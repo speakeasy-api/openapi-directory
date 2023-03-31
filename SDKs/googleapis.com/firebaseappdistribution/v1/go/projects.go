@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebaseappdistributionProjectsAppsReleasesBatchDelete - Deletes releases. A maximum of 100 releases can be deleted per request.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesBatchDelete(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesBatchDelete(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest, security operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesBatchDelete(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesBatchDelete(ctx co
 }
 
 // FirebaseappdistributionProjectsAppsReleasesDistribute - Distributes a release to testers. This call does the following: 1. Creates testers for the specified emails, if none exist. 2. Adds the testers and groups to the release. 3. Sends new testers an invitation email. 4. Sends existing testers a new release email. The request will fail with a `INVALID_ARGUMENT` if it contains a group that doesn't exist.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesDistribute(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesDistributeResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesDistribute(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest, security operations.FirebaseappdistributionProjectsAppsReleasesDistributeSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesDistributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:distribute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:distribute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1DistributeReleaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesDistribute(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesDistribute(ctx con
 }
 
 // FirebaseappdistributionProjectsAppsReleasesFeedbackReportsList - Lists feedback reports. By default, sorts by `createTime` in descending order.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesFeedbackReportsList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesFeedbackReportsList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest, security operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feedbackReports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feedbackReports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesFeedbackReportsLis
 }
 
 // FirebaseappdistributionProjectsAppsReleasesList - Lists releases. By default, sorts by `createTime` in descending order.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesListRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesListResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesListRequest, security operations.FirebaseappdistributionProjectsAppsReleasesListSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesList(ctx context.C
 }
 
 // FirebaseappdistributionProjectsAppsReleasesOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsCancel(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsCancel(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest, security operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsCancel(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsCancel(c
 }
 
 // FirebaseappdistributionProjectsAppsReleasesOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsListResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsList(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest, security operations.FirebaseappdistributionProjectsAppsReleasesOperationsListSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsList(ctx
 }
 
 // FirebaseappdistributionProjectsAppsReleasesOperationsWait - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
-func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsWait(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsWait(ctx context.Context, request operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest, security operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitSecurity) (*operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wait", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wait", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleLongrunningWaitOperationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsWait(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) FirebaseappdistributionProjectsAppsReleasesOperationsWait(ctx
 }
 
 // FirebaseappdistributionProjectsGroupsBatchJoin - Batch adds members to a group. The testers will gain access to all releases that the groups have access to.
-func (s *projects) FirebaseappdistributionProjectsGroupsBatchJoin(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest) (*operations.FirebaseappdistributionProjectsGroupsBatchJoinResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsBatchJoin(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest, security operations.FirebaseappdistributionProjectsGroupsBatchJoinSecurity) (*operations.FirebaseappdistributionProjectsGroupsBatchJoinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:batchJoin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:batchJoin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1BatchJoinGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsBatchJoin(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsBatchJoin(ctx context.Co
 }
 
 // FirebaseappdistributionProjectsGroupsBatchLeave - Batch removed members from a group. The testers will lose access to all releases that the groups have access to.
-func (s *projects) FirebaseappdistributionProjectsGroupsBatchLeave(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest) (*operations.FirebaseappdistributionProjectsGroupsBatchLeaveResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsBatchLeave(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest, security operations.FirebaseappdistributionProjectsGroupsBatchLeaveSecurity) (*operations.FirebaseappdistributionProjectsGroupsBatchLeaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:batchLeave", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:batchLeave", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1BatchLeaveGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsBatchLeave(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,11 +506,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsBatchLeave(ctx context.C
 }
 
 // FirebaseappdistributionProjectsGroupsCreate - Create a group.
-func (s *projects) FirebaseappdistributionProjectsGroupsCreate(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsCreateRequest) (*operations.FirebaseappdistributionProjectsGroupsCreateResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsCreate(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsCreateRequest, security operations.FirebaseappdistributionProjectsGroupsCreateSecurity) (*operations.FirebaseappdistributionProjectsGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1GroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -522,11 +522,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +561,20 @@ func (s *projects) FirebaseappdistributionProjectsGroupsCreate(ctx context.Conte
 }
 
 // FirebaseappdistributionProjectsGroupsDelete - Delete a group.
-func (s *projects) FirebaseappdistributionProjectsGroupsDelete(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsDeleteRequest) (*operations.FirebaseappdistributionProjectsGroupsDeleteResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsDelete(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsDeleteRequest, security operations.FirebaseappdistributionProjectsGroupsDeleteSecurity) (*operations.FirebaseappdistributionProjectsGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *projects) FirebaseappdistributionProjectsGroupsDelete(ctx context.Conte
 }
 
 // FirebaseappdistributionProjectsGroupsGet - Get a group.
-func (s *projects) FirebaseappdistributionProjectsGroupsGet(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsGetRequest) (*operations.FirebaseappdistributionProjectsGroupsGetResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsGet(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsGetRequest, security operations.FirebaseappdistributionProjectsGroupsGetSecurity) (*operations.FirebaseappdistributionProjectsGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +657,20 @@ func (s *projects) FirebaseappdistributionProjectsGroupsGet(ctx context.Context,
 }
 
 // FirebaseappdistributionProjectsGroupsList - List groups.
-func (s *projects) FirebaseappdistributionProjectsGroupsList(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsListRequest) (*operations.FirebaseappdistributionProjectsGroupsListResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsGroupsList(ctx context.Context, request operations.FirebaseappdistributionProjectsGroupsListRequest, security operations.FirebaseappdistributionProjectsGroupsListSecurity) (*operations.FirebaseappdistributionProjectsGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,11 +705,11 @@ func (s *projects) FirebaseappdistributionProjectsGroupsList(ctx context.Context
 }
 
 // FirebaseappdistributionProjectsTestersBatchAdd - Batch adds testers. This call adds testers for the specified emails if they don't already exist. Returns all testers specified in the request, including newly created and previously existing testers. This action is idempotent.
-func (s *projects) FirebaseappdistributionProjectsTestersBatchAdd(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersBatchAddRequest) (*operations.FirebaseappdistributionProjectsTestersBatchAddResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsTestersBatchAdd(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersBatchAddRequest, security operations.FirebaseappdistributionProjectsTestersBatchAddSecurity) (*operations.FirebaseappdistributionProjectsTestersBatchAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/testers:batchAdd", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/testers:batchAdd", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1BatchAddTestersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,11 +721,11 @@ func (s *projects) FirebaseappdistributionProjectsTestersBatchAdd(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,11 +760,11 @@ func (s *projects) FirebaseappdistributionProjectsTestersBatchAdd(ctx context.Co
 }
 
 // FirebaseappdistributionProjectsTestersBatchRemove - Batch removes testers. If found, this call deletes testers for the specified emails. Returns all deleted testers.
-func (s *projects) FirebaseappdistributionProjectsTestersBatchRemove(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest) (*operations.FirebaseappdistributionProjectsTestersBatchRemoveResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsTestersBatchRemove(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest, security operations.FirebaseappdistributionProjectsTestersBatchRemoveSecurity) (*operations.FirebaseappdistributionProjectsTestersBatchRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/testers:batchRemove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/testers:batchRemove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1BatchRemoveTestersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -776,11 +776,11 @@ func (s *projects) FirebaseappdistributionProjectsTestersBatchRemove(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,20 +815,20 @@ func (s *projects) FirebaseappdistributionProjectsTestersBatchRemove(ctx context
 }
 
 // FirebaseappdistributionProjectsTestersList - Lists testers and their resource ids.
-func (s *projects) FirebaseappdistributionProjectsTestersList(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersListRequest) (*operations.FirebaseappdistributionProjectsTestersListResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsTestersList(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersListRequest, security operations.FirebaseappdistributionProjectsTestersListSecurity) (*operations.FirebaseappdistributionProjectsTestersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/testers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/testers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,11 +863,11 @@ func (s *projects) FirebaseappdistributionProjectsTestersList(ctx context.Contex
 }
 
 // FirebaseappdistributionProjectsTestersPatch - Update a tester. If the testers joins a group they gain access to all releases that the group has access to.
-func (s *projects) FirebaseappdistributionProjectsTestersPatch(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersPatchRequest) (*operations.FirebaseappdistributionProjectsTestersPatchResponse, error) {
+func (s *projects) FirebaseappdistributionProjectsTestersPatch(ctx context.Context, request operations.FirebaseappdistributionProjectsTestersPatchRequest, security operations.FirebaseappdistributionProjectsTestersPatchSecurity) (*operations.FirebaseappdistributionProjectsTestersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppdistroV1TesterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,11 +879,11 @@ func (s *projects) FirebaseappdistributionProjectsTestersPatch(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesListLabelsForMilestonePathParams struct {
+type IssuesListLabelsForMilestoneRequest struct {
 	// milestone_number parameter
 	MilestoneNumber int64  `pathParam:"style=simple,explode=false,name=milestone_number"`
 	Owner           string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo            string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesListLabelsForMilestoneQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type IssuesListLabelsForMilestoneRequest struct {
-	PathParams  IssuesListLabelsForMilestonePathParams
-	QueryParams IssuesListLabelsForMilestoneQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesListLabelsForMilestoneResponse struct {

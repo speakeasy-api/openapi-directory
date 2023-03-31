@@ -1,0 +1,85 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/ivs-realtime/2020-07-14/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.CreateParticipantTokenRequest(
+    request_body=operations.CreateParticipantTokenRequestBody(
+        attributes={
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+        },
+        capabilities=[
+            "PUBLISH",
+            "SUBSCRIBE",
+            "SUBSCRIBE",
+            "PUBLISH",
+        ],
+        duration=437587,
+        stage_arn="magnam",
+        user_id="debitis",
+    ),
+    x_amz_algorithm="ipsa",
+    x_amz_content_sha256="delectus",
+    x_amz_credential="tempora",
+    x_amz_date="suscipit",
+    x_amz_security_token="molestiae",
+    x_amz_signature="minus",
+    x_amz_signed_headers="placeat",
+)
+    
+res = s.create_participant_token(req)
+
+if res.create_participant_token_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_participant_token` - <p>Creates an additional token for a specified stage. This can be done after stage creation or when tokens expire. Tokens always are scoped to the stage for which they are created.</p> <p>Encryption keys are owned by Amazon IVS and never used directly by your application.</p>
+* `create_stage` - Creates a new stage (and optionally participant tokens).
+* `delete_stage` - Shuts down and deletes the specified stage (disconnecting all participants).
+* `disconnect_participant` - Disconnects a specified participant and revokes the participant permanently from a specified stage.
+* `get_stage` - Gets information for the specified stage.
+* `list_stages` - Gets summary information about all stages in your account, in the AWS region where the API request is processed.
+* `list_tags_for_resource` - Gets information about AWS tags for the specified ARN.
+* `tag_resource` - Adds or updates tags for the AWS resource with the specified ARN.
+* `untag_resource` - Removes tags from the resource with the specified ARN.
+* `update_stage` - Updates a stage’s configuration.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

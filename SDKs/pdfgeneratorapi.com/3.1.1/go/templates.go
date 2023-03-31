@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -42,7 +43,7 @@ func (s *templates) CopyTemplate(ctx context.Context, request operations.CopyTem
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,7 +133,7 @@ func (s *templates) CopyTemplate(ctx context.Context, request operations.CopyTem
 
 // CreateTemplate - Create template
 // Creates a new template. If template configuration is not specified in the request body then an empty template is created. Template is placed to the workspace specified in authentication params. Template configuration must be sent in the request body.
-func (s *templates) CreateTemplate(ctx context.Context, request operations.CreateTemplateRequest) (*operations.CreateTemplateResponse, error) {
+func (s *templates) CreateTemplate(ctx context.Context, request shared.TemplateDefinitionNew) (*operations.CreateTemplateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/templates"
 
@@ -246,7 +247,7 @@ func (s *templates) DeleteTemplate(ctx context.Context, request operations.Delet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -340,7 +341,7 @@ func (s *templates) GetEditorURL(ctx context.Context, request operations.GetEdit
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/templates/templateId/editor"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -355,7 +356,7 @@ func (s *templates) GetEditorURL(ctx context.Context, request operations.GetEdit
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -454,7 +455,7 @@ func (s *templates) GetTemplate(ctx context.Context, request operations.GetTempl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -643,7 +644,7 @@ func (s *templates) UpdateTemplate(ctx context.Context, request operations.Updat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/templates/templateId"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TemplateDefinitionNew", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -658,7 +659,7 @@ func (s *templates) UpdateTemplate(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

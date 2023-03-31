@@ -10,13 +10,7 @@ import (
 )
 
 type ListGroupUsersSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type ListGroupUsersPathParams struct {
-	// Unique identifier of a Flat group
-	//
-	Group string `pathParam:"style=simple,explode=false,name=group"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListGroupUsersSourceEnum - Filter the users by their source
@@ -46,16 +40,13 @@ func (e *ListGroupUsersSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListGroupUsersQueryParams struct {
+type ListGroupUsersRequest struct {
+	// Unique identifier of a Flat group
+	//
+	Group string `pathParam:"style=simple,explode=false,name=group"`
 	// Filter the users by their source
 	//
 	Source *ListGroupUsersSourceEnum `queryParam:"style=form,explode=true,name=source"`
-}
-
-type ListGroupUsersRequest struct {
-	PathParams  ListGroupUsersPathParams
-	QueryParams ListGroupUsersQueryParams
-	Security    ListGroupUsersSecurity
 }
 
 type ListGroupUsersResponse struct {

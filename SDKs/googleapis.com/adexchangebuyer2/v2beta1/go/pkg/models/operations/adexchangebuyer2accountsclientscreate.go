@@ -8,20 +8,18 @@ import (
 )
 
 type Adexchangebuyer2AccountsClientsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsClientsCreatePathParams struct {
-	// Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer to create a client for. (required)
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type Adexchangebuyer2AccountsClientsCreateQueryParams struct {
+type Adexchangebuyer2AccountsClientsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Client      *shared.Client    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer to create a client for. (required)
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type Adexchangebuyer2AccountsClientsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsClientsCreateRequest struct {
-	PathParams  Adexchangebuyer2AccountsClientsCreatePathParams
-	QueryParams Adexchangebuyer2AccountsClientsCreateQueryParams
-	Request     *shared.Client `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2AccountsClientsCreateSecurity
 }
 
 type Adexchangebuyer2AccountsClientsCreateResponse struct {

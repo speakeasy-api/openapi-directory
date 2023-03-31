@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVodBackgroundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVodBackgroundPathParams struct {
+type DeleteVodBackgroundRequest struct {
 	// The ID of the background.
 	BackgroundID float64 `pathParam:"style=simple,explode=false,name=background_id"`
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type DeleteVodBackgroundRequest struct {
-	PathParams DeleteVodBackgroundPathParams
-	Security   DeleteVodBackgroundSecurity
 }
 
 type DeleteVodBackgroundResponse struct {

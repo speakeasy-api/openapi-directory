@@ -14,66 +14,58 @@ func main() {
     s := sdk.New()
 
     req := operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest{
-        Security: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ContactCenterID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.ContactCenterInput{
+        DollarXgafv: "2",
+        ContactCenterInput: &shared.ContactCenterInput{
             AdminUser: &shared.AdminUser{
-                FamilyName: "magnam",
-                GivenName: "debitis",
+                FamilyName: "provident",
+                GivenName: "distinctio",
             },
             CcaipManagedUsers: false,
-            CustomerDomainPrefix: "ipsa",
-            DisplayName: "delectus",
+            CustomerDomainPrefix: "quibusdam",
+            DisplayName: "unde",
             InstanceConfig: &shared.InstanceConfig{
-                InstanceSize: "STANDARD_SMALL",
+                InstanceSize: "STANDARD_3XLARGE",
             },
             Labels: map[string]string{
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "illum": "vel",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
-            Name: "iusto",
+            Name: "magnam",
             SamlParams: &shared.SAMLParams{
-                Certificate: "excepturi",
-                EntityID: "nisi",
-                SsoURI: "recusandae",
-                UserEmail: "temporibus",
+                Certificate: "debitis",
+                EntityID: "ipsa",
+                SsoURI: "delectus",
+                UserEmail: "tempora",
             },
             Uris: &shared.URIs{
-                ChatBotURI: "ab",
-                MediaURI: "quis",
-                RootURI: "veritatis",
-                VirtualAgentStreamingServiceURI: "deserunt",
+                ChatBotURI: "suscipit",
+                MediaURI: "molestiae",
+                RootURI: "minus",
+                VirtualAgentStreamingServiceURI: "placeat",
             },
-            UserEmail: "perferendis",
+            UserEmail: "voluptatum",
         },
+        AccessToken: "iusto",
+        Alt: "media",
+        Callback: "nisi",
+        ContactCenterID: "recusandae",
+        Fields: "temporibus",
+        Key: "ab",
+        OauthToken: "quis",
+        Parent: "veritatis",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        RequestID: "perferendis",
+        UploadType: "ipsam",
+        UploadProtocol: "repellendus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx, req)
+    res, err := s.Projects.ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx, req, operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

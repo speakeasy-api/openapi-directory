@@ -12,12 +12,8 @@ var UpdateExportConfigurationServerList = []string{
 }
 
 type UpdateExportConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateExportConfigurationPathParams struct {
-	// The type of communication – Messages, Calls, Conferences, and Participants
-	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateExportConfigurationUpdateExportConfigurationRequest struct {
@@ -30,10 +26,9 @@ type UpdateExportConfigurationUpdateExportConfigurationRequest struct {
 }
 
 type UpdateExportConfigurationRequest struct {
-	PathParams UpdateExportConfigurationPathParams
-	Request    *UpdateExportConfigurationUpdateExportConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateExportConfigurationSecurity
-	ServerURL  *string
+	RequestBody *UpdateExportConfigurationUpdateExportConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The type of communication – Messages, Calls, Conferences, and Participants
+	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
 }
 
 type UpdateExportConfigurationResponse struct {

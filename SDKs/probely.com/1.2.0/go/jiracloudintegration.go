@@ -106,7 +106,7 @@ func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjects(ctx context.Cont
 // GetIntegrationsJiraCloudProjectsProjectIDIssueTypes - Retrieve project issue types
 func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTypes(ctx context.Context, request operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesRequest) (*operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTyp
 // GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPriorities - Retrieve issue priorities
 func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPriorities(ctx context.Context, request operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesRequest) (*operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +244,7 @@ func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTyp
 // GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatus - Retrieve issue statuses
 func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatus(ctx context.Context, request operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusRequest) (*operations.GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/status/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/status/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +318,7 @@ func (s *jiraCloudIntegration) GetIntegrationsJiraCloudProjectsProjectIDIssueTyp
 // GetTargetsTargetIDFindingsIDIntegrationsJiraCloud - Retrieve Jira Cloud finding configuration
 func (s *jiraCloudIntegration) GetTargetsTargetIDFindingsIDIntegrationsJiraCloud(ctx context.Context, request operations.GetTargetsTargetIDFindingsIDIntegrationsJiraCloudRequest) (*operations.GetTargetsTargetIDFindingsIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -382,7 +382,7 @@ func (s *jiraCloudIntegration) GetTargetsTargetIDFindingsIDIntegrationsJiraCloud
 // GetTargetsTargetIDIntegrationsJiraCloud - Retrieve Jira Cloud Target configuration
 func (s *jiraCloudIntegration) GetTargetsTargetIDIntegrationsJiraCloud(ctx context.Context, request operations.GetTargetsTargetIDIntegrationsJiraCloudRequest) (*operations.GetTargetsTargetIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,9 +446,9 @@ func (s *jiraCloudIntegration) GetTargetsTargetIDIntegrationsJiraCloud(ctx conte
 // PatchTargetsTargetIDFindingsIDIntegrationsJiraCloud - Update Jira Cloud finding configuration
 func (s *jiraCloudIntegration) PatchTargetsTargetIDFindingsIDIntegrationsJiraCloud(ctx context.Context, request operations.PatchTargetsTargetIDFindingsIDIntegrationsJiraCloudRequest) (*operations.PatchTargetsTargetIDFindingsIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraFinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -530,9 +530,9 @@ func (s *jiraCloudIntegration) PatchTargetsTargetIDFindingsIDIntegrationsJiraClo
 // PatchTargetsTargetIDIntegrationsJiraCloud - Update Jira Cloud target configuration
 func (s *jiraCloudIntegration) PatchTargetsTargetIDIntegrationsJiraCloud(ctx context.Context, request operations.PatchTargetsTargetIDIntegrationsJiraCloudRequest) (*operations.PatchTargetsTargetIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraScope", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -614,9 +614,9 @@ func (s *jiraCloudIntegration) PatchTargetsTargetIDIntegrationsJiraCloud(ctx con
 // PutTargetsTargetIDFindingsIDIntegrationsJiraCloud - Update Jira Cloud finding configuration
 func (s *jiraCloudIntegration) PutTargetsTargetIDFindingsIDIntegrationsJiraCloud(ctx context.Context, request operations.PutTargetsTargetIDFindingsIDIntegrationsJiraCloudRequest) (*operations.PutTargetsTargetIDFindingsIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraFinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -698,9 +698,9 @@ func (s *jiraCloudIntegration) PutTargetsTargetIDFindingsIDIntegrationsJiraCloud
 // PutTargetsTargetIDIntegrationsJiraCloud - Update Jira Cloud target configuration
 func (s *jiraCloudIntegration) PutTargetsTargetIDIntegrationsJiraCloud(ctx context.Context, request operations.PutTargetsTargetIDIntegrationsJiraCloudRequest) (*operations.PutTargetsTargetIDIntegrationsJiraCloudResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-cloud/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraScope", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

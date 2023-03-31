@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateProjectPermissionsLegacyPathParams struct {
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsAddOrUpdateProjectPermissionsLegacyRequestBodyPermissionEnum - The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@3.5/rest/overview/resources-in-the-rest-api#http-verbs)."
 type TeamsAddOrUpdateProjectPermissionsLegacyRequestBodyPermissionEnum string
 
@@ -49,8 +42,11 @@ type TeamsAddOrUpdateProjectPermissionsLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateProjectPermissionsLegacyRequest struct {
-	PathParams TeamsAddOrUpdateProjectPermissionsLegacyPathParams
-	Request    *TeamsAddOrUpdateProjectPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateProjectPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 // TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSON - Forbidden if the project is not owned by the organization

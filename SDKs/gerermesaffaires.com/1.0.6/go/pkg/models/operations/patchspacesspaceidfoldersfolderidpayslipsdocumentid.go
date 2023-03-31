@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequestBody - A payslip to modify
 type PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequestBody struct {
 	Begin                 *string  `json:"Begin,omitempty"`
@@ -29,9 +20,14 @@ type PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDPathParams
 	// A payslip to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDResponse struct {

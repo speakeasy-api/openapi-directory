@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetShipmentListPathParams struct {
+type GetShipmentListRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetShipmentListRequest struct {
-	PathParams GetShipmentListPathParams
 }
 
 type GetShipmentListResponse struct {

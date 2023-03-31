@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompressFilesHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type CompressFilesCompressFilesRequestBody struct {
 	// Name of the zip archive to create. If left blank, current date will be used.
 	ArchiveName *string `json:"archiveName,omitempty"`
@@ -24,8 +17,11 @@ type CompressFilesCompressFilesRequestBody struct {
 }
 
 type CompressFilesRequest struct {
-	Headers CompressFilesHeaders
-	Request *CompressFilesCompressFilesRequestBody `request:"mediaType=application/json"`
+	RequestBody *CompressFilesCompressFilesRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type CompressFilesResponse struct {

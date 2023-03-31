@@ -11,10 +11,6 @@ type UpdateSynonymsRequestBody struct {
 	Hp          []string `json:"hp,omitempty"`
 }
 
-type UpdateSynonymsRequest struct {
-	Request *UpdateSynonymsRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateSynonymsResponse struct {
 	ContentType string
 	StatusCode  int

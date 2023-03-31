@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SchedulePathParams struct {
+type ScheduleRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018PRE</code>, <code>2018POST</code>, <code>2018STAR</code>, <code>2019</code>, etc.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type ScheduleRequest struct {
-	PathParams SchedulePathParams
 }
 
 type ScheduleResponse struct {

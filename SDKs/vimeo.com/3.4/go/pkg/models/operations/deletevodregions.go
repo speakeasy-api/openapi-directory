@@ -8,12 +8,7 @@ import (
 )
 
 type DeleteVodRegionsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteVodRegionsPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteVodRegionsRequestBody struct {
@@ -22,9 +17,9 @@ type DeleteVodRegionsRequestBody struct {
 }
 
 type DeleteVodRegionsRequest struct {
-	PathParams DeleteVodRegionsPathParams
-	Request    *DeleteVodRegionsRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.region+json"`
-	Security   DeleteVodRegionsSecurity
+	RequestBody *DeleteVodRegionsRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.region+json"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 }
 
 type DeleteVodRegionsResponse struct {

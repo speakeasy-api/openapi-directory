@@ -43,7 +43,7 @@ func (s *task) ListTasks(ctx context.Context, request operations.ListTasksReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *task) ListTasks(ctx context.Context, request operations.ListTasksReques
 // Returns a Task object
 func (s *task) ShowTask(ctx context.Context, request operations.ShowTaskRequest) (*operations.ShowTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,9 +140,9 @@ func (s *task) ShowTask(ctx context.Context, request operations.ShowTaskRequest)
 // Updates a Task object
 func (s *task) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest) (*operations.UpdateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

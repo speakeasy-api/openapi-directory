@@ -8,6 +8,13 @@ import (
 	"net/http"
 )
 
+// PostPostReviewRequestBody - The user_email must use a professional domain, free domains are not supported.
+type PostPostReviewRequestBody struct {
+	Rating    int64   `json:"rating"`
+	UserEmail string  `json:"user_email"`
+	UserName  *string `json:"user_name,omitempty"`
+}
+
 // PostPostReviewRatingEnum - The user's star rating, must be a single integer from [1, 2, 3, 4, 5]
 type PostPostReviewRatingEnum string
 
@@ -41,26 +48,15 @@ func (e *PostPostReviewRatingEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostPostReviewQueryParams struct {
+type PostPostReviewRequest struct {
+	// The request body requires the user_email and rating. The parameter use_name is optional.
+	RequestBody PostPostReviewRequestBody `request:"mediaType=application/json"`
 	// The user's star rating, must be a single integer from [1, 2, 3, 4, 5]
 	Rating PostPostReviewRatingEnum `queryParam:"style=form,explode=true,name=rating"`
 	// User's email to which the review verification will be sent.
 	UserEmail string `queryParam:"style=form,explode=true,name=user_email"`
 	// The user's name, defaults to empty string "".  Thus, if this is omitted, the email to the user will not use the user's name.
 	UserName *string `queryParam:"style=form,explode=true,name=user_name"`
-}
-
-// PostPostReviewRequestBody - The user_email must use a professional domain, free domains are not supported.
-type PostPostReviewRequestBody struct {
-	Rating    int64   `json:"rating"`
-	UserEmail string  `json:"user_email"`
-	UserName  *string `json:"user_name,omitempty"`
-}
-
-type PostPostReviewRequest struct {
-	QueryParams PostPostReviewQueryParams
-	// The request body requires the user_email and rating. The parameter use_name is optional.
-	Request PostPostReviewRequestBody `request:"mediaType=application/json"`
 }
 
 // PostPostReview403ApplicationJSON - The 403 response can have many detailed response messages related to the user's email address validation

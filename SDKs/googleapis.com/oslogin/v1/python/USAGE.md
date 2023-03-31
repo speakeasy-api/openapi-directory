@@ -4,39 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.OsloginUsersGetLoginProfileRequest(
-    security=operations.OsloginUsersGetLoginProfileSecurity(
-        option1=operations.OsloginUsersGetLoginProfileSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.OsloginUsersGetLoginProfilePathParams(
-        name="nihil",
-    ),
-    query_params=operations.OsloginUsersGetLoginProfileQueryParams(
-        dollar_xgafv="2",
-        access_token="quae",
-        alt="proto",
-        callback="iusto",
-        fields="voluptatibus",
-        key="laboriosam",
-        oauth_token="eveniet",
-        pretty_print=False,
-        project_id="quidem",
-        quota_user="autem",
-        system_id="consequatur",
-        upload_type="officiis",
-        upload_protocol="tenetur",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    project_id="vel",
+    quota_user="error",
+    system_id="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.users.oslogin_users_get_login_profile(req)
+res = s.users.oslogin_users_get_login_profile(req, operations.OsloginUsersGetLoginProfileSecurity(
+    option1=operations.OsloginUsersGetLoginProfileSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.login_profile is not None:
     # handle response

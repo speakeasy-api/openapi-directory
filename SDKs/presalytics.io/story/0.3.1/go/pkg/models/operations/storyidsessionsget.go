@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDSessionsGetPathParams struct {
+type StoryIDSessionsGetRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDSessionsGetQueryParams struct {
 	// Indicate whether the returned object should include child relationships
 	IncludeRelationships *bool `queryParam:"style=form,explode=true,name=include_relationships"`
-}
-
-type StoryIDSessionsGetRequest struct {
-	PathParams  StoryIDSessionsGetPathParams
-	QueryParams StoryIDSessionsGetQueryParams
 }
 
 type StoryIDSessionsGetResponse struct {

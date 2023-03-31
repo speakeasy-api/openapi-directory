@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsDeleteReviewCommentPathParams struct {
+type PullsDeleteReviewCommentRequest struct {
 	// comment_id parameter
 	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
 	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type PullsDeleteReviewCommentRequest struct {
-	PathParams PullsDeleteReviewCommentPathParams
 }
 
 type PullsDeleteReviewCommentResponse struct {

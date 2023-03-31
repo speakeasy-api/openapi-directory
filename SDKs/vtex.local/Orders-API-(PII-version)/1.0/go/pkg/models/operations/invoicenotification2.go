@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvoiceNotification2PathParams struct {
-	// ID of the order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type InvoiceNotification2Headers struct {
+type InvoiceNotification2Request struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type InvoiceNotification2Request struct {
-	PathParams InvoiceNotification2PathParams
-	Headers    InvoiceNotification2Headers
-	Request    shared.InvoiceNotificationRequest `request:"mediaType=application/json"`
+	ContentType                string                            `header:"style=simple,explode=false,name=Content-Type"`
+	InvoiceNotificationRequest shared.InvoiceNotificationRequest `request:"mediaType=application/json"`
+	// ID of the order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // InvoiceNotification2200ApplicationJSON - OK

@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListAccountPhoneNumbersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListAccountPhoneNumbersExtensionTypeEnum - The type of assignee to whom the number is assigned. The value can be one of the following:<br>
@@ -100,7 +99,7 @@ func (e *ListAccountPhoneNumbersTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAccountPhoneNumbersQueryParams struct {
+type ListAccountPhoneNumbersRequest struct {
 	// The type of assignee to whom the number is assigned. The value can be one of the following:<br>
 	// `user`<br> `callQueue`<br> `autoReceptionist`<br>
 	// `commonAreaPhone`
@@ -121,11 +120,6 @@ type ListAccountPhoneNumbersQueryParams struct {
 	// `all`: Include both assigned and unassigned numbers in the response.<br>
 	// `byoc`: Include Bring Your Own Carrier (BYOC) numbers only in the response.
 	Type *ListAccountPhoneNumbersTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListAccountPhoneNumbersRequest struct {
-	QueryParams ListAccountPhoneNumbersQueryParams
-	Security    ListAccountPhoneNumbersSecurity
 }
 
 // ListAccountPhoneNumbers200ApplicationXMLPhoneNumbersAssigneeTypeEnum - Indicates who the phone number belongs to.<br>

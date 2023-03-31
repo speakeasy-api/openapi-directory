@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAPIKeysIDPathParams struct {
+type DeleteAPIKeysIDRequest struct {
 	// Api Key ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAPIKeysIDRequest struct {
-	PathParams DeleteAPIKeysIDPathParams
 }
 
 type DeleteAPIKeysIDResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDiseaseGeneAssociationsPathParams struct {
-	// CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetDiseaseGeneAssociationsAssociationTypeEnum - Additional filters: causal, non_causal, both
 type GetDiseaseGeneAssociationsAssociationTypeEnum string
 
@@ -41,7 +36,7 @@ func (e *GetDiseaseGeneAssociationsAssociationTypeEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetDiseaseGeneAssociationsQueryParams struct {
+type GetDiseaseGeneAssociationsRequest struct {
 	// Additional filters: causal, non_causal, both
 	AssociationType *GetDiseaseGeneAssociationsAssociationTypeEnum `queryParam:"style=form,explode=true,name=association_type"`
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
@@ -58,6 +53,8 @@ type GetDiseaseGeneAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -76,11 +73,6 @@ type GetDiseaseGeneAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetDiseaseGeneAssociationsRequest struct {
-	PathParams  GetDiseaseGeneAssociationsPathParams
-	QueryParams GetDiseaseGeneAssociationsQueryParams
 }
 
 type GetDiseaseGeneAssociationsResponse struct {

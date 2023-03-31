@@ -37,7 +37,7 @@ func newAutomations(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete Automation
 func (s *automations) DeleteAutomationsID(ctx context.Context, request operations.DeleteAutomationsIDRequest) (*operations.DeleteAutomationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *automations) GetAutomations(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *automations) GetAutomations(ctx context.Context, request operations.Get
 // Show Automation
 func (s *automations) GetAutomationsID(ctx context.Context, request operations.GetAutomationsIDRequest) (*operations.GetAutomationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *automations) GetAutomationsID(ctx context.Context, request operations.G
 // Update Automation
 func (s *automations) PatchAutomationsID(ctx context.Context, request operations.PatchAutomationsIDRequest) (*operations.PatchAutomationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *automations) PatchAutomationsID(ctx context.Context, request operations
 
 // PostAutomations - Create Automation
 // Create Automation
-func (s *automations) PostAutomations(ctx context.Context, request operations.PostAutomationsRequest) (*operations.PostAutomationsResponse, error) {
+func (s *automations) PostAutomations(ctx context.Context, request operations.PostAutomationsRequestBody) (*operations.PostAutomationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/automations"
 

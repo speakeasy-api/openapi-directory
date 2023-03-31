@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNotificationByIDPathParams struct {
-	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateNotificationByIDHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum - Type of action be notified about. Notifications will only be sent for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
 type UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum string
 
@@ -71,9 +59,13 @@ type UpdateNotificationByIDUpdateNotificationByIDRequestBody struct {
 }
 
 type UpdateNotificationByIDRequest struct {
-	PathParams UpdateNotificationByIDPathParams
-	Headers    UpdateNotificationByIDHeaders
-	Request    *UpdateNotificationByIDUpdateNotificationByIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNotificationByIDUpdateNotificationByIDRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateNotificationByIDResponse struct {

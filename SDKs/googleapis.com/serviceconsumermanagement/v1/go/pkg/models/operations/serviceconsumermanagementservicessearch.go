@@ -8,16 +8,11 @@ import (
 )
 
 type ServiceconsumermanagementServicesSearchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServiceconsumermanagementServicesSearchPathParams struct {
-	// Required. Service for which search is performed. services/{service} {service} the name of a service, for example 'service.googleapis.com'.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceconsumermanagementServicesSearchQueryParams struct {
+type ServiceconsumermanagementServicesSearchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type ServiceconsumermanagementServicesSearchQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of `nextPageToken` from the previous response.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Service for which search is performed. services/{service} {service} the name of a service, for example 'service.googleapis.com'.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Optional. Set a query `{expression}` for querying tenancy units. Your `{expression}` must be in the format: `field_name=literal_string`. The `field_name` is the name of the field you want to compare. Supported fields are `tenant_resources.tag` and `tenant_resources.resource`. For example, to search tenancy units that contain at least one tenant resource with a given tag 'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain at least one tenant resource with a given resource name 'projects/123456', use the query `tenant_resources.resource=projects/123456`. Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to be included in the result set. For example, `tenant_resources.tag=xyz AND tenant_resources.resource=projects/123456`
@@ -46,12 +43,6 @@ type ServiceconsumermanagementServicesSearchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceconsumermanagementServicesSearchRequest struct {
-	PathParams  ServiceconsumermanagementServicesSearchPathParams
-	QueryParams ServiceconsumermanagementServicesSearchQueryParams
-	Security    ServiceconsumermanagementServicesSearchSecurity
 }
 
 type ServiceconsumermanagementServicesSearchResponse struct {

@@ -10,7 +10,7 @@ import (
 )
 
 type GetFilesSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFilesSortEnum - values to sort by
@@ -40,24 +40,15 @@ func (e *GetFilesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFilesQueryParams struct {
+type GetFilesRequest struct {
 	// number of records to skip for pagination
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// pass an optional page size value
 	Pagesize *int64 `queryParam:"style=form,explode=true,name=pagesize"`
 	// values to sort by
 	Sort *GetFilesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFilesHeaders struct {
 	// Xero identifier for Tenant
 	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
-}
-
-type GetFilesRequest struct {
-	QueryParams GetFilesQueryParams
-	Headers     GetFilesHeaders
-	Security    GetFilesSecurity
 }
 
 type GetFilesResponse struct {

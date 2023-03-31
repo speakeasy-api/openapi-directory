@@ -8,19 +8,14 @@ import (
 )
 
 type CreateAlbumLogoSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateAlbumLogoPathParams struct {
+type CreateAlbumLogoRequest struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type CreateAlbumLogoRequest struct {
-	PathParams CreateAlbumLogoPathParams
-	Security   CreateAlbumLogoSecurity
 }
 
 type CreateAlbumLogoResponse struct {

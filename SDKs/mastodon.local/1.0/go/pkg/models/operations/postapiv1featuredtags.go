@@ -8,16 +8,11 @@ import (
 )
 
 type PostAPIV1FeaturedTagsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1FeaturedTagsRequestBody struct {
 	Name *string `json:"name,omitempty"`
-}
-
-type PostAPIV1FeaturedTagsRequest struct {
-	Request  *PostAPIV1FeaturedTagsRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1FeaturedTagsSecurity
 }
 
 type PostAPIV1FeaturedTagsResponse struct {

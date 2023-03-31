@@ -25,161 +25,146 @@ func main() {
     s := sdk.New()
 
     req := operations.GenomicsPipelinesRunRequest{
-        Security: operations.GenomicsPipelinesRunSecurity{
-            Option1: &operations.GenomicsPipelinesRunSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.GenomicsPipelinesRunQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.RunPipelineRequest{
+        DollarXgafv: "2",
+        RunPipelineRequest: &shared.RunPipelineRequest{
             Labels: map[string]string{
-                "suscipit": "iure",
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
             Pipeline: &shared.Pipeline{
                 Actions: []shared.Action{
                     shared.Action{
                         Commands: []string{
-                            "molestiae",
-                            "minus",
+                            "deserunt",
+                            "suscipit",
+                            "iure",
                         },
                         Credentials: &shared.Secret{
-                            CipherText: "placeat",
-                            KeyName: "voluptatum",
+                            CipherText: "magnam",
+                            KeyName: "debitis",
                         },
                         EncryptedEnvironment: &shared.Secret{
-                            CipherText: "iusto",
-                            KeyName: "excepturi",
+                            CipherText: "ipsa",
+                            KeyName: "delectus",
                         },
-                        Entrypoint: "nisi",
+                        Entrypoint: "tempora",
                         Environment: map[string]string{
-                            "temporibus": "ab",
-                            "quis": "veritatis",
-                            "deserunt": "perferendis",
-                            "ipsam": "repellendus",
-                        },
-                        Flags: []shared.ActionFlagsEnum{
-                            "DISABLE_STANDARD_ERROR_CAPTURE",
-                            "IGNORE_EXIT_STATUS",
-                            "DISABLE_STANDARD_ERROR_CAPTURE",
-                            "DISABLE_STANDARD_ERROR_CAPTURE",
-                        },
-                        ImageURI: "maiores",
-                        Labels: map[string]string{
-                            "quod": "quod",
-                            "esse": "totam",
-                        },
-                        Mounts: []shared.Mount{
-                            shared.Mount{
-                                Disk: "dolorum",
-                                Path: "dicta",
-                                ReadOnly: false,
-                            },
-                            shared.Mount{
-                                Disk: "nam",
-                                Path: "officia",
-                                ReadOnly: false,
-                            },
-                            shared.Mount{
-                                Disk: "occaecati",
-                                Path: "fugit",
-                                ReadOnly: false,
-                            },
-                            shared.Mount{
-                                Disk: "deleniti",
-                                Path: "hic",
-                                ReadOnly: false,
-                            },
-                        },
-                        Name: "optio",
-                        PidNamespace: "totam",
-                        PortMappings: map[string]int{
-                            "commodi": 473600,
-                        },
-                        Timeout: "modi",
-                    },
-                    shared.Action{
-                        Commands: []string{
-                            "impedit",
-                        },
-                        Credentials: &shared.Secret{
-                            CipherText: "cum",
-                            KeyName: "esse",
-                        },
-                        EncryptedEnvironment: &shared.Secret{
-                            CipherText: "ipsum",
-                            KeyName: "excepturi",
-                        },
-                        Entrypoint: "aspernatur",
-                        Environment: map[string]string{
-                            "ad": "natus",
+                            "molestiae": "minus",
+                            "placeat": "voluptatum",
                         },
                         Flags: []shared.ActionFlagsEnum{
                             "PUBLISH_EXPOSED_PORTS",
+                            "ALWAYS_RUN",
                         },
-                        ImageURI: "dolor",
+                        ImageURI: "recusandae",
                         Labels: map[string]string{
-                            "laboriosam": "hic",
-                            "saepe": "fuga",
-                            "in": "corporis",
+                            "ab": "quis",
+                            "veritatis": "deserunt",
+                            "perferendis": "ipsam",
+                            "repellendus": "sapiente",
                         },
                         Mounts: []shared.Mount{
                             shared.Mount{
-                                Disk: "iure",
-                                Path: "saepe",
+                                Disk: "odit",
+                                Path: "at",
                                 ReadOnly: false,
                             },
                             shared.Mount{
-                                Disk: "quidem",
-                                Path: "architecto",
+                                Disk: "at",
+                                Path: "maiores",
                                 ReadOnly: false,
                             },
                             shared.Mount{
-                                Disk: "ipsa",
-                                Path: "reiciendis",
+                                Disk: "molestiae",
+                                Path: "quod",
+                                ReadOnly: false,
+                            },
+                            shared.Mount{
+                                Disk: "quod",
+                                Path: "esse",
                                 ReadOnly: false,
                             },
                         },
-                        Name: "est",
-                        PidNamespace: "mollitia",
+                        Name: "totam",
+                        PidNamespace: "porro",
                         PortMappings: map[string]int{
-                            "dolores": 210382,
-                            "corporis": 128926,
-                            "nobis": 315428,
+                            "dicta": 720633,
+                            "officia": 582020,
+                            "fugit": 537373,
                         },
-                        Timeout: "omnis",
+                        Timeout: "hic",
+                    },
+                    shared.Action{
+                        Commands: []string{
+                            "totam",
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        },
+                        Credentials: &shared.Secret{
+                            CipherText: "modi",
+                            KeyName: "qui",
+                        },
+                        EncryptedEnvironment: &shared.Secret{
+                            CipherText: "impedit",
+                            KeyName: "cum",
+                        },
+                        Entrypoint: "esse",
+                        Environment: map[string]string{
+                            "excepturi": "aspernatur",
+                        },
+                        Flags: []shared.ActionFlagsEnum{
+                            "RUN_IN_BACKGROUND",
+                        },
+                        ImageURI: "natus",
+                        Labels: map[string]string{
+                            "iste": "dolor",
+                        },
+                        Mounts: []shared.Mount{
+                            shared.Mount{
+                                Disk: "laboriosam",
+                                Path: "hic",
+                                ReadOnly: false,
+                            },
+                            shared.Mount{
+                                Disk: "saepe",
+                                Path: "fuga",
+                                ReadOnly: false,
+                            },
+                            shared.Mount{
+                                Disk: "in",
+                                Path: "corporis",
+                                ReadOnly: false,
+                            },
+                        },
+                        Name: "iste",
+                        PidNamespace: "iure",
+                        PortMappings: map[string]int{
+                            "quidem": 99280,
+                            "ipsa": 969810,
+                            "est": 653140,
+                            "laborum": 170909,
+                        },
+                        Timeout: "dolorem",
                     },
                 },
                 EncryptedEnvironment: &shared.Secret{
-                    CipherText: "nemo",
-                    KeyName: "minima",
+                    CipherText: "corporis",
+                    KeyName: "explicabo",
                 },
                 Environment: map[string]string{
-                    "accusantium": "iure",
-                    "culpa": "doloribus",
-                    "sapiente": "architecto",
+                    "enim": "omnis",
+                    "nemo": "minima",
+                    "excepturi": "accusantium",
+                    "iure": "culpa",
                 },
                 Resources: &shared.Resources{
-                    ProjectID: "mollitia",
+                    ProjectID: "doloribus",
                     Regions: []string{
+                        "architecto",
+                        "mollitia",
+                        "dolorem",
                         "culpa",
                     },
                     VirtualMachine: &shared.VirtualMachine{
@@ -256,10 +241,25 @@ func main() {
             },
             PubSubTopic: "dolore",
         },
+        AccessToken: "iusto",
+        Alt: "json",
+        Callback: "harum",
+        Fields: "enim",
+        Key: "accusamus",
+        OauthToken: "commodi",
+        PrettyPrint: false,
+        QuotaUser: "repudiandae",
+        UploadType: "quae",
+        UploadProtocol: "ipsum",
     }
 
     ctx := context.Background()
-    res, err := s.Pipelines.GenomicsPipelinesRun(ctx, req)
+    res, err := s.Pipelines.GenomicsPipelinesRun(ctx, req, operations.GenomicsPipelinesRunSecurity{
+        Option1: &operations.GenomicsPipelinesRunSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -272,7 +272,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Pipelines
@@ -290,4 +290,15 @@ func main() {
 * `GenomicsWorkersCheckIn` - The worker uses this method to retrieve the assigned operation and provide periodic status updates.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

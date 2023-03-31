@@ -12,18 +12,13 @@ var FetchBalanceServerList = []string{
 }
 
 type FetchBalanceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchBalancePathParams struct {
-	// The unique SID identifier of the Account.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchBalanceRequest struct {
-	PathParams FetchBalancePathParams
-	Security   FetchBalanceSecurity
-	ServerURL  *string
+	// The unique SID identifier of the Account.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 }
 
 type FetchBalanceResponse struct {

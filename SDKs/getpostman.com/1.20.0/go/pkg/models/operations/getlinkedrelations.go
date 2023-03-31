@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLinkedRelationsPathParams struct {
+type GetLinkedRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetLinkedRelationsRequest struct {
-	PathParams GetLinkedRelationsPathParams
 }
 
 type GetLinkedRelations200ApplicationJSONRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 struct {

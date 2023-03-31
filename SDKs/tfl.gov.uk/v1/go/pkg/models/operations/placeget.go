@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlaceGetPathParams struct {
+type PlaceGetRequest struct {
 	// The id of the place, you can use the /Place/Types/{types} endpoint to get a list of places for a given type including their ids
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PlaceGetQueryParams struct {
 	// Defaults to false. If true child places e.g. individual charging stations at a charge point while be included, otherwise just the URLs of any child places will be returned
 	IncludeChildren *bool `queryParam:"style=form,explode=true,name=includeChildren"`
-}
-
-type PlaceGetRequest struct {
-	PathParams  PlaceGetPathParams
-	QueryParams PlaceGetQueryParams
 }
 
 type PlaceGetResponse struct {

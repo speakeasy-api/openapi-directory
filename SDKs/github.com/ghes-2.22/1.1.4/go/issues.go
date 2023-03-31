@@ -38,9 +38,9 @@ func newIssues(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#add-assignees-to-an-issue - API method documentation
 func (s *issues) IssuesAddAssignees(ctx context.Context, request operations.IssuesAddAssigneesRequest) (*operations.IssuesAddAssigneesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *issues) IssuesAddAssignees(ctx context.Context, request operations.Issu
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#add-labels-to-an-issue - API method documentation
 func (s *issues) IssuesAddLabels(ctx context.Context, request operations.IssuesAddLabelsRequest) (*operations.IssuesAddLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -167,7 +167,7 @@ func (s *issues) IssuesAddLabels(ctx context.Context, request operations.IssuesA
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#check-if-a-user-can-be-assigned - API method documentation
 func (s *issues) IssuesCheckUserCanBeAssigned(ctx context.Context, request operations.IssuesCheckUserCanBeAssignedRequest) (*operations.IssuesCheckUserCanBeAssignedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/assignees/{assignee}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/assignees/{assignee}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,9 +216,9 @@ func (s *issues) IssuesCheckUserCanBeAssigned(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#create-an-issue - API method documentation
 func (s *issues) IssuesCreate(ctx context.Context, request operations.IssuesCreateRequest) (*operations.IssuesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -308,9 +308,9 @@ func (s *issues) IssuesCreate(ctx context.Context, request operations.IssuesCrea
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#create-an-issue-comment - API method documentation
 func (s *issues) IssuesCreateComment(ctx context.Context, request operations.IssuesCreateCommentRequest) (*operations.IssuesCreateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,9 +389,9 @@ func (s *issues) IssuesCreateComment(ctx context.Context, request operations.Iss
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#create-a-label - API method documentation
 func (s *issues) IssuesCreateLabel(ctx context.Context, request operations.IssuesCreateLabelRequest) (*operations.IssuesCreateLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -466,9 +466,9 @@ func (s *issues) IssuesCreateLabel(ctx context.Context, request operations.Issue
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#create-a-milestone - API method documentation
 func (s *issues) IssuesCreateMilestone(ctx context.Context, request operations.IssuesCreateMilestoneRequest) (*operations.IssuesCreateMilestoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -543,7 +543,7 @@ func (s *issues) IssuesCreateMilestone(ctx context.Context, request operations.I
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#delete-an-issue-comment - API method documentation
 func (s *issues) IssuesDeleteComment(ctx context.Context, request operations.IssuesDeleteCommentRequest) (*operations.IssuesDeleteCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -579,7 +579,7 @@ func (s *issues) IssuesDeleteComment(ctx context.Context, request operations.Iss
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#delete-a-label - API method documentation
 func (s *issues) IssuesDeleteLabel(ctx context.Context, request operations.IssuesDeleteLabelRequest) (*operations.IssuesDeleteLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -615,7 +615,7 @@ func (s *issues) IssuesDeleteLabel(ctx context.Context, request operations.Issue
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#delete-a-milestone - API method documentation
 func (s *issues) IssuesDeleteMilestone(ctx context.Context, request operations.IssuesDeleteMilestoneRequest) (*operations.IssuesDeleteMilestoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -672,7 +672,7 @@ func (s *issues) IssuesDeleteMilestone(ctx context.Context, request operations.I
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#get-an-issue - API method documentation
 func (s *issues) IssuesGet(ctx context.Context, request operations.IssuesGetRequest) (*operations.IssuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -732,7 +732,7 @@ func (s *issues) IssuesGet(ctx context.Context, request operations.IssuesGetRequ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#get-an-issue-comment - API method documentation
 func (s *issues) IssuesGetComment(ctx context.Context, request operations.IssuesGetCommentRequest) (*operations.IssuesGetCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -787,7 +787,7 @@ func (s *issues) IssuesGetComment(ctx context.Context, request operations.Issues
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#get-an-issue-event - API method documentation
 func (s *issues) IssuesGetEvent(ctx context.Context, request operations.IssuesGetEventRequest) (*operations.IssuesGetEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/events/{event_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/events/{event_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -846,7 +846,7 @@ func (s *issues) IssuesGetEvent(ctx context.Context, request operations.IssuesGe
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#get-a-label - API method documentation
 func (s *issues) IssuesGetLabel(ctx context.Context, request operations.IssuesGetLabelRequest) (*operations.IssuesGetLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -901,7 +901,7 @@ func (s *issues) IssuesGetLabel(ctx context.Context, request operations.IssuesGe
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#get-a-milestone - API method documentation
 func (s *issues) IssuesGetMilestone(ctx context.Context, request operations.IssuesGetMilestoneRequest) (*operations.IssuesGetMilestoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -971,7 +971,7 @@ func (s *issues) IssuesList(ctx context.Context, request operations.IssuesListRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1037,14 +1037,14 @@ func (s *issues) IssuesList(ctx context.Context, request operations.IssuesListRe
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-assignees - API method documentation
 func (s *issues) IssuesListAssignees(ctx context.Context, request operations.IssuesListAssigneesRequest) (*operations.IssuesListAssigneesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/assignees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/assignees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1099,14 +1099,14 @@ func (s *issues) IssuesListAssignees(ctx context.Context, request operations.Iss
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-issue-comments - API method documentation
 func (s *issues) IssuesListComments(ctx context.Context, request operations.IssuesListCommentsRequest) (*operations.IssuesListCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1163,14 +1163,14 @@ func (s *issues) IssuesListComments(ctx context.Context, request operations.Issu
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-issue-comments-for-a-repository - API method documentation
 func (s *issues) IssuesListCommentsForRepo(ctx context.Context, request operations.IssuesListCommentsForRepoRequest) (*operations.IssuesListCommentsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1234,14 +1234,14 @@ func (s *issues) IssuesListCommentsForRepo(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-issue-events - API method documentation
 func (s *issues) IssuesListEvents(ctx context.Context, request operations.IssuesListEventsRequest) (*operations.IssuesListEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1295,14 +1295,14 @@ func (s *issues) IssuesListEvents(ctx context.Context, request operations.Issues
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-issue-events-for-a-repository - API method documentation
 func (s *issues) IssuesListEventsForRepo(ctx context.Context, request operations.IssuesListEventsForRepoRequest) (*operations.IssuesListEventsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1356,14 +1356,14 @@ func (s *issues) IssuesListEventsForRepo(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-timeline-events-for-an-issue - API method documentation
 func (s *issues) IssuesListEventsForTimeline(ctx context.Context, request operations.IssuesListEventsForTimelineRequest) (*operations.IssuesListEventsForTimelineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/timeline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/timeline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1432,7 +1432,7 @@ func (s *issues) IssuesListForAuthenticatedUser(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1493,14 +1493,14 @@ func (s *issues) IssuesListForAuthenticatedUser(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-organization-issues-assigned-to-the-authenticated-user - API method documentation
 func (s *issues) IssuesListForOrg(ctx context.Context, request operations.IssuesListForOrgRequest) (*operations.IssuesListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/issues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/issues", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1560,14 +1560,14 @@ func (s *issues) IssuesListForOrg(ctx context.Context, request operations.Issues
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-repository-issues - API method documentation
 func (s *issues) IssuesListForRepo(ctx context.Context, request operations.IssuesListForRepoRequest) (*operations.IssuesListForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1633,14 +1633,14 @@ func (s *issues) IssuesListForRepo(ctx context.Context, request operations.Issue
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-labels-for-issues-in-a-milestone - API method documentation
 func (s *issues) IssuesListLabelsForMilestone(ctx context.Context, request operations.IssuesListLabelsForMilestoneRequest) (*operations.IssuesListLabelsForMilestoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}/labels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1684,14 +1684,14 @@ func (s *issues) IssuesListLabelsForMilestone(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-labels-for-a-repository - API method documentation
 func (s *issues) IssuesListLabelsForRepo(ctx context.Context, request operations.IssuesListLabelsForRepoRequest) (*operations.IssuesListLabelsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1745,14 +1745,14 @@ func (s *issues) IssuesListLabelsForRepo(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-labels-for-an-issue - API method documentation
 func (s *issues) IssuesListLabelsOnIssue(ctx context.Context, request operations.IssuesListLabelsOnIssueRequest) (*operations.IssuesListLabelsOnIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1806,14 +1806,14 @@ func (s *issues) IssuesListLabelsOnIssue(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#list-milestones - API method documentation
 func (s *issues) IssuesListMilestones(ctx context.Context, request operations.IssuesListMilestonesRequest) (*operations.IssuesListMilestonesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1870,9 +1870,9 @@ func (s *issues) IssuesListMilestones(ctx context.Context, request operations.Is
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#lock-an-issue - API method documentation
 func (s *issues) IssuesLock(ctx context.Context, request operations.IssuesLockRequest) (*operations.IssuesLockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1937,7 +1937,7 @@ func (s *issues) IssuesLock(ctx context.Context, request operations.IssuesLockRe
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#remove-all-labels-from-an-issue - API method documentation
 func (s *issues) IssuesRemoveAllLabels(ctx context.Context, request operations.IssuesRemoveAllLabelsRequest) (*operations.IssuesRemoveAllLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1984,9 +1984,9 @@ func (s *issues) IssuesRemoveAllLabels(ctx context.Context, request operations.I
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#remove-assignees-from-an-issue - API method documentation
 func (s *issues) IssuesRemoveAssignees(ctx context.Context, request operations.IssuesRemoveAssigneesRequest) (*operations.IssuesRemoveAssigneesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2037,7 +2037,7 @@ func (s *issues) IssuesRemoveAssignees(ctx context.Context, request operations.I
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#remove-a-label-from-an-issue - API method documentation
 func (s *issues) IssuesRemoveLabel(ctx context.Context, request operations.IssuesRemoveLabelRequest) (*operations.IssuesRemoveLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2095,9 +2095,9 @@ func (s *issues) IssuesRemoveLabel(ctx context.Context, request operations.Issue
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#set-labels-for-an-issue - API method documentation
 func (s *issues) IssuesSetLabels(ctx context.Context, request operations.IssuesSetLabelsRequest) (*operations.IssuesSetLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2168,7 +2168,7 @@ func (s *issues) IssuesSetLabels(ctx context.Context, request operations.IssuesS
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#unlock-an-issue - API method documentation
 func (s *issues) IssuesUnlock(ctx context.Context, request operations.IssuesUnlockRequest) (*operations.IssuesUnlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2217,9 +2217,9 @@ func (s *issues) IssuesUnlock(ctx context.Context, request operations.IssuesUnlo
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues/#update-an-issue - API method documentation
 func (s *issues) IssuesUpdate(ctx context.Context, request operations.IssuesUpdateRequest) (*operations.IssuesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2305,9 +2305,9 @@ func (s *issues) IssuesUpdate(ctx context.Context, request operations.IssuesUpda
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#update-an-issue-comment - API method documentation
 func (s *issues) IssuesUpdateComment(ctx context.Context, request operations.IssuesUpdateCommentRequest) (*operations.IssuesUpdateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2370,9 +2370,9 @@ func (s *issues) IssuesUpdateComment(ctx context.Context, request operations.Iss
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#update-a-label - API method documentation
 func (s *issues) IssuesUpdateLabel(ctx context.Context, request operations.IssuesUpdateLabelRequest) (*operations.IssuesUpdateLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/labels/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2422,9 +2422,9 @@ func (s *issues) IssuesUpdateLabel(ctx context.Context, request operations.Issue
 // https://docs.github.com/enterprise-server@2.22/rest/reference/issues#update-a-milestone - API method documentation
 func (s *issues) IssuesUpdateMilestone(ctx context.Context, request operations.IssuesUpdateMilestoneRequest) (*operations.IssuesUpdateMilestoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

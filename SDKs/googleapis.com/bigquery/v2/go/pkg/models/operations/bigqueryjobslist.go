@@ -10,29 +10,24 @@ import (
 )
 
 type BigqueryJobsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsListSecurity struct {
 	Option1 *BigqueryJobsListSecurityOption1 `security:"option"`
 	Option2 *BigqueryJobsListSecurityOption2 `security:"option"`
 	Option3 *BigqueryJobsListSecurityOption3 `security:"option"`
-}
-
-type BigqueryJobsListPathParams struct {
-	// Project ID of the jobs to list
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // BigqueryJobsListProjectionEnum - Restrict information returned to a set of selected fields
@@ -85,7 +80,7 @@ func (e *BigqueryJobsListStateFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BigqueryJobsListQueryParams struct {
+type BigqueryJobsListRequest struct {
 	// Whether to display jobs owned by all users in the project. Default false
 	AllUsers *bool `queryParam:"style=form,explode=true,name=allUsers"`
 	// Data format for the response.
@@ -108,6 +103,8 @@ type BigqueryJobsListQueryParams struct {
 	ParentJobID *string `queryParam:"style=form,explode=true,name=parentJobId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the jobs to list
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Restrict information returned to a set of selected fields
 	Projection *BigqueryJobsListProjectionEnum `queryParam:"style=form,explode=true,name=projection"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -116,12 +113,6 @@ type BigqueryJobsListQueryParams struct {
 	StateFilter []BigqueryJobsListStateFilterEnum `queryParam:"style=form,explode=true,name=stateFilter"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryJobsListRequest struct {
-	PathParams  BigqueryJobsListPathParams
-	QueryParams BigqueryJobsListQueryParams
-	Security    BigqueryJobsListSecurity
 }
 
 type BigqueryJobsListResponse struct {

@@ -43,7 +43,7 @@ func newAssetsPrices(defaultClient, securityClient HTTPClient, serverURL, langua
 //
 // References
 // * [Center for Research in Security Prices](https://www.crsp.org/products/documentation/crsp-calculations)
-func (s *assetsPrices) PostAssetsPricesAdjusted(ctx context.Context, request operations.PostAssetsPricesAdjustedRequest) (*operations.PostAssetsPricesAdjustedResponse, error) {
+func (s *assetsPrices) PostAssetsPricesAdjusted(ctx context.Context, request operations.PostAssetsPricesAdjustedRequestBody) (*operations.PostAssetsPricesAdjustedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/prices/adjusted"
 
@@ -108,7 +108,7 @@ func (s *assetsPrices) PostAssetsPricesAdjusted(ctx context.Context, request ope
 //
 // References
 // * [Center for Research in Security Prices](https://www.crsp.org/products/documentation/crsp-calculations)
-func (s *assetsPrices) PostAssetsPricesAdjustedForward(ctx context.Context, request operations.PostAssetsPricesAdjustedForwardRequest) (*operations.PostAssetsPricesAdjustedForwardResponse, error) {
+func (s *assetsPrices) PostAssetsPricesAdjustedForward(ctx context.Context, request operations.PostAssetsPricesAdjustedForwardRequestBody) (*operations.PostAssetsPricesAdjustedForwardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/prices/adjusted/forward"
 

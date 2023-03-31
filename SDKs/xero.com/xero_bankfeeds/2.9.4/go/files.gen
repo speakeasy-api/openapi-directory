@@ -25,7 +25,6 @@ pkg/models/shared/feedconnection.go
 pkg/models/shared/error.go
 pkg/models/shared/currencycodeenum.go
 pkg/models/shared/countrycodeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/statements.go
 pkg/models/shared/statement.go
 pkg/models/shared/statementline.go

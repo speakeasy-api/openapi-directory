@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsUpdatePasswordCredentialsPathParams struct {
+type ServicePrincipalsUpdatePasswordCredentialsRequest struct {
+	// Parameters to update the passwordCredentials of an existing service principal.
+	PasswordCredentialsUpdateParameters shared.PasswordCredentialsUpdateParameters `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the service principal.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsUpdatePasswordCredentialsQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsUpdatePasswordCredentialsRequest struct {
-	PathParams  ServicePrincipalsUpdatePasswordCredentialsPathParams
-	QueryParams ServicePrincipalsUpdatePasswordCredentialsQueryParams
-	// Parameters to update the passwordCredentials of an existing service principal.
-	Request shared.PasswordCredentialsUpdateParameters `request:"mediaType=application/json"`
 }
 
 type ServicePrincipalsUpdatePasswordCredentialsResponse struct {

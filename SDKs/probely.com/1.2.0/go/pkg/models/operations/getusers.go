@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -17,10 +17,6 @@ type GetUsersQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Search term
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 // GetUsers401ApplicationJSON - Access token is missing or invalid

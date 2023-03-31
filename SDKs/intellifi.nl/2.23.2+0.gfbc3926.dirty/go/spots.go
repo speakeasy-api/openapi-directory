@@ -43,9 +43,9 @@ func newSpots(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AddSpotSet - Create spotset
 func (s *spots) AddSpotSet(ctx context.Context, request operations.AddSpotSetRequest) (*operations.AddSpotSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpotSetCreate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,7 +97,7 @@ func (s *spots) AddSpotSet(ctx context.Context, request operations.AddSpotSetReq
 // GetSpotByID - Get spot
 func (s *spots) GetSpotByID(ctx context.Context, request operations.GetSpotByIDRequest) (*operations.GetSpotByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -141,7 +141,7 @@ func (s *spots) GetSpotByID(ctx context.Context, request operations.GetSpotByIDR
 // GetSpotSetByID - Get spotset
 func (s *spots) GetSpotSetByID(ctx context.Context, request operations.GetSpotSetByIDRequest) (*operations.GetSpotSetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets/{setId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets/{setId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *spots) GetSpotSetByID(ctx context.Context, request operations.GetSpotSe
 // GetSpotSetsByID - Get spotsets
 func (s *spots) GetSpotSetsByID(ctx context.Context, request operations.GetSpotSetsByIDRequest) (*operations.GetSpotSetsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *spots) GetSpots(ctx context.Context, request operations.GetSpotsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -277,9 +277,9 @@ func (s *spots) GetSpots(ctx context.Context, request operations.GetSpotsRequest
 // UpdateSpot - Update existing spot
 func (s *spots) UpdateSpot(ctx context.Context, request operations.UpdateSpotRequest) (*operations.UpdateSpotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpotUpdateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -331,9 +331,9 @@ func (s *spots) UpdateSpot(ctx context.Context, request operations.UpdateSpotReq
 // UpdateSpotSet - Update existing spotset
 func (s *spots) UpdateSpotSet(ctx context.Context, request operations.UpdateSpotSetRequest) (*operations.UpdateSpotSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets/{setId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spots/{id}/sets/{setId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpotSetUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

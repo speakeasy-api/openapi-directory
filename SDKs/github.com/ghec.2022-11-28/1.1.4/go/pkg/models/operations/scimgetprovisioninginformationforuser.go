@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScimGetProvisioningInformationForUserPathParams struct {
+type ScimGetProvisioningInformationForUserRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the SCIM user.
 	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
-type ScimGetProvisioningInformationForUserRequest struct {
-	PathParams ScimGetProvisioningInformationForUserPathParams
 }
 
 type ScimGetProvisioningInformationForUserResponse struct {

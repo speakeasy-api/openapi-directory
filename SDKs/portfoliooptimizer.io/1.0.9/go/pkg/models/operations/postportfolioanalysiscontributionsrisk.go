@@ -20,10 +20,6 @@ type PostPortfolioAnalysisContributionsRiskRequestBody struct {
 	Portfolios             []PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisContributionsRiskRequest struct {
-	Request PostPortfolioAnalysisContributionsRiskRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios struct {
 	// assetsGroupsRiskContributions[k] is the risk contribution of the group of assets k to the risk of the portfolio
 	AssetsGroupsRiskContributions []float64 `json:"assetsGroupsRiskContributions,omitempty"`

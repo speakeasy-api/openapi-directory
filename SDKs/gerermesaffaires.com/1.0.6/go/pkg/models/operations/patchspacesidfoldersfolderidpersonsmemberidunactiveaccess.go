@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessPathParams struct {
+type PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessRequest struct {
 	// id of the customer folder
 	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// memberId of the person
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
-type PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessRequest struct {
-	PathParams PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessPathParams
 }
 
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessResponse struct {

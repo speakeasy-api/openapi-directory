@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRequest struct {
-	// User Credentials
-	Request shared.UserCredential `request:"mediaType=application/json"`
-}
-
 type CreateResponse struct {
 	// Bad Request
 	APIError    *shared.APIError

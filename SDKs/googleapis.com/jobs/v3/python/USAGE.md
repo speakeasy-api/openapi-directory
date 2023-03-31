@@ -4,57 +4,50 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.JobsProjectsClientEventsCreateRequest(
-    security=operations.JobsProjectsClientEventsCreateSecurity(
-        option1=operations.JobsProjectsClientEventsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.JobsProjectsClientEventsCreatePathParams(
-        parent="aut",
-    ),
-    query_params=operations.JobsProjectsClientEventsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="ipsam",
-        alt="media",
-        callback="similique",
-        fields="est",
-        key="optio",
-        oauth_token="dolor",
-        pretty_print=True,
-        quota_user="dolore",
-        upload_type="itaque",
-        upload_protocol="hic",
-    ),
-    request=shared.CreateClientEventRequest(
+    dollar_xgafv="2",
+    create_client_event_request=shared.CreateClientEventRequest(
         client_event=shared.ClientEvent(
-            create_time="velit",
-            event_id="ad",
+            create_time="provident",
+            event_id="distinctio",
             extra_info={
-                "sit": "similique",
-                "reprehenderit": "vero",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
             job_event=shared.JobEvent(
                 jobs=[
-                    "tempora",
-                    "harum",
-                    "aut",
+                    "magnam",
+                    "debitis",
                 ],
-                type="APPLICATION_START_FROM_SEARCH",
+                type="JOB_EVENT_TYPE_UNSPECIFIED",
             ),
-            parent_event_id="mollitia",
-            request_id="et",
+            parent_event_id="delectus",
+            request_id="tempora",
         ),
     ),
+    access_token="suscipit",
+    alt="media",
+    callback="minus",
+    fields_="placeat",
+    key="voluptatum",
+    oauth_token="iusto",
+    parent="excepturi",
+    pretty_print=False,
+    quota_user="nisi",
+    upload_type="recusandae",
+    upload_protocol="temporibus",
 )
     
-res = s.projects.jobs_projects_client_events_create(req)
+res = s.projects.jobs_projects_client_events_create(req, operations.JobsProjectsClientEventsCreateSecurity(
+    option1=operations.JobsProjectsClientEventsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.client_event is not None:
     # handle response

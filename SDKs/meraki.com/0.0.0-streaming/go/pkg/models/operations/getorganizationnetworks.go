@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetOrganizationNetworksPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationNetworksQueryParams struct {
+type GetOrganizationNetworksRequest struct {
 	// An optional parameter that is the ID of a config template. Will return all networks bound to that template.
 	ConfigTemplateID *string `queryParam:"style=form,explode=true,name=configTemplateId"`
-}
-
-type GetOrganizationNetworksRequest struct {
-	PathParams  GetOrganizationNetworksPathParams
-	QueryParams GetOrganizationNetworksQueryParams
+	OrganizationID   string  `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationNetworksResponse struct {

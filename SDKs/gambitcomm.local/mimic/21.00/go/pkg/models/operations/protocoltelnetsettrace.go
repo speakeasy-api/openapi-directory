@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetSetTracePathParams struct {
+type ProtocolTelnetSetTraceRequest struct {
 	// Agent to set the TELNET tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the TELNET tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolTelnetSetTraceRequest struct {
-	PathParams ProtocolTelnetSetTracePathParams
 }
 
 type ProtocolTelnetSetTraceResponse struct {

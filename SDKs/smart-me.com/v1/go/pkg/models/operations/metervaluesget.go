@@ -8,17 +8,9 @@ import (
 	"time"
 )
 
-type MeterValuesGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type MeterValuesGetQueryParams struct {
-	Date time.Time `queryParam:"style=form,explode=true,name=date"`
-}
-
 type MeterValuesGetRequest struct {
-	PathParams  MeterValuesGetPathParams
-	QueryParams MeterValuesGetQueryParams
+	Date time.Time `queryParam:"style=form,explode=true,name=date"`
+	ID   string    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type MeterValuesGetResponse struct {

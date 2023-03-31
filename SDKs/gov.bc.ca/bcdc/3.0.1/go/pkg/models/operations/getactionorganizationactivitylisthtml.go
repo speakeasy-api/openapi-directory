@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationActivityListHTMLQueryParams struct {
+type GetActionOrganizationActivityListHTMLRequest struct {
 	// The id or name of the organization
 	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetActionOrganizationActivityListHTMLRequest struct {
-	QueryParams GetActionOrganizationActivityListHTMLQueryParams
 }
 
 type GetActionOrganizationActivityListHTMLResponse struct {

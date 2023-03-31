@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type MovePadUsingPOSTQueryParams struct {
+type MovePadUsingPOSTRequest struct {
 	DestinationID *string `queryParam:"style=form,explode=true,name=destinationID"`
 	Force         *string `queryParam:"style=form,explode=true,name=force"`
 	SourceID      *string `queryParam:"style=form,explode=true,name=sourceID"`
-}
-
-type MovePadUsingPOSTRequest struct {
-	QueryParams MovePadUsingPOSTQueryParams
 }
 
 // MovePadUsingPOST500ApplicationJSON - internal api error (code 2)

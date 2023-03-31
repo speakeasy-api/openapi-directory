@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineProjectsLocationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsGetSecurity struct {
@@ -28,14 +28,7 @@ type AppengineProjectsLocationsGetSecurity struct {
 	Option3 *AppengineProjectsLocationsGetSecurityOption3 `security:"option"`
 }
 
-type AppengineProjectsLocationsGetPathParams struct {
-	// Part of `name`. See documentation of `projectsId`.
-	LocationsID string `pathParam:"style=simple,explode=false,name=locationsId"`
-	// Part of `name`. Resource name for the location.
-	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
-}
-
-type AppengineProjectsLocationsGetQueryParams struct {
+type AppengineProjectsLocationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,22 +41,20 @@ type AppengineProjectsLocationsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Part of `name`. See documentation of `projectsId`.
+	LocationsID string `pathParam:"style=simple,explode=false,name=locationsId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Part of `name`. Resource name for the location.
+	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineProjectsLocationsGetRequest struct {
-	PathParams  AppengineProjectsLocationsGetPathParams
-	QueryParams AppengineProjectsLocationsGetQueryParams
-	Security    AppengineProjectsLocationsGetSecurity
 }
 
 type AppengineProjectsLocationsGetResponse struct {

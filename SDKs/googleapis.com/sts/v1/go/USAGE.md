@@ -14,23 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.StsIntrospectRequest{
-        QueryParams: operations.StsIntrospectQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
+        DollarXgafv: "2",
+        GoogleIdentityStsV1IntrospectTokenRequest: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
+            Token: "provident",
+            TokenTypeHint: "distinctio",
         },
-        Request: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
-            Token: "deserunt",
-            TokenTypeHint: "suscipit",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()

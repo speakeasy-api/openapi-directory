@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetDelayPathParams struct {
+type SetDelayRequest struct {
 	// Agent to set the delay time
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Delay time of the agent
 	Delay int `pathParam:"style=simple,explode=false,name=delay"`
-}
-
-type SetDelayRequest struct {
-	PathParams SetDelayPathParams
 }
 
 type SetDelayResponse struct {

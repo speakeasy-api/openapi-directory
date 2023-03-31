@@ -48,10 +48,6 @@ type ImGroupCreateApplicationJSON struct {
 	Type *ImGroupCreateApplicationJSONTypeEnum `json:"type,omitempty"`
 }
 
-type ImGroupCreateRequest struct {
-	Request ImGroupCreateApplicationJSON `request:"mediaType=application/json"`
-}
-
 // ImGroupCreate201ApplicationXML - **HTTP Status Code:** `201`<br>
 // IM Group created.
 type ImGroupCreate201ApplicationXML struct {

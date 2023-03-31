@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvoiceAPIPdfQueryParams struct {
-	ID            int   `queryParam:"style=form,explode=true,name=id"`
-	SignedVersion *bool `queryParam:"style=form,explode=true,name=signedVersion"`
-}
-
-type InvoiceAPIPdfHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type InvoiceAPIPdfRequest struct {
-	QueryParams InvoiceAPIPdfQueryParams
-	Headers     InvoiceAPIPdfHeaders
+	ID            int    `queryParam:"style=form,explode=true,name=id"`
+	SignedVersion *bool  `queryParam:"style=form,explode=true,name=signedVersion"`
+	XAuthKey      string `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret   string `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type InvoiceAPIPdfResponse struct {

@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetChannelPathParams struct {
+type GetChannelRequest struct {
 	// Channel ID: Unique Identifier of a channel.
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// Unique identifier of the user who is the owner of the channel.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetChannelRequest struct {
-	PathParams GetChannelPathParams
-	Security   GetChannelSecurity
 }
 
 // GetChannel200ApplicationXMLTypeEnum - Type of the channel. The value can be one of the following:<br>

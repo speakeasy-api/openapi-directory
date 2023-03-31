@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIterationJSONPathParams struct {
+type UpdateIterationJSONRequest struct {
+	// The updated iteration model.
+	IterationInput shared.IterationInput `request:"mediaType=application/json"`
 	// Iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// Project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateIterationJSONRequest struct {
-	PathParams UpdateIterationJSONPathParams
-	// The updated iteration model.
-	Request shared.IterationInput `request:"mediaType=application/json"`
 }
 
 type UpdateIterationJSONResponse struct {

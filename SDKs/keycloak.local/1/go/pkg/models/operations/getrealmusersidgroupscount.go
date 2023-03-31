@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetRealmUsersIDGroupsCountPathParams struct {
+type GetRealmUsersIDGroupsCountRequest struct {
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmUsersIDGroupsCountQueryParams struct {
+	Realm  string  `pathParam:"style=simple,explode=false,name=realm"`
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetRealmUsersIDGroupsCountRequest struct {
-	PathParams  GetRealmUsersIDGroupsCountPathParams
-	QueryParams GetRealmUsersIDGroupsCountQueryParams
 }
 
 type GetRealmUsersIDGroupsCountResponse struct {

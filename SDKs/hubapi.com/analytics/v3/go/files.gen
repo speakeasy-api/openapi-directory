@@ -16,5 +16,4 @@ pkg/models/operations/posteventsv3send.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/behavioraleventhttpcompletionrequest.go
-pkg/models/shared/security.go
 USAGE.md

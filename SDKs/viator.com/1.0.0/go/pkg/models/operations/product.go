@@ -34,7 +34,10 @@ func (e *ProductVoucherOptionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProductQueryParams struct {
+type ProductRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **unique alphanumeric identifier** of the product
 	Code *string `queryParam:"style=form,explode=true,name=code"`
 	// **currency code** for the currency in which pricing is displayed
@@ -65,17 +68,6 @@ type ProductQueryParams struct {
 	// - `"VOUCHER_E"`: EVouchers + Paper Vouchers accepted
 	//
 	VoucherOption *ProductVoucherOptionEnum `queryParam:"style=form,explode=true,name=voucherOption"`
-}
-
-type ProductHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type ProductRequest struct {
-	QueryParams ProductQueryParams
-	Headers     ProductHeaders
 }
 
 type Product200ApplicationJSONDataAgeBands struct {

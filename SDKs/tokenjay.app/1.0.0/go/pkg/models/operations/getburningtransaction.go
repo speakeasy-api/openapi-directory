@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetBurningTransactionPathParams struct {
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
-}
-
 type GetBurningTransactionRequest struct {
-	PathParams GetBurningTransactionPathParams
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type GetBurningTransactionResponse struct {

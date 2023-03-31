@@ -33,15 +33,11 @@ func (e *CompetitionFixturesLeagueDetailsFormatEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type CompetitionFixturesLeagueDetailsPathParams struct {
+type CompetitionFixturesLeagueDetailsRequest struct {
 	// A LoL competition/league unique CompetitionId. Possible values include: <code>100000019</code>, etc.
 	Competitionid string `pathParam:"style=simple,explode=false,name=competitionid"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format CompetitionFixturesLeagueDetailsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type CompetitionFixturesLeagueDetailsRequest struct {
-	PathParams CompetitionFixturesLeagueDetailsPathParams
 }
 
 type CompetitionFixturesLeagueDetailsResponse struct {

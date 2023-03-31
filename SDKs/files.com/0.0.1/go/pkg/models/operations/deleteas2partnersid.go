@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAs2PartnersIDPathParams struct {
+type DeleteAs2PartnersIDRequest struct {
 	// As2 Partner ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAs2PartnersIDRequest struct {
-	PathParams DeleteAs2PartnersIDPathParams
 }
 
 type DeleteAs2PartnersIDResponse struct {

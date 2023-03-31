@@ -33,7 +33,7 @@ func newStats(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GamesStatsGet - Returns engagement and spend statistics in this application for the currently authenticated user.
-func (s *stats) GamesStatsGet(ctx context.Context, request operations.GamesStatsGetRequest) (*operations.GamesStatsGetResponse, error) {
+func (s *stats) GamesStatsGet(ctx context.Context, request operations.GamesStatsGetRequest, security operations.GamesStatsGetSecurity) (*operations.GamesStatsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/stats"
 
@@ -42,11 +42,11 @@ func (s *stats) GamesStatsGet(ctx context.Context, request operations.GamesStats
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

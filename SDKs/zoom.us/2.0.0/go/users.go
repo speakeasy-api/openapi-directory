@@ -42,14 +42,14 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *users) DelUserVB(ctx context.Context, request operations.DelUserVBRequest) (*operations.DelUserVBResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings/virtual_backgrounds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,11 +97,11 @@ func (s *users) DelUserVB(ctx context.Context, request operations.DelUserVBReque
 // **Scope:** `user:master`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) SwitchUserAccount(ctx context.Context, request operations.SwitchUserAccountRequest) (*operations.SwitchUserAccountResponse, error) {
+func (s *users) SwitchUserAccount(ctx context.Context, request operations.SwitchUserAccountRequest, security operations.SwitchUserAccountSecurity) (*operations.SwitchUserAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/users/{userId}/account", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/users/{userId}/account", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -113,7 +113,7 @@ func (s *users) SwitchUserAccount(ctx context.Context, request operations.Switch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,9 +166,9 @@ func (s *users) SwitchUserAccount(ctx context.Context, request operations.Switch
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *users) UpdatePresenceStatus(ctx context.Context, request operations.UpdatePresenceStatusRequest) (*operations.UpdatePresenceStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/presence_status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/presence_status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -235,9 +235,9 @@ func (s *users) UpdatePresenceStatus(ctx context.Context, request operations.Upd
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *users) UploadVBuser(ctx context.Context, request operations.UploadVBuserRequest) (*operations.UploadVBuserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings/virtual_backgrounds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,14 +302,14 @@ func (s *users) UploadVBuser(ctx context.Context, request operations.UploadVBuse
 // <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b>If a user's status is pending, only `id` and `created_at` fields will be returned. The value of `created_at` will be the time at which the API call was made until the user activates their account.</p>
 func (s *users) User(ctx context.Context, request operations.UserRequest) (*operations.UserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -365,11 +365,11 @@ func (s *users) User(ctx context.Context, request operations.UserRequest) (*oper
 // **Scopes**: `user:write:admin` `user:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *users) UserAssistantCreate(ctx context.Context, request operations.UserAssistantCreateRequest) (*operations.UserAssistantCreateResponse, error) {
+func (s *users) UserAssistantCreate(ctx context.Context, request operations.UserAssistantCreateRequest, security operations.UserAssistantCreateSecurity) (*operations.UserAssistantCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *users) UserAssistantCreate(ctx context.Context, request operations.User
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,7 +441,7 @@ func (s *users) UserAssistantCreate(ctx context.Context, request operations.User
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *users) UserAssistantDelete(ctx context.Context, request operations.UserAssistantDeleteRequest) (*operations.UserAssistantDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants/{assistantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants/{assistantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -487,7 +487,7 @@ func (s *users) UserAssistantDelete(ctx context.Context, request operations.User
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *users) UserAssistants(ctx context.Context, request operations.UserAssistantsRequest) (*operations.UserAssistantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -546,7 +546,7 @@ func (s *users) UserAssistants(ctx context.Context, request operations.UserAssis
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *users) UserAssistantsDelete(ctx context.Context, request operations.UserAssistantsDeleteRequest) (*operations.UserAssistantsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/assistants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -587,7 +587,7 @@ func (s *users) UserAssistantsDelete(ctx context.Context, request operations.Use
 // **Scopes:** `user:write:admin` `user:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserCreate(ctx context.Context, request operations.UserCreateRequest) (*operations.UserCreateResponse, error) {
+func (s *users) UserCreate(ctx context.Context, request operations.UserCreateApplicationJSON, security operations.UserCreateSecurity) (*operations.UserCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -606,7 +606,7 @@ func (s *users) UserCreate(ctx context.Context, request operations.UserCreateReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -663,14 +663,14 @@ func (s *users) UserCreate(ctx context.Context, request operations.UserCreateReq
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *users) UserDelete(ctx context.Context, request operations.UserDeleteRequest) (*operations.UserDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -711,7 +711,7 @@ func (s *users) UserDelete(ctx context.Context, request operations.UserDeleteReq
 // **Scopes:** `user:read:admin` `user:read`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserEmail(ctx context.Context, request operations.UserEmailRequest) (*operations.UserEmailResponse, error) {
+func (s *users) UserEmail(ctx context.Context, request operations.UserEmailRequest, security operations.UserEmailSecurity) (*operations.UserEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/email"
 
@@ -720,11 +720,11 @@ func (s *users) UserEmail(ctx context.Context, request operations.UserEmailReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -780,9 +780,9 @@ func (s *users) UserEmail(ctx context.Context, request operations.UserEmailReque
 // * The new email address should not already exist in Zoom.
 func (s *users) UserEmailUpdate(ctx context.Context, request operations.UserEmailUpdateRequest) (*operations.UserEmailUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -834,9 +834,9 @@ func (s *users) UserEmailUpdate(ctx context.Context, request operations.UserEmai
 // * Owner or admin of the Zoom account.
 func (s *users) UserPassword(ctx context.Context, request operations.UserPasswordRequest) (*operations.UserPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -889,7 +889,7 @@ func (s *users) UserPassword(ctx context.Context, request operations.UserPasswor
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *users) UserPermission(ctx context.Context, request operations.UserPermissionRequest) (*operations.UserPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -948,9 +948,9 @@ func (s *users) UserPermission(ctx context.Context, request operations.UserPermi
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *users) UserPicture(ctx context.Context, request operations.UserPictureRequest) (*operations.UserPictureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/picture", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/picture", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1000,16 +1000,16 @@ func (s *users) UserPicture(ctx context.Context, request operations.UserPictureR
 // **Scopes:** `user:write:admin` `user:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserSSOTokenDelete(ctx context.Context, request operations.UserSSOTokenDeleteRequest) (*operations.UserSSOTokenDeleteResponse, error) {
+func (s *users) UserSSOTokenDelete(ctx context.Context, request operations.UserSSOTokenDeleteRequest, security operations.UserSSOTokenDeleteSecurity) (*operations.UserSSOTokenDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/token", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1045,16 +1045,16 @@ func (s *users) UserSSOTokenDelete(ctx context.Context, request operations.UserS
 // **Scopes**: `user:write:admin` `user:write`
 //
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserSchedulerDelete(ctx context.Context, request operations.UserSchedulerDeleteRequest) (*operations.UserSchedulerDeleteResponse, error) {
+func (s *users) UserSchedulerDelete(ctx context.Context, request operations.UserSchedulerDeleteRequest, security operations.UserSchedulerDeleteSecurity) (*operations.UserSchedulerDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers/{schedulerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers/{schedulerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1091,16 +1091,16 @@ func (s *users) UserSchedulerDelete(ctx context.Context, request operations.User
 // **Scopes**: `user:read:admin` `user:read`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *users) UserSchedulers(ctx context.Context, request operations.UserSchedulersRequest) (*operations.UserSchedulersResponse, error) {
+func (s *users) UserSchedulers(ctx context.Context, request operations.UserSchedulersRequest, security operations.UserSchedulersSecurity) (*operations.UserSchedulersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1149,16 +1149,16 @@ func (s *users) UserSchedulers(ctx context.Context, request operations.UserSched
 // **Scopes**: `user:write:admin` `user:write`
 //
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserSchedulersDelete(ctx context.Context, request operations.UserSchedulersDeleteRequest) (*operations.UserSchedulersDeleteResponse, error) {
+func (s *users) UserSchedulersDelete(ctx context.Context, request operations.UserSchedulersDeleteRequest, security operations.UserSchedulersDeleteSecurity) (*operations.UserSchedulersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/schedulers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1190,20 +1190,20 @@ func (s *users) UserSchedulersDelete(ctx context.Context, request operations.Use
 // **Scopes:** `user:read:admin` `user:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *users) UserSettings(ctx context.Context, request operations.UserSettingsRequest) (*operations.UserSettingsResponse, error) {
+func (s *users) UserSettings(ctx context.Context, request operations.UserSettingsRequest, security operations.UserSettingsSecurity) (*operations.UserSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1252,11 +1252,11 @@ func (s *users) UserSettings(ctx context.Context, request operations.UserSetting
 // **Scopes:** `user:write:admin` `user:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *users) UserSettingsUpdate(ctx context.Context, request operations.UserSettingsUpdateRequest) (*operations.UserSettingsUpdateResponse, error) {
+func (s *users) UserSettingsUpdate(ctx context.Context, request operations.UserSettingsUpdateRequest, security operations.UserSettingsUpdateSecurity) (*operations.UserSettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1271,11 +1271,11 @@ func (s *users) UserSettingsUpdate(ctx context.Context, request operations.UserS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1308,11 +1308,11 @@ func (s *users) UserSettingsUpdate(ctx context.Context, request operations.UserS
 // An account owner or admins can deactivate as well as activate a user in a Zoom account. Deactivating a user will remove all licenses associated with a user. It will prevent the deactivated user from logging into their Zoom account. A deactivated user can be reactivated. Reactivating a user grants the user access to login to their Zoom account.<br> Use this API to either [deactivate](https://support.zoom.us/hc/en-us/articles/115005269946-Remove-User-from-your-Account#h_6a9bc1c3-d739-4945-b1f2-00b3b88fb5cc) an active user or to [reactivate](https://support.zoom.us/hc/en-us/articles/115005269946-Remove-User-from-your-Account#h_16319724-d120-4be6-af5d-31582d134ea0) a deactivated user .<br><br>**Scopes:** `user:write:admin` `user:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserStatus(ctx context.Context, request operations.UserStatusRequest) (*operations.UserStatusResponse, error) {
+func (s *users) UserStatus(ctx context.Context, request operations.UserStatusRequest, security operations.UserStatusSecurity) (*operations.UserStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1327,7 +1327,7 @@ func (s *users) UserStatus(ctx context.Context, request operations.UserStatusReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1365,20 +1365,20 @@ func (s *users) UserStatus(ctx context.Context, request operations.UserStatusReq
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 //
 // If a user signed into Zoom using Google or Facebook, a null value will be returned for the token. To get the token with this API, ask the user to sign into Zoom using their email and password instead.
-func (s *users) UserToken(ctx context.Context, request operations.UserTokenRequest) (*operations.UserTokenResponse, error) {
+func (s *users) UserToken(ctx context.Context, request operations.UserTokenRequest, security operations.UserTokenSecurity) (*operations.UserTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/token", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1427,9 +1427,9 @@ func (s *users) UserToken(ctx context.Context, request operations.UserTokenReque
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *users) UserUpdate(ctx context.Context, request operations.UserUpdateRequest) (*operations.UserUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1444,7 +1444,7 @@ func (s *users) UserUpdate(ctx context.Context, request operations.UserUpdateReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1492,7 +1492,7 @@ func (s *users) UserVanityName(ctx context.Context, request operations.UserVanit
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1543,7 +1543,7 @@ func (s *users) UserVanityName(ctx context.Context, request operations.UserVanit
 //
 // **Scope:** `user_zak:read`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *users) UserZak(ctx context.Context, request operations.UserZakRequest) (*operations.UserZakResponse, error) {
+func (s *users) UserZak(ctx context.Context) (*operations.UserZakResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/zak"
 
@@ -1552,7 +1552,7 @@ func (s *users) UserZak(ctx context.Context, request operations.UserZakRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1599,7 +1599,7 @@ func (s *users) UserZak(ctx context.Context, request operations.UserZakRequest) 
 // **Scopes:** `user:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *users) Users(ctx context.Context, request operations.UsersRequest) (*operations.UsersResponse, error) {
+func (s *users) Users(ctx context.Context, request operations.UsersRequest, security operations.UsersSecurity) (*operations.UsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -1608,11 +1608,11 @@ func (s *users) Users(ctx context.Context, request operations.UsersRequest) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -42,7 +42,6 @@ pkg/models/shared/productconversationsenum.go
 pkg/models/shared/asrresponsegetreport.go
 pkg/models/shared/asrstatusenum.go
 pkg/models/shared/productasrenum.go
-pkg/models/shared/security.go
 pkg/models/shared/smsresponsecreatereport.go
 pkg/models/shared/requeststatuscreatereportenum.go
 pkg/models/shared/linkscreatereport.go

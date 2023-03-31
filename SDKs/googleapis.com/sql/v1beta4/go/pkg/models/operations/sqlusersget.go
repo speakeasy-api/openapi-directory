@@ -8,13 +8,13 @@ import (
 )
 
 type SQLUsersGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLUsersGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLUsersGetSecurity struct {
@@ -22,16 +22,7 @@ type SQLUsersGetSecurity struct {
 	Option2 *SQLUsersGetSecurityOption2 `security:"option"`
 }
 
-type SQLUsersGetPathParams struct {
-	// Database instance ID. This does not include the project ID.
-	Instance string `pathParam:"style=simple,explode=false,name=instance"`
-	// User of the instance.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// Project ID of the project that contains the instance.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type SQLUsersGetQueryParams struct {
+type SQLUsersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,24 +35,24 @@ type SQLUsersGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Host of a user of the instance.
 	Host *string `queryParam:"style=form,explode=true,name=host"`
+	// Database instance ID. This does not include the project ID.
+	Instance string `pathParam:"style=simple,explode=false,name=instance"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// User of the instance.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project that contains the instance.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SQLUsersGetRequest struct {
-	PathParams  SQLUsersGetPathParams
-	QueryParams SQLUsersGetQueryParams
-	Security    SQLUsersGetSecurity
 }
 
 type SQLUsersGetResponse struct {

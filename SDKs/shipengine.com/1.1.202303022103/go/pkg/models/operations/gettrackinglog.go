@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrackingLogQueryParams struct {
+type GetTrackingLogRequest struct {
 	// Carrier code used to retrieve tracking information
 	CarrierCode *string `queryParam:"style=form,explode=true,name=carrier_code"`
 	// The tracking number associated with a shipment
 	TrackingNumber *string `queryParam:"style=form,explode=true,name=tracking_number"`
-}
-
-type GetTrackingLogRequest struct {
-	QueryParams GetTrackingLogQueryParams
 }
 
 type GetTrackingLogResponse struct {

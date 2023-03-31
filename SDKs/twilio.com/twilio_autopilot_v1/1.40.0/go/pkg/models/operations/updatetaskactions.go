@@ -12,14 +12,8 @@ var UpdateTaskActionsServerList = []string{
 }
 
 type UpdateTaskActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskActionsPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to update were defined.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) for which the task actions to update were defined.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTaskActionsUpdateTaskActionsRequest struct {
@@ -28,10 +22,11 @@ type UpdateTaskActionsUpdateTaskActionsRequest struct {
 }
 
 type UpdateTaskActionsRequest struct {
-	PathParams UpdateTaskActionsPathParams
-	Request    *UpdateTaskActionsUpdateTaskActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskActionsSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to update were defined.
+	AssistantSid string                                     `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateTaskActionsUpdateTaskActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) for which the task actions to update were defined.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type UpdateTaskActionsResponse struct {

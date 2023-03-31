@@ -8,20 +8,15 @@ import (
 )
 
 type SetpersonsawaySecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SetpersonsawayQueryParams struct {
+type SetpersonsawayRequest struct {
 	// ID of the Home you're interested in
 	HomeID string `queryParam:"style=form,explode=true,name=home_id"`
 	// If a person_id is specified, that person will be set as 'Away'. If no person_id is specified, the Home will be set as 'Empty'.
 	PersonID *string `queryParam:"style=form,explode=true,name=person_id"`
-}
-
-type SetpersonsawayRequest struct {
-	QueryParams SetpersonsawayQueryParams
-	Security    SetpersonsawaySecurity
 }
 
 type SetpersonsawayResponse struct {

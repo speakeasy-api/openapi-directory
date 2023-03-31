@@ -33,7 +33,7 @@ func newNumberChecks(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GetNumbersIsCube - Checks whether a given number is a cube number or not.
-func (s *numberChecks) GetNumbersIsCube(ctx context.Context, request operations.GetNumbersIsCubeRequest) (*operations.GetNumbersIsCubeResponse, error) {
+func (s *numberChecks) GetNumbersIsCube(ctx context.Context, request operations.GetNumbersIsCubeRequest, security operations.GetNumbersIsCubeSecurity) (*operations.GetNumbersIsCubeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/is-cube"
 
@@ -42,11 +42,11 @@ func (s *numberChecks) GetNumbersIsCube(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,7 +74,7 @@ func (s *numberChecks) GetNumbersIsCube(ctx context.Context, request operations.
 }
 
 // GetNumbersIsPalindrome - Checks whether a given number is a palindrome number or not.
-func (s *numberChecks) GetNumbersIsPalindrome(ctx context.Context, request operations.GetNumbersIsPalindromeRequest) (*operations.GetNumbersIsPalindromeResponse, error) {
+func (s *numberChecks) GetNumbersIsPalindrome(ctx context.Context, request operations.GetNumbersIsPalindromeRequest, security operations.GetNumbersIsPalindromeSecurity) (*operations.GetNumbersIsPalindromeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/is-palindrome"
 
@@ -83,11 +83,11 @@ func (s *numberChecks) GetNumbersIsPalindrome(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *numberChecks) GetNumbersIsPalindrome(ctx context.Context, request opera
 }
 
 // GetNumbersIsSquare - Checks whether a given number is a square number or not.
-func (s *numberChecks) GetNumbersIsSquare(ctx context.Context, request operations.GetNumbersIsSquareRequest) (*operations.GetNumbersIsSquareResponse, error) {
+func (s *numberChecks) GetNumbersIsSquare(ctx context.Context, request operations.GetNumbersIsSquareRequest, security operations.GetNumbersIsSquareSecurity) (*operations.GetNumbersIsSquareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/is-square"
 
@@ -124,11 +124,11 @@ func (s *numberChecks) GetNumbersIsSquare(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *numberChecks) GetNumbersIsSquare(ctx context.Context, request operation
 }
 
 // GetNumbersIsTriangle - Checks whether a given number is a triangle number or not.
-func (s *numberChecks) GetNumbersIsTriangle(ctx context.Context, request operations.GetNumbersIsTriangleRequest) (*operations.GetNumbersIsTriangleResponse, error) {
+func (s *numberChecks) GetNumbersIsTriangle(ctx context.Context, request operations.GetNumbersIsTriangleRequest, security operations.GetNumbersIsTriangleSecurity) (*operations.GetNumbersIsTriangleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/is-triangle"
 
@@ -165,11 +165,11 @@ func (s *numberChecks) GetNumbersIsTriangle(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *numberChecks) GetNumbersIsTriangle(ctx context.Context, request operati
 }
 
 // GetNumbersPrimeIsFermatPrime - Checks whether a given number is a known fermat prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsFermatPrime(ctx context.Context, request operations.GetNumbersPrimeIsFermatPrimeRequest) (*operations.GetNumbersPrimeIsFermatPrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsFermatPrime(ctx context.Context, request operations.GetNumbersPrimeIsFermatPrimeRequest, security operations.GetNumbersPrimeIsFermatPrimeSecurity) (*operations.GetNumbersPrimeIsFermatPrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-fermat-prime"
 
@@ -206,11 +206,11 @@ func (s *numberChecks) GetNumbersPrimeIsFermatPrime(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *numberChecks) GetNumbersPrimeIsFermatPrime(ctx context.Context, request
 }
 
 // GetNumbersPrimeIsFibonacciPrime - Checks whether a given number is a known fibonacci prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsFibonacciPrime(ctx context.Context, request operations.GetNumbersPrimeIsFibonacciPrimeRequest) (*operations.GetNumbersPrimeIsFibonacciPrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsFibonacciPrime(ctx context.Context, request operations.GetNumbersPrimeIsFibonacciPrimeRequest, security operations.GetNumbersPrimeIsFibonacciPrimeSecurity) (*operations.GetNumbersPrimeIsFibonacciPrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-fibonacci-prime"
 
@@ -247,11 +247,11 @@ func (s *numberChecks) GetNumbersPrimeIsFibonacciPrime(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,7 +279,7 @@ func (s *numberChecks) GetNumbersPrimeIsFibonacciPrime(ctx context.Context, requ
 }
 
 // GetNumbersPrimeIsMersennePrime - Checks whether a given number is a known mersenne prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsMersennePrime(ctx context.Context, request operations.GetNumbersPrimeIsMersennePrimeRequest) (*operations.GetNumbersPrimeIsMersennePrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsMersennePrime(ctx context.Context, request operations.GetNumbersPrimeIsMersennePrimeRequest, security operations.GetNumbersPrimeIsMersennePrimeSecurity) (*operations.GetNumbersPrimeIsMersennePrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-mersenne-prime"
 
@@ -288,11 +288,11 @@ func (s *numberChecks) GetNumbersPrimeIsMersennePrime(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -320,7 +320,7 @@ func (s *numberChecks) GetNumbersPrimeIsMersennePrime(ctx context.Context, reque
 }
 
 // GetNumbersPrimeIsPartitionPrime - Checks whether a given number is a known partition prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsPartitionPrime(ctx context.Context, request operations.GetNumbersPrimeIsPartitionPrimeRequest) (*operations.GetNumbersPrimeIsPartitionPrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsPartitionPrime(ctx context.Context, request operations.GetNumbersPrimeIsPartitionPrimeRequest, security operations.GetNumbersPrimeIsPartitionPrimeSecurity) (*operations.GetNumbersPrimeIsPartitionPrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-partition-prime"
 
@@ -329,11 +329,11 @@ func (s *numberChecks) GetNumbersPrimeIsPartitionPrime(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,7 +361,7 @@ func (s *numberChecks) GetNumbersPrimeIsPartitionPrime(ctx context.Context, requ
 }
 
 // GetNumbersPrimeIsPellPrime - Checks whether a given number is a known pell prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsPellPrime(ctx context.Context, request operations.GetNumbersPrimeIsPellPrimeRequest) (*operations.GetNumbersPrimeIsPellPrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsPellPrime(ctx context.Context, request operations.GetNumbersPrimeIsPellPrimeRequest, security operations.GetNumbersPrimeIsPellPrimeSecurity) (*operations.GetNumbersPrimeIsPellPrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-pell-prime"
 
@@ -370,11 +370,11 @@ func (s *numberChecks) GetNumbersPrimeIsPellPrime(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -402,7 +402,7 @@ func (s *numberChecks) GetNumbersPrimeIsPellPrime(ctx context.Context, request o
 }
 
 // GetNumbersPrimeIsPerfect - Checks whether a given number is a perfect number or not.
-func (s *numberChecks) GetNumbersPrimeIsPerfect(ctx context.Context, request operations.GetNumbersPrimeIsPerfectRequest) (*operations.GetNumbersPrimeIsPerfectResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsPerfect(ctx context.Context, request operations.GetNumbersPrimeIsPerfectRequest, security operations.GetNumbersPrimeIsPerfectSecurity) (*operations.GetNumbersPrimeIsPerfectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-perfect"
 
@@ -411,11 +411,11 @@ func (s *numberChecks) GetNumbersPrimeIsPerfect(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -443,7 +443,7 @@ func (s *numberChecks) GetNumbersPrimeIsPerfect(ctx context.Context, request ope
 }
 
 // GetNumbersPrimeIsPrime - Checks whether a given number is a known prime number or not.
-func (s *numberChecks) GetNumbersPrimeIsPrime(ctx context.Context, request operations.GetNumbersPrimeIsPrimeRequest) (*operations.GetNumbersPrimeIsPrimeResponse, error) {
+func (s *numberChecks) GetNumbersPrimeIsPrime(ctx context.Context, request operations.GetNumbersPrimeIsPrimeRequest, security operations.GetNumbersPrimeIsPrimeSecurity) (*operations.GetNumbersPrimeIsPrimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/prime/is-prime"
 
@@ -452,11 +452,11 @@ func (s *numberChecks) GetNumbersPrimeIsPrime(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

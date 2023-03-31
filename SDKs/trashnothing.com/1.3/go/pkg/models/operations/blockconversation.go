@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type BlockConversationPathParams struct {
+type BlockConversationRequest struct {
 	// The ID of the conversation to block.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type BlockConversationRequest struct {
-	PathParams BlockConversationPathParams
 }
 
 type BlockConversationResponse struct {

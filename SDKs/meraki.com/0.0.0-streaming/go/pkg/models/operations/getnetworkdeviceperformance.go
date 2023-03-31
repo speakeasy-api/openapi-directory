@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkDevicePerformancePathParams struct {
+type GetNetworkDevicePerformanceRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetNetworkDevicePerformanceRequest struct {
-	PathParams GetNetworkDevicePerformancePathParams
 }
 
 type GetNetworkDevicePerformanceResponse struct {

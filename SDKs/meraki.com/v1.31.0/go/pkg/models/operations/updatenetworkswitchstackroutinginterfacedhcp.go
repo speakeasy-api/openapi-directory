@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams struct {
-	InterfaceID   string `pathParam:"style=simple,explode=false,name=interfaceId"`
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
 // UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum - The DHCP lease time config for the dhcp server running on switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
 type UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum string
 
@@ -187,8 +181,10 @@ type UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody struct {
 }
 
 type UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest struct {
-	PathParams UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams
-	Request    *UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody `request:"mediaType=application/json"`
+	InterfaceID   string                                                   `pathParam:"style=simple,explode=false,name=interfaceId"`
+	NetworkID     string                                                   `pathParam:"style=simple,explode=false,name=networkId"`
+	SwitchStackID string                                                   `pathParam:"style=simple,explode=false,name=switchStackId"`
 }
 
 type UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse struct {

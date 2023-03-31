@@ -7,35 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ComputeNodeDisableSchedulingPathParams struct {
-	// The id of the compute node that you want to disable task scheduling.
-	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
-	// The id of the pool that contains the compute node.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-}
-
-type ComputeNodeDisableSchedulingQueryParams struct {
+type ComputeNodeDisableSchedulingRequest struct {
+	// The parameters for the request.
+	NodeDisableSchedulingParameter *shared.NodeDisableSchedulingParameter `request:"mediaType=application/json"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type ComputeNodeDisableSchedulingHeaders struct {
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The id of the compute node that you want to disable task scheduling.
+	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// The id of the pool that contains the compute node.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type ComputeNodeDisableSchedulingRequest struct {
-	PathParams  ComputeNodeDisableSchedulingPathParams
-	QueryParams ComputeNodeDisableSchedulingQueryParams
-	Headers     ComputeNodeDisableSchedulingHeaders
-	// The parameters for the request.
-	Request *shared.NodeDisableSchedulingParameter `request:"mediaType=application/json"`
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type ComputeNodeDisableSchedulingResponse struct {

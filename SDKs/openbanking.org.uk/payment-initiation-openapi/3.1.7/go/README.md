@@ -25,102 +25,97 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateDomesticPaymentConsentsJSONRequest{
-        Security: operations.CreateDomesticPaymentConsentsJSONSecurity{
-            TPPOAuth2Security: shared.SchemeTppoAuth2Security{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateDomesticPaymentConsentsJSONHeaders{
-            Authorization: "corrupti",
-            XCustomerUserAgent: "provident",
-            XFapiAuthDate: "distinctio",
-            XFapiCustomerIPAddress: "quibusdam",
-            XFapiInteractionID: "unde",
-            XIdempotencyKey: "nulla",
-            XJwsSignature: "corrupti",
-        },
-        Request: shared.OBWriteDomesticConsent4{
+        Authorization: "corrupti",
+        OBWriteDomesticConsent4: shared.OBWriteDomesticConsent4{
             Data: shared.OBWriteDomesticConsent4Data{
                 Authorisation: &shared.OBWriteDomesticConsent4DataAuthorisation{
                     AuthorisationType: "Single",
-                    CompletionDateTime: "2022-05-18T09:34:54.894Z",
+                    CompletionDateTime: "2021-04-24T16:27:50.833Z",
                 },
                 Initiation: shared.OBWriteDomesticConsent4DataInitiation{
                     CreditorAccount: shared.OBWriteDomesticConsent4DataInitiationCreditorAccount{
-                        Identification: "deserunt",
-                        Name: "suscipit",
-                        SchemeName: "iure",
-                        SecondaryIdentification: "magnam",
+                        Identification: "unde",
+                        Name: "nulla",
+                        SchemeName: "corrupti",
+                        SecondaryIdentification: "illum",
                     },
                     CreditorPostalAddress: &shared.OBPostalAddress6{
                         AddressLine: []string{
-                            "ipsa",
-                            "delectus",
-                            "tempora",
-                            "suscipit",
+                            "error",
+                            "deserunt",
                         },
                         AddressType: "MailTo",
-                        BuildingNumber: "minus",
-                        Country: "Slovenia",
-                        CountrySubDivision: "voluptatum",
-                        Department: "iusto",
-                        PostCode: "39803-0603",
-                        StreetName: "repellendus",
-                        SubDepartment: "sapiente",
-                        TownName: "quo",
+                        BuildingNumber: "iure",
+                        Country: "French Guiana",
+                        CountrySubDivision: "debitis",
+                        Department: "ipsa",
+                        PostCode: "23478-5453",
+                        StreetName: "recusandae",
+                        SubDepartment: "temporibus",
+                        TownName: "ab",
                     },
                     DebtorAccount: &shared.OBWriteDomesticConsent4DataInitiationDebtorAccount{
-                        Identification: "odit",
-                        Name: "at",
-                        SchemeName: "at",
-                        SecondaryIdentification: "maiores",
+                        Identification: "quis",
+                        Name: "veritatis",
+                        SchemeName: "deserunt",
+                        SecondaryIdentification: "perferendis",
                     },
-                    EndToEndIdentification: "molestiae",
+                    EndToEndIdentification: "ipsam",
                     InstructedAmount: shared.OBWriteDomesticConsent4DataInitiationInstructedAmount{
-                        Amount: "quod",
-                        Currency: "quod",
+                        Amount: "repellendus",
+                        Currency: "sapiente",
                     },
-                    InstructionIdentification: "esse",
-                    LocalInstrument: "totam",
+                    InstructionIdentification: "quo",
+                    LocalInstrument: "odit",
                     RemittanceInformation: &shared.OBWriteDomesticConsent4DataInitiationRemittanceInformation{
-                        Reference: "porro",
-                        Unstructured: "dolorum",
+                        Reference: "at",
+                        Unstructured: "at",
                     },
                     SupplementaryData: map[string]interface{}{
-                        "nam": "officia",
+                        "molestiae": "quod",
+                        "quod": "esse",
+                        "totam": "porro",
+                        "dolorum": "dicta",
                     },
                 },
                 ReadRefundAccount: "Yes",
                 SCASupportData: &shared.OBSCASupportData1{
-                    AppliedAuthenticationApproach: "CA",
-                    ReferencePaymentOrderID: "deleniti",
-                    RequestedSCAExemptionType: "PartyToParty",
+                    AppliedAuthenticationApproach: "SCA",
+                    ReferencePaymentOrderID: "occaecati",
+                    RequestedSCAExemptionType: "ContactlessTravel",
                 },
             },
             Risk: shared.OBRisk1{
                 DeliveryAddress: &shared.OBRisk1DeliveryAddress{
                     AddressLine: []string{
+                        "hic",
+                        "optio",
                         "totam",
-                        "beatae",
-                        "commodi",
-                        "molestiae",
                     },
-                    BuildingNumber: "modi",
-                    Country: "Cocos (Keeling) Islands",
-                    CountrySubDivision: "impedit",
-                    PostCode: "42510-3616",
-                    StreetName: "dolor",
-                    TownName: "natus",
+                    BuildingNumber: "beatae",
+                    Country: "Iraq",
+                    CountrySubDivision: "molestiae",
+                    PostCode: "17742",
+                    StreetName: "excepturi",
+                    TownName: "aspernatur",
                 },
-                MerchantCategoryCode: "laboriosam",
-                MerchantCustomerIdentification: "hic",
-                PaymentContextCode: "PartyToParty",
+                MerchantCategoryCode: "perferendis",
+                MerchantCustomerIdentification: "ad",
+                PaymentContextCode: "Other",
             },
         },
+        XCustomerUserAgent: "sed",
+        XFapiAuthDate: "iste",
+        XFapiCustomerIPAddress: "dolor",
+        XFapiInteractionID: "natus",
+        XIdempotencyKey: "laboriosam",
+        XJwsSignature: "hic",
     }
 
     ctx := context.Background()
-    res, err := s.DomesticPayments.CreateDomesticPaymentConsentsJSON(ctx, req)
+    res, err := s.DomesticPayments.CreateDomesticPaymentConsentsJSON(ctx, req, operations.CreateDomesticPaymentConsentsJSONSecurity{
+        TPPOAuth2Security: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -133,7 +128,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### DomesticPayments
@@ -217,4 +212,15 @@ func main() {
 * `GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails` - Get Payment Details
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

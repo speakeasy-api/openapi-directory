@@ -12,14 +12,8 @@ var CreateInteractionChannelInviteServerList = []string{
 }
 
 type CreateInteractionChannelInviteSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInteractionChannelInvitePathParams struct {
-	// The Channel SID for this Invite.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The Interaction SID for this Channel.
-	InteractionSid string `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInteractionChannelInviteCreateInteractionChannelInviteRequest struct {
@@ -28,10 +22,11 @@ type CreateInteractionChannelInviteCreateInteractionChannelInviteRequest struct 
 }
 
 type CreateInteractionChannelInviteRequest struct {
-	PathParams CreateInteractionChannelInvitePathParams
-	Request    *CreateInteractionChannelInviteCreateInteractionChannelInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateInteractionChannelInviteSecurity
-	ServerURL  *string
+	// The Channel SID for this Invite.
+	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	// The Interaction SID for this Channel.
+	InteractionSid string                                                               `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	RequestBody    *CreateInteractionChannelInviteCreateInteractionChannelInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateInteractionChannelInviteResponse struct {

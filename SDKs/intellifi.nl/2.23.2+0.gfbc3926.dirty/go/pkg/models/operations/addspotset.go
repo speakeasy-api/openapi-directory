@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddSpotSetPathParams struct {
+type AddSpotSetRequest struct {
+	// A JSON object containing spot set information
+	SpotSetCreate shared.SpotSetCreate `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AddSpotSetRequest struct {
-	PathParams AddSpotSetPathParams
-	// A JSON object containing spot set information
-	Request shared.SpotSetCreate `request:"mediaType=application/json"`
 }
 
 type AddSpotSetResponse struct {

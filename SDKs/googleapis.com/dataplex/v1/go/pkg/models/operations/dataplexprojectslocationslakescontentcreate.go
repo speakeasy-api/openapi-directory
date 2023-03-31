@@ -8,18 +8,14 @@ import (
 )
 
 type DataplexProjectsLocationsLakesContentCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsLakesContentCreatePathParams struct {
-	// Required. The resource name of the parent lake: projects/{project_id}/locations/{location_id}/lakes/{lake_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataplexProjectsLocationsLakesContentCreateQueryParams struct {
+type DataplexProjectsLocationsLakesContentCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                       *shared.XgafvEnum                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDataplexV1ContentInput *shared.GoogleCloudDataplexV1ContentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type DataplexProjectsLocationsLakesContentCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource name of the parent lake: projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type DataplexProjectsLocationsLakesContentCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Only validate the request, but do not perform mutations. The default is false.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type DataplexProjectsLocationsLakesContentCreateRequest struct {
-	PathParams  DataplexProjectsLocationsLakesContentCreatePathParams
-	QueryParams DataplexProjectsLocationsLakesContentCreateQueryParams
-	Request     *shared.GoogleCloudDataplexV1ContentInput `request:"mediaType=application/json"`
-	Security    DataplexProjectsLocationsLakesContentCreateSecurity
 }
 
 type DataplexProjectsLocationsLakesContentCreateResponse struct {

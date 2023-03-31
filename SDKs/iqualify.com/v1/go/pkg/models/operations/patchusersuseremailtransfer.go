@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchUsersUserEmailTransferPathParams struct {
+type PatchUsersUserEmailTransferRequest struct {
+	// transfer_data
+	TransferRequest shared.TransferRequest `request:"mediaType=application/json"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PatchUsersUserEmailTransferRequest struct {
-	PathParams PatchUsersUserEmailTransferPathParams
-	// transfer_data
-	Request shared.TransferRequest `request:"mediaType=application/json"`
 }
 
 type PatchUsersUserEmailTransferResponse struct {

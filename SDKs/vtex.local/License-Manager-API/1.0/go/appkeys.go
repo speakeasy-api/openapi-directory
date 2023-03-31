@@ -34,7 +34,7 @@ func newAppKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // Createnewappkey - Create new appkey
 // Creates a new pair of `appKey` and `appToken`.
-func (s *appKeys) Createnewappkey(ctx context.Context, request operations.CreatenewappkeyRequest) (*operations.CreatenewappkeyResponse, error) {
+func (s *appKeys) Createnewappkey(ctx context.Context, request shared.CreatenewappkeyRequest) (*operations.CreatenewappkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/vlm/appkeys"
 
@@ -98,7 +98,7 @@ func (s *appKeys) Getappkeysfromaccount(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -138,9 +138,9 @@ func (s *appKeys) Getappkeysfromaccount(ctx context.Context, request operations.
 // Activates or deactivates an `appKey` by its ID.
 func (s *appKeys) Updateappkey(ctx context.Context, request operations.UpdateappkeyRequest) (*operations.UpdateappkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/vlm/appkeys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/vlm/appkeys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateappkeyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSpecProductTypeListOfWorkgroupRawPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostSpecProductTypeListOfWorkgroupRawRequest struct {
-	PathParams PostSpecProductTypeListOfWorkgroupRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
+	RequestBody []byte `request:"mediaType=text/xml"`
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostSpecProductTypeListOfWorkgroupRawResponse struct {

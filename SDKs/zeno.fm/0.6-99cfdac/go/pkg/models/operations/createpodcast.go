@@ -18,10 +18,6 @@ type CreatePodcastRequestBody struct {
 	Podcast shared.Podcast `multipartForm:"name=podcast,json"`
 }
 
-type CreatePodcastRequest struct {
-	Request *CreatePodcastRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type CreatePodcastResponse struct {
 	Body        []byte
 	ContentType string

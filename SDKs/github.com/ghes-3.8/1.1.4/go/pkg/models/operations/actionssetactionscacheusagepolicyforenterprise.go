@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetActionsCacheUsagePolicyForEnterprisePathParams struct {
+type ActionsSetActionsCacheUsagePolicyForEnterpriseRequest struct {
+	ActionsCacheUsagePolicyEnterprise shared.ActionsCacheUsagePolicyEnterprise `request:"mediaType=application/json"`
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type ActionsSetActionsCacheUsagePolicyForEnterpriseRequest struct {
-	PathParams ActionsSetActionsCacheUsagePolicyForEnterprisePathParams
-	Request    shared.ActionsCacheUsagePolicyEnterprise `request:"mediaType=application/json"`
 }
 
 type ActionsSetActionsCacheUsagePolicyForEnterpriseResponse struct {

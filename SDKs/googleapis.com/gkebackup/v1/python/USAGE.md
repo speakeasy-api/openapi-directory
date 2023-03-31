@@ -4,74 +4,69 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest(
-    security=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams(
-        parent="explicabo",
-    ),
-    query_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="corporis",
-        alt="media",
-        backup_id="laboriosam",
-        callback="sed",
-        fields="blanditiis",
-        key="et",
-        oauth_token="voluptatum",
-        pretty_print=True,
-        quota_user="inventore",
-        upload_type="dolores",
-        upload_protocol="ut",
-    ),
-    request=shared.BackupInput(
+    dollar_xgafv="2",
+    backup_input=shared.BackupInput(
         cluster_metadata=shared.ClusterMetadata(
-            anthos_version="inventore",
+            anthos_version="provident",
             backup_crd_versions={
-                "ipsum": "consequatur",
-                "ut": "quibusdam",
-                "repellat": "odio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
-            cluster="et",
-            gke_version="nobis",
-            k8s_version="quia",
+            cluster="error",
+            gke_version="deserunt",
+            k8s_version="suscipit",
         ),
-        delete_lock_days=3054520383972741130,
-        description="ipsa",
+        delete_lock_days=437587,
+        description="magnam",
         encryption_key=shared.EncryptionKey(
-            gcp_kms_encryption_key="enim",
+            gcp_kms_encryption_key="debitis",
         ),
         labels={
-            "quibusdam": "qui",
-            "omnis": "quae",
-            "voluptatem": "nesciunt",
+            "delectus": "tempora",
         },
-        retain_days=8947363127042062471,
+        retain_days=383441,
         selected_applications=shared.NamespacedNames(
             namespaced_names=[
                 shared.NamespacedName(
-                    name="qui",
-                    namespace="dolores",
+                    name="minus",
+                    namespace="placeat",
+                ),
+                shared.NamespacedName(
+                    name="voluptatum",
+                    namespace="iusto",
                 ),
             ],
         ),
         selected_namespaces=shared.Namespaces(
             namespaces=[
-                "quod",
-                "quia",
+                "nisi",
+                "recusandae",
+                "temporibus",
             ],
         ),
     ),
+    access_token="ab",
+    alt="media",
+    backup_id="veritatis",
+    callback="deserunt",
+    fields_="perferendis",
+    key="ipsam",
+    oauth_token="repellendus",
+    parent="sapiente",
+    pretty_print=False,
+    quota_user="quo",
+    upload_type="odit",
+    upload_protocol="at",
 )
     
-res = s.projects.gkebackup_projects_locations_backup_plans_backups_create(req)
+res = s.projects.gkebackup_projects_locations_backup_plans_backups_create(req, operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response

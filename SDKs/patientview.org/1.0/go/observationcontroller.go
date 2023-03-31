@@ -36,7 +36,7 @@ func newObservationController(defaultClient, securityClient HTTPClient, serverUR
 // Given a User ID and observation code, retrieve all observations.
 func (s *observationController) GetObservationsByCode(ctx context.Context, request operations.GetObservationsByCodeRequest) (*operations.GetObservationsByCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,14 +86,14 @@ func (s *observationController) GetObservationsByCode(ctx context.Context, reque
 // Given a User ID and search parameters, retrieve a page of observations.
 func (s *observationController) GetObservationsByCodes(ctx context.Context, request operations.GetObservationsByCodesRequest) (*operations.GetObservationsByCodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -140,7 +140,7 @@ func (s *observationController) GetObservationsByCodes(ctx context.Context, requ
 // Given a User ID and observation code, retrieve patient entered observations.
 func (s *observationController) GetPatientEnteredObservationsByCode(ctx context.Context, request operations.GetPatientEnteredObservationsByCodeRequest) (*operations.GetPatientEnteredObservationsByCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}/patiententered", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}/patiententered", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

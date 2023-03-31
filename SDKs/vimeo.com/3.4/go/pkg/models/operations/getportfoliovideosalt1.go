@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfolioVideosAlt1PathParams struct {
-	// The ID of the portfolio.
-	PortfolioID float64 `pathParam:"style=simple,explode=false,name=portfolio_id"`
-}
-
 // GetPortfolioVideosAlt1FilterEnum - The attribute by which to filter the results.
 type GetPortfolioVideosAlt1FilterEnum string
 
@@ -77,7 +72,7 @@ func (e *GetPortfolioVideosAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPortfolioVideosAlt1QueryParams struct {
+type GetPortfolioVideosAlt1Request struct {
 	// The page that contains the video URI.
 	ContainingURI *string `queryParam:"style=form,explode=true,name=containing_uri"`
 	// The attribute by which to filter the results.
@@ -88,17 +83,14 @@ type GetPortfolioVideosAlt1QueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The ID of the portfolio.
+	PortfolioID float64 `pathParam:"style=simple,explode=false,name=portfolio_id"`
 	// The way to sort the results.
 	//
 	// Option descriptions:
 	//  * `default` - This will sort to the default sort set on the portfolio.
 	//
 	Sort *GetPortfolioVideosAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPortfolioVideosAlt1Request struct {
-	PathParams  GetPortfolioVideosAlt1PathParams
-	QueryParams GetPortfolioVideosAlt1QueryParams
 }
 
 type GetPortfolioVideosAlt1Response struct {

@@ -14,40 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest{
-        Security: operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ExecuteActionRequest{
+        DollarXgafv: "2",
+        ExecuteActionRequest: &shared.ExecuteActionRequest{
             Parameters: map[string]interface{}{
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
         },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        Name: "magnam",
+        OauthToken: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ConnectorsProjectsLocationsConnectionsActionsExecute(ctx, req)
+    res, err := s.Projects.ConnectorsProjectsLocationsConnectionsActionsExecute(ctx, req, operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

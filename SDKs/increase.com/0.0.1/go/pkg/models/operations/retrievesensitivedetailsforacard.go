@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveSensitiveDetailsForACardPathParams struct {
-	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
 type RetrieveSensitiveDetailsForACardRequest struct {
-	PathParams RetrieveSensitiveDetailsForACardPathParams
+	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
 type RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum string

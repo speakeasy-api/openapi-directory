@@ -59,10 +59,6 @@ type UpdateCurrentUserRequestBody struct {
 	SpecialNotices *int64 `multipartForm:"name=special_notices"`
 }
 
-type UpdateCurrentUserRequest struct {
-	Request *UpdateCurrentUserRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UpdateCurrentUserResponse struct {
 	ContentType string
 	// The updated user data.

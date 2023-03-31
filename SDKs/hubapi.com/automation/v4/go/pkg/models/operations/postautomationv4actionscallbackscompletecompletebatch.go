@@ -4,19 +4,12 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity struct {
-	Hapikey           *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest struct {
-	// The result of the completed action.
-	Request  shared.BatchInputCallbackCompletionBatchRequest `request:"mediaType=application/json"`
-	Security PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity
+	Hapikey           *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse struct {

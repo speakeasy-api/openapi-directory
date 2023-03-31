@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCameraSchedulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCameraSchedulesRequest struct {
-	PathParams GetNetworkCameraSchedulesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkCameraSchedulesResponse struct {

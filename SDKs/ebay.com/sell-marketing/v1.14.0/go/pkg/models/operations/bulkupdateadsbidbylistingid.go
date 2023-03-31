@@ -8,19 +8,14 @@ import (
 )
 
 type BulkUpdateAdsBidByListingIDSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkUpdateAdsBidByListingIDPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkUpdateAdsBidByListingIDRequest struct {
-	PathParams BulkUpdateAdsBidByListingIDPathParams
 	// This request object defines the fields for the <b>BulkCreateAdsByListingId</b> request.
-	Request  shared.BulkCreateAdRequest `request:"mediaType=application/json"`
-	Security BulkUpdateAdsBidByListingIDSecurity
+	BulkCreateAdRequest shared.BulkCreateAdRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type BulkUpdateAdsBidByListingIDResponse struct {

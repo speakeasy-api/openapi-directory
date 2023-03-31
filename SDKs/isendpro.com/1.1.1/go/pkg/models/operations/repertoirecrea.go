@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RepertoireCreaRequest struct {
-	// Creation repertoire
-	Request shared.REPERTOIREcreaterequest `request:"mediaType=application/json"`
-}
-
 type RepertoireCreaResponse struct {
 	ContentType string
 	// Erreur

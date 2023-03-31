@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type UserToFolderAssignDeleteQueryParams struct {
+type UserToFolderAssignDeleteRequest struct {
 	// The ID of the user that should be de-assign
 	Source string `queryParam:"style=form,explode=true,name=source"`
 	// The ID of the folder
 	Target string `queryParam:"style=form,explode=true,name=target"`
-}
-
-type UserToFolderAssignDeleteRequest struct {
-	QueryParams UserToFolderAssignDeleteQueryParams
 }
 
 type UserToFolderAssignDeleteResponse struct {

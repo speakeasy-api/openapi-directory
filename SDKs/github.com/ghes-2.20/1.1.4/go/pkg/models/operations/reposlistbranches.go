@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListBranchesPathParams struct {
+type ReposListBranchesRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListBranchesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Setting to `true` returns only protected branches. When set to `false`, only unprotected branches are returned. Omitting this parameter returns all branches.
-	Protected *bool `queryParam:"style=form,explode=true,name=protected"`
-}
-
-type ReposListBranchesRequest struct {
-	PathParams  ReposListBranchesPathParams
-	QueryParams ReposListBranchesQueryParams
+	Protected *bool  `queryParam:"style=form,explode=true,name=protected"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListBranchesResponse struct {

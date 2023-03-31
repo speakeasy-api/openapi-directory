@@ -32,15 +32,11 @@ func (e *XPingFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type XPingPathParams struct {
+type XPingRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format XPingFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Number of seconds to sleep before responding
 	Seconds string `pathParam:"style=simple,explode=false,name=seconds"`
-}
-
-type XPingRequest struct {
-	PathParams XPingPathParams
 }
 
 type XPingResponse struct {

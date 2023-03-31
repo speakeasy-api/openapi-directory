@@ -8,22 +8,18 @@ import (
 	"time"
 )
 
-type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailPathParams struct {
+type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequestBody struct {
+	DueDate *time.Time `json:"dueDate,omitempty"`
+}
+
+type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequest struct {
+	RequestBody PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequestBody `request:"mediaType=application/json"`
 	// assessment's id
 	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequestBody struct {
-	DueDate *time.Time `json:"dueDate,omitempty"`
-}
-
-type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequest struct {
-	PathParams PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailPathParams
-	Request    PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequestBody `request:"mediaType=application/json"`
 }
 
 type PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailResponse struct {

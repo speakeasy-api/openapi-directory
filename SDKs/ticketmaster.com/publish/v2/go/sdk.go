@@ -96,9 +96,9 @@ func New(opts ...SDKOption) *SDK {
 // Since 1.0.0
 func (s *SDK) PatchAttraction(ctx context.Context, request operations.PatchAttractionRequest) (*operations.PatchAttractionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -113,7 +113,7 @@ func (s *SDK) PatchAttraction(ctx context.Context, request operations.PatchAttra
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -153,9 +153,9 @@ func (s *SDK) PatchAttraction(ctx context.Context, request operations.PatchAttra
 // Since 1.0.0
 func (s *SDK) PatchEvent(ctx context.Context, request operations.PatchEventRequest) (*operations.PatchEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,7 +170,7 @@ func (s *SDK) PatchEvent(ctx context.Context, request operations.PatchEventReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -210,9 +210,9 @@ func (s *SDK) PatchEvent(ctx context.Context, request operations.PatchEventReque
 // Since 1.0.0
 func (s *SDK) PatchVenue(ctx context.Context, request operations.PatchVenueRequest) (*operations.PatchVenueResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/venues/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/venues/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) PatchVenue(ctx context.Context, request operations.PatchVenueReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -269,7 +269,7 @@ func (s *SDK) PublishAttraction(ctx context.Context, request operations.PublishA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish/v2/attractions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Attraction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -284,7 +284,7 @@ func (s *SDK) PublishAttraction(ctx context.Context, request operations.PublishA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -324,9 +324,9 @@ func (s *SDK) PublishAttraction(ctx context.Context, request operations.PublishA
 // Since 1.0.0
 func (s *SDK) PublishAttractionVideos(ctx context.Context, request operations.PublishAttractionVideosRequest) (*operations.PublishAttractionVideosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Video", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -341,7 +341,7 @@ func (s *SDK) PublishAttractionVideos(ctx context.Context, request operations.Pu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -383,7 +383,7 @@ func (s *SDK) PublishEntitlements(ctx context.Context, request operations.Publis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish/v2/entitlements"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Entitlement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -398,7 +398,7 @@ func (s *SDK) PublishEntitlements(ctx context.Context, request operations.Publis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -440,7 +440,7 @@ func (s *SDK) PublishEvent(ctx context.Context, request operations.PublishEventR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish/v2/events"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Event", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -455,7 +455,7 @@ func (s *SDK) PublishEvent(ctx context.Context, request operations.PublishEventR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -495,9 +495,9 @@ func (s *SDK) PublishEvent(ctx context.Context, request operations.PublishEventR
 // Since 1.0.0
 func (s *SDK) PublishEventVideos(ctx context.Context, request operations.PublishEventVideosRequest) (*operations.PublishEventVideosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Video", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -512,7 +512,7 @@ func (s *SDK) PublishEventVideos(ctx context.Context, request operations.Publish
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -554,7 +554,7 @@ func (s *SDK) PublishExtension(ctx context.Context, request operations.PublishEx
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish/v2/extensions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtensionData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -569,7 +569,7 @@ func (s *SDK) PublishExtension(ctx context.Context, request operations.PublishEx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -611,7 +611,7 @@ func (s *SDK) PublishVenue(ctx context.Context, request operations.PublishVenueR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish/v2/venues"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Venue", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -626,7 +626,7 @@ func (s *SDK) PublishVenue(ctx context.Context, request operations.PublishVenueR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 

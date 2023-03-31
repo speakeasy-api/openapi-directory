@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CreateGroupIfNotExistsForUsingGETQueryParams struct {
-	GroupMapper *string `queryParam:"style=form,explode=true,name=groupMapper"`
-}
-
 type CreateGroupIfNotExistsForUsingGETRequest struct {
-	QueryParams CreateGroupIfNotExistsForUsingGETQueryParams
+	GroupMapper *string `queryParam:"style=form,explode=true,name=groupMapper"`
 }
 
 // CreateGroupIfNotExistsForUsingGET500ApplicationJSON - internal api error (code 2)

@@ -37,7 +37,7 @@ func newPortfolioOptimization(defaultClient, securityClient HTTPClient, serverUR
 //
 // References
 //   - [Richard, Jean-Charles and Roncalli, Thierry, Constrained Risk Budgeting Portfolios: Theory, Algorithms, Applications & Puzzles](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3331184)
-func (s *portfolioOptimization) PostPortfolioOptimizationEqualRiskContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualRiskContributionsRequest) (*operations.PostPortfolioOptimizationEqualRiskContributionsResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationEqualRiskContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualRiskContributionsRequestBody) (*operations.PostPortfolioOptimizationEqualRiskContributionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-risk-contributions"
 
@@ -95,7 +95,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationEqualRiskContributions(
 //
 // References
 //   - [Andreas Steiner, Sharpe Ratio Contribution and Attribution Analysis](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839166")
-func (s *portfolioOptimization) PostPortfolioOptimizationEqualSharpeRatioContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequest) (*operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationEqualSharpeRatioContributions(ctx context.Context, request operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequestBody) (*operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-sharpe-ratio-contributions"
 
@@ -153,7 +153,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationEqualSharpeRatioContrib
 //
 // References
 //   - [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
-func (s *portfolioOptimization) PostPortfolioOptimizationEqualVolatilityWeighted(ctx context.Context, request operations.PostPortfolioOptimizationEqualVolatilityWeightedRequest) (*operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationEqualVolatilityWeighted(ctx context.Context, request operations.PostPortfolioOptimizationEqualVolatilityWeightedRequestBody) (*operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-volatility-weighted"
 
@@ -211,7 +211,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationEqualVolatilityWeighted
 //
 // References
 //   - [Victor DeMiguel and al., Optimal Versus Naive Diversification: How Inefficient is the 1/N Portfolio Strategy?](https://academic.oup.com/rfs/article-abstract/22/5/1915/1592901?redirectedFrom=fulltext)
-func (s *portfolioOptimization) PostPortfolioOptimizationEqualWeighted(ctx context.Context, request operations.PostPortfolioOptimizationEqualWeightedRequest) (*operations.PostPortfolioOptimizationEqualWeightedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationEqualWeighted(ctx context.Context, request operations.PostPortfolioOptimizationEqualWeightedRequestBody) (*operations.PostPortfolioOptimizationEqualWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/equal-weighted"
 
@@ -272,7 +272,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationEqualWeighted(ctx conte
 // References
 //   - [Lopez de Prado, M. (2016). Building diversified portfolios that outperform out-of-sample. Journal of Portfolio Management, 42(4), 59–69](https://jpm.pm-research.com/content/42/4/59)
 //   - [Johann Pfitzinger & Nico Katzke, 2019. A constrained hierarchical risk parity algorithm with cluster-based capital allocation. Working Papers 14/2019, Stellenbosch University, Department of Economics](https://ideas.repec.org/p/sza/wpaper/wpapers328.html)
-func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParity(ctx context.Context, request operations.PostPortfolioOptimizationHierarchicalRiskParityRequest) (*operations.PostPortfolioOptimizationHierarchicalRiskParityResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParity(ctx context.Context, request operations.PostPortfolioOptimizationHierarchicalRiskParityRequestBody) (*operations.PostPortfolioOptimizationHierarchicalRiskParityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/hierarchical-risk-parity"
 
@@ -335,7 +335,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParity(
 //   - [Thomas Raffinot, Hierarchical Clustering-Based Asset Allocation, The Journal of Portfolio Management Multi-Asset Special Issue 2018, 44 (2) 89-99](https://jpm.pm-research.com/content/44/2/89.abstract)
 //   - [Raffinot, Thomas, The Hierarchical Equal Risk Contribution Portfolio](https://ssrn.com/abstract=3237540)
 //   - [Johann Pfitzinger & Nico Katzke, 2019. A constrained hierarchical risk parity algorithm with cluster-based capital allocation. Working Papers 14/2019, Stellenbosch University, Department of Economics](https://ideas.repec.org/p/sza/wpaper/wpapers328.html)
-func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParityClusteringBased(ctx context.Context, request operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequest) (*operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParityClusteringBased(ctx context.Context, request operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody) (*operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/hierarchical-risk-parity/clustering-based"
 
@@ -393,7 +393,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationHierarchicalRiskParityC
 //
 // References
 //   - [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
-func (s *portfolioOptimization) PostPortfolioOptimizationInverseVarianceWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVarianceWeightedRequest) (*operations.PostPortfolioOptimizationInverseVarianceWeightedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationInverseVarianceWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVarianceWeightedRequestBody) (*operations.PostPortfolioOptimizationInverseVarianceWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/inverse-variance-weighted"
 
@@ -451,7 +451,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationInverseVarianceWeighted
 //
 // References
 //   - [Raul Leote de Carvalho and al., Demystifying Equity Risk-Based Strategies: A Simple Alpha Plus Beta Description](https://doi.org/10.3905/jpm.2012.38.3.056)
-func (s *portfolioOptimization) PostPortfolioOptimizationInverseVolatilityWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVolatilityWeightedRequest) (*operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationInverseVolatilityWeighted(ctx context.Context, request operations.PostPortfolioOptimizationInverseVolatilityWeightedRequestBody) (*operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/inverse-volatility-weighted"
 
@@ -509,7 +509,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationInverseVolatilityWeight
 //
 // References
 //   - [Wikipedia, Capitalization-weighted Index](https://en.wikipedia.org/wiki/Capitalization-weighted_index)
-func (s *portfolioOptimization) PostPortfolioOptimizationMarketCapitalizationWeighted(ctx context.Context, request operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequest) (*operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMarketCapitalizationWeighted(ctx context.Context, request operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody) (*operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/market-capitalization-weighted"
 
@@ -570,7 +570,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationMarketCapitalizationWei
 //
 // References
 //   - [F. Goltz, S. Sivasubramanian, Scientific Beta Maximum Decorrelation Indices](http://www.scientificbeta.com/download/file/scientific-beta-max-decorrelation-indices)
-func (s *portfolioOptimization) PostPortfolioOptimizationMaximumDecorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMaximumDecorrelationRequest) (*operations.PostPortfolioOptimizationMaximumDecorrelationResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMaximumDecorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMaximumDecorrelationRequestBody) (*operations.PostPortfolioOptimizationMaximumDecorrelationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-decorrelation"
 
@@ -636,7 +636,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationMaximumDecorrelation(ct
 //   - [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
 //   - [A. Chekhlov, S. Uryasev, M. Zabarankin, Portfolio Optimization with Drawdown Constraints, Supply Chain and Finance, p 209-228](https://doi.org/10.1142/9789812562586_0013)
 //   - [A. Chekhlov, S. Uryasev, M. Zabarankin, Drawdown Measure in Portfolio Optimization, International Journal of Theoretical and Applied FinanceVol. 08, No. 01, pp. 13-58 (2005)](https://www.worldscientific.com/doi/10.1142/S0219024905002767)
-func (s *portfolioOptimization) PostPortfolioOptimizationMaximumUlcerPerformanceIndex(ctx context.Context, request operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequest) (*operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMaximumUlcerPerformanceIndex(ctx context.Context, request operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody) (*operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-ulcer-performance-index"
 
@@ -694,7 +694,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationMaximumUlcerPerformance
 //
 // References
 //   - [CSSA, Minimum Correlation Algorithm Paper Release](https://cssanalytics.wordpress.com/2012/09/21/minimum-correlation-algorithm-paper-release/)
-func (s *portfolioOptimization) PostPortfolioOptimizationMinimumCorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMinimumCorrelationRequest) (*operations.PostPortfolioOptimizationMinimumCorrelationResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMinimumCorrelation(ctx context.Context, request operations.PostPortfolioOptimizationMinimumCorrelationRequestBody) (*operations.PostPortfolioOptimizationMinimumCorrelationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-correlation"
 
@@ -757,7 +757,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationMinimumCorrelation(ctx 
 //   - [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
 //   - [A. Chekhlov, S. Uryasev, M. Zabarankin, Portfolio Optimization with Drawdown Constraints, Supply Chain and Finance, p 209-228](https://doi.org/10.1142/9789812562586_0013)
 //   - [A. Chekhlov, S. Uryasev, M. Zabarankin, Drawdown Measure in Portfolio Optimization, International Journal of Theoretical and Applied FinanceVol. 08, No. 01, pp. 13-58 (2005)](https://www.worldscientific.com/doi/10.1142/S0219024905002767)
-func (s *portfolioOptimization) PostPortfolioOptimizationMinimumUlcerIndex(ctx context.Context, request operations.PostPortfolioOptimizationMinimumUlcerIndexRequest) (*operations.PostPortfolioOptimizationMinimumUlcerIndexResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMinimumUlcerIndex(ctx context.Context, request operations.PostPortfolioOptimizationMinimumUlcerIndexRequestBody) (*operations.PostPortfolioOptimizationMinimumUlcerIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-ulcer-index"
 
@@ -818,7 +818,7 @@ func (s *portfolioOptimization) PostPortfolioOptimizationMinimumUlcerIndex(ctx c
 //
 // References
 //   - [Yves Choueifaty and Yves Coignard, Toward Maximum Diversification, The Journal of Portfolio Management Fall 2008, 35 (1) 40-51](https://doi.org/10.3905/JPM.2008.35.1.40)
-func (s *portfolioOptimization) PostPortfolioOptimizationMostDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMostDiversifiedRequest) (*operations.PostPortfolioOptimizationMostDiversifiedResponse, error) {
+func (s *portfolioOptimization) PostPortfolioOptimizationMostDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMostDiversifiedRequestBody) (*operations.PostPortfolioOptimizationMostDiversifiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/most-diversified"
 

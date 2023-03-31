@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDPathParams struct {
+type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDRequest struct {
 	// Id of the document to delete
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the folder exchange or followup
@@ -20,11 +19,6 @@ type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDoc
 	Requireddocumentid string `pathParam:"style=simple,explode=false,name=requireddocumentid"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDRequest struct {
-	PathParams DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDPathParams
-	Security   DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDSecurity
 }
 
 type DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDResponse struct {

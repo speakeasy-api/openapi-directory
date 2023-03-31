@@ -36,7 +36,7 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetCmsV3DomainsGetPage - Get current domains
 // Returns all existing domains that have been created. Results can be limited and filtered by creation or updated date.
-func (s *domains) GetCmsV3DomainsGetPage(ctx context.Context, request operations.GetCmsV3DomainsGetPageRequest) (*operations.GetCmsV3DomainsGetPageResponse, error) {
+func (s *domains) GetCmsV3DomainsGetPage(ctx context.Context, request operations.GetCmsV3DomainsGetPageRequest, security operations.GetCmsV3DomainsGetPageSecurity) (*operations.GetCmsV3DomainsGetPageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cms/v3/domains/"
 
@@ -45,11 +45,11 @@ func (s *domains) GetCmsV3DomainsGetPage(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -95,16 +95,16 @@ func (s *domains) GetCmsV3DomainsGetPage(ctx context.Context, request operations
 
 // GetCmsV3DomainsDomainIDGetByID - Get a single domain
 // Returns a single domains with the id specified.
-func (s *domains) GetCmsV3DomainsDomainIDGetByID(ctx context.Context, request operations.GetCmsV3DomainsDomainIDGetByIDRequest) (*operations.GetCmsV3DomainsDomainIDGetByIDResponse, error) {
+func (s *domains) GetCmsV3DomainsDomainIDGetByID(ctx context.Context, request operations.GetCmsV3DomainsDomainIDGetByIDRequest, security operations.GetCmsV3DomainsDomainIDGetByIDSecurity) (*operations.GetCmsV3DomainsDomainIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cms/v3/domains/{domainId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cms/v3/domains/{domainId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

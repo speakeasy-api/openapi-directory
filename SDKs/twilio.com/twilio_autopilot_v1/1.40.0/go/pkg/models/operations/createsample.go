@@ -12,14 +12,8 @@ var CreateSampleServerList = []string{
 }
 
 type CreateSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSamplePathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to create.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSampleCreateSampleRequest struct {
@@ -32,10 +26,11 @@ type CreateSampleCreateSampleRequest struct {
 }
 
 type CreateSampleRequest struct {
-	PathParams CreateSamplePathParams
-	Request    *CreateSampleCreateSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSampleSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
+	AssistantSid string                           `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateSampleCreateSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to create.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type CreateSampleResponse struct {

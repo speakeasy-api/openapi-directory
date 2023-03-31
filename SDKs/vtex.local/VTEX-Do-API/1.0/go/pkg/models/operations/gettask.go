@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetTaskPathParams struct {
-	// Task ID.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type GetTaskHeaders struct {
+type GetTaskRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetTaskRequest struct {
-	PathParams GetTaskPathParams
-	Headers    GetTaskHeaders
+	// Task ID.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type GetTaskResponse struct {

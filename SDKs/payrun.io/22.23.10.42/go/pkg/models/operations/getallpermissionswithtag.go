@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllPermissionsWithTagPathParams struct {
-	// The tag unique identifier. E.g. MyTag
-	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetAllPermissionsWithTagHeaders struct {
+type GetAllPermissionsWithTagRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetAllPermissionsWithTagRequest struct {
-	PathParams GetAllPermissionsWithTagPathParams
-	Headers    GetAllPermissionsWithTagHeaders
+	// The tag unique identifier. E.g. MyTag
+	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
 }
 
 type GetAllPermissionsWithTagResponse struct {

@@ -12,12 +12,8 @@ var UpdateFlexFlowServerList = []string{
 }
 
 type UpdateFlexFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateFlexFlowPathParams struct {
-	// The SID of the Flex Flow resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateFlexFlowUpdateFlexFlowRequest struct {
@@ -56,10 +52,9 @@ type UpdateFlexFlowUpdateFlexFlowRequest struct {
 }
 
 type UpdateFlexFlowRequest struct {
-	PathParams UpdateFlexFlowPathParams
-	Request    *UpdateFlexFlowUpdateFlexFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateFlexFlowSecurity
-	ServerURL  *string
+	RequestBody *UpdateFlexFlowUpdateFlexFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Flex Flow resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateFlexFlowResponse struct {

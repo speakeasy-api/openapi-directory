@@ -12,18 +12,13 @@ var FetchCompositionHookServerList = []string{
 }
 
 type FetchCompositionHookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCompositionHookPathParams struct {
-	// The SID of the CompositionHook resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCompositionHookRequest struct {
-	PathParams FetchCompositionHookPathParams
-	Security   FetchCompositionHookSecurity
-	ServerURL  *string
+	// The SID of the CompositionHook resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCompositionHookResponse struct {

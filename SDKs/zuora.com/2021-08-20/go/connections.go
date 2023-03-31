@@ -49,7 +49,7 @@ func (s *connections) POSTConnections(ctx context.Context, request operations.PO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

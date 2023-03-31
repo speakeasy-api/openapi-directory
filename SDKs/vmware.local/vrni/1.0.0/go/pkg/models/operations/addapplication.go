@@ -8,12 +8,7 @@ import (
 )
 
 type AddApplicationSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddApplicationRequest struct {
-	Request  shared.ApplicationRequest `request:"mediaType=application/json"`
-	Security AddApplicationSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddApplicationResponse struct {

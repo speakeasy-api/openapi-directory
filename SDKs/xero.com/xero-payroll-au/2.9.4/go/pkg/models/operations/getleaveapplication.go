@@ -8,23 +8,14 @@ import (
 )
 
 type GetLeaveApplicationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetLeaveApplicationPathParams struct {
-	// Leave Application id for single object
-	LeaveApplicationID string `pathParam:"style=simple,explode=false,name=LeaveApplicationID"`
-}
-
-type GetLeaveApplicationHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetLeaveApplicationRequest struct {
-	PathParams GetLeaveApplicationPathParams
-	Headers    GetLeaveApplicationHeaders
-	Security   GetLeaveApplicationSecurity
+	// Leave Application id for single object
+	LeaveApplicationID string `pathParam:"style=simple,explode=false,name=LeaveApplicationID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type GetLeaveApplicationResponse struct {

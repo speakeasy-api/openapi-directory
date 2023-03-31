@@ -14,22 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateCredentialListRequest{
-        Security: operations.CreateCredentialListSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+        RequestBody: &operations.CreateCredentialListCreateCredentialListRequest{
+            CredentialListSid: "corrupti",
         },
-        PathParams: operations.CreateCredentialListPathParams{
-            TrunkSid: "corrupti",
-        },
-        Request: &operations.CreateCredentialListCreateCredentialListRequest{
-            CredentialListSid: "provident",
-        },
+        TrunkSid: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.CreateCredentialList(ctx, req)
+    res, err := s.CreateCredentialList(ctx, req, operations.CreateCredentialListSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

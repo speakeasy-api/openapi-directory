@@ -10,15 +10,6 @@ import (
 	"time"
 )
 
-type IssuesUpdateMilestonePathParams struct {
-	// The number that identifies the milestone.
-	MilestoneNumber int64 `pathParam:"style=simple,explode=false,name=milestone_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesUpdateMilestoneRequestBodyStateEnum - The state of the milestone. Either `open` or `closed`.
 type IssuesUpdateMilestoneRequestBodyStateEnum string
 
@@ -55,8 +46,13 @@ type IssuesUpdateMilestoneRequestBody struct {
 }
 
 type IssuesUpdateMilestoneRequest struct {
-	PathParams IssuesUpdateMilestonePathParams
-	Request    *IssuesUpdateMilestoneRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesUpdateMilestoneRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the milestone.
+	MilestoneNumber int64 `pathParam:"style=simple,explode=false,name=milestone_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesUpdateMilestoneResponse struct {

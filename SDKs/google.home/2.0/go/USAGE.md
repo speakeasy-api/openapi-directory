@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            CastLocalAuthorizationToken: shared.SchemeCastLocalAuthorizationToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            CastLocalAuthorizationToken: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.AccessibilityRequest{
-        Request: shared.AccessibilityRequest{
-            EndpointEnabled: false,
-            HotwordEnabled: false,
-        },
+    req := shared.AccessibilityRequest{
+        EndpointEnabled: false,
+        HotwordEnabled: false,
     }
 
     ctx := context.Background()

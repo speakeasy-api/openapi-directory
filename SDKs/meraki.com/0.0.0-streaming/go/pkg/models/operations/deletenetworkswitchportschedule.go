@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSwitchPortSchedulePathParams struct {
+type DeleteNetworkSwitchPortScheduleRequest struct {
 	NetworkID      string `pathParam:"style=simple,explode=false,name=networkId"`
 	PortScheduleID string `pathParam:"style=simple,explode=false,name=portScheduleId"`
-}
-
-type DeleteNetworkSwitchPortScheduleRequest struct {
-	PathParams DeleteNetworkSwitchPortSchedulePathParams
 }
 
 type DeleteNetworkSwitchPortScheduleResponse struct {

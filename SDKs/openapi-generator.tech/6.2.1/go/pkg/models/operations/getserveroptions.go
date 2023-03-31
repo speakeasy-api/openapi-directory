@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetServerOptionsPathParams struct {
+type GetServerOptionsRequest struct {
 	// The target language for the server framework
 	Framework string `pathParam:"style=simple,explode=false,name=framework"`
-}
-
-type GetServerOptionsRequest struct {
-	PathParams GetServerOptionsPathParams
 }
 
 type GetServerOptionsResponse struct {

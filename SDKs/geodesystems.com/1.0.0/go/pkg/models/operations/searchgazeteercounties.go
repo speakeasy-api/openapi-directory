@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchGazeteerCountiesQueryParams struct {
+type SearchGazeteerCountiesRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -58,10 +58,6 @@ type SearchGazeteerCountiesQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchGazeteerCountiesRequest struct {
-	QueryParams SearchGazeteerCountiesQueryParams
 }
 
 type SearchGazeteerCountiesResponse struct {

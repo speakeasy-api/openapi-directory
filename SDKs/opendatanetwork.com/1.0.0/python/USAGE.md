@@ -4,17 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateAMapRequest(
-    query_params=operations.CreateAMapQueryParams(
-        app_token="voluptatum",
-        constraint="unde",
-        entity_id="unde",
-        variable="error",
-    ),
-    headers=operations.CreateAMapHeaders(
-        x_app_token="ut",
-    ),
+    x_app_token="corrupti",
+    app_token="provident",
+    constraint="distinctio",
+    entity_id="quibusdam",
+    variable="unde",
 )
     
 res = s.create_a_map(req)

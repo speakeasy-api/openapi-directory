@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateACardDisputeRequest struct {
-	Request shared.CreateACardDisputeParameters `request:"mediaType=application/json"`
-}
-
 type CreateACardDisputeDefaultApplicationJSON13StatusEnum string
 
 const (

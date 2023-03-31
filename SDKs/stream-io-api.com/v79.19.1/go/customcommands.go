@@ -34,7 +34,7 @@ func newCustomCommands(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // CreateCommand - Create command
 // Creates custom chat command
-func (s *customCommands) CreateCommand(ctx context.Context, request operations.CreateCommandRequest) (*operations.CreateCommandResponse, error) {
+func (s *customCommands) CreateCommand(ctx context.Context, request shared.CreateCommandRequest) (*operations.CreateCommandResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/commands"
 

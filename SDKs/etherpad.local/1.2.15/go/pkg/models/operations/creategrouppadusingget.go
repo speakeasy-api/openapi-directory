@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CreateGroupPadUsingGETQueryParams struct {
+type CreateGroupPadUsingGETRequest struct {
 	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 	PadName *string `queryParam:"style=form,explode=true,name=padName"`
 	Text    *string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type CreateGroupPadUsingGETRequest struct {
-	QueryParams CreateGroupPadUsingGETQueryParams
 }
 
 // CreateGroupPadUsingGET500ApplicationJSON - internal api error (code 2)

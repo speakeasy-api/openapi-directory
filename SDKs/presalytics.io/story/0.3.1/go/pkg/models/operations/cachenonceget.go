@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CacheNonceGetPathParams struct {
+type CacheNonceGetRequest struct {
 	// A one-time use token for retieving items in the users cache
 	Nonce string `pathParam:"style=simple,explode=false,name=nonce"`
-}
-
-type CacheNonceGetRequest struct {
-	PathParams CacheNonceGetPathParams
 }
 
 type CacheNonceGetResponse struct {

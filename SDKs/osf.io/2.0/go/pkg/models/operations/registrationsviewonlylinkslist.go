@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type RegistrationsViewOnlyLinksListPathParams struct {
+type RegistrationsViewOnlyLinksListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsViewOnlyLinksListRequest struct {
-	PathParams RegistrationsViewOnlyLinksListPathParams
 }
 
 // RegistrationsViewOnlyLinksListViewOnlyLinksAttributes - The properties of the view only link entity.

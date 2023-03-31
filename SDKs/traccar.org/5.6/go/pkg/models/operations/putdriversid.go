@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDriversIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutDriversIDRequest struct {
-	PathParams PutDriversIDPathParams
-	Request    shared.Driver `request:"mediaType=application/json"`
+	Driver shared.Driver `request:"mediaType=application/json"`
+	ID     int64         `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutDriversIDResponse struct {

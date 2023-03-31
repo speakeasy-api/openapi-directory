@@ -8,16 +8,13 @@ import (
 )
 
 type GetAccountsAccountIDScheduledPaymentsSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
-type GetAccountsAccountIDScheduledPaymentsPathParams struct {
+type GetAccountsAccountIDScheduledPaymentsRequest struct {
 	// AccountId
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountsAccountIDScheduledPaymentsHeaders struct {
 	// The unique id of the sandbox to be used
 	SandboxID string `header:"style=simple,explode=false,name=sandbox-id"`
 	// Indicates the user-agent that the PSU is using.
@@ -30,12 +27,6 @@ type GetAccountsAccountIDScheduledPaymentsHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type GetAccountsAccountIDScheduledPaymentsRequest struct {
-	PathParams GetAccountsAccountIDScheduledPaymentsPathParams
-	Headers    GetAccountsAccountIDScheduledPaymentsHeaders
-	Security   GetAccountsAccountIDScheduledPaymentsSecurity
 }
 
 type GetAccountsAccountIDScheduledPaymentsResponse struct {

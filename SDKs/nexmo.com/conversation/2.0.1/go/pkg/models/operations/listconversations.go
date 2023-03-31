@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConversationsQueryParams struct {
+type ListConversationsRequest struct {
 	// Return the records that occurred before this point in time.
 	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
 	// Return the records that occurred after this point in time.
@@ -18,10 +18,6 @@ type ListConversationsQueryParams struct {
 	PageSize *float64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Return calls from this index in the response
 	RecordIndex *float64 `queryParam:"style=form,explode=true,name=record_index"`
-}
-
-type ListConversationsRequest struct {
-	QueryParams ListConversationsQueryParams
 }
 
 type ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf struct {

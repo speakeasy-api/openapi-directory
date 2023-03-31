@@ -10,8 +10,8 @@ import (
 )
 
 type GetSimilarVideosSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSimilarVideosLicenseEnum string
@@ -61,7 +61,7 @@ func (e *GetSimilarVideosViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimilarVideosQueryParams struct {
+type GetSimilarVideosRequest struct {
 	// The asset ID or upload ID to find similar videos for
 	AssetID string `queryParam:"style=form,explode=true,name=asset_id"`
 	// Language for the keywords and categories in the response
@@ -76,11 +76,6 @@ type GetSimilarVideosQueryParams struct {
 	Safe *bool `queryParam:"style=form,explode=true,name=safe"`
 	// Amount of detail to render in the response
 	View *GetSimilarVideosViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSimilarVideosRequest struct {
-	QueryParams GetSimilarVideosQueryParams
-	Security    GetSimilarVideosSecurity
 }
 
 type GetSimilarVideosResponse struct {

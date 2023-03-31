@@ -34,7 +34,7 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Return the billing settings of this network
 func (s *billing) GetNetworkWirelessBilling(ctx context.Context, request operations.GetNetworkWirelessBillingRequest) (*operations.GetNetworkWirelessBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *billing) GetNetworkWirelessBilling(ctx context.Context, request operati
 // Update the billing settings
 func (s *billing) UpdateNetworkWirelessBilling(ctx context.Context, request operations.UpdateNetworkWirelessBillingRequest) (*operations.UpdateNetworkWirelessBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

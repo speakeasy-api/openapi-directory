@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListRunnerApplicationsForEnterprisePathParams struct {
+type EnterpriseAdminListRunnerApplicationsForEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminListRunnerApplicationsForEnterpriseRequest struct {
-	PathParams EnterpriseAdminListRunnerApplicationsForEnterprisePathParams
 }
 
 type EnterpriseAdminListRunnerApplicationsForEnterpriseResponse struct {

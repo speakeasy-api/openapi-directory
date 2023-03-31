@@ -35,7 +35,7 @@ func newAquifers(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AquifersFilesList - list files found for the aquifer identified in the uri
 func (s *aquifers) AquifersFilesList(ctx context.Context, request operations.AquifersFilesListRequest) (*operations.AquifersFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/aquifers/{aquifer_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/aquifers/{aquifer_id}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *aquifers) AquifersList(ctx context.Context, request operations.Aquifers
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,7 +134,7 @@ func (s *aquifers) AquifersNamesList(ctx context.Context, request operations.Aqu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -175,7 +175,7 @@ func (s *aquifers) AquifersNamesList(ctx context.Context, request operations.Aqu
 // AquifersRead - return details of aquifers
 func (s *aquifers) AquifersRead(ctx context.Context, request operations.AquifersReadRequest) (*operations.AquifersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/aquifers/{aquifer_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/aquifers/{aquifer_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

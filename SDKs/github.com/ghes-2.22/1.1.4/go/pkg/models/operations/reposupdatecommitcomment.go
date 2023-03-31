@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateCommitCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateCommitCommentRequestBody struct {
 	// The contents of the comment
 	Body string `json:"body"`
 }
 
 type ReposUpdateCommitCommentRequest struct {
-	PathParams ReposUpdateCommitCommentPathParams
-	Request    ReposUpdateCommitCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposUpdateCommitCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateCommitCommentResponse struct {

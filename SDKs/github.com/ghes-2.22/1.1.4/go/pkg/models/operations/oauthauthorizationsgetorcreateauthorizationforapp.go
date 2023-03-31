@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsGetOrCreateAuthorizationForAppPathParams struct {
-	// The client ID of your GitHub app.
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
 type OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody struct {
 	// The OAuth app client secret for which to create the token.
 	ClientSecret string `json:"client_secret"`
@@ -26,8 +21,9 @@ type OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody struct {
 }
 
 type OauthAuthorizationsGetOrCreateAuthorizationForAppRequest struct {
-	PathParams OauthAuthorizationsGetOrCreateAuthorizationForAppPathParams
-	Request    OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody `request:"mediaType=application/json"`
+	RequestBody OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody `request:"mediaType=application/json"`
+	// The client ID of your GitHub app.
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type OauthAuthorizationsGetOrCreateAuthorizationForAppResponse struct {

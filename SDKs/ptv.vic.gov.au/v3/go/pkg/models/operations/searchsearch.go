@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSearchPathParams struct {
-	// Search text (note: if search text is numeric and/or less than 3 characters, the API will only return routes)
-	SearchTerm string `pathParam:"style=simple,explode=false,name=search_term"`
-}
-
 type SearchSearchRouteTypesEnum string
 
 const (
@@ -46,7 +41,7 @@ func (e *SearchSearchRouteTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchSearchQueryParams struct {
+type SearchSearchRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Placeholder for future development; currently unavailable
@@ -67,15 +62,12 @@ type SearchSearchQueryParams struct {
 	MaxDistance *float32 `queryParam:"style=form,explode=true,name=max_distance"`
 	// Filter by route_type; values returned via RouteTypes API (note: stops and routes are ordered by route_types specified)
 	RouteTypes []SearchSearchRouteTypesEnum `queryParam:"style=form,explode=true,name=route_types"`
+	// Search text (note: if search text is numeric and/or less than 3 characters, the API will only return routes)
+	SearchTerm string `pathParam:"style=simple,explode=false,name=search_term"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type SearchSearchRequest struct {
-	PathParams  SearchSearchPathParams
-	QueryParams SearchSearchQueryParams
 }
 
 type SearchSearchResponse struct {

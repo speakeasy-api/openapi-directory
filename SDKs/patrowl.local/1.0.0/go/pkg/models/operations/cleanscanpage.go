@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CleanScanPagePathParams struct {
+type CleanScanPageRequest struct {
 	// Numeric ID of the scan to clean
 	ScanID int64 `pathParam:"style=simple,explode=false,name=scanId"`
-}
-
-type CleanScanPageRequest struct {
-	PathParams CleanScanPagePathParams
 }
 
 type CleanScanPageResponse struct {

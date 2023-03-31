@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GenreTypeSearchReadPathParams struct {
-	GenreDescription string `pathParam:"style=simple,explode=false,name=genre_description"`
-}
-
 type GenreTypeSearchReadRequest struct {
-	PathParams GenreTypeSearchReadPathParams
+	GenreDescription string `pathParam:"style=simple,explode=false,name=genre_description"`
 }
 
 type GenreTypeSearchReadResponse struct {

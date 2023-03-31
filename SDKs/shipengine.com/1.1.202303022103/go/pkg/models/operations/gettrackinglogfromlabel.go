@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrackingLogFromLabelPathParams struct {
+type GetTrackingLogFromLabelRequest struct {
 	// Label ID
 	LabelID string `pathParam:"style=simple,explode=false,name=label_id"`
-}
-
-type GetTrackingLogFromLabelRequest struct {
-	PathParams GetTrackingLogFromLabelPathParams
 }
 
 type GetTrackingLogFromLabelResponse struct {

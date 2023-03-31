@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.DeleteReportDefinitionRequest(
-    headers=operations.DeleteReportDefinitionHeaders(
-        x_amz_algorithm="quo",
-        x_amz_content_sha256="et",
-        x_amz_credential="eligendi",
-        x_amz_date="soluta",
-        x_amz_security_token="enim",
-        x_amz_signature="commodi",
-        x_amz_signed_headers="quia",
-        x_amz_target="AWSOrigamiServiceGatewayService.DeleteReportDefinition",
+    delete_report_definition_request=shared.DeleteReportDefinitionRequest(
+        report_name="corrupti",
     ),
-    request=shared.DeleteReportDefinitionRequest(
-        report_name="placeat",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="AWSOrigamiServiceGatewayService.DeleteReportDefinition",
 )
     
 res = s.delete_report_definition(req)

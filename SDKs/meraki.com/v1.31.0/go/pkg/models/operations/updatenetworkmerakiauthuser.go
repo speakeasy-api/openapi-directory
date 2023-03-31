@@ -7,11 +7,6 @@ import (
 	"time"
 )
 
-type UpdateNetworkMerakiAuthUserPathParams struct {
-	MerakiAuthUserID string `pathParam:"style=simple,explode=false,name=merakiAuthUserId"`
-	NetworkID        string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkMerakiAuthUserRequestBodyAuthorizations struct {
 	// Date for authorization to expire. Default is for authorization to not expire.
 	ExpiresAt *string `json:"expiresAt,omitempty"`
@@ -31,8 +26,9 @@ type UpdateNetworkMerakiAuthUserRequestBody struct {
 }
 
 type UpdateNetworkMerakiAuthUserRequest struct {
-	PathParams UpdateNetworkMerakiAuthUserPathParams
-	Request    *UpdateNetworkMerakiAuthUserRequestBody `request:"mediaType=application/json"`
+	RequestBody      *UpdateNetworkMerakiAuthUserRequestBody `request:"mediaType=application/json"`
+	MerakiAuthUserID string                                  `pathParam:"style=simple,explode=false,name=merakiAuthUserId"`
+	NetworkID        string                                  `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkMerakiAuthUser200ApplicationJSONAuthorizations struct {

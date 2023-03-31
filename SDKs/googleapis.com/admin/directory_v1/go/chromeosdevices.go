@@ -32,11 +32,11 @@ func newChromeosdevices(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DirectoryChromeosdevicesAction - Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will consume a device license. If you do not have sufficient licenses available when completing the re-enable action, you will receive an error. For more information about deprovisioning and disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
-func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, request operations.DirectoryChromeosdevicesActionRequest) (*operations.DirectoryChromeosdevicesActionResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, request operations.DirectoryChromeosdevicesActionRequest, security operations.DirectoryChromeosdevicesActionSecurity) (*operations.DirectoryChromeosdevicesActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDeviceAction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, re
 }
 
 // DirectoryChromeosdevicesGet - Retrieves a Chrome OS device's properties.
-func (s *chromeosdevices) DirectoryChromeosdevicesGet(ctx context.Context, request operations.DirectoryChromeosdevicesGetRequest) (*operations.DirectoryChromeosdevicesGetResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesGet(ctx context.Context, request operations.DirectoryChromeosdevicesGetRequest, security operations.DirectoryChromeosdevicesGetSecurity) (*operations.DirectoryChromeosdevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *chromeosdevices) DirectoryChromeosdevicesGet(ctx context.Context, reque
 }
 
 // DirectoryChromeosdevicesList - Retrieves a paginated list of Chrome OS devices within an account.
-func (s *chromeosdevices) DirectoryChromeosdevicesList(ctx context.Context, request operations.DirectoryChromeosdevicesListRequest) (*operations.DirectoryChromeosdevicesListResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesList(ctx context.Context, request operations.DirectoryChromeosdevicesListRequest, security operations.DirectoryChromeosdevicesListSecurity) (*operations.DirectoryChromeosdevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesList(ctx context.Context, requ
 }
 
 // DirectoryChromeosdevicesMoveDevicesToOu - Moves or inserts multiple Chrome OS devices to an organizational unit. You can move up to 50 devices at once.
-func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Context, request operations.DirectoryChromeosdevicesMoveDevicesToOuRequest) (*operations.DirectoryChromeosdevicesMoveDevicesToOuResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Context, request operations.DirectoryChromeosdevicesMoveDevicesToOuRequest, security operations.DirectoryChromeosdevicesMoveDevicesToOuSecurity) (*operations.DirectoryChromeosdevicesMoveDevicesToOuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsMoveDevicesToOu", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,11 +190,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -220,11 +220,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Co
 }
 
 // DirectoryChromeosdevicesPatch - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
-func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, request operations.DirectoryChromeosdevicesPatchRequest) (*operations.DirectoryChromeosdevicesPatchResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, request operations.DirectoryChromeosdevicesPatchRequest, security operations.DirectoryChromeosdevicesPatchSecurity) (*operations.DirectoryChromeosdevicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDevice", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -236,11 +236,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -275,11 +275,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, req
 }
 
 // DirectoryChromeosdevicesUpdate - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`.
-func (s *chromeosdevices) DirectoryChromeosdevicesUpdate(ctx context.Context, request operations.DirectoryChromeosdevicesUpdateRequest) (*operations.DirectoryChromeosdevicesUpdateResponse, error) {
+func (s *chromeosdevices) DirectoryChromeosdevicesUpdate(ctx context.Context, request operations.DirectoryChromeosdevicesUpdateRequest, security operations.DirectoryChromeosdevicesUpdateSecurity) (*operations.DirectoryChromeosdevicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDevice", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,11 +291,11 @@ func (s *chromeosdevices) DirectoryChromeosdevicesUpdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

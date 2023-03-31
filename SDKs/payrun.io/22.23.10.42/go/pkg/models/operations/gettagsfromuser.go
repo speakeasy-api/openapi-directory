@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsFromUserPathParams struct {
-	// The user unique identifier. E.g USER001
-	UserID string `pathParam:"style=simple,explode=false,name=UserId"`
-}
-
-type GetTagsFromUserHeaders struct {
+type GetTagsFromUserRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagsFromUserRequest struct {
-	PathParams GetTagsFromUserPathParams
-	Headers    GetTagsFromUserHeaders
+	// The user unique identifier. E.g USER001
+	UserID string `pathParam:"style=simple,explode=false,name=UserId"`
 }
 
 type GetTagsFromUserResponse struct {

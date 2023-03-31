@@ -10,23 +10,18 @@ import (
 )
 
 type BloggerPostsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPostsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPostsGetSecurity struct {
 	Option1 *BloggerPostsGetSecurityOption1 `security:"option"`
 	Option2 *BloggerPostsGetSecurityOption2 `security:"option"`
-}
-
-type BloggerPostsGetPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
-	PostID string `pathParam:"style=simple,explode=false,name=postId"`
 }
 
 // BloggerPostsGetViewEnum
@@ -59,13 +54,14 @@ func (e *BloggerPostsGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerPostsGetQueryParams struct {
+type BloggerPostsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback    *string `queryParam:"style=form,explode=true,name=callback"`
 	FetchBody   *bool   `queryParam:"style=form,explode=true,name=fetchBody"`
@@ -77,6 +73,7 @@ type BloggerPostsGetQueryParams struct {
 	MaxComments *int64  `queryParam:"style=form,explode=true,name=maxComments"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	PostID     string  `pathParam:"style=simple,explode=false,name=postId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -86,12 +83,6 @@ type BloggerPostsGetQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                  `queryParam:"style=form,explode=true,name=upload_protocol"`
 	View           *BloggerPostsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerPostsGetRequest struct {
-	PathParams  BloggerPostsGetPathParams
-	QueryParams BloggerPostsGetQueryParams
-	Security    BloggerPostsGetSecurity
 }
 
 type BloggerPostsGetResponse struct {

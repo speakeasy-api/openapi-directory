@@ -6,11 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientsOverviewPathParams struct {
+type GetNetworkClientsOverviewRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkClientsOverviewQueryParams struct {
 	// The time resolution in seconds for returned data. The valid resolutions are: 7200, 86400, 604800, 2592000. The default is 604800.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
 	// The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -19,11 +16,6 @@ type GetNetworkClientsOverviewQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkClientsOverviewRequest struct {
-	PathParams  GetNetworkClientsOverviewPathParams
-	QueryParams GetNetworkClientsOverviewQueryParams
 }
 
 type GetNetworkClientsOverviewResponse struct {

@@ -16,10 +16,6 @@ type PostFileCommentReactionsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostFileCommentReactionsRequest struct {
-	Request *PostFileCommentReactionsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostFileCommentReactionsResponse struct {
 	ContentType string
 	// The FileCommentReactions object.

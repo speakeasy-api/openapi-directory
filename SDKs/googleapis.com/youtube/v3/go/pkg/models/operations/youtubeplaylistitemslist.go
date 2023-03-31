@@ -8,23 +8,23 @@ import (
 )
 
 type YoutubePlaylistItemsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsListSecurity struct {
@@ -34,7 +34,7 @@ type YoutubePlaylistItemsListSecurity struct {
 	Option4 *YoutubePlaylistItemsListSecurityOption4 `security:"option"`
 }
 
-type YoutubePlaylistItemsListQueryParams struct {
+type YoutubePlaylistItemsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -70,11 +70,6 @@ type YoutubePlaylistItemsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Return the playlist items associated with the given video ID.
 	VideoID *string `queryParam:"style=form,explode=true,name=videoId"`
-}
-
-type YoutubePlaylistItemsListRequest struct {
-	QueryParams YoutubePlaylistItemsListQueryParams
-	Security    YoutubePlaylistItemsListSecurity
 }
 
 type YoutubePlaylistItemsListResponse struct {

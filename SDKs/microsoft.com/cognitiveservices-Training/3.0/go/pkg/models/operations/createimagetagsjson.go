@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageTagsJSONPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImageTagsJSONHeaders struct {
+type CreateImageTagsJSONRequest struct {
+	// Batch of image tags. Limited to 128 tags per batch.
+	ImageTagCreateBatch shared.ImageTagCreateBatch `request:"mediaType=application/json"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateImageTagsJSONRequest struct {
-	PathParams CreateImageTagsJSONPathParams
-	Headers    CreateImageTagsJSONHeaders
-	// Batch of image tags. Limited to 128 tags per batch.
-	Request shared.ImageTagCreateBatch `request:"mediaType=application/json"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type CreateImageTagsJSONResponse struct {

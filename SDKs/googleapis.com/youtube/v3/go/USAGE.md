@@ -14,68 +14,72 @@ func main() {
     s := sdk.New()
 
     req := operations.YoutubeAbuseReportsInsertRequest{
-        Security: operations.YoutubeAbuseReportsInsertSecurity{
-            Option1: &operations.YoutubeAbuseReportsInsertSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            Part: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
-            },
-            PrettyPrint: false,
-            QuotaUser: "iure",
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
-        Request: &shared.AbuseReport{
+        DollarXgafv: "2",
+        AbuseReport: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "delectus",
+                    ID: "distinctio",
+                },
+                shared.AbuseType{
+                    ID: "quibusdam",
+                },
+                shared.AbuseType{
+                    ID: "unde",
                 },
             },
-            Description: "tempora",
+            Description: "nulla",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "molestiae",
-                        TypeID: "minus",
-                        URL: "placeat",
+                        ID: "illum",
+                        TypeID: "vel",
+                        URL: "error",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "voluptatum",
-                        TypeID: "iusto",
-                        URL: "excepturi",
+                        ID: "deserunt",
+                        TypeID: "suscipit",
+                        URL: "iure",
+                    },
+                },
+                shared.RelatedEntity{
+                    Entity: &shared.Entity{
+                        ID: "magnam",
+                        TypeID: "debitis",
+                        URL: "ipsa",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "nisi",
-                TypeID: "recusandae",
-                URL: "temporibus",
+                ID: "delectus",
+                TypeID: "tempora",
+                URL: "suscipit",
             },
         },
+        AccessToken: "molestiae",
+        Alt: "proto",
+        Callback: "placeat",
+        Fields: "voluptatum",
+        Key: "iusto",
+        OauthToken: "excepturi",
+        Part: []string{
+            "recusandae",
+            "temporibus",
+        },
+        PrettyPrint: false,
+        QuotaUser: "ab",
+        UploadType: "quis",
+        UploadProtocol: "veritatis",
     }
 
     ctx := context.Background()
-    res, err := s.AbuseReports.YoutubeAbuseReportsInsert(ctx, req)
+    res, err := s.AbuseReports.YoutubeAbuseReportsInsert(ctx, req, operations.YoutubeAbuseReportsInsertSecurity{
+        Option1: &operations.YoutubeAbuseReportsInsertSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

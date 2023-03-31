@@ -4,24 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-s.config_security(
-    security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+
+
+req = operations.GetAudioRequest(
+    limit=548814,
+    use_canonical="true",
+    word="distinctio",
 )
     
-req = operations.AuthenticateRequest(
-    path_params=operations.AuthenticatePathParams(
-        username="debitis",
-    ),
-    query_params=operations.AuthenticateQueryParams(
-        password="ea",
-    ),
-)
-    
-res = s.account.authenticate(req)
+res = s.word.get_audio(req)
 
 if res.body is not None:
     # handle response

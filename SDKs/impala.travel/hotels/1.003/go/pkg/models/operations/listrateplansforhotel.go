@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRatePlansForHotelPathParams struct {
-	// The uuid of hotel for which rate plans are being fetched.
-	HotelID string `pathParam:"style=simple,explode=false,name=hotelId"`
-}
-
-type ListRatePlansForHotelQueryParams struct {
+type ListRatePlansForHotelRequest struct {
 	// Start date of the considered time window for the returned rate plan.
 	End *string `queryParam:"style=form,explode=true,name=end"`
+	// The uuid of hotel for which rate plans are being fetched.
+	HotelID string `pathParam:"style=simple,explode=false,name=hotelId"`
 	// Offset from the first rate plan in the result (for pagination).
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	// The UUID of room for which rate plans are being fetched.
@@ -25,11 +22,6 @@ type ListRatePlansForHotelQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// Returns rate plans changed after the supplied date.
 	UpdatedAt map[string]interface{} `queryParam:"style=deepObject,explode=true,name=updatedAt"`
-}
-
-type ListRatePlansForHotelRequest struct {
-	PathParams  ListRatePlansForHotelPathParams
-	QueryParams ListRatePlansForHotelQueryParams
 }
 
 type ListRatePlansForHotel200ApplicationJSON struct {

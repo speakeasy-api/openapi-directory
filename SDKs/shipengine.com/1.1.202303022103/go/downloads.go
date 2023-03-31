@@ -37,14 +37,14 @@ func newDownloads(defaultClient, securityClient HTTPClient, serverURL, language,
 // Get File
 func (s *downloads) DownloadFile(ctx context.Context, request operations.DownloadFileRequest) (*operations.DownloadFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/downloads/{dir}/{subdir}/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/downloads/{dir}/{subdir}/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

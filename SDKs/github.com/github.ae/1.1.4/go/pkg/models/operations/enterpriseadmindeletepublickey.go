@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeletePublicKeyPathParams struct {
+type EnterpriseAdminDeletePublicKeyRequest struct {
 	// The unique identifier of the key.
 	KeyIds string `pathParam:"style=simple,explode=false,name=key_ids"`
-}
-
-type EnterpriseAdminDeletePublicKeyRequest struct {
-	PathParams EnterpriseAdminDeletePublicKeyPathParams
 }
 
 type EnterpriseAdminDeletePublicKeyResponse struct {

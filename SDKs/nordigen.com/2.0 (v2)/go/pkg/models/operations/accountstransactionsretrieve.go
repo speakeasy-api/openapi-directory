@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/types"
 )
 
-type AccountsTransactionsRetrievePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AccountsTransactionsRetrieveQueryParams struct {
+type AccountsTransactionsRetrieveRequest struct {
 	DateFrom *types.Date `queryParam:"style=form,explode=true,name=date_from"`
 	DateTo   *types.Date `queryParam:"style=form,explode=true,name=date_to"`
-}
-
-type AccountsTransactionsRetrieveRequest struct {
-	PathParams  AccountsTransactionsRetrievePathParams
-	QueryParams AccountsTransactionsRetrieveQueryParams
+	ID       string      `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AccountsTransactionsRetrieveResponse struct {

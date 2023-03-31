@@ -10,13 +10,8 @@ import (
 )
 
 type CloudtasksProjectsLocationsQueuesTasksListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type CloudtasksProjectsLocationsQueuesTasksListPathParams struct {
-	// Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CloudtasksProjectsLocationsQueuesTasksListResponseViewEnum - The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
@@ -46,7 +41,7 @@ func (e *CloudtasksProjectsLocationsQueuesTasksListResponseViewEnum) UnmarshalJS
 	}
 }
 
-type CloudtasksProjectsLocationsQueuesTasksListQueryParams struct {
+type CloudtasksProjectsLocationsQueuesTasksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -65,6 +60,8 @@ type CloudtasksProjectsLocationsQueuesTasksListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying the page of results to return. To request the first page results, page_token must be empty. To request the next page of results, page_token must be the value of next_page_token returned from the previous call to ListTasks method. The page token is valid for only 2 hours.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -75,12 +72,6 @@ type CloudtasksProjectsLocationsQueuesTasksListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudtasksProjectsLocationsQueuesTasksListRequest struct {
-	PathParams  CloudtasksProjectsLocationsQueuesTasksListPathParams
-	QueryParams CloudtasksProjectsLocationsQueuesTasksListQueryParams
-	Security    CloudtasksProjectsLocationsQueuesTasksListSecurity
 }
 
 type CloudtasksProjectsLocationsQueuesTasksListResponse struct {

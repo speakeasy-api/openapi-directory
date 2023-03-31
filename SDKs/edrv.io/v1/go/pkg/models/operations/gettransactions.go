@@ -34,7 +34,7 @@ func (e *GetTransactionsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTransactionsQueryParams struct {
+type GetTransactionsRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -71,10 +71,6 @@ type GetTransactionsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetTransactionsRequest struct {
-	QueryParams GetTransactionsQueryParams
 }
 
 // GetTransactions200ApplicationJSON - Returns an array of transaction objects

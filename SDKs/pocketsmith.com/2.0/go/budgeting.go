@@ -35,7 +35,7 @@ func newBudgeting(defaultClient, securityClient HTTPClient, serverURL, language,
 // Delete the user's cached forecast by recalculating the forecast.
 func (s *budgeting) DeleteUsersIDForecastCache(ctx context.Context, request operations.DeleteUsersIDForecastCacheRequest) (*operations.DeleteUsersIDForecastCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/forecast_cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/forecast_cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,14 +83,14 @@ func (s *budgeting) DeleteUsersIDForecastCache(ctx context.Context, request oper
 // Lists the user's budget, consisting of one or more budget analysis packages, one per category. Akin to the list on the Budget page in PocketSmith.
 func (s *budgeting) GetUsersIDBudget(ctx context.Context, request operations.GetUsersIDBudgetRequest) (*operations.GetUsersIDBudgetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/budget", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/budget", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,14 +132,14 @@ func (s *budgeting) GetUsersIDBudget(ctx context.Context, request operations.Get
 // Get the user's budget summary, containing an expense and income analysis for all categories (excluding transfer categories) for the given period and date range. Akin to the overall budget shown on the Budget page in PocketSmith.
 func (s *budgeting) GetUsersIDBudgetSummary(ctx context.Context, request operations.GetUsersIDBudgetSummaryRequest) (*operations.GetUsersIDBudgetSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/budget_summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/budget_summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -195,14 +195,14 @@ func (s *budgeting) GetUsersIDBudgetSummary(ctx context.Context, request operati
 // Get an income and/or expense budget analysis for the given date range and period across any number of categories and scenarios. Akin to the Trends page in PocketSmith.
 func (s *budgeting) GetUsersIDTrendAnalysis(ctx context.Context, request operations.GetUsersIDTrendAnalysisRequest) (*operations.GetUsersIDTrendAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/trend_analysis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/trend_analysis", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

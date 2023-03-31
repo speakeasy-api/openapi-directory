@@ -8,17 +8,12 @@ import (
 )
 
 type AccountInstitutionCurationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type AccountInstitutionCurationPathParams struct {
-	// ID of the curation
-	CurationID int64 `pathParam:"style=simple,explode=false,name=curation_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AccountInstitutionCurationRequest struct {
-	PathParams AccountInstitutionCurationPathParams
-	Security   AccountInstitutionCurationSecurity
+	// ID of the curation
+	CurationID int64 `pathParam:"style=simple,explode=false,name=curation_id"`
 }
 
 type AccountInstitutionCurationResponse struct {

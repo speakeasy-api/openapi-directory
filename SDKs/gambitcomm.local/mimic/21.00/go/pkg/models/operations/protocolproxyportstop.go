@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ProtocolProxyPortStopPathParams struct {
+type ProtocolProxyPortStopRequest struct {
 	// Agent to manipulate PROXY target
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	Port     int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolProxyPortStopRequest struct {
-	PathParams ProtocolProxyPortStopPathParams
 }
 
 type ProtocolProxyPortStopResponse struct {

@@ -35,7 +35,7 @@ func newDataExporterConfigs(defaultClient, securityClient HTTPClient, serverURL,
 
 // DataExporterTemplate - Get all data exporter configs
 // Get all data exporter configs
-func (s *dataExporterConfigs) DataExporterTemplate(ctx context.Context, request operations.DataExporterTemplateRequest) (*operations.DataExporterTemplateResponse, error) {
+func (s *dataExporterConfigs) DataExporterTemplate(ctx context.Context, request operations.DataExporterTemplateRequest, security operations.DataExporterTemplateSecurity) (*operations.DataExporterTemplateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs/_template"
 
@@ -44,11 +44,11 @@ func (s *dataExporterConfigs) DataExporterTemplate(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *dataExporterConfigs) DataExporterTemplate(ctx context.Context, request 
 
 // CreateBulkDataExporterConfigs - Create a new data exporter configs
 // Create a new data exporter configs
-func (s *dataExporterConfigs) CreateBulkDataExporterConfigs(ctx context.Context, request operations.CreateBulkDataExporterConfigsRequest) (*operations.CreateBulkDataExporterConfigsResponse, error) {
+func (s *dataExporterConfigs) CreateBulkDataExporterConfigs(ctx context.Context, request shared.DataExporterConfig, security operations.CreateBulkDataExporterConfigsSecurity) (*operations.CreateBulkDataExporterConfigsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs/_bulk"
 
@@ -105,7 +105,7 @@ func (s *dataExporterConfigs) CreateBulkDataExporterConfigs(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *dataExporterConfigs) CreateBulkDataExporterConfigs(ctx context.Context,
 
 // CreateDataExporterConfig - Create a new data exporter config
 // Create a new data exporter config
-func (s *dataExporterConfigs) CreateDataExporterConfig(ctx context.Context, request operations.CreateDataExporterConfigRequest) (*operations.CreateDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) CreateDataExporterConfig(ctx context.Context, request shared.DataExporterConfig, security operations.CreateDataExporterConfigSecurity) (*operations.CreateDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs"
 
@@ -162,7 +162,7 @@ func (s *dataExporterConfigs) CreateDataExporterConfig(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,16 +203,16 @@ func (s *dataExporterConfigs) CreateDataExporterConfig(ctx context.Context, requ
 
 // DeleteDataExporterConfig - Delete a data exporter config
 // Delete a data exporter config
-func (s *dataExporterConfigs) DeleteDataExporterConfig(ctx context.Context, request operations.DeleteDataExporterConfigRequest) (*operations.DeleteDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) DeleteDataExporterConfig(ctx context.Context, request operations.DeleteDataExporterConfigRequest, security operations.DeleteDataExporterConfigSecurity) (*operations.DeleteDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,7 +253,7 @@ func (s *dataExporterConfigs) DeleteDataExporterConfig(ctx context.Context, requ
 
 // DeletebulkDataExporterConfig - Delete a data exporter config
 // Delete a data exporter config
-func (s *dataExporterConfigs) DeletebulkDataExporterConfig(ctx context.Context, request operations.DeletebulkDataExporterConfigRequest) (*operations.DeletebulkDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) DeletebulkDataExporterConfig(ctx context.Context, request []shared.Patch, security operations.DeletebulkDataExporterConfigSecurity) (*operations.DeletebulkDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs/_bulk"
 
@@ -269,7 +269,7 @@ func (s *dataExporterConfigs) DeletebulkDataExporterConfig(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -310,7 +310,7 @@ func (s *dataExporterConfigs) DeletebulkDataExporterConfig(ctx context.Context, 
 
 // FindAllDataExporters - Get all data exporter configs
 // Get all data exporter configs
-func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context, request operations.FindAllDataExportersRequest) (*operations.FindAllDataExportersResponse, error) {
+func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context) (*operations.FindAllDataExportersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs"
 
@@ -319,7 +319,7 @@ func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -360,16 +360,16 @@ func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context, request 
 
 // FindDataExporterConfigByID - Get a data exporter config
 // Get a data exporter config
-func (s *dataExporterConfigs) FindDataExporterConfigByID(ctx context.Context, request operations.FindDataExporterConfigByIDRequest) (*operations.FindDataExporterConfigByIDResponse, error) {
+func (s *dataExporterConfigs) FindDataExporterConfigByID(ctx context.Context, request operations.FindDataExporterConfigByIDRequest, security operations.FindDataExporterConfigByIDSecurity) (*operations.FindDataExporterConfigByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,7 +410,7 @@ func (s *dataExporterConfigs) FindDataExporterConfigByID(ctx context.Context, re
 
 // PatchBulkDataExporterConfig - Update a data exporter configs with a diff
 // Update a data exporter configs with a diff
-func (s *dataExporterConfigs) PatchBulkDataExporterConfig(ctx context.Context, request operations.PatchBulkDataExporterConfigRequest) (*operations.PatchBulkDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) PatchBulkDataExporterConfig(ctx context.Context, request []shared.Patch, security operations.PatchBulkDataExporterConfigSecurity) (*operations.PatchBulkDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs/_bulk"
 
@@ -426,7 +426,7 @@ func (s *dataExporterConfigs) PatchBulkDataExporterConfig(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -467,11 +467,11 @@ func (s *dataExporterConfigs) PatchBulkDataExporterConfig(ctx context.Context, r
 
 // PatchDataExporterConfig - Update a data exporter config with a diff
 // Update a data exporter config with a diff
-func (s *dataExporterConfigs) PatchDataExporterConfig(ctx context.Context, request operations.PatchDataExporterConfigRequest) (*operations.PatchDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) PatchDataExporterConfig(ctx context.Context, request operations.PatchDataExporterConfigRequest, security operations.PatchDataExporterConfigSecurity) (*operations.PatchDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -483,7 +483,7 @@ func (s *dataExporterConfigs) PatchDataExporterConfig(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -524,7 +524,7 @@ func (s *dataExporterConfigs) PatchDataExporterConfig(ctx context.Context, reque
 
 // UpdateBulkDataExporterConfig - Update a data exporter configs
 // Update a data exporter configs
-func (s *dataExporterConfigs) UpdateBulkDataExporterConfig(ctx context.Context, request operations.UpdateBulkDataExporterConfigRequest) (*operations.UpdateBulkDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) UpdateBulkDataExporterConfig(ctx context.Context, request shared.DataExporterConfig, security operations.UpdateBulkDataExporterConfigSecurity) (*operations.UpdateBulkDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs/_bulk"
 
@@ -540,7 +540,7 @@ func (s *dataExporterConfigs) UpdateBulkDataExporterConfig(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -581,11 +581,11 @@ func (s *dataExporterConfigs) UpdateBulkDataExporterConfig(ctx context.Context, 
 
 // UpdateDataExporterConfig - Update a data exporter config
 // Update a data exporter config
-func (s *dataExporterConfigs) UpdateDataExporterConfig(ctx context.Context, request operations.UpdateDataExporterConfigRequest) (*operations.UpdateDataExporterConfigResponse, error) {
+func (s *dataExporterConfigs) UpdateDataExporterConfig(ctx context.Context, request operations.UpdateDataExporterConfigRequest, security operations.UpdateDataExporterConfigSecurity) (*operations.UpdateDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataExporterConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -597,7 +597,7 @@ func (s *dataExporterConfigs) UpdateDataExporterConfig(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

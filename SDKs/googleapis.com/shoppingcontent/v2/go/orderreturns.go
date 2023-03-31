@@ -32,20 +32,20 @@ func newOrderreturns(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // ContentOrderreturnsGet - Retrieves an order return from your Merchant Center account.
-func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request operations.ContentOrderreturnsGetRequest) (*operations.ContentOrderreturnsGetResponse, error) {
+func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request operations.ContentOrderreturnsGetRequest, security operations.ContentOrderreturnsGetSecurity) (*operations.ContentOrderreturnsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request opera
 }
 
 // ContentOrderreturnsList - Lists order returns in your Merchant Center account.
-func (s *orderreturns) ContentOrderreturnsList(ctx context.Context, request operations.ContentOrderreturnsListRequest) (*operations.ContentOrderreturnsListResponse, error) {
+func (s *orderreturns) ContentOrderreturnsList(ctx context.Context, request operations.ContentOrderreturnsListRequest, security operations.ContentOrderreturnsListSecurity) (*operations.ContentOrderreturnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

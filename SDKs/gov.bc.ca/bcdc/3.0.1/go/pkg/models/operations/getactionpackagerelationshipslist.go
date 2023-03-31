@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetActionPackageRelationshipsListQueryParams struct {
+type GetActionPackageRelationshipsListRequest struct {
 	// The id or name of the first package
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// The id or name of the second package
 	Id2 *string `queryParam:"style=form,explode=true,name=id2"`
 	// relationship as string
 	Rel *string `queryParam:"style=form,explode=true,name=rel"`
-}
-
-type GetActionPackageRelationshipsListRequest struct {
-	QueryParams GetActionPackageRelationshipsListQueryParams
 }
 
 type GetActionPackageRelationshipsListResponse struct {

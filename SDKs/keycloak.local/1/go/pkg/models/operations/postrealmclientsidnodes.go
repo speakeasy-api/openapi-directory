@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PostRealmClientsIDNodesPathParams struct {
+type PostRealmClientsIDNodesRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientsIDNodesRequest struct {
-	PathParams PostRealmClientsIDNodesPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostRealmClientsIDNodesResponse struct {

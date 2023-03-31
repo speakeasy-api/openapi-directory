@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetDropsPathParams struct {
+type SetDropsRequest struct {
 	// Agent to set the drop rate
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Drop rate of the agent
 	Drops int `pathParam:"style=simple,explode=false,name=drops"`
-}
-
-type SetDropsRequest struct {
-	PathParams SetDropsPathParams
 }
 
 type SetDropsResponse struct {

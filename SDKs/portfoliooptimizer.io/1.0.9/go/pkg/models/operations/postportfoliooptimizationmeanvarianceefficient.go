@@ -38,10 +38,6 @@ type PostPortfolioOptimizationMeanVarianceEfficientRequestBody struct {
 	Constraints   PostPortfolioOptimizationMeanVarianceEfficientRequestBodyConstraints `json:"constraints"`
 }
 
-type PostPortfolioOptimizationMeanVarianceEfficientRequest struct {
-	Request PostPortfolioOptimizationMeanVarianceEfficientRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSON - OK
 type PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

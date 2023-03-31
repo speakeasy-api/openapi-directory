@@ -12,7 +12,8 @@ var UpdateFlowValidateServerList = []string{
 }
 
 type UpdateFlowValidateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateFlowValidateUpdateFlowValidateRequest struct {
@@ -23,12 +24,6 @@ type UpdateFlowValidateUpdateFlowValidateRequest struct {
 	// The string that you assigned to describe the Flow.
 	FriendlyName string                            `form:"name=FriendlyName"`
 	Status       shared.FlowValidateEnumStatusEnum `form:"name=Status"`
-}
-
-type UpdateFlowValidateRequest struct {
-	Request   *UpdateFlowValidateUpdateFlowValidateRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateFlowValidateSecurity
-	ServerURL *string
 }
 
 type UpdateFlowValidateResponse struct {

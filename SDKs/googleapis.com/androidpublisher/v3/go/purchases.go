@@ -32,11 +32,11 @@ func newPurchases(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AndroidpublisherPurchasesProductsAcknowledge - Acknowledges a purchase of an inapp item.
-func (s *purchases) AndroidpublisherPurchasesProductsAcknowledge(ctx context.Context, request operations.AndroidpublisherPurchasesProductsAcknowledgeRequest) (*operations.AndroidpublisherPurchasesProductsAcknowledgeResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesProductsAcknowledge(ctx context.Context, request operations.AndroidpublisherPurchasesProductsAcknowledgeRequest, security operations.AndroidpublisherPurchasesProductsAcknowledgeSecurity) (*operations.AndroidpublisherPurchasesProductsAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductPurchasesAcknowledgeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *purchases) AndroidpublisherPurchasesProductsAcknowledge(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *purchases) AndroidpublisherPurchasesProductsAcknowledge(ctx context.Con
 }
 
 // AndroidpublisherPurchasesProductsConsume - Consumes a purchase for an inapp item.
-func (s *purchases) AndroidpublisherPurchasesProductsConsume(ctx context.Context, request operations.AndroidpublisherPurchasesProductsConsumeRequest) (*operations.AndroidpublisherPurchasesProductsConsumeResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesProductsConsume(ctx context.Context, request operations.AndroidpublisherPurchasesProductsConsumeRequest, security operations.AndroidpublisherPurchasesProductsConsumeSecurity) (*operations.AndroidpublisherPurchasesProductsConsumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:consume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:consume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -117,20 +117,20 @@ func (s *purchases) AndroidpublisherPurchasesProductsConsume(ctx context.Context
 }
 
 // AndroidpublisherPurchasesProductsGet - Checks the purchase and consumption status of an inapp item.
-func (s *purchases) AndroidpublisherPurchasesProductsGet(ctx context.Context, request operations.AndroidpublisherPurchasesProductsGetRequest) (*operations.AndroidpublisherPurchasesProductsGetResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesProductsGet(ctx context.Context, request operations.AndroidpublisherPurchasesProductsGetRequest, security operations.AndroidpublisherPurchasesProductsGetSecurity) (*operations.AndroidpublisherPurchasesProductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,11 +165,11 @@ func (s *purchases) AndroidpublisherPurchasesProductsGet(ctx context.Context, re
 }
 
 // AndroidpublisherPurchasesSubscriptionsAcknowledge - Acknowledges a subscription purchase.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsAcknowledge(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest) (*operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsAcknowledge(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest, security operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionPurchasesAcknowledgeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -181,11 +181,11 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsAcknowledge(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,20 +211,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsAcknowledge(ctx contex
 }
 
 // AndroidpublisherPurchasesSubscriptionsCancel - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsCancel(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsCancelRequest) (*operations.AndroidpublisherPurchasesSubscriptionsCancelResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsCancel(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsCancelRequest, security operations.AndroidpublisherPurchasesSubscriptionsCancelSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,11 +250,11 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsCancel(ctx context.Con
 }
 
 // AndroidpublisherPurchasesSubscriptionsDefer - Defers a user's subscription purchase until a specified future expiration time.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsDefer(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsDeferRequest) (*operations.AndroidpublisherPurchasesSubscriptionsDeferResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsDefer(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsDeferRequest, security operations.AndroidpublisherPurchasesSubscriptionsDeferSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsDeferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionPurchasesDeferRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,11 +266,11 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsDefer(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -305,20 +305,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsDefer(ctx context.Cont
 }
 
 // AndroidpublisherPurchasesSubscriptionsGet - Checks whether a user's subscription purchase is valid and returns its expiry time.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsGet(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsGetRequest) (*operations.AndroidpublisherPurchasesSubscriptionsGetResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsGet(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsGetRequest, security operations.AndroidpublisherPurchasesSubscriptionsGetSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -353,20 +353,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsGet(ctx context.Contex
 }
 
 // AndroidpublisherPurchasesSubscriptionsRefund - Refunds a user's subscription purchase, but the subscription remains valid until its expiration time and it will continue to recur.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsRefund(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsRefundRequest) (*operations.AndroidpublisherPurchasesSubscriptionsRefundResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsRefund(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsRefundRequest, security operations.AndroidpublisherPurchasesSubscriptionsRefundSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -392,20 +392,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsRefund(ctx context.Con
 }
 
 // AndroidpublisherPurchasesSubscriptionsRevoke - Refunds and immediately revokes a user's subscription purchase. Access to the subscription will be terminated immediately and it will stop recurring.
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsRevoke(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest) (*operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsRevoke(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest, security operations.AndroidpublisherPurchasesSubscriptionsRevokeSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,20 +431,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsRevoke(ctx context.Con
 }
 
 // AndroidpublisherPurchasesSubscriptionsv2Get - Get metadata about a subscription
-func (s *purchases) AndroidpublisherPurchasesSubscriptionsv2Get(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsv2GetRequest) (*operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesSubscriptionsv2Get(ctx context.Context, request operations.AndroidpublisherPurchasesSubscriptionsv2GetRequest, security operations.AndroidpublisherPurchasesSubscriptionsv2GetSecurity) (*operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -479,20 +479,20 @@ func (s *purchases) AndroidpublisherPurchasesSubscriptionsv2Get(ctx context.Cont
 }
 
 // AndroidpublisherPurchasesVoidedpurchasesList - Lists the purchases that were canceled, refunded or charged-back.
-func (s *purchases) AndroidpublisherPurchasesVoidedpurchasesList(ctx context.Context, request operations.AndroidpublisherPurchasesVoidedpurchasesListRequest) (*operations.AndroidpublisherPurchasesVoidedpurchasesListResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesVoidedpurchasesList(ctx context.Context, request operations.AndroidpublisherPurchasesVoidedpurchasesListRequest, security operations.AndroidpublisherPurchasesVoidedpurchasesListSecurity) (*operations.AndroidpublisherPurchasesVoidedpurchasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/voidedpurchases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/voidedpurchases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

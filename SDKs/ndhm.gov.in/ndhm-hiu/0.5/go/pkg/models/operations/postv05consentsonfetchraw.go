@@ -11,17 +11,12 @@ var PostV05ConsentsOnFetchRawServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type PostV05ConsentsOnFetchRawHeaders struct {
+type PostV05ConsentsOnFetchRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05ConsentsOnFetchRawRequest struct {
-	Headers   PostV05ConsentsOnFetchRawHeaders
-	Request   []byte `request:"mediaType=application/xml"`
-	ServerURL *string
 }
 
 type PostV05ConsentsOnFetchRawResponse struct {

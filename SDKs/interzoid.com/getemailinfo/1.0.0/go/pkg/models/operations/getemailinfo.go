@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetemailinfoQueryParams struct {
+type GetemailinfoRequest struct {
 	// Email address to retrieve validation information
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetemailinfoRequest struct {
-	QueryParams GetemailinfoQueryParams
 }
 
 // Getemailinfo200ApplicationJSON - Email validation and demographic information

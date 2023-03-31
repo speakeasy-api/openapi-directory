@@ -36,7 +36,7 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Deletes a transcription job. All data related to the job, such as input media and transcript, will be permanently deleted. A job can only be deleted once it's completed (either with success or failure).
 func (s *jobs) DeleteJobByID(ctx context.Context, request operations.DeleteJobByIDRequest) (*operations.DeleteJobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *jobs) DeleteJobByID(ctx context.Context, request operations.DeleteJobBy
 // Returns information about a transcription job
 func (s *jobs) GetJobByID(ctx context.Context, request operations.GetJobByIDRequest) (*operations.GetJobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,7 +174,7 @@ func (s *jobs) GetListOfJobs(ctx context.Context, request operations.GetListOfJo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -234,7 +234,7 @@ func (s *jobs) GetListOfJobs(ctx context.Context, request operations.GetListOfJo
 
 // SubmitTranscriptionJobJSON - Submit Transcription Job
 // Starts an asynchronous job to transcribe speech-to-text for a media file. Media files can be specified in two ways, either by including a public url to the media in the transcription job `options` or by uploading a local file as part of a multipart/form request.
-func (s *jobs) SubmitTranscriptionJobJSON(ctx context.Context, request operations.SubmitTranscriptionJobJSONRequest) (*operations.SubmitTranscriptionJobJSONResponse, error) {
+func (s *jobs) SubmitTranscriptionJobJSON(ctx context.Context, request shared.SubmitJobMediaURLOptions) (*operations.SubmitTranscriptionJobJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobs"
 
@@ -319,7 +319,7 @@ func (s *jobs) SubmitTranscriptionJobJSON(ctx context.Context, request operation
 
 // SubmitTranscriptionJobMultipart - Submit Transcription Job
 // Starts an asynchronous job to transcribe speech-to-text for a media file. Media files can be specified in two ways, either by including a public url to the media in the transcription job `options` or by uploading a local file as part of a multipart/form request.
-func (s *jobs) SubmitTranscriptionJobMultipart(ctx context.Context, request operations.SubmitTranscriptionJobMultipartRequest) (*operations.SubmitTranscriptionJobMultipartResponse, error) {
+func (s *jobs) SubmitTranscriptionJobMultipart(ctx context.Context, request operations.SubmitTranscriptionJobMultipartFormData) (*operations.SubmitTranscriptionJobMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobs"
 

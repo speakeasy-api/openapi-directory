@@ -34,10 +34,6 @@ type PostPortfolioConstructionMimickingRequestBody struct {
 	Constraints      *PostPortfolioConstructionMimickingRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioConstructionMimickingRequest struct {
-	Request PostPortfolioConstructionMimickingRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioConstructionMimicking200ApplicationJSON - OK
 type PostPortfolioConstructionMimicking200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

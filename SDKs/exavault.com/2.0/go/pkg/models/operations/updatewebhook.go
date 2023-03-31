@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWebhookPathParams struct {
-	// Webhook endpoint ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateWebhookHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // UpdateWebhookUpdateWebhookRequestBodyResponseVersionEnum - Version of the webhooks message to send to the endpoint
 type UpdateWebhookUpdateWebhookRequestBodyResponseVersionEnum string
 
@@ -56,9 +44,13 @@ type UpdateWebhookUpdateWebhookRequestBody struct {
 }
 
 type UpdateWebhookRequest struct {
-	PathParams UpdateWebhookPathParams
-	Headers    UpdateWebhookHeaders
-	Request    *UpdateWebhookUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateWebhookUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// Webhook endpoint ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateWebhookResponse struct {

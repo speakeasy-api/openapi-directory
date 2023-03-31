@@ -35,9 +35,9 @@ func newGroupConfigurationLocations(defaultClient, securityClient HTTPClient, se
 // Create a new location for a group
 func (s *groupConfigurationLocations) CreateLocation(ctx context.Context, request operations.CreateLocationRequest) (*operations.CreateLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *groupConfigurationLocations) CreateLocation(ctx context.Context, reques
 // Edit a location based on the ID provided. The version parameter must match the latest location version.
 func (s *groupConfigurationLocations) EditLocation(ctx context.Context, request operations.EditLocationRequest) (*operations.EditLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations/{location_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations/{location_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *groupConfigurationLocations) EditLocation(ctx context.Context, request 
 // Returns the latest version of a single location based on the ID provided.
 func (s *groupConfigurationLocations) GetLocation(ctx context.Context, request operations.GetLocationRequest) (*operations.GetLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,14 +190,14 @@ func (s *groupConfigurationLocations) GetLocation(ctx context.Context, request o
 // Returns a list of all locations for a given group
 func (s *groupConfigurationLocations) GetLocationList(ctx context.Context, request operations.GetLocationListRequest) (*operations.GetLocationListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -33,13 +33,9 @@ func (e *RefereesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RefereesPathParams struct {
+type RefereesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format RefereesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type RefereesRequest struct {
-	PathParams RefereesPathParams
 }
 
 type RefereesResponse struct {

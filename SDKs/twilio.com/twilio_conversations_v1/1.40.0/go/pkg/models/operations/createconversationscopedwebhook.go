@@ -12,12 +12,8 @@ var CreateConversationScopedWebhookServerList = []string{
 }
 
 type CreateConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateConversationScopedWebhookPathParams struct {
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConversationScopedWebhookCreateConversationScopedWebhookRequest struct {
@@ -36,10 +32,9 @@ type CreateConversationScopedWebhookCreateConversationScopedWebhookRequest struc
 }
 
 type CreateConversationScopedWebhookRequest struct {
-	PathParams CreateConversationScopedWebhookPathParams
-	Request    *CreateConversationScopedWebhookCreateConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateConversationScopedWebhookSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+	ConversationSid string                                                                 `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *CreateConversationScopedWebhookCreateConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateConversationScopedWebhookResponse struct {

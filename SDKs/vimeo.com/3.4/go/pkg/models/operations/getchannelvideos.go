@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelVideosPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
 // GetChannelVideosDirectionEnum - The sort direction of the results.
 type GetChannelVideosDirectionEnum string
 
@@ -107,7 +102,9 @@ func (e *GetChannelVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelVideosQueryParams struct {
+type GetChannelVideosRequest struct {
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The page that contains the video URI.
 	ContainingURI *string `queryParam:"style=form,explode=true,name=containing_uri"`
 	// The sort direction of the results.
@@ -124,11 +121,6 @@ type GetChannelVideosQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetChannelVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetChannelVideosRequest struct {
-	PathParams  GetChannelVideosPathParams
-	QueryParams GetChannelVideosQueryParams
 }
 
 type GetChannelVideosResponse struct {

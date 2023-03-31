@@ -52,7 +52,6 @@ pkg/models/shared/objectmeta.go
 pkg/models/shared/ownerreference.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listjobsresponse.go
 pkg/models/shared/listmeta.go
 USAGE.md

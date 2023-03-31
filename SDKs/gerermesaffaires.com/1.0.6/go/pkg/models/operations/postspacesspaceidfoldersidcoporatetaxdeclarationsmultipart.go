@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartPathParams struct {
-	// Id of the folder result and taxation
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum string
@@ -124,10 +116,12 @@ type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormData1 struct 
 }
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartPathParams
 	// Corporate tax declaration to add (either (DeclarationDate,DocumentId) either (File,Name,Content64Encoded,Title,DeclarationDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder result and taxation
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipart201ApplicationJSON - Id of document created

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteEmailListByIDPathParams struct {
-	// ID of the email list to delete
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteEmailListByIDHeaders struct {
+type DeleteEmailListByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteEmailListByIDRequest struct {
-	PathParams DeleteEmailListByIDPathParams
-	Headers    DeleteEmailListByIDHeaders
+	// ID of the email list to delete
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteEmailListByIDResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutUsersIDRequestBody struct {
 	// Whether the user wishes to have all monetary values converted to their base currency.
 	AlwaysShowBaseCurrency *bool `json:"always_show_base_currency,omitempty"`
@@ -30,8 +25,9 @@ type PutUsersIDRequestBody struct {
 }
 
 type PutUsersIDRequest struct {
-	PathParams PutUsersIDPathParams
-	Request    *PutUsersIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutUsersIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutUsersIDResponse struct {

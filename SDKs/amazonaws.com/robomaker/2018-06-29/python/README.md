@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/robomaker/2018-06-29/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,32 +14,28 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchDeleteWorldsRequest(
-    headers=operations.BatchDeleteWorldsHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ea",
-        x_amz_credential="sapiente",
-        x_amz_date="consequatur",
-        x_amz_security_token="et",
-        x_amz_signature="voluptate",
-        x_amz_signed_headers="dolore",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.BatchDeleteWorldsRequestBody(
+)
+
+
+req = operations.BatchDeleteWorldsRequest(
+    request_body=operations.BatchDeleteWorldsRequestBody(
         worlds=[
-            "quia",
-            "eum",
-            "iure",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.batch_delete_worlds(req)
@@ -50,20 +46,20 @@ if res.batch_delete_worlds_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
 * `batch_delete_worlds` - Deletes one or more worlds in a batch operation.
 * `batch_describe_simulation_job` - Describes one or more simulation jobs.
-* `cancel_deployment_job` - Cancels the specified deployment job.
+* `cancel_deployment_job` - <p>Cancels the specified deployment job.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `cancel_simulation_job` - Cancels the specified simulation job.
 * `cancel_simulation_job_batch` - Cancels a simulation job batch. When you cancel a simulation job batch, you are also cancelling all of the active simulation jobs created as part of the batch. 
 * `cancel_world_export_job` - Cancels the specified export job.
 * `cancel_world_generation_job` - Cancels the specified world generator job.
-* `create_deployment_job` - <p>Deploys a specific version of a robot application to robots in a fleet.</p> <p>The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new version, use <code>CreateRobotApplicationVersion</code> or see <a href="https://docs.aws.amazon.com/robomaker/latest/dg/create-robot-application-version.html">Creating a Robot Application Version</a>. </p> <note> <p>After 90 days, deployment jobs expire and will be deleted. They will no longer be accessible. </p> </note>
-* `create_fleet` - Creates a fleet, a logical group of robots running the same robot application.
-* `create_robot` - Creates a robot.
+* `create_deployment_job` - <p>Deploys a specific version of a robot application to robots in a fleet.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important> <p>The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new version, use <code>CreateRobotApplicationVersion</code> or see <a href="https://docs.aws.amazon.com/robomaker/latest/dg/create-robot-application-version.html">Creating a Robot Application Version</a>. </p> <note> <p>After 90 days, deployment jobs expire and will be deleted. They will no longer be accessible. </p> </note>
+* `create_fleet` - <p>Creates a fleet, a logical group of robots running the same robot application.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
+* `create_robot` - <p>Creates a robot.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
 * `create_robot_application` - Creates a robot application. 
 * `create_robot_application_version` - Creates a version of a robot application.
 * `create_simulation_application` - Creates a simulation application.
@@ -72,15 +68,15 @@ if res.batch_delete_worlds_response is not None:
 * `create_world_export_job` - Creates a world export job.
 * `create_world_generation_job` - Creates worlds using the specified template.
 * `create_world_template` - Creates a world template.
-* `delete_fleet` - Deletes a fleet.
-* `delete_robot` - Deletes a robot.
+* `delete_fleet` - <p>Deletes a fleet.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+* `delete_robot` - <p>Deletes a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `delete_robot_application` - Deletes a robot application.
 * `delete_simulation_application` - Deletes a simulation application.
 * `delete_world_template` - Deletes a world template.
-* `deregister_robot` - Deregisters a robot.
-* `describe_deployment_job` - Describes a deployment job.
-* `describe_fleet` - Describes a fleet.
-* `describe_robot` - Describes a robot.
+* `deregister_robot` - <p>Deregisters a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+* `describe_deployment_job` - <p>Describes a deployment job.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+* `describe_fleet` - <p>Describes a fleet.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+* `describe_robot` - <p>Describes a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `describe_robot_application` - Describes a robot application.
 * `describe_simulation_application` - Describes a simulation application.
 * `describe_simulation_job` - Describes a simulation job.
@@ -90,10 +86,10 @@ if res.batch_delete_worlds_response is not None:
 * `describe_world_generation_job` - Describes a world generation job.
 * `describe_world_template` - Describes a world template.
 * `get_world_template_body` - Gets the world template body.
-* `list_deployment_jobs` - Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs. 
-* `list_fleets` - Returns a list of fleets. You can optionally provide filters to retrieve specific fleets. 
+* `list_deployment_jobs` - <p>Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+* `list_fleets` - <p>Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `list_robot_applications` - Returns a list of robot application. You can optionally provide filters to retrieve specific robot applications.
-* `list_robots` - Returns a list of robots. You can optionally provide filters to retrieve specific robots.
+* `list_robots` - <p>Returns a list of robots. You can optionally provide filters to retrieve specific robots.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `list_simulation_applications` - Returns a list of simulation applications. You can optionally provide filters to retrieve specific simulation applications. 
 * `list_simulation_job_batches` - Returns a list simulation job batches. You can optionally provide filters to retrieve specific simulation batch jobs. 
 * `list_simulation_jobs` - Returns a list of simulation jobs. You can optionally provide filters to retrieve specific simulation jobs. 
@@ -102,16 +98,26 @@ if res.batch_delete_worlds_response is not None:
 * `list_world_generation_jobs` - Lists world generator jobs.
 * `list_world_templates` - Lists world templates.
 * `list_worlds` - Lists worlds.
-* `register_robot` - Registers a robot with a fleet.
+* `register_robot` - <p>Registers a robot with a fleet.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
 * `restart_simulation_job` - Restarts a running simulation job.
 * `start_simulation_job_batch` - Starts a new simulation job batch. The batch is defined using one or more <code>SimulationJobRequest</code> objects. 
-* `sync_deployment_job` - Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.
+* `sync_deployment_job` - <p>Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
 * `tag_resource` - <p>Adds or edits tags for a AWS RoboMaker resource.</p> <p>Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty strings. </p> <p>For information about the rules that apply to tag keys and tag values, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag Restrictions</a> in the <i>AWS Billing and Cost Management User Guide</i>. </p>
 * `untag_resource` - <p>Removes the specified tags from the specified AWS RoboMaker resource.</p> <p>To remove a tag, specify the tag key. To change the tag value of an existing tag key, use <a href="https://docs.aws.amazon.com/robomaker/latest/dg/API_TagResource.html"> <code>TagResource</code> </a>. </p>
 * `update_robot_application` - Updates a robot application.
 * `update_simulation_application` - Updates a simulation application.
 * `update_world_template` - Updates a world template.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

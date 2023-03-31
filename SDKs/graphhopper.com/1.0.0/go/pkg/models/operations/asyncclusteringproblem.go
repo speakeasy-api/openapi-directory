@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AsyncClusteringProblemRequest struct {
-	// Request object that contains the problem to be solved
-	Request shared.ClusterRequest `request:"mediaType=application/json"`
-}
-
 type AsyncClusteringProblemResponse struct {
 	// Error occurred when reading client request. Request is invalid.
 	BadRequest  *shared.BadRequest

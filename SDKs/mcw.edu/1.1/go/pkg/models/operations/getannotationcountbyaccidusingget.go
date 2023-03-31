@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETAnnotationCountByAccIDUsingGETPathParams struct {
+type GETAnnotationCountByAccIDUsingGETRequest struct {
 	// Ontology term accession ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
 	// true: return annotations for the term and children, false: return annotations for the term only
 	IncludeChildren bool `pathParam:"style=simple,explode=false,name=includeChildren"`
-}
-
-type GETAnnotationCountByAccIDUsingGETRequest struct {
-	PathParams GETAnnotationCountByAccIDUsingGETPathParams
 }
 
 type GETAnnotationCountByAccIDUsingGETResponse struct {

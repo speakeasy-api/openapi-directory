@@ -9,15 +9,11 @@ import (
 	"time"
 )
 
-type GetPersonalCurrentAccountsHeaders struct {
+type GetPersonalCurrentAccountsRequest struct {
 	// Used for conditional request, to retrieve data only if modified since a given date
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Used for conditional request, to retrieve data only if the given Etag value does not match
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetPersonalCurrentAccountsRequest struct {
-	Headers GetPersonalCurrentAccountsHeaders
 }
 
 // GetPersonalCurrentAccountsErrorObject - A standard error response.

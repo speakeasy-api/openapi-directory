@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetListSellersQueryParams struct {
+type GetListSellersRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the VTEX account that belongs to the marketplace.
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
@@ -33,18 +37,6 @@ type GetListSellersQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The end number of pagination, being `100` the default value.
 	To *float64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetListSellersHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetListSellersRequest struct {
-	QueryParams GetListSellersQueryParams
-	Headers     GetListSellersHeaders
 }
 
 type GetListSellersResponse struct {

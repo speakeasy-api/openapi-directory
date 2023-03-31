@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTRSBasicInfoPathParams struct {
-	// Revenue schedule number. The revenue schedule number is always prefixed with "RS", for example, "RS-00000001".
-	//
-	RsNumber string `pathParam:"style=simple,explode=false,name=rs-number"`
-}
-
-type PUTRSBasicInfoHeaders struct {
+type PUTRSBasicInfoRequest struct {
+	PUTRSBasicInfoType shared.PUTRSBasicInfoType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,12 +17,9 @@ type PUTRSBasicInfoHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type PUTRSBasicInfoRequest struct {
-	PathParams PUTRSBasicInfoPathParams
-	Headers    PUTRSBasicInfoHeaders
-	Request    shared.PUTRSBasicInfoType `request:"mediaType=application/json"`
+	// Revenue schedule number. The revenue schedule number is always prefixed with "RS", for example, "RS-00000001".
+	//
+	RsNumber string `pathParam:"style=simple,explode=false,name=rs-number"`
 }
 
 type PUTRSBasicInfoResponse struct {

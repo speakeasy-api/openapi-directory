@@ -14,12 +14,8 @@ var UpdateCompositionHookServerList = []string{
 }
 
 type UpdateCompositionHookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCompositionHookPathParams struct {
-	// The SID of the CompositionHook resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateCompositionHookUpdateCompositionHookRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.
@@ -95,10 +91,9 @@ type UpdateCompositionHookUpdateCompositionHookRequest struct {
 }
 
 type UpdateCompositionHookRequest struct {
-	PathParams UpdateCompositionHookPathParams
-	Request    *UpdateCompositionHookUpdateCompositionHookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCompositionHookSecurity
-	ServerURL  *string
+	RequestBody *UpdateCompositionHookUpdateCompositionHookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the CompositionHook resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCompositionHookResponse struct {

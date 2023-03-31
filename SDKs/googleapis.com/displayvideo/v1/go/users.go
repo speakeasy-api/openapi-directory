@@ -33,11 +33,11 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DisplayvideoUsersBulkEditAssignedUserRoles - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
-func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, request operations.DisplayvideoUsersBulkEditAssignedUserRolesRequest) (*operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse, error) {
+func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, request operations.DisplayvideoUsersBulkEditAssignedUserRolesRequest, security operations.DisplayvideoUsersBulkEditAssignedUserRolesSecurity) (*operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}:bulkEditAssignedUserRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}:bulkEditAssignedUserRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedUserRolesRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, 
 }
 
 // DisplayvideoUsersCreate - Creates a new user. Returns the newly created user if successful.
-func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.DisplayvideoUsersCreateRequest) (*operations.DisplayvideoUsersCreateResponse, error) {
+func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.DisplayvideoUsersCreateRequest, security operations.DisplayvideoUsersCreateSecurity) (*operations.DisplayvideoUsersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.
 }
 
 // DisplayvideoUsersDelete - Deletes a user.
-func (s *users) DisplayvideoUsersDelete(ctx context.Context, request operations.DisplayvideoUsersDeleteRequest) (*operations.DisplayvideoUsersDeleteResponse, error) {
+func (s *users) DisplayvideoUsersDelete(ctx context.Context, request operations.DisplayvideoUsersDeleteRequest, security operations.DisplayvideoUsersDeleteSecurity) (*operations.DisplayvideoUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *users) DisplayvideoUsersDelete(ctx context.Context, request operations.
 }
 
 // DisplayvideoUsersGet - Gets a user.
-func (s *users) DisplayvideoUsersGet(ctx context.Context, request operations.DisplayvideoUsersGetRequest) (*operations.DisplayvideoUsersGetResponse, error) {
+func (s *users) DisplayvideoUsersGet(ctx context.Context, request operations.DisplayvideoUsersGetRequest, security operations.DisplayvideoUsersGetSecurity) (*operations.DisplayvideoUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,7 +239,7 @@ func (s *users) DisplayvideoUsersGet(ctx context.Context, request operations.Dis
 }
 
 // DisplayvideoUsersList - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
-func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.DisplayvideoUsersListRequest) (*operations.DisplayvideoUsersListResponse, error) {
+func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.DisplayvideoUsersListRequest, security operations.DisplayvideoUsersListSecurity) (*operations.DisplayvideoUsersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/users"
 
@@ -248,11 +248,11 @@ func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.Di
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.Di
 }
 
 // DisplayvideoUsersPatch - Updates an existing user. Returns the updated user if successful.
-func (s *users) DisplayvideoUsersPatch(ctx context.Context, request operations.DisplayvideoUsersPatchRequest) (*operations.DisplayvideoUsersPatchResponse, error) {
+func (s *users) DisplayvideoUsersPatch(ctx context.Context, request operations.DisplayvideoUsersPatchRequest, security operations.DisplayvideoUsersPatchSecurity) (*operations.DisplayvideoUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *users) DisplayvideoUsersPatch(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

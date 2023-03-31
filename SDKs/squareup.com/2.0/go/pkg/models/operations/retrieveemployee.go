@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveEmployeeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveEmployeePathParams struct {
-	// The employee's ID.
-	EmployeeID string `pathParam:"style=simple,explode=false,name=employee_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveEmployeeRequest struct {
-	PathParams RetrieveEmployeePathParams
-	Security   RetrieveEmployeeSecurity
+	// The employee's ID.
+	EmployeeID string `pathParam:"style=simple,explode=false,name=employee_id"`
 }
 
 type RetrieveEmployeeResponse struct {

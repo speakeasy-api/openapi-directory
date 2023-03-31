@@ -42,14 +42,14 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *groups) DelGroupVB(ctx context.Context, request operations.DelGroupVBRequest) (*operations.DelGroupVBResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings/virtual_backgrounds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,20 +89,20 @@ func (s *groups) DelGroupVB(ctx context.Context, request operations.DelGroupVBRe
 // **Scopes**: `group:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) GetGroupLockSettings(ctx context.Context, request operations.GetGroupLockSettingsRequest) (*operations.GetGroupLockSettingsResponse, error) {
+func (s *groups) GetGroupLockSettings(ctx context.Context, request operations.GetGroupLockSettingsRequest, security operations.GetGroupLockSettingsSecurity) (*operations.GetGroupLockSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/lock_settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/lock_settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,20 +150,20 @@ func (s *groups) GetGroupLockSettings(ctx context.Context, request operations.Ge
 // **Scopes**: `group:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) GetGroupSettings(ctx context.Context, request operations.GetGroupSettingsRequest) (*operations.GetGroupSettingsResponse, error) {
+func (s *groups) GetGroupSettings(ctx context.Context, request operations.GetGroupSettingsRequest, security operations.GetGroupSettingsSecurity) (*operations.GetGroupSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,16 +212,16 @@ func (s *groups) GetGroupSettings(ctx context.Context, request operations.GetGro
 // **Scopes**: `group:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *groups) Group(ctx context.Context, request operations.GroupRequest) (*operations.GroupResponse, error) {
+func (s *groups) Group(ctx context.Context, request operations.GroupRequest, security operations.GroupSecurity) (*operations.GroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *groups) Group(ctx context.Context, request operations.GroupRequest) (*o
 // **Scopes**: `group:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *groups) GroupCreate(ctx context.Context, request operations.GroupCreateRequest) (*operations.GroupCreateResponse, error) {
+func (s *groups) GroupCreate(ctx context.Context, request operations.GroupCreateApplicationJSON, security operations.GroupCreateSecurity) (*operations.GroupCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -293,7 +293,7 @@ func (s *groups) GroupCreate(ctx context.Context, request operations.GroupCreate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -352,16 +352,16 @@ func (s *groups) GroupCreate(ctx context.Context, request operations.GroupCreate
 // **Scopes**: `group:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *groups) GroupDelete(ctx context.Context, request operations.GroupDeleteRequest) (*operations.GroupDeleteResponse, error) {
+func (s *groups) GroupDelete(ctx context.Context, request operations.GroupDeleteRequest, security operations.GroupDeleteSecurity) (*operations.GroupDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -399,11 +399,11 @@ func (s *groups) GroupDelete(ctx context.Context, request operations.GroupDelete
 // **Scopes**: `group:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) GroupLockedSettings(ctx context.Context, request operations.GroupLockedSettingsRequest) (*operations.GroupLockedSettingsResponse, error) {
+func (s *groups) GroupLockedSettings(ctx context.Context, request operations.GroupLockedSettingsRequest, security operations.GroupLockedSettingsSecurity) (*operations.GroupLockedSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/lock_settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/lock_settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -415,11 +415,11 @@ func (s *groups) GroupLockedSettings(ctx context.Context, request operations.Gro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -470,20 +470,20 @@ func (s *groups) GroupLockedSettings(ctx context.Context, request operations.Gro
 // **Scopes**: `group:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) GroupMembers(ctx context.Context, request operations.GroupMembersRequest) (*operations.GroupMembersResponse, error) {
+func (s *groups) GroupMembers(ctx context.Context, request operations.GroupMembersRequest, security operations.GroupMembersSecurity) (*operations.GroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,9 +534,9 @@ func (s *groups) GroupMembers(ctx context.Context, request operations.GroupMembe
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *groups) GroupMembersCreate(ctx context.Context, request operations.GroupMembersCreateRequest) (*operations.GroupMembersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -602,16 +602,16 @@ func (s *groups) GroupMembersCreate(ctx context.Context, request operations.Grou
 // **Scopes**: `group:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *groups) GroupMembersDelete(ctx context.Context, request operations.GroupMembersDeleteRequest) (*operations.GroupMembersDeleteResponse, error) {
+func (s *groups) GroupMembersDelete(ctx context.Context, request operations.GroupMembersDeleteRequest, security operations.GroupMembersDeleteSecurity) (*operations.GroupMembersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -649,11 +649,11 @@ func (s *groups) GroupMembersDelete(ctx context.Context, request operations.Grou
 // **Scopes**: `group:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *groups) GroupUpdate(ctx context.Context, request operations.GroupUpdateRequest) (*operations.GroupUpdateResponse, error) {
+func (s *groups) GroupUpdate(ctx context.Context, request operations.GroupUpdateRequest, security operations.GroupUpdateSecurity) (*operations.GroupUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -668,7 +668,7 @@ func (s *groups) GroupUpdate(ctx context.Context, request operations.GroupUpdate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -706,7 +706,7 @@ func (s *groups) GroupUpdate(ctx context.Context, request operations.GroupUpdate
 // **Scopes**: `group:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) Groups(ctx context.Context, request operations.GroupsRequest) (*operations.GroupsResponse, error) {
+func (s *groups) Groups(ctx context.Context) (*operations.GroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -715,7 +715,7 @@ func (s *groups) Groups(ctx context.Context, request operations.GroupsRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -766,11 +766,11 @@ func (s *groups) Groups(ctx context.Context, request operations.GroupsRequest) (
 // * Pro or higher account<br> **Scopes:** `group:write:admin`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *groups) UpdateAGroupMember(ctx context.Context, request operations.UpdateAGroupMemberRequest) (*operations.UpdateAGroupMemberResponse, error) {
+func (s *groups) UpdateAGroupMember(ctx context.Context, request operations.UpdateAGroupMemberRequest, security operations.UpdateAGroupMemberSecurity) (*operations.UpdateAGroupMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/members/{memberId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -782,7 +782,7 @@ func (s *groups) UpdateAGroupMember(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -834,9 +834,9 @@ func (s *groups) UpdateAGroupMember(ctx context.Context, request operations.Upda
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *groups) UpdateGroupSettings(ctx context.Context, request operations.UpdateGroupSettingsRequest) (*operations.UpdateGroupSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -848,7 +848,7 @@ func (s *groups) UpdateGroupSettings(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -907,9 +907,9 @@ func (s *groups) UpdateGroupSettings(ctx context.Context, request operations.Upd
 // `
 func (s *groups) UploadGroupVB(ctx context.Context, request operations.UploadGroupVBRequest) (*operations.UploadGroupVBResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/settings/virtual_backgrounds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -921,7 +921,7 @@ func (s *groups) UploadGroupVB(ctx context.Context, request operations.UploadGro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

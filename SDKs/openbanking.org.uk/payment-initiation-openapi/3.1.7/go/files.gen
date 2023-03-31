@@ -88,7 +88,6 @@ pkg/models/shared/obactiveorhistoriccurrencyandamount.go
 pkg/models/shared/oberrorresponse1.go
 pkg/models/shared/oberror1.go
 pkg/models/shared/obwritedomesticconsent4.go
-pkg/models/shared/security.go
 pkg/models/shared/obwritedomesticresponse5.go
 pkg/models/shared/obwritedomestic2.go
 pkg/models/shared/obwritefundsconfirmationresponse1.go

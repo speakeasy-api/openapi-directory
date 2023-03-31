@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateProjectPermissionsInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum - The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/github-ae@latest/rest/overview/resources-in-the-rest-api#http-verbs)."
 type TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum string
 
@@ -50,8 +41,13 @@ type TeamsAddOrUpdateProjectPermissionsInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateProjectPermissionsInOrgRequest struct {
-	PathParams TeamsAddOrUpdateProjectPermissionsInOrgPathParams
-	Request    *TeamsAddOrUpdateProjectPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateProjectPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 // TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON - Forbidden if the project is not owned by the organization

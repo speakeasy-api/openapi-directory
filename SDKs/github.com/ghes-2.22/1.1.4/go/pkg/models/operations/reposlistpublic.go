@@ -33,15 +33,11 @@ func (e *ReposListPublicVisibilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReposListPublicQueryParams struct {
+type ReposListPublicRequest struct {
 	// A repository ID. Only return repositories with an ID greater than this ID.
 	Since *int64 `queryParam:"style=form,explode=true,name=since"`
 	// Specifies the types of repositories to return. Can be one of `all` or `public`. Default: `public`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise.
 	Visibility *ReposListPublicVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type ReposListPublicRequest struct {
-	QueryParams ReposListPublicQueryParams
 }
 
 type ReposListPublicResponse struct {

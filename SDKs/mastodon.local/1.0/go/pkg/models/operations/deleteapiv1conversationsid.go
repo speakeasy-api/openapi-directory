@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAPIV1ConversationsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1ConversationsIDPathParams struct {
-	// ID of the conversation in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1ConversationsIDRequest struct {
-	PathParams DeleteAPIV1ConversationsIDPathParams
-	Security   DeleteAPIV1ConversationsIDSecurity
+	// ID of the conversation in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1ConversationsIDResponse struct {

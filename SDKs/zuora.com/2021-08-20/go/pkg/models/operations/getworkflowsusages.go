@@ -8,19 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETWorkflowsUsagesQueryParams struct {
-	// The end date of the usage data that you want to get. For example, 2019-12-31.
-	//
-	EndDate types.Date `queryParam:"style=form,explode=true,name=endDate"`
-	// The type of metric that you want to get. Currently, only `taskCount` is supported. `taskCount` is the amount of task runs.
-	//
-	Metrics string `queryParam:"style=form,explode=true,name=metrics"`
-	// The start date of the usage data that you want to get. For example, 2019-01-01.
-	//
-	StartDate types.Date `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GETWorkflowsUsagesHeaders struct {
+type GETWorkflowsUsagesRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -32,11 +20,15 @@ type GETWorkflowsUsagesHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETWorkflowsUsagesRequest struct {
-	QueryParams GETWorkflowsUsagesQueryParams
-	Headers     GETWorkflowsUsagesHeaders
+	// The end date of the usage data that you want to get. For example, 2019-12-31.
+	//
+	EndDate types.Date `queryParam:"style=form,explode=true,name=endDate"`
+	// The type of metric that you want to get. Currently, only `taskCount` is supported. `taskCount` is the amount of task runs.
+	//
+	Metrics string `queryParam:"style=form,explode=true,name=metrics"`
+	// The start date of the usage data that you want to get. For example, 2019-01-01.
+	//
+	StartDate types.Date `queryParam:"style=form,explode=true,name=startDate"`
 }
 
 type GETWorkflowsUsagesResponse struct {

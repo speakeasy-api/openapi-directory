@@ -6,22 +6,18 @@ import (
 	"net/http"
 )
 
-type PostEmailEnrichHeaders struct {
+type PostEmailEnrichRequestBody struct {
+	Email *string `json:"Email,omitempty"`
+}
+
+type PostEmailEnrichRequest struct {
+	RequestBody *PostEmailEnrichRequestBody `request:"mediaType=application/json"`
 	// e.g. Key
 	GalaxyApName *string `header:"style=simple,explode=false,name=galaxy-ap-name"`
 	// e.g. Secret
 	GalaxyApPassword *string `header:"style=simple,explode=false,name=galaxy-ap-password"`
 	// e.g. DevAPIEmailID
 	GalaxySearchType *string `header:"style=simple,explode=false,name=galaxy-search-type"`
-}
-
-type PostEmailEnrichRequestBody struct {
-	Email *string `json:"Email,omitempty"`
-}
-
-type PostEmailEnrichRequest struct {
-	Headers PostEmailEnrichHeaders
-	Request *PostEmailEnrichRequestBody `request:"mediaType=application/json"`
 }
 
 type PostEmailEnrichResponse struct {

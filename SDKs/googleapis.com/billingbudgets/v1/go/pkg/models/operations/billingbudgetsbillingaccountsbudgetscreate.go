@@ -8,13 +8,13 @@ import (
 )
 
 type BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsCreateSecurity struct {
@@ -22,14 +22,10 @@ type BillingbudgetsBillingAccountsBudgetsCreateSecurity struct {
 	Option2 *BillingbudgetsBillingAccountsBudgetsCreateSecurityOption2 `security:"option"`
 }
 
-type BillingbudgetsBillingAccountsBudgetsCreatePathParams struct {
-	// Required. The name of the billing account to create the budget in. Values are of the form `billingAccounts/{billingAccountId}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsCreateQueryParams struct {
+type BillingbudgetsBillingAccountsBudgetsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                            *shared.XgafvEnum                              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudBillingBudgetsV1BudgetInput *shared.GoogleCloudBillingBudgetsV1BudgetInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type BillingbudgetsBillingAccountsBudgetsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the billing account to create the budget in. Values are of the form `billingAccounts/{billingAccountId}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type BillingbudgetsBillingAccountsBudgetsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsCreateRequest struct {
-	PathParams  BillingbudgetsBillingAccountsBudgetsCreatePathParams
-	QueryParams BillingbudgetsBillingAccountsBudgetsCreateQueryParams
-	Request     *shared.GoogleCloudBillingBudgetsV1BudgetInput `request:"mediaType=application/json"`
-	Security    BillingbudgetsBillingAccountsBudgetsCreateSecurity
 }
 
 type BillingbudgetsBillingAccountsBudgetsCreateResponse struct {

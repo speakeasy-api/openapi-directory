@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimPowerPortsDeletePathParams struct {
+type DcimPowerPortsDeleteRequest struct {
 	// A unique integer value identifying this power port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPortsDeleteRequest struct {
-	PathParams DcimPowerPortsDeletePathParams
 }
 
 type DcimPowerPortsDeleteResponse struct {

@@ -20,7 +20,6 @@ pkg/models/shared/googlecloudkmsinventoryv1searchprotectedresourcesresponse.go
 pkg/models/shared/googlecloudkmsinventoryv1protectedresource.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudkmsinventoryv1listcryptokeysresponse.go
 pkg/models/shared/googlecloudkmsv1cryptokey.go
 pkg/models/shared/googlecloudkmsv1cryptokeyversiontemplate.go

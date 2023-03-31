@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetweatherRequest{
-        QueryParams: operations.GetweatherQueryParams{
-            City: "Laruecester",
-            License: "quibusdam",
-            State: "unde",
-        },
+        City: "Laruecester",
+        License: "quibusdam",
+        State: "unde",
     }
 
     ctx := context.Background()

@@ -33,7 +33,7 @@ func newCloudloading(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // BooksCloudloadingAddBook - Add a user-upload volume and triggers processing.
-func (s *cloudloading) BooksCloudloadingAddBook(ctx context.Context, request operations.BooksCloudloadingAddBookRequest) (*operations.BooksCloudloadingAddBookResponse, error) {
+func (s *cloudloading) BooksCloudloadingAddBook(ctx context.Context, request operations.BooksCloudloadingAddBookRequest, security operations.BooksCloudloadingAddBookSecurity) (*operations.BooksCloudloadingAddBookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/cloudloading/addBook"
 
@@ -42,11 +42,11 @@ func (s *cloudloading) BooksCloudloadingAddBook(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *cloudloading) BooksCloudloadingAddBook(ctx context.Context, request ope
 }
 
 // BooksCloudloadingDeleteBook - Remove the book and its contents
-func (s *cloudloading) BooksCloudloadingDeleteBook(ctx context.Context, request operations.BooksCloudloadingDeleteBookRequest) (*operations.BooksCloudloadingDeleteBookResponse, error) {
+func (s *cloudloading) BooksCloudloadingDeleteBook(ctx context.Context, request operations.BooksCloudloadingDeleteBookRequest, security operations.BooksCloudloadingDeleteBookSecurity) (*operations.BooksCloudloadingDeleteBookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/cloudloading/deleteBook"
 
@@ -90,11 +90,11 @@ func (s *cloudloading) BooksCloudloadingDeleteBook(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *cloudloading) BooksCloudloadingDeleteBook(ctx context.Context, request 
 }
 
 // BooksCloudloadingUpdateBook - Updates a user-upload volume.
-func (s *cloudloading) BooksCloudloadingUpdateBook(ctx context.Context, request operations.BooksCloudloadingUpdateBookRequest) (*operations.BooksCloudloadingUpdateBookResponse, error) {
+func (s *cloudloading) BooksCloudloadingUpdateBook(ctx context.Context, request operations.BooksCloudloadingUpdateBookRequest, security operations.BooksCloudloadingUpdateBookSecurity) (*operations.BooksCloudloadingUpdateBookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/cloudloading/updateBook"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BooksCloudloadingResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *cloudloading) BooksCloudloadingUpdateBook(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

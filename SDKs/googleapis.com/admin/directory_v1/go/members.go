@@ -32,20 +32,20 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DirectoryMembersDelete - Removes a member from a group.
-func (s *members) DirectoryMembersDelete(ctx context.Context, request operations.DirectoryMembersDeleteRequest) (*operations.DirectoryMembersDeleteResponse, error) {
+func (s *members) DirectoryMembersDelete(ctx context.Context, request operations.DirectoryMembersDeleteRequest, security operations.DirectoryMembersDeleteSecurity) (*operations.DirectoryMembersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *members) DirectoryMembersDelete(ctx context.Context, request operations
 }
 
 // DirectoryMembersGet - Retrieves a group member's properties.
-func (s *members) DirectoryMembersGet(ctx context.Context, request operations.DirectoryMembersGetRequest) (*operations.DirectoryMembersGetResponse, error) {
+func (s *members) DirectoryMembersGet(ctx context.Context, request operations.DirectoryMembersGetRequest, security operations.DirectoryMembersGetSecurity) (*operations.DirectoryMembersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *members) DirectoryMembersGet(ctx context.Context, request operations.Di
 }
 
 // DirectoryMembersHasMember - Checks whether the given user is a member of the group. Membership can be direct or nested, but if nested, the `memberKey` and `groupKey` must be entities in the same domain or an `Invalid input` error is returned. To check for nested memberships that include entities outside of the group's domain, use the [`checkTransitiveMembership()`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/checkTransitiveMembership) method in the Cloud Identity Groups API.
-func (s *members) DirectoryMembersHasMember(ctx context.Context, request operations.DirectoryMembersHasMemberRequest) (*operations.DirectoryMembersHasMemberResponse, error) {
+func (s *members) DirectoryMembersHasMember(ctx context.Context, request operations.DirectoryMembersHasMemberRequest, security operations.DirectoryMembersHasMemberSecurity) (*operations.DirectoryMembersHasMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/hasMember/{memberKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/hasMember/{memberKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *members) DirectoryMembersHasMember(ctx context.Context, request operati
 }
 
 // DirectoryMembersInsert - Adds a user to the specified group.
-func (s *members) DirectoryMembersInsert(ctx context.Context, request operations.DirectoryMembersInsertRequest) (*operations.DirectoryMembersInsertResponse, error) {
+func (s *members) DirectoryMembersInsert(ctx context.Context, request operations.DirectoryMembersInsertRequest, security operations.DirectoryMembersInsertSecurity) (*operations.DirectoryMembersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Member", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *members) DirectoryMembersInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,20 +222,20 @@ func (s *members) DirectoryMembersInsert(ctx context.Context, request operations
 }
 
 // DirectoryMembersList - Retrieves a paginated list of all members in a group. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
-func (s *members) DirectoryMembersList(ctx context.Context, request operations.DirectoryMembersListRequest) (*operations.DirectoryMembersListResponse, error) {
+func (s *members) DirectoryMembersList(ctx context.Context, request operations.DirectoryMembersListRequest, security operations.DirectoryMembersListSecurity) (*operations.DirectoryMembersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,11 +270,11 @@ func (s *members) DirectoryMembersList(ctx context.Context, request operations.D
 }
 
 // DirectoryMembersPatch - Updates the membership properties of a user in the specified group. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
-func (s *members) DirectoryMembersPatch(ctx context.Context, request operations.DirectoryMembersPatchRequest) (*operations.DirectoryMembersPatchResponse, error) {
+func (s *members) DirectoryMembersPatch(ctx context.Context, request operations.DirectoryMembersPatchRequest, security operations.DirectoryMembersPatchSecurity) (*operations.DirectoryMembersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Member", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,11 +286,11 @@ func (s *members) DirectoryMembersPatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,11 +325,11 @@ func (s *members) DirectoryMembersPatch(ctx context.Context, request operations.
 }
 
 // DirectoryMembersUpdate - Updates the membership of a user in the specified group.
-func (s *members) DirectoryMembersUpdate(ctx context.Context, request operations.DirectoryMembersUpdateRequest) (*operations.DirectoryMembersUpdateResponse, error) {
+func (s *members) DirectoryMembersUpdate(ctx context.Context, request operations.DirectoryMembersUpdateRequest, security operations.DirectoryMembersUpdateSecurity) (*operations.DirectoryMembersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/members/{memberKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Member", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -341,11 +341,11 @@ func (s *members) DirectoryMembersUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

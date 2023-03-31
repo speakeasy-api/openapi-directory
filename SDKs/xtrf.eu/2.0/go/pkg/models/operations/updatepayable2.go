@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePayable2PathParams struct {
+type UpdatePayable2Request struct {
+	PayableDTO shared.PayableDTO `request:"mediaType=application/json"`
 	// payable's internal identifier
 	PayableID int64 `pathParam:"style=simple,explode=false,name=payableId"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdatePayable2Request struct {
-	PathParams UpdatePayable2PathParams
-	Request    shared.PayableDTO `request:"mediaType=application/json"`
 }
 
 type UpdatePayable2Response struct {

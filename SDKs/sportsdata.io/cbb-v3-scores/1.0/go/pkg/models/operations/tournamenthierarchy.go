@@ -33,15 +33,11 @@ func (e *TournamentHierarchyFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TournamentHierarchyPathParams struct {
+type TournamentHierarchyRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format TournamentHierarchyFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018POST</code>, <code>2019</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type TournamentHierarchyRequest struct {
-	PathParams TournamentHierarchyPathParams
 }
 
 type TournamentHierarchyResponse struct {

@@ -31,11 +31,11 @@ func newMarketplaceprivateauction(defaultClient, securityClient HTTPClient, serv
 }
 
 // AdexchangebuyerMarketplaceprivateauctionUpdateproposal - Update a given private auction proposal
-func (s *marketplaceprivateauction) AdexchangebuyerMarketplaceprivateauctionUpdateproposal(ctx context.Context, request operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest) (*operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalResponse, error) {
+func (s *marketplaceprivateauction) AdexchangebuyerMarketplaceprivateauctionUpdateproposal(ctx context.Context, request operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest, security operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity) (*operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/privateauction/{privateAuctionId}/updateproposal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/privateauction/{privateAuctionId}/updateproposal", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePrivateAuctionProposalRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -47,11 +47,11 @@ func (s *marketplaceprivateauction) AdexchangebuyerMarketplaceprivateauctionUpda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

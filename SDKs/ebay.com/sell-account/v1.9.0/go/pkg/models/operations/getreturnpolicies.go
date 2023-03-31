@@ -8,17 +8,12 @@ import (
 )
 
 type GetReturnPoliciesSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetReturnPoliciesQueryParams struct {
-	// This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
-	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetReturnPoliciesRequest struct {
-	QueryParams GetReturnPoliciesQueryParams
-	Security    GetReturnPoliciesSecurity
+	// This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
 }
 
 type GetReturnPoliciesResponse struct {

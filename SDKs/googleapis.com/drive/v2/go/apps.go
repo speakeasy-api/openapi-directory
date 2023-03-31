@@ -33,20 +33,20 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // DriveAppsGet - Gets a specific app.
-func (s *apps) DriveAppsGet(ctx context.Context, request operations.DriveAppsGetRequest) (*operations.DriveAppsGetResponse, error) {
+func (s *apps) DriveAppsGet(ctx context.Context, request operations.DriveAppsGetRequest, security operations.DriveAppsGetSecurity) (*operations.DriveAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *apps) DriveAppsGet(ctx context.Context, request operations.DriveAppsGet
 }
 
 // DriveAppsList - Lists a user's installed apps.
-func (s *apps) DriveAppsList(ctx context.Context, request operations.DriveAppsListRequest) (*operations.DriveAppsListResponse, error) {
+func (s *apps) DriveAppsList(ctx context.Context, request operations.DriveAppsListRequest, security operations.DriveAppsListSecurity) (*operations.DriveAppsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps"
 
@@ -90,11 +90,11 @@ func (s *apps) DriveAppsList(ctx context.Context, request operations.DriveAppsLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

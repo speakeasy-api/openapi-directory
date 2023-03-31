@@ -33,20 +33,20 @@ func newCalendars(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CalendarCalendarsClear - Clears a primary calendar. This operation deletes all events associated with the primary calendar of an account.
-func (s *calendars) CalendarCalendarsClear(ctx context.Context, request operations.CalendarCalendarsClearRequest) (*operations.CalendarCalendarsClearResponse, error) {
+func (s *calendars) CalendarCalendarsClear(ctx context.Context, request operations.CalendarCalendarsClearRequest, security operations.CalendarCalendarsClearSecurity) (*operations.CalendarCalendarsClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *calendars) CalendarCalendarsClear(ctx context.Context, request operatio
 }
 
 // CalendarCalendarsDelete - Deletes a secondary calendar. Use calendars.clear for clearing all events on primary calendars.
-func (s *calendars) CalendarCalendarsDelete(ctx context.Context, request operations.CalendarCalendarsDeleteRequest) (*operations.CalendarCalendarsDeleteResponse, error) {
+func (s *calendars) CalendarCalendarsDelete(ctx context.Context, request operations.CalendarCalendarsDeleteRequest, security operations.CalendarCalendarsDeleteSecurity) (*operations.CalendarCalendarsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,20 +111,20 @@ func (s *calendars) CalendarCalendarsDelete(ctx context.Context, request operati
 }
 
 // CalendarCalendarsGet - Returns metadata for a calendar.
-func (s *calendars) CalendarCalendarsGet(ctx context.Context, request operations.CalendarCalendarsGetRequest) (*operations.CalendarCalendarsGetResponse, error) {
+func (s *calendars) CalendarCalendarsGet(ctx context.Context, request operations.CalendarCalendarsGetRequest, security operations.CalendarCalendarsGetSecurity) (*operations.CalendarCalendarsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,11 +159,11 @@ func (s *calendars) CalendarCalendarsGet(ctx context.Context, request operations
 }
 
 // CalendarCalendarsInsert - Creates a secondary calendar.
-func (s *calendars) CalendarCalendarsInsert(ctx context.Context, request operations.CalendarCalendarsInsertRequest) (*operations.CalendarCalendarsInsertResponse, error) {
+func (s *calendars) CalendarCalendarsInsert(ctx context.Context, request operations.CalendarCalendarsInsertRequest, security operations.CalendarCalendarsInsertSecurity) (*operations.CalendarCalendarsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calendars"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Calendar", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,11 +175,11 @@ func (s *calendars) CalendarCalendarsInsert(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,11 +214,11 @@ func (s *calendars) CalendarCalendarsInsert(ctx context.Context, request operati
 }
 
 // CalendarCalendarsPatch - Updates metadata for a calendar. This method supports patch semantics.
-func (s *calendars) CalendarCalendarsPatch(ctx context.Context, request operations.CalendarCalendarsPatchRequest) (*operations.CalendarCalendarsPatchResponse, error) {
+func (s *calendars) CalendarCalendarsPatch(ctx context.Context, request operations.CalendarCalendarsPatchRequest, security operations.CalendarCalendarsPatchSecurity) (*operations.CalendarCalendarsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Calendar", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,11 +230,11 @@ func (s *calendars) CalendarCalendarsPatch(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -269,11 +269,11 @@ func (s *calendars) CalendarCalendarsPatch(ctx context.Context, request operatio
 }
 
 // CalendarCalendarsUpdate - Updates metadata for a calendar.
-func (s *calendars) CalendarCalendarsUpdate(ctx context.Context, request operations.CalendarCalendarsUpdateRequest) (*operations.CalendarCalendarsUpdateResponse, error) {
+func (s *calendars) CalendarCalendarsUpdate(ctx context.Context, request operations.CalendarCalendarsUpdateRequest, security operations.CalendarCalendarsUpdateSecurity) (*operations.CalendarCalendarsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Calendar", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -285,11 +285,11 @@ func (s *calendars) CalendarCalendarsUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

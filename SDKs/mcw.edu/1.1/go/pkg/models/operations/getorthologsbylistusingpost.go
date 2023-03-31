@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetOrthologsByListUsingPOSTRequest struct {
-	// orthologRequest
-	Request shared.OrthologRequest `request:"mediaType=application/json"`
-}
 
 type GetOrthologsByListUsingPOSTResponse struct {
 	Body        []byte

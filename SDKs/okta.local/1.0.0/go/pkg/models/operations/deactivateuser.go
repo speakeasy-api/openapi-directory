@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeactivateUserPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type DeactivateUserRequest struct {
-	PathParams DeactivateUserPathParams
-	Request    []byte `request:"mediaType=text/plain"`
+	RequestBody []byte `request:"mediaType=text/plain"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DeactivateUserResponse struct {

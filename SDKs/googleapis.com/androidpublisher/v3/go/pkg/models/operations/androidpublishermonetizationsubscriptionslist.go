@@ -8,16 +8,11 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsListPathParams struct {
-	// Required. The parent app (package name) for which the subscriptions should be read.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsListQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type AndroidpublisherMonetizationSubscriptionsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent app (package name) for which the subscriptions should be read.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// The maximum number of subscriptions to return. The service may return fewer than this value. If unspecified, at most 50 subscriptions will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListSubscriptions` must match the call that provided the page token.
@@ -46,12 +43,6 @@ type AndroidpublisherMonetizationSubscriptionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsListRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsListPathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsListQueryParams
-	Security    AndroidpublisherMonetizationSubscriptionsListSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsListResponse struct {

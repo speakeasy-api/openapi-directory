@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCellularGatewayDhcpPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCellularGatewayDhcpRequest struct {
-	PathParams GetNetworkCellularGatewayDhcpPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkCellularGatewayDhcp200ApplicationJSONDhcpLeaseTimeEnum - DHCP Lease time for all MG in the network.

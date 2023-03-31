@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadFilePathParams struct {
-	Dir      string `pathParam:"style=simple,explode=false,name=dir"`
-	Filename string `pathParam:"style=simple,explode=false,name=filename"`
-	Subdir   string `pathParam:"style=simple,explode=false,name=subdir"`
-}
-
-type DownloadFileQueryParams struct {
-	Download *string `queryParam:"style=form,explode=true,name=download"`
-	Rotation *int    `queryParam:"style=form,explode=true,name=rotation"`
-}
-
 type DownloadFileRequest struct {
-	PathParams  DownloadFilePathParams
-	QueryParams DownloadFileQueryParams
+	Dir      string  `pathParam:"style=simple,explode=false,name=dir"`
+	Download *string `queryParam:"style=form,explode=true,name=download"`
+	Filename string  `pathParam:"style=simple,explode=false,name=filename"`
+	Rotation *int    `queryParam:"style=form,explode=true,name=rotation"`
+	Subdir   string  `pathParam:"style=simple,explode=false,name=subdir"`
 }
 
 type DownloadFileResponse struct {

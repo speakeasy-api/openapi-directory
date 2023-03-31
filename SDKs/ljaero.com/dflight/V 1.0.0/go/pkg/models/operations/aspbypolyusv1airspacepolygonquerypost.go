@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AspByPolyUsV1AirspacePolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type AspByPolyUsV1AirspacePolygonQueryPostRequest struct {
-	Headers AspByPolyUsV1AirspacePolygonQueryPostHeaders
-	Request shared.AirspaceByPolygon `request:"mediaType=application/json"`
+	AirspaceByPolygon shared.AirspaceByPolygon `request:"mediaType=application/json"`
+	XAPIKey           *string                  `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type AspByPolyUsV1AirspacePolygonQueryPostResponse struct {

@@ -34,7 +34,7 @@ func newSubnetPool(defaultClient, securityClient HTTPClient, serverURL, language
 // Return the subnet pool and mask configured for MGs in the network.
 func (s *subnetPool) GetNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.GetNetworkCellularGatewaySubnetPoolRequest) (*operations.GetNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *subnetPool) GetNetworkCellularGatewaySubnetPool(ctx context.Context, re
 // Update the subnet pool and mask configuration for MGs in the network.
 func (s *subnetPool) UpdateNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.UpdateNetworkCellularGatewaySubnetPoolRequest) (*operations.UpdateNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

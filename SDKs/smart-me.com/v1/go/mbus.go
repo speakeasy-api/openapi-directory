@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -39,7 +40,7 @@ func newMBus(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
 //
 //	Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
-func (s *mBus) MBusPostForm(ctx context.Context, request operations.MBusPostFormRequest) (*operations.MBusPostFormResponse, error) {
+func (s *mBus) MBusPostForm(ctx context.Context, request shared.MBusData) (*operations.MBusPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MBus"
 
@@ -123,7 +124,7 @@ func (s *mBus) MBusPostForm(ctx context.Context, request operations.MBusPostForm
 // M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
 //
 //	Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
-func (s *mBus) MBusPostJSON(ctx context.Context, request operations.MBusPostJSONRequest) (*operations.MBusPostJSONResponse, error) {
+func (s *mBus) MBusPostJSON(ctx context.Context, request shared.MBusData) (*operations.MBusPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MBus"
 
@@ -207,7 +208,7 @@ func (s *mBus) MBusPostJSON(ctx context.Context, request operations.MBusPostJSON
 // M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
 //
 //	Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
-func (s *mBus) MBusPostRaw(ctx context.Context, request operations.MBusPostRawRequest) (*operations.MBusPostRawResponse, error) {
+func (s *mBus) MBusPostRaw(ctx context.Context, request []byte) (*operations.MBusPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MBus"
 

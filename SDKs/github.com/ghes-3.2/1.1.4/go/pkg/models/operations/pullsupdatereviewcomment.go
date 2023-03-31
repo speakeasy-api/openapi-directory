@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsUpdateReviewCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsUpdateReviewCommentRequestBody struct {
 	// The text of the reply to the review comment.
 	Body string `json:"body"`
 }
 
 type PullsUpdateReviewCommentRequest struct {
-	PathParams PullsUpdateReviewCommentPathParams
-	Request    PullsUpdateReviewCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsUpdateReviewCommentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsUpdateReviewCommentResponse struct {

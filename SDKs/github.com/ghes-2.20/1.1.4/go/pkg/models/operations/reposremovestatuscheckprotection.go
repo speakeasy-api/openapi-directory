@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ReposRemoveStatusCheckProtectionPathParams struct {
+type ReposRemoveStatusCheckProtectionRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposRemoveStatusCheckProtectionRequest struct {
-	PathParams ReposRemoveStatusCheckProtectionPathParams
 }
 
 type ReposRemoveStatusCheckProtectionResponse struct {

@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignCallingPlanSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UnassignCallingPlanPathParams struct {
+type UnassignCallingPlanRequest struct {
 	// The [type](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) of the calling plan that was assigned to user. (e.g: The value of type would be "200" for Unlimited US/Canada calling plan.)
 	//
 	Type   string `pathParam:"style=simple,explode=false,name=type"`
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UnassignCallingPlanRequest struct {
-	PathParams UnassignCallingPlanPathParams
-	Security   UnassignCallingPlanSecurity
 }
 
 type UnassignCallingPlanResponse struct {

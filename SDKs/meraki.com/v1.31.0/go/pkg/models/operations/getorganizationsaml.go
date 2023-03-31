@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSamlPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationSamlRequest struct {
-	PathParams GetOrganizationSamlPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationSaml200ApplicationJSON - Successful operation

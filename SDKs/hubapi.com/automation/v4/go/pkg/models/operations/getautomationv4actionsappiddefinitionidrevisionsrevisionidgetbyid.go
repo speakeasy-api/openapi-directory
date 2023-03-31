@@ -8,20 +8,15 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
-type GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDPathParams struct {
+type GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDRequest struct {
 	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the custom workflow action.
 	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 	// The version of the custom workflow action.
 	RevisionID string `pathParam:"style=simple,explode=false,name=revisionId"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDRequest struct {
-	PathParams GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDPathParams
-	Security   GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDSecurity
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDResponse struct {

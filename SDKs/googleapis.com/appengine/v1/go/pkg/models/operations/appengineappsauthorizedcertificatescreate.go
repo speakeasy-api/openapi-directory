@@ -8,22 +8,20 @@ import (
 )
 
 type AppengineAppsAuthorizedCertificatesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppengineAppsAuthorizedCertificatesCreatePathParams struct {
-	// Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-}
-
-type AppengineAppsAuthorizedCertificatesCreateQueryParams struct {
+type AppengineAppsAuthorizedCertificatesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AuthorizedCertificate *shared.AuthorizedCertificate `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,13 +38,6 @@ type AppengineAppsAuthorizedCertificatesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsAuthorizedCertificatesCreateRequest struct {
-	PathParams  AppengineAppsAuthorizedCertificatesCreatePathParams
-	QueryParams AppengineAppsAuthorizedCertificatesCreateQueryParams
-	Request     *shared.AuthorizedCertificate `request:"mediaType=application/json"`
-	Security    AppengineAppsAuthorizedCertificatesCreateSecurity
 }
 
 type AppengineAppsAuthorizedCertificatesCreateResponse struct {

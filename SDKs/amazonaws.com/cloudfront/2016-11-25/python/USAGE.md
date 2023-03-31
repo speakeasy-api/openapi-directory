@@ -3,26 +3,22 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateCloudFrontOriginAccessIdentity20161125Request(
-    headers=operations.CreateCloudFrontOriginAccessIdentity20161125Headers(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="architecto",
-        x_amz_credential="omnis",
-        x_amz_date="ut",
-        x_amz_security_token="sunt",
-        x_amz_signature="modi",
-        x_amz_signed_headers="nisi",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request="dolores".encode(),
+)
+
+
+req = operations.CreateCloudFrontOriginAccessIdentity20161125Request(
+    request_body="corrupti".encode(),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
 )
     
 res = s.create_cloud_front_origin_access_identity2016_11_25(req)

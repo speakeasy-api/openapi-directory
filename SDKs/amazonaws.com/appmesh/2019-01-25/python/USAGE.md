@@ -3,35 +3,17 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateGatewayRouteRequest(
-    path_params=operations.CreateGatewayRoutePathParams(
-        mesh_name="omnis",
-        virtual_gateway_name="corporis",
-    ),
-    query_params=operations.CreateGatewayRouteQueryParams(
-        mesh_owner="quasi",
-    ),
-    headers=operations.CreateGatewayRouteHeaders(
-        x_amz_algorithm="necessitatibus",
-        x_amz_content_sha256="sit",
-        x_amz_credential="minus",
-        x_amz_date="sequi",
-        x_amz_security_token="qui",
-        x_amz_signature="quidem",
-        x_amz_signed_headers="iure",
-    ),
-    request=operations.CreateGatewayRouteRequestBody(
-        client_token="consequatur",
-        gateway_route_name="occaecati",
+    request_body=operations.CreateGatewayRouteRequestBody(
+        client_token="corrupti",
+        gateway_route_name="provident",
         spec=operations.CreateGatewayRouteRequestBodySpec(
             grpc_route=shared.GrpcGatewayRoute(
                 action=shared.GrpcGatewayRouteAction(
@@ -41,80 +23,97 @@ req = operations.CreateGatewayRouteRequest(
                         ),
                     ),
                     target=shared.GatewayRouteTarget(
+                        port=844266,
                         virtual_service=shared.GatewayRouteVirtualService(
-                            virtual_service_name="repudiandae",
+                            virtual_service_name="unde",
                         ),
                     ),
                 ),
                 match=shared.GrpcGatewayRouteMatch(
                     hostname=shared.GatewayRouteHostnameMatch(
-                        exact="voluptas",
-                        suffix="eligendi",
+                        exact="nulla",
+                        suffix="corrupti",
                     ),
                     metadata=[
                         shared.GrpcGatewayRouteMetadata(
                             invert=False,
                             match=shared.GrpcMetadataMatchMethod(
-                                exact="similique",
-                                prefix="ad",
+                                exact="vel",
+                                prefix="error",
                                 range=shared.MatchRange(
-                                    end=4146470584718599470,
-                                    start=4854007963037812637,
+                                    end=645894,
+                                    start=384382,
                                 ),
-                                regex="molestiae",
-                                suffix="numquam",
-                            ),
-                            name="aut",
-                        ),
-                        shared.GrpcGatewayRouteMetadata(
-                            invert=True,
-                            match=shared.GrpcMetadataMatchMethod(
-                                exact="dolores",
-                                prefix="et",
-                                range=shared.MatchRange(
-                                    end=1596246021614689099,
-                                    start=5903985231896006729,
-                                ),
-                                regex="est",
-                                suffix="neque",
-                            ),
-                            name="explicabo",
-                        ),
-                        shared.GrpcGatewayRouteMetadata(
-                            invert=True,
-                            match=shared.GrpcMetadataMatchMethod(
-                                exact="eius",
-                                prefix="voluptatum",
-                                range=shared.MatchRange(
-                                    end=8758844135914746124,
-                                    start=285149591117881545,
-                                ),
-                                regex="aut",
-                                suffix="tempore",
+                                regex="iure",
+                                suffix="magnam",
                             ),
                             name="debitis",
                         ),
+                        shared.GrpcGatewayRouteMetadata(
+                            invert=False,
+                            match=shared.GrpcMetadataMatchMethod(
+                                exact="ipsa",
+                                prefix="delectus",
+                                range=shared.MatchRange(
+                                    end=272656,
+                                    start=383441,
+                                ),
+                                regex="molestiae",
+                                suffix="minus",
+                            ),
+                            name="placeat",
+                        ),
+                        shared.GrpcGatewayRouteMetadata(
+                            invert=False,
+                            match=shared.GrpcMetadataMatchMethod(
+                                exact="voluptatum",
+                                prefix="iusto",
+                                range=shared.MatchRange(
+                                    end=568045,
+                                    start=392785,
+                                ),
+                                regex="recusandae",
+                                suffix="temporibus",
+                            ),
+                            name="ab",
+                        ),
+                        shared.GrpcGatewayRouteMetadata(
+                            invert=False,
+                            match=shared.GrpcMetadataMatchMethod(
+                                exact="quis",
+                                prefix="veritatis",
+                                range=shared.MatchRange(
+                                    end=648172,
+                                    start=20218,
+                                ),
+                                regex="ipsam",
+                                suffix="repellendus",
+                            ),
+                            name="sapiente",
+                        ),
                     ],
-                    service_name="delectus",
+                    port=778157,
+                    service_name="odit",
                 ),
             ),
             http2_route=shared.HTTPGatewayRoute(
                 action=shared.HTTPGatewayRouteAction(
                     rewrite=shared.HTTPGatewayRouteRewrite(
                         hostname=shared.GatewayRouteHostnameRewrite(
-                            default_target_hostname="ENABLED",
+                            default_target_hostname="DISABLED",
                         ),
                         path=shared.HTTPGatewayRoutePathRewrite(
-                            exact="officiis",
+                            exact="at",
                         ),
                         prefix=shared.HTTPGatewayRoutePrefixRewrite(
                             default_prefix="DISABLED",
-                            value="quae",
+                            value="molestiae",
                         ),
                     ),
                     target=shared.GatewayRouteTarget(
+                        port=799159,
                         virtual_service=shared.GatewayRouteVirtualService(
-                            virtual_service_name="repellat",
+                            virtual_service_name="quod",
                         ),
                     ),
                 ),
@@ -123,48 +122,61 @@ req = operations.CreateGatewayRouteRequest(
                         shared.HTTPGatewayRouteHeader(
                             invert=False,
                             match=shared.HeaderMatchMethod(
-                                exact="magni",
-                                prefix="voluptas",
+                                exact="totam",
+                                prefix="porro",
                                 range=shared.MatchRange(
-                                    end=2177477502781941350,
-                                    start=2063521942541683052,
+                                    end=678880,
+                                    start=118274,
                                 ),
-                                regex="nostrum",
-                                suffix="et",
+                                regex="nam",
+                                suffix="officia",
                             ),
-                            name="nemo",
+                            name="occaecati",
                         ),
                         shared.HTTPGatewayRouteHeader(
-                            invert=True,
+                            invert=False,
                             match=shared.HeaderMatchMethod(
-                                exact="nostrum",
-                                prefix="illum",
+                                exact="fugit",
+                                prefix="deleniti",
                                 range=shared.MatchRange(
-                                    end=5846570952474056546,
-                                    start=6317657026515785697,
+                                    end=944669,
+                                    start=758616,
                                 ),
-                                regex="minus",
-                                suffix="facilis",
+                                regex="totam",
+                                suffix="beatae",
                             ),
-                            name="facilis",
+                            name="commodi",
                         ),
                     ],
                     hostname=shared.GatewayRouteHostnameMatch(
-                        exact="officia",
-                        suffix="vel",
+                        exact="molestiae",
+                        suffix="modi",
                     ),
-                    method="PATCH",
+                    method="HEAD",
                     path=shared.HTTPPathMatch(
-                        exact="saepe",
-                        regex="ut",
+                        exact="impedit",
+                        regex="cum",
                     ),
-                    prefix="ut",
+                    port=456150,
+                    prefix="ipsum",
                     query_parameters=[
                         shared.HTTPQueryParameter(
                             match=shared.QueryParameterMatch(
-                                exact="dolor",
+                                exact="aspernatur",
                             ),
-                            name="nemo",
+                            name="perferendis",
+                        ),
+                        shared.HTTPQueryParameter(
+                            match=shared.QueryParameterMatch(
+                                exact="ad",
+                            ),
+                            name="natus",
+                        ),
+                        shared.HTTPQueryParameter(
+                            match=shared.QueryParameterMatch(
+                                exact="sed",
+                            ),
+                            name="iste",
                         ),
                     ],
                 ),
@@ -173,19 +185,20 @@ req = operations.CreateGatewayRouteRequest(
                 action=shared.HTTPGatewayRouteAction(
                     rewrite=shared.HTTPGatewayRouteRewrite(
                         hostname=shared.GatewayRouteHostnameRewrite(
-                            default_target_hostname="DISABLED",
+                            default_target_hostname="ENABLED",
                         ),
                         path=shared.HTTPGatewayRoutePathRewrite(
-                            exact="reiciendis",
+                            exact="natus",
                         ),
                         prefix=shared.HTTPGatewayRoutePrefixRewrite(
-                            default_prefix="DISABLED",
-                            value="voluptatem",
+                            default_prefix="ENABLED",
+                            value="hic",
                         ),
                     ),
                     target=shared.GatewayRouteTarget(
+                        port=902599,
                         virtual_service=shared.GatewayRouteVirtualService(
-                            virtual_service_name="velit",
+                            virtual_service_name="fuga",
                         ),
                     ),
                 ),
@@ -194,85 +207,84 @@ req = operations.CreateGatewayRouteRequest(
                         shared.HTTPGatewayRouteHeader(
                             invert=False,
                             match=shared.HeaderMatchMethod(
-                                exact="dignissimos",
-                                prefix="hic",
+                                exact="corporis",
+                                prefix="iste",
                                 range=shared.MatchRange(
-                                    end=8379567376222127698,
-                                    start=3081965838106123659,
+                                    end=437032,
+                                    start=902349,
                                 ),
-                                regex="et",
-                                suffix="quia",
+                                regex="quidem",
+                                suffix="architecto",
                             ),
-                            name="qui",
+                            name="ipsa",
                         ),
                         shared.HTTPGatewayRouteHeader(
                             invert=False,
                             match=shared.HeaderMatchMethod(
-                                exact="sint",
-                                prefix="aperiam",
-                                range=shared.MatchRange(
-                                    end=7771700788967088893,
-                                    start=5927009572858680208,
-                                ),
-                                regex="qui",
-                                suffix="ea",
-                            ),
-                            name="mollitia",
-                        ),
-                        shared.HTTPGatewayRouteHeader(
-                            invert=True,
-                            match=shared.HeaderMatchMethod(
                                 exact="reiciendis",
-                                prefix="velit",
+                                prefix="est",
                                 range=shared.MatchRange(
-                                    end=8320974728239741942,
-                                    start=6004008708656253743,
+                                    end=653140,
+                                    start=670638,
                                 ),
-                                regex="sequi",
-                                suffix="ut",
+                                regex="dolores",
+                                suffix="dolorem",
                             ),
-                            name="aperiam",
+                            name="corporis",
                         ),
                     ],
                     hostname=shared.GatewayRouteHostnameMatch(
-                        exact="vel",
-                        suffix="reprehenderit",
+                        exact="explicabo",
+                        suffix="nobis",
                     ),
-                    method="PUT",
+                    method="POST",
                     path=shared.HTTPPathMatch(
-                        exact="tenetur",
-                        regex="fugiat",
+                        exact="omnis",
+                        regex="nemo",
                     ),
-                    prefix="fuga",
+                    port=325047,
+                    prefix="excepturi",
                     query_parameters=[
                         shared.HTTPQueryParameter(
                             match=shared.QueryParameterMatch(
-                                exact="enim",
+                                exact="iure",
                             ),
-                            name="animi",
-                        ),
-                        shared.HTTPQueryParameter(
-                            match=shared.QueryParameterMatch(
-                                exact="ut",
-                            ),
-                            name="sit",
+                            name="culpa",
                         ),
                     ],
                 ),
             ),
-            priority=8888763846808868349,
+            priority=988374,
         ),
         tags=[
             shared.TagRef(
-                key="est",
-                value="id",
+                key="architecto",
+                value="mollitia",
             ),
             shared.TagRef(
-                key="ea",
-                value="omnis",
+                key="dolorem",
+                value="culpa",
+            ),
+            shared.TagRef(
+                key="consequuntur",
+                value="repellat",
+            ),
+            shared.TagRef(
+                key="mollitia",
+                value="occaecati",
             ),
         ],
     ),
+    x_amz_algorithm="numquam",
+    x_amz_content_sha256="commodi",
+    x_amz_credential="quam",
+    x_amz_date="molestiae",
+    x_amz_security_token="velit",
+    x_amz_signature="error",
+    x_amz_signed_headers="quia",
+    mesh_name="quis",
+    mesh_owner="vitae",
+    virtual_gateway_name="laborum",
 )
     
 res = s.create_gateway_route(req)

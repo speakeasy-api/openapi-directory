@@ -8,18 +8,14 @@ import (
 )
 
 type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersPathParams struct {
-	// Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be edited.
-	FirstAndThirdPartyAudienceID string `pathParam:"style=simple,explode=false,name=firstAndThirdPartyAudienceId"`
-}
-
-type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersQueryParams struct {
+type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                     *shared.XgafvEnum                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	EditCustomerMatchMembersRequest *shared.EditCustomerMatchMembersRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -28,6 +24,8 @@ type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersQueryParams 
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be edited.
+	FirstAndThirdPartyAudienceID string `pathParam:"style=simple,explode=false,name=firstAndThirdPartyAudienceId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -40,13 +38,6 @@ type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest struct {
-	PathParams  DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersPathParams
-	QueryParams DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersQueryParams
-	Request     *shared.EditCustomerMatchMembersRequest `request:"mediaType=application/json"`
-	Security    DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersSecurity
 }
 
 type DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse struct {

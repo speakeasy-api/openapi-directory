@@ -8,12 +8,7 @@ import (
 )
 
 type CreateScoreSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateScoreRequest struct {
-	Request  shared.ScoreCreation `request:"mediaType=application/json"`
-	Security CreateScoreSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateScoreResponse struct {

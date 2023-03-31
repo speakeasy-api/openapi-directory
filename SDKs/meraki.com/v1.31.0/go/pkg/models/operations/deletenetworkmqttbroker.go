@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkMqttBrokerPathParams struct {
+type DeleteNetworkMqttBrokerRequest struct {
 	MqttBrokerID string `pathParam:"style=simple,explode=false,name=mqttBrokerId"`
 	NetworkID    string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkMqttBrokerRequest struct {
-	PathParams DeleteNetworkMqttBrokerPathParams
 }
 
 type DeleteNetworkMqttBrokerResponse struct {

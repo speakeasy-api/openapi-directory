@@ -21,8 +21,3 @@ type PodcastsSubmitRejectedRequestBodyPodcast struct {
 type PodcastsSubmitRejectedRequestBody struct {
 	Podcast *PodcastsSubmitRejectedRequestBodyPodcast `json:"podcast,omitempty"`
 }
-
-type PodcastsSubmitRejectedRequest struct {
-	// Triggered by your request to POST /podcasts/submit, if the podcast submission is rejected.
-	Request *PodcastsSubmitRejectedRequestBody `request:"mediaType=application/json"`
-}

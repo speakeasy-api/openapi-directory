@@ -14,52 +14,42 @@ func main() {
     s := sdk.New()
 
     req := operations.IdsProjectsLocationsEndpointsCreateRequest{
-        Security: operations.IdsProjectsLocationsEndpointsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.IdsProjectsLocationsEndpointsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.IdsProjectsLocationsEndpointsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            EndpointID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.EndpointInput{
-            Description: "magnam",
+        DollarXgafv: "2",
+        EndpointInput: &shared.EndpointInput{
+            Description: "provident",
             Labels: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
-            Network: "iusto",
+            Network: "error",
             Severity: "MEDIUM",
             ThreatExceptions: []string{
-                "recusandae",
-                "temporibus",
+                "iure",
+                "magnam",
             },
             TrafficLogs: false,
         },
+        AccessToken: "debitis",
+        Alt: "json",
+        Callback: "delectus",
+        EndpointID: "tempora",
+        Fields: "suscipit",
+        Key: "molestiae",
+        OauthToken: "minus",
+        Parent: "placeat",
+        PrettyPrint: false,
+        QuotaUser: "voluptatum",
+        RequestID: "iusto",
+        UploadType: "excepturi",
+        UploadProtocol: "nisi",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.IdsProjectsLocationsEndpointsCreate(ctx, req)
+    res, err := s.Projects.IdsProjectsLocationsEndpointsCreate(ctx, req, operations.IdsProjectsLocationsEndpointsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

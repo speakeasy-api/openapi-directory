@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetDrugByIDPathParams struct {
-	// Automatically added
-	DrugID string `pathParam:"style=simple,explode=false,name=DRUG_ID"`
-}
-
-type GetDrugByIDQueryParams struct {
-	// An ID in the drug index.
-	DrugID string `queryParam:"style=form,explode=true,name=drug_id"`
-}
-
 type GetDrugByIDRequest struct {
-	PathParams  GetDrugByIDPathParams
-	QueryParams GetDrugByIDQueryParams
+	// Automatically added
+	DRUGIDPathParameter string `pathParam:"style=simple,explode=false,name=DRUG_ID"`
+	// An ID in the drug index.
+	DrugIDQueryParameter string `queryParam:"style=form,explode=true,name=drug_id"`
 }
 
 type GetDrugByIDResponse struct {

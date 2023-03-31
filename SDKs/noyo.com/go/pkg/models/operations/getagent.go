@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAgentPathParams struct {
+type GetAgentRequest struct {
 	// The unique identifier of the agent in Noyo
 	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
-}
-
-type GetAgentRequest struct {
-	PathParams GetAgentPathParams
 }
 
 type GetAgentResponse struct {

@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListForSuitePathParams struct {
-	// The unique identifier of the check suite.
-	CheckSuiteID int64 `pathParam:"style=simple,explode=false,name=check_suite_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ChecksListForSuiteFilterEnum - Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
 type ChecksListForSuiteFilterEnum string
 
@@ -42,22 +33,23 @@ func (e *ChecksListForSuiteFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ChecksListForSuiteQueryParams struct {
+type ChecksListForSuiteRequest struct {
 	// Returns check runs with the specified `name`.
 	CheckName *string `queryParam:"style=form,explode=true,name=check_name"`
+	// The unique identifier of the check suite.
+	CheckSuiteID int64 `pathParam:"style=simple,explode=false,name=check_suite_id"`
 	// Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
 	Filter *ChecksListForSuiteFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Returns check runs with the specified `status`.
 	Status *shared.StatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ChecksListForSuiteRequest struct {
-	PathParams  ChecksListForSuitePathParams
-	QueryParams ChecksListForSuiteQueryParams
 }
 
 // ChecksListForSuite200ApplicationJSON - Response

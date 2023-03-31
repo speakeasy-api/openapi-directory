@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInventoryItemsReadPathParams struct {
+type DcimInventoryItemsReadRequest struct {
 	// A unique integer value identifying this inventory item.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInventoryItemsReadRequest struct {
-	PathParams DcimInventoryItemsReadPathParams
 }
 
 type DcimInventoryItemsReadResponse struct {

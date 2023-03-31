@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetVCustomPricesSessionSchemaHeaders struct {
+type GetVCustomPricesSessionSchemaRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetVCustomPricesSessionSchemaRequest struct {
-	Headers GetVCustomPricesSessionSchemaHeaders
 }
 
 type GetVCustomPricesSessionSchemaRequestBodyFields struct {

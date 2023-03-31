@@ -12,7 +12,8 @@ var CreateCredentialServerList = []string{
 }
 
 type CreateCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCredentialCreateCredentialRequest struct {
@@ -23,12 +24,6 @@ type CreateCredentialCreateCredentialRequest struct {
 	Sandbox      *bool                                `form:"name=Sandbox"`
 	Secret       *string                              `form:"name=Secret"`
 	Type         shared.CredentialEnumPushServiceEnum `form:"name=Type"`
-}
-
-type CreateCredentialRequest struct {
-	Request   *CreateCredentialCreateCredentialRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCredentialSecurity
-	ServerURL *string
 }
 
 type CreateCredentialResponse struct {

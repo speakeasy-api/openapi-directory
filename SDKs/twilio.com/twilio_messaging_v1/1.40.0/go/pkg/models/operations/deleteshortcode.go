@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteShortCodeServerList = []string{
@@ -12,20 +11,15 @@ var DeleteShortCodeServerList = []string{
 }
 
 type DeleteShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteShortCodePathParams struct {
+type DeleteShortCodeRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the ShortCode resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteShortCodeRequest struct {
-	PathParams DeleteShortCodePathParams
-	Security   DeleteShortCodeSecurity
-	ServerURL  *string
 }
 
 type DeleteShortCodeResponse struct {

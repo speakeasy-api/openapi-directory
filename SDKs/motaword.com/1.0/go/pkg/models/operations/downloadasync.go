@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadAsyncQueryParams struct {
+type DownloadAsyncRequest struct {
 	// Async operation key
 	AsyncRequestKey string `queryParam:"style=form,explode=true,name=async_request_key"`
-}
-
-type DownloadAsyncRequest struct {
-	QueryParams DownloadAsyncQueryParams
 }
 
 type DownloadAsyncResponse struct {

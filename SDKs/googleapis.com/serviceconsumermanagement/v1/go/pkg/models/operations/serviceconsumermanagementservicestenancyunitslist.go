@@ -8,16 +8,11 @@ import (
 )
 
 type ServiceconsumermanagementServicesTenancyUnitsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServiceconsumermanagementServicesTenancyUnitsListPathParams struct {
-	// Required. Managed service and service consumer. Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection type representing the service consumer, for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such as project number: '123456'. {service} the name of a service, such as 'service.googleapis.com'.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceconsumermanagementServicesTenancyUnitsListQueryParams struct {
+type ServiceconsumermanagementServicesTenancyUnitsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type ServiceconsumermanagementServicesTenancyUnitsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of `nextPageToken` from the previous response.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Managed service and service consumer. Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection type representing the service consumer, for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such as project number: '123456'. {service} the name of a service, such as 'service.googleapis.com'.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type ServiceconsumermanagementServicesTenancyUnitsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceconsumermanagementServicesTenancyUnitsListRequest struct {
-	PathParams  ServiceconsumermanagementServicesTenancyUnitsListPathParams
-	QueryParams ServiceconsumermanagementServicesTenancyUnitsListQueryParams
-	Security    ServiceconsumermanagementServicesTenancyUnitsListSecurity
 }
 
 type ServiceconsumermanagementServicesTenancyUnitsListResponse struct {

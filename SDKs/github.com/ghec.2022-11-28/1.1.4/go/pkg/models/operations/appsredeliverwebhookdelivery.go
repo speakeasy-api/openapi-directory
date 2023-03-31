@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsRedeliverWebhookDeliveryPathParams struct {
-	DeliveryID int64 `pathParam:"style=simple,explode=false,name=delivery_id"`
-}
-
 type AppsRedeliverWebhookDeliveryRequest struct {
-	PathParams AppsRedeliverWebhookDeliveryPathParams
+	DeliveryID int64 `pathParam:"style=simple,explode=false,name=delivery_id"`
 }
 
 type AppsRedeliverWebhookDeliveryResponse struct {

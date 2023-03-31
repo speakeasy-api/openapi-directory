@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetBadgeQueryParams struct {
+type GetBadgeRequest struct {
 	// The URL to retrieve the OpenAPI 3.0.x definition from
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetBadgeRequest struct {
-	QueryParams GetBadgeQueryParams
 }
 
 type GetBadgeResponse struct {

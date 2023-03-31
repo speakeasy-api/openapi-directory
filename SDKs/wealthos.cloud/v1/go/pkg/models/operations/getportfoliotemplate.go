@@ -4,28 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetPortfolioTemplateSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPortfolioTemplatePathParams struct {
-	// Portfolio ID
-	PortfolioTemplateID string `pathParam:"style=simple,explode=false,name=portfolio_template_id"`
-}
-
-type GetPortfolioTemplateHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetPortfolioTemplateRequest struct {
-	PathParams GetPortfolioTemplatePathParams
-	Headers    GetPortfolioTemplateHeaders
-	Security   GetPortfolioTemplateSecurity
+	// Portfolio ID
+	PortfolioTemplateID string `pathParam:"style=simple,explode=false,name=portfolio_template_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPortfolioTemplate500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

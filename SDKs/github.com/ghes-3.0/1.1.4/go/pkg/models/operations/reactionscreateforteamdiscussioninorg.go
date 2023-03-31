@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionInOrgPathParams struct {
-	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
-	Org              string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.0/rest/reference/reactions#reaction-types) to add to the team discussion.
 type ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForTeamDiscussionInOrgRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionInOrgRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionInOrgPathParams
-	Request    ReactionsCreateForTeamDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody      ReactionsCreateForTeamDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	DiscussionNumber int64                                            `pathParam:"style=simple,explode=false,name=discussion_number"`
+	Org              string                                           `pathParam:"style=simple,explode=false,name=org"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type ReactionsCreateForTeamDiscussionInOrgResponse struct {

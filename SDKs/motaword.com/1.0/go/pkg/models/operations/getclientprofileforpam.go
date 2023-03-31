@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClientProfileForPamPathParams struct {
+type GetClientProfileForPamRequest struct {
 	// Client ID
 	ClientID int64 `pathParam:"style=simple,explode=false,name=clientId"`
-}
-
-type GetClientProfileForPamRequest struct {
-	PathParams GetClientProfileForPamPathParams
 }
 
 type GetClientProfileForPamResponse struct {

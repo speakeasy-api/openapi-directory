@@ -4,30 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest(
-    path_params=operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams(
-        parent="aut",
+    dollar_xgafv="2",
+    place_action_link_input=shared.PlaceActionLinkInput(
+        is_preferred=False,
+        name="provident",
+        place_action_type="FOOD_DELIVERY",
+        uri="https://outstanding-strait.name",
     ),
-    query_params=operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="dignissimos",
-        alt="proto",
-        callback="commodi",
-        fields="rerum",
-        key="voluptas",
-        oauth_token="quasi",
-        pretty_print=False,
-        quota_user="vel",
-        upload_type="sed",
-        upload_protocol="et",
-    ),
-    request=shared.PlaceActionLinkInput(
-        is_preferred=True,
-        name="aut",
-        place_action_type="DINING_RESERVATION",
-        uri="modi",
-    ),
+    access_token="illum",
+    alt="media",
+    callback="error",
+    fields_="deserunt",
+    key="suscipit",
+    oauth_token="iure",
+    parent="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
 res = s.locations.mybusinessplaceactions_locations_place_action_links_create(req)

@@ -12,18 +12,13 @@ var CreateInsightsSessionServerList = []string{
 }
 
 type CreateInsightsSessionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInsightsSessionHeaders struct {
-	// The Authorization HTTP request header
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInsightsSessionRequest struct {
-	Headers   CreateInsightsSessionHeaders
-	Security  CreateInsightsSessionSecurity
-	ServerURL *string
+	// The Authorization HTTP request header
+	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
 }
 
 type CreateInsightsSessionResponse struct {

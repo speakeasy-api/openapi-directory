@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessRfProfilePathParams struct {
+type GetNetworkWirelessRfProfileRequest struct {
 	NetworkID   string `pathParam:"style=simple,explode=false,name=networkId"`
 	RfProfileID string `pathParam:"style=simple,explode=false,name=rfProfileId"`
-}
-
-type GetNetworkWirelessRfProfileRequest struct {
-	PathParams GetNetworkWirelessRfProfilePathParams
 }
 
 type GetNetworkWirelessRfProfileResponse struct {

@@ -9,38 +9,6 @@ import (
 	"time"
 )
 
-// GetDistanceOutputFormatOutputFormatEnum - Format of representation
-type GetDistanceOutputFormatOutputFormatEnum string
-
-const (
-	GetDistanceOutputFormatOutputFormatEnumJSON GetDistanceOutputFormatOutputFormatEnum = "json"
-	GetDistanceOutputFormatOutputFormatEnumKml  GetDistanceOutputFormatOutputFormatEnum = "kml"
-	GetDistanceOutputFormatOutputFormatEnumHTML GetDistanceOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *GetDistanceOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "html":
-		*e = GetDistanceOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetDistanceOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat GetDistanceOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetDistanceOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type GetDistanceOutputFormatCriteriaEnum string
 
@@ -89,6 +57,33 @@ func (e *GetDistanceOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
+// GetDistanceOutputFormatOutputFormatEnum - Format of representation
+type GetDistanceOutputFormatOutputFormatEnum string
+
+const (
+	GetDistanceOutputFormatOutputFormatEnumJSON GetDistanceOutputFormatOutputFormatEnum = "json"
+	GetDistanceOutputFormatOutputFormatEnumKml  GetDistanceOutputFormatOutputFormatEnum = "kml"
+	GetDistanceOutputFormatOutputFormatEnumHTML GetDistanceOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *GetDistanceOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "html":
+		*e = GetDistanceOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // GetDistanceOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetDistanceOutputFormatOutputSrsEnum string
 
@@ -131,7 +126,7 @@ func (e *GetDistanceOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetDistanceOutputFormatQueryParams struct {
+type GetDistanceOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start and end points.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -142,6 +137,8 @@ type GetDistanceOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetDistanceOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
+	// Format of representation
+	OutputFormat GetDistanceOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetDistanceOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
@@ -150,11 +147,6 @@ type GetDistanceOutputFormatQueryParams struct {
 	RoundTrip *bool `queryParam:"style=form,explode=true,name=roundTrip"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
-}
-
-type GetDistanceOutputFormatRequest struct {
-	PathParams  GetDistanceOutputFormatPathParams
-	QueryParams GetDistanceOutputFormatQueryParams
 }
 
 type GetDistanceOutputFormatResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGlobalStyleGuideMultipartRequest struct {
-	Request *shared.AccountStyleGuideUploadRequest1 `request:"mediaType=multipart/form-data"`
-}
-
 type UpdateGlobalStyleGuideMultipartResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall NoFileUploaded MissingCorporateAccount

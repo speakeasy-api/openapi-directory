@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHooksIDJSONPathParams struct {
-	// Id of the Hook
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetHooksIDJSONQueryParams struct {
+type GetHooksIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Hook
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetHooksIDJSONRequest struct {
-	PathParams  GetHooksIDJSONPathParams
-	QueryParams GetHooksIDJSONQueryParams
 }
 
 type GetHooksIDJSONResponse struct {

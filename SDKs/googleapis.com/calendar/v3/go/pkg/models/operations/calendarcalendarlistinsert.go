@@ -8,11 +8,12 @@ import (
 )
 
 type CalendarCalendarListInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CalendarCalendarListInsertQueryParams struct {
+type CalendarCalendarListInsertRequest struct {
+	CalendarListEntry *shared.CalendarListEntry `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
@@ -29,12 +30,6 @@ type CalendarCalendarListInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarCalendarListInsertRequest struct {
-	QueryParams CalendarCalendarListInsertQueryParams
-	Request     *shared.CalendarListEntry `request:"mediaType=application/json"`
-	Security    CalendarCalendarListInsertSecurity
 }
 
 type CalendarCalendarListInsertResponse struct {

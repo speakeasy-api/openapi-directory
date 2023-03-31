@@ -13,21 +13,8 @@ var UpdateMessageServerList = []string{
 }
 
 type UpdateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMessagePathParams struct {
-	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Message resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Message resource in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Message resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateMessageHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.MessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMessageUpdateMessageRequest struct {
@@ -46,11 +33,15 @@ type UpdateMessageUpdateMessageRequest struct {
 }
 
 type UpdateMessageRequest struct {
-	PathParams UpdateMessagePathParams
-	Headers    UpdateMessageHeaders
-	Request    *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMessageSecurity
-	ServerURL  *string
+	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Message resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                             `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Message resource in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Message resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.MessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateMessageResponse struct {

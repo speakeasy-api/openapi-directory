@@ -2,15 +2,7 @@
 
 package shared
 
-type SchemeAppKey struct {
-	APIKey string `security:"name=X-VTEX-API-AppKey"`
-}
-
-type SchemeAppToken struct {
-	APIKey string `security:"name=X-VTEX-API-AppToken"`
-}
-
 type Security struct {
-	AppKey   SchemeAppKey   `security:"scheme,type=apiKey,subtype=header"`
-	AppToken SchemeAppToken `security:"scheme,type=apiKey,subtype=header"`
+	AppKey   string `security:"scheme,type=apiKey,subtype=header,name=X-VTEX-API-AppKey"`
+	AppToken string `security:"scheme,type=apiKey,subtype=header,name=X-VTEX-API-AppToken"`
 }

@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesSetCodespacesBillingUsersPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type CodespacesSetCodespacesBillingUsersRequestBody struct {
 	// The usernames of the organization members whose codespaces be billed to the organization.
 	SelectedUsernames []string `json:"selected_usernames"`
 }
 
 type CodespacesSetCodespacesBillingUsersRequest struct {
-	PathParams CodespacesSetCodespacesBillingUsersPathParams
-	Request    CodespacesSetCodespacesBillingUsersRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesSetCodespacesBillingUsersRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type CodespacesSetCodespacesBillingUsersResponse struct {

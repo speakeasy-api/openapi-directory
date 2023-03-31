@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnnotateEntitiesQueryParams struct {
+type GetAnnotateEntitiesRequest struct {
 	// The text content to annotate
 	Content *string `queryParam:"style=form,explode=true,name=content"`
 	// Categories to exclude for annotation
@@ -24,10 +24,6 @@ type GetAnnotateEntitiesQueryParams struct {
 	LongestOnly *bool `queryParam:"style=form,explode=true,name=longest_only"`
 	// The minimum number of characters in the annotated entity
 	MinLength *string `queryParam:"style=form,explode=true,name=min_length"`
-}
-
-type GetAnnotateEntitiesRequest struct {
-	QueryParams GetAnnotateEntitiesQueryParams
 }
 
 type GetAnnotateEntitiesResponse struct {

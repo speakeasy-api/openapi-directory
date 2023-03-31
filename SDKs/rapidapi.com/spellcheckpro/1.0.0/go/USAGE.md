@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.CheckSpellingRussianRequest{
-        Headers: operations.CheckSpellingRussianHeaders{
-            XRapidAPIKey: "corrupti",
-        },
-        Request: &operations.CheckSpellingRussianRequestBody{
+        RequestBody: &operations.CheckSpellingRussianRequestBody{
             LangCode: "ru",
             Text: "Добрый вее!",
         },
+        XRapidAPIKey: "corrupti",
     }
 
     ctx := context.Background()

@@ -4,21 +4,20 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AirtravelCoordinatesRequest(
-    headers=operations.AirtravelCoordinatesHeaders(
-        content_type="et",
-    ),
-    request=operations.AirtravelCoordinatesRequestBody(
-        api_key_l1="laudantium",
-        api_key_l2="voluptatibus",
-        destination_airport_latitude=16.200001,
-        destination_airport_longitude=65.199997,
-        number_of_passengers=5496595919472461343,
-        origin_airport_latitude=88.199997,
-        origin_airport_longitude=31.200001,
-        travel_class="necessitatibus",
-        travel_mode="aspernatur",
+    content_type="application/x-www-form-urlencoded",
+    request_body=operations.AirtravelCoordinatesRequestBody(
+        api_key_l1="d95fead6-e8a6-4547-9fb9-7835101a3960",
+        api_key_l2="c60f8db5-7204-4427-960d-27400c38b166",
+        destination_airport_latitude=24.9056,
+        destination_airport_longitude=67.1569,
+        number_of_passengers=2,
+        origin_airport_latitude=31.5208,
+        origin_airport_longitude=74.4028,
+        travel_class="Economy",
+        travel_mode="round trip",
     ),
 )
     

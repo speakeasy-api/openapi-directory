@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PaymentInitiationPaymentReverseRequest struct {
-	Request shared.PaymentInitiationPaymentReverseRequest `request:"mediaType=application/json"`
-}
 
 type PaymentInitiationPaymentReverseResponse struct {
 	ContentType string

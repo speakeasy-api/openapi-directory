@@ -8,20 +8,17 @@ import (
 )
 
 type MirrorTimelineAttachmentsInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MirrorTimelineAttachmentsInsertPathParams struct {
-	// The ID of the timeline item the attachment belongs to.
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type MirrorTimelineAttachmentsInsertQueryParams struct {
+type MirrorTimelineAttachmentsInsertRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the timeline item the attachment belongs to.
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -32,12 +29,6 @@ type MirrorTimelineAttachmentsInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type MirrorTimelineAttachmentsInsertRequest struct {
-	PathParams  MirrorTimelineAttachmentsInsertPathParams
-	QueryParams MirrorTimelineAttachmentsInsertQueryParams
-	Security    MirrorTimelineAttachmentsInsertSecurity
 }
 
 type MirrorTimelineAttachmentsInsertResponse struct {

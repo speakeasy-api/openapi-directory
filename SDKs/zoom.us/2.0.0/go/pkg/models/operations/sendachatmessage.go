@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SendaChatMessageSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type SendaChatMessagePathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SendaChatMessageApplicationJSONAtItemsAtTypeEnum - Type of mention. You can use one of the following values:<br>
@@ -83,9 +78,8 @@ type SendaChatMessageApplicationJSON struct {
 }
 
 type SendaChatMessageRequest struct {
-	PathParams SendaChatMessagePathParams
-	Request    *SendaChatMessageApplicationJSON `request:"mediaType=application/json"`
-	Security   SendaChatMessageSecurity
+	RequestBody *SendaChatMessageApplicationJSON `request:"mediaType=application/json"`
+	UserID      string                           `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // SendaChatMessage201ApplicationXML - **Status Code:** `201`<br>

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteGroupUsersIDPathParams struct {
-	// Group User ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteGroupUsersIDQueryParams struct {
+type DeleteGroupUsersIDRequest struct {
 	// Group ID from which to remove user.
 	GroupID int `queryParam:"style=form,explode=true,name=group_id"`
+	// Group User ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// User ID to remove from group.
 	UserID int `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type DeleteGroupUsersIDRequest struct {
-	PathParams  DeleteGroupUsersIDPathParams
-	QueryParams DeleteGroupUsersIDQueryParams
 }
 
 type DeleteGroupUsersIDResponse struct {

@@ -4,42 +4,34 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest(
-    security=operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams(
-        parent="autem",
-    ),
-    query_params=operations.CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="json",
-        callback="qui",
-        fields="quis",
-        key="facilis",
-        oauth_token="reprehenderit",
-        pretty_print=False,
-        quota_user="molestiae",
-        upload_type="quod",
-        upload_protocol="perspiciatis",
-    ),
-    request=shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest(
+    dollar_xgafv="2",
+    google_cloud_privatecatalogproducer_v1beta1_create_association_request=shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest(
         association=shared.GoogleCloudPrivatecatalogproducerV1beta1Association(
-            create_time="accusantium",
-            name="impedit",
-            resource="nihil",
+            create_time="provident",
+            name="distinctio",
+            resource="quibusdam",
         ),
     ),
+    access_token="unde",
+    alt="proto",
+    callback="corrupti",
+    fields_="illum",
+    key="vel",
+    oauth_token="error",
+    parent="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.catalogs.cloudprivatecatalogproducer_catalogs_associations_create(req)
+res = s.catalogs.cloudprivatecatalogproducer_catalogs_associations_create(req, operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.body is not None:
     # handle response

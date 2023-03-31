@@ -8,17 +8,12 @@ import (
 )
 
 type GetScheduleSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSchedulePathParams struct {
-	// The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
-	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetScheduleRequest struct {
-	PathParams GetSchedulePathParams
-	Security   GetScheduleSecurity
+	// The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
+	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 
 type GetScheduleResponse struct {

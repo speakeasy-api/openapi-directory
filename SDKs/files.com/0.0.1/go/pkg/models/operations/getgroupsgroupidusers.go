@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsGroupIDUsersPathParams struct {
-	// Group ID.  If provided, will return group_users of this group.
-	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetGroupsGroupIDUsersQueryParams struct {
+type GetGroupsGroupIDUsersRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
+	// Group ID.  If provided, will return group_users of this group.
+	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// User ID.  If provided, will return group_users of this user.
 	UserID *int `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type GetGroupsGroupIDUsersRequest struct {
-	PathParams  GetGroupsGroupIDUsersPathParams
-	QueryParams GetGroupsGroupIDUsersQueryParams
 }
 
 type GetGroupsGroupIDUsersResponse struct {

@@ -13,20 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetSectionFormatRequest{
-        PathParams: operations.GetSectionFormatPathParams{
-            Format: "jsonp",
-            Section: "theater",
-        },
-        QueryParams: operations.GetSectionFormatQueryParams{
-            Callback: "distinctio",
-        },
+        Callback: "corrupti",
+        Format: "jsonp",
+        Section: "tmagazine",
     }
 
     ctx := context.Background()

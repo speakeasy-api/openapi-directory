@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollectionDetailsPathParams struct {
+type CollectionDetailsRequest struct {
 	// Collection Unique identifier
 	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionDetailsRequest struct {
-	PathParams CollectionDetailsPathParams
 }
 
 type CollectionDetailsResponse struct {

@@ -30,6 +30,7 @@ pkg/models/operations/runprojectslocationsservicessetiampolicy.go
 pkg/models/operations/runprojectslocationsservicestestiampermissions.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudrunv2job.go
 pkg/models/shared/googlecloudrunv2condition.go
 pkg/models/shared/googlecloudrunv2executiontemplate.go
@@ -53,9 +54,7 @@ pkg/models/shared/googlecloudrunv2envvarsource.go
 pkg/models/shared/googlecloudrunv2secretkeyselector.go
 pkg/models/shared/googlecloudrunv2executionreference.go
 pkg/models/shared/googlecloudrunv2binaryauthorization.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudrunv2listexecutionsresponse.go
 pkg/models/shared/googlecloudrunv2execution.go
 pkg/models/shared/googlecloudrunv2listtasksresponse.go

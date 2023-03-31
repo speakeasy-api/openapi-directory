@@ -8,14 +8,7 @@ import (
 	"net/http"
 )
 
-type GetInventoryQueryParams struct {
-	// The shipNode for which the inventory is requested
-	ShipNode *string `queryParam:"style=form,explode=true,name=shipNode"`
-	// An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’, '{', '}' as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
-	Sku string `queryParam:"style=form,explode=true,name=sku"`
-}
-
-type GetInventoryHeaders struct {
+type GetInventoryRequest struct {
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
@@ -24,11 +17,10 @@ type GetInventoryHeaders struct {
 	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
 	// Walmart Service Name
 	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
-type GetInventoryRequest struct {
-	QueryParams GetInventoryQueryParams
-	Headers     GetInventoryHeaders
+	// The shipNode for which the inventory is requested
+	ShipNode *string `queryParam:"style=form,explode=true,name=shipNode"`
+	// An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’, '{', '}' as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+	Sku string `queryParam:"style=form,explode=true,name=sku"`
 }
 
 // GetInventory200ApplicationXMLQuantityUnitEnum - The unit of measurement. Example: 'EACH'

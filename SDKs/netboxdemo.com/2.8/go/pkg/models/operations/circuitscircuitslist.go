@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitsListQueryParams struct {
+type CircuitsCircuitsListRequest struct {
 	Cid            *string `queryParam:"style=form,explode=true,name=cid"`
 	CidIc          *string `queryParam:"style=form,explode=true,name=cid__ic"`
 	CidIe          *string `queryParam:"style=form,explode=true,name=cid__ie"`
@@ -75,10 +75,6 @@ type CircuitsCircuitsListQueryParams struct {
 	TypeN          *string `queryParam:"style=form,explode=true,name=type__n"`
 	TypeID         *string `queryParam:"style=form,explode=true,name=type_id"`
 	TypeIDN        *string `queryParam:"style=form,explode=true,name=type_id__n"`
-}
-
-type CircuitsCircuitsListRequest struct {
-	QueryParams CircuitsCircuitsListQueryParams
 }
 
 type CircuitsCircuitsList200ApplicationJSON struct {

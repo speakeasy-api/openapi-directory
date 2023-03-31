@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsStarPathParams struct {
+type GistsStarRequest struct {
 	// The unique identifier of the gist.
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsStarRequest struct {
-	PathParams GistsStarPathParams
 }
 
 type GistsStarResponse struct {

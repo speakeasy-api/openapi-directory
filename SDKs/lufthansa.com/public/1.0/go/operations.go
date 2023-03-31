@@ -32,22 +32,22 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 
 // OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet - Flight Status at Arrival Airport
 // Status of all arrivals at a given airport up to 4 hours from the provided date time.
-func (s *operationsT) OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest) (*operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse, error) {
+func (s *operationsT) OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest, security operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity) (*operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,22 +83,22 @@ func (s *operationsT) OperationsFlightstatusArrivalsByAirportCodeAndFromDateTime
 
 // OperationsFlightstatusByFlightNumberAndDateGet - Flight Status
 // Status of a particular flight (boarding, delayed, etc.).
-func (s *operationsT) OperationsFlightstatusByFlightNumberAndDateGet(ctx context.Context, request operations.OperationsFlightstatusByFlightNumberAndDateGetRequest) (*operations.OperationsFlightstatusByFlightNumberAndDateGetResponse, error) {
+func (s *operationsT) OperationsFlightstatusByFlightNumberAndDateGet(ctx context.Context, request operations.OperationsFlightstatusByFlightNumberAndDateGetRequest, security operations.OperationsFlightstatusByFlightNumberAndDateGetSecurity) (*operations.OperationsFlightstatusByFlightNumberAndDateGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/{flightNumber}/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/{flightNumber}/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -134,22 +134,22 @@ func (s *operationsT) OperationsFlightstatusByFlightNumberAndDateGet(ctx context
 
 // OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet - Flight Status at Departure Airport
 // Status of all departures from a given airport up to 4 hours from the provided date time.
-func (s *operationsT) OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest) (*operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse, error) {
+func (s *operationsT) OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest, security operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetSecurity) (*operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,22 +185,22 @@ func (s *operationsT) OperationsFlightstatusDeparturesByAirportCodeAndFromDateTi
 
 // OperationsFlightstatusRouteDateByOriginAndDestinationGet - Flight Status by Route
 // Status of flights between a given origin and destination on a given date.
-func (s *operationsT) OperationsFlightstatusRouteDateByOriginAndDestinationGet(ctx context.Context, request operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest) (*operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse, error) {
+func (s *operationsT) OperationsFlightstatusRouteDateByOriginAndDestinationGet(ctx context.Context, request operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest, security operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity) (*operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/route/{origin}/{destination}/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/route/{origin}/{destination}/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,22 +236,22 @@ func (s *operationsT) OperationsFlightstatusRouteDateByOriginAndDestinationGet(c
 
 // OperationsSchedulesFromDateTimeByOriginAndDestinationGet - Flight Schedules
 // Scheduled flights between given airports on a given date.
-func (s *operationsT) OperationsSchedulesFromDateTimeByOriginAndDestinationGet(ctx context.Context, request operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest) (*operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse, error) {
+func (s *operationsT) OperationsSchedulesFromDateTimeByOriginAndDestinationGet(ctx context.Context, request operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest, security operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity) (*operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

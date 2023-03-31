@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CrmUsersJSONQueryParams struct {
+type GetV2CrmUsersJSONRequest struct {
 	// Filters crm users by crm_ids
 	CrmID []string `queryParam:"style=form,explode=false,name=crm_id"`
 	// IDs of crm users to fetch. If a record can't be found, that record won't be returned and your request will be successful
@@ -27,10 +27,6 @@ type GetV2CrmUsersJSONQueryParams struct {
 	UserGUID []string `queryParam:"style=form,explode=false,name=user_guid"`
 	// Filters crm users by user_ids
 	UserID []int64 `queryParam:"style=form,explode=false,name=user_id"`
-}
-
-type GetV2CrmUsersJSONRequest struct {
-	QueryParams GetV2CrmUsersJSONQueryParams
 }
 
 type GetV2CrmUsersJSONResponse struct {

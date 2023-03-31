@@ -14,39 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateConsentRequest{
-        Security: operations.CreateConsentSecurity{
-            BearerAuthOAuth: &shared.SchemeBearerAuthOAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateConsentHeaders{
-            Digest: "corrupti",
-            PSUAccept: "provident",
-            PSUAcceptCharset: "distinctio",
-            PSUAcceptEncoding: "quibusdam",
-            PSUAcceptLanguage: "unde",
-            PSUCorporateID: "nulla",
-            PSUCorporateIDType: "corrupti",
-            PSUDeviceID: "illum",
-            PSUGeoLocation: "vel",
-            PSUHTTPMethod: "PATCH",
-            PsuID: "deserunt",
-            PSUIDType: "suscipit",
-            PSUIPAddress: "112.76.228.14",
-            PSUIPPort: "delectus",
-            PSUUserAgent: "tempora",
-            Signature: "suscipit",
-            TPPBrandLoggingInformation: "molestiae",
-            TPPExplicitAuthorisationPreferred: false,
-            TPPNokRedirectURI: "https://studious-lynx.info",
-            TPPNotificationContentPreferred: "excepturi",
-            TPPNotificationURI: "nisi",
-            TPPRedirectPreferred: false,
-            TPPRedirectURI: "https://tangible-bathroom.info",
-            TPPSignatureCertificate: "veritatis",
-            XRequestID: "deserunt",
-        },
-        Request: &shared.Consents{
+        Digest: "corrupti",
+        PSUAccept: "provident",
+        PSUAcceptCharset: "distinctio",
+        PSUAcceptEncoding: "quibusdam",
+        PSUAcceptLanguage: "unde",
+        PSUCorporateID: "nulla",
+        PSUCorporateIDType: "corrupti",
+        PSUDeviceID: "illum",
+        PSUGeoLocation: "vel",
+        PSUHTTPMethod: "PATCH",
+        PsuID: "deserunt",
+        PSUIDType: "suscipit",
+        PSUIPAddress: "112.76.228.14",
+        PSUIPPort: "delectus",
+        PSUUserAgent: "tempora",
+        Signature: "suscipit",
+        TPPBrandLoggingInformation: "molestiae",
+        TPPExplicitAuthorisationPreferred: false,
+        TPPNokRedirectURI: "https://studious-lynx.info",
+        TPPNotificationContentPreferred: "excepturi",
+        TPPNotificationURI: "nisi",
+        TPPRedirectPreferred: false,
+        TPPRedirectURI: "https://tangible-bathroom.info",
+        TPPSignatureCertificate: "veritatis",
+        XRequestID: "deserunt",
+        Consents: &shared.Consents{
             Access: shared.AccountAccess{
                 Accounts: []shared.AccountReference16CH{
                     shared.AccountReference16CH{
@@ -173,7 +166,9 @@ func main() {
     }
 
     ctx := context.Background()
-    res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, req)
+    res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, req, operations.CreateConsentSecurity{
+        BearerAuthOAuth: sdk.String("Bearer YOUR_BEARER_TOKEN_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

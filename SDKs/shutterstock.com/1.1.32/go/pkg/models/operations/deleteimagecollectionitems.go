@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteImageCollectionItemsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DeleteImageCollectionItemsPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteImageCollectionItemsQueryParams struct {
-	// One or more image IDs to remove from the collection
-	ItemID []string `queryParam:"style=form,explode=true,name=item_id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteImageCollectionItemsRequest struct {
-	PathParams  DeleteImageCollectionItemsPathParams
-	QueryParams DeleteImageCollectionItemsQueryParams
-	Security    DeleteImageCollectionItemsSecurity
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// One or more image IDs to remove from the collection
+	ItemID []string `queryParam:"style=form,explode=true,name=item_id"`
 }
 
 type DeleteImageCollectionItemsResponse struct {

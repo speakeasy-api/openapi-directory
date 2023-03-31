@@ -34,7 +34,7 @@ func newPerformance(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return the performance score for a single MX. Only primary MX devices supported. If no data is available, a 204 error code is returned.
 func (s *performance) GetDeviceAppliancePerformance(ctx context.Context, request operations.GetDeviceAppliancePerformanceRequest) (*operations.GetDeviceAppliancePerformanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/performance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/performance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

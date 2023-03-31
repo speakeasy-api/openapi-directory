@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRemoteServersIDConfigurationFilePathParams struct {
+type GetRemoteServersIDConfigurationFileRequest struct {
 	// Remote Server ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetRemoteServersIDConfigurationFileRequest struct {
-	PathParams GetRemoteServersIDConfigurationFilePathParams
 }
 
 type GetRemoteServersIDConfigurationFileResponse struct {

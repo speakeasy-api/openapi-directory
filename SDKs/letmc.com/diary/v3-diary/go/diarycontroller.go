@@ -35,9 +35,9 @@ func newDiaryController(defaultClient, securityClient HTTPClient, serverURL, lan
 // DiaryControllerAddFeedbackForm - Submit appointment feedback
 func (s *diaryController) DiaryControllerAddFeedbackForm(ctx context.Context, request operations.DiaryControllerAddFeedbackFormRequest) (*operations.DiaryControllerAddFeedbackFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeedbackSubmissionModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,9 +114,9 @@ func (s *diaryController) DiaryControllerAddFeedbackForm(ctx context.Context, re
 // DiaryControllerAddFeedbackJSON - Submit appointment feedback
 func (s *diaryController) DiaryControllerAddFeedbackJSON(ctx context.Context, request operations.DiaryControllerAddFeedbackJSONRequest) (*operations.DiaryControllerAddFeedbackJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeedbackSubmissionModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -193,9 +193,9 @@ func (s *diaryController) DiaryControllerAddFeedbackJSON(ctx context.Context, re
 // DiaryControllerAddFeedbackRaw - Submit appointment feedback
 func (s *diaryController) DiaryControllerAddFeedbackRaw(ctx context.Context, request operations.DiaryControllerAddFeedbackRawRequest) (*operations.DiaryControllerAddFeedbackRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -272,7 +272,7 @@ func (s *diaryController) DiaryControllerAddFeedbackRaw(ctx context.Context, req
 // DiaryControllerCancelAppointment - Cancel an existing appointment using its unique identifier
 func (s *diaryController) DiaryControllerCancelAppointment(ctx context.Context, request operations.DiaryControllerCancelAppointmentRequest) (*operations.DiaryControllerCancelAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/{appointmentID}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment/{appointmentID}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -341,14 +341,14 @@ func (s *diaryController) DiaryControllerCancelAppointment(ctx context.Context, 
 // DiaryControllerDeleteAppointment - Delete an existing appointment using its unique identifier
 func (s *diaryController) DiaryControllerDeleteAppointment(ctx context.Context, request operations.DiaryControllerDeleteAppointmentRequest) (*operations.DiaryControllerDeleteAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -414,14 +414,14 @@ func (s *diaryController) DiaryControllerDeleteAppointment(ctx context.Context, 
 // DiaryControllerGetAllocations - Get a list of all available allocations for a date + 7 days for a specified appointment type
 func (s *diaryController) DiaryControllerGetAllocations(ctx context.Context, request operations.DiaryControllerGetAllocationsRequest) (*operations.DiaryControllerGetAllocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/allocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/allocations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -483,14 +483,14 @@ func (s *diaryController) DiaryControllerGetAllocations(ctx context.Context, req
 // DiaryControllerGetAppointment - Get an appointment by ID
 func (s *diaryController) DiaryControllerGetAppointment(ctx context.Context, request operations.DiaryControllerGetAppointmentRequest) (*operations.DiaryControllerGetAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -538,14 +538,14 @@ func (s *diaryController) DiaryControllerGetAppointment(ctx context.Context, req
 // DiaryControllerGetAppointmentTypes - A collection of all diary appointment types
 func (s *diaryController) DiaryControllerGetAppointmentTypes(ctx context.Context, request operations.DiaryControllerGetAppointmentTypesRequest) (*operations.DiaryControllerGetAppointmentTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointmenttypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointmenttypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -607,14 +607,14 @@ func (s *diaryController) DiaryControllerGetAppointmentTypes(ctx context.Context
 // DiaryControllerGetAppointmentsBetweenDates - A collection of diary appointments linked to a company filtered between specific dates and by appointment type
 func (s *diaryController) DiaryControllerGetAppointmentsBetweenDates(ctx context.Context, request operations.DiaryControllerGetAppointmentsBetweenDatesRequest) (*operations.DiaryControllerGetAppointmentsBetweenDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointmentsbetweendates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointmentsbetweendates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -676,14 +676,14 @@ func (s *diaryController) DiaryControllerGetAppointmentsBetweenDates(ctx context
 // DiaryControllerGetRecurringAppointments - Retrieves all recurring appointments:-
 func (s *diaryController) DiaryControllerGetRecurringAppointments(ctx context.Context, request operations.DiaryControllerGetRecurringAppointmentsRequest) (*operations.DiaryControllerGetRecurringAppointmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/recurringappointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/recurringappointment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -745,9 +745,9 @@ func (s *diaryController) DiaryControllerGetRecurringAppointments(ctx context.Co
 // DiaryControllerPostAppointmentForm - Post an appointment into a valid diary allocation
 func (s *diaryController) DiaryControllerPostAppointmentForm(ctx context.Context, request operations.DiaryControllerPostAppointmentFormRequest) (*operations.DiaryControllerPostAppointmentFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiaryAppointmentDetails", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,7 +762,7 @@ func (s *diaryController) DiaryControllerPostAppointmentForm(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -828,9 +828,9 @@ func (s *diaryController) DiaryControllerPostAppointmentForm(ctx context.Context
 // DiaryControllerPostAppointmentJSON - Post an appointment into a valid diary allocation
 func (s *diaryController) DiaryControllerPostAppointmentJSON(ctx context.Context, request operations.DiaryControllerPostAppointmentJSONRequest) (*operations.DiaryControllerPostAppointmentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiaryAppointmentDetails", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,7 +845,7 @@ func (s *diaryController) DiaryControllerPostAppointmentJSON(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -911,9 +911,9 @@ func (s *diaryController) DiaryControllerPostAppointmentJSON(ctx context.Context
 // DiaryControllerPostAppointmentRaw - Post an appointment into a valid diary allocation
 func (s *diaryController) DiaryControllerPostAppointmentRaw(ctx context.Context, request operations.DiaryControllerPostAppointmentRawRequest) (*operations.DiaryControllerPostAppointmentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -928,7 +928,7 @@ func (s *diaryController) DiaryControllerPostAppointmentRaw(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -994,9 +994,9 @@ func (s *diaryController) DiaryControllerPostAppointmentRaw(ctx context.Context,
 // DiaryControllerPutAppointmentForm - Update an existing appointment using its unique identifier
 func (s *diaryController) DiaryControllerPutAppointmentForm(ctx context.Context, request operations.DiaryControllerPutAppointmentFormRequest) (*operations.DiaryControllerPutAppointmentFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiaryAppointmentDetails", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1011,7 +1011,7 @@ func (s *diaryController) DiaryControllerPutAppointmentForm(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1077,9 +1077,9 @@ func (s *diaryController) DiaryControllerPutAppointmentForm(ctx context.Context,
 // DiaryControllerPutAppointmentJSON - Update an existing appointment using its unique identifier
 func (s *diaryController) DiaryControllerPutAppointmentJSON(ctx context.Context, request operations.DiaryControllerPutAppointmentJSONRequest) (*operations.DiaryControllerPutAppointmentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiaryAppointmentDetails", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1094,7 +1094,7 @@ func (s *diaryController) DiaryControllerPutAppointmentJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1160,9 +1160,9 @@ func (s *diaryController) DiaryControllerPutAppointmentJSON(ctx context.Context,
 // DiaryControllerPutAppointmentRaw - Update an existing appointment using its unique identifier
 func (s *diaryController) DiaryControllerPutAppointmentRaw(ctx context.Context, request operations.DiaryControllerPutAppointmentRawRequest) (*operations.DiaryControllerPutAppointmentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/appointment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1177,7 +1177,7 @@ func (s *diaryController) DiaryControllerPutAppointmentRaw(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1243,14 +1243,14 @@ func (s *diaryController) DiaryControllerPutAppointmentRaw(ctx context.Context, 
 // DiaryControllerSearchGuest - Match Guest Parameters with existing applicants
 func (s *diaryController) DiaryControllerSearchGuest(ctx context.Context, request operations.DiaryControllerSearchGuestRequest) (*operations.DiaryControllerSearchGuestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortname}/{branchID}/guest/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortname}/{branchID}/guest/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -11,15 +11,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesUpdatePathParams struct {
-	// The number that identifies the issue.
-	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesUpdateRequestBodyLabels2 struct {
 	Color       *string `json:"color,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -272,8 +263,13 @@ type IssuesUpdateRequestBody struct {
 }
 
 type IssuesUpdateRequest struct {
-	PathParams IssuesUpdatePathParams
-	Request    *IssuesUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesUpdateRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the issue.
+	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // IssuesUpdate503ApplicationJSON - Service unavailable

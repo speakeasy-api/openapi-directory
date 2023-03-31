@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostShippingMethodsJSONQueryParams struct {
+type PostShippingMethodsJSONRequest struct {
+	// Shipping Method parameters.
+	ShippingMethodEdit shared.ShippingMethodEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostShippingMethodsJSONRequest struct {
-	QueryParams PostShippingMethodsJSONQueryParams
-	// Shipping Method parameters.
-	Request shared.ShippingMethodEdit `request:"mediaType=application/json"`
 }
 
 type PostShippingMethodsJSONResponse struct {

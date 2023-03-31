@@ -93,7 +93,7 @@ func newRouteOptimizationAPI(defaultClient, securityClient HTTPClient, serverURL
 //
 // **Note**: Since the workflow is a bit more cumbersome and since you lose some time in fetching the solution, you should always prefer
 // the [synchronous endpoint](#operation/solveVRP). You should use the batch mode only for long running problems.
-func (s *routeOptimizationAPI) AsyncVRP(ctx context.Context, request operations.AsyncVRPRequest) (*operations.AsyncVRPResponse, error) {
+func (s *routeOptimizationAPI) AsyncVRP(ctx context.Context, request shared.Request) (*operations.AsyncVRPResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vrp/optimize"
 
@@ -179,7 +179,7 @@ func (s *routeOptimizationAPI) AsyncVRP(ctx context.Context, request operations.
 // You get the job id by sending a vehicle routing problem to the [batch mode URL](#operation/asyncVRP).
 func (s *routeOptimizationAPI) GetSolution(ctx context.Context, request operations.GetSolutionRequest) (*operations.GetSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vrp/solution/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vrp/solution/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -258,7 +258,7 @@ func (s *routeOptimizationAPI) GetSolution(ctx context.Context, request operatio
 // Please note that this URL is very well suited to solve minor problems.
 // Larger vehicle routing problems, which take longer than 10 seconds to solve, cannot be solved.
 // To solve them, please use the [batch mode URL](#operation/asyncVRP) instead.
-func (s *routeOptimizationAPI) SolveVRP(ctx context.Context, request operations.SolveVRPRequest) (*operations.SolveVRPResponse, error) {
+func (s *routeOptimizationAPI) SolveVRP(ctx context.Context, request shared.Request) (*operations.SolveVRPResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vrp"
 

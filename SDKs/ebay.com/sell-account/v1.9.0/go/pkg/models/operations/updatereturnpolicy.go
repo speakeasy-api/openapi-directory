@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateReturnPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateReturnPolicyPathParams struct {
-	// This path parameter specifies the ID of the return policy you want to update.
-	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateReturnPolicyRequest struct {
-	PathParams UpdateReturnPolicyPathParams
 	// Container for a return policy request.
-	Request  shared.ReturnPolicyRequest `request:"mediaType=application/json"`
-	Security UpdateReturnPolicySecurity
+	ReturnPolicyRequest shared.ReturnPolicyRequest `request:"mediaType=application/json"`
+	// This path parameter specifies the ID of the return policy you want to update.
+	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
 }
 
 type UpdateReturnPolicyResponse struct {

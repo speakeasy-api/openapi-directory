@@ -3,22 +3,18 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
-)
-    
-req = operations.AccessAddRequest(
-    path_params=operations.AccessAddPathParams(
-        agents="quas",
-        mask="qui",
-        user="ut",
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
     ),
+)
+
+
+req = operations.AccessAddRequest(
+    agents="corrupti",
+    mask="provident",
+    user="distinctio",
 )
     
 res = s.access.access_add(req)

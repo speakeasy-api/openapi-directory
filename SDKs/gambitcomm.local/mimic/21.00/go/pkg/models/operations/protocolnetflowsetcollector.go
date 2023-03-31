@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowSetCollectorPathParams struct {
+type ProtocolNetflowSetCollectorRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// file name to load config
 	CollectorIP string `pathParam:"style=simple,explode=false,name=collectorIP"`
-}
-
-type ProtocolNetflowSetCollectorRequest struct {
-	PathParams ProtocolNetflowSetCollectorPathParams
 }
 
 type ProtocolNetflowSetCollectorResponse struct {

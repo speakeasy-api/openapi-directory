@@ -33,11 +33,11 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // AppengineAppsAuthorizedCertificatesCreate - Uploads the specified SSL certificate.
-func (s *apps) AppengineAppsAuthorizedCertificatesCreate(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesCreateRequest) (*operations.AppengineAppsAuthorizedCertificatesCreateResponse, error) {
+func (s *apps) AppengineAppsAuthorizedCertificatesCreate(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesCreateRequest, security operations.AppengineAppsAuthorizedCertificatesCreateSecurity) (*operations.AppengineAppsAuthorizedCertificatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizedCertificate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *apps) AppengineAppsAuthorizedCertificatesCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *apps) AppengineAppsAuthorizedCertificatesCreate(ctx context.Context, re
 }
 
 // AppengineAppsAuthorizedCertificatesDelete - Deletes the specified SSL certificate.
-func (s *apps) AppengineAppsAuthorizedCertificatesDelete(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesDeleteRequest) (*operations.AppengineAppsAuthorizedCertificatesDeleteResponse, error) {
+func (s *apps) AppengineAppsAuthorizedCertificatesDelete(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesDeleteRequest, security operations.AppengineAppsAuthorizedCertificatesDeleteSecurity) (*operations.AppengineAppsAuthorizedCertificatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *apps) AppengineAppsAuthorizedCertificatesDelete(ctx context.Context, re
 }
 
 // AppengineAppsAuthorizedCertificatesGet - Gets the specified SSL certificate.
-func (s *apps) AppengineAppsAuthorizedCertificatesGet(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesGetRequest) (*operations.AppengineAppsAuthorizedCertificatesGetResponse, error) {
+func (s *apps) AppengineAppsAuthorizedCertificatesGet(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesGetRequest, security operations.AppengineAppsAuthorizedCertificatesGetSecurity) (*operations.AppengineAppsAuthorizedCertificatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *apps) AppengineAppsAuthorizedCertificatesGet(ctx context.Context, reque
 }
 
 // AppengineAppsAuthorizedCertificatesList - Lists all SSL certificates the user is authorized to administer.
-func (s *apps) AppengineAppsAuthorizedCertificatesList(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesListRequest) (*operations.AppengineAppsAuthorizedCertificatesListResponse, error) {
+func (s *apps) AppengineAppsAuthorizedCertificatesList(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesListRequest, security operations.AppengineAppsAuthorizedCertificatesListSecurity) (*operations.AppengineAppsAuthorizedCertificatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *apps) AppengineAppsAuthorizedCertificatesList(ctx context.Context, requ
 }
 
 // AppengineAppsAuthorizedCertificatesPatch - Updates the specified SSL certificate. To renew a certificate and maintain its existing domain mappings, update certificate_data with a new certificate. The new certificate must be applicable to the same domains as the original certificate. The certificate display_name may also be updated.
-func (s *apps) AppengineAppsAuthorizedCertificatesPatch(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesPatchRequest) (*operations.AppengineAppsAuthorizedCertificatesPatchResponse, error) {
+func (s *apps) AppengineAppsAuthorizedCertificatesPatch(ctx context.Context, request operations.AppengineAppsAuthorizedCertificatesPatchRequest, security operations.AppengineAppsAuthorizedCertificatesPatchSecurity) (*operations.AppengineAppsAuthorizedCertificatesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizedCertificate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *apps) AppengineAppsAuthorizedCertificatesPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,20 +287,20 @@ func (s *apps) AppengineAppsAuthorizedCertificatesPatch(ctx context.Context, req
 }
 
 // AppengineAppsAuthorizedDomainsList - Lists all domains the user is authorized to administer.
-func (s *apps) AppengineAppsAuthorizedDomainsList(ctx context.Context, request operations.AppengineAppsAuthorizedDomainsListRequest) (*operations.AppengineAppsAuthorizedDomainsListResponse, error) {
+func (s *apps) AppengineAppsAuthorizedDomainsList(ctx context.Context, request operations.AppengineAppsAuthorizedDomainsListRequest, security operations.AppengineAppsAuthorizedDomainsListSecurity) (*operations.AppengineAppsAuthorizedDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedDomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/authorizedDomains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,11 +335,11 @@ func (s *apps) AppengineAppsAuthorizedDomainsList(ctx context.Context, request o
 }
 
 // AppengineAppsCreate - Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The ID of the target Cloud Platform project. location - The region (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application located.For more information about App Engine applications, see Managing Projects, Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
-func (s *apps) AppengineAppsCreate(ctx context.Context, request operations.AppengineAppsCreateRequest) (*operations.AppengineAppsCreateResponse, error) {
+func (s *apps) AppengineAppsCreate(ctx context.Context, request operations.AppengineAppsCreateRequest, security operations.AppengineAppsCreateSecurity) (*operations.AppengineAppsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta/apps"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -351,11 +351,11 @@ func (s *apps) AppengineAppsCreate(ctx context.Context, request operations.Appen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,11 +390,11 @@ func (s *apps) AppengineAppsCreate(ctx context.Context, request operations.Appen
 }
 
 // AppengineAppsDomainMappingsCreate - Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
-func (s *apps) AppengineAppsDomainMappingsCreate(ctx context.Context, request operations.AppengineAppsDomainMappingsCreateRequest) (*operations.AppengineAppsDomainMappingsCreateResponse, error) {
+func (s *apps) AppengineAppsDomainMappingsCreate(ctx context.Context, request operations.AppengineAppsDomainMappingsCreateRequest, security operations.AppengineAppsDomainMappingsCreateSecurity) (*operations.AppengineAppsDomainMappingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainMapping", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -406,11 +406,11 @@ func (s *apps) AppengineAppsDomainMappingsCreate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -445,20 +445,20 @@ func (s *apps) AppengineAppsDomainMappingsCreate(ctx context.Context, request op
 }
 
 // AppengineAppsDomainMappingsDelete - Deletes the specified domain mapping. A user must be authorized to administer the associated domain in order to delete a DomainMapping resource.
-func (s *apps) AppengineAppsDomainMappingsDelete(ctx context.Context, request operations.AppengineAppsDomainMappingsDeleteRequest) (*operations.AppengineAppsDomainMappingsDeleteResponse, error) {
+func (s *apps) AppengineAppsDomainMappingsDelete(ctx context.Context, request operations.AppengineAppsDomainMappingsDeleteRequest, security operations.AppengineAppsDomainMappingsDeleteSecurity) (*operations.AppengineAppsDomainMappingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -493,20 +493,20 @@ func (s *apps) AppengineAppsDomainMappingsDelete(ctx context.Context, request op
 }
 
 // AppengineAppsDomainMappingsGet - Gets the specified domain mapping.
-func (s *apps) AppengineAppsDomainMappingsGet(ctx context.Context, request operations.AppengineAppsDomainMappingsGetRequest) (*operations.AppengineAppsDomainMappingsGetResponse, error) {
+func (s *apps) AppengineAppsDomainMappingsGet(ctx context.Context, request operations.AppengineAppsDomainMappingsGetRequest, security operations.AppengineAppsDomainMappingsGetSecurity) (*operations.AppengineAppsDomainMappingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -541,20 +541,20 @@ func (s *apps) AppengineAppsDomainMappingsGet(ctx context.Context, request opera
 }
 
 // AppengineAppsDomainMappingsList - Lists the domain mappings on an application.
-func (s *apps) AppengineAppsDomainMappingsList(ctx context.Context, request operations.AppengineAppsDomainMappingsListRequest) (*operations.AppengineAppsDomainMappingsListResponse, error) {
+func (s *apps) AppengineAppsDomainMappingsList(ctx context.Context, request operations.AppengineAppsDomainMappingsListRequest, security operations.AppengineAppsDomainMappingsListSecurity) (*operations.AppengineAppsDomainMappingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -589,11 +589,11 @@ func (s *apps) AppengineAppsDomainMappingsList(ctx context.Context, request oper
 }
 
 // AppengineAppsDomainMappingsPatch - Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to administer the associated domain in order to update a DomainMapping resource.
-func (s *apps) AppengineAppsDomainMappingsPatch(ctx context.Context, request operations.AppengineAppsDomainMappingsPatchRequest) (*operations.AppengineAppsDomainMappingsPatchResponse, error) {
+func (s *apps) AppengineAppsDomainMappingsPatch(ctx context.Context, request operations.AppengineAppsDomainMappingsPatchRequest, security operations.AppengineAppsDomainMappingsPatchSecurity) (*operations.AppengineAppsDomainMappingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainMapping", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -605,11 +605,11 @@ func (s *apps) AppengineAppsDomainMappingsPatch(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -644,11 +644,11 @@ func (s *apps) AppengineAppsDomainMappingsPatch(ctx context.Context, request ope
 }
 
 // AppengineAppsFirewallIngressRulesBatchUpdate - Replaces the entire firewall ruleset in one bulk operation. This overrides and replaces the rules of an existing firewall with the new rules.If the final rule does not match traffic with the '*' wildcard IP range, then an "allow all" rule is explicitly added to the end of the list.
-func (s *apps) AppengineAppsFirewallIngressRulesBatchUpdate(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesBatchUpdateRequest) (*operations.AppengineAppsFirewallIngressRulesBatchUpdateResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesBatchUpdate(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesBatchUpdateRequest, security operations.AppengineAppsFirewallIngressRulesBatchUpdateSecurity) (*operations.AppengineAppsFirewallIngressRulesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateIngressRulesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -660,11 +660,11 @@ func (s *apps) AppengineAppsFirewallIngressRulesBatchUpdate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -699,11 +699,11 @@ func (s *apps) AppengineAppsFirewallIngressRulesBatchUpdate(ctx context.Context,
 }
 
 // AppengineAppsFirewallIngressRulesCreate - Creates a firewall rule for the application.
-func (s *apps) AppengineAppsFirewallIngressRulesCreate(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesCreateRequest) (*operations.AppengineAppsFirewallIngressRulesCreateResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesCreate(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesCreateRequest, security operations.AppengineAppsFirewallIngressRulesCreateSecurity) (*operations.AppengineAppsFirewallIngressRulesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FirewallRule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -715,11 +715,11 @@ func (s *apps) AppengineAppsFirewallIngressRulesCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -754,20 +754,20 @@ func (s *apps) AppengineAppsFirewallIngressRulesCreate(ctx context.Context, requ
 }
 
 // AppengineAppsFirewallIngressRulesDelete - Deletes the specified firewall rule.
-func (s *apps) AppengineAppsFirewallIngressRulesDelete(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesDeleteRequest) (*operations.AppengineAppsFirewallIngressRulesDeleteResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesDelete(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesDeleteRequest, security operations.AppengineAppsFirewallIngressRulesDeleteSecurity) (*operations.AppengineAppsFirewallIngressRulesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -802,20 +802,20 @@ func (s *apps) AppengineAppsFirewallIngressRulesDelete(ctx context.Context, requ
 }
 
 // AppengineAppsFirewallIngressRulesGet - Gets the specified firewall rule.
-func (s *apps) AppengineAppsFirewallIngressRulesGet(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesGetRequest) (*operations.AppengineAppsFirewallIngressRulesGetResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesGet(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesGetRequest, security operations.AppengineAppsFirewallIngressRulesGetSecurity) (*operations.AppengineAppsFirewallIngressRulesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -850,20 +850,20 @@ func (s *apps) AppengineAppsFirewallIngressRulesGet(ctx context.Context, request
 }
 
 // AppengineAppsFirewallIngressRulesList - Lists the firewall rules of an application.
-func (s *apps) AppengineAppsFirewallIngressRulesList(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesListRequest) (*operations.AppengineAppsFirewallIngressRulesListResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesList(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesListRequest, security operations.AppengineAppsFirewallIngressRulesListSecurity) (*operations.AppengineAppsFirewallIngressRulesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -898,11 +898,11 @@ func (s *apps) AppengineAppsFirewallIngressRulesList(ctx context.Context, reques
 }
 
 // AppengineAppsFirewallIngressRulesPatch - Updates the specified firewall rule.
-func (s *apps) AppengineAppsFirewallIngressRulesPatch(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesPatchRequest) (*operations.AppengineAppsFirewallIngressRulesPatchResponse, error) {
+func (s *apps) AppengineAppsFirewallIngressRulesPatch(ctx context.Context, request operations.AppengineAppsFirewallIngressRulesPatchRequest, security operations.AppengineAppsFirewallIngressRulesPatchSecurity) (*operations.AppengineAppsFirewallIngressRulesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FirewallRule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -914,11 +914,11 @@ func (s *apps) AppengineAppsFirewallIngressRulesPatch(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -953,20 +953,20 @@ func (s *apps) AppengineAppsFirewallIngressRulesPatch(ctx context.Context, reque
 }
 
 // AppengineAppsGet - Gets information about an application.
-func (s *apps) AppengineAppsGet(ctx context.Context, request operations.AppengineAppsGetRequest) (*operations.AppengineAppsGetResponse, error) {
+func (s *apps) AppengineAppsGet(ctx context.Context, request operations.AppengineAppsGetRequest, security operations.AppengineAppsGetSecurity) (*operations.AppengineAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1001,20 +1001,20 @@ func (s *apps) AppengineAppsGet(ctx context.Context, request operations.Appengin
 }
 
 // AppengineAppsLocationsGet - Gets information about a location.
-func (s *apps) AppengineAppsLocationsGet(ctx context.Context, request operations.AppengineAppsLocationsGetRequest) (*operations.AppengineAppsLocationsGetResponse, error) {
+func (s *apps) AppengineAppsLocationsGet(ctx context.Context, request operations.AppengineAppsLocationsGetRequest, security operations.AppengineAppsLocationsGetSecurity) (*operations.AppengineAppsLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/locations/{locationsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/locations/{locationsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1049,20 +1049,20 @@ func (s *apps) AppengineAppsLocationsGet(ctx context.Context, request operations
 }
 
 // AppengineAppsLocationsList - Lists information about the supported locations for this service.
-func (s *apps) AppengineAppsLocationsList(ctx context.Context, request operations.AppengineAppsLocationsListRequest) (*operations.AppengineAppsLocationsListResponse, error) {
+func (s *apps) AppengineAppsLocationsList(ctx context.Context, request operations.AppengineAppsLocationsListRequest, security operations.AppengineAppsLocationsListSecurity) (*operations.AppengineAppsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1097,20 +1097,20 @@ func (s *apps) AppengineAppsLocationsList(ctx context.Context, request operation
 }
 
 // AppengineAppsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *apps) AppengineAppsOperationsGet(ctx context.Context, request operations.AppengineAppsOperationsGetRequest) (*operations.AppengineAppsOperationsGetResponse, error) {
+func (s *apps) AppengineAppsOperationsGet(ctx context.Context, request operations.AppengineAppsOperationsGetRequest, security operations.AppengineAppsOperationsGetSecurity) (*operations.AppengineAppsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/operations/{operationsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/operations/{operationsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1145,20 +1145,20 @@ func (s *apps) AppengineAppsOperationsGet(ctx context.Context, request operation
 }
 
 // AppengineAppsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
-func (s *apps) AppengineAppsOperationsList(ctx context.Context, request operations.AppengineAppsOperationsListRequest) (*operations.AppengineAppsOperationsListResponse, error) {
+func (s *apps) AppengineAppsOperationsList(ctx context.Context, request operations.AppengineAppsOperationsListRequest, security operations.AppengineAppsOperationsListSecurity) (*operations.AppengineAppsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1193,11 +1193,11 @@ func (s *apps) AppengineAppsOperationsList(ctx context.Context, request operatio
 }
 
 // AppengineAppsPatch - Updates the specified Application resource. You can update the following fields: auth_domain - Google authentication domain for controlling user access to the application. default_cookie_expiration - Cookie expiration policy for the application. iap - Identity-Aware Proxy properties for the application.
-func (s *apps) AppengineAppsPatch(ctx context.Context, request operations.AppengineAppsPatchRequest) (*operations.AppengineAppsPatchResponse, error) {
+func (s *apps) AppengineAppsPatch(ctx context.Context, request operations.AppengineAppsPatchRequest, security operations.AppengineAppsPatchSecurity) (*operations.AppengineAppsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1209,11 +1209,11 @@ func (s *apps) AppengineAppsPatch(ctx context.Context, request operations.Appeng
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1248,11 +1248,11 @@ func (s *apps) AppengineAppsPatch(ctx context.Context, request operations.Appeng
 }
 
 // AppengineAppsRepair - Recreates the required App Engine features for the specified App Engine application, for example a Cloud Storage bucket or App Engine service account. Use this method if you receive an error message about a missing feature, for example, Error retrieving the App Engine service account. If you have deleted your App Engine service account, this will not be able to recreate it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be found in the Cloud Console Activity Log.
-func (s *apps) AppengineAppsRepair(ctx context.Context, request operations.AppengineAppsRepairRequest) (*operations.AppengineAppsRepairResponse, error) {
+func (s *apps) AppengineAppsRepair(ctx context.Context, request operations.AppengineAppsRepairRequest, security operations.AppengineAppsRepairSecurity) (*operations.AppengineAppsRepairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}:repair", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}:repair", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1264,11 +1264,11 @@ func (s *apps) AppengineAppsRepair(ctx context.Context, request operations.Appen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1303,20 +1303,20 @@ func (s *apps) AppengineAppsRepair(ctx context.Context, request operations.Appen
 }
 
 // AppengineAppsServicesDelete - Deletes the specified service and all enclosed versions.
-func (s *apps) AppengineAppsServicesDelete(ctx context.Context, request operations.AppengineAppsServicesDeleteRequest) (*operations.AppengineAppsServicesDeleteResponse, error) {
+func (s *apps) AppengineAppsServicesDelete(ctx context.Context, request operations.AppengineAppsServicesDeleteRequest, security operations.AppengineAppsServicesDeleteSecurity) (*operations.AppengineAppsServicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1351,20 +1351,20 @@ func (s *apps) AppengineAppsServicesDelete(ctx context.Context, request operatio
 }
 
 // AppengineAppsServicesGet - Gets the current configuration of the specified service.
-func (s *apps) AppengineAppsServicesGet(ctx context.Context, request operations.AppengineAppsServicesGetRequest) (*operations.AppengineAppsServicesGetResponse, error) {
+func (s *apps) AppengineAppsServicesGet(ctx context.Context, request operations.AppengineAppsServicesGetRequest, security operations.AppengineAppsServicesGetSecurity) (*operations.AppengineAppsServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1399,20 +1399,20 @@ func (s *apps) AppengineAppsServicesGet(ctx context.Context, request operations.
 }
 
 // AppengineAppsServicesList - Lists all the services in the application.
-func (s *apps) AppengineAppsServicesList(ctx context.Context, request operations.AppengineAppsServicesListRequest) (*operations.AppengineAppsServicesListResponse, error) {
+func (s *apps) AppengineAppsServicesList(ctx context.Context, request operations.AppengineAppsServicesListRequest, security operations.AppengineAppsServicesListSecurity) (*operations.AppengineAppsServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1447,11 +1447,11 @@ func (s *apps) AppengineAppsServicesList(ctx context.Context, request operations
 }
 
 // AppengineAppsServicesPatch - Updates the configuration of the specified service.
-func (s *apps) AppengineAppsServicesPatch(ctx context.Context, request operations.AppengineAppsServicesPatchRequest) (*operations.AppengineAppsServicesPatchResponse, error) {
+func (s *apps) AppengineAppsServicesPatch(ctx context.Context, request operations.AppengineAppsServicesPatchRequest, security operations.AppengineAppsServicesPatchSecurity) (*operations.AppengineAppsServicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Service", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1463,11 +1463,11 @@ func (s *apps) AppengineAppsServicesPatch(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1502,11 +1502,11 @@ func (s *apps) AppengineAppsServicesPatch(ctx context.Context, request operation
 }
 
 // AppengineAppsServicesVersionsCreate - Deploys code and resource files to a new version.
-func (s *apps) AppengineAppsServicesVersionsCreate(ctx context.Context, request operations.AppengineAppsServicesVersionsCreateRequest) (*operations.AppengineAppsServicesVersionsCreateResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsCreate(ctx context.Context, request operations.AppengineAppsServicesVersionsCreateRequest, security operations.AppengineAppsServicesVersionsCreateSecurity) (*operations.AppengineAppsServicesVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1518,11 +1518,11 @@ func (s *apps) AppengineAppsServicesVersionsCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1557,20 +1557,20 @@ func (s *apps) AppengineAppsServicesVersionsCreate(ctx context.Context, request 
 }
 
 // AppengineAppsServicesVersionsDelete - Deletes an existing Version resource.
-func (s *apps) AppengineAppsServicesVersionsDelete(ctx context.Context, request operations.AppengineAppsServicesVersionsDeleteRequest) (*operations.AppengineAppsServicesVersionsDeleteResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsDelete(ctx context.Context, request operations.AppengineAppsServicesVersionsDeleteRequest, security operations.AppengineAppsServicesVersionsDeleteSecurity) (*operations.AppengineAppsServicesVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1605,20 +1605,20 @@ func (s *apps) AppengineAppsServicesVersionsDelete(ctx context.Context, request 
 }
 
 // AppengineAppsServicesVersionsGet - Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource.
-func (s *apps) AppengineAppsServicesVersionsGet(ctx context.Context, request operations.AppengineAppsServicesVersionsGetRequest) (*operations.AppengineAppsServicesVersionsGetResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsGet(ctx context.Context, request operations.AppengineAppsServicesVersionsGetRequest, security operations.AppengineAppsServicesVersionsGetSecurity) (*operations.AppengineAppsServicesVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1653,11 +1653,11 @@ func (s *apps) AppengineAppsServicesVersionsGet(ctx context.Context, request ope
 }
 
 // AppengineAppsServicesVersionsInstancesDebug - Enables debugging on a VM instance. This allows you to use the SSH command to connect to the virtual machine where the instance lives. While in "debug mode", the instance continues to serve live traffic. You should delete the instance when you are done debugging and then allow the system to take over and determine if another instance should be started.Only applicable for instances in App Engine flexible environment.
-func (s *apps) AppengineAppsServicesVersionsInstancesDebug(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesDebugRequest) (*operations.AppengineAppsServicesVersionsInstancesDebugResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsInstancesDebug(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesDebugRequest, security operations.AppengineAppsServicesVersionsInstancesDebugSecurity) (*operations.AppengineAppsServicesVersionsInstancesDebugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}:debug", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}:debug", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DebugInstanceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1669,11 +1669,11 @@ func (s *apps) AppengineAppsServicesVersionsInstancesDebug(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1708,20 +1708,20 @@ func (s *apps) AppengineAppsServicesVersionsInstancesDebug(ctx context.Context, 
 }
 
 // AppengineAppsServicesVersionsInstancesDelete - Stops a running instance.The instance might be automatically recreated based on the scaling settings of the version. For more information, see "How Instances are Managed" (standard environment (https://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed) | flexible environment (https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-managed)).To ensure that instances are not re-created and avoid getting billed, you can stop all instances within the target version by changing the serving status of the version to STOPPED with the apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions/patch) method.
-func (s *apps) AppengineAppsServicesVersionsInstancesDelete(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesDeleteRequest) (*operations.AppengineAppsServicesVersionsInstancesDeleteResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsInstancesDelete(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesDeleteRequest, security operations.AppengineAppsServicesVersionsInstancesDeleteSecurity) (*operations.AppengineAppsServicesVersionsInstancesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1756,20 +1756,20 @@ func (s *apps) AppengineAppsServicesVersionsInstancesDelete(ctx context.Context,
 }
 
 // AppengineAppsServicesVersionsInstancesGet - Gets instance information.
-func (s *apps) AppengineAppsServicesVersionsInstancesGet(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesGetRequest) (*operations.AppengineAppsServicesVersionsInstancesGetResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsInstancesGet(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesGetRequest, security operations.AppengineAppsServicesVersionsInstancesGetSecurity) (*operations.AppengineAppsServicesVersionsInstancesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1804,20 +1804,20 @@ func (s *apps) AppengineAppsServicesVersionsInstancesGet(ctx context.Context, re
 }
 
 // AppengineAppsServicesVersionsInstancesList - Lists the instances of a version.Tip: To aggregate details about instances over time, see the Stackdriver Monitoring API (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list).
-func (s *apps) AppengineAppsServicesVersionsInstancesList(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesListRequest) (*operations.AppengineAppsServicesVersionsInstancesListResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsInstancesList(ctx context.Context, request operations.AppengineAppsServicesVersionsInstancesListRequest, security operations.AppengineAppsServicesVersionsInstancesListSecurity) (*operations.AppengineAppsServicesVersionsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1852,20 +1852,20 @@ func (s *apps) AppengineAppsServicesVersionsInstancesList(ctx context.Context, r
 }
 
 // AppengineAppsServicesVersionsList - Lists the versions of a service.
-func (s *apps) AppengineAppsServicesVersionsList(ctx context.Context, request operations.AppengineAppsServicesVersionsListRequest) (*operations.AppengineAppsServicesVersionsListResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsList(ctx context.Context, request operations.AppengineAppsServicesVersionsListRequest, security operations.AppengineAppsServicesVersionsListSecurity) (*operations.AppengineAppsServicesVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1900,11 +1900,11 @@ func (s *apps) AppengineAppsServicesVersionsList(ctx context.Context, request op
 }
 
 // AppengineAppsServicesVersionsPatch - Updates the specified Version resource. You can specify the following fields depending on the App Engine environment and type of scaling that the version resource uses:Standard environment instance_class (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.instance_class)automatic scaling in the standard environment: automatic_scaling.min_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling) automaticScaling.standard_scheduler_settings.max_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.min_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_cpu_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_throughput_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StandardSchedulerSettings)basic scaling or manual scaling in the standard environment: serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.serving_status) manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#manualscaling)Flexible environment serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in the flexible environment: automatic_scaling.min_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling in the flexible environment: manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#manualscaling)
-func (s *apps) AppengineAppsServicesVersionsPatch(ctx context.Context, request operations.AppengineAppsServicesVersionsPatchRequest) (*operations.AppengineAppsServicesVersionsPatchResponse, error) {
+func (s *apps) AppengineAppsServicesVersionsPatch(ctx context.Context, request operations.AppengineAppsServicesVersionsPatchRequest, security operations.AppengineAppsServicesVersionsPatchSecurity) (*operations.AppengineAppsServicesVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1916,11 +1916,11 @@ func (s *apps) AppengineAppsServicesVersionsPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

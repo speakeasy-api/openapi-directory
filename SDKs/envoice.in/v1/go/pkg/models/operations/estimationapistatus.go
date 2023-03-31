@@ -8,18 +8,10 @@ import (
 	"net/http"
 )
 
-type EstimationAPIStatusQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type EstimationAPIStatusHeaders struct {
+type EstimationAPIStatusRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type EstimationAPIStatusRequest struct {
-	QueryParams EstimationAPIStatusQueryParams
-	Headers     EstimationAPIStatusHeaders
 }
 
 // EstimationAPIStatus200TextJSONEnum - OK

@@ -14,31 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateChannelRequest{
-        Security: operations.CreateChannelSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "corrupti",
-        },
-        Headers: operations.CreateChannelHeaders{
-            XTwilioWebhookEnabled: "false",
-        },
-        Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "distinctio",
-            CreatedBy: "quibusdam",
-            DateCreated: "2021-04-14T16:47:33.722Z",
-            DateUpdated: "2021-04-22T12:08:58.275Z",
-            FriendlyName: "vel",
+        RequestBody: &operations.CreateChannelCreateChannelRequest{
+            Attributes: "corrupti",
+            CreatedBy: "provident",
+            DateCreated: "2021-04-24T16:27:50.833Z",
+            DateUpdated: "2021-04-14T16:47:33.722Z",
+            FriendlyName: "corrupti",
             Type: "private",
-            UniqueName: "deserunt",
+            UniqueName: "vel",
         },
+        ServiceSid: "error",
+        XTwilioWebhookEnabled: "false",
     }
 
     ctx := context.Background()
-    res, err := s.CreateChannel(ctx, req)
+    res, err := s.CreateChannel(ctx, req, operations.CreateChannelSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.ActionsAddSelectedRepoToOrgSecretRequest{
-        PathParams: operations.ActionsAddSelectedRepoToOrgSecretPathParams{
-            Org: "corrupti",
-            RepositoryID: 592845,
-            SecretName: "distinctio",
-        },
+        Org: "corrupti",
+        RepositoryID: 592845,
+        SecretName: "distinctio",
     }
 
     ctx := context.Background()

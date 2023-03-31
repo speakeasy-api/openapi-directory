@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GETAnnotationCountByAccIDAndObjectTypeUsingGETPathParams struct {
+type GETAnnotationCountByAccIDAndObjectTypeUsingGETRequest struct {
 	// Ontology term accession ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
 	// true: return annotations for the term and children, false: return annotations for the term only
@@ -15,10 +15,6 @@ type GETAnnotationCountByAccIDAndObjectTypeUsingGETPathParams struct {
 	ObjectType int `pathParam:"style=simple,explode=false,name=objectType"`
 	// A list of species type keys can be found using the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETAnnotationCountByAccIDAndObjectTypeUsingGETRequest struct {
-	PathParams GETAnnotationCountByAccIDAndObjectTypeUsingGETPathParams
 }
 
 type GETAnnotationCountByAccIDAndObjectTypeUsingGETResponse struct {

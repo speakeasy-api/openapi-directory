@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDAccountingYearSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDAccountingYearPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesIDAccountingYearRequestBodyLevelEnum string
@@ -61,10 +55,10 @@ type PostSpacesIDAccountingYearRequestBody struct {
 }
 
 type PostSpacesIDAccountingYearRequest struct {
-	PathParams PostSpacesIDAccountingYearPathParams
 	// AccountingYear to add
-	Request  PostSpacesIDAccountingYearRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDAccountingYearSecurity
+	RequestBody PostSpacesIDAccountingYearRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDAccountingYear201ApplicationJSON - Id of the accounting year created

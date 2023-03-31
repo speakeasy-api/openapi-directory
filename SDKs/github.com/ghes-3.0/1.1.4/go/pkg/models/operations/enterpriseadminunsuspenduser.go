@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminUnsuspendUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminUnsuspendUserRequestBody struct {
 	// The reason the user is being unsuspended. This message will be logged in the [audit log](https://docs.github.com/enterprise/admin/articles/audit-logging/). If you don't provide a `reason`, it will default to "Unsuspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
 	Reason *string `json:"reason,omitempty"`
 }
 
 type EnterpriseAdminUnsuspendUserRequest struct {
-	PathParams EnterpriseAdminUnsuspendUserPathParams
-	Request    *EnterpriseAdminUnsuspendUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUnsuspendUserRequestBody `request:"mediaType=application/json"`
+	Username    string                                   `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminUnsuspendUserResponse struct {

@@ -36,7 +36,7 @@ func newRfq(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Get a specific Rfq
 func (s *rfq) GetRfq(ctx context.Context, request operations.GetRfqRequest) (*operations.GetRfqResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs/{rfq_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs/{rfq_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *rfq) GetRfq(ctx context.Context, request operations.GetRfqRequest) (*op
 // List the rfqs
 func (s *rfq) GetRfqList(ctx context.Context, request operations.GetRfqListRequest) (*operations.GetRfqListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

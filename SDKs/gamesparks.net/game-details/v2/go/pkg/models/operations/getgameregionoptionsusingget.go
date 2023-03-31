@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETGameRegionOptionsUsingGETPathParams struct {
+type GETGameRegionOptionsUsingGETRequest struct {
 	// gameApiKey
 	GameAPIKey string `pathParam:"style=simple,explode=false,name=gameApiKey"`
-}
-
-type GETGameRegionOptionsUsingGETRequest struct {
-	PathParams GETGameRegionOptionsUsingGETPathParams
 }
 
 type GETGameRegionOptionsUsingGETResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByIDPathParams struct {
-	// client invoice's internal identifier
-	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type GetByIDQueryParams struct {
+type GetByIDRequest struct {
 	// list of adittional fields which should be embedded in the response (ie. tasks)
 	Embed *string `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetByIDRequest struct {
-	PathParams  GetByIDPathParams
-	QueryParams GetByIDQueryParams
+	// client invoice's internal identifier
+	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
 }
 
 type GetByIDResponse struct {

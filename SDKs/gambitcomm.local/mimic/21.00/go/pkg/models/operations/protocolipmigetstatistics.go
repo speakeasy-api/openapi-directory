@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolIpmiGetStatisticsPathParams struct {
+type ProtocolIpmiGetStatisticsRequest struct {
 	// Agent to show IPMI statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolIpmiGetStatisticsRequest struct {
-	PathParams ProtocolIpmiGetStatisticsPathParams
 }
 
 type ProtocolIpmiGetStatisticsResponse struct {

@@ -107,10 +107,6 @@ func (u PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthReq
 	return nil, nil
 }
 
-type PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequest struct {
-	Request PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength200ApplicationJSONPortfolios struct {
 	// The minimum track record length of the portfolio, in number of required arithmetic returns, possibly equal to null in case the minimum track record length does not exist
 	PortfolioSharpeRatioMinimumTrackRecordLength float64 `json:"portfolioSharpeRatioMinimumTrackRecordLength"`

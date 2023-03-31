@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVariantSetsArchiveCollectionPathParams struct {
-	Day   int64 `pathParam:"style=simple,explode=false,name=day"`
-	Month int64 `pathParam:"style=simple,explode=false,name=month"`
-	Year  int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
 // GetVariantSetsArchiveCollectionPerPageEnum - Results per page {error_msg}
 type GetVariantSetsArchiveCollectionPerPageEnum string
 
@@ -51,16 +45,14 @@ func (e *GetVariantSetsArchiveCollectionPerPageEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetVariantSetsArchiveCollectionQueryParams struct {
+type GetVariantSetsArchiveCollectionRequest struct {
+	Day   int64 `pathParam:"style=simple,explode=false,name=day"`
+	Month int64 `pathParam:"style=simple,explode=false,name=month"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page {error_msg}
 	PerPage *GetVariantSetsArchiveCollectionPerPageEnum `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVariantSetsArchiveCollectionRequest struct {
-	PathParams  GetVariantSetsArchiveCollectionPathParams
-	QueryParams GetVariantSetsArchiveCollectionQueryParams
+	Year    int64                                       `pathParam:"style=simple,explode=false,name=year"`
 }
 
 type GetVariantSetsArchiveCollectionResponse struct {

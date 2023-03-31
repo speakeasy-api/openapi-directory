@@ -45,7 +45,7 @@ func (s *story) StoryGet(ctx context.Context, request operations.StoryGetRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -101,7 +101,7 @@ func (s *story) StoryGet(ctx context.Context, request operations.StoryGetRequest
 // returns an html document containing session and event metrics for the story
 func (s *story) StoryIDAnalytics(ctx context.Context, request operations.StoryIDAnalyticsRequest) (*operations.StoryIDAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/analytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/analytics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *story) StoryIDAnalytics(ctx context.Context, request operations.StoryID
 // Remove a story and dependant data.
 func (s *story) StoryIDDelete(ctx context.Context, request operations.StoryIDDeleteRequest) (*operations.StoryIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -220,7 +220,7 @@ func (s *story) StoryIDDelete(ctx context.Context, request operations.StoryIDDel
 // Deletes a subdcoument of this story (e.g., .pptx, .docx, .xlsx)
 func (s *story) StoryIDFileOoxmlautomationidDelete(ctx context.Context, request operations.StoryIDFileOoxmlautomationidDeleteRequest) (*operations.StoryIDFileOoxmlautomationidDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/file/{ooxml_automation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/file/{ooxml_automation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -270,7 +270,7 @@ func (s *story) StoryIDFileOoxmlautomationidDelete(ctx context.Context, request 
 // Redtreives updated story as open office xml file (e.g., .pptx, .docx, .xlsx)
 func (s *story) StoryIDFileOoxmlautomationidGet(ctx context.Context, request operations.StoryIDFileOoxmlautomationidGetRequest) (*operations.StoryIDFileOoxmlautomationidGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/file/{ooxml_automation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/file/{ooxml_automation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,9 +343,9 @@ func (s *story) StoryIDFileOoxmlautomationidGet(ctx context.Context, request ope
 // Upload a file to an existing story
 func (s *story) StoryIDFilePost(ctx context.Context, request operations.StoryIDFilePostRequest) (*operations.StoryIDFilePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/file", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,7 +360,7 @@ func (s *story) StoryIDFilePost(ctx context.Context, request operations.StoryIDF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -414,14 +414,14 @@ func (s *story) StoryIDFilePost(ctx context.Context, request operations.StoryIDF
 // Returns story metadata, inlcuding json object with story outline
 func (s *story) StoryIDGet(ctx context.Context, request operations.StoryIDGetRequest) (*operations.StoryIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -477,7 +477,7 @@ func (s *story) StoryIDGet(ctx context.Context, request operations.StoryIDGetReq
 // Returns Story's outline
 func (s *story) StoryIDOutlineGet(ctx context.Context, request operations.StoryIDOutlineGetRequest) (*operations.StoryIDOutlineGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/outline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/outline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -548,9 +548,9 @@ func (s *story) StoryIDOutlineGet(ctx context.Context, request operations.StoryI
 // Update a story outline.
 func (s *story) StoryIDOutlinePost(ctx context.Context, request operations.StoryIDOutlinePostRequest) (*operations.StoryIDOutlinePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/outline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/outline", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -608,7 +608,7 @@ func (s *story) StoryIDOutlinePost(ctx context.Context, request operations.Story
 // returns an html document containing a reveal.js epresentation of the story, if the story if set to is_public = True
 func (s *story) StoryIDPublic(ctx context.Context, request operations.StoryIDPublicRequest) (*operations.StoryIDPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/public/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/public/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -665,9 +665,9 @@ func (s *story) StoryIDPublic(ctx context.Context, request operations.StoryIDPub
 // Update story metadata, including story outline
 func (s *story) StoryIDPut(ctx context.Context, request operations.StoryIDPutRequest) (*operations.StoryIDPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Story", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -682,7 +682,7 @@ func (s *story) StoryIDPut(ctx context.Context, request operations.StoryIDPutReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -738,7 +738,7 @@ func (s *story) StoryIDPut(ctx context.Context, request operations.StoryIDPutReq
 // returns an html document containing a reveal.js epresentation of the story
 func (s *story) StoryIDReveal(ctx context.Context, request operations.StoryIDRevealRequest) (*operations.StoryIDRevealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/reveal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/reveal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -807,7 +807,7 @@ func (s *story) StoryIDReveal(ctx context.Context, request operations.StoryIDRev
 // Returns code indicating whether story has active running background and is healthy (e.g., the latest outline is valid)
 func (s *story) StoryIDStatusGet(ctx context.Context, request operations.StoryIDStatusGetRequest) (*operations.StoryIDStatusGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -869,7 +869,7 @@ func (s *story) StoryPost(ctx context.Context, request operations.StoryPostReque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Outline", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -884,7 +884,7 @@ func (s *story) StoryPost(ctx context.Context, request operations.StoryPostReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -940,7 +940,7 @@ func (s *story) StoryPostFile(ctx context.Context, request operations.StoryPostF
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -955,7 +955,7 @@ func (s *story) StoryPostFile(ctx context.Context, request operations.StoryPostF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1011,7 +1011,7 @@ func (s *story) StoryPostFileJSON(ctx context.Context, request operations.StoryP
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file/json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileUpload", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1023,7 +1023,7 @@ func (s *story) StoryPostFileJSON(ctx context.Context, request operations.StoryP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

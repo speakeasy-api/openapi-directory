@@ -32,20 +32,20 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // DrivePropertiesDelete - Deletes a property.
-func (s *properties) DrivePropertiesDelete(ctx context.Context, request operations.DrivePropertiesDeleteRequest) (*operations.DrivePropertiesDeleteResponse, error) {
+func (s *properties) DrivePropertiesDelete(ctx context.Context, request operations.DrivePropertiesDeleteRequest, security operations.DrivePropertiesDeleteSecurity) (*operations.DrivePropertiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *properties) DrivePropertiesDelete(ctx context.Context, request operatio
 }
 
 // DrivePropertiesGet - Gets a property by its key.
-func (s *properties) DrivePropertiesGet(ctx context.Context, request operations.DrivePropertiesGetRequest) (*operations.DrivePropertiesGetResponse, error) {
+func (s *properties) DrivePropertiesGet(ctx context.Context, request operations.DrivePropertiesGetRequest, security operations.DrivePropertiesGetSecurity) (*operations.DrivePropertiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *properties) DrivePropertiesGet(ctx context.Context, request operations.
 }
 
 // DrivePropertiesInsert - Adds a property to a file, or updates it if it already exists.
-func (s *properties) DrivePropertiesInsert(ctx context.Context, request operations.DrivePropertiesInsertRequest) (*operations.DrivePropertiesInsertResponse, error) {
+func (s *properties) DrivePropertiesInsert(ctx context.Context, request operations.DrivePropertiesInsertRequest, security operations.DrivePropertiesInsertSecurity) (*operations.DrivePropertiesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *properties) DrivePropertiesInsert(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *properties) DrivePropertiesInsert(ctx context.Context, request operatio
 }
 
 // DrivePropertiesList - Lists a file's properties.
-func (s *properties) DrivePropertiesList(ctx context.Context, request operations.DrivePropertiesListRequest) (*operations.DrivePropertiesListResponse, error) {
+func (s *properties) DrivePropertiesList(ctx context.Context, request operations.DrivePropertiesListRequest, security operations.DrivePropertiesListSecurity) (*operations.DrivePropertiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *properties) DrivePropertiesList(ctx context.Context, request operations
 }
 
 // DrivePropertiesPatch - Updates a property.
-func (s *properties) DrivePropertiesPatch(ctx context.Context, request operations.DrivePropertiesPatchRequest) (*operations.DrivePropertiesPatchResponse, error) {
+func (s *properties) DrivePropertiesPatch(ctx context.Context, request operations.DrivePropertiesPatchRequest, security operations.DrivePropertiesPatchSecurity) (*operations.DrivePropertiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *properties) DrivePropertiesPatch(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *properties) DrivePropertiesPatch(ctx context.Context, request operation
 }
 
 // DrivePropertiesUpdate - Updates a property.
-func (s *properties) DrivePropertiesUpdate(ctx context.Context, request operations.DrivePropertiesUpdateRequest) (*operations.DrivePropertiesUpdateResponse, error) {
+func (s *properties) DrivePropertiesUpdate(ctx context.Context, request operations.DrivePropertiesUpdateRequest, security operations.DrivePropertiesUpdateSecurity) (*operations.DrivePropertiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *properties) DrivePropertiesUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

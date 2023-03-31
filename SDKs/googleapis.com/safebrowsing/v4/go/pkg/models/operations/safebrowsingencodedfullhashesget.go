@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SafebrowsingEncodedFullHashesGetPathParams struct {
-	// A serialized FindFullHashesRequest proto.
-	EncodedRequest string `pathParam:"style=simple,explode=false,name=encodedRequest"`
-}
-
-type SafebrowsingEncodedFullHashesGetQueryParams struct {
+type SafebrowsingEncodedFullHashesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type SafebrowsingEncodedFullHashesGetQueryParams struct {
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// The version of the client implementation.
 	ClientVersion *string `queryParam:"style=form,explode=true,name=clientVersion"`
+	// A serialized FindFullHashesRequest proto.
+	EncodedRequest string `pathParam:"style=simple,explode=false,name=encodedRequest"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -39,11 +36,6 @@ type SafebrowsingEncodedFullHashesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SafebrowsingEncodedFullHashesGetRequest struct {
-	PathParams  SafebrowsingEncodedFullHashesGetPathParams
-	QueryParams SafebrowsingEncodedFullHashesGetQueryParams
 }
 
 type SafebrowsingEncodedFullHashesGetResponse struct {

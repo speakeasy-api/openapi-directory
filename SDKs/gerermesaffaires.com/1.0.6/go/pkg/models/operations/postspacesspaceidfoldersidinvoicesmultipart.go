@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDInvoicesMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDInvoicesMultipartPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum string
@@ -133,10 +125,12 @@ type PostSpacesSpaceIDFoldersIDInvoicesMultipartFormData1 struct {
 }
 
 type PostSpacesSpaceIDFoldersIDInvoicesMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDInvoicesMultipartPathParams
 	// Invoice to add (either DocumentId, InvoiceDate either (File,Name,Content64Encoded,Title,InvoiceDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDInvoicesMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDInvoicesMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDInvoicesMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDInvoicesMultipart201ApplicationJSON - Id of invoice created

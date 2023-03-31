@@ -34,20 +34,20 @@ func newCashDrawers(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // ListCashDrawerShiftEvents - ListCashDrawerShiftEvents
 // Provides a paginated list of events for a single cash drawer shift.
-func (s *cashDrawers) ListCashDrawerShiftEvents(ctx context.Context, request operations.ListCashDrawerShiftEventsRequest) (*operations.ListCashDrawerShiftEventsResponse, error) {
+func (s *cashDrawers) ListCashDrawerShiftEvents(ctx context.Context, request operations.ListCashDrawerShiftEventsRequest, security operations.ListCashDrawerShiftEventsSecurity) (*operations.ListCashDrawerShiftEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *cashDrawers) ListCashDrawerShiftEvents(ctx context.Context, request ope
 // ListCashDrawerShifts - ListCashDrawerShifts
 // Provides the details for all of the cash drawer shifts for a location
 // in a date range.
-func (s *cashDrawers) ListCashDrawerShifts(ctx context.Context, request operations.ListCashDrawerShiftsRequest) (*operations.ListCashDrawerShiftsResponse, error) {
+func (s *cashDrawers) ListCashDrawerShifts(ctx context.Context, request operations.ListCashDrawerShiftsRequest, security operations.ListCashDrawerShiftsSecurity) (*operations.ListCashDrawerShiftsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cash-drawers/shifts"
 
@@ -93,11 +93,11 @@ func (s *cashDrawers) ListCashDrawerShifts(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -134,20 +134,20 @@ func (s *cashDrawers) ListCashDrawerShifts(ctx context.Context, request operatio
 // RetrieveCashDrawerShift - RetrieveCashDrawerShift
 // Provides the summary details for a single cash drawer shift. See
 // [ListCashDrawerShiftEvents](https://developer.squareup.com/reference/square_2021-08-18/cash-drawers-api/list-cash-drawer-shift-events) for a list of cash drawer shift events.
-func (s *cashDrawers) RetrieveCashDrawerShift(ctx context.Context, request operations.RetrieveCashDrawerShiftRequest) (*operations.RetrieveCashDrawerShiftResponse, error) {
+func (s *cashDrawers) RetrieveCashDrawerShift(ctx context.Context, request operations.RetrieveCashDrawerShiftRequest, security operations.RetrieveCashDrawerShiftSecurity) (*operations.RetrieveCashDrawerShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

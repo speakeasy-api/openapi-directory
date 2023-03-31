@@ -32,11 +32,11 @@ func newGrants(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // AndroidpublisherGrantsCreate - Grant access for a user to the given package.
-func (s *grants) AndroidpublisherGrantsCreate(ctx context.Context, request operations.AndroidpublisherGrantsCreateRequest) (*operations.AndroidpublisherGrantsCreateResponse, error) {
+func (s *grants) AndroidpublisherGrantsCreate(ctx context.Context, request operations.AndroidpublisherGrantsCreateRequest, security operations.AndroidpublisherGrantsCreateSecurity) (*operations.AndroidpublisherGrantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/grants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/grants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Grant", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *grants) AndroidpublisherGrantsCreate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

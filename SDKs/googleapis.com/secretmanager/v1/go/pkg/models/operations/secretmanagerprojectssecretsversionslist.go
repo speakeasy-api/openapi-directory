@@ -8,16 +8,11 @@ import (
 )
 
 type SecretmanagerProjectsSecretsVersionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SecretmanagerProjectsSecretsVersionsListPathParams struct {
-	// Required. The resource name of the Secret associated with the SecretVersions to list, in the format `projects/*/secrets/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type SecretmanagerProjectsSecretsVersionsListQueryParams struct {
+type SecretmanagerProjectsSecretsVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type SecretmanagerProjectsSecretsVersionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Pagination token, returned earlier via ListSecretVersionsResponse.next_page_token][].
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the Secret associated with the SecretVersions to list, in the format `projects/*/secrets/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type SecretmanagerProjectsSecretsVersionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SecretmanagerProjectsSecretsVersionsListRequest struct {
-	PathParams  SecretmanagerProjectsSecretsVersionsListPathParams
-	QueryParams SecretmanagerProjectsSecretsVersionsListQueryParams
-	Security    SecretmanagerProjectsSecretsVersionsListSecurity
 }
 
 type SecretmanagerProjectsSecretsVersionsListResponse struct {

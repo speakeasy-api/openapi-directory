@@ -37,7 +37,7 @@ func newHealthQuestionDefinition(defaultClient, securityClient HTTPClient, serve
 // Get a health question definition by id
 func (s *healthQuestionDefinition) FetchHealthQuestionDefinition(ctx context.Context, request operations.FetchHealthQuestionDefinitionRequest) (*operations.FetchHealthQuestionDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/health_question_definition/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/health_question_definition/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

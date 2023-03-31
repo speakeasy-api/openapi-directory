@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetBEGreetingSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBEGreetingRequest struct {
-	Security GetBEGreetingSecurity
-}
 
 // GetBEGreeting500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support
 type GetBEGreeting500ApplicationJSON struct {

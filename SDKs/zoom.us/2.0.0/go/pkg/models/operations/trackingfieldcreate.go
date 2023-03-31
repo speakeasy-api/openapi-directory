@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TrackingfieldCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // TrackingfieldCreateTrackingField - Tracking Field
@@ -21,12 +20,6 @@ type TrackingfieldCreateTrackingField struct {
 	Required *bool `json:"required,omitempty" multipartForm:"name=required"`
 	// Tracking Field Visible
 	Visible *bool `json:"visible,omitempty" multipartForm:"name=visible"`
-}
-
-type TrackingfieldCreateRequest struct {
-	// Tracking Field
-	Request  TrackingfieldCreateTrackingField `request:"mediaType=application/json"`
-	Security TrackingfieldCreateSecurity
 }
 
 // TrackingfieldCreateTrackingField1 - Tracking Field

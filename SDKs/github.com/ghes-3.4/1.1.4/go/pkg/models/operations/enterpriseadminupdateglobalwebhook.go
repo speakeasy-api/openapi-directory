@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdateGlobalWebhookPathParams struct {
-	// The unique identifier of the hook.
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
 // EnterpriseAdminUpdateGlobalWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook.
 type EnterpriseAdminUpdateGlobalWebhookRequestBodyConfig struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
@@ -34,8 +29,9 @@ type EnterpriseAdminUpdateGlobalWebhookRequestBody struct {
 }
 
 type EnterpriseAdminUpdateGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminUpdateGlobalWebhookPathParams
-	Request    EnterpriseAdminUpdateGlobalWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminUpdateGlobalWebhookRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the hook.
+	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type EnterpriseAdminUpdateGlobalWebhookResponse struct {

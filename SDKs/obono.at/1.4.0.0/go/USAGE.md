@@ -11,19 +11,14 @@ import (
 )
 
 func main() {
-    s := sdk.New()
-
-    req := operations.GetAuthRequest{
-        Security: operations.GetAuthSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Jwt: "YOUR_API_KEY_HERE",
+        }),
+    )
 
     ctx := context.Background()
-    res, err := s.Auth.GetAuth(ctx, req)
+    res, err := s.Auth.GetAuth(ctx)
     if err != nil {
         log.Fatal(err)
     }

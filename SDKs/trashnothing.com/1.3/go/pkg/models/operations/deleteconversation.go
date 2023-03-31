@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteConversationPathParams struct {
+type DeleteConversationRequest struct {
 	// The ID of the conversation to delete.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type DeleteConversationQueryParams struct {
 	// The ID of the newest message in the conversation that the client has downloaded.
 	MessageID string `queryParam:"style=form,explode=true,name=message_id"`
-}
-
-type DeleteConversationRequest struct {
-	PathParams  DeleteConversationPathParams
-	QueryParams DeleteConversationQueryParams
 }
 
 type DeleteConversationResponse struct {

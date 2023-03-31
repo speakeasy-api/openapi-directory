@@ -8,20 +8,17 @@ import (
 )
 
 type DriveDrivesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveDrivesDeletePathParams struct {
-	// The ID of the shared drive.
-	DriveID string `pathParam:"style=simple,explode=false,name=driveId"`
-}
-
-type DriveDrivesDeleteQueryParams struct {
+type DriveDrivesDeleteRequest struct {
 	// Whether any items inside the shared drive should also be deleted. This option is only supported when useDomainAdminAccess is also set to true.
 	AllowItemDeletion *bool `queryParam:"style=form,explode=true,name=allowItemDeletion"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the shared drive.
+	DriveID string `pathParam:"style=simple,explode=false,name=driveId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -36,12 +33,6 @@ type DriveDrivesDeleteQueryParams struct {
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveDrivesDeleteRequest struct {
-	PathParams  DriveDrivesDeletePathParams
-	QueryParams DriveDrivesDeleteQueryParams
-	Security    DriveDrivesDeleteSecurity
 }
 
 type DriveDrivesDeleteResponse struct {

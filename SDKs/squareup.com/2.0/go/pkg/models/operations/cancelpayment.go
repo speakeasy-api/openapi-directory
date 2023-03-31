@@ -8,17 +8,12 @@ import (
 )
 
 type CancelPaymentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelPaymentPathParams struct {
-	// The ID of the payment to cancel.
-	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelPaymentRequest struct {
-	PathParams CancelPaymentPathParams
-	Security   CancelPaymentSecurity
+	// The ID of the payment to cancel.
+	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
 }
 
 type CancelPaymentResponse struct {

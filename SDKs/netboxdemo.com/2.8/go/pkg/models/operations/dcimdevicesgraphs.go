@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDevicesGraphsPathParams struct {
+type DcimDevicesGraphsRequest struct {
 	// A unique integer value identifying this device.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDevicesGraphsRequest struct {
-	PathParams DcimDevicesGraphsPathParams
 }
 
 type DcimDevicesGraphsResponse struct {

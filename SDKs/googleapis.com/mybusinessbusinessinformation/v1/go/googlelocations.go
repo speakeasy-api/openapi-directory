@@ -37,7 +37,7 @@ func (s *googleLocations) MybusinessbusinessinformationGoogleLocationsSearch(ctx
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/googleLocations:search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchGoogleLocationsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *googleLocations) MybusinessbusinessinformationGoogleLocationsSearch(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

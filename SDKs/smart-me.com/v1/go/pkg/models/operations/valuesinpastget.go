@@ -8,19 +8,11 @@ import (
 	"time"
 )
 
-type ValuesInPastGetPathParams struct {
-	// The ID of the device
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ValuesInPastGetQueryParams struct {
+type ValuesInPastGetRequest struct {
 	// the date of the value
 	Date time.Time `queryParam:"style=form,explode=true,name=date"`
-}
-
-type ValuesInPastGetRequest struct {
-	PathParams  ValuesInPastGetPathParams
-	QueryParams ValuesInPastGetQueryParams
+	// The ID of the device
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ValuesInPastGetResponse struct {

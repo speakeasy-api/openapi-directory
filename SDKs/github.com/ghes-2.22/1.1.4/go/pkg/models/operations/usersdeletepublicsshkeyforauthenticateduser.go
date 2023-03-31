@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersDeletePublicSSHKeyForAuthenticatedUserPathParams struct {
+type UsersDeletePublicSSHKeyForAuthenticatedUserRequest struct {
 	// key_id parameter
 	KeyID int64 `pathParam:"style=simple,explode=false,name=key_id"`
-}
-
-type UsersDeletePublicSSHKeyForAuthenticatedUserRequest struct {
-	PathParams UsersDeletePublicSSHKeyForAuthenticatedUserPathParams
 }
 
 type UsersDeletePublicSSHKeyForAuthenticatedUserResponse struct {

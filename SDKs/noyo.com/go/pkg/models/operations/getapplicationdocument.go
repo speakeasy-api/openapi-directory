@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationDocumentPathParams struct {
+type GetApplicationDocumentRequest struct {
 	// The unique identifier of the application document in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// The unique identifier of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=document_id"`
-}
-
-type GetApplicationDocumentRequest struct {
-	PathParams GetApplicationDocumentPathParams
 }
 
 type GetApplicationDocumentResponse struct {

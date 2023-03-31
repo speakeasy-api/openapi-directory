@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetCalculatorConfigurationByIDPathParams struct {
-	// Promotion ID or tax ID.
-	IDCalculatorConfiguration string `pathParam:"style=simple,explode=false,name=idCalculatorConfiguration"`
-}
-
-type GetCalculatorConfigurationByIDHeaders struct {
+type GetCalculatorConfigurationByIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetCalculatorConfigurationByIDRequest struct {
-	PathParams GetCalculatorConfigurationByIDPathParams
-	Headers    GetCalculatorConfigurationByIDHeaders
+	// Promotion ID or tax ID.
+	IDCalculatorConfiguration string `pathParam:"style=simple,explode=false,name=idCalculatorConfiguration"`
 }
 
 // GetCalculatorConfigurationByID200PromotionAffiliates - Object with information of the affiliate.

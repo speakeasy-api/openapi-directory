@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type ActionsCreateEnvironmentVariablePathParams struct {
-	// The name of the environment.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
-	// The unique identifier of the repository.
-	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
 type ActionsCreateEnvironmentVariableRequestBody struct {
 	// The name of the variable.
 	Name string `json:"name"`
@@ -21,8 +14,11 @@ type ActionsCreateEnvironmentVariableRequestBody struct {
 }
 
 type ActionsCreateEnvironmentVariableRequest struct {
-	PathParams ActionsCreateEnvironmentVariablePathParams
-	Request    ActionsCreateEnvironmentVariableRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateEnvironmentVariableRequestBody `request:"mediaType=application/json"`
+	// The name of the environment.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
+	// The unique identifier of the repository.
+	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
 }
 
 type ActionsCreateEnvironmentVariableResponse struct {

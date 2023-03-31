@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type PatchUsersIDPathParams struct {
-	// User ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchUsersIDRequestBodyAuthenticationMethodEnum - How is this user authenticated?
 type PatchUsersIDRequestBodyAuthenticationMethodEnum string
 
@@ -202,8 +197,9 @@ type PatchUsersIDRequestBody struct {
 }
 
 type PatchUsersIDRequest struct {
-	PathParams PatchUsersIDPathParams
-	Request    *PatchUsersIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchUsersIDRequestBody `request:"mediaType=multipart/form-data"`
+	// User ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchUsersIDResponse struct {

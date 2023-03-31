@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateGetPathParams struct {
+type CertificateGetRequest struct {
 	// Certificate id to lookup
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateGetRequest struct {
-	PathParams CertificateGetPathParams
 }
 
 type CertificateGetResponse struct {

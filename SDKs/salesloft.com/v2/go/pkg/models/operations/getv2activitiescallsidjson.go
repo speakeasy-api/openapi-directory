@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2ActivitiesCallsIDJSONPathParams struct {
+type GetV2ActivitiesCallsIDJSONRequest struct {
 	// Call ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2ActivitiesCallsIDJSONRequest struct {
-	PathParams GetV2ActivitiesCallsIDJSONPathParams
 }
 
 type GetV2ActivitiesCallsIDJSONResponse struct {

@@ -35,7 +35,7 @@ func newRewardProgram(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreateRewardProgram - Create a reward program
 // Create a reward program for a group.
-func (s *rewardProgram) CreateRewardProgram(ctx context.Context, request operations.CreateRewardProgramRequest) (*operations.CreateRewardProgramResponse, error) {
+func (s *rewardProgram) CreateRewardProgram(ctx context.Context, request shared.CreateRewardProgramRequest) (*operations.CreateRewardProgramResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reward_program"
 
@@ -106,7 +106,7 @@ func (s *rewardProgram) CreateRewardProgram(ctx context.Context, request operati
 // Get a reward program record by id.
 func (s *rewardProgram) FetchRewardProgram(ctx context.Context, request operations.FetchRewardProgramRequest) (*operations.FetchRewardProgramResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *rewardProgram) FetchRewardProgram(ctx context.Context, request operatio
 // Get the group related to a reward program.
 func (s *rewardProgram) FetchRewardProgramGroup(ctx context.Context, request operations.FetchRewardProgramGroupRequest) (*operations.FetchRewardProgramGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}/group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}/group", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +227,7 @@ func (s *rewardProgram) FetchRewardPrograms(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

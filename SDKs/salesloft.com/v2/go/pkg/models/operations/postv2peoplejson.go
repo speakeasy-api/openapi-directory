@@ -87,10 +87,6 @@ type PostV2PeopleJSONRequestBody struct {
 	WorkState *string `form:"name=work_state"`
 }
 
-type PostV2PeopleJSONRequest struct {
-	Request *PostV2PeopleJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2PeopleJSONResponse struct {
 	Body        []byte
 	ContentType string

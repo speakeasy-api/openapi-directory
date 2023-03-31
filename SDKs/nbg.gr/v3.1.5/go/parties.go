@@ -34,18 +34,18 @@ func newParties(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetAccountsAccountIDParties - Get Parties
 // Get Parties by Account ID
-func (s *parties) GetAccountsAccountIDParties(ctx context.Context, request operations.GetAccountsAccountIDPartiesRequest) (*operations.GetAccountsAccountIDPartiesResponse, error) {
+func (s *parties) GetAccountsAccountIDParties(ctx context.Context, request operations.GetAccountsAccountIDPartiesRequest, security operations.GetAccountsAccountIDPartiesSecurity) (*operations.GetAccountsAccountIDPartiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/parties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/parties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,18 +116,18 @@ func (s *parties) GetAccountsAccountIDParties(ctx context.Context, request opera
 
 // GetAccountsAccountIDParty - Get Party
 // Get Party by Account ID
-func (s *parties) GetAccountsAccountIDParty(ctx context.Context, request operations.GetAccountsAccountIDPartyRequest) (*operations.GetAccountsAccountIDPartyResponse, error) {
+func (s *parties) GetAccountsAccountIDParty(ctx context.Context, request operations.GetAccountsAccountIDPartyRequest, security operations.GetAccountsAccountIDPartySecurity) (*operations.GetAccountsAccountIDPartyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/party", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/party", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *parties) GetAccountsAccountIDParty(ctx context.Context, request operati
 
 // GetParty - Get Party
 // Get Party
-func (s *parties) GetParty(ctx context.Context, request operations.GetPartyRequest) (*operations.GetPartyResponse, error) {
+func (s *parties) GetParty(ctx context.Context, request operations.GetPartyRequest, security operations.GetPartySecurity) (*operations.GetPartyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/party"
 
@@ -207,9 +207,9 @@ func (s *parties) GetParty(ctx context.Context, request operations.GetPartyReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

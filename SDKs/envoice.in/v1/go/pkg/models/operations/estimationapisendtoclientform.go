@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EstimationAPISendToClientFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type EstimationAPISendToClientFormRequest struct {
-	Headers EstimationAPISendToClientFormHeaders
-	Request shared.SendEstimationToClientAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	SendEstimationToClientAPIModel shared.SendEstimationToClientAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey                       string                                `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret                    string                                `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type EstimationAPISendToClientFormResponse struct {

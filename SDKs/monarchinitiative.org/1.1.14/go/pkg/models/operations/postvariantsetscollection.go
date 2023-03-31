@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostVariantSetsCollectionRequest struct {
-	Request shared.VariantSet `request:"mediaType=application/json"`
-}
 
 type PostVariantSetsCollectionResponse struct {
 	ContentType string

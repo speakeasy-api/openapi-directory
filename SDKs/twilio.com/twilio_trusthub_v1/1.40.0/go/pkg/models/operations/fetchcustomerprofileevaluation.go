@@ -12,20 +12,15 @@ var FetchCustomerProfileEvaluationServerList = []string{
 }
 
 type FetchCustomerProfileEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCustomerProfileEvaluationPathParams struct {
+type FetchCustomerProfileEvaluationRequest struct {
 	// The unique string that we created to identify the customer_profile resource.
 	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
 	// The unique string that identifies the Evaluation resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchCustomerProfileEvaluationRequest struct {
-	PathParams FetchCustomerProfileEvaluationPathParams
-	Security   FetchCustomerProfileEvaluationSecurity
-	ServerURL  *string
 }
 
 type FetchCustomerProfileEvaluationResponse struct {

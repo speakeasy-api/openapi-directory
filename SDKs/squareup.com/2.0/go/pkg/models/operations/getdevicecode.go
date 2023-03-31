@@ -8,17 +8,12 @@ import (
 )
 
 type GetDeviceCodeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetDeviceCodePathParams struct {
-	// The unique identifier for the device code.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetDeviceCodeRequest struct {
-	PathParams GetDeviceCodePathParams
-	Security   GetDeviceCodeSecurity
+	// The unique identifier for the device code.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetDeviceCodeResponse struct {

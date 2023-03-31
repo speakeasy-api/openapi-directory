@@ -33,7 +33,7 @@ func (e *PlayerGameLogsBySeasonFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerGameLogsBySeasonPathParams struct {
+type PlayerGameLogsBySeasonRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerGameLogsBySeasonFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// How many games to return. Example <code>all</code>, <code>10</code>, <code>25</code>
@@ -42,10 +42,6 @@ type PlayerGameLogsBySeasonPathParams struct {
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
 	// Season to get games from. Example <code>2019POST</code>, <code>2020</code>
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type PlayerGameLogsBySeasonRequest struct {
-	PathParams PlayerGameLogsBySeasonPathParams
 }
 
 type PlayerGameLogsBySeasonResponse struct {

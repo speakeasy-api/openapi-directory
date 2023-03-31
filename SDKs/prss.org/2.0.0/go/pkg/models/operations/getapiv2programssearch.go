@@ -8,21 +8,16 @@ import (
 )
 
 type GetAPIV2ProgramsSearchSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAPIV2ProgramsSearchQueryParams struct {
+type GetAPIV2ProgramsSearchRequest struct {
 	// Free text search that matches against the program title or description.
 	Keywords *string `queryParam:"style=form,explode=true,name=keywords"`
 	// The number of items to return. Must be between 0 and 500, inclusive.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The start page of the results to return. The first item is indexed at 0.
 	PageStart *int `queryParam:"style=form,explode=true,name=pageStart"`
-}
-
-type GetAPIV2ProgramsSearchRequest struct {
-	QueryParams GetAPIV2ProgramsSearchQueryParams
-	Security    GetAPIV2ProgramsSearchSecurity
 }
 
 type GetAPIV2ProgramsSearchResponse struct {

@@ -10,29 +10,24 @@ import (
 )
 
 type DirectoryMobiledevicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesListSecurity struct {
 	Option1 *DirectoryMobiledevicesListSecurityOption1 `security:"option"`
 	Option2 *DirectoryMobiledevicesListSecurityOption2 `security:"option"`
 	Option3 *DirectoryMobiledevicesListSecurityOption3 `security:"option"`
-}
-
-type DirectoryMobiledevicesListPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 }
 
 // DirectoryMobiledevicesListOrderByEnum - Device property to use for sorting results.
@@ -125,7 +120,7 @@ func (e *DirectoryMobiledevicesListSortOrderEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DirectoryMobiledevicesListQueryParams struct {
+type DirectoryMobiledevicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -134,6 +129,8 @@ type DirectoryMobiledevicesListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -160,12 +157,6 @@ type DirectoryMobiledevicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryMobiledevicesListRequest struct {
-	PathParams  DirectoryMobiledevicesListPathParams
-	QueryParams DirectoryMobiledevicesListQueryParams
-	Security    DirectoryMobiledevicesListSecurity
 }
 
 type DirectoryMobiledevicesListResponse struct {

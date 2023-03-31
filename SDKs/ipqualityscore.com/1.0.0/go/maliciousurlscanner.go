@@ -34,7 +34,7 @@ func newMaliciousURLScanner(defaultClient, securityClient HTTPClient, serverURL,
 // Malicious URL Scanner
 func (s *maliciousURLScanner) MaliciousURLScanner(ctx context.Context, request operations.MaliciousURLScannerRequest) (*operations.MaliciousURLScannerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/json/url/{YOUR_API_KEY_HERE}/{URL_HERE}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/json/url/{YOUR_API_KEY_HERE}/{URL_HERE}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

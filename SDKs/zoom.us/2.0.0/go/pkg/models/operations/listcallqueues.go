@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListCallQueuesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCallQueuesQueryParams struct {
+type ListCallQueuesRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned from a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ListCallQueuesRequest struct {
-	QueryParams ListCallQueuesQueryParams
-	Security    ListCallQueuesSecurity
 }
 
 // ListCallQueues200ApplicationXMLCallQueuesPhoneNumbersSourceEnum - Source

@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type ReactionsDeletePathParams struct {
-	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
-}
-
-type ReactionsDeleteHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
 type ReactionsDeleteRequest struct {
-	PathParams ReactionsDeletePathParams
-	Headers    ReactionsDeleteHeaders
+	// This API is under preview and subject to change.
+	Accept     string `header:"style=simple,explode=false,name=accept"`
+	ReactionID int64  `pathParam:"style=simple,explode=false,name=reaction_id"`
 }
 
 type ReactionsDeleteResponse struct {

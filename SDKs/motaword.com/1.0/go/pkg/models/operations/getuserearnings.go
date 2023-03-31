@@ -8,17 +8,12 @@ import (
 )
 
 type GetUserEarningsSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type GetUserEarningsPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetUserEarningsRequest struct {
-	PathParams GetUserEarningsPathParams
-	Security   GetUserEarningsSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetUserEarningsResponse struct {

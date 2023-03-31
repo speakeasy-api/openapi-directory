@@ -158,7 +158,7 @@ func (e *ReverseDictionarySortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReverseDictionaryQueryParams struct {
+type ReverseDictionaryRequest struct {
 	// Exclude these comma-delimited parts of speech (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
 	ExcludePartOfSpeech *string `queryParam:"style=form,explode=true,name=excludePartOfSpeech"`
 	// Exclude these comma-delimited source dictionaries
@@ -191,10 +191,6 @@ type ReverseDictionaryQueryParams struct {
 	SortBy *ReverseDictionarySortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// Sort direction
 	SortOrder *ReverseDictionarySortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
-}
-
-type ReverseDictionaryRequest struct {
-	QueryParams ReverseDictionaryQueryParams
 }
 
 type ReverseDictionaryResponse struct {

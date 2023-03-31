@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveADocumentPathParams struct {
-	DocumentID string `pathParam:"style=simple,explode=false,name=document_id"`
-}
-
 type RetrieveADocumentRequest struct {
-	PathParams RetrieveADocumentPathParams
+	DocumentID string `pathParam:"style=simple,explode=false,name=document_id"`
 }
 
 type RetrieveADocumentDefaultApplicationJSON13StatusEnum string

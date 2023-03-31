@@ -12,15 +12,11 @@ var ListTrustProductChannelEndpointAssignmentServerList = []string{
 }
 
 type ListTrustProductChannelEndpointAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTrustProductChannelEndpointAssignmentPathParams struct {
-	// The unique string that we created to identify the CustomerProfile resource.
-	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
-}
-
-type ListTrustProductChannelEndpointAssignmentQueryParams struct {
+type ListTrustProductChannelEndpointAssignmentRequest struct {
 	// The SID of an channel endpoint
 	ChannelEndpointSid *string `queryParam:"style=form,explode=true,name=ChannelEndpointSid"`
 	// comma separated list of channel endpoint sids
@@ -31,13 +27,8 @@ type ListTrustProductChannelEndpointAssignmentQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListTrustProductChannelEndpointAssignmentRequest struct {
-	PathParams  ListTrustProductChannelEndpointAssignmentPathParams
-	QueryParams ListTrustProductChannelEndpointAssignmentQueryParams
-	Security    ListTrustProductChannelEndpointAssignmentSecurity
-	ServerURL   *string
+	// The unique string that we created to identify the CustomerProfile resource.
+	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
 }
 
 type ListTrustProductChannelEndpointAssignmentListTrustProductChannelEndpointAssignmentResponseMeta struct {

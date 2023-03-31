@@ -8,16 +8,11 @@ import (
 )
 
 type CloudassetIamPoliciesSearchAllSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudassetIamPoliciesSearchAllPathParams struct {
-	// Required. The relative name of an asset. The search is limited to the resources within the `scope`. The allowed value must be: * Organization number (such as "organizations/123") * Folder number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID (such as "projects/abc")
-	Scope string `pathParam:"style=simple,explode=false,name=scope"`
-}
-
-type CloudassetIamPoliciesSearchAllQueryParams struct {
+type CloudassetIamPoliciesSearchAllRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,16 +37,12 @@ type CloudassetIamPoliciesSearchAllQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The relative name of an asset. The search is limited to the resources within the `scope`. The allowed value must be: * Organization number (such as "organizations/123") * Folder number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID (such as "projects/abc")
+	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudassetIamPoliciesSearchAllRequest struct {
-	PathParams  CloudassetIamPoliciesSearchAllPathParams
-	QueryParams CloudassetIamPoliciesSearchAllQueryParams
-	Security    CloudassetIamPoliciesSearchAllSecurity
 }
 
 type CloudassetIamPoliciesSearchAllResponse struct {

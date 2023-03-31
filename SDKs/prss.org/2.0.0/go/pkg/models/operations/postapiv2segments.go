@@ -8,7 +8,7 @@ import (
 )
 
 type PostAPIV2SegmentsSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAPIV2SegmentsRequestBody struct {
@@ -22,11 +22,6 @@ type PostAPIV2SegmentsRequestBody struct {
 	OutCue *string `form:"name=outCue"`
 	// The segment number of the segment.
 	SegmentNumber int `form:"name=segmentNumber"`
-}
-
-type PostAPIV2SegmentsRequest struct {
-	Request  *PostAPIV2SegmentsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostAPIV2SegmentsSecurity
 }
 
 type PostAPIV2SegmentsResponse struct {

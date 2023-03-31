@@ -35,7 +35,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetAuthenticatedUser - Get current user profile
 // Get details about the current authenticated User.
-func (s *account) GetAuthenticatedUser(ctx context.Context, request operations.GetAuthenticatedUserRequest) (*operations.GetAuthenticatedUserResponse, error) {
+func (s *account) GetAuthenticatedUser(ctx context.Context, request operations.GetAuthenticatedUserRequest, security operations.GetAuthenticatedUserSecurity) (*operations.GetAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -44,11 +44,11 @@ func (s *account) GetAuthenticatedUser(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

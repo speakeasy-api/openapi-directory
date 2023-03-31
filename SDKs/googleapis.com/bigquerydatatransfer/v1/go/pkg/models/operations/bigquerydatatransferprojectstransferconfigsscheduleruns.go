@@ -8,13 +8,13 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurity struct {
@@ -22,14 +22,10 @@ type BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurity struct {
 	Option2 *BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurityOption2 `security:"option"`
 }
 
-type BigquerydatatransferProjectsTransferConfigsScheduleRunsPathParams struct {
-	// Required. Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsScheduleRunsQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                 *shared.XgafvEnum                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ScheduleTransferRunsRequest *shared.ScheduleTransferRunsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type BigquerydatatransferProjectsTransferConfigsScheduleRunsQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type BigquerydatatransferProjectsTransferConfigsScheduleRunsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsScheduleRunsPathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsScheduleRunsQueryParams
-	Request     *shared.ScheduleTransferRunsRequest `request:"mediaType=application/json"`
-	Security    BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsScheduleRunsResponse struct {

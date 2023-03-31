@@ -1,0 +1,89 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/backup-gateway/2021-01-01/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.AssociateGatewayToServerRequest(
+    associate_gateway_to_server_input=shared.AssociateGatewayToServerInput(
+        gateway_arn="corrupti",
+        server_arn="provident",
+    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="BackupOnPremises_v20210101.AssociateGatewayToServer",
+)
+    
+res = s.associate_gateway_to_server(req)
+
+if res.associate_gateway_to_server_output is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `associate_gateway_to_server` - Associates a backup gateway with your server. After you complete the association process, you can back up and restore your VMs through the gateway.
+* `create_gateway` - Creates a backup gateway. After you create a gateway, you can associate it with a server using the <code>AssociateGatewayToServer</code> operation.
+* `delete_gateway` - Deletes a backup gateway.
+* `delete_hypervisor` - Deletes a hypervisor.
+* `disassociate_gateway_from_server` - Disassociates a backup gateway from the specified server. After the disassociation process finishes, the gateway can no longer access the virtual machines on the server.
+* `get_bandwidth_rate_limit_schedule` - Retrieves the bandwidth rate limit schedule for a specified gateway. By default, gateways do not have bandwidth rate limit schedules, which means no bandwidth rate limiting is in effect. Use this to get a gateway's bandwidth rate limit schedule.
+* `get_gateway` - By providing the ARN (Amazon Resource Name), this API returns the gateway.
+* `get_hypervisor` - This action requests information about the specified hypervisor to which the gateway will connect. A hypervisor is hardware, software, or firmware that creates and manages virtual machines, and allocates resources to them.
+* `get_hypervisor_property_mappings` - This action retrieves the property mappings for the specified hypervisor. A hypervisor property mapping displays the relationship of entity properties available from the on-premises hypervisor to the properties available in Amazon Web Services.
+* `get_virtual_machine` - By providing the ARN (Amazon Resource Name), this API returns the virtual machine.
+* `import_hypervisor_configuration` - Connect to a hypervisor by importing its configuration.
+* `list_gateways` - Lists backup gateways owned by an Amazon Web Services account in an Amazon Web Services Region. The returned list is ordered by gateway Amazon Resource Name (ARN).
+* `list_hypervisors` - Lists your hypervisors.
+* `list_tags_for_resource` - Lists the tags applied to the resource identified by its Amazon Resource Name (ARN).
+* `list_virtual_machines` - Lists your virtual machines.
+* `put_bandwidth_rate_limit_schedule` - This action sets the bandwidth rate limit schedule for a specified gateway. By default, gateways do not have a bandwidth rate limit schedule, which means no bandwidth rate limiting is in effect. Use this to initiate a gateway's bandwidth rate limit schedule.
+* `put_hypervisor_property_mappings` - This action sets the property mappings for the specified hypervisor. A hypervisor property mapping displays the relationship of entity properties available from the on-premises hypervisor to the properties available in Amazon Web Services.
+* `put_maintenance_start_time` - Set the maintenance start time for a gateway.
+* `start_virtual_machines_metadata_sync` - This action sends a request to sync metadata across the specified virtual machines.
+* `tag_resource` - Tag the resource.
+* `test_hypervisor_configuration` - Tests your hypervisor configuration to validate that backup gateway can connect with the hypervisor and its resources.
+* `untag_resource` - Removes tags from the resource.
+* `update_gateway_information` - Updates a gateway's name. Specify which gateway to update using the Amazon Resource Name (ARN) of the gateway in your request.
+* `update_gateway_software_now` - <p>Updates the gateway virtual machine (VM) software. The request immediately triggers the software update.</p> <note> <p>When you make this request, you get a <code>200 OK</code> success response immediately. However, it might take some time for the update to complete.</p> </note>
+* `update_hypervisor` - Updates a hypervisor metadata, including its host, username, and password. Specify which hypervisor to update using the Amazon Resource Name (ARN) of the hypervisor in your request.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

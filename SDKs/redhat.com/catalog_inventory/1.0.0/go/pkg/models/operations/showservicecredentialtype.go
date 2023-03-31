@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShowServiceCredentialTypePathParams struct {
+type ShowServiceCredentialTypeRequest struct {
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ShowServiceCredentialTypeRequest struct {
-	PathParams ShowServiceCredentialTypePathParams
 }
 
 type ShowServiceCredentialTypeResponse struct {

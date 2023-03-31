@@ -114,7 +114,7 @@ func (s *SDK) GetContentJSON(ctx context.Context, request operations.GetContentJ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -153,14 +153,14 @@ func (s *SDK) GetContentJSON(ctx context.Context, request operations.GetContentJ
 }
 func (s *SDK) GetContentSourceSectionJSON(ctx context.Context, request operations.GetContentSourceSectionJSONRequest) (*operations.GetContentSourceSectionJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,14 +199,14 @@ func (s *SDK) GetContentSourceSectionJSON(ctx context.Context, request operation
 }
 func (s *SDK) GetContentSourceSectionTimePeriodJSON(ctx context.Context, request operations.GetContentSourceSectionTimePeriodJSONRequest) (*operations.GetContentSourceSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}/{time-period}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}/{time-period}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

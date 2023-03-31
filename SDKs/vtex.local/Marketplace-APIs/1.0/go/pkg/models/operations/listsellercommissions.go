@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type ListSellerCommissionsPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type ListSellerCommissionsQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-	// Environment to use. Used as part of the URL.
-	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type ListSellerCommissionsHeaders struct {
+type ListSellerCommissionsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListSellerCommissionsRequest struct {
-	PathParams  ListSellerCommissionsPathParams
-	QueryParams ListSellerCommissionsQueryParams
-	Headers     ListSellerCommissionsHeaders
+	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// Environment to use. Used as part of the URL.
+	Environment string `queryParam:"style=form,explode=true,name=environment"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 }
 
 type ListSellerCommissionsResponse struct {

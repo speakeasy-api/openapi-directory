@@ -34,7 +34,7 @@ func (e *MetalsSpotRatioHistoryGETFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MetalsSpotRatioHistoryGETQueryParams struct {
+type MetalsSpotRatioHistoryGETRequest struct {
 	// end date of time period. format is <i>yyyy-mm-dd</i>. Default is current date.
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// to override content negotiation specify a value of json or xml
@@ -56,10 +56,6 @@ type MetalsSpotRatioHistoryGETQueryParams struct {
 	Pairs string `queryParam:"style=form,explode=true,name=pairs"`
 	// start date of time period. format is <i>yyyy-mm-dd</i>
 	Start time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type MetalsSpotRatioHistoryGETRequest struct {
-	QueryParams MetalsSpotRatioHistoryGETQueryParams
 }
 
 type MetalsSpotRatioHistoryGETResponse struct {

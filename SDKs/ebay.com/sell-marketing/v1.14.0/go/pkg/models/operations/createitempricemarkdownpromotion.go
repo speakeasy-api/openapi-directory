@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateItemPriceMarkdownPromotionSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateItemPriceMarkdownPromotionRequest struct {
-	// This type defines the fields that describe an item price markdown promotion.
-	Request  *shared.ItemPriceMarkdown `request:"mediaType=application/json"`
-	Security CreateItemPriceMarkdownPromotionSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateItemPriceMarkdownPromotionResponse struct {

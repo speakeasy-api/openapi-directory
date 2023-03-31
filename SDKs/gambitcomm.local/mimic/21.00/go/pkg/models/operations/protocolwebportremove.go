@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolWebPortRemovePathParams struct {
+type ProtocolWebPortRemoveRequest struct {
 	// Agent to remove WEB port
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// TCP port
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolWebPortRemoveRequest struct {
-	PathParams ProtocolWebPortRemovePathParams
 }
 
 type ProtocolWebPortRemoveResponse struct {

@@ -10,7 +10,7 @@ import (
 )
 
 type UploadDatasetAsyncSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // UploadDatasetAsyncRequestBodyTypeEnum - Type of dataset data.
@@ -46,11 +46,6 @@ type UploadDatasetAsyncRequestBody struct {
 	Path *string `multipartForm:"name=path"`
 	// Type of dataset data.
 	Type *UploadDatasetAsyncRequestBodyTypeEnum `multipartForm:"name=type"`
-}
-
-type UploadDatasetAsyncRequest struct {
-	Request  *UploadDatasetAsyncRequestBody `request:"mediaType=multipart/form-data"`
-	Security UploadDatasetAsyncSecurity
 }
 
 type UploadDatasetAsyncResponse struct {

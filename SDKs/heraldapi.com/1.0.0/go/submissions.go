@@ -37,7 +37,7 @@ func newSubmissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Get the latest details for a specific [submission](https://www.heraldapi.com/docs/submission).
 func (s *submissions) GetSubmissionsSubmissionID(ctx context.Context, request operations.GetSubmissionsSubmissionIDRequest) (*operations.GetSubmissionsSubmissionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/submissions/{submission_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/submissions/{submission_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *submissions) GetSubmissionsSubmissionID(ctx context.Context, request op
 // A [submission](https://www.heraldapi.com/docs/submission) creates quotes by sending an application to the institutions associated with a list of desired products. A submission can be for a single product or multiple products.
 //
 // > The `application` object of the request can either be a full application (with all `risk_values` and `coverage_values`), or the `id` of a completed application created via [`/applications`](../reference/HeraldAPI.v1.yaml/paths/~1applications/post). See the 'examples' dropdown to the right for example requests and responses.
-func (s *submissions) PostSubmissions(ctx context.Context, request operations.PostSubmissionsRequest) (*operations.PostSubmissionsResponse, error) {
+func (s *submissions) PostSubmissions(ctx context.Context, request operations.PostSubmissionsRequestBody) (*operations.PostSubmissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/submissions"
 

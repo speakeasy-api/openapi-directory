@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/dataproc/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,143 +15,154 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DataprocProjectsLocationsBatchesCreateRequest(
-    security=operations.DataprocProjectsLocationsBatchesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DataprocProjectsLocationsBatchesCreatePathParams(
-        parent="dolorem",
-    ),
-    query_params=operations.DataprocProjectsLocationsBatchesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="adipisci",
-        alt="json",
-        batch_id="officia",
-        callback="eligendi",
-        fields="doloremque",
-        key="et",
-        oauth_token="perspiciatis",
-        pretty_print=True,
-        quota_user="esse",
-        request_id="est",
-        upload_type="accusamus",
-        upload_protocol="quibusdam",
-    ),
-    request=shared.BatchInput(
+    dollar_xgafv="2",
+    batch_input=shared.BatchInput(
         environment_config=shared.EnvironmentConfig(
             execution_config=shared.ExecutionConfig(
-                idle_ttl="reiciendis",
-                kms_key="esse",
+                idle_ttl="provident",
+                kms_key="distinctio",
                 network_tags=[
-                    "expedita",
+                    "unde",
                     "nulla",
+                    "corrupti",
+                    "illum",
                 ],
-                network_uri="quaerat",
-                service_account="odit",
-                subnetwork_uri="veritatis",
+                network_uri="vel",
+                service_account="error",
+                staging_bucket="deserunt",
+                subnetwork_uri="suscipit",
+                ttl="iure",
             ),
             peripherals_config=shared.PeripheralsConfig(
-                metastore_service="iusto",
+                metastore_service="magnam",
                 spark_history_server_config=shared.SparkHistoryServerConfig(
-                    dataproc_cluster="deserunt",
+                    dataproc_cluster="debitis",
                 ),
             ),
         ),
         labels={
-            "unde": "architecto",
-            "qui": "dolor",
+            "delectus": "tempora",
         },
         pyspark_batch=shared.PySparkBatch(
             archive_uris=[
-                "voluptatem",
+                "molestiae",
+                "minus",
             ],
             args=[
-                "aut",
-                "qui",
+                "voluptatum",
+                "iusto",
+                "excepturi",
+                "nisi",
             ],
             file_uris=[
-                "rerum",
+                "temporibus",
+                "ab",
+                "quis",
+                "veritatis",
             ],
             jar_file_uris=[
-                "molestias",
-                "et",
-                "officia",
+                "perferendis",
+                "ipsam",
+                "repellendus",
             ],
-            main_python_file_uri="ipsum",
+            main_python_file_uri="sapiente",
             python_file_uris=[
-                "velit",
+                "odit",
+                "at",
+                "at",
+                "maiores",
             ],
         ),
         runtime_config=shared.RuntimeConfig(
-            container_image="sed",
+            container_image="molestiae",
             properties={
-                "nisi": "eos",
-                "in": "expedita",
+                "quod": "esse",
+                "totam": "porro",
+                "dolorum": "dicta",
+                "nam": "officia",
             },
-            version="quisquam",
+            version="occaecati",
         ),
         runtime_info=shared.RuntimeInfoInput(
             approximate_usage=shared.UsageMetrics(
-                milli_dcu_seconds="consequatur",
-                shuffle_storage_gb_seconds="aperiam",
+                milli_dcu_seconds="fugit",
+                shuffle_storage_gb_seconds="deleniti",
+            ),
+            current_usage=shared.UsageSnapshot(
+                milli_dcu="hic",
+                shuffle_storage_gb="optio",
+                snapshot_time="totam",
             ),
         ),
         spark_batch=shared.SparkBatch(
             archive_uris=[
-                "consequatur",
-                "alias",
+                "commodi",
             ],
             args=[
-                "quia",
-                "quibusdam",
-                "error",
+                "modi",
+                "qui",
             ],
             file_uris=[
-                "architecto",
-                "hic",
-                "quia",
+                "cum",
+                "esse",
+                "ipsum",
+                "excepturi",
             ],
             jar_file_uris=[
-                "voluptatem",
-                "recusandae",
+                "perferendis",
             ],
-            main_class="a",
-            main_jar_file_uri="ipsam",
+            main_class="ad",
+            main_jar_file_uri="natus",
         ),
         spark_r_batch=shared.SparkRBatch(
             archive_uris=[
-                "temporibus",
-                "qui",
+                "iste",
             ],
             args=[
-                "ex",
+                "natus",
             ],
             file_uris=[
-                "sed",
+                "hic",
+                "saepe",
             ],
-            main_r_file_uri="dolorum",
+            main_r_file_uri="fuga",
         ),
         spark_sql_batch=shared.SparkSQLBatch(
             jar_file_uris=[
-                "ut",
                 "corporis",
+                "iste",
             ],
-            query_file_uri="nesciunt",
+            query_file_uri="iure",
             query_variables={
-                "in": "consequatur",
-                "dolores": "a",
+                "quidem": "architecto",
+                "ipsa": "reiciendis",
+                "est": "mollitia",
+                "laborum": "dolores",
             },
         ),
     ),
+    access_token="dolorem",
+    alt="media",
+    batch_id="explicabo",
+    callback="nobis",
+    fields_="enim",
+    key="omnis",
+    oauth_token="nemo",
+    parent="minima",
+    pretty_print=False,
+    quota_user="excepturi",
+    request_id="accusantium",
+    upload_type="iure",
+    upload_protocol="culpa",
 )
     
-res = s.projects.dataproc_projects_locations_batches_create(req)
+res = s.projects.dataproc_projects_locations_batches_create(req, operations.DataprocProjectsLocationsBatchesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -159,7 +170,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -173,6 +185,8 @@ if res.operation is not None:
 * `dataproc_projects_regions_clusters_get` - Gets the resource representation for a cluster in a project.
 * `dataproc_projects_regions_clusters_inject_credentials` - Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a personal auth cluster assigned to the user who is issuing the RPC.
 * `dataproc_projects_regions_clusters_list` - Lists all regions/{region}/clusters in a project alphabetically.
+* `dataproc_projects_regions_clusters_node_groups_create` - Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
+* `dataproc_projects_regions_clusters_node_groups_resize` - Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
 * `dataproc_projects_regions_clusters_patch` - Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is returned.
 * `dataproc_projects_regions_clusters_repair` - Repairs a cluster.
 * `dataproc_projects_regions_clusters_start` - Starts a cluster in a project.
@@ -195,7 +209,17 @@ if res.operation is not None:
 * `dataproc_projects_regions_workflow_templates_set_iam_policy` - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
 * `dataproc_projects_regions_workflow_templates_test_iam_permissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `dataproc_projects_regions_workflow_templates_update` - Updates (replaces) workflow template. The updated template must contain version that matches the current server version.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

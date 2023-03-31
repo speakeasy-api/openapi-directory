@@ -10,25 +10,18 @@ import (
 )
 
 type CalendarEventsUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsUpdateSecurity struct {
 	Option1 *CalendarEventsUpdateSecurityOption1 `security:"option"`
 	Option2 *CalendarEventsUpdateSecurityOption2 `security:"option"`
-}
-
-type CalendarEventsUpdatePathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-	// Event identifier.
-	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
 }
 
 // CalendarEventsUpdateSendUpdatesEnum - Guests who should receive notifications about the event update (for example, title changes, etc.).
@@ -58,13 +51,18 @@ func (e *CalendarEventsUpdateSendUpdatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CalendarEventsUpdateQueryParams struct {
+type CalendarEventsUpdateRequest struct {
+	Event *shared.Event `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
 	AlwaysIncludeEmail *bool `queryParam:"style=form,explode=true,name=alwaysIncludeEmail"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
 	ConferenceDataVersion *int64 `queryParam:"style=form,explode=true,name=conferenceDataVersion"`
+	// Event identifier.
+	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -87,13 +85,6 @@ type CalendarEventsUpdateQueryParams struct {
 	SupportsAttachments *bool `queryParam:"style=form,explode=true,name=supportsAttachments"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsUpdateRequest struct {
-	PathParams  CalendarEventsUpdatePathParams
-	QueryParams CalendarEventsUpdateQueryParams
-	Request     *shared.Event `request:"mediaType=application/json"`
-	Security    CalendarEventsUpdateSecurity
 }
 
 type CalendarEventsUpdateResponse struct {

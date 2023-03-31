@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetNotificationsQueryParams struct {
+type GetNotificationsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -44,10 +44,6 @@ type GetNotificationsQueryParams struct {
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetNotificationsRequest struct {
-	QueryParams GetNotificationsQueryParams
 }
 
 type GetNotificationsResponse struct {

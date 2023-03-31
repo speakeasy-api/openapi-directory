@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type GetOrganizationClientsSearchPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationClientsSearchQueryParams struct {
+type GetOrganizationClientsSearchRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// The MAC address of the client. Required.
-	Mac string `queryParam:"style=form,explode=true,name=mac"`
+	Mac            string `queryParam:"style=form,explode=true,name=mac"`
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 5. Default is 5.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
-}
-
-type GetOrganizationClientsSearchRequest struct {
-	PathParams  GetOrganizationClientsSearchPathParams
-	QueryParams GetOrganizationClientsSearchQueryParams
 }
 
 type GetOrganizationClientsSearchResponse struct {

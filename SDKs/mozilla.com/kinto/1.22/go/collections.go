@@ -32,16 +32,16 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 
 func (s *collections) GetCollection(ctx context.Context, request operations.GetCollectionRequest) (*operations.GetCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -107,16 +107,16 @@ func (s *collections) GetCollection(ctx context.Context, request operations.GetC
 }
 func (s *collections) GetCollections(ctx context.Context, request operations.GetCollectionsRequest) (*operations.GetCollectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

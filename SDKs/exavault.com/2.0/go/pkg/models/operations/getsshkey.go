@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSSHKeyPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSSHKeyHeaders struct {
+type GetSSHKeyRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetSSHKeyRequest struct {
-	PathParams GetSSHKeyPathParams
-	Headers    GetSSHKeyHeaders
+	ID       string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSSHKeyResponse struct {

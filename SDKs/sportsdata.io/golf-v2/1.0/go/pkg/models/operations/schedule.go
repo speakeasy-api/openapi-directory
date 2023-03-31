@@ -33,13 +33,9 @@ func (e *ScheduleFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SchedulePathParams struct {
+type ScheduleRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ScheduleFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type ScheduleRequest struct {
-	PathParams SchedulePathParams
 }
 
 type ScheduleResponse struct {

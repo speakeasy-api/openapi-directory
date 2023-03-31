@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementUploadsDeleteUploadDataSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUploadsDeleteUploadDataSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUploadsDeleteUploadDataSecurity struct {
@@ -22,18 +22,14 @@ type AnalyticsManagementUploadsDeleteUploadDataSecurity struct {
 	Option2 *AnalyticsManagementUploadsDeleteUploadDataSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementUploadsDeleteUploadDataPathParams struct {
+type AnalyticsManagementUploadsDeleteUploadDataRequest struct {
+	AnalyticsDataimportDeleteUploadDataRequest *shared.AnalyticsDataimportDeleteUploadDataRequest `request:"mediaType=application/json"`
 	// Account Id for the uploads to be deleted.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Custom data source Id for the uploads to be deleted.
-	CustomDataSourceID string `pathParam:"style=simple,explode=false,name=customDataSourceId"`
-	// Web property Id for the uploads to be deleted.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementUploadsDeleteUploadDataQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom data source Id for the uploads to be deleted.
+	CustomDataSourceID string `pathParam:"style=simple,explode=false,name=customDataSourceId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,13 +42,8 @@ type AnalyticsManagementUploadsDeleteUploadDataQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementUploadsDeleteUploadDataRequest struct {
-	PathParams  AnalyticsManagementUploadsDeleteUploadDataPathParams
-	QueryParams AnalyticsManagementUploadsDeleteUploadDataQueryParams
-	Request     *shared.AnalyticsDataimportDeleteUploadDataRequest `request:"mediaType=application/json"`
-	Security    AnalyticsManagementUploadsDeleteUploadDataSecurity
+	// Web property Id for the uploads to be deleted.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementUploadsDeleteUploadDataResponse struct {

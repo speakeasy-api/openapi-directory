@@ -36,7 +36,7 @@ func newScheduledTransactions(defaultClient, securityClient HTTPClient, serverUR
 // Returns a single scheduled transaction
 func (s *scheduledTransactions) GetScheduledTransactionByID(ctx context.Context, request operations.GetScheduledTransactionByIDRequest) (*operations.GetScheduledTransactionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions/{scheduled_transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions/{scheduled_transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,14 +93,14 @@ func (s *scheduledTransactions) GetScheduledTransactionByID(ctx context.Context,
 // Returns all scheduled transactions
 func (s *scheduledTransactions) GetScheduledTransactions(ctx context.Context, request operations.GetScheduledTransactionsRequest) (*operations.GetScheduledTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -14,14 +14,8 @@ var UpdateSipDomainServerList = []string{
 }
 
 type UpdateSipDomainSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSipDomainPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the SipDomain resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateSipDomainUpdateSipDomainRequestVoiceFallbackMethodEnum - The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.
@@ -162,10 +156,11 @@ type UpdateSipDomainUpdateSipDomainRequest struct {
 }
 
 type UpdateSipDomainRequest struct {
-	PathParams UpdateSipDomainPathParams
-	Request    *UpdateSipDomainUpdateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSipDomainSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource to update.
+	AccountSid  string                                 `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateSipDomainUpdateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the SipDomain resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSipDomainResponse struct {

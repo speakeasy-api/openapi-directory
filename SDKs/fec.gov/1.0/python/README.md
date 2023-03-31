@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/fec.gov/1.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,69 +14,68 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header_auth=shared.SchemeAPIKeyHeaderAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-        api_key_query_auth=shared.SchemeAPIKeyQueryAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetAuditCaseRequest(
-    query_params=operations.GetAuditCaseQueryParams(
-        api_key="consequatur",
-        audit_case_id=[
-            "officia",
-            "nihil",
-        ],
-        audit_id=[
-            7756699698972645173,
-            5607289564857015942,
-        ],
-        candidate_id=[
-            "necessitatibus",
-            "iste",
-        ],
-        committee_designation="ea",
-        committee_id=[
-            "sed",
-        ],
-        committee_type=[
-            "aliquam",
-            "nisi",
-        ],
-        cycle=[
-            8156228904820113242,
-            5947285951484731198,
-        ],
-        max_election_cycle=869561943583408486,
-        min_election_cycle=3655237301516905859,
-        page=2909554718741390322,
-        per_page=6600351355182752240,
-        primary_category_id="non",
-        q=[
-            "delectus",
-        ],
-        qq=[
-            "minus",
-        ],
-        sort=[
-            "eos",
-            "quaerat",
-            "quasi",
-        ],
-        sort_hide_null=False,
-        sort_null_only=True,
-        sort_nulls_last=False,
-        sub_category_id="officia",
+        api_key_header_auth="YOUR_API_KEY_HERE",
+        api_key_query_auth="YOUR_API_KEY_HERE",
+        api_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetAuditCaseRequest(
+    api_key="corrupti",
+    audit_case_id=[
+        "distinctio",
+        "quibusdam",
+        "unde",
+    ],
+    audit_id=[
+        544883,
+        847252,
+        423655,
+        623564,
+    ],
+    candidate_id=[
+        "suscipit",
+        "iure",
+        "magnam",
+    ],
+    committee_designation="debitis",
+    committee_id=[
+        "delectus",
+    ],
+    committee_type=[
+        "suscipit",
+        "molestiae",
+    ],
+    cycle=[
+        812169,
+        528895,
+        479977,
+        568045,
+    ],
+    max_election_cycle=392785,
+    min_election_cycle=925597,
+    page=836079,
+    per_page=71036,
+    primary_category_id="quis",
+    q=[
+        "deserunt",
+    ],
+    qq=[
+        "ipsam",
+    ],
+    sort=[
+        "sapiente",
+        "quo",
+        "odit",
+        "at",
+    ],
+    sort_hide_null=False,
+    sort_null_only=False,
+    sort_nulls_last=False,
+    sub_category_id="at",
 )
     
 res = s.audit.get_audit_case_(req)
@@ -87,7 +86,8 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### audit
 
@@ -164,11 +164,13 @@ stays the same. If the same person runs for multiple offices — for example, a 
 candidate runs for a Senate office — that candidate will get a unique ID for each office.
 
 The candidate endpoints primarily use data from FEC registration
-[Form 1](http://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
-[Form 2](http://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
+[Form 1](https://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
+[Form 2](https://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
 
 * `get_candidates_totals_` - 
 Aggregated candidate receipts and disbursements grouped by cycle.
+
+* `get_candidates_totals_aggregates_` -  Candidate total receipts and disbursements aggregated by `aggregate_by`.
 
 * `get_candidates_totals_by_office_` -  Aggregated candidate receipts and disbursements grouped by office by cycle.
 
@@ -227,7 +229,7 @@ particular characteristics.
 
 
 
-### communication cost
+### communication_cost
 
 * `get_communication_costs_` - 
 52 U.S.C. 30118 allows "communications by a corporation to its stockholders and executive or administrative personnel and their families or by a labor organization to its members and their families on any subject," including the express advocacy of the election or defeat of any Federal candidate.  The costs of such communications must be reported to the Federal Election Commission under certain circumstances.
@@ -441,7 +443,7 @@ Total electioneering communications spent on candidates by cycle
 or candidate election year
 
 
-### filer resources
+### filer_resources
 
 * `get_rad_analyst_` - 
 Use this endpoint to look up the RAD Analyst for a committee.
@@ -570,7 +572,7 @@ For presidential and Senate candidates, multiple two-year cycles exist between e
 
 
 
-### independent expenditures
+### independent_expenditures
 
 * `get_schedules_schedule_e_` - 
 Schedule E covers the line item expenditures for independent expenditures. For example, if a super PAC
@@ -647,7 +649,7 @@ receives or makes.
 The committee continues to report the loan until it is repaid.
 
 
-### party-coordinated expenditures
+### party_coordinated_expenditures
 
 * `get_schedules_schedule_f_` - 
 Schedule F, it shows all special expenditures a national or state party committee
@@ -834,7 +836,17 @@ Search for candidates or committees by name. If you're looking for information o
 particular person or group, using a name to find the `candidate_id` or `committee_id` on
 this endpoint can be a helpful first step.
 
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

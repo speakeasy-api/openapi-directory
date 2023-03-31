@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAnnotateQueryParams struct {
+type GetAnnotateRequest struct {
 	// The text content to annotate
 	Content *string `queryParam:"style=form,explode=true,name=content"`
 	// Categories to exclude for annotation
@@ -23,10 +23,6 @@ type GetAnnotateQueryParams struct {
 	LongestOnly *bool `queryParam:"style=form,explode=true,name=longest_only"`
 	// The minimum number of characters in the annotated entity
 	MinLength *string `queryParam:"style=form,explode=true,name=min_length"`
-}
-
-type GetAnnotateRequest struct {
-	QueryParams GetAnnotateQueryParams
 }
 
 type GetAnnotateResponse struct {

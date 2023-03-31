@@ -8,13 +8,13 @@ import (
 )
 
 type StorageObjectsComposeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsComposeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsComposeSecurity struct {
@@ -22,16 +22,14 @@ type StorageObjectsComposeSecurity struct {
 	Option2 *StorageObjectsComposeSecurityOption2 `security:"option"`
 }
 
-type StorageObjectsComposePathParams struct {
+type StorageObjectsComposeRequest struct {
+	ComposeRequest *shared.ComposeRequest `request:"mediaType=application/json"`
+	// Data format for the response.
+	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Name of the bucket containing the source objects. The destination object is stored in this bucket.
 	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
 	// Name of the new object.
 	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
-}
-
-type StorageObjectsComposeQueryParams struct {
-	// Data format for the response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the operation conditional on whether the object's current generation matches the given value.
@@ -48,13 +46,6 @@ type StorageObjectsComposeQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectsComposeRequest struct {
-	PathParams  StorageObjectsComposePathParams
-	QueryParams StorageObjectsComposeQueryParams
-	Request     *shared.ComposeRequest `request:"mediaType=application/json"`
-	Security    StorageObjectsComposeSecurity
 }
 
 type StorageObjectsComposeResponse struct {

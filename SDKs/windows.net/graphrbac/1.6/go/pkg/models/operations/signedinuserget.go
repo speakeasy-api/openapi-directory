@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignedInUserGetPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type SignedInUserGetQueryParams struct {
+type SignedInUserGetRequest struct {
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type SignedInUserGetRequest struct {
-	PathParams  SignedInUserGetPathParams
-	QueryParams SignedInUserGetQueryParams
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type SignedInUserGetResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type UnsubscribeFromChannelAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UnsubscribeFromChannelAlt1PathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnsubscribeFromChannelAlt1Request struct {
-	PathParams UnsubscribeFromChannelAlt1PathParams
-	Security   UnsubscribeFromChannelAlt1Security
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type UnsubscribeFromChannelAlt1Response struct {

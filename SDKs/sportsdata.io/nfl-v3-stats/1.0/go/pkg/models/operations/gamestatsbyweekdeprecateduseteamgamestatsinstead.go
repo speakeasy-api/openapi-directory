@@ -33,7 +33,7 @@ func (e *GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum) UnmarshalJS
 	}
 }
 
-type GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams struct {
+type GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	//           Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -44,10 +44,6 @@ type GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest struct {
-	PathParams GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams
 }
 
 type GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse struct {

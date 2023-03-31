@@ -4,9 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.CreateTicketRequest(
-    request="deleniti",
+
+
+req = shared.AbuseTicketCreate(
+    info="corrupti",
+    info_url="provident",
+    intentional=False,
+    proxy="distinctio",
+    source="quibusdam",
+    target="unde",
+    type="PHISHING",
 )
     
 res = s.v1.create_ticket(req)

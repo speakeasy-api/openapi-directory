@@ -10,8 +10,8 @@ import (
 )
 
 type AdsensehostAssociationsessionsStartSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsensehostAssociationsessionsStartProductCodeEnum string
@@ -46,7 +46,7 @@ func (e *AdsensehostAssociationsessionsStartProductCodeEnum) UnmarshalJSON(data 
 	}
 }
 
-type AdsensehostAssociationsessionsStartQueryParams struct {
+type AdsensehostAssociationsessionsStartRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// The URL to redirect the user to once association is completed. It receives a token parameter that can then be used to retrieve the associated account.
@@ -71,11 +71,6 @@ type AdsensehostAssociationsessionsStartQueryParams struct {
 	WebsiteLocale *string `queryParam:"style=form,explode=true,name=websiteLocale"`
 	// The URL of the user's hosted website.
 	WebsiteURL string `queryParam:"style=form,explode=true,name=websiteUrl"`
-}
-
-type AdsensehostAssociationsessionsStartRequest struct {
-	QueryParams AdsensehostAssociationsessionsStartQueryParams
-	Security    AdsensehostAssociationsessionsStartSecurity
 }
 
 type AdsensehostAssociationsessionsStartResponse struct {

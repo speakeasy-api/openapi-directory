@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AdultContentDetectionRequest(
-    request=operations.AdultContentDetectionRequestBody(
-        api_key="voluptatem",
-        text="laborum",
-    ),
+
+
+req = operations.AdultContentDetectionRequestBody(
+    api_key="corrupti",
+    text="provident",
 )
     
 res = s.document_classification.adult_content_detection(req)

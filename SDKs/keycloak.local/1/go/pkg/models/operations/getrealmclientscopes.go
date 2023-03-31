@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientScopesPathParams struct {
+type GetRealmClientScopesRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientScopesRequest struct {
-	PathParams GetRealmClientScopesPathParams
 }
 
 type GetRealmClientScopesResponse struct {

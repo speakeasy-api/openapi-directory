@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetPortPathParams struct {
+type ProtocolMqttClientSetPortRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// TCP port
 	Port string `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolMqttClientSetPortRequest struct {
-	PathParams ProtocolMqttClientSetPortPathParams
 }
 
 type ProtocolMqttClientSetPortResponse struct {

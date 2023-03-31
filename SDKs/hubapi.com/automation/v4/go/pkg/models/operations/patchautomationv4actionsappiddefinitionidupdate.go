@@ -8,20 +8,15 @@ import (
 )
 
 type PatchAutomationV4ActionsAppIDDefinitionIDUpdateSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PatchAutomationV4ActionsAppIDDefinitionIDUpdatePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the custom workflow action.
-	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PatchAutomationV4ActionsAppIDDefinitionIDUpdateRequest struct {
-	PathParams PatchAutomationV4ActionsAppIDDefinitionIDUpdatePathParams
 	// The custom workflow action fields to be updated.
-	Request  shared.ExtensionActionDefinitionPatch `request:"mediaType=application/json"`
-	Security PatchAutomationV4ActionsAppIDDefinitionIDUpdateSecurity
+	ExtensionActionDefinitionPatch shared.ExtensionActionDefinitionPatch `request:"mediaType=application/json"`
+	AppID                          int                                   `pathParam:"style=simple,explode=false,name=appId"`
+	// The ID of the custom workflow action.
+	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 }
 
 type PatchAutomationV4ActionsAppIDDefinitionIDUpdateResponse struct {

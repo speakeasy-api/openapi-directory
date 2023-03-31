@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LandlordControllerGetProfitLossReportPathParams struct {
+type LandlordControllerGetProfitLossReportRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetProfitLossReportQueryParams struct {
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerGetProfitLossReportRequest struct {
-	PathParams  LandlordControllerGetProfitLossReportPathParams
-	QueryParams LandlordControllerGetProfitLossReportQueryParams
 }
 
 type LandlordControllerGetProfitLossReportResponse struct {

@@ -35,7 +35,7 @@ func newIndividual(defaultClient, securityClient HTTPClient, serverURL, language
 // GetIndividual - Returns list of matches
 func (s *individual) GetIndividual(ctx context.Context, request operations.GetIndividualRequest) (*operations.GetIndividualResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individual/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individual/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *individual) GetIndividual(ctx context.Context, request operations.GetIn
 // GetPedigree - Returns list of matches
 func (s *individual) GetPedigree(ctx context.Context, request operations.GetPedigreeRequest) (*operations.GetPedigreeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individual/pedigree/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individual/pedigree/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

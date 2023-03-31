@@ -41,7 +41,7 @@ func (s *prospects) CreateProspect(ctx context.Context, request operations.Creat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/storage/profile-system/prospects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *prospects) CreateProspect(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -95,14 +95,14 @@ func (s *prospects) CreateProspect(ctx context.Context, request operations.Creat
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) DeleteProspect(ctx context.Context, request operations.DeleteProspectRequest) (*operations.DeleteProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -137,14 +137,14 @@ func (s *prospects) DeleteProspect(ctx context.Context, request operations.Delet
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) GetProspect(ctx context.Context, request operations.GetProspectRequest) (*operations.GetProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -186,16 +186,16 @@ func (s *prospects) GetProspect(ctx context.Context, request operations.GetProsp
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) GetUnmaskedProspect(ctx context.Context, request operations.GetUnmaskedProspectRequest) (*operations.GetUnmaskedProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}/unmask", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}/unmask", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -239,9 +239,9 @@ func (s *prospects) GetUnmaskedProspect(ctx context.Context, request operations.
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) UpdateProspect(ctx context.Context, request operations.UpdateProspectRequest) (*operations.UpdateProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -253,7 +253,7 @@ func (s *prospects) UpdateProspect(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

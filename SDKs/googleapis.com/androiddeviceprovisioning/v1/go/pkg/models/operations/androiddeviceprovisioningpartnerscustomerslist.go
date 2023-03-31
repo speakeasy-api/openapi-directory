@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AndroiddeviceprovisioningPartnersCustomersListPathParams struct {
-	// Required. The ID of the reseller partner.
-	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
-}
-
-type AndroiddeviceprovisioningPartnersCustomersListQueryParams struct {
+type AndroiddeviceprovisioningPartnersCustomersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type AndroiddeviceprovisioningPartnersCustomersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results returned by the server.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The ID of the reseller partner.
+	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type AndroiddeviceprovisioningPartnersCustomersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroiddeviceprovisioningPartnersCustomersListRequest struct {
-	PathParams  AndroiddeviceprovisioningPartnersCustomersListPathParams
-	QueryParams AndroiddeviceprovisioningPartnersCustomersListQueryParams
 }
 
 type AndroiddeviceprovisioningPartnersCustomersListResponse struct {

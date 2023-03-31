@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesListForAuthenticatedUserQueryParams struct {
+type CodespacesListForAuthenticatedUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// ID of the Repository to filter on
 	RepositoryID *int64 `queryParam:"style=form,explode=true,name=repository_id"`
-}
-
-type CodespacesListForAuthenticatedUserRequest struct {
-	QueryParams CodespacesListForAuthenticatedUserQueryParams
 }
 
 // CodespacesListForAuthenticatedUser200ApplicationJSON - Response

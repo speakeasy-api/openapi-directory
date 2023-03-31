@@ -8,16 +8,11 @@ import (
 )
 
 type ContentProductstatusesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentProductstatusesListPathParams struct {
-	// The ID of the account that contains the products. This account cannot be a multi-client account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentProductstatusesListQueryParams struct {
+type ContentProductstatusesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type ContentProductstatusesListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The maximum number of product statuses to return in the response, used for paging.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The ID of the account that contains the products. This account cannot be a multi-client account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
@@ -46,12 +43,6 @@ type ContentProductstatusesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentProductstatusesListRequest struct {
-	PathParams  ContentProductstatusesListPathParams
-	QueryParams ContentProductstatusesListQueryParams
-	Security    ContentProductstatusesListSecurity
 }
 
 type ContentProductstatusesListResponse struct {

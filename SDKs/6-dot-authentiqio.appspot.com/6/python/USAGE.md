@@ -4,14 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.KeyRevokeRequest(
-    path_params=operations.KeyRevokePathParams(
-        pk="expedita",
-    ),
-    query_params=operations.KeyRevokeQueryParams(
-        secret="consequuntur",
-    ),
+    pk="corrupti",
+    secret="provident",
 )
     
 res = s.delete.key_revoke(req)

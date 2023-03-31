@@ -8,23 +8,14 @@ import (
 )
 
 type GetAssociationsByObjectSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAssociationsByObjectPathParams struct {
-	// Object id for single object
-	ObjectID string `pathParam:"style=simple,explode=false,name=ObjectId"`
-}
-
-type GetAssociationsByObjectHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAssociationsByObjectRequest struct {
-	PathParams GetAssociationsByObjectPathParams
-	Headers    GetAssociationsByObjectHeaders
-	Security   GetAssociationsByObjectSecurity
+	// Object id for single object
+	ObjectID string `pathParam:"style=simple,explode=false,name=ObjectId"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type GetAssociationsByObjectResponse struct {

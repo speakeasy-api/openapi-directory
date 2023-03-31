@@ -38,16 +38,16 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // Subscription data is returned in reverse chronological order based on `updatedDate`.
 func (s *subscriptions) GETSubscriptionsByAccount(ctx context.Context, request operations.GETSubscriptionsByAccountRequest) (*operations.GETSubscriptionsByAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/accounts/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/accounts/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,16 +91,16 @@ func (s *subscriptions) GETSubscriptionsByAccount(ctx context.Context, request o
 // This REST API reference describes how to retrieve detailed information about a specified subscription in the latest version.
 func (s *subscriptions) GETSubscriptionsByKey(ctx context.Context, request operations.GETSubscriptionsByKeyRequest) (*operations.GETSubscriptionsByKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -144,16 +144,16 @@ func (s *subscriptions) GETSubscriptionsByKey(ctx context.Context, request opera
 // This REST API reference describes how to retrieve detailed information about a specified subscription in a specified version. When you create a subscription amendment, you create a new version of the subscription. You can use this method to retrieve information about a subscription in any version.
 func (s *subscriptions) GETSubscriptionsByKeyAndVersion(ctx context.Context, request operations.GETSubscriptionsByKeyAndVersionRequest) (*operations.GETSubscriptionsByKeyAndVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -196,14 +196,14 @@ func (s *subscriptions) GETSubscriptionsByKeyAndVersion(ctx context.Context, req
 // ObjectDELETESubscription - CRUD: Delete a subscription
 func (s *subscriptions) ObjectDELETESubscription(ctx context.Context, request operations.ObjectDELETESubscriptionRequest) (*operations.ObjectDELETESubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -256,16 +256,16 @@ func (s *subscriptions) ObjectDELETESubscription(ctx context.Context, request op
 // ObjectGETSubscription - CRUD: Retrieve a subscription
 func (s *subscriptions) ObjectGETSubscription(ctx context.Context, request operations.ObjectGETSubscriptionRequest) (*operations.ObjectGETSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -332,9 +332,9 @@ func (s *subscriptions) ObjectGETSubscription(ctx context.Context, request opera
 // ObjectPUTSubscription - CRUD: Update a subscription
 func (s *subscriptions) ObjectPUTSubscription(ctx context.Context, request operations.ObjectPUTSubscriptionRequest) (*operations.ObjectPUTSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/subscription/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifySubscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,9 +349,9 @@ func (s *subscriptions) ObjectPUTSubscription(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -421,7 +421,7 @@ func (s *subscriptions) POSTPreviewSubscription(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/subscriptions/preview"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTSubscriptionPreviewType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -436,7 +436,7 @@ func (s *subscriptions) POSTPreviewSubscription(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -493,7 +493,7 @@ func (s *subscriptions) POSTSubscription(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/subscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTSubscriptionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,7 +508,7 @@ func (s *subscriptions) POSTSubscription(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -552,9 +552,9 @@ func (s *subscriptions) POSTSubscription(ctx context.Context, request operations
 // **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
 func (s *subscriptions) PUTCancelSubscription(ctx context.Context, request operations.PUTCancelSubscriptionRequest) (*operations.PUTCancelSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTSubscriptionCancellationType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -569,7 +569,7 @@ func (s *subscriptions) PUTCancelSubscription(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -613,9 +613,9 @@ func (s *subscriptions) PUTCancelSubscription(ctx context.Context, request opera
 // **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
 func (s *subscriptions) PUTRenewSubscription(ctx context.Context, request operations.PUTRenewSubscriptionRequest) (*operations.PUTRenewSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/renew", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/renew", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTRenewSubscriptionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -630,7 +630,7 @@ func (s *subscriptions) PUTRenewSubscription(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -674,9 +674,9 @@ func (s *subscriptions) PUTRenewSubscription(ctx context.Context, request operat
 // **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
 func (s *subscriptions) PUTResumeSubscription(ctx context.Context, request operations.PUTResumeSubscriptionRequest) (*operations.PUTResumeSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSubscriptionResumeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -691,7 +691,7 @@ func (s *subscriptions) PUTResumeSubscription(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -766,9 +766,9 @@ func (s *subscriptions) PUTResumeSubscription(ctx context.Context, request opera
 // If you just override a specific tier, do not include the `startingUnit` field in the request.
 func (s *subscriptions) PUTSubscription(ctx context.Context, request operations.PUTSubscriptionRequest) (*operations.PUTSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSubscriptionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,7 +783,7 @@ func (s *subscriptions) PUTSubscription(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -827,9 +827,9 @@ func (s *subscriptions) PUTSubscription(ctx context.Context, request operations.
 // **Note**: If you have the Invoice Settlement feature enabled, it is best practice to set the `zuora-version` parameter to `211.0` or later. Otherwise, an error occurs.
 func (s *subscriptions) PUTSuspendSubscription(ctx context.Context, request operations.PUTSuspendSubscriptionRequest) (*operations.PUTSuspendSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscription-key}/suspend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSubscriptionSuspendType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -844,7 +844,7 @@ func (s *subscriptions) PUTSuspendSubscription(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -886,9 +886,9 @@ func (s *subscriptions) PUTSuspendSubscription(ctx context.Context, request oper
 // Updates the custom fields of a specified subscription version.
 func (s *subscriptions) PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersion(ctx context.Context, request operations.PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersionRequest) (*operations.PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionNumber}/versions/{version}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionNumber}/versions/{version}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSubscriptionPatchRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -903,7 +903,7 @@ func (s *subscriptions) PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersion(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

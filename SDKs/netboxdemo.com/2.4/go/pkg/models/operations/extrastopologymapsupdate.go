@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTopologyMapsUpdatePathParams struct {
+type ExtrasTopologyMapsUpdateRequest struct {
+	WritableTopologyMapInput shared.WritableTopologyMapInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this topology map.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTopologyMapsUpdateRequest struct {
-	PathParams ExtrasTopologyMapsUpdatePathParams
-	Request    shared.WritableTopologyMapInput `request:"mediaType=application/json"`
 }
 
 type ExtrasTopologyMapsUpdateResponse struct {

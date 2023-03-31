@@ -10,13 +10,8 @@ import (
 )
 
 type ConnectorsProjectsLocationsProvidersConnectorsVersionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ConnectorsProjectsLocationsProvidersConnectorsVersionsListPathParams struct {
-	// Required. Parent resource of the connectors, of the form: `projects/*/locations/*/providers/*/connectors/*` Only global location is supported for ConnectorVersion resource.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum - Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `BASIC` view.
@@ -46,7 +41,7 @@ func (e *ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum) Unm
 	}
 }
 
-type ConnectorsProjectsLocationsProvidersConnectorsVersionsListQueryParams struct {
+type ConnectorsProjectsLocationsProvidersConnectorsVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -65,6 +60,8 @@ type ConnectorsProjectsLocationsProvidersConnectorsVersionsListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent resource of the connectors, of the form: `projects/*/locations/*/providers/*/connectors/*` Only global location is supported for ConnectorVersion resource.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -75,12 +72,6 @@ type ConnectorsProjectsLocationsProvidersConnectorsVersionsListQueryParams struc
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `BASIC` view.
 	View *ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ConnectorsProjectsLocationsProvidersConnectorsVersionsListRequest struct {
-	PathParams  ConnectorsProjectsLocationsProvidersConnectorsVersionsListPathParams
-	QueryParams ConnectorsProjectsLocationsProvidersConnectorsVersionsListQueryParams
-	Security    ConnectorsProjectsLocationsProvidersConnectorsVersionsListSecurity
 }
 
 type ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse struct {

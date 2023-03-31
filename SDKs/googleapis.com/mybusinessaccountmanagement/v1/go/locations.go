@@ -34,9 +34,9 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessaccountmanagementLocationsAdminsCreate - Invites the specified user to become an administrator for the specified location. The invitee must accept the invitation in order to be granted access to the location. See AcceptInvitation to programmatically accept an invitation.
 func (s *locations) MybusinessaccountmanagementLocationsAdminsCreate(ctx context.Context, request operations.MybusinessaccountmanagementLocationsAdminsCreateRequest) (*operations.MybusinessaccountmanagementLocationsAdminsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/admins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsCreate(ctx context
 // MybusinessaccountmanagementLocationsAdminsDelete - Removes the specified admin as a manager of the specified location.
 func (s *locations) MybusinessaccountmanagementLocationsAdminsDelete(ctx context.Context, request operations.MybusinessaccountmanagementLocationsAdminsDeleteRequest) (*operations.MybusinessaccountmanagementLocationsAdminsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsDelete(ctx context
 // MybusinessaccountmanagementLocationsAdminsList - Lists all of the admins for the specified location.
 func (s *locations) MybusinessaccountmanagementLocationsAdminsList(ctx context.Context, request operations.MybusinessaccountmanagementLocationsAdminsListRequest) (*operations.MybusinessaccountmanagementLocationsAdminsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/admins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,9 +185,9 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsList(ctx context.C
 // MybusinessaccountmanagementLocationsAdminsPatch - Updates the Admin for the specified location. Only the AdminRole of the Admin can be updated.
 func (s *locations) MybusinessaccountmanagementLocationsAdminsPatch(ctx context.Context, request operations.MybusinessaccountmanagementLocationsAdminsPatchRequest) (*operations.MybusinessaccountmanagementLocationsAdminsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsPatch(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,9 +240,9 @@ func (s *locations) MybusinessaccountmanagementLocationsAdminsPatch(ctx context.
 // MybusinessaccountmanagementLocationsTransfer - Moves a location from an account that the user owns to another account that the same user administers. The user must be an owner of the account the location is currently associated with and must also be at least a manager of the destination account.
 func (s *locations) MybusinessaccountmanagementLocationsTransfer(ctx context.Context, request operations.MybusinessaccountmanagementLocationsTransferRequest) (*operations.MybusinessaccountmanagementLocationsTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:transfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:transfer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferLocationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,7 +254,7 @@ func (s *locations) MybusinessaccountmanagementLocationsTransfer(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

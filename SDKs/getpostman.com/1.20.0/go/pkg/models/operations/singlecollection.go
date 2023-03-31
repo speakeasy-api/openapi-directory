@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleCollectionPathParams struct {
-	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
-}
-
 type SingleCollectionRequest struct {
-	PathParams SingleCollectionPathParams
+	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 
 type SingleCollection200ApplicationJSONCollectionInfo struct {

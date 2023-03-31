@@ -8,26 +8,17 @@ import (
 )
 
 type GetV2EditorialIDSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetV2EditorialIDPathParams struct {
-	// Editorial ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2EditorialIDQueryParams struct {
-	// Returns only if the content is available for distribution in a certain country
-	Country string `queryParam:"style=form,explode=true,name=country"`
-	// The ID of the search that is related to this request
-	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetV2EditorialIDRequest struct {
-	PathParams  GetV2EditorialIDPathParams
-	QueryParams GetV2EditorialIDQueryParams
-	Security    GetV2EditorialIDSecurity
+	// Returns only if the content is available for distribution in a certain country
+	Country string `queryParam:"style=form,explode=true,name=country"`
+	// Editorial ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of the search that is related to this request
+	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 }
 
 type GetV2EditorialIDResponse struct {

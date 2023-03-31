@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CreateDiffHTMLUsingPOSTQueryParams struct {
+type CreateDiffHTMLUsingPOSTRequest struct {
 	EndRev   *string `queryParam:"style=form,explode=true,name=endRev"`
 	PadID    *string `queryParam:"style=form,explode=true,name=padID"`
 	StartRev *string `queryParam:"style=form,explode=true,name=startRev"`
-}
-
-type CreateDiffHTMLUsingPOSTRequest struct {
-	QueryParams CreateDiffHTMLUsingPOSTQueryParams
 }
 
 // CreateDiffHTMLUsingPOST500ApplicationJSON - internal api error (code 2)

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2NotesIDJSONPathParams struct {
-	// Note ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2NotesIDJSONRequestBody struct {
 	// ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
 	CallID *int64 `form:"name=call_id"`
@@ -19,8 +14,9 @@ type PutV2NotesIDJSONRequestBody struct {
 }
 
 type PutV2NotesIDJSONRequest struct {
-	PathParams PutV2NotesIDJSONPathParams
-	Request    PutV2NotesIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody PutV2NotesIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Note ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2NotesIDJSONResponse struct {

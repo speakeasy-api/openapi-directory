@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCompetenciesPathParams struct {
+type GetCompetenciesRequest struct {
 	// provider's internal identifier
 	ProviderID int64 `pathParam:"style=simple,explode=false,name=providerId"`
-}
-
-type GetCompetenciesRequest struct {
-	PathParams GetCompetenciesPathParams
 }
 
 type GetCompetenciesResponse struct {

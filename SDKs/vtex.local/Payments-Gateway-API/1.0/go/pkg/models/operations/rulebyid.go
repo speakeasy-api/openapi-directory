@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type RuleByIDPathParams struct {
-	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
-}
-
-type RuleByIDHeaders struct {
+type RuleByIDRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -19,11 +15,7 @@ type RuleByIDHeaders struct {
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type RuleByIDRequest struct {
-	PathParams RuleByIDPathParams
-	Headers    RuleByIDHeaders
+	RuleID               string `pathParam:"style=simple,explode=false,name=ruleId"`
 }
 
 type RuleByIDResponse struct {

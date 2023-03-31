@@ -41,10 +41,6 @@ type PostOauthV1TokenCreateRequestBody struct {
 	RefreshToken *string                                         `form:"name=refresh_token"`
 }
 
-type PostOauthV1TokenCreateRequest struct {
-	Request *PostOauthV1TokenCreateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostOauthV1TokenCreateResponse struct {
 	Body        []byte
 	ContentType string

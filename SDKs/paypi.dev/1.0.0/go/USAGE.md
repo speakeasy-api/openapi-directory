@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
-    req := operations.PostCheckCodeRequest{
-        Request: operations.PostCheckCodeRequestBody{
-            Code: "corrupti",
-            Email: "Micheal_Sporer@yahoo.com",
-        },
+    req := operations.PostCheckCodeRequestBody{
+        Code: "corrupti",
+        Email: "Micheal_Sporer@yahoo.com",
     }
 
     ctx := context.Background()

@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignPhoneNumberSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignPhoneNumberPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AssignPhoneNumberApplicationJSONPhoneNumbers struct {
@@ -28,10 +23,9 @@ type AssignPhoneNumberApplicationJSON struct {
 }
 
 type AssignPhoneNumberRequest struct {
-	PathParams AssignPhoneNumberPathParams
 	// Provide either an id or a number in the request body.
-	Request  *AssignPhoneNumberApplicationJSON `request:"mediaType=application/json"`
-	Security AssignPhoneNumberSecurity
+	RequestBody *AssignPhoneNumberApplicationJSON `request:"mediaType=application/json"`
+	UserID      string                            `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AssignPhoneNumber200ApplicationXMLPhoneNumbers struct {

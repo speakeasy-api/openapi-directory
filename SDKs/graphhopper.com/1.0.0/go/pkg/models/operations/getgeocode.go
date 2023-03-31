@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeocodeQueryParams struct {
+type GetGeocodeRequest struct {
 	// If `true`, the output will be formatted.
 	Debug *bool `queryParam:"style=form,explode=true,name=debug"`
 	// Specify the maximum number of results to return
@@ -82,10 +82,6 @@ type GetGeocodeQueryParams struct {
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// It is `required` to be `true` if you want to do a reverse geocoding request. If it is `true`, `point` must be defined as well, and `q` must not be used.
 	Reverse *bool `queryParam:"style=form,explode=true,name=reverse"`
-}
-
-type GetGeocodeRequest struct {
-	QueryParams GetGeocodeQueryParams
 }
 
 type GetGeocodeResponse struct {

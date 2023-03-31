@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteTracksTrackIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteTracksTrackIDPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type DeleteTracksTrackIDRequest struct {
-	PathParams DeleteTracksTrackIDPathParams
-	Security   DeleteTracksTrackIDSecurity
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type DeleteTracksTrackIDResponse struct {

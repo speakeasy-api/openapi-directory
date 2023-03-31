@@ -10,15 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposAddAppAccessRestrictionsPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposAddAppAccessRestrictionsRequestBody1 struct {
 	// apps parameter
 	Apps []string `json:"apps"`
@@ -93,8 +84,13 @@ func (u ReposAddAppAccessRestrictionsRequestBody) MarshalJSON() ([]byte, error) 
 }
 
 type ReposAddAppAccessRestrictionsRequest struct {
-	PathParams ReposAddAppAccessRestrictionsPathParams
-	Request    *ReposAddAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposAddAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposAddAppAccessRestrictionsResponse struct {

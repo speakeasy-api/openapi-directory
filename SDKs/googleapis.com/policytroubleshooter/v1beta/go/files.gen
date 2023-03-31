@@ -22,9 +22,8 @@ pkg/models/shared/googleiamv1auditconfig.go
 pkg/models/shared/googleiamv1auditlogconfig.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1betabindingexplanation.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1betabindingexplanationannotatedmembership.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1betatroubleshootiampolicyrequest.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1betaaccesstuple.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

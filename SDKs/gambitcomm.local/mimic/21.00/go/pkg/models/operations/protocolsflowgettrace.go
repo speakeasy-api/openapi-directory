@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSflowGetTracePathParams struct {
+type ProtocolSflowGetTraceRequest struct {
 	// Agent to show whether SFLOW tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSflowGetTraceRequest struct {
-	PathParams ProtocolSflowGetTracePathParams
 }
 
 type ProtocolSflowGetTraceResponse struct {

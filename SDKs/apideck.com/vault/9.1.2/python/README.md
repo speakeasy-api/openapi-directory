@@ -1,0 +1,84 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/apideck.com/vault/9.1.2/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.ConnectionSettingsAllRequest(
+    resource="corrupti",
+    service_id="provident",
+    unified_api="distinctio",
+    x_apideck_app_id="quibusdam",
+    x_apideck_consumer_id="unde",
+)
+    
+res = s.connections.connection_settings_all(req, operations.ConnectionSettingsAllSecurity(
+    api_key="YOUR_API_KEY_HERE",
+))
+
+if res.get_connection_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### connections
+
+* `connection_settings_all` - Get resource settings
+* `connection_settings_update` - Update settings
+* `connections_add` - Create connection
+* `connections_all` - Get all connections
+* `connections_callback` - Callback
+* `connections_delete` - Deletes a connection
+* `connections_import` - Import connection
+* `connections_one` - Get connection
+* `connections_revoke` - Revoke connection
+* `connections_token` - Get Access Token
+* `connections_update` - Update connection
+
+### consumers
+
+* `consumer_request_counts_all` - Consumer request counts
+* `consumers_add` - Create consumer
+* `consumers_all` - Get all consumers
+* `consumers_delete` - Delete consumer
+* `consumers_one` - Get consumer
+* `consumers_update` - Update consumer
+
+### logs
+
+* `logs_all` - Get all consumer request logs
+
+### sessions
+
+* `sessions_create` - Create Session
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

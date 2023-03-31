@@ -14,6 +14,5 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/deleteconnection.go
 pkg/models/operations/getconnections.go
-pkg/models/shared/security.go
 pkg/models/shared/connection.go
 USAGE.md

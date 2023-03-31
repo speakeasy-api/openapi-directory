@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPackagePATCHPathParams struct {
+type AppPackagePATCHRequest struct {
+	// Operational state to be set
+	AppPkgInfoModifications shared.AppPkgInfoModifications `request:"mediaType=application/json"`
 	// Identifier of an individual application package resource
 	AppPkgID string `pathParam:"style=simple,explode=false,name=appPkgId"`
-}
-
-type AppPackagePATCHRequest struct {
-	PathParams AppPackagePATCHPathParams
-	// Operational state to be set
-	Request shared.AppPkgInfoModifications `request:"mediaType=application/json"`
 }
 
 type AppPackagePATCHResponse struct {

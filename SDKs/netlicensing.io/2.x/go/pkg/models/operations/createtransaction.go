@@ -11,7 +11,8 @@ import (
 )
 
 type CreateTransactionSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateTransactionRequestBodySourceEnum - AUTO Transaction for internal use only
@@ -73,11 +74,6 @@ type CreateTransactionRequestBody struct {
 	// AUTO Transaction for internal use only
 	Source CreateTransactionRequestBodySourceEnum `form:"name=source"`
 	Status CreateTransactionRequestBodyStatusEnum `form:"name=status"`
-}
-
-type CreateTransactionRequest struct {
-	Request  *CreateTransactionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateTransactionSecurity
 }
 
 type CreateTransactionResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteMembersOfSLGPathParams struct {
+type DeleteMembersOfSLGRequest struct {
 	// Unique identifier of the Shared Line Group that you would like to delete.
 	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
-type DeleteMembersOfSLGRequest struct {
-	PathParams DeleteMembersOfSLGPathParams
 }
 
 type DeleteMembersOfSLGResponse struct {

@@ -33,7 +33,7 @@ func newCaptions(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // YoutubeCaptionsDelete - Deletes a resource.
-func (s *captions) YoutubeCaptionsDelete(ctx context.Context, request operations.YoutubeCaptionsDeleteRequest) (*operations.YoutubeCaptionsDeleteResponse, error) {
+func (s *captions) YoutubeCaptionsDelete(ctx context.Context, request operations.YoutubeCaptionsDeleteRequest, security operations.YoutubeCaptionsDeleteSecurity) (*operations.YoutubeCaptionsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/captions"
 
@@ -42,11 +42,11 @@ func (s *captions) YoutubeCaptionsDelete(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *captions) YoutubeCaptionsDelete(ctx context.Context, request operations
 }
 
 // YoutubeCaptionsDownload - Downloads a caption track.
-func (s *captions) YoutubeCaptionsDownload(ctx context.Context, request operations.YoutubeCaptionsDownloadRequest) (*operations.YoutubeCaptionsDownloadResponse, error) {
+func (s *captions) YoutubeCaptionsDownload(ctx context.Context, request operations.YoutubeCaptionsDownloadRequest, security operations.YoutubeCaptionsDownloadSecurity) (*operations.YoutubeCaptionsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/youtube/v3/captions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/youtube/v3/captions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,11 +111,11 @@ func (s *captions) YoutubeCaptionsDownload(ctx context.Context, request operatio
 }
 
 // YoutubeCaptionsInsert - Inserts a new resource into this collection.
-func (s *captions) YoutubeCaptionsInsert(ctx context.Context, request operations.YoutubeCaptionsInsertRequest) (*operations.YoutubeCaptionsInsertResponse, error) {
+func (s *captions) YoutubeCaptionsInsert(ctx context.Context, request operations.YoutubeCaptionsInsertRequest, security operations.YoutubeCaptionsInsertSecurity) (*operations.YoutubeCaptionsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/captions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,11 +127,11 @@ func (s *captions) YoutubeCaptionsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *captions) YoutubeCaptionsInsert(ctx context.Context, request operations
 }
 
 // YoutubeCaptionsList - Retrieves a list of resources, possibly filtered.
-func (s *captions) YoutubeCaptionsList(ctx context.Context, request operations.YoutubeCaptionsListRequest) (*operations.YoutubeCaptionsListResponse, error) {
+func (s *captions) YoutubeCaptionsList(ctx context.Context, request operations.YoutubeCaptionsListRequest, security operations.YoutubeCaptionsListSecurity) (*operations.YoutubeCaptionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/captions"
 
@@ -175,11 +175,11 @@ func (s *captions) YoutubeCaptionsList(ctx context.Context, request operations.Y
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,11 +214,11 @@ func (s *captions) YoutubeCaptionsList(ctx context.Context, request operations.Y
 }
 
 // YoutubeCaptionsUpdate - Updates an existing resource.
-func (s *captions) YoutubeCaptionsUpdate(ctx context.Context, request operations.YoutubeCaptionsUpdateRequest) (*operations.YoutubeCaptionsUpdateResponse, error) {
+func (s *captions) YoutubeCaptionsUpdate(ctx context.Context, request operations.YoutubeCaptionsUpdateRequest, security operations.YoutubeCaptionsUpdateSecurity) (*operations.YoutubeCaptionsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/captions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,11 +230,11 @@ func (s *captions) YoutubeCaptionsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

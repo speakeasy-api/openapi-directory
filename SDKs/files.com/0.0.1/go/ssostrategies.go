@@ -44,7 +44,7 @@ func (s *ssoStrategies) GetSsoStrategies(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *ssoStrategies) GetSsoStrategies(ctx context.Context, request operations
 // Show Sso Strategy
 func (s *ssoStrategies) GetSsoStrategiesID(ctx context.Context, request operations.GetSsoStrategiesIDRequest) (*operations.GetSsoStrategiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +169,7 @@ func (s *ssoStrategies) GetSsoStrategiesID(ctx context.Context, request operatio
 // Synchronize provisioning data with the SSO remote server.
 func (s *ssoStrategies) PostSsoStrategiesIDSync(ctx context.Context, request operations.PostSsoStrategiesIDSyncRequest) (*operations.PostSsoStrategiesIDSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}/sync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}/sync", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

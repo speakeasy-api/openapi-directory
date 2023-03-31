@@ -8,17 +8,12 @@ import (
 )
 
 type AccountArticleReportSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type AccountArticleReportQueryParams struct {
-	// A group ID to filter by
-	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AccountArticleReportRequest struct {
-	QueryParams AccountArticleReportQueryParams
-	Security    AccountArticleReportSecurity
+	// A group ID to filter by
+	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
 }
 
 type AccountArticleReportResponse struct {

@@ -14,49 +14,40 @@ func main() {
     s := sdk.New()
 
     req := operations.VpcaccessProjectsLocationsConnectorsCreateRequest{
-        Security: operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.VpcaccessProjectsLocationsConnectorsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.VpcaccessProjectsLocationsConnectorsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ConnectorID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.ConnectorInput{
-            IPCidrRange: "iure",
-            MachineType: "magnam",
-            MaxInstances: 891773,
-            MaxThroughput: 56713,
-            MinInstances: 963663,
-            MinThroughput: 272656,
-            Name: "suscipit",
-            Network: "molestiae",
+        DollarXgafv: "2",
+        ConnectorInput: &shared.ConnectorInput{
+            IPCidrRange: "provident",
+            MachineType: "distinctio",
+            MaxInstances: 844266,
+            MaxThroughput: 602763,
+            MinInstances: 857946,
+            MinThroughput: 544883,
+            Name: "illum",
+            Network: "vel",
             Subnet: &shared.Subnet{
-                Name: "minus",
-                ProjectID: "placeat",
+                Name: "error",
+                ProjectID: "deserunt",
             },
         },
+        AccessToken: "suscipit",
+        Alt: "media",
+        Callback: "magnam",
+        ConnectorID: "debitis",
+        Fields: "ipsa",
+        Key: "delectus",
+        OauthToken: "tempora",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "molestiae",
+        UploadType: "minus",
+        UploadProtocol: "placeat",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, req)
+    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, req, operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

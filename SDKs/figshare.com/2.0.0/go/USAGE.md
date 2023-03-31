@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.AccountArticleReportRequest{
-        Security: operations.AccountArticleReportSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.AccountArticleReportQueryParams{
-            GroupID: 548814,
-        },
+        GroupID: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.Articles.AccountArticleReport(ctx, req)
+    res, err := s.Articles.AccountArticleReport(ctx, req, operations.AccountArticleReportSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

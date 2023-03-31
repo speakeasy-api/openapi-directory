@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ReplaceTokenAmountInputFieldsRequest struct {
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type ReplaceTokenAmountInputFieldsResponse struct {
 	Body        []byte
 	ContentType string

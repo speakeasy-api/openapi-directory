@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnbanQueryParams struct {
+type UnbanRequest struct {
 	ID           *string `queryParam:"serialization=json,name=id"`
 	TargetUserID *string `queryParam:"serialization=json,name=target_user_id"`
 	Type         *string `queryParam:"serialization=json,name=type"`
-}
-
-type UnbanRequest struct {
-	QueryParams UnbanQueryParams
 }
 
 type UnbanResponse struct {

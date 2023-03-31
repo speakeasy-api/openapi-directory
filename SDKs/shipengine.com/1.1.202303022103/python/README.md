@@ -1,0 +1,203 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/shipengine.com/1.1.202303022103/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        api_key="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = shared.ParseAddressRequestBody(
+    address=shared.PartialAddress(
+        address_line1="1999 Bishop Grandin Blvd.",
+        address_line2="Unit 408",
+        address_line3="Building #7",
+        address_residential_indicator="no",
+        city_locality="Winnipeg",
+        company_name="The Home Depot",
+        country_code="CA",
+        email="example@example.com",
+        name="John Doe",
+        phone="+1 204-253-9411 ext. 123",
+        postal_code="78756-3717",
+        state_province="Manitoba",
+    ),
+    text="Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652.",
+)
+    
+res = s.addresses.parse_address(req)
+
+if res.parse_address_response_body is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### addresses
+
+* `parse_address` - Parse an address
+* `validate_address` - Validate An Address
+
+### batches
+
+* `add_to_batch` - Add to a Batch
+* `create_batch` - Create A Batch
+* `delete_batch` - Delete Batch By Id
+* `get_batch_by_external_id` - Get Batch By External ID
+* `get_batch_by_id` - Get Batch By ID
+* `list_batch_errors` - Get Batch Errors
+* `list_batches` - List Batches
+* `process_batch` - Process Batch ID Labels
+* `remove_from_batch` - Remove From Batch
+* `update_batch` - Update Batch By Id
+
+### carrier_accounts
+
+* `connect_carrier` - Connect a carrier account
+* `disconnect_carrier` - Disconnect a carrier
+* `get_carrier_settings` - Get carrier settings
+* `update_carrier_settings` - Update carrier settings
+
+### carriers
+
+* `add_funds_to_carrier` - Add Funds To Carrier
+* `get_carrier_by_id` - Get Carrier By ID
+* `get_carrier_options` - Get Carrier Options
+* `list_carrier_package_types` - List Carrier Package Types
+* `list_carrier_services` - List Carrier Services
+* `list_carriers` - List Carriers
+
+### downloads
+
+* `download_file` - Download File
+
+### insurance
+
+* `add_funds_to_insurance` - Add Funds To Insurance
+* `connect_insurer` - Connect a Shipsurance Account
+* `disconnect_insurer` - Disconnect a Shipsurance Account
+* `get_insurance_balance` - Get Insurance Funds Balance
+
+### labels
+
+* `create_label` - Purchase Label
+* `create_label_from_rate` - Purchase Label with Rate ID
+* `create_label_from_shipment` - Purchase Label with Shipment ID
+* `create_return_label` - Create a return label
+* `get_label_by_external_shipment_id` - Get Label By External Shipment ID
+* `get_label_by_id` - Get Label By ID
+* `get_tracking_log_from_label` - Get Label Tracking Information
+* `list_labels` - List labels
+* `void_label` - Void a Label By ID
+
+### manifests
+
+* `create_manifest` - Create Manifest
+* `get_manifest_by_id` - Get Manifest By Id
+* `get_manifest_request_by_id` - Get Manifest Request By Id
+* `list_manifests` - List Manifests
+
+### package_pickups
+
+* `delete_scheduled_pickup` - Delete a Scheduled Pickup
+* `get_pickup_by_id` - Get Pickup By ID
+* `list_scheduled_pickups` - List Scheduled Pickups
+* `schedule_pickup` - Schedule a Pickup
+
+### package_types
+
+* `create_package_type` - Create Custom Package Type
+* `delete_package_type` - Delete A Custom Package By ID
+* `get_package_type_by_id` - Get Custom Package Type By ID
+* `list_package_types` - List Custom Package Types
+* `update_package_type` - Update Custom Package Type By ID
+
+### rates
+
+* `calculate_rates` - Get Shipping Rates
+* `compare_bulk_rates` - Get Bulk Rates
+* `estimate_rates` - Estimate Rates
+* `get_rate_by_id` - Get Rate By ID
+
+### service_points
+
+* `service_points_get_by_id` - Get Service Point By ID
+* `service_points_list` - List Service Points
+
+### shipments
+
+* `cancel_shipments` - Cancel a Shipment
+* `create_shipments` - Create Shipments
+* `get_shipment_by_external_id` - Get Shipment By External ID
+* `get_shipment_by_id` - Get Shipment By ID
+* `list_shipment_rates` - Get Shipment Rates
+* `list_shipments` - List Shipments
+* `parse_shipment` - Parse shipping info
+* `tag_shipment` - Add Tag to Shipment
+* `untag_shipment` - Remove Tag from Shipment
+* `update_shipment` - Update Shipment By ID
+
+### tags
+
+* `create_tag` - Create a New Tag
+* `delete_tag` - Delete Tag
+* `list_tags` - Get Tags
+* `rename_tag` - Update Tag Name
+
+### tokens
+
+* `tokens_get_ephemeral_token` - Get Ephemeral Token
+
+### tracking
+
+* `get_tracking_log` - Get Tracking Information
+* `start_tracking` - Start Tracking a Package
+* `stop_tracking` - Stop Tracking a Package
+
+### warehouses
+
+* `create_warehouse` - Create Warehouse
+* `delete_warehouse` - Delete Warehouse By ID
+* `get_warehouse_by_id` - Get Warehouse By Id
+* `list_warehouses` - List Warehouses
+* `update_warehouse` - Update Warehouse By Id
+* `update_warehouse_settings` - Update Warehouse Settings
+
+### webhooks
+
+* `create_webhook` - Create a Webhook
+* `delete_webhook` - Delete Webhook By ID
+* `get_webhook_by_id` - Get Webhook By ID
+* `list_webhooks` - List Webhooks
+* `update_webhook` - Update a Webhook
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

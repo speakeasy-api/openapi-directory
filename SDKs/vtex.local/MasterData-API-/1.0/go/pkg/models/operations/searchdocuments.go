@@ -6,12 +6,13 @@ import (
 	"net/http"
 )
 
-type SearchdocumentsPathParams struct {
-	// Identifies the kind of data
-	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
-}
-
-type SearchdocumentsQueryParams struct {
+type SearchdocumentsRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	// Range of documents to show
+	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
 	// Fields that will be returned by document
 	Fields *string `queryParam:"style=form,explode=true,name=_fields"`
 	// String to search
@@ -22,21 +23,8 @@ type SearchdocumentsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=_sort"`
 	// Specification of filters. As seen below
 	Where *string `queryParam:"style=form,explode=true,name=_where"`
-}
-
-type SearchdocumentsHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-	// Range of documents to show
-	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
-}
-
-type SearchdocumentsRequest struct {
-	PathParams  SearchdocumentsPathParams
-	QueryParams SearchdocumentsQueryParams
-	Headers     SearchdocumentsHeaders
+	// Identifies the kind of data
+	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 }
 
 type SearchdocumentsResponse struct {

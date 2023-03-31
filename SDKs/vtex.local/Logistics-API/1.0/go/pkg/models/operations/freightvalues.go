@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type FreightValuesPathParams struct {
-	// Carrier ID
-	CarrierID string `pathParam:"style=simple,explode=false,name=carrierId"`
-	// Postal code.
-	Cep string `pathParam:"style=simple,explode=false,name=cep"`
-}
-
-type FreightValuesHeaders struct {
+type FreightValuesRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type FreightValuesRequest struct {
-	PathParams FreightValuesPathParams
-	Headers    FreightValuesHeaders
+	// Carrier ID
+	CarrierID string `pathParam:"style=simple,explode=false,name=carrierId"`
+	// Postal code.
+	Cep string `pathParam:"style=simple,explode=false,name=cep"`
 }
 
 type FreightValues200ApplicationJSON struct {

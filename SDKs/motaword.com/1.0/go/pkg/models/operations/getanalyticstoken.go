@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnalyticsTokenPathParams struct {
+type GetAnalyticsTokenRequest struct {
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAnalyticsTokenRequest struct {
-	PathParams GetAnalyticsTokenPathParams
 }
 
 type GetAnalyticsTokenResponse struct {

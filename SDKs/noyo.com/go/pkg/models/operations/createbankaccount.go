@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBankAccountPathParams struct {
+type CreateBankAccountRequest struct {
+	BankAccountCreateRequest shared.BankAccountCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type CreateBankAccountRequest struct {
-	PathParams CreateBankAccountPathParams
-	Request    shared.BankAccountCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateBankAccountResponse struct {

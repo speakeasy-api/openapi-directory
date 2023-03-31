@@ -8,23 +8,15 @@ import (
 	"openapi/pkg/types"
 )
 
-type DeleteEmployerRevisionPathParams struct {
-	// The effective date to be applied. E.g 2016-04-06
-	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type DeleteEmployerRevisionHeaders struct {
+type DeleteEmployerRevisionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeleteEmployerRevisionRequest struct {
-	PathParams DeleteEmployerRevisionPathParams
-	Headers    DeleteEmployerRevisionHeaders
+	// The effective date to be applied. E.g 2016-04-06
+	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type DeleteEmployerRevisionResponse struct {

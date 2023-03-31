@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllNamesWithIdsQueryParams struct {
+type GetAllNamesWithIdsRequest struct {
 	// only clients modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllNamesWithIdsRequest struct {
-	QueryParams GetAllNamesWithIdsQueryParams
 }
 
 type GetAllNamesWithIdsResponse struct {

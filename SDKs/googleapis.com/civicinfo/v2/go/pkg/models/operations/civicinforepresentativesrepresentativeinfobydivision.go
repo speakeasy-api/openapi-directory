@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CivicinfoRepresentativesRepresentativeInfoByDivisionPathParams struct {
-	// The Open Civic Data division identifier of the division to look up.
-	OcdID string `pathParam:"style=simple,explode=false,name=ocdId"`
-}
-
 type CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum string
 
 const (
@@ -111,7 +106,7 @@ func (e *CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum) Unmarsha
 	}
 }
 
-type CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams struct {
+type CivicinfoRepresentativesRepresentativeInfoByDivisionRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -128,6 +123,8 @@ type CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams struct {
 	Levels []CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum `queryParam:"style=form,explode=true,name=levels"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The Open Civic Data division identifier of the division to look up.
+	OcdID string `pathParam:"style=simple,explode=false,name=ocdId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -140,11 +137,6 @@ type CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CivicinfoRepresentativesRepresentativeInfoByDivisionRequest struct {
-	PathParams  CivicinfoRepresentativesRepresentativeInfoByDivisionPathParams
-	QueryParams CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams
 }
 
 type CivicinfoRepresentativesRepresentativeInfoByDivisionResponse struct {

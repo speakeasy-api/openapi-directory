@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArchivedPromotionsHeaders struct {
+type GetArchivedPromotionsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetArchivedPromotionsRequest struct {
-	Headers GetArchivedPromotionsHeaders
 }
 
 // GetArchivedPromotions200ApplicationJSON - Response object.

@@ -15,10 +15,6 @@ type PostAssetsReturnsAverageRequestBody struct {
 	Assets []PostAssetsReturnsAverageRequestBodyAssets `json:"assets"`
 }
 
-type PostAssetsReturnsAverageRequest struct {
-	Request PostAssetsReturnsAverageRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsReturnsAverage200ApplicationJSONAssets struct {
 	// The arithmetic average return of the asset
 	AssetAverageReturn float64 `json:"assetAverageReturn"`

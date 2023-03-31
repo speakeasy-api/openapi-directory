@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type AddOrReplaceDocumentsQueryParams struct {
-	PrimaryKey *string `queryParam:"style=form,explode=true,name=primaryKey"`
-}
-
 type AddOrReplaceDocumentsRequestBody struct {
 	Author *string  `json:"author,omitempty"`
 	Genre  *string  `json:"genre,omitempty"`
@@ -19,8 +15,8 @@ type AddOrReplaceDocumentsRequestBody struct {
 }
 
 type AddOrReplaceDocumentsRequest struct {
-	QueryParams AddOrReplaceDocumentsQueryParams
-	Request     []AddOrReplaceDocumentsRequestBody `request:"mediaType=application/json"`
+	RequestBody []AddOrReplaceDocumentsRequestBody `request:"mediaType=application/json"`
+	PrimaryKey  *string                            `queryParam:"style=form,explode=true,name=primaryKey"`
 }
 
 type AddOrReplaceDocumentsResponse struct {

@@ -3,29 +3,17 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateFhirDatastoreRequest(
-    headers=operations.CreateFhirDatastoreHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="est",
-        x_amz_credential="eos",
-        x_amz_date="quas",
-        x_amz_security_token="commodi",
-        x_amz_signature="eum",
-        x_amz_signed_headers="ex",
-        x_amz_target="HealthLake.CreateFHIRDatastore",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateFhirDatastoreRequest(
-        client_token="deleniti",
-        datastore_name="quam",
+)
+
+
+req = operations.CreateFHIRDatastoreRequest(
+    create_fhir_datastore_request=shared.CreateFHIRDatastoreRequest(
+        client_token="corrupti",
+        datastore_name="provident",
         datastore_type_version="R4",
         preload_data_config=shared.PreloadDataConfig(
             preload_data_type="SYNTHEA",
@@ -33,24 +21,32 @@ req = operations.CreateFhirDatastoreRequest(
         sse_configuration=shared.SseConfiguration(
             kms_encryption_config=shared.KmsEncryptionConfig(
                 cmk_type="AWS_OWNED_KMS_KEY",
-                kms_key_id="molestiae",
+                kms_key_id="quibusdam",
             ),
         ),
         tags=[
             shared.Tag(
-                key="magnam",
-                value="voluptatem",
+                key="nulla",
+                value="corrupti",
             ),
             shared.Tag(
-                key="nihil",
-                value="et",
+                key="illum",
+                value="vel",
             ),
             shared.Tag(
-                key="recusandae",
-                value="error",
+                key="error",
+                value="deserunt",
             ),
         ],
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="iure",
+    x_amz_credential="magnam",
+    x_amz_date="debitis",
+    x_amz_security_token="ipsa",
+    x_amz_signature="delectus",
+    x_amz_signed_headers="tempora",
+    x_amz_target="HealthLake.CreateFHIRDatastore",
 )
     
 res = s.create_fhir_datastore(req)

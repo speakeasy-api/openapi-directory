@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarPollUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarPollUpdatePathParams struct {
-	// The poll ID
-	PollID string `pathParam:"style=simple,explode=false,name=pollId"`
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarPollUpdatePollQuestionsTypeEnum - Poll Question & Answer type:<br>`single` - Single choice<br>`mutliple` - Multiple choice
@@ -62,10 +54,12 @@ type WebinarPollUpdatePoll struct {
 }
 
 type WebinarPollUpdateRequest struct {
-	PathParams WebinarPollUpdatePathParams
 	// Webinar Poll
-	Request  WebinarPollUpdatePoll `request:"mediaType=application/json"`
-	Security WebinarPollUpdateSecurity
+	RequestBody WebinarPollUpdatePoll `request:"mediaType=application/json"`
+	// The poll ID
+	PollID string `pathParam:"style=simple,explode=false,name=pollId"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type WebinarPollUpdateResponse struct {

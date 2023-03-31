@@ -4,18 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateAPIRequest(
-    query_params=operations.CreateAPIQueryParams(
-        workspace="est",
-    ),
-    request=operations.CreateAPIRequestBody(
+    request_body=operations.CreateAPIRequestBody(
         api=operations.CreateAPIRequestBodyAPI(
-            description="et",
-            name="dolores",
-            summary="modi",
+            description="This is description.",
+            name="Sync Service API",
+            summary="This is supposed to be a short summary.",
         ),
     ),
+    workspace="{{workspaceId}}",
 )
     
 res = s.api.create_api(req)

@@ -42,7 +42,7 @@ func (s *countries) GetCountriesJSON(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *countries) GetCountriesJSON(ctx context.Context, request operations.Get
 // GetCountriesCountryCodeJSON - Retrieve a single Country information.
 func (s *countries) GetCountriesCountryCodeJSON(ctx context.Context, request operations.GetCountriesCountryCodeJSONRequest) (*operations.GetCountriesCountryCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -141,14 +141,14 @@ func (s *countries) GetCountriesCountryCodeJSON(ctx context.Context, request ope
 // GetCountriesCountryCodeRegionsJSON - Retrieve all Regions from a single Country.
 func (s *countries) GetCountriesCountryCodeRegionsJSON(ctx context.Context, request operations.GetCountriesCountryCodeRegionsJSONRequest) (*operations.GetCountriesCountryCodeRegionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,14 +199,14 @@ func (s *countries) GetCountriesCountryCodeRegionsJSON(ctx context.Context, requ
 // GetCountriesCountryCodeRegionsRegionCodeJSON - Retrieve a single Region information object.
 func (s *countries) GetCountriesCountryCodeRegionsRegionCodeJSON(ctx context.Context, request operations.GetCountriesCountryCodeRegionsRegionCodeJSONRequest) (*operations.GetCountriesCountryCodeRegionsRegionCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions/{region_code}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions/{region_code}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -38,7 +38,7 @@ func newAssistant(defaultClient, securityClient HTTPClient, serverURL, language,
 // This controls Accessibility sounds. `hotword_enabled` is for 'Play start sound' and `endpoint_enabled` is for 'Play end sound'.
 // Sending an empty-body POST request returns the current values.
 // Either of the fields or both can be sent and new values will be saved.
-func (s *assistant) Accessibility(ctx context.Context, request operations.AccessibilityRequest) (*operations.AccessibilityResponse, error) {
+func (s *assistant) Accessibility(ctx context.Context, request shared.AccessibilityRequest) (*operations.AccessibilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assistant/a11y_mode"
 
@@ -97,7 +97,7 @@ func (s *assistant) Accessibility(ctx context.Context, request operations.Access
 //
 // Volume is a float number in [0, 1] where 0 is minimum and 1 is maximum.
 // Sending an empty body gets the volume. Sending `volume` sets the volume.
-func (s *assistant) AlarmVolume(ctx context.Context, request operations.AlarmVolumeRequest) (*operations.AlarmVolumeResponse, error) {
+func (s *assistant) AlarmVolume(ctx context.Context, request shared.AlarmVolumeRequest) (*operations.AlarmVolumeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assistant/alarms/volume"
 
@@ -154,7 +154,7 @@ func (s *assistant) AlarmVolume(ctx context.Context, request operations.AlarmVol
 // This deletes alarms and timers by their id.
 //
 // `ids` is a list of ids to be deleted. Sending invalid id still returns a 200 OK. The `/` in the ids have to be escaped like `\/`.
-func (s *assistant) DeleteAlarmsandTimers(ctx context.Context, request operations.DeleteAlarmsandTimersRequest) (*operations.DeleteAlarmsandTimersResponse, error) {
+func (s *assistant) DeleteAlarmsandTimers(ctx context.Context, request shared.DeleteAlarmsandTimersRequest) (*operations.DeleteAlarmsandTimersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assistant/alarms/delete"
 
@@ -218,7 +218,7 @@ func (s *assistant) DoNotDisturb(ctx context.Context, request operations.DoNotDi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -316,7 +316,7 @@ func (s *assistant) GetAlarmsandTimers(ctx context.Context) (*operations.GetAlar
 //
 // Default values are 0 for both.
 // While the slider in the Home app only ranges from -6 to +6, they can be set to any integer like 50 or -100. These changes persist.
-func (s *assistant) SetEqualizerValues(ctx context.Context, request operations.SetEqualizerValuesRequest) (*operations.SetEqualizerValuesResponse, error) {
+func (s *assistant) SetEqualizerValues(ctx context.Context, request shared.SetEqualizerValuesRequest) (*operations.SetEqualizerValuesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user_eq/set_equalizer"
 

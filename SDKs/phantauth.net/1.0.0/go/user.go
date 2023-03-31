@@ -51,7 +51,7 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // The members of a team are users randomly generated from the team name.
 func (s *user) GetUserUsername(ctx context.Context, request operations.GetUserUsernameRequest) (*operations.GetUserUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,14 +99,14 @@ func (s *user) GetUserUsername(ctx context.Context, request operations.GetUserUs
 // Generating an access token, for example, will let you avoid authentication, and immediately call an operation requiring the access token.
 func (s *user) GetUserUsernameTokenKind(ctx context.Context, request operations.GetUserUsernameTokenKindRequest) (*operations.GetUserUsernameTokenKindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{username}/token/{kind}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{username}/token/{kind}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -141,7 +141,7 @@ func (s *user) GetUserUsernameTokenKind(ctx context.Context, request operations.
 // By the use of a selfie token, you can use your own user objects during the authentication process.
 //
 // Its use, however, is limited by its relatively large size (more than 100 characters), which exceeds the maximum size of the user name in several systems.
-func (s *user) PostUser(ctx context.Context, request operations.PostUserRequest) (*operations.PostUserResponse, error) {
+func (s *user) PostUser(ctx context.Context, request operations.PostUserRequestBody) (*operations.PostUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 

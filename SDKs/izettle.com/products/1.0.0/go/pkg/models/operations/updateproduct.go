@@ -8,23 +8,14 @@ import (
 )
 
 type UpdateProductSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type UpdateProductPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-	ProductUUID      string `pathParam:"style=simple,explode=false,name=productUuid"`
-}
-
-type UpdateProductHeaders struct {
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateProductRequest struct {
-	PathParams UpdateProductPathParams
-	Headers    UpdateProductHeaders
-	Request    shared.FullProductUpdateRequest `request:"mediaType=application/json"`
-	Security   UpdateProductSecurity
+	FullProductUpdateRequest shared.FullProductUpdateRequest `request:"mediaType=application/json"`
+	IfMatch                  *string                         `header:"style=simple,explode=false,name=If-Match"`
+	OrganizationUUID         string                          `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ProductUUID              string                          `pathParam:"style=simple,explode=false,name=productUuid"`
 }
 
 type UpdateProductResponse struct {

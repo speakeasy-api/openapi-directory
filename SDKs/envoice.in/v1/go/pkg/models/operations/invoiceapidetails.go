@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvoiceAPIDetailsQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type InvoiceAPIDetailsHeaders struct {
+type InvoiceAPIDetailsRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type InvoiceAPIDetailsRequest struct {
-	QueryParams InvoiceAPIDetailsQueryParams
-	Headers     InvoiceAPIDetailsHeaders
 }
 
 type InvoiceAPIDetailsResponse struct {

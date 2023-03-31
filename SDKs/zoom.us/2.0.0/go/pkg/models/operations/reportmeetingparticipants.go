@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ReportMeetingParticipantsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ReportMeetingParticipantsPathParams struct {
-	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportMeetingParticipantsIncludeFieldsEnum - Provide `registrant_id` as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingregistrants).<br>
@@ -42,21 +34,19 @@ func (e *ReportMeetingParticipantsIncludeFieldsEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ReportMeetingParticipantsQueryParams struct {
+type ReportMeetingParticipantsRequest struct {
 	// Provide `registrant_id` as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingregistrants).<br>
 	//
 	//
 	IncludeFields *ReportMeetingParticipantsIncludeFieldsEnum `queryParam:"style=form,explode=true,name=include_fields"`
+	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ReportMeetingParticipantsRequest struct {
-	PathParams  ReportMeetingParticipantsPathParams
-	QueryParams ReportMeetingParticipantsQueryParams
-	Security    ReportMeetingParticipantsSecurity
 }
 
 type ReportMeetingParticipants200ApplicationXMLParticipants struct {

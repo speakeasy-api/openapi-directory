@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolProxyGetConfigPathParams struct {
+type ProtocolProxyGetConfigRequest struct {
 	// Agent to show the PROXY configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolProxyGetConfigRequest struct {
-	PathParams ProtocolProxyGetConfigPathParams
 }
 
 type ProtocolProxyGetConfigResponse struct {

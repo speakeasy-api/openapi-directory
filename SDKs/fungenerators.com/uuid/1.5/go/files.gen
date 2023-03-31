@@ -16,5 +16,4 @@ pkg/utils/utils.go
 pkg/models/operations/getuuid.go
 pkg/models/operations/getuuidversionversion.go
 pkg/models/operations/postuuid.go
-pkg/models/shared/security.go
 USAGE.md

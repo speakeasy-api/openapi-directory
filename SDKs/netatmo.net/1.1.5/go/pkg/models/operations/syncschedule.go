@@ -8,22 +8,17 @@ import (
 )
 
 type SyncscheduleSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SyncscheduleQueryParams struct {
+type SyncscheduleRequest struct {
+	// The thermostat program (zones, timetable and name)
+	RequestBody []byte `request:"mediaType=text/plain"`
 	// The relay id
 	DeviceID string `queryParam:"style=form,explode=true,name=device_id"`
 	// The thermostat id
 	ModuleID string `queryParam:"style=form,explode=true,name=module_id"`
-}
-
-type SyncscheduleRequest struct {
-	QueryParams SyncscheduleQueryParams
-	// The thermostat program (zones, timetable and name)
-	Request  []byte `request:"mediaType=text/plain"`
-	Security SyncscheduleSecurity
 }
 
 type SyncscheduleResponse struct {

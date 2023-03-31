@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchSpacesIDLegalPathParams struct {
+type PatchSpacesIDLegalRequest struct {
+	// Legal information to modify
+	Legal shared.Legal `request:"mediaType=application/json"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchSpacesIDLegalRequest struct {
-	PathParams PatchSpacesIDLegalPathParams
-	// Legal information to modify
-	Request shared.Legal `request:"mediaType=application/json"`
 }
 
 type PatchSpacesIDLegalResponse struct {

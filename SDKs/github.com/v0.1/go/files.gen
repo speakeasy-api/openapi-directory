@@ -44,7 +44,6 @@ pkg/models/operations/postv01conferenceundeaf.go
 pkg/models/operations/postv01conferenceunmute.go
 pkg/models/shared/bulkcallresponse.go
 pkg/models/shared/bulkcallparameters.go
-pkg/models/shared/security.go
 pkg/models/shared/callresponse.go
 pkg/models/shared/callparameters.go
 pkg/models/shared/cancelscheduledhangupresponse.go

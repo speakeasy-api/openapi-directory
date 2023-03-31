@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETUniProtMappingUsingGETPathParams struct {
+type GETUniProtMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETUniProtMappingUsingGETRequest struct {
-	PathParams GETUniProtMappingUsingGETPathParams
 }
 
 type GETUniProtMappingUsingGETResponse struct {

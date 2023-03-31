@@ -32,11 +32,11 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // PlayintegrityDecodeIntegrityToken - Decodes the integrity token and returns the token payload.
-func (s *v1) PlayintegrityDecodeIntegrityToken(ctx context.Context, request operations.PlayintegrityDecodeIntegrityTokenRequest) (*operations.PlayintegrityDecodeIntegrityTokenResponse, error) {
+func (s *v1) PlayintegrityDecodeIntegrityToken(ctx context.Context, request operations.PlayintegrityDecodeIntegrityTokenRequest, security operations.PlayintegrityDecodeIntegrityTokenSecurity) (*operations.PlayintegrityDecodeIntegrityTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{packageName}:decodeIntegrityToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{packageName}:decodeIntegrityToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DecodeIntegrityTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *v1) PlayintegrityDecodeIntegrityToken(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

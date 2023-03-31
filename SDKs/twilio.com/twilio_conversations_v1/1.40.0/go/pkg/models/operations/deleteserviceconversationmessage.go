@@ -12,28 +12,19 @@ var DeleteServiceConversationMessageServerList = []string{
 }
 
 type DeleteServiceConversationMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteServiceConversationMessagePathParams struct {
+type DeleteServiceConversationMessageRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteServiceConversationMessageHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.ServiceConversationMessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteServiceConversationMessageRequest struct {
-	PathParams DeleteServiceConversationMessagePathParams
-	Headers    DeleteServiceConversationMessageHeaders
-	Security   DeleteServiceConversationMessageSecurity
-	ServerURL  *string
 }
 
 type DeleteServiceConversationMessageResponse struct {

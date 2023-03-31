@@ -3,33 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateProjectRequest(
-    query_params=operations.CreateProjectQueryParams(
-        name="magnam",
-        region="similique",
-        snapshot_id="fuga",
+    request_body=operations.CreateProjectRequestBody(
+        contents="corrupti",
     ),
-    headers=operations.CreateProjectHeaders(
-        x_amz_algorithm="voluptatem",
-        x_amz_content_sha256="officia",
-        x_amz_credential="iure",
-        x_amz_date="at",
-        x_amz_security_token="consequatur",
-        x_amz_signature="aut",
-        x_amz_signed_headers="nobis",
-    ),
-    request=operations.CreateProjectRequestBody(
-        contents="vero",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    name="vel",
+    region="error",
+    snapshot_id="deserunt",
 )
     
 res = s.create_project(req)

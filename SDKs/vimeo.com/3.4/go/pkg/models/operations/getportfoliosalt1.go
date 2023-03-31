@@ -57,7 +57,7 @@ func (e *GetPortfoliosAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPortfoliosAlt1QueryParams struct {
+type GetPortfoliosAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetPortfoliosAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -68,10 +68,6 @@ type GetPortfoliosAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetPortfoliosAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPortfoliosAlt1Request struct {
-	QueryParams GetPortfoliosAlt1QueryParams
 }
 
 type GetPortfoliosAlt1Response struct {

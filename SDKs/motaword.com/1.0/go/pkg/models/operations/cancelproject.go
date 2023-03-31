@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelProjectPathParams struct {
+type CancelProjectRequest struct {
+	CancelProjectRequest *shared.CancelProjectRequest `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CancelProjectRequest struct {
-	PathParams CancelProjectPathParams
-	Request    *shared.CancelProjectRequest `request:"mediaType=application/json"`
 }
 
 type CancelProjectResponse struct {

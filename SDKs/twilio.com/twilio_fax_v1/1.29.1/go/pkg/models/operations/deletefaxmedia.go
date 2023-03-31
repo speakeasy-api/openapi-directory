@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteFaxMediaServerList = []string{
@@ -12,20 +11,15 @@ var DeleteFaxMediaServerList = []string{
 }
 
 type DeleteFaxMediaSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteFaxMediaPathParams struct {
+type DeleteFaxMediaRequest struct {
 	// The SID of the fax with the FaxMedia resource to delete.
 	FaxSid string `pathParam:"style=simple,explode=false,name=FaxSid"`
 	// The Twilio-provided string that uniquely identifies the FaxMedia resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteFaxMediaRequest struct {
-	PathParams DeleteFaxMediaPathParams
-	Security   DeleteFaxMediaSecurity
-	ServerURL  *string
 }
 
 type DeleteFaxMediaResponse struct {

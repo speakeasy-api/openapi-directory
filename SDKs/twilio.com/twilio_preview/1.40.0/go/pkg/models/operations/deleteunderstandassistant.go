@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUnderstandAssistantServerList = []string{
@@ -12,18 +11,13 @@ var DeleteUnderstandAssistantServerList = []string{
 }
 
 type DeleteUnderstandAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteUnderstandAssistantPathParams struct {
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteUnderstandAssistantRequest struct {
-	PathParams DeleteUnderstandAssistantPathParams
-	Security   DeleteUnderstandAssistantSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteUnderstandAssistantResponse struct {

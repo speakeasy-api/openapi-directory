@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegionPathParams struct {
+type GetRegionRequest struct {
 	// The country code.
 	Country string `pathParam:"style=simple,explode=false,name=country"`
-}
-
-type GetRegionRequest struct {
-	PathParams GetRegionPathParams
 }
 
 type GetRegionResponse struct {

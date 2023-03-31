@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageVariationRequest struct {
-	Request shared.CreateImageVariationRequest `request:"mediaType=multipart/form-data"`
-}
-
 type CreateImageVariationResponse struct {
 	ContentType string
 	// OK

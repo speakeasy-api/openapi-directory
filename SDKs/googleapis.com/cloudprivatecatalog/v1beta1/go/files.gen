@@ -19,7 +19,6 @@ pkg/models/shared/googlecloudprivatecatalogv1beta1searchcatalogsresponse.go
 pkg/models/shared/googlecloudprivatecatalogv1beta1catalog.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudprivatecatalogv1beta1searchproductsresponse.go
 pkg/models/shared/googlecloudprivatecatalogv1beta1product.go
 pkg/models/shared/googlecloudprivatecatalogv1beta1searchversionsresponse.go

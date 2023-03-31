@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypeEsriFeatureserverQueryParams struct {
+type SearchTypeEsriFeatureserverRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchTypeEsriFeatureserverQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypeEsriFeatureserverRequest struct {
-	QueryParams SearchTypeEsriFeatureserverQueryParams
 }
 
 type SearchTypeEsriFeatureserverResponse struct {

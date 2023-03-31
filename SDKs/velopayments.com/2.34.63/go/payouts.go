@@ -46,7 +46,7 @@ func newPayouts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Create quote for a payout
 func (s *payouts) CreateQuoteForPayoutV3(ctx context.Context, request operations.CreateQuoteForPayoutV3Request) (*operations.CreateQuoteForPayoutV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/quote", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/quote", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -111,7 +111,7 @@ func (s *payouts) CreateQuoteForPayoutV3(ctx context.Context, request operations
 // Remove the schedule for a scheduled payout
 func (s *payouts) DeschedulePayout(ctx context.Context, request operations.DeschedulePayoutRequest) (*operations.DeschedulePayoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/schedule", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/schedule", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -187,14 +187,14 @@ func (s *payouts) DeschedulePayout(ctx context.Context, request operations.Desch
 // Retrieve payments for a payout
 func (s *payouts) GetPaymentsForPayoutV3(ctx context.Context, request operations.GetPaymentsForPayoutV3Request) (*operations.GetPaymentsForPayoutV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -246,7 +246,7 @@ func (s *payouts) GetPaymentsForPayoutV3(ctx context.Context, request operations
 // Get payout summary - returns the current state of the payout.
 func (s *payouts) GetPayoutSummaryV3(ctx context.Context, request operations.GetPayoutSummaryV3Request) (*operations.GetPayoutSummaryV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,9 +321,9 @@ func (s *payouts) GetPayoutSummaryV3(ctx context.Context, request operations.Get
 // Instruct a payout to be made for the specified payoutId.
 func (s *payouts) InstructPayoutV3(ctx context.Context, request operations.InstructPayoutV3Request) (*operations.InstructPayoutV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstructPayoutRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -415,9 +415,9 @@ func (s *payouts) InstructPayoutV3(ctx context.Context, request operations.Instr
 // or update existing payout schedule if the payout has been scheduled before.</p>
 func (s *payouts) ScheduleForPayout(ctx context.Context, request operations.ScheduleForPayoutRequest) (*operations.ScheduleForPayoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/schedule", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}/schedule", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SchedulePayoutRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,7 +509,7 @@ func (s *payouts) ScheduleForPayout(ctx context.Context, request operations.Sche
 // <p>Basic validation of the payout is performed before returning but more comprehensive validation is done asynchronously</p>
 // <p>The results can be obtained by issuing a HTTP GET to the URL returned in the location header</p>
 // <p>**NOTE:** amount values in payments must be in 'minor units' format. E.g. cents for USD, pence for GBP etc with no decimal places</p>
-func (s *payouts) SubmitPayoutV3JSON(ctx context.Context, request operations.SubmitPayoutV3JSONRequest) (*operations.SubmitPayoutV3JSONResponse, error) {
+func (s *payouts) SubmitPayoutV3JSON(ctx context.Context, request shared.CreatePayoutRequestV3) (*operations.SubmitPayoutV3JSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/payouts"
 
@@ -590,7 +590,7 @@ func (s *payouts) SubmitPayoutV3JSON(ctx context.Context, request operations.Sub
 // <p>Basic validation of the payout is performed before returning but more comprehensive validation is done asynchronously</p>
 // <p>The results can be obtained by issuing a HTTP GET to the URL returned in the location header</p>
 // <p>**NOTE:** amount values in payments must be in 'minor units' format. E.g. cents for USD, pence for GBP etc with no decimal places</p>
-func (s *payouts) SubmitPayoutV3Multipart(ctx context.Context, request operations.SubmitPayoutV3MultipartRequest) (*operations.SubmitPayoutV3MultipartResponse, error) {
+func (s *payouts) SubmitPayoutV3Multipart(ctx context.Context, request operations.SubmitPayoutV3MultipartFormData) (*operations.SubmitPayoutV3MultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/payouts"
 
@@ -677,9 +677,9 @@ func (s *payouts) SubmitPayoutV3Multipart(ctx context.Context, request operation
 // </ul>
 func (s *payouts) WithdrawPayment(ctx context.Context, request operations.WithdrawPaymentRequest) (*operations.WithdrawPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/withdraw", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/withdraw", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WithdrawPaymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -763,7 +763,7 @@ func (s *payouts) WithdrawPayment(ctx context.Context, request operations.Withdr
 // Withdraw Payout will remove the payout details from the rails but the payout will still be accessible in payout service in WITHDRAWN status.
 func (s *payouts) WithdrawPayoutV3(ctx context.Context, request operations.WithdrawPayoutV3Request) (*operations.WithdrawPayoutV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payouts/{payoutId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

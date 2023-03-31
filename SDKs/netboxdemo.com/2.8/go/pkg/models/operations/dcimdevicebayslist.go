@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceBaysListQueryParams struct {
+type DcimDeviceBaysListRequest struct {
 	Description     *string `queryParam:"style=form,explode=true,name=description"`
 	DescriptionIc   *string `queryParam:"style=form,explode=true,name=description__ic"`
 	DescriptionIe   *string `queryParam:"style=form,explode=true,name=description__ie"`
@@ -53,10 +53,6 @@ type DcimDeviceBaysListQueryParams struct {
 	SiteIDN   *string `queryParam:"style=form,explode=true,name=site_id__n"`
 	Tag       *string `queryParam:"style=form,explode=true,name=tag"`
 	TagN      *string `queryParam:"style=form,explode=true,name=tag__n"`
-}
-
-type DcimDeviceBaysListRequest struct {
-	QueryParams DcimDeviceBaysListQueryParams
 }
 
 type DcimDeviceBaysList200ApplicationJSON struct {

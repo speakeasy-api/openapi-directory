@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionPackageRevisionListQueryParams struct {
+type GetActionPackageRevisionListRequest struct {
 	// The id or name of the dataset
 	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetActionPackageRevisionListRequest struct {
-	QueryParams GetActionPackageRevisionListQueryParams
 }
 
 type GetActionPackageRevisionListResponse struct {

@@ -100,16 +100,16 @@ func New(opts ...SDKOption) *SDK {
 
 // CancelReport - Cancel the execution of a report
 // Cancel the execution of a pending or processing report.
-func (s *SDK) CancelReport(ctx context.Context, request operations.CancelReportRequest) (*operations.CancelReportResponse, error) {
+func (s *SDK) CancelReport(ctx context.Context, request operations.CancelReportRequest, security operations.CancelReportSecurity) (*operations.CancelReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/reports/{report_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/reports/{report_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *SDK) CancelReport(ctx context.Context, request operations.CancelReportR
 
 // CreateAsyncReport - Create an asynchronous report
 // Request a report on your account activity
-func (s *SDK) CreateAsyncReport(ctx context.Context, request operations.CreateAsyncReportRequest) (*operations.CreateAsyncReportResponse, error) {
+func (s *SDK) CreateAsyncReport(ctx context.Context, request operations.CreateAsyncReportRequestBody, security operations.CreateAsyncReportSecurity) (*operations.CreateAsyncReportResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/reports"
 
@@ -191,7 +191,7 @@ func (s *SDK) CreateAsyncReport(ctx context.Context, request operations.CreateAs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,16 +267,16 @@ func (s *SDK) CreateAsyncReport(ctx context.Context, request operations.CreateAs
 
 // DownloadReport - Get report data
 // Download a zipped archive of the rendered report. The file is available for download for 72 hours.<br> The zip file will be named `<PRODUCT>_<REPORT_ID>.zip`<br> The csv file in the zip archive will be named as `report_<PRODUCT>_<ACCOUNT_ID>_<DATE>.csv` the date will be formatted as `yyyyMMdd`.
-func (s *SDK) DownloadReport(ctx context.Context, request operations.DownloadReportRequest) (*operations.DownloadReportResponse, error) {
+func (s *SDK) DownloadReport(ctx context.Context, request operations.DownloadReportRequest, security operations.DownloadReportSecurity) (*operations.DownloadReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/media/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/media/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,7 +332,7 @@ func (s *SDK) DownloadReport(ctx context.Context, request operations.DownloadRep
 
 // GetRecords - Load records synchronously
 // Fetch usage data synchronously
-func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsRequest) (*operations.GetRecordsResponse, error) {
+func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsRequest, security operations.GetRecordsSecurity) (*operations.GetRecordsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/reports/records"
 
@@ -341,11 +341,11 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -401,16 +401,16 @@ func (s *SDK) GetRecords(ctx context.Context, request operations.GetRecordsReque
 
 // GetReport - Get status of report
 // Retrieve status and metadata about a requested report.
-func (s *SDK) GetReport(ctx context.Context, request operations.GetReportRequest) (*operations.GetReportResponse, error) {
+func (s *SDK) GetReport(ctx context.Context, request operations.GetReportRequest, security operations.GetReportSecurity) (*operations.GetReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/reports/{report_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/reports/{report_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -466,7 +466,7 @@ func (s *SDK) GetReport(ctx context.Context, request operations.GetReportRequest
 
 // ListReports - List reports
 // List reports created by the specified account based on filtered provided.
-func (s *SDK) ListReports(ctx context.Context, request operations.ListReportsRequest) (*operations.ListReportsResponse, error) {
+func (s *SDK) ListReports(ctx context.Context, request operations.ListReportsRequest, security operations.ListReportsSecurity) (*operations.ListReportsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/reports"
 
@@ -475,11 +475,11 @@ func (s *SDK) ListReports(ctx context.Context, request operations.ListReportsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

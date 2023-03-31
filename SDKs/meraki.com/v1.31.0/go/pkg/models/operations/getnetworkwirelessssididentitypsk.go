@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidIdentityPskPathParams struct {
+type GetNetworkWirelessSsidIdentityPskRequest struct {
 	IdentityPskID string `pathParam:"style=simple,explode=false,name=identityPskId"`
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number        string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidIdentityPskRequest struct {
-	PathParams GetNetworkWirelessSsidIdentityPskPathParams
 }
 
 // GetNetworkWirelessSsidIdentityPsk200ApplicationJSON - Successful operation

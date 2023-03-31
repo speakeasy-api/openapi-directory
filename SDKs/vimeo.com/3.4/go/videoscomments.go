@@ -32,11 +32,11 @@ func newVideosComments(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // CreateComment - Add a comment to a video
-func (s *videosComments) CreateComment(ctx context.Context, request operations.CreateCommentRequest) (*operations.CreateCommentResponse, error) {
+func (s *videosComments) CreateComment(ctx context.Context, request operations.CreateCommentRequest, security operations.CreateCommentSecurity) (*operations.CreateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *videosComments) CreateComment(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,11 +100,11 @@ func (s *videosComments) CreateComment(ctx context.Context, request operations.C
 }
 
 // CreateCommentAlt1 - Add a comment to a video
-func (s *videosComments) CreateCommentAlt1(ctx context.Context, request operations.CreateCommentAlt1Request) (*operations.CreateCommentAlt1Response, error) {
+func (s *videosComments) CreateCommentAlt1(ctx context.Context, request operations.CreateCommentAlt1Request, security operations.CreateCommentAlt1Security) (*operations.CreateCommentAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -119,7 +119,7 @@ func (s *videosComments) CreateCommentAlt1(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,11 +168,11 @@ func (s *videosComments) CreateCommentAlt1(ctx context.Context, request operatio
 }
 
 // CreateCommentReply - Add a reply to a video comment
-func (s *videosComments) CreateCommentReply(ctx context.Context, request operations.CreateCommentReplyRequest) (*operations.CreateCommentReplyResponse, error) {
+func (s *videosComments) CreateCommentReply(ctx context.Context, request operations.CreateCommentReplyRequest, security operations.CreateCommentReplySecurity) (*operations.CreateCommentReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}/replies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}/replies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -187,7 +187,7 @@ func (s *videosComments) CreateCommentReply(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -234,16 +234,16 @@ func (s *videosComments) CreateCommentReply(ctx context.Context, request operati
 }
 
 // DeleteComment - Delete a video comment
-func (s *videosComments) DeleteComment(ctx context.Context, request operations.DeleteCommentRequest) (*operations.DeleteCommentResponse, error) {
+func (s *videosComments) DeleteComment(ctx context.Context, request operations.DeleteCommentRequest, security operations.DeleteCommentSecurity) (*operations.DeleteCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,11 +289,11 @@ func (s *videosComments) DeleteComment(ctx context.Context, request operations.D
 }
 
 // EditComment - Edit a video comment
-func (s *videosComments) EditComment(ctx context.Context, request operations.EditCommentRequest) (*operations.EditCommentResponse, error) {
+func (s *videosComments) EditComment(ctx context.Context, request operations.EditCommentRequest, security operations.EditCommentSecurity) (*operations.EditCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -308,7 +308,7 @@ func (s *videosComments) EditComment(ctx context.Context, request operations.Edi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,7 +357,7 @@ func (s *videosComments) EditComment(ctx context.Context, request operations.Edi
 // GetComment - Get a specific video comment
 func (s *videosComments) GetComment(ctx context.Context, request operations.GetCommentRequest) (*operations.GetCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -411,14 +411,14 @@ func (s *videosComments) GetComment(ctx context.Context, request operations.GetC
 // GetCommentReplies - Get all the replies to a video comment
 func (s *videosComments) GetCommentReplies(ctx context.Context, request operations.GetCommentRepliesRequest) (*operations.GetCommentRepliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}/replies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments/{comment_id}/replies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -469,14 +469,14 @@ func (s *videosComments) GetCommentReplies(ctx context.Context, request operatio
 // GetComments - Get all the comments on a video
 func (s *videosComments) GetComments(ctx context.Context, request operations.GetCommentsRequest) (*operations.GetCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -517,14 +517,14 @@ func (s *videosComments) GetComments(ctx context.Context, request operations.Get
 // GetCommentsAlt1 - Get all the comments on a video
 func (s *videosComments) GetCommentsAlt1(ctx context.Context, request operations.GetCommentsAlt1Request) (*operations.GetCommentsAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

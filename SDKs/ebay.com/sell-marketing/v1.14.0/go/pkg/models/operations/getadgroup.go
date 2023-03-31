@@ -8,19 +8,14 @@ import (
 )
 
 type GetAdGroupSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAdGroupPathParams struct {
+type GetAdGroupRequest struct {
 	// The ID of the ad group that shall be retrieved.
 	AdGroupID string `pathParam:"style=simple,explode=false,name=ad_group_id"`
 	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
-}
-
-type GetAdGroupRequest struct {
-	PathParams GetAdGroupPathParams
-	Security   GetAdGroupSecurity
 }
 
 type GetAdGroupResponse struct {

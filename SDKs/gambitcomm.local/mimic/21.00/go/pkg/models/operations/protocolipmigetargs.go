@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolIpmiGetArgsPathParams struct {
+type ProtocolIpmiGetArgsRequest struct {
 	// Agent to show the IPMI argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolIpmiGetArgsRequest struct {
-	PathParams ProtocolIpmiGetArgsPathParams
 }
 
 type ProtocolIpmiGetArgsResponse struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type FindSimilarVideosSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type FindSimilarVideosPathParams struct {
-	// The ID of a video for which similar videos should be returned
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // FindSimilarVideosViewEnum - Amount of detail to render in the response
@@ -43,7 +38,9 @@ func (e *FindSimilarVideosViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FindSimilarVideosQueryParams struct {
+type FindSimilarVideosRequest struct {
+	// The ID of a video for which similar videos should be returned
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language for the keywords and categories in the response
 	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Page number
@@ -52,12 +49,6 @@ type FindSimilarVideosQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Amount of detail to render in the response
 	View *FindSimilarVideosViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type FindSimilarVideosRequest struct {
-	PathParams  FindSimilarVideosPathParams
-	QueryParams FindSimilarVideosQueryParams
-	Security    FindSimilarVideosSecurity
 }
 
 type FindSimilarVideosResponse struct {

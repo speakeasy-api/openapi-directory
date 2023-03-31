@@ -39,7 +39,7 @@ func (s *sla) CalculateSLA(ctx context.Context, request operations.CalculateSLAR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/logistics/pvt/shipping/calculate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *sla) CalculateSLA(ctx context.Context, request operations.CalculateSLAR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

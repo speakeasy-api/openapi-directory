@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsGetCommentPathParams struct {
+type GistsGetCommentRequest struct {
 	// comment_id parameter
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// gist_id parameter
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsGetCommentRequest struct {
-	PathParams GistsGetCommentPathParams
 }
 
 type GistsGetComment403ApplicationJSONBlock struct {

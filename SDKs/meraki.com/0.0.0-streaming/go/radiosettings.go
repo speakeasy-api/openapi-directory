@@ -34,9 +34,9 @@ func newRadioSettings(defaultClient, securityClient HTTPClient, serverURL, langu
 // Creates new RF profile for this network
 func (s *radioSettings) CreateNetworkWirelessRfProfile(ctx context.Context, request operations.CreateNetworkWirelessRfProfileRequest) (*operations.CreateNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *radioSettings) CreateNetworkWirelessRfProfile(ctx context.Context, requ
 // Delete a RF Profile
 func (s *radioSettings) DeleteNetworkWirelessRfProfile(ctx context.Context, request operations.DeleteNetworkWirelessRfProfileRequest) (*operations.DeleteNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *radioSettings) DeleteNetworkWirelessRfProfile(ctx context.Context, requ
 // Return a RF profile
 func (s *radioSettings) GetNetworkWirelessRfProfile(ctx context.Context, request operations.GetNetworkWirelessRfProfileRequest) (*operations.GetNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *radioSettings) GetNetworkWirelessRfProfile(ctx context.Context, request
 // List the non-basic RF profiles for this network
 func (s *radioSettings) GetNetworkWirelessRfProfiles(ctx context.Context, request operations.GetNetworkWirelessRfProfilesRequest) (*operations.GetNetworkWirelessRfProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -219,9 +219,9 @@ func (s *radioSettings) GetNetworkWirelessRfProfiles(ctx context.Context, reques
 // Updates specified RF profile for this network
 func (s *radioSettings) UpdateNetworkWirelessRfProfile(ctx context.Context, request operations.UpdateNetworkWirelessRfProfileRequest) (*operations.UpdateNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

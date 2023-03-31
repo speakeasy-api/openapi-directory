@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAWireTransferRequest struct {
-	Request shared.CreateAWireTransferParameters `request:"mediaType=application/json"`
-}
-
 type CreateAWireTransferDefaultApplicationJSON13StatusEnum string
 
 const (

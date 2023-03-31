@@ -44,7 +44,7 @@ func newPortfolioConstruction(defaultClient, securityClient HTTPClient, serverUR
 //
 // References
 // * [Steiner, Andreas, Accuracy and Rounding in Portfolio Construction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2261131)
-func (s *portfolioConstruction) PostPortfolioConstructionInvestable(ctx context.Context, request operations.PostPortfolioConstructionInvestableRequest) (*operations.PostPortfolioConstructionInvestableResponse, error) {
+func (s *portfolioConstruction) PostPortfolioConstructionInvestable(ctx context.Context, request operations.PostPortfolioConstructionInvestableRequestBody) (*operations.PostPortfolioConstructionInvestableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/construction/investable"
 
@@ -105,7 +105,7 @@ func (s *portfolioConstruction) PostPortfolioConstructionInvestable(ctx context.
 //
 // References
 // * Konstantinos Benidis, Yiyong Feng, Daniel P. Palomar, Optimization Methods for Financial Index Tracking: From Theory to Practice, now publishers Inc (7 juin 2018)
-func (s *portfolioConstruction) PostPortfolioConstructionMimicking(ctx context.Context, request operations.PostPortfolioConstructionMimickingRequest) (*operations.PostPortfolioConstructionMimickingResponse, error) {
+func (s *portfolioConstruction) PostPortfolioConstructionMimicking(ctx context.Context, request operations.PostPortfolioConstructionMimickingRequestBody) (*operations.PostPortfolioConstructionMimickingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/construction/mimicking"
 
@@ -167,7 +167,7 @@ func (s *portfolioConstruction) PostPortfolioConstructionMimicking(ctx context.C
 //
 // References
 // * [William Thornton Shaw, Monte Carlo Portfolio Optimization for General Investor Risk-Return Objectives and Arbitrary Return Distributions: A Solution for Long-Only Portfolios](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1680224)
-func (s *portfolioConstruction) PostPortfolioConstructionRandom(ctx context.Context, request operations.PostPortfolioConstructionRandomRequest) (*operations.PostPortfolioConstructionRandomResponse, error) {
+func (s *portfolioConstruction) PostPortfolioConstructionRandom(ctx context.Context, request operations.PostPortfolioConstructionRandomRequestBody) (*operations.PostPortfolioConstructionRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/construction/random"
 

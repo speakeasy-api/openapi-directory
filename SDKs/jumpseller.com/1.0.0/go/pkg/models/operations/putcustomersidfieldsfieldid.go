@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCustomersIDFieldsFieldIDPathParams struct {
+type PutCustomersIDFieldsFieldIDRequest struct {
+	// Customer Additional Field parameters.
+	CustomerAdditionalFieldEdit shared.CustomerAdditionalFieldEdit `request:"mediaType=application/json"`
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the Customer Additional Field
 	FieldID int `pathParam:"style=simple,explode=false,name=field_id"`
 	// Id of the Customer
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutCustomersIDFieldsFieldIDQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutCustomersIDFieldsFieldIDRequest struct {
-	PathParams  PutCustomersIDFieldsFieldIDPathParams
-	QueryParams PutCustomersIDFieldsFieldIDQueryParams
-	// Customer Additional Field parameters.
-	Request shared.CustomerAdditionalFieldEdit `request:"mediaType=application/json"`
 }
 
 type PutCustomersIDFieldsFieldIDResponse struct {

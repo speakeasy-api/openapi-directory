@@ -12,12 +12,8 @@ var UpdateDeviceServerList = []string{
 }
 
 type UpdateDeviceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDevicePathParams struct {
-	// A 34-character string that uniquely identifies this Device.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDeviceUpdateDeviceRequest struct {
@@ -30,10 +26,9 @@ type UpdateDeviceUpdateDeviceRequest struct {
 }
 
 type UpdateDeviceRequest struct {
-	PathParams UpdateDevicePathParams
-	Request    *UpdateDeviceUpdateDeviceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDeviceSecurity
-	ServerURL  *string
+	RequestBody *UpdateDeviceUpdateDeviceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34-character string that uniquely identifies this Device.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateDeviceResponse struct {

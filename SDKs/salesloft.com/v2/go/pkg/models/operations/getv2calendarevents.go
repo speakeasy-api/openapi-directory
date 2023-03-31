@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CalendarEventsQueryParams struct {
+type GetV2CalendarEventsRequest struct {
 	// Upper bound (exclusive) for a calendar event's start time to filter by.
 	// Must be in ISO 8601 format.
 	//
@@ -32,10 +32,6 @@ type GetV2CalendarEventsQueryParams struct {
 	// user_guid of the user who created or included as a guest to the event.
 	//
 	UserGUID *string `queryParam:"style=form,explode=true,name=user_guid"`
-}
-
-type GetV2CalendarEventsRequest struct {
-	QueryParams GetV2CalendarEventsQueryParams
 }
 
 type GetV2CalendarEventsResponse struct {

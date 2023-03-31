@@ -8,12 +8,8 @@ import (
 )
 
 type FullImportSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FullImportRequest struct {
-	Request  *shared.ImportExport `request:"mediaType=application/json"`
-	Security FullImportSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FullImportResponse struct {

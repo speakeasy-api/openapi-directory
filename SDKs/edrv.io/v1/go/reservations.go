@@ -34,14 +34,14 @@ func newReservations(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetReservation - Get one reservation data
 func (s *reservations) GetReservation(ctx context.Context, request operations.GetReservationRequest) (*operations.GetReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reservations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/reservations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -80,7 +80,7 @@ func (s *reservations) GetReservations(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -112,9 +112,9 @@ func (s *reservations) GetReservations(ctx context.Context, request operations.G
 // Updatereservation - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 func (s *reservations) Updatereservation(ctx context.Context, request operations.UpdatereservationRequest) (*operations.UpdatereservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reservations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/reservations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

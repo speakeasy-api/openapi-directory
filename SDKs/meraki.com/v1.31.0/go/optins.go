@@ -34,9 +34,9 @@ func newOptIns(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Create a new early access feature opt-in for an organization
 func (s *optIns) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.CreateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.CreateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *optIns) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context,
 // Delete an early access feature opt-in
 func (s *optIns) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest) (*operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *optIns) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Context,
 // Show an early access feature opt-in for an organization
 func (s *optIns) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *optIns) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, re
 // List the early access feature opt-ins for an organization
 func (s *optIns) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInsRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *optIns) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context, r
 // Update an early access feature opt-in for an organization
 func (s *optIns) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

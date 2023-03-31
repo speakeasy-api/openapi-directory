@@ -10,7 +10,7 @@ import (
 )
 
 type GetNearbyFacilitiesSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 // GetNearbyFacilitiesDriveTimeEnum - Filter to only include facilities that are within the specified number of drive time minutes from the requested location.
@@ -58,7 +58,7 @@ func (e *GetNearbyFacilitiesDriveTimeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNearbyFacilitiesQueryParams struct {
+type GetNearbyFacilitiesRequest struct {
 	// City of the location from which drive time will be calculated.
 	City *string `queryParam:"style=form,explode=true,name=city"`
 	// Filter to only include facilities that are within the specified number of drive time minutes from the requested location.
@@ -79,11 +79,6 @@ type GetNearbyFacilitiesQueryParams struct {
 	StreetAddress *string `queryParam:"style=form,explode=true,name=street_address"`
 	// Zip code of the location from which drive time will be calculated.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetNearbyFacilitiesRequest struct {
-	QueryParams GetNearbyFacilitiesQueryParams
-	Security    GetNearbyFacilitiesSecurity
 }
 
 type GetNearbyFacilitiesResponse struct {

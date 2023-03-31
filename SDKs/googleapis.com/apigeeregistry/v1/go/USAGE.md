@@ -14,53 +14,43 @@ func main() {
     s := sdk.New()
 
     req := operations.ApigeeregistryProjectsLocationsApisCreateRequest{
-        Security: operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ApigeeregistryProjectsLocationsApisCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ApigeeregistryProjectsLocationsApisCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            APIID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.APIInput{
+        DollarXgafv: "2",
+        APIInput: &shared.APIInput{
             Annotations: map[string]string{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            Availability: "tempora",
-            Description: "suscipit",
-            DisplayName: "molestiae",
+            Availability: "vel",
+            Description: "error",
+            DisplayName: "deserunt",
             Labels: map[string]string{
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
-                "nisi": "recusandae",
-                "temporibus": "ab",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            Name: "quis",
-            RecommendedDeployment: "veritatis",
-            RecommendedVersion: "deserunt",
+            Name: "delectus",
+            RecommendedDeployment: "tempora",
+            RecommendedVersion: "suscipit",
         },
+        AccessToken: "molestiae",
+        Alt: "proto",
+        APIID: "placeat",
+        Callback: "voluptatum",
+        Fields: "iusto",
+        Key: "excepturi",
+        OauthToken: "nisi",
+        Parent: "recusandae",
+        PrettyPrint: false,
+        QuotaUser: "temporibus",
+        UploadType: "ab",
+        UploadProtocol: "quis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ApigeeregistryProjectsLocationsApisCreate(ctx, req)
+    res, err := s.Projects.ApigeeregistryProjectsLocationsApisCreate(ctx, req, operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

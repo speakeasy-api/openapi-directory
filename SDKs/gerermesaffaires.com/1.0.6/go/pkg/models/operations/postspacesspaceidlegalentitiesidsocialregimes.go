@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDLegalEntitiesIDSocialRegimesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDLegalEntitiesIDSocialRegimesPathParams struct {
-	// Id of the legal entity or memberId
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequestBodyLevelEnum string
@@ -119,10 +111,12 @@ type PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequestBody struct {
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequest struct {
-	PathParams PostSpacesSpaceIDLegalEntitiesIDSocialRegimesPathParams
 	// SocialRegime to add (except name, class and archivaldate)
-	Request  PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDLegalEntitiesIDSocialRegimesSecurity
+	RequestBody PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequestBody `request:"mediaType=application/json"`
+	// Id of the legal entity or memberId
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDLegalEntitiesIDSocialRegimes201ApplicationJSON - Id of folder created

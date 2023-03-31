@@ -12,12 +12,8 @@ var UpdateTrunksServerList = []string{
 }
 
 type UpdateTrunksSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTrunksPathParams struct {
-	// The absolute URL of the SIP Trunk
-	SipTrunkDomain string `pathParam:"style=simple,explode=false,name=SipTrunkDomain"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTrunksUpdateTrunksRequest struct {
@@ -28,10 +24,9 @@ type UpdateTrunksUpdateTrunksRequest struct {
 }
 
 type UpdateTrunksRequest struct {
-	PathParams UpdateTrunksPathParams
-	Request    *UpdateTrunksUpdateTrunksRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTrunksSecurity
-	ServerURL  *string
+	RequestBody *UpdateTrunksUpdateTrunksRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The absolute URL of the SIP Trunk
+	SipTrunkDomain string `pathParam:"style=simple,explode=false,name=SipTrunkDomain"`
 }
 
 type UpdateTrunksResponse struct {

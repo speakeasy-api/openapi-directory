@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            ApimKey: shared.SchemeApimKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            ApimKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetDomainRequest{
-        PathParams: operations.GetDomainPathParams{
-            DomainID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
+        DomainID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
     }
 
     ctx := context.Background()

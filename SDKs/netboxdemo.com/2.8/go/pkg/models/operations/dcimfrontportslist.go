@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimFrontPortsListQueryParams struct {
+type DcimFrontPortsListRequest struct {
 	Cabled          *string `queryParam:"style=form,explode=true,name=cabled"`
 	Description     *string `queryParam:"style=form,explode=true,name=description"`
 	DescriptionIc   *string `queryParam:"style=form,explode=true,name=description__ic"`
@@ -56,10 +56,6 @@ type DcimFrontPortsListQueryParams struct {
 	TagN      *string `queryParam:"style=form,explode=true,name=tag__n"`
 	Type      *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN     *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimFrontPortsListRequest struct {
-	QueryParams DcimFrontPortsListQueryParams
 }
 
 type DcimFrontPortsList200ApplicationJSON struct {

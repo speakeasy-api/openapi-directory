@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationLicensePathParams struct {
+type GetOrganizationLicenseRequest struct {
 	LicenseID      string `pathParam:"style=simple,explode=false,name=licenseId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationLicenseRequest struct {
-	PathParams GetOrganizationLicensePathParams
 }
 
 type GetOrganizationLicenseResponse struct {

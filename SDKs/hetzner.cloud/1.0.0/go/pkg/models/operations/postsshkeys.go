@@ -15,10 +15,6 @@ type PostSSHKeysRequestBody struct {
 	PublicKey string `json:"public_key"`
 }
 
-type PostSSHKeysRequest struct {
-	Request *PostSSHKeysRequestBody `request:"mediaType=application/json"`
-}
-
 type PostSSHKeys201ApplicationJSONSSHKey struct {
 	// Point in time when the Resource was created (in ISO-8601 format)
 	Created string `json:"created"`

@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTemplateQueryParams struct {
+type GetTemplateRequest struct {
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type GetTemplateRequest struct {
-	QueryParams GetTemplateQueryParams
 }
 
 // GetTemplate500ApplicationJSON - Internal Server Error

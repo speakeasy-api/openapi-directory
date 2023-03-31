@@ -34,7 +34,7 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ArchiveAllConversations - Archive all conversations
-func (s *messages) ArchiveAllConversations(ctx context.Context, request operations.ArchiveAllConversationsRequest) (*operations.ArchiveAllConversationsResponse, error) {
+func (s *messages) ArchiveAllConversations(ctx context.Context, request operations.ArchiveAllConversationsRequestBody) (*operations.ArchiveAllConversationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversations/archive-all"
 
@@ -83,7 +83,7 @@ func (s *messages) ArchiveAllConversations(ctx context.Context, request operatio
 // ArchiveConversation - Archive conversation
 func (s *messages) ArchiveConversation(ctx context.Context, request operations.ArchiveConversationRequest) (*operations.ArchiveConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *messages) ArchiveConversation(ctx context.Context, request operations.A
 // BlockConversation - Block conversation
 func (s *messages) BlockConversation(ctx context.Context, request operations.BlockConversationRequest) (*operations.BlockConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/block", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/block", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -163,14 +163,14 @@ func (s *messages) BlockConversation(ctx context.Context, request operations.Blo
 // DeleteConversation - Delete conversation
 func (s *messages) DeleteConversation(ctx context.Context, request operations.DeleteConversationRequest) (*operations.DeleteConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -208,14 +208,14 @@ func (s *messages) DeleteConversation(ctx context.Context, request operations.De
 // GetConversationMessages - List conversation messages
 func (s *messages) GetConversationMessages(ctx context.Context, request operations.GetConversationMessagesRequest) (*operations.GetConversationMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,7 +268,7 @@ func (s *messages) GetConversations(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,7 +308,7 @@ func (s *messages) GetConversations(ctx context.Context, request operations.GetC
 }
 
 // MarkAllConversationsRead - Mark all conversations as read
-func (s *messages) MarkAllConversationsRead(ctx context.Context, request operations.MarkAllConversationsReadRequest) (*operations.MarkAllConversationsReadResponse, error) {
+func (s *messages) MarkAllConversationsRead(ctx context.Context, request operations.MarkAllConversationsReadRequestBody) (*operations.MarkAllConversationsReadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversations/mark-all-read"
 
@@ -357,9 +357,9 @@ func (s *messages) MarkAllConversationsRead(ctx context.Context, request operati
 // MarkConversationRead - Mark conversation as read
 func (s *messages) MarkConversationRead(ctx context.Context, request operations.MarkConversationReadRequest) (*operations.MarkConversationReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/mark-read", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/mark-read", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -408,9 +408,9 @@ func (s *messages) MarkConversationRead(ctx context.Context, request operations.
 // ReplyToConversation - Reply to conversation
 func (s *messages) ReplyToConversation(ctx context.Context, request operations.ReplyToConversationRequest) (*operations.ReplyToConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/reply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/reply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,9 +467,9 @@ func (s *messages) ReplyToConversation(ctx context.Context, request operations.R
 // ReportConversation - Report conversation
 func (s *messages) ReportConversation(ctx context.Context, request operations.ReportConversationRequest) (*operations.ReportConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/report", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -526,7 +526,7 @@ func (s *messages) SearchConversations(ctx context.Context, request operations.S
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -568,7 +568,7 @@ func (s *messages) SearchConversations(ctx context.Context, request operations.S
 // UnarchiveConversation - Unarchive conversation
 func (s *messages) UnarchiveConversation(ctx context.Context, request operations.UnarchiveConversationRequest) (*operations.UnarchiveConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/unarchive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/unarchive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -607,7 +607,7 @@ func (s *messages) UnarchiveConversation(ctx context.Context, request operations
 // UnblockConversation - Unblock conversation
 func (s *messages) UnblockConversation(ctx context.Context, request operations.UnblockConversationRequest) (*operations.UnblockConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/unblock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/unblock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DashboardMeetingParticipantQOSSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardMeetingParticipantQOSPathParams struct {
-	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-	// Participant ID.
-	ParticipantID string `pathParam:"style=simple,explode=false,name=participantId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardMeetingParticipantQOSTypeEnum - The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
@@ -50,15 +40,15 @@ func (e *DashboardMeetingParticipantQOSTypeEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DashboardMeetingParticipantQOSQueryParams struct {
+type DashboardMeetingParticipantQOSRequest struct {
+	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
+	// Participant ID.
+	ParticipantID string `pathParam:"style=simple,explode=false,name=participantId"`
 	// The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
 	Type *DashboardMeetingParticipantQOSTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardMeetingParticipantQOSRequest struct {
-	PathParams  DashboardMeetingParticipantQOSPathParams
-	QueryParams DashboardMeetingParticipantQOSQueryParams
-	Security    DashboardMeetingParticipantQOSSecurity
 }
 
 // DashboardMeetingParticipantQOSParticipantQOSUserQOSAsDeviceFromCrc - QoS metrics on screen shares by a participant who joined the meeting via a Cloud Room Connector.

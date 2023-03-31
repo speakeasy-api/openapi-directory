@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsListPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsListQueryParams struct {
+type ApplicationsListRequest struct {
 	// The filters to apply to the operation.
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsListRequest struct {
-	PathParams  ApplicationsListPathParams
-	QueryParams ApplicationsListQueryParams
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type ApplicationsListResponse struct {

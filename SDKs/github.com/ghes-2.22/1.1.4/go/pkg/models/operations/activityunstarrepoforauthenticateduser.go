@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityUnstarRepoForAuthenticatedUserPathParams struct {
+type ActivityUnstarRepoForAuthenticatedUserRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActivityUnstarRepoForAuthenticatedUserRequest struct {
-	PathParams ActivityUnstarRepoForAuthenticatedUserPathParams
 }
 
 type ActivityUnstarRepoForAuthenticatedUserResponse struct {

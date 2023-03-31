@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        github_access_code=shared.SchemeGithubAccessCode(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetActionOrganizationActivityListRequest(
-    query_params=operations.GetActionOrganizationActivityListQueryParams(
-        id="voluptatem",
+        github_access_code="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetActionOrganizationActivityListRequest(
+    id="corrupti",
 )
     
 res = s.action.get_action_organization_activity_list(req)

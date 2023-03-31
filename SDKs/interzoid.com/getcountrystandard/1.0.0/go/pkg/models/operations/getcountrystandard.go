@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcountrystandardQueryParams struct {
+type GetcountrystandardRequest struct {
 	// Country name from which to retrieve the standardized version
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetcountrystandardRequest struct {
-	QueryParams GetcountrystandardQueryParams
 }
 
 // Getcountrystandard200ApplicationJSON - Standardized country name data

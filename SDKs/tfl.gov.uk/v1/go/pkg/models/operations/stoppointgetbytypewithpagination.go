@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetByTypeWithPaginationPathParams struct {
+type StopPointGetByTypeWithPaginationRequest struct {
 	Page  int      `pathParam:"style=simple,explode=false,name=page"`
 	Types []string `pathParam:"style=simple,explode=false,name=types"`
-}
-
-type StopPointGetByTypeWithPaginationRequest struct {
-	PathParams StopPointGetByTypeWithPaginationPathParams
 }
 
 type StopPointGetByTypeWithPaginationResponse struct {

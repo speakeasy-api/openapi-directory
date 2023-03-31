@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDistinctAttributeRequest struct {
-	Request []byte `request:"mediaType=application/octet-stream"`
-}
-
 type UpdateDistinctAttributeResponse struct {
 	ContentType string
 	StatusCode  int

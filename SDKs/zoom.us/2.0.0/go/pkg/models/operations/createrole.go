@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateRoleSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateRoleApplicationJSON struct {
@@ -18,11 +17,6 @@ type CreateRoleApplicationJSON struct {
 	Name *string `json:"name,omitempty"`
 	// Privileges assigned to the role. Can be one or a combination of [these permissions](https://marketplace.zoom.us/docs/api-reference/other-references/privileges).
 	Privileges []string `json:"privileges,omitempty"`
-}
-
-type CreateRoleRequest struct {
-	Request  *CreateRoleApplicationJSON `request:"mediaType=application/json"`
-	Security CreateRoleSecurity
 }
 
 // CreateRole201ApplicationJSON - **Status Code:** `201`<br>

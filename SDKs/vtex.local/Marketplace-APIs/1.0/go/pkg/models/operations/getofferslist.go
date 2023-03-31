@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetofferslistQueryParams struct {
+type GetofferslistRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the VTEX account. Used as part of the URL
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
@@ -56,18 +60,6 @@ type GetofferslistQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Number corresponding to the row from which the offer list will begin, used for pagination. Filters the list of offers by retrieving the offers starting from the row defined. The default value is 0, if the param is not included in the call.
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetofferslistHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetofferslistRequest struct {
-	QueryParams GetofferslistQueryParams
-	Headers     GetofferslistHeaders
 }
 
 type GetofferslistGetMatchedOffersResponse struct {

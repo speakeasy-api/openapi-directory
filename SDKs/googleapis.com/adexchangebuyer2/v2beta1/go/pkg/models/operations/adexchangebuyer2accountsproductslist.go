@@ -8,20 +8,17 @@ import (
 )
 
 type Adexchangebuyer2AccountsProductsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsProductsListPathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type Adexchangebuyer2AccountsProductsListQueryParams struct {
+type Adexchangebuyer2AccountsProductsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -46,12 +43,6 @@ type Adexchangebuyer2AccountsProductsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsProductsListRequest struct {
-	PathParams  Adexchangebuyer2AccountsProductsListPathParams
-	QueryParams Adexchangebuyer2AccountsProductsListQueryParams
-	Security    Adexchangebuyer2AccountsProductsListSecurity
 }
 
 type Adexchangebuyer2AccountsProductsListResponse struct {

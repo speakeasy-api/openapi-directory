@@ -33,11 +33,11 @@ func newApplication(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // LinkApplication - Link application to an account
-func (s *application) LinkApplication(ctx context.Context, request operations.LinkApplicationRequest) (*operations.LinkApplicationResponse, error) {
+func (s *application) LinkApplication(ctx context.Context, request operations.LinkApplicationRequest, security operations.LinkApplicationSecurity) (*operations.LinkApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *application) LinkApplication(ctx context.Context, request operations.Li
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -117,16 +117,16 @@ func (s *application) LinkApplication(ctx context.Context, request operations.Li
 }
 
 // UnliWithoutApplicationnkApplication - Unlink application from an account
-func (s *application) UnliWithoutApplicationnkApplication(ctx context.Context, request operations.UnliWithoutApplicationnkApplicationRequest) (*operations.UnliWithoutApplicationnkApplicationResponse, error) {
+func (s *application) UnliWithoutApplicationnkApplication(ctx context.Context, request operations.UnliWithoutApplicationnkApplicationRequest, security operations.UnliWithoutApplicationnkApplicationSecurity) (*operations.UnliWithoutApplicationnkApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications/{application_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications/{application_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

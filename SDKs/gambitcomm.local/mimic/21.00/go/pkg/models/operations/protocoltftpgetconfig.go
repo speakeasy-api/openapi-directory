@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTftpGetConfigPathParams struct {
+type ProtocolTftpGetConfigRequest struct {
 	// Agent to show the TFTP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTftpGetConfigRequest struct {
-	PathParams ProtocolTftpGetConfigPathParams
 }
 
 type ProtocolTftpGetConfigResponse struct {

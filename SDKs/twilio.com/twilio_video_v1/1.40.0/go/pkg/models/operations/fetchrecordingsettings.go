@@ -11,15 +11,6 @@ var FetchRecordingSettingsServerList = []string{
 	"https://video.twilio.com",
 }
 
-type FetchRecordingSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRecordingSettingsRequest struct {
-	Security  FetchRecordingSettingsSecurity
-	ServerURL *string
-}
-
 type FetchRecordingSettingsResponse struct {
 	ContentType string
 	StatusCode  int

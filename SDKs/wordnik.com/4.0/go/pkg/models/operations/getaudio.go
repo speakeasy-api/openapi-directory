@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetAudioPathParams struct {
-	// Word to get audio for.
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetAudioUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetAudioUseCanonicalEnum string
 
@@ -37,16 +32,13 @@ func (e *GetAudioUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAudioQueryParams struct {
+type GetAudioRequest struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetAudioUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetAudioRequest struct {
-	PathParams  GetAudioPathParams
-	QueryParams GetAudioQueryParams
+	// Word to get audio for.
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetAudioResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type ValidateIBANBasicSecurity struct {
-	APIKeySecurity shared.SchemeAPIKeySecurity `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type ValidateIBANBasicQueryParams struct {
-	// The IBAN
-	Iban string `queryParam:"style=form,explode=true,name=iban"`
+	APIKeySecurity string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
 type ValidateIBANBasicRequest struct {
-	QueryParams ValidateIBANBasicQueryParams
-	Security    ValidateIBANBasicSecurity
+	// The IBAN
+	Iban string `queryParam:"style=form,explode=true,name=iban"`
 }
 
 type ValidateIBANBasicResponse struct {

@@ -8,19 +8,11 @@ import (
 	"time"
 )
 
-type RoadStatusPathParams struct {
-	// Comma-separated list of road identifiers e.g. "A406, A2" or use "all" to ignore id filter (a full list of supported road identifiers can be found at the /Road/ endpoint)
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type RoadStatusQueryParams struct {
+type RoadStatusRequest struct {
 	DateRangeNullableEndDate   *time.Time `queryParam:"style=form,explode=true,name=dateRangeNullable.endDate"`
 	DateRangeNullableStartDate *time.Time `queryParam:"style=form,explode=true,name=dateRangeNullable.startDate"`
-}
-
-type RoadStatusRequest struct {
-	PathParams  RoadStatusPathParams
-	QueryParams RoadStatusQueryParams
+	// Comma-separated list of road identifiers e.g. "A406, A2" or use "all" to ignore id filter (a full list of supported road identifiers can be found at the /Road/ endpoint)
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
 }
 
 type RoadStatusResponse struct {

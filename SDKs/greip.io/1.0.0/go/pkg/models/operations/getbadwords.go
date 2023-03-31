@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetBadWordsQueryParams struct {
+type GetBadWordsRequest struct {
 	// Sets the format of the API response. JSON is the default format.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
@@ -17,10 +17,6 @@ type GetBadWordsQueryParams struct {
 	ScoreOnly *string `queryParam:"style=form,explode=true,name=scoreOnly"`
 	// The text you want to check.
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type GetBadWordsRequest struct {
-	QueryParams GetBadWordsQueryParams
 }
 
 type GetBadWordsResponse struct {

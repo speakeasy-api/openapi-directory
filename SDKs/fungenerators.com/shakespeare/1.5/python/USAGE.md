@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetShakespeareGenerateInsultRequest(
-    security=operations.GetShakespeareGenerateInsultSecurity(
-        x_fungenerators_api_secret=shared.SchemeXFungeneratorsAPISecret(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    query_params=operations.GetShakespeareGenerateInsultQueryParams(
-        limit=4136970415430295649,
-    ),
+    limit=548814,
 )
     
-res = s.generation.get_shakespeare_generate_insult(req)
+res = s.generation.get_shakespeare_generate_insult(req, operations.GetShakespeareGenerateInsultSecurity(
+    x_fungenerators_api_secret="YOUR_API_KEY_HERE",
+))
 
 if res.status_code == 200:
     # handle response

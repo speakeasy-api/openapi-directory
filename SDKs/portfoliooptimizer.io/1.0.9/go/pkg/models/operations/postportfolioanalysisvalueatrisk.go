@@ -17,10 +17,6 @@ type PostPortfolioAnalysisValueAtRiskRequestBody struct {
 	Portfolios []PostPortfolioAnalysisValueAtRiskRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisValueAtRiskRequest struct {
-	Request PostPortfolioAnalysisValueAtRiskRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisValueAtRisk200ApplicationJSONPortfolios struct {
 	// The value at risk of the portfolio
 	PortfolioValueAtRisk float64 `json:"portfolioValueAtRisk"`

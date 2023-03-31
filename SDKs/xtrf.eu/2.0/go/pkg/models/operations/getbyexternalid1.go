@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByExternalID1PathParams struct {
+type GetByExternalID1Request struct {
 	// project's external identifier
 	ExternalProjectID string `pathParam:"style=simple,explode=false,name=externalProjectId"`
-}
-
-type GetByExternalID1Request struct {
-	PathParams GetByExternalID1PathParams
 }
 
 type GetByExternalID1Response struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminSetGithubActionsPermissionsEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 type EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody struct {
 	// The permissions policy that controls the actions that are allowed to run.
 	AllowedActions *shared.AllowedActionsEnum `json:"allowed_actions,omitempty"`
@@ -20,8 +15,9 @@ type EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody struct {
 }
 
 type EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequest struct {
-	PathParams EnterpriseAdminSetGithubActionsPermissionsEnterprisePathParams
-	Request    EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 }
 
 type EnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse struct {

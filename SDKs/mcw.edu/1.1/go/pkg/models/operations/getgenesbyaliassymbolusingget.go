@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETGenesByAliasSymbolUsingGETPathParams struct {
+type GETGenesByAliasSymbolUsingGETRequest struct {
 	// Gene alias symbol
 	AliasSymbol string `pathParam:"style=simple,explode=false,name=aliasSymbol"`
 	// A list of RGD species type keys can be found in the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETGenesByAliasSymbolUsingGETRequest struct {
-	PathParams GETGenesByAliasSymbolUsingGETPathParams
 }
 
 type GETGenesByAliasSymbolUsingGETResponse struct {

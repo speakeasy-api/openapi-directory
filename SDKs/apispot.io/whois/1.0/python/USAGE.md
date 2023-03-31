@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CheckDomainRequest(
-    path_params=operations.CheckDomainPathParams(
-        domain="porro",
+        api_key_auth="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.CheckDomainRequest(
+    domain="corrupti",
 )
     
 res = s.check_domain(req)

@@ -10,13 +10,8 @@ import (
 )
 
 type AndroidenterpriseEnterprisesCreateEnrollmentTokenSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type AndroidenterpriseEnterprisesCreateEnrollmentTokenPathParams struct {
-	// The ID of the enterprise.
-	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AndroidenterpriseEnterprisesCreateEnrollmentTokenDeviceTypeEnum - Whether it’s a dedicated device or a knowledge worker device.
@@ -46,7 +41,7 @@ func (e *AndroidenterpriseEnterprisesCreateEnrollmentTokenDeviceTypeEnum) Unmars
 	}
 }
 
-type AndroidenterpriseEnterprisesCreateEnrollmentTokenQueryParams struct {
+type AndroidenterpriseEnterprisesCreateEnrollmentTokenRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -57,6 +52,8 @@ type AndroidenterpriseEnterprisesCreateEnrollmentTokenQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Whether it’s a dedicated device or a knowledge worker device.
 	DeviceType *AndroidenterpriseEnterprisesCreateEnrollmentTokenDeviceTypeEnum `queryParam:"style=form,explode=true,name=deviceType"`
+	// The ID of the enterprise.
+	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -71,12 +68,6 @@ type AndroidenterpriseEnterprisesCreateEnrollmentTokenQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseEnterprisesCreateEnrollmentTokenRequest struct {
-	PathParams  AndroidenterpriseEnterprisesCreateEnrollmentTokenPathParams
-	QueryParams AndroidenterpriseEnterprisesCreateEnrollmentTokenQueryParams
-	Security    AndroidenterpriseEnterprisesCreateEnrollmentTokenSecurity
 }
 
 type AndroidenterpriseEnterprisesCreateEnrollmentTokenResponse struct {

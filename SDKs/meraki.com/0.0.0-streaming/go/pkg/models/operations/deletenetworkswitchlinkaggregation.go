@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSwitchLinkAggregationPathParams struct {
+type DeleteNetworkSwitchLinkAggregationRequest struct {
 	LinkAggregationID string `pathParam:"style=simple,explode=false,name=linkAggregationId"`
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkSwitchLinkAggregationRequest struct {
-	PathParams DeleteNetworkSwitchLinkAggregationPathParams
 }
 
 type DeleteNetworkSwitchLinkAggregationResponse struct {

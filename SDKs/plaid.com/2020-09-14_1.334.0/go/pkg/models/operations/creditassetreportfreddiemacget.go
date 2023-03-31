@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreditAssetReportFreddieMacGetRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type CreditAssetReportFreddieMacGetResponse struct {
 	// OK
 	AssetReportFreddieGetResponse map[string]interface{}

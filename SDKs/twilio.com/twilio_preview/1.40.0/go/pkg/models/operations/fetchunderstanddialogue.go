@@ -12,18 +12,13 @@ var FetchUnderstandDialogueServerList = []string{
 }
 
 type FetchUnderstandDialogueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandDialoguePathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandDialogueRequest struct {
-	PathParams FetchUnderstandDialoguePathParams
-	Security   FetchUnderstandDialogueSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchUnderstandDialogueResponse struct {

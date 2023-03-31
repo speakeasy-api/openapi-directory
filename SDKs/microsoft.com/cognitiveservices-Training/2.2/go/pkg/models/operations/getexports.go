@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExportsPathParams struct {
+type GetExportsRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetExportsHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetExportsRequest struct {
-	PathParams GetExportsPathParams
-	Headers    GetExportsHeaders
 }
 
 type GetExportsResponse struct {

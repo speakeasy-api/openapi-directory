@@ -4,38 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest(
-    security=operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelPathParams(
-        name="vel",
-    ),
-    query_params=operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelQueryParams(
-        dollar_xgafv="2",
-        access_token="illum",
-        alt="json",
-        callback="ea",
-        fields="animi",
-        key="enim",
-        oauth_token="nostrum",
-        pretty_print=True,
-        quota_user="sunt",
-        upload_type="officia",
-        upload_protocol="voluptate",
-    ),
-    request={
-        "quibusdam": "ratione",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.projects.workflowexecutions_projects_locations_workflows_executions_cancel(req)
+res = s.projects.workflowexecutions_projects_locations_workflows_executions_cancel(req, operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.execution is not None:
     # handle response

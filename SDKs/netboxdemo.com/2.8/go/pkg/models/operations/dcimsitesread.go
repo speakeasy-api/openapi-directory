@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimSitesReadPathParams struct {
+type DcimSitesReadRequest struct {
 	// A unique integer value identifying this site.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimSitesReadRequest struct {
-	PathParams DcimSitesReadPathParams
 }
 
 type DcimSitesReadResponse struct {

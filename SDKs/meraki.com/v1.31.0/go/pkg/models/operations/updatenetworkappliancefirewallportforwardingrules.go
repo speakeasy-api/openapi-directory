@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceFirewallPortForwardingRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceFirewallPortForwardingRulesRequestBodyRulesProtocolEnum - TCP or UDP
 type UpdateNetworkApplianceFirewallPortForwardingRulesRequestBodyRulesProtocolEnum string
 
@@ -86,8 +82,8 @@ type UpdateNetworkApplianceFirewallPortForwardingRulesRequestBody struct {
 }
 
 type UpdateNetworkApplianceFirewallPortForwardingRulesRequest struct {
-	PathParams UpdateNetworkApplianceFirewallPortForwardingRulesPathParams
-	Request    UpdateNetworkApplianceFirewallPortForwardingRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceFirewallPortForwardingRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                       `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceFirewallPortForwardingRulesResponse struct {

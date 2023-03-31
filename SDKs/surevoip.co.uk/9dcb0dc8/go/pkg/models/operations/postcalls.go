@@ -49,11 +49,6 @@ type PostCallsRequestBody struct {
 	To string `json:"to"`
 }
 
-type PostCallsRequest struct {
-	// Create a phone call and play announcement audio to the "from" party (a leg)
-	Request PostCallsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostCalls202ApplicationJSON - Call creation request accepted.
 type PostCalls202ApplicationJSON struct {
 	Call     *string `json:"Call,omitempty"`

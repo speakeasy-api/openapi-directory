@@ -8,47 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserSettingsUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserSettingsUpdatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-// UserSettingsUpdateOptionEnum
-type UserSettingsUpdateOptionEnum string
-
-const (
-	UserSettingsUpdateOptionEnumMeetingAuthentication   UserSettingsUpdateOptionEnum = "meeting_authentication"
-	UserSettingsUpdateOptionEnumRecordingAuthentication UserSettingsUpdateOptionEnum = "recording_authentication"
-	UserSettingsUpdateOptionEnumMeetingSecuirty         UserSettingsUpdateOptionEnum = "meeting_secuirty"
-)
-
-func (e *UserSettingsUpdateOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "meeting_authentication":
-		fallthrough
-	case "recording_authentication":
-		fallthrough
-	case "meeting_secuirty":
-		*e = UserSettingsUpdateOptionEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UserSettingsUpdateOptionEnum: %s", s)
-	}
-}
-
-type UserSettingsUpdateQueryParams struct {
-	Option *UserSettingsUpdateOptionEnum `queryParam:"style=form,explode=true,name=option"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UserSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
@@ -1086,12 +1049,39 @@ func (u UserSettingsUpdateApplicationJSON) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
+// UserSettingsUpdateOptionEnum
+type UserSettingsUpdateOptionEnum string
+
+const (
+	UserSettingsUpdateOptionEnumMeetingAuthentication   UserSettingsUpdateOptionEnum = "meeting_authentication"
+	UserSettingsUpdateOptionEnumRecordingAuthentication UserSettingsUpdateOptionEnum = "recording_authentication"
+	UserSettingsUpdateOptionEnumMeetingSecuirty         UserSettingsUpdateOptionEnum = "meeting_secuirty"
+)
+
+func (e *UserSettingsUpdateOptionEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "meeting_authentication":
+		fallthrough
+	case "recording_authentication":
+		fallthrough
+	case "meeting_secuirty":
+		*e = UserSettingsUpdateOptionEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UserSettingsUpdateOptionEnum: %s", s)
+	}
+}
+
 type UserSettingsUpdateRequest struct {
-	PathParams  UserSettingsUpdatePathParams
-	QueryParams UserSettingsUpdateQueryParams
 	// User Settings
-	Request  UserSettingsUpdateApplicationJSON `request:"mediaType=application/json"`
-	Security UserSettingsUpdateSecurity
+	RequestBody UserSettingsUpdateApplicationJSON `request:"mediaType=application/json"`
+	Option      *UserSettingsUpdateOptionEnum     `queryParam:"style=form,explode=true,name=option"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserSettingsUpdateResponse struct {

@@ -33,7 +33,7 @@ func newReturnPolicy(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CreateReturnPolicy - This method creates a new return policy where the policy encapsulates seller's terms for returning items.  <br/><br/>Each policy targets a specific marketplace, and you can create multiple policies for each marketplace. Return policies are not applicable to motor-vehicle listings.<br/><br/>A successful request returns the <b>getReturnPolicy</b> URI to the new policy in the <b>Location</b> response header and the ID for the new policy is returned in the response payload.  <p class="tablenote"><b>Tip:</b> For details on creating and using the business policies supported by the Account API, see <a href="/api-docs/sell/static/seller-accounts/business-policies.html">eBay business policies</a>.</p>
-func (s *returnPolicy) CreateReturnPolicy(ctx context.Context, request operations.CreateReturnPolicyRequest) (*operations.CreateReturnPolicyResponse, error) {
+func (s *returnPolicy) CreateReturnPolicy(ctx context.Context, request shared.ReturnPolicyRequest, security operations.CreateReturnPolicySecurity) (*operations.CreateReturnPolicyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/return_policy"
 
@@ -52,7 +52,7 @@ func (s *returnPolicy) CreateReturnPolicy(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,16 +92,16 @@ func (s *returnPolicy) CreateReturnPolicy(ctx context.Context, request operation
 }
 
 // DeleteReturnPolicy - This method deletes a return policy. Supply the ID of the policy you want to delete in the <b>returnPolicyId</b> path parameter.
-func (s *returnPolicy) DeleteReturnPolicy(ctx context.Context, request operations.DeleteReturnPolicyRequest) (*operations.DeleteReturnPolicyResponse, error) {
+func (s *returnPolicy) DeleteReturnPolicy(ctx context.Context, request operations.DeleteReturnPolicyRequest, security operations.DeleteReturnPolicySecurity) (*operations.DeleteReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *returnPolicy) DeleteReturnPolicy(ctx context.Context, request operation
 }
 
 // GetReturnPolicies - This method retrieves all the return policies configured for the marketplace you specify using the <code>marketplace_id</code> query parameter.  <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policies for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get the policies for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank">HTTP request headers</a>.
-func (s *returnPolicy) GetReturnPolicies(ctx context.Context, request operations.GetReturnPoliciesRequest) (*operations.GetReturnPoliciesResponse, error) {
+func (s *returnPolicy) GetReturnPolicies(ctx context.Context, request operations.GetReturnPoliciesRequest, security operations.GetReturnPoliciesSecurity) (*operations.GetReturnPoliciesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/return_policy"
 
@@ -144,11 +144,11 @@ func (s *returnPolicy) GetReturnPolicies(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,16 +186,16 @@ func (s *returnPolicy) GetReturnPolicies(ctx context.Context, request operations
 }
 
 // GetReturnPolicy - This method retrieves the complete details of the return policy specified by the <b>returnPolicyId</b> path parameter.
-func (s *returnPolicy) GetReturnPolicy(ctx context.Context, request operations.GetReturnPolicyRequest) (*operations.GetReturnPolicyResponse, error) {
+func (s *returnPolicy) GetReturnPolicy(ctx context.Context, request operations.GetReturnPolicyRequest, security operations.GetReturnPolicySecurity) (*operations.GetReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *returnPolicy) GetReturnPolicy(ctx context.Context, request operations.G
 }
 
 // GetReturnPolicyByName - This method retrieves the details of a specific return policy. Supply both the policy <code>name</code> and its associated <code>marketplace_id</code> in the request query parameters.   <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policy for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get a policy for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP">HTTP request headers</a>.
-func (s *returnPolicy) GetReturnPolicyByName(ctx context.Context, request operations.GetReturnPolicyByNameRequest) (*operations.GetReturnPolicyByNameResponse, error) {
+func (s *returnPolicy) GetReturnPolicyByName(ctx context.Context, request operations.GetReturnPolicyByNameRequest, security operations.GetReturnPolicyByNameSecurity) (*operations.GetReturnPolicyByNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/return_policy/get_by_policy_name"
 
@@ -244,11 +244,11 @@ func (s *returnPolicy) GetReturnPolicyByName(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *returnPolicy) GetReturnPolicyByName(ctx context.Context, request operat
 }
 
 // UpdateReturnPolicy - This method updates an existing return policy. Specify the policy you want to update using the <b>return_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
-func (s *returnPolicy) UpdateReturnPolicy(ctx context.Context, request operations.UpdateReturnPolicyRequest) (*operations.UpdateReturnPolicyResponse, error) {
+func (s *returnPolicy) UpdateReturnPolicy(ctx context.Context, request operations.UpdateReturnPolicyRequest, security operations.UpdateReturnPolicySecurity) (*operations.UpdateReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *returnPolicy) UpdateReturnPolicy(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

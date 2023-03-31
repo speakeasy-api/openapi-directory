@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsGetV2ProjectsProjectIDGetPathParams struct {
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
 // ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum - An enumeration.
 type ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum string
 
@@ -70,7 +66,7 @@ func (e *ProjectsGetV2ProjectsProjectIDGetSortSortEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ProjectsGetV2ProjectsProjectIDGetQueryParams struct {
+type ProjectsGetV2ProjectsProjectIDGetRequest struct {
 	//         Limit results by a certain country using two letter country code.
 	//         (ex. ?country=US or ?country=US&country=MX)
 	//
@@ -92,16 +88,12 @@ type ProjectsGetV2ProjectsProjectIDGetQueryParams struct {
 	Parameter   []interface{} `queryParam:"style=form,explode=true,name=parameter"`
 	ParameterID *int64        `queryParam:"style=form,explode=true,name=parameter_id"`
 	Project     []interface{} `queryParam:"style=form,explode=true,name=project"`
+	ProjectID   int64         `pathParam:"style=simple,explode=false,name=project_id"`
 	SensorType  *string       `queryParam:"style=form,explode=true,name=sensorType"`
 	// Define sort order.
 	Sort       *ProjectsGetV2ProjectsProjectIDGetSortSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	SourceName []string                                       `queryParam:"style=form,explode=true,name=sourceName"`
 	Unit       []string                                       `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type ProjectsGetV2ProjectsProjectIDGetRequest struct {
-	PathParams  ProjectsGetV2ProjectsProjectIDGetPathParams
-	QueryParams ProjectsGetV2ProjectsProjectIDGetQueryParams
 }
 
 type ProjectsGetV2ProjectsProjectIDGetResponse struct {

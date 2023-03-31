@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type IndicesQueryParams struct {
+type IndicesRequest struct {
 	EndDate     *string `queryParam:"style=form,explode=true,name=endDate"`
 	Exchanges   *string `queryParam:"style=form,explode=true,name=exchanges"`
 	Limit       *string `queryParam:"style=form,explode=true,name=limit"`
 	LowCap      *string `queryParam:"style=form,explode=true,name=lowCap"`
 	StartDate   *string `queryParam:"style=form,explode=true,name=startDate"`
 	TimeHorizon *string `queryParam:"style=form,explode=true,name=timeHorizon"`
-}
-
-type IndicesRequest struct {
-	QueryParams IndicesQueryParams
 }
 
 type IndicesResponse struct {

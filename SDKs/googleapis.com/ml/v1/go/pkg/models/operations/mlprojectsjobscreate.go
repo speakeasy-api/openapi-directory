@@ -8,18 +8,14 @@ import (
 )
 
 type MlProjectsJobsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MlProjectsJobsCreatePathParams struct {
-	// Required. The project name.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MlProjectsJobsCreateQueryParams struct {
+type MlProjectsJobsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudMlV1JobInput *shared.GoogleCloudMlV1JobInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type MlProjectsJobsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project name.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type MlProjectsJobsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MlProjectsJobsCreateRequest struct {
-	PathParams  MlProjectsJobsCreatePathParams
-	QueryParams MlProjectsJobsCreateQueryParams
-	Request     *shared.GoogleCloudMlV1JobInput `request:"mediaType=application/json"`
-	Security    MlProjectsJobsCreateSecurity
 }
 
 type MlProjectsJobsCreateResponse struct {

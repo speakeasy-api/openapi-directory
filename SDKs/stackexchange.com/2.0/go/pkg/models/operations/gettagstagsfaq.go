@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetTagsTagsFaqPathParams struct {
-	// String list (semicolon delimited).
-	Tags string `pathParam:"style=simple,explode=false,name=tags"`
-}
-
-type GetTagsTagsFaqQueryParams struct {
+type GetTagsTagsFaqRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -52,11 +47,8 @@ type GetTagsTagsFaqQueryParams struct {
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetTagsTagsFaqRequest struct {
-	PathParams  GetTagsTagsFaqPathParams
-	QueryParams GetTagsTagsFaqQueryParams
+	// String list (semicolon delimited).
+	Tags string `pathParam:"style=simple,explode=false,name=tags"`
 }
 
 type GetTagsTagsFaqResponse struct {

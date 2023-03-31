@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFormByIDPathParams struct {
-	// Form unique ID number.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateFormByIDHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type UpdateFormByIDUpdateFormByIDRequestBodyElementsSettings struct {
 	// True is the form element is required for submission.
 	IsRequired  *bool `json:"isRequired,omitempty"`
@@ -87,9 +75,13 @@ type UpdateFormByIDUpdateFormByIDRequestBody struct {
 }
 
 type UpdateFormByIDRequest struct {
-	PathParams UpdateFormByIDPathParams
-	Headers    UpdateFormByIDHeaders
-	Request    *UpdateFormByIDUpdateFormByIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateFormByIDUpdateFormByIDRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// Form unique ID number.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateFormByIDResponse struct {

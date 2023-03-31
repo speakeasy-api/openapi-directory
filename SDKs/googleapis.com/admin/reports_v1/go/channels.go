@@ -32,11 +32,11 @@ func newChannels(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdminChannelsStop - Stop watching resources through this channel.
-func (s *channels) AdminChannelsStop(ctx context.Context, request operations.AdminChannelsStopRequest) (*operations.AdminChannelsStopResponse, error) {
+func (s *channels) AdminChannelsStop(ctx context.Context, request operations.AdminChannelsStopRequest, security operations.AdminChannelsStopSecurity) (*operations.AdminChannelsStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/reports_v1/channels/stop"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *channels) AdminChannelsStop(ctx context.Context, request operations.Adm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

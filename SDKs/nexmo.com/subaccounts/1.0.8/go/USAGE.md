@@ -14,24 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateSubAccountRequest{
-        Security: operations.CreateSubAccountSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "corrupti",
-        },
-        Request: shared.NewSubaccountRequest{
+        NewSubaccountRequest: shared.NewSubaccountRequest{
             Name: "Subaccount department A",
             Secret: "Password123",
             UsePrimaryAccountBalance: false,
         },
+        APIKey: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.SubaccountManagement.CreateSubAccount(ctx, req)
+    res, err := s.SubaccountManagement.CreateSubAccount(ctx, req, operations.CreateSubAccountSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

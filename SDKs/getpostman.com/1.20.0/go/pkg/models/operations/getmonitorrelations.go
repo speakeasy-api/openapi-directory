@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetMonitorRelationsPathParams struct {
+type GetMonitorRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetMonitorRelationsRequest struct {
-	PathParams GetMonitorRelationsPathParams
 }
 
 type GetMonitorRelations200ApplicationJSONMonitor struct {

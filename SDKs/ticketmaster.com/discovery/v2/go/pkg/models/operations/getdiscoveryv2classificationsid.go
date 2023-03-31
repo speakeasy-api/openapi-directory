@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDiscoveryV2ClassificationsIDPathParams struct {
-	// ID of the segment, genre, or sub-genre
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetDiscoveryV2ClassificationsIDIncludeLicensedContentEnum - True if you want to display licensed content
 type GetDiscoveryV2ClassificationsIDIncludeLicensedContentEnum string
 
@@ -37,16 +32,13 @@ func (e *GetDiscoveryV2ClassificationsIDIncludeLicensedContentEnum) UnmarshalJSO
 	}
 }
 
-type GetDiscoveryV2ClassificationsIDQueryParams struct {
+type GetDiscoveryV2ClassificationsIDRequest struct {
+	// ID of the segment, genre, or sub-genre
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// True if you want to display licensed content
 	IncludeLicensedContent *GetDiscoveryV2ClassificationsIDIncludeLicensedContentEnum `queryParam:"style=form,explode=true,name=includeLicensedContent"`
 	// The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*')
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetDiscoveryV2ClassificationsIDRequest struct {
-	PathParams  GetDiscoveryV2ClassificationsIDPathParams
-	QueryParams GetDiscoveryV2ClassificationsIDQueryParams
 }
 
 type GetDiscoveryV2ClassificationsIDResponse struct {

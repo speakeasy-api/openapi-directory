@@ -36,9 +36,9 @@ func newProjectDocument(defaultClient, securityClient HTTPClient, serverURL, lan
 // Upload a new document
 func (s *projectDocument) CreateProjectDocument(ctx context.Context, request operations.CreateProjectDocumentRequest) (*operations.CreateProjectDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DocumentUpdates", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *projectDocument) CreateProjectDocument(ctx context.Context, request ope
 // Delete the document
 func (s *projectDocument) DeleteProjectDocument(ctx context.Context, request operations.DeleteProjectDocumentRequest) (*operations.DeleteProjectDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *projectDocument) DeleteProjectDocument(ctx context.Context, request ope
 // Download an actual source file you uploaded to be translated in your project.
 func (s *projectDocument) DownloadProjectDocument(ctx context.Context, request operations.DownloadProjectDocumentRequest) (*operations.DownloadProjectDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -219,14 +219,14 @@ func (s *projectDocument) DownloadProjectDocument(ctx context.Context, request o
 // Download translated document in the given target language.
 func (s *projectDocument) DownloadTranslatedDocumentForLanguage(ctx context.Context, request operations.DownloadTranslatedDocumentForLanguageRequest) (*operations.DownloadTranslatedDocumentForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/download/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/download/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,14 +278,14 @@ func (s *projectDocument) DownloadTranslatedDocumentForLanguage(ctx context.Cont
 // View the details of a source file you uploaded to be translated in your project.
 func (s *projectDocument) GetProjectDocument(ctx context.Context, request operations.GetProjectDocumentRequest) (*operations.GetProjectDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -337,14 +337,14 @@ func (s *projectDocument) GetProjectDocument(ctx context.Context, request operat
 // Get a list of source files you uploaded to be translated in your project.
 func (s *projectDocument) GetProjectDocuments(ctx context.Context, request operations.GetProjectDocumentsRequest) (*operations.GetProjectDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -396,9 +396,9 @@ func (s *projectDocument) GetProjectDocuments(ctx context.Context, request opera
 // Update the document. File name and contents will replaced with the new one.
 func (s *projectDocument) UpdateProjectDocumentJSON(ctx context.Context, request operations.UpdateProjectDocumentJSONRequest) (*operations.UpdateProjectDocumentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DocumentUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -466,9 +466,9 @@ func (s *projectDocument) UpdateProjectDocumentJSON(ctx context.Context, request
 // Update the document. File name and contents will replaced with the new one.
 func (s *projectDocument) UpdateProjectDocumentMultipart(ctx context.Context, request operations.UpdateProjectDocumentMultipartRequest) (*operations.UpdateProjectDocumentMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DocumentUploadRequest1", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

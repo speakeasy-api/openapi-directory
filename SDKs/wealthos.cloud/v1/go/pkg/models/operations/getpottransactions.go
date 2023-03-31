@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPotTransactionsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPotTransactionsPathParams struct {
-	// Pot Id
-	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // GetPotTransactionsSortEnum - Sorting order; results are sorted by creation time.
@@ -42,31 +36,23 @@ func (e *GetPotTransactionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPotTransactionsQueryParams struct {
+type GetPotTransactionsRequest struct {
 	// From timestamp for the query. This must be in ISO format. Eg. 2021-08-12T07:54:47.011Z. If not present the from is set to 2000-01-01T00:00:00.000Z
 	From *string `queryParam:"style=form,explode=true,name=from"`
 	// Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
 	// Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageSize *string `queryParam:"style=form,explode=true,name=page_size"`
+	// Pot Id
+	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
 	// Sorting order; results are sorted by creation time.
 	Sort *GetPotTransactionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Sub transaction type of the transactions to be retrieved from the API
 	SubTransactionType *string `queryParam:"style=form,explode=true,name=sub_transaction_type"`
 	// To timestamp for the query. This must be in ISO format. Eg. 2021-08-12T07:54:47.011Z. If not present the to is set to current time.
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPotTransactionsHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetPotTransactionsRequest struct {
-	PathParams  GetPotTransactionsPathParams
-	QueryParams GetPotTransactionsQueryParams
-	Headers     GetPotTransactionsHeaders
-	Security    GetPotTransactionsSecurity
 }
 
 // GetPotTransactions500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

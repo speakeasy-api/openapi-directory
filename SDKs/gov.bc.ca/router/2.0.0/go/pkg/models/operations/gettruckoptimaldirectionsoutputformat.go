@@ -9,38 +9,6 @@ import (
 	"time"
 )
 
-// GetTruckOptimalDirectionsOutputFormatOutputFormatEnum - Format of representation
-type GetTruckOptimalDirectionsOutputFormatOutputFormatEnum string
-
-const (
-	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumJSON GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "json"
-	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumKml  GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "kml"
-	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumHTML GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *GetTruckOptimalDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "html":
-		*e = GetTruckOptimalDirectionsOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetTruckOptimalDirectionsOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat GetTruckOptimalDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetTruckOptimalDirectionsOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type GetTruckOptimalDirectionsOutputFormatCriteriaEnum string
 
@@ -89,6 +57,33 @@ func (e *GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum) UnmarshalJSON(da
 	}
 }
 
+// GetTruckOptimalDirectionsOutputFormatOutputFormatEnum - Format of representation
+type GetTruckOptimalDirectionsOutputFormatOutputFormatEnum string
+
+const (
+	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumJSON GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "json"
+	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumKml  GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "kml"
+	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumHTML GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *GetTruckOptimalDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "html":
+		*e = GetTruckOptimalDirectionsOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // GetTruckOptimalDirectionsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetTruckOptimalDirectionsOutputFormatOutputSrsEnum string
 
@@ -131,7 +126,7 @@ func (e *GetTruckOptimalDirectionsOutputFormatOutputSrsEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetTruckOptimalDirectionsOutputFormatQueryParams struct {
+type GetTruckOptimalDirectionsOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start and end points.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -142,6 +137,8 @@ type GetTruckOptimalDirectionsOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
+	// Format of representation
+	OutputFormat GetTruckOptimalDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetTruckOptimalDirectionsOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// A comma-separated list of values to identify sections of the route that correspond to truck route sections and non-truck route sections, ferry sections and non-ferry sections, and locality names.  The response includes a partitions attribute, which is an array of objects, each of which has an index (into the route coordinate array) and a value for each of the attributes requested in the partition parameter. Any or all of the following values can be used. <br><br>Partition values:<br> isTruckRoute – Distinguish between truck route sections and non-truck route sections <br> isFerry – Distinguish between ferry sections and non-ferry sections <br> locality – Include the locality name for the route partition
@@ -154,11 +151,6 @@ type GetTruckOptimalDirectionsOutputFormatQueryParams struct {
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
 	// The truck route multiplier value is used to multiply the cost of using roads that are not truck routes.
 	TruckRouteMultiplier *int64 `queryParam:"style=form,explode=true,name=truckRouteMultiplier"`
-}
-
-type GetTruckOptimalDirectionsOutputFormatRequest struct {
-	PathParams  GetTruckOptimalDirectionsOutputFormatPathParams
-	QueryParams GetTruckOptimalDirectionsOutputFormatQueryParams
 }
 
 type GetTruckOptimalDirectionsOutputFormatResponse struct {

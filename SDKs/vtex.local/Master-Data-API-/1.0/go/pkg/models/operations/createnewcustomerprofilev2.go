@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateNewCustomerProfilev2QueryParams struct {
-	// Name of the schema the document to be created needs to be compliant with.
-	Schema *string `queryParam:"style=form,explode=true,name=_schema"`
-}
-
-type CreateNewCustomerProfilev2Headers struct {
+type CreateNewCustomerProfilev2Request struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreateNewCustomerProfilev2Request struct {
-	QueryParams CreateNewCustomerProfilev2QueryParams
-	Headers     CreateNewCustomerProfilev2Headers
-	Request     shared.CreateUpdateProfileRequests `request:"mediaType=application/json"`
+	// Name of the schema the document to be created needs to be compliant with.
+	Schema                      *string                            `queryParam:"style=form,explode=true,name=_schema"`
+	CreateUpdateProfileRequests shared.CreateUpdateProfileRequests `request:"mediaType=application/json"`
 }
 
 type CreateNewCustomerProfilev2Response struct {

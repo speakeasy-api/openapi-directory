@@ -8,20 +8,15 @@ import (
 )
 
 type PrivateArticlePrivateLinkUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateArticlePrivateLinkUpdatePathParams struct {
+type PrivateArticlePrivateLinkUpdateRequest struct {
+	PrivateLinkCreator *shared.PrivateLinkCreator `request:"mediaType=application/json"`
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Private link token
 	LinkID string `pathParam:"style=simple,explode=false,name=link_id"`
-}
-
-type PrivateArticlePrivateLinkUpdateRequest struct {
-	PathParams PrivateArticlePrivateLinkUpdatePathParams
-	Request    *shared.PrivateLinkCreator `request:"mediaType=application/json"`
-	Security   PrivateArticlePrivateLinkUpdateSecurity
 }
 
 type PrivateArticlePrivateLinkUpdateResponse struct {

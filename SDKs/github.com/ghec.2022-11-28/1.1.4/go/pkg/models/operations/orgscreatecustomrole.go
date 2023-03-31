@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsCreateCustomRolePathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsCreateCustomRoleRequestBodyBaseRoleEnum - The system role from which this role inherits permissions.
 type OrgsCreateCustomRoleRequestBodyBaseRoleEnum string
 
@@ -56,8 +51,9 @@ type OrgsCreateCustomRoleRequestBody struct {
 }
 
 type OrgsCreateCustomRoleRequest struct {
-	PathParams OrgsCreateCustomRolePathParams
-	Request    OrgsCreateCustomRoleRequestBody `request:"mediaType=application/json"`
+	RequestBody OrgsCreateCustomRoleRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsCreateCustomRoleResponse struct {

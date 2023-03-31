@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SessionIDDeletePathParams struct {
+type SessionIDDeleteRequest struct {
 	// The primary key for a view session
 	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
-}
-
-type SessionIDDeleteRequest struct {
-	PathParams SessionIDDeletePathParams
 }
 
 type SessionIDDeleteResponse struct {

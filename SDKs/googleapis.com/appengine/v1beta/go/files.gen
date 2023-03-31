@@ -63,7 +63,6 @@ pkg/models/shared/managedcertificate.go
 pkg/models/shared/certificaterawdata.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listauthorizedcertificatesresponse.go
 pkg/models/shared/listauthorizeddomainsresponse.go
 pkg/models/shared/authorizeddomain.go

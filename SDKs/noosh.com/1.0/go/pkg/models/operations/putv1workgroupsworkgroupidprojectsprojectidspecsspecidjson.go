@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	SpecID      string `pathParam:"style=simple,explode=false,name=spec_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONRequest struct {
-	PathParams PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONPathParams
-	Request    *shared.SpecUpdatePersistVO `request:"mediaType=application/json"`
+	SpecUpdatePersistVO *shared.SpecUpdatePersistVO `request:"mediaType=application/json"`
+	ProjectID           string                      `pathParam:"style=simple,explode=false,name=project_id"`
+	SpecID              string                      `pathParam:"style=simple,explode=false,name=spec_id"`
+	WorkgroupID         string                      `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONResponse struct {

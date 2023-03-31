@@ -12,7 +12,8 @@ var CreateUnderstandAssistantServerList = []string{
 }
 
 type CreateUnderstandAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandAssistantCreateUnderstandAssistantRequest struct {
@@ -32,12 +33,6 @@ type CreateUnderstandAssistantCreateUnderstandAssistantRequest struct {
 	StyleSheet interface{} `form:"name=StyleSheet"`
 	// A user-provided string that uniquely identifies this resource as an alternative to the sid. Unique up to 64 characters long.
 	UniqueName *string `form:"name=UniqueName"`
-}
-
-type CreateUnderstandAssistantRequest struct {
-	Request   *CreateUnderstandAssistantCreateUnderstandAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateUnderstandAssistantSecurity
-	ServerURL *string
 }
 
 type CreateUnderstandAssistantResponse struct {

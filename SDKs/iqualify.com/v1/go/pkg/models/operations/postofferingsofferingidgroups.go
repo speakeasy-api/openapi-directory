@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOfferingsOfferingIDGroupsPathParams struct {
+type PostOfferingsOfferingIDGroupsRequest struct {
+	AssessmentGroupRequired shared.AssessmentGroupRequired `request:"mediaType=application/json"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type PostOfferingsOfferingIDGroupsRequest struct {
-	PathParams PostOfferingsOfferingIDGroupsPathParams
-	Request    shared.AssessmentGroupRequired `request:"mediaType=application/json"`
 }
 
 type PostOfferingsOfferingIDGroupsResponse struct {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBillingRecipientsRequest{
-        PathParams: operations.GetBillingRecipientsPathParams{
-            WorkgroupID: "corrupti",
-        },
+        WorkgroupID: "corrupti",
     }
 
     ctx := context.Background()

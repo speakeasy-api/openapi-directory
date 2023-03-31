@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // TestingProjectsTestMatricesCancel - Cancels unfinished test executions in a test matrix. This call returns immediately and cancellation proceeds asynchronously. If the matrix is already final, this operation will have no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
-func (s *projects) TestingProjectsTestMatricesCancel(ctx context.Context, request operations.TestingProjectsTestMatricesCancelRequest) (*operations.TestingProjectsTestMatricesCancelResponse, error) {
+func (s *projects) TestingProjectsTestMatricesCancel(ctx context.Context, request operations.TestingProjectsTestMatricesCancelRequest, security operations.TestingProjectsTestMatricesCancelSecurity) (*operations.TestingProjectsTestMatricesCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices/{testMatrixId}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices/{testMatrixId}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) TestingProjectsTestMatricesCancel(ctx context.Context, reques
 }
 
 // TestingProjectsTestMatricesCreate - Creates and runs a matrix of tests according to the given specifications. Unsupported environments will be returned in the state UNSUPPORTED. A test matrix is limited to use at most 2000 devices in parallel. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed or if the matrix tries to use too many simultaneous devices.
-func (s *projects) TestingProjectsTestMatricesCreate(ctx context.Context, request operations.TestingProjectsTestMatricesCreateRequest) (*operations.TestingProjectsTestMatricesCreateResponse, error) {
+func (s *projects) TestingProjectsTestMatricesCreate(ctx context.Context, request operations.TestingProjectsTestMatricesCreateRequest, security operations.TestingProjectsTestMatricesCreateSecurity) (*operations.TestingProjectsTestMatricesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestMatrix", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) TestingProjectsTestMatricesCreate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) TestingProjectsTestMatricesCreate(ctx context.Context, reques
 }
 
 // TestingProjectsTestMatricesGet - Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
-func (s *projects) TestingProjectsTestMatricesGet(ctx context.Context, request operations.TestingProjectsTestMatricesGetRequest) (*operations.TestingProjectsTestMatricesGetResponse, error) {
+func (s *projects) TestingProjectsTestMatricesGet(ctx context.Context, request operations.TestingProjectsTestMatricesGetRequest, security operations.TestingProjectsTestMatricesGetSecurity) (*operations.TestingProjectsTestMatricesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices/{testMatrixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/testMatrices/{testMatrixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

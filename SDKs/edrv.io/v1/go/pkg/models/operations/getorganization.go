@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetOrganizationPathParams struct {
+type GetOrganizationRequest struct {
 	// ID of organization that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetOrganizationQueryParams struct {
 	// Populate locations
 	IncludeLocations *bool `queryParam:"style=form,explode=true,name=include_locations"`
-}
-
-type GetOrganizationRequest struct {
-	PathParams  GetOrganizationPathParams
-	QueryParams GetOrganizationQueryParams
 }
 
 type GetOrganizationResponse struct {

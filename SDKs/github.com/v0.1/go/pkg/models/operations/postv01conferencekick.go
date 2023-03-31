@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ConferenceKickSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ConferenceKickRequest struct {
-	// POST parameters
-	Request  *shared.ConferenceKickParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ConferenceKickSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ConferenceKickResponse struct {

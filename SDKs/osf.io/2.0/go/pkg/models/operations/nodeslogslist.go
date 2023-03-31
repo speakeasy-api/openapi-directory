@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesLogsListPathParams struct {
+type NodesLogsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesLogsListRequest struct {
-	PathParams NodesLogsListPathParams
 }
 
 // NodesLogsListLogAttributesLogParams - The type of action performed on the OSF. See description for full list of possible actions.

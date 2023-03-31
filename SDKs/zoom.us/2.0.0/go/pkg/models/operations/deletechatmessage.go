@@ -4,20 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteChatMessageSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteChatMessagePathParams struct {
+type DeleteChatMessageRequest struct {
 	// Message ID
 	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
-	UserID    string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteChatMessageQueryParams struct {
 	// The channel Id of the channel where you would like to send the message.
 	//
 	// You must provide either `to_contact` or `to_channel` as a query parameter to delete a message that was previously sent to either an individual or a chat channel
@@ -26,12 +21,7 @@ type DeleteChatMessageQueryParams struct {
 	//
 	// Note: You must provide either `to_contact` or `to_channel` as a query parameter to delete a message that was previously sent to either an individual or a chat channel respectively.
 	ToContact *string `queryParam:"style=form,explode=true,name=to_contact"`
-}
-
-type DeleteChatMessageRequest struct {
-	PathParams  DeleteChatMessagePathParams
-	QueryParams DeleteChatMessageQueryParams
-	Security    DeleteChatMessageSecurity
+	UserID    string  `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DeleteChatMessageResponse struct {

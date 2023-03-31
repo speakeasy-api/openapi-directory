@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTodGetTracePathParams struct {
+type ProtocolTodGetTraceRequest struct {
 	// Agent to show whether TOD tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTodGetTraceRequest struct {
-	PathParams ProtocolTodGetTracePathParams
 }
 
 type ProtocolTodGetTraceResponse struct {

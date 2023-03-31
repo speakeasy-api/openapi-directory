@@ -12,20 +12,15 @@ var FetchEventServerList = []string{
 }
 
 type FetchEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchEventPathParams struct {
+type FetchEventRequest struct {
 	// The SID of the Event resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Event to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchEventRequest struct {
-	PathParams FetchEventPathParams
-	Security   FetchEventSecurity
-	ServerURL  *string
 }
 
 type FetchEventResponse struct {

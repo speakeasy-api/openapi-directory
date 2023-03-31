@@ -6,11 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCollectionsPathParams struct {
-	BucketID string `pathParam:"style=simple,explode=false,name=bucket_id"`
-}
-
-type GetCollectionsQueryParams struct {
+type GetCollectionsRequest struct {
+	IfMatch      *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch  *string  `header:"style=simple,explode=false,name=If-None-Match"`
 	Before       *int64   `queryParam:"style=form,explode=true,name=_before"`
 	Fields       []string `queryParam:"style=form,explode=false,name=_fields"`
 	Limit        *int64   `queryParam:"style=form,explode=true,name=_limit"`
@@ -18,19 +16,9 @@ type GetCollectionsQueryParams struct {
 	Sort         []string `queryParam:"style=form,explode=false,name=_sort"`
 	To           *int64   `queryParam:"style=form,explode=true,name=_to"`
 	Token        *string  `queryParam:"style=form,explode=true,name=_token"`
+	BucketID     string   `pathParam:"style=simple,explode=false,name=bucket_id"`
 	ID           *string  `queryParam:"style=form,explode=true,name=id"`
 	LastModified *int64   `queryParam:"style=form,explode=true,name=last_modified"`
-}
-
-type GetCollectionsHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetCollectionsRequest struct {
-	PathParams  GetCollectionsPathParams
-	QueryParams GetCollectionsQueryParams
-	Headers     GetCollectionsHeaders
 }
 
 // GetCollectionsErrorSchema - The request is invalid.

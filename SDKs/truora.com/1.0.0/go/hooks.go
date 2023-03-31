@@ -69,7 +69,7 @@ func newHooks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ```
 //
 // Keep in mind that the object attribute varies depending on the event_type.
-func (s *hooks) CreateHook(ctx context.Context, request operations.CreateHookRequest) (*operations.CreateHookResponse, error) {
+func (s *hooks) CreateHook(ctx context.Context, request shared.CreateHookInput, security operations.CreateHookSecurity) (*operations.CreateHookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/hooks"
 
@@ -88,7 +88,7 @@ func (s *hooks) CreateHook(ctx context.Context, request operations.CreateHookReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,16 +125,16 @@ func (s *hooks) CreateHook(ctx context.Context, request operations.CreateHookReq
 
 // DeletHook - Deletes hook
 // Deletes hook configuration.
-func (s *hooks) DeletHook(ctx context.Context, request operations.DeletHookRequest) (*operations.DeletHookResponse, error) {
+func (s *hooks) DeletHook(ctx context.Context, request operations.DeletHookRequest, security operations.DeletHookSecurity) (*operations.DeletHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *hooks) DeletHook(ctx context.Context, request operations.DeletHookReque
 
 // ListHook - Lists all hooks
 // Lists all the configured hooks in your account.
-func (s *hooks) ListHook(ctx context.Context, request operations.ListHookRequest) (*operations.ListHookResponse, error) {
+func (s *hooks) ListHook(ctx context.Context) (*operations.ListHookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/hooks"
 
@@ -180,7 +180,7 @@ func (s *hooks) ListHook(ctx context.Context, request operations.ListHookRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -216,11 +216,11 @@ func (s *hooks) ListHook(ctx context.Context, request operations.ListHookRequest
 
 // UpdateHook - Updates hook
 // Updates a hook configuration.
-func (s *hooks) UpdateHook(ctx context.Context, request operations.UpdateHookRequest) (*operations.UpdateHookResponse, error) {
+func (s *hooks) UpdateHook(ctx context.Context, request operations.UpdateHookRequest, security operations.UpdateHookSecurity) (*operations.UpdateHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateHookInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -235,7 +235,7 @@ func (s *hooks) UpdateHook(ctx context.Context, request operations.UpdateHookReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,18 +8,13 @@ import (
 )
 
 type PostAutomationV4ActionsAppIDCreateSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostAutomationV4ActionsAppIDCreatePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PostAutomationV4ActionsAppIDCreateRequest struct {
-	PathParams PostAutomationV4ActionsAppIDCreatePathParams
 	// The custom workflow action to create.
-	Request  shared.ExtensionActionDefinitionInput `request:"mediaType=application/json"`
-	Security PostAutomationV4ActionsAppIDCreateSecurity
+	ExtensionActionDefinitionInput shared.ExtensionActionDefinitionInput `request:"mediaType=application/json"`
+	AppID                          int                                   `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PostAutomationV4ActionsAppIDCreateResponse struct {

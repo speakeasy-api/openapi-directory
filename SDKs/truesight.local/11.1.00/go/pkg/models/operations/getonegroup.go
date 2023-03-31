@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOneGroupPathParams struct {
+type GetOneGroupRequest struct {
 	// The ID of the group.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetOneGroupRequest struct {
-	PathParams GetOneGroupPathParams
 }
 
 type GetOneGroupResponse struct {

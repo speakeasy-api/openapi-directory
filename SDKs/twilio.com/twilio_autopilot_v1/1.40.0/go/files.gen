@@ -64,7 +64,6 @@ pkg/models/operations/updatetask.go
 pkg/models/operations/updatetaskactions.go
 pkg/models/operations/updatewebhook.go
 pkg/models/shared/autopilotv1assistant.go
-pkg/models/shared/security.go
 pkg/models/shared/autopilotv1assistanttaskfield.go
 pkg/models/shared/autopilotv1assistantfieldtype.go
 pkg/models/shared/autopilotv1assistantfieldtypefieldvalue.go
@@ -81,3 +80,4 @@ pkg/models/shared/autopilotv1assistanttasktaskactions.go
 pkg/models/shared/autopilotv1assistanttasktaskstatistics.go
 pkg/models/shared/autopilotv1restoreassistant.go
 USAGE.md
+pkg/models/operations/options.go

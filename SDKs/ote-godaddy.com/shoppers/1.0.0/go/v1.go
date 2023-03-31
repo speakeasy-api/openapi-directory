@@ -37,9 +37,9 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // <strong>Notes:</strong><ul><li>Password set is only supported by API Resellers setting subaccount passwords.</li><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/factors/password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/factors/password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Secret", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *v1) ChangePassword(ctx context.Context, request operations.ChangePasswo
 }
 
 // CreateSubaccountJSON - Create a Subaccount owned by the authenticated Reseller
-func (s *v1) CreateSubaccountJSON(ctx context.Context, request operations.CreateSubaccountJSONRequest) (*operations.CreateSubaccountJSONResponse, error) {
+func (s *v1) CreateSubaccountJSON(ctx context.Context, request shared.SubaccountCreate) (*operations.CreateSubaccountJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shoppers/subaccount"
 
@@ -277,7 +277,7 @@ func (s *v1) CreateSubaccountJSON(ctx context.Context, request operations.Create
 }
 
 // CreateSubaccountRaw - Create a Subaccount owned by the authenticated Reseller
-func (s *v1) CreateSubaccountRaw(ctx context.Context, request operations.CreateSubaccountRawRequest) (*operations.CreateSubaccountRawResponse, error) {
+func (s *v1) CreateSubaccountRaw(ctx context.Context, request []byte) (*operations.CreateSubaccountRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shoppers/subaccount"
 
@@ -446,14 +446,14 @@ func (s *v1) CreateSubaccountRaw(ctx context.Context, request operations.CreateS
 // <strong>Notes:</strong><ul><li>Shopper deletion is not supported in OTE</li><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -574,14 +574,14 @@ func (s *v1) Delete(ctx context.Context, request operations.DeleteRequest) (*ope
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -735,14 +735,14 @@ func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operation
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**. **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) GetStatus(ctx context.Context, request operations.GetStatusRequest) (*operations.GetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -898,9 +898,9 @@ func (s *v1) GetStatus(ctx context.Context, request operations.GetStatusRequest)
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONRequest) (*operations.UpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShopperUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1067,9 +1067,9 @@ func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONReques
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) UpdateRaw(ctx context.Context, request operations.UpdateRawRequest) (*operations.UpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

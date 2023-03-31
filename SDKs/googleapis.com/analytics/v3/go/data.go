@@ -33,7 +33,7 @@ func newData(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // AnalyticsDataGaGet - Returns Analytics data for a view (profile).
-func (s *data) AnalyticsDataGaGet(ctx context.Context, request operations.AnalyticsDataGaGetRequest) (*operations.AnalyticsDataGaGetResponse, error) {
+func (s *data) AnalyticsDataGaGet(ctx context.Context, request operations.AnalyticsDataGaGetRequest, security operations.AnalyticsDataGaGetSecurity) (*operations.AnalyticsDataGaGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data/ga"
 
@@ -42,11 +42,11 @@ func (s *data) AnalyticsDataGaGet(ctx context.Context, request operations.Analyt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *data) AnalyticsDataGaGet(ctx context.Context, request operations.Analyt
 }
 
 // AnalyticsDataMcfGet - Returns Analytics Multi-Channel Funnels data for a view (profile).
-func (s *data) AnalyticsDataMcfGet(ctx context.Context, request operations.AnalyticsDataMcfGetRequest) (*operations.AnalyticsDataMcfGetResponse, error) {
+func (s *data) AnalyticsDataMcfGet(ctx context.Context, request operations.AnalyticsDataMcfGetRequest, security operations.AnalyticsDataMcfGetSecurity) (*operations.AnalyticsDataMcfGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data/mcf"
 
@@ -90,11 +90,11 @@ func (s *data) AnalyticsDataMcfGet(ctx context.Context, request operations.Analy
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *data) AnalyticsDataMcfGet(ctx context.Context, request operations.Analy
 }
 
 // AnalyticsDataRealtimeGet - Returns real time data for a view (profile).
-func (s *data) AnalyticsDataRealtimeGet(ctx context.Context, request operations.AnalyticsDataRealtimeGetRequest) (*operations.AnalyticsDataRealtimeGetResponse, error) {
+func (s *data) AnalyticsDataRealtimeGet(ctx context.Context, request operations.AnalyticsDataRealtimeGetRequest, security operations.AnalyticsDataRealtimeGetSecurity) (*operations.AnalyticsDataRealtimeGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data/realtime"
 
@@ -138,11 +138,11 @@ func (s *data) AnalyticsDataRealtimeGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

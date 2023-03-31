@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteThirdPartyTransactionPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The third party transaction unique identifier. E.g TP001
-	ThirdPartyTransactionID string `pathParam:"style=simple,explode=false,name=ThirdPartyTransactionId"`
-}
-
-type DeleteThirdPartyTransactionHeaders struct {
+type DeleteThirdPartyTransactionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeleteThirdPartyTransactionRequest struct {
-	PathParams DeleteThirdPartyTransactionPathParams
-	Headers    DeleteThirdPartyTransactionHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The third party transaction unique identifier. E.g TP001
+	ThirdPartyTransactionID string `pathParam:"style=simple,explode=false,name=ThirdPartyTransactionId"`
 }
 
 type DeleteThirdPartyTransactionResponse struct {

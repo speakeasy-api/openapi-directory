@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDGroupsGroupIDPersonsMemberIDPathParams struct {
+type PatchSpacesIDGroupsGroupIDPersonsMemberIDRequest struct {
 	// Id of the group to modify
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// MemberId of the person
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
-type PatchSpacesIDGroupsGroupIDPersonsMemberIDRequest struct {
-	PathParams PatchSpacesIDGroupsGroupIDPersonsMemberIDPathParams
 }
 
 type PatchSpacesIDGroupsGroupIDPersonsMemberIDResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvoiceAPIDeleteJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type InvoiceAPIDeleteJSONRequest struct {
-	Headers InvoiceAPIDeleteJSONHeaders
-	Request shared.InvoiceDeleteAPIModel `request:"mediaType=application/json"`
+	InvoiceDeleteAPIModel shared.InvoiceDeleteAPIModel `request:"mediaType=application/json"`
+	XAuthKey              string                       `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret           string                       `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type InvoiceAPIDeleteJSONResponse struct {

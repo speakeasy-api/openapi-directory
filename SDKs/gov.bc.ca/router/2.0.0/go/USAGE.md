@@ -13,27 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetDirectionsOutputFormatRequest{
-        PathParams: operations.GetDirectionsOutputFormatPathParams{
-            OutputFormat: "kml",
-        },
-        QueryParams: operations.GetDirectionsOutputFormatQueryParams{
-            CorrectSide: false,
-            Criteria: "fastest",
-            Departure: "2021-04-24T16:27:50.833Z",
-            Disable: "unde",
-            DistanceUnit: "mi",
-            OutputSRS: "26908",
-            Points: "illum",
-            RoundTrip: false,
-            RouteDescription: "vel",
-        },
+        CorrectSide: false,
+        Criteria: "fastest",
+        Departure: "2021-07-27T21:52:56.087Z",
+        Disable: "quibusdam",
+        DistanceUnit: "mi",
+        OutputFormat: "html",
+        OutputSRS: "26908",
+        Points: "illum",
+        RoundTrip: false,
+        RouteDescription: "vel",
     }
 
     ctx := context.Background()

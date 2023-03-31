@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSSHGetArgsPathParams struct {
+type ProtocolSSHGetArgsRequest struct {
 	// Agent to show the SSH argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSSHGetArgsRequest struct {
-	PathParams ProtocolSSHGetArgsPathParams
 }
 
 type ProtocolSSHGetArgsResponse struct {

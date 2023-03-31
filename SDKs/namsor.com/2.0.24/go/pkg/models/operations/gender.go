@@ -8,16 +8,11 @@ import (
 )
 
 type GenderSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderPathParams struct {
-	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderRequest struct {
-	PathParams GenderPathParams
-	Security   GenderSecurity
+	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
 }
 
 type GenderResponse struct {

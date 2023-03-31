@@ -59,7 +59,7 @@ func (e *GetMeBadgesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMeBadgesQueryParams struct {
+type GetMeBadgesRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -116,10 +116,6 @@ type GetMeBadgesQueryParams struct {
 	Sort *GetMeBadgesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetMeBadgesRequest struct {
-	QueryParams GetMeBadgesQueryParams
 }
 
 type GetMeBadgesResponse struct {

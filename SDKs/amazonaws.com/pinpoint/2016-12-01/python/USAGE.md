@@ -3,35 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAppRequest(
-    headers=operations.CreateAppHeaders(
-        x_amz_algorithm="dolorum",
-        x_amz_content_sha256="ut",
-        x_amz_credential="voluptatum",
-        x_amz_date="alias",
-        x_amz_security_token="consequatur",
-        x_amz_signature="eum",
-        x_amz_signed_headers="nemo",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateAppRequestBody(
+)
+
+
+req = operations.CreateAppRequest(
+    request_body=operations.CreateAppRequestBody(
         create_application_request=operations.CreateAppRequestBodyCreateApplicationRequest(
-            name="omnis",
+            name="corrupti",
             tags={
-                "reprehenderit": "omnis",
-                "velit": "molestiae",
-                "id": "quia",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
         ),
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
 )
     
 res = s.create_app(req)

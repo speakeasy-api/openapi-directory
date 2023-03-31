@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRepoWorkflowsPathParams struct {
+type ActionsListRepoWorkflowsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsListRepoWorkflowsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListRepoWorkflowsRequest struct {
-	PathParams  ActionsListRepoWorkflowsPathParams
-	QueryParams ActionsListRepoWorkflowsQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ActionsListRepoWorkflows200ApplicationJSON - Response

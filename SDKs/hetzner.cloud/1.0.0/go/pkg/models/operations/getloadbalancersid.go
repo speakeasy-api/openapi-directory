@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancersIDPathParams struct {
+type GetLoadBalancersIDRequest struct {
 	// ID of the Load Balancer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLoadBalancersIDRequest struct {
-	PathParams GetLoadBalancersIDPathParams
 }
 
 // GetLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum - Type of the algorithm

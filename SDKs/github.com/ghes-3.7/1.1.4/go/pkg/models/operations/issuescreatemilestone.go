@@ -10,13 +10,6 @@ import (
 	"time"
 )
 
-type IssuesCreateMilestonePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesCreateMilestoneRequestBodyStateEnum - The state of the milestone. Either `open` or `closed`.
 type IssuesCreateMilestoneRequestBodyStateEnum string
 
@@ -53,8 +46,11 @@ type IssuesCreateMilestoneRequestBody struct {
 }
 
 type IssuesCreateMilestoneRequest struct {
-	PathParams IssuesCreateMilestonePathParams
-	Request    IssuesCreateMilestoneRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesCreateMilestoneRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesCreateMilestoneResponse struct {

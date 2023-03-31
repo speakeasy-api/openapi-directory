@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AspByRouteUsV1AirspaceRouteQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type AspByRouteUsV1AirspaceRouteQueryPostRequest struct {
-	Headers AspByRouteUsV1AirspaceRouteQueryPostHeaders
-	Request shared.AirspaceByRoute `request:"mediaType=application/json"`
+	AirspaceByRoute shared.AirspaceByRoute `request:"mediaType=application/json"`
+	XAPIKey         *string                `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type AspByRouteUsV1AirspaceRouteQueryPostResponse struct {

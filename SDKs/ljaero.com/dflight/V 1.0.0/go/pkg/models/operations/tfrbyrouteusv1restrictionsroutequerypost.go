@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TfrByRouteUsV1RestrictionsRouteQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type TfrByRouteUsV1RestrictionsRouteQueryPostRequest struct {
-	Headers TfrByRouteUsV1RestrictionsRouteQueryPostHeaders
-	Request shared.NOTAMsByRoute `request:"mediaType=application/json"`
+	NOTAMsByRoute shared.NOTAMsByRoute `request:"mediaType=application/json"`
+	XAPIKey       *string              `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type TfrByRouteUsV1RestrictionsRouteQueryPostResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteFlexFlowServerList = []string{
@@ -12,18 +11,13 @@ var DeleteFlexFlowServerList = []string{
 }
 
 type DeleteFlexFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteFlexFlowPathParams struct {
-	// The SID of the Flex Flow resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteFlexFlowRequest struct {
-	PathParams DeleteFlexFlowPathParams
-	Security   DeleteFlexFlowSecurity
-	ServerURL  *string
+	// The SID of the Flex Flow resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteFlexFlowResponse struct {

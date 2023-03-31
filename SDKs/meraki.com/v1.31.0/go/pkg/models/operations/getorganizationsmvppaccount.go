@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSmVppAccountPathParams struct {
+type GetOrganizationSmVppAccountRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	VppAccountID   string `pathParam:"style=simple,explode=false,name=vppAccountId"`
-}
-
-type GetOrganizationSmVppAccountRequest struct {
-	PathParams GetOrganizationSmVppAccountPathParams
 }
 
 // GetOrganizationSmVppAccount200ApplicationJSON - Successful operation

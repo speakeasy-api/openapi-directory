@@ -11,10 +11,6 @@ type EnterpriseAdminUpgradeLicenseRequestBody struct {
 	License *string `form:"name=license"`
 }
 
-type EnterpriseAdminUpgradeLicenseRequest struct {
-	Request *EnterpriseAdminUpgradeLicenseRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type EnterpriseAdminUpgradeLicenseResponse struct {
 	ContentType string
 	StatusCode  int

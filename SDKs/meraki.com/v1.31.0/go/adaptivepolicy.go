@@ -34,9 +34,9 @@ func newAdaptivePolicy(defaultClient, securityClient HTTPClient, serverURL, lang
 // Creates new adaptive policy ACL
 func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyACLRequest) (*operations.CreateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyACL(ctx context.Context
 // Creates a new adaptive policy group
 func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyGroupRequest) (*operations.CreateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,9 +144,9 @@ func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyGroup(ctx context.Conte
 // Add an Adaptive Policy
 func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyPolicyRequest) (*operations.CreateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *adaptivePolicy) CreateOrganizationAdaptivePolicyPolicy(ctx context.Cont
 // Deletes the specified adaptive policy ACL. Note this adaptive policy ACL will also be removed from policies using it.
 func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyACLRequest) (*operations.DeleteOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyACL(ctx context.Context
 // Deletes the specified adaptive policy group and any associated policies and references
 func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyGroupRequest) (*operations.DeleteOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyGroup(ctx context.Conte
 // Delete an Adaptive Policy
 func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyPolicyRequest) (*operations.DeleteOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -307,7 +307,7 @@ func (s *adaptivePolicy) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Cont
 // Returns the adaptive policy ACL information
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyACL(ctx context.Context, request operations.GetOrganizationAdaptivePolicyACLRequest) (*operations.GetOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +352,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyACL(ctx context.Context, r
 // List adaptive policy ACLs in a organization
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyAcls(ctx context.Context, request operations.GetOrganizationAdaptivePolicyAclsRequest) (*operations.GetOrganizationAdaptivePolicyAclsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -397,7 +397,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyAcls(ctx context.Context, 
 // Returns an adaptive policy group
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupRequest) (*operations.GetOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -442,7 +442,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyGroup(ctx context.Context,
 // List adaptive policy groups in a organization
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyGroups(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupsRequest) (*operations.GetOrganizationAdaptivePolicyGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +487,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyGroups(ctx context.Context
 // Returns adaptive policy aggregate statistics for an organization
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyOverview(ctx context.Context, request operations.GetOrganizationAdaptivePolicyOverviewRequest) (*operations.GetOrganizationAdaptivePolicyOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -532,7 +532,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyOverview(ctx context.Conte
 // List adaptive policies in an organization
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPoliciesRequest) (*operations.GetOrganizationAdaptivePolicyPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -577,7 +577,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyPolicies(ctx context.Conte
 // Return an adaptive policy
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPolicyRequest) (*operations.GetOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -622,7 +622,7 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicyPolicy(ctx context.Context
 // Returns global adaptive policy settings in an organization
 func (s *adaptivePolicy) GetOrganizationAdaptivePolicySettings(ctx context.Context, request operations.GetOrganizationAdaptivePolicySettingsRequest) (*operations.GetOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -667,9 +667,9 @@ func (s *adaptivePolicy) GetOrganizationAdaptivePolicySettings(ctx context.Conte
 // Updates an adaptive policy ACL
 func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyACLRequest) (*operations.UpdateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -719,9 +719,9 @@ func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyACL(ctx context.Context
 // Updates an adaptive policy group. If updating "Infrastructure", only the SGT is allowed. Cannot update "Unknown".
 func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyGroupRequest) (*operations.UpdateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -771,9 +771,9 @@ func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyGroup(ctx context.Conte
 // Update an Adaptive Policy
 func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyPolicyRequest) (*operations.UpdateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -823,9 +823,9 @@ func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Cont
 // Update global adaptive policy settings
 func (s *adaptivePolicy) UpdateOrganizationAdaptivePolicySettings(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicySettingsRequest) (*operations.UpdateOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

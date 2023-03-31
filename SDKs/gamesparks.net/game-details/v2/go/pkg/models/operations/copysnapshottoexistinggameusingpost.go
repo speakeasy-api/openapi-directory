@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopySnapshotToExistingGameUsingPOSTPathParams struct {
+type CopySnapshotToExistingGameUsingPOSTRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId
 	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
 	// targetApiKey
 	TargetAPIKey string `pathParam:"style=simple,explode=false,name=targetApiKey"`
-}
-
-type CopySnapshotToExistingGameUsingPOSTRequest struct {
-	PathParams CopySnapshotToExistingGameUsingPOSTPathParams
 }
 
 type CopySnapshotToExistingGameUsingPOSTResponse struct {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDevicesAvailabilitiesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationDevicesAvailabilitiesTagsFilterTypeEnum - An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 type GetOrganizationDevicesAvailabilitiesTagsFilterTypeEnum string
 
@@ -36,11 +32,12 @@ func (e *GetOrganizationDevicesAvailabilitiesTagsFilterTypeEnum) UnmarshalJSON(d
 	}
 }
 
-type GetOrganizationDevicesAvailabilitiesQueryParams struct {
+type GetOrganizationDevicesAvailabilitiesRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Optional parameter to filter device availabilities by network ID. This filter uses multiple exact matches.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches.
@@ -53,11 +50,6 @@ type GetOrganizationDevicesAvailabilitiesQueryParams struct {
 	Tags []string `queryParam:"style=form,explode=false,name=tags"`
 	// An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 	TagsFilterType *GetOrganizationDevicesAvailabilitiesTagsFilterTypeEnum `queryParam:"style=form,explode=true,name=tagsFilterType"`
-}
-
-type GetOrganizationDevicesAvailabilitiesRequest struct {
-	PathParams  GetOrganizationDevicesAvailabilitiesPathParams
-	QueryParams GetOrganizationDevicesAvailabilitiesQueryParams
 }
 
 // GetOrganizationDevicesAvailabilities200ApplicationJSONNetwork - Network info.

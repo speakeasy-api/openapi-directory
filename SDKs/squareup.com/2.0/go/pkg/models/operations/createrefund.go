@@ -8,21 +8,16 @@ import (
 )
 
 type CreateRefundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateRefundPathParams struct {
-	// The ID of the original payment's associated location.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateRefundRequest struct {
-	PathParams CreateRefundPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.V1CreateRefundRequest `request:"mediaType=application/json"`
-	Security CreateRefundSecurity
+	V1CreateRefundRequest shared.V1CreateRefundRequest `request:"mediaType=application/json"`
+	// The ID of the original payment's associated location.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 }
 
 type CreateRefundResponse struct {

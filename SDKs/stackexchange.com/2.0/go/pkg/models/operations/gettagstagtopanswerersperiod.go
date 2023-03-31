@@ -32,12 +32,7 @@ func (e *GetTagsTagTopAnswerersPeriodPeriodEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetTagsTagTopAnswerersPeriodPathParams struct {
-	Period GetTagsTagTopAnswerersPeriodPeriodEnum `pathParam:"style=simple,explode=false,name=period"`
-	Tag    string                                 `pathParam:"style=simple,explode=false,name=tag"`
-}
-
-type GetTagsTagTopAnswerersPeriodQueryParams struct {
+type GetTagsTagTopAnswerersPeriodRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -72,17 +67,14 @@ type GetTagsTagTopAnswerersPeriodQueryParams struct {
 	//
 	// For ease of transition from earlier API versions, the filters _b, _ba, _bc, _bca, _a, _ac, and _c are also built in. These are unsafe, and exclude a combination of question and answer body, comments, and answers so as to mimic the body, answers, and comments parameters that have been removed in V2.0. New applications should not use these filters.
 	//
-	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
-	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
-	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
+	Filter   *string                                `queryParam:"style=form,explode=true,name=filter"`
+	Page     *int64                                 `queryParam:"style=form,explode=true,name=page"`
+	Pagesize *int64                                 `queryParam:"style=form,explode=true,name=pagesize"`
+	Period   GetTagsTagTopAnswerersPeriodPeriodEnum `pathParam:"style=simple,explode=false,name=period"`
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetTagsTagTopAnswerersPeriodRequest struct {
-	PathParams  GetTagsTagTopAnswerersPeriodPathParams
-	QueryParams GetTagsTagTopAnswerersPeriodQueryParams
+	Tag  string `pathParam:"style=simple,explode=false,name=tag"`
 }
 
 type GetTagsTagTopAnswerersPeriodResponse struct {

@@ -1,0 +1,79 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/twilio.com/twilio_notify_v1/1.40.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.CreateBindingRequest(
+    request_body=operations.CreateBindingCreateBindingRequest(
+        address="5786 Little Streets",
+        binding_type="sms",
+        credential_sid="error",
+        endpoint="deserunt",
+        identity="suscipit",
+        notification_protocol_version="iure",
+        tag=[
+            "debitis",
+            "ipsa",
+        ],
+    ),
+    service_sid="delectus",
+)
+    
+res = s.create_binding(req, operations.CreateBindingSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
+
+if res.notify_v1_service_binding is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_binding`
+* `create_credential`
+* `create_notification`
+* `create_service`
+* `delete_binding`
+* `delete_credential`
+* `delete_service`
+* `fetch_binding`
+* `fetch_credential`
+* `fetch_service`
+* `list_binding`
+* `list_credential`
+* `list_service`
+* `update_credential`
+* `update_service`
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

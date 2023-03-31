@@ -7,35 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JobGetPathParams struct {
-	// The id of the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type JobGetQueryParams struct {
+type JobGetRequest struct {
 	// Sets an OData $expand clause.
 	DollarExpand *string `queryParam:"style=form,explode=true,name=$expand"`
 	// Sets an OData $select clause.
 	DollarSelect *string `queryParam:"style=form,explode=true,name=$select"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type JobGetHeaders struct {
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The id of the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type JobGetRequest struct {
-	PathParams  JobGetPathParams
-	QueryParams JobGetQueryParams
-	Headers     JobGetHeaders
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type JobGetResponse struct {

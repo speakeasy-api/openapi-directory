@@ -34,7 +34,7 @@ func newClients(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteRealmClientsID - Delete the client
 func (s *clients) DeleteRealmClientsID(ctx context.Context, request operations.DeleteRealmClientsIDRequest) (*operations.DeleteRealmClientsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -67,7 +67,7 @@ func (s *clients) DeleteRealmClientsID(ctx context.Context, request operations.D
 }
 func (s *clients) DeleteRealmClientsIDDefaultClientScopesClientScopeID(ctx context.Context, request operations.DeleteRealmClientsIDDefaultClientScopesClientScopeIDRequest) (*operations.DeleteRealmClientsIDDefaultClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *clients) DeleteRealmClientsIDDefaultClientScopesClientScopeID(ctx conte
 // DeleteRealmClientsIDNodesNode - Unregister a cluster node from the client
 func (s *clients) DeleteRealmClientsIDNodesNode(ctx context.Context, request operations.DeleteRealmClientsIDNodesNodeRequest) (*operations.DeleteRealmClientsIDNodesNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/nodes/{node}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/nodes/{node}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *clients) DeleteRealmClientsIDNodesNode(ctx context.Context, request ope
 }
 func (s *clients) DeleteRealmClientsIDOptionalClientScopesClientScopeID(ctx context.Context, request operations.DeleteRealmClientsIDOptionalClientScopesClientScopeIDRequest) (*operations.DeleteRealmClientsIDOptionalClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *clients) DeleteRealmClientsIDOptionalClientScopesClientScopeID(ctx cont
 // GetRealmClients - Get clients belonging to the realm   Returns a list of clients belonging to the realm
 func (s *clients) GetRealmClients(ctx context.Context, request operations.GetRealmClientsRequest) (*operations.GetRealmClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -218,7 +218,7 @@ func (s *clients) GetRealmClients(ctx context.Context, request operations.GetRea
 // GetRealmClientsID - Get representation of the client
 func (s *clients) GetRealmClientsID(ctx context.Context, request operations.GetRealmClientsIDRequest) (*operations.GetRealmClientsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +262,7 @@ func (s *clients) GetRealmClientsID(ctx context.Context, request operations.GetR
 // GetRealmClientsIDClientSecret - Get the client secret
 func (s *clients) GetRealmClientsIDClientSecret(ctx context.Context, request operations.GetRealmClientsIDClientSecretRequest) (*operations.GetRealmClientsIDClientSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/client-secret", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/client-secret", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *clients) GetRealmClientsIDClientSecret(ctx context.Context, request ope
 // GetRealmClientsIDDefaultClientScopes - Get default client scopes.
 func (s *clients) GetRealmClientsIDDefaultClientScopes(ctx context.Context, request operations.GetRealmClientsIDDefaultClientScopesRequest) (*operations.GetRealmClientsIDDefaultClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,14 +350,14 @@ func (s *clients) GetRealmClientsIDDefaultClientScopes(ctx context.Context, requ
 // GetRealmClientsIDEvaluateScopesGenerateExampleAccessToken - Create JSON with payload of example access token
 func (s *clients) GetRealmClientsIDEvaluateScopesGenerateExampleAccessToken(ctx context.Context, request operations.GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenRequest) (*operations.GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/generate-example-access-token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/generate-example-access-token", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -398,14 +398,14 @@ func (s *clients) GetRealmClientsIDEvaluateScopesGenerateExampleAccessToken(ctx 
 // GetRealmClientsIDEvaluateScopesProtocolMappers - Return list of all protocol mappers, which will be used when generating tokens issued for particular client.
 func (s *clients) GetRealmClientsIDEvaluateScopesProtocolMappers(ctx context.Context, request operations.GetRealmClientsIDEvaluateScopesProtocolMappersRequest) (*operations.GetRealmClientsIDEvaluateScopesProtocolMappersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/protocol-mappers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/protocol-mappers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -446,14 +446,14 @@ func (s *clients) GetRealmClientsIDEvaluateScopesProtocolMappers(ctx context.Con
 // GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGranted - Get effective scope mapping of all roles of particular role container, which this client is defacto allowed to have in the accessToken issued for him.
 func (s *clients) GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGranted(ctx context.Context, request operations.GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedRequest) (*operations.GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -494,14 +494,14 @@ func (s *clients) GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGra
 // GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDNotGranted - Get roles, which this client doesn’t have scope for and can’t have them in the accessToken issued for him.
 func (s *clients) GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDNotGranted(ctx context.Context, request operations.GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDNotGrantedRequest) (*operations.GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDNotGrantedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/not-granted", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/not-granted", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -540,7 +540,7 @@ func (s *clients) GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDNot
 }
 func (s *clients) GetRealmClientsIDInstallationProvidersProviderID(ctx context.Context, request operations.GetRealmClientsIDInstallationProvidersProviderIDRequest) (*operations.GetRealmClientsIDInstallationProvidersProviderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/installation/providers/{providerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/installation/providers/{providerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -575,7 +575,7 @@ func (s *clients) GetRealmClientsIDInstallationProvidersProviderID(ctx context.C
 // GetRealmClientsIDManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *clients) GetRealmClientsIDManagementPermissions(ctx context.Context, request operations.GetRealmClientsIDManagementPermissionsRequest) (*operations.GetRealmClientsIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/management/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -619,7 +619,7 @@ func (s *clients) GetRealmClientsIDManagementPermissions(ctx context.Context, re
 // GetRealmClientsIDOfflineSessionCount - Get application offline session count   Returns a number of offline user sessions associated with this client   {      "count": number  }
 func (s *clients) GetRealmClientsIDOfflineSessionCount(ctx context.Context, request operations.GetRealmClientsIDOfflineSessionCountRequest) (*operations.GetRealmClientsIDOfflineSessionCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/offline-session-count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/offline-session-count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -663,14 +663,14 @@ func (s *clients) GetRealmClientsIDOfflineSessionCount(ctx context.Context, requ
 // GetRealmClientsIDOfflineSessions - Get offline sessions for client   Returns a list of offline user sessions associated with this client
 func (s *clients) GetRealmClientsIDOfflineSessions(ctx context.Context, request operations.GetRealmClientsIDOfflineSessionsRequest) (*operations.GetRealmClientsIDOfflineSessionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/offline-sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/offline-sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -711,7 +711,7 @@ func (s *clients) GetRealmClientsIDOfflineSessions(ctx context.Context, request 
 // GetRealmClientsIDOptionalClientScopes - Get optional client scopes.
 func (s *clients) GetRealmClientsIDOptionalClientScopes(ctx context.Context, request operations.GetRealmClientsIDOptionalClientScopesRequest) (*operations.GetRealmClientsIDOptionalClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +755,7 @@ func (s *clients) GetRealmClientsIDOptionalClientScopes(ctx context.Context, req
 // GetRealmClientsIDServiceAccountUser - Get a user dedicated to the service account
 func (s *clients) GetRealmClientsIDServiceAccountUser(ctx context.Context, request operations.GetRealmClientsIDServiceAccountUserRequest) (*operations.GetRealmClientsIDServiceAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/service-account-user", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/service-account-user", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -799,7 +799,7 @@ func (s *clients) GetRealmClientsIDServiceAccountUser(ctx context.Context, reque
 // GetRealmClientsIDSessionCount - Get application session count   Returns a number of user sessions associated with this client   {      "count": number  }
 func (s *clients) GetRealmClientsIDSessionCount(ctx context.Context, request operations.GetRealmClientsIDSessionCountRequest) (*operations.GetRealmClientsIDSessionCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/session-count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/session-count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -843,7 +843,7 @@ func (s *clients) GetRealmClientsIDSessionCount(ctx context.Context, request ope
 // GetRealmClientsIDTestNodesAvailable - Test if registered cluster nodes are available   Tests availability by sending 'ping' request to all cluster nodes.
 func (s *clients) GetRealmClientsIDTestNodesAvailable(ctx context.Context, request operations.GetRealmClientsIDTestNodesAvailableRequest) (*operations.GetRealmClientsIDTestNodesAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/test-nodes-available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/test-nodes-available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -887,14 +887,14 @@ func (s *clients) GetRealmClientsIDTestNodesAvailable(ctx context.Context, reque
 // GetRealmClientsIDUserSessions - Get user sessions for client   Returns a list of user sessions associated with this client
 func (s *clients) GetRealmClientsIDUserSessions(ctx context.Context, request operations.GetRealmClientsIDUserSessionsRequest) (*operations.GetRealmClientsIDUserSessionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/user-sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/user-sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -935,9 +935,9 @@ func (s *clients) GetRealmClientsIDUserSessions(ctx context.Context, request ope
 // PostRealmClients - Create a new client   Client’s client_id must be unique!
 func (s *clients) PostRealmClients(ctx context.Context, request operations.PostRealmClientsRequest) (*operations.PostRealmClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -980,7 +980,7 @@ func (s *clients) PostRealmClients(ctx context.Context, request operations.PostR
 // PostRealmClientsIDClientSecret - Generate a new secret for the client
 func (s *clients) PostRealmClientsIDClientSecret(ctx context.Context, request operations.PostRealmClientsIDClientSecretRequest) (*operations.PostRealmClientsIDClientSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/client-secret", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/client-secret", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1024,9 +1024,9 @@ func (s *clients) PostRealmClientsIDClientSecret(ctx context.Context, request op
 // PostRealmClientsIDNodes - Register a cluster node with the client   Manually register cluster node to this client - usually it’s not needed to call this directly as adapter should handle  by sending registration request to Keycloak
 func (s *clients) PostRealmClientsIDNodes(ctx context.Context, request operations.PostRealmClientsIDNodesRequest) (*operations.PostRealmClientsIDNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/nodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1069,7 +1069,7 @@ func (s *clients) PostRealmClientsIDNodes(ctx context.Context, request operation
 // PostRealmClientsIDPushRevocation - Push the client’s revocation policy to its admin URL   If the client has an admin URL, push revocation policy to it.
 func (s *clients) PostRealmClientsIDPushRevocation(ctx context.Context, request operations.PostRealmClientsIDPushRevocationRequest) (*operations.PostRealmClientsIDPushRevocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/push-revocation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/push-revocation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1113,7 +1113,7 @@ func (s *clients) PostRealmClientsIDPushRevocation(ctx context.Context, request 
 // PostRealmClientsIDRegistrationAccessToken - Generate a new registration access token for the client
 func (s *clients) PostRealmClientsIDRegistrationAccessToken(ctx context.Context, request operations.PostRealmClientsIDRegistrationAccessTokenRequest) (*operations.PostRealmClientsIDRegistrationAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/registration-access-token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/registration-access-token", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1157,9 +1157,9 @@ func (s *clients) PostRealmClientsIDRegistrationAccessToken(ctx context.Context,
 // PutRealmClientsID - Update the client
 func (s *clients) PutRealmClientsID(ctx context.Context, request operations.PutRealmClientsIDRequest) (*operations.PutRealmClientsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1200,7 +1200,7 @@ func (s *clients) PutRealmClientsID(ctx context.Context, request operations.PutR
 }
 func (s *clients) PutRealmClientsIDDefaultClientScopesClientScopeID(ctx context.Context, request operations.PutRealmClientsIDDefaultClientScopesClientScopeIDRequest) (*operations.PutRealmClientsIDDefaultClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/default-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1235,9 +1235,9 @@ func (s *clients) PutRealmClientsIDDefaultClientScopesClientScopeID(ctx context.
 // PutRealmClientsIDManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *clients) PutRealmClientsIDManagementPermissions(ctx context.Context, request operations.PutRealmClientsIDManagementPermissionsRequest) (*operations.PutRealmClientsIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/management/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagementPermissionReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1287,7 +1287,7 @@ func (s *clients) PutRealmClientsIDManagementPermissions(ctx context.Context, re
 }
 func (s *clients) PutRealmClientsIDOptionalClientScopesClientScopeID(ctx context.Context, request operations.PutRealmClientsIDOptionalClientScopesClientScopeIDRequest) (*operations.PutRealmClientsIDOptionalClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/optional-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -8,19 +8,14 @@ import (
 )
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams struct {
-	// Name must match
-	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams struct {
+type ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                    *shared.XgafvEnum                                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudServicebrokerV1beta1ServiceInstance *shared.GoogleCloudServicebrokerV1beta1ServiceInstance `request:"mediaType=application/json"`
 	// See CreateServiceInstanceRequest for details.
 	AcceptsIncomplete *bool `queryParam:"style=form,explode=true,name=acceptsIncomplete"`
 	// OAuth access token.
@@ -33,6 +28,9 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name must match
+	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -43,13 +41,6 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest struct {
-	PathParams  ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams
-	QueryParams ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams
-	Request     *shared.GoogleCloudServicebrokerV1beta1ServiceInstance `request:"mediaType=application/json"`
-	Security    ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity
 }
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse struct {

@@ -4,28 +4,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostEventsV3SendRequest(
-    security=operations.PostEventsV3SendSecurity(
-        hapikey=shared.SchemeHapikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    request=shared.BehavioralEventHTTPCompletionRequest(
-        email="impedit",
-        event_name="fugiat",
-        object_id="qui",
-        occurred_at="1972-12-01T08:46:03Z",
-        properties={
-            "est": "ipsam",
-            "veniam": "eos",
-            "reprehenderit": "deleniti",
-        },
-        utk="quia",
-    ),
+
+
+req = shared.BehavioralEventHTTPCompletionRequest(
+    email="Larue_Rau85@yahoo.com",
+    event_name="corrupti",
+    object_id="illum",
+    occurred_at="2022-05-18T09:34:54.894Z",
+    properties={
+        "suscipit": "iure",
+        "magnam": "debitis",
+        "ipsa": "delectus",
+    },
+    utk="tempora",
 )
     
-res = s.behavioral_events_tracking.post_events_v3_send(req)
+res = s.behavioral_events_tracking.post_events_v3_send(req, operations.PostEventsV3SendSecurity(
+    hapikey="YOUR_API_KEY_HERE",
+))
 
 if res.status_code == 200:
     # handle response

@@ -13,19 +13,8 @@ var CreateServiceConversationParticipantServerList = []string{
 }
 
 type CreateServiceConversationParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateServiceConversationParticipantPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-}
-
-type CreateServiceConversationParticipantHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceConversationParticipantCreateServiceConversationParticipantRequest struct {
@@ -48,11 +37,13 @@ type CreateServiceConversationParticipantCreateServiceConversationParticipantReq
 }
 
 type CreateServiceConversationParticipantRequest struct {
-	PathParams CreateServiceConversationParticipantPathParams
-	Headers    CreateServiceConversationParticipantHeaders
-	Request    *CreateServiceConversationParticipantCreateServiceConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateServiceConversationParticipantSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+	ConversationSid string                                                                           `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *CreateServiceConversationParticipantCreateServiceConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateServiceConversationParticipantResponse struct {

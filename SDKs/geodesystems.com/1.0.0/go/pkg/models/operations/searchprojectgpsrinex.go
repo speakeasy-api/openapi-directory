@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchProjectGpsRinexQueryParams struct {
+type SearchProjectGpsRinexRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchProjectGpsRinexQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchProjectGpsRinexRequest struct {
-	QueryParams SearchProjectGpsRinexQueryParams
 }
 
 type SearchProjectGpsRinexResponse struct {

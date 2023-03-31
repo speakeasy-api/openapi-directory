@@ -64,7 +64,7 @@ func (e *GetRouteCurbsideEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRouteQueryParams struct {
+type GetRouteRequest struct {
 	// Rather than looking for the shortest or fastest path, this parameter lets you solve two different problems related to routing:
 	// With `alternative_route`, we give you not one but several routes that are close to optimal, but
 	// not too similar to each other.
@@ -168,10 +168,6 @@ type GetRouteQueryParams struct {
 	// Determines the way the "best" route is calculated. Besides `fastest` you can use `short_fastest` which finds a reasonable balance between the distance influence (`shortest`) and the time (`fastest`). You could also use `shortest` but is deprecated and not recommended for motor vehicles. All except `fastest` require `ch.disable=true`.
 	//
 	Weighting *string `queryParam:"style=form,explode=true,name=weighting"`
-}
-
-type GetRouteRequest struct {
-	QueryParams GetRouteQueryParams
 }
 
 type GetRouteResponse struct {

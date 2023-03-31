@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrackPackagePathParams struct {
+type TrackPackageRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TrackPackageQueryParams struct {
 	// This is the package tracking key provided in the response of a /package call.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type TrackPackageRequest struct {
-	PathParams  TrackPackagePathParams
-	QueryParams TrackPackageQueryParams
 }
 
 type TrackPackageResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams struct {
+type EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest struct {
+	PatchSchema shared.PatchSchema `request:"mediaType=application/json"`
 	// A unique identifier of the SCIM group.
 	ScimGroupID string `pathParam:"style=simple,explode=false,name=scim_group_id"`
-}
-
-type EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest struct {
-	PathParams EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams
-	Request    shared.PatchSchema `request:"mediaType=application/json"`
 }
 
 type EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse struct {

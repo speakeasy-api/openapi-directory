@@ -16,10 +16,9 @@ pkg/models/operations/datastoreprojectsexport.go
 pkg/models/operations/datastoreprojectsimport.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googledatastoreadminv1beta1exportentitiesrequest.go
 pkg/models/shared/googledatastoreadminv1beta1entityfilter.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googledatastoreadminv1beta1importentitiesrequest.go
 USAGE.md

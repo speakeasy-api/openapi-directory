@@ -14,16 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        QueryParams: operations.GetQueryParams{
-            Keys: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-        },
-        Headers: operations.GetHeaders{
-            XMarketID: "unde",
-            XPrivateLabelID: 857946,
+        XMarketID: "corrupti",
+        XPrivateLabelID: 592845,
+        Keys: []string{
+            "quibusdam",
+            "unde",
+            "nulla",
         },
     }
 

@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListMembersPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsListMembersRoleEnum - Filters members returned by their role in the team. Can be one of:
 // \* `member` - normal members of the team.
 // \* `maintainer` - team maintainers.
@@ -43,7 +39,7 @@ func (e *TeamsListMembersRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TeamsListMembersQueryParams struct {
+type TeamsListMembersRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
@@ -52,12 +48,8 @@ type TeamsListMembersQueryParams struct {
 	// \* `member` - normal members of the team.
 	// \* `maintainer` - team maintainers.
 	// \* `all` - all members of the team.
-	Role *TeamsListMembersRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type TeamsListMembersRequest struct {
-	PathParams  TeamsListMembersPathParams
-	QueryParams TeamsListMembersQueryParams
+	Role   *TeamsListMembersRoleEnum `queryParam:"style=form,explode=true,name=role"`
+	TeamID int64                     `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListMembersResponse struct {

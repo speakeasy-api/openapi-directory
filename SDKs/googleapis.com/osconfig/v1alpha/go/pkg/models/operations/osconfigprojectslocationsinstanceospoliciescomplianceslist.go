@@ -8,16 +8,11 @@ import (
 )
 
 type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams struct {
-	// Required. The parent resource name. Format: `projects/{project}/locations/{location}` For `{project}`, either Compute Engine project-number or project-id can be provided.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams struct {
+type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A pagination token returned from a previous call to `ListInstanceOSPoliciesCompliances` that indicates where this listing should continue from.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name. Format: `projects/{project}/locations/{location}` For `{project}`, either Compute Engine project-number or project-id can be provided.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams struc
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest struct {
-	PathParams  OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams
-	QueryParams OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams
-	Security    OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity
 }
 
 type OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse struct {

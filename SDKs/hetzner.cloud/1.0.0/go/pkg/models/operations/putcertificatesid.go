@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutCertificatesIDPathParams struct {
-	// ID of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutCertificatesIDUpdateCertificateRequest struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -21,8 +16,9 @@ type PutCertificatesIDUpdateCertificateRequest struct {
 }
 
 type PutCertificatesIDRequest struct {
-	PathParams PutCertificatesIDPathParams
-	Request    *PutCertificatesIDUpdateCertificateRequest `request:"mediaType=application/json"`
+	RequestBody *PutCertificatesIDUpdateCertificateRequest `request:"mediaType=application/json"`
+	// ID of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutCertificatesIDCertificateResponseCertificateStatusError - If issuance or renewal reports `failed`, this property contains information about what happened

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type WellsFilesListPathParams struct {
-	Tag string `pathParam:"style=simple,explode=false,name=tag"`
-}
-
 type WellsFilesListRequest struct {
-	PathParams WellsFilesListPathParams
+	Tag string `pathParam:"style=simple,explode=false,name=tag"`
 }
 
 type WellsFilesList200ApplicationJSONPrivate struct {

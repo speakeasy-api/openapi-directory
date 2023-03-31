@@ -4,19 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetProductRequest(
-    security=operations.GetProductSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GetProductPathParams(
-        epid="modi",
-    ),
+    x_ebay_c_marketplace_id="corrupti",
+    epid="provident",
 )
     
-res = s.product.get_product(req)
+res = s.product.get_product(req, operations.GetProductSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.product is not None:
     # handle response

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAccountsAccountPositionsPathParams struct {
+type GetAccountsAccountPositionsRequest struct {
 	// Account Number
 	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type GetAccountsAccountPositionsRequest struct {
-	PathParams GetAccountsAccountPositionsPathParams
 }
 
 type GetAccountsAccountPositions200ApplicationJSON struct {

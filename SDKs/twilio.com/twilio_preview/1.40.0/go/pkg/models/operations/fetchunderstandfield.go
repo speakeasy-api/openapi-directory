@@ -12,22 +12,17 @@ var FetchUnderstandFieldServerList = []string{
 }
 
 type FetchUnderstandFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUnderstandFieldPathParams struct {
+type FetchUnderstandFieldRequest struct {
 	// The unique ID of the Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The unique ID of the Task associated with this Field.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type FetchUnderstandFieldRequest struct {
-	PathParams FetchUnderstandFieldPathParams
-	Security   FetchUnderstandFieldSecurity
-	ServerURL  *string
 }
 
 type FetchUnderstandFieldResponse struct {

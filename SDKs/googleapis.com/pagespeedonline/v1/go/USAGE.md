@@ -14,26 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
-        QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
-            Alt: "json",
-            Fields: "corrupti",
-            FilterThirdPartyResources: false,
-            Key: "provident",
-            Locale: "distinctio",
-            OauthToken: "quibusdam",
-            PrettyPrint: false,
-            QuotaUser: "unde",
-            Rule: []string{
-                "corrupti",
-                "illum",
-                "vel",
-                "error",
-            },
-            Screenshot: false,
-            Strategy: "mobile",
-            URL: "suscipit",
-            UserIP: "iure",
+        Alt: "json",
+        Fields: "corrupti",
+        FilterThirdPartyResources: false,
+        Key: "provident",
+        Locale: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        Rule: []string{
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
         },
+        Screenshot: false,
+        Strategy: "mobile",
+        URL: "suscipit",
+        UserIP: "iure",
     }
 
     ctx := context.Background()

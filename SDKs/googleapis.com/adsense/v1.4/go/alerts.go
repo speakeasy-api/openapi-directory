@@ -33,20 +33,20 @@ func newAlerts(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // AdsenseAlertsDelete - Dismiss (delete) the specified alert from the publisher's AdSense account.
-func (s *alerts) AdsenseAlertsDelete(ctx context.Context, request operations.AdsenseAlertsDeleteRequest) (*operations.AdsenseAlertsDeleteResponse, error) {
+func (s *alerts) AdsenseAlertsDelete(ctx context.Context, request operations.AdsenseAlertsDeleteRequest, security operations.AdsenseAlertsDeleteSecurity) (*operations.AdsenseAlertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alerts/{alertId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alerts/{alertId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *alerts) AdsenseAlertsDelete(ctx context.Context, request operations.Ads
 }
 
 // AdsenseAlertsList - List the alerts for this AdSense account.
-func (s *alerts) AdsenseAlertsList(ctx context.Context, request operations.AdsenseAlertsListRequest) (*operations.AdsenseAlertsListResponse, error) {
+func (s *alerts) AdsenseAlertsList(ctx context.Context, request operations.AdsenseAlertsListRequest, security operations.AdsenseAlertsListSecurity) (*operations.AdsenseAlertsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alerts"
 
@@ -81,11 +81,11 @@ func (s *alerts) AdsenseAlertsList(ctx context.Context, request operations.Adsen
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

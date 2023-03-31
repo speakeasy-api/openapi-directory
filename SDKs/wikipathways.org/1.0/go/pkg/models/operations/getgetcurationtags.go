@@ -44,14 +44,10 @@ func (e *GetGetCurationTagsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetCurationTagsQueryParams struct {
+type GetGetCurationTagsRequest struct {
 	Format *GetGetCurationTagsFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
-}
-
-type GetGetCurationTagsRequest struct {
-	QueryParams GetGetCurationTagsQueryParams
 }
 
 type GetGetCurationTagsResponse struct {

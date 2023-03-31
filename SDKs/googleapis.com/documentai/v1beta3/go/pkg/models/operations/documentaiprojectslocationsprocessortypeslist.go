@@ -8,16 +8,11 @@ import (
 )
 
 type DocumentaiProjectsLocationsProcessorTypesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DocumentaiProjectsLocationsProcessorTypesListPathParams struct {
-	// Required. The location of processor type to list. The available processor types may depend on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DocumentaiProjectsLocationsProcessorTypesListQueryParams struct {
+type DocumentaiProjectsLocationsProcessorTypesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DocumentaiProjectsLocationsProcessorTypesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Used to retrieve the next page of results, empty if at the end of the list.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The location of processor type to list. The available processor types may depend on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DocumentaiProjectsLocationsProcessorTypesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocumentaiProjectsLocationsProcessorTypesListRequest struct {
-	PathParams  DocumentaiProjectsLocationsProcessorTypesListPathParams
-	QueryParams DocumentaiProjectsLocationsProcessorTypesListQueryParams
-	Security    DocumentaiProjectsLocationsProcessorTypesListSecurity
 }
 
 type DocumentaiProjectsLocationsProcessorTypesListResponse struct {

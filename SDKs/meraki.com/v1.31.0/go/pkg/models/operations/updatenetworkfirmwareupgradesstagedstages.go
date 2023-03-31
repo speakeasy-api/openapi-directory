@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkFirmwareUpgradesStagedStagesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkFirmwareUpgradesStagedStagesRequestBodyJSONGroup - The Staged Upgrade Group
 type UpdateNetworkFirmwareUpgradesStagedStagesRequestBodyJSONGroup struct {
 	// ID of the Staged Upgrade Group
@@ -27,8 +23,8 @@ type UpdateNetworkFirmwareUpgradesStagedStagesRequestBody struct {
 }
 
 type UpdateNetworkFirmwareUpgradesStagedStagesRequest struct {
-	PathParams UpdateNetworkFirmwareUpgradesStagedStagesPathParams
-	Request    *UpdateNetworkFirmwareUpgradesStagedStagesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkFirmwareUpgradesStagedStagesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkFirmwareUpgradesStagedStages200ApplicationJSONGroup - The Staged Upgrade Group

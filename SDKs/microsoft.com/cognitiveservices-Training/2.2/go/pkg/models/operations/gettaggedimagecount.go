@@ -6,26 +6,14 @@ import (
 	"net/http"
 )
 
-type GetTaggedImageCountPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetTaggedImageCountQueryParams struct {
+type GetTaggedImageCountRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// A list of tags ids to filter the images to count. Defaults to all tags when null.
 	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type GetTaggedImageCountHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetTaggedImageCountRequest struct {
-	PathParams  GetTaggedImageCountPathParams
-	QueryParams GetTaggedImageCountQueryParams
-	Headers     GetTaggedImageCountHeaders
 }
 
 type GetTaggedImageCountResponse struct {

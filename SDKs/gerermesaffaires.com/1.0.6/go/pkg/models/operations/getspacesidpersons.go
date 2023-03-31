@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesIDPersonsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetSpacesIDPersonsValidatedEnum - Status of the person
 type GetSpacesIDPersonsValidatedEnum string
 
@@ -38,7 +33,7 @@ func (e *GetSpacesIDPersonsValidatedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSpacesIDPersonsQueryParams struct {
+type GetSpacesIDPersonsRequest struct {
 	// Email of the person
 	Email *string `queryParam:"style=form,explode=true,name=Email"`
 	// Function of the person
@@ -49,11 +44,8 @@ type GetSpacesIDPersonsQueryParams struct {
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
 	// Status of the person
 	Validated *GetSpacesIDPersonsValidatedEnum `queryParam:"style=form,explode=true,name=Validated"`
-}
-
-type GetSpacesIDPersonsRequest struct {
-	PathParams  GetSpacesIDPersonsPathParams
-	QueryParams GetSpacesIDPersonsQueryParams
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDPersonsResponse struct {

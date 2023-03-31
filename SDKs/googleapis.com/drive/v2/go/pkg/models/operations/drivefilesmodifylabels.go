@@ -8,18 +8,18 @@ import (
 )
 
 type DriveFilesModifyLabelsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesModifyLabelsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesModifyLabelsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesModifyLabelsSecurity struct {
@@ -28,16 +28,14 @@ type DriveFilesModifyLabelsSecurity struct {
 	Option3 *DriveFilesModifyLabelsSecurityOption3 `security:"option"`
 }
 
-type DriveFilesModifyLabelsPathParams struct {
-	// The ID of the file for which the labels are modified.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveFilesModifyLabelsQueryParams struct {
+type DriveFilesModifyLabelsRequest struct {
+	ModifyLabelsRequest *shared.ModifyLabelsRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file for which the labels are modified.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -48,13 +46,6 @@ type DriveFilesModifyLabelsQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesModifyLabelsRequest struct {
-	PathParams  DriveFilesModifyLabelsPathParams
-	QueryParams DriveFilesModifyLabelsQueryParams
-	Request     *shared.ModifyLabelsRequest `request:"mediaType=application/json"`
-	Security    DriveFilesModifyLabelsSecurity
 }
 
 type DriveFilesModifyLabelsResponse struct {

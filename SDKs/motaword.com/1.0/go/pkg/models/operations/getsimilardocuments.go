@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSimilarDocumentsPathParams struct {
-	// Document ID
-	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
 type GetSimilarDocumentsWithEnum string
 
 const (
@@ -37,16 +32,13 @@ func (e *GetSimilarDocumentsWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimilarDocumentsQueryParams struct {
+type GetSimilarDocumentsRequest struct {
+	// Document ID
+	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Determines the number of similar documents to return.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetSimilarDocumentsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetSimilarDocumentsRequest struct {
-	PathParams  GetSimilarDocumentsPathParams
-	QueryParams GetSimilarDocumentsQueryParams
 }
 
 type GetSimilarDocumentsResponse struct {

@@ -91,15 +91,25 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateExportCustomJob(ctx context.Context, request operations.CreateExportCustomJobRequest) (*operations.CreateExportCustomJobResponse, error) {
-	baseURL := operations.CreateExportCustomJobServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateExportCustomJob(ctx context.Context, request operations.CreateExportCustomJobRequest, security operations.CreateExportCustomJobSecurity, opts ...operations.Option) (*operations.CreateExportCustomJobResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Jobs", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateExportCustomJobServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Jobs", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +121,7 @@ func (s *SDK) CreateExportCustomJob(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,20 +154,30 @@ func (s *SDK) CreateExportCustomJob(ctx context.Context, request operations.Crea
 
 	return res, nil
 }
-func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest) (*operations.DeleteJobResponse, error) {
-	baseURL := operations.DeleteJobServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest, security operations.DeleteJobSecurity, opts ...operations.Option) (*operations.DeleteJobResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/Jobs/{JobSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteJobServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/Jobs/{JobSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +203,30 @@ func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest
 }
 
 // FetchDay - Fetch a specific Day.
-func (s *SDK) FetchDay(ctx context.Context, request operations.FetchDayRequest) (*operations.FetchDayResponse, error) {
-	baseURL := operations.FetchDayServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDay(ctx context.Context, request operations.FetchDayRequest, security operations.FetchDaySecurity, opts ...operations.Option) (*operations.FetchDayResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Days/{Day}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDayServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Days/{Day}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +261,30 @@ func (s *SDK) FetchDay(ctx context.Context, request operations.FetchDayRequest) 
 }
 
 // FetchExport - Fetch a specific Export.
-func (s *SDK) FetchExport(ctx context.Context, request operations.FetchExportRequest) (*operations.FetchExportResponse, error) {
-	baseURL := operations.FetchExportServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExport(ctx context.Context, request operations.FetchExportRequest, security operations.FetchExportSecurity, opts ...operations.Option) (*operations.FetchExportResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExportServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +319,30 @@ func (s *SDK) FetchExport(ctx context.Context, request operations.FetchExportReq
 }
 
 // FetchExportConfiguration - Fetch a specific Export Configuration.
-func (s *SDK) FetchExportConfiguration(ctx context.Context, request operations.FetchExportConfigurationRequest) (*operations.FetchExportConfigurationResponse, error) {
-	baseURL := operations.FetchExportConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExportConfiguration(ctx context.Context, request operations.FetchExportConfigurationRequest, security operations.FetchExportConfigurationSecurity, opts ...operations.Option) (*operations.FetchExportConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Configuration", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExportConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,20 +375,30 @@ func (s *SDK) FetchExportConfiguration(ctx context.Context, request operations.F
 
 	return res, nil
 }
-func (s *SDK) FetchJob(ctx context.Context, request operations.FetchJobRequest) (*operations.FetchJobResponse, error) {
-	baseURL := operations.FetchJobServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchJob(ctx context.Context, request operations.FetchJobRequest, security operations.FetchJobSecurity, opts ...operations.Option) (*operations.FetchJobResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/Jobs/{JobSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchJobServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/Jobs/{JobSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -373,24 +433,34 @@ func (s *SDK) FetchJob(ctx context.Context, request operations.FetchJobRequest) 
 }
 
 // ListDay - Retrieve a list of all Days for a resource.
-func (s *SDK) ListDay(ctx context.Context, request operations.ListDayRequest) (*operations.ListDayResponse, error) {
-	baseURL := operations.ListDayServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDay(ctx context.Context, request operations.ListDayRequest, security operations.ListDaySecurity, opts ...operations.Option) (*operations.ListDayResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Days", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDayServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Days", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,24 +493,34 @@ func (s *SDK) ListDay(ctx context.Context, request operations.ListDayRequest) (*
 
 	return res, nil
 }
-func (s *SDK) ListExportCustomJob(ctx context.Context, request operations.ListExportCustomJobRequest) (*operations.ListExportCustomJobResponse, error) {
-	baseURL := operations.ListExportCustomJobServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListExportCustomJob(ctx context.Context, request operations.ListExportCustomJobRequest, security operations.ListExportCustomJobSecurity, opts ...operations.Option) (*operations.ListExportCustomJobResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Jobs", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListExportCustomJobServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -475,15 +555,25 @@ func (s *SDK) ListExportCustomJob(ctx context.Context, request operations.ListEx
 }
 
 // UpdateExportConfiguration - Update a specific Export Configuration.
-func (s *SDK) UpdateExportConfiguration(ctx context.Context, request operations.UpdateExportConfigurationRequest) (*operations.UpdateExportConfigurationResponse, error) {
-	baseURL := operations.UpdateExportConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateExportConfiguration(ctx context.Context, request operations.UpdateExportConfigurationRequest, security operations.UpdateExportConfigurationSecurity, opts ...operations.Option) (*operations.UpdateExportConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Configuration", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateExportConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Exports/{ResourceType}/Configuration", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -495,7 +585,7 @@ func (s *SDK) UpdateExportConfiguration(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

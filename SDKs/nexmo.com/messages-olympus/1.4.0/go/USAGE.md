@@ -13,18 +13,15 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.SendMessageRequest{
-        Security: operations.SendMessageSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: operations.SendMessageRequestBody{},
-    }
+    req := operations.SendMessageRequestBody{}
 
     ctx := context.Background()
-    res, err := s.SendMessage(ctx, req)
+    res, err := s.SendMessage(ctx, req, operations.SendMessageSecurity{
+        BasicAuth: &shared.SchemeBasicAuth{
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type SetValuePathParams struct {
+type SetValueRequest struct {
+	// Value
+	RequestBody *string `request:"mediaType=application/json"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Row of the table in the agent's value space. 0 for single instance objects
@@ -15,12 +17,6 @@ type SetValuePathParams struct {
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Variable
 	Variable string `pathParam:"style=simple,explode=false,name=variable"`
-}
-
-type SetValueRequest struct {
-	PathParams SetValuePathParams
-	// Value
-	Request *string `request:"mediaType=application/json"`
 }
 
 type SetValueResponse struct {

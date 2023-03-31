@@ -27,10 +27,6 @@ type PostV2TasksJSONRequestBody struct {
 	UserID int64 `form:"name=user_id"`
 }
 
-type PostV2TasksJSONRequest struct {
-	Request PostV2TasksJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2TasksJSONResponse struct {
 	Body        []byte
 	ContentType string

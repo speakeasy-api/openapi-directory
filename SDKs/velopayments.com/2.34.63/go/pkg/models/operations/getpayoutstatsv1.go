@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayoutStatsV1QueryParams struct {
+type GetPayoutStatsV1Request struct {
 	// The account owner Payor ID. Required for external users.
 	PayorID *string `queryParam:"style=form,explode=true,name=payorId"`
-}
-
-type GetPayoutStatsV1Request struct {
-	QueryParams GetPayoutStatsV1QueryParams
 }
 
 type GetPayoutStatsV1Response struct {

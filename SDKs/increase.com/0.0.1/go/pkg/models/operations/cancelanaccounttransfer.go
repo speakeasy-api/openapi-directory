@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelAnAccountTransferPathParams struct {
-	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
-}
-
 type CancelAnAccountTransferRequest struct {
-	PathParams CancelAnAccountTransferPathParams
+	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
 }
 
 type CancelAnAccountTransferDefaultApplicationJSON13StatusEnum string

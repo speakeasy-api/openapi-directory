@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RegistrationsInstitutionsListPathParams struct {
+type RegistrationsInstitutionsListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsInstitutionsListRequest struct {
-	PathParams RegistrationsInstitutionsListPathParams
 }
 
 // RegistrationsInstitutionsListInstitutionAttributes - The properties of the institution entity.

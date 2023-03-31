@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationPathParams struct {
+type GetApplicationRequest struct {
 	// The ID of the application
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetApplicationRequest struct {
-	PathParams GetApplicationPathParams
 }
 
 // GetApplication406ApplicationJSON - Invalid Accept Header

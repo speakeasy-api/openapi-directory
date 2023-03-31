@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type DeleteWorkspaceQueryParams struct {
+type DeleteWorkspaceRequest struct {
 	// Workspace identifier
 	WorkspaceID string `queryParam:"style=form,explode=true,name=workspaceId"`
-}
-
-type DeleteWorkspaceRequest struct {
-	QueryParams DeleteWorkspaceQueryParams
 }
 
 // DeleteWorkspace500ApplicationJSON - Internal Server Error

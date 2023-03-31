@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OccupancyGetChargeConnectorStatusPathParams struct {
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 type OccupancyGetChargeConnectorStatusRequest struct {
-	PathParams OccupancyGetChargeConnectorStatusPathParams
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
 }
 
 type OccupancyGetChargeConnectorStatusResponse struct {

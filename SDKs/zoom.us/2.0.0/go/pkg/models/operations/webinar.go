@@ -6,30 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarQueryParams struct {
+type WebinarRequest struct {
 	// Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences. When you create a recurring Webinar using [Create a Webinar API](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarcreate), you can retrieve the Occurrence ID from the response of the API call.
 	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 	// Set the value of this field to `true` if you would like to view Webinar details of all previous occurrences of a recurring Webinar.
 	ShowPreviousOccurrences *bool `queryParam:"style=form,explode=true,name=show_previous_occurrences"`
-}
-
-type WebinarRequest struct {
-	PathParams  WebinarPathParams
-	QueryParams WebinarQueryParams
-	Security    WebinarSecurity
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // Webinar200ApplicationXMLOccurrences - Occurence object. This object is only returned for Recurring Webinars.

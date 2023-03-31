@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceCameraAnalyticsOverviewPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // GetDeviceCameraAnalyticsOverviewObjectTypeEnum - [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 type GetDeviceCameraAnalyticsOverviewObjectTypeEnum string
 
@@ -36,20 +32,16 @@ func (e *GetDeviceCameraAnalyticsOverviewObjectTypeEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetDeviceCameraAnalyticsOverviewQueryParams struct {
+type GetDeviceCameraAnalyticsOverviewRequest struct {
 	// [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 	ObjectType *GetDeviceCameraAnalyticsOverviewObjectTypeEnum `queryParam:"style=form,explode=true,name=objectType"`
+	Serial     string                                          `pathParam:"style=simple,explode=false,name=serial"`
 	// The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetDeviceCameraAnalyticsOverviewRequest struct {
-	PathParams  GetDeviceCameraAnalyticsOverviewPathParams
-	QueryParams GetDeviceCameraAnalyticsOverviewQueryParams
 }
 
 type GetDeviceCameraAnalyticsOverviewResponse struct {

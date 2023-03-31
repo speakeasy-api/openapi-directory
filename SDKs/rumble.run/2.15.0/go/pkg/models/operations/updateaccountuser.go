@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAccountUserSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAccountUserPathParams struct {
-	// UUID of the user to retrieve
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAccountUserRequest struct {
-	PathParams UpdateAccountUserPathParams
 	// user parameters
-	Request  shared.UserOptions `request:"mediaType=application/json"`
-	Security UpdateAccountUserSecurity
+	UserOptions shared.UserOptions `request:"mediaType=application/json"`
+	// UUID of the user to retrieve
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type UpdateAccountUserResponse struct {

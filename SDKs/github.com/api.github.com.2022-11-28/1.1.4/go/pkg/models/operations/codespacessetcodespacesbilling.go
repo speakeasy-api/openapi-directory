@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesSetCodespacesBillingPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // CodespacesSetCodespacesBillingRequestBodyVisibilityEnum - Which users can access codespaces in the organization. `disabled` means that no users can access codespaces in the organization.
 type CodespacesSetCodespacesBillingRequestBodyVisibilityEnum string
 
@@ -52,8 +47,9 @@ type CodespacesSetCodespacesBillingRequestBody struct {
 }
 
 type CodespacesSetCodespacesBillingRequest struct {
-	PathParams CodespacesSetCodespacesBillingPathParams
-	Request    CodespacesSetCodespacesBillingRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesSetCodespacesBillingRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type CodespacesSetCodespacesBillingResponse struct {

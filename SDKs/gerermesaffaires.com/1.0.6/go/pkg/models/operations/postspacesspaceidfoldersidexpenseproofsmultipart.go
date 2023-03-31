@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDExpenseProofsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDExpenseProofsMultipartPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDExpenseProofsMultipartFormDataAccountEnum string
@@ -166,10 +158,12 @@ type PostSpacesSpaceIDFoldersIDExpenseProofsMultipartFormData1 struct {
 }
 
 type PostSpacesSpaceIDFoldersIDExpenseProofsMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDExpenseProofsMultipartPathParams
 	// Expense proof to add (either DocumentId, ExpenseDate either (File,Name,Content64Encoded,Title,ExpenseDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDExpenseProofsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDExpenseProofsMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDExpenseProofsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDExpenseProofsMultipart201ApplicationJSON - Id of expense proof created

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EurekaInfoQueryParams struct {
+type EurekaInfoRequest struct {
 	Nonce   int    `queryParam:"style=form,explode=true,name=nonce"`
 	Options string `queryParam:"style=form,explode=true,name=options"`
 	Params  string `queryParam:"style=form,explode=true,name=params"`
-}
-
-type EurekaInfoRequest struct {
-	QueryParams EurekaInfoQueryParams
 }
 
 type EurekaInfoResponse struct {

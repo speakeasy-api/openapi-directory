@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1ResourcesIDRecoverPathParams struct {
-	// id of resource object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1ResourcesIDRecoverQueryParams struct {
+type PutSetupV1ResourcesIDRecoverRequest struct {
 	// Google calendar authorization return url
 	GoogleAuthReturnURL *string `queryParam:"style=form,explode=true,name=googleAuthReturnUrl"`
+	// id of resource object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Outlook calendar authorization return url
 	OutlookAuthReturnURL *string `queryParam:"style=form,explode=true,name=outlookAuthReturnUrl"`
-}
-
-type PutSetupV1ResourcesIDRecoverRequest struct {
-	PathParams  PutSetupV1ResourcesIDRecoverPathParams
-	QueryParams PutSetupV1ResourcesIDRecoverQueryParams
 }
 
 type PutSetupV1ResourcesIDRecoverResponse struct {

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxTransferRepaymentSimulateRequest struct {
-	Request shared.SandboxTransferRepaymentSimulateRequest `request:"mediaType=application/json"`
-}
 
 type SandboxTransferRepaymentSimulateResponse struct {
 	ContentType string

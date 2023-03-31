@@ -41,7 +41,7 @@ func (e *RoutesOneOrMoreRoutesRouteTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RoutesOneOrMoreRoutesQueryParams struct {
+type RoutesOneOrMoreRoutesRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by name  of route (accepts partial route name matches)
@@ -52,10 +52,6 @@ type RoutesOneOrMoreRoutesQueryParams struct {
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RoutesOneOrMoreRoutesRequest struct {
-	QueryParams RoutesOneOrMoreRoutesQueryParams
 }
 
 type RoutesOneOrMoreRoutesResponse struct {

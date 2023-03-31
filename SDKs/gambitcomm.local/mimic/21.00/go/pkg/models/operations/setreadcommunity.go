@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetReadCommunityPathParams struct {
+type SetReadCommunityRequest struct {
 	// Agent to return the SNMP read community string
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMP read community string
 	Read string `pathParam:"style=simple,explode=false,name=read"`
-}
-
-type SetReadCommunityRequest struct {
-	PathParams SetReadCommunityPathParams
 }
 
 type SetReadCommunityResponse struct {

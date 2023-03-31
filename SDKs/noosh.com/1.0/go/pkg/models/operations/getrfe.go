@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRfePathParams struct {
+type GetRfeRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	RfeID       string `pathParam:"style=simple,explode=false,name=rfe_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetRfeRequest struct {
-	PathParams GetRfePathParams
 }
 
 type GetRfeResponse struct {

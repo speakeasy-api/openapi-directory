@@ -12,20 +12,15 @@ var FetchAuthorizedConnectAppServerList = []string{
 }
 
 type FetchAuthorizedConnectAppSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAuthorizedConnectAppPathParams struct {
+type FetchAuthorizedConnectAppRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AuthorizedConnectApp resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the Connect App to fetch.
 	ConnectAppSid string `pathParam:"style=simple,explode=false,name=ConnectAppSid"`
-}
-
-type FetchAuthorizedConnectAppRequest struct {
-	PathParams FetchAuthorizedConnectAppPathParams
-	Security   FetchAuthorizedConnectAppSecurity
-	ServerURL  *string
 }
 
 type FetchAuthorizedConnectAppResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type DatamigrationProjectsLocationsPrivateConnectionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatamigrationProjectsLocationsPrivateConnectionsListPathParams struct {
-	// Required. The parent that owns the collection of private connections.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatamigrationProjectsLocationsPrivateConnectionsListQueryParams struct {
+type DatamigrationProjectsLocationsPrivateConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type DatamigrationProjectsLocationsPrivateConnectionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token received from a previous `ListPrivateConnections` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListPrivateConnections` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent that owns the collection of private connections.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type DatamigrationProjectsLocationsPrivateConnectionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatamigrationProjectsLocationsPrivateConnectionsListRequest struct {
-	PathParams  DatamigrationProjectsLocationsPrivateConnectionsListPathParams
-	QueryParams DatamigrationProjectsLocationsPrivateConnectionsListQueryParams
-	Security    DatamigrationProjectsLocationsPrivateConnectionsListSecurity
 }
 
 type DatamigrationProjectsLocationsPrivateConnectionsListResponse struct {

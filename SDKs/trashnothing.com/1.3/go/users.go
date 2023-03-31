@@ -35,7 +35,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // ChangeEmail - Change email address
 // Change the users' current email address.  A verification link will be emailed to the new email address to verify that the email account belongs to the user.  The email change will not take effect until the user clicks the link in the verification email.
-func (s *users) ChangeEmail(ctx context.Context, request operations.ChangeEmailRequest) (*operations.ChangeEmailResponse, error) {
+func (s *users) ChangeEmail(ctx context.Context, request operations.ChangeEmailRequestBody) (*operations.ChangeEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/email"
 
@@ -82,7 +82,7 @@ func (s *users) ChangeEmail(ctx context.Context, request operations.ChangeEmailR
 }
 
 // CreateAlert - Create an email alert
-func (s *users) CreateAlert(ctx context.Context, request operations.CreateAlertRequest) (*operations.CreateAlertResponse, error) {
+func (s *users) CreateAlert(ctx context.Context, request operations.CreateAlertRequestBody) (*operations.CreateAlertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/alerts"
 
@@ -139,7 +139,7 @@ func (s *users) CreateAlert(ctx context.Context, request operations.CreateAlertR
 // DeleteAlert - Delete an email alert
 func (s *users) DeleteAlert(ctx context.Context, request operations.DeleteAlertRequest) (*operations.DeleteAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/alerts/{alert_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/me/alerts/{alert_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *users) GetCurrentUserGroups(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,7 +324,7 @@ func (s *users) GetCurrentUserPosts(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -412,14 +412,14 @@ func (s *users) GetPostLocations(ctx context.Context) (*operations.GetPostLocati
 // This is designed to be used as the src attribute of an HTML &lt;img&gt; tag to show the profile image of the given user.
 func (s *users) GetProfileImageFile(ctx context.Context, request operations.GetProfileImageFileRequest) (*operations.GetProfileImageFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/profile-image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/profile-image", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -497,7 +497,7 @@ func (s *users) GetProfileImages(ctx context.Context) (*operations.GetProfileIma
 // GetUser - Retrieve a user
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -543,7 +543,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 // Retrieve a user and information related to the user (eg. recent posts) that is useful for displaying a more detailed view of the user.
 func (s *users) GetUserAndRelatedData(ctx context.Context, request operations.GetUserAndRelatedDataRequest) (*operations.GetUserAndRelatedDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/display", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/display", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -595,7 +595,7 @@ func (s *users) GetUserGroupNotices(ctx context.Context, request operations.GetU
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -636,20 +636,20 @@ func (s *users) GetUserGroupNotices(ctx context.Context, request operations.GetU
 
 // GetUserPosts - List posts by a user
 // NOTE: In order to make it easier to see all a users&#39; posts, the current users&#39; location preferences are not applied when listing or searching posts from a single user.  If location based filtering of the posts is needed, the latitude, longitude and radius parameters may be used.
-func (s *users) GetUserPosts(ctx context.Context, request operations.GetUserPostsRequest) (*operations.GetUserPostsResponse, error) {
+func (s *users) GetUserPosts(ctx context.Context, request operations.GetUserPostsRequest, security operations.GetUserPostsSecurity) (*operations.GetUserPostsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/posts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/posts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -688,7 +688,7 @@ func (s *users) GetUserPosts(ctx context.Context, request operations.GetUserPost
 // Allows the current user to remove feedback that they left on a user.
 func (s *users) RemoveUserFeedback(ctx context.Context, request operations.RemoveUserFeedbackRequest) (*operations.RemoveUserFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feedback", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -733,7 +733,7 @@ func (s *users) RemoveUserFeedback(ctx context.Context, request operations.Remov
 }
 
 // ReportUser - Report a user
-func (s *users) ReportUser(ctx context.Context, request operations.ReportUserRequest) (*operations.ReportUserResponse, error) {
+func (s *users) ReportUser(ctx context.Context, request operations.ReportUserRequestBody) (*operations.ReportUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/report"
 
@@ -817,7 +817,7 @@ func (s *users) ResendAccountVerificationEmail(ctx context.Context) (*operations
 
 // SavePostLocation - Save a post location for the current user
 // Creates or updates a post location for the current user. Updates will happen when the name of the post location matches a previous post location.
-func (s *users) SavePostLocation(ctx context.Context, request operations.SavePostLocationRequest) (*operations.SavePostLocationResponse, error) {
+func (s *users) SavePostLocation(ctx context.Context, request operations.SavePostLocationRequestBody) (*operations.SavePostLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/post-locations"
 
@@ -881,7 +881,7 @@ func (s *users) SearchCurrentUserPosts(ctx context.Context, request operations.S
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -922,20 +922,20 @@ func (s *users) SearchCurrentUserPosts(ctx context.Context, request operations.S
 
 // SearchUserPosts - Search posts by a user
 // Searching posts takes the same arguments as listing posts except for the addition of the search and sort_by parameters.
-func (s *users) SearchUserPosts(ctx context.Context, request operations.SearchUserPostsRequest) (*operations.SearchUserPostsResponse, error) {
+func (s *users) SearchUserPosts(ctx context.Context, request operations.SearchUserPostsRequest, security operations.SearchUserPostsSecurity) (*operations.SearchUserPostsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/posts/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/posts/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1053,7 +1053,7 @@ func (s *users) SetEmailNotBouncing(ctx context.Context) (*operations.SetEmailNo
 
 // SetProfileImage - Set a profile image
 // Profile images must be at least 90 pixels wide and tall.  And if the image used is not square it will be automatically cropped to be square.
-func (s *users) SetProfileImage(ctx context.Context, request operations.SetProfileImageRequest) (*operations.SetProfileImageResponse, error) {
+func (s *users) SetProfileImage(ctx context.Context, request operations.SetProfileImageRequestBody) (*operations.SetProfileImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/profile-image"
 
@@ -1108,9 +1108,9 @@ func (s *users) SetProfileImage(ctx context.Context, request operations.SetProfi
 // Allows the current user to submit feedback on a user.  The current user can only leave feedback on a user if the feedback allowed property on that user is set to true (see User definition for more details). And the system will only store the most recent feedback submission that the current user has submitted on a user. If the current user submits feedback multiple times, the newest feedback will overwrite the older feedback. This allows users to update their feedback as long as the feedback allowed property allows it.
 func (s *users) SubmitUserFeedback(ctx context.Context, request operations.SubmitUserFeedbackRequest) (*operations.SubmitUserFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1164,7 +1164,7 @@ func (s *users) SubmitUserFeedback(ctx context.Context, request operations.Submi
 
 // UpdateCurrentUser - Update current user
 // Update the current user.  All fields are optional so requests can update just one or multiple user properties at a time.
-func (s *users) UpdateCurrentUser(ctx context.Context, request operations.UpdateCurrentUserRequest) (*operations.UpdateCurrentUserResponse, error) {
+func (s *users) UpdateCurrentUser(ctx context.Context, request operations.UpdateCurrentUserRequestBody) (*operations.UpdateCurrentUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me"
 
@@ -1217,7 +1217,7 @@ func (s *users) UpdateCurrentUser(ctx context.Context, request operations.Update
 
 // UpdateLocation - Update location
 // Update the current users' location. The location is used to determine which posts are shown to the user (both public posts and group posts).
-func (s *users) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequest) (*operations.UpdateLocationResponse, error) {
+func (s *users) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequestBody) (*operations.UpdateLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/location"
 

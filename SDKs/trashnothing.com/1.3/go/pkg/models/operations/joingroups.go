@@ -12,10 +12,6 @@ type JoinGroupsRequestBody struct {
 	GroupIds string `multipartForm:"name=group_ids"`
 }
 
-type JoinGroupsRequest struct {
-	Request JoinGroupsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // JoinGroups200ApplicationJSON - The groups with updated membership data.
 type JoinGroups200ApplicationJSON struct {
 	// Updated data about the groups and the current users' membership to each group.

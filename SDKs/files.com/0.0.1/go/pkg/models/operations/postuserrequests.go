@@ -16,10 +16,6 @@ type PostUserRequestsRequestBody struct {
 	Name string `multipartForm:"name=name"`
 }
 
-type PostUserRequestsRequest struct {
-	Request PostUserRequestsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostUserRequestsResponse struct {
 	ContentType string
 	StatusCode  int

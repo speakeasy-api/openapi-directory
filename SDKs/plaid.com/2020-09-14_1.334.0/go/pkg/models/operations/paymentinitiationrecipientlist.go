@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PaymentInitiationRecipientListRequest struct {
-	Request shared.PaymentInitiationRecipientListRequest `request:"mediaType=application/json"`
-}
 
 type PaymentInitiationRecipientListResponse struct {
 	ContentType string

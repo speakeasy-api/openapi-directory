@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateResendEmailPathParams struct {
+type CertificateResendEmailRequest struct {
 	// Certificate id to resend email
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 	// Email id for email to resend
 	EmailID string `pathParam:"style=simple,explode=false,name=emailId"`
-}
-
-type CertificateResendEmailRequest struct {
-	PathParams CertificateResendEmailPathParams
 }
 
 type CertificateResendEmailResponse struct {

@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OutletsGetOutletsByGeolocationPathParams struct {
+type OutletsGetOutletsByGeolocationRequest struct {
+	// Your developer id
+	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Geographic coordinate of latitude
 	Latitude float32 `pathParam:"style=simple,explode=false,name=latitude"`
 	// Geographic coordinate of longitude
 	Longitude float32 `pathParam:"style=simple,explode=false,name=longitude"`
-}
-
-type OutletsGetOutletsByGeolocationQueryParams struct {
-	// Your developer id
-	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by maximum distance (in metres) from location specified via latitude and longitude parameters (default = 300)
 	MaxDistance *float64 `queryParam:"style=form,explode=true,name=max_distance"`
 	// Maximum number of results returned (default = 30)
@@ -25,11 +22,6 @@ type OutletsGetOutletsByGeolocationQueryParams struct {
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type OutletsGetOutletsByGeolocationRequest struct {
-	PathParams  OutletsGetOutletsByGeolocationPathParams
-	QueryParams OutletsGetOutletsByGeolocationQueryParams
 }
 
 type OutletsGetOutletsByGeolocationResponse struct {

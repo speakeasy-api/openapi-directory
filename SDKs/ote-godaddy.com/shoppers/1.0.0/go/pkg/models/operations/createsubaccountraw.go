@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSubaccountRawRequest struct {
-	// The subaccount to create
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type CreateSubaccountRawResponse struct {
 	Body        []byte
 	ContentType string

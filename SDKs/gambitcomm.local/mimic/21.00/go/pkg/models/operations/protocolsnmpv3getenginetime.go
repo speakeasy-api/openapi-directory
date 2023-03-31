@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3GetEnginetimePathParams struct {
+type ProtocolSnmpv3GetEnginetimeRequest struct {
 	// Agent to show the SNMPv3 engine
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmpv3GetEnginetimeRequest struct {
-	PathParams ProtocolSnmpv3GetEnginetimePathParams
 }
 
 type ProtocolSnmpv3GetEnginetimeResponse struct {

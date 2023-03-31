@@ -11,8 +11,8 @@ import (
 )
 
 type SearchVideosSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchVideosAspectRatioEnum - Show videos with the specified aspect ratio
@@ -280,7 +280,7 @@ func (e *SearchVideosViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchVideosQueryParams struct {
+type SearchVideosRequest struct {
 	// Show videos added on the specified date
 	AddedDate *types.Date `queryParam:"style=form,explode=true,name=added_date"`
 	// Show videos added before the specified date
@@ -339,11 +339,6 @@ type SearchVideosQueryParams struct {
 	Sort *SearchVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Amount of detail to render in the response
 	View *SearchVideosViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type SearchVideosRequest struct {
-	QueryParams SearchVideosQueryParams
-	Security    SearchVideosSecurity
 }
 
 type SearchVideosResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateQuoteForPayoutV3PathParams struct {
+type CreateQuoteForPayoutV3Request struct {
 	// Id of the payout
 	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
-type CreateQuoteForPayoutV3Request struct {
-	PathParams CreateQuoteForPayoutV3PathParams
 }
 
 type CreateQuoteForPayoutV3Response struct {

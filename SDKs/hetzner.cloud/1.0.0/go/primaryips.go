@@ -48,7 +48,7 @@ func newPrimaryIPs(defaultClient, securityClient HTTPClient, serverURL, language
 // The Primary IP may be assigned to a Server. In this case it is unassigned automatically. The Server must be powered off (status `off`) in order for this operation to succeed.
 func (s *primaryIPs) DeletePrimaryIpsID(ctx context.Context, request operations.DeletePrimaryIpsIDRequest) (*operations.DeletePrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *primaryIPs) GetPrimaryIps(ctx context.Context, request operations.GetPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -133,7 +133,7 @@ func (s *primaryIPs) GetPrimaryIps(ctx context.Context, request operations.GetPr
 // Returns a specific Primary IP object.
 func (s *primaryIPs) GetPrimaryIpsID(ctx context.Context, request operations.GetPrimaryIpsIDRequest) (*operations.GetPrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *primaryIPs) GetPrimaryIpsID(ctx context.Context, request operations.Get
 // | `server_not_stopped`          | The specified server is running, but needs to be powered off  |
 // | `server_has_ipv4`             | The server already has an ipv4 address                        |
 // | `server_has_ipv6`             | The server already has an ipv6 address                        |
-func (s *primaryIPs) PostPrimaryIps(ctx context.Context, request operations.PostPrimaryIpsRequest) (*operations.PostPrimaryIpsResponse, error) {
+func (s *primaryIPs) PostPrimaryIps(ctx context.Context, request operations.PostPrimaryIpsCreatePrimaryIPRequest) (*operations.PostPrimaryIpsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/primary_ips"
 
@@ -246,9 +246,9 @@ func (s *primaryIPs) PostPrimaryIps(ctx context.Context, request operations.Post
 // If the Primary IP object changes during the request, the response will be a “conflict” error.
 func (s *primaryIPs) PutPrimaryIpsID(ctx context.Context, request operations.PutPrimaryIpsIDRequest) (*operations.PutPrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

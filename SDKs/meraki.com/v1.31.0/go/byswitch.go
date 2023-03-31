@@ -34,14 +34,14 @@ func newBySwitch(defaultClient, securityClient HTTPClient, serverURL, language, 
 // List the switchports in an organization by switch
 func (s *bySwitch) GetOrganizationSwitchPortsBySwitch(ctx context.Context, request operations.GetOrganizationSwitchPortsBySwitchRequest) (*operations.GetOrganizationSwitchPortsBySwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/ports/bySwitch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/ports/bySwitch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

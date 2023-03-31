@@ -10,23 +10,23 @@ import (
 )
 
 type MonitoringServicesServiceLevelObjectivesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesGetSecurity struct {
@@ -34,11 +34,6 @@ type MonitoringServicesServiceLevelObjectivesGetSecurity struct {
 	Option2 *MonitoringServicesServiceLevelObjectivesGetSecurityOption2 `security:"option"`
 	Option3 *MonitoringServicesServiceLevelObjectivesGetSecurityOption3 `security:"option"`
 	Option4 *MonitoringServicesServiceLevelObjectivesGetSecurityOption4 `security:"option"`
-}
-
-type MonitoringServicesServiceLevelObjectivesGetPathParams struct {
-	// Required. Resource name of the ServiceLevelObjective to get. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // MonitoringServicesServiceLevelObjectivesGetViewEnum - View of the ServiceLevelObjective to return. If DEFAULT, return the ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
@@ -68,7 +63,7 @@ func (e *MonitoringServicesServiceLevelObjectivesGetViewEnum) UnmarshalJSON(data
 	}
 }
 
-type MonitoringServicesServiceLevelObjectivesGetQueryParams struct {
+type MonitoringServicesServiceLevelObjectivesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -81,6 +76,8 @@ type MonitoringServicesServiceLevelObjectivesGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Resource name of the ServiceLevelObjective to get. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -93,12 +90,6 @@ type MonitoringServicesServiceLevelObjectivesGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// View of the ServiceLevelObjective to return. If DEFAULT, return the ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
 	View *MonitoringServicesServiceLevelObjectivesGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MonitoringServicesServiceLevelObjectivesGetRequest struct {
-	PathParams  MonitoringServicesServiceLevelObjectivesGetPathParams
-	QueryParams MonitoringServicesServiceLevelObjectivesGetQueryParams
-	Security    MonitoringServicesServiceLevelObjectivesGetSecurity
 }
 
 type MonitoringServicesServiceLevelObjectivesGetResponse struct {

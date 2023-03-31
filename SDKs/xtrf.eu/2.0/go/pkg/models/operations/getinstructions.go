@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInstructionsPathParams struct {
+type GetInstructionsRequest struct {
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetInstructionsRequest struct {
-	PathParams GetInstructionsPathParams
 }
 
 type GetInstructionsResponse struct {

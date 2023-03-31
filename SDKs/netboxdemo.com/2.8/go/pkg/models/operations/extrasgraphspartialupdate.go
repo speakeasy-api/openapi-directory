@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasGraphsPartialUpdatePathParams struct {
+type ExtrasGraphsPartialUpdateRequest struct {
+	GraphInput shared.GraphInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this graph.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasGraphsPartialUpdateRequest struct {
-	PathParams ExtrasGraphsPartialUpdatePathParams
-	Request    shared.GraphInput `request:"mediaType=application/json"`
 }
 
 type ExtrasGraphsPartialUpdateResponse struct {

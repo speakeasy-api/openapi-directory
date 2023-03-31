@@ -33,7 +33,7 @@ func newAccounting(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetAccounting - List Order Accounting
 // Retrieves accounting activity during the queried timespan.
-func (s *accounting) GetAccounting(ctx context.Context, request operations.GetAccountingRequest) (*operations.GetAccountingResponse, error) {
+func (s *accounting) GetAccounting(ctx context.Context, request operations.GetAccountingRequest, security operations.GetAccountingSecurity) (*operations.GetAccountingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting"
 
@@ -42,11 +42,11 @@ func (s *accounting) GetAccounting(ctx context.Context, request operations.GetAc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

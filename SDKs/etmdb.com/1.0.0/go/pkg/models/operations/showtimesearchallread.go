@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ShowtimeSearchallReadPathParams struct {
-	Param string `pathParam:"style=simple,explode=false,name=param"`
-}
-
 type ShowtimeSearchallReadRequest struct {
-	PathParams ShowtimeSearchallReadPathParams
+	Param string `pathParam:"style=simple,explode=false,name=param"`
 }
 
 type ShowtimeSearchallReadResponse struct {

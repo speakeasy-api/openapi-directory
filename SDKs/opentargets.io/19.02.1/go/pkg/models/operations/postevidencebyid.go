@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostEvidenceByIDRequest struct {
-	// IDs of the evidence string to retrieve.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostEvidenceByIDResponse struct {
 	ContentType string
 	StatusCode  int

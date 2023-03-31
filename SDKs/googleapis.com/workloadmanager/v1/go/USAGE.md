@@ -14,84 +14,75 @@ func main() {
     s := sdk.New()
 
     req := operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest{
-        Security: operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            EvaluationID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.EvaluationInput{
-            Description: "magnam",
+        DollarXgafv: "2",
+        EvaluationInput: &shared.EvaluationInput{
+            Description: "provident",
             Labels: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
-            Name: "iusto",
+            Name: "error",
             ResourceFilter: &shared.ResourceFilter{
                 GceInstanceFilter: &shared.GceInstanceFilter{
                     ServiceAccounts: []string{
-                        "nisi",
-                        "recusandae",
-                        "temporibus",
+                        "suscipit",
+                        "iure",
+                        "magnam",
                     },
                 },
                 InclusionLabels: map[string]string{
-                    "quis": "veritatis",
+                    "ipsa": "delectus",
+                    "tempora": "suscipit",
+                    "molestiae": "minus",
+                    "placeat": "voluptatum",
                 },
                 ResourceIDPatterns: []string{
-                    "perferendis",
-                    "ipsam",
-                    "repellendus",
+                    "excepturi",
+                    "nisi",
                 },
                 Scopes: []string{
-                    "quo",
-                    "odit",
-                    "at",
-                    "at",
+                    "temporibus",
+                    "ab",
+                    "quis",
+                    "veritatis",
                 },
             },
             ResourceStatus: &shared.ResourceStatus{
                 RulesNewerVersions: []string{
-                    "molestiae",
-                    "quod",
-                    "quod",
-                    "esse",
+                    "perferendis",
+                    "ipsam",
+                    "repellendus",
                 },
-                State: "ACTIVE",
+                State: "DELETING",
             },
             RuleNames: []string{
-                "dolorum",
-                "dicta",
-                "nam",
-                "officia",
+                "odit",
+                "at",
+                "at",
+                "maiores",
             },
         },
+        AccessToken: "molestiae",
+        Alt: "proto",
+        Callback: "quod",
+        EvaluationID: "esse",
+        Fields: "totam",
+        Key: "porro",
+        OauthToken: "dolorum",
+        Parent: "dicta",
+        PrettyPrint: false,
+        QuotaUser: "nam",
+        RequestID: "officia",
+        UploadType: "occaecati",
+        UploadProtocol: "fugit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx, req)
+    res, err := s.Projects.WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx, req, operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

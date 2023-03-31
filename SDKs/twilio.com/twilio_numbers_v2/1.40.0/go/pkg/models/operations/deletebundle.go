@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteBundleServerList = []string{
@@ -12,18 +11,13 @@ var DeleteBundleServerList = []string{
 }
 
 type DeleteBundleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteBundlePathParams struct {
-	// The unique string that we created to identify the Bundle resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteBundleRequest struct {
-	PathParams DeleteBundlePathParams
-	Security   DeleteBundleSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Bundle resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteBundleResponse struct {

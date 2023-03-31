@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type RetrieveMappingPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type RetrieveMappingQueryParams struct {
+type RetrieveMappingRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the VTEX account that belongs to the marketplace. Used as part of the URL
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Marketplace's account name, the same one inputted on the endpoint's path.
 	An string `queryParam:"style=form,explode=true,name=an"`
 	// Environment to use. Used as part of the URL.
 	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type RetrieveMappingHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RetrieveMappingRequest struct {
-	PathParams  RetrieveMappingPathParams
-	QueryParams RetrieveMappingQueryParams
-	Headers     RetrieveMappingHeaders
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 }
 
 type RetrieveMapping200ApplicationJSON struct {

@@ -21,10 +21,6 @@ type PostPortfolioOptimizationEqualRiskContributionsRequestBody struct {
 	Constraints            *PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationEqualRiskContributionsRequest struct {
-	Request PostPortfolioOptimizationEqualRiskContributionsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationEqualRiskContributions200ApplicationJSON - OK
 type PostPortfolioOptimizationEqualRiskContributions200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

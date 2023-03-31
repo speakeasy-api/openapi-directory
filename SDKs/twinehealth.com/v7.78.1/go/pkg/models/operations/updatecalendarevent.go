@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCalendarEventPathParams struct {
+type UpdateCalendarEventRequest struct {
+	UpdateCalendarEventRequest shared.UpdateCalendarEventRequest `request:"mediaType=application/vnd.api+json"`
 	// Calendar event identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateCalendarEventRequest struct {
-	PathParams UpdateCalendarEventPathParams
-	Request    shared.UpdateCalendarEventRequest `request:"mediaType=application/vnd.api+json"`
 }
 
 type UpdateCalendarEventResponse struct {

@@ -35,7 +35,7 @@ func (e *FetchEmailHistoriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FetchEmailHistoriesQueryParams struct {
+type FetchEmailHistoriesRequest struct {
 	// Type of email
 	FilterEmailType *string `queryParam:"style=form,explode=true,name=filter[emailType]"`
 	// Fitbit Plus user id of email recipient. Required if filter[sender] is not defined.
@@ -47,10 +47,6 @@ type FetchEmailHistoriesQueryParams struct {
 	//   * -send_time - descending by send_time
 	//
 	Sort *FetchEmailHistoriesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type FetchEmailHistoriesRequest struct {
-	QueryParams FetchEmailHistoriesQueryParams
 }
 
 type FetchEmailHistoriesResponse struct {

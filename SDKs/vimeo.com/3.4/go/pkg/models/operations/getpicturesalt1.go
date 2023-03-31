@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPicturesAlt1QueryParams struct {
+type GetPicturesAlt1Request struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetPicturesAlt1Request struct {
-	QueryParams GetPicturesAlt1QueryParams
 }
 
 type GetPicturesAlt1Response struct {

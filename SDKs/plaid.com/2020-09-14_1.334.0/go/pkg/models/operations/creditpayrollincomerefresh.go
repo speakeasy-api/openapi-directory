@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreditPayrollIncomeRefreshRequest struct {
-	Request shared.CreditPayrollIncomeRefreshRequest `request:"mediaType=application/json"`
-}
 
 type CreditPayrollIncomeRefreshResponse struct {
 	ContentType string

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type AccessAddPathParams struct {
+type AccessAddRequest struct {
 	// Agent range in minimal range representation
 	Agents string `pathParam:"style=simple,explode=false,name=agents"`
 	// Currently not used
 	Mask string `pathParam:"style=simple,explode=false,name=mask"`
 	// Username of the simulator hosting system
 	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type AccessAddRequest struct {
-	PathParams AccessAddPathParams
 }
 
 type AccessAddResponse struct {

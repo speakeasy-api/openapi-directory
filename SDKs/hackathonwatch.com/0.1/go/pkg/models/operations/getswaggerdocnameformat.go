@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETSwaggerDocNameFormatPathParams struct {
+type GETSwaggerDocNameFormatRequest struct {
 	// Resource name of mounted API
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GETSwaggerDocNameFormatRequest struct {
-	PathParams GETSwaggerDocNameFormatPathParams
 }
 
 type GETSwaggerDocNameFormatResponse struct {

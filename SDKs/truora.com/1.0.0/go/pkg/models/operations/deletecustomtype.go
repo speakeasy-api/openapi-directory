@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteCustomTypeSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 // DeleteCustomTypeCountryEnum - Country where the custom type is valid
@@ -55,16 +54,11 @@ func (e *DeleteCustomTypeCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteCustomTypeQueryParams struct {
+type DeleteCustomTypeRequest struct {
 	// Country where the custom type is valid
 	Country *DeleteCustomTypeCountryEnum `queryParam:"style=form,explode=true,name=country"`
 	// Name of the custom type to be deleted
 	Type string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DeleteCustomTypeRequest struct {
-	QueryParams DeleteCustomTypeQueryParams
-	Security    DeleteCustomTypeSecurity
 }
 
 type DeleteCustomTypeResponse struct {

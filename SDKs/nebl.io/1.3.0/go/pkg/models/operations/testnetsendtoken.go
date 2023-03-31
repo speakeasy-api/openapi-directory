@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetSendTokenRequest struct {
-	// Object representing the token to be sent
-	Request shared.SendTokenRequest `request:"mediaType=application/json"`
-}
-
 type TestnetSendTokenResponse struct {
 	ContentType string
 	// Unexpected error

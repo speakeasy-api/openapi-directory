@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type ResetPasswordPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ResetPasswordQueryParams struct {
-	SendEmail *string `queryParam:"style=form,explode=true,name=sendEmail"`
-}
-
 type ResetPasswordRequest struct {
-	PathParams  ResetPasswordPathParams
-	QueryParams ResetPasswordQueryParams
-	Request     []byte `request:"mediaType=text/plain"`
+	RequestBody []byte  `request:"mediaType=text/plain"`
+	SendEmail   *string `queryParam:"style=form,explode=true,name=sendEmail"`
+	UserID      string  `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ResetPasswordResponse struct {

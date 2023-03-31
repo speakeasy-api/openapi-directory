@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchSftpHostKeysIDPathParams struct {
-	// Sftp Host Key ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchSftpHostKeysIDRequestBody struct {
 	// The friendly name of this SFTP Host Key.
 	Name *string `multipartForm:"name=name"`
@@ -20,8 +15,9 @@ type PatchSftpHostKeysIDRequestBody struct {
 }
 
 type PatchSftpHostKeysIDRequest struct {
-	PathParams PatchSftpHostKeysIDPathParams
-	Request    *PatchSftpHostKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchSftpHostKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Sftp Host Key ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchSftpHostKeysIDResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasExportTemplatesUpdatePathParams struct {
+type ExtrasExportTemplatesUpdateRequest struct {
+	ExportTemplateInput shared.ExportTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this export template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasExportTemplatesUpdateRequest struct {
-	PathParams ExtrasExportTemplatesUpdatePathParams
-	Request    shared.ExportTemplateInput `request:"mediaType=application/json"`
 }
 
 type ExtrasExportTemplatesUpdateResponse struct {

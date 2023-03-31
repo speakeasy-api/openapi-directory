@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetReisezentrenRequest(
-    query_params=operations.GetReisezentrenQueryParams(
-        name="nihil",
-    ),
+    name="corrupti",
 )
     
 res = s.get_reisezentren(req)

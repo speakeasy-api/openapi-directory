@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsQueryParams struct {
+type GetRealmClientsRequest struct {
 	// filter by clientId
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// the first result
 	First *int `queryParam:"style=form,explode=true,name=first"`
 	// the max results to return
 	Max *int `queryParam:"style=form,explode=true,name=max"`
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// whether this is a search query or a getClientById query
 	Search *bool `queryParam:"style=form,explode=true,name=search"`
 	// filter clients that cannot be viewed in full by admin
 	ViewableOnly *bool `queryParam:"style=form,explode=true,name=viewableOnly"`
-}
-
-type GetRealmClientsRequest struct {
-	PathParams  GetRealmClientsPathParams
-	QueryParams GetRealmClientsQueryParams
 }
 
 type GetRealmClientsResponse struct {

@@ -33,7 +33,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GamesEventsListByPlayer - Returns a list showing the current progress on events in this application for the currently authenticated user.
-func (s *events) GamesEventsListByPlayer(ctx context.Context, request operations.GamesEventsListByPlayerRequest) (*operations.GamesEventsListByPlayerResponse, error) {
+func (s *events) GamesEventsListByPlayer(ctx context.Context, request operations.GamesEventsListByPlayerRequest, security operations.GamesEventsListByPlayerSecurity) (*operations.GamesEventsListByPlayerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/events"
 
@@ -42,11 +42,11 @@ func (s *events) GamesEventsListByPlayer(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *events) GamesEventsListByPlayer(ctx context.Context, request operations
 }
 
 // GamesEventsListDefinitions - Returns a list of the event definitions in this application.
-func (s *events) GamesEventsListDefinitions(ctx context.Context, request operations.GamesEventsListDefinitionsRequest) (*operations.GamesEventsListDefinitionsResponse, error) {
+func (s *events) GamesEventsListDefinitions(ctx context.Context, request operations.GamesEventsListDefinitionsRequest, security operations.GamesEventsListDefinitionsSecurity) (*operations.GamesEventsListDefinitionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/eventDefinitions"
 
@@ -90,11 +90,11 @@ func (s *events) GamesEventsListDefinitions(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *events) GamesEventsListDefinitions(ctx context.Context, request operati
 }
 
 // GamesEventsRecord - Records a batch of changes to the number of times events have occurred for the currently authenticated user of this application.
-func (s *events) GamesEventsRecord(ctx context.Context, request operations.GamesEventsRecordRequest) (*operations.GamesEventsRecordResponse, error) {
+func (s *events) GamesEventsRecord(ctx context.Context, request operations.GamesEventsRecordRequest, security operations.GamesEventsRecordSecurity) (*operations.GamesEventsRecordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/events"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventRecordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *events) GamesEventsRecord(ctx context.Context, request operations.Games
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

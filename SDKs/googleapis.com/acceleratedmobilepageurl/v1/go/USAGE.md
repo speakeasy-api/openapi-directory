@@ -14,26 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest{
-        QueryParams: operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.BatchGetAmpUrlsRequest{
+        DollarXgafv: "2",
+        BatchGetAmpUrlsRequest: &shared.BatchGetAmpUrlsRequest{
             LookupStrategy: "IN_INDEX_DOC",
             Urls: []string{
-                "iure",
-                "magnam",
+                "quibusdam",
+                "unde",
+                "nulla",
             },
         },
+        AccessToken: "corrupti",
+        Alt: "proto",
+        Callback: "vel",
+        Fields: "error",
+        Key: "deserunt",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()

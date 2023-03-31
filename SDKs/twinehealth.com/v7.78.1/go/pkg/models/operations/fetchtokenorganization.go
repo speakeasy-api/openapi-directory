@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchTokenOrganizationPathParams struct {
+type FetchTokenOrganizationRequest struct {
 	// Token identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchTokenOrganizationRequest struct {
-	PathParams FetchTokenOrganizationPathParams
 }
 
 type FetchTokenOrganizationResponse struct {

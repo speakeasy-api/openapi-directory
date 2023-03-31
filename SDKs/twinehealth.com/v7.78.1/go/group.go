@@ -35,7 +35,7 @@ func newGroup(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateGroup - Create a group
 // Create a group record.
-func (s *group) CreateGroup(ctx context.Context, request operations.CreateGroupRequest) (*operations.CreateGroupResponse, error) {
+func (s *group) CreateGroup(ctx context.Context, request shared.CreateGroupRequestInput) (*operations.CreateGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/group"
 
@@ -106,7 +106,7 @@ func (s *group) CreateGroup(ctx context.Context, request operations.CreateGroupR
 // Get a group record by id.
 func (s *group) FetchGroup(ctx context.Context, request operations.FetchGroupRequest) (*operations.FetchGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/group/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/group/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *group) FetchGroups(ctx context.Context, request operations.FetchGroupsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

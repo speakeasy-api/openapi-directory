@@ -34,7 +34,7 @@ func newChromosome(defaultClient, securityClient HTTPClient, serverURL, language
 // GETChromosomeByAssemblyUsingGET - Return a list of chromosomes
 func (s *chromosome) GETChromosomeByAssemblyUsingGET(ctx context.Context, request operations.GETChromosomeByAssemblyUsingGETRequest) (*operations.GETChromosomeByAssemblyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{chromosome}/{mapKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{chromosome}/{mapKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *chromosome) GETChromosomeByAssemblyUsingGET(ctx context.Context, reques
 // GETChromosomesByAssemblyUsingGET - Return a list of chromosomes
 func (s *chromosome) GETChromosomesByAssemblyUsingGET(ctx context.Context, request operations.GETChromosomesByAssemblyUsingGETRequest) (*operations.GETChromosomesByAssemblyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{mapKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{mapKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

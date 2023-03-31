@@ -33,7 +33,7 @@ func newUris(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // WebriskUrisSearch - This method is used to check whether a URI is on a given threatList. Multiple threatLists may be searched in a single query. The response will list all requested threatLists the URI was found to match. If the URI is not found on any of the requested ThreatList an empty response will be returned.
-func (s *uris) WebriskUrisSearch(ctx context.Context, request operations.WebriskUrisSearchRequest) (*operations.WebriskUrisSearchResponse, error) {
+func (s *uris) WebriskUrisSearch(ctx context.Context, request operations.WebriskUrisSearchRequest, security operations.WebriskUrisSearchSecurity) (*operations.WebriskUrisSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/uris:search"
 
@@ -42,11 +42,11 @@ func (s *uris) WebriskUrisSearch(ctx context.Context, request operations.Webrisk
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCreditSessionRequest struct {
-	// session_request
-	Request shared.SessionCreateInput `request:"mediaType=application/json"`
-}
-
 type CreateCreditSessionResponse struct {
 	ContentType string
 	StatusCode  int

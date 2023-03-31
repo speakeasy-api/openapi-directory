@@ -8,12 +8,7 @@ import (
 	"time"
 )
 
-type DiaryControllerGetAllocationsPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerGetAllocationsQueryParams struct {
+type DiaryControllerGetAllocationsRequest struct {
 	// The unique appointment type identifier
 	AppointmentType string `queryParam:"style=form,explode=true,name=appointmentType"`
 	// Branch ID to check appointments (required if no property submitted)
@@ -24,11 +19,8 @@ type DiaryControllerGetAllocationsQueryParams struct {
 	PreferredDate time.Time `queryParam:"style=form,explode=true,name=preferredDate"`
 	// The unique property identifier (Sales or Lettings) determines branch and property type
 	PropertyIdentifier *string `queryParam:"style=form,explode=true,name=propertyIdentifier"`
-}
-
-type DiaryControllerGetAllocationsRequest struct {
-	PathParams  DiaryControllerGetAllocationsPathParams
-	QueryParams DiaryControllerGetAllocationsQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerGetAllocationsResponse struct {

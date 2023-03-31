@@ -8,10 +8,10 @@ import (
 )
 
 type GetV2EmployeesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV2EmployeesQueryParams struct {
+type GetV2EmployeesRequest struct {
 	// The token required to retrieve the specified page of results.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The number of employees to be returned on each page.
@@ -19,11 +19,6 @@ type GetV2EmployeesQueryParams struct {
 	LocationID *string `queryParam:"style=form,explode=true,name=location_id"`
 	// Specifies the EmployeeStatus to filter the employee by.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetV2EmployeesRequest struct {
-	QueryParams GetV2EmployeesQueryParams
-	Security    GetV2EmployeesSecurity
 }
 
 type GetV2EmployeesResponse struct {

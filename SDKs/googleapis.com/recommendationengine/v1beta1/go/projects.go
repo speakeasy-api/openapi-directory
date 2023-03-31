@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate - Creates a catalog item.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest, security operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1CatalogItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsCrea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsCrea
 }
 
 // RecommendationengineProjectsLocationsCatalogsCatalogItemsImport - Bulk import of multiple catalog items. Request processing may be synchronous. No partial updating supported. Non-existing items will be created. Operation.response is of type ImportResponse. Note that it is possible for a subset of the items to be successfully updated.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsImport(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsImport(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest, security operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsImpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsImpo
 }
 
 // RecommendationengineProjectsLocationsCatalogsCatalogItemsList - Gets a list of catalog items.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest, security operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogItems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsList
 }
 
 // RecommendationengineProjectsLocationsCatalogsCatalogItemsPatch - Updates a catalog item. Partial updating is supported. Non-existing items will be created.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsPatch(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsPatch(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest, security operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1CatalogItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsPatc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsCatalogItemsPatc
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredict - Makes a recommendation prediction. If using API Key based authentication, the API Key must be registered using the PredictionApiKeyRegistry service. [Learn more](https://cloud.google.com/recommendations-ai/docs/setting-up#register-key).
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredict(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredict(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:predict", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:predict", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1PredictRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPlace
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPlace
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreate - Register an API key for use with predict method.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreate(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreateRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreateResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreate(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreateRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreateSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/predictionApiKeyRegistrations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/predictionApiKeyRegistrations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1CreatePredictionAPIKeyRegistrationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,20 +355,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredi
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDelete - Unregister an apiKey from using for predict method.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDelete(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDeleteRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDeleteResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDelete(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDeleteRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDeleteSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,20 +403,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredi
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsList - List the registered apiKeys for use with predict method.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/predictionApiKeyRegistrations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/predictionApiKeyRegistrations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresPredi
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollect - Writes a single user event from the browser. This uses a GET request to due to browser restriction of POST-ing to a 3rd party domain. This method is used only by the Recommendations AI JavaScript pixel. Users should not call this method directly.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollect(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollect(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:collect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:collect", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImport - Bulk import of User events. Request processing might be synchronous. Events that already exist are skipped. Use this method for backfilling historical user events. Operation.response is of type ImportResponse. Note that it is possible for a subset of the items to be successfully inserted. Operation.metadata is of type ImportMetadata.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImport(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImport(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1ImportUserEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsList - Gets a list of user events within a time range, with potential filtering. The method does not list unjoined user events. Unjoined user event definition: when a user event is ingested from Recommendations AI User Event APIs, the catalog item included in the user event is connected with the current catalog. If a catalog item of the ingested event is not in the current catalog, it could lead to degraded model quality. This is called an unjoined event.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurge - Deletes permanently all user events specified by the filter provided. Depending on the number of events specified by the filter, this operation could take hours or days to complete. To test a filter, use the list command first.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurge(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurge(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:purge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:purge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoin - Triggers a user event rejoin operation with latest catalog data. Events will not be annotated with detailed catalog information if catalog item is missing at the time the user event is ingested, and these events are stored as unjoined events with a limited usage on training and serving. This API can be used to trigger a 'join' operation on specified events with latest version of catalog items. It can also be used to correct events joined with wrong catalog items.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoin(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoin(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:rejoin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:rejoin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,11 +712,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWrite - Writes a single user event.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWrite(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWrite(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest, security operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:write", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/userEvents:write", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommendationengineV1beta1UserEvent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -728,11 +728,11 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,20 +767,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsEventStoresUserE
 }
 
 // RecommendationengineProjectsLocationsCatalogsList - Lists all the catalog configurations associated with the project.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsListRequest) (*operations.RecommendationengineProjectsLocationsCatalogsListResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsListRequest, security operations.RecommendationengineProjectsLocationsCatalogsListSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/catalogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,20 +815,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsList(ctx context
 }
 
 // RecommendationengineProjectsLocationsCatalogsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsOperationsGet(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest) (*operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsOperationsGet(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest, security operations.RecommendationengineProjectsLocationsCatalogsOperationsGetSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,20 +863,20 @@ func (s *projects) RecommendationengineProjectsLocationsCatalogsOperationsGet(ct
 }
 
 // RecommendationengineProjectsLocationsCatalogsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) RecommendationengineProjectsLocationsCatalogsOperationsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest) (*operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse, error) {
+func (s *projects) RecommendationengineProjectsLocationsCatalogsOperationsList(ctx context.Context, request operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest, security operations.RecommendationengineProjectsLocationsCatalogsOperationsListSecurity) (*operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

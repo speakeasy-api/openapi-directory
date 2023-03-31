@@ -13,31 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            TokenAuthentication: shared.SchemeTokenAuthentication{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            TokenAuthentication: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetGlobalwinescoresLatestRequest{
-        QueryParams: operations.GetGlobalwinescoresLatestQueryParams{
-            Color: "white",
-            IsPrimeurs: false,
-            Limit: 592845,
-            Lwin: "distinctio",
-            Lwin11: "quibusdam",
-            Offset: 602763,
-            Ordering: "-score",
-            Vintage: "corrupti",
-            WineID: []int64{
-                423655,
-                623564,
-                645894,
-                384382,
-            },
-        },
-        Headers: operations.GetGlobalwinescoresLatestHeaders{
-            Authorization: "iure",
+        Authorization: "corrupti",
+        Color: "white",
+        IsPrimeurs: false,
+        Limit: 715190,
+        Lwin: "quibusdam",
+        Lwin11: "unde",
+        Offset: 857946,
+        Ordering: "score",
+        Vintage: "illum",
+        WineID: []int64{
+            623564,
+            645894,
         },
     }
 

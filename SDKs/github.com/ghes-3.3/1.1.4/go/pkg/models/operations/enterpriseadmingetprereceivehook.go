@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetPreReceiveHookPathParams struct {
+type EnterpriseAdminGetPreReceiveHookRequest struct {
 	// The unique identifier of the pre-receive hook.
 	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-}
-
-type EnterpriseAdminGetPreReceiveHookRequest struct {
-	PathParams EnterpriseAdminGetPreReceiveHookPathParams
 }
 
 type EnterpriseAdminGetPreReceiveHookResponse struct {

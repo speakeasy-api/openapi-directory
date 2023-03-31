@@ -10,23 +10,18 @@ import (
 )
 
 type PlusCommentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusCommentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusCommentsListSecurity struct {
 	Option1 *PlusCommentsListSecurityOption1 `security:"option"`
 	Option2 *PlusCommentsListSecurityOption2 `security:"option"`
-}
-
-type PlusCommentsListPathParams struct {
-	// The ID of the activity to get comments for.
-	ActivityID string `pathParam:"style=simple,explode=false,name=activityId"`
 }
 
 // PlusCommentsListSortOrderEnum - The order in which to sort the list of comments.
@@ -53,7 +48,9 @@ func (e *PlusCommentsListSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlusCommentsListQueryParams struct {
+type PlusCommentsListRequest struct {
+	// The ID of the activity to get comments for.
+	ActivityID string `pathParam:"style=simple,explode=false,name=activityId"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -74,12 +71,6 @@ type PlusCommentsListQueryParams struct {
 	SortOrder *PlusCommentsListSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type PlusCommentsListRequest struct {
-	PathParams  PlusCommentsListPathParams
-	QueryParams PlusCommentsListQueryParams
-	Security    PlusCommentsListSecurity
 }
 
 type PlusCommentsListResponse struct {

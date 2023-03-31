@@ -4,37 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams struct {
+type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// 3-letter IATA aiport code (e.g. 'ZRH')
 	AirportCode string `pathParam:"style=simple,explode=false,name=airportCode"`
 	// Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)
 	FromDateTime string `pathParam:"style=simple,explode=false,name=fromDateTime"`
-}
-
-type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams struct {
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest struct {
-	PathParams  OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams
-	QueryParams OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams
-	Headers     OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders
-	Security    OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity
 }
 
 type OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse struct {

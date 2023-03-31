@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetTokenPricePathParams struct {
-	TokenID string `pathParam:"style=simple,explode=false,name=tokenId"`
-}
-
 type GetTokenPriceRequest struct {
-	PathParams GetTokenPricePathParams
+	TokenID string `pathParam:"style=simple,explode=false,name=tokenId"`
 }
 
 type GetTokenPriceResponse struct {

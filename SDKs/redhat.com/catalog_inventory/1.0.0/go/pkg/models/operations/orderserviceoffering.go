@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderServiceOfferingPathParams struct {
+type OrderServiceOfferingRequest struct {
+	// Order parameters defining the service and provider control
+	OrderParametersServiceOfferingInput shared.OrderParametersServiceOfferingInput `request:"mediaType=application/json"`
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderServiceOfferingRequest struct {
-	PathParams OrderServiceOfferingPathParams
-	// Order parameters defining the service and provider control
-	Request shared.OrderParametersServiceOfferingInput `request:"mediaType=application/json"`
 }
 
 // OrderServiceOffering200ApplicationJSON - Returns a task ID for the order

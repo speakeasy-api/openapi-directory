@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type RegisterForRealtimeAPIPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type RegisterForRealtimeAPIPostRawResponse struct {
 	ContentType string
 	StatusCode  int

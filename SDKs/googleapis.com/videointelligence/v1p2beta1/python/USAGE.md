@@ -4,116 +4,138 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VideointelligenceVideosAnnotateRequest(
-    security=operations.VideointelligenceVideosAnnotateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.VideointelligenceVideosAnnotateQueryParams(
-        dollar_xgafv="1",
-        access_token="necessitatibus",
-        alt="proto",
-        callback="numquam",
-        fields="omnis",
-        key="cumque",
-        oauth_token="eum",
-        pretty_print=True,
-        quota_user="fugiat",
-        upload_type="iure",
-        upload_protocol="dignissimos",
-    ),
-    request=shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest(
+    dollar_xgafv="2",
+    google_cloud_videointelligence_v1p2beta1_annotate_video_request=shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest(
         features=[
             "OBJECT_TRACKING",
-            "FACE_DETECTION",
+            "LOGO_RECOGNITION",
             "TEXT_DETECTION",
         ],
-        input_content="unde",
-        input_uri="sit",
-        location_id="voluptates",
-        output_uri="et",
+        input_content="nulla",
+        input_uri="corrupti",
+        location_id="illum",
+        output_uri="vel",
         video_context=shared.GoogleCloudVideointelligenceV1p2beta1VideoContext(
             explicit_content_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig(
-                model="ut",
+                model="error",
             ),
             face_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig(
                 include_attributes=False,
-                include_bounding_boxes=True,
-                model="eveniet",
+                include_bounding_boxes=False,
+                model="deserunt",
             ),
             label_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig(
-                frame_confidence_threshold=17.100000,
-                label_detection_mode="LABEL_DETECTION_MODE_UNSPECIFIED",
-                model="earum",
-                stationary_camera=True,
-                video_confidence_threshold=46.099998,
+                frame_confidence_threshold=3843.82,
+                label_detection_mode="SHOT_MODE",
+                model="magnam",
+                stationary_camera=False,
+                video_confidence_threshold=8917.73,
             ),
             object_tracking_config=shared.GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig(
-                model="quaerat",
+                model="ipsa",
             ),
             person_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig(
-                include_attributes=True,
+                include_attributes=False,
                 include_bounding_boxes=False,
                 include_pose_landmarks=False,
             ),
             segments=[
                 shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment(
-                    end_time_offset="eaque",
-                    start_time_offset="voluptatem",
+                    end_time_offset="tempora",
+                    start_time_offset="suscipit",
                 ),
                 shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment(
-                    end_time_offset="cum",
-                    start_time_offset="nobis",
+                    end_time_offset="molestiae",
+                    start_time_offset="minus",
+                ),
+                shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment(
+                    end_time_offset="placeat",
+                    start_time_offset="voluptatum",
+                ),
+                shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment(
+                    end_time_offset="iusto",
+                    start_time_offset="excepturi",
                 ),
             ],
             shot_change_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig(
-                model="voluptates",
+                model="nisi",
             ),
             speech_transcription_config=shared.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig(
                 audio_tracks=[
-                    6498262192660066603,
-                    1770289546034260289,
+                    836079,
+                    71036,
+                    337396,
+                    87129,
                 ],
-                diarization_speaker_count=2891950092806909580,
-                enable_automatic_punctuation=True,
-                enable_speaker_diarization=True,
-                enable_word_confidence=True,
-                filter_profanity=True,
-                language_code="non",
-                max_alternatives=1280594349293678002,
+                diarization_speaker_count=648172,
+                enable_automatic_punctuation=False,
+                enable_speaker_diarization=False,
+                enable_word_confidence=False,
+                filter_profanity=False,
+                language_code="perferendis",
+                max_alternatives=368241,
                 speech_contexts=[
                     shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext(
                         phrases=[
-                            "neque",
-                            "rerum",
-                            "qui",
+                            "quo",
+                            "odit",
+                            "at",
+                            "at",
                         ],
                     ),
                     shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext(
                         phrases=[
-                            "error",
-                            "et",
-                            "aspernatur",
+                            "molestiae",
+                            "quod",
+                            "quod",
+                            "esse",
+                        ],
+                    ),
+                    shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext(
+                        phrases=[
+                            "porro",
+                            "dolorum",
+                            "dicta",
+                        ],
+                    ),
+                    shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext(
+                        phrases=[
+                            "officia",
+                            "occaecati",
+                            "fugit",
                         ],
                     ),
                 ],
             ),
             text_detection_config=shared.GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig(
                 language_hints=[
-                    "ab",
+                    "hic",
+                    "optio",
+                    "totam",
                 ],
-                model="eos",
+                model="beatae",
             ),
         ),
     ),
+    access_token="commodi",
+    alt="media",
+    callback="modi",
+    fields_="qui",
+    key="impedit",
+    oauth_token="cum",
+    pretty_print=False,
+    quota_user="esse",
+    upload_type="ipsum",
+    upload_protocol="excepturi",
 )
     
-res = s.videos.videointelligence_videos_annotate(req)
+res = s.videos.videointelligence_videos_annotate(req, operations.VideointelligenceVideosAnnotateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response

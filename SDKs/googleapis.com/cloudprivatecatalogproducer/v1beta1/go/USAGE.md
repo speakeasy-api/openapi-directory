@@ -14,41 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest{
-        Security: operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest{
+        DollarXgafv: "2",
+        GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest: &shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest{
             Association: &shared.GoogleCloudPrivatecatalogproducerV1beta1Association{
-                CreateTime: "suscipit",
-                Name: "iure",
-                Resource: "magnam",
+                CreateTime: "provident",
+                Name: "distinctio",
+                Resource: "quibusdam",
             },
         },
+        AccessToken: "unde",
+        Alt: "proto",
+        Callback: "corrupti",
+        Fields: "illum",
+        Key: "vel",
+        OauthToken: "error",
+        Parent: "deserunt",
+        PrettyPrint: false,
+        QuotaUser: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.Catalogs.CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx, req)
+    res, err := s.Catalogs.CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx, req, operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

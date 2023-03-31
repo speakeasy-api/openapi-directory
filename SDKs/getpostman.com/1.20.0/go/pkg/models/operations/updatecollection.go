@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateCollectionPathParams struct {
-	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
-}
-
 type UpdateCollectionRequestBodyCollectionInfo struct {
 	PostmanID   *string `json:"_postman_id,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -55,8 +51,8 @@ type UpdateCollectionRequestBody struct {
 }
 
 type UpdateCollectionRequest struct {
-	PathParams UpdateCollectionPathParams
-	Request    *UpdateCollectionRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateCollectionRequestBody `request:"mediaType=application/json"`
+	CollectionUID string                       `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 
 type UpdateCollection404ApplicationJSONErrorDetails struct {

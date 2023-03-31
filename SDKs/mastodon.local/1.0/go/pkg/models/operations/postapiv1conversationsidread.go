@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1ConversationsIDReadSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1ConversationsIDReadPathParams struct {
-	// ID of the conversation in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1ConversationsIDReadRequest struct {
-	PathParams PostAPIV1ConversationsIDReadPathParams
-	Security   PostAPIV1ConversationsIDReadSecurity
+	// ID of the conversation in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1ConversationsIDReadResponse struct {

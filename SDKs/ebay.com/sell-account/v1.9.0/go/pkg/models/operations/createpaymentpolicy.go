@@ -8,13 +8,7 @@ import (
 )
 
 type CreatePaymentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreatePaymentPolicyRequest struct {
-	// Payment policy request
-	Request  shared.PaymentPolicyRequest `request:"mediaType=application/json"`
-	Security CreatePaymentPolicySecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreatePaymentPolicyResponse struct {

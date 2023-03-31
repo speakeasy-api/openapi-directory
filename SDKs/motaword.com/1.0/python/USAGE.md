@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        mwo_auth=shared.SchemeMwoAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteCacheRequest(
-    path_params=operations.DeleteCachePathParams(
-        key="quia",
+        mwo_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.DeleteCacheRequest(
+    key="corrupti",
 )
     
 res = s.delete_cache(req)

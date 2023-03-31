@@ -33,11 +33,11 @@ func newPos(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // ContentPosCustombatch - Batches multiple POS-related calls in a single request.
-func (s *pos) ContentPosCustombatch(ctx context.Context, request operations.ContentPosCustombatchRequest) (*operations.ContentPosCustombatchResponse, error) {
+func (s *pos) ContentPosCustombatch(ctx context.Context, request operations.ContentPosCustombatchRequest, security operations.ContentPosCustombatchSecurity) (*operations.ContentPosCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *pos) ContentPosCustombatch(ctx context.Context, request operations.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *pos) ContentPosCustombatch(ctx context.Context, request operations.Cont
 }
 
 // ContentPosDelete - Deletes a store for the given merchant.
-func (s *pos) ContentPosDelete(ctx context.Context, request operations.ContentPosDeleteRequest) (*operations.ContentPosDeleteResponse, error) {
+func (s *pos) ContentPosDelete(ctx context.Context, request operations.ContentPosDeleteRequest, security operations.ContentPosDeleteSecurity) (*operations.ContentPosDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *pos) ContentPosDelete(ctx context.Context, request operations.ContentPo
 }
 
 // ContentPosGet - Retrieves information about the given store.
-func (s *pos) ContentPosGet(ctx context.Context, request operations.ContentPosGetRequest) (*operations.ContentPosGetResponse, error) {
+func (s *pos) ContentPosGet(ctx context.Context, request operations.ContentPosGetRequest, security operations.ContentPosGetSecurity) (*operations.ContentPosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *pos) ContentPosGet(ctx context.Context, request operations.ContentPosGe
 }
 
 // ContentPosInsert - Creates a store for the given merchant.
-func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPosInsertRequest) (*operations.ContentPosInsertResponse, error) {
+func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPosInsertRequest, security operations.ContentPosInsertSecurity) (*operations.ContentPosInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosStore", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,11 +230,11 @@ func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPo
 }
 
 // ContentPosInventory - Submit inventory for the given merchant.
-func (s *pos) ContentPosInventory(ctx context.Context, request operations.ContentPosInventoryRequest) (*operations.ContentPosInventoryResponse, error) {
+func (s *pos) ContentPosInventory(ctx context.Context, request operations.ContentPosInventoryRequest, security operations.ContentPosInventorySecurity) (*operations.ContentPosInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/inventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/inventory", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosInventoryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,11 +246,11 @@ func (s *pos) ContentPosInventory(ctx context.Context, request operations.Conten
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,20 +285,20 @@ func (s *pos) ContentPosInventory(ctx context.Context, request operations.Conten
 }
 
 // ContentPosList - Lists the stores of the target merchant.
-func (s *pos) ContentPosList(ctx context.Context, request operations.ContentPosListRequest) (*operations.ContentPosListResponse, error) {
+func (s *pos) ContentPosList(ctx context.Context, request operations.ContentPosListRequest, security operations.ContentPosListSecurity) (*operations.ContentPosListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,11 +333,11 @@ func (s *pos) ContentPosList(ctx context.Context, request operations.ContentPosL
 }
 
 // ContentPosSale - Submit a sale event for the given merchant.
-func (s *pos) ContentPosSale(ctx context.Context, request operations.ContentPosSaleRequest) (*operations.ContentPosSaleResponse, error) {
+func (s *pos) ContentPosSale(ctx context.Context, request operations.ContentPosSaleRequest, security operations.ContentPosSaleSecurity) (*operations.ContentPosSaleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/sale", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/sale", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosSaleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,11 +349,11 @@ func (s *pos) ContentPosSale(ctx context.Context, request operations.ContentPosS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

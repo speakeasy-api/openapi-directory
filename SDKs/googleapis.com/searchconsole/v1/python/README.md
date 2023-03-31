@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/searchconsole/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,64 +15,141 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebmastersSearchanalyticsQueryRequest(
-    security=operations.WebmastersSearchanalyticsQuerySecurity(
-        option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.WebmastersSearchanalyticsQueryPathParams(
-        site_url="adipisci",
-    ),
-    query_params=operations.WebmastersSearchanalyticsQueryQueryParams(
-        dollar_xgafv="2",
-        access_token="sequi",
-        alt="media",
-        callback="et",
-        fields="id",
-        key="impedit",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="consequuntur",
-        upload_type="fugit",
-        upload_protocol="aut",
-    ),
-    request=shared.SearchAnalyticsQueryRequest(
-        aggregation_type="AUTO",
+    dollar_xgafv="2",
+    search_analytics_query_request=shared.SearchAnalyticsQueryRequest(
+        aggregation_type="BY_PROPERTY",
         data_state="ALL",
         dimension_filter_groups=[
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
+                        dimension="SEARCH_APPEARANCE",
+                        expression="corrupti",
+                        operator="EXCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="COUNTRY",
+                        expression="error",
+                        operator="NOT_CONTAINS",
+                    ),
+                    shared.APIDimensionFilter(
                         dimension="PAGE",
+                        expression="iure",
+                        operator="NOT_EQUALS",
+                    ),
+                ],
+                group_type="AND",
+            ),
+            shared.APIDimensionFilterGroup(
+                filters=[
+                    shared.APIDimensionFilter(
+                        dimension="QUERY",
                         expression="delectus",
+                        operator="NOT_EQUALS",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="PAGE",
+                        expression="molestiae",
+                        operator="INCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="SEARCH_APPEARANCE",
+                        expression="voluptatum",
                         operator="CONTAINS",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="COUNTRY",
+                        expression="nisi",
+                        operator="EXCLUDING_REGEX",
+                    ),
+                ],
+                group_type="AND",
+            ),
+            shared.APIDimensionFilterGroup(
+                filters=[
+                    shared.APIDimensionFilter(
+                        dimension="QUERY",
+                        expression="quis",
+                        operator="EQUALS",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="DEVICE",
+                        expression="perferendis",
+                        operator="CONTAINS",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="SEARCH_APPEARANCE",
+                        expression="sapiente",
+                        operator="INCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="QUERY",
+                        expression="at",
+                        operator="EXCLUDING_REGEX",
+                    ),
+                ],
+                group_type="AND",
+            ),
+            shared.APIDimensionFilterGroup(
+                filters=[
+                    shared.APIDimensionFilter(
+                        dimension="COUNTRY",
+                        expression="quod",
+                        operator="INCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="COUNTRY",
+                        expression="totam",
+                        operator="INCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="DEVICE",
+                        expression="dicta",
+                        operator="INCLUDING_REGEX",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="DEVICE",
+                        expression="occaecati",
+                        operator="EQUALS",
                     ),
                 ],
                 group_type="AND",
             ),
         ],
         dimensions=[
-            "DATE",
             "SEARCH_APPEARANCE",
-            "QUERY",
+            "DEVICE",
+            "COUNTRY",
         ],
-        end_date="assumenda",
-        row_limit=7714857476425061931,
+        end_date="beatae",
+        row_limit=414662,
         search_type="VIDEO",
-        start_date="delectus",
-        start_row=7876677448085170865,
-        type="NEWS",
+        start_date="modi",
+        start_row=186332,
+        type="DISCOVER",
     ),
+    access_token="cum",
+    alt="media",
+    callback="ipsum",
+    fields_="excepturi",
+    key="aspernatur",
+    oauth_token="perferendis",
+    pretty_print=False,
+    quota_user="ad",
+    site_url="natus",
+    upload_type="sed",
+    upload_protocol="iste",
 )
     
-res = s.searchanalytics.webmasters_searchanalytics_query(req)
+res = s.searchanalytics.webmasters_searchanalytics_query(req, operations.WebmastersSearchanalyticsQuerySecurity(
+    option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.search_analytics_query_response is not None:
     # handle response
@@ -80,7 +157,8 @@ if res.search_analytics_query_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### searchanalytics
 
@@ -100,14 +178,24 @@ if res.search_analytics_query_response is not None:
 * `webmasters_sites_get` -  Retrieves information about specific site.
 * `webmasters_sites_list` -  Lists the user's Search Console sites.
 
-### urlInspection
+### url_inspection
 
 * `searchconsole_url_inspection_index_inspect` - Index inspection.
 
-### urlTestingTools
+### url_testing_tools
 
 * `searchconsole_url_testing_tools_mobile_friendly_test_run` - Runs Mobile-Friendly Test for a given URL.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

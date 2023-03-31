@@ -19,6 +19,5 @@ pkg/models/shared/geofacet.go
 pkg/models/shared/desfacet.go
 pkg/models/shared/timeperiodenum.go
 pkg/models/shared/sectionenum.go
-pkg/models/shared/security.go
 pkg/models/shared/article.go
 USAGE.md

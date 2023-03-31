@@ -10,7 +10,7 @@ import (
 )
 
 type GetFacilityIdsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 // GetFacilityIdsTypeEnum - Optional facility type search filter
@@ -43,14 +43,9 @@ func (e *GetFacilityIdsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFacilityIdsQueryParams struct {
+type GetFacilityIdsRequest struct {
 	// Optional facility type search filter
 	Type *GetFacilityIdsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetFacilityIdsRequest struct {
-	QueryParams GetFacilityIdsQueryParams
-	Security    GetFacilityIdsSecurity
 }
 
 type GetFacilityIdsResponse struct {

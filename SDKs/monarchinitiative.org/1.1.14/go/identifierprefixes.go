@@ -70,7 +70,7 @@ func (s *identifierPrefixes) GetPrefixCollection(ctx context.Context) (*operatio
 // GetPrefixContract - Returns contracted URI
 func (s *identifierPrefixes) GetPrefixContract(ctx context.Context, request operations.GetPrefixContractRequest) (*operations.GetPrefixContractResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identifier/prefixes/contract/{uri}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identifier/prefixes/contract/{uri}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,7 +105,7 @@ func (s *identifierPrefixes) GetPrefixContract(ctx context.Context, request oper
 // GetPrefixExpand - Returns expanded URI
 func (s *identifierPrefixes) GetPrefixExpand(ctx context.Context, request operations.GetPrefixExpandRequest) (*operations.GetPrefixExpandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identifier/prefixes/expand/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identifier/prefixes/expand/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

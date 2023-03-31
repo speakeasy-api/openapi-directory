@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointNoaaFlaskMonthQueryParams struct {
+type SearchTypePointNoaaFlaskMonthRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -52,10 +52,6 @@ type SearchTypePointNoaaFlaskMonthQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointNoaaFlaskMonthRequest struct {
-	QueryParams SearchTypePointNoaaFlaskMonthQueryParams
 }
 
 type SearchTypePointNoaaFlaskMonthResponse struct {

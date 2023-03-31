@@ -6,25 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateSellerPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type UpdateSellerQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-	// Environment to use. Used as part of the URL.
-	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type UpdateSellerHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type UpdateSellerRequestBody struct {
 	// The action being performed, which is always going to be `replace`.
 	Operation string `json:"operation"`
@@ -35,11 +16,18 @@ type UpdateSellerRequestBody struct {
 }
 
 type UpdateSellerRequest struct {
-	PathParams  UpdateSellerPathParams
-	QueryParams UpdateSellerQueryParams
-	Headers     UpdateSellerHeaders
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// array of objects
-	Request []UpdateSellerRequestBody `request:"mediaType=application/json"`
+	RequestBody []UpdateSellerRequestBody `request:"mediaType=application/json"`
+	// Name of the VTEX account that belongs to the marketplace.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// Environment to use. Used as part of the URL.
+	Environment string `queryParam:"style=form,explode=true,name=environment"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 }
 
 type UpdateSellerResponse struct {

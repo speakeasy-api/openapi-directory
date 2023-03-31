@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingPollsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MeetingPollsPathParams struct {
+type MeetingPollsRequest struct {
 	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
 	//
 	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
 	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingPollsRequest struct {
-	PathParams MeetingPollsPathParams
-	Security   MeetingPollsSecurity
 }
 
 // MeetingPollsPollListPollQuestionsTypeEnum - Poll Question & Answer type:<br>`single` - Single choice<br>`mutliple` - Multiple choice

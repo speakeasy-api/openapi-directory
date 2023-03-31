@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLanguagesHeaders struct {
+type GetLanguagesRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetLanguagesRequest struct {
-	Headers GetLanguagesHeaders
 }
 
 type GetLanguagesResponse struct {

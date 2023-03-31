@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AllocateStaticIPRequest(
-    headers=operations.AllocateStaticIPHeaders(
-        x_amz_algorithm="excepturi",
-        x_amz_content_sha256="quia",
-        x_amz_credential="dolore",
-        x_amz_date="sapiente",
-        x_amz_security_token="voluptas",
-        x_amz_signature="quis",
-        x_amz_signed_headers="dolor",
-        x_amz_target="Lightsail_20161128.AllocateStaticIp",
+    allocate_static_ip_request=shared.AllocateStaticIPRequest(
+        static_ip_name="corrupti",
     ),
-    request=shared.AllocateStaticIPRequest(
-        static_ip_name="doloremque",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="Lightsail_20161128.AllocateStaticIp",
 )
     
 res = s.allocate_static_ip(req)

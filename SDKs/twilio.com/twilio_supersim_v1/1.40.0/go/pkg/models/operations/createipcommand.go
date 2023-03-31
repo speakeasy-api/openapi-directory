@@ -14,7 +14,8 @@ var CreateIPCommandServerList = []string{
 }
 
 type CreateIPCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateIPCommandCreateIPCommandRequestCallbackMethodEnum - The HTTP method we should use to call `callback_url`. Can be `GET` or `POST`, and the default is `POST`.
@@ -65,12 +66,6 @@ type CreateIPCommandCreateIPCommandRequest struct {
 	PayloadType *shared.IPCommandEnumPayloadTypeEnum `form:"name=PayloadType"`
 	// The `sid` or `unique_name` of the [Super SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) to send the IP Command to.
 	Sim string `form:"name=Sim"`
-}
-
-type CreateIPCommandRequest struct {
-	Request   *CreateIPCommandCreateIPCommandRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateIPCommandSecurity
-	ServerURL *string
 }
 
 type CreateIPCommandResponse struct {

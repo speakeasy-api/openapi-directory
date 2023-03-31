@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsGetMembershipForAuthenticatedUserPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type OrgsGetMembershipForAuthenticatedUserRequest struct {
-	PathParams OrgsGetMembershipForAuthenticatedUserPathParams
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsGetMembershipForAuthenticatedUserResponse struct {

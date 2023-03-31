@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateJuniperSwitchSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateJuniperSwitchPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateJuniperSwitchRequest struct {
-	PathParams UpdateJuniperSwitchPathParams
-	Request    *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security   UpdateJuniperSwitchSecurity
+	SwitchDataSource *shared.SwitchDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateJuniperSwitchResponse struct {

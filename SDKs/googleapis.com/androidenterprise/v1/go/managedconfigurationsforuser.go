@@ -32,20 +32,20 @@ func newManagedconfigurationsforuser(defaultClient, securityClient HTTPClient, s
 }
 
 // AndroidenterpriseManagedconfigurationsforuserDelete - Removes a per-user managed configuration for an app for the specified user.
-func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserDelete(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest) (*operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse, error) {
+func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserDelete(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest, security operations.AndroidenterpriseManagedconfigurationsforuserDeleteSecurity) (*operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsfor
 }
 
 // AndroidenterpriseManagedconfigurationsforuserGet - Retrieves details of a per-user managed configuration for an app for the specified user.
-func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserGet(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserGetRequest) (*operations.AndroidenterpriseManagedconfigurationsforuserGetResponse, error) {
+func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserGet(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserGetRequest, security operations.AndroidenterpriseManagedconfigurationsforuserGetSecurity) (*operations.AndroidenterpriseManagedconfigurationsforuserGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsfor
 }
 
 // AndroidenterpriseManagedconfigurationsforuserList - Lists all the per-user managed configurations for the specified user. Only the ID is set.
-func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserListRequest) (*operations.AndroidenterpriseManagedconfigurationsforuserListResponse, error) {
+func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserListRequest, security operations.AndroidenterpriseManagedconfigurationsforuserListSecurity) (*operations.AndroidenterpriseManagedconfigurationsforuserListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsfor
 }
 
 // AndroidenterpriseManagedconfigurationsforuserUpdate - Adds or updates the managed configuration settings for an app for the specified user. If you support the Managed configurations iframe, you can apply managed configurations to a user by specifying an mcmId and its associated configuration variables (if any) in the request. Alternatively, all EMMs can apply managed configurations by passing a list of managed properties.
-func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserUpdate(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest) (*operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse, error) {
+func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsforuserUpdate(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest, security operations.AndroidenterpriseManagedconfigurationsforuserUpdateSecurity) (*operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *managedconfigurationsforuser) AndroidenterpriseManagedconfigurationsfor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

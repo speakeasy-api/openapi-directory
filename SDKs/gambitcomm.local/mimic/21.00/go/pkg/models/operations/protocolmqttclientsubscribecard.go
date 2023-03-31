@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSubscribeCardPathParams struct {
+type ProtocolMqttClientSubscribeCardRequest struct {
 	// Agent to show MQTT subscription state
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttClientSubscribeCardRequest struct {
-	PathParams ProtocolMqttClientSubscribeCardPathParams
 }
 
 type ProtocolMqttClientSubscribeCardResponse struct {

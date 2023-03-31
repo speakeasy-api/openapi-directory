@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolProxySetTracePathParams struct {
+type ProtocolProxySetTraceRequest struct {
 	// Agent to set the PROXY tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the PROXY tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolProxySetTraceRequest struct {
-	PathParams ProtocolProxySetTracePathParams
 }
 
 type ProtocolProxySetTraceResponse struct {

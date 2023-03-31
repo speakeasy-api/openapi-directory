@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReleaseByTagPathParams struct {
+type ReposGetReleaseByTagRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 	// tag parameter
 	Tag string `pathParam:"style=simple,explode=false,name=tag"`
-}
-
-type ReposGetReleaseByTagRequest struct {
-	PathParams ReposGetReleaseByTagPathParams
 }
 
 type ReposGetReleaseByTagResponse struct {

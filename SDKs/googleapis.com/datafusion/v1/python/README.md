@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/datafusion/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,109 +15,60 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatafusionProjectsLocationsInstancesCreateRequest(
-    security=operations.DatafusionProjectsLocationsInstancesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatafusionProjectsLocationsInstancesCreatePathParams(
-        parent="qui",
-    ),
-    query_params=operations.DatafusionProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="minima",
-        alt="media",
-        callback="cum",
-        fields="unde",
-        instance_id="iure",
-        key="voluptatem",
-        oauth_token="quae",
-        pretty_print=False,
-        quota_user="consectetur",
-        upload_type="delectus",
-        upload_protocol="doloribus",
-    ),
-    request=shared.InstanceInput(
-        accelerators=[
-            shared.Accelerator(
-                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
-                state="DISABLED",
-            ),
-            shared.Accelerator(
-                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
-                state="STATE_UNSPECIFIED",
-            ),
-            shared.Accelerator(
-                accelerator_type="CDC",
-                state="DISABLED",
-            ),
-        ],
-        available_version=[
-            shared.Version(
-                available_features=[
-                    "porro",
-                ],
-                default_version=True,
-                type="TYPE_GENERAL_AVAILABILITY",
-                version_number="aut",
-            ),
-            shared.Version(
-                available_features=[
-                    "distinctio",
-                    "sint",
-                ],
-                default_version=True,
-                type="TYPE_GENERAL_AVAILABILITY",
-                version_number="atque",
-            ),
-            shared.Version(
-                available_features=[
-                    "rerum",
-                    "voluptatibus",
-                ],
-                default_version=True,
-                type="TYPE_UNSPECIFIED",
-                version_number="eum",
-            ),
-        ],
+    dollar_xgafv="2",
+    instance_input=shared.InstanceInput(
         crypto_key_config=shared.CryptoKeyConfig(
-            key_reference="sit",
+            key_reference="provident",
         ),
-        dataproc_service_account="aut",
-        description="nisi",
-        display_name="velit",
+        dataproc_service_account="distinctio",
+        description="quibusdam",
+        display_name="unde",
         enable_rbac=False,
         enable_stackdriver_logging=False,
-        enable_stackdriver_monitoring=True,
+        enable_stackdriver_monitoring=False,
+        enable_zone_separation=False,
         event_publish_config=shared.EventPublishConfig(
             enabled=False,
-            topic="repellat",
+            topic="nulla",
         ),
         labels={
-            "consequatur": "eveniet",
-            "sint": "iusto",
+            "illum": "vel",
+            "error": "deserunt",
+            "suscipit": "iure",
         },
         network_config=shared.NetworkConfig(
-            ip_allocation="deleniti",
-            network="aperiam",
+            ip_allocation="magnam",
+            network="debitis",
         ),
         options={
-            "eius": "debitis",
-            "sit": "impedit",
+            "delectus": "tempora",
         },
         private_instance=False,
-        type="TYPE_UNSPECIFIED",
-        version="magni",
-        zone="quibusdam",
+        type="BASIC",
+        version="molestiae",
+        zone="minus",
     ),
+    access_token="placeat",
+    alt="media",
+    callback="iusto",
+    fields_="excepturi",
+    instance_id="nisi",
+    key="recusandae",
+    oauth_token="temporibus",
+    parent="ab",
+    pretty_print=False,
+    quota_user="quis",
+    upload_type="veritatis",
+    upload_protocol="deserunt",
 )
     
-res = s.projects.datafusion_projects_locations_instances_create(req)
+res = s.projects.datafusion_projects_locations_instances_create(req, operations.DatafusionProjectsLocationsInstancesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -125,7 +76,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -142,9 +94,19 @@ if res.operation is not None:
 * `datafusion_projects_locations_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `datafusion_projects_locations_operations_delete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datafusion_projects_locations_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `datafusion_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `datafusion_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `datafusion_projects_locations_versions_list` - Lists possible versions for Data Fusion instances in the specified project and location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

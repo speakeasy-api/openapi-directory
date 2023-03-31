@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSnippetUsingPOSTPathParams struct {
+type CreateSnippetUsingPOSTRequest struct {
+	// snippet
+	ManageSnippet shared.ManageSnippet `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateSnippetUsingPOSTRequest struct {
-	PathParams CreateSnippetUsingPOSTPathParams
-	// snippet
-	Request shared.ManageSnippet `request:"mediaType=application/json"`
 }
 
 type CreateSnippetUsingPOSTResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteProjectDocumentPathParams struct {
+type DeleteProjectDocumentRequest struct {
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteProjectDocumentRequest struct {
-	PathParams DeleteProjectDocumentPathParams
 }
 
 type DeleteProjectDocumentResponse struct {

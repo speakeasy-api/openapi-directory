@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrgsRemoveOutsideCollaboratorPathParams struct {
+type OrgsRemoveOutsideCollaboratorRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsRemoveOutsideCollaboratorRequest struct {
-	PathParams OrgsRemoveOutsideCollaboratorPathParams
 }
 
 // OrgsRemoveOutsideCollaborator422ApplicationJSON - Unprocessable Entity if user is a member of the organization

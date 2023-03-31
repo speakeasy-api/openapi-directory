@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationShowQueryParams struct {
+type GetActionOrganizationShowRequest struct {
 	// The id or name of the organization
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// include a list of the organization's datasets
 	IncludeDatasets *bool `queryParam:"style=form,explode=true,name=include_datasets"`
-}
-
-type GetActionOrganizationShowRequest struct {
-	QueryParams GetActionOrganizationShowQueryParams
 }
 
 type GetActionOrganizationShowResponse struct {

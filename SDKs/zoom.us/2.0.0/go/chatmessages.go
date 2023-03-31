@@ -42,20 +42,20 @@ func newChatMessages(defaultClient, securityClient HTTPClient, serverURL, langua
 // **Scope:** `chat_message:write`, `chat_message:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *chatMessages) DeleteChatMessage(ctx context.Context, request operations.DeleteChatMessageRequest) (*operations.DeleteChatMessageResponse, error) {
+func (s *chatMessages) DeleteChatMessage(ctx context.Context, request operations.DeleteChatMessageRequest, security operations.DeleteChatMessageSecurity) (*operations.DeleteChatMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages/{messageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages/{messageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,11 +92,11 @@ func (s *chatMessages) DeleteChatMessage(ctx context.Context, request operations
 //
 // </b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b><a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a> that has Edit permission for Chat Messages</b>.</p>
 // **Scope:** `chat_message:write`, `chat_message:write:admin`<br>
-func (s *chatMessages) EditMessage(ctx context.Context, request operations.EditMessageRequest) (*operations.EditMessageResponse, error) {
+func (s *chatMessages) EditMessage(ctx context.Context, request operations.EditMessageRequest, security operations.EditMessageSecurity) (*operations.EditMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages/{messageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages/{messageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -108,7 +108,7 @@ func (s *chatMessages) EditMessage(ctx context.Context, request operations.EditM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +148,20 @@ func (s *chatMessages) EditMessage(ctx context.Context, request operations.EditM
 // <br>**Scopes:** `chat_message:read`, `chat_message:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *chatMessages) GetChatMessages(ctx context.Context, request operations.GetChatMessagesRequest) (*operations.GetChatMessagesResponse, error) {
+func (s *chatMessages) GetChatMessages(ctx context.Context, request operations.GetChatMessagesRequest, security operations.GetChatMessagesSecurity) (*operations.GetChatMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,11 +209,11 @@ func (s *chatMessages) GetChatMessages(ctx context.Context, request operations.G
 // Send chat messages on Zoom to either an individual user who is in your contact list or to a [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-) of which you are a member. To send a message to a contact, provide the contact's email address in the `to_contact` field. Similary, to send a message to a channel, provide the Channel Id of the Channel in `to_channel` field.<br>
 // <br>**Scopes:** `chat_message:write`, `chat_message:write:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br> <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b><a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a> that has Edit permission for Chat Messages</b>.</p>
-func (s *chatMessages) SendaChatMessage(ctx context.Context, request operations.SendaChatMessageRequest) (*operations.SendaChatMessageResponse, error) {
+func (s *chatMessages) SendaChatMessage(ctx context.Context, request operations.SendaChatMessageRequest, security operations.SendaChatMessageSecurity) (*operations.SendaChatMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -225,7 +225,7 @@ func (s *chatMessages) SendaChatMessage(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

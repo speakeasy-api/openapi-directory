@@ -34,14 +34,14 @@ func newSnapshots(defaultClient, securityClient HTTPClient, serverURL, language,
 // CopySnapshotToExistingGameUsingPOST1 - copySnapshotToExistingGame
 func (s *snapshots) CopySnapshotToExistingGameUsingPOST1(ctx context.Context, request operations.CopySnapshotToExistingGameUsingPOST1Request) (*operations.CopySnapshotToExistingGameUsingPOST1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy/to/{targetApiKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy/to/{targetApiKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *snapshots) CopySnapshotToExistingGameUsingPOST1(ctx context.Context, re
 // CopySnapshotToNewGameUsingPOST - copySnapshotToNewGame
 func (s *snapshots) CopySnapshotToNewGameUsingPOST(ctx context.Context, request operations.CopySnapshotToNewGameUsingPOSTRequest) (*operations.CopySnapshotToNewGameUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -156,9 +156,9 @@ func (s *snapshots) CopySnapshotToNewGameUsingPOST(ctx context.Context, request 
 // CreateSnapshotsUsingPOST - createSnapshots
 func (s *snapshots) CreateSnapshotsUsingPOST(ctx context.Context, request operations.CreateSnapshotsUsingPOSTRequest) (*operations.CreateSnapshotsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotCreationModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +223,7 @@ func (s *snapshots) CreateSnapshotsUsingPOST(ctx context.Context, request operat
 // DELETESnapshotUsingDELETE1 - deleteSnapshot
 func (s *snapshots) DELETESnapshotUsingDELETE1(ctx context.Context, request operations.DELETESnapshotUsingDELETE1Request) (*operations.DELETESnapshotUsingDELETE1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -272,7 +272,7 @@ func (s *snapshots) DELETESnapshotUsingDELETE1(ctx context.Context, request oper
 // GETLiveSnapshotIDUsingGET - getLiveSnapshotId
 func (s *snapshots) GETLiveSnapshotIDUsingGET(ctx context.Context, request operations.GETLiveSnapshotIDUsingGETRequest) (*operations.GETLiveSnapshotIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/liveSnapshotId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/liveSnapshotId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +321,7 @@ func (s *snapshots) GETLiveSnapshotIDUsingGET(ctx context.Context, request opera
 // GETSnapshotUsingGET - getSnapshot
 func (s *snapshots) GETSnapshotUsingGET(ctx context.Context, request operations.GETSnapshotUsingGETRequest) (*operations.GETSnapshotUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,14 +378,14 @@ func (s *snapshots) GETSnapshotUsingGET(ctx context.Context, request operations.
 // GETSnapshotsUsingGET - getSnapshots
 func (s *snapshots) GETSnapshotsUsingGET(ctx context.Context, request operations.GETSnapshotsUsingGETRequest) (*operations.GETSnapshotsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/page/{page}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/page/{page}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,14 +439,14 @@ func (s *snapshots) GETSnapshotsUsingGET(ctx context.Context, request operations
 // GETSnapshotsUsingGET1 - getSnapshots
 func (s *snapshots) GETSnapshotsUsingGET1(ctx context.Context, request operations.GETSnapshotsUsingGET1Request) (*operations.GETSnapshotsUsingGET1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -500,7 +500,7 @@ func (s *snapshots) GETSnapshotsUsingGET1(ctx context.Context, request operation
 // PublishSnapshotUsingPOST1 - publishSnapshot
 func (s *snapshots) PublishSnapshotUsingPOST1(ctx context.Context, request operations.PublishSnapshotUsingPOST1Request) (*operations.PublishSnapshotUsingPOST1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -549,7 +549,7 @@ func (s *snapshots) PublishSnapshotUsingPOST1(ctx context.Context, request opera
 // RevertToSnapshotUsingPOST - revertToSnapshot
 func (s *snapshots) RevertToSnapshotUsingPOST(ctx context.Context, request operations.RevertToSnapshotUsingPOSTRequest) (*operations.RevertToSnapshotUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/revert/to/{snapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/revert/to/{snapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -598,7 +598,7 @@ func (s *snapshots) RevertToSnapshotUsingPOST(ctx context.Context, request opera
 // UnpublishSnapshotUsingPOST - unpublishSnapshot
 func (s *snapshots) UnpublishSnapshotUsingPOST(ctx context.Context, request operations.UnpublishSnapshotUsingPOSTRequest) (*operations.UnpublishSnapshotUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/unpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/unpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

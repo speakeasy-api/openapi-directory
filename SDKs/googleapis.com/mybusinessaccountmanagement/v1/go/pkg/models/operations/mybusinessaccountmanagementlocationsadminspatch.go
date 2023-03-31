@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessaccountmanagementLocationsAdminsPatchPathParams struct {
-	// Immutable. The resource name. For account admins, this is in the form: `accounts/{account_id}/admins/{admin_id}` For location admins, this is in the form: `locations/{location_id}/admins/{admin_id}` This field will be ignored if set during admin creation.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessaccountmanagementLocationsAdminsPatchQueryParams struct {
+type MybusinessaccountmanagementLocationsAdminsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AdminInput  *shared.AdminInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type MybusinessaccountmanagementLocationsAdminsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Immutable. The resource name. For account admins, this is in the form: `accounts/{account_id}/admins/{admin_id}` For location admins, this is in the form: `locations/{location_id}/admins/{admin_id}` This field will be ignored if set during admin creation.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -39,12 +37,6 @@ type MybusinessaccountmanagementLocationsAdminsPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. If true, the request is validated without actually updating the account.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type MybusinessaccountmanagementLocationsAdminsPatchRequest struct {
-	PathParams  MybusinessaccountmanagementLocationsAdminsPatchPathParams
-	QueryParams MybusinessaccountmanagementLocationsAdminsPatchQueryParams
-	Request     *shared.AdminInput `request:"mediaType=application/json"`
 }
 
 type MybusinessaccountmanagementLocationsAdminsPatchResponse struct {

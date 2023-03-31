@@ -10,10 +10,6 @@ type PostAuthPollRequestBody struct {
 	Token *string `json:"token,omitempty"`
 }
 
-type PostAuthPollRequest struct {
-	Request PostAuthPollRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthPoll200ApplicationJSON - The user confirmed the authentication request
 type PostAuthPoll200ApplicationJSON struct {
 	// The user's API key

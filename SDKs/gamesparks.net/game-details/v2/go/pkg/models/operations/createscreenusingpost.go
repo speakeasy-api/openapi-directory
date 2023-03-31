@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateScreenUsingPOSTPathParams struct {
+type CreateScreenUsingPOSTRequest struct {
+	// screen
+	ManageScreen shared.ManageScreen `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateScreenUsingPOSTRequest struct {
-	PathParams CreateScreenUsingPOSTPathParams
-	// screen
-	Request shared.ManageScreen `request:"mediaType=application/json"`
 }
 
 type CreateScreenUsingPOSTResponse struct {

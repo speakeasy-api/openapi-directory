@@ -12,19 +12,14 @@ var FetchUnderstandFieldValueServerList = []string{
 }
 
 type FetchUnderstandFieldValueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandFieldValuePathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	FieldTypeSid string `pathParam:"style=simple,explode=false,name=FieldTypeSid"`
-	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandFieldValueRequest struct {
-	PathParams FetchUnderstandFieldValuePathParams
-	Security   FetchUnderstandFieldValueSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	FieldTypeSid string `pathParam:"style=simple,explode=false,name=FieldTypeSid"`
+	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchUnderstandFieldValueResponse struct {

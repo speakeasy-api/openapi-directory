@@ -4,40 +4,127 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
-    security=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams(
-        parent="vel",
-    ),
-    query_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="json",
-        callback="atque",
-        fields="quo",
-        key="amet",
-        oauth_token="ipsa",
-        pretty_print=True,
-        quota_user="aspernatur",
-        upload_type="at",
-        upload_protocol="esse",
-    ),
-    request=shared.AccessLevel(
+    dollar_xgafv="2",
+    access_level=shared.AccessLevel(
         basic=shared.BasicLevel(
-            combining_function="AND",
+            combining_function="OR",
             conditions=[
                 shared.Condition(
                     device_policy=shared.DevicePolicy(
                         allowed_device_management_levels=[
-                            "NONE",
+                            "BASIC",
+                            "COMPLETE",
+                            "BASIC",
+                            "COMPLETE",
+                        ],
+                        allowed_encryption_statuses=[
+                            "UNENCRYPTED",
+                            "UNENCRYPTED",
+                        ],
+                        os_constraints=[
+                            shared.OsConstraint(
+                                minimum_version="iure",
+                                os_type="DESKTOP_WINDOWS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="debitis",
+                                os_type="OS_UNSPECIFIED",
+                                require_verified_chrome_os=False,
+                            ),
+                        ],
+                        require_admin_approval=False,
+                        require_corp_owned=False,
+                        require_screenlock=False,
+                    ),
+                    ip_subnetworks=[
+                        "tempora",
+                        "suscipit",
+                        "molestiae",
+                        "minus",
+                    ],
+                    members=[
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
+                        "nisi",
+                    ],
+                    negate=False,
+                    regions=[
+                        "temporibus",
+                        "ab",
+                        "quis",
+                        "veritatis",
+                    ],
+                    required_access_levels=[
+                        "perferendis",
+                        "ipsam",
+                        "repellendus",
+                    ],
+                ),
+                shared.Condition(
+                    device_policy=shared.DevicePolicy(
+                        allowed_device_management_levels=[
+                            "COMPLETE",
+                            "MANAGEMENT_UNSPECIFIED",
+                            "COMPLETE",
+                            "COMPLETE",
+                        ],
+                        allowed_encryption_statuses=[
+                            "ENCRYPTION_UNSUPPORTED",
+                            "ENCRYPTED",
+                            "ENCRYPTED",
+                            "ENCRYPTION_UNSUPPORTED",
+                        ],
+                        os_constraints=[
+                            shared.OsConstraint(
+                                minimum_version="porro",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="dicta",
+                                os_type="ANDROID",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="officia",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
+                            ),
+                        ],
+                        require_admin_approval=False,
+                        require_corp_owned=False,
+                        require_screenlock=False,
+                    ),
+                    ip_subnetworks=[
+                        "deleniti",
+                    ],
+                    members=[
+                        "optio",
+                        "totam",
+                        "beatae",
+                        "commodi",
+                    ],
+                    negate=False,
+                    regions=[
+                        "modi",
+                        "qui",
+                    ],
+                    required_access_levels=[
+                        "cum",
+                        "esse",
+                        "ipsum",
+                        "excepturi",
+                    ],
+                ),
+                shared.Condition(
+                    device_policy=shared.DevicePolicy(
+                        allowed_device_management_levels=[
+                            "MANAGEMENT_UNSPECIFIED",
                         ],
                         allowed_encryption_statuses=[
                             "UNENCRYPTED",
@@ -45,94 +132,75 @@ req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
                         ],
                         os_constraints=[
                             shared.OsConstraint(
-                                minimum_version="voluptatibus",
-                                os_type="DESKTOP_MAC",
-                                require_verified_chrome_os=False,
-                            ),
-                        ],
-                        require_admin_approval=True,
-                        require_corp_owned=True,
-                        require_screenlock=False,
-                    ),
-                    ip_subnetworks=[
-                        "doloribus",
-                    ],
-                    members=[
-                        "excepturi",
-                    ],
-                    negate=True,
-                    regions=[
-                        "beatae",
-                        "quia",
-                    ],
-                    required_access_levels=[
-                        "suscipit",
-                        "cupiditate",
-                    ],
-                ),
-                shared.Condition(
-                    device_policy=shared.DevicePolicy(
-                        allowed_device_management_levels=[
-                            "BASIC",
-                        ],
-                        allowed_encryption_statuses=[
-                            "ENCRYPTION_UNSPECIFIED",
-                            "ENCRYPTION_UNSPECIFIED",
-                        ],
-                        os_constraints=[
-                            shared.OsConstraint(
-                                minimum_version="rerum",
-                                os_type="IOS",
-                                require_verified_chrome_os=False,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="autem",
-                                os_type="IOS",
-                                require_verified_chrome_os=True,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="ipsam",
+                                minimum_version="dolor",
                                 os_type="DESKTOP_CHROME_OS",
-                                require_verified_chrome_os=True,
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="laboriosam",
+                                os_type="IOS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="saepe",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
                             ),
                         ],
                         require_admin_approval=False,
-                        require_corp_owned=True,
-                        require_screenlock=True,
+                        require_corp_owned=False,
+                        require_screenlock=False,
                     ),
                     ip_subnetworks=[
-                        "quis",
+                        "corporis",
+                        "iste",
                     ],
                     members=[
-                        "optio",
-                        "eos",
+                        "saepe",
+                        "quidem",
                     ],
                     negate=False,
                     regions=[
-                        "sunt",
+                        "ipsa",
                     ],
                     required_access_levels=[
-                        "non",
-                        "iure",
+                        "est",
+                        "mollitia",
+                        "laborum",
+                        "dolores",
                     ],
                 ),
             ],
         ),
         custom=shared.CustomLevel(
             expr=shared.Expr(
-                description="atque",
+                description="dolorem",
                 expression="corporis",
-                location="sed",
-                title="illum",
+                location="explicabo",
+                title="Miss",
             ),
         ),
         description="enim",
-        name="aut",
-        title="et",
+        name="omnis",
+        title="Mrs.",
     ),
+    access_token="minima",
+    alt="media",
+    callback="accusantium",
+    fields_="iure",
+    key="culpa",
+    oauth_token="doloribus",
+    parent="sapiente",
+    pretty_print=False,
+    quota_user="architecto",
+    upload_type="mollitia",
+    upload_protocol="dolorem",
 )
     
-res = s.access_policies.accesscontextmanager_access_policies_access_levels_create(req)
+res = s.access_policies.accesscontextmanager_access_policies_access_levels_create(req, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

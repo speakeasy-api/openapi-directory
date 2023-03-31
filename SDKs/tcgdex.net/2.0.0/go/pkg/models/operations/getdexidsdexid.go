@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDexIdsDexIDPathParams struct {
-	DexID string `pathParam:"style=simple,explode=false,name=dexId"`
-}
-
 type GetDexIdsDexIDRequest struct {
-	PathParams GetDexIdsDexIDPathParams
+	DexID string `pathParam:"style=simple,explode=false,name=dexId"`
 }
 
 type GetDexIdsDexIDResponse struct {

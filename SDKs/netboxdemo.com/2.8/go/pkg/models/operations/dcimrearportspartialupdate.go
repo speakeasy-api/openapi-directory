@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRearPortsPartialUpdatePathParams struct {
+type DcimRearPortsPartialUpdateRequest struct {
+	WritableRearPortInput shared.WritableRearPortInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this rear port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRearPortsPartialUpdateRequest struct {
-	PathParams DcimRearPortsPartialUpdatePathParams
-	Request    shared.WritableRearPortInput `request:"mediaType=application/json"`
 }
 
 type DcimRearPortsPartialUpdateResponse struct {

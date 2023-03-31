@@ -32,7 +32,9 @@ func (e *AnalyzeImageDetailsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AnalyzeImageQueryParams struct {
+type AnalyzeImageRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// Turn off specified domain models when generating the description.
 	DescriptionExclude []shared.DescriptionExcludeEnum `queryParam:"style=form,explode=false,name=descriptionExclude"`
 	// A string indicating which domain-specific details to return. Multiple values should be comma-separated. Valid visual feature types include: Celebrities - identifies celebrities if detected in the image, Landmarks - identifies notable landmarks in the image.
@@ -41,12 +43,6 @@ type AnalyzeImageQueryParams struct {
 	Language *shared.ServiceLanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// A string indicating what visual feature types to return. Multiple values should be comma-separated. Valid visual feature types include: Categories - categorizes image content according to a taxonomy defined in documentation. Tags - tags the image with a detailed list of words related to the image content. Description - describes the image content with a complete English sentence. Faces - detects if faces are present. If present, generate coordinates, gender and age. ImageType - detects if image is clipart or a line drawing. Color - determines the accent color, dominant color, and whether an image is black&white. Adult - detects if the image is pornographic in nature (depicts nudity or a sex act), or is gory (depicts extreme violence or blood). Sexually suggestive content (aka racy content) is also detected. Objects - detects various objects within an image, including the approximate location. The Objects argument is only available in English. Brands - detects various brands within an image, including the approximate location. The Brands argument is only available in English.
 	VisualFeatures []shared.VisualFeaturesEnum `queryParam:"style=form,explode=false,name=visualFeatures"`
-}
-
-type AnalyzeImageRequest struct {
-	QueryParams AnalyzeImageQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
 }
 
 type AnalyzeImageResponse struct {

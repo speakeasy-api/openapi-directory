@@ -22,10 +22,9 @@ pkg/models/shared/networkconfig.go
 pkg/models/shared/vlanattachment.go
 pkg/models/shared/instanceconfig.go
 pkg/models/shared/networkaddress.go
-pkg/models/shared/submitprovisioningconfigrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/submitprovisioningconfigrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listprovisioningquotasresponse.go
 pkg/models/shared/provisioningquota.go
 pkg/models/shared/instancequota.go

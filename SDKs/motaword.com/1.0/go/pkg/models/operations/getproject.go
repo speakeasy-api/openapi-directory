@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectPathParams struct {
-	// Project ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetProjectWithEnum string
 
 const (
@@ -40,14 +35,11 @@ func (e *GetProjectWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectQueryParams struct {
+type GetProjectRequest struct {
+	// Project ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Include detailed information. Possible values 'client', 'vendor', 'score'
 	With []GetProjectWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetProjectRequest struct {
-	PathParams  GetProjectPathParams
-	QueryParams GetProjectQueryParams
 }
 
 type GetProjectResponse struct {

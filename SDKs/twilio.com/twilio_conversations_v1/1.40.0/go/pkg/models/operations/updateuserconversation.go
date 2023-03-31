@@ -13,14 +13,8 @@ var UpdateUserConversationServerList = []string{
 }
 
 type UpdateUserConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUserConversationPathParams struct {
-	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
-	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUserConversationUpdateUserConversationRequest struct {
@@ -32,10 +26,11 @@ type UpdateUserConversationUpdateUserConversationRequest struct {
 }
 
 type UpdateUserConversationRequest struct {
-	PathParams UpdateUserConversationPathParams
-	Request    *UpdateUserConversationUpdateUserConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUserConversationSecurity
-	ServerURL  *string
+	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+	ConversationSid string                                               `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateUserConversationUpdateUserConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type UpdateUserConversationResponse struct {

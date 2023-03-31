@@ -37,7 +37,7 @@ func newFileComments(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete File Comment
 func (s *fileComments) DeleteFileCommentsID(ctx context.Context, request operations.DeleteFileCommentsIDRequest) (*operations.DeleteFileCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -93,14 +93,14 @@ func (s *fileComments) DeleteFileCommentsID(ctx context.Context, request operati
 // List File Comments by path
 func (s *fileComments) FileCommentListForPath(ctx context.Context, request operations.FileCommentListForPathRequest) (*operations.FileCommentListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file_comments/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,9 +161,9 @@ func (s *fileComments) FileCommentListForPath(ctx context.Context, request opera
 // Update File Comment
 func (s *fileComments) PatchFileCommentsID(ctx context.Context, request operations.PatchFileCommentsIDRequest) (*operations.PatchFileCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -233,7 +233,7 @@ func (s *fileComments) PatchFileCommentsID(ctx context.Context, request operatio
 
 // PostFileComments - Create File Comment
 // Create File Comment
-func (s *fileComments) PostFileComments(ctx context.Context, request operations.PostFileCommentsRequest) (*operations.PostFileCommentsResponse, error) {
+func (s *fileComments) PostFileComments(ctx context.Context, request operations.PostFileCommentsRequestBody) (*operations.PostFileCommentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file_comments"
 

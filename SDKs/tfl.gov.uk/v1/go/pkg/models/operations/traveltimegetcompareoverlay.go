@@ -8,23 +8,6 @@ import (
 	"net/http"
 )
 
-type TravelTimeGetCompareOverlayPathParams struct {
-	// The height of the requested overlay.
-	Height int `pathParam:"style=simple,explode=false,name=height"`
-	// The map center latitude.
-	MapCenterLat float64 `pathParam:"style=simple,explode=false,name=mapCenterLat"`
-	// The map center longitude.
-	MapCenterLon float64 `pathParam:"style=simple,explode=false,name=mapCenterLon"`
-	// The latitude of the pin.
-	PinLat float64 `pathParam:"style=simple,explode=false,name=pinLat"`
-	// The longitude of the pin.
-	PinLon float64 `pathParam:"style=simple,explode=false,name=pinLon"`
-	// The width of the requested overlay.
-	Width int `pathParam:"style=simple,explode=false,name=width"`
-	// The zoom level.
-	Z int `pathParam:"style=simple,explode=false,name=z"`
-}
-
 // TravelTimeGetCompareOverlayDirectionEnum - The direction of travel.
 type TravelTimeGetCompareOverlayDirectionEnum string
 
@@ -52,24 +35,33 @@ func (e *TravelTimeGetCompareOverlayDirectionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type TravelTimeGetCompareOverlayQueryParams struct {
+type TravelTimeGetCompareOverlayRequest struct {
 	CompareType  string `queryParam:"style=form,explode=true,name=compareType"`
 	CompareValue string `queryParam:"style=form,explode=true,name=compareValue"`
 	// The direction of travel.
 	Direction TravelTimeGetCompareOverlayDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The height of the requested overlay.
+	Height int `pathParam:"style=simple,explode=false,name=height"`
+	// The map center latitude.
+	MapCenterLat float64 `pathParam:"style=simple,explode=false,name=mapCenterLat"`
+	// The map center longitude.
+	MapCenterLon float64 `pathParam:"style=simple,explode=false,name=mapCenterLon"`
 	// The id of the mode.
 	ModeID string `queryParam:"style=form,explode=true,name=modeId"`
+	// The latitude of the pin.
+	PinLat float64 `pathParam:"style=simple,explode=false,name=pinLat"`
+	// The longitude of the pin.
+	PinLon float64 `pathParam:"style=simple,explode=false,name=pinLon"`
 	// The title of the scenario.
 	ScenarioTitle string `queryParam:"style=form,explode=true,name=scenarioTitle"`
 	// The id for the time of day (AM/INTER/PM)
 	TimeOfDayID string `queryParam:"style=form,explode=true,name=timeOfDayId"`
 	// The total minutes between the travel time bands
 	TravelTimeInterval int `queryParam:"style=form,explode=true,name=travelTimeInterval"`
-}
-
-type TravelTimeGetCompareOverlayRequest struct {
-	PathParams  TravelTimeGetCompareOverlayPathParams
-	QueryParams TravelTimeGetCompareOverlayQueryParams
+	// The width of the requested overlay.
+	Width int `pathParam:"style=simple,explode=false,name=width"`
+	// The zoom level.
+	Z int `pathParam:"style=simple,explode=false,name=z"`
 }
 
 type TravelTimeGetCompareOverlayResponse struct {

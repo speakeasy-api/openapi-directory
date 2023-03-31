@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeclineInvitationForAuthenticatedUserPathParams struct {
+type ReposDeclineInvitationForAuthenticatedUserRequest struct {
 	// The unique identifier of the invitation.
 	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
-}
-
-type ReposDeclineInvitationForAuthenticatedUserRequest struct {
-	PathParams ReposDeclineInvitationForAuthenticatedUserPathParams
 }
 
 type ReposDeclineInvitationForAuthenticatedUserResponse struct {

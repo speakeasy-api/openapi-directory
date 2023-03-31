@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostAPILogisticsPvtShippingPoliciesHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // PostAPILogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours - Object containing business hour configuration.
 type PostAPILogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours struct {
 	// Closing time.
@@ -150,8 +143,11 @@ type PostAPILogisticsPvtShippingPoliciesRequestBody struct {
 }
 
 type PostAPILogisticsPvtShippingPoliciesRequest struct {
-	Headers PostAPILogisticsPvtShippingPoliciesHeaders
-	Request *PostAPILogisticsPvtShippingPoliciesRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                                          `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PostAPILogisticsPvtShippingPoliciesRequestBody `request:"mediaType=application/json"`
 }
 
 type PostAPILogisticsPvtShippingPoliciesResponse struct {

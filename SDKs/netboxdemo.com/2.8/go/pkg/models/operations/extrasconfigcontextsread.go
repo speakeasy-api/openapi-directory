@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasConfigContextsReadPathParams struct {
+type ExtrasConfigContextsReadRequest struct {
 	// A unique integer value identifying this config context.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasConfigContextsReadRequest struct {
-	PathParams ExtrasConfigContextsReadPathParams
 }
 
 type ExtrasConfigContextsReadResponse struct {

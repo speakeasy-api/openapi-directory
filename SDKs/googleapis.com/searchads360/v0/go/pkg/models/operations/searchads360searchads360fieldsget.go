@@ -8,16 +8,11 @@ import (
 )
 
 type Searchads360SearchAds360FieldsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Searchads360SearchAds360FieldsGetPathParams struct {
-	// Required. The resource name of the field to get.
-	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
-}
-
-type Searchads360SearchAds360FieldsGetQueryParams struct {
+type Searchads360SearchAds360FieldsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,16 +31,12 @@ type Searchads360SearchAds360FieldsGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The resource name of the field to get.
+	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Searchads360SearchAds360FieldsGetRequest struct {
-	PathParams  Searchads360SearchAds360FieldsGetPathParams
-	QueryParams Searchads360SearchAds360FieldsGetQueryParams
-	Security    Searchads360SearchAds360FieldsGetSecurity
 }
 
 type Searchads360SearchAds360FieldsGetResponse struct {

@@ -8,16 +8,12 @@ import (
 )
 
 type AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerMarketplaceprivateauctionUpdateproposalPathParams struct {
-	// The private auction id to be updated.
-	PrivateAuctionID string `pathParam:"style=simple,explode=false,name=privateAuctionId"`
-}
-
-type AdexchangebuyerMarketplaceprivateauctionUpdateproposalQueryParams struct {
+type AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest struct {
+	UpdatePrivateAuctionProposalRequest *shared.UpdatePrivateAuctionProposalRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -28,17 +24,12 @@ type AdexchangebuyerMarketplaceprivateauctionUpdateproposalQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The private auction id to be updated.
+	PrivateAuctionID string `pathParam:"style=simple,explode=false,name=privateAuctionId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest struct {
-	PathParams  AdexchangebuyerMarketplaceprivateauctionUpdateproposalPathParams
-	QueryParams AdexchangebuyerMarketplaceprivateauctionUpdateproposalQueryParams
-	Request     *shared.UpdatePrivateAuctionProposalRequest `request:"mediaType=application/json"`
-	Security    AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity
 }
 
 type AdexchangebuyerMarketplaceprivateauctionUpdateproposalResponse struct {

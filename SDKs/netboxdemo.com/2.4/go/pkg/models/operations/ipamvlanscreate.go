@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlansCreateRequest struct {
-	Request shared.WritableVLANInput `request:"mediaType=application/json"`
-}
-
 type IpamVlansCreateResponse struct {
 	ContentType string
 	StatusCode  int

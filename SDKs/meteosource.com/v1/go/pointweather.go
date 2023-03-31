@@ -46,7 +46,7 @@ func newPointWeather(defaultClient, securityClient HTTPClient, serverURL, langua
 // * The response contains an `Expires` header, which defines the point at which the API response will not change for the same request. We highly recommend using this to avoid unnecessary requests and **increase the performance of your app**.
 // * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
 // * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
-func (s *pointWeather) AirQualityAirQualityGet(ctx context.Context, request operations.AirQualityAirQualityGetRequest) (*operations.AirQualityAirQualityGetResponse, error) {
+func (s *pointWeather) AirQualityAirQualityGet(ctx context.Context, request operations.AirQualityAirQualityGetRequest, security operations.AirQualityAirQualityGetSecurity) (*operations.AirQualityAirQualityGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/air_quality"
 
@@ -55,11 +55,11 @@ func (s *pointWeather) AirQualityAirQualityGet(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *pointWeather) AirQualityAirQualityGet(ctx context.Context, request oper
 // * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
 // * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
 // * The detailed description of weather alerts is only available in English. The alert category is translated into selected language.
-func (s *pointWeather) PointPointGet(ctx context.Context, request operations.PointPointGetRequest) (*operations.PointPointGetResponse, error) {
+func (s *pointWeather) PointPointGet(ctx context.Context, request operations.PointPointGetRequest, security operations.PointPointGetSecurity) (*operations.PointPointGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/point"
 
@@ -157,11 +157,11 @@ func (s *pointWeather) PointPointGet(ctx context.Context, request operations.Poi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

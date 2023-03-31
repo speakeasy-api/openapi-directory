@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsCheckTokenPathParams struct {
-	// The client ID of your GitHub app.
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
 type AppsCheckTokenRequestBody struct {
 	// The access_token of the OAuth application.
 	AccessToken string `json:"access_token"`
 }
 
 type AppsCheckTokenRequest struct {
-	PathParams AppsCheckTokenPathParams
-	Request    AppsCheckTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody AppsCheckTokenRequestBody `request:"mediaType=application/json"`
+	// The client ID of your GitHub app.
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type AppsCheckTokenResponse struct {

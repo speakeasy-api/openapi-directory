@@ -33,11 +33,11 @@ func newChannelBanners(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // YoutubeChannelBannersInsert - Inserts a new resource into this collection.
-func (s *channelBanners) YoutubeChannelBannersInsert(ctx context.Context, request operations.YoutubeChannelBannersInsertRequest) (*operations.YoutubeChannelBannersInsertResponse, error) {
+func (s *channelBanners) YoutubeChannelBannersInsert(ctx context.Context, request operations.YoutubeChannelBannersInsertRequest, security operations.YoutubeChannelBannersInsertSecurity) (*operations.YoutubeChannelBannersInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/channelBanners/insert"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *channelBanners) YoutubeChannelBannersInsert(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

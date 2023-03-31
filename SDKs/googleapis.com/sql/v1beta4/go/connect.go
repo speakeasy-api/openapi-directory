@@ -32,11 +32,11 @@ func newConnect(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // SQLConnectGenerateEphemeral - Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
-func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request operations.SQLConnectGenerateEphemeralRequest) (*operations.SQLConnectGenerateEphemeralResponse, error) {
+func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request operations.SQLConnectGenerateEphemeralRequest, security operations.SQLConnectGenerateEphemeralSecurity) (*operations.SQLConnectGenerateEphemeralResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}:generateEphemeralCert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}:generateEphemeralCert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateEphemeralCertRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request opera
 }
 
 // SQLConnectGet - Retrieves connect settings about a Cloud SQL instance.
-func (s *connect) SQLConnectGet(ctx context.Context, request operations.SQLConnectGetRequest) (*operations.SQLConnectGetResponse, error) {
+func (s *connect) SQLConnectGet(ctx context.Context, request operations.SQLConnectGetRequest, security operations.SQLConnectGetSecurity) (*operations.SQLConnectGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/connectSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/connectSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUserPathParams struct {
-	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteUserHeaders struct {
+type DeleteUserRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteUserRequest struct {
-	PathParams DeleteUserPathParams
-	Headers    DeleteUserHeaders
+	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteUserResponse struct {

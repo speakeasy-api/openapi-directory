@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AnalyzeImageByDomainPathParams struct {
-	// The domain-specific content to recognize.
-	Model string `pathParam:"style=simple,explode=false,name=model"`
-}
-
-type AnalyzeImageByDomainQueryParams struct {
+type AnalyzeImageByDomainRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// The desired language for output generation. If this parameter is not specified, the default value is &quot;en&quot;.Supported languages:en - English, Default. es - Spanish, ja - Japanese, pt - Portuguese, zh - Simplified Chinese.
 	Language *shared.ServiceLanguageEnum `queryParam:"style=form,explode=true,name=language"`
-}
-
-type AnalyzeImageByDomainRequest struct {
-	PathParams  AnalyzeImageByDomainPathParams
-	QueryParams AnalyzeImageByDomainQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
+	// The domain-specific content to recognize.
+	Model string `pathParam:"style=simple,explode=false,name=model"`
 }
 
 type AnalyzeImageByDomainResponse struct {

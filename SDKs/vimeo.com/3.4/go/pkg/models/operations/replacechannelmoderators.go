@@ -8,12 +8,7 @@ import (
 )
 
 type ReplaceChannelModeratorsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ReplaceChannelModeratorsPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplaceChannelModeratorsRequestBody struct {
@@ -22,9 +17,9 @@ type ReplaceChannelModeratorsRequestBody struct {
 }
 
 type ReplaceChannelModeratorsRequest struct {
-	PathParams ReplaceChannelModeratorsPathParams
-	Request    ReplaceChannelModeratorsRequestBody `request:"mediaType=application/json"`
-	Security   ReplaceChannelModeratorsSecurity
+	RequestBody ReplaceChannelModeratorsRequestBody `request:"mediaType=application/json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type ReplaceChannelModeratorsResponse struct {

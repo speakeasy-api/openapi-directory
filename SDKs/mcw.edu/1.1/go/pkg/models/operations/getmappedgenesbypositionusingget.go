@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GETMappedGenesByPositionUsingGETPathParams struct {
+type GETMappedGenesByPositionUsingGETRequest struct {
 	// Chromosome
 	Chr string `pathParam:"style=simple,explode=false,name=chr"`
 	// A list of RGD assembly map keys can be found in the lookup service
@@ -15,10 +15,6 @@ type GETMappedGenesByPositionUsingGETPathParams struct {
 	Start int64 `pathParam:"style=simple,explode=false,name=start"`
 	// Stop Position
 	Stop int64 `pathParam:"style=simple,explode=false,name=stop"`
-}
-
-type GETMappedGenesByPositionUsingGETRequest struct {
-	PathParams GETMappedGenesByPositionUsingGETPathParams
 }
 
 type GETMappedGenesByPositionUsingGETResponse struct {

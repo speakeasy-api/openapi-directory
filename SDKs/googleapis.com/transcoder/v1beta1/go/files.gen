@@ -58,7 +58,6 @@ pkg/models/shared/editatom.go
 pkg/models/shared/adbreak.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listjobtemplatesresponse.go
 pkg/models/shared/job.go
 pkg/models/shared/progress.go

@@ -8,20 +8,15 @@ import (
 )
 
 type GetContributorCollectionsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetContributorCollectionsPathParams struct {
+type GetContributorCollectionsRequest struct {
 	// Contributor ID
 	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
 	// Collection ID that belongs to the contributor
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetContributorCollectionsRequest struct {
-	PathParams GetContributorCollectionsPathParams
-	Security   GetContributorCollectionsSecurity
 }
 
 type GetContributorCollectionsResponse struct {

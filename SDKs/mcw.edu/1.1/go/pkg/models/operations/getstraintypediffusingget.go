@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GETStrainTypeDiffUsingGETPathParams struct {
+type GETStrainTypeDiffUsingGETRequest struct {
 	// dateFromYYYYMMDD
 	DateFromYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateFromYYYYMMDD"`
 	// dateToYYYYMMDD
 	DateToYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateToYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETStrainTypeDiffUsingGETRequest struct {
-	PathParams GETStrainTypeDiffUsingGETPathParams
 }
 
 type GETStrainTypeDiffUsingGETResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsUpdatePathParams struct {
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
 // ProjectsUpdateRequestBodyOrganizationPermissionEnum - The baseline permission that all organization members have on this project
 type ProjectsUpdateRequestBodyOrganizationPermissionEnum string
 
@@ -58,8 +53,9 @@ type ProjectsUpdateRequestBody struct {
 }
 
 type ProjectsUpdateRequest struct {
-	PathParams ProjectsUpdatePathParams
-	Request    *ProjectsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *ProjectsUpdateRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 // ProjectsUpdate403ApplicationJSON - Forbidden

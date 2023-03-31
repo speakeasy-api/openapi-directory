@@ -8,17 +8,13 @@ import (
 )
 
 type GetPaymentMethodSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetPaymentMethodPathParams struct {
-	// Payment method number
-	PaymentMethodNumber string `pathParam:"style=simple,explode=false,name=paymentMethodNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetPaymentMethodRequest struct {
-	PathParams GetPaymentMethodPathParams
-	Security   GetPaymentMethodSecurity
+	// Payment method number
+	PaymentMethodNumber string `pathParam:"style=simple,explode=false,name=paymentMethodNumber"`
 }
 
 type GetPaymentMethodResponse struct {

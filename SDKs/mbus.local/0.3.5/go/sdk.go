@@ -96,7 +96,7 @@ func New(opts ...SDKOption) *SDK {
 // Get - Gets data from the slave identified by {address}
 func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/get/{device}/{baudrate}/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mbus/get/{device}/{baudrate}/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -154,7 +154,7 @@ func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operatio
 // GetMulti - Gets data from the slave identified by {address}, and supports multiple responses from the slave
 func (s *SDK) GetMulti(ctx context.Context, request operations.GetMultiRequest) (*operations.GetMultiResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -415,7 +415,7 @@ func (s *SDK) MbusAPI(ctx context.Context) (*operations.MbusAPIResponse, error) 
 // Scan - Scan the specified device for slaves
 func (s *SDK) Scan(ctx context.Context, request operations.ScanRequest) (*operations.ScanResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/scan/{device}/{baudrate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mbus/scan/{device}/{baudrate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

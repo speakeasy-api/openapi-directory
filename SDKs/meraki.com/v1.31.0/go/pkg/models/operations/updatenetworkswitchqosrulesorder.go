@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchQosRulesOrderPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchQosRulesOrderRequestBody struct {
 	// A list of quality of service rule IDs arranged in order in which they should be processed by the switch.
 	RuleIds []string `json:"ruleIds"`
 }
 
 type UpdateNetworkSwitchQosRulesOrderRequest struct {
-	PathParams UpdateNetworkSwitchQosRulesOrderPathParams
-	Request    UpdateNetworkSwitchQosRulesOrderRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkSwitchQosRulesOrderRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchQosRulesOrderResponse struct {

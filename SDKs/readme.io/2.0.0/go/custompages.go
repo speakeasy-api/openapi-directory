@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newCustomPages(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CreateCustomPage - Create custom page
 // Create a new custom page inside of this project
-func (s *customPages) CreateCustomPage(ctx context.Context, request operations.CreateCustomPageRequest) (*operations.CreateCustomPageResponse, error) {
+func (s *customPages) CreateCustomPage(ctx context.Context, request shared.CustomPage, security operations.CreateCustomPageSecurity) (*operations.CreateCustomPageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custompages"
 
@@ -52,7 +53,7 @@ func (s *customPages) CreateCustomPage(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,16 +82,16 @@ func (s *customPages) CreateCustomPage(ctx context.Context, request operations.C
 
 // DeleteCustomPage - Delete custom page
 // Delete the custom page with this slug
-func (s *customPages) DeleteCustomPage(ctx context.Context, request operations.DeleteCustomPageRequest) (*operations.DeleteCustomPageResponse, error) {
+func (s *customPages) DeleteCustomPage(ctx context.Context, request operations.DeleteCustomPageRequest, security operations.DeleteCustomPageSecurity) (*operations.DeleteCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,16 +120,16 @@ func (s *customPages) DeleteCustomPage(ctx context.Context, request operations.D
 
 // GetCustomPage - Get custom page
 // Returns the custom page with this slug
-func (s *customPages) GetCustomPage(ctx context.Context, request operations.GetCustomPageRequest) (*operations.GetCustomPageResponse, error) {
+func (s *customPages) GetCustomPage(ctx context.Context, request operations.GetCustomPageRequest, security operations.GetCustomPageSecurity) (*operations.GetCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +158,7 @@ func (s *customPages) GetCustomPage(ctx context.Context, request operations.GetC
 
 // GetCustomPages - Get custom pages
 // Returns a list of custom pages associated with the project API key
-func (s *customPages) GetCustomPages(ctx context.Context, request operations.GetCustomPagesRequest) (*operations.GetCustomPagesResponse, error) {
+func (s *customPages) GetCustomPages(ctx context.Context, request operations.GetCustomPagesRequest, security operations.GetCustomPagesSecurity) (*operations.GetCustomPagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custompages"
 
@@ -166,11 +167,11 @@ func (s *customPages) GetCustomPages(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +199,11 @@ func (s *customPages) GetCustomPages(ctx context.Context, request operations.Get
 
 // UpdateCustomPage - Update custom page
 // Update a custom page with this slug
-func (s *customPages) UpdateCustomPage(ctx context.Context, request operations.UpdateCustomPageRequest) (*operations.UpdateCustomPageResponse, error) {
+func (s *customPages) UpdateCustomPage(ctx context.Context, request operations.UpdateCustomPageRequest, security operations.UpdateCustomPageSecurity) (*operations.UpdateCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomPage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,7 +218,7 @@ func (s *customPages) UpdateCustomPage(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

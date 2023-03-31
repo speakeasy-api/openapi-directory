@@ -8,12 +8,7 @@ import (
 )
 
 type CreateProjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateProjectPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateProjectRequestBody struct {
@@ -22,9 +17,9 @@ type CreateProjectRequestBody struct {
 }
 
 type CreateProjectRequest struct {
-	PathParams CreateProjectPathParams
-	Request    CreateProjectRequestBody `request:"mediaType=application/json"`
-	Security   CreateProjectSecurity
+	RequestBody CreateProjectRequestBody `request:"mediaType=application/json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type CreateProjectResponse struct {

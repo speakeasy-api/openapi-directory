@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotGetAlertPathParams struct {
+type DependabotGetAlertRequest struct {
 	// The number that identifies a Dependabot alert in its repository.
 	// You can find this at the end of the URL for a Dependabot alert within GitHub,
 	// or in `number` fields in the response from the
@@ -17,10 +17,6 @@ type DependabotGetAlertPathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type DependabotGetAlertRequest struct {
-	PathParams DependabotGetAlertPathParams
 }
 
 type DependabotGetAlertResponse struct {

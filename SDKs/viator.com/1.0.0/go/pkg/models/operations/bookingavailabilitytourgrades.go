@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type BookingAvailabilityTourgradesHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type BookingAvailabilityTourgradesRequestBodyAgeBands struct {
 	// **unique numeric identifier** for the age band
 	// - See: [Working with age bands](#section/Appendices/Working-with-age-bands)
@@ -32,8 +26,10 @@ type BookingAvailabilityTourgradesRequestBody struct {
 }
 
 type BookingAvailabilityTourgradesRequest struct {
-	Headers BookingAvailabilityTourgradesHeaders
-	Request *BookingAvailabilityTourgradesRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                                    `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *BookingAvailabilityTourgradesRequestBody `request:"mediaType=application/json"`
 }
 
 type BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired struct {

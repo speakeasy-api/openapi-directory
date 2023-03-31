@@ -39,14 +39,14 @@ func newRevenueSchedules(defaultClient, securityClient HTTPClient, serverURL, la
 // The revenue schedule must not be associated with any invoice item, invoice item adjustment, or credit/debit memo item in Zuora Billing.
 func (s *revenueSchedules) DeleteRs(ctx context.Context, request operations.DELETERSRequest) (*operations.DELETERSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -88,14 +88,14 @@ func (s *revenueSchedules) DeleteRs(ctx context.Context, request operations.DELE
 // Retrieves the details of a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) GetRs(ctx context.Context, request operations.GETRSRequest) (*operations.GETRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -140,14 +140,14 @@ func (s *revenueSchedules) GetRs(ctx context.Context, request operations.GETRSRe
 // Retrieves the details about a revenue schedule by specifying a valid credit memo item ID.
 func (s *revenueSchedules) GETRSbyCreditMemoItem(ctx context.Context, request operations.GETRSbyCreditMemoItemRequest) (*operations.GETRSbyCreditMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -192,14 +192,14 @@ func (s *revenueSchedules) GETRSbyCreditMemoItem(ctx context.Context, request op
 // Retrieves the details about a revenue schedule by specifying a valid debit memo item ID.
 func (s *revenueSchedules) GETRSbyDebitMemoItem(ctx context.Context, request operations.GETRSbyDebitMemoItemRequest) (*operations.GETRSbyDebitMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -241,14 +241,14 @@ func (s *revenueSchedules) GETRSbyDebitMemoItem(ctx context.Context, request ope
 // Retrieves the details of a revenue schedule by specifying the invoice item ID.
 func (s *revenueSchedules) GETRSbyInvoiceItem(ctx context.Context, request operations.GETRSbyInvoiceItemRequest) (*operations.GETRSbyInvoiceItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -290,14 +290,14 @@ func (s *revenueSchedules) GETRSbyInvoiceItem(ctx context.Context, request opera
 // Retrieves the details of a revenue schedule by specifying a valid invoice item adjustment identifier. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) GETRSbyInvoiceItemAdjustment(ctx context.Context, request operations.GETRSbyInvoiceItemAdjustmentRequest) (*operations.GETRSbyInvoiceItemAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -342,16 +342,16 @@ func (s *revenueSchedules) GETRSbyInvoiceItemAdjustment(ctx context.Context, req
 // Retrieves the details about all revenue schedules of a product rate plan charge by specifying the charge ID and billing account ID.
 func (s *revenueSchedules) GETRSbyProductChargeAndBillingAccount(ctx context.Context, request operations.GETRSbyProductChargeAndBillingAccountRequest) (*operations.GETRSbyProductChargeAndBillingAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/product-charges/{charge-key}/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/product-charges/{charge-key}/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -395,16 +395,16 @@ func (s *revenueSchedules) GETRSbyProductChargeAndBillingAccount(ctx context.Con
 // Retrieves the revenue schedule details by specifying subscription charge ID. Request and response field descriptions and sample code are provided
 func (s *revenueSchedules) GETRSforSubscCharge(ctx context.Context, request operations.GETRSforSubscChargeRequest) (*operations.GETRSforSubscChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/subscription-charges/{charge-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/subscription-charges/{charge-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -451,9 +451,9 @@ func (s *revenueSchedules) GETRSforSubscCharge(ctx context.Context, request oper
 // Creates a revenue schedule for a credit memo item, and automatically distribute the revenue by specifying the recognition start and end dates.
 func (s *revenueSchedules) POSTRSforCreditMemoItemDistributeByDateRange(ctx context.Context, request operations.POSTRSforCreditMemoItemDistributeByDateRangeRequest) (*operations.POSTRSforCreditMemoItemDistributeByDateRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionRatablyCMType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,7 +468,7 @@ func (s *revenueSchedules) POSTRSforCreditMemoItemDistributeByDateRange(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -513,9 +513,9 @@ func (s *revenueSchedules) POSTRSforCreditMemoItemDistributeByDateRange(ctx cont
 // Creates a revenue schedule for a credit memo item, and manually distribute the revenue.
 func (s *revenueSchedules) POSTRSforCreditMemoItemManualDistribution(ctx context.Context, request operations.POSTRSforCreditMemoItemManualDistributionRequest) (*operations.POSTRSforCreditMemoItemManualDistributionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -530,7 +530,7 @@ func (s *revenueSchedules) POSTRSforCreditMemoItemManualDistribution(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,9 +575,9 @@ func (s *revenueSchedules) POSTRSforCreditMemoItemManualDistribution(ctx context
 // Creates a revenue schedule for a debit memo item, and automatically distribute the revenue by specifying the recognition start and end dates.
 func (s *revenueSchedules) POSTRSforDebitMemoItemDistributeByDateRange(ctx context.Context, request operations.POSTRSforDebitMemoItemDistributeByDateRangeRequest) (*operations.POSTRSforDebitMemoItemDistributeByDateRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionRatablyDMType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -592,7 +592,7 @@ func (s *revenueSchedules) POSTRSforDebitMemoItemDistributeByDateRange(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -637,9 +637,9 @@ func (s *revenueSchedules) POSTRSforDebitMemoItemDistributeByDateRange(ctx conte
 // Creates a revenue schedule for a debit memo item, and manually distribute the revenue.
 func (s *revenueSchedules) POSTRSforDebitMemoItemManualDistribution(ctx context.Context, request operations.POSTRSforDebitMemoItemManualDistributionRequest) (*operations.POSTRSforDebitMemoItemManualDistributionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -654,7 +654,7 @@ func (s *revenueSchedules) POSTRSforDebitMemoItemManualDistribution(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -696,9 +696,9 @@ func (s *revenueSchedules) POSTRSforDebitMemoItemManualDistribution(ctx context.
 // Creates a revenue schedule for an Invoice Item Adjustment and distribute the revenue by specifying the recognition start and end dates.
 func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentDistributeByDateRange(ctx context.Context, request operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeRequest) (*operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByDateRangeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -713,7 +713,7 @@ func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentDistributeByDateRange(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -755,9 +755,9 @@ func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentDistributeByDateRange(c
 // Creates a revenue schedule for an Invoice Item Adjustment and manually distribute the revenue.
 func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentManualDistribution(ctx context.Context, request operations.POSTRSforInvoiceItemAdjustmentManualDistributionRequest) (*operations.POSTRSforInvoiceItemAdjustmentManualDistributionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -772,7 +772,7 @@ func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentManualDistribution(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -814,9 +814,9 @@ func (s *revenueSchedules) POSTRSforInvoiceItemAdjustmentManualDistribution(ctx 
 // Creates a revenue schedule for an Invoice Item and distribute the revenue by specifying the recognition start and end dates.
 func (s *revenueSchedules) POSTRSforInvoiceItemDistributeByDateRange(ctx context.Context, request operations.POSTRSforInvoiceItemDistributeByDateRangeRequest) (*operations.POSTRSforInvoiceItemDistributeByDateRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByDateRangeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -831,7 +831,7 @@ func (s *revenueSchedules) POSTRSforInvoiceItemDistributeByDateRange(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -873,9 +873,9 @@ func (s *revenueSchedules) POSTRSforInvoiceItemDistributeByDateRange(ctx context
 // Creates a revenue schedule for an Invoice Item and manually distribute the revenue.
 func (s *revenueSchedules) POSTRSforInvoiceItemManualDistribution(ctx context.Context, request operations.POSTRSforInvoiceItemManualDistributionRequest) (*operations.POSTRSforInvoiceItemManualDistributionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByTransactionType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -890,7 +890,7 @@ func (s *revenueSchedules) POSTRSforInvoiceItemManualDistribution(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -934,9 +934,9 @@ func (s *revenueSchedules) POSTRSforInvoiceItemManualDistribution(ctx context.Co
 // **Note**: You can create a maximum of 3,000 revenue schedules for a subscription charge.
 func (s *revenueSchedules) POSTRSforSubscCharge(ctx context.Context, request operations.POSTRSforSubscChargeRequest) (*operations.POSTRSforSubscChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/subscription-charges/{charge-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/subscription-charges/{charge-key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRevenueScheduleByChargeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -951,7 +951,7 @@ func (s *revenueSchedules) POSTRSforSubscCharge(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -993,9 +993,9 @@ func (s *revenueSchedules) POSTRSforSubscCharge(ctx context.Context, request ope
 // Retrieves basic information of a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) PUTRSBasicInfo(ctx context.Context, request operations.PUTRSBasicInfoRequest) (*operations.PUTRSBasicInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/basic-information", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/basic-information", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTRSBasicInfoType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1010,7 +1010,7 @@ func (s *revenueSchedules) PUTRSBasicInfo(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1052,9 +1052,9 @@ func (s *revenueSchedules) PUTRSBasicInfo(ctx context.Context, request operation
 // Distributes revenue by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) PUTRevenueAcrossAP(ctx context.Context, request operations.PUTRevenueAcrossAPRequest) (*operations.PUTRevenueAcrossAPResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTAllocateManuallyType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1069,7 +1069,7 @@ func (s *revenueSchedules) PUTRevenueAcrossAP(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1111,9 +1111,9 @@ func (s *revenueSchedules) PUTRevenueAcrossAP(ctx context.Context, request opera
 // Distributes revenue by specifying the recognition start and end dates. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) PUTRevenueByRecognitionStartandEndDates(ctx context.Context, request operations.PUTRevenueByRecognitionStartandEndDatesRequest) (*operations.PUTRevenueByRecognitionStartandEndDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTRSTermType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1128,7 +1128,7 @@ func (s *revenueSchedules) PUTRevenueByRecognitionStartandEndDates(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1170,9 +1170,9 @@ func (s *revenueSchedules) PUTRevenueByRecognitionStartandEndDates(ctx context.C
 // Distributes revenue on a specific recognition date. Request and response field descriptions and sample code are provided.
 func (s *revenueSchedules) PUTRevenueSpecificDate(ctx context.Context, request operations.PUTRevenueSpecificDateRequest) (*operations.PUTRevenueSpecificDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSpecificDateAllocationType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1187,7 +1187,7 @@ func (s *revenueSchedules) PUTRevenueSpecificDate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

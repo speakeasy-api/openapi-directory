@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GenerateDistributionLinksRequest struct {
-	// Parameters for the link generation
-	Request shared.CreateDistributionLinks `request:"mediaType=application/json"`
-}
 
 type GenerateDistributionLinksResponse struct {
 	ContentType string

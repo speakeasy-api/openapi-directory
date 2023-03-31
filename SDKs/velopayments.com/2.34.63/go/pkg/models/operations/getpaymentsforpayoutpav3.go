@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetPaymentsForPayoutPAV3PathParams struct {
-	// The id (UUID) of the payout.
-	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
 // GetPaymentsForPayoutPAV3StatusEnum - Payment Status
 type GetPaymentsForPayoutPAV3StatusEnum string
 
@@ -66,7 +61,7 @@ func (e *GetPaymentsForPayoutPAV3StatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPaymentsForPayoutPAV3QueryParams struct {
+type GetPaymentsForPayoutPAV3Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -75,6 +70,8 @@ type GetPaymentsForPayoutPAV3QueryParams struct {
 	PaymentAmountFrom *int `queryParam:"style=form,explode=true,name=paymentAmountFrom"`
 	// The payment amount to range filter. Filters for paymentAmount ⇐ paymentAmountTo
 	PaymentAmountTo *int `queryParam:"style=form,explode=true,name=paymentAmountTo"`
+	// The id (UUID) of the payout.
+	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
 	// The remote id of the payees.
 	RemoteID *string `queryParam:"style=form,explode=true,name=remoteId"`
 	// Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
@@ -96,11 +93,6 @@ type GetPaymentsForPayoutPAV3QueryParams struct {
 	SubmittedDateFrom *types.Date `queryParam:"style=form,explode=true,name=submittedDateFrom"`
 	// The submitted date to range filter. Format is yyyy-MM-dd.
 	SubmittedDateTo *types.Date `queryParam:"style=form,explode=true,name=submittedDateTo"`
-}
-
-type GetPaymentsForPayoutPAV3Request struct {
-	PathParams  GetPaymentsForPayoutPAV3PathParams
-	QueryParams GetPaymentsForPayoutPAV3QueryParams
 }
 
 type GetPaymentsForPayoutPAV3Response struct {

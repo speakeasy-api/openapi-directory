@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsCustomchannelsAdunitsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsCustomchannelsAdunitsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsCustomchannelsAdunitsListSecurity struct {
@@ -22,18 +22,15 @@ type AdsenseAccountsCustomchannelsAdunitsListSecurity struct {
 	Option2 *AdsenseAccountsCustomchannelsAdunitsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsCustomchannelsAdunitsListPathParams struct {
+type AdsenseAccountsCustomchannelsAdunitsListRequest struct {
 	// Account to which the ad client belongs.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client which contains the custom channel.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-	// Custom channel for which to list ad units.
-	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
-}
-
-type AdsenseAccountsCustomchannelsAdunitsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom channel for which to list ad units.
+	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Whether to include inactive ad units. Default: true.
@@ -52,12 +49,6 @@ type AdsenseAccountsCustomchannelsAdunitsListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsCustomchannelsAdunitsListRequest struct {
-	PathParams  AdsenseAccountsCustomchannelsAdunitsListPathParams
-	QueryParams AdsenseAccountsCustomchannelsAdunitsListQueryParams
-	Security    AdsenseAccountsCustomchannelsAdunitsListSecurity
 }
 
 type AdsenseAccountsCustomchannelsAdunitsListResponse struct {

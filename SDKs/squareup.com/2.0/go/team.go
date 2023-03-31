@@ -39,7 +39,7 @@ func newTeam(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // contains explicit error information for the failed create.
 //
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-create-team-members).
-func (s *team) BulkCreateTeamMembers(ctx context.Context, request operations.BulkCreateTeamMembersRequest) (*operations.BulkCreateTeamMembersResponse, error) {
+func (s *team) BulkCreateTeamMembers(ctx context.Context, request shared.BulkCreateTeamMembersRequest, security operations.BulkCreateTeamMembersSecurity) (*operations.BulkCreateTeamMembersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/bulk-create"
 
@@ -58,7 +58,7 @@ func (s *team) BulkCreateTeamMembers(ctx context.Context, request operations.Bul
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *team) BulkCreateTeamMembers(ctx context.Context, request operations.Bul
 // the request cannot be successfully processed, the request is not marked as failed, but the body of the response
 // contains explicit error information for the failed update.
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-update-team-members).
-func (s *team) BulkUpdateTeamMembers(ctx context.Context, request operations.BulkUpdateTeamMembersRequest) (*operations.BulkUpdateTeamMembersResponse, error) {
+func (s *team) BulkUpdateTeamMembers(ctx context.Context, request shared.BulkUpdateTeamMembersRequest, security operations.BulkUpdateTeamMembersSecurity) (*operations.BulkUpdateTeamMembersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/bulk-update"
 
@@ -117,7 +117,7 @@ func (s *team) BulkUpdateTeamMembers(ctx context.Context, request operations.Bul
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *team) BulkUpdateTeamMembers(ctx context.Context, request operations.Bul
 // - `family_name`
 //
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#createteammember).
-func (s *team) CreateTeamMember(ctx context.Context, request operations.CreateTeamMemberRequest) (*operations.CreateTeamMemberResponse, error) {
+func (s *team) CreateTeamMember(ctx context.Context, request shared.CreateTeamMemberRequest, security operations.CreateTeamMemberSecurity) (*operations.CreateTeamMemberResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members"
 
@@ -177,7 +177,7 @@ func (s *team) CreateTeamMember(ctx context.Context, request operations.CreateTe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,16 +214,16 @@ func (s *team) CreateTeamMember(ctx context.Context, request operations.CreateTe
 // RetrieveTeamMember - RetrieveTeamMember
 // Retrieves a `TeamMember` object for the given `TeamMember.id`.
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrieve-a-team-member).
-func (s *team) RetrieveTeamMember(ctx context.Context, request operations.RetrieveTeamMemberRequest) (*operations.RetrieveTeamMemberResponse, error) {
+func (s *team) RetrieveTeamMember(ctx context.Context, request operations.RetrieveTeamMemberRequest, security operations.RetrieveTeamMemberSecurity) (*operations.RetrieveTeamMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,16 +261,16 @@ func (s *team) RetrieveTeamMember(ctx context.Context, request operations.Retrie
 // Retrieves a `WageSetting` object for a team member specified
 // by `TeamMember.id`.
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrievewagesetting).
-func (s *team) RetrieveWageSetting(ctx context.Context, request operations.RetrieveWageSettingRequest) (*operations.RetrieveWageSettingResponse, error) {
+func (s *team) RetrieveWageSetting(ctx context.Context, request operations.RetrieveWageSettingRequest, security operations.RetrieveWageSettingSecurity) (*operations.RetrieveWageSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -309,7 +309,7 @@ func (s *team) RetrieveWageSetting(ctx context.Context, request operations.Retri
 // The list can be filtered by the following:
 // - location IDs
 // - `status`
-func (s *team) SearchTeamMembers(ctx context.Context, request operations.SearchTeamMembersRequest) (*operations.SearchTeamMembersResponse, error) {
+func (s *team) SearchTeamMembers(ctx context.Context, request shared.SearchTeamMembersRequest, security operations.SearchTeamMembersSecurity) (*operations.SearchTeamMembersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/search"
 
@@ -328,7 +328,7 @@ func (s *team) SearchTeamMembers(ctx context.Context, request operations.SearchT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -365,11 +365,11 @@ func (s *team) SearchTeamMembers(ctx context.Context, request operations.SearchT
 // UpdateTeamMember - UpdateTeamMember
 // Updates a single `TeamMember` object. The `TeamMember` object is returned on successful updates.
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#update-a-team-member).
-func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTeamMemberRequest) (*operations.UpdateTeamMemberResponse, error) {
+func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTeamMemberRequest, security operations.UpdateTeamMemberSecurity) (*operations.UpdateTeamMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTeamMemberRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -424,11 +424,11 @@ func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTe
 // it fully replaces the `WageSetting` object for the team member.
 // The `WageSetting` is returned on a successful update.
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#create-or-update-a-wage-setting).
-func (s *team) UpdateWageSetting(ctx context.Context, request operations.UpdateWageSettingRequest) (*operations.UpdateWageSettingResponse, error) {
+func (s *team) UpdateWageSetting(ctx context.Context, request operations.UpdateWageSettingRequest, security operations.UpdateWageSettingSecurity) (*operations.UpdateWageSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWageSettingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -443,7 +443,7 @@ func (s *team) UpdateWageSetting(ctx context.Context, request operations.UpdateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

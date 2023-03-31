@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InteractionsSetRestrictionsForRepoPathParams struct {
+type InteractionsSetRestrictionsForRepoRequest struct {
+	InteractionLimit shared.InteractionLimit `request:"mediaType=application/json"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type InteractionsSetRestrictionsForRepoRequest struct {
-	PathParams InteractionsSetRestrictionsForRepoPathParams
-	Request    shared.InteractionLimit `request:"mediaType=application/json"`
 }
 
 type InteractionsSetRestrictionsForRepoResponse struct {

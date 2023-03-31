@@ -42,7 +42,7 @@ func (s *packageT) PackageDelete(ctx context.Context, request operations.Package
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -112,7 +112,7 @@ func (s *packageT) PackageGet(ctx context.Context, request operations.PackageGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -163,7 +163,7 @@ func (s *packageT) PackageGet(ctx context.Context, request operations.PackageGet
 }
 
 // PackagePost - Insert new package into the system
-func (s *packageT) PackagePost(ctx context.Context, request operations.PackagePostRequest) (*operations.PackagePostResponse, error) {
+func (s *packageT) PackagePost(ctx context.Context, request shared.PackageDTO) (*operations.PackagePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Package"
 
@@ -227,7 +227,7 @@ func (s *packageT) PackagePost(ctx context.Context, request operations.PackagePo
 }
 
 // PackagePut - Update existing package by its ID
-func (s *packageT) PackagePut(ctx context.Context, request operations.PackagePutRequest) (*operations.PackagePutResponse, error) {
+func (s *packageT) PackagePut(ctx context.Context, request shared.PackageDTO) (*operations.PackagePutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Package"
 
@@ -300,7 +300,7 @@ func (s *packageT) PackageSearch(ctx context.Context, request operations.Package
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -368,7 +368,7 @@ func (s *packageT) PackageUpdateStatus(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

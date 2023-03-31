@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete5PathParams struct {
+type Delete5Request struct {
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type Delete5Request struct {
-	PathParams Delete5PathParams
 }
 
 type Delete5Response struct {

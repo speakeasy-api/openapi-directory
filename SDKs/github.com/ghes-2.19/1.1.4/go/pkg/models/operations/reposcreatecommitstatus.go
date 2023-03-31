@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateCommitStatusPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	Sha   string `pathParam:"style=simple,explode=false,name=sha"`
-}
-
 // ReposCreateCommitStatusRequestBodyStateEnum - The state of the status. Can be one of `error`, `failure`, `pending`, or `success`.
 type ReposCreateCommitStatusRequestBodyStateEnum string
 
@@ -59,8 +53,10 @@ type ReposCreateCommitStatusRequestBody struct {
 }
 
 type ReposCreateCommitStatusRequest struct {
-	PathParams ReposCreateCommitStatusPathParams
-	Request    ReposCreateCommitStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateCommitStatusRequestBody `request:"mediaType=application/json"`
+	Owner       string                             `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                             `pathParam:"style=simple,explode=false,name=repo"`
+	Sha         string                             `pathParam:"style=simple,explode=false,name=sha"`
 }
 
 type ReposCreateCommitStatusResponse struct {

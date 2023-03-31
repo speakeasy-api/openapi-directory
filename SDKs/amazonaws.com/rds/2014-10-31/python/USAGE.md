@@ -3,32 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
-req = operations.GetAddRoleToDbClusterRequest(
-    query_params=operations.GetAddRoleToDbClusterQueryParams(
-        action="AddRoleToDBCluster",
-        db_cluster_identifier="aut",
-        feature_name="corrupti",
-        role_arn="molestiae",
-        version="2014-10-31",
-    ),
-    headers=operations.GetAddRoleToDbClusterHeaders(
-        x_amz_algorithm="nemo",
-        x_amz_content_sha256="beatae",
-        x_amz_credential="iste",
-        x_amz_date="fuga",
-        x_amz_security_token="suscipit",
-        x_amz_signature="voluptatem",
-        x_amz_signed_headers="veniam",
-    ),
+
+
+req = operations.GETAddRoleToDBClusterRequest(
+    action="AddRoleToDBCluster",
+    db_cluster_identifier="corrupti",
+    feature_name="provident",
+    role_arn="distinctio",
+    version="2014-10-31",
+    x_amz_algorithm="quibusdam",
+    x_amz_content_sha256="unde",
+    x_amz_credential="nulla",
+    x_amz_date="corrupti",
+    x_amz_security_token="illum",
+    x_amz_signature="vel",
+    x_amz_signed_headers="error",
 )
     
 res = s.get_add_role_to_db_cluster(req)

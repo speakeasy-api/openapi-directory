@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type CheckSpellingRussianHeaders struct {
-	XRapidAPIKey *string `header:"style=simple,explode=false,name=X-RapidAPI-Key"`
-}
-
 type CheckSpellingRussianRequestBody struct {
 	LangCode *string `json:"lang_code,omitempty"`
 	Text     *string `json:"text,omitempty"`
 }
 
 type CheckSpellingRussianRequest struct {
-	Headers CheckSpellingRussianHeaders
-	Request *CheckSpellingRussianRequestBody `request:"mediaType=application/json"`
+	RequestBody  *CheckSpellingRussianRequestBody `request:"mediaType=application/json"`
+	XRapidAPIKey *string                          `header:"style=simple,explode=false,name=X-RapidAPI-Key"`
 }
 
 type CheckSpellingRussianResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1AnnouncementsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1AnnouncementsQueryParams struct {
-	// If true, response will include announcements dismissed by the user. Defaults to false.
-	WithDismissed *bool `queryParam:"style=form,explode=true,name=with_dismissed"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1AnnouncementsRequest struct {
-	QueryParams GetAPIV1AnnouncementsQueryParams
-	Security    GetAPIV1AnnouncementsSecurity
+	// If true, response will include announcements dismissed by the user. Defaults to false.
+	WithDismissed *bool `queryParam:"style=form,explode=true,name=with_dismissed"`
 }
 
 type GetAPIV1AnnouncementsResponse struct {

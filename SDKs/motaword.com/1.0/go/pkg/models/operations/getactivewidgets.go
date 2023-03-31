@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActiveWidgetsPathParams struct {
+type GetActiveWidgetsRequest struct {
 	// Continuous Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetActiveWidgetsRequest struct {
-	PathParams GetActiveWidgetsPathParams
 }
 
 type GetActiveWidgetsResponse struct {

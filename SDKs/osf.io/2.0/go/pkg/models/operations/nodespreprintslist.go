@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesPreprintsListPathParams struct {
+type NodesPreprintsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesPreprintsListRequest struct {
-	PathParams NodesPreprintsListPathParams
 }
 
 // NodesPreprintsListPreprintAttributes - The properties of the preprint entity.

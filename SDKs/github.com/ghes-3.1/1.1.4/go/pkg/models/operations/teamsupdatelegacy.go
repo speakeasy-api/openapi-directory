@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdateLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsUpdateLegacyRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified.
 type TeamsUpdateLegacyRequestBodyPermissionEnum string
 
@@ -89,8 +84,9 @@ type TeamsUpdateLegacyRequestBody struct {
 }
 
 type TeamsUpdateLegacyRequest struct {
-	PathParams TeamsUpdateLegacyPathParams
-	Request    TeamsUpdateLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsUpdateLegacyRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsUpdateLegacyResponse struct {

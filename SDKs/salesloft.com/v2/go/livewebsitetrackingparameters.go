@@ -35,7 +35,7 @@ func newLiveWebsiteTrackingParameters(defaultClient, securityClient HTTPClient, 
 
 // PostV2LiveWebsiteTrackingParametersJSON - Create an Live Website Tracking Parameter
 // Creates a Live Website Tracking parameter to identify a person
-func (s *liveWebsiteTrackingParameters) PostV2LiveWebsiteTrackingParametersJSON(ctx context.Context, request operations.PostV2LiveWebsiteTrackingParametersJSONRequest) (*operations.PostV2LiveWebsiteTrackingParametersJSONResponse, error) {
+func (s *liveWebsiteTrackingParameters) PostV2LiveWebsiteTrackingParametersJSON(ctx context.Context, request operations.PostV2LiveWebsiteTrackingParametersJSONRequestBody) (*operations.PostV2LiveWebsiteTrackingParametersJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/live_website_tracking_parameters.json"
 

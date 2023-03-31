@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type RegisterForRealtimeAPIPostJSONRequest struct {
-	Request shared.RegisterRealtimeAPIData `request:"mediaType=application/json"`
-}
 
 type RegisterForRealtimeAPIPostJSONResponse struct {
 	ContentType string

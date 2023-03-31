@@ -8,17 +8,12 @@ import (
 )
 
 type GetDellSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetDellSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetDellSwitchSnmpConfigRequest struct {
-	PathParams GetDellSwitchSnmpConfigPathParams
-	Security   GetDellSwitchSnmpConfigSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetDellSwitchSnmpConfigResponse struct {

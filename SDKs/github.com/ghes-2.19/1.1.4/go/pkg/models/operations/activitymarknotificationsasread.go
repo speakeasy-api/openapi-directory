@@ -15,10 +15,6 @@ type ActivityMarkNotificationsAsReadRequestBody struct {
 	Read *bool `json:"read,omitempty"`
 }
 
-type ActivityMarkNotificationsAsReadRequest struct {
-	Request *ActivityMarkNotificationsAsReadRequestBody `request:"mediaType=application/json"`
-}
-
 // ActivityMarkNotificationsAsRead202ApplicationJSON - Response
 type ActivityMarkNotificationsAsRead202ApplicationJSON struct {
 	Message *string `json:"message,omitempty"`

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolMqttGetConfigPathParams struct {
+type ProtocolMqttGetConfigRequest struct {
 	// Agent to show the MQTT configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttGetConfigRequest struct {
-	PathParams ProtocolMqttGetConfigPathParams
 }
 
 type ProtocolMqttGetConfigResponse struct {

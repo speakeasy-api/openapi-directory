@@ -29,13 +29,9 @@ func (e *HooksGetActionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HooksGetQueryParams struct {
+type HooksGetRequest struct {
 	// Determines the action to execute.
 	Action HooksGetActionEnum `queryParam:"style=form,explode=true,name=action"`
-}
-
-type HooksGetRequest struct {
-	QueryParams HooksGetQueryParams
 }
 
 type HooksGet200ApplicationJSONHooks struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InviteUserRequest struct {
-	// Details of User to invite
-	Request shared.InviteUserRequest `request:"mediaType=application/json"`
-}
-
 type InviteUserResponse struct {
 	ContentType string
 	StatusCode  int

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteTextTrackSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteTextTrackPathParams struct {
+type DeleteTextTrackRequest struct {
 	// The ID of the text track.
 	TexttrackID float64 `pathParam:"style=simple,explode=false,name=texttrack_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteTextTrackRequest struct {
-	PathParams DeleteTextTrackPathParams
-	Security   DeleteTextTrackSecurity
 }
 
 type DeleteTextTrackResponse struct {

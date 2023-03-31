@@ -3,34 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AddApplicationCloudWatchLoggingOptionRequest(
-    headers=operations.AddApplicationCloudWatchLoggingOptionHeaders(
-        x_amz_algorithm="quia",
-        x_amz_content_sha256="earum",
-        x_amz_credential="a",
-        x_amz_date="alias",
-        x_amz_security_token="culpa",
-        x_amz_signature="rerum",
-        x_amz_signed_headers="maxime",
-        x_amz_target="KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
-    ),
-    request=shared.AddApplicationCloudWatchLoggingOptionRequest(
-        application_name="omnis",
+    add_application_cloud_watch_logging_option_request=shared.AddApplicationCloudWatchLoggingOptionRequest(
+        application_name="corrupti",
         cloud_watch_logging_option=shared.CloudWatchLoggingOption(
-            log_stream_arn="eos",
-            role_arn="iusto",
+            log_stream_arn="provident",
+            role_arn="distinctio",
         ),
-        current_application_version_id=8230610447774493355,
+        current_application_version_id=844266,
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
 )
     
 res = s.add_application_cloud_watch_logging_option(req)

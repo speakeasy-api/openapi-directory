@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostApplicationsRequest struct {
-	Request *shared.ApplicationWriteV1 `request:"mediaType=application/json"`
-}
-
 // PostApplications200ApplicationJSON - OK
 type PostApplications200ApplicationJSON struct {
 	// An application is a set of information submitted by a producer to institutions in order to get quotes.

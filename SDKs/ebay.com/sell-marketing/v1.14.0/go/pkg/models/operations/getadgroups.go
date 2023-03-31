@@ -8,27 +8,18 @@ import (
 )
 
 type GetAdGroupsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAdGroupsPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
-}
-
-type GetAdGroupsQueryParams struct {
+type GetAdGroupsRequest struct {
 	// A comma-separated list of ad group statuses. The results will be filtered to only include the given statuses of the ad group.<br /><br />The results might not include these ad groups if other search conditions exclude them.
 	AdGroupStatus *string `queryParam:"style=form,explode=true,name=ad_group_status"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 	// The number of results, from the current result set, to be returned in a single page.
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// The number of results that will be skipped in the result set. This is used with the <b>limit</b> field to control the pagination of the output.<br /><br />For example, if the <b>offset</b> is set to <code>0</code> and the <b>limit</b> is set to <code>10</code>, the method will retrieve items 1 through 10 from the list of items returned. If the <b>offset</b> is set to <code>10</code> and the <b>limit</b> is set to <code>10</code>, the method will retrieve items 11 through 20 from the list of items returned.<br><br><b>Default</b>: <code>0</code>
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetAdGroupsRequest struct {
-	PathParams  GetAdGroupsPathParams
-	QueryParams GetAdGroupsQueryParams
-	Security    GetAdGroupsSecurity
 }
 
 type GetAdGroupsResponse struct {

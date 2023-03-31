@@ -32,20 +32,20 @@ func newFloodlightConfigurations(defaultClient, securityClient HTTPClient, serve
 }
 
 // DfareportingFloodlightConfigurationsGet - Gets one floodlight configuration by ID.
-func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsGet(ctx context.Context, request operations.DfareportingFloodlightConfigurationsGetRequest) (*operations.DfareportingFloodlightConfigurationsGetResponse, error) {
+func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsGet(ctx context.Context, request operations.DfareportingFloodlightConfigurationsGetRequest, security operations.DfareportingFloodlightConfigurationsGetSecurity) (*operations.DfareportingFloodlightConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsGet(ctx c
 }
 
 // DfareportingFloodlightConfigurationsList - Retrieves a list of floodlight configurations, possibly filtered.
-func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsList(ctx context.Context, request operations.DfareportingFloodlightConfigurationsListRequest) (*operations.DfareportingFloodlightConfigurationsListResponse, error) {
+func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsList(ctx context.Context, request operations.DfareportingFloodlightConfigurationsListRequest, security operations.DfareportingFloodlightConfigurationsListSecurity) (*operations.DfareportingFloodlightConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsList(ctx 
 }
 
 // DfareportingFloodlightConfigurationsPatch - Updates an existing floodlight configuration. This method supports patch semantics.
-func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx context.Context, request operations.DfareportingFloodlightConfigurationsPatchRequest) (*operations.DfareportingFloodlightConfigurationsPatchResponse, error) {
+func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx context.Context, request operations.DfareportingFloodlightConfigurationsPatchRequest, security operations.DfareportingFloodlightConfigurationsPatchSecurity) (*operations.DfareportingFloodlightConfigurationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FloodlightConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx
 }
 
 // DfareportingFloodlightConfigurationsUpdate - Updates an existing floodlight configuration.
-func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsUpdate(ctx context.Context, request operations.DfareportingFloodlightConfigurationsUpdateRequest) (*operations.DfareportingFloodlightConfigurationsUpdateResponse, error) {
+func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsUpdate(ctx context.Context, request operations.DfareportingFloodlightConfigurationsUpdateRequest, security operations.DfareportingFloodlightConfigurationsUpdateSecurity) (*operations.DfareportingFloodlightConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FloodlightConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsUpdate(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

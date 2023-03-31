@@ -44,10 +44,6 @@ type ApplyYaraRulesRequestBody struct {
 	Rules               []string                                          `multipartForm:"name=rules"`
 }
 
-type ApplyYaraRulesRequest struct {
-	Request ApplyYaraRulesRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // ApplyYaraRules200Wildcard - Yara rules
 type ApplyYaraRules200Wildcard struct {
 	Result *shared.ApplyYaraRule

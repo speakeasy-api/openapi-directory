@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetV2BulkJobsQueryParams struct {
+type GetV2BulkJobsRequest struct {
 	// Filter by id using comparison operators. Only supports greater than (gt) comparison (i.e. id[gt]=123)
 	ID map[string]interface{} `queryParam:"style=form,explode=true,name=id"`
 	// How many records to show per page in the range [1, 100]. Defaults to 25
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The state of the bulk job. Accepts multiple states. Each state must be one of: open, executing, done
 	State []string `queryParam:"style=form,explode=false,name=state"`
-}
-
-type GetV2BulkJobsRequest struct {
-	QueryParams GetV2BulkJobsQueryParams
 }
 
 type GetV2BulkJobsResponse struct {

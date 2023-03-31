@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCountriesRequest{
-        QueryParams: operations.GetCountriesQueryParams{
-            MarketID: "corrupti",
-            Order: "descending",
-            RegionName: "distinctio",
-            RegionTypeID: 844266,
-            Sort: "label",
-        },
+        MarketID: "corrupti",
+        Order: "descending",
+        RegionName: "distinctio",
+        RegionTypeID: 844266,
+        Sort: "label",
     }
 
     ctx := context.Background()

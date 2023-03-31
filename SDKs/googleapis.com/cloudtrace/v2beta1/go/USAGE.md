@@ -14,42 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudtraceProjectsTraceSinksCreateRequest{
-        Security: operations.CloudtraceProjectsTraceSinksCreateSecurity{
-            Option1: &operations.CloudtraceProjectsTraceSinksCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.CloudtraceProjectsTraceSinksCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudtraceProjectsTraceSinksCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.TraceSinkInput{
-            Name: "suscipit",
+        DollarXgafv: "2",
+        TraceSinkInput: &shared.TraceSinkInput{
+            Name: "provident",
             OutputConfig: &shared.OutputConfig{
-                Destination: "iure",
+                Destination: "distinctio",
             },
         },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        Parent: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.CloudtraceProjectsTraceSinksCreate(ctx, req)
+    res, err := s.Projects.CloudtraceProjectsTraceSinksCreate(ctx, req, operations.CloudtraceProjectsTraceSinksCreateSecurity{
+        Option1: &operations.CloudtraceProjectsTraceSinksCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

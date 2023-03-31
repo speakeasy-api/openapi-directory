@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListCallLogsMetricsQueryParams struct {
+type ListCallLogsMetricsRequest struct {
 	// Start date for the report in `yyyy-mm-dd` format. Specify a 30 day range using the `from` and `to` parameters as the response provides a maximum of a month worth of data per API request.
 	From *string `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -26,10 +26,6 @@ type ListCallLogsMetricsQueryParams struct {
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
 	// End date for the report in `yyyy-mm-dd` format.
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ListCallLogsMetricsRequest struct {
-	QueryParams ListCallLogsMetricsQueryParams
 }
 
 // ListCallLogsMetrics200ApplicationXMLCallLogsCallee - Callee object contains information of the calee.

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05PatientsSmsOnNotifyJSONHeaders struct {
+type PostV05PatientsSmsOnNotifyJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization                 string                               `header:"style=simple,explode=false,name=Authorization"`
+	PatientSMSNotifcationResponse shared.PatientSMSNotifcationResponse `request:"mediaType=application/json"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
-}
-
-type PostV05PatientsSmsOnNotifyJSONRequest struct {
-	Headers PostV05PatientsSmsOnNotifyJSONHeaders
-	Request shared.PatientSMSNotifcationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05PatientsSmsOnNotifyJSONResponse struct {

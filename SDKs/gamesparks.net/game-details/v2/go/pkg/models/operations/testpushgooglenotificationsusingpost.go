@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestPushGoogleNotificationsUsingPOSTPathParams struct {
+type TestPushGoogleNotificationsUsingPOSTRequest struct {
+	// messageDetails
+	PushNotificationTestModel shared.PushNotificationTestModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type TestPushGoogleNotificationsUsingPOSTRequest struct {
-	PathParams TestPushGoogleNotificationsUsingPOSTPathParams
-	// messageDetails
-	Request shared.PushNotificationTestModel `request:"mediaType=application/json"`
 }
 
 type TestPushGoogleNotificationsUsingPOSTResponse struct {

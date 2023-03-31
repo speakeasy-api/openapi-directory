@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoThumbnailPathParams struct {
+type GetVideoThumbnailRequest struct {
 	// The ID of the picture.
 	PictureID float64 `pathParam:"style=simple,explode=false,name=picture_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVideoThumbnailRequest struct {
-	PathParams GetVideoThumbnailPathParams
 }
 
 type GetVideoThumbnailResponse struct {

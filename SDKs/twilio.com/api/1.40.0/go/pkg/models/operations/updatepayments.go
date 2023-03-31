@@ -12,16 +12,8 @@ var UpdatePaymentsServerList = []string{
 }
 
 type UpdatePaymentsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdatePaymentsPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will update the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the call that will update the resource. This should be the same call sid that was used to create payments resource.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The SID of Payments session that needs to be updated.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdatePaymentsUpdatePaymentsRequest struct {
@@ -34,10 +26,13 @@ type UpdatePaymentsUpdatePaymentsRequest struct {
 }
 
 type UpdatePaymentsRequest struct {
-	PathParams UpdatePaymentsPathParams
-	Request    *UpdatePaymentsUpdatePaymentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdatePaymentsSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will update the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the call that will update the resource. This should be the same call sid that was used to create payments resource.
+	CallSid     string                               `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdatePaymentsUpdatePaymentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of Payments session that needs to be updated.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdatePaymentsResponse struct {

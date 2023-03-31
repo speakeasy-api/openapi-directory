@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResultsReadPathParams struct {
+type ResultsReadRequest struct {
 	// Id of the result_file for which the result_file_url is generated.
 	ResultFileID string `pathParam:"style=simple,explode=false,name=result_file_id"`
-}
-
-type ResultsReadRequest struct {
-	PathParams ResultsReadPathParams
 }
 
 type ResultsReadResponse struct {

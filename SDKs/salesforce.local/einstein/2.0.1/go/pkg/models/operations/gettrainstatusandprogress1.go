@@ -8,16 +8,11 @@ import (
 )
 
 type GetTrainStatusAndProgress1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTrainStatusAndProgress1PathParams struct {
-	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTrainStatusAndProgress1Request struct {
-	PathParams GetTrainStatusAndProgress1PathParams
-	Security   GetTrainStatusAndProgress1Security
+	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
 }
 
 type GetTrainStatusAndProgress1Response struct {

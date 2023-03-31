@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientRuntimeConnectPathParams struct {
+type ProtocolMqttClientRuntimeConnectRequest struct {
 	// Agent to set MQTT behavior
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttClientRuntimeConnectRequest struct {
-	PathParams ProtocolMqttClientRuntimeConnectPathParams
 }
 
 type ProtocolMqttClientRuntimeConnectResponse struct {

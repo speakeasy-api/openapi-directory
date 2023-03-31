@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementAccountsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementAccountsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementAccountsListSecurity struct {
@@ -22,7 +22,7 @@ type AnalyticsManagementAccountsListSecurity struct {
 	Option2 *AnalyticsManagementAccountsListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementAccountsListQueryParams struct {
+type AnalyticsManagementAccountsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -41,11 +41,6 @@ type AnalyticsManagementAccountsListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementAccountsListRequest struct {
-	QueryParams AnalyticsManagementAccountsListQueryParams
-	Security    AnalyticsManagementAccountsListSecurity
 }
 
 type AnalyticsManagementAccountsListResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1AdminReportsIDAssignToSelfSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AdminReportsIDAssignToSelfPathParams struct {
-	// ID of the report
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AdminReportsIDAssignToSelfRequest struct {
-	PathParams PostAPIV1AdminReportsIDAssignToSelfPathParams
-	Security   PostAPIV1AdminReportsIDAssignToSelfSecurity
+	// ID of the report
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AdminReportsIDAssignToSelfResponse struct {

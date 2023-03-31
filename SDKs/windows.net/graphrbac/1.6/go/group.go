@@ -34,9 +34,9 @@ func newGroup(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GroupsAddMember - Add a member to a group.
 func (s *group) GroupsAddMember(ctx context.Context, request operations.GroupsAddMemberRequest) (*operations.GroupsAddMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{groupObjectId}/$links/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{groupObjectId}/$links/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *group) GroupsAddMember(ctx context.Context, request operations.GroupsAd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -100,9 +100,9 @@ func (s *group) GroupsAddMember(ctx context.Context, request operations.GroupsAd
 // GroupsCreate - Create a group in the directory.
 func (s *group) GroupsCreate(ctx context.Context, request operations.GroupsCreateRequest) (*operations.GroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -117,7 +117,7 @@ func (s *group) GroupsCreate(ctx context.Context, request operations.GroupsCreat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,14 +182,14 @@ func (s *group) GroupsCreate(ctx context.Context, request operations.GroupsCreat
 // GroupsDelete - Delete a group from the directory.
 func (s *group) GroupsDelete(ctx context.Context, request operations.GroupsDeleteRequest) (*operations.GroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -238,14 +238,14 @@ func (s *group) GroupsDelete(ctx context.Context, request operations.GroupsDelet
 // GroupsGet - Gets group information from the directory.
 func (s *group) GroupsGet(ctx context.Context, request operations.GroupsGetRequest) (*operations.GroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -310,14 +310,14 @@ func (s *group) GroupsGet(ctx context.Context, request operations.GroupsGetReque
 // GroupsGetGroupMembers - Gets the members of a group.
 func (s *group) GroupsGetGroupMembers(ctx context.Context, request operations.GroupsGetGroupMembersRequest) (*operations.GroupsGetGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -382,9 +382,9 @@ func (s *group) GroupsGetGroupMembers(ctx context.Context, request operations.Gr
 // GroupsGetMemberGroups - Gets a collection of object IDs of groups of which the specified group is a member.
 func (s *group) GroupsGetMemberGroups(ctx context.Context, request operations.GroupsGetMemberGroupsRequest) (*operations.GroupsGetMemberGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/getMemberGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/getMemberGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -399,7 +399,7 @@ func (s *group) GroupsGetMemberGroups(ctx context.Context, request operations.Gr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -464,9 +464,9 @@ func (s *group) GroupsGetMemberGroups(ctx context.Context, request operations.Gr
 // GroupsIsMemberOf - Checks whether the specified user, group, contact, or service principal is a direct or transitive member of the specified group.
 func (s *group) GroupsIsMemberOf(ctx context.Context, request operations.GroupsIsMemberOfRequest) (*operations.GroupsIsMemberOfResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/isMemberOf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/isMemberOf", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -481,7 +481,7 @@ func (s *group) GroupsIsMemberOf(ctx context.Context, request operations.GroupsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -546,14 +546,14 @@ func (s *group) GroupsIsMemberOf(ctx context.Context, request operations.GroupsI
 // GroupsList - Gets list of groups for the current tenant.
 func (s *group) GroupsList(ctx context.Context, request operations.GroupsListRequest) (*operations.GroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -618,14 +618,14 @@ func (s *group) GroupsList(ctx context.Context, request operations.GroupsListReq
 // GroupsRemoveMember - Remove a member from a group.
 func (s *group) GroupsRemoveMember(ctx context.Context, request operations.GroupsRemoveMemberRequest) (*operations.GroupsRemoveMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{groupObjectId}/$links/members/{memberObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{groupObjectId}/$links/members/{memberObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

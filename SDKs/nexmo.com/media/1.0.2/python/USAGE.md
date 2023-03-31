@@ -4,6 +4,7 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
+
     
 res = s.delete_a_media_item()
 

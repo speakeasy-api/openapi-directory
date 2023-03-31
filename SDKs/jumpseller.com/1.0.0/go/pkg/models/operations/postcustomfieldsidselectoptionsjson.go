@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCustomFieldsIDSelectOptionsJSONPathParams struct {
-	// Automatically added
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostCustomFieldsIDSelectOptionsJSONQueryParams struct {
+type PostCustomFieldsIDSelectOptionsJSONRequest struct {
+	// Custom Field Select Option parameters.
+	CustomFieldSelectOptionEdit shared.CustomFieldSelectOptionEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Automatically added
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostCustomFieldsIDSelectOptionsJSONRequest struct {
-	PathParams  PostCustomFieldsIDSelectOptionsJSONPathParams
-	QueryParams PostCustomFieldsIDSelectOptionsJSONQueryParams
-	// Custom Field Select Option parameters.
-	Request shared.CustomFieldSelectOptionEdit `request:"mediaType=application/json"`
 }
 
 type PostCustomFieldsIDSelectOptionsJSONResponse struct {

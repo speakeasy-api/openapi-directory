@@ -8,18 +8,14 @@ import (
 )
 
 type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ManagedidentitiesProjectsLocationsGlobalPeeringsCreatePathParams struct {
-	// Required. Resource project name and location using the form: `projects/{project_id}/locations/global`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateQueryParams struct {
+type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PeeringInput *shared.PeeringInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Resource project name and location using the form: `projects/{project_id}/locations/global`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Required. Peering Id, unique name to identify peering.
 	PeeringID *string `queryParam:"style=form,explode=true,name=peeringId"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateRequest struct {
-	PathParams  ManagedidentitiesProjectsLocationsGlobalPeeringsCreatePathParams
-	QueryParams ManagedidentitiesProjectsLocationsGlobalPeeringsCreateQueryParams
-	Request     *shared.PeeringInput `request:"mediaType=application/json"`
-	Security    ManagedidentitiesProjectsLocationsGlobalPeeringsCreateSecurity
 }
 
 type ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse struct {

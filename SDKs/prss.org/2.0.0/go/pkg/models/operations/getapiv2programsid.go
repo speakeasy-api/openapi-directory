@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV2ProgramsIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2ProgramsIDPathParams struct {
-	// The ID of the program to operate on.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2ProgramsIDRequest struct {
-	PathParams GetAPIV2ProgramsIDPathParams
-	Security   GetAPIV2ProgramsIDSecurity
+	// The ID of the program to operate on.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV2ProgramsIDResponse struct {

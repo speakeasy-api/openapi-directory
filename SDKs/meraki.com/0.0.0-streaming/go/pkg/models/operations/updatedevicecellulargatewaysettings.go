@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCellularGatewaySettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceCellularGatewaySettingsRequestBodyFixedIPAssignments struct {
 	// The IP address you want to assign to a specific server or device
 	IP string `json:"ip"`
@@ -36,8 +32,8 @@ type UpdateDeviceCellularGatewaySettingsRequestBody struct {
 }
 
 type UpdateDeviceCellularGatewaySettingsRequest struct {
-	PathParams UpdateDeviceCellularGatewaySettingsPathParams
-	Request    *UpdateDeviceCellularGatewaySettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCellularGatewaySettingsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                          `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCellularGatewaySettingsResponse struct {

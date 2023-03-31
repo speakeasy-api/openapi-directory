@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETHackathonsComingFormatQueryParams struct {
+type GETHackathonsComingFormatRequest struct {
 	// Specify the page of coming hackathons.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GETHackathonsComingFormatRequest struct {
-	QueryParams GETHackathonsComingFormatQueryParams
 }
 
 type GETHackathonsComingFormatResponse struct {

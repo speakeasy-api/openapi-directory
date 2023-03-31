@@ -33,11 +33,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudresourcemanagerProjectsClearOrgPolicy - Clears a `Policy` from a resource.
-func (s *projects) CloudresourcemanagerProjectsClearOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsClearOrgPolicyRequest) (*operations.CloudresourcemanagerProjectsClearOrgPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsClearOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsClearOrgPolicyRequest, security operations.CloudresourcemanagerProjectsClearOrgPolicySecurity) (*operations.CloudresourcemanagerProjectsClearOrgPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:clearOrgPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:clearOrgPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClearOrgPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *projects) CloudresourcemanagerProjectsClearOrgPolicy(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *projects) CloudresourcemanagerProjectsClearOrgPolicy(ctx context.Contex
 }
 
 // CloudresourcemanagerProjectsCreate - Request that a new Project be created. The result is an Operation which can be used to track the creation process. This process usually takes a few seconds, but can sometimes take much longer. The tracking Operation is automatically deleted after a few hours, so there is no need to call DeleteOperation. Authorization requires the Google IAM permission `resourcemanager.projects.create` on the specified parent for the new project. The parent is identified by a specified ResourceId, which must include both an ID and a type, such as organization. This method does not associate the new project with a billing account. You can set or update the billing account associated with a project using the [`projects.updateBillingInfo`] (/billing/reference/rest/v1/projects/updateBillingInfo) method.
-func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, request operations.CloudresourcemanagerProjectsCreateRequest) (*operations.CloudresourcemanagerProjectsCreateResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, request operations.CloudresourcemanagerProjectsCreateRequest, security operations.CloudresourcemanagerProjectsCreateSecurity) (*operations.CloudresourcemanagerProjectsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Project", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, reque
 }
 
 // CloudresourcemanagerProjectsDelete - Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts at an unspecified time, at which point the Project is no longer accessible. Until the deletion completes, you can check the lifecycle state checked by retrieving the Project with GetProject, and the Project remains visible to ListProjects. However, you cannot update the project. After the deletion completes, the Project is not retrievable by the GetProject and ListProjects methods. The caller must have delete permissions for this Project.
-func (s *projects) CloudresourcemanagerProjectsDelete(ctx context.Context, request operations.CloudresourcemanagerProjectsDeleteRequest) (*operations.CloudresourcemanagerProjectsDeleteResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsDelete(ctx context.Context, request operations.CloudresourcemanagerProjectsDeleteRequest, security operations.CloudresourcemanagerProjectsDeleteSecurity) (*operations.CloudresourcemanagerProjectsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *projects) CloudresourcemanagerProjectsDelete(ctx context.Context, reque
 }
 
 // CloudresourcemanagerProjectsGet - Retrieves the Project identified by the specified `project_id` (for example, `my-project-123`). The caller must have read permissions for this Project.
-func (s *projects) CloudresourcemanagerProjectsGet(ctx context.Context, request operations.CloudresourcemanagerProjectsGetRequest) (*operations.CloudresourcemanagerProjectsGetResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsGet(ctx context.Context, request operations.CloudresourcemanagerProjectsGetRequest, security operations.CloudresourcemanagerProjectsGetSecurity) (*operations.CloudresourcemanagerProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *projects) CloudresourcemanagerProjectsGet(ctx context.Context, request 
 }
 
 // CloudresourcemanagerProjectsGetAncestry - Gets a list of ancestors in the resource hierarchy for the Project identified by the specified `project_id` (for example, `my-project-123`). The caller must have read permissions for this Project.
-func (s *projects) CloudresourcemanagerProjectsGetAncestry(ctx context.Context, request operations.CloudresourcemanagerProjectsGetAncestryRequest) (*operations.CloudresourcemanagerProjectsGetAncestryResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsGetAncestry(ctx context.Context, request operations.CloudresourcemanagerProjectsGetAncestryRequest, security operations.CloudresourcemanagerProjectsGetAncestrySecurity) (*operations.CloudresourcemanagerProjectsGetAncestryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:getAncestry", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:getAncestry", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *projects) CloudresourcemanagerProjectsGetAncestry(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *projects) CloudresourcemanagerProjectsGetAncestry(ctx context.Context, 
 }
 
 // CloudresourcemanagerProjectsGetEffectiveOrgPolicy - Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
-func (s *projects) CloudresourcemanagerProjectsGetEffectiveOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetEffectiveOrgPolicyRequest) (*operations.CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsGetEffectiveOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetEffectiveOrgPolicyRequest, security operations.CloudresourcemanagerProjectsGetEffectiveOrgPolicySecurity) (*operations.CloudresourcemanagerProjectsGetEffectiveOrgPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getEffectiveOrgPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getEffectiveOrgPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetEffectiveOrgPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *projects) CloudresourcemanagerProjectsGetEffectiveOrgPolicy(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,11 +349,11 @@ func (s *projects) CloudresourcemanagerProjectsGetEffectiveOrgPolicy(ctx context
 }
 
 // CloudresourcemanagerProjectsGetIamPolicy - Returns the IAM access control policy for the specified Project. Permission is denied if the policy or the resource does not exist. Authorization requires the Google IAM permission `resourcemanager.projects.getIamPolicy` on the project. For additional information about `resource` (e.g. my-project-id) structure and identification, see [Resource Names](https://cloud.google.com/apis/design/resource_names).
-func (s *projects) CloudresourcemanagerProjectsGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetIamPolicyRequest) (*operations.CloudresourcemanagerProjectsGetIamPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetIamPolicyRequest, security operations.CloudresourcemanagerProjectsGetIamPolicySecurity) (*operations.CloudresourcemanagerProjectsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,11 +365,11 @@ func (s *projects) CloudresourcemanagerProjectsGetIamPolicy(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,11 +404,11 @@ func (s *projects) CloudresourcemanagerProjectsGetIamPolicy(ctx context.Context,
 }
 
 // CloudresourcemanagerProjectsGetOrgPolicy - Gets a `Policy` on a resource. If no `Policy` is set on the resource, a `Policy` is returned with default values including `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to create or update a `Policy` during read-modify-write.
-func (s *projects) CloudresourcemanagerProjectsGetOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetOrgPolicyRequest) (*operations.CloudresourcemanagerProjectsGetOrgPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsGetOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsGetOrgPolicyRequest, security operations.CloudresourcemanagerProjectsGetOrgPolicySecurity) (*operations.CloudresourcemanagerProjectsGetOrgPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getOrgPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getOrgPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetOrgPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -420,11 +420,11 @@ func (s *projects) CloudresourcemanagerProjectsGetOrgPolicy(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,7 +459,7 @@ func (s *projects) CloudresourcemanagerProjectsGetOrgPolicy(ctx context.Context,
 }
 
 // CloudresourcemanagerProjectsList - Lists Projects that the caller has the `resourcemanager.projects.get` permission on and satisfy the specified filter. This method returns Projects in an unspecified order. This method is eventually consistent with project mutations; this means that a newly created project may not appear in the results or recent updates to an existing project may not be reflected in the results. To retrieve the latest state of a project, use the GetProject method. NOTE: If the request filter contains a `parent.type` and `parent.id` and the caller has the `resourcemanager.projects.list` permission on the parent, the results will be drawn from an alternate index which provides more consistent results. In future versions of this API, this List method will be split into List and Search to properly capture the behavioral difference.
-func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request operations.CloudresourcemanagerProjectsListRequest) (*operations.CloudresourcemanagerProjectsListResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request operations.CloudresourcemanagerProjectsListRequest, security operations.CloudresourcemanagerProjectsListSecurity) (*operations.CloudresourcemanagerProjectsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/projects"
 
@@ -468,11 +468,11 @@ func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,11 +507,11 @@ func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request
 }
 
 // CloudresourcemanagerProjectsListAvailableOrgPolicyConstraints - Lists `Constraints` that could be applied on the specified resource.
-func (s *projects) CloudresourcemanagerProjectsListAvailableOrgPolicyConstraints(ctx context.Context, request operations.CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsRequest) (*operations.CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsListAvailableOrgPolicyConstraints(ctx context.Context, request operations.CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsRequest, security operations.CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsSecurity) (*operations.CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:listAvailableOrgPolicyConstraints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:listAvailableOrgPolicyConstraints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListAvailableOrgPolicyConstraintsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,11 +523,11 @@ func (s *projects) CloudresourcemanagerProjectsListAvailableOrgPolicyConstraints
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,11 +562,11 @@ func (s *projects) CloudresourcemanagerProjectsListAvailableOrgPolicyConstraints
 }
 
 // CloudresourcemanagerProjectsListOrgPolicies - Lists all the `Policies` set for a particular resource.
-func (s *projects) CloudresourcemanagerProjectsListOrgPolicies(ctx context.Context, request operations.CloudresourcemanagerProjectsListOrgPoliciesRequest) (*operations.CloudresourcemanagerProjectsListOrgPoliciesResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsListOrgPolicies(ctx context.Context, request operations.CloudresourcemanagerProjectsListOrgPoliciesRequest, security operations.CloudresourcemanagerProjectsListOrgPoliciesSecurity) (*operations.CloudresourcemanagerProjectsListOrgPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:listOrgPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:listOrgPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListOrgPoliciesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -578,11 +578,11 @@ func (s *projects) CloudresourcemanagerProjectsListOrgPolicies(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,11 +617,11 @@ func (s *projects) CloudresourcemanagerProjectsListOrgPolicies(ctx context.Conte
 }
 
 // CloudresourcemanagerProjectsSetIamPolicy - Sets the IAM access control policy for the specified Project. CAUTION: This method will replace the existing policy, and cannot be used to append additional IAM settings. NOTE: Removing service accounts from policies or changing their roles can render services completely inoperable. It is important to understand how the service account is being used before removing or updating its roles. For additional information about `resource` (e.g. my-project-id) structure and identification, see [Resource Names](https://cloud.google.com/apis/design/resource_names). The following constraints apply when using `setIamPolicy()`: + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a `Policy`. + The owner role can be granted to a `user`, `serviceAccount`, or a group that is part of an organization. For example, group@myownpersonaldomain.com could be added as an owner to a project in the myownpersonaldomain.com organization, but not the examplepetstore.com organization. + Service accounts can be made owners of a project directly without any restrictions. However, to be added as an owner, a user must be invited via Cloud Platform console and must accept the invitation. + A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the owner role using the Cloud Platform Console and must explicitly accept the invitation. + You can only grant ownership of a project to a member by using the GCP Console. Inviting a member will deliver an invitation email that they must accept. An invitation email is not generated if you are granting a role other than owner, or if both the member you are inviting and the project are part of your organization. + If the project is not part of an organization, there must be at least one owner who has accepted the Terms of Service (ToS) agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner from the policy will fail. This restriction also applies to legacy projects that no longer have owners who have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is rectified. If the project is part of an organization, you can remove all owners, potentially making the organization inaccessible. Authorization requires the Google IAM permission `resourcemanager.projects.setIamPolicy` on the project
-func (s *projects) CloudresourcemanagerProjectsSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsSetIamPolicyRequest) (*operations.CloudresourcemanagerProjectsSetIamPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsSetIamPolicyRequest, security operations.CloudresourcemanagerProjectsSetIamPolicySecurity) (*operations.CloudresourcemanagerProjectsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -633,11 +633,11 @@ func (s *projects) CloudresourcemanagerProjectsSetIamPolicy(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,11 +672,11 @@ func (s *projects) CloudresourcemanagerProjectsSetIamPolicy(ctx context.Context,
 }
 
 // CloudresourcemanagerProjectsSetOrgPolicy - Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the resource if one does not exist. Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.
-func (s *projects) CloudresourcemanagerProjectsSetOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsSetOrgPolicyRequest) (*operations.CloudresourcemanagerProjectsSetOrgPolicyResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsSetOrgPolicy(ctx context.Context, request operations.CloudresourcemanagerProjectsSetOrgPolicyRequest, security operations.CloudresourcemanagerProjectsSetOrgPolicySecurity) (*operations.CloudresourcemanagerProjectsSetOrgPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setOrgPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setOrgPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetOrgPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -688,11 +688,11 @@ func (s *projects) CloudresourcemanagerProjectsSetOrgPolicy(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -727,11 +727,11 @@ func (s *projects) CloudresourcemanagerProjectsSetOrgPolicy(ctx context.Context,
 }
 
 // CloudresourcemanagerProjectsTestIamPermissions - Returns permissions that a caller has on the specified Project. For additional information about `resource` (e.g. my-project-id) structure and identification, see [Resource Names](https://cloud.google.com/apis/design/resource_names). There are no permissions required for making this API call.
-func (s *projects) CloudresourcemanagerProjectsTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerProjectsTestIamPermissionsRequest) (*operations.CloudresourcemanagerProjectsTestIamPermissionsResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerProjectsTestIamPermissionsRequest, security operations.CloudresourcemanagerProjectsTestIamPermissionsSecurity) (*operations.CloudresourcemanagerProjectsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -743,11 +743,11 @@ func (s *projects) CloudresourcemanagerProjectsTestIamPermissions(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -782,11 +782,11 @@ func (s *projects) CloudresourcemanagerProjectsTestIamPermissions(ctx context.Co
 }
 
 // CloudresourcemanagerProjectsUndelete - Restores the Project identified by the specified `project_id` (for example, `my-project-123`). You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the Project cannot be restored. The caller must have undelete permissions for this Project.
-func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, request operations.CloudresourcemanagerProjectsUndeleteRequest) (*operations.CloudresourcemanagerProjectsUndeleteResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, request operations.CloudresourcemanagerProjectsUndeleteRequest, security operations.CloudresourcemanagerProjectsUndeleteSecurity) (*operations.CloudresourcemanagerProjectsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -798,11 +798,11 @@ func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -837,11 +837,11 @@ func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, req
 }
 
 // CloudresourcemanagerProjectsUpdate - Updates the attributes of the Project identified by the specified `project_id` (for example, `my-project-123`). The caller must have modify permissions for this Project.
-func (s *projects) CloudresourcemanagerProjectsUpdate(ctx context.Context, request operations.CloudresourcemanagerProjectsUpdateRequest) (*operations.CloudresourcemanagerProjectsUpdateResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsUpdate(ctx context.Context, request operations.CloudresourcemanagerProjectsUpdateRequest, security operations.CloudresourcemanagerProjectsUpdateSecurity) (*operations.CloudresourcemanagerProjectsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Project", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -853,11 +853,11 @@ func (s *projects) CloudresourcemanagerProjectsUpdate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

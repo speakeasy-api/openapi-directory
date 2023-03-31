@@ -25,5 +25,4 @@ pkg/models/shared/permission.go
 pkg/models/shared/move.go
 pkg/models/shared/parent.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 USAGE.md

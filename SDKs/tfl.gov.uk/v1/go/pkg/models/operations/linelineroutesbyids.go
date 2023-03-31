@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineLineRoutesByIdsPathParams struct {
-	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 type LineLineRoutesByIdsServiceTypesEnum string
 
 const (
@@ -37,14 +32,11 @@ func (e *LineLineRoutesByIdsServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineLineRoutesByIdsQueryParams struct {
+type LineLineRoutesByIdsRequest struct {
+	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
 	// A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []LineLineRoutesByIdsServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type LineLineRoutesByIdsRequest struct {
-	PathParams  LineLineRoutesByIdsPathParams
-	QueryParams LineLineRoutesByIdsQueryParams
 }
 
 type LineLineRoutesByIdsResponse struct {

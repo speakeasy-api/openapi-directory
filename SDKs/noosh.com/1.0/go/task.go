@@ -36,7 +36,7 @@ func newTask(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Get default task priority list
 func (s *task) TaskPriorityList(ctx context.Context, request operations.TaskPriorityListRequest) (*operations.TaskPriorityListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/defaultTaskPriority", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/defaultTaskPriority", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +189,7 @@ func (s *task) TaskPriorityList(ctx context.Context, request operations.TaskPrio
 // Get custom task types of workgroup level
 func (s *task) GetCustomTaskTypesOfWg(ctx context.Context, request operations.GetCustomTaskTypesOfWgRequest) (*operations.GetCustomTaskTypesOfWgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/customTaskTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/customTaskTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +344,7 @@ func (s *task) GetCustomTaskTypesOfWg(ctx context.Context, request operations.Ge
 // Get default task status list
 func (s *task) GetDefaultTaskStatusList(ctx context.Context, request operations.GetDefaultTaskStatusListRequest) (*operations.GetDefaultTaskStatusListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/defaultTaskStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/defaultTaskStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -497,7 +497,7 @@ func (s *task) GetDefaultTaskStatusList(ctx context.Context, request operations.
 // Get task list of project level
 func (s *task) GetTaskListOfProject(ctx context.Context, request operations.GetTaskListOfProjectRequest) (*operations.GetTaskListOfProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +652,7 @@ func (s *task) GetTaskListOfProject(ctx context.Context, request operations.GetT
 // Get task list of workgroup level
 func (s *task) GetTaskListOfWorkgroup(ctx context.Context, request operations.GetTaskListOfWorkgroupRequest) (*operations.GetTaskListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -807,7 +807,7 @@ func (s *task) GetTaskListOfWorkgroup(ctx context.Context, request operations.Ge
 // Get a sepcific task of project level
 func (s *task) GetTaskOfProject(ctx context.Context, request operations.GetTaskOfProjectRequest) (*operations.GetTaskOfProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks/{task_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks/{task_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -962,7 +962,7 @@ func (s *task) GetTaskOfProject(ctx context.Context, request operations.GetTaskO
 // Get a sepcific task of workgroup level
 func (s *task) GetTaskOfWorkgroup(ctx context.Context, request operations.GetTaskOfWorkgroupRequest) (*operations.GetTaskOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/tasks/{task_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/tasks/{task_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1117,7 +1117,7 @@ func (s *task) GetTaskOfWorkgroup(ctx context.Context, request operations.GetTas
 // Get task types of workgroup level
 func (s *task) GetTaskTypesOfWorkgroup(ctx context.Context, request operations.GetTaskTypesOfWorkgroupRequest) (*operations.GetTaskTypesOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/taskTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/taskTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1272,7 +1272,7 @@ func (s *task) GetTaskTypesOfWorkgroup(ctx context.Context, request operations.G
 // Get custom task status of workgroup level
 func (s *task) GetWgTaskStatusListOfWorkgroup(ctx context.Context, request operations.GetWgTaskStatusListOfWorkgroupRequest) (*operations.GetWgTaskStatusListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/customTaskStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/customTaskStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1427,9 +1427,9 @@ func (s *task) GetWgTaskStatusListOfWorkgroup(ctx context.Context, request opera
 // Create a new task
 func (s *task) PostTaskForProjectJSON(ctx context.Context, request operations.PostTaskForProjectJSONRequest) (*operations.PostTaskForProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskPersistVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1589,9 +1589,9 @@ func (s *task) PostTaskForProjectJSON(ctx context.Context, request operations.Po
 // Create a new task
 func (s *task) PostTaskForProjectRaw(ctx context.Context, request operations.PostTaskForProjectRawRequest) (*operations.PostTaskForProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

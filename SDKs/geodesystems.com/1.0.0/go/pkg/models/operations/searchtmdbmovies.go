@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTmdbmoviesQueryParams struct {
+type SearchTmdbmoviesRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -82,10 +82,6 @@ type SearchTmdbmoviesQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTmdbmoviesRequest struct {
-	QueryParams SearchTmdbmoviesQueryParams
 }
 
 type SearchTmdbmoviesResponse struct {

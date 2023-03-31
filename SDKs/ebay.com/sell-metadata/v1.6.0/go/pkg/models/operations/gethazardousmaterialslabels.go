@@ -8,17 +8,12 @@ import (
 )
 
 type GetHazardousMaterialsLabelsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetHazardousMaterialsLabelsPathParams struct {
-	// A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved.<p><span class="tablenote"><strong>Tip:</strong> See <a href="/api-docs/static/rest-request-components.html#marketpl" >Request components</a> for a list of valid eBay marketplace IDs.</span></p>
-	MarketplaceID string `pathParam:"style=simple,explode=false,name=marketplace_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetHazardousMaterialsLabelsRequest struct {
-	PathParams GetHazardousMaterialsLabelsPathParams
-	Security   GetHazardousMaterialsLabelsSecurity
+	// A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved.<p><span class="tablenote"><strong>Tip:</strong> See <a href="/api-docs/static/rest-request-components.html#marketpl" >Request components</a> for a list of valid eBay marketplace IDs.</span></p>
+	MarketplaceID string `pathParam:"style=simple,explode=false,name=marketplace_id"`
 }
 
 type GetHazardousMaterialsLabelsResponse struct {

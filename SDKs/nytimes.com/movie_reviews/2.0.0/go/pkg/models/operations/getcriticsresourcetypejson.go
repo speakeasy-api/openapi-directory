@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCriticsResourceTypeJSONPathParams struct {
+type GetCriticsResourceTypeJSONRequest struct {
 	// all | full-time | part-time | [reviewer-name]
 	//
 	// Specify all to get all Times reviewers, or specify full-time or part-time to get that subset. Specify a reviewer's name to get details about a particular reviewer.
 	//
 	ResourceType string `pathParam:"style=simple,explode=false,name=resource-type"`
-}
-
-type GetCriticsResourceTypeJSONRequest struct {
-	PathParams GetCriticsResourceTypeJSONPathParams
 }
 
 // GetCriticsResourceTypeJSON200ApplicationJSON - An array of Movie Critics

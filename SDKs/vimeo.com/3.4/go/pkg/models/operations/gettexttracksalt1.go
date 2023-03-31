@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTextTracksAlt1PathParams struct {
+type GetTextTracksAlt1Request struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetTextTracksAlt1Request struct {
-	PathParams GetTextTracksAlt1PathParams
 }
 
 type GetTextTracksAlt1Response struct {

@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type RemoveNetworkSwitchStackPathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
 type RemoveNetworkSwitchStackRequestBody struct {
 	// The serial of the switch to be removed
 	Serial string `json:"serial"`
 }
 
 type RemoveNetworkSwitchStackRequest struct {
-	PathParams RemoveNetworkSwitchStackPathParams
-	Request    RemoveNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	RequestBody   RemoveNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                              `pathParam:"style=simple,explode=false,name=networkId"`
+	SwitchStackID string                              `pathParam:"style=simple,explode=false,name=switchStackId"`
 }
 
 type RemoveNetworkSwitchStackResponse struct {

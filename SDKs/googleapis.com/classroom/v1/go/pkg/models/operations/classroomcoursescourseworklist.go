@@ -10,23 +10,23 @@ import (
 )
 
 type ClassroomCoursesCourseWorkListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkListSecurity struct {
@@ -34,11 +34,6 @@ type ClassroomCoursesCourseWorkListSecurity struct {
 	Option2 *ClassroomCoursesCourseWorkListSecurityOption2 `security:"option"`
 	Option3 *ClassroomCoursesCourseWorkListSecurityOption3 `security:"option"`
 	Option4 *ClassroomCoursesCourseWorkListSecurityOption4 `security:"option"`
-}
-
-type ClassroomCoursesCourseWorkListPathParams struct {
-	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 }
 
 type ClassroomCoursesCourseWorkListCourseWorkStatesEnum string
@@ -70,7 +65,7 @@ func (e *ClassroomCoursesCourseWorkListCourseWorkStatesEnum) UnmarshalJSON(data 
 	}
 }
 
-type ClassroomCoursesCourseWorkListQueryParams struct {
+type ClassroomCoursesCourseWorkListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -79,6 +74,8 @@ type ClassroomCoursesCourseWorkListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 	// Restriction on the work status to return. Only courseWork that matches is returned. If unspecified, items with a work status of `PUBLISHED` is returned.
 	CourseWorkStates []ClassroomCoursesCourseWorkListCourseWorkStatesEnum `queryParam:"style=form,explode=true,name=courseWorkStates"`
 	// Selector specifying which fields to include in a partial response.
@@ -101,12 +98,6 @@ type ClassroomCoursesCourseWorkListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesCourseWorkListRequest struct {
-	PathParams  ClassroomCoursesCourseWorkListPathParams
-	QueryParams ClassroomCoursesCourseWorkListQueryParams
-	Security    ClassroomCoursesCourseWorkListSecurity
 }
 
 type ClassroomCoursesCourseWorkListResponse struct {

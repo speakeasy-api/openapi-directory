@@ -10,35 +10,24 @@ import (
 )
 
 type StorageObjectsCopySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsCopySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsCopySecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsCopySecurity struct {
 	Option1 *StorageObjectsCopySecurityOption1 `security:"option"`
 	Option2 *StorageObjectsCopySecurityOption2 `security:"option"`
 	Option3 *StorageObjectsCopySecurityOption3 `security:"option"`
-}
-
-type StorageObjectsCopyPathParams struct {
-	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
-	// Name of the new object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any.
-	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
-	// Name of the bucket in which to find the source object.
-	SourceBucket string `pathParam:"style=simple,explode=false,name=sourceBucket"`
-	// Name of the source object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	SourceObject string `pathParam:"style=simple,explode=false,name=sourceObject"`
 }
 
 // StorageObjectsCopyDestinationPredefinedACLEnum - Apply a predefined set of access controls to the destination object.
@@ -101,11 +90,16 @@ func (e *StorageObjectsCopyProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsCopyQueryParams struct {
+type StorageObjectsCopyRequest struct {
+	Object *shared.Object `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
 	// Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.
 	DestinationKmsKeyName *string `queryParam:"style=form,explode=true,name=destinationKmsKeyName"`
+	// Name of the new object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any.
+	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
 	// Apply a predefined set of access controls to the destination object.
 	DestinationPredefinedACL *StorageObjectsCopyDestinationPredefinedACLEnum `queryParam:"style=form,explode=true,name=destinationPredefinedAcl"`
 	// Selector specifying which fields to include in a partial response.
@@ -136,21 +130,18 @@ type StorageObjectsCopyQueryParams struct {
 	Projection *StorageObjectsCopyProjectionEnum `queryParam:"style=form,explode=true,name=projection"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Name of the bucket in which to find the source object.
+	SourceBucket string `pathParam:"style=simple,explode=false,name=sourceBucket"`
 	// If present, selects a specific revision of the source object (as opposed to the latest version, the default).
 	SourceGeneration *string `queryParam:"style=form,explode=true,name=sourceGeneration"`
+	// Name of the source object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	SourceObject string `pathParam:"style=simple,explode=false,name=sourceObject"`
 	// Upload protocol for media (e.g. "media", "multipart", "resumable").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsCopyRequest struct {
-	PathParams  StorageObjectsCopyPathParams
-	QueryParams StorageObjectsCopyQueryParams
-	Request     *shared.Object `request:"mediaType=application/json"`
-	Security    StorageObjectsCopySecurity
 }
 
 type StorageObjectsCopyResponse struct {

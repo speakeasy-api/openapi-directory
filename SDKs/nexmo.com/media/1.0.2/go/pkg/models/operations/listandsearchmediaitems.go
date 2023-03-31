@@ -33,7 +33,7 @@ func (e *ListAndSearchMediaItemsOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAndSearchMediaItemsQueryParams struct {
+type ListAndSearchMediaItemsRequest struct {
 	// Retrieve results created on or before this timestamp.
 	EndTime *string `queryParam:"style=form,explode=true,name=end_time"`
 	// The order of search results.
@@ -44,10 +44,6 @@ type ListAndSearchMediaItemsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Retrieve results created on or after this timestap.
 	StartTime *string `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListAndSearchMediaItemsRequest struct {
-	QueryParams ListAndSearchMediaItemsQueryParams
 }
 
 // ListAndSearchMediaItems200ApplicationJSONEmbedded - A collection of media items. See [retrieve a media item](#retrieve-a-media-item) for a description of the returned fields

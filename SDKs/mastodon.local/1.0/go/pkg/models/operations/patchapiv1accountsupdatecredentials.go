@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAPIV1AccountsUpdateCredentialsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PatchAPIV1AccountsUpdateCredentialsRequestBodySource struct {
@@ -38,11 +38,6 @@ type PatchAPIV1AccountsUpdateCredentialsRequestBody struct {
 	// The account bio.
 	Note   *string
 	Source *PatchAPIV1AccountsUpdateCredentialsRequestBodySource
-}
-
-type PatchAPIV1AccountsUpdateCredentialsRequest struct {
-	Request  []byte `request:"mediaType=application/form-data"`
-	Security PatchAPIV1AccountsUpdateCredentialsSecurity
 }
 
 type PatchAPIV1AccountsUpdateCredentialsResponse struct {

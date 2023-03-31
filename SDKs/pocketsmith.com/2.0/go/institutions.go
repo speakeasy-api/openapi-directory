@@ -35,14 +35,14 @@ func newInstitutions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes an institution and all data within. Alternatively, another institution can be provided to merge the data into to avoid losing it.
 func (s *institutions) DeleteInstitutionsID(ctx context.Context, request operations.DeleteInstitutionsIDRequest) (*operations.DeleteInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *institutions) DeleteInstitutionsID(ctx context.Context, request operati
 // Gets an institution by its ID.
 func (s *institutions) GetInstitutionsID(ctx context.Context, request operations.GetInstitutionsIDRequest) (*operations.GetInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *institutions) GetInstitutionsID(ctx context.Context, request operations
 // Lists all the institutions belonging to the user.
 func (s *institutions) GetUsersIDInstitutions(ctx context.Context, request operations.GetUsersIDInstitutionsRequest) (*operations.GetUsersIDInstitutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,9 +203,9 @@ func (s *institutions) GetUsersIDInstitutions(ctx context.Context, request opera
 // Creates an institution belonging to a user.
 func (s *institutions) PostUsersIDInstitutions(ctx context.Context, request operations.PostUsersIDInstitutionsRequest) (*operations.PostUsersIDInstitutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,9 +269,9 @@ func (s *institutions) PostUsersIDInstitutions(ctx context.Context, request oper
 // Updates the title and currency code for an institution.
 func (s *institutions) PutInstitutionsID(ctx context.Context, request operations.PutInstitutionsIDRequest) (*operations.PutInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

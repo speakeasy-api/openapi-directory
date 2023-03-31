@@ -87,7 +87,7 @@ func (e *GetMatrixToCurbsideEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMatrixQueryParams struct {
+type GetMatrixRequest struct {
 	// Optional parameter. It specifies on which side a point should be relative to the driver when she leaves/arrives at a start/target/via point. You need to specify this parameter for either none or all points. Only supported for motor vehicles and OpenStreetMap.
 	Curbside []GetMatrixCurbsideEnum `queryParam:"style=form,explode=true,name=curbside"`
 	// Specifies whether or not the matrix calculation should return with an error as soon as possible in case some points cannot be found or some points are not connected. If set to `false` the time/weight/distance matrix will be calculated for all valid points and contain the `null` value for all entries that could not be calculated. The `hint` field of the response will also contain additional information about what went wrong (see its documentation).
@@ -117,10 +117,6 @@ type GetMatrixQueryParams struct {
 	TurnCosts *bool `queryParam:"style=form,explode=true,name=turn_costs"`
 	// The vehicle profile for which the matrix should be calculated.
 	Vehicle *shared.VehicleProfileIDEnum `queryParam:"style=form,explode=true,name=vehicle"`
-}
-
-type GetMatrixRequest struct {
-	QueryParams GetMatrixQueryParams
 }
 
 type GetMatrixResponse struct {

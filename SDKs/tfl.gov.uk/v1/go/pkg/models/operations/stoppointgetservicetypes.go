@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetServiceTypesQueryParams struct {
+type StopPointGetServiceTypesRequest struct {
 	// The Naptan id of the stop
 	ID string `queryParam:"style=form,explode=true,name=id"`
 	// The lines which contain the given Naptan id (all lines relevant to the given stoppoint if empty)
 	LineIds []string `queryParam:"style=form,explode=true,name=lineIds"`
 	// The modes which the lines are relevant to (all if empty)
 	Modes []string `queryParam:"style=form,explode=true,name=modes"`
-}
-
-type StopPointGetServiceTypesRequest struct {
-	QueryParams StopPointGetServiceTypesQueryParams
 }
 
 type StopPointGetServiceTypesResponse struct {

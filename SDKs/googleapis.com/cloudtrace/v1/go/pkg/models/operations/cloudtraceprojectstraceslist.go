@@ -10,23 +10,18 @@ import (
 )
 
 type CloudtraceProjectsTracesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTracesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTracesListSecurity struct {
 	Option1 *CloudtraceProjectsTracesListSecurityOption1 `security:"option"`
 	Option2 *CloudtraceProjectsTracesListSecurityOption2 `security:"option"`
-}
-
-type CloudtraceProjectsTracesListPathParams struct {
-	// Required. ID of the Cloud project where the trace data is stored.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // CloudtraceProjectsTracesListViewEnum - Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
@@ -59,7 +54,7 @@ func (e *CloudtraceProjectsTracesListViewEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type CloudtraceProjectsTracesListQueryParams struct {
+type CloudtraceProjectsTracesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,6 +81,8 @@ type CloudtraceProjectsTracesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. ID of the Cloud project where the trace data is stored.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Start of the time interval (inclusive) during which the trace data was collected from the application.
@@ -96,12 +93,6 @@ type CloudtraceProjectsTracesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
 	View *CloudtraceProjectsTracesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudtraceProjectsTracesListRequest struct {
-	PathParams  CloudtraceProjectsTracesListPathParams
-	QueryParams CloudtraceProjectsTracesListQueryParams
-	Security    CloudtraceProjectsTracesListSecurity
 }
 
 type CloudtraceProjectsTracesListResponse struct {

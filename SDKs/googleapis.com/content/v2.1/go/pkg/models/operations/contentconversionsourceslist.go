@@ -8,16 +8,11 @@ import (
 )
 
 type ContentConversionsourcesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentConversionsourcesListPathParams struct {
-	// Required. The ID of the account that owns the new conversion source.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentConversionsourcesListQueryParams struct {
+type ContentConversionsourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +25,8 @@ type ContentConversionsourcesListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The ID of the account that owns the new conversion source.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of conversion sources to return in a page. If no `page_size` is specified, `100` is used as the default value. The maximum value is `200`. Values above `200` will be coerced to `200`. Regardless of pagination, at most `200` conversion sources are returned in total.
@@ -46,12 +43,6 @@ type ContentConversionsourcesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentConversionsourcesListRequest struct {
-	PathParams  ContentConversionsourcesListPathParams
-	QueryParams ContentConversionsourcesListQueryParams
-	Security    ContentConversionsourcesListSecurity
 }
 
 type ContentConversionsourcesListResponse struct {

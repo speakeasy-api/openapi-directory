@@ -8,18 +8,13 @@ import (
 )
 
 type GetContributorSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetContributorPathParams struct {
-	// Contributor ID
-	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetContributorRequest struct {
-	PathParams GetContributorPathParams
-	Security   GetContributorSecurity
+	// Contributor ID
+	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
 }
 
 type GetContributorResponse struct {

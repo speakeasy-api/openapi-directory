@@ -8,15 +8,7 @@ import (
 )
 
 type CreateCustomerGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateCustomerGroupRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateCustomerGroupRequest `request:"mediaType=application/json"`
-	Security CreateCustomerGroupSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCustomerGroupResponse struct {

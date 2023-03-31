@@ -13,10 +13,11 @@ var ListVerificationAttemptServerList = []string{
 }
 
 type ListVerificationAttemptSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListVerificationAttemptQueryParams struct {
+type ListVerificationAttemptRequest struct {
 	// Filter used to query Verification Attempts by communication channel. Valid values are `SMS` and `CALL`
 	Channel *shared.VerificationAttemptEnumChannelsEnum `queryParam:"style=form,explode=true,name=Channel"`
 	// Destination of a verification. It is phone number in E.164 format.
@@ -39,12 +40,6 @@ type ListVerificationAttemptQueryParams struct {
 	VerificationSid *string `queryParam:"style=form,explode=true,name=VerificationSid"`
 	// Filter used to query Verification Attempts by verify service. Only attempts of the provided SID will be returned.
 	VerifyServiceSid *string `queryParam:"style=form,explode=true,name=VerifyServiceSid"`
-}
-
-type ListVerificationAttemptRequest struct {
-	QueryParams ListVerificationAttemptQueryParams
-	Security    ListVerificationAttemptSecurity
-	ServerURL   *string
 }
 
 type ListVerificationAttemptListVerificationAttemptResponseMeta struct {

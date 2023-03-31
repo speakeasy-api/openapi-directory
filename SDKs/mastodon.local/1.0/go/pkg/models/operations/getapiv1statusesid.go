@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1StatusesIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1StatusesIDPathParams struct {
-	// Local ID of a status in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1StatusesIDRequest struct {
-	PathParams GetAPIV1StatusesIDPathParams
-	Security   GetAPIV1StatusesIDSecurity
+	// Local ID of a status in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1StatusesIDResponse struct {

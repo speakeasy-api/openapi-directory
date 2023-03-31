@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmDeviceWlanListsPathParams struct {
+type GetNetworkSmDeviceWlanListsRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmDeviceWlanListsRequest struct {
-	PathParams GetNetworkSmDeviceWlanListsPathParams
 }
 
 type GetNetworkSmDeviceWlanLists200ApplicationJSON struct {

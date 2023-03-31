@@ -19,7 +19,6 @@ pkg/models/shared/listdomainsresponse.go
 pkg/models/shared/domain.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/trafficstats.go
 pkg/models/shared/feedbackloop.go
 pkg/models/shared/ipreputation.go

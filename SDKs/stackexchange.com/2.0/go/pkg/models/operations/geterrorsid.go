@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetErrorsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetErrorsIDRequest struct {
-	PathParams GetErrorsIDPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetErrorsIDResponse struct {

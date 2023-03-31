@@ -6,18 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GETListsDateListJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GETListsDateListJSONPathParams struct {
-	Date string `pathParam:"style=simple,explode=false,name=date"`
-	// Name of the Best Sellers List. You can get the full list from /lists/names.json
-	List string `pathParam:"style=simple,explode=false,name=list"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 // GETListsDateListJSONSortOrderEnum - The default is ASC (ascending). The sort-order parameter is used with the sort-by parameter — for details, see each request type.
@@ -44,13 +37,16 @@ func (e *GETListsDateListJSONSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListsDateListJSONQueryParams struct {
+type GETListsDateListJSONRequest struct {
 	// YYYY-MM-DD
 	//
 	// The week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29).
 	BestsellersDate *string `queryParam:"style=form,explode=true,name=bestsellers-date"`
+	Date            string  `pathParam:"style=simple,explode=false,name=date"`
 	// International Standard Book Number, 10 or 13 digits
 	Isbn *int64 `queryParam:"style=form,explode=true,name=isbn"`
+	// Name of the Best Sellers List. You can get the full list from /lists/names.json
+	List string `pathParam:"style=simple,explode=false,name=list"`
 	// The name of the Times best-seller list. To get valid values, use a list names request.
 	//
 	// Be sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.)
@@ -69,12 +65,6 @@ type GETListsDateListJSONQueryParams struct {
 	SortOrder *GETListsDateListJSONSortOrderEnum `queryParam:"style=form,explode=true,name=sort-order"`
 	// The number of weeks that the best seller has been on list-name, as of bestsellers-date
 	WeeksOnList *int64 `queryParam:"style=form,explode=true,name=weeks-on-list"`
-}
-
-type GETListsDateListJSONRequest struct {
-	PathParams  GETListsDateListJSONPathParams
-	QueryParams GETListsDateListJSONQueryParams
-	Security    GETListsDateListJSONSecurity
 }
 
 type GETListsDateListJSON200ApplicationJSONResultsBooksIsbns struct {

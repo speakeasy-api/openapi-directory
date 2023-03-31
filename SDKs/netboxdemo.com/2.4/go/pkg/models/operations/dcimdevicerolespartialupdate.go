@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceRolesPartialUpdatePathParams struct {
+type DcimDeviceRolesPartialUpdateRequest struct {
+	DeviceRoleInput shared.DeviceRoleInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this device role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceRolesPartialUpdateRequest struct {
-	PathParams DcimDeviceRolesPartialUpdatePathParams
-	Request    shared.DeviceRoleInput `request:"mediaType=application/json"`
 }
 
 type DcimDeviceRolesPartialUpdateResponse struct {

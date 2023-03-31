@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IPBlocklistQueryParams struct {
+type IPBlocklistRequest struct {
 	// An IPv4 or IPv6 address. Accepts standard IP notation (with or without port number), CIDR notation and IPv6 compressed notation. If multiple IPs are passed using comma-separated values the first non-bogon address on the list will be checked
 	IP string `queryParam:"style=form,explode=true,name=ip"`
 	// Include public VPN provider IP addresses. <br><b>NOTE</b>: For more advanced VPN detection including the ability to identify private and stealth VPNs use the <a href="https://www.neutrinoapi.com/api/ip-probe/">IP Probe API</a>
 	VpnLookup *bool `queryParam:"style=form,explode=true,name=vpn-lookup"`
-}
-
-type IPBlocklistRequest struct {
-	QueryParams IPBlocklistQueryParams
 }
 
 type IPBlocklistResponse struct {

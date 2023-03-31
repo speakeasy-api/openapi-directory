@@ -6,24 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteImagesPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteImagesQueryParams struct {
+type DeleteImagesRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Ids of the images to be deleted. Limited to 256 images per batch.
 	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
-}
-
-type DeleteImagesHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeleteImagesRequest struct {
-	PathParams  DeleteImagesPathParams
-	QueryParams DeleteImagesQueryParams
-	Headers     DeleteImagesHeaders
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type DeleteImagesResponse struct {

@@ -8,17 +8,13 @@ import (
 )
 
 type GetLicenseeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetLicenseePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Licensee. Vendor can assign this number when creating a Licensee or let NetLicensing generate one. Read-only after creation of the first License for the Licensee.
-	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetLicenseeRequest struct {
-	PathParams GetLicenseePathParams
-	Security   GetLicenseeSecurity
+	// Unique number (across all Products of a Vendor) that identifies the Licensee. Vendor can assign this number when creating a Licensee or let NetLicensing generate one. Read-only after creation of the first License for the Licensee.
+	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
 }
 
 type GetLicenseeResponse struct {

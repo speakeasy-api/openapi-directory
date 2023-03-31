@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppkeyPatchQueryParams struct {
+type AppkeyPatchRequest struct {
 	// compromised app key
 	AppKey string `queryParam:"style=form,explode=true,name=app_key"`
 	// Comments (like how was this compromised)
 	Comments *string `queryParam:"style=form,explode=true,name=comments"`
-}
-
-type AppkeyPatchRequest struct {
-	QueryParams AppkeyPatchQueryParams
 }
 
 type AppkeyPatchResponse struct {

@@ -90,7 +90,7 @@ func (e *ListCallsStatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCallsQueryParams struct {
+type ListCallsRequest struct {
 	// Filter by call direction. For multiple criteria, seperate values by a comma.
 	Direction *ListCallsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Return calls that occurred after this point in time
@@ -107,10 +107,6 @@ type ListCallsQueryParams struct {
 	States *ListCallsStatesEnum `queryParam:"style=form,explode=true,name=states"`
 	// Return calls that occurred before this point in time
 	ToDate *int64 `queryParam:"style=form,explode=true,name=toDate"`
-}
-
-type ListCallsRequest struct {
-	QueryParams ListCallsQueryParams
 }
 
 type ListCallsResponse struct {

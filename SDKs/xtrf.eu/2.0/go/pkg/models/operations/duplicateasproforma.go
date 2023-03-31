@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DuplicateAsProFormaPathParams struct {
+type DuplicateAsProFormaRequest struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type DuplicateAsProFormaRequest struct {
-	PathParams DuplicateAsProFormaPathParams
 }
 
 type DuplicateAsProFormaResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileActionFindPathParams struct {
+type FileActionFindRequest struct {
 	// Path to operate on.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type FileActionFindQueryParams struct {
 	// Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
 	PreviewSize *string `queryParam:"style=form,explode=true,name=preview_size"`
 	// Include file preview information?
 	WithPreviews *bool `queryParam:"style=form,explode=true,name=with_previews"`
 	// Include file priority color information?
 	WithPriorityColor *bool `queryParam:"style=form,explode=true,name=with_priority_color"`
-}
-
-type FileActionFindRequest struct {
-	PathParams  FileActionFindPathParams
-	QueryParams FileActionFindQueryParams
 }
 
 type FileActionFindResponse struct {

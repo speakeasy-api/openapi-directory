@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateReissuePathParams struct {
+type CertificateReissueRequest struct {
+	// The reissue request info
+	CertificateReissue shared.CertificateReissue `request:"mediaType=application/json"`
 	// Certificate id to reissue
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateReissueRequest struct {
-	PathParams CertificateReissuePathParams
-	// The reissue request info
-	Request shared.CertificateReissue `request:"mediaType=application/json"`
 }
 
 type CertificateReissueResponse struct {

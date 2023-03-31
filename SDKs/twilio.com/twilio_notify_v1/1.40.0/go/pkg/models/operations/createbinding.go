@@ -12,12 +12,8 @@ var CreateBindingServerList = []string{
 }
 
 type CreateBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBindingPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to create the resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBindingCreateBindingRequest struct {
@@ -37,10 +33,9 @@ type CreateBindingCreateBindingRequest struct {
 }
 
 type CreateBindingRequest struct {
-	PathParams CreateBindingPathParams
-	Request    *CreateBindingCreateBindingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateBindingSecurity
-	ServerURL  *string
+	RequestBody *CreateBindingCreateBindingRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to create the resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateBindingResponse struct {

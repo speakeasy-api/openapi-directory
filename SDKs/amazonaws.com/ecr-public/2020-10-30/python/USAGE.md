@@ -3,34 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.BatchCheckLayerAvailabilityRequest(
-    headers=operations.BatchCheckLayerAvailabilityHeaders(
-        x_amz_algorithm="adipisci",
-        x_amz_content_sha256="dolorem",
-        x_amz_credential="quas",
-        x_amz_date="eum",
-        x_amz_security_token="distinctio",
-        x_amz_signature="nostrum",
-        x_amz_signed_headers="sed",
-        x_amz_target="SpencerFrontendService.BatchCheckLayerAvailability",
-    ),
-    request=shared.BatchCheckLayerAvailabilityRequest(
+    batch_check_layer_availability_request=shared.BatchCheckLayerAvailabilityRequest(
         layer_digests=[
-            "totam",
-            "sit",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
-        registry_id="et",
-        repository_name="et",
+        registry_id="unde",
+        repository_name="nulla",
     ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
+    x_amz_target="SpencerFrontendService.BatchCheckLayerAvailability",
 )
     
 res = s.batch_check_layer_availability(req)

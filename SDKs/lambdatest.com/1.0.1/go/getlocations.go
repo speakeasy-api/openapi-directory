@@ -34,7 +34,7 @@ func newGetLocations(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // Locations - Fetch Locations
 // Fetch list of available Geolocations
-func (s *getLocations) Locations(ctx context.Context, request operations.LocationsRequest) (*operations.LocationsResponse, error) {
+func (s *getLocations) Locations(ctx context.Context) (*operations.LocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locations"
 
@@ -43,7 +43,7 @@ func (s *getLocations) Locations(ctx context.Context, request operations.Locatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CalcSigmaRsvExchangeRequest{
-        PathParams: operations.CalcSigmaRsvExchangePathParams{
-            Amount: 548814,
-        },
+        Amount: 548814,
     }
 
     ctx := context.Background()

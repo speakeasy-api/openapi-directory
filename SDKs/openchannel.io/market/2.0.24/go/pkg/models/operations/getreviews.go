@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetReviewsQueryParams struct {
+type GetReviewsRequest struct {
 	// The maximum number of results to return per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The result set page number to be returned
@@ -15,10 +15,6 @@ type GetReviewsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'rating':1} sorts the results by rating in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetReviewsRequest struct {
-	QueryParams GetReviewsQueryParams
 }
 
 type GetReviewsResponse struct {

@@ -4,27 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-s.config_security(
-    security=shared.Security(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
+
+
 req = operations.InterferenceRequest(
-    security=operations.InterferenceSecurity(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    query_params=operations.InterferenceQueryParams(
-        name="voluptas",
-        network="quam",
-    ),
+    name="corrupti",
+    network="provident",
 )
     
-res = s.analyse.interference(req)
+res = s.analyse.interference(req, operations.InterferenceSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.status_code == 200:
     # handle response

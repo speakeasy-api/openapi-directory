@@ -8,7 +8,7 @@ import (
 )
 
 type TrainSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type TrainRequestBody struct {
@@ -24,11 +24,6 @@ type TrainRequestBody struct {
 	Name *string `multipartForm:"name=name"`
 	// JSON that contains parameters that specify how the model is created
 	TrainParams *shared.V2LanguageTrainParams `multipartForm:"name=trainParams,json"`
-}
-
-type TrainRequest struct {
-	Request  *TrainRequestBody `request:"mediaType=multipart/form-data"`
-	Security TrainSecurity
 }
 
 type TrainResponse struct {

@@ -37,15 +37,25 @@ func newConsentFlow(defaultClient, securityClient HTTPClient, serverURL, languag
 // Notification of consents to health information providers consent request granted, consent revoked, consent expired. Only the GRANTED and REVOKED status notifications will be sent to HIP.
 //  1. If consent is granted, status=GRANTED, then consentDetail contains the consent artefact details and signature is available.
 //  2. If consent is revoked, then status=REVOKED, and consentId specifes which consent artefact is revoked.
-func (s *consentFlow) PostV05ConsentsHipNotifyJSON(ctx context.Context, request operations.PostV05ConsentsHipNotifyJSONRequest) (*operations.PostV05ConsentsHipNotifyJSONResponse, error) {
+func (s *consentFlow) PostV05ConsentsHipNotifyJSON(ctx context.Context, request operations.PostV05ConsentsHipNotifyJSONRequest, opts ...operations.Option) (*operations.PostV05ConsentsHipNotifyJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentsHipNotifyJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/hip/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIPConsentNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -60,7 +70,7 @@ func (s *consentFlow) PostV05ConsentsHipNotifyJSON(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -110,15 +120,25 @@ func (s *consentFlow) PostV05ConsentsHipNotifyJSON(ctx context.Context, request 
 // Notification of consents to health information providers consent request granted, consent revoked, consent expired. Only the GRANTED and REVOKED status notifications will be sent to HIP.
 //  1. If consent is granted, status=GRANTED, then consentDetail contains the consent artefact details and signature is available.
 //  2. If consent is revoked, then status=REVOKED, and consentId specifes which consent artefact is revoked.
-func (s *consentFlow) PostV05ConsentsHipNotifyRaw(ctx context.Context, request operations.PostV05ConsentsHipNotifyRawRequest) (*operations.PostV05ConsentsHipNotifyRawResponse, error) {
+func (s *consentFlow) PostV05ConsentsHipNotifyRaw(ctx context.Context, request operations.PostV05ConsentsHipNotifyRawRequest, opts ...operations.Option) (*operations.PostV05ConsentsHipNotifyRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentsHipNotifyRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/hip/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -133,7 +153,7 @@ func (s *consentFlow) PostV05ConsentsHipNotifyRaw(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

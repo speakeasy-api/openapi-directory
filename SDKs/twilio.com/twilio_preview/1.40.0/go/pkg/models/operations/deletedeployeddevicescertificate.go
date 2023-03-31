@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDeployedDevicesCertificateServerList = []string{
@@ -12,19 +11,14 @@ var DeleteDeployedDevicesCertificateServerList = []string{
 }
 
 type DeleteDeployedDevicesCertificateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDeployedDevicesCertificatePathParams struct {
-	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
-	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDeployedDevicesCertificateRequest struct {
-	PathParams DeleteDeployedDevicesCertificatePathParams
-	Security   DeleteDeployedDevicesCertificateSecurity
-	ServerURL  *string
+	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
+	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteDeployedDevicesCertificateResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetCorpusHeaders struct {
+type ResetCorpusRequest struct {
+	AdminResetCorpusRequest shared.AdminResetCorpusRequest `request:"mediaType=application/json"`
 	// The Customer ID to use for the request.
 	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
-}
-
-type ResetCorpusRequest struct {
-	Headers ResetCorpusHeaders
-	Request shared.AdminResetCorpusRequest `request:"mediaType=application/json"`
 }
 
 type ResetCorpusResponse struct {

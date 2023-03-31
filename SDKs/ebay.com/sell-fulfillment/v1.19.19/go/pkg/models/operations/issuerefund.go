@@ -8,18 +8,13 @@ import (
 )
 
 type IssueRefundSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type IssueRefundPathParams struct {
-	// The unique identifier of the order. Order IDs are returned in the <b>getOrders</b> method (and <b>GetOrders</b> call of Trading API). The <b>issueRefund</b> method supports the legacy API Order IDs and REST API order IDs.
-	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IssueRefundRequest struct {
-	PathParams IssueRefundPathParams
-	Request    *shared.IssueRefundRequest `request:"mediaType=application/json"`
-	Security   IssueRefundSecurity
+	IssueRefundRequest *shared.IssueRefundRequest `request:"mediaType=application/json"`
+	// The unique identifier of the order. Order IDs are returned in the <b>getOrders</b> method (and <b>GetOrders</b> call of Trading API). The <b>issueRefund</b> method supports the legacy API Order IDs and REST API order IDs.
+	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
 }
 
 type IssueRefundResponse struct {

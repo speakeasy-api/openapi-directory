@@ -42,7 +42,7 @@ func newShipments(defaultClient, securityClient HTTPClient, serverURL, language,
 // would remove it from this process
 func (s *shipments) CancelShipments(ctx context.Context, request operations.CancelShipmentsRequest) (*operations.CancelShipmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *shipments) CancelShipments(ctx context.Context, request operations.Canc
 
 // CreateShipments - Create Shipments
 // Create one or multiple shipments.
-func (s *shipments) CreateShipments(ctx context.Context, request operations.CreateShipmentsRequest) (*operations.CreateShipmentsResponse, error) {
+func (s *shipments) CreateShipments(ctx context.Context, request shared.CreateShipmentsRequestBodyInput) (*operations.CreateShipmentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shipments"
 
@@ -177,7 +177,7 @@ func (s *shipments) CreateShipments(ctx context.Context, request operations.Crea
 // Query Shipments created using your own custom ID convention using this endpint
 func (s *shipments) GetShipmentByExternalID(ctx context.Context, request operations.GetShipmentByExternalIDRequest) (*operations.GetShipmentByExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/external_shipment_id/{external_shipment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/external_shipment_id/{external_shipment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *shipments) GetShipmentByExternalID(ctx context.Context, request operati
 // Get an individual shipment based on its ID
 func (s *shipments) GetShipmentByID(ctx context.Context, request operations.GetShipmentByIDRequest) (*operations.GetShipmentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,14 +295,14 @@ func (s *shipments) GetShipmentByID(ctx context.Context, request operations.GetS
 // Get Rates for the shipment information associated with the shipment ID
 func (s *shipments) ListShipmentRates(ctx context.Context, request operations.ListShipmentRatesRequest) (*operations.ListShipmentRatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/rates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/rates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -365,7 +365,7 @@ func (s *shipments) ListShipments(ctx context.Context, request operations.ListSh
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -423,7 +423,7 @@ func (s *shipments) ListShipments(ctx context.Context, request operations.ListSh
 // Data often enters your system as unstructured text (for example: emails, SMS messages, support tickets, or other documents). ShipEngine's shipment-recognition API helps you extract meaningful, structured data from this unstructured text. The parsed shipment data is returned in the same structure that's used for other ShipEngine APIs, so you can easily use the parsed data to create a shipping label.
 //
 // > **Note:** Shipment recognition is currently supported for the United States, Canada, Australia, New Zealand, the United Kingdom, and Ireland.
-func (s *shipments) ParseShipment(ctx context.Context, request operations.ParseShipmentRequest) (*operations.ParseShipmentResponse, error) {
+func (s *shipments) ParseShipment(ctx context.Context, request shared.ParseShipmentRequestBodyInput) (*operations.ParseShipmentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shipments/recognize"
 
@@ -492,7 +492,7 @@ func (s *shipments) ParseShipment(ctx context.Context, request operations.ParseS
 // Add a tag to the shipment object
 func (s *shipments) TagShipment(ctx context.Context, request operations.TagShipmentRequest) (*operations.TagShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/tags/{tag_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/tags/{tag_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -551,7 +551,7 @@ func (s *shipments) TagShipment(ctx context.Context, request operations.TagShipm
 // Remove an existing tag from the Shipment object
 func (s *shipments) UntagShipment(ctx context.Context, request operations.UntagShipmentRequest) (*operations.UntagShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/tags/{tag_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}/tags/{tag_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -619,9 +619,9 @@ func (s *shipments) UntagShipment(ctx context.Context, request operations.UntagS
 // Update a shipment object based on its ID
 func (s *shipments) UpdateShipment(ctx context.Context, request operations.UpdateShipmentRequest) (*operations.UpdateShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/shipments/{shipment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateShipmentRequestBodyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

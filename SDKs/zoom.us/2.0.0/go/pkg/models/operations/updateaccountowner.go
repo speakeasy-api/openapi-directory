@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateAccountOwnerSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateAccountOwnerPathParams struct {
-	// Account Id of the account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateAccountOwnerApplicationJSON struct {
@@ -22,9 +16,9 @@ type UpdateAccountOwnerApplicationJSON struct {
 }
 
 type UpdateAccountOwnerRequest struct {
-	PathParams UpdateAccountOwnerPathParams
-	Request    *UpdateAccountOwnerApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateAccountOwnerSecurity
+	RequestBody *UpdateAccountOwnerApplicationJSON `request:"mediaType=application/json"`
+	// Account Id of the account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type UpdateAccountOwnerResponse struct {

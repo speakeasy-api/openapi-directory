@@ -8,13 +8,13 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesListSecurity struct {
@@ -22,12 +22,7 @@ type CloudiotProjectsLocationsRegistriesListSecurity struct {
 	Option2 *CloudiotProjectsLocationsRegistriesListSecurityOption2 `security:"option"`
 }
 
-type CloudiotProjectsLocationsRegistriesListPathParams struct {
-	// Required. The project and cloud region path. For example, `projects/example-project/locations/us-central1`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudiotProjectsLocationsRegistriesListQueryParams struct {
+type CloudiotProjectsLocationsRegistriesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type CloudiotProjectsLocationsRegistriesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a continuation of a prior `ListDeviceRegistries` call and the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and cloud region path. For example, `projects/example-project/locations/us-central1`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type CloudiotProjectsLocationsRegistriesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesListRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesListPathParams
-	QueryParams CloudiotProjectsLocationsRegistriesListQueryParams
-	Security    CloudiotProjectsLocationsRegistriesListSecurity
 }
 
 type CloudiotProjectsLocationsRegistriesListResponse struct {

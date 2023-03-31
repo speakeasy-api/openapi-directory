@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetOwnerPathParams struct {
+type SetOwnerRequest struct {
 	// Agent to set the owner
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Owner of the agent
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-}
-
-type SetOwnerRequest struct {
-	PathParams SetOwnerPathParams
 }
 
 type SetOwnerResponse struct {

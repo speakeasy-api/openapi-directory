@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsChangeDNSPtrPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostServersIDActionsChangeDNSPtrRequestBody - Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
 type PostServersIDActionsChangeDNSPtrRequestBody struct {
 	// Hostname to set as a reverse DNS PTR entry, reset to original value if `null`
@@ -22,9 +17,10 @@ type PostServersIDActionsChangeDNSPtrRequestBody struct {
 }
 
 type PostServersIDActionsChangeDNSPtrRequest struct {
-	PathParams PostServersIDActionsChangeDNSPtrPathParams
 	// Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
-	Request *PostServersIDActionsChangeDNSPtrRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsChangeDNSPtrRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsChangeDNSPtrActionResponseActionError - Error message for the Action if error occurred, otherwise null

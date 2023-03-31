@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAPIInvoiceNewcategoryFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type PostAPIInvoiceNewcategoryFormRequest struct {
-	Headers PostAPIInvoiceNewcategoryFormHeaders
-	Request shared.InvoiceCategoryCreateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	InvoiceCategoryCreateAPIModel shared.InvoiceCategoryCreateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey                      string                               `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret                   string                               `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type PostAPIInvoiceNewcategoryFormResponse struct {

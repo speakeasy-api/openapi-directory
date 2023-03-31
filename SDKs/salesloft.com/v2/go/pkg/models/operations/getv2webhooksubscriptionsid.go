@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2WebhookSubscriptionsIDPathParams struct {
+type GetV2WebhookSubscriptionsIDRequest struct {
 	// The id for the Webhook Subscription
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2WebhookSubscriptionsIDRequest struct {
-	PathParams GetV2WebhookSubscriptionsIDPathParams
 }
 
 type GetV2WebhookSubscriptionsIDResponse struct {

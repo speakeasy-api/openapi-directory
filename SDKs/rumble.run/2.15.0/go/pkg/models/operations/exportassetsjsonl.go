@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportAssetsJSONLSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ExportAssetsJSONLQueryParams struct {
+type ExportAssetsJSONLRequest struct {
 	// an optional list of fields to export, comma-separated
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// an optional search string for filtering results
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type ExportAssetsJSONLRequest struct {
-	QueryParams ExportAssetsJSONLQueryParams
-	Security    ExportAssetsJSONLSecurity
 }
 
 type ExportAssetsJSONLResponse struct {

@@ -12,7 +12,8 @@ var CreateRatePlanServerList = []string{
 }
 
 type CreateRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateRatePlanCreateRatePlanRequest struct {
@@ -38,12 +39,6 @@ type CreateRatePlanCreateRatePlanRequest struct {
 	UniqueName *string `form:"name=UniqueName"`
 	// Deprecated.
 	VoiceEnabled *bool `form:"name=VoiceEnabled"`
-}
-
-type CreateRatePlanRequest struct {
-	Request   *CreateRatePlanCreateRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateRatePlanSecurity
-	ServerURL *string
 }
 
 type CreateRatePlanResponse struct {

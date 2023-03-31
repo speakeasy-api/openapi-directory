@@ -9,17 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionCommentInOrgPathParams struct {
-	// The number that identifies the comment.
-	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // ReactionsListForTeamDiscussionCommentInOrgContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.1/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 type ReactionsListForTeamDiscussionCommentInOrgContentEnum string
 
@@ -62,18 +51,21 @@ func (e *ReactionsListForTeamDiscussionCommentInOrgContentEnum) UnmarshalJSON(da
 	}
 }
 
-type ReactionsListForTeamDiscussionCommentInOrgQueryParams struct {
+type ReactionsListForTeamDiscussionCommentInOrgRequest struct {
+	// The number that identifies the comment.
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.1/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 	Content *ReactionsListForTeamDiscussionCommentInOrgContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionCommentInOrgRequest struct {
-	PathParams  ReactionsListForTeamDiscussionCommentInOrgPathParams
-	QueryParams ReactionsListForTeamDiscussionCommentInOrgQueryParams
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type ReactionsListForTeamDiscussionCommentInOrgResponse struct {

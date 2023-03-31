@@ -8,13 +8,13 @@ import (
 )
 
 type VisionImagesAsyncBatchAnnotateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VisionImagesAsyncBatchAnnotateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VisionImagesAsyncBatchAnnotateSecurity struct {
@@ -22,9 +22,10 @@ type VisionImagesAsyncBatchAnnotateSecurity struct {
 	Option2 *VisionImagesAsyncBatchAnnotateSecurityOption2 `security:"option"`
 }
 
-type VisionImagesAsyncBatchAnnotateQueryParams struct {
+type VisionImagesAsyncBatchAnnotateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                               *shared.XgafvEnum                                                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest *shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type VisionImagesAsyncBatchAnnotateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VisionImagesAsyncBatchAnnotateRequest struct {
-	QueryParams VisionImagesAsyncBatchAnnotateQueryParams
-	Request     *shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest `request:"mediaType=application/json"`
-	Security    VisionImagesAsyncBatchAnnotateSecurity
 }
 
 type VisionImagesAsyncBatchAnnotateResponse struct {

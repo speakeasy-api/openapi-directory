@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListDigitalSignageContentQueryParams struct {
+type ListDigitalSignageContentRequest struct {
 	// Unique identifier of the folder where the content is located. Provide this field if you would like to filter the response by contents that are only available in a specific folder.
 	FolderID *string `queryParam:"style=form,explode=true,name=folder_id"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -17,10 +17,6 @@ type ListDigitalSignageContentQueryParams struct {
 	// * `content`: Returns information about content files.
 	// * `folder`: Returns information about the folder where the content files are located.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListDigitalSignageContentRequest struct {
-	QueryParams ListDigitalSignageContentQueryParams
 }
 
 type ListDigitalSignageContent200ApplicationXMLContents struct {

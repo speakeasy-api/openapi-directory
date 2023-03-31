@@ -8,21 +8,16 @@ import (
 )
 
 type CreateDisputeEvidenceTextSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateDisputeEvidenceTextPathParams struct {
-	// The ID of the dispute you want to upload evidence for.
-	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateDisputeEvidenceTextRequest struct {
-	PathParams CreateDisputeEvidenceTextPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.CreateDisputeEvidenceTextRequest `request:"mediaType=application/json"`
-	Security CreateDisputeEvidenceTextSecurity
+	CreateDisputeEvidenceTextRequest shared.CreateDisputeEvidenceTextRequest `request:"mediaType=application/json"`
+	// The ID of the dispute you want to upload evidence for.
+	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 }
 
 type CreateDisputeEvidenceTextResponse struct {

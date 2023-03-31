@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRunnerApplicationsForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsListRunnerApplicationsForOrgRequest struct {
-	PathParams ActionsListRunnerApplicationsForOrgPathParams
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsListRunnerApplicationsForOrgResponse struct {

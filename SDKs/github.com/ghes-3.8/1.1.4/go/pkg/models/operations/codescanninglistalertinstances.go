@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningListAlertInstancesPathParams struct {
+type CodeScanningListAlertInstancesRequest struct {
 	// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
 	AlertNumber int64 `pathParam:"style=simple,explode=false,name=alert_number"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodeScanningListAlertInstancesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type CodeScanningListAlertInstancesRequest struct {
-	PathParams  CodeScanningListAlertInstancesPathParams
-	QueryParams CodeScanningListAlertInstancesQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // CodeScanningListAlertInstances503ApplicationJSON - Service unavailable

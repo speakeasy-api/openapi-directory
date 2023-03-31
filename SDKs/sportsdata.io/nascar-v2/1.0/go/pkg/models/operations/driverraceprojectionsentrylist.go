@@ -33,16 +33,12 @@ func (e *DriverRaceProjectionsEntryListFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DriverRaceProjectionsEntryListPathParams struct {
+type DriverRaceProjectionsEntryListRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DriverRaceProjectionsEntryListFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Race ID.
 	// Example:<code>1</code>, <code>2</code>, etc.
 	Raceid string `pathParam:"style=simple,explode=false,name=raceid"`
-}
-
-type DriverRaceProjectionsEntryListRequest struct {
-	PathParams DriverRaceProjectionsEntryListPathParams
 }
 
 type DriverRaceProjectionsEntryListResponse struct {

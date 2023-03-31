@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmPartialImportPathParams struct {
+type PostRealmPartialImportRequest struct {
+	PartialImportRepresentation shared.PartialImportRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmPartialImportRequest struct {
-	PathParams PostRealmPartialImportPathParams
-	Request    shared.PartialImportRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmPartialImportResponse struct {

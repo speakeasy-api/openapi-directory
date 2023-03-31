@@ -32,16 +32,16 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetLatestImportStatus - Get status for latest import
-func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.GetLatestImportStatusRequest) (*operations.GetLatestImportStatusResponse, error) {
+func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.GetLatestImportStatusRequest, security operations.GetLatestImportStatusSecurity) (*operations.GetLatestImportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,16 +77,16 @@ func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.
 }
 
 // GetStatusByUUID - Get status for an import
-func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetStatusByUUIDRequest) (*operations.GetStatusByUUIDResponse, error) {
+func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetStatusByUUIDRequest, security operations.GetStatusByUUIDSecurity) (*operations.GetStatusByUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status/{importUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status/{importUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,11 +122,11 @@ func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetSta
 }
 
 // ImportLibraryV2 - Import library items
-func (s *importT) ImportLibraryV2(ctx context.Context, request operations.ImportLibraryV2Request) (*operations.ImportLibraryV2Response, error) {
+func (s *importT) ImportLibraryV2(ctx context.Context, request operations.ImportLibraryV2Request, security operations.ImportLibraryV2Security) (*operations.ImportLibraryV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/v2", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/v2", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkImportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,7 +141,7 @@ func (s *importT) ImportLibraryV2(ctx context.Context, request operations.Import
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

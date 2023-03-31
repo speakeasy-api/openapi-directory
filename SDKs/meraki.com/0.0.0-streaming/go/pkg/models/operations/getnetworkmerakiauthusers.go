@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkMerakiAuthUsersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkMerakiAuthUsersRequest struct {
-	PathParams GetNetworkMerakiAuthUsersPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkMerakiAuthUsersResponse struct {

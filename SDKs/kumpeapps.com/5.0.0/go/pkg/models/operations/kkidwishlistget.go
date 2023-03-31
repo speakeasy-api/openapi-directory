@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidWishlistGetQueryParams struct {
+type KkidWishlistGetRequest struct {
 	// userID of the kid
 	KidUserID *int64 `queryParam:"style=form,explode=true,name=kidUserId"`
-}
-
-type KkidWishlistGetRequest struct {
-	QueryParams KkidWishlistGetQueryParams
 }
 
 type KkidWishlistGetResponse struct {

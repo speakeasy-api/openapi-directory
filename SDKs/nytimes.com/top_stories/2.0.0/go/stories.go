@@ -34,14 +34,14 @@ func newStories(defaultClient, securityClient HTTPClient, serverURL, language, s
 // The Top Stories API returns a list of articles and associated images currently on the specified section.  Support JSON and JSONP.
 func (s *stories) GetSectionFormat(ctx context.Context, request operations.GetSectionFormatRequest) (*operations.GetSectionFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{section}.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{section}.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

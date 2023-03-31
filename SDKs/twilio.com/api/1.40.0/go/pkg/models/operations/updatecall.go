@@ -14,14 +14,8 @@ var UpdateCallServerList = []string{
 }
 
 type UpdateCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCallPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the Call resource to update
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateCallUpdateCallRequestFallbackMethodEnum - The HTTP method that we should use to request the `fallback_url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.
@@ -153,10 +147,11 @@ type UpdateCallUpdateCallRequest struct {
 }
 
 type UpdateCallRequest struct {
-	PathParams UpdateCallPathParams
-	Request    *UpdateCallUpdateCallRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCallSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to update.
+	AccountSid  string                       `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateCallUpdateCallRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Call resource to update
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCallResponse struct {

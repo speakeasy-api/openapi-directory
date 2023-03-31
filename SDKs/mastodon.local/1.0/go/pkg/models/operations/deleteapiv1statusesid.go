@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAPIV1StatusesIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1StatusesIDPathParams struct {
-	// Local ID of a status in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1StatusesIDRequest struct {
-	PathParams DeleteAPIV1StatusesIDPathParams
-	Security   DeleteAPIV1StatusesIDSecurity
+	// Local ID of a status in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1StatusesIDResponse struct {

@@ -17,5 +17,4 @@ pkg/models/operations/groupssettingsgroupspatch.go
 pkg/models/operations/groupssettingsgroupsupdate.go
 pkg/models/shared/groups.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 USAGE.md

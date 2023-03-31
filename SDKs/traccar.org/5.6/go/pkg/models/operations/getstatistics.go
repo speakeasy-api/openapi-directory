@@ -8,15 +8,11 @@ import (
 	"time"
 )
 
-type GetStatisticsQueryParams struct {
+type GetStatisticsRequest struct {
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	From time.Time `queryParam:"style=form,explode=true,name=from"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	To time.Time `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetStatisticsRequest struct {
-	QueryParams GetStatisticsQueryParams
 }
 
 type GetStatisticsResponse struct {

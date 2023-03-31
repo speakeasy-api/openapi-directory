@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateSearchableAttributesRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type UpdateSearchableAttributesResponse struct {
 	ContentType string
 	StatusCode  int

@@ -33,20 +33,20 @@ func newDirectDeals(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AdexchangebuyerDirectDealsGet - Gets one direct deal by ID.
-func (s *directDeals) AdexchangebuyerDirectDealsGet(ctx context.Context, request operations.AdexchangebuyerDirectDealsGetRequest) (*operations.AdexchangebuyerDirectDealsGetResponse, error) {
+func (s *directDeals) AdexchangebuyerDirectDealsGet(ctx context.Context, request operations.AdexchangebuyerDirectDealsGetRequest, security operations.AdexchangebuyerDirectDealsGetSecurity) (*operations.AdexchangebuyerDirectDealsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/directdeals/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/directdeals/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *directDeals) AdexchangebuyerDirectDealsGet(ctx context.Context, request
 }
 
 // AdexchangebuyerDirectDealsList - Retrieves the authenticated user's list of direct deals.
-func (s *directDeals) AdexchangebuyerDirectDealsList(ctx context.Context, request operations.AdexchangebuyerDirectDealsListRequest) (*operations.AdexchangebuyerDirectDealsListResponse, error) {
+func (s *directDeals) AdexchangebuyerDirectDealsList(ctx context.Context, request operations.AdexchangebuyerDirectDealsListRequest, security operations.AdexchangebuyerDirectDealsListSecurity) (*operations.AdexchangebuyerDirectDealsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/directdeals"
 
@@ -90,11 +90,11 @@ func (s *directDeals) AdexchangebuyerDirectDealsList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

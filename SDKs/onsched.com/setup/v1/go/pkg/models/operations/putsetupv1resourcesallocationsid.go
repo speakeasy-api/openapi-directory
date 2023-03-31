@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1ResourcesAllocationsIDPathParams struct {
+type PutSetupV1ResourcesAllocationsIDRequest struct {
+	// Resource allocation update model
+	ResourceAllocationUpdateModel *shared.ResourceAllocationUpdateModel `request:"mediaType=application/json"`
 	// id of resourceAllocation object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1ResourcesAllocationsIDRequest struct {
-	PathParams PutSetupV1ResourcesAllocationsIDPathParams
-	// Resource allocation update model
-	Request *shared.ResourceAllocationUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1ResourcesAllocationsIDResponse struct {

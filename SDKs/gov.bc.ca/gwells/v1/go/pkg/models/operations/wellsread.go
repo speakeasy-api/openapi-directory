@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WellsReadPathParams struct {
+type WellsReadRequest struct {
 	// A unique integer value identifying this well.
 	WellTagNumber int64 `pathParam:"style=simple,explode=false,name=well_tag_number"`
-}
-
-type WellsReadRequest struct {
-	PathParams WellsReadPathParams
 }
 
 type WellsReadResponse struct {

@@ -37,7 +37,7 @@ func newSite(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // GetTargetsTargetIDSite - Retrieve target's site
 func (s *site) GetTargetsTargetIDSite(ctx context.Context, request operations.GetTargetsTargetIDSiteRequest) (*operations.GetTargetsTargetIDSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,9 +102,9 @@ func (s *site) GetTargetsTargetIDSite(ctx context.Context, request operations.Ge
 // Note that the URL can only be set once.
 func (s *site) PatchTargetsTargetIDSite(ctx context.Context, request operations.PatchTargetsTargetIDSiteRequest) (*operations.PatchTargetsTargetIDSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,9 +196,9 @@ func (s *site) PatchTargetsTargetIDSite(ctx context.Context, request operations.
 // PostTargetsTargetIDSiteVerify - Verify site ownership
 func (s *site) PostTargetsTargetIDSiteVerify(ctx context.Context, request operations.PostTargetsTargetIDSiteVerifyRequest) (*operations.PostTargetsTargetIDSiteVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/verify/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/verify/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,9 +291,9 @@ func (s *site) PostTargetsTargetIDSiteVerify(ctx context.Context, request operat
 // Note that the URL can only be set once.
 func (s *site) PutTargetsTargetIDSite(ctx context.Context, request operations.PutTargetsTargetIDSiteRequest) (*operations.PutTargetsTargetIDSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/site/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

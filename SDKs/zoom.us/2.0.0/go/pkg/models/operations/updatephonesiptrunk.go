@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdatePhoneSIPTrunkSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdatePhoneSIPTrunkPathParams struct {
-	// Unique identifier of the sub account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Unique identifier of the SIP trunk.
-	SipTrunkID string `pathParam:"style=simple,explode=false,name=sipTrunkId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdatePhoneSIPTrunkApplicationJSON struct {
@@ -26,9 +18,11 @@ type UpdatePhoneSIPTrunkApplicationJSON struct {
 }
 
 type UpdatePhoneSIPTrunkRequest struct {
-	PathParams UpdatePhoneSIPTrunkPathParams
-	Request    *UpdatePhoneSIPTrunkApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdatePhoneSIPTrunkSecurity
+	RequestBody *UpdatePhoneSIPTrunkApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the sub account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// Unique identifier of the SIP trunk.
+	SipTrunkID string `pathParam:"style=simple,explode=false,name=sipTrunkId"`
 }
 
 type UpdatePhoneSIPTrunkResponse struct {

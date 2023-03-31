@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/appintegrations/2020-07-29/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,63 +14,149 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateEventIntegrationRequest(
-    headers=operations.CreateEventIntegrationHeaders(
-        x_amz_algorithm="asperiores",
-        x_amz_content_sha256="voluptatem",
-        x_amz_credential="hic",
-        x_amz_date="doloribus",
-        x_amz_security_token="corrupti",
-        x_amz_signature="nemo",
-        x_amz_signed_headers="architecto",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateEventIntegrationRequestBody(
-        client_token="neque",
-        description="autem",
-        event_bridge_bus="saepe",
-        event_filter=operations.CreateEventIntegrationRequestBodyEventFilter(
-            source="voluptatem",
+)
+
+
+req = operations.CreateDataIntegrationRequest(
+    request_body=operations.CreateDataIntegrationRequestBody(
+        client_token="corrupti",
+        description="provident",
+        file_configuration=operations.CreateDataIntegrationRequestBodyFileConfiguration(
+            filters={
+                "quibusdam": [
+                    "nulla",
+                    "corrupti",
+                    "illum",
+                ],
+                "vel": [
+                    "deserunt",
+                    "suscipit",
+                    "iure",
+                ],
+                "magnam": [
+                    "ipsa",
+                    "delectus",
+                    "tempora",
+                    "suscipit",
+                ],
+            },
+            folders=[
+                "minus",
+                "placeat",
+            ],
         ),
-        name="error",
+        kms_key="voluptatum",
+        name="iusto",
+        object_configuration={
+            "nisi": {
+                "temporibus": [
+                    "quis",
+                ],
+                "veritatis": [
+                    "perferendis",
+                    "ipsam",
+                    "repellendus",
+                ],
+                "sapiente": [
+                    "odit",
+                    "at",
+                    "at",
+                    "maiores",
+                ],
+                "molestiae": [
+                    "quod",
+                    "esse",
+                    "totam",
+                    "porro",
+                ],
+            },
+            "dolorum": {
+                "nam": [
+                    "occaecati",
+                    "fugit",
+                    "deleniti",
+                ],
+            },
+            "hic": {
+                "totam": [
+                    "commodi",
+                ],
+                "molestiae": [
+                    "qui",
+                    "impedit",
+                ],
+                "cum": [
+                    "ipsum",
+                    "excepturi",
+                ],
+                "aspernatur": [
+                    "ad",
+                ],
+            },
+        },
+        schedule_config=operations.CreateDataIntegrationRequestBodyScheduleConfig(
+            first_execution_from="natus",
+            object="sed",
+            schedule_expression="iste",
+        ),
+        source_uri="dolor",
         tags={
-            "in": "mollitia",
-            "autem": "distinctio",
-            "consequuntur": "autem",
+            "laboriosam": "hic",
+            "saepe": "fuga",
+            "in": "corporis",
         },
     ),
+    x_amz_algorithm="iste",
+    x_amz_content_sha256="iure",
+    x_amz_credential="saepe",
+    x_amz_date="quidem",
+    x_amz_security_token="architecto",
+    x_amz_signature="ipsa",
+    x_amz_signed_headers="reiciendis",
 )
     
-res = s.create_event_integration(req)
+res = s.create_data_integration(req)
 
-if res.create_event_integration_response is not None:
+if res.create_data_integration_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
+* `create_data_integration` - <p>Creates and persists a DataIntegration resource.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.</p> </note>
 * `create_event_integration` - Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in your account and a partner event source that pushes events to that bus. No objects are created in the your account, only metadata that is persisted on the EventIntegration control plane.
+* `delete_data_integration` - <p>Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role. </p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `delete_event_integration` - Deletes the specified existing event integration. If the event integration is associated with clients, the request is rejected.
-* `get_event_integration` - Return information about the event integration.
+* `get_data_integration` - <p>Returns information about the DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
+* `get_event_integration` - Returns information about the event integration.
+* `list_data_integration_associations` - <p>Returns a paginated list of DataIntegration associations in the account.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
+* `list_data_integrations` - <p>Returns a paginated list of DataIntegrations in the account.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `list_event_integration_associations` - Returns a paginated list of event integration associations in the account. 
 * `list_event_integrations` - Returns a paginated list of event integrations in the account.
 * `list_tags_for_resource` - Lists the tags for the specified resource.
 * `tag_resource` - Adds the specified tags to the specified resource.
 * `untag_resource` - Removes the specified tags from the specified resource.
+* `update_data_integration` - <p>Updates the description of a DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `update_event_integration` - Updates the description of an event integration.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

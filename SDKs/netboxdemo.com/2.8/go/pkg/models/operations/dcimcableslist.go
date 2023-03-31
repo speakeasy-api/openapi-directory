@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimCablesListQueryParams struct {
+type DcimCablesListRequest struct {
 	Color       *string `queryParam:"style=form,explode=true,name=color"`
 	ColorN      *string `queryParam:"style=form,explode=true,name=color__n"`
 	Device      *string `queryParam:"style=form,explode=true,name=device"`
@@ -51,10 +51,6 @@ type DcimCablesListQueryParams struct {
 	TenantID *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN    *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimCablesListRequest struct {
-	QueryParams DcimCablesListQueryParams
 }
 
 type DcimCablesList200ApplicationJSON struct {

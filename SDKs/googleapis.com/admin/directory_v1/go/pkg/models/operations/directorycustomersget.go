@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryCustomersGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryCustomersGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryCustomersGetSecurity struct {
@@ -22,12 +22,7 @@ type DirectoryCustomersGetSecurity struct {
 	Option2 *DirectoryCustomersGetSecurityOption2 `security:"option"`
 }
 
-type DirectoryCustomersGetPathParams struct {
-	// Id of the customer to be retrieved
-	CustomerKey string `pathParam:"style=simple,explode=false,name=customerKey"`
-}
-
-type DirectoryCustomersGetQueryParams struct {
+type DirectoryCustomersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DirectoryCustomersGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Id of the customer to be retrieved
+	CustomerKey string `pathParam:"style=simple,explode=false,name=customerKey"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -50,12 +47,6 @@ type DirectoryCustomersGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryCustomersGetRequest struct {
-	PathParams  DirectoryCustomersGetPathParams
-	QueryParams DirectoryCustomersGetQueryParams
-	Security    DirectoryCustomersGetSecurity
 }
 
 type DirectoryCustomersGetResponse struct {

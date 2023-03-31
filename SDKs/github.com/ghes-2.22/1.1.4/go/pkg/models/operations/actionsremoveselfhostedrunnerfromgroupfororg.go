@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams struct {
+type ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner group.
 	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest struct {
-	PathParams ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams
 }
 
 type ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse struct {

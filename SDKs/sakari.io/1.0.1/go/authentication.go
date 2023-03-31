@@ -42,7 +42,7 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AuthToken - Get token for accessing APIs
-func (s *authentication) AuthToken(ctx context.Context, request operations.AuthTokenRequest) (*operations.AuthTokenResponse, error) {
+func (s *authentication) AuthToken(ctx context.Context, request shared.TokenRequest) (*operations.AuthTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/token"
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePayeeByIDV4PathParams struct {
+type DeletePayeeByIDV4Request struct {
 	// The UUID of the payee.
 	PayeeID string `pathParam:"style=simple,explode=false,name=payeeId"`
-}
-
-type DeletePayeeByIDV4Request struct {
-	PathParams DeletePayeeByIDV4PathParams
 }
 
 type DeletePayeeByIDV4Response struct {

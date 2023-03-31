@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteChannelWebhookServerList = []string{
@@ -12,22 +11,17 @@ var DeleteChannelWebhookServerList = []string{
 }
 
 type DeleteChannelWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteChannelWebhookPathParams struct {
+type DeleteChannelWebhookRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Channel Webhook resource to delete belongs to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel to delete the Webhook resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Channel Webhook resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteChannelWebhookRequest struct {
-	PathParams DeleteChannelWebhookPathParams
-	Security   DeleteChannelWebhookSecurity
-	ServerURL  *string
 }
 
 type DeleteChannelWebhookResponse struct {

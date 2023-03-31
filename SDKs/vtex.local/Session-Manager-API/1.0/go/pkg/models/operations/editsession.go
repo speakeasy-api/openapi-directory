@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type EditsessionRequest struct {
-	Request shared.EditsessionRequest `request:"mediaType=application/json"`
-}
 
 type EditsessionResponse struct {
 	ContentType string

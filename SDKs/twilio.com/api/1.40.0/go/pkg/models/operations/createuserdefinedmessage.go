@@ -12,14 +12,8 @@ var CreateUserDefinedMessageServerList = []string{
 }
 
 type CreateUserDefinedMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUserDefinedMessagePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created User Defined Message.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Message is associated with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUserDefinedMessageCreateUserDefinedMessageRequest struct {
@@ -30,10 +24,11 @@ type CreateUserDefinedMessageCreateUserDefinedMessageRequest struct {
 }
 
 type CreateUserDefinedMessageRequest struct {
-	PathParams CreateUserDefinedMessagePathParams
-	Request    *CreateUserDefinedMessageCreateUserDefinedMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUserDefinedMessageSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created User Defined Message.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Message is associated with.
+	CallSid     string                                                   `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreateUserDefinedMessageCreateUserDefinedMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUserDefinedMessageResponse struct {

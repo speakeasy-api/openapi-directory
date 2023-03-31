@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTargetExpressionByENSGIDQueryParams struct {
+type GetTargetExpressionByENSGIDRequest struct {
 	// An Ensembl gene identifier.
 	Gene string `queryParam:"style=form,explode=true,name=gene"`
-}
-
-type GetTargetExpressionByENSGIDRequest struct {
-	QueryParams GetTargetExpressionByENSGIDQueryParams
 }
 
 type GetTargetExpressionByENSGIDResponse struct {

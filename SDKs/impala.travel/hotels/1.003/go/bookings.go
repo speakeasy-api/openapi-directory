@@ -45,7 +45,7 @@ func newBookings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // If the booking you cancelled allows for a partial or full refund, we'll credit your Impala balance with the amount we charged you as the seller of this booking – meaning we'll deduct the amount the next time we're requesting payment for the sum of all the bookings you made.
 func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelBookingRequest) (*operations.CancelBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelB
 // <!-- theme: warning -->
 //
 // > **This request might take up to 20 seconds to load.** While we work to return a response to your request within milliseconds in most cases, some bookings require us to re-verify current pricing in real-time and doing so might take up to 20 seconds. Please make sure your app handles this waiting state appropriately.
-func (s *bookings) CreateBooking(ctx context.Context, request operations.CreateBookingRequest) (*operations.CreateBookingResponse, error) {
+func (s *bookings) CreateBooking(ctx context.Context, request shared.BookingRequest) (*operations.CreateBookingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bookings"
 
@@ -222,7 +222,7 @@ func (s *bookings) ListBookings(ctx context.Context, request operations.ListBook
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -286,7 +286,7 @@ func (s *bookings) ListBookings(ctx context.Context, request operations.ListBook
 // Returns all details for the specified booking.
 func (s *bookings) RetrieveBooking(ctx context.Context, request operations.RetrieveBookingRequest) (*operations.RetrieveBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,9 +373,9 @@ func (s *bookings) RetrieveBooking(ctx context.Context, request operations.Retri
 // > **This request might take up to 20 seconds to load.** While we work to return a response to your request within milliseconds in most cases, some bookings require us to re-verify current pricing in real-time and doing so might take up to 20 seconds. Please make sure your app handles this waiting state appropriately.
 func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateBookingRequest) (*operations.UpdateBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBookingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -451,9 +451,9 @@ func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateB
 // In addition, we require you to supply a `updateBookingVersionAtTimestamp` field with the `updatedAt` timestamp of the booking. You can find this value by looking up the booking via the [Retrieve a booking](https://docs.impala.travel/docs/booking-api/spec/openapi.seller.yaml/paths/~1bookings~1%7BbookingId%7D/get) endpoint. This is to avoid race conditions where another update might have happened since the last time you have checked for the current details of this booking.
 func (s *bookings) UpdateBookingContact(ctx context.Context, request operations.UpdateBookingContactRequest) (*operations.UpdateBookingContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}/booking-contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bookings/{bookingId}/booking-contact", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBookingContactRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

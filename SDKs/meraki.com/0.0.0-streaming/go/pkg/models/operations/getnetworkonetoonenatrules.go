@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkOneToOneNatRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkOneToOneNatRulesRequest struct {
-	PathParams GetNetworkOneToOneNatRulesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkOneToOneNatRulesResponse struct {

@@ -38,14 +38,13 @@ pkg/models/shared/value.go
 pkg/models/shared/mapvalue.go
 pkg/models/shared/latlng.go
 pkg/models/shared/arrayvalue.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchgetdocumentsrequest.go
 pkg/models/shared/transactionoptions.go
 pkg/models/shared/readwrite.go
 pkg/models/shared/readonly.go
 pkg/models/shared/documentmask.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchwriteresponse.go
 pkg/models/shared/writeresult.go
 pkg/models/shared/status.go

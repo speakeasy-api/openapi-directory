@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCisJobStatusPathParams struct {
-	// The job unique identifier.
-	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
-}
-
-type GetCisJobStatusHeaders struct {
+type GetCisJobStatusRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetCisJobStatusRequest struct {
-	PathParams GetCisJobStatusPathParams
-	Headers    GetCisJobStatusHeaders
+	// The job unique identifier.
+	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
 }
 
 type GetCisJobStatusResponse struct {

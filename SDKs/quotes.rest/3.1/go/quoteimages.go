@@ -34,7 +34,7 @@ func newQuoteImages(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DeleteQuoteImage - Delete a quote image. The user needs to be the owner of the quote image to be able to delete it.
-func (s *quoteImages) DeleteQuoteImage(ctx context.Context, request operations.DeleteQuoteImageRequest) (*operations.DeleteQuoteImageResponse, error) {
+func (s *quoteImages) DeleteQuoteImage(ctx context.Context, request operations.DeleteQuoteImageRequest, security operations.DeleteQuoteImageSecurity) (*operations.DeleteQuoteImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image"
 
@@ -43,11 +43,11 @@ func (s *quoteImages) DeleteQuoteImage(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *quoteImages) DeleteQuoteImage(ctx context.Context, request operations.D
 }
 
 // DeleteQuoteImageBackground - Delete a background image file. The user needs to be the owner of the background image to be able to delete it.
-func (s *quoteImages) DeleteQuoteImageBackground(ctx context.Context, request operations.DeleteQuoteImageBackgroundRequest) (*operations.DeleteQuoteImageBackgroundResponse, error) {
+func (s *quoteImages) DeleteQuoteImageBackground(ctx context.Context, request operations.DeleteQuoteImageBackgroundRequest, security operations.DeleteQuoteImageBackgroundSecurity) (*operations.DeleteQuoteImageBackgroundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background"
 
@@ -86,11 +86,11 @@ func (s *quoteImages) DeleteQuoteImageBackground(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *quoteImages) DeleteQuoteImageBackground(ctx context.Context, request op
 }
 
 // DeleteQuoteImageFont - Delete a font file. The user needs to be the owner of the font to be able to delete it.
-func (s *quoteImages) DeleteQuoteImageFont(ctx context.Context, request operations.DeleteQuoteImageFontRequest) (*operations.DeleteQuoteImageFontResponse, error) {
+func (s *quoteImages) DeleteQuoteImageFont(ctx context.Context, request operations.DeleteQuoteImageFontRequest, security operations.DeleteQuoteImageFontSecurity) (*operations.DeleteQuoteImageFontResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font"
 
@@ -129,11 +129,11 @@ func (s *quoteImages) DeleteQuoteImageFont(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *quoteImages) DeleteQuoteImageFont(ctx context.Context, request operatio
 }
 
 // GetQuoteImage - Gets a Quote image for a given id. Response can be an image file as a binary or a base64 encoded contents wrapped in json. `TODO`
-func (s *quoteImages) GetQuoteImage(ctx context.Context, request operations.GetQuoteImageRequest) (*operations.GetQuoteImageResponse, error) {
+func (s *quoteImages) GetQuoteImage(ctx context.Context, request operations.GetQuoteImageRequest, security operations.GetQuoteImageSecurity) (*operations.GetQuoteImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image"
 
@@ -172,11 +172,11 @@ func (s *quoteImages) GetQuoteImage(ctx context.Context, request operations.GetQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -206,7 +206,7 @@ func (s *quoteImages) GetQuoteImage(ctx context.Context, request operations.GetQ
 }
 
 // GetQuoteImageBackgroundList - Lists background images in your private collection.
-func (s *quoteImages) GetQuoteImageBackgroundList(ctx context.Context, request operations.GetQuoteImageBackgroundListRequest) (*operations.GetQuoteImageBackgroundListResponse, error) {
+func (s *quoteImages) GetQuoteImageBackgroundList(ctx context.Context, request operations.GetQuoteImageBackgroundListRequest, security operations.GetQuoteImageBackgroundListSecurity) (*operations.GetQuoteImageBackgroundListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background/list"
 
@@ -215,11 +215,11 @@ func (s *quoteImages) GetQuoteImageBackgroundList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *quoteImages) GetQuoteImageBackgroundList(ctx context.Context, request o
 }
 
 // GetQuoteImageBackgroundSearch - Searches for a background image with a given tag.
-func (s *quoteImages) GetQuoteImageBackgroundSearch(ctx context.Context, request operations.GetQuoteImageBackgroundSearchRequest) (*operations.GetQuoteImageBackgroundSearchResponse, error) {
+func (s *quoteImages) GetQuoteImageBackgroundSearch(ctx context.Context, request operations.GetQuoteImageBackgroundSearchRequest, security operations.GetQuoteImageBackgroundSearchSecurity) (*operations.GetQuoteImageBackgroundSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background/search"
 
@@ -258,11 +258,11 @@ func (s *quoteImages) GetQuoteImageBackgroundSearch(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,7 +292,7 @@ func (s *quoteImages) GetQuoteImageBackgroundSearch(ctx context.Context, request
 }
 
 // GetQuoteImageFontList - Lists background images in your private collection.
-func (s *quoteImages) GetQuoteImageFontList(ctx context.Context, request operations.GetQuoteImageFontListRequest) (*operations.GetQuoteImageFontListResponse, error) {
+func (s *quoteImages) GetQuoteImageFontList(ctx context.Context, request operations.GetQuoteImageFontListRequest, security operations.GetQuoteImageFontListSecurity) (*operations.GetQuoteImageFontListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font/list"
 
@@ -301,11 +301,11 @@ func (s *quoteImages) GetQuoteImageFontList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,7 +335,7 @@ func (s *quoteImages) GetQuoteImageFontList(ctx context.Context, request operati
 }
 
 // GetQuoteImageFontSearch - Searches for a font with a given tag.
-func (s *quoteImages) GetQuoteImageFontSearch(ctx context.Context, request operations.GetQuoteImageFontSearchRequest) (*operations.GetQuoteImageFontSearchResponse, error) {
+func (s *quoteImages) GetQuoteImageFontSearch(ctx context.Context, request operations.GetQuoteImageFontSearchRequest, security operations.GetQuoteImageFontSearchSecurity) (*operations.GetQuoteImageFontSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font/search"
 
@@ -344,11 +344,11 @@ func (s *quoteImages) GetQuoteImageFontSearch(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,7 +378,7 @@ func (s *quoteImages) GetQuoteImageFontSearch(ctx context.Context, request opera
 }
 
 // GetQuoteImageSearch - Gets a Random Quote image. Optional `category` param determines the category of quote used in the image. Optional `author` param gets the quote image of a given author.
-func (s *quoteImages) GetQuoteImageSearch(ctx context.Context, request operations.GetQuoteImageSearchRequest) (*operations.GetQuoteImageSearchResponse, error) {
+func (s *quoteImages) GetQuoteImageSearch(ctx context.Context, request operations.GetQuoteImageSearchRequest, security operations.GetQuoteImageSearchSecurity) (*operations.GetQuoteImageSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/search"
 
@@ -387,11 +387,11 @@ func (s *quoteImages) GetQuoteImageSearch(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -421,7 +421,7 @@ func (s *quoteImages) GetQuoteImageSearch(ctx context.Context, request operation
 }
 
 // PostQuoteImageBackground - Add an image for use later as a quote background image.
-func (s *quoteImages) PostQuoteImageBackground(ctx context.Context, request operations.PostQuoteImageBackgroundRequest) (*operations.PostQuoteImageBackgroundResponse, error) {
+func (s *quoteImages) PostQuoteImageBackground(ctx context.Context, request operations.PostQuoteImageBackgroundRequestBody, security operations.PostQuoteImageBackgroundSecurity) (*operations.PostQuoteImageBackgroundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background"
 
@@ -437,7 +437,7 @@ func (s *quoteImages) PostQuoteImageBackground(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -465,7 +465,7 @@ func (s *quoteImages) PostQuoteImageBackground(ctx context.Context, request oper
 }
 
 // PostQuoteImageBackgroundTagsAdd - Add a tag to a given Image.
-func (s *quoteImages) PostQuoteImageBackgroundTagsAdd(ctx context.Context, request operations.PostQuoteImageBackgroundTagsAddRequest) (*operations.PostQuoteImageBackgroundTagsAddResponse, error) {
+func (s *quoteImages) PostQuoteImageBackgroundTagsAdd(ctx context.Context, request operations.PostQuoteImageBackgroundTagsAddRequest, security operations.PostQuoteImageBackgroundTagsAddSecurity) (*operations.PostQuoteImageBackgroundTagsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background/tags/add"
 
@@ -474,11 +474,11 @@ func (s *quoteImages) PostQuoteImageBackgroundTagsAdd(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -508,7 +508,7 @@ func (s *quoteImages) PostQuoteImageBackgroundTagsAdd(ctx context.Context, reque
 }
 
 // PostQuoteImageBackgroundTagsRemove - Remove a tag from a given Image.
-func (s *quoteImages) PostQuoteImageBackgroundTagsRemove(ctx context.Context, request operations.PostQuoteImageBackgroundTagsRemoveRequest) (*operations.PostQuoteImageBackgroundTagsRemoveResponse, error) {
+func (s *quoteImages) PostQuoteImageBackgroundTagsRemove(ctx context.Context, request operations.PostQuoteImageBackgroundTagsRemoveRequest, security operations.PostQuoteImageBackgroundTagsRemoveSecurity) (*operations.PostQuoteImageBackgroundTagsRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/background/tags/remove"
 
@@ -517,11 +517,11 @@ func (s *quoteImages) PostQuoteImageBackgroundTagsRemove(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -551,7 +551,7 @@ func (s *quoteImages) PostQuoteImageBackgroundTagsRemove(ctx context.Context, re
 }
 
 // PostQuoteImageFont - Add a font file for use later in creating a quote image. This is essentially a `PUT` but not many clients handle PUT with binary stream i.e. a file, gracefully.
-func (s *quoteImages) PostQuoteImageFont(ctx context.Context, request operations.PostQuoteImageFontRequest) (*operations.PostQuoteImageFontResponse, error) {
+func (s *quoteImages) PostQuoteImageFont(ctx context.Context, request operations.PostQuoteImageFontRequestBody, security operations.PostQuoteImageFontSecurity) (*operations.PostQuoteImageFontResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font"
 
@@ -567,7 +567,7 @@ func (s *quoteImages) PostQuoteImageFont(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,7 +595,7 @@ func (s *quoteImages) PostQuoteImageFont(ctx context.Context, request operations
 }
 
 // PostQuoteImageFontTagsAdd - Add a tag to a given font.
-func (s *quoteImages) PostQuoteImageFontTagsAdd(ctx context.Context, request operations.PostQuoteImageFontTagsAddRequest) (*operations.PostQuoteImageFontTagsAddResponse, error) {
+func (s *quoteImages) PostQuoteImageFontTagsAdd(ctx context.Context, request operations.PostQuoteImageFontTagsAddRequest, security operations.PostQuoteImageFontTagsAddSecurity) (*operations.PostQuoteImageFontTagsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font/tags/add"
 
@@ -604,11 +604,11 @@ func (s *quoteImages) PostQuoteImageFontTagsAdd(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -638,7 +638,7 @@ func (s *quoteImages) PostQuoteImageFontTagsAdd(ctx context.Context, request ope
 }
 
 // PostQuoteImageFontTagsRemove - Remove a tag from a given Font.
-func (s *quoteImages) PostQuoteImageFontTagsRemove(ctx context.Context, request operations.PostQuoteImageFontTagsRemoveRequest) (*operations.PostQuoteImageFontTagsRemoveResponse, error) {
+func (s *quoteImages) PostQuoteImageFontTagsRemove(ctx context.Context, request operations.PostQuoteImageFontTagsRemoveRequest, security operations.PostQuoteImageFontTagsRemoveSecurity) (*operations.PostQuoteImageFontTagsRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image/font/tags/remove"
 
@@ -647,11 +647,11 @@ func (s *quoteImages) PostQuoteImageFontTagsRemove(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -681,7 +681,7 @@ func (s *quoteImages) PostQuoteImageFontTagsRemove(ctx context.Context, request 
 }
 
 // PutQuoteImage - Create a new quote image for a given quote. Choose background colors/images , choose different font styles and generate a beautiful quote image. Did you just had a feeling of being a god or what?!
-func (s *quoteImages) PutQuoteImage(ctx context.Context, request operations.PutQuoteImageRequest) (*operations.PutQuoteImageResponse, error) {
+func (s *quoteImages) PutQuoteImage(ctx context.Context, request operations.PutQuoteImageRequest, security operations.PutQuoteImageSecurity) (*operations.PutQuoteImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/image"
 
@@ -690,11 +690,11 @@ func (s *quoteImages) PutQuoteImage(ctx context.Context, request operations.PutQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

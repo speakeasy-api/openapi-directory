@@ -22,6 +22,5 @@ pkg/models/operations/firebasedatabaseprojectslocationsinstancesundelete.go
 pkg/models/shared/databaseinstance.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listdatabaseinstancesresponse.go
 USAGE.md

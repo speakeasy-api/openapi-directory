@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolIpmiSetConfigPathParams struct {
+type ProtocolIpmiSetConfigRequest struct {
 	// Agent to set the IPMI configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the IPMI configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the IPMI configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolIpmiSetConfigRequest struct {
-	PathParams ProtocolIpmiSetConfigPathParams
 }
 
 type ProtocolIpmiSetConfigResponse struct {

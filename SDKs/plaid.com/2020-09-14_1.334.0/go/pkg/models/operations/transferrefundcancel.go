@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferRefundCancelRequest struct {
-	Request shared.TransferRefundCancelRequest `request:"mediaType=application/json"`
-}
 
 type TransferRefundCancelResponse struct {
 	ContentType string

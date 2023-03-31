@@ -37,7 +37,7 @@ func (s *polygons) CreateUpdatePolygon(ctx context.Context, request operations.C
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/logistics/pvt/configuration/geoshape"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *polygons) CreateUpdatePolygon(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -83,14 +83,14 @@ func (s *polygons) CreateUpdatePolygon(ctx context.Context, request operations.C
 // Deletes polygon set up in your store, by polygon name.
 func (s *polygons) DeletePolygon(ctx context.Context, request operations.DeletePolygonRequest) (*operations.DeletePolygonResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -128,9 +128,9 @@ func (s *polygons) PagedPolygons(ctx context.Context, request operations.PagedPo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -163,14 +163,14 @@ func (s *polygons) PagedPolygons(ctx context.Context, request operations.PagedPo
 // Lists your store's polygons by searching through polygon name
 func (s *polygons) PolygonbyID(ctx context.Context, request operations.PolygonbyIDRequest) (*operations.PolygonbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

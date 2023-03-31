@@ -33,11 +33,11 @@ func newEarnings(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AddOrUpdateAnEmployeeEarning - Add/Update Earning
 // Add/Update Earning API sends new or updated employee earnings information directly to Web Pay.
-func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request operations.AddOrUpdateAnEmployeeEarningRequest) (*operations.AddOrUpdateAnEmployeeEarningResponse, error) {
+func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request operations.AddOrUpdateAnEmployeeEarningRequest, security operations.AddOrUpdateAnEmployeeEarningSecurity) (*operations.AddOrUpdateAnEmployeeEarningResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Earning", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request ope
 
 // DeleteEarningByEarningCodeAndStartDate - Delete Earning by Earning Code and Start Date
 // Delete Earning by Earning Code and Start Date
-func (s *earnings) DeleteEarningByEarningCodeAndStartDate(ctx context.Context, request operations.DeleteEarningByEarningCodeAndStartDateRequest) (*operations.DeleteEarningByEarningCodeAndStartDateResponse, error) {
+func (s *earnings) DeleteEarningByEarningCodeAndStartDate(ctx context.Context, request operations.DeleteEarningByEarningCodeAndStartDateRequest, security operations.DeleteEarningByEarningCodeAndStartDateSecurity) (*operations.DeleteEarningByEarningCodeAndStartDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -153,16 +153,16 @@ func (s *earnings) DeleteEarningByEarningCodeAndStartDate(ctx context.Context, r
 
 // GetAllEarnings - Get All Earnings
 // Get All Earnings returns all earnings for the selected employee.
-func (s *earnings) GetAllEarnings(ctx context.Context, request operations.GetAllEarningsRequest) (*operations.GetAllEarningsResponse, error) {
+func (s *earnings) GetAllEarnings(ctx context.Context, request operations.GetAllEarningsRequest, security operations.GetAllEarningsSecurity) (*operations.GetAllEarningsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,16 +215,16 @@ func (s *earnings) GetAllEarnings(ctx context.Context, request operations.GetAll
 
 // GetEarningByEarningCodeAndStartDate - Get Earning by Earning Code and Start Date
 // Get Earnings returns the single earning with the provided earning code and start date for the selected employee.
-func (s *earnings) GetEarningByEarningCodeAndStartDate(ctx context.Context, request operations.GetEarningByEarningCodeAndStartDateRequest) (*operations.GetEarningByEarningCodeAndStartDateResponse, error) {
+func (s *earnings) GetEarningByEarningCodeAndStartDate(ctx context.Context, request operations.GetEarningByEarningCodeAndStartDateRequest, security operations.GetEarningByEarningCodeAndStartDateSecurity) (*operations.GetEarningByEarningCodeAndStartDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,16 +277,16 @@ func (s *earnings) GetEarningByEarningCodeAndStartDate(ctx context.Context, requ
 
 // GetEarningsByEarningCode - Get Earnings by Earning Code
 // Get Earnings returns all earnings with the provided earning code for the selected employee.
-func (s *earnings) GetEarningsByEarningCode(ctx context.Context, request operations.GetEarningsByEarningCodeRequest) (*operations.GetEarningsByEarningCodeResponse, error) {
+func (s *earnings) GetEarningsByEarningCode(ctx context.Context, request operations.GetEarningsByEarningCodeRequest, security operations.GetEarningsByEarningCodeSecurity) (*operations.GetEarningsByEarningCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

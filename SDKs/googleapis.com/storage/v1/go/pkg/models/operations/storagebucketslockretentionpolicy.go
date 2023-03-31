@@ -8,18 +8,18 @@ import (
 )
 
 type StorageBucketsLockRetentionPolicySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsLockRetentionPolicySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsLockRetentionPolicySecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsLockRetentionPolicySecurity struct {
@@ -28,14 +28,11 @@ type StorageBucketsLockRetentionPolicySecurity struct {
 	Option3 *StorageBucketsLockRetentionPolicySecurityOption3 `security:"option"`
 }
 
-type StorageBucketsLockRetentionPolicyPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageBucketsLockRetentionPolicyQueryParams struct {
+type StorageBucketsLockRetentionPolicyRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the operation conditional on whether bucket's current metageneration matches the given value.
@@ -54,12 +51,6 @@ type StorageBucketsLockRetentionPolicyQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageBucketsLockRetentionPolicyRequest struct {
-	PathParams  StorageBucketsLockRetentionPolicyPathParams
-	QueryParams StorageBucketsLockRetentionPolicyQueryParams
-	Security    StorageBucketsLockRetentionPolicySecurity
 }
 
 type StorageBucketsLockRetentionPolicyResponse struct {

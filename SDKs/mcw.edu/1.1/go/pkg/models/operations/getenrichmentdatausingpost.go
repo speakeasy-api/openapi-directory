@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetEnrichmentDataUsingPOSTRequest struct {
-	// geneRequest
-	Request shared.EnrichmentGeneRequest `request:"mediaType=application/json"`
-}
 
 type GetEnrichmentDataUsingPOSTResponse struct {
 	Body        []byte

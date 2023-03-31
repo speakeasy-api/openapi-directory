@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type NodesContributorsReadPathParams struct {
+type NodesContributorsReadRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type NodesContributorsReadRequest struct {
-	PathParams NodesContributorsReadPathParams
 }
 
 // NodesContributorsReadContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.

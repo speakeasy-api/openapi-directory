@@ -8,12 +8,7 @@ import (
 )
 
 type PutOrdersIDShipSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
-}
-
-type PutOrdersIDShipPathParams struct {
-	// The FDC order Id
-	ID int `pathParam:"style=simple,explode=false,name=id"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PutOrdersIDShipOrderShipV2 - Shipping Details
@@ -25,10 +20,10 @@ type PutOrdersIDShipOrderShipV2 struct {
 }
 
 type PutOrdersIDShipRequest struct {
-	PathParams PutOrdersIDShipPathParams
 	// Shipping Details
-	Request  PutOrdersIDShipOrderShipV2 `request:"mediaType=application/json"`
-	Security PutOrdersIDShipSecurity
+	RequestBody PutOrdersIDShipOrderShipV2 `request:"mediaType=application/json"`
+	// The FDC order Id
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutOrdersIDShipResponse struct {

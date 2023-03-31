@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitUpdateRefPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref string `pathParam:"style=simple,explode=false,name=ref"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type GitUpdateRefRequestBody struct {
 	// Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work.
 	Force *bool `json:"force,omitempty"`
@@ -24,8 +15,13 @@ type GitUpdateRefRequestBody struct {
 }
 
 type GitUpdateRefRequest struct {
-	PathParams GitUpdateRefPathParams
-	Request    GitUpdateRefRequestBody `request:"mediaType=application/json"`
+	RequestBody GitUpdateRefRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// ref parameter
+	Ref string `pathParam:"style=simple,explode=false,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitUpdateRefResponse struct {

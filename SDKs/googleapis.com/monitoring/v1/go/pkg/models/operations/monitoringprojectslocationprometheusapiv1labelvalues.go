@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurity struct {
@@ -28,16 +28,7 @@ type MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurity struct {
 	Option3 *MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsLocationPrometheusAPIV1LabelValuesPathParams struct {
-	// The label name for which values are queried.
-	Label string `pathParam:"style=simple,explode=false,name=label"`
-	// Location of the resource information. Has to be "global" now.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1LabelValuesQueryParams struct {
+type MonitoringProjectsLocationPrometheusAPIV1LabelValuesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,8 +43,14 @@ type MonitoringProjectsLocationPrometheusAPIV1LabelValuesQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The label name for which values are queried.
+	Label string `pathParam:"style=simple,explode=false,name=label"`
+	// Location of the resource information. Has to be "global" now.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// A list of matchers encoded in the Prometheus label matcher format to constrain the values to series that satisfy them.
 	Match *string `queryParam:"style=form,explode=true,name=match"`
+	// The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -66,12 +63,6 @@ type MonitoringProjectsLocationPrometheusAPIV1LabelValuesQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1LabelValuesRequest struct {
-	PathParams  MonitoringProjectsLocationPrometheusAPIV1LabelValuesPathParams
-	QueryParams MonitoringProjectsLocationPrometheusAPIV1LabelValuesQueryParams
-	Security    MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurity
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1LabelValuesResponse struct {

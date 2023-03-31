@@ -12,12 +12,8 @@ var CreateActivityServerList = []string{
 }
 
 type CreateActivitySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateActivityPathParams struct {
-	// The SID of the Workspace that the new Activity belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateActivityCreateActivityRequest struct {
@@ -28,10 +24,9 @@ type CreateActivityCreateActivityRequest struct {
 }
 
 type CreateActivityRequest struct {
-	PathParams CreateActivityPathParams
-	Request    *CreateActivityCreateActivityRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateActivitySecurity
-	ServerURL  *string
+	RequestBody *CreateActivityCreateActivityRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new Activity belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateActivityResponse struct {

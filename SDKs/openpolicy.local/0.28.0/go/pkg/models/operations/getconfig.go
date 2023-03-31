@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfigQueryParams struct {
+type GetConfigRequest struct {
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type GetConfigRequest struct {
-	QueryParams GetConfigQueryParams
 }
 
 type GetConfigResponse struct {

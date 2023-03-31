@@ -33,11 +33,11 @@ func newSdfdownloadtasks(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // DisplayvideoSdfdownloadtasksCreate - Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running, asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the operation is SdfDownloadTask. The response will not include the download files, which must be retrieved with media.download. The state of operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the error.message. Note that error.details is expected to be empty.
-func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksCreate(ctx context.Context, request operations.DisplayvideoSdfdownloadtasksCreateRequest) (*operations.DisplayvideoSdfdownloadtasksCreateResponse, error) {
+func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksCreate(ctx context.Context, request operations.DisplayvideoSdfdownloadtasksCreateRequest, security operations.DisplayvideoSdfdownloadtasksCreateSecurity) (*operations.DisplayvideoSdfdownloadtasksCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/sdfdownloadtasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSdfDownloadTaskRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksCreate(ctx context.Contex
 }
 
 // DisplayvideoSdfdownloadtasksOperationsGet - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
-func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksOperationsGet(ctx context.Context, request operations.DisplayvideoSdfdownloadtasksOperationsGetRequest) (*operations.DisplayvideoSdfdownloadtasksOperationsGetResponse, error) {
+func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksOperationsGet(ctx context.Context, request operations.DisplayvideoSdfdownloadtasksOperationsGetRequest, security operations.DisplayvideoSdfdownloadtasksOperationsGetSecurity) (*operations.DisplayvideoSdfdownloadtasksOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

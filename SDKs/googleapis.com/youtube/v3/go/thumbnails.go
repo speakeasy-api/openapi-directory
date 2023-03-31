@@ -33,7 +33,7 @@ func newThumbnails(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // YoutubeThumbnailsSet - As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
-func (s *thumbnails) YoutubeThumbnailsSet(ctx context.Context, request operations.YoutubeThumbnailsSetRequest) (*operations.YoutubeThumbnailsSetResponse, error) {
+func (s *thumbnails) YoutubeThumbnailsSet(ctx context.Context, request operations.YoutubeThumbnailsSetRequest, security operations.YoutubeThumbnailsSetSecurity) (*operations.YoutubeThumbnailsSetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/thumbnails/set"
 
@@ -42,11 +42,11 @@ func (s *thumbnails) YoutubeThumbnailsSet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

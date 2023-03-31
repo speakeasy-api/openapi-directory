@@ -11,117 +11,7 @@ import (
 )
 
 type UpdatePaymentCancellationPsuDataSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdatePaymentCancellationPsuDataPathParams struct {
-	// Resource identification of the related SCA.
-	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
-	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
-	// The ASPSP will publish which of the payment products/endpoints will be supported.
-	//
-	// The following payment products are supported:
-	//   - domestic-swiss-credit-transfers-isr
-	//   - domestic-swiss-credit-transfers
-	//   - domestic-swiss-credit-transfers-qr
-	//   - domestic-swiss-foreign-credit-transfers
-	//   - swiss-sepa-credit-transfers
-	//   - swiss-cross-border-credit-transfers
-	//   - pain.001-sepa-credit-transfers
-	//   - pain.001-cross-border-credit-transfers
-	//   - pain.001-swiss-six-credit-transfers
-	//
-	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
-	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
-	// Further XML schemes might be supported by some communities.
-	//
-	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
-	// There are plenty of country specificic scheme variants.
-	//
-	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
-	// Payment service:
-	//
-	// Possible values are:
-	// * payments
-	// * bulk-payments
-	// * periodic-payments
-	//
-	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
-	// Resource identification of the generated payment initiation resource.
-	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type UpdatePaymentCancellationPsuDataHeaders struct {
-	// Is contained if and only if the "Signature" element is contained in the header of the request.
-	Digest *string `header:"style=simple,explode=false,name=Digest"`
-	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
-	//
-	PSUAccept *string `header:"style=simple,explode=false,name=PSU-Accept"`
-	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
-	//
-	PSUAcceptCharset *string `header:"style=simple,explode=false,name=PSU-Accept-Charset"`
-	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
-	//
-	PSUAcceptEncoding *string `header:"style=simple,explode=false,name=PSU-Accept-Encoding"`
-	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
-	//
-	PSUAcceptLanguage *string `header:"style=simple,explode=false,name=PSU-Accept-Language"`
-	// Might be mandated in the ASPSP's documentation. Only used in a corporate context.
-	//
-	PSUCorporateID *string `header:"style=simple,explode=false,name=PSU-Corporate-ID"`
-	// Might be mandated in the ASPSP's documentation. Only used in a corporate context.
-	//
-	PSUCorporateIDType *string `header:"style=simple,explode=false,name=PSU-Corporate-ID-Type"`
-	// UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
-	// UUID identifies either a device or a device dependant application installation.
-	// In case of an installation identification this ID needs to be unaltered until removal from device.
-	//
-	PSUDeviceID *string `header:"style=simple,explode=false,name=PSU-Device-ID"`
-	// The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
-	//
-	PSUGeoLocation *string `header:"style=simple,explode=false,name=PSU-Geo-Location"`
-	// HTTP method used at the PSU ? TPP interface, if available.
-	// Valid values are:
-	// * GET
-	// * POST
-	// * PUT
-	// * PATCH
-	// * DELETE
-	//
-	PSUHTTPMethod *shared.PSUHTTPMethodEnum `header:"style=simple,explode=false,name=PSU-Http-Method"`
-	// Client ID of the PSU in the ASPSP client interface.
-	//
-	// Might be mandated in the ASPSP's documentation.
-	//
-	// It might be contained even if an OAuth2 based authentication was performed in a pre-step or an OAuth2 based SCA was performed in an preceding
-	// AIS service in the same session.
-	// In this case the ASPSP might check whether PSU-ID and token match,
-	// according to ASPSP documentation.
-	//
-	PsuID *string `header:"style=simple,explode=false,name=PSU-ID"`
-	// Type of the PSU-ID, needed in scenarios where PSUs have several PSU-IDs as access possibility.
-	//
-	// In this case, the mean and use are then defined in the ASPSP's documentation.
-	//
-	PSUIDType *string `header:"style=simple,explode=false,name=PSU-ID-Type"`
-	// The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
-	//
-	PSUIPAddress *string `header:"style=simple,explode=false,name=PSU-IP-Address"`
-	// The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
-	//
-	PSUIPPort *string `header:"style=simple,explode=false,name=PSU-IP-Port"`
-	// The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
-	//
-	PSUUserAgent *string `header:"style=simple,explode=false,name=PSU-User-Agent"`
-	// A signature of the request by the TPP on application level. This might be mandated by ASPSP.
-	//
-	Signature *string `header:"style=simple,explode=false,name=Signature"`
-	// The certificate used for signing the request, in base64 encoding.
-	// Must be contained if a signature is contained.
-	//
-	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
-	// ID of the request, unique to the call, as determined by the initiating party.
-	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdatePaymentCancellationPsuDataRequestBodyType string
@@ -265,10 +155,111 @@ func (u UpdatePaymentCancellationPsuDataRequestBody) MarshalJSON() ([]byte, erro
 }
 
 type UpdatePaymentCancellationPsuDataRequest struct {
-	PathParams UpdatePaymentCancellationPsuDataPathParams
-	Headers    UpdatePaymentCancellationPsuDataHeaders
-	Request    *UpdatePaymentCancellationPsuDataRequestBody `request:"mediaType=application/json"`
-	Security   UpdatePaymentCancellationPsuDataSecurity
+	// Is contained if and only if the "Signature" element is contained in the header of the request.
+	Digest *string `header:"style=simple,explode=false,name=Digest"`
+	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+	//
+	PSUAccept *string `header:"style=simple,explode=false,name=PSU-Accept"`
+	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+	//
+	PSUAcceptCharset *string `header:"style=simple,explode=false,name=PSU-Accept-Charset"`
+	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+	//
+	PSUAcceptEncoding *string `header:"style=simple,explode=false,name=PSU-Accept-Encoding"`
+	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+	//
+	PSUAcceptLanguage *string `header:"style=simple,explode=false,name=PSU-Accept-Language"`
+	// Might be mandated in the ASPSP's documentation. Only used in a corporate context.
+	//
+	PSUCorporateID *string `header:"style=simple,explode=false,name=PSU-Corporate-ID"`
+	// Might be mandated in the ASPSP's documentation. Only used in a corporate context.
+	//
+	PSUCorporateIDType *string `header:"style=simple,explode=false,name=PSU-Corporate-ID-Type"`
+	// UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+	// UUID identifies either a device or a device dependant application installation.
+	// In case of an installation identification this ID needs to be unaltered until removal from device.
+	//
+	PSUDeviceID *string `header:"style=simple,explode=false,name=PSU-Device-ID"`
+	// The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+	//
+	PSUGeoLocation *string `header:"style=simple,explode=false,name=PSU-Geo-Location"`
+	// HTTP method used at the PSU ? TPP interface, if available.
+	// Valid values are:
+	// * GET
+	// * POST
+	// * PUT
+	// * PATCH
+	// * DELETE
+	//
+	PSUHTTPMethod *shared.PSUHTTPMethodEnum `header:"style=simple,explode=false,name=PSU-Http-Method"`
+	// Client ID of the PSU in the ASPSP client interface.
+	//
+	// Might be mandated in the ASPSP's documentation.
+	//
+	// It might be contained even if an OAuth2 based authentication was performed in a pre-step or an OAuth2 based SCA was performed in an preceding
+	// AIS service in the same session.
+	// In this case the ASPSP might check whether PSU-ID and token match,
+	// according to ASPSP documentation.
+	//
+	PsuID *string `header:"style=simple,explode=false,name=PSU-ID"`
+	// Type of the PSU-ID, needed in scenarios where PSUs have several PSU-IDs as access possibility.
+	//
+	// In this case, the mean and use are then defined in the ASPSP's documentation.
+	//
+	PSUIDType *string `header:"style=simple,explode=false,name=PSU-ID-Type"`
+	// The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
+	//
+	PSUIPAddress *string `header:"style=simple,explode=false,name=PSU-IP-Address"`
+	// The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+	//
+	PSUIPPort *string `header:"style=simple,explode=false,name=PSU-IP-Port"`
+	// The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+	//
+	PSUUserAgent *string                                      `header:"style=simple,explode=false,name=PSU-User-Agent"`
+	RequestBody  *UpdatePaymentCancellationPsuDataRequestBody `request:"mediaType=application/json"`
+	// A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+	//
+	Signature *string `header:"style=simple,explode=false,name=Signature"`
+	// The certificate used for signing the request, in base64 encoding.
+	// Must be contained if a signature is contained.
+	//
+	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
+	// ID of the request, unique to the call, as determined by the initiating party.
+	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
+	// Resource identification of the related SCA.
+	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
+	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+	// The ASPSP will publish which of the payment products/endpoints will be supported.
+	//
+	// The following payment products are supported:
+	//   - domestic-swiss-credit-transfers-isr
+	//   - domestic-swiss-credit-transfers
+	//   - domestic-swiss-credit-transfers-qr
+	//   - domestic-swiss-foreign-credit-transfers
+	//   - swiss-sepa-credit-transfers
+	//   - swiss-cross-border-credit-transfers
+	//   - pain.001-sepa-credit-transfers
+	//   - pain.001-cross-border-credit-transfers
+	//   - pain.001-swiss-six-credit-transfers
+	//
+	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+	// Further XML schemes might be supported by some communities.
+	//
+	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+	// There are plenty of country specificic scheme variants.
+	//
+	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
+	// Payment service:
+	//
+	// Possible values are:
+	// * payments
+	// * bulk-payments
+	// * periodic-payments
+	//
+	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
+	// Resource identification of the generated payment initiation resource.
+	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
 }
 
 type UpdatePaymentCancellationPsuData200ApplicationJSONType string

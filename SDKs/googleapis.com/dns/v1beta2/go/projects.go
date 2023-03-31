@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DNSProjectsGet - Fetches the representation of an existing Project.
-func (s *projects) DNSProjectsGet(ctx context.Context, request operations.DNSProjectsGetRequest) (*operations.DNSProjectsGetResponse, error) {
+func (s *projects) DNSProjectsGet(ctx context.Context, request operations.DNSProjectsGetRequest, security operations.DNSProjectsGetSecurity) (*operations.DNSProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

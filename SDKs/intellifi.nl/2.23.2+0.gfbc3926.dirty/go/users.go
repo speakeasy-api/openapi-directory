@@ -39,7 +39,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // AddUser - Create user
 // Can only be used by an **administrative** user.
-func (s *users) AddUser(ctx context.Context, request operations.AddUserRequest) (*operations.AddUserResponse, error) {
+func (s *users) AddUser(ctx context.Context, request shared.UserInput, security operations.AddUserSecurity) (*operations.AddUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -58,7 +58,7 @@ func (s *users) AddUser(ctx context.Context, request operations.AddUserRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,16 +94,16 @@ func (s *users) AddUser(ctx context.Context, request operations.AddUserRequest) 
 
 // DeleteUser - Delete user
 // Can only be used by an **administrative** user.
-func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
+func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest, security operations.DeleteUserSecurity) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,16 +139,16 @@ func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserReq
 
 // GetUserByID - Get user
 // Can only be used by an **administrative** user.
-func (s *users) GetUserByID(ctx context.Context, request operations.GetUserByIDRequest) (*operations.GetUserByIDResponse, error) {
+func (s *users) GetUserByID(ctx context.Context, request operations.GetUserByIDRequest, security operations.GetUserByIDSecurity) (*operations.GetUserByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *users) GetUserByID(ctx context.Context, request operations.GetUserByIDR
 
 // GetUsers - Get all users
 // Can only be used by an **administrative** user.
-func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest) (*operations.GetUsersResponse, error) {
+func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest, security operations.GetUsersSecurity) (*operations.GetUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -193,11 +193,11 @@ func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,11 +233,11 @@ func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest
 
 // UpdateUser - Update existing user
 // Can only be used by an **administrative** user.
-func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
+func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserRequest, security operations.UpdateUserSecurity) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -252,7 +252,7 @@ func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

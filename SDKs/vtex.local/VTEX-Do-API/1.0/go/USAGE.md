@@ -13,26 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetNoteRequest{
-        PathParams: operations.GetNotePathParams{
-            NoteID: "654321cba",
-        },
-        QueryParams: operations.GetNoteQueryParams{
-            Reason: "data-validation",
-        },
-        Headers: operations.GetNoteHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
+        Accept: "application/json",
+        ContentType: "application/json",
+        NoteID: "654321cba",
+        Reason: "data-validation",
     }
 
     ctx := context.Background()

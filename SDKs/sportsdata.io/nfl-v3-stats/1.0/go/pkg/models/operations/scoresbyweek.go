@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScoresByWeekPathParams struct {
+type ScoresByWeekRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	//           Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -18,10 +18,6 @@ type ScoresByWeekPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type ScoresByWeekRequest struct {
-	PathParams ScoresByWeekPathParams
 }
 
 type ScoresByWeekResponse struct {

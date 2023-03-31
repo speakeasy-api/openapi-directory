@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersPrimeIsPartitionPrimeSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersPrimeIsPartitionPrimeQueryParams struct {
-	// Number to check
-	Number *int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersPrimeIsPartitionPrimeRequest struct {
-	QueryParams GetNumbersPrimeIsPartitionPrimeQueryParams
-	Security    GetNumbersPrimeIsPartitionPrimeSecurity
+	// Number to check
+	Number *int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersPrimeIsPartitionPrimeResponse struct {

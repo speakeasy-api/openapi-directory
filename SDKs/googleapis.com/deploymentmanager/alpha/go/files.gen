@@ -54,7 +54,6 @@ pkg/models/operations/deploymentmanagertypeslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/compositetype.go
 pkg/models/shared/templatecontents.go
 pkg/models/shared/importfile.go

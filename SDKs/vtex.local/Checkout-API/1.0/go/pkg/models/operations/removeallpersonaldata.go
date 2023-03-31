@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type RemoveallpersonaldataPathParams struct {
-	// ID of the orderForm corresponding to the cart whose user's personal data you want to remove.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type RemoveallpersonaldataHeaders struct {
+type RemoveallpersonaldataRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RemoveallpersonaldataRequest struct {
-	PathParams RemoveallpersonaldataPathParams
-	Headers    RemoveallpersonaldataHeaders
+	// ID of the orderForm corresponding to the cart whose user's personal data you want to remove.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type RemoveallpersonaldataResponse struct {

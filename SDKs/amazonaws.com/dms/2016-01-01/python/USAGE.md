@@ -3,46 +3,42 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddTagsToResourceRequest(
-    headers=operations.AddTagsToResourceHeaders(
-        x_amz_algorithm="laborum",
-        x_amz_content_sha256="ex",
-        x_amz_credential="ad",
-        x_amz_date="voluptatem",
-        x_amz_security_token="accusantium",
-        x_amz_signature="et",
-        x_amz_signed_headers="sunt",
-        x_amz_target="AmazonDMSv20160101.AddTagsToResource",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddTagsToResourceMessage(
-        resource_arn="quidem",
+)
+
+
+req = operations.AddTagsToResourceRequest(
+    add_tags_to_resource_message=shared.AddTagsToResourceMessage(
+        resource_arn="corrupti",
         tags=[
             shared.Tag(
-                key="iure",
-                resource_arn="incidunt",
-                value="iusto",
+                key="distinctio",
+                resource_arn="quibusdam",
+                value="unde",
             ),
             shared.Tag(
-                key="voluptatibus",
-                resource_arn="voluptates",
-                value="quia",
+                key="nulla",
+                resource_arn="corrupti",
+                value="illum",
             ),
             shared.Tag(
-                key="tenetur",
-                resource_arn="et",
-                value="rerum",
+                key="vel",
+                resource_arn="error",
+                value="deserunt",
             ),
         ],
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="iure",
+    x_amz_credential="magnam",
+    x_amz_date="debitis",
+    x_amz_security_token="ipsa",
+    x_amz_signature="delectus",
+    x_amz_signed_headers="tempora",
+    x_amz_target="AmazonDMSv20160101.AddTagsToResource",
 )
     
 res = s.add_tags_to_resource(req)

@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type FacetscategoryPathParams struct {
-	// Term used for the facet's search. You can search for as much term as you want. The term can be: `categoryId`, `brandId`, `specificationId`.
-	Term string `pathParam:"style=simple,explode=false,name=term"`
-}
-
-type FacetscategoryQueryParams struct {
+type FacetscategoryRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
 	From *string `queryParam:"style=form,explode=true,name=_from"`
 	// Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
 	To *string `queryParam:"style=form,explode=true,name=_to"`
 	// Mapping of the term. It can be `c` for a category, `b` for a brand, or `specificationFilter_{specificationId}` for a specification. You need to include a map for each term you are searching for in the same term's order.
 	Map string `queryParam:"style=form,explode=true,name=map"`
-}
-
-type FacetscategoryHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type FacetscategoryRequest struct {
-	PathParams  FacetscategoryPathParams
-	QueryParams FacetscategoryQueryParams
-	Headers     FacetscategoryHeaders
+	// Term used for the facet's search. You can search for as much term as you want. The term can be: `categoryId`, `brandId`, `specificationId`.
+	Term string `pathParam:"style=simple,explode=false,name=term"`
 }
 
 type Facetscategory200ApplicationJSONBrands struct {

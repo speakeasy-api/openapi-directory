@@ -105,7 +105,7 @@ func New(opts ...SDKOption) *SDK {
 // RotoballerArticles - RotoBaller Articles
 func (s *SDK) RotoballerArticles(ctx context.Context, request operations.RotoballerArticlesRequest) (*operations.RotoballerArticlesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *SDK) RotoballerArticles(ctx context.Context, request operations.Rotobal
 // RotoballerArticlesByDate - RotoBaller Articles by Date
 func (s *SDK) RotoballerArticlesByDate(ctx context.Context, request operations.RotoballerArticlesByDateRequest) (*operations.RotoballerArticlesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +193,7 @@ func (s *SDK) RotoballerArticlesByDate(ctx context.Context, request operations.R
 // RotoballerArticlesByPlayer - RotoBaller Articles by Player
 func (s *SDK) RotoballerArticlesByPlayer(ctx context.Context, request operations.RotoballerArticlesByPlayerRequest) (*operations.RotoballerArticlesByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

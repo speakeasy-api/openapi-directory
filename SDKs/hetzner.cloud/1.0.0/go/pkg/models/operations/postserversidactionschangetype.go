@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsChangeTypePathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsChangeTypeRequestBody struct {
 	// ID or name of Server type the Server should migrate to
 	ServerType string `json:"server_type"`
@@ -21,8 +16,9 @@ type PostServersIDActionsChangeTypeRequestBody struct {
 }
 
 type PostServersIDActionsChangeTypeRequest struct {
-	PathParams PostServersIDActionsChangeTypePathParams
-	Request    *PostServersIDActionsChangeTypeRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsChangeTypeRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsChangeTypeActionResponseActionError - Error message for the Action if error occurred, otherwise null

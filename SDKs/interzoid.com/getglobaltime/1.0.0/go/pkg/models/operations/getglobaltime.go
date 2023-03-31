@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetglobaltimeQueryParams struct {
+type GetglobaltimeRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Geographic locale to get the current time for
 	Locale string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetglobaltimeRequest struct {
-	QueryParams GetglobaltimeQueryParams
 }
 
 // Getglobaltime200ApplicationJSON - Current global time in many forms and related information

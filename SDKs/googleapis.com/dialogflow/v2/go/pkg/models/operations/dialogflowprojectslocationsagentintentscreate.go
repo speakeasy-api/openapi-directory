@@ -10,23 +10,18 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentIntentsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentIntentsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentIntentsCreateSecurity struct {
 	Option1 *DialogflowProjectsLocationsAgentIntentsCreateSecurityOption1 `security:"option"`
 	Option2 *DialogflowProjectsLocationsAgentIntentsCreateSecurityOption2 `security:"option"`
-}
-
-type DialogflowProjectsLocationsAgentIntentsCreatePathParams struct {
-	// Required. The agent to create a intent for. Format: `projects//agent`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum - Optional. The resource view to apply to the returned intent.
@@ -53,9 +48,10 @@ func (e *DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum) UnmarshalJ
 	}
 }
 
-type DialogflowProjectsLocationsAgentIntentsCreateQueryParams struct {
+type DialogflowProjectsLocationsAgentIntentsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                        *shared.XgafvEnum                          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowV2IntentInput *shared.GoogleCloudDialogflowV2IntentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -72,6 +68,8 @@ type DialogflowProjectsLocationsAgentIntentsCreateQueryParams struct {
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The agent to create a intent for. Format: `projects//agent`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -80,13 +78,6 @@ type DialogflowProjectsLocationsAgentIntentsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentIntentsCreateRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentIntentsCreatePathParams
-	QueryParams DialogflowProjectsLocationsAgentIntentsCreateQueryParams
-	Request     *shared.GoogleCloudDialogflowV2IntentInput `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentIntentsCreateSecurity
 }
 
 type DialogflowProjectsLocationsAgentIntentsCreateResponse struct {

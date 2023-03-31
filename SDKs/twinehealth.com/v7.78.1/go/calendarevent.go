@@ -35,7 +35,7 @@ func newCalendarEvent(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreateCalendarEvent - Create calendar event
 // Create a calendar event for a patient. Attribute `all_day` must be set to `true` and `end_at` cannot be set for `plan-check-in` event type.
-func (s *calendarEvent) CreateCalendarEvent(ctx context.Context, request operations.CreateCalendarEventRequest) (*operations.CreateCalendarEventResponse, error) {
+func (s *calendarEvent) CreateCalendarEvent(ctx context.Context, request shared.CreateCalendarEventRequest) (*operations.CreateCalendarEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calendar_event"
 
@@ -106,7 +106,7 @@ func (s *calendarEvent) CreateCalendarEvent(ctx context.Context, request operati
 // Delete a calendar event by id
 func (s *calendarEvent) DeleteCalendarEvent(ctx context.Context, request operations.DeleteCalendarEventRequest) (*operations.DeleteCalendarEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -154,7 +154,7 @@ func (s *calendarEvent) DeleteCalendarEvent(ctx context.Context, request operati
 // Get a calendar event by id
 func (s *calendarEvent) FetchCalendarEvent(ctx context.Context, request operations.FetchCalendarEventRequest) (*operations.FetchCalendarEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +218,7 @@ func (s *calendarEvent) FetchCalendarEvents(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -274,9 +274,9 @@ func (s *calendarEvent) FetchCalendarEvents(ctx context.Context, request operati
 // Update a calendar event for a patient. Attribute `all_day` must be true and `end_at` cannot be specified for `plan-check-in` event type. To mark a calendar event as 'completed', set `completed_at` and `completed_by` to desired values.  To mark a completed calendar event as 'not completed', set `completed_at` and `completed_by` to `null`. Attendees can be added or removed, but response status cannot be updated. Use the calendar event response api for response status updates instead.
 func (s *calendarEvent) UpdateCalendarEvent(ctx context.Context, request operations.UpdateCalendarEventRequest) (*operations.UpdateCalendarEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendar_event/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCalendarEventRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

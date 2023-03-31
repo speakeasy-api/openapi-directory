@@ -106,9 +106,9 @@ func New(opts ...SDKOption) *SDK {
 // ActionARealTimeDecision - Action a Real-Time Decision
 func (s *SDK) ActionARealTimeDecision(ctx context.Context, request operations.ActionARealTimeDecisionRequest) (*operations.ActionARealTimeDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}/action", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}/action", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActionARealTimeDecisionParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,7 +170,7 @@ func (s *SDK) ActionARealTimeDecision(ctx context.Context, request operations.Ac
 // ApproveACheckTransfer - Approve a Check Transfer
 func (s *SDK) ApproveACheckTransfer(ctx context.Context, request operations.ApproveACheckTransferRequest) (*operations.ApproveACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *SDK) ApproveACheckTransfer(ctx context.Context, request operations.Appr
 // ApproveAWireTransfer - Approve a Wire Transfer
 func (s *SDK) ApproveAWireTransfer(ctx context.Context, request operations.ApproveAWireTransferRequest) (*operations.ApproveAWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -278,7 +278,7 @@ func (s *SDK) ApproveAWireTransfer(ctx context.Context, request operations.Appro
 // ApproveAnAccountTransfer - Approve an Account Transfer
 func (s *SDK) ApproveAnAccountTransfer(ctx context.Context, request operations.ApproveAnAccountTransferRequest) (*operations.ApproveAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -333,7 +333,7 @@ func (s *SDK) ApproveAnAccountTransfer(ctx context.Context, request operations.A
 // Approves an ACH Transfer in a pending_approval state.
 func (s *SDK) ApproveAnAchTransfer(ctx context.Context, request operations.ApproveAnAchTransferRequest) (*operations.ApproveAnAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -388,7 +388,7 @@ func (s *SDK) ApproveAnAchTransfer(ctx context.Context, request operations.Appro
 // Cancels an ACH Transfer in a pending_approval state.
 func (s *SDK) CancelAPendingAchTransfer(ctx context.Context, request operations.CancelAPendingAchTransferRequest) (*operations.CancelAPendingAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -442,7 +442,7 @@ func (s *SDK) CancelAPendingAchTransfer(ctx context.Context, request operations.
 // CancelAPendingCheckTransfer - Cancel a pending Check Transfer
 func (s *SDK) CancelAPendingCheckTransfer(ctx context.Context, request operations.CancelAPendingCheckTransferRequest) (*operations.CancelAPendingCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -496,7 +496,7 @@ func (s *SDK) CancelAPendingCheckTransfer(ctx context.Context, request operation
 // CancelAPendingWireTransfer - Cancel a pending Wire Transfer
 func (s *SDK) CancelAPendingWireTransfer(ctx context.Context, request operations.CancelAPendingWireTransferRequest) (*operations.CancelAPendingWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -550,7 +550,7 @@ func (s *SDK) CancelAPendingWireTransfer(ctx context.Context, request operations
 // CancelAnAccountTransfer - Cancel an Account Transfer
 func (s *SDK) CancelAnAccountTransfer(ctx context.Context, request operations.CancelAnAccountTransferRequest) (*operations.CancelAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -604,7 +604,7 @@ func (s *SDK) CancelAnAccountTransfer(ctx context.Context, request operations.Ca
 // CloseAnAccount - Close an Account
 func (s *SDK) CloseAnAccount(ctx context.Context, request operations.CloseAnAccountRequest) (*operations.CloseAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/close", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -659,7 +659,7 @@ func (s *SDK) CloseAnAccount(ctx context.Context, request operations.CloseAnAcco
 // If your account is configured to require approval for each transfer, this endpoint simulates the approval of an [Account Transfer](#account-transfers). You can also approve sandbox Account Transfers in the dashboard. This transfer must first have a `status` of `pending_approval`.
 func (s *SDK) CompleteASandboxAccountTransfer(ctx context.Context, request operations.CompleteASandboxAccountTransferRequest) (*operations.CompleteASandboxAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/account_transfers/{account_transfer_id}/complete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/account_transfers/{account_transfer_id}/complete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -711,7 +711,7 @@ func (s *SDK) CompleteASandboxAccountTransfer(ctx context.Context, request opera
 }
 
 // CreateACard - Create a Card
-func (s *SDK) CreateACard(ctx context.Context, request operations.CreateACardRequest) (*operations.CreateACardResponse, error) {
+func (s *SDK) CreateACard(ctx context.Context, request shared.CreateACardParameters) (*operations.CreateACardResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cards"
 
@@ -775,7 +775,7 @@ func (s *SDK) CreateACard(ctx context.Context, request operations.CreateACardReq
 }
 
 // CreateACardDispute - Create a Card Dispute
-func (s *SDK) CreateACardDispute(ctx context.Context, request operations.CreateACardDisputeRequest) (*operations.CreateACardDisputeResponse, error) {
+func (s *SDK) CreateACardDispute(ctx context.Context, request shared.CreateACardDisputeParameters) (*operations.CreateACardDisputeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/card_disputes"
 
@@ -839,7 +839,7 @@ func (s *SDK) CreateACardDispute(ctx context.Context, request operations.CreateA
 }
 
 // CreateACardProfile - Create a Card Profile
-func (s *SDK) CreateACardProfile(ctx context.Context, request operations.CreateACardProfileRequest) (*operations.CreateACardProfileResponse, error) {
+func (s *SDK) CreateACardProfile(ctx context.Context, request shared.CreateACardProfileParameters) (*operations.CreateACardProfileResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/card_profiles"
 
@@ -903,7 +903,7 @@ func (s *SDK) CreateACardProfile(ctx context.Context, request operations.CreateA
 }
 
 // CreateACheckDeposit - Create a Check Deposit
-func (s *SDK) CreateACheckDeposit(ctx context.Context, request operations.CreateACheckDepositRequest) (*operations.CreateACheckDepositResponse, error) {
+func (s *SDK) CreateACheckDeposit(ctx context.Context, request shared.CreateACheckDepositParameters) (*operations.CreateACheckDepositResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_deposits"
 
@@ -967,7 +967,7 @@ func (s *SDK) CreateACheckDeposit(ctx context.Context, request operations.Create
 }
 
 // CreateACheckTransfer - Create a Check Transfer
-func (s *SDK) CreateACheckTransfer(ctx context.Context, request operations.CreateACheckTransferRequest) (*operations.CreateACheckTransferResponse, error) {
+func (s *SDK) CreateACheckTransfer(ctx context.Context, request shared.CreateACheckTransferParameters) (*operations.CreateACheckTransferResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_transfers"
 
@@ -1032,7 +1032,7 @@ func (s *SDK) CreateACheckTransfer(ctx context.Context, request operations.Creat
 
 // CreateAFile - Create a File
 // To upload a file to Increase, you'll need to send a request of Content-Type `multipart/form-data`. The request should contain the file you would like to upload, as well as the parameters for creating a file.
-func (s *SDK) CreateAFile(ctx context.Context, request operations.CreateAFileRequest) (*operations.CreateAFileResponse, error) {
+func (s *SDK) CreateAFile(ctx context.Context, request shared.CreateAFileParameters) (*operations.CreateAFileResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files"
 
@@ -1096,7 +1096,7 @@ func (s *SDK) CreateAFile(ctx context.Context, request operations.CreateAFileReq
 }
 
 // CreateALimit - Create a Limit
-func (s *SDK) CreateALimit(ctx context.Context, request operations.CreateALimitRequest) (*operations.CreateALimitResponse, error) {
+func (s *SDK) CreateALimit(ctx context.Context, request shared.CreateALimitParameters) (*operations.CreateALimitResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/limits"
 
@@ -1162,9 +1162,9 @@ func (s *SDK) CreateALimit(ctx context.Context, request operations.CreateALimitR
 // CreateASupplementalDocumentForAnEntity - Create a supplemental document for an Entity
 func (s *SDK) CreateASupplementalDocumentForAnEntity(ctx context.Context, request operations.CreateASupplementalDocumentForAnEntityRequest) (*operations.CreateASupplementalDocumentForAnEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}/supplemental_documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}/supplemental_documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateASupplementalDocumentForAnEntityParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1224,7 +1224,7 @@ func (s *SDK) CreateASupplementalDocumentForAnEntity(ctx context.Context, reques
 }
 
 // CreateAWireDrawdownRequest - Create a Wire Drawdown Request
-func (s *SDK) CreateAWireDrawdownRequest(ctx context.Context, request operations.CreateAWireDrawdownRequestRequest) (*operations.CreateAWireDrawdownRequestResponse, error) {
+func (s *SDK) CreateAWireDrawdownRequest(ctx context.Context, request shared.CreateAWireDrawdownRequestParameters) (*operations.CreateAWireDrawdownRequestResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wire_drawdown_requests"
 
@@ -1288,7 +1288,7 @@ func (s *SDK) CreateAWireDrawdownRequest(ctx context.Context, request operations
 }
 
 // CreateAWireTransfer - Create a Wire Transfer
-func (s *SDK) CreateAWireTransfer(ctx context.Context, request operations.CreateAWireTransferRequest) (*operations.CreateAWireTransferResponse, error) {
+func (s *SDK) CreateAWireTransfer(ctx context.Context, request shared.CreateAWireTransferParameters) (*operations.CreateAWireTransferResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wire_transfers"
 
@@ -1352,7 +1352,7 @@ func (s *SDK) CreateAWireTransfer(ctx context.Context, request operations.Create
 }
 
 // CreateAnAccount - Create an Account
-func (s *SDK) CreateAnAccount(ctx context.Context, request operations.CreateAnAccountRequest) (*operations.CreateAnAccountResponse, error) {
+func (s *SDK) CreateAnAccount(ctx context.Context, request shared.CreateAnAccountParameters) (*operations.CreateAnAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -1416,7 +1416,7 @@ func (s *SDK) CreateAnAccount(ctx context.Context, request operations.CreateAnAc
 }
 
 // CreateAnAccountNumber - Create an Account Number
-func (s *SDK) CreateAnAccountNumber(ctx context.Context, request operations.CreateAnAccountNumberRequest) (*operations.CreateAnAccountNumberResponse, error) {
+func (s *SDK) CreateAnAccountNumber(ctx context.Context, request shared.CreateAnAccountNumberParameters) (*operations.CreateAnAccountNumberResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account_numbers"
 
@@ -1480,7 +1480,7 @@ func (s *SDK) CreateAnAccountNumber(ctx context.Context, request operations.Crea
 }
 
 // CreateAnAccountTransfer - Create an Account Transfer
-func (s *SDK) CreateAnAccountTransfer(ctx context.Context, request operations.CreateAnAccountTransferRequest) (*operations.CreateAnAccountTransferResponse, error) {
+func (s *SDK) CreateAnAccountTransfer(ctx context.Context, request shared.CreateAnAccountTransferParameters) (*operations.CreateAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account_transfers"
 
@@ -1544,7 +1544,7 @@ func (s *SDK) CreateAnAccountTransfer(ctx context.Context, request operations.Cr
 }
 
 // CreateAnAchPrenotification - Create an ACH Prenotification
-func (s *SDK) CreateAnAchPrenotification(ctx context.Context, request operations.CreateAnAchPrenotificationRequest) (*operations.CreateAnAchPrenotificationResponse, error) {
+func (s *SDK) CreateAnAchPrenotification(ctx context.Context, request shared.CreateAnAchPrenotificationParameters) (*operations.CreateAnAchPrenotificationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ach_prenotifications"
 
@@ -1608,7 +1608,7 @@ func (s *SDK) CreateAnAchPrenotification(ctx context.Context, request operations
 }
 
 // CreateAnAchReturn - Create an ACH Return
-func (s *SDK) CreateAnAchReturn(ctx context.Context, request operations.CreateAnAchReturnRequest) (*operations.CreateAnAchReturnResponse, error) {
+func (s *SDK) CreateAnAchReturn(ctx context.Context, request shared.CreateAnAchReturnParameters) (*operations.CreateAnAchReturnResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inbound_ach_transfer_returns"
 
@@ -1672,7 +1672,7 @@ func (s *SDK) CreateAnAchReturn(ctx context.Context, request operations.CreateAn
 }
 
 // CreateAnAchTransfer - Create an ACH Transfer
-func (s *SDK) CreateAnAchTransfer(ctx context.Context, request operations.CreateAnAchTransferRequest) (*operations.CreateAnAchTransferResponse, error) {
+func (s *SDK) CreateAnAchTransfer(ctx context.Context, request shared.CreateAnAchTransferParameters) (*operations.CreateAnAchTransferResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ach_transfers"
 
@@ -1736,7 +1736,7 @@ func (s *SDK) CreateAnAchTransfer(ctx context.Context, request operations.Create
 }
 
 // CreateAnEntity - Create an Entity
-func (s *SDK) CreateAnEntity(ctx context.Context, request operations.CreateAnEntityRequest) (*operations.CreateAnEntityResponse, error) {
+func (s *SDK) CreateAnEntity(ctx context.Context, request shared.CreateAnEntityParameters) (*operations.CreateAnEntityResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities"
 
@@ -1800,7 +1800,7 @@ func (s *SDK) CreateAnEntity(ctx context.Context, request operations.CreateAnEnt
 }
 
 // CreateAnEventSubscription - Create an Event Subscription
-func (s *SDK) CreateAnEventSubscription(ctx context.Context, request operations.CreateAnEventSubscriptionRequest) (*operations.CreateAnEventSubscriptionResponse, error) {
+func (s *SDK) CreateAnEventSubscription(ctx context.Context, request shared.CreateAnEventSubscriptionParameters) (*operations.CreateAnEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/event_subscriptions"
 
@@ -1864,7 +1864,7 @@ func (s *SDK) CreateAnEventSubscription(ctx context.Context, request operations.
 }
 
 // CreateAnExternalAccount - Create an External Account
-func (s *SDK) CreateAnExternalAccount(ctx context.Context, request operations.CreateAnExternalAccountRequest) (*operations.CreateAnExternalAccountResponse, error) {
+func (s *SDK) CreateAnExternalAccount(ctx context.Context, request shared.CreateAnExternalAccountParameters) (*operations.CreateAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/external_accounts"
 
@@ -1931,7 +1931,7 @@ func (s *SDK) CreateAnExternalAccount(ctx context.Context, request operations.Cr
 // Simulates a [Check Transfer](#check-transfers) being deposited at a bank. This transfer must first have a `status` of `mailed`.
 func (s *SDK) DepositASandboxCheckTransfer(ctx context.Context, request operations.DepositASandboxCheckTransferRequest) (*operations.DepositASandboxCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/deposit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/deposit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1992,7 +1992,7 @@ func (s *SDK) ListAccountNumbers(ctx context.Context, request operations.ListAcc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2050,7 +2050,7 @@ func (s *SDK) ListAccountStatements(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2108,7 +2108,7 @@ func (s *SDK) ListAccountTransfers(ctx context.Context, request operations.ListA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2166,7 +2166,7 @@ func (s *SDK) ListAccounts(ctx context.Context, request operations.ListAccountsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2224,7 +2224,7 @@ func (s *SDK) ListAchPrenotifications(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2282,7 +2282,7 @@ func (s *SDK) ListAchTransfers(ctx context.Context, request operations.ListAchTr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2340,7 +2340,7 @@ func (s *SDK) ListCardDisputes(ctx context.Context, request operations.ListCardD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2398,7 +2398,7 @@ func (s *SDK) ListCardProfiles(ctx context.Context, request operations.ListCardP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2456,7 +2456,7 @@ func (s *SDK) ListCards(ctx context.Context, request operations.ListCardsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2514,7 +2514,7 @@ func (s *SDK) ListCheckDeposits(ctx context.Context, request operations.ListChec
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2572,7 +2572,7 @@ func (s *SDK) ListCheckTransfers(ctx context.Context, request operations.ListChe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2630,7 +2630,7 @@ func (s *SDK) ListDeclinedTransactions(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2688,7 +2688,7 @@ func (s *SDK) ListDigitalWalletTokens(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2746,7 +2746,7 @@ func (s *SDK) ListDocuments(ctx context.Context, request operations.ListDocument
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2804,7 +2804,7 @@ func (s *SDK) ListEntities(ctx context.Context, request operations.ListEntitiesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2862,7 +2862,7 @@ func (s *SDK) ListEventSubscriptions(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2920,7 +2920,7 @@ func (s *SDK) ListEvents(ctx context.Context, request operations.ListEventsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2978,7 +2978,7 @@ func (s *SDK) ListExternalAccounts(ctx context.Context, request operations.ListE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3036,7 +3036,7 @@ func (s *SDK) ListFiles(ctx context.Context, request operations.ListFilesRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3094,7 +3094,7 @@ func (s *SDK) ListInboundAchTransferReturns(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3152,7 +3152,7 @@ func (s *SDK) ListInboundWireDrawdownRequests(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3210,7 +3210,7 @@ func (s *SDK) ListLimits(ctx context.Context, request operations.ListLimitsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3268,7 +3268,7 @@ func (s *SDK) ListOauthConnections(ctx context.Context, request operations.ListO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3326,7 +3326,7 @@ func (s *SDK) ListPendingTransactions(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3385,7 +3385,7 @@ func (s *SDK) ListRoutingNumbers(ctx context.Context, request operations.ListRou
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3443,7 +3443,7 @@ func (s *SDK) ListTransactions(ctx context.Context, request operations.ListTrans
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3501,7 +3501,7 @@ func (s *SDK) ListWireDrawdownRequests(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3559,7 +3559,7 @@ func (s *SDK) ListWireTransfers(ctx context.Context, request operations.ListWire
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3611,7 +3611,7 @@ func (s *SDK) ListWireTransfers(ctx context.Context, request operations.ListWire
 // Simulates the mailing of a [Check Transfer](#check-transfers), which happens once per weekday in production but can be sped up in sandbox. This transfer must first have a `status` of `pending_approval` or `pending_submission`.
 func (s *SDK) MailASandboxCheckTransfer(ctx context.Context, request operations.MailASandboxCheckTransferRequest) (*operations.MailASandboxCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/mail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/mail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3666,7 +3666,7 @@ func (s *SDK) MailASandboxCheckTransfer(ctx context.Context, request operations.
 // Simulates the rejection of a [Check Deposit](#check-deposits) by Increase due to factors like poor image quality. This Check Deposit must first have a `status` of `pending`.
 func (s *SDK) RejectASandboxCheckDeposit(ctx context.Context, request operations.RejectASandboxCheckDepositRequest) (*operations.RejectASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/reject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/reject", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3720,7 +3720,7 @@ func (s *SDK) RejectASandboxCheckDeposit(ctx context.Context, request operations
 // RequestAStopPaymentOnACheckTransfer - Request a stop payment on a Check Transfer
 func (s *SDK) RequestAStopPaymentOnACheckTransfer(ctx context.Context, request operations.RequestAStopPaymentOnACheckTransferRequest) (*operations.RequestAStopPaymentOnACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/stop_payment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/stop_payment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3774,7 +3774,7 @@ func (s *SDK) RequestAStopPaymentOnACheckTransfer(ctx context.Context, request o
 // RetrieveACard - Retrieve a Card
 func (s *SDK) RetrieveACard(ctx context.Context, request operations.RetrieveACardRequest) (*operations.RetrieveACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3828,7 +3828,7 @@ func (s *SDK) RetrieveACard(ctx context.Context, request operations.RetrieveACar
 // RetrieveACardDispute - Retrieve a Card Dispute
 func (s *SDK) RetrieveACardDispute(ctx context.Context, request operations.RetrieveACardDisputeRequest) (*operations.RetrieveACardDisputeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/card_disputes/{card_dispute_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/card_disputes/{card_dispute_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3882,7 +3882,7 @@ func (s *SDK) RetrieveACardDispute(ctx context.Context, request operations.Retri
 // RetrieveACardProfile - Retrieve a Card Profile
 func (s *SDK) RetrieveACardProfile(ctx context.Context, request operations.RetrieveACardProfileRequest) (*operations.RetrieveACardProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/card_profiles/{card_profile_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/card_profiles/{card_profile_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3936,7 +3936,7 @@ func (s *SDK) RetrieveACardProfile(ctx context.Context, request operations.Retri
 // RetrieveACheckDeposit - Retrieve a Check Deposit
 func (s *SDK) RetrieveACheckDeposit(ctx context.Context, request operations.RetrieveACheckDepositRequest) (*operations.RetrieveACheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_deposits/{check_deposit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check_deposits/{check_deposit_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3990,7 +3990,7 @@ func (s *SDK) RetrieveACheckDeposit(ctx context.Context, request operations.Retr
 // RetrieveACheckTransfer - Retrieve a Check Transfer
 func (s *SDK) RetrieveACheckTransfer(ctx context.Context, request operations.RetrieveACheckTransferRequest) (*operations.RetrieveACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4044,7 +4044,7 @@ func (s *SDK) RetrieveACheckTransfer(ctx context.Context, request operations.Ret
 // RetrieveADeclinedTransaction - Retrieve a Declined Transaction
 func (s *SDK) RetrieveADeclinedTransaction(ctx context.Context, request operations.RetrieveADeclinedTransactionRequest) (*operations.RetrieveADeclinedTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/declined_transactions/{declined_transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/declined_transactions/{declined_transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4098,7 +4098,7 @@ func (s *SDK) RetrieveADeclinedTransaction(ctx context.Context, request operatio
 // RetrieveADigitalWalletToken - Retrieve a Digital Wallet Token
 func (s *SDK) RetrieveADigitalWalletToken(ctx context.Context, request operations.RetrieveADigitalWalletTokenRequest) (*operations.RetrieveADigitalWalletTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/digital_wallet_tokens/{digital_wallet_token_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/digital_wallet_tokens/{digital_wallet_token_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4152,7 +4152,7 @@ func (s *SDK) RetrieveADigitalWalletToken(ctx context.Context, request operation
 // RetrieveADocument - Retrieve a Document
 func (s *SDK) RetrieveADocument(ctx context.Context, request operations.RetrieveADocumentRequest) (*operations.RetrieveADocumentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{document_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{document_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4206,7 +4206,7 @@ func (s *SDK) RetrieveADocument(ctx context.Context, request operations.Retrieve
 // RetrieveAFile - Retrieve a File
 func (s *SDK) RetrieveAFile(ctx context.Context, request operations.RetrieveAFileRequest) (*operations.RetrieveAFileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4260,7 +4260,7 @@ func (s *SDK) RetrieveAFile(ctx context.Context, request operations.RetrieveAFil
 // RetrieveALimit - Retrieve a Limit
 func (s *SDK) RetrieveALimit(ctx context.Context, request operations.RetrieveALimitRequest) (*operations.RetrieveALimitResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4314,7 +4314,7 @@ func (s *SDK) RetrieveALimit(ctx context.Context, request operations.RetrieveALi
 // RetrieveAPendingTransaction - Retrieve a Pending Transaction
 func (s *SDK) RetrieveAPendingTransaction(ctx context.Context, request operations.RetrieveAPendingTransactionRequest) (*operations.RetrieveAPendingTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pending_transactions/{pending_transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pending_transactions/{pending_transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4368,7 +4368,7 @@ func (s *SDK) RetrieveAPendingTransaction(ctx context.Context, request operation
 // RetrieveARealTimeDecision - Retrieve a Real-Time Decision
 func (s *SDK) RetrieveARealTimeDecision(ctx context.Context, request operations.RetrieveARealTimeDecisionRequest) (*operations.RetrieveARealTimeDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4422,7 +4422,7 @@ func (s *SDK) RetrieveARealTimeDecision(ctx context.Context, request operations.
 // RetrieveATransaction - Retrieve a Transaction
 func (s *SDK) RetrieveATransaction(ctx context.Context, request operations.RetrieveATransactionRequest) (*operations.RetrieveATransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4476,7 +4476,7 @@ func (s *SDK) RetrieveATransaction(ctx context.Context, request operations.Retri
 // RetrieveAWireDrawdownRequest - Retrieve a Wire Drawdown Request
 func (s *SDK) RetrieveAWireDrawdownRequest(ctx context.Context, request operations.RetrieveAWireDrawdownRequestRequest) (*operations.RetrieveAWireDrawdownRequestResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_drawdown_requests/{wire_drawdown_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wire_drawdown_requests/{wire_drawdown_request_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4530,7 +4530,7 @@ func (s *SDK) RetrieveAWireDrawdownRequest(ctx context.Context, request operatio
 // RetrieveAWireTransfer - Retrieve a Wire Transfer
 func (s *SDK) RetrieveAWireTransfer(ctx context.Context, request operations.RetrieveAWireTransferRequest) (*operations.RetrieveAWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4584,7 +4584,7 @@ func (s *SDK) RetrieveAWireTransfer(ctx context.Context, request operations.Retr
 // RetrieveAnAccount - Retrieve an Account
 func (s *SDK) RetrieveAnAccount(ctx context.Context, request operations.RetrieveAnAccountRequest) (*operations.RetrieveAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4638,7 +4638,7 @@ func (s *SDK) RetrieveAnAccount(ctx context.Context, request operations.Retrieve
 // RetrieveAnAccountNumber - Retrieve an Account Number
 func (s *SDK) RetrieveAnAccountNumber(ctx context.Context, request operations.RetrieveAnAccountNumberRequest) (*operations.RetrieveAnAccountNumberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4692,7 +4692,7 @@ func (s *SDK) RetrieveAnAccountNumber(ctx context.Context, request operations.Re
 // RetrieveAnAccountStatement - Retrieve an Account Statement
 func (s *SDK) RetrieveAnAccountStatement(ctx context.Context, request operations.RetrieveAnAccountStatementRequest) (*operations.RetrieveAnAccountStatementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_statements/{account_statement_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_statements/{account_statement_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4746,7 +4746,7 @@ func (s *SDK) RetrieveAnAccountStatement(ctx context.Context, request operations
 // RetrieveAnAccountTransfer - Retrieve an Account Transfer
 func (s *SDK) RetrieveAnAccountTransfer(ctx context.Context, request operations.RetrieveAnAccountTransferRequest) (*operations.RetrieveAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4800,7 +4800,7 @@ func (s *SDK) RetrieveAnAccountTransfer(ctx context.Context, request operations.
 // RetrieveAnAchPrenotification - Retrieve an ACH Prenotification
 func (s *SDK) RetrieveAnAchPrenotification(ctx context.Context, request operations.RetrieveAnAchPrenotificationRequest) (*operations.RetrieveAnAchPrenotificationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_prenotifications/{ach_prenotification_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ach_prenotifications/{ach_prenotification_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4854,7 +4854,7 @@ func (s *SDK) RetrieveAnAchPrenotification(ctx context.Context, request operatio
 // RetrieveAnAchTransfer - Retrieve an ACH Transfer
 func (s *SDK) RetrieveAnAchTransfer(ctx context.Context, request operations.RetrieveAnAchTransferRequest) (*operations.RetrieveAnAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4908,7 +4908,7 @@ func (s *SDK) RetrieveAnAchTransfer(ctx context.Context, request operations.Retr
 // RetrieveAnEntity - Retrieve an Entity
 func (s *SDK) RetrieveAnEntity(ctx context.Context, request operations.RetrieveAnEntityRequest) (*operations.RetrieveAnEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4962,7 +4962,7 @@ func (s *SDK) RetrieveAnEntity(ctx context.Context, request operations.RetrieveA
 // RetrieveAnEvent - Retrieve an Event
 func (s *SDK) RetrieveAnEvent(ctx context.Context, request operations.RetrieveAnEventRequest) (*operations.RetrieveAnEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{event_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{event_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5016,7 +5016,7 @@ func (s *SDK) RetrieveAnEvent(ctx context.Context, request operations.RetrieveAn
 // RetrieveAnEventSubscription - Retrieve an Event Subscription
 func (s *SDK) RetrieveAnEventSubscription(ctx context.Context, request operations.RetrieveAnEventSubscriptionRequest) (*operations.RetrieveAnEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5070,7 +5070,7 @@ func (s *SDK) RetrieveAnEventSubscription(ctx context.Context, request operation
 // RetrieveAnExternalAccount - Retrieve an External Account
 func (s *SDK) RetrieveAnExternalAccount(ctx context.Context, request operations.RetrieveAnExternalAccountRequest) (*operations.RetrieveAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5124,7 +5124,7 @@ func (s *SDK) RetrieveAnExternalAccount(ctx context.Context, request operations.
 // RetrieveAnInboundAchTransferReturn - Retrieve an Inbound ACH Transfer Return
 func (s *SDK) RetrieveAnInboundAchTransferReturn(ctx context.Context, request operations.RetrieveAnInboundAchTransferReturnRequest) (*operations.RetrieveAnInboundAchTransferReturnResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5178,7 +5178,7 @@ func (s *SDK) RetrieveAnInboundAchTransferReturn(ctx context.Context, request op
 // RetrieveAnInboundWireDrawdownRequest - Retrieve an Inbound Wire Drawdown Request
 func (s *SDK) RetrieveAnInboundWireDrawdownRequest(ctx context.Context, request operations.RetrieveAnInboundWireDrawdownRequestRequest) (*operations.RetrieveAnInboundWireDrawdownRequestResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5232,7 +5232,7 @@ func (s *SDK) RetrieveAnInboundWireDrawdownRequest(ctx context.Context, request 
 // RetrieveAnOauthConnection - Retrieve an OAuth Connection
 func (s *SDK) RetrieveAnOauthConnection(ctx context.Context, request operations.RetrieveAnOauthConnectionRequest) (*operations.RetrieveAnOauthConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth_connections/{oauth_connection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth_connections/{oauth_connection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5341,7 +5341,7 @@ func (s *SDK) RetrieveGroupDetails(ctx context.Context) (*operations.RetrieveGro
 // RetrieveSensitiveDetailsForACard - Retrieve sensitive details for a Card
 func (s *SDK) RetrieveSensitiveDetailsForACard(ctx context.Context, request operations.RetrieveSensitiveDetailsForACardRequest) (*operations.RetrieveSensitiveDetailsForACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}/details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5396,9 +5396,9 @@ func (s *SDK) RetrieveSensitiveDetailsForACard(ctx context.Context, request oper
 // Simulates the return of an [ACH Transfer](#ach-transfers) by the Federal Reserve due to an error condition. This will also create a Transaction to account for the returned funds. This transfer must first have a `status` of `submitted`.
 func (s *SDK) ReturnASandboxAchTransfer(ctx context.Context, request operations.ReturnASandboxAchTransferRequest) (*operations.ReturnASandboxAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/return", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/return", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnASandboxAchTransferParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5461,7 +5461,7 @@ func (s *SDK) ReturnASandboxAchTransfer(ctx context.Context, request operations.
 // Simulates the return of a [Check Deposit](#check-deposits). This Check Deposit must first have a `status` of `submitted`.
 func (s *SDK) ReturnASandboxCheckDeposit(ctx context.Context, request operations.ReturnASandboxCheckDepositRequest) (*operations.ReturnASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/return", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/return", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5516,7 +5516,7 @@ func (s *SDK) ReturnASandboxCheckDeposit(ctx context.Context, request operations
 // Simulates the reversal of a [Wire Transfer](#wire-transfers) by the Federal Reserve due to error conditions. This will also create a [Transaction](#transaction) to account for the returned funds. This Wire Transfer must first have a `status` of `complete`.'
 func (s *SDK) ReverseASandboxWireTransfer(ctx context.Context, request operations.ReverseASandboxWireTransferRequest) (*operations.ReverseASandboxWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5569,7 +5569,7 @@ func (s *SDK) ReverseASandboxWireTransfer(ctx context.Context, request operation
 
 // SimulateARealTimePaymentsTransferToYourAccount - Simulate a Real Time Payments Transfer to your account
 // Simulates an inbound Real Time Payments transfer to your account. Real Time Payments are a beta feature.
-func (s *SDK) SimulateARealTimePaymentsTransferToYourAccount(ctx context.Context, request operations.SimulateARealTimePaymentsTransferToYourAccountRequest) (*operations.SimulateARealTimePaymentsTransferToYourAccountResponse, error) {
+func (s *SDK) SimulateARealTimePaymentsTransferToYourAccount(ctx context.Context, request shared.SimulateARealTimePaymentsTransferToYourAccountParameters) (*operations.SimulateARealTimePaymentsTransferToYourAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/inbound_real_time_payments_transfers"
 
@@ -5634,7 +5634,7 @@ func (s *SDK) SimulateARealTimePaymentsTransferToYourAccount(ctx context.Context
 
 // SimulateARefundOnACard - Simulate a refund on a card
 // Simulates refunding a card transaction. The full value of the original sandbox transaction is refunded.
-func (s *SDK) SimulateARefundOnACard(ctx context.Context, request operations.SimulateARefundOnACardRequest) (*operations.SimulateARefundOnACardResponse, error) {
+func (s *SDK) SimulateARefundOnACard(ctx context.Context, request shared.SimulateARefundOnACardParameters) (*operations.SimulateARefundOnACardResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/card_refunds"
 
@@ -5699,7 +5699,7 @@ func (s *SDK) SimulateARefundOnACard(ctx context.Context, request operations.Sim
 
 // SimulateATaxDocumentBeingCreated - Simulate a tax document being created
 // Simulates an tax document being created for an account.
-func (s *SDK) SimulateATaxDocumentBeingCreated(ctx context.Context, request operations.SimulateATaxDocumentBeingCreatedRequest) (*operations.SimulateATaxDocumentBeingCreatedResponse, error) {
+func (s *SDK) SimulateATaxDocumentBeingCreated(ctx context.Context, request shared.SimulateATaxDocumentBeingCreatedParameters) (*operations.SimulateATaxDocumentBeingCreatedResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/documents"
 
@@ -5764,7 +5764,7 @@ func (s *SDK) SimulateATaxDocumentBeingCreated(ctx context.Context, request oper
 
 // SimulateAWireTransferToYourAccount - Simulate a Wire Transfer to your account
 // Simulates an inbound Wire Transfer to your account.
-func (s *SDK) SimulateAWireTransferToYourAccount(ctx context.Context, request operations.SimulateAWireTransferToYourAccountRequest) (*operations.SimulateAWireTransferToYourAccountResponse, error) {
+func (s *SDK) SimulateAWireTransferToYourAccount(ctx context.Context, request shared.SimulateAWireTransferToYourAccountParameters) (*operations.SimulateAWireTransferToYourAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/inbound_wire_transfers"
 
@@ -5829,7 +5829,7 @@ func (s *SDK) SimulateAWireTransferToYourAccount(ctx context.Context, request op
 
 // SimulateAnAccountStatementBeingCreated - Simulate an Account Statement being created
 // Simulates an [Account Statement](#account-statements) being created for an account. In production, Account Statements are generated once per month.
-func (s *SDK) SimulateAnAccountStatementBeingCreated(ctx context.Context, request operations.SimulateAnAccountStatementBeingCreatedRequest) (*operations.SimulateAnAccountStatementBeingCreatedResponse, error) {
+func (s *SDK) SimulateAnAccountStatementBeingCreated(ctx context.Context, request shared.SimulateAnAccountStatementBeingCreatedParameters) (*operations.SimulateAnAccountStatementBeingCreatedResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/account_statements"
 
@@ -5894,7 +5894,7 @@ func (s *SDK) SimulateAnAccountStatementBeingCreated(ctx context.Context, reques
 
 // SimulateAnAchTransferToYourAccount - Simulate an ACH Transfer to your account
 // Simulates an inbound ACH transfer to your account. This imitates initiating a transaction to an Increase account from a different financial institution. The transfer may be either a credit or a debit depending on if the `amount` is positive or negative. The result of calling this API will be either a [Transaction](#transactions) or a [Declined Transaction](#declined-transactions) depending on whether or not the transfer is allowed.
-func (s *SDK) SimulateAnAchTransferToYourAccount(ctx context.Context, request operations.SimulateAnAchTransferToYourAccountRequest) (*operations.SimulateAnAchTransferToYourAccountResponse, error) {
+func (s *SDK) SimulateAnAchTransferToYourAccount(ctx context.Context, request shared.SimulateAnAchTransferToYourAccountParameters) (*operations.SimulateAnAchTransferToYourAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/inbound_ach_transfers"
 
@@ -5959,7 +5959,7 @@ func (s *SDK) SimulateAnAchTransferToYourAccount(ctx context.Context, request op
 
 // SimulateAnAuthorizationOnACard - Simulate an authorization on a Card
 // Simulates a purchase authorization on a [Card](#cards). Depending on the balance available to the card and the `amount` submitted, the authorization activity will result in a [Pending Transaction](#pending-transactions) of type `card_authorization` or a [Declined Transaction](#declined-transactions) of type `card_decline`. You can pass either a Card id or a [Digital Wallet Token](#digital-wallet-tokens) id to simulate the two different ways purchases can be made.
-func (s *SDK) SimulateAnAuthorizationOnACard(ctx context.Context, request operations.SimulateAnAuthorizationOnACardRequest) (*operations.SimulateAnAuthorizationOnACardResponse, error) {
+func (s *SDK) SimulateAnAuthorizationOnACard(ctx context.Context, request shared.SimulateAnAuthorizationOnACardParameters) (*operations.SimulateAnAuthorizationOnACardResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/card_authorizations"
 
@@ -6024,7 +6024,7 @@ func (s *SDK) SimulateAnAuthorizationOnACard(ctx context.Context, request operat
 
 // SimulateAnInboundWireDrawdownRequestBeingCreated - Simulate an Inbound Wire Drawdown request being created
 // Simulates the receival of an [Inbound Wire Drawdown Request](#inbound-wire-drawdown-requests).
-func (s *SDK) SimulateAnInboundWireDrawdownRequestBeingCreated(ctx context.Context, request operations.SimulateAnInboundWireDrawdownRequestBeingCreatedRequest) (*operations.SimulateAnInboundWireDrawdownRequestBeingCreatedResponse, error) {
+func (s *SDK) SimulateAnInboundWireDrawdownRequestBeingCreated(ctx context.Context, request shared.SimulateAnInboundWireDrawdownRequestBeingCreatedParameters) (*operations.SimulateAnInboundWireDrawdownRequestBeingCreatedResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/inbound_wire_drawdown_requests"
 
@@ -6089,7 +6089,7 @@ func (s *SDK) SimulateAnInboundWireDrawdownRequestBeingCreated(ctx context.Conte
 
 // SimulateDigitalWalletProvisioningForACard - Simulate digital wallet provisioning for a card
 // Simulates a user attempting add a [Card](#cards) to a digital wallet such as Apple Pay.
-func (s *SDK) SimulateDigitalWalletProvisioningForACard(ctx context.Context, request operations.SimulateDigitalWalletProvisioningForACardRequest) (*operations.SimulateDigitalWalletProvisioningForACardResponse, error) {
+func (s *SDK) SimulateDigitalWalletProvisioningForACard(ctx context.Context, request shared.SimulateDigitalWalletProvisioningForACardParameters) (*operations.SimulateDigitalWalletProvisioningForACardResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/digital_wallet_token_requests"
 
@@ -6154,7 +6154,7 @@ func (s *SDK) SimulateDigitalWalletProvisioningForACard(ctx context.Context, req
 
 // SimulateSettlingACardAuthorization - Simulate settling a card authorization
 // Simulates the settlement of an authorization by a card acquirer. After a card authorization is created, the merchant will eventually send a settlement. This simulates that event, which may occur many days after the purchase in production. The amount settled can be different from the amount originally authorized, for example, when adding a tip to a restaurant bill.
-func (s *SDK) SimulateSettlingACardAuthorization(ctx context.Context, request operations.SimulateSettlingACardAuthorizationRequest) (*operations.SimulateSettlingACardAuthorizationResponse, error) {
+func (s *SDK) SimulateSettlingACardAuthorization(ctx context.Context, request shared.SimulateSettlingACardAuthorizationParameters) (*operations.SimulateSettlingACardAuthorizationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/simulations/card_settlements"
 
@@ -6221,9 +6221,9 @@ func (s *SDK) SimulateSettlingACardAuthorization(ctx context.Context, request op
 // After a [Card Dispute](#card-disputes) is created in production, the dispute will be reviewed. Since no review happens in sandbox, this endpoint simulates moving a Card Dispute into a rejected or accepted state. A Card Dispute can only be actioned one time and must have a status of `pending_reviewing`.
 func (s *SDK) SimulatesAdvancingTheStateOfACardDispute(ctx context.Context, request operations.SimulatesAdvancingTheStateOfACardDisputeRequest) (*operations.SimulatesAdvancingTheStateOfACardDisputeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/card_disputes/{card_dispute_id}/action", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/card_disputes/{card_dispute_id}/action", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SimulatesAdvancingTheStateOfACardDisputeParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6286,7 +6286,7 @@ func (s *SDK) SimulatesAdvancingTheStateOfACardDispute(ctx context.Context, requ
 // Simulates the submission of an [ACH Transfer](#ach-transfers) to the Federal Reserve. This transfer must first have a `status` of `pending_approval` or `pending_submission`. In production, Increase submits ACH Transfers to the Federal Reserve three times per day on weekdays. Since sandbox ACH Transfers are not submitted to the Federal Reserve, this endpoint allows you to skip that delay and transition the ACH Transfer to a status of `submitted`.
 func (s *SDK) SubmitASandboxAchTransfer(ctx context.Context, request operations.SubmitASandboxAchTransferRequest) (*operations.SubmitASandboxAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/submit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/submit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6341,7 +6341,7 @@ func (s *SDK) SubmitASandboxAchTransfer(ctx context.Context, request operations.
 // Simulates the submission of a [Check Deposit](#check-deposits) to the Federal Reserve. This Check Deposit must first have a `status` of `pending`.
 func (s *SDK) SubmitASandboxCheckDeposit(ctx context.Context, request operations.SubmitASandboxCheckDepositRequest) (*operations.SubmitASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/submit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/submit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6396,7 +6396,7 @@ func (s *SDK) SubmitASandboxCheckDeposit(ctx context.Context, request operations
 // Simulates the submission of a [Wire Transfer](#wire-transfers) to the Federal Reserve. This transfer must first have a `status` of `pending_approval` or `pending_creating`.
 func (s *SDK) SubmitASandboxWireTransfer(ctx context.Context, request operations.SubmitASandboxWireTransferRequest) (*operations.SubmitASandboxWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/submit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/submit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6450,9 +6450,9 @@ func (s *SDK) SubmitASandboxWireTransfer(ctx context.Context, request operations
 // UpdateACard - Update a Card
 func (s *SDK) UpdateACard(ctx context.Context, request operations.UpdateACardRequest) (*operations.UpdateACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateACardParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6514,9 +6514,9 @@ func (s *SDK) UpdateACard(ctx context.Context, request operations.UpdateACardReq
 // UpdateALimit - Update a Limit
 func (s *SDK) UpdateALimit(ctx context.Context, request operations.UpdateALimitRequest) (*operations.UpdateALimitResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateALimitParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6578,9 +6578,9 @@ func (s *SDK) UpdateALimit(ctx context.Context, request operations.UpdateALimitR
 // UpdateAnAccount - Update an Account
 func (s *SDK) UpdateAnAccount(ctx context.Context, request operations.UpdateAnAccountRequest) (*operations.UpdateAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnAccountParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6642,9 +6642,9 @@ func (s *SDK) UpdateAnAccount(ctx context.Context, request operations.UpdateAnAc
 // UpdateAnAccountNumber - Update an Account Number
 func (s *SDK) UpdateAnAccountNumber(ctx context.Context, request operations.UpdateAnAccountNumberRequest) (*operations.UpdateAnAccountNumberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnAccountNumberParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6706,9 +6706,9 @@ func (s *SDK) UpdateAnAccountNumber(ctx context.Context, request operations.Upda
 // UpdateAnEventSubscription - Update an Event Subscription
 func (s *SDK) UpdateAnEventSubscription(ctx context.Context, request operations.UpdateAnEventSubscriptionRequest) (*operations.UpdateAnEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnEventSubscriptionParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6770,9 +6770,9 @@ func (s *SDK) UpdateAnEventSubscription(ctx context.Context, request operations.
 // UpdateAnExternalAccount - Update an External Account
 func (s *SDK) UpdateAnExternalAccount(ctx context.Context, request operations.UpdateAnExternalAccountRequest) (*operations.UpdateAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnExternalAccountParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

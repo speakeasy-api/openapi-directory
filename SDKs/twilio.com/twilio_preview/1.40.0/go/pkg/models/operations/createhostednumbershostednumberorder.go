@@ -14,7 +14,8 @@ var CreateHostedNumbersHostedNumberOrderServerList = []string{
 }
 
 type CreateHostedNumbersHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateHostedNumbersHostedNumberOrderCreateHostedNumbersHostedNumberOrderRequestSmsFallbackMethodEnum - The HTTP method that should be used to request the SmsFallbackUrl. Must be either `GET` or `POST`. This will be copied onto the IncomingPhoneNumber resource.
@@ -159,12 +160,6 @@ type CreateHostedNumbersHostedNumberOrderCreateHostedNumbersHostedNumberOrderReq
 	// Optional. The unique sid identifier of the Identity Document that represents the document for verifying ownership of the number to be hosted. Required when VerificationType is phone-bill.
 	VerificationDocumentSid *string                                           `form:"name=VerificationDocumentSid"`
 	VerificationType        *shared.HostedNumberOrderEnumVerificationTypeEnum `form:"name=VerificationType"`
-}
-
-type CreateHostedNumbersHostedNumberOrderRequest struct {
-	Request   *CreateHostedNumbersHostedNumberOrderCreateHostedNumbersHostedNumberOrderRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateHostedNumbersHostedNumberOrderSecurity
-	ServerURL *string
 }
 
 type CreateHostedNumbersHostedNumberOrderResponse struct {

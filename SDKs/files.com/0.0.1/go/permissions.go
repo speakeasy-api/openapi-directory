@@ -37,7 +37,7 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete Permission
 func (s *permissions) DeletePermissionsID(ctx context.Context, request operations.DeletePermissionsIDRequest) (*operations.DeletePermissionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permissions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/permissions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *permissions) GetPermissions(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -159,7 +159,7 @@ func (s *permissions) GetPermissions(ctx context.Context, request operations.Get
 
 // PostPermissions - Create Permission
 // Create Permission
-func (s *permissions) PostPermissions(ctx context.Context, request operations.PostPermissionsRequest) (*operations.PostPermissionsResponse, error) {
+func (s *permissions) PostPermissions(ctx context.Context, request operations.PostPermissionsRequestBody) (*operations.PostPermissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/permissions"
 

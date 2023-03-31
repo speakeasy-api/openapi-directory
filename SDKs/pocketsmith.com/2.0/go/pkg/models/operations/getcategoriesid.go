@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesIDPathParams struct {
+type GetCategoriesIDRequest struct {
 	// The unique identifier of the category.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCategoriesIDRequest struct {
-	PathParams GetCategoriesIDPathParams
 }
 
 type GetCategoriesIDResponse struct {

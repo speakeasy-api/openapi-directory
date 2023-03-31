@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddVideoEmbedPresetSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoEmbedPresetPathParams struct {
+type AddVideoEmbedPresetRequest struct {
 	// The ID of the preset.
 	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoEmbedPresetRequest struct {
-	PathParams AddVideoEmbedPresetPathParams
-	Security   AddVideoEmbedPresetSecurity
 }
 
 type AddVideoEmbedPresetResponse struct {

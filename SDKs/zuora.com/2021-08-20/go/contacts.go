@@ -36,14 +36,14 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Deletes a contact.
 func (s *contacts) ObjectDELETEContact(ctx context.Context, request operations.ObjectDELETEContactRequest) (*operations.ObjectDELETEContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,16 +97,16 @@ func (s *contacts) ObjectDELETEContact(ctx context.Context, request operations.O
 // Retrieves detailed information about a specific contact.
 func (s *contacts) ObjectGETContact(ctx context.Context, request operations.ObjectGETContactRequest) (*operations.ObjectGETContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,7 +176,7 @@ func (s *contacts) ObjectPOSTContact(ctx context.Context, request operations.Obj
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/contact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateContact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,9 +191,9 @@ func (s *contacts) ObjectPOSTContact(ctx context.Context, request operations.Obj
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -265,9 +265,9 @@ func (s *contacts) ObjectPOSTContact(ctx context.Context, request operations.Obj
 // For a use case of this operation, see [Edit the contact information for an account](https://www.zuora.com/developer/api-guides/#Edit-the-contact-information-for-an-account).
 func (s *contacts) ObjectPUTContact(ctx context.Context, request operations.ObjectPUTContactRequest) (*operations.ObjectPUTContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/contact/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyContact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -282,9 +282,9 @@ func (s *contacts) ObjectPUTContact(ctx context.Context, request operations.Obje
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -347,14 +347,14 @@ func (s *contacts) ObjectPUTContact(ctx context.Context, request operations.Obje
 // **Note**: To use this operation, you must ensure that the "Scrub Sensitive Data of Contact" billing permission is enabled in your user role. Contact your tenant administrator if you want to enable this permission. See [Scrub Contacts](https://knowledgecenter.zuora.com/BC_Subscription_Management/Customer_Accounts/A_How_to_Manage_Customer_Accounts/B_Key_Contacts/Scrub_Contacts) for more information.
 func (s *contacts) PUTScrubContact(ctx context.Context, request operations.PUTScrubContactRequest) (*operations.PUTScrubContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/contacts/{contactId}/scrub", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/contacts/{contactId}/scrub", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

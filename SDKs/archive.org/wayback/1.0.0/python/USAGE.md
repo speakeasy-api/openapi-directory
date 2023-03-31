@@ -4,17 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetWaybackV1AvailableRequest(
-    query_params=operations.GetWaybackV1AvailableQueryParams(
-        callback="eum",
-        closest="after",
-        status_code=2100388220143852559,
-        tag="necessitatibus",
-        timeout=57.200001,
-        timestamp="error",
-        url="aliquam",
-    ),
+    callback="corrupti",
+    closest="before",
+    status_code="421",
+    tag="quibusdam",
+    timeout=6027.63,
+    timestamp="nulla",
+    url="corrupti",
 )
     
 res = s.get_wayback_v1_available(req)

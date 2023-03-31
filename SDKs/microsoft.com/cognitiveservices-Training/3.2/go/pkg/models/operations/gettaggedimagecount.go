@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaggedImageCountPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetTaggedImageCountQueryParams struct {
+type GetTaggedImageCountRequest struct {
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// A list of tags ids to filter the images to count. Defaults to all tags when null.
 	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type GetTaggedImageCountRequest struct {
-	PathParams  GetTaggedImageCountPathParams
-	QueryParams GetTaggedImageCountQueryParams
 }
 
 type GetTaggedImageCountResponse struct {

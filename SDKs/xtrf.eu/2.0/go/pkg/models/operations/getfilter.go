@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFilterPathParams struct {
+type GetFilterRequest struct {
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type GetFilterRequest struct {
-	PathParams GetFilterPathParams
 }
 
 type GetFilterResponse struct {

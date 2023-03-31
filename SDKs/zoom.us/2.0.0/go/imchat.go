@@ -43,14 +43,14 @@ func newIMChat(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Please see our [announcements page related to this deprecation](https://marketplace.zoom.us/docs/guides/stay-up-to-date/announcements#im-api-notice).
 func (s *imChat) ImChatMessages(ctx context.Context, request operations.ImChatMessagesRequest) (*operations.ImChatMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/chat/sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/chat/sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -104,7 +104,7 @@ func (s *imChat) ImChatMessages(ctx context.Context, request operations.ImChatMe
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 //
 //	Please see our [announcements page related to this deprecation](https://marketplace.zoom.us/docs/guides/stay-up-to-date/announcements#im-api-notice).
-func (s *imChat) ImChatSessions(ctx context.Context, request operations.ImChatSessionsRequest) (*operations.ImChatSessionsResponse, error) {
+func (s *imChat) ImChatSessions(ctx context.Context, request operations.ImChatSessionsRequest, security operations.ImChatSessionsSecurity) (*operations.ImChatSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/im/chat/sessions"
 
@@ -113,11 +113,11 @@ func (s *imChat) ImChatSessions(ctx context.Context, request operations.ImChatSe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,20 +165,20 @@ func (s *imChat) ImChatSessions(ctx context.Context, request operations.ImChatSe
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 //
 // Please see the [announcements page related to this deprecation.](https://marketplace.zoom.us/docs/guides/stay-up-to-date/announcements#im-api-notice)
-func (s *imChat) Listimmessages(ctx context.Context, request operations.ListimmessagesRequest) (*operations.ListimmessagesResponse, error) {
+func (s *imChat) Listimmessages(ctx context.Context, request operations.ListimmessagesRequest, security operations.ListimmessagesSecurity) (*operations.ListimmessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/users/{userId}/chat/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/users/{userId}/chat/messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *imChat) Listimmessages(ctx context.Context, request operations.Listimme
 // Send chat message to a user. <aside>Note: This API only supports OAuth 2.0.</aside><br><br>**Scope:** `imchat:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *imChat) Sendimmessages(ctx context.Context, request operations.SendimmessagesRequest) (*operations.SendimmessagesResponse, error) {
+func (s *imChat) Sendimmessages(ctx context.Context, request operations.SendimmessagesRequest, security operations.SendimmessagesSecurity) (*operations.SendimmessagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/im/users/me/chat/messages"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *imChat) Sendimmessages(ctx context.Context, request operations.Sendimme
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

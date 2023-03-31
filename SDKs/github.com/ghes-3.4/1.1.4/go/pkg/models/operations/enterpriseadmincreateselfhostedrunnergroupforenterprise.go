@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 // EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum - Visibility of a runner group. You can select all organizations or select individual organization.
 type EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum string
 
@@ -52,8 +47,9 @@ type EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody struct {
 }
 
 type EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest struct {
-	PathParams EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprisePathParams
-	Request    EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 }
 
 type EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse struct {

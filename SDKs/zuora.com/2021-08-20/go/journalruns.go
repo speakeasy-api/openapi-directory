@@ -40,14 +40,14 @@ func newJournalRuns(defaultClient, securityClient HTTPClient, serverURL, languag
 //	You must have the "Delete Cancelled Journal Run" Zuora Finance user permission enabled to delete journal runs.
 func (s *journalRuns) DELETEJournalRun(ctx context.Context, request operations.DELETEJournalRunRequest) (*operations.DELETEJournalRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *journalRuns) DELETEJournalRun(ctx context.Context, request operations.D
 // This REST API reference describes how to get information about a journal run. Request and response field descriptions and sample code are provided.
 func (s *journalRuns) GETJournalRun(ctx context.Context, request operations.GETJournalRunRequest) (*operations.GETJournalRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -140,7 +140,7 @@ func (s *journalRuns) POSTJournalRun(ctx context.Context, request operations.POS
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/journal-runs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTJournalRunType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -155,7 +155,7 @@ func (s *journalRuns) POSTJournalRun(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -210,14 +210,14 @@ func (s *journalRuns) POSTJournalRun(ctx context.Context, request operations.POS
 // 4. The journal run status remains as "Completed". The status does not change to "Canceled" because the journal run still contains a journey entry that is not canceled.
 func (s *journalRuns) PUTJournalRun(ctx context.Context, request operations.PUTJournalRunRequest) (*operations.PUTJournalRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-runs/{jr-number}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,17 +8,13 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDMessagesMessageIDPathParams struct {
+type GetSpacesSpaceIDFoldersIDMessagesMessageIDRequest struct {
 	// Id of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the mesage
 	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDMessagesMessageIDRequest struct {
-	PathParams GetSpacesSpaceIDFoldersIDMessagesMessageIDPathParams
 }
 
 type GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum string

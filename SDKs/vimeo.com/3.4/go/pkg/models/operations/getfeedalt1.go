@@ -10,7 +10,7 @@ import (
 )
 
 type GetFeedAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFeedAlt1TypeEnum - The feed type.
@@ -67,7 +67,7 @@ func (e *GetFeedAlt1TypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFeedAlt1QueryParams struct {
+type GetFeedAlt1Request struct {
 	// Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// The page number of the results to show.
@@ -76,11 +76,6 @@ type GetFeedAlt1QueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The feed type.
 	Type *GetFeedAlt1TypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetFeedAlt1Request struct {
-	QueryParams GetFeedAlt1QueryParams
-	Security    GetFeedAlt1Security
 }
 
 type GetFeedAlt1Response struct {

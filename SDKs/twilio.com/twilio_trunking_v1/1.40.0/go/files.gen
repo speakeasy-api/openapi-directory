@@ -36,7 +36,6 @@ pkg/models/operations/updateoriginationurl.go
 pkg/models/operations/updaterecording.go
 pkg/models/operations/updatetrunk.go
 pkg/models/shared/trunkingv1trunkcredentiallist.go
-pkg/models/shared/security.go
 pkg/models/shared/trunkingv1trunkipaccesscontrollist.go
 pkg/models/shared/trunkingv1trunkoriginationurl.go
 pkg/models/shared/trunkingv1trunkphonenumber.go
@@ -48,3 +47,4 @@ pkg/models/shared/trunkingv1trunkrecording.go
 pkg/models/shared/recordingenumrecordingtrimenum.go
 pkg/models/shared/recordingenumrecordingmodeenum.go
 USAGE.md
+pkg/models/operations/options.go

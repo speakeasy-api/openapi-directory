@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteInlineScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteInlineScriptTagPathParams struct {
-	// インラインスクリプトタグID
-	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteInlineScriptTagRequest struct {
-	PathParams DeleteInlineScriptTagPathParams
-	Security   DeleteInlineScriptTagSecurity
+	// インラインスクリプトタグID
+	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
 }
 
 type DeleteInlineScriptTagResponse struct {

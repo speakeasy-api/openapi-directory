@@ -40,7 +40,6 @@ pkg/models/shared/googlefirebaseappcheckv1batchgetappattestconfigsresponse.go
 pkg/models/shared/googlefirebaseappcheckv1appattestconfig.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlefirebaseappcheckv1debugtoken.go
 pkg/models/shared/googlefirebaseappcheckv1listdebugtokensresponse.go
 pkg/models/shared/googlefirebaseappcheckv1batchgetdevicecheckconfigsresponse.go

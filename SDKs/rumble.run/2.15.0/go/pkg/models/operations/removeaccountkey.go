@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveAccountKeySecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveAccountKeyPathParams struct {
-	// UUID of the key to retrieve
-	KeyID string `pathParam:"style=simple,explode=false,name=key_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveAccountKeyRequest struct {
-	PathParams RemoveAccountKeyPathParams
-	Security   RemoveAccountKeySecurity
+	// UUID of the key to retrieve
+	KeyID string `pathParam:"style=simple,explode=false,name=key_id"`
 }
 
 type RemoveAccountKeyResponse struct {

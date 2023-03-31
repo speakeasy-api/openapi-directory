@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsIDPathParams struct {
+type GetSetupV1LocationsIDRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1LocationsIDRequest struct {
-	PathParams GetSetupV1LocationsIDPathParams
 }
 
 type GetSetupV1LocationsIDResponse struct {

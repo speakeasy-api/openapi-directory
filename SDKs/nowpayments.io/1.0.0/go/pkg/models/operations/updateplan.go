@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatePlanPathParams struct {
-	PlanID string `pathParam:"style=simple,explode=false,name=plan-id"`
-}
-
 type UpdatePlanRequestBody struct {
 	Amount      *float64 `json:"amount,omitempty"`
 	Currency    *string  `json:"currency,omitempty"`
@@ -18,8 +14,8 @@ type UpdatePlanRequestBody struct {
 }
 
 type UpdatePlanRequest struct {
-	PathParams UpdatePlanPathParams
-	Request    *UpdatePlanRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdatePlanRequestBody `request:"mediaType=application/json"`
+	PlanID      string                 `pathParam:"style=simple,explode=false,name=plan-id"`
 }
 
 type UpdatePlanResponse struct {

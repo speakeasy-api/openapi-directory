@@ -8,18 +8,13 @@ import (
 )
 
 type FetchRendersSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type FetchRendersQueryParams struct {
-	// One or more render IDs
-	ID []string `queryParam:"style=form,explode=true,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchRendersRequest struct {
-	QueryParams FetchRendersQueryParams
-	Security    FetchRendersSecurity
+	// One or more render IDs
+	ID []string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type FetchRendersResponse struct {

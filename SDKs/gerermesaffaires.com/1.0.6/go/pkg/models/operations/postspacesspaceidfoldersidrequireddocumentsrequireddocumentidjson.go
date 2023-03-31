@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONPathParams struct {
-	// Id of the folder exchange or followup
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the requireddocument
-	Requireddocumentid string `pathParam:"style=simple,explode=false,name=requireddocumentid"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidApplicationJSONFile struct {
@@ -31,10 +21,14 @@ type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidApplicationJSO
 }
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONPathParams
 	// Required Document to add
-	Request  PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder exchange or followup
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the requireddocument
+	Requireddocumentid string `pathParam:"style=simple,explode=false,name=requireddocumentid"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSON201ApplicationJSON - Id of document created

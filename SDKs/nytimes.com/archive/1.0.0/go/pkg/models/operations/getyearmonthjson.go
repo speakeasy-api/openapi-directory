@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetYearMonthJSONPathParams struct {
+type GetYearMonthJSONRequest struct {
 	// The month number (e.g. 1 for January).
 	Month int `pathParam:"style=simple,explode=false,name=month"`
 	// The year (e.g. 2016).
 	Year int `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetYearMonthJSONRequest struct {
-	PathParams GetYearMonthJSONPathParams
 }
 
 type GetYearMonthJSON200ApplicationJSONResponseMeta struct {

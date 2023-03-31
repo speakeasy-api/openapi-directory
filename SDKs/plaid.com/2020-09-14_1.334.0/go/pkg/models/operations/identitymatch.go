@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type IdentityMatchRequest struct {
-	Request shared.IdentityMatchRequest `request:"mediaType=application/json"`
-}
 
 type IdentityMatchResponse struct {
 	ContentType string

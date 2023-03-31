@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResendTokenPathParams struct {
+type ResendTokenRequest struct {
+	// The type of token to resend
+	ResendTokenRequest shared.ResendTokenRequest `request:"mediaType=application/json"`
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ResendTokenRequest struct {
-	PathParams ResendTokenPathParams
-	// The type of token to resend
-	Request shared.ResendTokenRequest `request:"mediaType=application/json"`
 }
 
 type ResendTokenResponse struct {

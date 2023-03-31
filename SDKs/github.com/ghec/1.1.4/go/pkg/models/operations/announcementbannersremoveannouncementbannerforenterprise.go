@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AnnouncementBannersRemoveAnnouncementBannerForEnterprisePathParams struct {
+type AnnouncementBannersRemoveAnnouncementBannerForEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type AnnouncementBannersRemoveAnnouncementBannerForEnterpriseRequest struct {
-	PathParams AnnouncementBannersRemoveAnnouncementBannerForEnterprisePathParams
 }
 
 type AnnouncementBannersRemoveAnnouncementBannerForEnterpriseResponse struct {

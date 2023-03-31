@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitGetTreePathParams struct {
+type GitGetTreeRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in `:tree_sha`. For example, setting `recursive` to any of the following will enable returning objects or subtrees: `0`, `1`, `"true"`, and `"false"`. Omit this parameter to prevent recursively returning objects or subtrees.
+	Recursive *string `queryParam:"style=form,explode=true,name=recursive"`
 	// The name of the repository. The name is not case sensitive.
 	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	TreeSha string `pathParam:"style=simple,explode=false,name=tree_sha"`
-}
-
-type GitGetTreeQueryParams struct {
-	// Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in `:tree_sha`. For example, setting `recursive` to any of the following will enable returning objects or subtrees: `0`, `1`, `"true"`, and `"false"`. Omit this parameter to prevent recursively returning objects or subtrees.
-	Recursive *string `queryParam:"style=form,explode=true,name=recursive"`
-}
-
-type GitGetTreeRequest struct {
-	PathParams  GitGetTreePathParams
-	QueryParams GitGetTreeQueryParams
 }
 
 type GitGetTreeResponse struct {

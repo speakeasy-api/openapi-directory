@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceSensorRelationshipsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceSensorRelationshipsRequest struct {
-	PathParams GetDeviceSensorRelationshipsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // GetDeviceSensorRelationships200ApplicationJSONLivestreamRelatedDevicesProductTypeEnum - The product type of the related device

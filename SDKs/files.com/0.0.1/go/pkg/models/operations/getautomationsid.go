@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAutomationsIDPathParams struct {
+type GetAutomationsIDRequest struct {
 	// Automation ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAutomationsIDRequest struct {
-	PathParams GetAutomationsIDPathParams
 }
 
 type GetAutomationsIDResponse struct {

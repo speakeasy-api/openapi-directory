@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveACardProfilePathParams struct {
-	CardProfileID string `pathParam:"style=simple,explode=false,name=card_profile_id"`
-}
-
 type RetrieveACardProfileRequest struct {
-	PathParams RetrieveACardProfilePathParams
+	CardProfileID string `pathParam:"style=simple,explode=false,name=card_profile_id"`
 }
 
 type RetrieveACardProfileDefaultApplicationJSON13StatusEnum string

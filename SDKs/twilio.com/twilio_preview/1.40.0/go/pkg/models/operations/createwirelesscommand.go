@@ -12,7 +12,8 @@ var CreateWirelessCommandServerList = []string{
 }
 
 type CreateWirelessCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWirelessCommandCreateWirelessCommandRequest struct {
@@ -23,12 +24,6 @@ type CreateWirelessCommandCreateWirelessCommandRequest struct {
 	Device         *string `form:"name=Device"`
 	IncludeSid     *string `form:"name=IncludeSid"`
 	Sim            *string `form:"name=Sim"`
-}
-
-type CreateWirelessCommandRequest struct {
-	Request   *CreateWirelessCommandCreateWirelessCommandRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateWirelessCommandSecurity
-	ServerURL *string
 }
 
 type CreateWirelessCommandResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WellsTagsListQueryParams struct {
+type WellsTagsListRequest struct {
 	// Which field to use when ordering the results.
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A search term.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type WellsTagsListRequest struct {
-	QueryParams WellsTagsListQueryParams
 }
 
 type WellsTagsListResponse struct {

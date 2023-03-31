@@ -7,13 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFineTuneEventsPathParams struct {
+type ListFineTuneEventsRequest struct {
 	// The ID of the fine-tune job to get events for.
 	//
 	FineTuneID string `pathParam:"style=simple,explode=false,name=fine_tune_id"`
-}
-
-type ListFineTuneEventsQueryParams struct {
 	// Whether to stream events for the fine-tune job. If set to true,
 	// events will be sent as data-only
 	// [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format)
@@ -24,11 +21,6 @@ type ListFineTuneEventsQueryParams struct {
 	// If set to false, only events generated so far will be returned.
 	//
 	Stream *bool `queryParam:"style=form,explode=true,name=stream"`
-}
-
-type ListFineTuneEventsRequest struct {
-	PathParams  ListFineTuneEventsPathParams
-	QueryParams ListFineTuneEventsQueryParams
 }
 
 type ListFineTuneEventsResponse struct {

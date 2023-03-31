@@ -7,7 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductReviewsQueryParams struct {
+type ProductReviewsRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **unique alphanumeric identifier** of the product
 	Code *string `queryParam:"style=form,explode=true,name=code"`
 	// **specifier** as to whether or not to show 'unavailable' products:
@@ -33,17 +36,6 @@ type ProductReviewsQueryParams struct {
 	// - if `topX` is not specified, the default is `'1-100'`
 	//
 	TopX *string `queryParam:"style=form,explode=true,name=topX"`
-}
-
-type ProductReviewsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type ProductReviewsRequest struct {
-	QueryParams ProductReviewsQueryParams
-	Headers     ProductReviewsHeaders
 }
 
 // ProductReviews200ApplicationJSON - Success

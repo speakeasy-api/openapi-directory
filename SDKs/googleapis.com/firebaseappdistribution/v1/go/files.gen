@@ -33,6 +33,7 @@ pkg/models/operations/firebaseappdistributionprojectstesterslist.go
 pkg/models/operations/firebaseappdistributionprojectstesterspatch.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlefirebaseappdistrov1uploadreleaserequest.go
 pkg/models/shared/gdatamedia.go
 pkg/models/shared/gdataobjectid.go
@@ -45,9 +46,7 @@ pkg/models/shared/gdatadiffuploadrequest.go
 pkg/models/shared/gdatadiffdownloadresponse.go
 pkg/models/shared/gdatadiffchecksumsresponse.go
 pkg/models/shared/gdatacontenttypeinfo.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlefirebaseappdistrov1batchdeletereleasesrequest.go
 pkg/models/shared/googlefirebaseappdistrov1distributereleaserequest.go
 pkg/models/shared/googlefirebaseappdistrov1listfeedbackreportsresponse.go

@@ -8,19 +8,14 @@ import (
 )
 
 type GetAllCompanyCodesAndDescriptionsByResourceSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllCompanyCodesAndDescriptionsByResourcePathParams struct {
+type GetAllCompanyCodesAndDescriptionsByResourceRequest struct {
 	// Type of Company Code. Common values costcenter1, costcenter2, costcenter3, deductions, earnings, taxes, paygrade, positions.
 	CodeResource string `pathParam:"style=simple,explode=false,name=codeResource"`
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetAllCompanyCodesAndDescriptionsByResourceRequest struct {
-	PathParams GetAllCompanyCodesAndDescriptionsByResourcePathParams
-	Security   GetAllCompanyCodesAndDescriptionsByResourceSecurity
 }
 
 type GetAllCompanyCodesAndDescriptionsByResourceResponse struct {

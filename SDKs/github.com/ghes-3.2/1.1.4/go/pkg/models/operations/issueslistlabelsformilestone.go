@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesListLabelsForMilestonePathParams struct {
+type IssuesListLabelsForMilestoneRequest struct {
 	// The number that identifies the milestone.
 	MilestoneNumber int64 `pathParam:"style=simple,explode=false,name=milestone_number"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesListLabelsForMilestoneQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type IssuesListLabelsForMilestoneRequest struct {
-	PathParams  IssuesListLabelsForMilestonePathParams
-	QueryParams IssuesListLabelsForMilestoneQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesListLabelsForMilestoneResponse struct {

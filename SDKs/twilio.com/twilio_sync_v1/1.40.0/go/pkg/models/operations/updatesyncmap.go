@@ -12,14 +12,8 @@ var UpdateSyncMapServerList = []string{
 }
 
 type UpdateSyncMapSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncMapPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Sync Map resource to update. Can be the Sync Map's `sid` or its `unique_name`.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncMapUpdateSyncMapRequest struct {
@@ -30,10 +24,11 @@ type UpdateSyncMapUpdateSyncMapRequest struct {
 }
 
 type UpdateSyncMapRequest struct {
-	PathParams UpdateSyncMapPathParams
-	Request    *UpdateSyncMapUpdateSyncMapRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncMapSecurity
-	ServerURL  *string
+	RequestBody *UpdateSyncMapUpdateSyncMapRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Sync Map resource to update. Can be the Sync Map's `sid` or its `unique_name`.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSyncMapResponse struct {

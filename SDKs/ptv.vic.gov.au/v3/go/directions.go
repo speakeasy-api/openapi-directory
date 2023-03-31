@@ -35,14 +35,14 @@ func newDirections(defaultClient, securityClient HTTPClient, serverURL, language
 // DirectionsForDirection - View all routes for a direction of travel
 func (s *directions) DirectionsForDirection(ctx context.Context, request operations.DirectionsForDirectionRequest) (*operations.DirectionsForDirectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/{direction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/{direction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,14 +123,14 @@ func (s *directions) DirectionsForDirection(ctx context.Context, request operati
 // DirectionsForDirectionAndType - View all routes of a particular type for a direction of travel
 func (s *directions) DirectionsForDirectionAndType(ctx context.Context, request operations.DirectionsForDirectionAndTypeRequest) (*operations.DirectionsForDirectionAndTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/{direction_id}/route_type/{route_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/{direction_id}/route_type/{route_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -211,14 +211,14 @@ func (s *directions) DirectionsForDirectionAndType(ctx context.Context, request 
 // DirectionsForRoute - View directions that a route travels in
 func (s *directions) DirectionsForRoute(ctx context.Context, request operations.DirectionsForRouteRequest) (*operations.DirectionsForRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/route/{route_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/directions/route/{route_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

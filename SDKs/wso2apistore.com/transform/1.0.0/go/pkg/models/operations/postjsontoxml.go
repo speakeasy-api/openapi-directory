@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostJsontoxmlRequest struct {
-	// JSON payload
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostJsontoxmlResponse struct {
 	ContentType string
 	StatusCode  int

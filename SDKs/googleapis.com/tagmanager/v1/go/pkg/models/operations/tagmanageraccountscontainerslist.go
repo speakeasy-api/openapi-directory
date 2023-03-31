@@ -8,13 +8,13 @@ import (
 )
 
 type TagmanagerAccountsContainersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersListSecurity struct {
@@ -22,16 +22,13 @@ type TagmanagerAccountsContainersListSecurity struct {
 	Option2 *TagmanagerAccountsContainersListSecurityOption2 `security:"option"`
 }
 
-type TagmanagerAccountsContainersListPathParams struct {
-	// The GTM Account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type TagmanagerAccountsContainersListQueryParams struct {
+type TagmanagerAccountsContainersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The GTM Account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -50,12 +47,6 @@ type TagmanagerAccountsContainersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersListRequest struct {
-	PathParams  TagmanagerAccountsContainersListPathParams
-	QueryParams TagmanagerAccountsContainersListQueryParams
-	Security    TagmanagerAccountsContainersListSecurity
 }
 
 type TagmanagerAccountsContainersListResponse struct {

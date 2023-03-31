@@ -6,14 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeviceListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeviceListQueryParams struct {
+type DeviceListRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
@@ -22,11 +21,6 @@ type DeviceListQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type DeviceListRequest struct {
-	QueryParams DeviceListQueryParams
-	Security    DeviceListSecurity
 }
 
 // DeviceListH323SIPDeviceListTheH323SIPDeviceObjectEncryptionEnum - Device encryption:<br>`auto` - auto.<br>`yes` - yes.<br>`no` - no.

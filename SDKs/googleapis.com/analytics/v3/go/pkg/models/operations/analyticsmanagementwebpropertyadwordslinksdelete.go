@@ -8,20 +8,13 @@ import (
 )
 
 type AnalyticsManagementWebPropertyAdWordsLinksDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementWebPropertyAdWordsLinksDeletePathParams struct {
+type AnalyticsManagementWebPropertyAdWordsLinksDeleteRequest struct {
 	// ID of the account which the given web property belongs to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property Google Ads link ID.
-	WebPropertyAdWordsLinkID string `pathParam:"style=simple,explode=false,name=webPropertyAdWordsLinkId"`
-	// Web property ID to delete the Google Ads link for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementWebPropertyAdWordsLinksDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -36,12 +29,10 @@ type AnalyticsManagementWebPropertyAdWordsLinksDeleteQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebPropertyAdWordsLinksDeleteRequest struct {
-	PathParams  AnalyticsManagementWebPropertyAdWordsLinksDeletePathParams
-	QueryParams AnalyticsManagementWebPropertyAdWordsLinksDeleteQueryParams
-	Security    AnalyticsManagementWebPropertyAdWordsLinksDeleteSecurity
+	// Web property Google Ads link ID.
+	WebPropertyAdWordsLinkID string `pathParam:"style=simple,explode=false,name=webPropertyAdWordsLinkId"`
+	// Web property ID to delete the Google Ads link for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementWebPropertyAdWordsLinksDeleteResponse struct {

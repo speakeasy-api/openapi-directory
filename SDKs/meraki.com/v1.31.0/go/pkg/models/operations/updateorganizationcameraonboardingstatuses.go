@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationCameraOnboardingStatusesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationCameraOnboardingStatusesRequestBody struct {
 	// Serial of camera
 	Serial *string `json:"serial,omitempty"`
@@ -18,8 +14,8 @@ type UpdateOrganizationCameraOnboardingStatusesRequestBody struct {
 }
 
 type UpdateOrganizationCameraOnboardingStatusesRequest struct {
-	PathParams UpdateOrganizationCameraOnboardingStatusesPathParams
-	Request    *UpdateOrganizationCameraOnboardingStatusesRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationCameraOnboardingStatusesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                 `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationCameraOnboardingStatusesResponse struct {

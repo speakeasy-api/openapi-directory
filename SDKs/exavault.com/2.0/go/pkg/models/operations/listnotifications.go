@@ -109,11 +109,15 @@ func (e *ListNotificationsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListNotificationsQueryParams struct {
+type ListNotificationsRequest struct {
 	// The kind of action which triggers the notification. Valid choices are **connect** (only for delivery receipts), **download**, **upload**, **delete**, or **all**
 	//
 	// **Note** The **all** action matches notifications set to "all", not all notifications. For example, notifications set to trigger only on delete are not included if you filter for action=all
 	Action *ListNotificationsActionEnum `queryParam:"style=form,explode=true,name=action"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Related records to include in the response. Valid options are **ownerUser**, **resource**, **share**
 	Include *ListNotificationsIncludeEnum `queryParam:"style=form,explode=true,name=include"`
 	// Number of notification records to return. Can be used for pagination.
@@ -128,18 +132,6 @@ type ListNotificationsQueryParams struct {
 	//
 	// If this parameter is not used, only **file** and **folder** type notifications are included in the list.
 	Type *ListNotificationsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListNotificationsHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type ListNotificationsRequest struct {
-	QueryParams ListNotificationsQueryParams
-	Headers     ListNotificationsHeaders
 }
 
 type ListNotificationsResponse struct {

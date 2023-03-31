@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetValidatePathParams struct {
+type SetValidateRequest struct {
 	// Agent to set the bitmask integer
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Bitmask integer to set
 	Validate int `pathParam:"style=simple,explode=false,name=validate"`
-}
-
-type SetValidateRequest struct {
-	PathParams SetValidatePathParams
 }
 
 type SetValidateResponse struct {

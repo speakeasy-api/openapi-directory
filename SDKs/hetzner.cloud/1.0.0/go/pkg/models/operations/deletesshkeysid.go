@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSSHKeysIDPathParams struct {
+type DeleteSSHKeysIDRequest struct {
 	// ID of the SSH key
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSSHKeysIDRequest struct {
-	PathParams DeleteSSHKeysIDPathParams
 }
 
 type DeleteSSHKeysIDResponse struct {

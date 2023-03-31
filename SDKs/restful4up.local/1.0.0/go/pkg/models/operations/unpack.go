@@ -16,10 +16,6 @@ type UnpackRequestBody struct {
 	File UnpackRequestBodyFile `multipartForm:"file"`
 }
 
-type UnpackRequest struct {
-	Request UnpackRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UnpackResponse struct {
 	Body        []byte
 	ContentType string

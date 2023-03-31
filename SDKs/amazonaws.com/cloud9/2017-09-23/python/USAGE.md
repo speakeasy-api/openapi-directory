@@ -3,48 +3,48 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateEnvironmentEc2Request(
-    headers=operations.CreateEnvironmentEc2Headers(
-        x_amz_algorithm="cupiditate",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="iste",
-        x_amz_date="unde",
-        x_amz_security_token="adipisci",
-        x_amz_signature="impedit",
-        x_amz_signed_headers="tempora",
-        x_amz_target="AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateEnvironmentEc2Request(
-        automatic_stop_time_minutes=3876518618080918046,
-        client_request_token="corrupti",
+)
+
+
+req = operations.CreateEnvironmentEc2Request(
+    create_environment_ec2_request=shared.CreateEnvironmentEc2Request(
+        automatic_stop_time_minutes=548814,
+        client_request_token="provident",
         connection_type="CONNECT_SSM",
-        description="cum",
+        description="quibusdam",
         dry_run=False,
-        image_id="ea",
-        instance_type="architecto",
-        name="esse",
-        owner_arn="explicabo",
-        subnet_id="distinctio",
+        image_id="unde",
+        instance_type="nulla",
+        name="corrupti",
+        owner_arn="illum",
+        subnet_id="vel",
         tags=[
             shared.Tag(
-                key="non",
-                value="accusantium",
+                key="deserunt",
+                value="suscipit",
             ),
             shared.Tag(
-                key="ut",
-                value="consequatur",
+                key="iure",
+                value="magnam",
+            ),
+            shared.Tag(
+                key="debitis",
+                value="ipsa",
             ),
         ],
     ),
+    x_amz_algorithm="delectus",
+    x_amz_content_sha256="tempora",
+    x_amz_credential="suscipit",
+    x_amz_date="molestiae",
+    x_amz_security_token="minus",
+    x_amz_signature="placeat",
+    x_amz_signed_headers="voluptatum",
+    x_amz_target="AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
 )
     
 res = s.create_environment_ec2(req)

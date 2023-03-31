@@ -4,22 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarRegistrantCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarRegistrantCreatePathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarRegistrantCreateQueryParams struct {
-	// Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma.
-	OccurrenceIds *string `queryParam:"style=form,explode=true,name=occurrence_ids"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarRegistrantCreateApplicationJSONCustomQuestions - Custom Question.
@@ -69,10 +58,11 @@ type WebinarRegistrantCreateApplicationJSON struct {
 }
 
 type WebinarRegistrantCreateRequest struct {
-	PathParams  WebinarRegistrantCreatePathParams
-	QueryParams WebinarRegistrantCreateQueryParams
-	Request     WebinarRegistrantCreateApplicationJSON `request:"mediaType=application/json"`
-	Security    WebinarRegistrantCreateSecurity
+	RequestBody WebinarRegistrantCreateApplicationJSON `request:"mediaType=application/json"`
+	// Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma.
+	OccurrenceIds *string `queryParam:"style=form,explode=true,name=occurrence_ids"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // WebinarRegistrantCreate201ApplicationXML - **HTTP Status Code:** `201`<br>

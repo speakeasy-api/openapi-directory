@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugActivitiesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugActivitiesPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugActivitiesActivityTypeEnum - Comma separated list of activity types
@@ -296,7 +291,7 @@ func (e *GetWorkspaceSlugActivitiesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWorkspaceSlugActivitiesQueryParams struct {
+type GetWorkspaceSlugActivitiesRequest struct {
 	// Comma separated list of activity types
 	ActivityType *GetWorkspaceSlugActivitiesActivityTypeEnum `queryParam:"style=form,explode=true,name=activity_type"`
 	Affiliation  *GetWorkspaceSlugActivitiesAffiliationEnum  `queryParam:"style=form,explode=true,name=affiliation"`
@@ -326,13 +321,8 @@ type GetWorkspaceSlugActivitiesQueryParams struct {
 	// Comma separated list of job titles. The union (OR) of job titles is applied.
 	Title *string `queryParam:"style=form,explode=true,name=title[]"`
 	// Deprecated in favor of the activity_type parameter.
-	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetWorkspaceSlugActivitiesRequest struct {
-	PathParams  GetWorkspaceSlugActivitiesPathParams
-	QueryParams GetWorkspaceSlugActivitiesQueryParams
-	Security    GetWorkspaceSlugActivitiesSecurity
+	Type          *string `queryParam:"style=form,explode=true,name=type"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugActivitiesResponse struct {

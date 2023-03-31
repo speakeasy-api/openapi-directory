@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeletePublicKeyPathParams struct {
-	KeyIds string `pathParam:"style=simple,explode=false,name=key_ids"`
-}
-
 type EnterpriseAdminDeletePublicKeyRequest struct {
-	PathParams EnterpriseAdminDeletePublicKeyPathParams
+	KeyIds string `pathParam:"style=simple,explode=false,name=key_ids"`
 }
 
 type EnterpriseAdminDeletePublicKeyResponse struct {

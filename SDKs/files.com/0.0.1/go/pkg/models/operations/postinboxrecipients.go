@@ -24,10 +24,6 @@ type PostInboxRecipientsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostInboxRecipientsRequest struct {
-	Request *PostInboxRecipientsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostInboxRecipientsResponse struct {
 	ContentType string
 	// The InboxRecipients object.

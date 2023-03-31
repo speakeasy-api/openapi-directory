@@ -8,12 +8,7 @@ import (
 )
 
 type DetectMultipartSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DetectMultipartRequest struct {
-	Request  *shared.ObjectDetectionRequest `request:"mediaType=application/json"`
-	Security DetectMultipartSecurity
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DetectMultipartResponse struct {

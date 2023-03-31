@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPartnerAggregatorStationsQueryParams struct {
+type GetPartnerAggregatorStationsRequest struct {
 	HitsPerPage *string `queryParam:"style=form,explode=true,name=hitsPerPage"`
 	Page        *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetPartnerAggregatorStationsRequest struct {
-	QueryParams GetPartnerAggregatorStationsQueryParams
 }
 
 type GetPartnerAggregatorStationsResponse struct {

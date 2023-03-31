@@ -33,11 +33,11 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // VisionFilesAnnotate - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
-func (s *files) VisionFilesAnnotate(ctx context.Context, request operations.VisionFilesAnnotateRequest) (*operations.VisionFilesAnnotateResponse, error) {
+func (s *files) VisionFilesAnnotate(ctx context.Context, request operations.VisionFilesAnnotateRequest, security operations.VisionFilesAnnotateSecurity) (*operations.VisionFilesAnnotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/files:annotate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *files) VisionFilesAnnotate(ctx context.Context, request operations.Visi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *files) VisionFilesAnnotate(ctx context.Context, request operations.Visi
 }
 
 // VisionFilesAsyncBatchAnnotate - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
-func (s *files) VisionFilesAsyncBatchAnnotate(ctx context.Context, request operations.VisionFilesAsyncBatchAnnotateRequest) (*operations.VisionFilesAsyncBatchAnnotateResponse, error) {
+func (s *files) VisionFilesAsyncBatchAnnotate(ctx context.Context, request operations.VisionFilesAsyncBatchAnnotateRequest, security operations.VisionFilesAsyncBatchAnnotateSecurity) (*operations.VisionFilesAsyncBatchAnnotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/files:asyncBatchAnnotate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *files) VisionFilesAsyncBatchAnnotate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

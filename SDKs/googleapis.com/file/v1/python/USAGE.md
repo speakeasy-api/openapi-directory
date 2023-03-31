@@ -4,44 +4,40 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FileProjectsLocationsBackupsCreateRequest(
-    security=operations.FileProjectsLocationsBackupsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.FileProjectsLocationsBackupsCreatePathParams(
-        parent="sapiente",
-    ),
-    query_params=operations.FileProjectsLocationsBackupsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="accusamus",
-        alt="media",
-        backup_id="voluptatem",
-        callback="et",
-        fields="asperiores",
-        key="reprehenderit",
-        oauth_token="sequi",
-        pretty_print=True,
-        quota_user="ea",
-        upload_type="ea",
-        upload_protocol="facere",
-    ),
-    request=shared.BackupInput(
-        description="veritatis",
+    dollar_xgafv="2",
+    backup_input=shared.BackupInput(
+        description="provident",
+        kms_key="distinctio",
         labels={
-            "velit": "nostrum",
+            "unde": "nulla",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
         },
-        source_file_share="minus",
-        source_instance="qui",
+        source_file_share="iure",
+        source_instance="magnam",
     ),
+    access_token="debitis",
+    alt="json",
+    backup_id="delectus",
+    callback="tempora",
+    fields_="suscipit",
+    key="molestiae",
+    oauth_token="minus",
+    parent="placeat",
+    pretty_print=False,
+    quota_user="voluptatum",
+    upload_type="iusto",
+    upload_protocol="excepturi",
 )
     
-res = s.projects.file_projects_locations_backups_create(req)
+res = s.projects.file_projects_locations_backups_create(req, operations.FileProjectsLocationsBackupsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

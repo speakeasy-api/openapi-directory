@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAtmsRequest(
-    headers=operations.GetAtmsHeaders(
-        if_modified_since="nemo",
-        if_none_match="voluptatem",
-    ),
+    if_modified_since="corrupti",
+    if_none_match="provident",
 )
     
 res = s.atm.get_atms(req)

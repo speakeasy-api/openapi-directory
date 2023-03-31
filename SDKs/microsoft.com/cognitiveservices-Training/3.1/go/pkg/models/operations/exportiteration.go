@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportIterationPathParams struct {
-	// The iteration id.
-	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // ExportIterationFlavorEnum - The flavor of the target platform.
 type ExportIterationFlavorEnum string
 
@@ -88,22 +81,17 @@ func (e *ExportIterationPlatformEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExportIterationQueryParams struct {
-	// The flavor of the target platform.
-	Flavor *ExportIterationFlavorEnum `queryParam:"style=form,explode=true,name=flavor"`
-	// The target platform.
-	Platform ExportIterationPlatformEnum `queryParam:"style=form,explode=true,name=platform"`
-}
-
-type ExportIterationHeaders struct {
+type ExportIterationRequest struct {
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type ExportIterationRequest struct {
-	PathParams  ExportIterationPathParams
-	QueryParams ExportIterationQueryParams
-	Headers     ExportIterationHeaders
+	// The flavor of the target platform.
+	Flavor *ExportIterationFlavorEnum `queryParam:"style=form,explode=true,name=flavor"`
+	// The iteration id.
+	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
+	// The target platform.
+	Platform ExportIterationPlatformEnum `queryParam:"style=form,explode=true,name=platform"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type ExportIterationResponse struct {

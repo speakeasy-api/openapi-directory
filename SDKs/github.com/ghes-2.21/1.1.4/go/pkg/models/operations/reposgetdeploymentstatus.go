@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetDeploymentStatusPathParams struct {
+type ReposGetDeploymentStatusRequest struct {
 	// deployment_id parameter
 	DeploymentID int64  `pathParam:"style=simple,explode=false,name=deployment_id"`
 	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
 	StatusID     int64  `pathParam:"style=simple,explode=false,name=status_id"`
-}
-
-type ReposGetDeploymentStatusRequest struct {
-	PathParams ReposGetDeploymentStatusPathParams
 }
 
 // ReposGetDeploymentStatus415ApplicationJSON - Preview header missing

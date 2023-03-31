@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3ViewDelPathParams struct {
+type ProtocolSnmpv3ViewDelRequest struct {
 	// Agent to add the SNMPv3 view
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMPv3 view name
 	ViewName string `pathParam:"style=simple,explode=false,name=viewName"`
-}
-
-type ProtocolSnmpv3ViewDelRequest struct {
-	PathParams ProtocolSnmpv3ViewDelPathParams
 }
 
 type ProtocolSnmpv3ViewDelResponse struct {

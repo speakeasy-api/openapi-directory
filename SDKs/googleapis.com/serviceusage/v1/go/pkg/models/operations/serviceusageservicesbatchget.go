@@ -8,13 +8,13 @@ import (
 )
 
 type ServiceusageServicesBatchGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesBatchGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesBatchGetSecurity struct {
@@ -22,12 +22,7 @@ type ServiceusageServicesBatchGetSecurity struct {
 	Option2 *ServiceusageServicesBatchGetSecurityOption2 `security:"option"`
 }
 
-type ServiceusageServicesBatchGetPathParams struct {
-	// Parent to retrieve services from. If this is set, the parent of all of the services specified in `names` must match this field. An example name would be: `projects/123` where `123` is the project number. The `BatchGetServices` method currently only supports projects.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceusageServicesBatchGetQueryParams struct {
+type ServiceusageServicesBatchGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type ServiceusageServicesBatchGetQueryParams struct {
 	Names []string `queryParam:"style=form,explode=true,name=names"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Parent to retrieve services from. If this is set, the parent of all of the services specified in `names` must match this field. An example name would be: `projects/123` where `123` is the project number. The `BatchGetServices` method currently only supports projects.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type ServiceusageServicesBatchGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesBatchGetRequest struct {
-	PathParams  ServiceusageServicesBatchGetPathParams
-	QueryParams ServiceusageServicesBatchGetQueryParams
-	Security    ServiceusageServicesBatchGetSecurity
 }
 
 type ServiceusageServicesBatchGetResponse struct {

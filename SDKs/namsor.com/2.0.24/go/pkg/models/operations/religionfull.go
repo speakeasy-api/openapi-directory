@@ -8,18 +8,13 @@ import (
 )
 
 type ReligionFullSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReligionFullPathParams struct {
-	CountryIso2         string `pathParam:"style=simple,explode=false,name=countryIso2"`
-	PersonalNameFull    string `pathParam:"style=simple,explode=false,name=personalNameFull"`
-	SubDivisionIso31662 string `pathParam:"style=simple,explode=false,name=subDivisionIso31662"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ReligionFullRequest struct {
-	PathParams ReligionFullPathParams
-	Security   ReligionFullSecurity
+	CountryIso2         string `pathParam:"style=simple,explode=false,name=countryIso2"`
+	PersonalNameFull    string `pathParam:"style=simple,explode=false,name=personalNameFull"`
+	SubDivisionIso31662 string `pathParam:"style=simple,explode=false,name=subDivisionIso31662"`
 }
 
 type ReligionFullResponse struct {

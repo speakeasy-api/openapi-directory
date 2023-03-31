@@ -34,7 +34,7 @@ func newProtocolMappers(defaultClient, securityClient HTTPClient, serverURL, lan
 // DeleteRealmClientScopesId1ProtocolMappersModelsId2 - Delete the mapper
 func (s *protocolMappers) DeleteRealmClientScopesId1ProtocolMappersModelsId2(ctx context.Context, request operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2Request) (*operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *protocolMappers) DeleteRealmClientScopesId1ProtocolMappersModelsId2(ctx
 // DeleteRealmClientsId1ProtocolMappersModelsId2 - Delete the mapper
 func (s *protocolMappers) DeleteRealmClientsId1ProtocolMappersModelsId2(ctx context.Context, request operations.DeleteRealmClientsId1ProtocolMappersModelsId2Request) (*operations.DeleteRealmClientsId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *protocolMappers) DeleteRealmClientsId1ProtocolMappersModelsId2(ctx cont
 // GetRealmClientScopesId1ProtocolMappersModelsId2 - Get mapper by id
 func (s *protocolMappers) GetRealmClientScopesId1ProtocolMappersModelsId2(ctx context.Context, request operations.GetRealmClientScopesId1ProtocolMappersModelsId2Request) (*operations.GetRealmClientScopesId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *protocolMappers) GetRealmClientScopesId1ProtocolMappersModelsId2(ctx co
 // GetRealmClientScopesIDProtocolMappersModels - Get mappers
 func (s *protocolMappers) GetRealmClientScopesIDProtocolMappersModels(ctx context.Context, request operations.GetRealmClientScopesIDProtocolMappersModelsRequest) (*operations.GetRealmClientScopesIDProtocolMappersModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *protocolMappers) GetRealmClientScopesIDProtocolMappersModels(ctx contex
 // GetRealmClientScopesIDProtocolMappersProtocolProtocol - Get mappers by name for a specific protocol
 func (s *protocolMappers) GetRealmClientScopesIDProtocolMappersProtocolProtocol(ctx context.Context, request operations.GetRealmClientScopesIDProtocolMappersProtocolProtocolRequest) (*operations.GetRealmClientScopesIDProtocolMappersProtocolProtocolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *protocolMappers) GetRealmClientScopesIDProtocolMappersProtocolProtocol(
 // GetRealmClientsId1ProtocolMappersModelsId2 - Get mapper by id
 func (s *protocolMappers) GetRealmClientsId1ProtocolMappersModelsId2(ctx context.Context, request operations.GetRealmClientsId1ProtocolMappersModelsId2Request) (*operations.GetRealmClientsId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +280,7 @@ func (s *protocolMappers) GetRealmClientsId1ProtocolMappersModelsId2(ctx context
 // GetRealmClientsIDProtocolMappersModels - Get mappers
 func (s *protocolMappers) GetRealmClientsIDProtocolMappersModels(ctx context.Context, request operations.GetRealmClientsIDProtocolMappersModelsRequest) (*operations.GetRealmClientsIDProtocolMappersModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -324,7 +324,7 @@ func (s *protocolMappers) GetRealmClientsIDProtocolMappersModels(ctx context.Con
 // GetRealmClientsIDProtocolMappersProtocolProtocol - Get mappers by name for a specific protocol
 func (s *protocolMappers) GetRealmClientsIDProtocolMappersProtocolProtocol(ctx context.Context, request operations.GetRealmClientsIDProtocolMappersProtocolProtocolRequest) (*operations.GetRealmClientsIDProtocolMappersProtocolProtocolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/protocol/{protocol}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/protocol/{protocol}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -368,9 +368,9 @@ func (s *protocolMappers) GetRealmClientsIDProtocolMappersProtocolProtocol(ctx c
 // PostRealmClientScopesIDProtocolMappersAddModels - Create multiple mappers
 func (s *protocolMappers) PostRealmClientScopesIDProtocolMappersAddModels(ctx context.Context, request operations.PostRealmClientScopesIDProtocolMappersAddModelsRequest) (*operations.PostRealmClientScopesIDProtocolMappersAddModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/add-models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/add-models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,9 +413,9 @@ func (s *protocolMappers) PostRealmClientScopesIDProtocolMappersAddModels(ctx co
 // PostRealmClientScopesIDProtocolMappersModels - Create a mapper
 func (s *protocolMappers) PostRealmClientScopesIDProtocolMappersModels(ctx context.Context, request operations.PostRealmClientScopesIDProtocolMappersModelsRequest) (*operations.PostRealmClientScopesIDProtocolMappersModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/protocol-mappers/models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProtocolMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,9 +458,9 @@ func (s *protocolMappers) PostRealmClientScopesIDProtocolMappersModels(ctx conte
 // PostRealmClientsIDProtocolMappersAddModels - Create multiple mappers
 func (s *protocolMappers) PostRealmClientsIDProtocolMappersAddModels(ctx context.Context, request operations.PostRealmClientsIDProtocolMappersAddModelsRequest) (*operations.PostRealmClientsIDProtocolMappersAddModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/add-models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/add-models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -503,9 +503,9 @@ func (s *protocolMappers) PostRealmClientsIDProtocolMappersAddModels(ctx context
 // PostRealmClientsIDProtocolMappersModels - Create a mapper
 func (s *protocolMappers) PostRealmClientsIDProtocolMappersModels(ctx context.Context, request operations.PostRealmClientsIDProtocolMappersModelsRequest) (*operations.PostRealmClientsIDProtocolMappersModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/protocol-mappers/models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProtocolMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -548,9 +548,9 @@ func (s *protocolMappers) PostRealmClientsIDProtocolMappersModels(ctx context.Co
 // PutRealmClientScopesId1ProtocolMappersModelsId2 - Update the mapper
 func (s *protocolMappers) PutRealmClientScopesId1ProtocolMappersModelsId2(ctx context.Context, request operations.PutRealmClientScopesId1ProtocolMappersModelsId2Request) (*operations.PutRealmClientScopesId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProtocolMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -593,9 +593,9 @@ func (s *protocolMappers) PutRealmClientScopesId1ProtocolMappersModelsId2(ctx co
 // PutRealmClientsId1ProtocolMappersModelsId2 - Update the mapper
 func (s *protocolMappers) PutRealmClientsId1ProtocolMappersModelsId2(ctx context.Context, request operations.PutRealmClientsId1ProtocolMappersModelsId2Request) (*operations.PutRealmClientsId1ProtocolMappersModelsId2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProtocolMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

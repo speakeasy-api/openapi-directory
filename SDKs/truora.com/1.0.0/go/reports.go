@@ -44,11 +44,11 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // **Company** [Colombia](https://app.truora.com/files/company/company-input-co.xlsx), [Mexico](https://app.truora.com/files/company/company-input-mx.xlsx), [Brazil](https://app.truora.com/files/company/company-input-br.xlsx)
 //
 // Keep in mind that we currently do not support batch uploads for custom check types. Background checks created by batch upload are processed with low priority.
-func (s *reports) BatchUpload(ctx context.Context, request operations.BatchUploadRequest) (*operations.BatchUploadResponse, error) {
+func (s *reports) BatchUpload(ctx context.Context, request operations.BatchUploadRequest, security operations.BatchUploadSecurity) (*operations.BatchUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUploadInput", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -63,7 +63,7 @@ func (s *reports) BatchUpload(ctx context.Context, request operations.BatchUploa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -109,7 +109,7 @@ func (s *reports) BatchUpload(ctx context.Context, request operations.BatchUploa
 
 // CreateReport - Create Report
 // Creates a Report to which it is possible to associate multiple Checks.
-func (s *reports) CreateReport(ctx context.Context, request operations.CreateReportRequest) (*operations.CreateReportResponse, error) {
+func (s *reports) CreateReport(ctx context.Context, request shared.CreateReportInput, security operations.CreateReportSecurity) (*operations.CreateReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/reports"
 
@@ -128,7 +128,7 @@ func (s *reports) CreateReport(ctx context.Context, request operations.CreateRep
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,16 +166,16 @@ func (s *reports) CreateReport(ctx context.Context, request operations.CreateRep
 
 // GetReport - Get Report
 // Returns a report with the given ID.
-func (s *reports) GetReport(ctx context.Context, request operations.GetReportRequest) (*operations.GetReportResponse, error) {
+func (s *reports) GetReport(ctx context.Context, request operations.GetReportRequest, security operations.GetReportSecurity) (*operations.GetReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *reports) ListReports(ctx context.Context, request operations.ListReport
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

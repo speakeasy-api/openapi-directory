@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPodcastsInBatchHeaders struct {
+type GetPodcastsInBatchRequest struct {
+	GetPodcastsInBatchForm *shared.GetPodcastsInBatchForm `request:"mediaType=application/x-www-form-urlencoded"`
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPodcastsInBatchRequest struct {
-	Headers GetPodcastsInBatchHeaders
-	Request *shared.GetPodcastsInBatchForm `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type GetPodcastsInBatchResponse struct {

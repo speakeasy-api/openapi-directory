@@ -10,7 +10,8 @@ import (
 )
 
 type CreateProductSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateProductRequestBodyVatModeEnum - Vat mode for Product. Supported types: GROSS, NET
@@ -54,11 +55,6 @@ type CreateProductRequestBody struct {
 	VatMode *CreateProductRequestBodyVatModeEnum `form:"name=vatMode"`
 	// Product version. Convenience parameter, additional to the Product name.
 	Version string `form:"name=version"`
-}
-
-type CreateProductRequest struct {
-	Request  *CreateProductRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateProductSecurity
 }
 
 type CreateProductResponse struct {

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsDownloadJobLogsForWorkflowRunPathParams struct {
+type ActionsDownloadJobLogsForWorkflowRunRequest struct {
 	// The unique identifier of the job.
 	JobID int64 `pathParam:"style=simple,explode=false,name=job_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsDownloadJobLogsForWorkflowRunRequest struct {
-	PathParams ActionsDownloadJobLogsForWorkflowRunPathParams
 }
 
 type ActionsDownloadJobLogsForWorkflowRunResponse struct {

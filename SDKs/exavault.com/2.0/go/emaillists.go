@@ -39,7 +39,7 @@ func (s *emailLists) AddEmailList(ctx context.Context, request operations.AddEma
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/email-lists"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *emailLists) AddEmailList(ctx context.Context, request operations.AddEma
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *emailLists) AddEmailList(ctx context.Context, request operations.AddEma
 // Permanently delete an email group. This action is not reversible. We recommend making a user confirm this action before sending the API call.
 func (s *emailLists) DeleteEmailListByID(ctx context.Context, request operations.DeleteEmailListByIDRequest) (*operations.DeleteEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -138,16 +138,16 @@ func (s *emailLists) DeleteEmailListByID(ctx context.Context, request operations
 // Retrieve all the details of a specific email list including it's name, when it was created and all the email addresses that belong to the group.
 func (s *emailLists) GetEmailListByID(ctx context.Context, request operations.GetEmailListByIDRequest) (*operations.GetEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -196,9 +196,9 @@ func (s *emailLists) GetEmailLists(ctx context.Context, request operations.GetEm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,9 +244,9 @@ func (s *emailLists) GetEmailLists(ctx context.Context, request operations.GetEm
 // *This call will **replace** your current email list in its entirety.* If you want to keep any existing emails on the list, be sure to submit the call with any current emails you want to keep on the list.
 func (s *emailLists) UpdateEmailListByID(ctx context.Context, request operations.UpdateEmailListByIDRequest) (*operations.UpdateEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,7 +258,7 @@ func (s *emailLists) UpdateEmailListByID(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

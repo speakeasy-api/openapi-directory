@@ -13,9 +13,7 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Authorization: shared.SchemeAuthorization{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Authorization: "YOUR_API_KEY_HERE",
         }),
     )
 

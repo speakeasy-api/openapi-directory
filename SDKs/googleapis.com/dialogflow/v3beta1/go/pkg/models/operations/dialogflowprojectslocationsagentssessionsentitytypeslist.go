@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurity struct {
@@ -22,12 +22,7 @@ type DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentsSessionsEntityTypesListPathParams struct {
-	// Required. The session to list all session entity types from. Format: `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified, we assume default 'draft' environment.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsAgentsSessionsEntityTypesListQueryParams struct {
+type DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type DialogflowProjectsLocationsAgentsSessionsEntityTypesListQueryParams struct 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The session to list all session entity types from. Format: `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified, we assume default 'draft' environment.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type DialogflowProjectsLocationsAgentsSessionsEntityTypesListQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsSessionsEntityTypesListPathParams
-	QueryParams DialogflowProjectsLocationsAgentsSessionsEntityTypesListQueryParams
-	Security    DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurity
 }
 
 type DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse struct {

@@ -8,16 +8,7 @@ import (
 	"time"
 )
 
-type GETChargeMetricsDiscountAllocationDetailsQueryParams struct {
-	// The starting date and time of a time range when changes are made to charge metrics, in `yyyy-mm-ddThh:mm:ssZ` format. For example, `2020-08-18T09:01:11Z`. The timestamp maps to the `UpdatedOn` timestamp of the to-be-exported object.
-	//
-	FromTimestamp time.Time `queryParam:"style=form,explode=true,name=fromTimestamp"`
-	// The end date and time of a time range when changes are made to charge metrics, in `yyyy-mm-ddThh:mm:ssZ` format. For example, `2020-08-20T09:01:11Z`. The timestamp maps to the `UpdatedOn` timestamp of the to-be-exported object.
-	//
-	ToTimestamp time.Time `queryParam:"style=form,explode=true,name=toTimestamp"`
-}
-
-type GETChargeMetricsDiscountAllocationDetailsHeaders struct {
+type GETChargeMetricsDiscountAllocationDetailsRequest struct {
 	// Expressed as MIME types that the client is able to understand. Using content negotiation, the server then selects one of the proposals, uses it and informs the client of its choice with the `Content-Type` response header. The possible response MIME types are `application/json-seq` compatible with http://jsonlines.org/, and `text/csv` compatible with RFC 4180. `application/json-seq` is the default response MIME type. If the `Accept` header is not sepecified, or set */*, the response body is returned in application/json-seq MIME type.
 	//
 	Accept *string `header:"style=simple,explode=false,name=Accept"`
@@ -29,11 +20,12 @@ type GETChargeMetricsDiscountAllocationDetailsHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETChargeMetricsDiscountAllocationDetailsRequest struct {
-	QueryParams GETChargeMetricsDiscountAllocationDetailsQueryParams
-	Headers     GETChargeMetricsDiscountAllocationDetailsHeaders
+	// The starting date and time of a time range when changes are made to charge metrics, in `yyyy-mm-ddThh:mm:ssZ` format. For example, `2020-08-18T09:01:11Z`. The timestamp maps to the `UpdatedOn` timestamp of the to-be-exported object.
+	//
+	FromTimestamp time.Time `queryParam:"style=form,explode=true,name=fromTimestamp"`
+	// The end date and time of a time range when changes are made to charge metrics, in `yyyy-mm-ddThh:mm:ssZ` format. For example, `2020-08-20T09:01:11Z`. The timestamp maps to the `UpdatedOn` timestamp of the to-be-exported object.
+	//
+	ToTimestamp time.Time `queryParam:"style=form,explode=true,name=toTimestamp"`
 }
 
 type GETChargeMetricsDiscountAllocationDetailsResponse struct {

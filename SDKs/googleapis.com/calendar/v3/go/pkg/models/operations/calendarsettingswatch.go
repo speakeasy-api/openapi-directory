@@ -8,18 +8,18 @@ import (
 )
 
 type CalendarSettingsWatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarSettingsWatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarSettingsWatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarSettingsWatchSecurity struct {
@@ -28,7 +28,8 @@ type CalendarSettingsWatchSecurity struct {
 	Option3 *CalendarSettingsWatchSecurityOption3 `security:"option"`
 }
 
-type CalendarSettingsWatchQueryParams struct {
+type CalendarSettingsWatchRequest struct {
+	Channel *shared.Channel `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -52,12 +53,6 @@ type CalendarSettingsWatchQueryParams struct {
 	SyncToken *string `queryParam:"style=form,explode=true,name=syncToken"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarSettingsWatchRequest struct {
-	QueryParams CalendarSettingsWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    CalendarSettingsWatchSecurity
 }
 
 type CalendarSettingsWatchResponse struct {

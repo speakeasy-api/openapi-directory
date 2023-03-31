@@ -13,10 +13,6 @@ type PostSetpasswordRequestBody struct {
 	Token string `json:"token"`
 }
 
-type PostSetpasswordRequest struct {
-	Request PostSetpasswordRequestBody `request:"mediaType=application/json"`
-}
-
 // PostSetpassword400ApplicationJSON - Bad Request
 type PostSetpassword400ApplicationJSON struct {
 	// Error message

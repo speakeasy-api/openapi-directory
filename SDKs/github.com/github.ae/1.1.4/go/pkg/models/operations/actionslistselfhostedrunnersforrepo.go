@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListSelfHostedRunnersForRepoPathParams struct {
+type ActionsListSelfHostedRunnersForRepoRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsListSelfHostedRunnersForRepoQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListSelfHostedRunnersForRepoRequest struct {
-	PathParams  ActionsListSelfHostedRunnersForRepoPathParams
-	QueryParams ActionsListSelfHostedRunnersForRepoQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ActionsListSelfHostedRunnersForRepo200ApplicationJSON - Response

@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetcurrencyrateRequest{
-        QueryParams: operations.GetcurrencyrateQueryParams{
-            License: "corrupti",
-            Symbol: "provident",
-        },
+        License: "corrupti",
+        Symbol: "provident",
     }
 
     ctx := context.Background()

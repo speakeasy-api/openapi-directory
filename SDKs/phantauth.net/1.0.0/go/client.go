@@ -45,7 +45,7 @@ func newClient(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // The members of a fleet are clients randomly generated from the fleet name.
 func (s *client) GetClientClientID(ctx context.Context, request operations.GetClientClientIDRequest) (*operations.GetClientClientIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *client) GetClientClientID(ctx context.Context, request operations.GetCl
 // It is primarily used for testing purposes, when, for example, the token from the standard authentication flow is not available to the test code.
 func (s *client) GetClientClientIDTokenKind(ctx context.Context, request operations.GetClientClientIDTokenKindRequest) (*operations.GetClientClientIDTokenKindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}/token/{kind}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}/token/{kind}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *client) GetClientClientIDTokenKind(ctx context.Context, request operati
 // To create a selfie token from the client data, you need an opaqe string token, which contains the encoded client properties sent in the request.
 // Later, the selfie token can be used as a client ID. In this case, the client data is included in the selfie token, that is, the client properties are taken from the token.
 // By the use of a selfie token, you can use your own client objects in the authentication process.
-func (s *client) PostClient(ctx context.Context, request operations.PostClientRequest) (*operations.PostClientResponse, error) {
+func (s *client) PostClient(ctx context.Context, request operations.PostClientRequestBody) (*operations.PostClientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/client"
 

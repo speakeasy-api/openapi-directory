@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsDeletePathParams struct {
+type GistsDeleteRequest struct {
 	// The unique identifier of the gist.
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsDeleteRequest struct {
-	PathParams GistsDeletePathParams
 }
 
 type GistsDeleteResponse struct {

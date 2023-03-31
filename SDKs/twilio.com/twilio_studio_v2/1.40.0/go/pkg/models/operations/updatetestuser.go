@@ -12,12 +12,8 @@ var UpdateTestUserServerList = []string{
 }
 
 type UpdateTestUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTestUserPathParams struct {
-	// Unique identifier of the flow.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTestUserUpdateTestUserRequest struct {
@@ -26,10 +22,9 @@ type UpdateTestUserUpdateTestUserRequest struct {
 }
 
 type UpdateTestUserRequest struct {
-	PathParams UpdateTestUserPathParams
-	Request    *UpdateTestUserUpdateTestUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTestUserSecurity
-	ServerURL  *string
+	RequestBody *UpdateTestUserUpdateTestUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique identifier of the flow.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateTestUserResponse struct {

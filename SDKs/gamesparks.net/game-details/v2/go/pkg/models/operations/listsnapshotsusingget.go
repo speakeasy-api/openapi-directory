@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSnapshotsUsingGETPathParams struct {
+type ListSnapshotsUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type ListSnapshotsUsingGETRequest struct {
-	PathParams ListSnapshotsUsingGETPathParams
 }
 
 type ListSnapshotsUsingGETResponse struct {

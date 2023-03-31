@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDContractingPartnerSpacePathParams struct {
+type GetSpacesSpaceIDFoldersIDContractingPartnerSpaceRequest struct {
 	// Id of the folder (contract)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDContractingPartnerSpaceRequest struct {
-	PathParams GetSpacesSpaceIDFoldersIDContractingPartnerSpacePathParams
 }
 
 type GetSpacesSpaceIDFoldersIDContractingPartnerSpace200ApplicationJSONClassEnum string

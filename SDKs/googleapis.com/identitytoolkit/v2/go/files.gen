@@ -37,12 +37,11 @@ pkg/models/operations/identitytoolkitprojectstenantssetiampolicy.go
 pkg/models/operations/identitytoolkitprojectstenantstestiampermissions.go
 pkg/models/shared/googlecloudidentitytoolkitv2finalizemfaenrollmentresponse.go
 pkg/models/shared/googlecloudidentitytoolkitv2finalizemfaphoneresponseinfo.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudidentitytoolkitv2finalizemfaenrollmentrequest.go
 pkg/models/shared/googlecloudidentitytoolkitv2finalizemfatotpenrollmentrequestinfo.go
 pkg/models/shared/googlecloudidentitytoolkitv2finalizemfaphonerequestinfo.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudidentitytoolkitv2startmfaenrollmentresponse.go
 pkg/models/shared/googlecloudidentitytoolkitv2startmfatotpenrollmentresponseinfo.go
 pkg/models/shared/googlecloudidentitytoolkitv2startmfaphoneresponseinfo.go

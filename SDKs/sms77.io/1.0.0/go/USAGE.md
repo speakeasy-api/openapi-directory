@@ -13,20 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AnalyticsRequest{
-        QueryParams: operations.AnalyticsQueryParams{
-            End: "corrupti",
-            GroupBy: "subaccount",
-            Label: "distinctio",
-            Start: "quibusdam",
-            Subaccounts: "unde",
-        },
+        End: "corrupti",
+        GroupBy: "subaccount",
+        Label: "distinctio",
+        Start: "quibusdam",
+        Subaccounts: "unde",
     }
 
     ctx := context.Background()

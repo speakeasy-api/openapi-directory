@@ -10,28 +10,28 @@ import (
 )
 
 type SlidesPresentationsPagesGetThumbnailSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsPagesGetThumbnailSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsPagesGetThumbnailSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsPagesGetThumbnailSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsPagesGetThumbnailSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsPagesGetThumbnailSecurity struct {
@@ -40,13 +40,6 @@ type SlidesPresentationsPagesGetThumbnailSecurity struct {
 	Option3 *SlidesPresentationsPagesGetThumbnailSecurityOption3 `security:"option"`
 	Option4 *SlidesPresentationsPagesGetThumbnailSecurityOption4 `security:"option"`
 	Option5 *SlidesPresentationsPagesGetThumbnailSecurityOption5 `security:"option"`
-}
-
-type SlidesPresentationsPagesGetThumbnailPathParams struct {
-	// The object ID of the page whose thumbnail to retrieve.
-	PageObjectID string `pathParam:"style=simple,explode=false,name=pageObjectId"`
-	// The ID of the presentation to retrieve.
-	PresentationID string `pathParam:"style=simple,explode=false,name=presentationId"`
 }
 
 // SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum - The optional mime type of the thumbnail image. If you don't specify the mime type, the mime type defaults to PNG.
@@ -100,7 +93,7 @@ func (e *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnu
 	}
 }
 
-type SlidesPresentationsPagesGetThumbnailQueryParams struct {
+type SlidesPresentationsPagesGetThumbnailRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -115,6 +108,10 @@ type SlidesPresentationsPagesGetThumbnailQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The object ID of the page whose thumbnail to retrieve.
+	PageObjectID string `pathParam:"style=simple,explode=false,name=pageObjectId"`
+	// The ID of the presentation to retrieve.
+	PresentationID string `pathParam:"style=simple,explode=false,name=presentationId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -127,12 +124,6 @@ type SlidesPresentationsPagesGetThumbnailQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SlidesPresentationsPagesGetThumbnailRequest struct {
-	PathParams  SlidesPresentationsPagesGetThumbnailPathParams
-	QueryParams SlidesPresentationsPagesGetThumbnailQueryParams
-	Security    SlidesPresentationsPagesGetThumbnailSecurity
 }
 
 type SlidesPresentationsPagesGetThumbnailResponse struct {

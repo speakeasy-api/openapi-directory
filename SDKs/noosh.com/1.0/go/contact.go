@@ -36,7 +36,7 @@ func newContact(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List Billing Recipients
 func (s *contact) GetBillingRecipients(ctx context.Context, request operations.GetBillingRecipientsRequest) (*operations.GetBillingRecipientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/billingRecipients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/billingRecipients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *contact) GetBillingRecipients(ctx context.Context, request operations.G
 // List the contacts
 func (s *contact) GetContactList(ctx context.Context, request operations.GetContactListRequest) (*operations.GetContactListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *contact) GetContactList(ctx context.Context, request operations.GetCont
 // Contact Info
 func (s *contact) GetContactUserInfo(ctx context.Context, request operations.GetContactUserInfoRequest) (*operations.GetContactUserInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/contacts/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/contacts/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

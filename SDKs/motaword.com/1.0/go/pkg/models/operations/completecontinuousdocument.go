@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteContinuousDocumentPathParams struct {
+type CompleteContinuousDocumentRequest struct {
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CompleteContinuousDocumentRequest struct {
-	PathParams CompleteContinuousDocumentPathParams
 }
 
 type CompleteContinuousDocumentResponse struct {

@@ -12,14 +12,8 @@ var UpdateUnderstandTaskActionsServerList = []string{
 }
 
 type UpdateUnderstandTaskActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandTaskActionsPathParams struct {
-	// The unique ID of the parent Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The unique ID of the Task.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest struct {
@@ -28,10 +22,11 @@ type UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest struct {
 }
 
 type UpdateUnderstandTaskActionsRequest struct {
-	PathParams UpdateUnderstandTaskActionsPathParams
-	Request    *UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandTaskActionsSecurity
-	ServerURL  *string
+	// The unique ID of the parent Assistant.
+	AssistantSid string                                                         `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique ID of the Task.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type UpdateUnderstandTaskActionsResponse struct {

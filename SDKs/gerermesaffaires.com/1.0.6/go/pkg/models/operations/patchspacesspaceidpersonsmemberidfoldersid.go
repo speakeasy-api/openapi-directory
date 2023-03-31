@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDPersonsMemberIDFoldersIDPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// memberId of the person
-	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum string
 
 const (
@@ -79,9 +70,14 @@ type PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBody struct {
 }
 
 type PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequest struct {
-	PathParams PatchSpacesSpaceIDPersonsMemberIDFoldersIDPathParams
 	// Access to modify
-	Request PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// memberId of the person
+	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDPersonsMemberIDFoldersIDResponse struct {

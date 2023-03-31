@@ -54,10 +54,6 @@ func (u SubscriptionsAPICountRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type SubscriptionsAPICountRequest struct {
-	Request SubscriptionsAPICountRequestBody `request:"mediaType=application/json"`
-}
-
 type SubscriptionsAPICount200ApplicationJSONType string
 
 const (

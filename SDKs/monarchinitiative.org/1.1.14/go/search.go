@@ -35,14 +35,14 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetAutocomplete - Returns list of matching concepts or entities using lexical search
 func (s *search) GetAutocomplete(ctx context.Context, request operations.GetAutocompleteRequest) (*operations.GetAutocompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/entity/autocomplete/{term}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/entity/autocomplete/{term}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *search) GetAutocomplete(ctx context.Context, request operations.GetAuto
 // GetSearchEntities - Returns list of matching concepts or entities using lexical search
 func (s *search) GetSearchEntities(ctx context.Context, request operations.GetSearchEntitiesRequest) (*operations.GetSearchEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/entity/{term}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/entity/{term}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *search) GetSearchEntities(ctx context.Context, request operations.GetSe
 // GetSearchHpoEntities - Returns list of matching concepts or entities using lexical search
 func (s *search) GetSearchHpoEntities(ctx context.Context, request operations.GetSearchHpoEntitiesRequest) (*operations.GetSearchHpoEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/entity/hpo-pl/{term}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/entity/hpo-pl/{term}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

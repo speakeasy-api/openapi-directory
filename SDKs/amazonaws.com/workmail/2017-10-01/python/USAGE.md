@@ -3,31 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateDelegateToResourceRequest(
-    headers=operations.AssociateDelegateToResourceHeaders(
-        x_amz_algorithm="voluptates",
-        x_amz_content_sha256="non",
-        x_amz_credential="nam",
-        x_amz_date="enim",
-        x_amz_security_token="enim",
-        x_amz_signature="assumenda",
-        x_amz_signed_headers="quo",
-        x_amz_target="WorkMailService.AssociateDelegateToResource",
+    associate_delegate_to_resource_request=shared.AssociateDelegateToResourceRequest(
+        entity_id="corrupti",
+        organization_id="provident",
+        resource_id="distinctio",
     ),
-    request=shared.AssociateDelegateToResourceRequest(
-        entity_id="quis",
-        organization_id="esse",
-        resource_id="voluptate",
-    ),
+    x_amz_algorithm="quibusdam",
+    x_amz_content_sha256="unde",
+    x_amz_credential="nulla",
+    x_amz_date="corrupti",
+    x_amz_security_token="illum",
+    x_amz_signature="vel",
+    x_amz_signed_headers="error",
+    x_amz_target="WorkMailService.AssociateDelegateToResource",
 )
     
 res = s.associate_delegate_to_resource(req)

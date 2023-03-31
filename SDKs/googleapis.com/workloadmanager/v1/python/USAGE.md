@@ -4,77 +4,77 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest(
-    security=operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams(
-        parent="perspiciatis",
-    ),
-    query_params=operations.WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="aut",
-        alt="json",
-        callback="vero",
-        evaluation_id="quibusdam",
-        fields="qui",
-        key="sint",
-        oauth_token="ullam",
-        pretty_print=False,
-        quota_user="eos",
-        request_id="et",
-        upload_type="voluptas",
-        upload_protocol="qui",
-    ),
-    request=shared.EvaluationInput(
-        description="ab",
+    dollar_xgafv="2",
+    evaluation_input=shared.EvaluationInput(
+        description="provident",
         labels={
-            "deleniti": "mollitia",
-            "dolore": "neque",
-            "quo": "dolor",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
         },
-        name="quasi",
+        name="error",
         resource_filter=shared.ResourceFilter(
             gce_instance_filter=shared.GceInstanceFilter(
                 service_accounts=[
-                    "vel",
-                    "in",
+                    "suscipit",
+                    "iure",
+                    "magnam",
                 ],
             ),
             inclusion_labels={
-                "omnis": "neque",
-                "beatae": "temporibus",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
             resource_id_patterns=[
-                "et",
-                "enim",
-                "in",
+                "excepturi",
+                "nisi",
             ],
             scopes=[
-                "in",
-                "et",
+                "temporibus",
+                "ab",
+                "quis",
+                "veritatis",
             ],
         ),
         resource_status=shared.ResourceStatus(
             rules_newer_versions=[
-                "sint",
-                "tempora",
+                "perferendis",
+                "ipsam",
+                "repellendus",
             ],
-            state="ACTIVE",
+            state="DELETING",
         ),
         rule_names=[
-            "assumenda",
+            "odit",
+            "at",
+            "at",
+            "maiores",
         ],
     ),
+    access_token="molestiae",
+    alt="proto",
+    callback="quod",
+    evaluation_id="esse",
+    fields_="totam",
+    key="porro",
+    oauth_token="dolorum",
+    parent="dicta",
+    pretty_print=False,
+    quota_user="nam",
+    request_id="officia",
+    upload_type="occaecati",
+    upload_protocol="fugit",
 )
     
-res = s.projects.workloadmanager_projects_locations_evaluations_create(req)
+res = s.projects.workloadmanager_projects_locations_evaluations_create(req, operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

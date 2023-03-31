@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttSetTracePathParams struct {
+type ProtocolMqttSetTraceRequest struct {
 	// Agent to set the MQTT tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the MQTT tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolMqttSetTraceRequest struct {
-	PathParams ProtocolMqttSetTracePathParams
 }
 
 type ProtocolMqttSetTraceResponse struct {

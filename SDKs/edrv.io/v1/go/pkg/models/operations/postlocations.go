@@ -27,11 +27,6 @@ type PostLocationsRequestBody struct {
 	OperatorName   string                              `json:"operatorName"`
 }
 
-type PostLocationsRequest struct {
-	// Include location properties to create here
-	Request PostLocationsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostLocations200ApplicationJSON - Returns the newly created location object
 type PostLocations200ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

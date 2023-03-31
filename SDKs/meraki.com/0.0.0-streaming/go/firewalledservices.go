@@ -34,7 +34,7 @@ func newFirewalledServices(defaultClient, securityClient HTTPClient, serverURL, 
 // Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 func (s *firewalledServices) GetNetworkFirewalledService(ctx context.Context, request operations.GetNetworkFirewalledServiceRequest) (*operations.GetNetworkFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *firewalledServices) GetNetworkFirewalledService(ctx context.Context, re
 // List the appliance services and their accessibility rules
 func (s *firewalledServices) GetNetworkFirewalledServices(ctx context.Context, request operations.GetNetworkFirewalledServicesRequest) (*operations.GetNetworkFirewalledServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *firewalledServices) GetNetworkFirewalledServices(ctx context.Context, r
 // Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
 func (s *firewalledServices) UpdateNetworkFirewalledService(ctx context.Context, request operations.UpdateNetworkFirewalledServiceRequest) (*operations.UpdateNetworkFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

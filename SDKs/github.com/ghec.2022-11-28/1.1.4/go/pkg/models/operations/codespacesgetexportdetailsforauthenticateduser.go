@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesGetExportDetailsForAuthenticatedUserPathParams struct {
+type CodespacesGetExportDetailsForAuthenticatedUserRequest struct {
 	// The name of the codespace.
 	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
 	// The ID of the export operation, or `latest`. Currently only `latest` is currently supported.
 	ExportID string `pathParam:"style=simple,explode=false,name=export_id"`
-}
-
-type CodespacesGetExportDetailsForAuthenticatedUserRequest struct {
-	PathParams CodespacesGetExportDetailsForAuthenticatedUserPathParams
 }
 
 type CodespacesGetExportDetailsForAuthenticatedUserResponse struct {

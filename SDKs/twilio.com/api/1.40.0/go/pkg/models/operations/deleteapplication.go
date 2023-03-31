@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteApplicationServerList = []string{
@@ -12,20 +11,15 @@ var DeleteApplicationServerList = []string{
 }
 
 type DeleteApplicationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteApplicationPathParams struct {
+type DeleteApplicationRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the Application resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteApplicationRequest struct {
-	PathParams DeleteApplicationPathParams
-	Security   DeleteApplicationSecurity
-	ServerURL  *string
 }
 
 type DeleteApplicationResponse struct {

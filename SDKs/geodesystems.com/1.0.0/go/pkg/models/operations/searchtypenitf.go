@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypeNitfQueryParams struct {
+type SearchTypeNitfRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchTypeNitfQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypeNitfRequest struct {
-	QueryParams SearchTypeNitfQueryParams
 }
 
 type SearchTypeNitfResponse struct {

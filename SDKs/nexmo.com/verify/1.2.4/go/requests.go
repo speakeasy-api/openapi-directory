@@ -44,9 +44,9 @@ func newRequests(defaultClient, securityClient HTTPClient, serverURL, language, 
 // *Note that this endpoint is available by `GET` request as well as `POST`.*
 func (s *requests) VerifyRequest(ctx context.Context, request operations.VerifyRequestRequest) (*operations.VerifyRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

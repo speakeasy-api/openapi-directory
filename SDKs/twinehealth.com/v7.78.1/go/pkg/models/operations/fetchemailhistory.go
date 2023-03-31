@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchEmailHistoryPathParams struct {
+type FetchEmailHistoryRequest struct {
 	// Email history identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchEmailHistoryRequest struct {
-	PathParams FetchEmailHistoryPathParams
 }
 
 type FetchEmailHistoryResponse struct {

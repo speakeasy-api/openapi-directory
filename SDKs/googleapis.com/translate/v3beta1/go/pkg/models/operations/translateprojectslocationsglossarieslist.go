@@ -8,13 +8,13 @@ import (
 )
 
 type TranslateProjectsLocationsGlossariesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsGlossariesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsGlossariesListSecurity struct {
@@ -22,12 +22,7 @@ type TranslateProjectsLocationsGlossariesListSecurity struct {
 	Option2 *TranslateProjectsLocationsGlossariesListSecurityOption2 `security:"option"`
 }
 
-type TranslateProjectsLocationsGlossariesListPathParams struct {
-	// Required. The name of the project from which to list all of the glossaries.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type TranslateProjectsLocationsGlossariesListQueryParams struct {
+type TranslateProjectsLocationsGlossariesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type TranslateProjectsLocationsGlossariesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A token identifying a page of results the server should return. Typically, this is the value of [ListGlossariesResponse.next_page_token] returned from the previous call to `ListGlossaries` method. The first page is returned if `page_token`is empty or missing.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the project from which to list all of the glossaries.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -56,12 +53,6 @@ type TranslateProjectsLocationsGlossariesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TranslateProjectsLocationsGlossariesListRequest struct {
-	PathParams  TranslateProjectsLocationsGlossariesListPathParams
-	QueryParams TranslateProjectsLocationsGlossariesListQueryParams
-	Security    TranslateProjectsLocationsGlossariesListSecurity
 }
 
 type TranslateProjectsLocationsGlossariesListResponse struct {

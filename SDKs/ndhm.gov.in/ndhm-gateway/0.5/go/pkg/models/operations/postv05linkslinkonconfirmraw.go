@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05LinksLinkOnConfirmRawHeaders struct {
+type PostV05LinksLinkOnConfirmRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05LinksLinkOnConfirmRawRequest struct {
-	Headers PostV05LinksLinkOnConfirmRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05LinksLinkOnConfirmRawResponse struct {

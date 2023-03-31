@@ -35,10 +35,6 @@ type PostAdminRequestsCountRequestBody struct {
 	URLPattern *string `json:"urlPattern,omitempty"`
 }
 
-type PostAdminRequestsCountRequest struct {
-	Request PostAdminRequestsCountRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAdminRequestsCount200ApplicationJSON - Number of matching requests
 type PostAdminRequestsCount200ApplicationJSON struct {
 	Count *int64 `json:"count,omitempty"`

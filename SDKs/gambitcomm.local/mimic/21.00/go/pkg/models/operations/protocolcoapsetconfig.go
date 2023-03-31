@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolCoapSetConfigPathParams struct {
+type ProtocolCoapSetConfigRequest struct {
 	// Agent to set the COAP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the COAP configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the COAP configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolCoapSetConfigRequest struct {
-	PathParams ProtocolCoapSetConfigPathParams
 }
 
 type ProtocolCoapSetConfigResponse struct {

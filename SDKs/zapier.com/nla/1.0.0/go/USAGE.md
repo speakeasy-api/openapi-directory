@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CheckRequest{
-        Security: operations.CheckSecurity{
-            AccessPointAPIKeyHeader: &shared.SchemeAccessPointAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Check(ctx, req)
+    res, err := s.Check(ctx)
     if err != nil {
         log.Fatal(err)
     }

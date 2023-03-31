@@ -6,24 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteImageRegionsPathParams struct {
+type DeleteImageRegionsRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteImageRegionsQueryParams struct {
 	// Regions to delete. Limited to 64.
 	RegionIds []string `queryParam:"style=form,explode=false,name=regionIds"`
-}
-
-type DeleteImageRegionsHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeleteImageRegionsRequest struct {
-	PathParams  DeleteImageRegionsPathParams
-	QueryParams DeleteImageRegionsQueryParams
-	Headers     DeleteImageRegionsHeaders
 }
 
 type DeleteImageRegionsResponse struct {

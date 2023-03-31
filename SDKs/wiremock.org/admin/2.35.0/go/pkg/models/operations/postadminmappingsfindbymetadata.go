@@ -259,10 +259,6 @@ func (u PostAdminMappingsFindByMetadataRequestBody) MarshalJSON() ([]byte, error
 	return nil, nil
 }
 
-type PostAdminMappingsFindByMetadataRequest struct {
-	Request PostAdminMappingsFindByMetadataRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAdminMappingsFindByMetadata200ApplicationJSONMappingsRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against
 type PostAdminMappingsFindByMetadata200ApplicationJSONMappingsRequestBasicAuthCredentials struct {
 	Password string `json:"password"`

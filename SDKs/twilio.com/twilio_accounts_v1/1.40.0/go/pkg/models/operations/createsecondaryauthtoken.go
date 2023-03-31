@@ -11,15 +11,6 @@ var CreateSecondaryAuthTokenServerList = []string{
 	"https://accounts.twilio.com",
 }
 
-type CreateSecondaryAuthTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSecondaryAuthTokenRequest struct {
-	Security  CreateSecondaryAuthTokenSecurity
-	ServerURL *string
-}
-
 type CreateSecondaryAuthTokenResponse struct {
 	ContentType string
 	StatusCode  int

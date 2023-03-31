@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostFloatingIpsIDActionsUnassignPathParams struct {
+type PostFloatingIpsIDActionsUnassignRequest struct {
 	// ID of the Floating IP
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostFloatingIpsIDActionsUnassignRequest struct {
-	PathParams PostFloatingIpsIDActionsUnassignPathParams
 }
 
 // PostFloatingIpsIDActionsUnassignActionResponseActionError - Error message for the Action if error occurred, otherwise null

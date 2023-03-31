@@ -13,10 +13,6 @@ type PostAuthStartRequestBody struct {
 	EmailConfirmation *bool `json:"email_confirmation,omitempty"`
 }
 
-type PostAuthStartRequest struct {
-	Request PostAuthStartRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthStart200ApplicationJSON - The authentication request was succesfully started
 type PostAuthStart200ApplicationJSON struct {
 	// URL where the user can confirm the authentication request

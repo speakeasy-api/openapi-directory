@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAtmsRequest{
-        Headers: operations.GetAtmsHeaders{
-            IfModifiedSince: "corrupti",
-            IfNoneMatch: "provident",
-        },
+        IfModifiedSince: "corrupti",
+        IfNoneMatch: "provident",
     }
 
     ctx := context.Background()

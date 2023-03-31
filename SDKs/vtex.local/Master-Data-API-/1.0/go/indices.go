@@ -35,14 +35,14 @@ func newIndices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete an index.
 func (s *indices) Deleteindexbyname(ctx context.Context, request operations.DeleteindexbynameRequest) (*operations.DeleteindexbynameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices/{index_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices/{index_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -73,14 +73,14 @@ func (s *indices) Deleteindexbyname(ctx context.Context, request operations.Dele
 // Returns an index.
 func (s *indices) Getindexbyname(ctx context.Context, request operations.GetindexbynameRequest) (*operations.GetindexbynameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices/{index_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices/{index_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -111,14 +111,14 @@ func (s *indices) Getindexbyname(ctx context.Context, request operations.Getinde
 // Returns the list of indices by data entity.
 func (s *indices) Getindices(ctx context.Context, request operations.GetindicesRequest) (*operations.GetindicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -149,9 +149,9 @@ func (s *indices) Getindices(ctx context.Context, request operations.GetindicesR
 // Create an index.
 func (s *indices) Putindices(ctx context.Context, request operations.PutindicesRequest) (*operations.PutindicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/indices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutindicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

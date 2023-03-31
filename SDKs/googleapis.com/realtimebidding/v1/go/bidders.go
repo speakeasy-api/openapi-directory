@@ -33,11 +33,11 @@ func newBidders(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // RealtimebiddingBiddersCreativesWatch - Watches all creatives pertaining to a bidder. It is sufficient to invoke this endpoint once per bidder. A Pub/Sub topic will be created and notifications will be pushed to the topic when any of the bidder's creatives change status. All of the bidder's service accounts will have access to read from the topic. Subsequent invocations of this method will return the existing Pub/Sub configuration.
-func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, request operations.RealtimebiddingBiddersCreativesWatchRequest) (*operations.RealtimebiddingBiddersCreativesWatchResponse, error) {
+func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, request operations.RealtimebiddingBiddersCreativesWatchRequest, security operations.RealtimebiddingBiddersCreativesWatchSecurity) (*operations.RealtimebiddingBiddersCreativesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives:watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives:watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, requ
 }
 
 // RealtimebiddingBiddersEndpointsList - Lists all the bidder's endpoints.
-func (s *bidders) RealtimebiddingBiddersEndpointsList(ctx context.Context, request operations.RealtimebiddingBiddersEndpointsListRequest) (*operations.RealtimebiddingBiddersEndpointsListResponse, error) {
+func (s *bidders) RealtimebiddingBiddersEndpointsList(ctx context.Context, request operations.RealtimebiddingBiddersEndpointsListRequest, security operations.RealtimebiddingBiddersEndpointsListSecurity) (*operations.RealtimebiddingBiddersEndpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *bidders) RealtimebiddingBiddersEndpointsList(ctx context.Context, reque
 }
 
 // RealtimebiddingBiddersList - Lists all the bidder accounts that belong to the caller.
-func (s *bidders) RealtimebiddingBiddersList(ctx context.Context, request operations.RealtimebiddingBiddersListRequest) (*operations.RealtimebiddingBiddersListResponse, error) {
+func (s *bidders) RealtimebiddingBiddersList(ctx context.Context, request operations.RealtimebiddingBiddersListRequest, security operations.RealtimebiddingBiddersListSecurity) (*operations.RealtimebiddingBiddersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/bidders"
 
@@ -145,11 +145,11 @@ func (s *bidders) RealtimebiddingBiddersList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *bidders) RealtimebiddingBiddersList(ctx context.Context, request operat
 }
 
 // RealtimebiddingBiddersPretargetingConfigsActivate - Activates a pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest, security operations.RealtimebiddingBiddersPretargetingConfigsActivateSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.
 }
 
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedApps - Adds targeted apps to the pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedApps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedApps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedAppsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx c
 }
 
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers - Adds targeted publishers to the pretargeting config.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedPublishers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedPublishers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedPublishersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,11 +349,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers
 }
 
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedSites - Adds targeted sites to the pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedSites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedSites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedSitesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,11 +365,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,11 +404,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx 
 }
 
 // RealtimebiddingBiddersPretargetingConfigsCreate - Creates a pretargeting configuration. A pretargeting configuration's state (PretargetingConfig.state) is active upon creation, and it will start to affect traffic shortly after. A bidder may create a maximum of 10 pretargeting configurations. Attempts to exceed this maximum results in a 400 bad request error.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest, security operations.RealtimebiddingBiddersPretargetingConfigsCreateSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PretargetingConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -420,11 +420,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,20 +459,20 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Co
 }
 
 // RealtimebiddingBiddersPretargetingConfigsDelete - Deletes a pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsDelete(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsDelete(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest, security operations.RealtimebiddingBiddersPretargetingConfigsDeleteSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,20 +507,20 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsDelete(ctx context.Co
 }
 
 // RealtimebiddingBiddersPretargetingConfigsList - Lists all pretargeting configurations for a single bidder.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsList(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsListRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsListResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsList(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsListRequest, security operations.RealtimebiddingBiddersPretargetingConfigsListSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -555,11 +555,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsList(ctx context.Cont
 }
 
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps - Removes targeted apps from the pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedApps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedApps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedAppsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -571,11 +571,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,11 +610,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ct
 }
 
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers - Removes targeted publishers from the pretargeting config.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedPublishers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedPublishers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedPublishersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -626,11 +626,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublish
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -665,11 +665,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublish
 }
 
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites - Removes targeted sites from the pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedSites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedSites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedSitesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -681,11 +681,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -720,11 +720,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(c
 }
 
 // RealtimebiddingBiddersPretargetingConfigsSuspend - Suspends a pretargeting configuration.
-func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest) (*operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest, security operations.RealtimebiddingBiddersPretargetingConfigsSuspendSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:suspend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -736,11 +736,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -775,11 +775,11 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.C
 }
 
 // RealtimebiddingBiddersPublisherConnectionsBatchApprove - Batch approves multiple publisher connections.
-func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest, security operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchApprove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchApprove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchApprovePublisherConnectionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -791,11 +791,11 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -830,11 +830,11 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx con
 }
 
 // RealtimebiddingBiddersPublisherConnectionsBatchReject - Batch rejects multiple publisher connections.
-func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest, security operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchReject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchReject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRejectPublisherConnectionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -846,11 +846,11 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -885,20 +885,20 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx cont
 }
 
 // RealtimebiddingBiddersPublisherConnectionsList - Lists publisher connections for a given bidder.
-func (s *bidders) RealtimebiddingBiddersPublisherConnectionsList(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsListRequest) (*operations.RealtimebiddingBiddersPublisherConnectionsListResponse, error) {
+func (s *bidders) RealtimebiddingBiddersPublisherConnectionsList(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsListRequest, security operations.RealtimebiddingBiddersPublisherConnectionsListSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

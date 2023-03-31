@@ -69,7 +69,6 @@ pkg/models/operations/gettrainstatusandprogress1.go
 pkg/models/operations/retrain1.go
 pkg/models/operations/train1.go
 pkg/models/shared/generateaccesstokenresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/apiusagelist.go
 pkg/models/shared/apiusage.go
 pkg/models/shared/plandata.go

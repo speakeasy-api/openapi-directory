@@ -39,15 +39,25 @@ func newIdentification(defaultClient, securityClient HTTPClient, serverURL, lang
 // Note in addition to the "Authorization" header, one of the following headers must be specified
 // 1. specify **X-HIU-ID** if the requester is HIU (identified from /find requester.id)
 // 2. specify **X-HIP-ID** if the requester is HIP (identified from /find requester.id)
-func (s *identification) PostV05PatientsOnFindJSON(ctx context.Context, request operations.PostV05PatientsOnFindJSONRequest) (*operations.PostV05PatientsOnFindJSONResponse, error) {
+func (s *identification) PostV05PatientsOnFindJSON(ctx context.Context, request operations.PostV05PatientsOnFindJSONRequest, opts ...operations.Option) (*operations.PostV05PatientsOnFindJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05PatientsOnFindJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/on-find"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientIdentificationResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -62,7 +72,7 @@ func (s *identification) PostV05PatientsOnFindJSON(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -124,15 +134,25 @@ func (s *identification) PostV05PatientsOnFindJSON(ctx context.Context, request 
 // Note in addition to the "Authorization" header, one of the following headers must be specified
 // 1. specify **X-HIU-ID** if the requester is HIU (identified from /find requester.id)
 // 2. specify **X-HIP-ID** if the requester is HIP (identified from /find requester.id)
-func (s *identification) PostV05PatientsOnFindRaw(ctx context.Context, request operations.PostV05PatientsOnFindRawRequest) (*operations.PostV05PatientsOnFindRawResponse, error) {
+func (s *identification) PostV05PatientsOnFindRaw(ctx context.Context, request operations.PostV05PatientsOnFindRawRequest, opts ...operations.Option) (*operations.PostV05PatientsOnFindRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05PatientsOnFindRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/on-find"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,7 +167,7 @@ func (s *identification) PostV05PatientsOnFindRaw(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

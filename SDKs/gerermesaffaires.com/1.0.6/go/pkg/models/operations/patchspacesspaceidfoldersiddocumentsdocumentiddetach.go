@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachPathParams struct {
+type PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachPathParams
 }
 
 type PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachResponse struct {

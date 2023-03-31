@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendInvitations1PathParams struct {
+type SendInvitations1Request struct {
 	// provider's internal identifier
 	ProviderID int64 `pathParam:"style=simple,explode=false,name=providerId"`
-}
-
-type SendInvitations1Request struct {
-	PathParams SendInvitations1PathParams
 }
 
 type SendInvitations1Response struct {

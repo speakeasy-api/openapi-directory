@@ -3,42 +3,45 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateApplicationRequest(
-    headers=operations.CreateApplicationHeaders(
-        x_amz_algorithm="laudantium",
-        x_amz_content_sha256="odio",
-        x_amz_credential="deserunt",
-        x_amz_date="qui",
-        x_amz_security_token="inventore",
-        x_amz_signature="omnis",
-        x_amz_signed_headers="veritatis",
-        x_amz_target="EC2WindowsBarleyService.CreateApplication",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateApplicationRequest(
+)
+
+
+req = operations.CreateApplicationRequest(
+    create_application_request=shared.CreateApplicationRequest(
+        auto_config_enabled=False,
+        auto_create=False,
         cwe_monitor_enabled=False,
-        ops_center_enabled=True,
-        ops_item_sns_topic_arn="vitae",
-        resource_group_name="quia",
+        grouping_type="ACCOUNT_BASED",
+        ops_center_enabled=False,
+        ops_item_sns_topic_arn="corrupti",
+        resource_group_name="provident",
         tags=[
             shared.Tag(
-                key="adipisci",
-                value="cupiditate",
+                key="quibusdam",
+                value="unde",
             ),
             shared.Tag(
-                key="similique",
-                value="omnis",
+                key="nulla",
+                value="corrupti",
+            ),
+            shared.Tag(
+                key="illum",
+                value="vel",
             ),
         ],
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="EC2WindowsBarleyService.CreateApplication",
 )
     
 res = s.create_application(req)

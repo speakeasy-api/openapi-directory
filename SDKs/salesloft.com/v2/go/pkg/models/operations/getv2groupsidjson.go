@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2GroupsIDJSONPathParams struct {
+type GetV2GroupsIDJSONRequest struct {
 	// Group ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2GroupsIDJSONRequest struct {
-	PathParams GetV2GroupsIDJSONPathParams
 }
 
 type GetV2GroupsIDJSONResponse struct {

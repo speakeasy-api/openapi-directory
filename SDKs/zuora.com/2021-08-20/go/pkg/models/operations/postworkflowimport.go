@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTWorkflowImportHeaders struct {
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
 type POSTWorkflowImportRequestBody struct {
 	Linkages []shared.Linkage `json:"linkages,omitempty"`
 	Tasks    []shared.Task    `json:"tasks,omitempty"`
@@ -24,8 +16,12 @@ type POSTWorkflowImportRequestBody struct {
 }
 
 type POSTWorkflowImportRequest struct {
-	Headers POSTWorkflowImportHeaders
-	Request *POSTWorkflowImportRequestBody `request:"mediaType=application/json"`
+	RequestBody *POSTWorkflowImportRequestBody `request:"mediaType=application/json"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 }
 
 type POSTWorkflowImportResponse struct {

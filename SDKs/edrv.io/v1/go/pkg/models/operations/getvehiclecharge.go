@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetVehicleChargePathParams struct {
+type GetVehicleChargeRequest struct {
 	// The vehicle id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVehicleChargeRequest struct {
-	PathParams GetVehicleChargePathParams
 }
 
 type GetVehicleChargeResponse struct {

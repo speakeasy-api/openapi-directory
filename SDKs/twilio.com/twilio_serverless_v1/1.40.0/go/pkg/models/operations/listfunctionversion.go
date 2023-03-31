@@ -12,30 +12,21 @@ var ListFunctionVersionServerList = []string{
 }
 
 type ListFunctionVersionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFunctionVersionPathParams struct {
+type ListFunctionVersionRequest struct {
 	// The SID of the function that is the parent of the Function Version resources to read.
 	FunctionSid string `pathParam:"style=simple,explode=false,name=FunctionSid"`
-	// The SID of the Service to read the Function Version resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListFunctionVersionQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListFunctionVersionRequest struct {
-	PathParams  ListFunctionVersionPathParams
-	QueryParams ListFunctionVersionQueryParams
-	Security    ListFunctionVersionSecurity
-	ServerURL   *string
+	// The SID of the Service to read the Function Version resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListFunctionVersionListFunctionVersionResponseMeta struct {

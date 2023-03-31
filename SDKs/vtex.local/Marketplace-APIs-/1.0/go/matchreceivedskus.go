@@ -51,9 +51,9 @@ func newMatchReceivedSKUs(defaultClient, securityClient HTTPClient, serverURL, l
 // Note that  if the autoApprove setting is enabled, the SKUs will be approved, regardless of the Score.
 func (s *matchReceivedSKUs) Match(ctx context.Context, request operations.MatchRequest) (*operations.MatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}/matches/{matchid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}/matches/{matchid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,9 +68,9 @@ func (s *matchReceivedSKUs) Match(ctx context.Context, request operations.MatchR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,9 +115,9 @@ func (s *matchReceivedSKUs) Match(ctx context.Context, request operations.MatchR
 // 4. `deny`: deny the received SKU.
 func (s *matchReceivedSKUs) MatchMultiple(ctx context.Context, request operations.MatchMultipleRequest) (*operations.MatchMultipleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/matches/action/{actionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/matches/action/{actionName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -132,9 +132,9 @@ func (s *matchReceivedSKUs) MatchMultiple(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

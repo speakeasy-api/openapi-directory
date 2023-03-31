@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPaymenttransactionPathParams struct {
-	// Order ID is a unique code that identifies an order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetPaymenttransactionHeaders struct {
+type GetPaymenttransactionRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetPaymenttransactionRequest struct {
-	PathParams GetPaymenttransactionPathParams
-	Headers    GetPaymenttransactionHeaders
+	// Order ID is a unique code that identifies an order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type GetPaymenttransactionResponse struct {

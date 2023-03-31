@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesListEventsForRepoPathParams struct {
+type IssuesListEventsForRepoRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesListEventsForRepoQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type IssuesListEventsForRepoRequest struct {
-	PathParams  IssuesListEventsForRepoPathParams
-	QueryParams IssuesListEventsForRepoQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesListEventsForRepoResponse struct {

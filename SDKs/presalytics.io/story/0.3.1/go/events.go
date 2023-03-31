@@ -35,7 +35,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Get a list of Events available to users of this story
 func (s *events) StoryIDEventsGet(ctx context.Context, request operations.StoryIDEventsGetRequest) (*operations.StoryIDEventsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,9 +90,9 @@ func (s *events) StoryIDEventsGet(ctx context.Context, request operations.StoryI
 // Add a message to the Story's conversation
 func (s *events) StoryIDEventsPost(ctx context.Context, request operations.StoryIDEventsPostRequest) (*operations.StoryIDEventsPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageEvent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

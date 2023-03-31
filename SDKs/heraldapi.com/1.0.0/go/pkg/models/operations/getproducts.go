@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProductsQueryParams struct {
+type GetProductsRequest struct {
 	// `id` for a specific producer.
 	ProducerID *string `queryParam:"style=form,explode=true,name=producer_id"`
-}
-
-type GetProductsRequest struct {
-	QueryParams GetProductsQueryParams
 }
 
 // GetProducts400ApplicationJSON - Bad Request: something was wrong with the included query param(s)

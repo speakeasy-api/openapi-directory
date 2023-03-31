@@ -32,20 +32,20 @@ func newRoleAssignments(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DirectoryRoleAssignmentsDelete - Deletes a role assignment.
-func (s *roleAssignments) DirectoryRoleAssignmentsDelete(ctx context.Context, request operations.DirectoryRoleAssignmentsDeleteRequest) (*operations.DirectoryRoleAssignmentsDeleteResponse, error) {
+func (s *roleAssignments) DirectoryRoleAssignmentsDelete(ctx context.Context, request operations.DirectoryRoleAssignmentsDeleteRequest, security operations.DirectoryRoleAssignmentsDeleteSecurity) (*operations.DirectoryRoleAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *roleAssignments) DirectoryRoleAssignmentsDelete(ctx context.Context, re
 }
 
 // DirectoryRoleAssignmentsGet - Retrieves a role assignment.
-func (s *roleAssignments) DirectoryRoleAssignmentsGet(ctx context.Context, request operations.DirectoryRoleAssignmentsGetRequest) (*operations.DirectoryRoleAssignmentsGetResponse, error) {
+func (s *roleAssignments) DirectoryRoleAssignmentsGet(ctx context.Context, request operations.DirectoryRoleAssignmentsGetRequest, security operations.DirectoryRoleAssignmentsGetSecurity) (*operations.DirectoryRoleAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *roleAssignments) DirectoryRoleAssignmentsGet(ctx context.Context, reque
 }
 
 // DirectoryRoleAssignmentsInsert - Creates a role assignment.
-func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, request operations.DirectoryRoleAssignmentsInsertRequest) (*operations.DirectoryRoleAssignmentsInsertResponse, error) {
+func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, request operations.DirectoryRoleAssignmentsInsertRequest, security operations.DirectoryRoleAssignmentsInsertSecurity) (*operations.DirectoryRoleAssignmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, re
 }
 
 // DirectoryRoleAssignmentsList - Retrieves a paginated list of all roleAssignments.
-func (s *roleAssignments) DirectoryRoleAssignmentsList(ctx context.Context, request operations.DirectoryRoleAssignmentsListRequest) (*operations.DirectoryRoleAssignmentsListResponse, error) {
+func (s *roleAssignments) DirectoryRoleAssignmentsList(ctx context.Context, request operations.DirectoryRoleAssignmentsListRequest, security operations.DirectoryRoleAssignmentsListSecurity) (*operations.DirectoryRoleAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

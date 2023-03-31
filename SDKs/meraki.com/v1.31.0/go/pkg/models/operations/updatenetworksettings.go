@@ -7,10 +7,6 @@ import (
 	"time"
 )
 
-type UpdateNetworkSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSettingsRequestBodyLocalStatusPageAuthentication - A hash of Local Status page(s)' authentication options applied to the Network.
 type UpdateNetworkSettingsRequestBodyLocalStatusPageAuthentication struct {
 	// Enables / disables the authentication on Local Status page(s).
@@ -43,8 +39,8 @@ type UpdateNetworkSettingsRequestBody struct {
 }
 
 type UpdateNetworkSettingsRequest struct {
-	PathParams UpdateNetworkSettingsPathParams
-	Request    *UpdateNetworkSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                            `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkSettings200ApplicationJSONClientPrivacy - Privacy settings

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcompanymatchQueryParams struct {
+type GetcompanymatchRequest struct {
 	// Company name from which to generate similarity key
 	Company string `queryParam:"style=form,explode=true,name=company"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetcompanymatchRequest struct {
-	QueryParams GetcompanymatchQueryParams
 }
 
 // Getcompanymatch200ApplicationJSON - Generated similarity key for company name data

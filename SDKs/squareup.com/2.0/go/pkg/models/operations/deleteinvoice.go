@@ -8,25 +8,16 @@ import (
 )
 
 type DeleteInvoiceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteInvoicePathParams struct {
+type DeleteInvoiceRequest struct {
 	// The ID of the invoice to delete.
 	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
-}
-
-type DeleteInvoiceQueryParams struct {
 	// The version of the [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice) to delete.
 	// If you do not know the version, you can call [GetInvoice](https://developer.squareup.com/reference/square_2021-08-18/invoices-api/get-invoice) or
 	// [ListInvoices](https://developer.squareup.com/reference/square_2021-08-18/invoices-api/list-invoices).
 	Version *int64 `queryParam:"style=form,explode=true,name=version"`
-}
-
-type DeleteInvoiceRequest struct {
-	PathParams  DeleteInvoicePathParams
-	QueryParams DeleteInvoiceQueryParams
-	Security    DeleteInvoiceSecurity
 }
 
 type DeleteInvoiceResponse struct {

@@ -68,7 +68,6 @@ pkg/models/shared/leavebalance.go
 pkg/models/shared/homeaddress.go
 pkg/models/shared/stateenum.go
 pkg/models/shared/bankaccount.go
-pkg/models/shared/security.go
 pkg/models/shared/leaveapplications.go
 pkg/models/shared/leaveapplication.go
 pkg/models/shared/leaveperiod.go

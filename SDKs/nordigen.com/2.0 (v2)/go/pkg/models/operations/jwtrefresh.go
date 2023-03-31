@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JWTRefreshRequest struct {
-	Request shared.JWTRefreshRequest `request:"mediaType=application/json"`
-}
-
 type JWTRefreshResponse struct {
 	ContentType string
 	// Invalid token

@@ -14,24 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.TransportationIncentivesLawsAllRequest{
-        PathParams: operations.TransportationIncentivesLawsAllPathParams{
-            OutputFormat: "xml",
-        },
-        QueryParams: operations.TransportationIncentivesLawsAllQueryParams{
-            APIKey: "provident",
-            Expired: false,
-            IncentiveType: "distinctio",
-            Jurisdiction: "quibusdam",
-            Keyword: "unde",
-            LawType: "nulla",
-            Limit: 544883,
-            Local: false,
-            Poc: false,
-            Recent: false,
-            RegulationType: "illum",
-            Technology: "vel",
-            UserType: "error",
-        },
+        APIKey: "corrupti",
+        Expired: false,
+        IncentiveType: "provident",
+        Jurisdiction: "distinctio",
+        Keyword: "quibusdam",
+        LawType: "unde",
+        Limit: 857946,
+        Local: false,
+        OutputFormat: "xml",
+        Poc: false,
+        Recent: false,
+        RegulationType: "illum",
+        Technology: "vel",
+        UserType: "error",
     }
 
     ctx := context.Background()

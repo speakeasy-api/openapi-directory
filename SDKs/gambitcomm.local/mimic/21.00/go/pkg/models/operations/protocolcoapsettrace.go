@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolCoapSetTracePathParams struct {
+type ProtocolCoapSetTraceRequest struct {
 	// Agent to set the COAP tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the COAP tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolCoapSetTraceRequest struct {
-	PathParams ProtocolCoapSetTracePathParams
 }
 
 type ProtocolCoapSetTraceResponse struct {

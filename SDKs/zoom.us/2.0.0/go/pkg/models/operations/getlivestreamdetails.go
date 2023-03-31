@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLiveStreamDetailsPathParams struct {
+type GetLiveStreamDetailsRequest struct {
 	// Unique identifier of the meeting.
 	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type GetLiveStreamDetailsRequest struct {
-	PathParams GetLiveStreamDetailsPathParams
 }
 
 // GetLiveStreamDetails200ApplicationXML - **HTTP Status Code:** `200` **OK**<br>

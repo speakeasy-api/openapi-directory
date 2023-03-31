@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAlertPathParams struct {
+type DeleteAlertRequest struct {
 	// The ID of the email alert to delete.
 	AlertID string `pathParam:"style=simple,explode=false,name=alert_id"`
-}
-
-type DeleteAlertRequest struct {
-	PathParams DeleteAlertPathParams
 }
 
 type DeleteAlertResponse struct {

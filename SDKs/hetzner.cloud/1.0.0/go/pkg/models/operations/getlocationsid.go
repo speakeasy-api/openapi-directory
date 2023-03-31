@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLocationsIDPathParams struct {
+type GetLocationsIDRequest struct {
 	// ID of Location
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLocationsIDRequest struct {
-	PathParams GetLocationsIDPathParams
 }
 
 type GetLocationsID200ApplicationJSONLocation struct {

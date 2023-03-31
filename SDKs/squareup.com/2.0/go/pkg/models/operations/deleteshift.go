@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteShiftSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteShiftPathParams struct {
-	// The UUID for the `Shift` being deleted.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteShiftRequest struct {
-	PathParams DeleteShiftPathParams
-	Security   DeleteShiftSecurity
+	// The UUID for the `Shift` being deleted.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteShiftResponse struct {

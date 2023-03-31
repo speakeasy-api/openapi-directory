@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type BookmarkPostPathParams struct {
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type BookmarkPostRequest struct {
-	PathParams BookmarkPostPathParams
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type BookmarkPostResponse struct {

@@ -13,24 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ActivateSKUBindingRequest{
-        PathParams: operations.ActivateSKUBindingPathParams{
-            SellerID: "vtxkfj7352",
-            SkuSellerID: "71",
-        },
-        Headers: operations.ActivateSKUBindingHeaders{
-            Accept: "corrupti",
-            ContentType: "provident",
-        },
+        Accept: "corrupti",
+        ContentType: "provident",
+        SellerID: "vtxkfj7352",
+        SkuSellerID: "71",
     }
 
     ctx := context.Background()

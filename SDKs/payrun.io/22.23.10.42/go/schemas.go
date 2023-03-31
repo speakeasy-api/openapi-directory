@@ -36,14 +36,14 @@ func newSchemas(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Returns the XSD schema for the specified data type
 func (s *schemas) GetSchema(ctx context.Context, request operations.GetSchemaRequest) (*operations.GetSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Schemas/{DtoDataType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Schemas/{DtoDataType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,7 +106,7 @@ func (s *schemas) GetSchemas(ctx context.Context, request operations.GetSchemasR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateClientDeadlinePathParams struct {
+type UpdateClientDeadlineRequest struct {
+	// Updated Client Deadline for a project.
+	TimeDTO shared.TimeDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateClientDeadlineRequest struct {
-	PathParams UpdateClientDeadlinePathParams
-	// Updated Client Deadline for a project.
-	Request shared.TimeDTO `request:"mediaType=application/json"`
 }
 
 type UpdateClientDeadlineResponse struct {

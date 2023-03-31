@@ -12,16 +12,8 @@ var CreateMessageInteractionServerList = []string{
 }
 
 type CreateMessageInteractionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessageInteractionPathParams struct {
-	// The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.
-	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
-	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessageInteractionCreateMessageInteractionRequest struct {
@@ -32,10 +24,13 @@ type CreateMessageInteractionCreateMessageInteractionRequest struct {
 }
 
 type CreateMessageInteractionRequest struct {
-	PathParams CreateMessageInteractionPathParams
-	Request    *CreateMessageInteractionCreateMessageInteractionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessageInteractionSecurity
-	ServerURL  *string
+	// The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.
+	ParticipantSid string                                                   `pathParam:"style=simple,explode=false,name=ParticipantSid"`
+	RequestBody    *CreateMessageInteractionCreateMessageInteractionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
+	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
 }
 
 type CreateMessageInteractionResponse struct {

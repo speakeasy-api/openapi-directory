@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetPathParams struct {
+type ActionsGetRequest struct {
 	// The ID of the device
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ActionsGetRequest struct {
-	PathParams ActionsGetPathParams
 }
 
 type ActionsGetResponse struct {

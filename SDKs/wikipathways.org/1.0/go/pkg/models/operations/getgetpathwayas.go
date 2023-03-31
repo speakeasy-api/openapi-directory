@@ -44,7 +44,7 @@ func (e *GetGetPathwayAsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetPathwayAsQueryParams struct {
+type GetGetPathwayAsRequest struct {
 	// The file type to convert to, e.g.
 	FileType string                     `queryParam:"style=form,explode=true,name=fileType"`
 	Format   *GetGetPathwayAsFormatEnum `queryParam:"style=form,explode=true,name=format"`
@@ -52,10 +52,6 @@ type GetGetPathwayAsQueryParams struct {
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
 	// The revision number of the pathway (use 0 for most recent)
 	Revision *int64 `queryParam:"style=form,explode=true,name=revision"`
-}
-
-type GetGetPathwayAsRequest struct {
-	QueryParams GetGetPathwayAsQueryParams
 }
 
 type GetGetPathwayAsResponse struct {

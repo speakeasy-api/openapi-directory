@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GETScriptDifferencesUsingGETPathParams struct {
+type GETScriptDifferencesUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId1
 	SnapshotId1 string `pathParam:"style=simple,explode=false,name=snapshotId1"`
 	// snapshotId2
 	SnapshotId2 string `pathParam:"style=simple,explode=false,name=snapshotId2"`
-}
-
-type GETScriptDifferencesUsingGETRequest struct {
-	PathParams GETScriptDifferencesUsingGETPathParams
 }
 
 type GETScriptDifferencesUsingGETResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteCustomerCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteCustomerCardPathParams struct {
+type DeleteCustomerCardRequest struct {
 	// The ID of the card on file to delete.
 	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 	// The ID of the customer that the card on file belongs to.
 	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type DeleteCustomerCardRequest struct {
-	PathParams DeleteCustomerCardPathParams
-	Security   DeleteCustomerCardSecurity
 }
 
 type DeleteCustomerCardResponse struct {

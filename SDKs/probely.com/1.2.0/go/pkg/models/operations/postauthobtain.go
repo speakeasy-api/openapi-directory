@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostAuthObtainRequest struct {
-	Request shared.Login `request:"mediaType=application/json"`
-}
 
 // PostAuthObtain500ApplicationJSON - Internal server error
 type PostAuthObtain500ApplicationJSON struct {

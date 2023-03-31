@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolIpmiGetTracePathParams struct {
+type ProtocolIpmiGetTraceRequest struct {
 	// Agent to show whether IPMI tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolIpmiGetTraceRequest struct {
-	PathParams ProtocolIpmiGetTracePathParams
 }
 
 type ProtocolIpmiGetTraceResponse struct {

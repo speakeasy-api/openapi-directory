@@ -10,13 +10,8 @@ import (
 )
 
 type ChromemanagementCustomersReportsFindInstalledAppDevicesSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ChromemanagementCustomersReportsFindInstalledAppDevicesPathParams struct {
-	// Required. Customer id or "my_customer" to use the customer associated to the account making the request.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum - Type of the app.
@@ -55,7 +50,7 @@ func (e *ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum) Unm
 	}
 }
 
-type ChromemanagementCustomersReportsFindInstalledAppDevicesQueryParams struct {
+type ChromemanagementCustomersReportsFindInstalledAppDevicesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -68,6 +63,8 @@ type ChromemanagementCustomersReportsFindInstalledAppDevicesQueryParams struct {
 	AppType *ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum `queryParam:"style=form,explode=true,name=appType"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. Customer id or "my_customer" to use the customer associated to the account making the request.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * last_active_date
@@ -92,12 +89,6 @@ type ChromemanagementCustomersReportsFindInstalledAppDevicesQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ChromemanagementCustomersReportsFindInstalledAppDevicesRequest struct {
-	PathParams  ChromemanagementCustomersReportsFindInstalledAppDevicesPathParams
-	QueryParams ChromemanagementCustomersReportsFindInstalledAppDevicesQueryParams
-	Security    ChromemanagementCustomersReportsFindInstalledAppDevicesSecurity
 }
 
 type ChromemanagementCustomersReportsFindInstalledAppDevicesResponse struct {

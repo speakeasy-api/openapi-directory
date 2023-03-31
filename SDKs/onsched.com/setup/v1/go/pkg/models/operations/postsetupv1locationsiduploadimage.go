@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsIDUploadimagePathParams struct {
+type PostSetupV1LocationsIDUploadimageRequest struct {
+	// Input model for image upload
+	ResourceImageInputModel *shared.ResourceImageInputModel `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1LocationsIDUploadimageRequest struct {
-	PathParams PostSetupV1LocationsIDUploadimagePathParams
-	// Input model for image upload
-	Request *shared.ResourceImageInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1LocationsIDUploadimageResponse struct {

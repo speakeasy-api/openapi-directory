@@ -13,17 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyHeader: shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyHeader: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CommunicationRequest{
-        QueryParams: operations.CommunicationQueryParams{
-            All: false,
-        },
-        Request: []shared.Post{
+        RequestBody: []shared.Post{
             shared.Post{
                 ID: "1",
                 Language: "en",
@@ -40,6 +35,7 @@ func main() {
                 Text: "I love the service",
             },
         },
+        All: false,
     }
 
     ctx := context.Background()

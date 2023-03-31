@@ -33,7 +33,7 @@ func (e *PlayerTournamentStatsByPlayerFormatEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type PlayerTournamentStatsByPlayerPathParams struct {
+type PlayerTournamentStatsByPlayerRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerTournamentStatsByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
@@ -41,10 +41,6 @@ type PlayerTournamentStatsByPlayerPathParams struct {
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
 	// The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are <code>58</code>, <code>61</code>, etc.
 	Tournamentid string `pathParam:"style=simple,explode=false,name=tournamentid"`
-}
-
-type PlayerTournamentStatsByPlayerRequest struct {
-	PathParams PlayerTournamentStatsByPlayerPathParams
 }
 
 type PlayerTournamentStatsByPlayerResponse struct {

@@ -13,24 +13,20 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 
     req := operations.PostPostReviewRequest{
-        QueryParams: operations.PostPostReviewQueryParams{
-            Rating: "3",
-            UserEmail: "provident",
-            UserName: "Micheal_Sporer",
-        },
-        Request: operations.PostPostReviewRequestBody{
+        RequestBody: operations.PostPostReviewRequestBody{
             Rating: 5,
             UserEmail: "johnsmith@usercompanyxyz.com",
             UserName: "John",
         },
+        Rating: "3",
+        UserEmail: "provident",
+        UserName: "Micheal_Sporer",
     }
 
     ctx := context.Background()

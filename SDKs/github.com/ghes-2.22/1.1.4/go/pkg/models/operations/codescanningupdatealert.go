@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningUpdateAlertPathParams struct {
-	// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
-	AlertNumber int64  `pathParam:"style=simple,explode=false,name=alert_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type CodeScanningUpdateAlertRequestBody struct {
 	// **Required when the state is dismissed.** The reason for dismissing or closing the alert. Can be one of: `false positive`, `won't fix`, and `used in tests`.
 	DismissedReason *shared.CodeScanningAlertDismissedReasonEnum `json:"dismissed_reason,omitempty"`
@@ -22,8 +15,11 @@ type CodeScanningUpdateAlertRequestBody struct {
 }
 
 type CodeScanningUpdateAlertRequest struct {
-	PathParams CodeScanningUpdateAlertPathParams
-	Request    CodeScanningUpdateAlertRequestBody `request:"mediaType=application/json"`
+	RequestBody CodeScanningUpdateAlertRequestBody `request:"mediaType=application/json"`
+	// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+	AlertNumber int64  `pathParam:"style=simple,explode=false,name=alert_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // CodeScanningUpdateAlert503ApplicationJSON - Service unavailable

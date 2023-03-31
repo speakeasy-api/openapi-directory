@@ -13,11 +13,6 @@ type PostAnnouncementsRequestBody struct {
 	File        *string `multipartForm:"name=file"`
 }
 
-type PostAnnouncementsRequest struct {
-	// Upload a wav file to be used in other parts of the API - 10Mb limit, ending in .wav
-	Request PostAnnouncementsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // PostAnnouncements403ApplicationJSON - Sorry, you have reached your max quota of 10 announcement files. Please delete some.
 type PostAnnouncements403ApplicationJSON struct {
 	Message *string `json:"message,omitempty"`

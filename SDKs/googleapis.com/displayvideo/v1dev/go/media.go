@@ -32,20 +32,20 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DisplayvideoMediaDownload - Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.` **Note**: Download requests will not be successful without including `alt=media` query string.
-func (s *media) DisplayvideoMediaDownload(ctx context.Context, request operations.DisplayvideoMediaDownloadRequest) (*operations.DisplayvideoMediaDownloadResponse, error) {
+func (s *media) DisplayvideoMediaDownload(ctx context.Context, request operations.DisplayvideoMediaDownloadRequest, security operations.DisplayvideoMediaDownloadSecurity) (*operations.DisplayvideoMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/download/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/download/{resourceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *media) DisplayvideoMediaDownload(ctx context.Context, request operation
 }
 
 // DisplayvideoMediaUpload - Uploads media. Upload is supported on the URI `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be successful without including `upload_type=media` query string.
-func (s *media) DisplayvideoMediaUpload(ctx context.Context, request operations.DisplayvideoMediaUploadRequest) (*operations.DisplayvideoMediaUploadResponse, error) {
+func (s *media) DisplayvideoMediaUpload(ctx context.Context, request operations.DisplayvideoMediaUploadRequest, security operations.DisplayvideoMediaUploadSecurity) (*operations.DisplayvideoMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media/{resourceName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *media) DisplayvideoMediaUpload(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

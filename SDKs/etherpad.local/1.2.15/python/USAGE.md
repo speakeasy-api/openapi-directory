@@ -3,20 +3,16 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AppendTextUsingGetRequest(
-    query_params=operations.AppendTextUsingGetQueryParams(
-        pad_id="et",
-        text="fuga",
+        api_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.AppendTextUsingGETRequest(
+    pad_id="corrupti",
+    text="provident",
 )
     
 res = s.append_text_using_get(req)

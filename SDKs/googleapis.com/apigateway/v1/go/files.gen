@@ -29,13 +29,12 @@ pkg/models/operations/apigatewayprojectslocationsoperationsget.go
 pkg/models/operations/apigatewayprojectslocationsoperationslist.go
 pkg/models/shared/apigatewayoperation.go
 pkg/models/shared/apigatewaystatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/apigatewayapiconfig.go
 pkg/models/shared/apigatewayapiconfigopenapidocument.go
 pkg/models/shared/apigatewayapiconfigfile.go
 pkg/models/shared/apigatewayapiconfiggrpcservicedefinition.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/apigatewaylistapiconfigsresponse.go
 pkg/models/shared/apigatewayapi.go
 pkg/models/shared/apigatewaylistapisresponse.go

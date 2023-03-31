@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOwnedNumbersQueryParams struct {
+type GetOwnedNumbersRequest struct {
 	// The Application that you want to return the numbers for.
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
 	Country       *string `queryParam:"style=form,explode=true,name=country"`
@@ -32,10 +32,6 @@ type GetOwnedNumbersQueryParams struct {
 	SearchPattern *shared.SearchPatternEnum `queryParam:"style=form,explode=true,name=search_pattern"`
 	// Page size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetOwnedNumbersRequest struct {
-	QueryParams GetOwnedNumbersQueryParams
 }
 
 type GetOwnedNumbersResponse struct {

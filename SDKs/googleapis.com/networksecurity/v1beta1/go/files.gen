@@ -43,10 +43,9 @@ pkg/models/operations/networksecurityprojectslocationsurllistslist.go
 pkg/models/operations/networksecurityprojectslocationsurllistspatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
-pkg/models/shared/addaddressgroupitemsrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/addaddressgroupitemsrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/cloneaddressgroupitemsrequest.go
 pkg/models/shared/addressgroup.go
 pkg/models/shared/listaddressgroupsresponse.go

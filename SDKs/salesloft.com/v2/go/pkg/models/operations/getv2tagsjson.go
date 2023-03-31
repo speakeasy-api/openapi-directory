@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2TagsJSONQueryParams struct {
+type GetV2TagsJSONRequest struct {
 	// Filters tags by their IDs
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -23,10 +23,6 @@ type GetV2TagsJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2TagsJSONRequest struct {
-	QueryParams GetV2TagsJSONQueryParams
 }
 
 type GetV2TagsJSONResponse struct {

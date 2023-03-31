@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type InventoryNotificationPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-	// A string that identifies the SKU in the seller, that suffered the change. This is the ID that the marketplace will use for all  references to this SKU, such as price and inventory notifications.
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type InventoryNotificationQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace. The notification will be posted into this account.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-	// Environment to use. Used as part of the URL.
-	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type InventoryNotificationHeaders struct {
+type InventoryNotificationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type InventoryNotificationRequest struct {
-	PathParams  InventoryNotificationPathParams
-	QueryParams InventoryNotificationQueryParams
-	Headers     InventoryNotificationHeaders
+	// Name of the VTEX account that belongs to the marketplace. The notification will be posted into this account.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// Environment to use. Used as part of the URL.
+	Environment string `queryParam:"style=form,explode=true,name=environment"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
+	// A string that identifies the SKU in the seller, that suffered the change. This is the ID that the marketplace will use for all  references to this SKU, such as price and inventory notifications.
+	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 type InventoryNotificationResponse struct {

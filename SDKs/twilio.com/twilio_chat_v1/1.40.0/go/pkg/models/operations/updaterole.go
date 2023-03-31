@@ -12,14 +12,8 @@ var UpdateRoleServerList = []string{
 }
 
 type UpdateRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRolePathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Role resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRoleUpdateRoleRequest struct {
@@ -28,10 +22,11 @@ type UpdateRoleUpdateRoleRequest struct {
 }
 
 type UpdateRoleRequest struct {
-	PathParams UpdateRolePathParams
-	Request    *UpdateRoleUpdateRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRoleSecurity
-	ServerURL  *string
+	RequestBody *UpdateRoleUpdateRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Role resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateRoleResponse struct {

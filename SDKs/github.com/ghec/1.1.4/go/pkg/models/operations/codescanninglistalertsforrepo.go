@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningListAlertsForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // CodeScanningListAlertsForRepoSortEnum - The property by which to sort the results.
 type CodeScanningListAlertsForRepoSortEnum string
 
@@ -40,15 +33,19 @@ func (e *CodeScanningListAlertsForRepoSortEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type CodeScanningListAlertsForRepoQueryParams struct {
+type CodeScanningListAlertsForRepoRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// If specified, only code scanning alerts with this severity will be returned.
 	Severity *shared.CodeScanningAlertSeverityEnum `queryParam:"style=form,explode=true,name=severity"`
 	// The property by which to sort the results.
@@ -59,11 +56,6 @@ type CodeScanningListAlertsForRepoQueryParams struct {
 	ToolGUID *string `queryParam:"style=form,explode=true,name=tool_guid"`
 	// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
 	ToolName *string `queryParam:"style=form,explode=true,name=tool_name"`
-}
-
-type CodeScanningListAlertsForRepoRequest struct {
-	PathParams  CodeScanningListAlertsForRepoPathParams
-	QueryParams CodeScanningListAlertsForRepoQueryParams
 }
 
 // CodeScanningListAlertsForRepo503ApplicationJSON - Service unavailable

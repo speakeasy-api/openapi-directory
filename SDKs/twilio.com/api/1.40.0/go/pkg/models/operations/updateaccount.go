@@ -12,12 +12,8 @@ var UpdateAccountServerList = []string{
 }
 
 type UpdateAccountSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAccountPathParams struct {
-	// The Account Sid that uniquely identifies the account to update
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAccountUpdateAccountRequest struct {
@@ -27,10 +23,9 @@ type UpdateAccountUpdateAccountRequest struct {
 }
 
 type UpdateAccountRequest struct {
-	PathParams UpdateAccountPathParams
-	Request    *UpdateAccountUpdateAccountRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAccountSecurity
-	ServerURL  *string
+	RequestBody *UpdateAccountUpdateAccountRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Account Sid that uniquely identifies the account to update
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateAccountResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePermissionsIDPathParams struct {
+type DeletePermissionsIDRequest struct {
 	// Permission ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePermissionsIDRequest struct {
-	PathParams DeletePermissionsIDPathParams
 }
 
 type DeletePermissionsIDResponse struct {

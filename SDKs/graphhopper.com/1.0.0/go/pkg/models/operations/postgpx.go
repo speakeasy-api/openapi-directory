@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostGPXQueryParams struct {
+type PostGPXRequest struct {
 	// Specify the precision of a point, in meter
 	GpsAccuracy *int64 `queryParam:"style=form,explode=true,name=gps_accuracy"`
 	// Specify the vehicle profile like car
 	Vehicle *string `queryParam:"style=form,explode=true,name=vehicle"`
-}
-
-type PostGPXRequest struct {
-	QueryParams PostGPXQueryParams
 }
 
 type PostGPXResponse struct {

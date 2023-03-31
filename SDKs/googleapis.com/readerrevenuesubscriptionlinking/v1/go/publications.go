@@ -34,14 +34,14 @@ func newPublications(defaultClient, securityClient HTTPClient, serverURL, langua
 // ReaderrevenuesubscriptionlinkingPublicationsReadersDelete - Removes a publication reader, effectively severing the association with a Google user. If `force` is set to true, any entitlements for this reader will also be deleted. (Otherwise, the request will only work if the reader has no entitlements.) - If the reader does not exist, return NOT_FOUND. - Return FAILED_PRECONDITION if the force field is false (or unset) and entitlements are present.
 func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersDelete(ctx context.Context, request operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteRequest) (*operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersDelete
 // ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlements - Gets the reader entitlements for a publication reader. - Returns PERMISSION_DENIED if the caller does not have access. - Returns NOT_FOUND if the reader does not exist.
 func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlements(ctx context.Context, request operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsRequest) (*operations.ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersGetEnt
 // ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlements - Updates the reader entitlements for a publication reader. The entire reader entitlements will be overwritten by the new reader entitlements in the payload, like a PUT. - Returns PERMISSION_DENIED if the caller does not have access. - Returns NOT_FOUND if the reader does not exist.
 func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlements(ctx context.Context, request operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsRequest) (*operations.ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReaderEntitlementsInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *publications) ReaderrevenuesubscriptionlinkingPublicationsReadersUpdate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

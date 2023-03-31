@@ -8,23 +8,14 @@ import (
 )
 
 type GetEventSimpleSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEventSimplePathParams struct {
-	// TBA Event Key, eg `2016nytr`
-	EventKey string `pathParam:"style=simple,explode=false,name=event_key"`
-}
-
-type GetEventSimpleHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetEventSimpleRequest struct {
-	PathParams GetEventSimplePathParams
-	Headers    GetEventSimpleHeaders
-	Security   GetEventSimpleSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// TBA Event Key, eg `2016nytr`
+	EventKey string `pathParam:"style=simple,explode=false,name=event_key"`
 }
 
 type GetEventSimpleResponse struct {

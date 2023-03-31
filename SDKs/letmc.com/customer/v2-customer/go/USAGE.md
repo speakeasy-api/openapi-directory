@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.BranchControllerGetBranchesRequest{
-        PathParams: operations.BranchControllerGetBranchesPathParams{
-            ShortName: "corrupti",
-        },
-        QueryParams: operations.BranchControllerGetBranchesQueryParams{
-            Count: 592845,
-            Offset: 715190,
-        },
+        Count: 548814,
+        Offset: 592845,
+        ShortName: "distinctio",
     }
 
     ctx := context.Background()

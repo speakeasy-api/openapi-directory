@@ -34,7 +34,7 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CreateUser - Create a user
 // Note: Users must be created with an admin JWT.
-func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequest) (*operations.CreateUserResponse, error) {
+func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequestBody) (*operations.CreateUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -87,7 +87,7 @@ func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequ
 // DeleteUser - Delete a user
 func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequ
 // GetUser - Retrieve a user
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -220,7 +220,7 @@ func (s *user) GetUsers(ctx context.Context) (*operations.GetUsersResponse, erro
 // GetuserConversations - List user conversations
 func (s *user) GetuserConversations(ctx context.Context, request operations.GetuserConversationsRequest) (*operations.GetuserConversationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/conversations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -264,9 +264,9 @@ func (s *user) GetuserConversations(ctx context.Context, request operations.Getu
 // UpdateUser - Update a user
 func (s *user) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

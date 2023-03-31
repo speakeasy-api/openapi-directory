@@ -45,7 +45,6 @@ pkg/models/shared/contactgroupmetadata.go
 pkg/models/shared/groupclientdata.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/createcontactgrouprequest.go
 pkg/models/shared/listcontactgroupsresponse.go
 pkg/models/shared/modifycontactgroupmembersresponse.go

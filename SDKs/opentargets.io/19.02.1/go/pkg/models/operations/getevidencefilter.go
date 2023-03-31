@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetEvidenceFilterQueryParams struct {
+type GetEvidenceFilterRequest struct {
 	// Data source to consider.
 	DataSource *string `queryParam:"style=form,explode=true,name=data source"`
 	// Type of data structure to return. Can be 'full', 'simple', 'ids', or 'count'.
@@ -37,10 +37,6 @@ type GetEvidenceFilterQueryParams struct {
 	Target *string `queryParam:"style=form,explode=true,name=target"`
 	// A UniProt keyword (meaning all the targets linked to that keyword).
 	Uniprotkw *string `queryParam:"style=form,explode=true,name=uniprotkw"`
-}
-
-type GetEvidenceFilterRequest struct {
-	QueryParams GetEvidenceFilterQueryParams
 }
 
 type GetEvidenceFilterResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmClientDescriptionConverterPathParams struct {
+type PostRealmClientDescriptionConverterRequest struct {
+	RequestBody string `request:"mediaType=text/plain"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientDescriptionConverterRequest struct {
-	PathParams PostRealmClientDescriptionConverterPathParams
-	Request    string `request:"mediaType=text/plain"`
 }
 
 type PostRealmClientDescriptionConverterResponse struct {

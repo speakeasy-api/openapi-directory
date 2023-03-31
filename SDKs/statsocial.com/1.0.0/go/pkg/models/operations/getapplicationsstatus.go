@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationsStatusQueryParams struct {
+type GetApplicationsStatusRequest struct {
 	// User application key
 	Key string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetApplicationsStatusRequest struct {
-	QueryParams GetApplicationsStatusQueryParams
 }
 
 type GetApplicationsStatusResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type GamesPlayersGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GamesPlayersGetPathParams struct {
-	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
-	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
-}
-
-type GamesPlayersGetQueryParams struct {
+type GamesPlayersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type GamesPlayersGetQueryParams struct {
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
+	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
 	// Consistency token of the player id. The call returns a 'not found' result when the token is present and invalid. Empty value is ignored. See also GlobalPlayerIdConsistencyTokenProto
 	PlayerIDConsistencyToken *string `queryParam:"style=form,explode=true,name=playerIdConsistencyToken"`
 	// Returns response with indentations and line breaks.
@@ -44,12 +41,6 @@ type GamesPlayersGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesPlayersGetRequest struct {
-	PathParams  GamesPlayersGetPathParams
-	QueryParams GamesPlayersGetQueryParams
-	Security    GamesPlayersGetSecurity
 }
 
 type GamesPlayersGetResponse struct {

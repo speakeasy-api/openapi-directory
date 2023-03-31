@@ -25,10 +25,6 @@ type PostVolumesCreateVolumeRequest struct {
 	Size int64 `json:"size"`
 }
 
-type PostVolumesRequest struct {
-	Request *PostVolumesCreateVolumeRequest `request:"mediaType=application/json"`
-}
-
 // PostVolumes201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null
 type PostVolumes201ApplicationJSONActionError struct {
 	// Fixed machine readable code

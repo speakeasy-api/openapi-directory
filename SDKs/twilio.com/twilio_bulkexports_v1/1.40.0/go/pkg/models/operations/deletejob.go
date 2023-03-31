@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteJobServerList = []string{
@@ -12,18 +11,13 @@ var DeleteJobServerList = []string{
 }
 
 type DeleteJobSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteJobPathParams struct {
-	// The unique string that that we created to identify the Bulk Export job
-	JobSid string `pathParam:"style=simple,explode=false,name=JobSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteJobRequest struct {
-	PathParams DeleteJobPathParams
-	Security   DeleteJobSecurity
-	ServerURL  *string
+	// The unique string that that we created to identify the Bulk Export job
+	JobSid string `pathParam:"style=simple,explode=false,name=JobSid"`
 }
 
 type DeleteJobResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSetupV1CompaniesDomainsIDPathParams struct {
+type DeleteSetupV1CompaniesDomainsIDRequest struct {
 	// id of companyDomain object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1CompaniesDomainsIDRequest struct {
-	PathParams DeleteSetupV1CompaniesDomainsIDPathParams
 }
 
 type DeleteSetupV1CompaniesDomainsIDResponse struct {

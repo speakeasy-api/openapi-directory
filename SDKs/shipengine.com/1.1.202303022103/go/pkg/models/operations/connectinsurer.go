@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConnectInsurerRequest struct {
-	Request shared.ConnectInsurerRequestBody `request:"mediaType=application/json"`
-}
-
 type ConnectInsurerResponse struct {
 	ContentType string
 	StatusCode  int

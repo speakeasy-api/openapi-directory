@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimSitesListQueryParams struct {
+type DcimSitesListRequest struct {
 	Asn              *string `queryParam:"style=form,explode=true,name=asn"`
 	AsnGt            *string `queryParam:"style=form,explode=true,name=asn__gt"`
 	AsnGte           *string `queryParam:"style=form,explode=true,name=asn__gte"`
@@ -119,10 +119,6 @@ type DcimSitesListQueryParams struct {
 	TenantGroupIDN *string `queryParam:"style=form,explode=true,name=tenant_group_id__n"`
 	TenantID       *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	TenantIDN      *string `queryParam:"style=form,explode=true,name=tenant_id__n"`
-}
-
-type DcimSitesListRequest struct {
-	QueryParams DcimSitesListQueryParams
 }
 
 type DcimSitesList200ApplicationJSON struct {

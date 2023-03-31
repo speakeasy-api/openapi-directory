@@ -12,20 +12,15 @@ var FetchDeviceConfigServerList = []string{
 }
 
 type FetchDeviceConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchDeviceConfigPathParams struct {
+type FetchDeviceConfigRequest struct {
 	// A 34-character string that uniquely identifies the Device.
 	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
 	// The config key; up to 100 characters.
 	Key string `pathParam:"style=simple,explode=false,name=Key"`
-}
-
-type FetchDeviceConfigRequest struct {
-	PathParams FetchDeviceConfigPathParams
-	Security   FetchDeviceConfigSecurity
-	ServerURL  *string
 }
 
 type FetchDeviceConfigResponse struct {

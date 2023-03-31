@@ -99,7 +99,7 @@ func (s *entityData) GetErrorCodes(ctx context.Context, request operations.GetEr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -149,7 +149,7 @@ func (s *entityData) GetErrorCodes(ctx context.Context, request operations.GetEr
 
 // PostEntities - Obtiene los activos financieros y el detalle de su composición
 // Obtiene los activos financieros y el detalle de su composición de carteras de inversión compuestas por acciones o fondos, tarjetas de crédito, seguros y préstamos. Incluye información de titularidad de cada uno de los activos así como identificadores únicos que facilitan el tratamiento del dato. Es posible obtener datos Mock. Consulte con el equipo técnico cómo hacerlo.
-func (s *entityData) PostEntities(ctx context.Context, request operations.PostEntitiesRequest) (*operations.PostEntitiesResponse, error) {
+func (s *entityData) PostEntities(ctx context.Context, request operations.PostEntitiesRequestBody) (*operations.PostEntitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities"
 

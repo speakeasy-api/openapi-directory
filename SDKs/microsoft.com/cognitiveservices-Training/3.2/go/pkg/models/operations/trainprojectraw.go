@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrainProjectRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // TrainProjectRawTrainingTypeEnum - The type of training to use to train the project (default: Regular).
 type TrainProjectRawTrainingTypeEnum string
 
@@ -38,22 +33,19 @@ func (e *TrainProjectRawTrainingTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TrainProjectRawQueryParams struct {
+type TrainProjectRawRequest struct {
+	// Additional training parameters passed in to control how the project is trained.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Whether to force train even if dataset and configuration does not change (default: false).
 	ForceTrain *bool `queryParam:"style=form,explode=true,name=forceTrain"`
 	// The email address to send notification to when training finishes (default: null).
 	NotificationEmailAddress *string `queryParam:"style=form,explode=true,name=notificationEmailAddress"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The number of hours reserved as budget for training (if applicable).
 	ReservedBudgetInHours *int `queryParam:"style=form,explode=true,name=reservedBudgetInHours"`
 	// The type of training to use to train the project (default: Regular).
 	TrainingType *TrainProjectRawTrainingTypeEnum `queryParam:"style=form,explode=true,name=trainingType"`
-}
-
-type TrainProjectRawRequest struct {
-	PathParams  TrainProjectRawPathParams
-	QueryParams TrainProjectRawQueryParams
-	// Additional training parameters passed in to control how the project is trained.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type TrainProjectRawResponse struct {

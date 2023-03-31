@@ -12,14 +12,8 @@ var UpdateSipIPAccessControlListServerList = []string{
 }
 
 type UpdateSipIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSipIPAccessControlListPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// A 34 character string that uniquely identifies the resource to udpate.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSipIPAccessControlListUpdateSipIPAccessControlListRequest struct {
@@ -28,10 +22,11 @@ type UpdateSipIPAccessControlListUpdateSipIPAccessControlListRequest struct {
 }
 
 type UpdateSipIPAccessControlListRequest struct {
-	PathParams UpdateSipIPAccessControlListPathParams
-	Request    *UpdateSipIPAccessControlListUpdateSipIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSipIPAccessControlListSecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid  string                                                           `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateSipIPAccessControlListUpdateSipIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies the resource to udpate.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSipIPAccessControlListResponse struct {

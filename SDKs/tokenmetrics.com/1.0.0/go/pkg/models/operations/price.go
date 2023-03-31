@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PriceQueryParams struct {
+type PriceRequest struct {
 	EndDate   *string `queryParam:"style=form,explode=true,name=endDate"`
 	Limit     *string `queryParam:"style=form,explode=true,name=limit"`
 	Page      *string `queryParam:"style=form,explode=true,name=page"`
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
 	Tokens    *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type PriceRequest struct {
-	QueryParams PriceQueryParams
 }
 
 type PriceResponse struct {

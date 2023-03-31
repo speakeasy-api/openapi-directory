@@ -12,12 +12,8 @@ var CreateQueryServerList = []string{
 }
 
 type CreateQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateQueryPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateQueryCreateQueryRequest struct {
@@ -32,10 +28,9 @@ type CreateQueryCreateQueryRequest struct {
 }
 
 type CreateQueryRequest struct {
-	PathParams CreateQueryPathParams
-	Request    *CreateQueryCreateQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateQuerySecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+	AssistantSid string                         `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateQueryCreateQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateQueryResponse struct {

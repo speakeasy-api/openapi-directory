@@ -10,29 +10,24 @@ import (
 )
 
 type StorageObjectsWatchAllSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsWatchAllSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsWatchAllSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsWatchAllSecurity struct {
 	Option1 *StorageObjectsWatchAllSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsWatchAllSecurityOption2 `security:"option"`
 	Option3 *StorageObjectsWatchAllSecurityOption3 `security:"option"`
-}
-
-type StorageObjectsWatchAllPathParams struct {
-	// Name of the bucket in which to look for objects.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageObjectsWatchAllProjectionEnum - Set of properties to return. Defaults to noAcl.
@@ -59,9 +54,12 @@ func (e *StorageObjectsWatchAllProjectionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type StorageObjectsWatchAllQueryParams struct {
+type StorageObjectsWatchAllRequest struct {
+	Channel *shared.Channel `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to look for objects.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
 	Delimiter *string `queryParam:"style=form,explode=true,name=delimiter"`
 	// Selector specifying which fields to include in a partial response.
@@ -86,13 +84,6 @@ type StorageObjectsWatchAllQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// If true, lists all versions of a file as distinct results.
 	Versions *bool `queryParam:"style=form,explode=true,name=versions"`
-}
-
-type StorageObjectsWatchAllRequest struct {
-	PathParams  StorageObjectsWatchAllPathParams
-	QueryParams StorageObjectsWatchAllQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    StorageObjectsWatchAllSecurity
 }
 
 type StorageObjectsWatchAllResponse struct {

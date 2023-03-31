@@ -15,10 +15,6 @@ type PostV2WebhookSubscriptionsRequestBody struct {
 	EventType string `form:"name=event_type"`
 }
 
-type PostV2WebhookSubscriptionsRequest struct {
-	Request PostV2WebhookSubscriptionsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2WebhookSubscriptionsResponse struct {
 	Body        []byte
 	ContentType string

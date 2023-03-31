@@ -12,16 +12,8 @@ var UpdateServiceConversationScopedWebhookServerList = []string{
 }
 
 type UpdateServiceConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceConversationScopedWebhookPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest struct {
@@ -37,10 +29,13 @@ type UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhoo
 }
 
 type UpdateServiceConversationScopedWebhookRequest struct {
-	PathParams UpdateServiceConversationScopedWebhookPathParams
-	Request    *UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceConversationScopedWebhookSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+	ConversationSid string                                                                               `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateServiceConversationScopedWebhookResponse struct {

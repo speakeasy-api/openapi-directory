@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete2PathParams struct {
+type Delete2Request struct {
 	// customer payment's internal identifier
 	PaymentID int64 `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type Delete2Request struct {
-	PathParams Delete2PathParams
 }
 
 type Delete2Response struct {

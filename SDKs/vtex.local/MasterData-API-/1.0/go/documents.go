@@ -54,9 +54,9 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 // Creates documents through a JSON object where the key is the name of the field.
 func (s *documents) Createnewdocument(ctx context.Context, request operations.CreatenewdocumentRequest) (*operations.CreatenewdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -71,7 +71,7 @@ func (s *documents) Createnewdocument(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -110,9 +110,9 @@ func (s *documents) Createnewdocument(ctx context.Context, request operations.Cr
 // Createorupdateentiredocument - Create or update entire document
 func (s *documents) Createorupdateentiredocument(ctx context.Context, request operations.CreateorupdateentiredocumentRequest) (*operations.CreateorupdateentiredocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,7 +127,7 @@ func (s *documents) Createorupdateentiredocument(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -157,9 +157,9 @@ func (s *documents) Createorupdateentiredocument(ctx context.Context, request op
 // Createorupdatepartialdocument - Create or update partial document
 func (s *documents) Createorupdatepartialdocument(ctx context.Context, request operations.CreateorupdatepartialdocumentRequest) (*operations.CreateorupdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -174,7 +174,7 @@ func (s *documents) Createorupdatepartialdocument(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -205,14 +205,14 @@ func (s *documents) Createorupdatepartialdocument(ctx context.Context, request o
 // It allows to delete a document.
 func (s *documents) Deletedocument(ctx context.Context, request operations.DeletedocumentRequest) (*operations.DeletedocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -245,14 +245,14 @@ func (s *documents) Deletedocument(ctx context.Context, request operations.Delet
 // Assign the `_fields` parameter in the query string to retrieve the desired fields. If you want to return all the fields use `_fields=_all`.
 func (s *documents) Getdocument(ctx context.Context, request operations.GetdocumentRequest) (*operations.GetdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -291,9 +291,9 @@ func (s *documents) Getdocument(ctx context.Context, request operations.Getdocum
 // Updateentiredocument - Update entire document
 func (s *documents) Updateentiredocument(ctx context.Context, request operations.UpdateentiredocumentRequest) (*operations.UpdateentiredocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -308,7 +308,7 @@ func (s *documents) Updateentiredocument(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -338,9 +338,9 @@ func (s *documents) Updateentiredocument(ctx context.Context, request operations
 // Updatepartialdocument - Update partial document
 func (s *documents) Updatepartialdocument(ctx context.Context, request operations.UpdatepartialdocumentRequest) (*operations.UpdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -355,7 +355,7 @@ func (s *documents) Updatepartialdocument(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SubscribeRequest struct {
-	// Returns subscription Id.
-	Request shared.SubscriptionDTO `request:"mediaType=application/json"`
-}
 
 type SubscribeResponse struct {
 	ContentType string

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteFromCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DeleteFromCollectionPathParams struct {
-	// The ID of the collection to remove assets from
-	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteFromCollectionRequest struct {
-	PathParams DeleteFromCollectionPathParams
 	// Items to remove from the collection
-	Request  shared.RemoveCatalogCollectionItems `request:"mediaType=application/json"`
-	Security DeleteFromCollectionSecurity
+	RemoveCatalogCollectionItems shared.RemoveCatalogCollectionItems `request:"mediaType=application/json"`
+	// The ID of the collection to remove assets from
+	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type DeleteFromCollectionResponse struct {

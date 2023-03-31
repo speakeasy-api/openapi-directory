@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSessionQueryParams struct {
+type GetSessionRequest struct {
 	// Items are the keys of the values you wish to get. It follows the format `namespace1.key1,namespace2.key2`
 	Items string `queryParam:"style=form,explode=true,name=items"`
-}
-
-type GetSessionRequest struct {
-	QueryParams GetSessionQueryParams
 }
 
 type GetSessionResponse struct {

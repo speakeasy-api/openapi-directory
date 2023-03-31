@@ -8,12 +8,14 @@ import (
 )
 
 type CreateDomesticStandingOrderConsentsRawSecurity struct {
-	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateDomesticStandingOrderConsentsRawHeaders struct {
+type CreateDomesticStandingOrderConsentsRawRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// Default
+	RequestBody []byte `request:"mediaType=application/jose+jwe"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -30,13 +32,6 @@ type CreateDomesticStandingOrderConsentsRawHeaders struct {
 	XIdempotencyKey string `header:"style=simple,explode=false,name=x-idempotency-key"`
 	// A detached JWS signature of the body of the payload.
 	XJwsSignature string `header:"style=simple,explode=false,name=x-jws-signature"`
-}
-
-type CreateDomesticStandingOrderConsentsRawRequest struct {
-	Headers CreateDomesticStandingOrderConsentsRawHeaders
-	// Default
-	Request  []byte `request:"mediaType=application/jose+jwe"`
-	Security CreateDomesticStandingOrderConsentsRawSecurity
 }
 
 type CreateDomesticStandingOrderConsentsRawResponse struct {

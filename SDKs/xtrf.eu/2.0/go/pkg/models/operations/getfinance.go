@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFinancePathParams struct {
+type GetFinanceRequest struct {
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetFinanceRequest struct {
-	PathParams GetFinancePathParams
 }
 
 type GetFinanceResponse struct {

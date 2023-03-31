@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartScanPageRequest struct {
-	Request shared.ScanDefinition `request:"mediaType=application/json"`
-}
-
 type StartScanPageResponse struct {
 	// successful operation
 	APIResponse *shared.APIResponse

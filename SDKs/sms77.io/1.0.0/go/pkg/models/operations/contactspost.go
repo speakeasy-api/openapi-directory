@@ -56,7 +56,7 @@ func (e *ContactsPOSTJSONEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ContactsPOSTQueryParams struct {
+type ContactsPOSTRequest struct {
 	// Determines the action to execute.
 	Action ContactsPOSTActionEnum `queryParam:"style=form,explode=true,name=action"`
 	// The contacts email address.
@@ -69,10 +69,6 @@ type ContactsPOSTQueryParams struct {
 	JSON *ContactsPOSTJSONEnum `queryParam:"style=form,explode=true,name=json"`
 	// The contacts name.
 	Nick *string `queryParam:"style=form,explode=true,name=nick"`
-}
-
-type ContactsPOSTRequest struct {
-	QueryParams ContactsPOSTQueryParams
 }
 
 type ContactsPOSTResponse struct {

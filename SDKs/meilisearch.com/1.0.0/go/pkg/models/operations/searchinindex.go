@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SearchInIndexQueryParams struct {
+type SearchInIndexRequest struct {
 	AttributesToCrop      *string `queryParam:"style=form,explode=true,name=attributesToCrop"`
 	AttributesToHighlight *string `queryParam:"style=form,explode=true,name=attributesToHighlight"`
 	AttributesToRetrieve  *string `queryParam:"style=form,explode=true,name=attributesToRetrieve"`
@@ -24,10 +24,6 @@ type SearchInIndexQueryParams struct {
 	Q                     *string `queryParam:"style=form,explode=true,name=q"`
 	ShowMatchesPosition   *string `queryParam:"style=form,explode=true,name=showMatchesPosition"`
 	Sort                  *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchInIndexRequest struct {
-	QueryParams SearchInIndexQueryParams
 }
 
 type SearchInIndexResponse struct {

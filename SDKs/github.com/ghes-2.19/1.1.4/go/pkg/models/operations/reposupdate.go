@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdatePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateRequestBodyVisibilityEnum - Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. The `visibility` parameter overrides the `private` parameter when you use both along with the `nebula-preview` preview header.
 type ReposUpdateRequestBodyVisibilityEnum string
 
@@ -81,8 +76,9 @@ type ReposUpdateRequestBody struct {
 }
 
 type ReposUpdateRequest struct {
-	PathParams ReposUpdatePathParams
-	Request    *ReposUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateRequestBody `request:"mediaType=application/json"`
+	Owner       string                  `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                  `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateResponse struct {

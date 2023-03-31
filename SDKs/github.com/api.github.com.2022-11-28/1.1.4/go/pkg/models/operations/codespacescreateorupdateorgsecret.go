@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesCreateOrUpdateOrgSecretPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 // CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum - Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
 type CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum string
 
@@ -55,8 +48,11 @@ type CodespacesCreateOrUpdateOrgSecretRequestBody struct {
 }
 
 type CodespacesCreateOrUpdateOrgSecretRequest struct {
-	PathParams CodespacesCreateOrUpdateOrgSecretPathParams
-	Request    CodespacesCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type CodespacesCreateOrUpdateOrgSecretResponse struct {

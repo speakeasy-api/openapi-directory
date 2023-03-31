@@ -8,18 +8,14 @@ import (
 )
 
 type PeopleContactGroupsMembersModifySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PeopleContactGroupsMembersModifyPathParams struct {
-	// Required. The resource name of the contact group to modify.
-	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
-}
-
-type PeopleContactGroupsMembersModifyQueryParams struct {
+type PeopleContactGroupsMembersModifyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ModifyContactGroupMembersRequest *shared.ModifyContactGroupMembersRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,17 +32,12 @@ type PeopleContactGroupsMembersModifyQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The resource name of the contact group to modify.
+	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PeopleContactGroupsMembersModifyRequest struct {
-	PathParams  PeopleContactGroupsMembersModifyPathParams
-	QueryParams PeopleContactGroupsMembersModifyQueryParams
-	Request     *shared.ModifyContactGroupMembersRequest `request:"mediaType=application/json"`
-	Security    PeopleContactGroupsMembersModifySecurity
 }
 
 type PeopleContactGroupsMembersModifyResponse struct {

@@ -12,18 +12,13 @@ var FetchEsimProfileServerList = []string{
 }
 
 type FetchEsimProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchEsimProfilePathParams struct {
-	// The SID of the eSIM Profile resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchEsimProfileRequest struct {
-	PathParams FetchEsimProfilePathParams
-	Security   FetchEsimProfileSecurity
-	ServerURL  *string
+	// The SID of the eSIM Profile resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchEsimProfileResponse struct {

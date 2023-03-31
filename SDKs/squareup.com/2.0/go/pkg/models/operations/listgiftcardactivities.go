@@ -8,10 +8,10 @@ import (
 )
 
 type ListGiftCardActivitiesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListGiftCardActivitiesQueryParams struct {
+type ListGiftCardActivitiesRequest struct {
 	// The timestamp for the beginning of the reporting period, in RFC 3339 format.
 	// Inclusive. Default: The current time minus one year.
 	BeginTime *string `queryParam:"style=form,explode=true,name=begin_time"`
@@ -39,11 +39,6 @@ type ListGiftCardActivitiesQueryParams struct {
 	// If you provide a type, the endpoint returns gift card activities of this type.
 	// Otherwise, the endpoint returns all types of gift card activities.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListGiftCardActivitiesRequest struct {
-	QueryParams ListGiftCardActivitiesQueryParams
-	Security    ListGiftCardActivitiesSecurity
 }
 
 type ListGiftCardActivitiesResponse struct {

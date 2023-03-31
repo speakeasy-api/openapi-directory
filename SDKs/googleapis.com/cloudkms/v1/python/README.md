@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/cloudkms/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,53 +15,85 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest(
-    security=operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity(
-        option1=operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams(
-        parent="autem",
-    ),
-    query_params=operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="aut",
-        alt="proto",
-        callback="excepturi",
-        ekm_connection_id="temporibus",
-        fields="eum",
-        key="qui",
-        oauth_token="quidem",
-        pretty_print=False,
-        quota_user="sint",
-        upload_type="aliquam",
-        upload_protocol="fugit",
-    ),
-    request=shared.EkmConnectionInput(
-        etag="consequatur",
+    dollar_xgafv="2",
+    ekm_connection_input=shared.EkmConnectionInput(
+        crypto_space_path="provident",
+        etag="distinctio",
+        key_management_mode="CLOUD_KMS",
         service_resolvers=[
             shared.ServiceResolverInput(
-                endpoint_filter="est",
-                hostname="dolores",
+                endpoint_filter="nulla",
+                hostname="moral-star.info",
                 server_certificates=[
                     shared.CertificateInput(
-                        raw_der="sit",
+                        raw_der="deserunt",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="suscipit",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="iure",
                     ),
                 ],
-                service_directory_service="corrupti",
+                service_directory_service="magnam",
+            ),
+            shared.ServiceResolverInput(
+                endpoint_filter="debitis",
+                hostname="awesome-voter.biz",
+                server_certificates=[
+                    shared.CertificateInput(
+                        raw_der="molestiae",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="minus",
+                    ),
+                ],
+                service_directory_service="placeat",
+            ),
+            shared.ServiceResolverInput(
+                endpoint_filter="voluptatum",
+                hostname="lawful-missionary.info",
+                server_certificates=[
+                    shared.CertificateInput(
+                        raw_der="temporibus",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="ab",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="quis",
+                    ),
+                    shared.CertificateInput(
+                        raw_der="veritatis",
+                    ),
+                ],
+                service_directory_service="deserunt",
             ),
         ],
     ),
+    access_token="perferendis",
+    alt="media",
+    callback="repellendus",
+    ekm_connection_id="sapiente",
+    fields_="quo",
+    key="odit",
+    oauth_token="at",
+    parent="at",
+    pretty_print=False,
+    quota_user="maiores",
+    upload_type="molestiae",
+    upload_protocol="quod",
 )
     
-res = s.projects.cloudkms_projects_locations_ekm_connections_create(req)
+res = s.projects.cloudkms_projects_locations_ekm_connections_create(req, operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity(
+    option1=operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.ekm_connection is not None:
     # handle response
@@ -69,7 +101,8 @@ if res.ekm_connection is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -101,7 +134,17 @@ if res.ekm_connection is not None:
 * `cloudkms_projects_locations_key_rings_import_jobs_test_iam_permissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `cloudkms_projects_locations_key_rings_list` - Lists KeyRings.
 * `cloudkms_projects_locations_list` - Lists information about the supported locations for this service.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

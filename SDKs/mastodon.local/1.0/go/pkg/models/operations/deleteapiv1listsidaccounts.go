@@ -8,23 +8,14 @@ import (
 )
 
 type DeleteAPIV1ListsIDAccountsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1ListsIDAccountsPathParams struct {
-	// ID of the list in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAPIV1ListsIDAccountsQueryParams struct {
-	// Array of account IDs to add to the list.
-	AccountIds []string `queryParam:"style=form,explode=true,name=account_ids"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1ListsIDAccountsRequest struct {
-	PathParams  DeleteAPIV1ListsIDAccountsPathParams
-	QueryParams DeleteAPIV1ListsIDAccountsQueryParams
-	Security    DeleteAPIV1ListsIDAccountsSecurity
+	// Array of account IDs to add to the list.
+	AccountIds []string `queryParam:"style=form,explode=true,name=account_ids"`
+	// ID of the list in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1ListsIDAccountsResponse struct {

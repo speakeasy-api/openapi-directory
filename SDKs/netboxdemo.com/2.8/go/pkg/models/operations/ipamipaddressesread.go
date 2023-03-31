@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamIPAddressesReadPathParams struct {
+type IpamIPAddressesReadRequest struct {
 	// A unique integer value identifying this IP address.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamIPAddressesReadRequest struct {
-	PathParams IpamIPAddressesReadPathParams
 }
 
 type IpamIPAddressesReadResponse struct {

@@ -8,20 +8,17 @@ import (
 )
 
 type AdexchangebuyerCreativesGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerCreativesGetPathParams struct {
+type AdexchangebuyerCreativesGetRequest struct {
 	// The id for the account that will serve this creative.
 	AccountID int64 `pathParam:"style=simple,explode=false,name=accountId"`
-	// The buyer-specific id for this creative.
-	BuyerCreativeID string `pathParam:"style=simple,explode=false,name=buyerCreativeId"`
-}
-
-type AdexchangebuyerCreativesGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The buyer-specific id for this creative.
+	BuyerCreativeID string `pathParam:"style=simple,explode=false,name=buyerCreativeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -34,12 +31,6 @@ type AdexchangebuyerCreativesGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerCreativesGetRequest struct {
-	PathParams  AdexchangebuyerCreativesGetPathParams
-	QueryParams AdexchangebuyerCreativesGetQueryParams
-	Security    AdexchangebuyerCreativesGetSecurity
 }
 
 type AdexchangebuyerCreativesGetResponse struct {

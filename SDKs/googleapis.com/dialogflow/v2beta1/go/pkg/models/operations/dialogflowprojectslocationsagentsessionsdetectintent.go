@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentSessionsDetectIntentSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsDetectIntentSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsDetectIntentSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentSessionsDetectIntentSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentSessionsDetectIntentSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentSessionsDetectIntentPathParams struct {
-	// Required. The name of the session this query is sent to. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment (`Environment ID` might be referred to as environment name at some places). If `User ID` is not specified, we are using "-". It's up to the API caller to choose an appropriate `Session ID` and `User Id`. They can be a random number or some type of user and session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not exceed 36 characters. For more information, see the [API interactions guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
-	Session string `pathParam:"style=simple,explode=false,name=session"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsDetectIntentQueryParams struct {
+type DialogflowProjectsLocationsAgentSessionsDetectIntentRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                     *shared.XgafvEnum                                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowV2beta1DetectIntentRequest *shared.GoogleCloudDialogflowV2beta1DetectIntentRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type DialogflowProjectsLocationsAgentSessionsDetectIntentQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the session this query is sent to. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment (`Environment ID` might be referred to as environment name at some places). If `User ID` is not specified, we are using "-". It's up to the API caller to choose an appropriate `Session ID` and `User Id`. They can be a random number or some type of user and session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not exceed 36 characters. For more information, see the [API interactions guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+	Session string `pathParam:"style=simple,explode=false,name=session"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsDetectIntentRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentSessionsDetectIntentPathParams
-	QueryParams DialogflowProjectsLocationsAgentSessionsDetectIntentQueryParams
-	Request     *shared.GoogleCloudDialogflowV2beta1DetectIntentRequest `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentSessionsDetectIntentSecurity
 }
 
 type DialogflowProjectsLocationsAgentSessionsDetectIntentResponse struct {

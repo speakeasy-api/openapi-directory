@@ -14,10 +14,6 @@ type ProjectsCreateForAuthenticatedUserRequestBody struct {
 	Name string `json:"name"`
 }
 
-type ProjectsCreateForAuthenticatedUserRequest struct {
-	Request ProjectsCreateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 // ProjectsCreateForAuthenticatedUser415ApplicationJSON - Preview header missing
 type ProjectsCreateForAuthenticatedUser415ApplicationJSON struct {
 	DocumentationURL string `json:"documentation_url"`

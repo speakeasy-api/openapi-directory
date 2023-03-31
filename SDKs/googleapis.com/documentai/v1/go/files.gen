@@ -37,7 +37,6 @@ pkg/models/shared/googleclouddocumentaiv1processortype.go
 pkg/models/shared/googleclouddocumentaiv1processortypelocationinfo.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudlocationlistlocationsresponse.go
 pkg/models/shared/googlecloudlocationlocation.go
 pkg/models/shared/googleclouddocumentaiv1listprocessortypesresponse.go

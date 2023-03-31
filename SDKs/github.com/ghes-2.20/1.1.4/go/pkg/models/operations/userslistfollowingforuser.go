@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersListFollowingForUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersListFollowingForUserQueryParams struct {
+type UsersListFollowingForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
-	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type UsersListFollowingForUserRequest struct {
-	PathParams  UsersListFollowingForUserPathParams
-	QueryParams UsersListFollowingForUserQueryParams
+	PerPage  *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersListFollowingForUserResponse struct {

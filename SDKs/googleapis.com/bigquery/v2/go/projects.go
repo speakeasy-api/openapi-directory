@@ -33,20 +33,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BigqueryProjectsGetServiceAccount - Returns the email address of the service account for your project used for interactions with Google Cloud KMS.
-func (s *projects) BigqueryProjectsGetServiceAccount(ctx context.Context, request operations.BigqueryProjectsGetServiceAccountRequest) (*operations.BigqueryProjectsGetServiceAccountResponse, error) {
+func (s *projects) BigqueryProjectsGetServiceAccount(ctx context.Context, request operations.BigqueryProjectsGetServiceAccountRequest, security operations.BigqueryProjectsGetServiceAccountSecurity) (*operations.BigqueryProjectsGetServiceAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *projects) BigqueryProjectsGetServiceAccount(ctx context.Context, reques
 }
 
 // BigqueryProjectsList - Lists all projects to which you have been granted any project role.
-func (s *projects) BigqueryProjectsList(ctx context.Context, request operations.BigqueryProjectsListRequest) (*operations.BigqueryProjectsListResponse, error) {
+func (s *projects) BigqueryProjectsList(ctx context.Context, request operations.BigqueryProjectsListRequest, security operations.BigqueryProjectsListSecurity) (*operations.BigqueryProjectsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 
@@ -90,11 +90,11 @@ func (s *projects) BigqueryProjectsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

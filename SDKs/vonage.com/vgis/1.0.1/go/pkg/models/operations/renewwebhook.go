@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RenewWebhookPathParams struct {
+type RenewWebhookRequest struct {
 	// Webhook ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RenewWebhookRequest struct {
-	PathParams RenewWebhookPathParams
 }
 
 type RenewWebhookResponse struct {

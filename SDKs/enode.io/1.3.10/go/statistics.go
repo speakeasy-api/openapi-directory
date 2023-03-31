@@ -33,7 +33,7 @@ func newStatistics(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetStatisticsCharging - Get User Charging Statistics
 // Returns a normalized timeseries of statistics about power consumption and price for the User.
-func (s *statistics) GetStatisticsCharging(ctx context.Context, request operations.GetStatisticsChargingRequest) (*operations.GetStatisticsChargingResponse, error) {
+func (s *statistics) GetStatisticsCharging(ctx context.Context, request operations.GetStatisticsChargingRequest, security operations.GetStatisticsChargingSecurity) (*operations.GetStatisticsChargingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/statistics/charging"
 
@@ -42,11 +42,11 @@ func (s *statistics) GetStatisticsCharging(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

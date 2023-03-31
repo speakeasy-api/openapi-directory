@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreatePathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // TeamsCreateRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer newly-added repositories.
 // \* `push` - team members can pull and push, but not administer newly-added repositories.
@@ -99,8 +95,8 @@ type TeamsCreateRequestBody struct {
 }
 
 type TeamsCreateRequest struct {
-	PathParams TeamsCreatePathParams
-	Request    TeamsCreateRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateRequestBody `request:"mediaType=application/json"`
+	Org         string                 `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type TeamsCreateResponse struct {

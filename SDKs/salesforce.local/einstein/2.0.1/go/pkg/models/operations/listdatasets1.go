@@ -8,21 +8,16 @@ import (
 )
 
 type ListDatasets1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ListDatasets1QueryParams struct {
+type ListDatasets1Request struct {
 	// Number of datsets to return. Maximum valid value is 25. If you specify a number greater than 25, the call returns 25 datasets.
 	Count *string `queryParam:"style=form,explode=true,name=count"`
 	// If true, returns all global datasets. Global datasets are public datasets that Salesforce provides.
 	Global *bool `queryParam:"style=form,explode=true,name=global"`
 	// Index of the dataset from which you want to start paging
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListDatasets1Request struct {
-	QueryParams ListDatasets1QueryParams
-	Security    ListDatasets1Security
 }
 
 type ListDatasets1Response struct {

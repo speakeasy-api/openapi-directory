@@ -8,15 +8,10 @@ import (
 )
 
 type ListPaymentsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListPaymentsPathParams struct {
-	// The ID of the location to list payments for. If you specify me, this endpoint returns payments aggregated from all of the business's locations.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type ListPaymentsQueryParams struct {
+type ListPaymentsRequest struct {
 	// A pagination cursor to retrieve the next set of results for your
 	// original query to the endpoint.
 	BatchToken *string `queryParam:"style=form,explode=true,name=batch_token"`
@@ -28,14 +23,10 @@ type ListPaymentsQueryParams struct {
 	IncludePartial *bool `queryParam:"style=form,explode=true,name=include_partial"`
 	// The maximum number of payments to return in a single response. This value cannot exceed 200.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// The ID of the location to list payments for. If you specify me, this endpoint returns payments aggregated from all of the business's locations.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order in which payments are listed in the response.
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type ListPaymentsRequest struct {
-	PathParams  ListPaymentsPathParams
-	QueryParams ListPaymentsQueryParams
-	Security    ListPaymentsSecurity
 }
 
 type ListPaymentsResponse struct {

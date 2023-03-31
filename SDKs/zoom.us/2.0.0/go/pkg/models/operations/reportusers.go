@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ReportUsersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportUsersTypeEnum - Active or inactive hosts.<br>`active` - Active hosts. <br>`inactive` - Inactive hosts.
@@ -38,7 +37,7 @@ func (e *ReportUsersTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReportUsersQueryParams struct {
+type ReportUsersRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -51,11 +50,6 @@ type ReportUsersQueryParams struct {
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
 	// Active or inactive hosts.<br>`active` - Active hosts. <br>`inactive` - Inactive hosts.
 	Type *ReportUsersTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ReportUsersRequest struct {
-	QueryParams ReportUsersQueryParams
-	Security    ReportUsersSecurity
 }
 
 // ReportUsers200ApplicationXMLUsersCustomAttributes - Custom attribute(s) that have been assigned to the user.

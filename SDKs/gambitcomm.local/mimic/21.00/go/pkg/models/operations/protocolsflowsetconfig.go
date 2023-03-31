@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolSflowSetConfigPathParams struct {
+type ProtocolSflowSetConfigRequest struct {
 	// Agent to set the SFLOW configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the SFLOW configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the SFLOW configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolSflowSetConfigRequest struct {
-	PathParams ProtocolSflowSetConfigPathParams
 }
 
 type ProtocolSflowSetConfigResponse struct {

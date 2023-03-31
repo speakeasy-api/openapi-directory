@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SmartMeDeviceConfigurationGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SmartMeDeviceConfigurationGetRequest struct {
-	PathParams SmartMeDeviceConfigurationGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SmartMeDeviceConfigurationGetResponse struct {

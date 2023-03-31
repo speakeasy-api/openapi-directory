@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetOiddirPathParams struct {
+type SetOiddirRequest struct {
 	// Agent to set the directory path
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Directory path for the agent
 	Oiddir string `pathParam:"style=simple,explode=false,name=oiddir"`
-}
-
-type SetOiddirRequest struct {
-	PathParams SetOiddirPathParams
 }
 
 type SetOiddirResponse struct {

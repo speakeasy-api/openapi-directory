@@ -12,20 +12,15 @@ var FetchSyncMapServerList = []string{
 }
 
 type FetchSyncMapSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncMapPathParams struct {
+type FetchSyncMapRequest struct {
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Sync Map resource to fetch. Can be the Sync Map's `sid` or its `unique_name`.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSyncMapRequest struct {
-	PathParams FetchSyncMapPathParams
-	Security   FetchSyncMapSecurity
-	ServerURL  *string
 }
 
 type FetchSyncMapResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchNotificationsIDPathParams struct {
-	// Notification ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchNotificationsIDRequestBody struct {
 	// Custom message to include in notification emails.
 	Message *string `multipartForm:"name=message"`
@@ -42,8 +37,9 @@ type PatchNotificationsIDRequestBody struct {
 }
 
 type PatchNotificationsIDRequest struct {
-	PathParams PatchNotificationsIDPathParams
-	Request    *PatchNotificationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchNotificationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Notification ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchNotificationsIDResponse struct {

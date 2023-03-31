@@ -6,12 +6,13 @@ import (
 	"net/http"
 )
 
-type ScrolldocumentsPathParams struct {
-	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
-	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-}
-
-type ScrolldocumentsQueryParams struct {
+type ScrolldocumentsRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	// Defines the collection of documents to be returned. A range within the collection limited by 100 documents per query.
+	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
 	// Fields that should be returned by document. Separate fields' names with commas. For example `_fields=email,firstName,document`. You can also use `_all` to fetch all fields.
 	Fields *string `queryParam:"style=form,explode=true,name=_fields"`
 	// String to search. Use quotes for a partial query. For example, `_keyword=Maria` or `_keyword="Maria"`.
@@ -24,21 +25,8 @@ type ScrolldocumentsQueryParams struct {
 	Token *string `queryParam:"style=form,explode=true,name=_token"`
 	// Filter specification.
 	Where *string `queryParam:"style=form,explode=true,name=_where"`
-}
-
-type ScrolldocumentsHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-	// Defines the collection of documents to be returned. A range within the collection limited by 100 documents per query.
-	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
-}
-
-type ScrolldocumentsRequest struct {
-	PathParams  ScrolldocumentsPathParams
-	QueryParams ScrolldocumentsQueryParams
-	Headers     ScrolldocumentsHeaders
+	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
 }
 
 type ScrolldocumentsResponse struct {

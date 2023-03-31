@@ -33,7 +33,7 @@ func newTestMethods(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // GetBEGreeting - Wealth Manager Greeting for BE
-func (s *testMethods) GetBEGreeting(ctx context.Context, request operations.GetBEGreetingRequest) (*operations.GetBEGreetingResponse, error) {
+func (s *testMethods) GetBEGreeting(ctx context.Context) (*operations.GetBEGreetingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/test/hello-world-be"
 
@@ -42,7 +42,7 @@ func (s *testMethods) GetBEGreeting(ctx context.Context, request operations.GetB
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

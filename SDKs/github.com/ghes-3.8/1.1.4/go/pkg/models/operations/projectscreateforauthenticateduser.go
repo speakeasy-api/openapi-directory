@@ -14,10 +14,6 @@ type ProjectsCreateForAuthenticatedUserRequestBody struct {
 	Name string `json:"name"`
 }
 
-type ProjectsCreateForAuthenticatedUserRequest struct {
-	Request ProjectsCreateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type ProjectsCreateForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

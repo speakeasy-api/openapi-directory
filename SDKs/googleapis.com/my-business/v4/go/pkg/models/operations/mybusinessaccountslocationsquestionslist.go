@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsQuestionsListPathParams struct {
-	// The name of the location to fetch questions for.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsQuestionsListQueryParams struct {
+type MybusinessAccountsLocationsQuestionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -37,6 +32,8 @@ type MybusinessAccountsLocationsQuestionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If specified, the next page of questions is retrieved.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The name of the location to fetch questions for.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -45,11 +42,6 @@ type MybusinessAccountsLocationsQuestionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsQuestionsListRequest struct {
-	PathParams  MybusinessAccountsLocationsQuestionsListPathParams
-	QueryParams MybusinessAccountsLocationsQuestionsListQueryParams
 }
 
 type MybusinessAccountsLocationsQuestionsListResponse struct {

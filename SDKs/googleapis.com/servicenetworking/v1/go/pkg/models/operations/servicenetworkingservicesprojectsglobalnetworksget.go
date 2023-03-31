@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesProjectsGlobalNetworksGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksGetSecurity struct {
@@ -22,12 +22,7 @@ type ServicenetworkingServicesProjectsGlobalNetworksGetSecurity struct {
 	Option2 *ServicenetworkingServicesProjectsGlobalNetworksGetSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesProjectsGlobalNetworksGetPathParams struct {
-	// Required. Name of the consumer config to retrieve in the format: `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name of the service consumer's VPC network.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksGetQueryParams struct {
+type ServicenetworkingServicesProjectsGlobalNetworksGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type ServicenetworkingServicesProjectsGlobalNetworksGetQueryParams struct {
 	IncludeUsedIPRanges *bool `queryParam:"style=form,explode=true,name=includeUsedIpRanges"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Name of the consumer config to retrieve in the format: `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name of the service consumer's VPC network.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The standard list page size.
@@ -56,12 +53,6 @@ type ServicenetworkingServicesProjectsGlobalNetworksGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksGetRequest struct {
-	PathParams  ServicenetworkingServicesProjectsGlobalNetworksGetPathParams
-	QueryParams ServicenetworkingServicesProjectsGlobalNetworksGetQueryParams
-	Security    ServicenetworkingServicesProjectsGlobalNetworksGetSecurity
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksGetResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FindPetsByTagsPathParams struct {
+type FindPetsByTagsRequest struct {
 	// Tags to filter by
 	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
-}
-
-type FindPetsByTagsRequest struct {
-	PathParams FindPetsByTagsPathParams
 }
 
 type FindPetsByTagsResponse struct {

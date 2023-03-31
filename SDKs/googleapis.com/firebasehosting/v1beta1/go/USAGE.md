@@ -14,44 +14,36 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebasehostingProjectsSitesCreateRequest{
-        Security: operations.FirebasehostingProjectsSitesCreateSecurity{
-            Option1: &operations.FirebasehostingProjectsSitesCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.FirebasehostingProjectsSitesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.FirebasehostingProjectsSitesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            SiteID: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.SiteInput{
-            AppID: "iure",
+        DollarXgafv: "2",
+        SiteInput: &shared.SiteInput{
+            AppID: "provident",
             Labels: map[string]string{
-                "debitis": "ipsa",
-                "delectus": "tempora",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
         },
+        AccessToken: "error",
+        Alt: "media",
+        Callback: "suscipit",
+        Fields: "iure",
+        Key: "magnam",
+        OauthToken: "debitis",
+        Parent: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        SiteID: "tempora",
+        UploadType: "suscipit",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FirebasehostingProjectsSitesCreate(ctx, req)
+    res, err := s.Projects.FirebasehostingProjectsSitesCreate(ctx, req, operations.FirebasehostingProjectsSitesCreateSecurity{
+        Option1: &operations.FirebasehostingProjectsSitesCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

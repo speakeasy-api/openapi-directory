@@ -8,13 +8,7 @@ import (
 )
 
 type CreateImageCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type CreateImageCollectionRequest struct {
-	// The names of the new collections
-	Request  shared.CollectionCreateRequest `request:"mediaType=application/json"`
-	Security CreateImageCollectionSecurity
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateImageCollectionResponse struct {

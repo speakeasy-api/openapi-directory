@@ -28,10 +28,10 @@ pkg/models/operations/updatecredential.go
 pkg/models/operations/updateservice.go
 pkg/models/shared/notifyv1servicebinding.go
 pkg/models/shared/bindingenumbindingtypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/notifyv1credential.go
 pkg/models/shared/credentialenumpushserviceenum.go
 pkg/models/shared/notifyv1servicenotification.go
 pkg/models/shared/notificationenumpriorityenum.go
 pkg/models/shared/notifyv1service.go
 USAGE.md
+pkg/models/operations/options.go

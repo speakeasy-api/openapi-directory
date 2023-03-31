@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteConnectAppServerList = []string{
@@ -12,20 +11,15 @@ var DeleteConnectAppServerList = []string{
 }
 
 type DeleteConnectAppSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteConnectAppPathParams struct {
+type DeleteConnectAppRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the ConnectApp resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteConnectAppRequest struct {
-	PathParams DeleteConnectAppPathParams
-	Security   DeleteConnectAppSecurity
-	ServerURL  *string
 }
 
 type DeleteConnectAppResponse struct {

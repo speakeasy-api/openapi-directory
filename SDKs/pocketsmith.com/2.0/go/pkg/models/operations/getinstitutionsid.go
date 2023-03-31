@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInstitutionsIDPathParams struct {
+type GetInstitutionsIDRequest struct {
 	// The unique identifier of the institution.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetInstitutionsIDRequest struct {
-	PathParams GetInstitutionsIDPathParams
 }
 
 type GetInstitutionsIDResponse struct {

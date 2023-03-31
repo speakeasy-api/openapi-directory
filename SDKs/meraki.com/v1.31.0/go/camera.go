@@ -34,9 +34,9 @@ func newCamera(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Creates new quality retention profile for this network.
 func (s *camera) CreateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.CreateNetworkCameraQualityRetentionProfileRequest) (*operations.CreateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *camera) CreateNetworkCameraQualityRetentionProfile(ctx context.Context,
 // Creates a new camera wireless profile for this network.
 func (s *camera) CreateNetworkCameraWirelessProfile(ctx context.Context, request operations.CreateNetworkCameraWirelessProfileRequest) (*operations.CreateNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,9 +144,9 @@ func (s *camera) CreateNetworkCameraWirelessProfile(ctx context.Context, request
 // Create custom analytics artifact. Returns an artifact upload URL with expiry time. Upload the artifact file with a put request to the returned upload URL before its expiry.
 func (s *camera) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.CreateOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,7 +196,7 @@ func (s *camera) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.Con
 // Delete an existing quality retention profile for this network.
 func (s *camera) DeleteNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.DeleteNetworkCameraQualityRetentionProfileRequest) (*operations.DeleteNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *camera) DeleteNetworkCameraQualityRetentionProfile(ctx context.Context,
 // Delete an existing camera wireless profile for this network.
 func (s *camera) DeleteNetworkCameraWirelessProfile(ctx context.Context, request operations.DeleteNetworkCameraWirelessProfileRequest) (*operations.DeleteNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -268,7 +268,7 @@ func (s *camera) DeleteNetworkCameraWirelessProfile(ctx context.Context, request
 // Delete Custom Analytics Artifact
 func (s *camera) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.DeleteOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -304,9 +304,9 @@ func (s *camera) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.Con
 // Generate a snapshot of what the camera sees at the specified time and return a link to that image.
 func (s *camera) GenerateDeviceCameraSnapshot(ctx context.Context, request operations.GenerateDeviceCameraSnapshotRequest) (*operations.GenerateDeviceCameraSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/generateSnapshot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/generateSnapshot", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -356,7 +356,7 @@ func (s *camera) GenerateDeviceCameraSnapshot(ctx context.Context, request opera
 // Returns live state from camera of analytics zones
 func (s *camera) GetDeviceCameraAnalyticsLive(ctx context.Context, request operations.GetDeviceCameraAnalyticsLiveRequest) (*operations.GetDeviceCameraAnalyticsLiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -401,14 +401,14 @@ func (s *camera) GetDeviceCameraAnalyticsLive(ctx context.Context, request opera
 // Returns an overview of aggregate analytics data for a timespan
 func (s *camera) GetDeviceCameraAnalyticsOverview(ctx context.Context, request operations.GetDeviceCameraAnalyticsOverviewRequest) (*operations.GetDeviceCameraAnalyticsOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -450,14 +450,14 @@ func (s *camera) GetDeviceCameraAnalyticsOverview(ctx context.Context, request o
 // Returns most recent record for analytics zones
 func (s *camera) GetDeviceCameraAnalyticsRecent(ctx context.Context, request operations.GetDeviceCameraAnalyticsRecentRequest) (*operations.GetDeviceCameraAnalyticsRecentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/recent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/recent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -499,14 +499,14 @@ func (s *camera) GetDeviceCameraAnalyticsRecent(ctx context.Context, request ope
 // Return historical records for analytic zones
 func (s *camera) GetDeviceCameraAnalyticsZoneHistory(ctx context.Context, request operations.GetDeviceCameraAnalyticsZoneHistoryRequest) (*operations.GetDeviceCameraAnalyticsZoneHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -548,7 +548,7 @@ func (s *camera) GetDeviceCameraAnalyticsZoneHistory(ctx context.Context, reques
 // Returns all configured analytic zones for this camera
 func (s *camera) GetDeviceCameraAnalyticsZones(ctx context.Context, request operations.GetDeviceCameraAnalyticsZonesRequest) (*operations.GetDeviceCameraAnalyticsZonesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -593,7 +593,7 @@ func (s *camera) GetDeviceCameraAnalyticsZones(ctx context.Context, request oper
 // Return custom analytics settings for a camera
 func (s *camera) GetDeviceCameraCustomAnalytics(ctx context.Context, request operations.GetDeviceCameraCustomAnalyticsRequest) (*operations.GetDeviceCameraCustomAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -638,7 +638,7 @@ func (s *camera) GetDeviceCameraCustomAnalytics(ctx context.Context, request ope
 // Returns quality and retention settings for the given camera
 func (s *camera) GetDeviceCameraQualityAndRetention(ctx context.Context, request operations.GetDeviceCameraQualityAndRetentionRequest) (*operations.GetDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -683,7 +683,7 @@ func (s *camera) GetDeviceCameraQualityAndRetention(ctx context.Context, request
 // Returns sense settings for a given camera
 func (s *camera) GetDeviceCameraSense(ctx context.Context, request operations.GetDeviceCameraSenseRequest) (*operations.GetDeviceCameraSenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -728,7 +728,7 @@ func (s *camera) GetDeviceCameraSense(ctx context.Context, request operations.Ge
 // Returns the MV Sense object detection model list for the given camera
 func (s *camera) GetDeviceCameraSenseObjectDetectionModels(ctx context.Context, request operations.GetDeviceCameraSenseObjectDetectionModelsRequest) (*operations.GetDeviceCameraSenseObjectDetectionModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -773,14 +773,14 @@ func (s *camera) GetDeviceCameraSenseObjectDetectionModels(ctx context.Context, 
 // Returns video link to the specified camera. If a timestamp is supplied, it links to that timestamp.
 func (s *camera) GetDeviceCameraVideoLink(ctx context.Context, request operations.GetDeviceCameraVideoLinkRequest) (*operations.GetDeviceCameraVideoLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -822,7 +822,7 @@ func (s *camera) GetDeviceCameraVideoLink(ctx context.Context, request operation
 // Returns video settings for the given camera
 func (s *camera) GetDeviceCameraVideoSettings(ctx context.Context, request operations.GetDeviceCameraVideoSettingsRequest) (*operations.GetDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -867,7 +867,7 @@ func (s *camera) GetDeviceCameraVideoSettings(ctx context.Context, request opera
 // Returns wireless profile assigned to the given camera
 func (s *camera) GetDeviceCameraWirelessProfiles(ctx context.Context, request operations.GetDeviceCameraWirelessProfilesRequest) (*operations.GetDeviceCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -912,7 +912,7 @@ func (s *camera) GetDeviceCameraWirelessProfiles(ctx context.Context, request op
 // Retrieve a single quality retention profile
 func (s *camera) GetNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfileRequest) (*operations.GetNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -957,7 +957,7 @@ func (s *camera) GetNetworkCameraQualityRetentionProfile(ctx context.Context, re
 // List the quality retention profiles for this network
 func (s *camera) GetNetworkCameraQualityRetentionProfiles(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfilesRequest) (*operations.GetNetworkCameraQualityRetentionProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1002,7 +1002,7 @@ func (s *camera) GetNetworkCameraQualityRetentionProfiles(ctx context.Context, r
 // Returns a list of all camera recording schedules.
 func (s *camera) GetNetworkCameraSchedules(ctx context.Context, request operations.GetNetworkCameraSchedulesRequest) (*operations.GetNetworkCameraSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1047,7 +1047,7 @@ func (s *camera) GetNetworkCameraSchedules(ctx context.Context, request operatio
 // Retrieve a single camera wireless profile.
 func (s *camera) GetNetworkCameraWirelessProfile(ctx context.Context, request operations.GetNetworkCameraWirelessProfileRequest) (*operations.GetNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1092,7 +1092,7 @@ func (s *camera) GetNetworkCameraWirelessProfile(ctx context.Context, request op
 // List the camera wireless profiles for this network.
 func (s *camera) GetNetworkCameraWirelessProfiles(ctx context.Context, request operations.GetNetworkCameraWirelessProfilesRequest) (*operations.GetNetworkCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1137,7 +1137,7 @@ func (s *camera) GetNetworkCameraWirelessProfiles(ctx context.Context, request o
 // Get Custom Analytics Artifact
 func (s *camera) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1182,7 +1182,7 @@ func (s *camera) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Contex
 // List Custom Analytics Artifacts
 func (s *camera) GetOrganizationCameraCustomAnalyticsArtifacts(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1227,14 +1227,14 @@ func (s *camera) GetOrganizationCameraCustomAnalyticsArtifacts(ctx context.Conte
 // Fetch onboarding status of cameras
 func (s *camera) GetOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.GetOrganizationCameraOnboardingStatusesRequest) (*operations.GetOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1276,9 +1276,9 @@ func (s *camera) GetOrganizationCameraOnboardingStatuses(ctx context.Context, re
 // Update custom analytics settings for a camera
 func (s *camera) UpdateDeviceCameraCustomAnalytics(ctx context.Context, request operations.UpdateDeviceCameraCustomAnalyticsRequest) (*operations.UpdateDeviceCameraCustomAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1328,9 +1328,9 @@ func (s *camera) UpdateDeviceCameraCustomAnalytics(ctx context.Context, request 
 // Update quality and retention settings for the given camera
 func (s *camera) UpdateDeviceCameraQualityAndRetention(ctx context.Context, request operations.UpdateDeviceCameraQualityAndRetentionRequest) (*operations.UpdateDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1380,9 +1380,9 @@ func (s *camera) UpdateDeviceCameraQualityAndRetention(ctx context.Context, requ
 // Update sense settings for the given camera
 func (s *camera) UpdateDeviceCameraSense(ctx context.Context, request operations.UpdateDeviceCameraSenseRequest) (*operations.UpdateDeviceCameraSenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1432,9 +1432,9 @@ func (s *camera) UpdateDeviceCameraSense(ctx context.Context, request operations
 // Update video settings for the given camera
 func (s *camera) UpdateDeviceCameraVideoSettings(ctx context.Context, request operations.UpdateDeviceCameraVideoSettingsRequest) (*operations.UpdateDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1484,9 +1484,9 @@ func (s *camera) UpdateDeviceCameraVideoSettings(ctx context.Context, request op
 // Assign wireless profiles to the given camera. Incremental updates are not supported, all profile assignment need to be supplied at once.
 func (s *camera) UpdateDeviceCameraWirelessProfiles(ctx context.Context, request operations.UpdateDeviceCameraWirelessProfilesRequest) (*operations.UpdateDeviceCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1539,9 +1539,9 @@ func (s *camera) UpdateDeviceCameraWirelessProfiles(ctx context.Context, request
 // Update an existing quality retention profile for this network.
 func (s *camera) UpdateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.UpdateNetworkCameraQualityRetentionProfileRequest) (*operations.UpdateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1591,9 +1591,9 @@ func (s *camera) UpdateNetworkCameraQualityRetentionProfile(ctx context.Context,
 // Update an existing camera wireless profile in this network.
 func (s *camera) UpdateNetworkCameraWirelessProfile(ctx context.Context, request operations.UpdateNetworkCameraWirelessProfileRequest) (*operations.UpdateNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1643,9 +1643,9 @@ func (s *camera) UpdateNetworkCameraWirelessProfile(ctx context.Context, request
 // Notify that credential handoff to camera has completed
 func (s *camera) UpdateOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.UpdateOrganizationCameraOnboardingStatusesRequest) (*operations.UpdateOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

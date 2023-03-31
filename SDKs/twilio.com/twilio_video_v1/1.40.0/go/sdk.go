@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateComposition(ctx context.Context, request operations.CreateCompositionRequest) (*operations.CreateCompositionResponse, error) {
+func (s *SDK) CreateComposition(ctx context.Context, request operations.CreateCompositionCreateCompositionRequest, security operations.CreateCompositionSecurity, opts ...operations.Option) (*operations.CreateCompositionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCompositionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Compositions"
@@ -112,7 +122,7 @@ func (s *SDK) CreateComposition(ctx context.Context, request operations.CreateCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,10 +155,20 @@ func (s *SDK) CreateComposition(ctx context.Context, request operations.CreateCo
 
 	return res, nil
 }
-func (s *SDK) CreateCompositionHook(ctx context.Context, request operations.CreateCompositionHookRequest) (*operations.CreateCompositionHookResponse, error) {
+func (s *SDK) CreateCompositionHook(ctx context.Context, request operations.CreateCompositionHookCreateCompositionHookRequest, security operations.CreateCompositionHookSecurity, opts ...operations.Option) (*operations.CreateCompositionHookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCompositionHookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CompositionHooks"
@@ -165,7 +185,7 @@ func (s *SDK) CreateCompositionHook(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,10 +218,20 @@ func (s *SDK) CreateCompositionHook(ctx context.Context, request operations.Crea
 
 	return res, nil
 }
-func (s *SDK) CreateCompositionSettings(ctx context.Context, request operations.CreateCompositionSettingsRequest) (*operations.CreateCompositionSettingsResponse, error) {
+func (s *SDK) CreateCompositionSettings(ctx context.Context, request operations.CreateCompositionSettingsCreateCompositionSettingsRequest, security operations.CreateCompositionSettingsSecurity, opts ...operations.Option) (*operations.CreateCompositionSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCompositionSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CompositionSettings/Default"
@@ -218,7 +248,7 @@ func (s *SDK) CreateCompositionSettings(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,10 +281,20 @@ func (s *SDK) CreateCompositionSettings(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *SDK) CreateRecordingSettings(ctx context.Context, request operations.CreateRecordingSettingsRequest) (*operations.CreateRecordingSettingsResponse, error) {
+func (s *SDK) CreateRecordingSettings(ctx context.Context, request operations.CreateRecordingSettingsCreateRecordingSettingsRequest, security operations.CreateRecordingSettingsSecurity, opts ...operations.Option) (*operations.CreateRecordingSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateRecordingSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/RecordingSettings/Default"
@@ -271,7 +311,7 @@ func (s *SDK) CreateRecordingSettings(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -304,10 +344,20 @@ func (s *SDK) CreateRecordingSettings(ctx context.Context, request operations.Cr
 
 	return res, nil
 }
-func (s *SDK) CreateRoom(ctx context.Context, request operations.CreateRoomRequest) (*operations.CreateRoomResponse, error) {
+func (s *SDK) CreateRoom(ctx context.Context, request operations.CreateRoomCreateRoomRequest, security operations.CreateRoomSecurity, opts ...operations.Option) (*operations.CreateRoomResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateRoomServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Rooms"
@@ -324,7 +374,7 @@ func (s *SDK) CreateRoom(ctx context.Context, request operations.CreateRoomReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,20 +409,30 @@ func (s *SDK) CreateRoom(ctx context.Context, request operations.CreateRoomReque
 }
 
 // DeleteComposition - Delete a Recording Composition resource identified by a Composition SID.
-func (s *SDK) DeleteComposition(ctx context.Context, request operations.DeleteCompositionRequest) (*operations.DeleteCompositionResponse, error) {
-	baseURL := operations.DeleteCompositionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteComposition(ctx context.Context, request operations.DeleteCompositionRequest, security operations.DeleteCompositionSecurity, opts ...operations.Option) (*operations.DeleteCompositionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Compositions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCompositionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Compositions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -398,20 +458,30 @@ func (s *SDK) DeleteComposition(ctx context.Context, request operations.DeleteCo
 }
 
 // DeleteCompositionHook - Delete a Recording CompositionHook resource identified by a `CompositionHook SID`.
-func (s *SDK) DeleteCompositionHook(ctx context.Context, request operations.DeleteCompositionHookRequest) (*operations.DeleteCompositionHookResponse, error) {
-	baseURL := operations.DeleteCompositionHookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCompositionHook(ctx context.Context, request operations.DeleteCompositionHookRequest, security operations.DeleteCompositionHookSecurity, opts ...operations.Option) (*operations.DeleteCompositionHookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCompositionHookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -437,20 +507,30 @@ func (s *SDK) DeleteCompositionHook(ctx context.Context, request operations.Dele
 }
 
 // DeleteRecording - Delete a Recording resource identified by a Recording SID.
-func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteRecordingRequest) (*operations.DeleteRecordingResponse, error) {
-	baseURL := operations.DeleteRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteRecordingRequest, security operations.DeleteRecordingSecurity, opts ...operations.Option) (*operations.DeleteRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Recordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Recordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -474,20 +554,30 @@ func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteReco
 
 	return res, nil
 }
-func (s *SDK) DeleteRoomRecording(ctx context.Context, request operations.DeleteRoomRecordingRequest) (*operations.DeleteRoomRecordingResponse, error) {
-	baseURL := operations.DeleteRoomRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRoomRecording(ctx context.Context, request operations.DeleteRoomRecordingRequest, security operations.DeleteRoomRecordingSecurity, opts ...operations.Option) (*operations.DeleteRoomRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRoomRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,20 +603,30 @@ func (s *SDK) DeleteRoomRecording(ctx context.Context, request operations.Delete
 }
 
 // FetchComposition - Returns a single Composition resource identified by a Composition SID.
-func (s *SDK) FetchComposition(ctx context.Context, request operations.FetchCompositionRequest) (*operations.FetchCompositionResponse, error) {
-	baseURL := operations.FetchCompositionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchComposition(ctx context.Context, request operations.FetchCompositionRequest, security operations.FetchCompositionSecurity, opts ...operations.Option) (*operations.FetchCompositionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Compositions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCompositionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Compositions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +661,30 @@ func (s *SDK) FetchComposition(ctx context.Context, request operations.FetchComp
 }
 
 // FetchCompositionHook - Returns a single CompositionHook resource identified by a CompositionHook SID.
-func (s *SDK) FetchCompositionHook(ctx context.Context, request operations.FetchCompositionHookRequest) (*operations.FetchCompositionHookResponse, error) {
-	baseURL := operations.FetchCompositionHookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCompositionHook(ctx context.Context, request operations.FetchCompositionHookRequest, security operations.FetchCompositionHookSecurity, opts ...operations.Option) (*operations.FetchCompositionHookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCompositionHookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -607,10 +717,20 @@ func (s *SDK) FetchCompositionHook(ctx context.Context, request operations.Fetch
 
 	return res, nil
 }
-func (s *SDK) FetchCompositionSettings(ctx context.Context, request operations.FetchCompositionSettingsRequest) (*operations.FetchCompositionSettingsResponse, error) {
+func (s *SDK) FetchCompositionSettings(ctx context.Context, opts ...operations.Option) (*operations.FetchCompositionSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchCompositionSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CompositionSettings/Default"
@@ -620,7 +740,7 @@ func (s *SDK) FetchCompositionSettings(ctx context.Context, request operations.F
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -655,20 +775,30 @@ func (s *SDK) FetchCompositionSettings(ctx context.Context, request operations.F
 }
 
 // FetchRecording - Returns a single Recording resource identified by a Recording SID.
-func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecordingRequest) (*operations.FetchRecordingResponse, error) {
-	baseURL := operations.FetchRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecordingRequest, security operations.FetchRecordingSecurity, opts ...operations.Option) (*operations.FetchRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Recordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Recordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -701,10 +831,20 @@ func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecord
 
 	return res, nil
 }
-func (s *SDK) FetchRecordingSettings(ctx context.Context, request operations.FetchRecordingSettingsRequest) (*operations.FetchRecordingSettingsResponse, error) {
+func (s *SDK) FetchRecordingSettings(ctx context.Context, opts ...operations.Option) (*operations.FetchRecordingSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchRecordingSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/RecordingSettings/Default"
@@ -714,7 +854,7 @@ func (s *SDK) FetchRecordingSettings(ctx context.Context, request operations.Fet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -747,20 +887,30 @@ func (s *SDK) FetchRecordingSettings(ctx context.Context, request operations.Fet
 
 	return res, nil
 }
-func (s *SDK) FetchRoom(ctx context.Context, request operations.FetchRoomRequest) (*operations.FetchRoomResponse, error) {
-	baseURL := operations.FetchRoomServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoom(ctx context.Context, request operations.FetchRoomRequest, security operations.FetchRoomSecurity, opts ...operations.Option) (*operations.FetchRoomResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -793,20 +943,30 @@ func (s *SDK) FetchRoom(ctx context.Context, request operations.FetchRoomRequest
 
 	return res, nil
 }
-func (s *SDK) FetchRoomParticipant(ctx context.Context, request operations.FetchRoomParticipantRequest) (*operations.FetchRoomParticipantResponse, error) {
-	baseURL := operations.FetchRoomParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomParticipant(ctx context.Context, request operations.FetchRoomParticipantRequest, security operations.FetchRoomParticipantSecurity, opts ...operations.Option) (*operations.FetchRoomParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -841,20 +1001,30 @@ func (s *SDK) FetchRoomParticipant(ctx context.Context, request operations.Fetch
 }
 
 // FetchRoomParticipantPublishedTrack - Returns a single Track resource represented by TrackName or SID.
-func (s *SDK) FetchRoomParticipantPublishedTrack(ctx context.Context, request operations.FetchRoomParticipantPublishedTrackRequest) (*operations.FetchRoomParticipantPublishedTrackResponse, error) {
-	baseURL := operations.FetchRoomParticipantPublishedTrackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomParticipantPublishedTrack(ctx context.Context, request operations.FetchRoomParticipantPublishedTrackRequest, security operations.FetchRoomParticipantPublishedTrackSecurity, opts ...operations.Option) (*operations.FetchRoomParticipantPublishedTrackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/PublishedTracks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomParticipantPublishedTrackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/PublishedTracks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -889,20 +1059,30 @@ func (s *SDK) FetchRoomParticipantPublishedTrack(ctx context.Context, request op
 }
 
 // FetchRoomParticipantSubscribeRule - Returns a list of Subscribe Rules for the Participant.
-func (s *SDK) FetchRoomParticipantSubscribeRule(ctx context.Context, request operations.FetchRoomParticipantSubscribeRuleRequest) (*operations.FetchRoomParticipantSubscribeRuleResponse, error) {
-	baseURL := operations.FetchRoomParticipantSubscribeRuleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomParticipantSubscribeRule(ctx context.Context, request operations.FetchRoomParticipantSubscribeRuleRequest, security operations.FetchRoomParticipantSubscribeRuleSecurity, opts ...operations.Option) (*operations.FetchRoomParticipantSubscribeRuleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribeRules", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomParticipantSubscribeRuleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribeRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -937,20 +1117,30 @@ func (s *SDK) FetchRoomParticipantSubscribeRule(ctx context.Context, request ope
 }
 
 // FetchRoomParticipantSubscribedTrack - Returns a single Track resource represented by `track_sid`.  Note: This is one resource with the Video API that requires a SID, be Track Name on the subscriber side is not guaranteed to be unique.
-func (s *SDK) FetchRoomParticipantSubscribedTrack(ctx context.Context, request operations.FetchRoomParticipantSubscribedTrackRequest) (*operations.FetchRoomParticipantSubscribedTrackResponse, error) {
-	baseURL := operations.FetchRoomParticipantSubscribedTrackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomParticipantSubscribedTrack(ctx context.Context, request operations.FetchRoomParticipantSubscribedTrackRequest, security operations.FetchRoomParticipantSubscribedTrackSecurity, opts ...operations.Option) (*operations.FetchRoomParticipantSubscribedTrackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribedTracks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomParticipantSubscribedTrackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribedTracks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -983,20 +1173,30 @@ func (s *SDK) FetchRoomParticipantSubscribedTrack(ctx context.Context, request o
 
 	return res, nil
 }
-func (s *SDK) FetchRoomRecording(ctx context.Context, request operations.FetchRoomRecordingRequest) (*operations.FetchRoomRecordingResponse, error) {
-	baseURL := operations.FetchRoomRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomRecording(ctx context.Context, request operations.FetchRoomRecordingRequest, security operations.FetchRoomRecordingSecurity, opts ...operations.Option) (*operations.FetchRoomRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1031,20 +1231,30 @@ func (s *SDK) FetchRoomRecording(ctx context.Context, request operations.FetchRo
 }
 
 // FetchRoomRecordingRule - Returns a list of Recording Rules for the Room.
-func (s *SDK) FetchRoomRecordingRule(ctx context.Context, request operations.FetchRoomRecordingRuleRequest) (*operations.FetchRoomRecordingRuleResponse, error) {
-	baseURL := operations.FetchRoomRecordingRuleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRoomRecordingRule(ctx context.Context, request operations.FetchRoomRecordingRuleRequest, security operations.FetchRoomRecordingRuleSecurity, opts ...operations.Option) (*operations.FetchRoomRecordingRuleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/RecordingRules", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoomRecordingRuleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/RecordingRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1079,10 +1289,20 @@ func (s *SDK) FetchRoomRecordingRule(ctx context.Context, request operations.Fet
 }
 
 // ListComposition - List of all Recording compositions.
-func (s *SDK) ListComposition(ctx context.Context, request operations.ListCompositionRequest) (*operations.ListCompositionResponse, error) {
+func (s *SDK) ListComposition(ctx context.Context, request operations.ListCompositionRequest, security operations.ListCompositionSecurity, opts ...operations.Option) (*operations.ListCompositionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCompositionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Compositions"
@@ -1092,11 +1312,11 @@ func (s *SDK) ListComposition(ctx context.Context, request operations.ListCompos
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1131,10 +1351,20 @@ func (s *SDK) ListComposition(ctx context.Context, request operations.ListCompos
 }
 
 // ListCompositionHook - List of all Recording CompositionHook resources.
-func (s *SDK) ListCompositionHook(ctx context.Context, request operations.ListCompositionHookRequest) (*operations.ListCompositionHookResponse, error) {
+func (s *SDK) ListCompositionHook(ctx context.Context, request operations.ListCompositionHookRequest, security operations.ListCompositionHookSecurity, opts ...operations.Option) (*operations.ListCompositionHookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCompositionHookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CompositionHooks"
@@ -1144,11 +1374,11 @@ func (s *SDK) ListCompositionHook(ctx context.Context, request operations.ListCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1183,10 +1413,20 @@ func (s *SDK) ListCompositionHook(ctx context.Context, request operations.ListCo
 }
 
 // ListRecording - List of all Track recordings.
-func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordingRequest) (*operations.ListRecordingResponse, error) {
+func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordingRequest, security operations.ListRecordingSecurity, opts ...operations.Option) (*operations.ListRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Recordings"
@@ -1196,11 +1436,11 @@ func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1233,10 +1473,20 @@ func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordin
 
 	return res, nil
 }
-func (s *SDK) ListRoom(ctx context.Context, request operations.ListRoomRequest) (*operations.ListRoomResponse, error) {
+func (s *SDK) ListRoom(ctx context.Context, request operations.ListRoomRequest, security operations.ListRoomSecurity, opts ...operations.Option) (*operations.ListRoomResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListRoomServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Rooms"
@@ -1246,11 +1496,11 @@ func (s *SDK) ListRoom(ctx context.Context, request operations.ListRoomRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1283,24 +1533,34 @@ func (s *SDK) ListRoom(ctx context.Context, request operations.ListRoomRequest) 
 
 	return res, nil
 }
-func (s *SDK) ListRoomParticipant(ctx context.Context, request operations.ListRoomParticipantRequest) (*operations.ListRoomParticipantResponse, error) {
-	baseURL := operations.ListRoomParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRoomParticipant(ctx context.Context, request operations.ListRoomParticipantRequest, security operations.ListRoomParticipantSecurity, opts ...operations.Option) (*operations.ListRoomParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRoomParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1335,24 +1595,34 @@ func (s *SDK) ListRoomParticipant(ctx context.Context, request operations.ListRo
 }
 
 // ListRoomParticipantPublishedTrack - Returns a list of tracks associated with a given Participant. Only `currently` Published Tracks are in the list resource.
-func (s *SDK) ListRoomParticipantPublishedTrack(ctx context.Context, request operations.ListRoomParticipantPublishedTrackRequest) (*operations.ListRoomParticipantPublishedTrackResponse, error) {
-	baseURL := operations.ListRoomParticipantPublishedTrackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRoomParticipantPublishedTrack(ctx context.Context, request operations.ListRoomParticipantPublishedTrackRequest, security operations.ListRoomParticipantPublishedTrackSecurity, opts ...operations.Option) (*operations.ListRoomParticipantPublishedTrackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/PublishedTracks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRoomParticipantPublishedTrackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/PublishedTracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1387,24 +1657,34 @@ func (s *SDK) ListRoomParticipantPublishedTrack(ctx context.Context, request ope
 }
 
 // ListRoomParticipantSubscribedTrack - Returns a list of tracks that are subscribed for the participant.
-func (s *SDK) ListRoomParticipantSubscribedTrack(ctx context.Context, request operations.ListRoomParticipantSubscribedTrackRequest) (*operations.ListRoomParticipantSubscribedTrackResponse, error) {
-	baseURL := operations.ListRoomParticipantSubscribedTrackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRoomParticipantSubscribedTrack(ctx context.Context, request operations.ListRoomParticipantSubscribedTrackRequest, security operations.ListRoomParticipantSubscribedTrackSecurity, opts ...operations.Option) (*operations.ListRoomParticipantSubscribedTrackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribedTracks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRoomParticipantSubscribedTrackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribedTracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1437,24 +1717,34 @@ func (s *SDK) ListRoomParticipantSubscribedTrack(ctx context.Context, request op
 
 	return res, nil
 }
-func (s *SDK) ListRoomRecording(ctx context.Context, request operations.ListRoomRecordingRequest) (*operations.ListRoomRecordingResponse, error) {
-	baseURL := operations.ListRoomRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRoomRecording(ctx context.Context, request operations.ListRoomRecordingRequest, security operations.ListRoomRecordingSecurity, opts ...operations.Option) (*operations.ListRoomRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRoomRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1487,15 +1777,25 @@ func (s *SDK) ListRoomRecording(ctx context.Context, request operations.ListRoom
 
 	return res, nil
 }
-func (s *SDK) UpdateCompositionHook(ctx context.Context, request operations.UpdateCompositionHookRequest) (*operations.UpdateCompositionHookResponse, error) {
-	baseURL := operations.UpdateCompositionHookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCompositionHook(ctx context.Context, request operations.UpdateCompositionHookRequest, security operations.UpdateCompositionHookSecurity, opts ...operations.Option) (*operations.UpdateCompositionHookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCompositionHookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CompositionHooks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1507,7 +1807,7 @@ func (s *SDK) UpdateCompositionHook(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1540,15 +1840,25 @@ func (s *SDK) UpdateCompositionHook(ctx context.Context, request operations.Upda
 
 	return res, nil
 }
-func (s *SDK) UpdateRoom(ctx context.Context, request operations.UpdateRoomRequest) (*operations.UpdateRoomResponse, error) {
-	baseURL := operations.UpdateRoomServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRoom(ctx context.Context, request operations.UpdateRoomRequest, security operations.UpdateRoomSecurity, opts ...operations.Option) (*operations.UpdateRoomResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoomServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1560,7 +1870,7 @@ func (s *SDK) UpdateRoom(ctx context.Context, request operations.UpdateRoomReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1593,15 +1903,25 @@ func (s *SDK) UpdateRoom(ctx context.Context, request operations.UpdateRoomReque
 
 	return res, nil
 }
-func (s *SDK) UpdateRoomParticipant(ctx context.Context, request operations.UpdateRoomParticipantRequest) (*operations.UpdateRoomParticipantResponse, error) {
-	baseURL := operations.UpdateRoomParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRoomParticipant(ctx context.Context, request operations.UpdateRoomParticipantRequest, security operations.UpdateRoomParticipantSecurity, opts ...operations.Option) (*operations.UpdateRoomParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoomParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1613,7 +1933,7 @@ func (s *SDK) UpdateRoomParticipant(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1646,20 +1966,30 @@ func (s *SDK) UpdateRoomParticipant(ctx context.Context, request operations.Upda
 
 	return res, nil
 }
-func (s *SDK) UpdateRoomParticipantAnonymize(ctx context.Context, request operations.UpdateRoomParticipantAnonymizeRequest) (*operations.UpdateRoomParticipantAnonymizeResponse, error) {
-	baseURL := operations.UpdateRoomParticipantAnonymizeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRoomParticipantAnonymize(ctx context.Context, request operations.UpdateRoomParticipantAnonymizeRequest, security operations.UpdateRoomParticipantAnonymizeSecurity, opts ...operations.Option) (*operations.UpdateRoomParticipantAnonymizeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}/Anonymize", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoomParticipantAnonymizeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{Sid}/Anonymize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1694,15 +2024,25 @@ func (s *SDK) UpdateRoomParticipantAnonymize(ctx context.Context, request operat
 }
 
 // UpdateRoomParticipantSubscribeRule - Update the Subscribe Rules for the Participant
-func (s *SDK) UpdateRoomParticipantSubscribeRule(ctx context.Context, request operations.UpdateRoomParticipantSubscribeRuleRequest) (*operations.UpdateRoomParticipantSubscribeRuleResponse, error) {
-	baseURL := operations.UpdateRoomParticipantSubscribeRuleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRoomParticipantSubscribeRule(ctx context.Context, request operations.UpdateRoomParticipantSubscribeRuleRequest, security operations.UpdateRoomParticipantSubscribeRuleSecurity, opts ...operations.Option) (*operations.UpdateRoomParticipantSubscribeRuleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribeRules", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoomParticipantSubscribeRuleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/Participants/{ParticipantSid}/SubscribeRules", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1714,7 +2054,7 @@ func (s *SDK) UpdateRoomParticipantSubscribeRule(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1749,15 +2089,25 @@ func (s *SDK) UpdateRoomParticipantSubscribeRule(ctx context.Context, request op
 }
 
 // UpdateRoomRecordingRule - Update the Recording Rules for the Room
-func (s *SDK) UpdateRoomRecordingRule(ctx context.Context, request operations.UpdateRoomRecordingRuleRequest) (*operations.UpdateRoomRecordingRuleResponse, error) {
-	baseURL := operations.UpdateRoomRecordingRuleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRoomRecordingRule(ctx context.Context, request operations.UpdateRoomRecordingRuleRequest, security operations.UpdateRoomRecordingRuleSecurity, opts ...operations.Option) (*operations.UpdateRoomRecordingRuleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/RecordingRules", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoomRecordingRuleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Rooms/{RoomSid}/RecordingRules", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1769,7 +2119,7 @@ func (s *SDK) UpdateRoomRecordingRule(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

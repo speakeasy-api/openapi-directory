@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetCriticsResourceTypeJSONRequest(
-    path_params=operations.GetCriticsResourceTypeJSONPathParams(
-        resource_type="quae",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetCriticsResourceTypeJSONRequest(
+    resource_type="corrupti",
 )
     
 res = s.get_critics_resource_type_json(req)

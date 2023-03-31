@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposMergeUpstreamPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposMergeUpstreamRequestBody struct {
 	// The name of the branch which should be updated to match upstream.
 	Branch string `json:"branch"`
 }
 
 type ReposMergeUpstreamRequest struct {
-	PathParams ReposMergeUpstreamPathParams
-	Request    ReposMergeUpstreamRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposMergeUpstreamRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposMergeUpstreamResponse struct {

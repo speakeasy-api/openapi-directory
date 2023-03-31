@@ -8,10 +8,10 @@ import (
 )
 
 type ExportAdvisoriesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type ExportAdvisoriesQueryParams struct {
+type ExportAdvisoriesRequest struct {
 	// Filter
 	FilterAdvisoryType *string `queryParam:"style=form,explode=true,name=filter[advisory_type]"`
 	// Filter
@@ -28,11 +28,6 @@ type ExportAdvisoriesQueryParams struct {
 	FilterSynopsis *string `queryParam:"style=form,explode=true,name=filter[synopsis]"`
 	// Find matching text
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type ExportAdvisoriesRequest struct {
-	QueryParams ExportAdvisoriesQueryParams
-	Security    ExportAdvisoriesSecurity
 }
 
 type ExportAdvisoriesResponse struct {

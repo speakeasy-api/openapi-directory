@@ -35,7 +35,7 @@ func newSlackIntegration(defaultClient, securityClient HTTPClient, serverURL, la
 // GetTargetsTargetIDIntegrationsSlack - Retrieve slack integration data
 func (s *slackIntegration) GetTargetsTargetIDIntegrationsSlack(ctx context.Context, request operations.GetTargetsTargetIDIntegrationsSlackRequest) (*operations.GetTargetsTargetIDIntegrationsSlackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,9 +99,9 @@ func (s *slackIntegration) GetTargetsTargetIDIntegrationsSlack(ctx context.Conte
 // PatchTargetsTargetIDIntegrationsSlack - Update slack integration data
 func (s *slackIntegration) PatchTargetsTargetIDIntegrationsSlack(ctx context.Context, request operations.PatchTargetsTargetIDIntegrationsSlackRequest) (*operations.PatchTargetsTargetIDIntegrationsSlackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Slack", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,9 +183,9 @@ func (s *slackIntegration) PatchTargetsTargetIDIntegrationsSlack(ctx context.Con
 // PutTargetsTargetIDIntegrationsSlack - Update slack integration data
 func (s *slackIntegration) PutTargetsTargetIDIntegrationsSlack(ctx context.Context, request operations.PutTargetsTargetIDIntegrationsSlackRequest) (*operations.PutTargetsTargetIDIntegrationsSlackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/slack/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Slack", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

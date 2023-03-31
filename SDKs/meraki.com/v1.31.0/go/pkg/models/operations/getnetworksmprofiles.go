@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmProfilesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSmProfilesRequest struct {
-	PathParams GetNetworkSmProfilesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSmProfiles200ApplicationJSON struct {

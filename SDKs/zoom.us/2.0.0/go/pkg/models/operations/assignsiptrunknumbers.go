@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignSipTrunkNumbersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignSipTrunkNumbersPathParams struct {
-	// Unique Identifier of the sub account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AssignSipTrunkNumbersApplicationJSON struct {
@@ -22,9 +16,9 @@ type AssignSipTrunkNumbersApplicationJSON struct {
 }
 
 type AssignSipTrunkNumbersRequest struct {
-	PathParams AssignSipTrunkNumbersPathParams
-	Request    *AssignSipTrunkNumbersApplicationJSON `request:"mediaType=application/json"`
-	Security   AssignSipTrunkNumbersSecurity
+	RequestBody *AssignSipTrunkNumbersApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the sub account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AssignSipTrunkNumbersResponse struct {

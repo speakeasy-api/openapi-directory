@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type WatchlistSearchReadPathParams struct {
-	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
-}
-
 type WatchlistSearchReadRequest struct {
-	PathParams WatchlistSearchReadPathParams
+	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
 }
 
 type WatchlistSearchReadResponse struct {

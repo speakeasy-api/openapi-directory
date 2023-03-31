@@ -12,18 +12,13 @@ var FetchConfigurationServerList = []string{
 }
 
 type FetchConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConfigurationQueryParams struct {
-	// The Pinned UI version of the Configuration resource to fetch.
-	UIVersion *string `queryParam:"style=form,explode=true,name=UiVersion"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchConfigurationRequest struct {
-	QueryParams FetchConfigurationQueryParams
-	Security    FetchConfigurationSecurity
-	ServerURL   *string
+	// The Pinned UI version of the Configuration resource to fetch.
+	UIVersion *string `queryParam:"style=form,explode=true,name=UiVersion"`
 }
 
 type FetchConfigurationResponse struct {

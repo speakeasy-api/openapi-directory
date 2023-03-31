@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteVideoFromWatchLaterAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteVideoFromWatchLaterAlt1PathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteVideoFromWatchLaterAlt1Request struct {
-	PathParams DeleteVideoFromWatchLaterAlt1PathParams
-	Security   DeleteVideoFromWatchLaterAlt1Security
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type DeleteVideoFromWatchLaterAlt1Response struct {

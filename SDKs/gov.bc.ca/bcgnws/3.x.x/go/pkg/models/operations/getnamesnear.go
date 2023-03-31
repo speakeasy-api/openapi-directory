@@ -158,7 +158,7 @@ func (e *GetNamesNearSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesNearQueryParams struct {
+type GetNamesNearRequest struct {
 	// A radius (in kilometres) around the centre point.
 	Distance string `queryParam:"style=form,explode=true,name=distance"`
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
@@ -183,10 +183,6 @@ type GetNamesNearQueryParams struct {
 	SortBy *GetNamesNearSortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// The index of the first record to be returned (>= 1)
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type GetNamesNearRequest struct {
-	QueryParams GetNamesNearQueryParams
 }
 
 type GetNamesNearResponse struct {

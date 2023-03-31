@@ -12,14 +12,8 @@ var UpdateInteractionChannelServerList = []string{
 }
 
 type UpdateInteractionChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateInteractionChannelPathParams struct {
-	// The unique string created by Twilio to identify an Interaction resource, prefixed with KD.
-	InteractionSid string `pathParam:"style=simple,explode=false,name=InteractionSid"`
-	// The unique string created by Twilio to identify an Interaction Channel resource, prefixed with UO.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateInteractionChannelUpdateInteractionChannelRequest struct {
@@ -29,10 +23,11 @@ type UpdateInteractionChannelUpdateInteractionChannelRequest struct {
 }
 
 type UpdateInteractionChannelRequest struct {
-	PathParams UpdateInteractionChannelPathParams
-	Request    *UpdateInteractionChannelUpdateInteractionChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateInteractionChannelSecurity
-	ServerURL  *string
+	// The unique string created by Twilio to identify an Interaction resource, prefixed with KD.
+	InteractionSid string                                                   `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	RequestBody    *UpdateInteractionChannelUpdateInteractionChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string created by Twilio to identify an Interaction Channel resource, prefixed with UO.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateInteractionChannelResponse struct {

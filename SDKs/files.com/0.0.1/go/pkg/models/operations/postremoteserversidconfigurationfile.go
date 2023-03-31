@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRemoteServersIDConfigurationFilePathParams struct {
-	// Remote Server ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostRemoteServersIDConfigurationFileRequestBody struct {
 	// Files Agent API Token
 	APIToken *string `multipartForm:"name=api_token"`
@@ -34,8 +29,9 @@ type PostRemoteServersIDConfigurationFileRequestBody struct {
 }
 
 type PostRemoteServersIDConfigurationFileRequest struct {
-	PathParams PostRemoteServersIDConfigurationFilePathParams
-	Request    *PostRemoteServersIDConfigurationFileRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostRemoteServersIDConfigurationFileRequestBody `request:"mediaType=multipart/form-data"`
+	// Remote Server ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostRemoteServersIDConfigurationFileResponse struct {

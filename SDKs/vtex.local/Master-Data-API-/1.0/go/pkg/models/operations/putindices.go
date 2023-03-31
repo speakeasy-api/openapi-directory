@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutindicesPathParams struct {
+type PutindicesRequest struct {
+	// Request body for creating an index
+	PutindicesRequest shared.PutindicesRequest `request:"mediaType=application/json"`
 	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
 	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-}
-
-type PutindicesRequest struct {
-	PathParams PutindicesPathParams
-	// Request body for creating an index
-	Request shared.PutindicesRequest `request:"mediaType=application/json"`
 }
 
 type PutindicesResponse struct {

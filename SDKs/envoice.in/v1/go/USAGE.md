@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.ClientAPIAllRequest{
-        Headers: operations.ClientAPIAllHeaders{
-            XAuthKey: "corrupti",
-            XAuthSecret: "provident",
-        },
+        XAuthKey: "corrupti",
+        XAuthSecret: "provident",
     }
 
     ctx := context.Background()

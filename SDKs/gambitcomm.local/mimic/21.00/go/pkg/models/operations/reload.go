@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ReloadPathParams struct {
+type ReloadRequest struct {
 	// Agent to return the primary IP
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ReloadRequest struct {
-	PathParams ReloadPathParams
 }
 
 type ReloadResponse struct {

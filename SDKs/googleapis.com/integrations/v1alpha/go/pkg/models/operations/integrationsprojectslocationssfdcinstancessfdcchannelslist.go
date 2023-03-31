@@ -8,16 +8,11 @@ import (
 )
 
 type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListPathParams struct {
-	// Required. The client, which owns this collection of SfdcChannels.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListQueryParams struct {
+type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The token returned in the previous response.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The client, which owns this collection of SfdcChannels.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListQueryParams struc
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest struct {
-	PathParams  IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListPathParams
-	QueryParams IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListQueryParams
-	Security    IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListSecurity
 }
 
 type IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse struct {

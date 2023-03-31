@@ -44,7 +44,7 @@ func (s *paymentAuditServiceDeprecated) ExportTransactionsCsvv3(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *paymentAuditServiceDeprecated) GetFundingsV1(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -205,14 +205,14 @@ func (s *paymentAuditServiceDeprecated) GetFundingsV1(ctx context.Context, reque
 // Deprecated (use /v4/paymentaudit/payments/<paymentId> instead)
 func (s *paymentAuditServiceDeprecated) GetPaymentDetailsV3(ctx context.Context, request operations.GetPaymentDetailsV3Request) (*operations.GetPaymentDetailsV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/paymentaudit/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/paymentaudit/payments/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -294,14 +294,14 @@ func (s *paymentAuditServiceDeprecated) GetPaymentDetailsV3(ctx context.Context,
 // Deprecated (use /v4/paymentaudit/payouts/<payoutId> instead)
 func (s *paymentAuditServiceDeprecated) GetPaymentsForPayoutPAV3(ctx context.Context, request operations.GetPaymentsForPayoutPAV3Request) (*operations.GetPaymentsForPayoutPAV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/paymentaudit/payouts/{payoutId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/paymentaudit/payouts/{payoutId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -390,7 +390,7 @@ func (s *paymentAuditServiceDeprecated) GetPayoutStatsV1(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -479,7 +479,7 @@ func (s *paymentAuditServiceDeprecated) GetPayoutsForPayorV3(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -568,7 +568,7 @@ func (s *paymentAuditServiceDeprecated) ListPaymentChanges(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -618,7 +618,7 @@ func (s *paymentAuditServiceDeprecated) ListPaymentsAuditV3(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type CreateNetworkFirmwareUpgradesStagedEventPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkFirmwareUpgradesStagedEventRequestBodyProductsSwitchNextUpgradeToVersion - The version to be updated to
 type CreateNetworkFirmwareUpgradesStagedEventRequestBodyProductsSwitchNextUpgradeToVersion struct {
 	// The version ID
@@ -64,8 +60,8 @@ type CreateNetworkFirmwareUpgradesStagedEventRequestBody struct {
 }
 
 type CreateNetworkFirmwareUpgradesStagedEventRequest struct {
-	PathParams CreateNetworkFirmwareUpgradesStagedEventPathParams
-	Request    CreateNetworkFirmwareUpgradesStagedEventRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkFirmwareUpgradesStagedEventRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                              `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkFirmwareUpgradesStagedEvent200ApplicationJSONProductsSwitchNextUpgradeToVersion - Details of the version the device will upgrade to

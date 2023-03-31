@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type MeterFolderInformationPostFormRequest struct {
-	Request shared.MeterFolderInformationToPost `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type MeterFolderInformationPostFormResponse struct {
 	ContentType string

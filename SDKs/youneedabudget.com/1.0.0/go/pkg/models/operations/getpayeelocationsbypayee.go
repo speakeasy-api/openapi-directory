@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayeeLocationsByPayeePathParams struct {
+type GetPayeeLocationsByPayeeRequest struct {
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// id of payee
 	PayeeID string `pathParam:"style=simple,explode=false,name=payee_id"`
-}
-
-type GetPayeeLocationsByPayeeRequest struct {
-	PathParams GetPayeeLocationsByPayeePathParams
 }
 
 type GetPayeeLocationsByPayeeResponse struct {

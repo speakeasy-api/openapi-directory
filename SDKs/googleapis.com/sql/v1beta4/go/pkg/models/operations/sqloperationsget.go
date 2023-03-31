@@ -8,13 +8,13 @@ import (
 )
 
 type SQLOperationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLOperationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLOperationsGetSecurity struct {
@@ -22,14 +22,7 @@ type SQLOperationsGetSecurity struct {
 	Option2 *SQLOperationsGetSecurityOption2 `security:"option"`
 }
 
-type SQLOperationsGetPathParams struct {
-	// Instance operation ID.
-	Operation string `pathParam:"style=simple,explode=false,name=operation"`
-	// Project ID of the project that contains the instance.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type SQLOperationsGetQueryParams struct {
+type SQLOperationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,20 +37,18 @@ type SQLOperationsGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Instance operation ID.
+	Operation string `pathParam:"style=simple,explode=false,name=operation"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project that contains the instance.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SQLOperationsGetRequest struct {
-	PathParams  SQLOperationsGetPathParams
-	QueryParams SQLOperationsGetQueryParams
-	Security    SQLOperationsGetSecurity
 }
 
 type SQLOperationsGetResponse struct {

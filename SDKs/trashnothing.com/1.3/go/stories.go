@@ -34,7 +34,7 @@ func newStories(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GetStories - List stories
-func (s *stories) GetStories(ctx context.Context, request operations.GetStoriesRequest) (*operations.GetStoriesResponse, error) {
+func (s *stories) GetStories(ctx context.Context, request operations.GetStoriesRequest, security operations.GetStoriesSecurity) (*operations.GetStoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stories"
 
@@ -43,11 +43,11 @@ func (s *stories) GetStories(ctx context.Context, request operations.GetStoriesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,20 +83,20 @@ func (s *stories) GetStories(ctx context.Context, request operations.GetStoriesR
 }
 
 // GetStory - Retrieve a story
-func (s *stories) GetStory(ctx context.Context, request operations.GetStoryRequest) (*operations.GetStoryResponse, error) {
+func (s *stories) GetStory(ctx context.Context, request operations.GetStoryRequest, security operations.GetStorySecurity) (*operations.GetStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,14 +136,14 @@ func (s *stories) GetStory(ctx context.Context, request operations.GetStoryReque
 // LikeStory - Like a story
 func (s *stories) LikeStory(ctx context.Context, request operations.LikeStoryRequest) (*operations.LikeStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/like", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/like", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,7 +183,7 @@ func (s *stories) LikeStory(ctx context.Context, request operations.LikeStoryReq
 }
 
 // SubmitStory - Submit a story
-func (s *stories) SubmitStory(ctx context.Context, request operations.SubmitStoryRequest) (*operations.SubmitStoryResponse, error) {
+func (s *stories) SubmitStory(ctx context.Context, request operations.SubmitStoryRequestBody) (*operations.SubmitStoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stories"
 
@@ -240,14 +240,14 @@ func (s *stories) SubmitStory(ctx context.Context, request operations.SubmitStor
 // UnlikeStory - Unlike a story
 func (s *stories) UnlikeStory(ctx context.Context, request operations.UnlikeStoryRequest) (*operations.UnlikeStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/unlike", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/unlike", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,16 +288,16 @@ func (s *stories) UnlikeStory(ctx context.Context, request operations.UnlikeStor
 
 // ViewedStory - Record story viewed
 // Records every time a user views the full story (and not just a preview or snippet),
-func (s *stories) ViewedStory(ctx context.Context, request operations.ViewedStoryRequest) (*operations.ViewedStoryResponse, error) {
+func (s *stories) ViewedStory(ctx context.Context, request operations.ViewedStoryRequest, security operations.ViewedStorySecurity) (*operations.ViewedStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/viewed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_id}/viewed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

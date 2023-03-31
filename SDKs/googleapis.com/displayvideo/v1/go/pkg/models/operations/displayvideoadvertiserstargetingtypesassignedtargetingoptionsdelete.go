@@ -10,8 +10,8 @@ import (
 )
 
 type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum - Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
@@ -170,22 +170,17 @@ func (e *DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteTarg
 	}
 }
 
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeletePathParams struct {
-	// Required. The ID of the advertiser.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the assigned targeting option to delete.
-	AssignedTargetingOptionID string `pathParam:"style=simple,explode=false,name=assignedTargetingOptionId"`
-	// Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
-	TargetingType DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
-}
-
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteQueryParams struct {
+type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The ID of the assigned targeting option to delete.
+	AssignedTargetingOptionID string `pathParam:"style=simple,explode=false,name=assignedTargetingOptionId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -198,16 +193,12 @@ type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteQueryPar
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+	TargetingType DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest struct {
-	PathParams  DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeletePathParams
-	QueryParams DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteQueryParams
-	Security    DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteSecurity
 }
 
 type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse struct {

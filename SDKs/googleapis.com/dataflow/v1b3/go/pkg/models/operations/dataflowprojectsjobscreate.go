@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsJobsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsCreateSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsCreateSecurity struct {
@@ -34,11 +34,6 @@ type DataflowProjectsJobsCreateSecurity struct {
 	Option2 *DataflowProjectsJobsCreateSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsJobsCreateSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsJobsCreateSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsJobsCreatePathParams struct {
-	// The ID of the Cloud Platform project that the job belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsJobsCreateViewEnum - The level of information requested in response.
@@ -71,9 +66,10 @@ func (e *DataflowProjectsJobsCreateViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DataflowProjectsJobsCreateQueryParams struct {
+type DataflowProjectsJobsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	JobInput    *shared.JobInput  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -90,6 +86,8 @@ type DataflowProjectsJobsCreateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The ID of the Cloud Platform project that the job belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. This field is now in the Job message.
@@ -100,13 +98,6 @@ type DataflowProjectsJobsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The level of information requested in response.
 	View *DataflowProjectsJobsCreateViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DataflowProjectsJobsCreateRequest struct {
-	PathParams  DataflowProjectsJobsCreatePathParams
-	QueryParams DataflowProjectsJobsCreateQueryParams
-	Request     *shared.JobInput `request:"mediaType=application/json"`
-	Security    DataflowProjectsJobsCreateSecurity
 }
 
 type DataflowProjectsJobsCreateResponse struct {

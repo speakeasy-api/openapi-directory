@@ -8,18 +8,18 @@ import (
 )
 
 type Oauth2UserinfoV2MeGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Oauth2UserinfoV2MeGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Oauth2UserinfoV2MeGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Oauth2UserinfoV2MeGetSecurity struct {
@@ -28,7 +28,7 @@ type Oauth2UserinfoV2MeGetSecurity struct {
 	Option3 *Oauth2UserinfoV2MeGetSecurityOption3 `security:"option"`
 }
 
-type Oauth2UserinfoV2MeGetQueryParams struct {
+type Oauth2UserinfoV2MeGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -43,11 +43,6 @@ type Oauth2UserinfoV2MeGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type Oauth2UserinfoV2MeGetRequest struct {
-	QueryParams Oauth2UserinfoV2MeGetQueryParams
-	Security    Oauth2UserinfoV2MeGetSecurity
 }
 
 type Oauth2UserinfoV2MeGetResponse struct {

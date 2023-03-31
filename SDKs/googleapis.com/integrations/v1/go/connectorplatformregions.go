@@ -33,7 +33,7 @@ func newConnectorPlatformRegions(defaultClient, securityClient HTTPClient, serve
 }
 
 // IntegrationsConnectorPlatformRegionsEnumerate - Enumerates the regions for which Connector Platform is provisioned.
-func (s *connectorPlatformRegions) IntegrationsConnectorPlatformRegionsEnumerate(ctx context.Context, request operations.IntegrationsConnectorPlatformRegionsEnumerateRequest) (*operations.IntegrationsConnectorPlatformRegionsEnumerateResponse, error) {
+func (s *connectorPlatformRegions) IntegrationsConnectorPlatformRegionsEnumerate(ctx context.Context, request operations.IntegrationsConnectorPlatformRegionsEnumerateRequest, security operations.IntegrationsConnectorPlatformRegionsEnumerateSecurity) (*operations.IntegrationsConnectorPlatformRegionsEnumerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/connectorPlatformRegions:enumerate"
 
@@ -42,11 +42,11 @@ func (s *connectorPlatformRegions) IntegrationsConnectorPlatformRegionsEnumerate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

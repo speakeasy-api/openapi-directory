@@ -12,12 +12,8 @@ var CreateItemAssignmentServerList = []string{
 }
 
 type CreateItemAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateItemAssignmentPathParams struct {
-	// The unique string that we created to identify the Bundle resource.
-	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateItemAssignmentCreateItemAssignmentRequest struct {
@@ -26,10 +22,9 @@ type CreateItemAssignmentCreateItemAssignmentRequest struct {
 }
 
 type CreateItemAssignmentRequest struct {
-	PathParams CreateItemAssignmentPathParams
-	Request    *CreateItemAssignmentCreateItemAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateItemAssignmentSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Bundle resource.
+	BundleSid   string                                           `pathParam:"style=simple,explode=false,name=BundleSid"`
+	RequestBody *CreateItemAssignmentCreateItemAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateItemAssignmentResponse struct {

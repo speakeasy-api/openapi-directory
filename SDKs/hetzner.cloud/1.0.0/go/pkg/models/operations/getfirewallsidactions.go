@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetFirewallsIDActionsPathParams struct {
-	// ID of the Resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetFirewallsIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetFirewallsIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetFirewallsIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetFirewallsIDActionsQueryParams struct {
+type GetFirewallsIDActionsRequest struct {
+	// ID of the Resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetFirewallsIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetFirewallsIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetFirewallsIDActionsRequest struct {
-	PathParams  GetFirewallsIDActionsPathParams
-	QueryParams GetFirewallsIDActionsQueryParams
 }
 
 // GetFirewallsIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -33,20 +33,20 @@ func newAdclients(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AdsensehostAdclientsGet - Get information about one of the ad clients in the Host AdSense account.
-func (s *adclients) AdsensehostAdclientsGet(ctx context.Context, request operations.AdsensehostAdclientsGetRequest) (*operations.AdsensehostAdclientsGetResponse, error) {
+func (s *adclients) AdsensehostAdclientsGet(ctx context.Context, request operations.AdsensehostAdclientsGetRequest, security operations.AdsensehostAdclientsGetSecurity) (*operations.AdsensehostAdclientsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *adclients) AdsensehostAdclientsGet(ctx context.Context, request operati
 }
 
 // AdsensehostAdclientsList - List all host ad clients in this AdSense account.
-func (s *adclients) AdsensehostAdclientsList(ctx context.Context, request operations.AdsensehostAdclientsListRequest) (*operations.AdsensehostAdclientsListResponse, error) {
+func (s *adclients) AdsensehostAdclientsList(ctx context.Context, request operations.AdsensehostAdclientsListRequest, security operations.AdsensehostAdclientsListSecurity) (*operations.AdsensehostAdclientsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/adclients"
 
@@ -90,11 +90,11 @@ func (s *adclients) AdsensehostAdclientsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

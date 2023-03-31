@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserDetailsUpdateForSelfRequest struct {
-	// The details of the user to update
-	Request shared.PayeeUserSelfUpdateRequest `request:"mediaType=application/json"`
-}
-
 type UserDetailsUpdateForSelfResponse struct {
 	ContentType string
 	StatusCode  int

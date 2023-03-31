@@ -12,12 +12,8 @@ var CreateReplaceItemsServerList = []string{
 }
 
 type CreateReplaceItemsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateReplaceItemsPathParams struct {
-	// The unique string that identifies the Bundle where the item assignments are going to be replaced.
-	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateReplaceItemsCreateReplaceItemsRequest struct {
@@ -26,10 +22,9 @@ type CreateReplaceItemsCreateReplaceItemsRequest struct {
 }
 
 type CreateReplaceItemsRequest struct {
-	PathParams CreateReplaceItemsPathParams
-	Request    *CreateReplaceItemsCreateReplaceItemsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateReplaceItemsSecurity
-	ServerURL  *string
+	// The unique string that identifies the Bundle where the item assignments are going to be replaced.
+	BundleSid   string                                       `pathParam:"style=simple,explode=false,name=BundleSid"`
+	RequestBody *CreateReplaceItemsCreateReplaceItemsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateReplaceItemsResponse struct {

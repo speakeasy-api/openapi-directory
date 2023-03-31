@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPanelsReadPathParams struct {
+type DcimPowerPanelsReadRequest struct {
 	// A unique integer value identifying this power panel.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPanelsReadRequest struct {
-	PathParams DcimPowerPanelsReadPathParams
 }
 
 type DcimPowerPanelsReadResponse struct {

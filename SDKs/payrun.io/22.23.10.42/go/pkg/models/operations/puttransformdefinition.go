@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutTransformDefinitionPathParams struct {
-	// The transform definition unique identifier.
-	TransformDefinitionID string `pathParam:"style=simple,explode=false,name=TransformDefinitionId"`
-}
-
-type PutTransformDefinitionHeaders struct {
+type PutTransformDefinitionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutTransformDefinitionRequest struct {
-	PathParams PutTransformDefinitionPathParams
-	Headers    PutTransformDefinitionHeaders
 	// The transform definition object to be executed against the report data.
-	Request shared.TransformDefinition `request:"mediaType=application/json"`
+	TransformDefinition shared.TransformDefinition `request:"mediaType=application/json"`
+	// The transform definition unique identifier.
+	TransformDefinitionID string `pathParam:"style=simple,explode=false,name=TransformDefinitionId"`
 }
 
 type PutTransformDefinitionResponse struct {

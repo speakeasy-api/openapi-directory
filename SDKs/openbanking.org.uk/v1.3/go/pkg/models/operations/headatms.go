@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type HeadAtmsHeaders struct {
+type HeadAtmsRequest struct {
 	// Used for conditional request, to retrieve data only if modified since a given date
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Used for conditional request, to retrieve data only if the given Etag value does not match
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type HeadAtmsRequest struct {
-	Headers HeadAtmsHeaders
 }
 
 type HeadAtmsResponse struct {

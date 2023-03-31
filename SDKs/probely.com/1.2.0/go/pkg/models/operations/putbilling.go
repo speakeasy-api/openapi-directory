@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutBillingRequest struct {
-	Request shared.Billing `request:"mediaType=application/json"`
-}
-
 // PutBilling403ApplicationJSON - Not allowed to perform operation
 type PutBilling403ApplicationJSON struct {
 	// Error message.

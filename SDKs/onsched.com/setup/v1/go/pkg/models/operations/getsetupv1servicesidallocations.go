@@ -8,14 +8,11 @@ import (
 	"time"
 )
 
-type GetSetupV1ServicesIDAllocationsPathParams struct {
-	// id of  service to list allocations for, 0 for all
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ServicesIDAllocationsQueryParams struct {
+type GetSetupV1ServicesIDAllocationsRequest struct {
 	// Format YYYY-MM-DD. Filter appointments on/before endDate
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// id of  service to list allocations for, 0 for all
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// The id of the location. Defaults to the primary location
@@ -26,11 +23,6 @@ type GetSetupV1ServicesIDAllocationsQueryParams struct {
 	ResourceID *string `queryParam:"style=form,explode=true,name=resourceId"`
 	// Format YYYY-MM-DD. Filter appointments by on/after startDate
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GetSetupV1ServicesIDAllocationsRequest struct {
-	PathParams  GetSetupV1ServicesIDAllocationsPathParams
-	QueryParams GetSetupV1ServicesIDAllocationsQueryParams
 }
 
 type GetSetupV1ServicesIDAllocationsResponse struct {

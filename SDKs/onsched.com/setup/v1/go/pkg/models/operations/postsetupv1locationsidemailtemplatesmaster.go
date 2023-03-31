@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsIDEmailTemplatesMasterPathParams struct {
+type PostSetupV1LocationsIDEmailTemplatesMasterRequest struct {
+	// Input model for master email template settings
+	MasterTemplateSettingsInputModel *shared.MasterTemplateSettingsInputModel `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1LocationsIDEmailTemplatesMasterRequest struct {
-	PathParams PostSetupV1LocationsIDEmailTemplatesMasterPathParams
-	// Input model for master email template settings
-	Request *shared.MasterTemplateSettingsInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1LocationsIDEmailTemplatesMasterResponse struct {

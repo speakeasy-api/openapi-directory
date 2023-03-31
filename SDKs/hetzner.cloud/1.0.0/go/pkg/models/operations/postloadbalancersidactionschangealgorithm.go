@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsChangeAlgorithmPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum - Algorithm of the Load Balancer
 type PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum string
 
@@ -43,8 +38,9 @@ type PostLoadBalancersIDActionsChangeAlgorithmRequestBody struct {
 }
 
 type PostLoadBalancersIDActionsChangeAlgorithmRequest struct {
-	PathParams PostLoadBalancersIDActionsChangeAlgorithmPathParams
-	Request    *PostLoadBalancersIDActionsChangeAlgorithmRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsChangeAlgorithmRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionError - Error message for the Action if error occurred, otherwise null

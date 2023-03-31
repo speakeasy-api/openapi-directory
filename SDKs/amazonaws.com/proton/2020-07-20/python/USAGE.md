@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptEnvironmentAccountConnectionRequest(
-    headers=operations.AcceptEnvironmentAccountConnectionHeaders(
-        x_amz_algorithm="possimus",
-        x_amz_content_sha256="ullam",
-        x_amz_credential="eveniet",
-        x_amz_date="alias",
-        x_amz_security_token="tenetur",
-        x_amz_signature="dolorem",
-        x_amz_signed_headers="porro",
-        x_amz_target="AwsProton20200720.AcceptEnvironmentAccountConnection",
+    accept_environment_account_connection_input=shared.AcceptEnvironmentAccountConnectionInput(
+        id="corrupti",
     ),
-    request=shared.AcceptEnvironmentAccountConnectionInput(
-        id="sed",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="AwsProton20200720.AcceptEnvironmentAccountConnection",
 )
     
 res = s.accept_environment_account_connection(req)

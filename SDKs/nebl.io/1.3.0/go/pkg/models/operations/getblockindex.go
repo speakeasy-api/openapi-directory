@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlockIndexPathParams struct {
+type GetBlockIndexRequest struct {
 	// Block Index
 	Blockindex float64 `pathParam:"style=simple,explode=false,name=blockindex"`
-}
-
-type GetBlockIndexRequest struct {
-	PathParams GetBlockIndexPathParams
 }
 
 type GetBlockIndexResponse struct {

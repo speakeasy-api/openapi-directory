@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MirrorAccountsInsertPathParams struct {
+type MirrorAccountsInsertRequest struct {
+	Account *shared.Account `request:"mediaType=application/json"`
 	// The name of the account to be passed to the Android Account Manager.
 	AccountName string `pathParam:"style=simple,explode=false,name=accountName"`
 	// Account type to be passed to Android Account Manager.
 	AccountType string `pathParam:"style=simple,explode=false,name=accountType"`
-	// The ID for the user.
-	UserToken string `pathParam:"style=simple,explode=false,name=userToken"`
-}
-
-type MirrorAccountsInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -31,12 +27,8 @@ type MirrorAccountsInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type MirrorAccountsInsertRequest struct {
-	PathParams  MirrorAccountsInsertPathParams
-	QueryParams MirrorAccountsInsertQueryParams
-	Request     *shared.Account `request:"mediaType=application/json"`
+	// The ID for the user.
+	UserToken string `pathParam:"style=simple,explode=false,name=userToken"`
 }
 
 type MirrorAccountsInsertResponse struct {

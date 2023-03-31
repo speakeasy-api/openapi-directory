@@ -38,7 +38,7 @@ func newSavedListViews(defaultClient, securityClient HTTPClient, serverURL, lang
 // This operation can be called multiple times successfully.
 func (s *savedListViews) DeleteV2SavedListViewsIDJSON(ctx context.Context, request operations.DeleteV2SavedListViewsIDJSONRequest) (*operations.DeleteV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *savedListViews) GetV2SavedListViewsJSON(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,7 +124,7 @@ func (s *savedListViews) GetV2SavedListViewsJSON(ctx context.Context, request op
 // Fetches a saved list view, by ID only.
 func (s *savedListViews) GetV2SavedListViewsIDJSON(ctx context.Context, request operations.GetV2SavedListViewsIDJSONRequest) (*operations.GetV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *savedListViews) GetV2SavedListViewsIDJSON(ctx context.Context, request 
 
 // PostV2SavedListViewsJSON - Create a saved list view
 // Creates a saved list view.
-func (s *savedListViews) PostV2SavedListViewsJSON(ctx context.Context, request operations.PostV2SavedListViewsJSONRequest) (*operations.PostV2SavedListViewsJSONResponse, error) {
+func (s *savedListViews) PostV2SavedListViewsJSON(ctx context.Context, request operations.PostV2SavedListViewsJSONRequestBody) (*operations.PostV2SavedListViewsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/saved_list_views.json"
 
@@ -224,9 +224,9 @@ func (s *savedListViews) PostV2SavedListViewsJSON(ctx context.Context, request o
 // Updates a saved list view.
 func (s *savedListViews) PutV2SavedListViewsIDJSON(ctx context.Context, request operations.PutV2SavedListViewsIDJSONRequest) (*operations.PutV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

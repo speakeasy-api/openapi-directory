@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetZRProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetZRProfilePathParams struct {
-	// Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetZRProfileRequest struct {
-	PathParams GetZRProfilePathParams
-	Security   GetZRProfileSecurity
+	// Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 type GetZRProfile200ApplicationXMLBasic struct {

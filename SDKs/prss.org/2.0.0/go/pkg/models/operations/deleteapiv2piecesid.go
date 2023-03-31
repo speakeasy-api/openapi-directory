@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAPIV2PiecesIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteAPIV2PiecesIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAPIV2PiecesIDRequest struct {
-	PathParams DeleteAPIV2PiecesIDPathParams
-	Security   DeleteAPIV2PiecesIDSecurity
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV2PiecesIDResponse struct {

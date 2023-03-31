@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTelnetGetConfigPathParams struct {
+type ProtocolTelnetGetConfigRequest struct {
 	// Agent to show the TELNET configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTelnetGetConfigRequest struct {
-	PathParams ProtocolTelnetGetConfigPathParams
 }
 
 type ProtocolTelnetGetConfigResponse struct {

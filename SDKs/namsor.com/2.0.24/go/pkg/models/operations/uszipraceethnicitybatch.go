@@ -8,13 +8,7 @@ import (
 )
 
 type UsZipRaceEthnicityBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsZipRaceEthnicityBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchFirstLastNameGeoZippedIn `request:"mediaType=application/json"`
-	Security UsZipRaceEthnicityBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type UsZipRaceEthnicityBatchResponse struct {

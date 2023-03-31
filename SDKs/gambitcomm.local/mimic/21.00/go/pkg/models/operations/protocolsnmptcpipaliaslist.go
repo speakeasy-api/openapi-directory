@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSnmptcpIpaliasListPathParams struct {
+type ProtocolSnmptcpIpaliasListRequest struct {
 	// Agent to manipulate SNMPTCP IP alias
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmptcpIpaliasListRequest struct {
-	PathParams ProtocolSnmptcpIpaliasListPathParams
 }
 
 type ProtocolSnmptcpIpaliasListResponse struct {

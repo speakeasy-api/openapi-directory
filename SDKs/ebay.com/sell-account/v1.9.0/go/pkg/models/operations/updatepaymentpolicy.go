@@ -8,19 +8,14 @@ import (
 )
 
 type UpdatePaymentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdatePaymentPolicyPathParams struct {
-	// This path parameter specifies the ID of the payment policy you want to update.
-	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdatePaymentPolicyRequest struct {
-	PathParams UpdatePaymentPolicyPathParams
 	// Payment policy request
-	Request  shared.PaymentPolicyRequest `request:"mediaType=application/json"`
-	Security UpdatePaymentPolicySecurity
+	PaymentPolicyRequest shared.PaymentPolicyRequest `request:"mediaType=application/json"`
+	// This path parameter specifies the ID of the payment policy you want to update.
+	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
 }
 
 type UpdatePaymentPolicyResponse struct {

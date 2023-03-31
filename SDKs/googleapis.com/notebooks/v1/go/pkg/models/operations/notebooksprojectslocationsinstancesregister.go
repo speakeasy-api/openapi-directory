@@ -8,18 +8,14 @@ import (
 )
 
 type NotebooksProjectsLocationsInstancesRegisterSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NotebooksProjectsLocationsInstancesRegisterPathParams struct {
-	// Required. Format: `parent=projects/{project_id}/locations/{location}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type NotebooksProjectsLocationsInstancesRegisterQueryParams struct {
+type NotebooksProjectsLocationsInstancesRegisterRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RegisterInstanceRequest *shared.RegisterInstanceRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type NotebooksProjectsLocationsInstancesRegisterQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Format: `parent=projects/{project_id}/locations/{location}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type NotebooksProjectsLocationsInstancesRegisterQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NotebooksProjectsLocationsInstancesRegisterRequest struct {
-	PathParams  NotebooksProjectsLocationsInstancesRegisterPathParams
-	QueryParams NotebooksProjectsLocationsInstancesRegisterQueryParams
-	Request     *shared.RegisterInstanceRequest `request:"mediaType=application/json"`
-	Security    NotebooksProjectsLocationsInstancesRegisterSecurity
 }
 
 type NotebooksProjectsLocationsInstancesRegisterResponse struct {

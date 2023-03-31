@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebasemlProjectsModelsCreate - Creates a model in Firebase ML. The longrunning operation will eventually return a Model
-func (s *projects) FirebasemlProjectsModelsCreate(ctx context.Context, request operations.FirebasemlProjectsModelsCreateRequest) (*operations.FirebasemlProjectsModelsCreateResponse, error) {
+func (s *projects) FirebasemlProjectsModelsCreate(ctx context.Context, request operations.FirebasemlProjectsModelsCreateRequest, security operations.FirebasemlProjectsModelsCreateSecurity) (*operations.FirebasemlProjectsModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirebasemlProjectsModelsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) FirebasemlProjectsModelsCreate(ctx context.Context, request o
 }
 
 // FirebasemlProjectsModelsDelete - Deletes a model
-func (s *projects) FirebasemlProjectsModelsDelete(ctx context.Context, request operations.FirebasemlProjectsModelsDeleteRequest) (*operations.FirebasemlProjectsModelsDeleteResponse, error) {
+func (s *projects) FirebasemlProjectsModelsDelete(ctx context.Context, request operations.FirebasemlProjectsModelsDeleteRequest, security operations.FirebasemlProjectsModelsDeleteSecurity) (*operations.FirebasemlProjectsModelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,14 +137,14 @@ func (s *projects) FirebasemlProjectsModelsDelete(ctx context.Context, request o
 // FirebasemlProjectsModelsDownload - Gets Download information for a model. This is meant for downloading model resources onto devices. It gives very limited information about the model.
 func (s *projects) FirebasemlProjectsModelsDownload(ctx context.Context, request operations.FirebasemlProjectsModelsDownloadRequest) (*operations.FirebasemlProjectsModelsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,20 +183,20 @@ func (s *projects) FirebasemlProjectsModelsDownload(ctx context.Context, request
 }
 
 // FirebasemlProjectsModelsList - Lists the models
-func (s *projects) FirebasemlProjectsModelsList(ctx context.Context, request operations.FirebasemlProjectsModelsListRequest) (*operations.FirebasemlProjectsModelsListResponse, error) {
+func (s *projects) FirebasemlProjectsModelsList(ctx context.Context, request operations.FirebasemlProjectsModelsListRequest, security operations.FirebasemlProjectsModelsListSecurity) (*operations.FirebasemlProjectsModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) FirebasemlProjectsModelsList(ctx context.Context, request ope
 }
 
 // FirebasemlProjectsModelsPatch - Updates a model. The longrunning operation will eventually return a Model.
-func (s *projects) FirebasemlProjectsModelsPatch(ctx context.Context, request operations.FirebasemlProjectsModelsPatchRequest) (*operations.FirebasemlProjectsModelsPatchResponse, error) {
+func (s *projects) FirebasemlProjectsModelsPatch(ctx context.Context, request operations.FirebasemlProjectsModelsPatchRequest, security operations.FirebasemlProjectsModelsPatchSecurity) (*operations.FirebasemlProjectsModelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) FirebasemlProjectsModelsPatch(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) FirebasemlProjectsModelsPatch(ctx context.Context, request op
 }
 
 // FirebasemlProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) FirebasemlProjectsOperationsGet(ctx context.Context, request operations.FirebasemlProjectsOperationsGetRequest) (*operations.FirebasemlProjectsOperationsGetResponse, error) {
+func (s *projects) FirebasemlProjectsOperationsGet(ctx context.Context, request operations.FirebasemlProjectsOperationsGetRequest, security operations.FirebasemlProjectsOperationsGetSecurity) (*operations.FirebasemlProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

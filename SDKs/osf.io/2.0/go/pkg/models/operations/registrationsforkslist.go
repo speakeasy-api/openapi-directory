@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type RegistrationsForksListPathParams struct {
+type RegistrationsForksListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsForksListRequest struct {
-	PathParams RegistrationsForksListPathParams
 }
 
 // RegistrationsForksListRegistrationAttributesCategoryEnum - The category of the registered node.

@@ -8,21 +8,13 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDAccountingYearPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDAccountingYearQueryParams struct {
+type GetSpacesIDAccountingYearRequest struct {
 	// Effective date inside  the accounting year  (range not available)
 	EffectiveDate *string `queryParam:"style=form,explode=true,name=EffectiveDate"`
 	// End date of the accounting year (YYYYMM or YYYYMMDD) (range not available)
 	End *string `queryParam:"style=form,explode=true,name=End"`
-}
-
-type GetSpacesIDAccountingYearRequest struct {
-	PathParams  GetSpacesIDAccountingYearPathParams
-	QueryParams GetSpacesIDAccountingYearQueryParams
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDAccountingYear200ApplicationJSONLevelEnum string

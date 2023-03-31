@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteChannelsRequest struct {
-	Request shared.DeleteChannelsRequest `request:"mediaType=application/json"`
-}
-
 type DeleteChannelsResponse struct {
 	// Bad request
 	APIError    *shared.APIError

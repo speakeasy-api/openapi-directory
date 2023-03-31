@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleAPIPathParams struct {
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 type SingleAPIRequest struct {
-	PathParams SingleAPIPathParams
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type SingleAPI200ApplicationJSONAPI struct {

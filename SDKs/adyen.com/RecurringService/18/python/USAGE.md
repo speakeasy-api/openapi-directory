@@ -4,9 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostDisableRequest(
-    request="commodi",
+
+
+req = shared.DisableRequest(
+    contract="corrupti",
+    merchant_account="provident",
+    recurring_detail_reference="distinctio",
+    shopper_reference="quibusdam",
 )
     
 res = s.post_disable(req)

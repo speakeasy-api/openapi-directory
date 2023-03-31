@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CrmActivityFieldsJSONQueryParams struct {
+type GetV2CrmActivityFieldsJSONRequest struct {
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
 	IncludePagingCounts *bool `queryParam:"style=form,explode=true,name=include_paging_counts"`
 	// Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
@@ -21,10 +21,6 @@ type GetV2CrmActivityFieldsJSONQueryParams struct {
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
 	// Return only records with this source
 	Source *string `queryParam:"style=form,explode=true,name=source"`
-}
-
-type GetV2CrmActivityFieldsJSONRequest struct {
-	QueryParams GetV2CrmActivityFieldsJSONQueryParams
 }
 
 type GetV2CrmActivityFieldsJSONResponse struct {

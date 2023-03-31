@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETChromosomesByAssemblyUsingGETPathParams struct {
+type GETChromosomesByAssemblyUsingGETRequest struct {
 	// mapKey
 	MapKey int `pathParam:"style=simple,explode=false,name=mapKey"`
-}
-
-type GETChromosomesByAssemblyUsingGETRequest struct {
-	PathParams GETChromosomesByAssemblyUsingGETPathParams
 }
 
 type GETChromosomesByAssemblyUsingGETResponse struct {

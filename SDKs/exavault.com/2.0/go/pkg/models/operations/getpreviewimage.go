@@ -36,7 +36,11 @@ func (e *GetPreviewImageSizeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPreviewImageQueryParams struct {
+type GetPreviewImageRequest struct {
+	// Access Token
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Overrides sizes. Sets to a specific height.
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// Page number to extract from a multi-page document (0 is the first page). Vaild for **.pdf** or **.doc** files.
@@ -47,18 +51,6 @@ type GetPreviewImageQueryParams struct {
 	Size GetPreviewImageSizeEnum `queryParam:"style=form,explode=true,name=size"`
 	// Overrides sizes. Sets to a specific width.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type GetPreviewImageHeaders struct {
-	// Access Token
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetPreviewImageRequest struct {
-	QueryParams GetPreviewImageQueryParams
-	Headers     GetPreviewImageHeaders
 }
 
 type GetPreviewImageResponse struct {

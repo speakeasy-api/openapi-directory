@@ -50,14 +50,14 @@ func newCommittee(defaultClient, securityClient HTTPClient, serverURL, language,
 // filer. Use the `committee_id` to find the most recent information about the committee.
 func (s *committee) GetCandidateCandidateIDCommittees(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesRequest) (*operations.GetCandidateCandidateIDCommitteesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -100,14 +100,14 @@ func (s *committee) GetCandidateCandidateIDCommittees(ctx context.Context, reque
 // committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCandidateCandidateIDCommitteesHistory(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesHistoryRequest) (*operations.GetCandidateCandidateIDCommitteesHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,14 +150,14 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistory(ctx context.Context
 // committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCandidateCandidateIDCommitteesHistoryCycle(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesHistoryCycleRequest) (*operations.GetCandidateCandidateIDCommitteesHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -200,14 +200,14 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistoryCycle(ctx context.Co
 // filer. Use the `committee_id` to find the most recent information about the committee.
 func (s *committee) GetCommitteeCommitteeID(ctx context.Context, request operations.GetCommitteeCommitteeIDRequest) (*operations.GetCommitteeCommitteeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -250,14 +250,14 @@ func (s *committee) GetCommitteeCommitteeID(ctx context.Context, request operati
 // committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCommitteeCommitteeIDHistory(ctx context.Context, request operations.GetCommitteeCommitteeIDHistoryRequest) (*operations.GetCommitteeCommitteeIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -300,14 +300,14 @@ func (s *committee) GetCommitteeCommitteeIDHistory(ctx context.Context, request 
 // committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCommitteeCommitteeIDHistoryCycle(ctx context.Context, request operations.GetCommitteeCommitteeIDHistoryCycleRequest) (*operations.GetCommitteeCommitteeIDHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/{cycle}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/{cycle}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,7 +357,7 @@ func (s *committee) GetCommittees(ctx context.Context, request operations.GetCom
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

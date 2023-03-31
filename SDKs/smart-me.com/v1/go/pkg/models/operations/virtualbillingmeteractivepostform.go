@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualBillingMeterActivePostFormRequest struct {
-	// The Meter to activate
-	Request shared.VMeterToActivate `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type VirtualBillingMeterActivePostFormResponse struct {
 	Body        []byte
 	ContentType string

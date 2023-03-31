@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesListLabelsOnIssuePathParams struct {
+type IssuesListLabelsOnIssueRequest struct {
 	// issue_number parameter
 	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
 	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesListLabelsOnIssueQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type IssuesListLabelsOnIssueRequest struct {
-	PathParams  IssuesListLabelsOnIssuePathParams
-	QueryParams IssuesListLabelsOnIssueQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesListLabelsOnIssueResponse struct {

@@ -10,7 +10,7 @@ import (
 )
 
 type GetAllFacilitiesSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 // GetAllFacilitiesAcceptEnum
@@ -40,13 +40,8 @@ func (e *GetAllFacilitiesAcceptEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAllFacilitiesHeaders struct {
-	Accept GetAllFacilitiesAcceptEnum `header:"style=simple,explode=false,name=Accept"`
-}
-
 type GetAllFacilitiesRequest struct {
-	Headers  GetAllFacilitiesHeaders
-	Security GetAllFacilitiesSecurity
+	Accept GetAllFacilitiesAcceptEnum `header:"style=simple,explode=false,name=Accept"`
 }
 
 type GetAllFacilitiesResponse struct {

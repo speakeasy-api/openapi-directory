@@ -8,14 +8,11 @@ import (
 	"time"
 )
 
-type GetConsumerV1ServicesIDAllocationsPathParams struct {
-	// id of service to list allocations for, 0 for all
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConsumerV1ServicesIDAllocationsQueryParams struct {
+type GetConsumerV1ServicesIDAllocationsRequest struct {
 	// Format YYYY-MM-DD. Filter allocations on/before endDate
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// id of service to list allocations for, 0 for all
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// id of the location, defaults to the primary location
@@ -26,11 +23,6 @@ type GetConsumerV1ServicesIDAllocationsQueryParams struct {
 	ResourceID *string `queryParam:"style=form,explode=true,name=resourceId"`
 	// Format YYYY-MM-DD: Filter allocations on/after startDate
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GetConsumerV1ServicesIDAllocationsRequest struct {
-	PathParams  GetConsumerV1ServicesIDAllocationsPathParams
-	QueryParams GetConsumerV1ServicesIDAllocationsQueryParams
 }
 
 type GetConsumerV1ServicesIDAllocationsResponse struct {

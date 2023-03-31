@@ -12,22 +12,17 @@ var FetchSipCredentialListMappingServerList = []string{
 }
 
 type FetchSipCredentialListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSipCredentialListMappingPathParams struct {
+type FetchSipCredentialListMappingRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies the SIP Domain that includes the resource to fetch.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A 34 character string that uniquely identifies the resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSipCredentialListMappingRequest struct {
-	PathParams FetchSipCredentialListMappingPathParams
-	Security   FetchSipCredentialListMappingSecurity
-	ServerURL  *string
 }
 
 type FetchSipCredentialListMappingResponse struct {

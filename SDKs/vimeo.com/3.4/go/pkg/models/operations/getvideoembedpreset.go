@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoEmbedPresetPathParams struct {
+type GetVideoEmbedPresetRequest struct {
 	// The ID of the preset.
 	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVideoEmbedPresetRequest struct {
-	PathParams GetVideoEmbedPresetPathParams
 }
 
 type GetVideoEmbedPresetResponse struct {

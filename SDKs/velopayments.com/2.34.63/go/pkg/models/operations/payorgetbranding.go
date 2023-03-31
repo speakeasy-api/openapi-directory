@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayorGetBrandingPathParams struct {
+type PayorGetBrandingRequest struct {
 	// The Payor Id
 	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type PayorGetBrandingRequest struct {
-	PathParams PayorGetBrandingPathParams
 }
 
 type PayorGetBrandingResponse struct {

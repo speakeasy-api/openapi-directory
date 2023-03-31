@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRateLimitsRequest{
-        Security: operations.GetRateLimitsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetRateLimitsQueryParams{
-            APIContext: "corrupti",
-            APIName: "provident",
-        },
+        APIContext: "corrupti",
+        APIName: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.RateLimit.GetRateLimits(ctx, req)
+    res, err := s.RateLimit.GetRateLimits(ctx, req, operations.GetRateLimitsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

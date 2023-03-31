@@ -8,6 +8,17 @@ import (
 	"net/http"
 )
 
+type PriceBulkUploadsRequestBodyFile struct {
+	Content []byte `multipartForm:"content"`
+	File    string `multipartForm:"name=file"`
+}
+
+// PriceBulkUploadsRequestBody - The request body consists of a Feed file attached to the request based on the feedType selected
+type PriceBulkUploadsRequestBody struct {
+	// Feed file to upload
+	File PriceBulkUploadsRequestBodyFile `multipartForm:"file"`
+}
+
 // PriceBulkUploadsFeedTypeEnum - The feed Type
 type PriceBulkUploadsFeedTypeEnum string
 
@@ -32,12 +43,9 @@ func (e *PriceBulkUploadsFeedTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PriceBulkUploadsQueryParams struct {
-	// The feed Type
-	FeedType PriceBulkUploadsFeedTypeEnum `queryParam:"style=form,explode=true,name=feedType"`
-}
-
-type PriceBulkUploadsHeaders struct {
+type PriceBulkUploadsRequest struct {
+	// The request body consists of a Feed file attached to the request based on the feedType selected
+	RequestBody PriceBulkUploadsRequestBody `request:"mediaType=multipart/form-data"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
@@ -46,24 +54,8 @@ type PriceBulkUploadsHeaders struct {
 	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
 	// Walmart Service Name
 	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
-type PriceBulkUploadsRequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
-}
-
-// PriceBulkUploadsRequestBody - The request body consists of a Feed file attached to the request based on the feedType selected
-type PriceBulkUploadsRequestBody struct {
-	// Feed file to upload
-	File PriceBulkUploadsRequestBodyFile `multipartForm:"file"`
-}
-
-type PriceBulkUploadsRequest struct {
-	QueryParams PriceBulkUploadsQueryParams
-	Headers     PriceBulkUploadsHeaders
-	// The request body consists of a Feed file attached to the request based on the feedType selected
-	Request PriceBulkUploadsRequestBody `request:"mediaType=multipart/form-data"`
+	// The feed Type
+	FeedType PriceBulkUploadsFeedTypeEnum `queryParam:"style=form,explode=true,name=feedType"`
 }
 
 // PriceBulkUploads200ApplicationXML - Successful Operation

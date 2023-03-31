@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchDpsMessagePathParams struct {
-	// The DPS message unique identifier. E.g. DPS001
-	DpsMessageID string `pathParam:"style=simple,explode=false,name=DpsMessageId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PatchDpsMessageHeaders struct {
+type PatchDpsMessageRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PatchDpsMessageRequest struct {
-	PathParams PatchDpsMessagePathParams
-	Headers    PatchDpsMessageHeaders
+	// The DPS message unique identifier. E.g. DPS001
+	DpsMessageID string `pathParam:"style=simple,explode=false,name=DpsMessageId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type PatchDpsMessageResponse struct {

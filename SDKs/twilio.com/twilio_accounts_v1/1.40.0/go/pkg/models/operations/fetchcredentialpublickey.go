@@ -12,18 +12,13 @@ var FetchCredentialPublicKeyServerList = []string{
 }
 
 type FetchCredentialPublicKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCredentialPublicKeyPathParams struct {
-	// The Twilio-provided string that uniquely identifies the PublicKey resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCredentialPublicKeyRequest struct {
-	PathParams FetchCredentialPublicKeyPathParams
-	Security   FetchCredentialPublicKeySecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the PublicKey resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCredentialPublicKeyResponse struct {

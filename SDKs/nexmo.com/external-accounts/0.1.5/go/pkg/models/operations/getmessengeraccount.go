@@ -8,18 +8,13 @@ import (
 )
 
 type GetMessengerAccountSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetMessengerAccountPathParams struct {
-	// External id of the account you want to retrieve. In this case it is the Facebook Page ID.
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetMessengerAccountRequest struct {
-	PathParams GetMessengerAccountPathParams
-	Security   GetMessengerAccountSecurity
+	// External id of the account you want to retrieve. In this case it is the Facebook Page ID.
+	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type GetMessengerAccountResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type AuthAuthkeyPostSecurity struct {
-	AppKey shared.SchemeAppKey `security:"scheme,type=apiKey,subtype=header"`
+	AppKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
-type AuthAuthkeyPostQueryParams struct {
+type AuthAuthkeyPostRequest struct {
 	// YubiKey OTP (if configured for user)
 	Otp *string `queryParam:"style=form,explode=true,name=otp"`
 	// Authenticated password
 	Password string `queryParam:"style=form,explode=true,name=password"`
 	// Authenticated username
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type AuthAuthkeyPostRequest struct {
-	QueryParams AuthAuthkeyPostQueryParams
-	Security    AuthAuthkeyPostSecurity
 }
 
 type AuthAuthkeyPostResponse struct {

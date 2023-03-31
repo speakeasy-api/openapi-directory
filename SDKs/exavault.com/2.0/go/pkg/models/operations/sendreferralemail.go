@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendReferralEmailHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type SendReferralEmailSendReferralEmailRequestBody struct {
 	Emails  []string `json:"emails"`
 	Message string   `json:"message"`
 }
 
 type SendReferralEmailRequest struct {
-	Headers SendReferralEmailHeaders
-	Request *SendReferralEmailSendReferralEmailRequestBody `request:"mediaType=application/json"`
+	RequestBody *SendReferralEmailSendReferralEmailRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type SendReferralEmailResponse struct {

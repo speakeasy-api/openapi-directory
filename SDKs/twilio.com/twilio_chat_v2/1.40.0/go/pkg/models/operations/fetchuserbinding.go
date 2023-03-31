@@ -12,22 +12,17 @@ var FetchUserBindingServerList = []string{
 }
 
 type FetchUserBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUserBindingPathParams struct {
+type FetchUserBindingRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the User Binding resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the User Binding resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) with the User Binding resource to fetch.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
 	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type FetchUserBindingRequest struct {
-	PathParams FetchUserBindingPathParams
-	Security   FetchUserBindingSecurity
-	ServerURL  *string
 }
 
 type FetchUserBindingResponse struct {

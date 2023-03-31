@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationObjectPathParams struct {
+type GetAssociationObjectRequest struct {
 	// identifier for an association, e.g. f5ba436c-f851-41b3-9d9d-bb2b5fc879d4
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAssociationObjectRequest struct {
-	PathParams GetAssociationObjectPathParams
 }
 
 type GetAssociationObjectResponse struct {

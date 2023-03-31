@@ -34,14 +34,14 @@ func newByInterval(defaultClient, securityClient HTTPClient, serverURL, language
 // Tracks organizations' API requests by response code across a given time period
 func (s *byInterval) GetOrganizationAPIRequestsOverviewResponseCodesByInterval(ctx context.Context, request operations.GetOrganizationAPIRequestsOverviewResponseCodesByIntervalRequest) (*operations.GetOrganizationAPIRequestsOverviewResponseCodesByIntervalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

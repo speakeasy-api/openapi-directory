@@ -8,12 +8,7 @@ import (
 )
 
 type AddNsxvManagerDatasourceSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddNsxvManagerDatasourceRequest struct {
-	Request  *shared.NSXVManagerDataSourceRequest `request:"mediaType=application/json"`
-	Security AddNsxvManagerDatasourceSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddNsxvManagerDatasourceResponse struct {

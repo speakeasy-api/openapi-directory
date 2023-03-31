@@ -145,10 +145,6 @@ type PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody s
 	WithinClusterAllocationMethod *PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyWithinClusterAllocationMethodEnum `json:"withinClusterAllocationMethod,omitempty"`
 }
 
-type PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequest struct {
-	Request PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON - OK
 type PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

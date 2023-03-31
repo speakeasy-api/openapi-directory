@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchPortSchedulePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkSwitchPortScheduleRequestBodyPortScheduleFriday - The schedule object for Friday.
 type CreateNetworkSwitchPortScheduleRequestBodyPortScheduleFriday struct {
 	// Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
@@ -112,8 +108,8 @@ type CreateNetworkSwitchPortScheduleRequestBody struct {
 }
 
 type CreateNetworkSwitchPortScheduleRequest struct {
-	PathParams CreateNetworkSwitchPortSchedulePathParams
-	Request    CreateNetworkSwitchPortScheduleRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSwitchPortScheduleRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkSwitchPortScheduleResponse struct {

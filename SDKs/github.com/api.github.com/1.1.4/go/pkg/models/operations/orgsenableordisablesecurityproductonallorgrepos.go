@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsEnableOrDisableSecurityProductOnAllOrgReposPathParams struct {
+type OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest struct {
 	// The action to take.
 	//
 	// `enable_all` means to enable the specified security feature for all repositories in the organization.
@@ -17,10 +17,6 @@ type OrgsEnableOrDisableSecurityProductOnAllOrgReposPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The security feature to enable or disable.
 	SecurityProduct shared.SecurityProductEnum `pathParam:"style=simple,explode=false,name=security_product"`
-}
-
-type OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest struct {
-	PathParams OrgsEnableOrDisableSecurityProductOnAllOrgReposPathParams
 }
 
 type OrgsEnableOrDisableSecurityProductOnAllOrgReposResponse struct {

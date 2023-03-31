@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientResubscribePathParams struct {
+type ProtocolMqttClientResubscribeRequest struct {
 	// Agent to change MQTT state
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Subscription Number
 	SubNum int `pathParam:"style=simple,explode=false,name=subNum"`
-}
-
-type ProtocolMqttClientResubscribeRequest struct {
-	PathParams ProtocolMqttClientResubscribePathParams
 }
 
 type ProtocolMqttClientResubscribeResponse struct {

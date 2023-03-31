@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEditRequest struct {
-	Request shared.CreateEditRequest `request:"mediaType=application/json"`
-}
-
 type CreateEditResponse struct {
 	ContentType string
 	// OK

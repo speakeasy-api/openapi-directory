@@ -6,11 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceUplinksUsageHistoryPathParams struct {
+type GetNetworkApplianceUplinksUsageHistoryRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkApplianceUplinksUsageHistoryQueryParams struct {
 	// The time resolution in seconds for returned data. The valid resolutions are: 60, 300, 600, 1800, 3600, 86400. The default is 60.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
 	// The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
@@ -19,11 +16,6 @@ type GetNetworkApplianceUplinksUsageHistoryQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 10 minutes.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkApplianceUplinksUsageHistoryRequest struct {
-	PathParams  GetNetworkApplianceUplinksUsageHistoryPathParams
-	QueryParams GetNetworkApplianceUplinksUsageHistoryQueryParams
 }
 
 type GetNetworkApplianceUplinksUsageHistoryResponse struct {

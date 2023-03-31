@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type TransferOriginatorGetRawRequest struct {
-	Request []byte `request:"mediaType=examples"`
-}
-
 type TransferOriginatorGetRawResponse struct {
 	ContentType string
 	// Error response

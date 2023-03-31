@@ -42,7 +42,7 @@ func newPayees(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // <p>* If Payee has existing payments</p>
 func (s *payees) DeletePayeeByIDV3(ctx context.Context, request operations.DeletePayeeByIDV3Request) (*operations.DeletePayeeByIDV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *payees) DeletePayeeByIDV3(ctx context.Context, request operations.Delet
 // <p>* If Payee has existing payments</p>
 func (s *payees) DeletePayeeByIDV4(ctx context.Context, request operations.DeletePayeeByIDV4Request) (*operations.DeletePayeeByIDV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -127,14 +127,14 @@ func (s *payees) DeletePayeeByIDV4(ctx context.Context, request operations.Delet
 // <p>Get Payee by Id</p>
 func (s *payees) GetPayeeByIDV3(ctx context.Context, request operations.GetPayeeByIDV3Request) (*operations.GetPayeeByIDV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -177,14 +177,14 @@ func (s *payees) GetPayeeByIDV3(ctx context.Context, request operations.GetPayee
 // Get Payee by Id
 func (s *payees) GetPayeeByIDV4(ctx context.Context, request operations.GetPayeeByIDV4Request) (*operations.GetPayeeByIDV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -235,7 +235,7 @@ func (s *payees) ListPayeeChangesV3(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -292,7 +292,7 @@ func (s *payees) ListPayeeChangesV4(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -343,7 +343,7 @@ func (s *payees) ListPayeesV3(ctx context.Context, request operations.ListPayees
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -432,7 +432,7 @@ func (s *payees) ListPayeesV4(ctx context.Context, request operations.ListPayees
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -515,9 +515,9 @@ func (s *payees) ListPayeesV4(ctx context.Context, request operations.ListPayees
 // <p>Update payee details for the given Payee Id.<p>
 func (s *payees) PayeeDetailsUpdateV3(ctx context.Context, request operations.PayeeDetailsUpdateV3Request) (*operations.PayeeDetailsUpdateV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/payeeDetailsUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/payeeDetailsUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePayeeDetailsRequestV3Input", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -602,9 +602,9 @@ func (s *payees) PayeeDetailsUpdateV3(ctx context.Context, request operations.Pa
 // <p>Payors may only update the payee details if the payee has not yet onboarded</p>
 func (s *payees) PayeeDetailsUpdateV4(ctx context.Context, request operations.PayeeDetailsUpdateV4Request) (*operations.PayeeDetailsUpdateV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/payeeDetailsUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/payeeDetailsUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePayeeDetailsRequestV4Input", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -689,9 +689,9 @@ func (s *payees) PayeeDetailsUpdateV4(ctx context.Context, request operations.Pa
 // <p>Update the remote Id for the given Payee Id.</p>
 func (s *payees) PostV3PayeesPayeeIDRemoteIDUpdate(ctx context.Context, request operations.PostV3PayeesPayeeIDRemoteIDUpdateRequest) (*operations.PostV3PayeesPayeeIDRemoteIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/remoteIdUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/remoteIdUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRemoteIDRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -785,9 +785,9 @@ func (s *payees) PostV3PayeesPayeeIDRemoteIDUpdate(ctx context.Context, request 
 // <p>Update the remote Id for the given Payee Id.</p>
 func (s *payees) PostV4PayeesPayeeIDRemoteIDUpdate(ctx context.Context, request operations.PostV4PayeesPayeeIDRemoteIDUpdateRequest) (*operations.PostV4PayeesPayeeIDRemoteIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/remoteIdUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/remoteIdUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRemoteIDRequestV4", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

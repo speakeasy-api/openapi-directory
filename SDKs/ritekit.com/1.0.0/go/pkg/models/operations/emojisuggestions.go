@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EmojiSuggestionsQueryParams struct {
+type EmojiSuggestionsRequest struct {
 	// Text of the post
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type EmojiSuggestionsRequest struct {
-	QueryParams EmojiSuggestionsQueryParams
 }
 
 type EmojiSuggestionsResponse struct {

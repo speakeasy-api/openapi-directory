@@ -32,20 +32,20 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GamesManagementApplicationsListHidden - Get the list of players hidden from the given application. This method is only available to user accounts for your developer console.
-func (s *applications) GamesManagementApplicationsListHidden(ctx context.Context, request operations.GamesManagementApplicationsListHiddenRequest) (*operations.GamesManagementApplicationsListHiddenResponse, error) {
+func (s *applications) GamesManagementApplicationsListHidden(ctx context.Context, request operations.GamesManagementApplicationsListHiddenRequest, security operations.GamesManagementApplicationsListHiddenSecurity) (*operations.GamesManagementApplicationsListHiddenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

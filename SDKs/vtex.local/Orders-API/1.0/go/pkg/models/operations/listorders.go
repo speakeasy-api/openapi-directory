@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOrdersQueryParams struct {
+type ListOrdersRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// You can filter orders by rates and benefits (promotions).
 	FRnB *string `queryParam:"style=form,explode=true,name=f_RnB"`
 	// You can filter orders by using a Universal Transverse Mercator (UTM) source.
@@ -81,18 +85,6 @@ type ListOrdersQueryParams struct {
 	SearchField *string `queryParam:"style=form,explode=true,name=searchField"`
 	// Converts orders' time zone to the Universal Time Coordinated (UTC) format and shows the amount of orders set for that UTC, up to the limit of 30 pages. For it to work properly, you have to associate it with the `f_creationDate` parameter.
 	Utc *int `queryParam:"style=form,explode=true,name=utc"`
-}
-
-type ListOrdersHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListOrdersRequest struct {
-	QueryParams ListOrdersQueryParams
-	Headers     ListOrdersHeaders
 }
 
 type ListOrdersResponse struct {

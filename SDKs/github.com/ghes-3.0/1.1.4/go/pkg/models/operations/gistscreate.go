@@ -115,10 +115,6 @@ type GistsCreateRequestBody struct {
 	Public *GistsCreateRequestBodyPublic          `json:"public,omitempty"`
 }
 
-type GistsCreateRequest struct {
-	Request GistsCreateRequestBody `request:"mediaType=application/json"`
-}
-
 type GistsCreateResponse struct {
 	ContentType string
 	Headers     map[string][]string

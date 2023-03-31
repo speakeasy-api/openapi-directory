@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/onsched.com/consumer/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,19 +14,15 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteConsumerV1AppointmentsIDRequest(
-    path_params=operations.DeleteConsumerV1AppointmentsIDPathParams(
-        id="voluptate",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.DeleteConsumerV1AppointmentsIDRequest(
+    id="corrupti",
 )
     
 res = s.appointments.delete_consumer_v1_appointments_id_(req)
@@ -37,84 +33,81 @@ if res.appointment_view_model is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Appointments
 
-* `delete_consumer_v1_appointments_id_` - Returns an appointment object
-* `get_consumer_v1_appointments` - Returns a list of appointments.
-* `get_consumer_v1_appointments_bookingfields` - Returns a list of appointment booking fields
-* `get_consumer_v1_appointments_customfields` - Returns a list of appointment custom field definitions
-* `get_consumer_v1_appointments_id_` - Returns an appointment object.
-* `post_consumer_v1_appointments` - Returns an appointment object
-* `put_consumer_v1_appointments_id_book` - Returns an appointment object
-* `put_consumer_v1_appointments_id_cancel` - Returns an appointment object
-* `put_consumer_v1_appointments_id_confirm` - Set the Appointment Confirm property to true or false
-* `put_consumer_v1_appointments_id_noshow` - For more information see <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a>
-* `put_consumer_v1_appointments_id_reschedule` - Returns an appointment object
-* `put_consumer_v1_appointments_id_reserve` - Returns an appointment object
+### appointments
 
-### Availability
+* `delete_consumer_v1_appointments_id_` - Delete Appointment
+* `get_consumer_v1_appointments` - Get Appointments
+* `get_consumer_v1_appointments_bookingfields` - Get Custom Fields Labels
+* `get_consumer_v1_appointments_customfields` - Get Custom Fields List
+* `get_consumer_v1_appointments_id_` - Get Appointment
+* `post_consumer_v1_appointments` - Create Appointment
+* `put_consumer_v1_appointments_id_book` - Book Appointment
+* `put_consumer_v1_appointments_id_cancel` - Cancel Appointment
+* `put_consumer_v1_appointments_id_confirm` - Confirm Appointment
+* `put_consumer_v1_appointments_id_noshow` - Set NoShow Status
+* `put_consumer_v1_appointments_id_reschedule` - Reschedule Appointment
+* `put_consumer_v1_appointments_id_reserve` - Reserve Appointment
 
-* `get_consumer_v1_availability_service_id_start_date_end_date_` - Returns a list of available times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_days` - Returns a list of available days.
-* `get_consumer_v1_availability_service_id_start_date_end_date_times` - Returns a list of available times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_unavailable` - Returns a list of unavailable times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_windows` - Returns a list of available booking window times.
+### availability
 
-### Customers
+* `get_consumer_v1_availability_service_id_start_date_end_date_` - Get Available Times
+* `get_consumer_v1_availability_service_id_start_date_end_date_days` - Get Available Days
+* `get_consumer_v1_availability_service_id_start_date_end_date_unavailable` - Get Unavailable Times
 
-* `delete_consumer_v1_customers_subscriptions_id_`
-* `delete_consumer_v1_customers_id_`
-* `get_consumer_v1_customers` - Returns a list of customers.
-* `get_consumer_v1_customers_bookingfields` - Returns a list of customer booking fields
-* `get_consumer_v1_customers_countries` - Returns a list of country objects
-* `get_consumer_v1_customers_customfields` - Returns a list of customField objects
-* `get_consumer_v1_customers_plans` - Returns a list of customers.
-* `get_consumer_v1_customers_plans_id_` - Returns a customer object.
-* `get_consumer_v1_customers_states` - Returns a list of state objects
-* `get_consumer_v1_customers_subscriptions` - Returns a list of customer subscriptions.
-* `get_consumer_v1_customers_subscriptions_id_` - Returns a customer subscription object.
-* `get_consumer_v1_customers_id_` - Returns a customer object.
-* `get_consumer_v1_customers_id_planlimits_service_id_resource_id_date_time_tz_` - Returns a list of customer booking limits.
-* `get_consumer_v1_customers_id_subscriptions` - Returns a customer subscription object.
-* `post_consumer_v1_customers` - Creates a new customer object.
-* `post_consumer_v1_customers_id_subscriptions` - Creates a new customer subscription object.
-* `put_consumer_v1_customers_subscriptions_id_` - Updates a customer subscription object.
-* `put_consumer_v1_customers_id_` - Updates a customer object.
+### customers
 
-### Locations
+* `delete_consumer_v1_customers_id_` - Delete Customer
+* `get_consumer_v1_customers` - List Customers
+* `get_consumer_v1_customers_bookingfields` - Get Customer Booking Fields
+* `get_consumer_v1_customers_countries` - List Country Codes
+* `get_consumer_v1_customers_customfields` - Get Customer Custom Fields
+* `get_consumer_v1_customers_states` - List Country States
+* `get_consumer_v1_customers_id_` - Get Customer
+* `post_consumer_v1_customers` - Create Customer
+* `put_consumer_v1_customers_id_` - Update Customer
 
-* `get_consumer_v1_locations` - Returns a list of business locations.
-* `get_consumer_v1_locations_id_` - Returns a business location object.
+### locations
 
-### Resources
+* `get_consumer_v1_locations` - List Locations
+* `get_consumer_v1_locations_id_` - Get Location
 
-* `get_consumer_v1_resources` - Returns a list of resources.
-* `get_consumer_v1_resources_id_` - Returns a resource object.
-* `get_consumer_v1_resources_id_services` - Returns a list of resource services.
+### resource_groups
 
-### ServiceGroups
+* `get_consumer_v1_resourcegroups` - List Resource Groups
+* `get_consumer_v1_resourcegroups_id_` - Get Resource Group
 
-* `get_consumer_v1_servicegroups` - Returns a list of service groups.
-* `get_consumer_v1_servicegroups_id_` - Returns a serviceGroup object.
+### resources
 
-### Services
+* `get_consumer_v1_resources` - List Resources
+* `get_consumer_v1_resources_id_` - Get Resource
+* `get_consumer_v1_resources_id_services` - Get Resource Linked Services
 
-* `get_consumer_v1_services` - Returns a list of services.
-* `get_consumer_v1_services_allocations_id_` - Get a service allocation
-* `get_consumer_v1_services_id_` - Returns a service object.
-* `get_consumer_v1_services_id_allocations` - Returns a list of service allocations.
-* `get_consumer_v1_services_id_resources` - Returns a list of resources.
+### service_groups
 
-### Settings
+* `get_consumer_v1_servicegroups` - List Service Groups
+* `get_consumer_v1_servicegroups_id_` - Get Service Group
 
-* `get_consumer_v1_settings` - Returns a list of customers.
+### services
 
-### StripePlans
-
-* `get_plan_id_`
-
+* `get_consumer_v1_services` - List Services
+* `get_consumer_v1_services_allocations_id_` - Get Service Allocation
+* `get_consumer_v1_services_id_` - Get Service
+* `get_consumer_v1_services_id_allocations` - List Service Allocations
+* `get_consumer_v1_services_id_resources` - List Resources for Service
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

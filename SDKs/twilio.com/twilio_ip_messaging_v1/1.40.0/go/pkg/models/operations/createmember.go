@@ -12,12 +12,8 @@ var CreateMemberServerList = []string{
 }
 
 type CreateMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMemberPathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMemberCreateMemberRequest struct {
@@ -26,10 +22,9 @@ type CreateMemberCreateMemberRequest struct {
 }
 
 type CreateMemberRequest struct {
-	PathParams CreateMemberPathParams
-	Request    *CreateMemberCreateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMemberSecurity
-	ServerURL  *string
+	ChannelSid  string                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateMemberCreateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                           `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateMemberResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsScopeTokenPathParams struct {
-	// The client ID of your GitHub app.
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
 type AppsScopeTokenRequestBody struct {
 	// The OAuth access token used to authenticate to the GitHub API.
 	AccessToken string `json:"access_token"`
@@ -28,8 +23,9 @@ type AppsScopeTokenRequestBody struct {
 }
 
 type AppsScopeTokenRequest struct {
-	PathParams AppsScopeTokenPathParams
-	Request    AppsScopeTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody AppsScopeTokenRequestBody `request:"mediaType=application/json"`
+	// The client ID of your GitHub app.
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type AppsScopeTokenResponse struct {

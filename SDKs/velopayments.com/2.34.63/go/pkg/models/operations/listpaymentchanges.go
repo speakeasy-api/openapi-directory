@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ListPaymentChangesQueryParams struct {
+type ListPaymentChangesRequest struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -17,10 +17,6 @@ type ListPaymentChangesQueryParams struct {
 	PayorID string `queryParam:"style=form,explode=true,name=payorId"`
 	// The updatedSince filter in the format YYYY-MM-DDThh:mm:ss+hh:mm
 	UpdatedSince time.Time `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type ListPaymentChangesRequest struct {
-	QueryParams ListPaymentChangesQueryParams
 }
 
 type ListPaymentChangesResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete3PathParams struct {
+type Delete3Request struct {
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type Delete3Request struct {
-	PathParams Delete3PathParams
 }
 
 type Delete3Response struct {

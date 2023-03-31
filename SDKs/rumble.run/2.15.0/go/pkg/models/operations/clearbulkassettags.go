@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ClearBulkAssetTagsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ClearBulkAssetTagsRequest struct {
-	// search query to filter
-	Request  shared.Search `request:"mediaType=application/json"`
-	Security ClearBulkAssetTagsSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ClearBulkAssetTagsResponse struct {

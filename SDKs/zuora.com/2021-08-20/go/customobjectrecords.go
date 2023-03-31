@@ -54,14 +54,14 @@ func newCustomObjectRecords(defaultClient, securityClient HTTPClient, serverURL,
 // Note that the record is deleted immediately and, therefore, will not be retained upon successful deletion.
 func (s *customObjectRecords) DeleteCustomObjectRecordByID(ctx context.Context, request operations.DeleteCustomObjectRecordByIDRequest) (*operations.DeleteCustomObjectRecordByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -109,16 +109,16 @@ func (s *customObjectRecords) DeleteCustomObjectRecordByID(ctx context.Context, 
 // * When a record is created, there will be a delay before it is available for search. For example, if you create 5 records and perform a query that these 5 records satisfy the query conditions, there will be a delay between when the 5 records are created, and when all the 5 records can be returned in the query result.
 func (s *customObjectRecords) GETAllRecordsForCustomObjectType(ctx context.Context, request operations.GETAllRecordsForCustomObjectTypeRequest) (*operations.GETAllRecordsForCustomObjectTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -162,14 +162,14 @@ func (s *customObjectRecords) GETAllRecordsForCustomObjectType(ctx context.Conte
 // Retrieves a record of a given type by ID.
 func (s *customObjectRecords) GETCustomObjectRecordByID(ctx context.Context, request operations.GETCustomObjectRecordByIDRequest) (*operations.GETCustomObjectRecordByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -241,9 +241,9 @@ func (s *customObjectRecords) GETCustomObjectRecordByID(ctx context.Context, req
 //     ```
 func (s *customObjectRecords) POSTCustomObjectRecords(ctx context.Context, request operations.POSTCustomObjectRecordsRequest) (*operations.POSTCustomObjectRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostCustomObjectRecordsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,7 +258,7 @@ func (s *customObjectRecords) POSTCustomObjectRecords(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -355,9 +355,9 @@ func (s *customObjectRecords) POSTCustomObjectRecords(ctx context.Context, reque
 //     ```
 func (s *customObjectRecords) POSTCustomObjectRecordsBatchUpdateOrDelete(ctx context.Context, request operations.POSTCustomObjectRecordsBatchUpdateOrDeleteRequest) (*operations.POSTCustomObjectRecordsBatchUpdateOrDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/batch/default/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/batch/default/{object}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomObjectRecordBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -372,7 +372,7 @@ func (s *customObjectRecords) POSTCustomObjectRecordsBatchUpdateOrDelete(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -464,9 +464,9 @@ func (s *customObjectRecords) POSTCustomObjectRecordsBatchUpdateOrDelete(ctx con
 //     ```
 func (s *customObjectRecords) PUTCustomObjectRecord(ctx context.Context, request operations.PUTCustomObjectRecordRequest) (*operations.PUTCustomObjectRecordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -481,7 +481,7 @@ func (s *customObjectRecords) PUTCustomObjectRecord(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -549,9 +549,9 @@ func (s *customObjectRecords) PUTCustomObjectRecord(ctx context.Context, request
 //     ```
 func (s *customObjectRecords) PatchPartialUpdateCustomObjectRecord(ctx context.Context, request operations.PatchPartialUpdateCustomObjectRecordRequest) (*operations.PatchPartialUpdateCustomObjectRecordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/records/default/{object}/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -566,7 +566,7 @@ func (s *customObjectRecords) PatchPartialUpdateCustomObjectRecord(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

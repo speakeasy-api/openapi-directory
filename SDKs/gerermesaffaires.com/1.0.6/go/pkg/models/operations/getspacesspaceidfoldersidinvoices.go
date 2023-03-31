@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDInvoicesPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum - name of value for sort
 type GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum string
 
@@ -76,7 +69,7 @@ func (e *GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetSpacesSpaceIDFoldersIDInvoicesQueryParams struct {
+type GetSpacesSpaceIDFoldersIDInvoicesRequest struct {
 	// value of AccountedOn (boolean available but not range)
 	AccountedOn *string `queryParam:"style=form,explode=true,name=AccountedOn"`
 	// amount before VAT
@@ -107,11 +100,10 @@ type GetSpacesSpaceIDFoldersIDInvoicesQueryParams struct {
 	Title *string `queryParam:"style=form,explode=true,name=Title"`
 	// If present returns also the data extend
 	WithExtend *string `queryParam:"style=form,explode=true,name=WithExtend"`
-}
-
-type GetSpacesSpaceIDFoldersIDInvoicesRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDInvoicesPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDInvoicesQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDInvoicesResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAdunitsGetAdCodeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAdunitsGetAdCodeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAdunitsGetAdCodeSecurity struct {
@@ -22,14 +22,11 @@ type AdsenseAdunitsGetAdCodeSecurity struct {
 	Option2 *AdsenseAdunitsGetAdCodeSecurityOption2 `security:"option"`
 }
 
-type AdsenseAdunitsGetAdCodePathParams struct {
+type AdsenseAdunitsGetAdCodeRequest struct {
 	// Ad client with contains the ad unit.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
 	// Ad unit to get the code for.
 	AdUnitID string `pathParam:"style=simple,explode=false,name=adUnitId"`
-}
-
-type AdsenseAdunitsGetAdCodeQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,12 +41,6 @@ type AdsenseAdunitsGetAdCodeQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAdunitsGetAdCodeRequest struct {
-	PathParams  AdsenseAdunitsGetAdCodePathParams
-	QueryParams AdsenseAdunitsGetAdCodeQueryParams
-	Security    AdsenseAdunitsGetAdCodeSecurity
 }
 
 type AdsenseAdunitsGetAdCodeResponse struct {

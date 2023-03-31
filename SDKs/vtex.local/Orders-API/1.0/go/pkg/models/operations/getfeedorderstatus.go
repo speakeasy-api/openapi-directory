@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetfeedorderstatusQueryParams struct {
-	MaxLot string `queryParam:"style=form,explode=true,name=maxLot"`
-}
-
-type GetfeedorderstatusHeaders struct {
+type GetfeedorderstatusRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetfeedorderstatusRequest struct {
-	QueryParams GetfeedorderstatusQueryParams
-	Headers     GetfeedorderstatusHeaders
+	MaxLot      string `queryParam:"style=form,explode=true,name=maxLot"`
 }
 
 type GetfeedorderstatusResponse struct {

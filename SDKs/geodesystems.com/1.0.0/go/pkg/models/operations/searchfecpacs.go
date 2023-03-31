@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchFecPacsQueryParams struct {
+type SearchFecPacsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -76,10 +76,6 @@ type SearchFecPacsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchFecPacsRequest struct {
-	QueryParams SearchFecPacsQueryParams
 }
 
 type SearchFecPacsResponse struct {

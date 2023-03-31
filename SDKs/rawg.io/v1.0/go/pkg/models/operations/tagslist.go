@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsListQueryParams struct {
+type TagsListRequest struct {
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type TagsListRequest struct {
-	QueryParams TagsListQueryParams
 }
 
 type TagsList200ApplicationJSON struct {

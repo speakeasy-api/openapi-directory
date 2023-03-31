@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostRequest struct {
-	// JSON representation of the realm
-	Request shared.RealmRepresentation `request:"mediaType=application/json"`
-}
 
 type PostResponse struct {
 	ContentType string

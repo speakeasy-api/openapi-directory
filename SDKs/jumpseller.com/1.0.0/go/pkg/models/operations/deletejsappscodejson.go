@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteJsappsCodeJSONPathParams struct {
-	// Code of the App
-	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
-type DeleteJsappsCodeJSONQueryParams struct {
+type DeleteJsappsCodeJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Code of the App
+	Code string `pathParam:"style=simple,explode=false,name=code"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteJsappsCodeJSONRequest struct {
-	PathParams  DeleteJsappsCodeJSONPathParams
-	QueryParams DeleteJsappsCodeJSONQueryParams
 }
 
 type DeleteJsappsCodeJSONResponse struct {

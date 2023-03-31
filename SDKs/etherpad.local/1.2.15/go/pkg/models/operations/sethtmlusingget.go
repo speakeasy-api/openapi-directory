@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SetHTMLUsingGETQueryParams struct {
+type SetHTMLUsingGETRequest struct {
 	HTML  *string `queryParam:"style=form,explode=true,name=html"`
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
-type SetHTMLUsingGETRequest struct {
-	QueryParams SetHTMLUsingGETQueryParams
 }
 
 // SetHTMLUsingGET500ApplicationJSON - internal api error (code 2)

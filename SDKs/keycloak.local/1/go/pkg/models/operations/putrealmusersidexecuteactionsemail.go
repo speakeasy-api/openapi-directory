@@ -6,27 +6,19 @@ import (
 	"net/http"
 )
 
-type PutRealmUsersIDExecuteActionsEmailPathParams struct {
-	// User id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDExecuteActionsEmailQueryParams struct {
+type PutRealmUsersIDExecuteActionsEmailRequest struct {
+	// required actions the user needs to complete
+	RequestBody []string `request:"mediaType=application/json"`
 	// Client id
 	ClientID *string `queryParam:"style=form,explode=true,name=client_id"`
+	// User id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Number of seconds after which the generated token expires
 	Lifespan *int `queryParam:"style=form,explode=true,name=lifespan"`
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// Redirect uri
 	RedirectURI *string `queryParam:"style=form,explode=true,name=redirect_uri"`
-}
-
-type PutRealmUsersIDExecuteActionsEmailRequest struct {
-	PathParams  PutRealmUsersIDExecuteActionsEmailPathParams
-	QueryParams PutRealmUsersIDExecuteActionsEmailQueryParams
-	// required actions the user needs to complete
-	Request []string `request:"mediaType=application/json"`
 }
 
 type PutRealmUsersIDExecuteActionsEmailResponse struct {

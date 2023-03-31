@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type ListInflectedFormsQueryParams struct {
+type ListInflectedFormsRequest struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
 	// (Required) The family to inspect
 	Family *string `queryParam:"style=form,explode=true,name=family"`
 	// (Required) The language code
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// (Required) The lexeme to inspect
 	Lexeme *string `queryParam:"style=form,explode=true,name=lexeme"`
-}
-
-type ListInflectedFormsHeaders struct {
-	// {{apiKeyDescription}}
-	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
-}
-
-type ListInflectedFormsRequest struct {
-	QueryParams ListInflectedFormsQueryParams
-	Headers     ListInflectedFormsHeaders
 }
 
 type ListInflectedForms200ApplicationJSONFeatures struct {

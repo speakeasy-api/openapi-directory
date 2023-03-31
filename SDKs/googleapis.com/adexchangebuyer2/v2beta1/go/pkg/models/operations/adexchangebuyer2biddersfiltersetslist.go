@@ -8,16 +8,11 @@ import (
 )
 
 type Adexchangebuyer2BiddersFilterSetsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2BiddersFilterSetsListPathParams struct {
-	// Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
-	OwnerName string `pathParam:"style=simple,explode=false,name=ownerName"`
-}
-
-type Adexchangebuyer2BiddersFilterSetsListQueryParams struct {
+type Adexchangebuyer2BiddersFilterSetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type Adexchangebuyer2BiddersFilterSetsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
+	OwnerName string `pathParam:"style=simple,explode=false,name=ownerName"`
 	// Requested page size. The server may return fewer results than requested. If unspecified, the server will pick an appropriate default.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return. Typically, this is the value of ListFilterSetsResponse.nextPageToken returned from the previous call to the accounts.filterSets.list method.
@@ -44,12 +41,6 @@ type Adexchangebuyer2BiddersFilterSetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2BiddersFilterSetsListRequest struct {
-	PathParams  Adexchangebuyer2BiddersFilterSetsListPathParams
-	QueryParams Adexchangebuyer2BiddersFilterSetsListQueryParams
-	Security    Adexchangebuyer2BiddersFilterSetsListSecurity
 }
 
 type Adexchangebuyer2BiddersFilterSetsListResponse struct {

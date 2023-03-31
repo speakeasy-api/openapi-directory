@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetFilesDownloadQueryParams struct {
+type GetFilesDownloadRequest struct {
 	// The URL of the file to be uploaded
 	FileID string `queryParam:"style=form,explode=true,name=fileId"`
 	// The number of seconds that this signed URL should be valid for. The default is 60.
 	ValidSeconds *int64 `queryParam:"style=form,explode=true,name=validSeconds"`
-}
-
-type GetFilesDownloadRequest struct {
-	QueryParams GetFilesDownloadQueryParams
 }
 
 type GetFilesDownloadResponse struct {

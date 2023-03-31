@@ -9,11 +9,6 @@ import (
 	"time"
 )
 
-type UserPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserLoginTypeEnum - `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
 type UserLoginTypeEnum string
 
@@ -47,14 +42,11 @@ func (e *UserLoginTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UserQueryParams struct {
+type UserRequest struct {
 	// `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
 	LoginType *UserLoginTypeEnum `queryParam:"style=form,explode=true,name=login_type"`
-}
-
-type UserRequest struct {
-	PathParams  UserPathParams
-	QueryParams UserQueryParams
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // User200ApplicationXMLCustomAttributes - Custom attribute(s) that have been assigned to the user.

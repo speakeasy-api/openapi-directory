@@ -8,23 +8,14 @@ import (
 )
 
 type GetAssetByIDSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAssetByIDPathParams struct {
-	// fixed asset id for single object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAssetByIDHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAssetByIDRequest struct {
-	PathParams GetAssetByIDPathParams
-	Headers    GetAssetByIDHeaders
-	Security   GetAssetByIDSecurity
+	// fixed asset id for single object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type GetAssetByIDResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type NewsSearchReadPathParams struct {
-	Title string `pathParam:"style=simple,explode=false,name=title"`
-}
-
 type NewsSearchReadRequest struct {
-	PathParams NewsSearchReadPathParams
+	Title string `pathParam:"style=simple,explode=false,name=title"`
 }
 
 type NewsSearchReadResponse struct {

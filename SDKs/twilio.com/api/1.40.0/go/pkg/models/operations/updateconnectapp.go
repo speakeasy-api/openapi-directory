@@ -14,14 +14,8 @@ var UpdateConnectAppServerList = []string{
 }
 
 type UpdateConnectAppSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConnectAppPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resources to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the ConnectApp resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateConnectAppUpdateConnectAppRequestDeauthorizeCallbackMethodEnum - The HTTP method to use when calling `deauthorize_callback_url`.
@@ -80,10 +74,11 @@ type UpdateConnectAppUpdateConnectAppRequest struct {
 }
 
 type UpdateConnectAppRequest struct {
-	PathParams UpdateConnectAppPathParams
-	Request    *UpdateConnectAppUpdateConnectAppRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConnectAppSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resources to update.
+	AccountSid  string                                   `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateConnectAppUpdateConnectAppRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the ConnectApp resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConnectAppResponse struct {

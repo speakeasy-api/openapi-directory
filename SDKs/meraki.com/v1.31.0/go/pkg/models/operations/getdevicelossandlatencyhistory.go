@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceLossAndLatencyHistoryPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // GetDeviceLossAndLatencyHistoryUplinkEnum - The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1.
 type GetDeviceLossAndLatencyHistoryUplinkEnum string
 
@@ -39,11 +35,12 @@ func (e *GetDeviceLossAndLatencyHistoryUplinkEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetDeviceLossAndLatencyHistoryQueryParams struct {
+type GetDeviceLossAndLatencyHistoryRequest struct {
 	// The destination IP used to obtain the requested stats. This is required.
 	IP string `queryParam:"style=form,explode=true,name=ip"`
 	// The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
+	Serial     string `pathParam:"style=simple,explode=false,name=serial"`
 	// The beginning of the timespan for the data. The maximum lookback period is 60 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
@@ -52,11 +49,6 @@ type GetDeviceLossAndLatencyHistoryQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1.
 	Uplink *GetDeviceLossAndLatencyHistoryUplinkEnum `queryParam:"style=form,explode=true,name=uplink"`
-}
-
-type GetDeviceLossAndLatencyHistoryRequest struct {
-	PathParams  GetDeviceLossAndLatencyHistoryPathParams
-	QueryParams GetDeviceLossAndLatencyHistoryQueryParams
 }
 
 type GetDeviceLossAndLatencyHistoryResponse struct {

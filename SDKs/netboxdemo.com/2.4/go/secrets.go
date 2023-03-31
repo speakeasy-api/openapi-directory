@@ -67,7 +67,7 @@ func (s *secrets) SecretsChoicesList(ctx context.Context) (*operations.SecretsCh
 }
 func (s *secrets) SecretsChoicesRead(ctx context.Context, request operations.SecretsChoicesReadRequest) (*operations.SecretsChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +186,7 @@ func (s *secrets) SecretsGetSessionKeyCreate(ctx context.Context) (*operations.S
 
 	return res, nil
 }
-func (s *secrets) SecretsSecretRolesCreate(ctx context.Context, request operations.SecretsSecretRolesCreateRequest) (*operations.SecretsSecretRolesCreateResponse, error) {
+func (s *secrets) SecretsSecretRolesCreate(ctx context.Context, request shared.SecretRoleInput) (*operations.SecretsSecretRolesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/secrets/secret-roles/"
 
@@ -240,7 +240,7 @@ func (s *secrets) SecretsSecretRolesCreate(ctx context.Context, request operatio
 }
 func (s *secrets) SecretsSecretRolesDelete(ctx context.Context, request operations.SecretsSecretRolesDeleteRequest) (*operations.SecretsSecretRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -280,7 +280,7 @@ func (s *secrets) SecretsSecretRolesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -319,9 +319,9 @@ func (s *secrets) SecretsSecretRolesList(ctx context.Context, request operations
 }
 func (s *secrets) SecretsSecretRolesPartialUpdate(ctx context.Context, request operations.SecretsSecretRolesPartialUpdateRequest) (*operations.SecretsSecretRolesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SecretRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,7 +371,7 @@ func (s *secrets) SecretsSecretRolesPartialUpdate(ctx context.Context, request o
 }
 func (s *secrets) SecretsSecretRolesRead(ctx context.Context, request operations.SecretsSecretRolesReadRequest) (*operations.SecretsSecretRolesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -413,9 +413,9 @@ func (s *secrets) SecretsSecretRolesRead(ctx context.Context, request operations
 }
 func (s *secrets) SecretsSecretRolesUpdate(ctx context.Context, request operations.SecretsSecretRolesUpdateRequest) (*operations.SecretsSecretRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secret-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SecretRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -463,7 +463,7 @@ func (s *secrets) SecretsSecretRolesUpdate(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *secrets) SecretsSecretsCreate(ctx context.Context, request operations.SecretsSecretsCreateRequest) (*operations.SecretsSecretsCreateResponse, error) {
+func (s *secrets) SecretsSecretsCreate(ctx context.Context, request shared.WritableSecretInput) (*operations.SecretsSecretsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/secrets/secrets/"
 
@@ -517,7 +517,7 @@ func (s *secrets) SecretsSecretsCreate(ctx context.Context, request operations.S
 }
 func (s *secrets) SecretsSecretsDelete(ctx context.Context, request operations.SecretsSecretsDeleteRequest) (*operations.SecretsSecretsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -557,7 +557,7 @@ func (s *secrets) SecretsSecretsList(ctx context.Context, request operations.Sec
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -596,9 +596,9 @@ func (s *secrets) SecretsSecretsList(ctx context.Context, request operations.Sec
 }
 func (s *secrets) SecretsSecretsPartialUpdate(ctx context.Context, request operations.SecretsSecretsPartialUpdateRequest) (*operations.SecretsSecretsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableSecretInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -648,7 +648,7 @@ func (s *secrets) SecretsSecretsPartialUpdate(ctx context.Context, request opera
 }
 func (s *secrets) SecretsSecretsRead(ctx context.Context, request operations.SecretsSecretsReadRequest) (*operations.SecretsSecretsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -690,9 +690,9 @@ func (s *secrets) SecretsSecretsRead(ctx context.Context, request operations.Sec
 }
 func (s *secrets) SecretsSecretsUpdate(ctx context.Context, request operations.SecretsSecretsUpdateRequest) (*operations.SecretsSecretsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/secrets/secrets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableSecretInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

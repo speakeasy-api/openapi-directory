@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateVersionSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateVersionPathParams struct {
-	// Semver version indentifier
-	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateVersionRequest struct {
-	PathParams UpdateVersionPathParams
 	// Version object
-	Request  shared.Version `request:"mediaType=application/json"`
-	Security UpdateVersionSecurity
+	Version shared.Version `request:"mediaType=application/json"`
+	// Semver version indentifier
+	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
 }
 
 type UpdateVersionResponse struct {

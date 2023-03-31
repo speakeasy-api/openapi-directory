@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDGroupsGroupIDPathParams struct {
+type GetSpacesIDGroupsGroupIDRequest struct {
 	// Id of the group
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDGroupsGroupIDRequest struct {
-	PathParams GetSpacesIDGroupsGroupIDPathParams
 }
 
 type GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum string

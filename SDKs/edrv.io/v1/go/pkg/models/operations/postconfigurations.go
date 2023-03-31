@@ -12,11 +12,6 @@ type PostConfigurationsRequestBody struct {
 	Value *string `json:"value,omitempty"`
 }
 
-type PostConfigurationsRequest struct {
-	// Include Configuration properties to create here
-	Request PostConfigurationsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostConfigurations201ApplicationJSON - A successful response
 type PostConfigurations201ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

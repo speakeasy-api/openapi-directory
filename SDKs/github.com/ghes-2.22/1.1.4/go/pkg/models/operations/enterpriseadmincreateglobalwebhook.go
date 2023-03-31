@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminCreateGlobalWebhookHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
 // EnterpriseAdminCreateGlobalWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook.
 type EnterpriseAdminCreateGlobalWebhookRequestBodyConfig struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
@@ -36,8 +31,9 @@ type EnterpriseAdminCreateGlobalWebhookRequestBody struct {
 }
 
 type EnterpriseAdminCreateGlobalWebhookRequest struct {
-	Headers EnterpriseAdminCreateGlobalWebhookHeaders
-	Request EnterpriseAdminCreateGlobalWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminCreateGlobalWebhookRequestBody `request:"mediaType=application/json"`
+	// This API is under preview and subject to change.
+	Accept string `header:"style=simple,explode=false,name=accept"`
 }
 
 type EnterpriseAdminCreateGlobalWebhookResponse struct {

@@ -36,7 +36,7 @@ func newEvidenceGraph(defaultClient, securityClient HTTPClient, serverURL, langu
 // Note that every association is assumed to have a unique ID
 func (s *evidenceGraph) GetEvidenceGraphObject(ctx context.Context, request operations.GetEvidenceGraphObjectRequest) (*operations.GetEvidenceGraphObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,14 +81,14 @@ func (s *evidenceGraph) GetEvidenceGraphObject(ctx context.Context, request oper
 // Note that every association is assumed to have a unique ID
 func (s *evidenceGraph) GetEvidenceGraphTable(ctx context.Context, request operations.GetEvidenceGraphTableRequest) (*operations.GetEvidenceGraphTableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}/table", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}/table", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPackageDELETEPathParams struct {
+type AppPackageDELETERequest struct {
 	// Identifier of an individual application package resource
 	AppPkgID string `pathParam:"style=simple,explode=false,name=appPkgId"`
-}
-
-type AppPackageDELETERequest struct {
-	PathParams AppPackageDELETEPathParams
 }
 
 type AppPackageDELETEResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostReportsCustomInsertQueryParams struct {
+type PostReportsCustomInsertRequest struct {
 	// List of twitter ids, separated by commas, to be inserted into report. Ids must be enclosed with brackets ie. [177490485] or [177490485,23423434]
 	Ids []interface{} `queryParam:"style=form,explode=false,name=ids"`
 	// Upload hash to be used for inserting handles
 	UploadHash string `queryParam:"style=form,explode=true,name=upload_hash"`
-}
-
-type PostReportsCustomInsertRequest struct {
-	QueryParams PostReportsCustomInsertQueryParams
 }
 
 type PostReportsCustomInsertResponse struct {

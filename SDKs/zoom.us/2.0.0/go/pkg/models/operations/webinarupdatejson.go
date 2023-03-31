@@ -6,22 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarUpdateJSONSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarUpdateJSONPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarUpdateJSONQueryParams struct {
-	// Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarUpdateApplicationJSONRecurrenceMonthlyWeekEnum - Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
@@ -663,11 +652,12 @@ type WebinarUpdateApplicationJSON struct {
 }
 
 type WebinarUpdateJSONRequest struct {
-	PathParams  WebinarUpdateJSONPathParams
-	QueryParams WebinarUpdateJSONQueryParams
 	// Webinar.
-	Request  WebinarUpdateApplicationJSON `request:"mediaType=application/json"`
-	Security WebinarUpdateJSONSecurity
+	RequestBody WebinarUpdateApplicationJSON `request:"mediaType=application/json"`
+	// Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type WebinarUpdateJSONResponse struct {

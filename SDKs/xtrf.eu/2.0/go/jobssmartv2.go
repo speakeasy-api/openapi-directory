@@ -35,9 +35,9 @@ func newJobsSmartV2(defaultClient, securityClient HTTPClient, serverURL, languag
 
 func (s *jobsSmartV2) AddExternalFileLink(ctx context.Context, request operations.AddExternalFileLinkRequest) (*operations.AddExternalFileLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/addExternalLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/addExternalLink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExternalFileDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -81,9 +81,9 @@ func (s *jobsSmartV2) AddExternalFileLink(ctx context.Context, request operation
 // Adds file link to the project as a link delivered in the job. The following properties can be specified for each file link:<ul><li>url (required, 400 Bad Request is returned otherwise)</li><li>category (required, 400 Bad Request is returned otherwise)</li><li>languageIds – when the file category depends on a list of languages</li><li>languageCombinationIds – when the file category depends on a list of language combinations</li></ul>
 func (s *jobsSmartV2) AddFileLinks(ctx context.Context, request operations.AddFileLinksRequest) (*operations.AddFileLinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/addLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/addLink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileLinkCategorizationsDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,9 +136,9 @@ func (s *jobsSmartV2) AddFileLinks(ctx context.Context, request operations.AddFi
 // Adds files to the project as delivered in the job. The files have to be uploaded beforehand (see "POST /jobs/{jobId}/files/upload" operation). The following properties can be specified for each file:<ul><li>category (required, 400 Bad Request is returned otherwise)</li><li>languageIds – when the file category depends on a list of languages</li><li>languageCombinationIds – when the file category depends on a list of language combinations</li></ul>
 func (s *jobsSmartV2) AddFiles(ctx context.Context, request operations.AddFilesRequest) (*operations.AddFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileCategorizationsDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -182,9 +182,9 @@ func (s *jobsSmartV2) AddFiles(ctx context.Context, request operations.AddFilesR
 // Assigns vendor to a job in a project.
 func (s *jobsSmartV2) AssignVendor1(ctx context.Context, request operations.AssignVendor1Request) (*operations.AssignVendor1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/vendor", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/vendor", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VendorPriceProfileDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -228,9 +228,9 @@ func (s *jobsSmartV2) AssignVendor1(ctx context.Context, request operations.Assi
 // Updates dates of a given job.
 func (s *jobsSmartV2) ChangeDates(ctx context.Context, request operations.ChangeDatesRequest) (*operations.ChangeDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/dates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobDatesDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,9 +274,9 @@ func (s *jobsSmartV2) ChangeDates(ctx context.Context, request operations.Change
 // Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:<ul><li>OPEN – available when the job has one of the following statuses: ACCEPTED, CANCELED</li><li>ACCEPTED – available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED</li><li>STARTED – available when the job has one of the following statuses: ACCEPTED, READY</li><li>READY – available when the job has one of the following statuses: STARTED</li><li>CANCELLED – available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT</li><li>OFFERS_SENT – not available as a target status for this operation</li></ul>
 func (s *jobsSmartV2) ChangeStatus1(ctx context.Context, request operations.ChangeStatus1Request) (*operations.ChangeStatus1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobStatusDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,7 +324,7 @@ func (s *jobsSmartV2) GetByExternalID(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,7 +357,7 @@ func (s *jobsSmartV2) GetByExternalID(ctx context.Context, request operations.Ge
 // Returns list of files delivered in the job.
 func (s *jobsSmartV2) GetDeliveredFiles(ctx context.Context, request operations.GetDeliveredFilesRequest) (*operations.GetDeliveredFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,7 +402,7 @@ func (s *jobsSmartV2) GetDeliveredFiles(ctx context.Context, request operations.
 // Returns details for a job.
 func (s *jobsSmartV2) GetFileByID1(ctx context.Context, request operations.GetFileByID1Request) (*operations.GetFileByID1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -447,7 +447,7 @@ func (s *jobsSmartV2) GetFileByID1(ctx context.Context, request operations.GetFi
 // Returns list of files shared with the job as Reference Files.
 func (s *jobsSmartV2) GetSharedReferenceFiles(ctx context.Context, request operations.GetSharedReferenceFilesRequest) (*operations.GetSharedReferenceFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedReferenceFiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedReferenceFiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -492,7 +492,7 @@ func (s *jobsSmartV2) GetSharedReferenceFiles(ctx context.Context, request opera
 // Returns list of files shared with the job as Work Files.
 func (s *jobsSmartV2) GetSharedWorkFiles(ctx context.Context, request operations.GetSharedWorkFilesRequest) (*operations.GetSharedWorkFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedWorkFiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedWorkFiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -537,9 +537,9 @@ func (s *jobsSmartV2) GetSharedWorkFiles(ctx context.Context, request operations
 // Shares selected files as Reference Files with a job in a project. The files and the job have to be part of the same project. The operation is finished successfully even if some of the selected files were already shared with the job. If a file was shared with the job as Work File, it will now be shared as Reference File (and not as Work File).
 func (s *jobsSmartV2) ShareAsReferenceFiles(ctx context.Context, request operations.ShareAsReferenceFilesRequest) (*operations.ShareAsReferenceFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedReferenceFiles/share", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedReferenceFiles/share", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilesDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -592,9 +592,9 @@ func (s *jobsSmartV2) ShareAsReferenceFiles(ctx context.Context, request operati
 // Shares selected files as Work Files with a job in a project. The files and the job have to be part of the same project. The operation is finished successfully even if some of the selected files were already shared with the job. If a file was shared with the job as Reference File, it will now be shared as Work File (and not as Reference File).
 func (s *jobsSmartV2) ShareAsWorkFiles(ctx context.Context, request operations.ShareAsWorkFilesRequest) (*operations.ShareAsWorkFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedWorkFiles/share", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/sharedWorkFiles/share", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilesDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -647,9 +647,9 @@ func (s *jobsSmartV2) ShareAsWorkFiles(ctx context.Context, request operations.S
 // Stops sharing selected files with a job in a project. The files and the job have to be part of the same project. The operation is finished successfully even if some of the selected files were not shared with the job.
 func (s *jobsSmartV2) StopSharing(ctx context.Context, request operations.StopSharingRequest) (*operations.StopSharingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/stopSharing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/stopSharing", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilesDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -702,9 +702,9 @@ func (s *jobsSmartV2) StopSharing(ctx context.Context, request operations.StopSh
 // Updates instructions for a job. See also "PUT /projects/{projectId}/vendorInstructions" and "PUT /quotes/{quoteId}/vendorInstructions" for updating instructions for all jobs in a project or quote.
 func (s *jobsSmartV2) UpdateInstructions4(ctx context.Context, request operations.UpdateInstructions4Request) (*operations.UpdateInstructions4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/instructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -748,9 +748,9 @@ func (s *jobsSmartV2) UpdateInstructions4(ctx context.Context, request operation
 // Uploads file to the project as a file delivered in the job. Only one file can be uploaded at once. When the upload is finished the file has to be added by specifying its category and languages (see "PUT /jobs/{jobId}/files/add" operation).
 func (s *jobsSmartV2) UploadFile1(ctx context.Context, request operations.UploadFile1Request) (*operations.UploadFile1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/jobs/{jobId}/files/delivered/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileToUploadDto", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

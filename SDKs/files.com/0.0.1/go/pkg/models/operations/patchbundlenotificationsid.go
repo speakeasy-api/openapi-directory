@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchBundleNotificationsIDPathParams struct {
-	// Bundle Notification ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchBundleNotificationsIDRequestBody struct {
 	// Triggers bundle notification when a registration action occurs for it.
 	NotifyOnRegistration *bool `multipartForm:"name=notify_on_registration"`
@@ -20,8 +15,9 @@ type PatchBundleNotificationsIDRequestBody struct {
 }
 
 type PatchBundleNotificationsIDRequest struct {
-	PathParams PatchBundleNotificationsIDPathParams
-	Request    *PatchBundleNotificationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchBundleNotificationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Bundle Notification ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchBundleNotificationsIDResponse struct {

@@ -35,16 +35,16 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // CancelSubscription - CancelSubscription
 // Sets the `canceled_date` field to the end of the active billing period.
 // After this date, the status changes from ACTIVE to CANCELED.
-func (s *subscriptions) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest) (*operations.CancelSubscriptionResponse, error) {
+func (s *subscriptions) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest, security operations.CancelSubscriptionSecurity) (*operations.CancelSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *subscriptions) CancelSubscription(ctx context.Context, request operatio
 // the subscription. Otherwise, Square bills an invoice to the customer's email
 // address. The subscription starts immediately, unless the request includes
 // the optional `start_date`. Each individual subscription is associated with a particular location.
-func (s *subscriptions) CreateSubscription(ctx context.Context, request operations.CreateSubscriptionRequest) (*operations.CreateSubscriptionResponse, error) {
+func (s *subscriptions) CreateSubscription(ctx context.Context, request shared.CreateSubscriptionRequest, security operations.CreateSubscriptionSecurity) (*operations.CreateSubscriptionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/subscriptions"
 
@@ -104,7 +104,7 @@ func (s *subscriptions) CreateSubscription(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,20 +141,20 @@ func (s *subscriptions) CreateSubscription(ctx context.Context, request operatio
 // ListSubscriptionEvents - ListSubscriptionEvents
 // Lists all events for a specific subscription.
 // In the current implementation, only `START_SUBSCRIPTION` and `STOP_SUBSCRIPTION` (when the subscription was canceled) events are returned.
-func (s *subscriptions) ListSubscriptionEvents(ctx context.Context, request operations.ListSubscriptionEventsRequest) (*operations.ListSubscriptionEventsResponse, error) {
+func (s *subscriptions) ListSubscriptionEvents(ctx context.Context, request operations.ListSubscriptionEventsRequest, security operations.ListSubscriptionEventsSecurity) (*operations.ListSubscriptionEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,16 +190,16 @@ func (s *subscriptions) ListSubscriptionEvents(ctx context.Context, request oper
 
 // ResumeSubscription - ResumeSubscription
 // Resumes a deactivated subscription.
-func (s *subscriptions) ResumeSubscription(ctx context.Context, request operations.ResumeSubscriptionRequest) (*operations.ResumeSubscriptionResponse, error) {
+func (s *subscriptions) ResumeSubscription(ctx context.Context, request operations.ResumeSubscriptionRequest, security operations.ResumeSubscriptionSecurity) (*operations.ResumeSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,16 +235,16 @@ func (s *subscriptions) ResumeSubscription(ctx context.Context, request operatio
 
 // RetrieveSubscription - RetrieveSubscription
 // Retrieves a subscription.
-func (s *subscriptions) RetrieveSubscription(ctx context.Context, request operations.RetrieveSubscriptionRequest) (*operations.RetrieveSubscriptionResponse, error) {
+func (s *subscriptions) RetrieveSubscription(ctx context.Context, request operations.RetrieveSubscriptionRequest, security operations.RetrieveSubscriptionSecurity) (*operations.RetrieveSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *subscriptions) RetrieveSubscription(ctx context.Context, request operat
 //
 // For more information, see
 // [Retrieve subscriptions](https://developer.squareup.com/docs/subscriptions-api/overview#retrieve-subscriptions).
-func (s *subscriptions) SearchSubscriptions(ctx context.Context, request operations.SearchSubscriptionsRequest) (*operations.SearchSubscriptionsResponse, error) {
+func (s *subscriptions) SearchSubscriptions(ctx context.Context, request shared.SearchSubscriptionsRequest, security operations.SearchSubscriptionsSecurity) (*operations.SearchSubscriptionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/subscriptions/search"
 
@@ -314,7 +314,7 @@ func (s *subscriptions) SearchSubscriptions(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,11 +351,11 @@ func (s *subscriptions) SearchSubscriptions(ctx context.Context, request operati
 // UpdateSubscription - UpdateSubscription
 // Updates a subscription. You can set, modify, and clear the
 // `subscription` field values.
-func (s *subscriptions) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest) (*operations.UpdateSubscriptionResponse, error) {
+func (s *subscriptions) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest, security operations.UpdateSubscriptionSecurity) (*operations.UpdateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -370,7 +370,7 @@ func (s *subscriptions) UpdateSubscription(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

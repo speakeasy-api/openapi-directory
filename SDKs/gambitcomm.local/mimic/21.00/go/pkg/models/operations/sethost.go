@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetHostPathParams struct {
+type SetHostRequest struct {
 	// Agent to set the primary IP
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Primary IP of the agent
 	Host string `pathParam:"style=simple,explode=false,name=host"`
-}
-
-type SetHostRequest struct {
-	PathParams SetHostPathParams
 }
 
 type SetHostResponse struct {

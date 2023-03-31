@@ -8,13 +8,6 @@ import (
 	"time"
 )
 
-type PutTargetsTargetIDScheduledscansIDPathParams struct {
-	// Object Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
 type PutTargetsTargetIDScheduledscansIDRequestBody struct {
 	// Date time of next scan
 	DateTime time.Time `json:"date_time"`
@@ -29,8 +22,11 @@ type PutTargetsTargetIDScheduledscansIDRequestBody struct {
 }
 
 type PutTargetsTargetIDScheduledscansIDRequest struct {
-	PathParams PutTargetsTargetIDScheduledscansIDPathParams
-	Request    PutTargetsTargetIDScheduledscansIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PutTargetsTargetIDScheduledscansIDRequestBody `request:"mediaType=application/json"`
+	// Object Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // PutTargetsTargetIDScheduledscansID404ApplicationJSON - Not found

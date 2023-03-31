@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAddressPathParams struct {
+type GetAddressRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type GetAddressRequest struct {
-	PathParams GetAddressPathParams
 }
 
 type GetAddressResponse struct {

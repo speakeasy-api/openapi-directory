@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type UsersNodesListPathParams struct {
+type UsersNodesListRequest struct {
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersNodesListRequest struct {
-	PathParams UsersNodesListPathParams
 }
 
 // UsersNodesListNodeAttributesCategoryEnum - The category of the node, as selected by project contributors.

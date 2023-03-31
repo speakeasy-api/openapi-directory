@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchProfileJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatchProfileApplicationJSONBirth struct {
@@ -57,12 +56,6 @@ type PatchProfileApplicationJSON struct {
 	IDFile    *PatchProfileApplicationJSONIDFile  `json:"IDFile,omitempty"`
 	Name      *string                             `json:"Name,omitempty"`
 	Sex       *PatchProfileApplicationJSONSexEnum `json:"Sex,omitempty"`
-}
-
-type PatchProfileJSONRequest struct {
-	// Profile to add
-	Request  PatchProfileApplicationJSON `request:"mediaType=application/json"`
-	Security PatchProfileJSONSecurity
 }
 
 type PatchProfileJSONResponse struct {

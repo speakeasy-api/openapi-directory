@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PredictImagePathParams struct {
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PredictImageQueryParams struct {
-	// Optional. Specifies the name of application using the endpoint
-	Application *string `queryParam:"style=form,explode=true,name=application"`
-	// Optional. Specifies the id of a particular iteration to evaluate against.
-	//             The default iteration for the project will be used when not specified
-	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type PredictImageHeaders struct {
-	PredictionKey string `header:"style=simple,explode=false,name=Prediction-Key"`
-}
-
 type PredictImageRequestBodyImageData struct {
 	Content   []byte `multipartForm:"content"`
 	ImageData string `multipartForm:"name=imageData"`
@@ -34,10 +17,15 @@ type PredictImageRequestBody struct {
 }
 
 type PredictImageRequest struct {
-	PathParams  PredictImagePathParams
-	QueryParams PredictImageQueryParams
-	Headers     PredictImageHeaders
-	Request     PredictImageRequestBody `request:"mediaType=multipart/form-data"`
+	PredictionKey string                  `header:"style=simple,explode=false,name=Prediction-Key"`
+	RequestBody   PredictImageRequestBody `request:"mediaType=multipart/form-data"`
+	// Optional. Specifies the name of application using the endpoint
+	Application *string `queryParam:"style=form,explode=true,name=application"`
+	// Optional. Specifies the id of a particular iteration to evaluate against.
+	//             The default iteration for the project will be used when not specified
+	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PredictImageResponse struct {

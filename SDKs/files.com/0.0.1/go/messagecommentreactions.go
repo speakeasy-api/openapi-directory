@@ -37,7 +37,7 @@ func newMessageCommentReactions(defaultClient, securityClient HTTPClient, server
 // Delete Message Comment Reaction
 func (s *messageCommentReactions) DeleteMessageCommentReactionsID(ctx context.Context, request operations.DeleteMessageCommentReactionsIDRequest) (*operations.DeleteMessageCommentReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *messageCommentReactions) GetMessageCommentReactions(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *messageCommentReactions) GetMessageCommentReactions(ctx context.Context
 // Show Message Comment Reaction
 func (s *messageCommentReactions) GetMessageCommentReactionsID(ctx context.Context, request operations.GetMessageCommentReactionsIDRequest) (*operations.GetMessageCommentReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *messageCommentReactions) GetMessageCommentReactionsID(ctx context.Conte
 
 // PostMessageCommentReactions - Create Message Comment Reaction
 // Create Message Comment Reaction
-func (s *messageCommentReactions) PostMessageCommentReactions(ctx context.Context, request operations.PostMessageCommentReactionsRequest) (*operations.PostMessageCommentReactionsResponse, error) {
+func (s *messageCommentReactions) PostMessageCommentReactions(ctx context.Context, request operations.PostMessageCommentReactionsRequestBody) (*operations.PostMessageCommentReactionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/message_comment_reactions"
 

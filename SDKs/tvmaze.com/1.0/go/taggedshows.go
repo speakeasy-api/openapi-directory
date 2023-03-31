@@ -35,7 +35,7 @@ func newTaggedShows(defaultClient, securityClient HTTPClient, serverURL, languag
 // DeleteUserTagsTagID - Delete a specific tag
 func (s *taggedShows) DeleteUserTagsTagID(ctx context.Context, request operations.DeleteUserTagsTagIDRequest) (*operations.DeleteUserTagsTagIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *taggedShows) DeleteUserTagsTagID(ctx context.Context, request operation
 // DeleteUserTagsTagIDShowsShowID - Untag a show
 func (s *taggedShows) DeleteUserTagsTagIDShowsShowID(ctx context.Context, request operations.DeleteUserTagsTagIDShowsShowIDRequest) (*operations.DeleteUserTagsTagIDShowsShowIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows/{show_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows/{show_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,14 +153,14 @@ func (s *taggedShows) GetUserTags(ctx context.Context) (*operations.GetUserTagsR
 // GetUserTagsTagIDShows - List all shows under this tag
 func (s *taggedShows) GetUserTagsTagIDShows(ctx context.Context, request operations.GetUserTagsTagIDShowsRequest) (*operations.GetUserTagsTagIDShowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -202,9 +202,9 @@ func (s *taggedShows) GetUserTagsTagIDShows(ctx context.Context, request operati
 // PatchUserTagsTagID - Update a specific tag
 func (s *taggedShows) PatchUserTagsTagID(ctx context.Context, request operations.PatchUserTagsTagIDRequest) (*operations.PatchUserTagsTagIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,7 +254,7 @@ func (s *taggedShows) PatchUserTagsTagID(ctx context.Context, request operations
 }
 
 // PostUserTags - Create a new tag
-func (s *taggedShows) PostUserTags(ctx context.Context, request operations.PostUserTagsRequest) (*operations.PostUserTagsResponse, error) {
+func (s *taggedShows) PostUserTags(ctx context.Context, request shared.TagInput) (*operations.PostUserTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/tags"
 
@@ -308,7 +308,7 @@ func (s *taggedShows) PostUserTags(ctx context.Context, request operations.PostU
 // PutUserTagsTagIDShowsShowID - Tag a show
 func (s *taggedShows) PutUserTagsTagIDShowsShowID(ctx context.Context, request operations.PutUserTagsTagIDShowsShowIDRequest) (*operations.PutUserTagsTagIDShowsShowIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows/{show_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/tags/{tag_id}/shows/{show_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

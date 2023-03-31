@@ -32,17 +32,13 @@ func (e *GetV1ValidationSingleFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetV1ValidationSingleQueryParams struct {
+type GetV1ValidationSingleRequest struct {
 	// The email address to be validated.
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// Return the result in json (default) or xml format.
 	Format *GetV1ValidationSingleFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// API key.
 	Key string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetV1ValidationSingleRequest struct {
-	QueryParams GetV1ValidationSingleQueryParams
 }
 
 type GetV1ValidationSingleResponse struct {

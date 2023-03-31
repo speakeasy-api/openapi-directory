@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeleteFilePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// path parameter
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposDeleteFileRequestBodyAuthor - object containing information about the author.
 type ReposDeleteFileRequestBodyAuthor struct {
 	// The email of the author (or committer) of the commit
@@ -44,8 +37,11 @@ type ReposDeleteFileRequestBody struct {
 }
 
 type ReposDeleteFileRequest struct {
-	PathParams ReposDeleteFilePathParams
-	Request    ReposDeleteFileRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposDeleteFileRequestBody `request:"mediaType=application/json"`
+	Owner       string                     `pathParam:"style=simple,explode=false,name=owner"`
+	// path parameter
+	Path string `pathParam:"style=simple,explode=false,name=path"`
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposDeleteFile503ApplicationJSON - Service unavailable

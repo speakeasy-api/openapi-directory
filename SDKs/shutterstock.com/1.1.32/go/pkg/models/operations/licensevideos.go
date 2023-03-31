@@ -10,7 +10,7 @@ import (
 )
 
 type LicenseVideosSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // LicenseVideosSizeEnum - The size of the video to license
@@ -43,20 +43,15 @@ func (e *LicenseVideosSizeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LicenseVideosQueryParams struct {
+type LicenseVideosRequest struct {
+	// List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+	LicenseVideoRequest shared.LicenseVideoRequest `request:"mediaType=application/json"`
 	// The Search ID that led to this licensing event
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// The size of the video to license
 	Size *LicenseVideosSizeEnum `queryParam:"style=form,explode=true,name=size"`
 	// The subscription ID to use for licensing
 	SubscriptionID *string `queryParam:"style=form,explode=true,name=subscription_id"`
-}
-
-type LicenseVideosRequest struct {
-	QueryParams LicenseVideosQueryParams
-	// List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
-	Request  shared.LicenseVideoRequest `request:"mediaType=application/json"`
-	Security LicenseVideosSecurity
 }
 
 type LicenseVideosResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsSetAgentSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsSetAgentSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsSetAgentSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsSetAgentSecurity struct {
 	Option2 *DialogflowProjectsLocationsSetAgentSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsSetAgentPathParams struct {
-	// Required. The project of this agent. Format: `projects/`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsSetAgentQueryParams struct {
+type DialogflowProjectsLocationsSetAgentRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowV2Agent *shared.GoogleCloudDialogflowV2Agent `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type DialogflowProjectsLocationsSetAgentQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project of this agent. Format: `projects/`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type DialogflowProjectsLocationsSetAgentQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsSetAgentRequest struct {
-	PathParams  DialogflowProjectsLocationsSetAgentPathParams
-	QueryParams DialogflowProjectsLocationsSetAgentQueryParams
-	Request     *shared.GoogleCloudDialogflowV2Agent `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsSetAgentSecurity
 }
 
 type DialogflowProjectsLocationsSetAgentResponse struct {

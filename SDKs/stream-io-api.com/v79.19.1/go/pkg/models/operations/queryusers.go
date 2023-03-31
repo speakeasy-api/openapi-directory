@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryUsersQueryParams struct {
-	Payload *shared.QueryUsersRequest `queryParam:"serialization=json,name=payload"`
-}
-
 type QueryUsersRequest struct {
-	QueryParams QueryUsersQueryParams
+	Payload *shared.QueryUsersRequest `queryParam:"serialization=json,name=payload"`
 }
 
 type QueryUsersResponse struct {

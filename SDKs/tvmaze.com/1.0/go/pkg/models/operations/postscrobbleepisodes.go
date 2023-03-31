@@ -16,10 +16,6 @@ type PostScrobbleEpisodesRequestBody struct {
 	Type interface{} `json:"type,omitempty"`
 }
 
-type PostScrobbleEpisodesRequest struct {
-	Request []PostScrobbleEpisodesRequestBody `request:"mediaType=application/json"`
-}
-
 type PostScrobbleEpisodesResponse struct {
 	// All episodes were succesfully marked
 	BulkResponse []shared.BulkResponse

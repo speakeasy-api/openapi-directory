@@ -11,8 +11,8 @@ import (
 )
 
 type GetUpdatedVideosSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetUpdatedVideosSortEnum - Sort by oldest or newest videos first
@@ -39,7 +39,7 @@ func (e *GetUpdatedVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUpdatedVideosQueryParams struct {
+type GetUpdatedVideosRequest struct {
 	// Show videos updated before the specified date
 	EndDate *types.Date `queryParam:"style=form,explode=true,name=end_date"`
 	// Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request
@@ -52,11 +52,6 @@ type GetUpdatedVideosQueryParams struct {
 	Sort *GetUpdatedVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Show videos updated on or after the specified date
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type GetUpdatedVideosRequest struct {
-	QueryParams GetUpdatedVideosQueryParams
-	Security    GetUpdatedVideosSecurity
 }
 
 type GetUpdatedVideosResponse struct {

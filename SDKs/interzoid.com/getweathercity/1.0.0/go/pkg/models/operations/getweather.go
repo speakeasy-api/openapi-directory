@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetweatherQueryParams struct {
+type GetweatherRequest struct {
 	// City for weather information
 	City string `queryParam:"style=form,explode=true,name=city"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// State for weather information
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetweatherRequest struct {
-	QueryParams GetweatherQueryParams
 }
 
 // Getweather200ApplicationJSON - Current weather information for a US city

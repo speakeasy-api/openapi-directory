@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurity struct {
@@ -22,14 +22,10 @@ type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurity st
 	Option2 *BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurityOption2 `security:"option"`
 }
 
-type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchPathParams struct {
-	// Output only. Name of the resource. E.g.: `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must only contain lower case alphanumeric characters or dashes and the max length is 64 characters.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchQueryParams struct {
+type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AssignmentInput *shared.AssignmentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchQueryParams
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. Name of the resource. E.g.: `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must only contain lower case alphanumeric characters or dashes and the max length is 64 characters.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,13 +50,6 @@ type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchQueryParams
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest struct {
-	PathParams  BigqueryreservationProjectsLocationsReservationsAssignmentsPatchPathParams
-	QueryParams BigqueryreservationProjectsLocationsReservationsAssignmentsPatchQueryParams
-	Request     *shared.AssignmentInput `request:"mediaType=application/json"`
-	Security    BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurity
 }
 
 type BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse struct {

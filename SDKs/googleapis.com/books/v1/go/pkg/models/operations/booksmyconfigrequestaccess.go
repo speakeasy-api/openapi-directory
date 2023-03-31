@@ -10,8 +10,8 @@ import (
 )
 
 type BooksMyconfigRequestAccessSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksMyconfigRequestAccessLicenseTypesEnum - The type of access license to request. If not specified, the default is BOTH.
@@ -44,7 +44,7 @@ func (e *BooksMyconfigRequestAccessLicenseTypesEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type BooksMyconfigRequestAccessQueryParams struct {
+type BooksMyconfigRequestAccessRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -79,11 +79,6 @@ type BooksMyconfigRequestAccessQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The volume to request concurrent/download restrictions for.
 	VolumeID string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksMyconfigRequestAccessRequest struct {
-	QueryParams BooksMyconfigRequestAccessQueryParams
-	Security    BooksMyconfigRequestAccessSecurity
 }
 
 type BooksMyconfigRequestAccessResponse struct {

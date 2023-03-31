@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkAppliancePrefixesDelegatedStaticPathParams struct {
+type DeleteNetworkAppliancePrefixesDelegatedStaticRequest struct {
 	NetworkID               string `pathParam:"style=simple,explode=false,name=networkId"`
 	StaticDelegatedPrefixID string `pathParam:"style=simple,explode=false,name=staticDelegatedPrefixId"`
-}
-
-type DeleteNetworkAppliancePrefixesDelegatedStaticRequest struct {
-	PathParams DeleteNetworkAppliancePrefixesDelegatedStaticPathParams
 }
 
 type DeleteNetworkAppliancePrefixesDelegatedStaticResponse struct {

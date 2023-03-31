@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteJsappsCodeJSONRequest{
-        PathParams: operations.DeleteJsappsCodeJSONPathParams{
-            Code: "corrupti",
-        },
-        QueryParams: operations.DeleteJsappsCodeJSONQueryParams{
-            Authtoken: "provident",
-            Login: "distinctio",
-        },
+        Authtoken: "corrupti",
+        Code: "provident",
+        Login: "distinctio",
     }
 
     ctx := context.Background()

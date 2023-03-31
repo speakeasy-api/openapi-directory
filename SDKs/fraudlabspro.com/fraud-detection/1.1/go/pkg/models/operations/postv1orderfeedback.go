@@ -59,16 +59,12 @@ func (e *PostV1OrderFeedbackFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostV1OrderFeedbackQueryParams struct {
+type PostV1OrderFeedbackRequest struct {
 	Action PostV1OrderFeedbackActionEnum  `queryParam:"style=form,explode=true,name=action"`
 	Format *PostV1OrderFeedbackFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	ID     string                         `queryParam:"style=form,explode=true,name=id"`
 	Key    string                         `queryParam:"style=form,explode=true,name=key"`
 	Notes  *string                        `queryParam:"style=form,explode=true,name=notes"`
-}
-
-type PostV1OrderFeedbackRequest struct {
-	QueryParams PostV1OrderFeedbackQueryParams
 }
 
 type PostV1OrderFeedbackResponse struct {

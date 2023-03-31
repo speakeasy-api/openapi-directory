@@ -3,103 +3,190 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateBudgetRequest(
-    headers=operations.CreateBudgetHeaders(
-        x_amz_algorithm="ea",
-        x_amz_content_sha256="ad",
-        x_amz_credential="et",
-        x_amz_date="nemo",
-        x_amz_security_token="illo",
-        x_amz_signature="animi",
-        x_amz_signed_headers="earum",
-        x_amz_target="AWSBudgetServiceGateway.CreateBudget",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateBudgetRequest(
-        account_id="vero",
+)
+
+
+req = operations.CreateBudgetRequest(
+    create_budget_request=shared.CreateBudgetRequest(
+        account_id="corrupti",
         budget=shared.Budget(
-            budget_limit=shared.Spend(
-                amount="et",
-                unit="quam",
+            auto_adjust_data=shared.AutoAdjustData(
+                auto_adjust_type="FORECAST",
+                historical_options=shared.HistoricalOptions(
+                    budget_adjustment_period=715190,
+                    look_back_available_periods=844266,
+                ),
+                last_auto_adjust_time="2021-04-14T16:47:33.722Z",
             ),
-            budget_name="iste",
-            budget_type="SAVINGS_PLANS_UTILIZATION",
+            budget_limit=shared.Spend(
+                amount="corrupti",
+                unit="illum",
+            ),
+            budget_name="vel",
+            budget_type="RI_COVERAGE",
             calculated_spend=shared.CalculatedSpend(
                 actual_spend=shared.Spend(
-                    amount="eos",
-                    unit="aut",
+                    amount="deserunt",
+                    unit="suscipit",
                 ),
                 forecasted_spend=shared.Spend(
-                    amount="ut",
-                    unit="enim",
+                    amount="iure",
+                    unit="magnam",
                 ),
             ),
             cost_filters={
-                "cupiditate": [
-                    "id",
+                "ipsa": [
+                    "tempora",
+                    "suscipit",
                     "molestiae",
+                    "minus",
+                ],
+                "placeat": [
+                    "iusto",
+                    "excepturi",
+                    "nisi",
+                ],
+                "recusandae": [
+                    "ab",
+                    "quis",
+                    "veritatis",
+                    "deserunt",
+                ],
+                "perferendis": [
+                    "repellendus",
+                    "sapiente",
                 ],
             },
             cost_types=shared.CostTypes(
-                include_credit=True,
-                include_discount=True,
+                include_credit=False,
+                include_discount=False,
                 include_other_subscription=False,
                 include_recurring=False,
                 include_refund=False,
-                include_subscription=True,
-                include_support=True,
+                include_subscription=False,
+                include_support=False,
                 include_tax=False,
-                include_upfront=True,
-                use_amortized=True,
-                use_blended=True,
+                include_upfront=False,
+                use_amortized=False,
+                use_blended=False,
             ),
-            last_updated_time="2020-04-04T17:02:02Z",
+            last_updated_time="2022-07-31T07:34:52.790Z",
             planned_budget_limits={
-                "modi": shared.Spend(
-                    amount="dolor",
-                    unit="omnis",
+                "at": shared.Spend(
+                    amount="maiores",
+                    unit="molestiae",
                 ),
-                "explicabo": shared.Spend(
-                    amount="voluptatum",
-                    unit="quia",
+                "quod": shared.Spend(
+                    amount="quod",
+                    unit="esse",
                 ),
-                "perferendis": shared.Spend(
-                    amount="temporibus",
-                    unit="incidunt",
+                "totam": shared.Spend(
+                    amount="porro",
+                    unit="dolorum",
+                ),
+                "dicta": shared.Spend(
+                    amount="nam",
+                    unit="officia",
                 ),
             },
             time_period=shared.TimePeriod(
-                end="1983-11-22T04:40:57Z",
-                start="2006-01-09T19:38:06Z",
+                end="2022-09-18T08:27:00.721Z",
+                start="2021-02-10T09:24:01.909Z",
             ),
-            time_unit="QUARTERLY",
+            time_unit="ANNUALLY",
         ),
         notifications_with_subscribers=[
             shared.NotificationWithSubscribers(
                 notification=shared.Notification(
-                    comparison_operator="EQUAL_TO",
+                    comparison_operator="GREATER_THAN",
+                    notification_state="OK",
+                    notification_type="ACTUAL",
+                    threshold=2645.55,
+                    threshold_type="PERCENTAGE",
+                ),
+                subscribers=[
+                    shared.Subscriber(
+                        address="cum",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="ipsum",
+                        subscription_type="EMAIL",
+                    ),
+                    shared.Subscriber(
+                        address="aspernatur",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="ad",
+                        subscription_type="EMAIL",
+                    ),
+                ],
+            ),
+            shared.NotificationWithSubscribers(
+                notification=shared.Notification(
+                    comparison_operator="GREATER_THAN",
+                    notification_state="ALARM",
+                    notification_type="ACTUAL",
+                    threshold=6169.34,
+                    threshold_type="PERCENTAGE",
+                ),
+                subscribers=[
+                    shared.Subscriber(
+                        address="saepe",
+                        subscription_type="EMAIL",
+                    ),
+                    shared.Subscriber(
+                        address="in",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="iste",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="saepe",
+                        subscription_type="EMAIL",
+                    ),
+                ],
+            ),
+            shared.NotificationWithSubscribers(
+                notification=shared.Notification(
+                    comparison_operator="GREATER_THAN",
                     notification_state="OK",
                     notification_type="FORECASTED",
-                    threshold=7.100000,
+                    threshold=6667.67,
                     threshold_type="ABSOLUTE_VALUE",
                 ),
                 subscribers=[
                     shared.Subscriber(
-                        address="iste",
-                        subscription_type="EMAIL",
+                        address="dolores",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="corporis",
+                        subscription_type="SNS",
+                    ),
+                    shared.Subscriber(
+                        address="nobis",
+                        subscription_type="SNS",
                     ),
                 ],
             ),
         ],
     ),
+    x_amz_algorithm="omnis",
+    x_amz_content_sha256="nemo",
+    x_amz_credential="minima",
+    x_amz_date="excepturi",
+    x_amz_security_token="accusantium",
+    x_amz_signature="iure",
+    x_amz_signed_headers="culpa",
+    x_amz_target="AWSBudgetServiceGateway.CreateBudget",
 )
     
 res = s.create_budget(req)

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsId1ProtocolMappersModelsId2PathParams struct {
+type GetRealmClientsId1ProtocolMappersModelsId2Request struct {
 	Id1 string `pathParam:"style=simple,explode=false,name=id1"`
 	Id2 string `pathParam:"style=simple,explode=false,name=id2"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsId1ProtocolMappersModelsId2Request struct {
-	PathParams GetRealmClientsId1ProtocolMappersModelsId2PathParams
 }
 
 type GetRealmClientsId1ProtocolMappersModelsId2Response struct {

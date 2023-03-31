@@ -12,10 +12,11 @@ var ListTrustProductServerList = []string{
 }
 
 type ListTrustProductSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTrustProductQueryParams struct {
+type ListTrustProductRequest struct {
 	// The string that you assigned to describe the resource.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -28,12 +29,6 @@ type ListTrustProductQueryParams struct {
 	PolicySid *string `queryParam:"style=form,explode=true,name=PolicySid"`
 	// The verification status of the Customer-Profile resource.
 	Status *shared.TrustProductEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListTrustProductRequest struct {
-	QueryParams ListTrustProductQueryParams
-	Security    ListTrustProductSecurity
-	ServerURL   *string
 }
 
 type ListTrustProductListTrustProductResponseMeta struct {

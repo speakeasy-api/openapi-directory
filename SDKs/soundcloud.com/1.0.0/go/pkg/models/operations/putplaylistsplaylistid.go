@@ -8,19 +8,14 @@ import (
 )
 
 type PutPlaylistsPlaylistIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PutPlaylistsPlaylistIDPathParams struct {
-	// SoundCloud playlist id
-	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PutPlaylistsPlaylistIDRequest struct {
-	PathParams PutPlaylistsPlaylistIDPathParams
 	// Playlist payload
-	Request  *shared.CreateUpdatePlaylistRequest `request:"mediaType=application/json"`
-	Security PutPlaylistsPlaylistIDSecurity
+	CreateUpdatePlaylistRequest *shared.CreateUpdatePlaylistRequest `request:"mediaType=application/json"`
+	// SoundCloud playlist id
+	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
 }
 
 // PutPlaylistsPlaylistID200ApplicationJSONTracks - Soundcloud Track object.

@@ -32,11 +32,11 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // OrgpolicyOrganizationsCustomConstraintsCreate - Creates a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
-func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest) (*operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse, error) {
+func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest, security operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity) (*operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudOrgpolicyV2CustomConstraintInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx contex
 }
 
 // OrgpolicyOrganizationsCustomConstraintsList - Retrieves all of the custom constraints that exist on a particular organization resource.
-func (s *organizations) OrgpolicyOrganizationsCustomConstraintsList(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsListRequest) (*operations.OrgpolicyOrganizationsCustomConstraintsListResponse, error) {
+func (s *organizations) OrgpolicyOrganizationsCustomConstraintsList(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsListRequest, security operations.OrgpolicyOrganizationsCustomConstraintsListSecurity) (*operations.OrgpolicyOrganizationsCustomConstraintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

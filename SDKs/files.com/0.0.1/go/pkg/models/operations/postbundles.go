@@ -98,10 +98,6 @@ type PostBundlesRequestBody struct {
 	WatermarkAttachmentFile *PostBundlesRequestBodyWatermarkAttachmentFile `multipartForm:"file"`
 }
 
-type PostBundlesRequest struct {
-	Request *PostBundlesRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostBundlesResponse struct {
 	// The Bundles object.
 	BundleEntity *shared.BundleEntity

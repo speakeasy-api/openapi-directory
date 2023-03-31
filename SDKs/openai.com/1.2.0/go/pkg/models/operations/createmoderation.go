@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateModerationRequest struct {
-	Request shared.CreateModerationRequest `request:"mediaType=application/json"`
-}
-
 type CreateModerationResponse struct {
 	ContentType string
 	// OK

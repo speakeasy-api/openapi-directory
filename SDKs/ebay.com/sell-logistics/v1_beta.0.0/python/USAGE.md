@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CancelShipmentRequest(
-    security=operations.CancelShipmentSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CancelShipmentPathParams(
-        shipment_id="aliquid",
-    ),
+    shipment_id="corrupti",
 )
     
-res = s.shipment.cancel_shipment(req)
+res = s.shipment.cancel_shipment(req, operations.CancelShipmentSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.shipment is not None:
     # handle response

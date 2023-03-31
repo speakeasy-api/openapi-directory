@@ -8,14 +8,7 @@ import (
 )
 
 type CreateVideoThumbnailAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateVideoThumbnailAlt1PathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateVideoThumbnailAlt1RequestBody struct {
@@ -26,9 +19,11 @@ type CreateVideoThumbnailAlt1RequestBody struct {
 }
 
 type CreateVideoThumbnailAlt1Request struct {
-	PathParams CreateVideoThumbnailAlt1PathParams
-	Request    *CreateVideoThumbnailAlt1RequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   CreateVideoThumbnailAlt1Security
+	RequestBody *CreateVideoThumbnailAlt1RequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type CreateVideoThumbnailAlt1Response struct {

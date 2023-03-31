@@ -14,44 +14,47 @@ func main() {
     s := sdk.New()
 
     req := operations.PlayablelocationsLogImpressionsRequest{
-        QueryParams: operations.PlayablelocationsLogImpressionsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest{
+        DollarXgafv: "2",
+        GoogleMapsPlayablelocationsV3LogImpressionsRequest: &shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest{
             ClientInfo: &shared.GoogleMapsUnityClientInfo{
-                APIClient: "deserunt",
-                ApplicationID: "suscipit",
-                ApplicationVersion: "iure",
-                DeviceModel: "magnam",
-                LanguageCode: "debitis",
-                OperatingSystem: "ipsa",
-                OperatingSystemBuild: "delectus",
-                Platform: "MAC_OS",
+                APIClient: "provident",
+                ApplicationID: "distinctio",
+                ApplicationVersion: "quibusdam",
+                DeviceModel: "unde",
+                LanguageCode: "nulla",
+                OperatingSystem: "corrupti",
+                OperatingSystemBuild: "illum",
+                Platform: "WINDOWS",
             },
             Impressions: []shared.GoogleMapsPlayablelocationsV3Impression{
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 477665,
-                    ImpressionType: "INTERACTED",
-                    LocationName: "placeat",
+                    GameObjectType: 645894,
+                    ImpressionType: "PRESENTED",
+                    LocationName: "iure",
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 528895,
-                    ImpressionType: "PRESENTED",
-                    LocationName: "excepturi",
+                    GameObjectType: 297534,
+                    ImpressionType: "INTERACTED",
+                    LocationName: "ipsa",
+                },
+                shared.GoogleMapsPlayablelocationsV3Impression{
+                    GameObjectType: 963663,
+                    ImpressionType: "IMPRESSION_TYPE_UNSPECIFIED",
+                    LocationName: "suscipit",
                 },
             },
-            RequestID: "nisi",
+            RequestID: "molestiae",
         },
+        AccessToken: "minus",
+        Alt: "proto",
+        Callback: "voluptatum",
+        Fields: "iusto",
+        Key: "excepturi",
+        OauthToken: "nisi",
+        PrettyPrint: false,
+        QuotaUser: "recusandae",
+        UploadType: "temporibus",
+        UploadProtocol: "ab",
     }
 
     ctx := context.Background()

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchProjectGpsRawQueryParams struct {
+type SearchProjectGpsRawRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchProjectGpsRawQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchProjectGpsRawRequest struct {
-	QueryParams SearchProjectGpsRawQueryParams
 }
 
 type SearchProjectGpsRawResponse struct {

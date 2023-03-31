@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupCoveragePlansPathParams struct {
+type GetGroupCoveragePlansRequest struct {
 	// The unique identifier of the group coverage.
 	GroupCoverageID string `pathParam:"style=simple,explode=false,name=group_coverage_id"`
-}
-
-type GetGroupCoveragePlansRequest struct {
-	PathParams GetGroupCoveragePlansPathParams
 }
 
 type GetGroupCoveragePlansResponse struct {

@@ -37,7 +37,7 @@ func newRequests(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Request
 func (s *requests) DeleteRequestsID(ctx context.Context, request operations.DeleteRequestsIDRequest) (*operations.DeleteRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/requests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *requests) GetRequests(ctx context.Context, request operations.GetReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,14 +161,14 @@ func (s *requests) GetRequests(ctx context.Context, request operations.GetReques
 // List Requests
 func (s *requests) GetRequestsFoldersPath(ctx context.Context, request operations.GetRequestsFoldersPathRequest) (*operations.GetRequestsFoldersPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/requests/folders/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/requests/folders/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,7 +227,7 @@ func (s *requests) GetRequestsFoldersPath(ctx context.Context, request operation
 
 // PostRequests - Create Request
 // Create Request
-func (s *requests) PostRequests(ctx context.Context, request operations.PostRequestsRequest) (*operations.PostRequestsResponse, error) {
+func (s *requests) PostRequests(ctx context.Context, request operations.PostRequestsRequestBody) (*operations.PostRequestsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/requests"
 

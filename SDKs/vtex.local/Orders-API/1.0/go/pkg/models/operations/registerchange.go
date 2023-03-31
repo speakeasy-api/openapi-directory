@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterChangePathParams struct {
-	// ID that identifies the order in the seller.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type RegisterChangeHeaders struct {
+type RegisterChangeRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RegisterChangeRequest struct {
-	PathParams RegisterChangePathParams
-	Headers    RegisterChangeHeaders
-	Request    shared.RegisterChangeRequest `request:"mediaType=application/json"`
+	ContentType           string                       `header:"style=simple,explode=false,name=Content-Type"`
+	RegisterChangeRequest shared.RegisterChangeRequest `request:"mediaType=application/json"`
+	// ID that identifies the order in the seller.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type RegisterChangeResponse struct {

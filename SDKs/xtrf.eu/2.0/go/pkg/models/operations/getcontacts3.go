@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContacts3PathParams struct {
+type GetContacts3Request struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type GetContacts3Request struct {
-	PathParams GetContacts3PathParams
 }
 
 type GetContacts3Response struct {

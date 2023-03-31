@@ -8,13 +8,7 @@ import (
 )
 
 type BulkCreateNegativeKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkCreateNegativeKeywordRequest struct {
-	// A type that defines the fields for the bulk request to create negative keywords.
-	Request  shared.BulkCreateNegativeKeywordRequest `request:"mediaType=application/json"`
-	Security BulkCreateNegativeKeywordSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkCreateNegativeKeywordResponse struct {

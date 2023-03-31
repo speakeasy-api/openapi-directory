@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomField2PathParams struct {
+type UpdateCustomField2Request struct {
+	// Updated custom field with a specified key in a project.
+	SmartCustomFieldDTO shared.SmartCustomFieldDTO `request:"mediaType=application/json"`
 	// custom field's key
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateCustomField2Request struct {
-	PathParams UpdateCustomField2PathParams
-	// Updated custom field with a specified key in a project.
-	Request shared.SmartCustomFieldDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCustomField2Response struct {

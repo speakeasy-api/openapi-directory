@@ -8,19 +8,14 @@ import (
 )
 
 type GetShippingFulfillmentSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetShippingFulfillmentPathParams struct {
+type GetShippingFulfillmentRequest struct {
 	// The unique identifier of the fulfillment. This eBay-generated value was created by the <b>Create Shipping Fulfillment</b> call, and returned by the <b>getShippingFulfillments</b> call in the <b>fulfillments.fulfillmentId</b> field; for example, <code>9405509699937003457459</code>.
 	FulfillmentID string `pathParam:"style=simple,explode=false,name=fulfillmentId"`
 	// The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the <b>getOrders</b> method in the <b>orders.orderId</b> field.
 	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetShippingFulfillmentRequest struct {
-	PathParams GetShippingFulfillmentPathParams
-	Security   GetShippingFulfillmentSecurity
 }
 
 type GetShippingFulfillmentResponse struct {

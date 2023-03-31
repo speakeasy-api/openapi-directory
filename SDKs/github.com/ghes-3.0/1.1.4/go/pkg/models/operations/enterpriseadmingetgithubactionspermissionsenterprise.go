@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetGithubActionsPermissionsEnterprisePathParams struct {
+type EnterpriseAdminGetGithubActionsPermissionsEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminGetGithubActionsPermissionsEnterpriseRequest struct {
-	PathParams EnterpriseAdminGetGithubActionsPermissionsEnterprisePathParams
 }
 
 type EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse struct {

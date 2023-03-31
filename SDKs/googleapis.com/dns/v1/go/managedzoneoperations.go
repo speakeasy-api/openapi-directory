@@ -32,20 +32,20 @@ func newManagedZoneOperations(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // DNSManagedZoneOperationsGet - Fetches the representation of an existing Operation.
-func (s *managedZoneOperations) DNSManagedZoneOperationsGet(ctx context.Context, request operations.DNSManagedZoneOperationsGetRequest) (*operations.DNSManagedZoneOperationsGetResponse, error) {
+func (s *managedZoneOperations) DNSManagedZoneOperationsGet(ctx context.Context, request operations.DNSManagedZoneOperationsGetRequest, security operations.DNSManagedZoneOperationsGetSecurity) (*operations.DNSManagedZoneOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *managedZoneOperations) DNSManagedZoneOperationsGet(ctx context.Context,
 }
 
 // DNSManagedZoneOperationsList - Enumerates Operations for the given ManagedZone.
-func (s *managedZoneOperations) DNSManagedZoneOperationsList(ctx context.Context, request operations.DNSManagedZoneOperationsListRequest) (*operations.DNSManagedZoneOperationsListResponse, error) {
+func (s *managedZoneOperations) DNSManagedZoneOperationsList(ctx context.Context, request operations.DNSManagedZoneOperationsListRequest, security operations.DNSManagedZoneOperationsListSecurity) (*operations.DNSManagedZoneOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidBonjourForwardingPathParams struct {
+type GetNetworkWirelessSsidBonjourForwardingRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidBonjourForwardingRequest struct {
-	PathParams GetNetworkWirelessSsidBonjourForwardingPathParams
 }
 
 type GetNetworkWirelessSsidBonjourForwardingResponse struct {

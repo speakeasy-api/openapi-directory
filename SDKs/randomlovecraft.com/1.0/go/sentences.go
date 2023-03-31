@@ -41,7 +41,7 @@ func (s *sentences) GetSentences(ctx context.Context, request operations.GetSent
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *sentences) GetSentences(ctx context.Context, request operations.GetSent
 // GetSentencesFromBook - Random sentences from a specific book
 func (s *sentences) GetSentencesFromBook(ctx context.Context, request operations.GetSentencesFromBookRequest) (*operations.GetSentencesFromBookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/{id}/sentences", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/{id}/sentences", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,7 +130,7 @@ func (s *sentences) GetSentencesFromBook(ctx context.Context, request operations
 // GetSpecificSentence - A specific sentence
 func (s *sentences) GetSpecificSentence(ctx context.Context, request operations.GetSpecificSentenceRequest) (*operations.GetSpecificSentenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sentences/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sentences/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

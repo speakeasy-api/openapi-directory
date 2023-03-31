@@ -32,20 +32,20 @@ func newLicenseAssignments(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // LicensingLicenseAssignmentsDelete - Revoke a license.
-func (s *licenseAssignments) LicensingLicenseAssignmentsDelete(ctx context.Context, request operations.LicensingLicenseAssignmentsDeleteRequest) (*operations.LicensingLicenseAssignmentsDeleteResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsDelete(ctx context.Context, request operations.LicensingLicenseAssignmentsDeleteRequest, security operations.LicensingLicenseAssignmentsDeleteSecurity) (*operations.LicensingLicenseAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsDelete(ctx context.Conte
 }
 
 // LicensingLicenseAssignmentsGet - Get a specific user's license by product SKU.
-func (s *licenseAssignments) LicensingLicenseAssignmentsGet(ctx context.Context, request operations.LicensingLicenseAssignmentsGetRequest) (*operations.LicensingLicenseAssignmentsGetResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsGet(ctx context.Context, request operations.LicensingLicenseAssignmentsGetRequest, security operations.LicensingLicenseAssignmentsGetSecurity) (*operations.LicensingLicenseAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsGet(ctx context.Context,
 }
 
 // LicensingLicenseAssignmentsInsert - Assign a license.
-func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Context, request operations.LicensingLicenseAssignmentsInsertRequest) (*operations.LicensingLicenseAssignmentsInsertResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Context, request operations.LicensingLicenseAssignmentsInsertRequest, security operations.LicensingLicenseAssignmentsInsertSecurity) (*operations.LicensingLicenseAssignmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignmentInsert", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Conte
 }
 
 // LicensingLicenseAssignmentsListForProduct - List all users assigned licenses for a specific product SKU.
-func (s *licenseAssignments) LicensingLicenseAssignmentsListForProduct(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductRequest) (*operations.LicensingLicenseAssignmentsListForProductResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsListForProduct(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductRequest, security operations.LicensingLicenseAssignmentsListForProductSecurity) (*operations.LicensingLicenseAssignmentsListForProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsListForProduct(ctx conte
 }
 
 // LicensingLicenseAssignmentsListForProductAndSku - List all users assigned licenses for a specific product SKU.
-func (s *licenseAssignments) LicensingLicenseAssignmentsListForProductAndSku(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductAndSkuRequest) (*operations.LicensingLicenseAssignmentsListForProductAndSkuResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsListForProductAndSku(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductAndSkuRequest, security operations.LicensingLicenseAssignmentsListForProductAndSkuSecurity) (*operations.LicensingLicenseAssignmentsListForProductAndSkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,11 +279,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsListForProductAndSku(ctx
 }
 
 // LicensingLicenseAssignmentsPatch - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
-func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Context, request operations.LicensingLicenseAssignmentsPatchRequest) (*operations.LicensingLicenseAssignmentsPatchResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Context, request operations.LicensingLicenseAssignmentsPatchRequest, security operations.LicensingLicenseAssignmentsPatchSecurity) (*operations.LicensingLicenseAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,11 +295,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Contex
 }
 
 // LicensingLicenseAssignmentsUpdate - Reassign a user's product SKU with a different SKU in the same product.
-func (s *licenseAssignments) LicensingLicenseAssignmentsUpdate(ctx context.Context, request operations.LicensingLicenseAssignmentsUpdateRequest) (*operations.LicensingLicenseAssignmentsUpdateResponse, error) {
+func (s *licenseAssignments) LicensingLicenseAssignmentsUpdate(ctx context.Context, request operations.LicensingLicenseAssignmentsUpdateRequest, security operations.LicensingLicenseAssignmentsUpdateSecurity) (*operations.LicensingLicenseAssignmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsUpdate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

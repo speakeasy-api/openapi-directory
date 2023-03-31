@@ -35,7 +35,7 @@ func newClients(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // Create2 - Creates a new person.
 // Creates a new person. Required fields are presented in the example. Other fields (from PUT) may also be specified here.
-func (s *clients) Create2(ctx context.Context, request operations.Create2Request) (*operations.Create2Response, error) {
+func (s *clients) Create2(ctx context.Context, request shared.CustomerPersonDTO) (*operations.Create2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/customers/persons"
 
@@ -99,7 +99,7 @@ func (s *clients) Create2(ctx context.Context, request operations.Create2Request
 //	</ul>
 //
 // </p>
-func (s *clients) Create3(ctx context.Context, request operations.Create3Request) (*operations.Create3Response, error) {
+func (s *clients) Create3(ctx context.Context, request shared.CustomerDTO) (*operations.Create3Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/customers"
 
@@ -156,7 +156,7 @@ func (s *clients) Create3(ctx context.Context, request operations.Create3Request
 // Removes a person.
 func (s *clients) Delete3(ctx context.Context, request operations.Delete3Request) (*operations.Delete3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *clients) Delete3(ctx context.Context, request operations.Delete3Request
 // Removes a customer price list.
 func (s *clients) Delete4(ctx context.Context, request operations.Delete4Request) (*operations.Delete4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/priceLists/{priceListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/priceLists/{priceListId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -228,7 +228,7 @@ func (s *clients) Delete4(ctx context.Context, request operations.Delete4Request
 // Removes a client.
 func (s *clients) Delete5(ctx context.Context, request operations.Delete5Request) (*operations.Delete5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -262,7 +262,7 @@ func (s *clients) Delete5(ctx context.Context, request operations.Delete5Request
 
 // GenerateSingleUseSignInToken - Generates a single use sign-in token.
 // Generates a single use sign-in token for the customer person found for given login or e-mail. Returns 'url' and 'token' which allows to sign-in to customer portal as this person. Token is valid for two minutes and can be used only once. To sign-in to customer portal you should post 'token' provided as the 'accessToken' form param to the 'url' using POST method.Detailed description is available in the Customer API <a href="/api-doc/customer-api/authentication">authentication</a>.
-func (s *clients) GenerateSingleUseSignInToken(ctx context.Context, request operations.GenerateSingleUseSignInTokenRequest) (*operations.GenerateSingleUseSignInTokenResponse, error) {
+func (s *clients) GenerateSingleUseSignInToken(ctx context.Context, request shared.AccessTokenRequestDTO) (*operations.GenerateSingleUseSignInTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/customers/persons/accessToken"
 
@@ -319,7 +319,7 @@ func (s *clients) GenerateSingleUseSignInToken(ctx context.Context, request oper
 // Returns address of a given client.
 func (s *clients) GetAddress(ctx context.Context, request operations.GetAddressRequest) (*operations.GetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +371,7 @@ func (s *clients) GetAllIds1(ctx context.Context, request operations.GetAllIds1R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -420,7 +420,7 @@ func (s *clients) GetAllIds2(ctx context.Context, request operations.GetAllIds2R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -469,7 +469,7 @@ func (s *clients) GetAllNamesWithIds(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -511,7 +511,7 @@ func (s *clients) GetAllNamesWithIds(ctx context.Context, request operations.Get
 // Returns person details.
 func (s *clients) GetByID1(ctx context.Context, request operations.GetByID1Request) (*operations.GetByID1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,14 +556,14 @@ func (s *clients) GetByID1(ctx context.Context, request operations.GetByID1Reque
 // Returns client details.
 func (s *clients) GetByID2(ctx context.Context, request operations.GetByID2Request) (*operations.GetByID2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -605,7 +605,7 @@ func (s *clients) GetByID2(ctx context.Context, request operations.GetByID2Reque
 // Returns categories of a given client.
 func (s *clients) GetCategories(ctx context.Context, request operations.GetCategoriesRequest) (*operations.GetCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -650,7 +650,7 @@ func (s *clients) GetCategories(ctx context.Context, request operations.GetCateg
 // Returns contact of a given person.
 func (s *clients) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -695,7 +695,7 @@ func (s *clients) GetContact(ctx context.Context, request operations.GetContactR
 // Returns contact of a given client.
 func (s *clients) GetContact1(ctx context.Context, request operations.GetContact1Request) (*operations.GetContact1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -740,7 +740,7 @@ func (s *clients) GetContact1(ctx context.Context, request operations.GetContact
 // Returns correspondence address of a given client.
 func (s *clients) GetCorrespondenceAddress(ctx context.Context, request operations.GetCorrespondenceAddressRequest) (*operations.GetCorrespondenceAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -785,7 +785,7 @@ func (s *clients) GetCorrespondenceAddress(ctx context.Context, request operatio
 // Returns custom field of a given client.
 func (s *clients) GetCustomField(ctx context.Context, request operations.GetCustomFieldRequest) (*operations.GetCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -830,7 +830,7 @@ func (s *clients) GetCustomField(ctx context.Context, request operations.GetCust
 // Returns custom fields of a given person.
 func (s *clients) GetCustomFields(ctx context.Context, request operations.GetCustomFieldsRequest) (*operations.GetCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -875,7 +875,7 @@ func (s *clients) GetCustomFields(ctx context.Context, request operations.GetCus
 // Returns custom fields of a given client.
 func (s *clients) GetCustomFields1(ctx context.Context, request operations.GetCustomFields1Request) (*operations.GetCustomFields1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +920,7 @@ func (s *clients) GetCustomFields1(ctx context.Context, request operations.GetCu
 // Returns industries of a given client.
 func (s *clients) GetIndustries(ctx context.Context, request operations.GetIndustriesRequest) (*operations.GetIndustriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -965,9 +965,9 @@ func (s *clients) GetIndustries(ctx context.Context, request operations.GetIndus
 // Updates address of a given client.
 func (s *clients) UpdateAddress(ctx context.Context, request operations.UpdateAddressRequest) (*operations.UpdateAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1020,9 +1020,9 @@ func (s *clients) UpdateAddress(ctx context.Context, request operations.UpdateAd
 // Updates categories of a given client.
 func (s *clients) UpdateCategories(ctx context.Context, request operations.UpdateCategoriesRequest) (*operations.UpdateCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1075,9 +1075,9 @@ func (s *clients) UpdateCategories(ctx context.Context, request operations.Updat
 // Updates contact of a given person. Sets that this person uses specific address and contact (not the one from customer).
 func (s *clients) UpdateContact(ctx context.Context, request operations.UpdateContactRequest) (*operations.UpdateContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PersonContactDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1130,9 +1130,9 @@ func (s *clients) UpdateContact(ctx context.Context, request operations.UpdateCo
 // Updates contact of a given client.
 func (s *clients) UpdateContact1(ctx context.Context, request operations.UpdateContact1Request) (*operations.UpdateContact1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1185,9 +1185,9 @@ func (s *clients) UpdateContact1(ctx context.Context, request operations.UpdateC
 // Updates correspondence address of a given client.
 func (s *clients) UpdateCorrespondenceAddress(ctx context.Context, request operations.UpdateCorrespondenceAddressRequest) (*operations.UpdateCorrespondenceAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1240,9 +1240,9 @@ func (s *clients) UpdateCorrespondenceAddress(ctx context.Context, request opera
 // Updates given custom field of a given client.
 func (s *clients) UpdateCustomField(ctx context.Context, request operations.UpdateCustomFieldRequest) (*operations.UpdateCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1295,9 +1295,9 @@ func (s *clients) UpdateCustomField(ctx context.Context, request operations.Upda
 // Updates custom fields of a given person.
 func (s *clients) UpdateCustomFields(ctx context.Context, request operations.UpdateCustomFieldsRequest) (*operations.UpdateCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1350,9 +1350,9 @@ func (s *clients) UpdateCustomFields(ctx context.Context, request operations.Upd
 // Updates custom fields of a given client.
 func (s *clients) UpdateCustomFields1(ctx context.Context, request operations.UpdateCustomFields1Request) (*operations.UpdateCustomFields1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1405,9 +1405,9 @@ func (s *clients) UpdateCustomFields1(ctx context.Context, request operations.Up
 // Updates industries of a given client.
 func (s *clients) UpdateIndustries(ctx context.Context, request operations.UpdateIndustriesRequest) (*operations.UpdateIndustriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1460,9 +1460,9 @@ func (s *clients) UpdateIndustries(ctx context.Context, request operations.Updat
 // Only specified fields will be changed. One may not specify embeddable fields here - use separate API calls for updating them.
 func (s *clients) Update1(ctx context.Context, request operations.Update1Request) (*operations.Update1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerPersonDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1515,9 +1515,9 @@ func (s *clients) Update1(ctx context.Context, request operations.Update1Request
 // Only specified fields will be changed (id is required). One may not specify embeddable fields here - use separate API calls for updating them.
 func (s *clients) Update2(ctx context.Context, request operations.Update2Request) (*operations.Update2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsUsersGetCapabilitiesPathParams struct {
-	// Required. The resource name of the user. Only "users/me/capabilities" is supported.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 // DrivelabelsUsersGetCapabilitiesViewEnum - When specified, only certain fields belonging to the indicated view are returned.
 type DrivelabelsUsersGetCapabilitiesViewEnum string
 
@@ -38,7 +33,7 @@ func (e *DrivelabelsUsersGetCapabilitiesViewEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DrivelabelsUsersGetCapabilitiesQueryParams struct {
+type DrivelabelsUsersGetCapabilitiesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -53,6 +48,8 @@ type DrivelabelsUsersGetCapabilitiesQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the user. Only "users/me/capabilities" is supported.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -67,11 +64,6 @@ type DrivelabelsUsersGetCapabilitiesQueryParams struct {
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
 	// When specified, only certain fields belonging to the indicated view are returned.
 	View *DrivelabelsUsersGetCapabilitiesViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DrivelabelsUsersGetCapabilitiesRequest struct {
-	PathParams  DrivelabelsUsersGetCapabilitiesPathParams
-	QueryParams DrivelabelsUsersGetCapabilitiesQueryParams
 }
 
 type DrivelabelsUsersGetCapabilitiesResponse struct {

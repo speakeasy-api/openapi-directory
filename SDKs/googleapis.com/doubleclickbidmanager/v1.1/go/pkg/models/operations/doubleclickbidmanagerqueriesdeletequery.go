@@ -8,16 +8,11 @@ import (
 )
 
 type DoubleclickbidmanagerQueriesDeletequerySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DoubleclickbidmanagerQueriesDeletequeryPathParams struct {
-	// Query ID to delete.
-	QueryID string `pathParam:"style=simple,explode=false,name=queryId"`
-}
-
-type DoubleclickbidmanagerQueriesDeletequeryQueryParams struct {
+type DoubleclickbidmanagerQueriesDeletequeryRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,18 +29,14 @@ type DoubleclickbidmanagerQueriesDeletequeryQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Query ID to delete.
+	QueryID string `pathParam:"style=simple,explode=false,name=queryId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DoubleclickbidmanagerQueriesDeletequeryRequest struct {
-	PathParams  DoubleclickbidmanagerQueriesDeletequeryPathParams
-	QueryParams DoubleclickbidmanagerQueriesDeletequeryQueryParams
-	Security    DoubleclickbidmanagerQueriesDeletequerySecurity
 }
 
 type DoubleclickbidmanagerQueriesDeletequeryResponse struct {

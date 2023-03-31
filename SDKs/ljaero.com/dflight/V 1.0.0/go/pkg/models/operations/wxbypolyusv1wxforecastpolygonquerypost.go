@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WxByPolyUsV1WxForecastPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type WxByPolyUsV1WxForecastPolygonQueryPostRequest struct {
-	Headers WxByPolyUsV1WxForecastPolygonQueryPostHeaders
-	Request shared.WxByPolygon `request:"mediaType=application/json"`
+	WxByPolygon shared.WxByPolygon `request:"mediaType=application/json"`
+	XAPIKey     *string            `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type WxByPolyUsV1WxForecastPolygonQueryPostResponse struct {

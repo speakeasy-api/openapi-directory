@@ -34,7 +34,7 @@ func newMiscellaneous(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // GetResolve - Resolves soundcloud.com URLs to Resource URLs to use with the API.
-func (s *miscellaneous) GetResolve(ctx context.Context, request operations.GetResolveRequest) (*operations.GetResolveResponse, error) {
+func (s *miscellaneous) GetResolve(ctx context.Context, request operations.GetResolveRequest, security operations.GetResolveSecurity) (*operations.GetResolveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resolve"
 
@@ -43,11 +43,11 @@ func (s *miscellaneous) GetResolve(ctx context.Context, request operations.GetRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

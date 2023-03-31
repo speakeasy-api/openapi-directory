@@ -12,7 +12,8 @@ var CreateSyncServiceServerList = []string{
 }
 
 type CreateSyncServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncServiceCreateSyncServiceRequest struct {
@@ -20,12 +21,6 @@ type CreateSyncServiceCreateSyncServiceRequest struct {
 	FriendlyName                *string `form:"name=FriendlyName"`
 	ReachabilityWebhooksEnabled *bool   `form:"name=ReachabilityWebhooksEnabled"`
 	WebhookURL                  *string `form:"name=WebhookUrl"`
-}
-
-type CreateSyncServiceRequest struct {
-	Request   *CreateSyncServiceCreateSyncServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSyncServiceSecurity
-	ServerURL *string
 }
 
 type CreateSyncServiceResponse struct {

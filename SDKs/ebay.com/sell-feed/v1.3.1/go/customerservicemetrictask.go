@@ -33,11 +33,11 @@ func newCustomerServiceMetricTask(defaultClient, securityClient HTTPClient, serv
 }
 
 // CreateCustomerServiceMetricTask - <p>Use this method to create a customer service metrics download task with filter criteria for the customer service metrics report. When using this method, specify the <strong>feedType</strong> and <strong>filterCriteria</strong> including both <strong>evaluationMarketplaceId</strong> and <strong>customerServiceMetricType</strong> for the report. The method returns the location response header containing the call URI to use with <strong>getCustomerServiceMetricTask</strong> to retrieve status and details on the task.</p><p>Only CURRENT Customer Service Metrics reports can be generated with the Sell Feed API. PROJECTED reports are not supported at this time. See the <a href="/api-docs/sell/analytics/resources/customer_service_metric/methods/getCustomerServiceMetric">getCustomerServiceMetric</a> method document in the Analytics API for more information about these two types of reports.</p><p><span class="tablenote"><strong>Note:</strong> Before calling this API, retrieve the summary of the seller's performance and rating for the customer service metric by calling <strong>getCustomerServiceMetric</strong> (part of the <a href="/api-docs/sell/analytics/resources/methods">Analytics API</a>). You can then populate the create task request fields with the values from the response. This technique eliminates failed tasks that request a report for a <strong>customerServiceMetricType</strong> and <strong>evaluationMarketplaceId</strong> that are without evaluation.</span></p>
-func (s *customerServiceMetricTask) CreateCustomerServiceMetricTask(ctx context.Context, request operations.CreateCustomerServiceMetricTaskRequest) (*operations.CreateCustomerServiceMetricTaskResponse, error) {
+func (s *customerServiceMetricTask) CreateCustomerServiceMetricTask(ctx context.Context, request operations.CreateCustomerServiceMetricTaskRequest, security operations.CreateCustomerServiceMetricTaskSecurity) (*operations.CreateCustomerServiceMetricTaskResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/customer_service_metric_task"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateServiceMetricsTaskRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *customerServiceMetricTask) CreateCustomerServiceMetricTask(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *customerServiceMetricTask) CreateCustomerServiceMetricTask(ctx context.
 }
 
 // GetCustomerServiceMetricTask - <p>Use this method to retrieve customer service metric task details for the specified task. The input is <strong>task_id</strong>.</p>
-func (s *customerServiceMetricTask) GetCustomerServiceMetricTask(ctx context.Context, request operations.GetCustomerServiceMetricTaskRequest) (*operations.GetCustomerServiceMetricTaskResponse, error) {
+func (s *customerServiceMetricTask) GetCustomerServiceMetricTask(ctx context.Context, request operations.GetCustomerServiceMetricTaskRequest, security operations.GetCustomerServiceMetricTaskSecurity) (*operations.GetCustomerServiceMetricTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_service_metric_task/{task_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customer_service_metric_task/{task_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *customerServiceMetricTask) GetCustomerServiceMetricTask(ctx context.Con
 }
 
 // GetCustomerServiceMetricTasks - Use this method to return an array of customer service metric tasks. You can limit the tasks returned by specifying a date range. </p> <p> <span class="tablenote"><strong>Note:</strong> You can pass in either the <code>look_back_days </code>or<code> date_range</code>, but not both.</span></p>
-func (s *customerServiceMetricTask) GetCustomerServiceMetricTasks(ctx context.Context, request operations.GetCustomerServiceMetricTasksRequest) (*operations.GetCustomerServiceMetricTasksResponse, error) {
+func (s *customerServiceMetricTask) GetCustomerServiceMetricTasks(ctx context.Context, request operations.GetCustomerServiceMetricTasksRequest, security operations.GetCustomerServiceMetricTasksSecurity) (*operations.GetCustomerServiceMetricTasksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/customer_service_metric_task"
 
@@ -146,11 +146,11 @@ func (s *customerServiceMetricTask) GetCustomerServiceMetricTasks(ctx context.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

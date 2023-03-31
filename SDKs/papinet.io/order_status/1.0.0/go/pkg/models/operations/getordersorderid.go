@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrdersOrderIDPathParams struct {
+type GetOrdersOrderIDRequest struct {
 	// UUID of the `order` to get
 	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetOrdersOrderIDRequest struct {
-	PathParams GetOrdersOrderIDPathParams
 }
 
 type GetOrdersOrderIDResponse struct {

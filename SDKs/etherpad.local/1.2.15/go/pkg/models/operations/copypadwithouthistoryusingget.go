@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CopyPadWithoutHistoryUsingGETQueryParams struct {
+type CopyPadWithoutHistoryUsingGETRequest struct {
 	DestinationID *string `queryParam:"style=form,explode=true,name=destinationID"`
 	Force         *string `queryParam:"style=form,explode=true,name=force"`
 	SourceID      *string `queryParam:"style=form,explode=true,name=sourceID"`
-}
-
-type CopyPadWithoutHistoryUsingGETRequest struct {
-	QueryParams CopyPadWithoutHistoryUsingGETQueryParams
 }
 
 // CopyPadWithoutHistoryUsingGET500ApplicationJSON - internal api error (code 2)

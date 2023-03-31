@@ -42,9 +42,9 @@ func newSellerInvite(defaultClient, securityClient HTTPClient, serverURL, langua
 // If you want to change the status, you can start the process again, by deleting that lead through the *Delete Seller Lead* endpoint, and resending the invite through the *Resend Seller Lead's Invite* endpoint.
 func (s *sellerInvite) AcceptSellerLead(ctx context.Context, request operations.AcceptSellerLeadRequest) (*operations.AcceptSellerLeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcceptSellerLeadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -59,9 +59,9 @@ func (s *sellerInvite) AcceptSellerLead(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,16 +102,16 @@ func (s *sellerInvite) AcceptSellerLead(ctx context.Context, request operations.
 // If you want to change the status, you can start the process again, by deleting that lead through the *Delete Seller Lead* endpoint, and resending the invite through the *Resend Seller Lead's Invite* endpoint.
 func (s *sellerInvite) CreateSellerFromSellerLead(ctx context.Context, request operations.CreateSellerFromSellerLeadRequest) (*operations.CreateSellerFromSellerLeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}/seller", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}/seller", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -148,7 +148,7 @@ func (s *sellerInvite) CreateSellerLead(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/seller-register/pvt/seller-leads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSellerLeadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -163,9 +163,9 @@ func (s *sellerInvite) CreateSellerLead(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -221,9 +221,9 @@ func (s *sellerInvite) ListSellerLeads(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -256,16 +256,16 @@ func (s *sellerInvite) ListSellerLeads(ctx context.Context, request operations.L
 // This endpoint permanently deletes a seller previously invited to the marketplace, if the seller has not already accepted the invitation.
 func (s *sellerInvite) RemoveSellerLead(ctx context.Context, request operations.RemoveSellerLeadRequest) (*operations.RemoveSellerLeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -298,9 +298,9 @@ func (s *sellerInvite) RemoveSellerLead(ctx context.Context, request operations.
 // This endpoint allows marketplace operators to resend an invitation to a seller lead, previously invited to join their marketplace. The request will only accept Seller Leads whose status is `invited`. If they are already `connected` or `accepted`, the call will not be fulfilled.
 func (s *sellerInvite) ResendSellerLeadRequest(ctx context.Context, request operations.ResendSellerLeadRequestRequest) (*operations.ResendSellerLeadRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendSellerLeadRequestRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -315,9 +315,9 @@ func (s *sellerInvite) ResendSellerLeadRequest(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -366,16 +366,16 @@ func (s *sellerInvite) ResendSellerLeadRequest(ctx context.Context, request oper
 // - `email`
 func (s *sellerInvite) RetrieveSellerLead(ctx context.Context, request operations.RetrieveSellerLeadRequest) (*operations.RetrieveSellerLeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/seller-leads/{sellerLeadId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

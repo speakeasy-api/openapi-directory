@@ -36,12 +36,11 @@ pkg/models/operations/beyondcorpprojectslocationsoperationsget.go
 pkg/models/operations/beyondcorpprojectslocationsoperationslist.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1appconnection.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1appconnectiongateway.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1appconnectionapplicationendpoint.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1listappconnectionsresponse.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1resolveappconnectionsresponse.go
 pkg/models/shared/googlecloudbeyondcorpappconnectionsv1resolveappconnectionsresponseappconnectiondetails.go

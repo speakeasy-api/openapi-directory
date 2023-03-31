@@ -8,16 +8,11 @@ import (
 )
 
 type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesPathParams struct {
-	// Required. The resource name of the entitlement for which to list entitlement changes. The `-` wildcard may be used to match entitlements across a customer. Formats: * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} * accounts/{account_id}/customers/{customer_id}/entitlements/-
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesQueryParams struct {
+type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesQueryParams 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous CloudChannelService.ListEntitlementChanges call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to CloudChannelService.ListEntitlementChanges must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the entitlement for which to list entitlement changes. The `-` wildcard may be used to match entitlements across a customer. Formats: * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} * accounts/{account_id}/customers/{customer_id}/entitlements/-
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesRequest struct {
-	PathParams  CloudchannelAccountsCustomersEntitlementsListEntitlementChangesPathParams
-	QueryParams CloudchannelAccountsCustomersEntitlementsListEntitlementChangesQueryParams
-	Security    CloudchannelAccountsCustomersEntitlementsListEntitlementChangesSecurity
 }
 
 type CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse struct {

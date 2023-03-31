@@ -12,18 +12,13 @@ var FetchAccountServerList = []string{
 }
 
 type FetchAccountSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAccountPathParams struct {
-	// The Account Sid that uniquely identifies the account to fetch
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAccountRequest struct {
-	PathParams FetchAccountPathParams
-	Security   FetchAccountSecurity
-	ServerURL  *string
+	// The Account Sid that uniquely identifies the account to fetch
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchAccountResponse struct {

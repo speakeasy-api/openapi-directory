@@ -42,11 +42,11 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // the operation is not deleted; instead, it becomes an operation with
 // an Operation.error value with a google.rpc.Status.code of 1,
 // corresponding to `Code.CANCELLED`.
-func (s *operationsT) CloudprivatecatalogproducerOperationsCancel(ctx context.Context, request operations.CloudprivatecatalogproducerOperationsCancelRequest) (*operations.CloudprivatecatalogproducerOperationsCancelResponse, error) {
+func (s *operationsT) CloudprivatecatalogproducerOperationsCancel(ctx context.Context, request operations.CloudprivatecatalogproducerOperationsCancelRequest, security operations.CloudprivatecatalogproducerOperationsCancelSecurity) (*operations.CloudprivatecatalogproducerOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,11 +58,11 @@ func (s *operationsT) CloudprivatecatalogproducerOperationsCancel(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *operationsT) CloudprivatecatalogproducerOperationsCancel(ctx context.Co
 // For backwards compatibility, the default name includes the operations
 // collection id, however overriding users must ensure the name binding
 // is the parent resource, without the operations collection id.
-func (s *operationsT) CloudprivatecatalogproducerOperationsList(ctx context.Context, request operations.CloudprivatecatalogproducerOperationsListRequest) (*operations.CloudprivatecatalogproducerOperationsListResponse, error) {
+func (s *operationsT) CloudprivatecatalogproducerOperationsList(ctx context.Context, request operations.CloudprivatecatalogproducerOperationsListRequest, security operations.CloudprivatecatalogproducerOperationsListSecurity) (*operations.CloudprivatecatalogproducerOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/operations"
 
@@ -115,11 +115,11 @@ func (s *operationsT) CloudprivatecatalogproducerOperationsList(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

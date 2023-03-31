@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsProvidersListQueryParams struct {
+type CircuitsProvidersListRequest struct {
 	Account        *string `queryParam:"style=form,explode=true,name=account"`
 	AccountIc      *string `queryParam:"style=form,explode=true,name=account__ic"`
 	AccountIe      *string `queryParam:"style=form,explode=true,name=account__ie"`
@@ -71,10 +71,6 @@ type CircuitsProvidersListQueryParams struct {
 	SlugNisw  *string `queryParam:"style=form,explode=true,name=slug__nisw"`
 	Tag       *string `queryParam:"style=form,explode=true,name=tag"`
 	TagN      *string `queryParam:"style=form,explode=true,name=tag__n"`
-}
-
-type CircuitsProvidersListRequest struct {
-	QueryParams CircuitsProvidersListQueryParams
 }
 
 type CircuitsProvidersList200ApplicationJSON struct {

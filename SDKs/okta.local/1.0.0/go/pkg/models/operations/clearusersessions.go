@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ClearUserSessionsPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ClearUserSessionsRequest struct {
-	PathParams ClearUserSessionsPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ClearUserSessionsResponse struct {

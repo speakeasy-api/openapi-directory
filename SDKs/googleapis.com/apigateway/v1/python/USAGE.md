@@ -4,127 +4,156 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ApigatewayProjectsLocationsApisConfigsCreateRequest(
-    security=operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams(
-        parent="sint",
-    ),
-    query_params=operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="a",
-        alt="media",
-        api_config_id="eveniet",
-        callback="perferendis",
-        fields="numquam",
-        key="assumenda",
-        oauth_token="vitae",
-        pretty_print=True,
-        quota_user="a",
-        upload_type="mollitia",
-        upload_protocol="ut",
-    ),
-    request=shared.ApigatewayAPIConfigInput(
-        display_name="consequatur",
-        gateway_service_account="repellat",
+    dollar_xgafv="2",
+    apigateway_api_config_input=shared.ApigatewayAPIConfigInput(
+        display_name="provident",
+        gateway_service_account="distinctio",
         grpc_services=[
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="repellendus",
-                    path="alias",
+                    contents="unde",
+                    path="nulla",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="blanditiis",
-                        path="pariatur",
+                        contents="illum",
+                        path="vel",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="ipsam",
-                        path="veritatis",
+                        contents="error",
+                        path="deserunt",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="voluptatem",
-                        path="ullam",
+                        contents="suscipit",
+                        path="iure",
                     ),
                 ],
             ),
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="quasi",
-                    path="deleniti",
+                    contents="magnam",
+                    path="debitis",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="sit",
-                        path="assumenda",
+                        contents="delectus",
+                        path="tempora",
                     ),
                 ],
             ),
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="quo",
-                    path="ipsum",
+                    contents="suscipit",
+                    path="molestiae",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="laudantium",
-                        path="aperiam",
+                        contents="placeat",
+                        path="voluptatum",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="eos",
-                        path="qui",
+                        contents="iusto",
+                        path="excepturi",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="perspiciatis",
-                        path="quod",
+                        contents="nisi",
+                        path="recusandae",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="temporibus",
+                        path="ab",
+                    ),
+                ],
+            ),
+            shared.ApigatewayAPIConfigGrpcServiceDefinition(
+                file_descriptor_set=shared.ApigatewayAPIConfigFile(
+                    contents="quis",
+                    path="veritatis",
+                ),
+                source=[
+                    shared.ApigatewayAPIConfigFile(
+                        contents="perferendis",
+                        path="ipsam",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="repellendus",
+                        path="sapiente",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="quo",
+                        path="odit",
                     ),
                 ],
             ),
         ],
         labels={
-            "aliquam": "aut",
-            "laborum": "voluptatem",
-            "enim": "non",
+            "at": "maiores",
+            "molestiae": "quod",
+            "quod": "esse",
+            "totam": "porro",
         },
         managed_service_configs=[
             shared.ApigatewayAPIConfigFile(
-                contents="saepe",
-                path="dolores",
+                contents="dicta",
+                path="nam",
             ),
             shared.ApigatewayAPIConfigFile(
-                contents="dolorum",
-                path="ab",
+                contents="officia",
+                path="occaecati",
             ),
             shared.ApigatewayAPIConfigFile(
-                contents="earum",
-                path="nihil",
+                contents="fugit",
+                path="deleniti",
             ),
         ],
         openapi_documents=[
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
-                    contents="consectetur",
-                    path="ut",
+                    contents="optio",
+                    path="totam",
+                ),
+            ),
+            shared.ApigatewayAPIConfigOpenAPIDocument(
+                document=shared.ApigatewayAPIConfigFile(
+                    contents="beatae",
+                    path="commodi",
+                ),
+            ),
+            shared.ApigatewayAPIConfigOpenAPIDocument(
+                document=shared.ApigatewayAPIConfigFile(
+                    contents="molestiae",
+                    path="modi",
                 ),
             ),
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
                     contents="qui",
-                    path="deleniti",
+                    path="impedit",
                 ),
             ),
         ],
     ),
+    access_token="cum",
+    alt="media",
+    api_config_id="ipsum",
+    callback="excepturi",
+    fields_="aspernatur",
+    key="perferendis",
+    oauth_token="ad",
+    parent="natus",
+    pretty_print=False,
+    quota_user="sed",
+    upload_type="iste",
+    upload_protocol="dolor",
 )
     
-res = s.projects.apigateway_projects_locations_apis_configs_create(req)
+res = s.projects.apigateway_projects_locations_apis_configs_create(req, operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.apigateway_operation is not None:
     # handle response

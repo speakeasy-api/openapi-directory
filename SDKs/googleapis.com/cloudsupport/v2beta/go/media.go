@@ -32,20 +32,20 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudsupportMediaDownload - Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
-func (s *media) CloudsupportMediaDownload(ctx context.Context, request operations.CloudsupportMediaDownloadRequest) (*operations.CloudsupportMediaDownloadResponse, error) {
+func (s *media) CloudsupportMediaDownload(ctx context.Context, request operations.CloudsupportMediaDownloadRequest, security operations.CloudsupportMediaDownloadSecurity) (*operations.CloudsupportMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *media) CloudsupportMediaDownload(ctx context.Context, request operation
 }
 
 // CloudsupportMediaUpload - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
-func (s *media) CloudsupportMediaUpload(ctx context.Context, request operations.CloudsupportMediaUploadRequest) (*operations.CloudsupportMediaUploadResponse, error) {
+func (s *media) CloudsupportMediaUpload(ctx context.Context, request operations.CloudsupportMediaUploadRequest, security operations.CloudsupportMediaUploadSecurity) (*operations.CloudsupportMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *media) CloudsupportMediaUpload(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

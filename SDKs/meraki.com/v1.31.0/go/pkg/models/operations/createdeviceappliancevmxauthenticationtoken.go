@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CreateDeviceApplianceVmxAuthenticationTokenPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type CreateDeviceApplianceVmxAuthenticationTokenRequest struct {
-	PathParams CreateDeviceApplianceVmxAuthenticationTokenPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // CreateDeviceApplianceVmxAuthenticationToken201ApplicationJSON - Successful operation

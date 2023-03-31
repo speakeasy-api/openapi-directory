@@ -33,7 +33,7 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // YoutubeCommentsDelete - Deletes a resource.
-func (s *comments) YoutubeCommentsDelete(ctx context.Context, request operations.YoutubeCommentsDeleteRequest) (*operations.YoutubeCommentsDeleteResponse, error) {
+func (s *comments) YoutubeCommentsDelete(ctx context.Context, request operations.YoutubeCommentsDeleteRequest, security operations.YoutubeCommentsDeleteSecurity) (*operations.YoutubeCommentsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments"
 
@@ -42,11 +42,11 @@ func (s *comments) YoutubeCommentsDelete(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *comments) YoutubeCommentsDelete(ctx context.Context, request operations
 }
 
 // YoutubeCommentsInsert - Inserts a new resource into this collection.
-func (s *comments) YoutubeCommentsInsert(ctx context.Context, request operations.YoutubeCommentsInsertRequest) (*operations.YoutubeCommentsInsertResponse, error) {
+func (s *comments) YoutubeCommentsInsert(ctx context.Context, request operations.YoutubeCommentsInsertRequest, security operations.YoutubeCommentsInsertSecurity) (*operations.YoutubeCommentsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *comments) YoutubeCommentsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *comments) YoutubeCommentsInsert(ctx context.Context, request operations
 }
 
 // YoutubeCommentsList - Retrieves a list of resources, possibly filtered.
-func (s *comments) YoutubeCommentsList(ctx context.Context, request operations.YoutubeCommentsListRequest) (*operations.YoutubeCommentsListResponse, error) {
+func (s *comments) YoutubeCommentsList(ctx context.Context, request operations.YoutubeCommentsListRequest, security operations.YoutubeCommentsListSecurity) (*operations.YoutubeCommentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments"
 
@@ -136,11 +136,11 @@ func (s *comments) YoutubeCommentsList(ctx context.Context, request operations.Y
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *comments) YoutubeCommentsList(ctx context.Context, request operations.Y
 }
 
 // YoutubeCommentsMarkAsSpam - Expresses the caller's opinion that one or more comments should be flagged as spam.
-func (s *comments) YoutubeCommentsMarkAsSpam(ctx context.Context, request operations.YoutubeCommentsMarkAsSpamRequest) (*operations.YoutubeCommentsMarkAsSpamResponse, error) {
+func (s *comments) YoutubeCommentsMarkAsSpam(ctx context.Context, request operations.YoutubeCommentsMarkAsSpamRequest, security operations.YoutubeCommentsMarkAsSpamSecurity) (*operations.YoutubeCommentsMarkAsSpamResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments/markAsSpam"
 
@@ -184,11 +184,11 @@ func (s *comments) YoutubeCommentsMarkAsSpam(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *comments) YoutubeCommentsMarkAsSpam(ctx context.Context, request operat
 }
 
 // YoutubeCommentsSetModerationStatus - Sets the moderation status of one or more comments.
-func (s *comments) YoutubeCommentsSetModerationStatus(ctx context.Context, request operations.YoutubeCommentsSetModerationStatusRequest) (*operations.YoutubeCommentsSetModerationStatusResponse, error) {
+func (s *comments) YoutubeCommentsSetModerationStatus(ctx context.Context, request operations.YoutubeCommentsSetModerationStatusRequest, security operations.YoutubeCommentsSetModerationStatusSecurity) (*operations.YoutubeCommentsSetModerationStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments/setModerationStatus"
 
@@ -223,11 +223,11 @@ func (s *comments) YoutubeCommentsSetModerationStatus(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,11 +253,11 @@ func (s *comments) YoutubeCommentsSetModerationStatus(ctx context.Context, reque
 }
 
 // YoutubeCommentsUpdate - Updates an existing resource.
-func (s *comments) YoutubeCommentsUpdate(ctx context.Context, request operations.YoutubeCommentsUpdateRequest) (*operations.YoutubeCommentsUpdateResponse, error) {
+func (s *comments) YoutubeCommentsUpdate(ctx context.Context, request operations.YoutubeCommentsUpdateRequest, security operations.YoutubeCommentsUpdateSecurity) (*operations.YoutubeCommentsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/comments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,11 +269,11 @@ func (s *comments) YoutubeCommentsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UseAsDraftPathParams struct {
+type UseAsDraftRequest struct {
+	UseAsDraftPayload *shared.UseAsDraftPayload `request:"mediaType=application/json"`
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type UseAsDraftRequest struct {
-	PathParams UseAsDraftPathParams
-	Request    *shared.UseAsDraftPayload `request:"mediaType=application/json"`
 }
 
 type UseAsDraftResponse struct {

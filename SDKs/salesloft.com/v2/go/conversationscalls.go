@@ -35,7 +35,7 @@ func newConversationsCalls(defaultClient, securityClient HTTPClient, serverURL, 
 
 // PostV2ConversationsCalls - Create Conversations Call
 // Enqueue a Conversations Call for processing
-func (s *conversationsCalls) PostV2ConversationsCalls(ctx context.Context, request operations.PostV2ConversationsCallsRequest) (*operations.PostV2ConversationsCallsResponse, error) {
+func (s *conversationsCalls) PostV2ConversationsCalls(ctx context.Context, request operations.PostV2ConversationsCallsRequestBody) (*operations.PostV2ConversationsCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/conversations/calls"
 

@@ -92,15 +92,25 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateDocument(ctx context.Context, request operations.CreateDocumentRequest) (*operations.CreateDocumentResponse, error) {
-	baseURL := operations.CreateDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateDocument(ctx context.Context, request operations.CreateDocumentRequest, security operations.CreateDocumentSecurity, opts ...operations.Option) (*operations.CreateDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -112,7 +122,7 @@ func (s *SDK) CreateDocument(ctx context.Context, request operations.CreateDocum
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,10 +155,20 @@ func (s *SDK) CreateDocument(ctx context.Context, request operations.CreateDocum
 
 	return res, nil
 }
-func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceRequest) (*operations.CreateServiceResponse, error) {
+func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceCreateServiceRequest, security operations.CreateServiceSecurity, opts ...operations.Option) (*operations.CreateServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -165,7 +185,7 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -200,15 +220,25 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 }
 
 // CreateStreamMessage - Create a new Stream Message.
-func (s *SDK) CreateStreamMessage(ctx context.Context, request operations.CreateStreamMessageRequest) (*operations.CreateStreamMessageResponse, error) {
-	baseURL := operations.CreateStreamMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateStreamMessage(ctx context.Context, request operations.CreateStreamMessageRequest, security operations.CreateStreamMessageSecurity, opts ...operations.Option) (*operations.CreateStreamMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{StreamSid}/Messages", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateStreamMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{StreamSid}/Messages", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -220,7 +250,7 @@ func (s *SDK) CreateStreamMessage(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,15 +283,25 @@ func (s *SDK) CreateStreamMessage(ctx context.Context, request operations.Create
 
 	return res, nil
 }
-func (s *SDK) CreateSyncList(ctx context.Context, request operations.CreateSyncListRequest) (*operations.CreateSyncListResponse, error) {
-	baseURL := operations.CreateSyncListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSyncList(ctx context.Context, request operations.CreateSyncListRequest, security operations.CreateSyncListSecurity, opts ...operations.Option) (*operations.CreateSyncListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSyncListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +313,7 @@ func (s *SDK) CreateSyncList(ctx context.Context, request operations.CreateSyncL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,15 +346,25 @@ func (s *SDK) CreateSyncList(ctx context.Context, request operations.CreateSyncL
 
 	return res, nil
 }
-func (s *SDK) CreateSyncListItem(ctx context.Context, request operations.CreateSyncListItemRequest) (*operations.CreateSyncListItemResponse, error) {
-	baseURL := operations.CreateSyncListItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSyncListItem(ctx context.Context, request operations.CreateSyncListItemRequest, security operations.CreateSyncListItemSecurity, opts ...operations.Option) (*operations.CreateSyncListItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSyncListItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -326,7 +376,7 @@ func (s *SDK) CreateSyncListItem(ctx context.Context, request operations.CreateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,15 +409,25 @@ func (s *SDK) CreateSyncListItem(ctx context.Context, request operations.CreateS
 
 	return res, nil
 }
-func (s *SDK) CreateSyncMap(ctx context.Context, request operations.CreateSyncMapRequest) (*operations.CreateSyncMapResponse, error) {
-	baseURL := operations.CreateSyncMapServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSyncMap(ctx context.Context, request operations.CreateSyncMapRequest, security operations.CreateSyncMapSecurity, opts ...operations.Option) (*operations.CreateSyncMapResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSyncMapServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -379,7 +439,7 @@ func (s *SDK) CreateSyncMap(ctx context.Context, request operations.CreateSyncMa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -412,15 +472,25 @@ func (s *SDK) CreateSyncMap(ctx context.Context, request operations.CreateSyncMa
 
 	return res, nil
 }
-func (s *SDK) CreateSyncMapItem(ctx context.Context, request operations.CreateSyncMapItemRequest) (*operations.CreateSyncMapItemResponse, error) {
-	baseURL := operations.CreateSyncMapItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSyncMapItem(ctx context.Context, request operations.CreateSyncMapItemRequest, security operations.CreateSyncMapItemSecurity, opts ...operations.Option) (*operations.CreateSyncMapItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSyncMapItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -432,7 +502,7 @@ func (s *SDK) CreateSyncMapItem(ctx context.Context, request operations.CreateSy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -467,15 +537,25 @@ func (s *SDK) CreateSyncMapItem(ctx context.Context, request operations.CreateSy
 }
 
 // CreateSyncStream - Create a new Stream.
-func (s *SDK) CreateSyncStream(ctx context.Context, request operations.CreateSyncStreamRequest) (*operations.CreateSyncStreamResponse, error) {
-	baseURL := operations.CreateSyncStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSyncStream(ctx context.Context, request operations.CreateSyncStreamRequest, security operations.CreateSyncStreamSecurity, opts ...operations.Option) (*operations.CreateSyncStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSyncStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -487,7 +567,7 @@ func (s *SDK) CreateSyncStream(ctx context.Context, request operations.CreateSyn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,20 +600,30 @@ func (s *SDK) CreateSyncStream(ctx context.Context, request operations.CreateSyn
 
 	return res, nil
 }
-func (s *SDK) DeleteDocument(ctx context.Context, request operations.DeleteDocumentRequest) (*operations.DeleteDocumentResponse, error) {
-	baseURL := operations.DeleteDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteDocument(ctx context.Context, request operations.DeleteDocumentRequest, security operations.DeleteDocumentSecurity, opts ...operations.Option) (*operations.DeleteDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -559,20 +649,30 @@ func (s *SDK) DeleteDocument(ctx context.Context, request operations.DeleteDocum
 }
 
 // DeleteDocumentPermission - Delete a specific Sync Document Permission.
-func (s *SDK) DeleteDocumentPermission(ctx context.Context, request operations.DeleteDocumentPermissionRequest) (*operations.DeleteDocumentPermissionResponse, error) {
-	baseURL := operations.DeleteDocumentPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteDocumentPermission(ctx context.Context, request operations.DeleteDocumentPermissionRequest, security operations.DeleteDocumentPermissionSecurity, opts ...operations.Option) (*operations.DeleteDocumentPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteDocumentPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -596,20 +696,30 @@ func (s *SDK) DeleteDocumentPermission(ctx context.Context, request operations.D
 
 	return res, nil
 }
-func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest) (*operations.DeleteServiceResponse, error) {
-	baseURL := operations.DeleteServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest, security operations.DeleteServiceSecurity, opts ...operations.Option) (*operations.DeleteServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -633,20 +743,30 @@ func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServic
 
 	return res, nil
 }
-func (s *SDK) DeleteSyncList(ctx context.Context, request operations.DeleteSyncListRequest) (*operations.DeleteSyncListResponse, error) {
-	baseURL := operations.DeleteSyncListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncList(ctx context.Context, request operations.DeleteSyncListRequest, security operations.DeleteSyncListSecurity, opts ...operations.Option) (*operations.DeleteSyncListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -670,22 +790,32 @@ func (s *SDK) DeleteSyncList(ctx context.Context, request operations.DeleteSyncL
 
 	return res, nil
 }
-func (s *SDK) DeleteSyncListItem(ctx context.Context, request operations.DeleteSyncListItemRequest) (*operations.DeleteSyncListItemResponse, error) {
-	baseURL := operations.DeleteSyncListItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncListItem(ctx context.Context, request operations.DeleteSyncListItemRequest, security operations.DeleteSyncListItemSecurity, opts ...operations.Option) (*operations.DeleteSyncListItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncListItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,20 +841,30 @@ func (s *SDK) DeleteSyncListItem(ctx context.Context, request operations.DeleteS
 }
 
 // DeleteSyncListPermission - Delete a specific Sync List Permission.
-func (s *SDK) DeleteSyncListPermission(ctx context.Context, request operations.DeleteSyncListPermissionRequest) (*operations.DeleteSyncListPermissionResponse, error) {
-	baseURL := operations.DeleteSyncListPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncListPermission(ctx context.Context, request operations.DeleteSyncListPermissionRequest, security operations.DeleteSyncListPermissionSecurity, opts ...operations.Option) (*operations.DeleteSyncListPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncListPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -748,20 +888,30 @@ func (s *SDK) DeleteSyncListPermission(ctx context.Context, request operations.D
 
 	return res, nil
 }
-func (s *SDK) DeleteSyncMap(ctx context.Context, request operations.DeleteSyncMapRequest) (*operations.DeleteSyncMapResponse, error) {
-	baseURL := operations.DeleteSyncMapServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncMap(ctx context.Context, request operations.DeleteSyncMapRequest, security operations.DeleteSyncMapSecurity, opts ...operations.Option) (*operations.DeleteSyncMapResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncMapServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -785,22 +935,32 @@ func (s *SDK) DeleteSyncMap(ctx context.Context, request operations.DeleteSyncMa
 
 	return res, nil
 }
-func (s *SDK) DeleteSyncMapItem(ctx context.Context, request operations.DeleteSyncMapItemRequest) (*operations.DeleteSyncMapItemResponse, error) {
-	baseURL := operations.DeleteSyncMapItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncMapItem(ctx context.Context, request operations.DeleteSyncMapItemRequest, security operations.DeleteSyncMapItemSecurity, opts ...operations.Option) (*operations.DeleteSyncMapItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncMapItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -826,20 +986,30 @@ func (s *SDK) DeleteSyncMapItem(ctx context.Context, request operations.DeleteSy
 }
 
 // DeleteSyncMapPermission - Delete a specific Sync Map Permission.
-func (s *SDK) DeleteSyncMapPermission(ctx context.Context, request operations.DeleteSyncMapPermissionRequest) (*operations.DeleteSyncMapPermissionResponse, error) {
-	baseURL := operations.DeleteSyncMapPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncMapPermission(ctx context.Context, request operations.DeleteSyncMapPermissionRequest, security operations.DeleteSyncMapPermissionSecurity, opts ...operations.Option) (*operations.DeleteSyncMapPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncMapPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -865,20 +1035,30 @@ func (s *SDK) DeleteSyncMapPermission(ctx context.Context, request operations.De
 }
 
 // DeleteSyncStream - Delete a specific Stream.
-func (s *SDK) DeleteSyncStream(ctx context.Context, request operations.DeleteSyncStreamRequest) (*operations.DeleteSyncStreamResponse, error) {
-	baseURL := operations.DeleteSyncStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSyncStream(ctx context.Context, request operations.DeleteSyncStreamRequest, security operations.DeleteSyncStreamSecurity, opts ...operations.Option) (*operations.DeleteSyncStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSyncStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -902,20 +1082,30 @@ func (s *SDK) DeleteSyncStream(ctx context.Context, request operations.DeleteSyn
 
 	return res, nil
 }
-func (s *SDK) FetchDocument(ctx context.Context, request operations.FetchDocumentRequest) (*operations.FetchDocumentResponse, error) {
-	baseURL := operations.FetchDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDocument(ctx context.Context, request operations.FetchDocumentRequest, security operations.FetchDocumentSecurity, opts ...operations.Option) (*operations.FetchDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -950,20 +1140,30 @@ func (s *SDK) FetchDocument(ctx context.Context, request operations.FetchDocumen
 }
 
 // FetchDocumentPermission - Fetch a specific Sync Document Permission.
-func (s *SDK) FetchDocumentPermission(ctx context.Context, request operations.FetchDocumentPermissionRequest) (*operations.FetchDocumentPermissionResponse, error) {
-	baseURL := operations.FetchDocumentPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDocumentPermission(ctx context.Context, request operations.FetchDocumentPermissionRequest, security operations.FetchDocumentPermissionSecurity, opts ...operations.Option) (*operations.FetchDocumentPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDocumentPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -996,20 +1196,30 @@ func (s *SDK) FetchDocumentPermission(ctx context.Context, request operations.Fe
 
 	return res, nil
 }
-func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest) (*operations.FetchServiceResponse, error) {
-	baseURL := operations.FetchServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest, security operations.FetchServiceSecurity, opts ...operations.Option) (*operations.FetchServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,20 +1252,30 @@ func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceR
 
 	return res, nil
 }
-func (s *SDK) FetchSyncList(ctx context.Context, request operations.FetchSyncListRequest) (*operations.FetchSyncListResponse, error) {
-	baseURL := operations.FetchSyncListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncList(ctx context.Context, request operations.FetchSyncListRequest, security operations.FetchSyncListSecurity, opts ...operations.Option) (*operations.FetchSyncListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1088,20 +1308,30 @@ func (s *SDK) FetchSyncList(ctx context.Context, request operations.FetchSyncLis
 
 	return res, nil
 }
-func (s *SDK) FetchSyncListItem(ctx context.Context, request operations.FetchSyncListItemRequest) (*operations.FetchSyncListItemResponse, error) {
-	baseURL := operations.FetchSyncListItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncListItem(ctx context.Context, request operations.FetchSyncListItemRequest, security operations.FetchSyncListItemSecurity, opts ...operations.Option) (*operations.FetchSyncListItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncListItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1136,20 +1366,30 @@ func (s *SDK) FetchSyncListItem(ctx context.Context, request operations.FetchSyn
 }
 
 // FetchSyncListPermission - Fetch a specific Sync List Permission.
-func (s *SDK) FetchSyncListPermission(ctx context.Context, request operations.FetchSyncListPermissionRequest) (*operations.FetchSyncListPermissionResponse, error) {
-	baseURL := operations.FetchSyncListPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncListPermission(ctx context.Context, request operations.FetchSyncListPermissionRequest, security operations.FetchSyncListPermissionSecurity, opts ...operations.Option) (*operations.FetchSyncListPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncListPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1182,20 +1422,30 @@ func (s *SDK) FetchSyncListPermission(ctx context.Context, request operations.Fe
 
 	return res, nil
 }
-func (s *SDK) FetchSyncMap(ctx context.Context, request operations.FetchSyncMapRequest) (*operations.FetchSyncMapResponse, error) {
-	baseURL := operations.FetchSyncMapServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncMap(ctx context.Context, request operations.FetchSyncMapRequest, security operations.FetchSyncMapSecurity, opts ...operations.Option) (*operations.FetchSyncMapResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncMapServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1228,20 +1478,30 @@ func (s *SDK) FetchSyncMap(ctx context.Context, request operations.FetchSyncMapR
 
 	return res, nil
 }
-func (s *SDK) FetchSyncMapItem(ctx context.Context, request operations.FetchSyncMapItemRequest) (*operations.FetchSyncMapItemResponse, error) {
-	baseURL := operations.FetchSyncMapItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncMapItem(ctx context.Context, request operations.FetchSyncMapItemRequest, security operations.FetchSyncMapItemSecurity, opts ...operations.Option) (*operations.FetchSyncMapItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncMapItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1276,20 +1536,30 @@ func (s *SDK) FetchSyncMapItem(ctx context.Context, request operations.FetchSync
 }
 
 // FetchSyncMapPermission - Fetch a specific Sync Map Permission.
-func (s *SDK) FetchSyncMapPermission(ctx context.Context, request operations.FetchSyncMapPermissionRequest) (*operations.FetchSyncMapPermissionResponse, error) {
-	baseURL := operations.FetchSyncMapPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncMapPermission(ctx context.Context, request operations.FetchSyncMapPermissionRequest, security operations.FetchSyncMapPermissionSecurity, opts ...operations.Option) (*operations.FetchSyncMapPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncMapPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1324,20 +1594,30 @@ func (s *SDK) FetchSyncMapPermission(ctx context.Context, request operations.Fet
 }
 
 // FetchSyncStream - Fetch a specific Stream.
-func (s *SDK) FetchSyncStream(ctx context.Context, request operations.FetchSyncStreamRequest) (*operations.FetchSyncStreamResponse, error) {
-	baseURL := operations.FetchSyncStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSyncStream(ctx context.Context, request operations.FetchSyncStreamRequest, security operations.FetchSyncStreamSecurity, opts ...operations.Option) (*operations.FetchSyncStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSyncStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1370,24 +1650,34 @@ func (s *SDK) FetchSyncStream(ctx context.Context, request operations.FetchSyncS
 
 	return res, nil
 }
-func (s *SDK) ListDocument(ctx context.Context, request operations.ListDocumentRequest) (*operations.ListDocumentResponse, error) {
-	baseURL := operations.ListDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDocument(ctx context.Context, request operations.ListDocumentRequest, security operations.ListDocumentSecurity, opts ...operations.Option) (*operations.ListDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1422,24 +1712,34 @@ func (s *SDK) ListDocument(ctx context.Context, request operations.ListDocumentR
 }
 
 // ListDocumentPermission - Retrieve a list of all Permissions applying to a Sync Document.
-func (s *SDK) ListDocumentPermission(ctx context.Context, request operations.ListDocumentPermissionRequest) (*operations.ListDocumentPermissionResponse, error) {
-	baseURL := operations.ListDocumentPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDocumentPermission(ctx context.Context, request operations.ListDocumentPermissionRequest, security operations.ListDocumentPermissionSecurity, opts ...operations.Option) (*operations.ListDocumentPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDocumentPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1472,10 +1772,20 @@ func (s *SDK) ListDocumentPermission(ctx context.Context, request operations.Lis
 
 	return res, nil
 }
-func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest) (*operations.ListServiceResponse, error) {
+func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest, security operations.ListServiceSecurity, opts ...operations.Option) (*operations.ListServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -1485,11 +1795,11 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1522,24 +1832,34 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 
 	return res, nil
 }
-func (s *SDK) ListSyncList(ctx context.Context, request operations.ListSyncListRequest) (*operations.ListSyncListResponse, error) {
-	baseURL := operations.ListSyncListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncList(ctx context.Context, request operations.ListSyncListRequest, security operations.ListSyncListSecurity, opts ...operations.Option) (*operations.ListSyncListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1572,24 +1892,34 @@ func (s *SDK) ListSyncList(ctx context.Context, request operations.ListSyncListR
 
 	return res, nil
 }
-func (s *SDK) ListSyncListItem(ctx context.Context, request operations.ListSyncListItemRequest) (*operations.ListSyncListItemResponse, error) {
-	baseURL := operations.ListSyncListItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncListItem(ctx context.Context, request operations.ListSyncListItemRequest, security operations.ListSyncListItemSecurity, opts ...operations.Option) (*operations.ListSyncListItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncListItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1624,24 +1954,34 @@ func (s *SDK) ListSyncListItem(ctx context.Context, request operations.ListSyncL
 }
 
 // ListSyncListPermission - Retrieve a list of all Permissions applying to a Sync List.
-func (s *SDK) ListSyncListPermission(ctx context.Context, request operations.ListSyncListPermissionRequest) (*operations.ListSyncListPermissionResponse, error) {
-	baseURL := operations.ListSyncListPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncListPermission(ctx context.Context, request operations.ListSyncListPermissionRequest, security operations.ListSyncListPermissionSecurity, opts ...operations.Option) (*operations.ListSyncListPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncListPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1674,24 +2014,34 @@ func (s *SDK) ListSyncListPermission(ctx context.Context, request operations.Lis
 
 	return res, nil
 }
-func (s *SDK) ListSyncMap(ctx context.Context, request operations.ListSyncMapRequest) (*operations.ListSyncMapResponse, error) {
-	baseURL := operations.ListSyncMapServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncMap(ctx context.Context, request operations.ListSyncMapRequest, security operations.ListSyncMapSecurity, opts ...operations.Option) (*operations.ListSyncMapResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncMapServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1724,24 +2074,34 @@ func (s *SDK) ListSyncMap(ctx context.Context, request operations.ListSyncMapReq
 
 	return res, nil
 }
-func (s *SDK) ListSyncMapItem(ctx context.Context, request operations.ListSyncMapItemRequest) (*operations.ListSyncMapItemResponse, error) {
-	baseURL := operations.ListSyncMapItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncMapItem(ctx context.Context, request operations.ListSyncMapItemRequest, security operations.ListSyncMapItemSecurity, opts ...operations.Option) (*operations.ListSyncMapItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncMapItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1776,24 +2136,34 @@ func (s *SDK) ListSyncMapItem(ctx context.Context, request operations.ListSyncMa
 }
 
 // ListSyncMapPermission - Retrieve a list of all Permissions applying to a Sync Map.
-func (s *SDK) ListSyncMapPermission(ctx context.Context, request operations.ListSyncMapPermissionRequest) (*operations.ListSyncMapPermissionResponse, error) {
-	baseURL := operations.ListSyncMapPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncMapPermission(ctx context.Context, request operations.ListSyncMapPermissionRequest, security operations.ListSyncMapPermissionSecurity, opts ...operations.Option) (*operations.ListSyncMapPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncMapPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1828,24 +2198,34 @@ func (s *SDK) ListSyncMapPermission(ctx context.Context, request operations.List
 }
 
 // ListSyncStream - Retrieve a list of all Streams in a Service Instance.
-func (s *SDK) ListSyncStream(ctx context.Context, request operations.ListSyncStreamRequest) (*operations.ListSyncStreamResponse, error) {
-	baseURL := operations.ListSyncStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSyncStream(ctx context.Context, request operations.ListSyncStreamRequest, security operations.ListSyncStreamSecurity, opts ...operations.Option) (*operations.ListSyncStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSyncStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1878,15 +2258,25 @@ func (s *SDK) ListSyncStream(ctx context.Context, request operations.ListSyncStr
 
 	return res, nil
 }
-func (s *SDK) UpdateDocument(ctx context.Context, request operations.UpdateDocumentRequest) (*operations.UpdateDocumentResponse, error) {
-	baseURL := operations.UpdateDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateDocument(ctx context.Context, request operations.UpdateDocumentRequest, security operations.UpdateDocumentSecurity, opts ...operations.Option) (*operations.UpdateDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1898,9 +2288,9 @@ func (s *SDK) UpdateDocument(ctx context.Context, request operations.UpdateDocum
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1935,15 +2325,25 @@ func (s *SDK) UpdateDocument(ctx context.Context, request operations.UpdateDocum
 }
 
 // UpdateDocumentPermission - Update an identity's access to a specific Sync Document.
-func (s *SDK) UpdateDocumentPermission(ctx context.Context, request operations.UpdateDocumentPermissionRequest) (*operations.UpdateDocumentPermissionResponse, error) {
-	baseURL := operations.UpdateDocumentPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateDocumentPermission(ctx context.Context, request operations.UpdateDocumentPermissionRequest, security operations.UpdateDocumentPermissionSecurity, opts ...operations.Option) (*operations.UpdateDocumentPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateDocumentPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1955,7 +2355,7 @@ func (s *SDK) UpdateDocumentPermission(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1988,15 +2388,25 @@ func (s *SDK) UpdateDocumentPermission(ctx context.Context, request operations.U
 
 	return res, nil
 }
-func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServiceRequest) (*operations.UpdateServiceResponse, error) {
-	baseURL := operations.UpdateServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServiceRequest, security operations.UpdateServiceSecurity, opts ...operations.Option) (*operations.UpdateServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2008,7 +2418,7 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2041,15 +2451,25 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 
 	return res, nil
 }
-func (s *SDK) UpdateSyncList(ctx context.Context, request operations.UpdateSyncListRequest) (*operations.UpdateSyncListResponse, error) {
-	baseURL := operations.UpdateSyncListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncList(ctx context.Context, request operations.UpdateSyncListRequest, security operations.UpdateSyncListSecurity, opts ...operations.Option) (*operations.UpdateSyncListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2061,7 +2481,7 @@ func (s *SDK) UpdateSyncList(ctx context.Context, request operations.UpdateSyncL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2094,15 +2514,25 @@ func (s *SDK) UpdateSyncList(ctx context.Context, request operations.UpdateSyncL
 
 	return res, nil
 }
-func (s *SDK) UpdateSyncListItem(ctx context.Context, request operations.UpdateSyncListItemRequest) (*operations.UpdateSyncListItemResponse, error) {
-	baseURL := operations.UpdateSyncListItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncListItem(ctx context.Context, request operations.UpdateSyncListItemRequest, security operations.UpdateSyncListItemSecurity, opts ...operations.Option) (*operations.UpdateSyncListItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncListItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2114,9 +2544,9 @@ func (s *SDK) UpdateSyncListItem(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2151,15 +2581,25 @@ func (s *SDK) UpdateSyncListItem(ctx context.Context, request operations.UpdateS
 }
 
 // UpdateSyncListPermission - Update an identity's access to a specific Sync List.
-func (s *SDK) UpdateSyncListPermission(ctx context.Context, request operations.UpdateSyncListPermissionRequest) (*operations.UpdateSyncListPermissionResponse, error) {
-	baseURL := operations.UpdateSyncListPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncListPermission(ctx context.Context, request operations.UpdateSyncListPermissionRequest, security operations.UpdateSyncListPermissionSecurity, opts ...operations.Option) (*operations.UpdateSyncListPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncListPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2171,7 +2611,7 @@ func (s *SDK) UpdateSyncListPermission(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2204,15 +2644,25 @@ func (s *SDK) UpdateSyncListPermission(ctx context.Context, request operations.U
 
 	return res, nil
 }
-func (s *SDK) UpdateSyncMap(ctx context.Context, request operations.UpdateSyncMapRequest) (*operations.UpdateSyncMapResponse, error) {
-	baseURL := operations.UpdateSyncMapServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncMap(ctx context.Context, request operations.UpdateSyncMapRequest, security operations.UpdateSyncMapSecurity, opts ...operations.Option) (*operations.UpdateSyncMapResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncMapServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2224,7 +2674,7 @@ func (s *SDK) UpdateSyncMap(ctx context.Context, request operations.UpdateSyncMa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2257,15 +2707,25 @@ func (s *SDK) UpdateSyncMap(ctx context.Context, request operations.UpdateSyncMa
 
 	return res, nil
 }
-func (s *SDK) UpdateSyncMapItem(ctx context.Context, request operations.UpdateSyncMapItemRequest) (*operations.UpdateSyncMapItemResponse, error) {
-	baseURL := operations.UpdateSyncMapItemServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncMapItem(ctx context.Context, request operations.UpdateSyncMapItemRequest, security operations.UpdateSyncMapItemSecurity, opts ...operations.Option) (*operations.UpdateSyncMapItemResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncMapItemServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2277,9 +2737,9 @@ func (s *SDK) UpdateSyncMapItem(ctx context.Context, request operations.UpdateSy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2314,15 +2774,25 @@ func (s *SDK) UpdateSyncMapItem(ctx context.Context, request operations.UpdateSy
 }
 
 // UpdateSyncMapPermission - Update an identity's access to a specific Sync Map.
-func (s *SDK) UpdateSyncMapPermission(ctx context.Context, request operations.UpdateSyncMapPermissionRequest) (*operations.UpdateSyncMapPermissionResponse, error) {
-	baseURL := operations.UpdateSyncMapPermissionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncMapPermission(ctx context.Context, request operations.UpdateSyncMapPermissionRequest, security operations.UpdateSyncMapPermissionSecurity, opts ...operations.Option) (*operations.UpdateSyncMapPermissionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncMapPermissionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2334,7 +2804,7 @@ func (s *SDK) UpdateSyncMapPermission(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2369,15 +2839,25 @@ func (s *SDK) UpdateSyncMapPermission(ctx context.Context, request operations.Up
 }
 
 // UpdateSyncStream - Update a specific Stream.
-func (s *SDK) UpdateSyncStream(ctx context.Context, request operations.UpdateSyncStreamRequest) (*operations.UpdateSyncStreamResponse, error) {
-	baseURL := operations.UpdateSyncStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSyncStream(ctx context.Context, request operations.UpdateSyncStreamRequest, security operations.UpdateSyncStreamSecurity, opts ...operations.Option) (*operations.UpdateSyncStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSyncStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Streams/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2389,7 +2869,7 @@ func (s *SDK) UpdateSyncStream(ctx context.Context, request operations.UpdateSyn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

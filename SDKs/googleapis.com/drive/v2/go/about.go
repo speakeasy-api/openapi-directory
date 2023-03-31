@@ -33,7 +33,7 @@ func newAbout(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DriveAboutGet - Gets the information about the current user along with Drive API settings
-func (s *about) DriveAboutGet(ctx context.Context, request operations.DriveAboutGetRequest) (*operations.DriveAboutGetResponse, error) {
+func (s *about) DriveAboutGet(ctx context.Context, request operations.DriveAboutGetRequest, security operations.DriveAboutGetSecurity) (*operations.DriveAboutGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/about"
 
@@ -42,11 +42,11 @@ func (s *about) DriveAboutGet(ctx context.Context, request operations.DriveAbout
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

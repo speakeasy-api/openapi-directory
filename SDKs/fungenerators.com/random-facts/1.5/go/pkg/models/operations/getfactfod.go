@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFactFodSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetFactFodQueryParams struct {
-	// Category to get the fact of the day from. Must be one from the list returned from /fact/fod/categories
-	Category *string `queryParam:"style=form,explode=true,name=category"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetFactFodRequest struct {
-	QueryParams GetFactFodQueryParams
-	Security    GetFactFodSecurity
+	// Category to get the fact of the day from. Must be one from the list returned from /fact/fod/categories
+	Category *string `queryParam:"style=form,explode=true,name=category"`
 }
 
 type GetFactFodResponse struct {

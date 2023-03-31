@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationAPIRequestsOverviewResponseCodesByIntervalVersionEnum - Filter by API version of the endpoint. Allowable values are: [0, 1]
 type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalVersionEnum string
 
@@ -37,13 +33,14 @@ func (e *GetOrganizationAPIRequestsOverviewResponseCodesByIntervalVersionEnum) U
 	}
 }
 
-type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalQueryParams struct {
+type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalRequest struct {
 	// Filter by admin ID of user that made the API request
 	AdminIds []string `queryParam:"style=form,explode=false,name=adminIds"`
 	// The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
 	Interval *int64 `queryParam:"style=form,explode=true,name=interval"`
 	// Filter by operation ID of the endpoint
-	OperationIds []string `queryParam:"style=form,explode=false,name=operationIds"`
+	OperationIds   []string `queryParam:"style=form,explode=false,name=operationIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// Filter by source IP that made the API request
 	SourceIps []string `queryParam:"style=form,explode=false,name=sourceIps"`
 	// The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -56,11 +53,6 @@ type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalQueryParams struct
 	UserAgent *string `queryParam:"style=form,explode=true,name=userAgent"`
 	// Filter by API version of the endpoint. Allowable values are: [0, 1]
 	Version *GetOrganizationAPIRequestsOverviewResponseCodesByIntervalVersionEnum `queryParam:"style=form,explode=true,name=version"`
-}
-
-type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalRequest struct {
-	PathParams  GetOrganizationAPIRequestsOverviewResponseCodesByIntervalPathParams
-	QueryParams GetOrganizationAPIRequestsOverviewResponseCodesByIntervalQueryParams
 }
 
 type GetOrganizationAPIRequestsOverviewResponseCodesByInterval200ApplicationJSONCounts struct {

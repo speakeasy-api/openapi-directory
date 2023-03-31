@@ -8,18 +8,13 @@ import (
 )
 
 type GethomecoachsdataSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
-}
-
-type GethomecoachsdataQueryParams struct {
-	// Id of the device you want to retrieve information of
-	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GethomecoachsdataRequest struct {
-	QueryParams GethomecoachsdataQueryParams
-	Security    GethomecoachsdataSecurity
+	// Id of the device you want to retrieve information of
+	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 }
 
 type GethomecoachsdataResponse struct {

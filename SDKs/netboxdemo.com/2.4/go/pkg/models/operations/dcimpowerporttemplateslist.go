@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPortTemplatesListQueryParams struct {
+type DcimPowerPortTemplatesListRequest struct {
 	DevicetypeID *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type DcimPowerPortTemplatesListRequest struct {
-	QueryParams DcimPowerPortTemplatesListQueryParams
 }
 
 type DcimPowerPortTemplatesList200ApplicationJSON struct {

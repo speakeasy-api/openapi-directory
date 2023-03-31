@@ -8,17 +8,12 @@ import (
 )
 
 type GetTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetTaskPathParams struct {
-	// The ID of the task. This ID was generated when the task was created.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTaskRequest struct {
-	PathParams GetTaskPathParams
-	Security   GetTaskSecurity
+	// The ID of the task. This ID was generated when the task was created.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetTaskResponse struct {

@@ -28,7 +28,6 @@ pkg/models/operations/bigquerydatatransferprojectstransferconfigsstartmanualruns
 pkg/models/shared/checkvalidcredsresponse.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listdatasourcesresponse.go
 pkg/models/shared/datasource.go
 pkg/models/shared/datasourceparameter.go

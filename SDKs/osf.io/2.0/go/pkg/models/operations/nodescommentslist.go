@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesCommentsListPathParams struct {
+type NodesCommentsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesCommentsListRequest struct {
-	PathParams NodesCommentsListPathParams
 }
 
 // NodesCommentsListCommentAttributes - The properties of the comment entity.

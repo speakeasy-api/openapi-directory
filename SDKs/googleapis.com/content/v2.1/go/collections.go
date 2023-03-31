@@ -32,11 +32,11 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // ContentCollectionsCreate - Uploads a collection to your Merchant Center account. If a collection with the same collectionId already exists, this method updates that entry. In each update, the collection is completely replaced by the fields in the body of the update request.
-func (s *collections) ContentCollectionsCreate(ctx context.Context, request operations.ContentCollectionsCreateRequest) (*operations.ContentCollectionsCreateResponse, error) {
+func (s *collections) ContentCollectionsCreate(ctx context.Context, request operations.ContentCollectionsCreateRequest, security operations.ContentCollectionsCreateSecurity) (*operations.ContentCollectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Collection", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *collections) ContentCollectionsCreate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *collections) ContentCollectionsCreate(ctx context.Context, request oper
 }
 
 // ContentCollectionsDelete - Deletes a collection from your Merchant Center account.
-func (s *collections) ContentCollectionsDelete(ctx context.Context, request operations.ContentCollectionsDeleteRequest) (*operations.ContentCollectionsDeleteResponse, error) {
+func (s *collections) ContentCollectionsDelete(ctx context.Context, request operations.ContentCollectionsDeleteRequest, security operations.ContentCollectionsDeleteSecurity) (*operations.ContentCollectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections/{collectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections/{collectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *collections) ContentCollectionsDelete(ctx context.Context, request oper
 }
 
 // ContentCollectionsGet - Retrieves a collection from your Merchant Center account.
-func (s *collections) ContentCollectionsGet(ctx context.Context, request operations.ContentCollectionsGetRequest) (*operations.ContentCollectionsGetResponse, error) {
+func (s *collections) ContentCollectionsGet(ctx context.Context, request operations.ContentCollectionsGetRequest, security operations.ContentCollectionsGetSecurity) (*operations.ContentCollectionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections/{collectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections/{collectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *collections) ContentCollectionsGet(ctx context.Context, request operati
 }
 
 // ContentCollectionsList - Lists the collections in your Merchant Center account. The response might contain fewer items than specified by page_size. Rely on next_page_token to determine if there are more items to be requested.
-func (s *collections) ContentCollectionsList(ctx context.Context, request operations.ContentCollectionsListRequest) (*operations.ContentCollectionsListResponse, error) {
+func (s *collections) ContentCollectionsList(ctx context.Context, request operations.ContentCollectionsListRequest, security operations.ContentCollectionsListSecurity) (*operations.ContentCollectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

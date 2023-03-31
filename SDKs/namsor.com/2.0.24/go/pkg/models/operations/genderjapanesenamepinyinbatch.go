@@ -8,13 +8,7 @@ import (
 )
 
 type GenderJapaneseNamePinyinBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderJapaneseNamePinyinBatchRequest struct {
-	// A list of names, with country code.
-	Request  *shared.BatchFirstLastNameIn `request:"mediaType=application/json"`
-	Security GenderJapaneseNamePinyinBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderJapaneseNamePinyinBatchResponse struct {

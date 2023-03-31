@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListAssetsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
-type ListAssetsQueryParams struct {
+type ListAssetsRequest struct {
 	// Flag to display Legacy and Provider Ids.
 	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
 	// Limit the the number of items to be returned per page. For example: 5.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Updated After
 	UpdatedAfter *string `queryParam:"style=form,explode=true,name=updatedAfter"`
-}
-
-type ListAssetsRequest struct {
-	QueryParams ListAssetsQueryParams
-	Security    ListAssetsSecurity
 }
 
 type ListAssetsResponse struct {

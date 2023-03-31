@@ -4,49 +4,43 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.JobsProjectsTenantsClientEventsCreateRequest(
-    security=operations.JobsProjectsTenantsClientEventsCreateSecurity(
-        option1=operations.JobsProjectsTenantsClientEventsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.JobsProjectsTenantsClientEventsCreatePathParams(
-        parent="amet",
-    ),
-    query_params=operations.JobsProjectsTenantsClientEventsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="adipisci",
-        alt="media",
-        callback="sit",
-        fields="suscipit",
-        key="aliquam",
-        oauth_token="nobis",
-        pretty_print=True,
-        quota_user="eum",
-        upload_type="consequatur",
-        upload_protocol="perspiciatis",
-    ),
-    request=shared.ClientEvent(
-        create_time="hic",
-        event_id="facilis",
-        event_notes="molestiae",
+    dollar_xgafv="2",
+    client_event=shared.ClientEvent(
+        create_time="provident",
+        event_id="distinctio",
+        event_notes="quibusdam",
         job_event=shared.JobEvent(
             jobs=[
-                "molestiae",
+                "nulla",
+                "corrupti",
+                "illum",
             ],
-            type="SENT_CV",
+            type="APPLICATION_QUICK_SUBMISSION",
         ),
         request_id="error",
     ),
+    access_token="deserunt",
+    alt="media",
+    callback="iure",
+    fields_="magnam",
+    key="debitis",
+    oauth_token="ipsa",
+    parent="delectus",
+    pretty_print=False,
+    quota_user="tempora",
+    upload_type="suscipit",
+    upload_protocol="molestiae",
 )
     
-res = s.projects.jobs_projects_tenants_client_events_create(req)
+res = s.projects.jobs_projects_tenants_client_events_create(req, operations.JobsProjectsTenantsClientEventsCreateSecurity(
+    option1=operations.JobsProjectsTenantsClientEventsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.client_event is not None:
     # handle response

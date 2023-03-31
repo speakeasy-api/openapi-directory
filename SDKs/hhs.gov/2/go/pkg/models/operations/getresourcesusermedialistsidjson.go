@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesUserMediaListsIDJSONPathParams struct {
-	// The id of the record to look up
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesUserMediaListsIDJSONQueryParams struct {
+type GetResourcesUserMediaListsIDJSONRequest struct {
 	// Method used to render an html request. Accepts one: [mv, list, feed]
 	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
-}
-
-type GetResourcesUserMediaListsIDJSONRequest struct {
-	PathParams  GetResourcesUserMediaListsIDJSONPathParams
-	QueryParams GetResourcesUserMediaListsIDJSONQueryParams
+	// The id of the record to look up
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetResourcesUserMediaListsIDJSONResponse struct {

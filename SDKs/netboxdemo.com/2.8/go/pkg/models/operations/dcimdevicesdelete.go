@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimDevicesDeletePathParams struct {
+type DcimDevicesDeleteRequest struct {
 	// A unique integer value identifying this device.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDevicesDeleteRequest struct {
-	PathParams DcimDevicesDeletePathParams
 }
 
 type DcimDevicesDeleteResponse struct {

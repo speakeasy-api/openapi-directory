@@ -8,16 +8,11 @@ import (
 )
 
 type EventarcProjectsLocationsTriggersDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type EventarcProjectsLocationsTriggersDeletePathParams struct {
-	// Required. The name of the trigger to be deleted.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type EventarcProjectsLocationsTriggersDeleteQueryParams struct {
+type EventarcProjectsLocationsTriggersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type EventarcProjectsLocationsTriggersDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the trigger to be deleted.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -46,12 +43,6 @@ type EventarcProjectsLocationsTriggersDeleteQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. If set, validate the request and preview the review, but do not actually post it.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type EventarcProjectsLocationsTriggersDeleteRequest struct {
-	PathParams  EventarcProjectsLocationsTriggersDeletePathParams
-	QueryParams EventarcProjectsLocationsTriggersDeleteQueryParams
-	Security    EventarcProjectsLocationsTriggersDeleteSecurity
 }
 
 type EventarcProjectsLocationsTriggersDeleteResponse struct {

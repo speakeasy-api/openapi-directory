@@ -3,30 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        apikey="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetDirectionsOutputFormatRequest(
-    path_params=operations.GetDirectionsOutputFormatPathParams(
-        output_format="kml",
-    ),
-    query_params=operations.GetDirectionsOutputFormatQueryParams(
-        correct_side=False,
-        criteria="shortest",
-        departure="2012-09-29T14:14:23Z",
-        disable="quia",
-        distance_unit="mi",
-        output_srs=2629240772588096916,
-        points="distinctio",
-        round_trip=False,
-        route_description="nesciunt",
-    ),
+    correct_side=False,
+    criteria="fastest",
+    departure="2021-07-27T21:52:56.087Z",
+    disable="quibusdam",
+    distance_unit="mi",
+    output_format="html",
+    output_srs="26908",
+    points="illum",
+    round_trip=False,
+    route_description="vel",
 )
     
 res = s.directions.get_directions_output_format_(req)

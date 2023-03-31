@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineDisruptionPathParams struct {
+type LineDisruptionRequest struct {
 	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
 	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type LineDisruptionRequest struct {
-	PathParams LineDisruptionPathParams
 }
 
 type LineDisruptionResponse struct {

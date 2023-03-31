@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostDiseaseMmeRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PostDiseaseMmeResponse struct {
 	ContentType string
 	StatusCode  int

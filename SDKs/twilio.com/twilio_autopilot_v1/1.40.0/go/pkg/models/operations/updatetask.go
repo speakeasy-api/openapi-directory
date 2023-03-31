@@ -12,14 +12,8 @@ var UpdateTaskServerList = []string{
 }
 
 type UpdateTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The Twilio-provided string that uniquely identifies the Task resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTaskUpdateTaskRequest struct {
@@ -34,10 +28,11 @@ type UpdateTaskUpdateTaskRequest struct {
 }
 
 type UpdateTaskRequest struct {
-	PathParams UpdateTaskPathParams
-	Request    *UpdateTaskUpdateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+	AssistantSid string                       `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateTaskUpdateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Task resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateTaskResponse struct {

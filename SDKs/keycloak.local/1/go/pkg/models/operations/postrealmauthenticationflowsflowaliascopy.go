@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PostRealmAuthenticationFlowsFlowAliasCopyPathParams struct {
+type PostRealmAuthenticationFlowsFlowAliasCopyRequest struct {
+	// JSON containing 'newName' attribute
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Name of the existing authentication flow
 	FlowAlias string `pathParam:"style=simple,explode=false,name=flowAlias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationFlowsFlowAliasCopyRequest struct {
-	PathParams PostRealmAuthenticationFlowsFlowAliasCopyPathParams
-	// JSON containing 'newName' attribute
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostRealmAuthenticationFlowsFlowAliasCopyResponse struct {

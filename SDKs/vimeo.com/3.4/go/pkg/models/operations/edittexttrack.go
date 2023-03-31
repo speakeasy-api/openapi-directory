@@ -10,14 +10,7 @@ import (
 )
 
 type EditTextTrackSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditTextTrackPathParams struct {
-	// The ID of the text track.
-	TexttrackID float64 `pathParam:"style=simple,explode=false,name=texttrack_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // EditTextTrackRequestBodyTypeEnum - The text track type.
@@ -65,9 +58,11 @@ type EditTextTrackRequestBody struct {
 }
 
 type EditTextTrackRequest struct {
-	PathParams EditTextTrackPathParams
-	Request    *EditTextTrackRequestBody `request:"mediaType=application/vnd.vimeo.video.texttrack+json"`
-	Security   EditTextTrackSecurity
+	RequestBody *EditTextTrackRequestBody `request:"mediaType=application/vnd.vimeo.video.texttrack+json"`
+	// The ID of the text track.
+	TexttrackID float64 `pathParam:"style=simple,explode=false,name=texttrack_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type EditTextTrackResponse struct {

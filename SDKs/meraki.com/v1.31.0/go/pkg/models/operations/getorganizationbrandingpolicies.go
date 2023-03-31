@@ -9,12 +9,8 @@ import (
 	"time"
 )
 
-type GetOrganizationBrandingPoliciesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationBrandingPoliciesRequest struct {
-	PathParams GetOrganizationBrandingPoliciesPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationBrandingPolicies200ApplicationJSONAdminSettingsAppliesToEnum - Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.

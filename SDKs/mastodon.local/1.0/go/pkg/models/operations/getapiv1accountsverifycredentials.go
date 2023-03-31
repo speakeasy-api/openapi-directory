@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1AccountsVerifyCredentialsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1AccountsVerifyCredentialsRequest struct {
-	Security GetAPIV1AccountsVerifyCredentialsSecurity
-}
-
 type GetAPIV1AccountsVerifyCredentialsResponse struct {
 	// Note the extra `source` property, which is not visible on accounts other than your own. Also note that plain-text is used within `source` and HTML is used for their corresponding properties such as `note` and `fields`.
 	Account     *shared.Account

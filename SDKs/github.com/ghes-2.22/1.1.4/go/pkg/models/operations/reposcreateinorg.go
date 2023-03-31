@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ReposCreateInOrgRequestBodyVisibilityEnum - Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.
 // The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
 type ReposCreateInOrgRequestBodyVisibilityEnum string
@@ -80,8 +76,8 @@ type ReposCreateInOrgRequestBody struct {
 }
 
 type ReposCreateInOrgRequest struct {
-	PathParams ReposCreateInOrgPathParams
-	Request    ReposCreateInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                      `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ReposCreateInOrgResponse struct {

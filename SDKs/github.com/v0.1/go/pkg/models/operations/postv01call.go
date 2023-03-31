@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01CallSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01CallRequest struct {
-	// POST parameters
-	Request  *shared.CallParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01CallSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01CallResponse struct {

@@ -47,10 +47,6 @@ type PostClientRequestBody struct {
 	TosURI *string `json:"tos_uri,omitempty"`
 }
 
-type PostClientRequest struct {
-	Request *PostClientRequestBody `request:"mediaType=application/json"`
-}
-
 type PostClientResponse struct {
 	ContentType string
 	StatusCode  int

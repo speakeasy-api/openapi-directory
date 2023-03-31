@@ -14,42 +14,34 @@ func main() {
     s := sdk.New()
 
     req := operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteRequest{
-        Security: operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteSecurity{
-            Option1: &operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeletePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest{
+        DollarXgafv: "2",
+        GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest: &shared.GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest{
             EntityTypeNames: []string{
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
         },
+        AccessToken: "nulla",
+        Alt: "media",
+        Callback: "illum",
+        Fields: "vel",
+        Key: "error",
+        OauthToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx, req)
+    res, err := s.Projects.DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx, req, operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteSecurity{
+        Option1: &operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

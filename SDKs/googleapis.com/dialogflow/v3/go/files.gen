@@ -71,7 +71,6 @@ pkg/models/shared/googleclouddialogflowcxv3listchangelogsresponse.go
 pkg/models/shared/googleclouddialogflowcxv3changelog.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleclouddialogflowcxv3agent.go
 pkg/models/shared/googleclouddialogflowcxv3texttospeechsettings.go
 pkg/models/shared/googleclouddialogflowcxv3synthesizespeechconfig.go

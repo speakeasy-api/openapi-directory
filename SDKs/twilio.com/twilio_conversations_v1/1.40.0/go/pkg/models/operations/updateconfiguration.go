@@ -12,7 +12,8 @@ var UpdateConfigurationServerList = []string{
 }
 
 type UpdateConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConfigurationUpdateConfigurationRequest struct {
@@ -24,12 +25,6 @@ type UpdateConfigurationUpdateConfigurationRequest struct {
 	DefaultInactiveTimer *string `form:"name=DefaultInactiveTimer"`
 	// The SID of the default [Messaging Service](https://www.twilio.com/docs/sms/services/api) to use when creating a conversation.
 	DefaultMessagingServiceSid *string `form:"name=DefaultMessagingServiceSid"`
-}
-
-type UpdateConfigurationRequest struct {
-	Request   *UpdateConfigurationUpdateConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateConfigurationSecurity
-	ServerURL *string
 }
 
 type UpdateConfigurationResponse struct {

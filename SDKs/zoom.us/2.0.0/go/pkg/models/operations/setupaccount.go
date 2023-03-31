@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SetUpAccountSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type SetUpAccountPathParams struct {
-	// Unique identifier of the account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SetUpAccountApplicationJSONEmergencyAddress - Specify emergency address for the account.
@@ -40,9 +34,9 @@ type SetUpAccountApplicationJSON struct {
 }
 
 type SetUpAccountRequest struct {
-	PathParams SetUpAccountPathParams
-	Request    *SetUpAccountApplicationJSON `request:"mediaType=application/json"`
-	Security   SetUpAccountSecurity
+	RequestBody *SetUpAccountApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type SetUpAccountResponse struct {

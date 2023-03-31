@@ -85,10 +85,6 @@ type PostV2CalendarEventsUpsertRequestBody struct {
 	Title *string `form:"name=title"`
 }
 
-type PostV2CalendarEventsUpsertRequest struct {
-	Request PostV2CalendarEventsUpsertRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2CalendarEventsUpsertResponse struct {
 	Body        []byte
 	ContentType string

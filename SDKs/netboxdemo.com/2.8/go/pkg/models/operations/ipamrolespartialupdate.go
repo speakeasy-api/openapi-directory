@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRolesPartialUpdatePathParams struct {
+type IpamRolesPartialUpdateRequest struct {
+	RoleInput shared.RoleInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamRolesPartialUpdateRequest struct {
-	PathParams IpamRolesPartialUpdatePathParams
-	Request    shared.RoleInput `request:"mediaType=application/json"`
 }
 
 type IpamRolesPartialUpdateResponse struct {

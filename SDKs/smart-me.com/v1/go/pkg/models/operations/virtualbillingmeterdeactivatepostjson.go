@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type VirtualBillingMeterDeactivatePostJSONRequest struct {
-	// The Meter to activate
-	Request shared.VMeterToDeactivate `request:"mediaType=application/json"`
-}
 
 type VirtualBillingMeterDeactivatePostJSONResponse struct {
 	Body        []byte

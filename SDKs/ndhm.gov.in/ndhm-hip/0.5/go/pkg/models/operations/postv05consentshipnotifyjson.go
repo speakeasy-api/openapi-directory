@@ -11,17 +11,12 @@ var PostV05ConsentsHipNotifyJSONServerList = []string{
 	"https://your-hrp-server.com",
 }
 
-type PostV05ConsentsHipNotifyJSONHeaders struct {
+type PostV05ConsentsHipNotifyJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	HIPConsentNotification shared.HIPConsentNotification `request:"mediaType=application/json"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
-}
-
-type PostV05ConsentsHipNotifyJSONRequest struct {
-	Headers   PostV05ConsentsHipNotifyJSONHeaders
-	Request   shared.HIPConsentNotification `request:"mediaType=application/json"`
-	ServerURL *string
 }
 
 type PostV05ConsentsHipNotifyJSONResponse struct {

@@ -22,5 +22,4 @@ pkg/models/shared/ratingaspectdistribution.go
 pkg/models/shared/marketpricedetail.go
 pkg/models/shared/amount.go
 pkg/models/shared/image.go
-pkg/models/shared/security.go
 USAGE.md

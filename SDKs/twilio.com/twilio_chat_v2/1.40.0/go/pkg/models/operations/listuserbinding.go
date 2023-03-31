@@ -12,17 +12,11 @@ var ListUserBindingServerList = []string{
 }
 
 type ListUserBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUserBindingPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the User Binding resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) with the User Binding resources to read.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
-	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type ListUserBindingQueryParams struct {
+type ListUserBindingRequest struct {
 	// The push technology used by the User Binding resources to read. Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
 	BindingType []shared.UserBindingEnumBindingTypeEnum `queryParam:"style=form,explode=true,name=BindingType"`
 	// The page index. This value is simply for client state.
@@ -31,13 +25,10 @@ type ListUserBindingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListUserBindingRequest struct {
-	PathParams  ListUserBindingPathParams
-	QueryParams ListUserBindingQueryParams
-	Security    ListUserBindingSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the User Binding resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) with the User Binding resources to read.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
+	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type ListUserBindingListUserBindingResponseMeta struct {

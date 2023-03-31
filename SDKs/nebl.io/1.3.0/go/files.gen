@@ -80,7 +80,6 @@ pkg/models/shared/error.go
 pkg/models/shared/sendtxrequest.go
 pkg/models/shared/rpcresponse.go
 pkg/models/shared/rpcrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/broadcasttxrequest.go
 pkg/models/shared/burntokenresponse.go
 pkg/models/shared/burntokenrequest.go
@@ -95,3 +94,4 @@ pkg/models/shared/sendtokenresponse.go
 pkg/models/shared/sendtokenrequest.go
 pkg/models/shared/getfaucetresponse.go
 USAGE.md
+pkg/models/operations/options.go

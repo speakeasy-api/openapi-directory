@@ -37,7 +37,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Removes a report.
 func (s *reports) Delete11(ctx context.Context, request operations.Delete11Request) (*operations.Delete11Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +73,7 @@ func (s *reports) Delete11(ctx context.Context, request operations.Delete11Reque
 // Duplicates a report.
 func (s *reports) Duplicate1(ctx context.Context, request operations.Duplicate1Request) (*operations.Duplicate1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/duplicate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/duplicate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -107,7 +107,7 @@ func (s *reports) Duplicate1(ctx context.Context, request operations.Duplicate1R
 
 // ExportToXML - Exports reports definition to XML.
 // Exports reports definition to XML.
-func (s *reports) ExportToXML(ctx context.Context, request operations.ExportToXMLRequest) (*operations.ExportToXMLResponse, error) {
+func (s *reports) ExportToXML(ctx context.Context, request shared.ExportRequestDTO) (*operations.ExportToXMLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/export/xml"
 
@@ -164,7 +164,7 @@ func (s *reports) ExportToXML(ctx context.Context, request operations.ExportToXM
 // Generates CSV content for a report.
 func (s *reports) GenerateCSV(ctx context.Context, request operations.GenerateCSVRequest) (*operations.GenerateCSVResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/csv", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/csv", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *reports) GenerateCSV(ctx context.Context, request operations.GenerateCS
 // Generates printer friendly content for a report.
 func (s *reports) GeneratePrinterFriendly(ctx context.Context, request operations.GeneratePrinterFriendlyRequest) (*operations.GeneratePrinterFriendlyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/printerFriendly", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/printerFriendly", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -252,7 +252,7 @@ func (s *reports) GeneratePrinterFriendly(ctx context.Context, request operation
 
 // ImportFromXML - Imports reports definition from XML.
 // Imports a report definition from an XML using a file token. To obtain the token, you first need to upload a temporary XML file, as specified in the Files section. Note that the name of the imported report must be unique.
-func (s *reports) ImportFromXML(ctx context.Context, request operations.ImportFromXMLRequest) (*operations.ImportFromXMLResponse, error) {
+func (s *reports) ImportFromXML(ctx context.Context, request shared.ImportRequestDTO) (*operations.ImportFromXMLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/import/xml"
 
@@ -309,9 +309,9 @@ func (s *reports) ImportFromXML(ctx context.Context, request operations.ImportFr
 // Marks report as preferred or not.
 func (s *reports) SetPreferred(ctx context.Context, request operations.SetPreferredRequest) (*operations.SetPreferredResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/preferred", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/preferred", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PreferredRequestDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

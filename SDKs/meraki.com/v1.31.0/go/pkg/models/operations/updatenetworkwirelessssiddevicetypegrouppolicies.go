@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequestBodyDeviceTypePoliciesDevicePolicyEnum - The device policy. Can be one of 'Allowed', 'Blocked' or 'Group policy'
 type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequestBodyDeviceTypePoliciesDevicePolicyEnum string
 
@@ -108,8 +103,9 @@ type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest struct {
-	PathParams UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams
-	Request    *UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                       `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                                       `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse struct {

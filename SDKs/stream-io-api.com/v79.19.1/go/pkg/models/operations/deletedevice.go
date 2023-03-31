@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDeviceQueryParams struct {
+type DeleteDeviceRequest struct {
 	ID     *string `queryParam:"serialization=json,name=id"`
 	UserID *string `queryParam:"serialization=json,name=user_id"`
-}
-
-type DeleteDeviceRequest struct {
-	QueryParams DeleteDeviceQueryParams
 }
 
 type DeleteDeviceResponse struct {

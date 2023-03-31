@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryDatasetsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsInsertSecurity struct {
@@ -22,12 +22,8 @@ type BigqueryDatasetsInsertSecurity struct {
 	Option2 *BigqueryDatasetsInsertSecurityOption2 `security:"option"`
 }
 
-type BigqueryDatasetsInsertPathParams struct {
-	// Project ID of the new dataset
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryDatasetsInsertQueryParams struct {
+type BigqueryDatasetsInsertRequest struct {
+	Dataset *shared.Dataset `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -38,17 +34,12 @@ type BigqueryDatasetsInsertQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the new dataset
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryDatasetsInsertRequest struct {
-	PathParams  BigqueryDatasetsInsertPathParams
-	QueryParams BigqueryDatasetsInsertQueryParams
-	Request     *shared.Dataset `request:"mediaType=application/json"`
-	Security    BigqueryDatasetsInsertSecurity
 }
 
 type BigqueryDatasetsInsertResponse struct {

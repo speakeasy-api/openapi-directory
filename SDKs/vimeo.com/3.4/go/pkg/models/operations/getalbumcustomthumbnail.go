@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumCustomThumbnailPathParams struct {
+type GetAlbumCustomThumbnailRequest struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The ID of the custom thumbnail.
 	ThumbnailID float64 `pathParam:"style=simple,explode=false,name=thumbnail_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetAlbumCustomThumbnailRequest struct {
-	PathParams GetAlbumCustomThumbnailPathParams
 }
 
 type GetAlbumCustomThumbnailResponse struct {

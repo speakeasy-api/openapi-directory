@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type SessionControllerCreateLandlordLoginPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerCreateLandlordLoginQueryParams struct {
+type SessionControllerCreateLandlordLoginRequest struct {
 	// (Optional) The branch ID linked to the login. This will determine which in tray the request display in
 	BranchID *string `queryParam:"style=form,explode=true,name=branchID"`
 	// Contact details of the landlord
@@ -22,15 +17,12 @@ type SessionControllerCreateLandlordLoginQueryParams struct {
 	Forename string `queryParam:"style=form,explode=true,name=forename"`
 	// Address of the property linked to the landlord
 	PropertyAddress string `queryParam:"style=form,explode=true,name=propertyAddress"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The surname of the landlord
 	Surname string `queryParam:"style=form,explode=true,name=surname"`
 	// The title of the landlord
 	Title string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type SessionControllerCreateLandlordLoginRequest struct {
-	PathParams  SessionControllerCreateLandlordLoginPathParams
-	QueryParams SessionControllerCreateLandlordLoginQueryParams
 }
 
 type SessionControllerCreateLandlordLoginResponse struct {

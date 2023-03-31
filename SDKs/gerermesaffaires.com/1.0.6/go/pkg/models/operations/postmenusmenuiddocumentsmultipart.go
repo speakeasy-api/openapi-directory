@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostMenusMenuIDDocumentsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostMenusMenuIDDocumentsMultipartPathParams struct {
-	// Id of the space
-	MenuID string `pathParam:"style=simple,explode=false,name=menuId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostMenusMenuIDDocumentsMultipartFormDataFile struct {
@@ -31,10 +25,10 @@ type PostMenusMenuIDDocumentsMultipartFormData struct {
 }
 
 type PostMenusMenuIDDocumentsMultipartRequest struct {
-	PathParams PostMenusMenuIDDocumentsMultipartPathParams
 	// Document to add
-	Request  PostMenusMenuIDDocumentsMultipartFormData `request:"mediaType=multipart/form-data"`
-	Security PostMenusMenuIDDocumentsMultipartSecurity
+	RequestBody PostMenusMenuIDDocumentsMultipartFormData `request:"mediaType=multipart/form-data"`
+	// Id of the space
+	MenuID string `pathParam:"style=simple,explode=false,name=menuId"`
 }
 
 // PostMenusMenuIDDocumentsMultipart201ApplicationJSON - Report of upload

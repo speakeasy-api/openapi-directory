@@ -8,14 +8,8 @@ import (
 )
 
 type UploadEphemeralImageSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type UploadEphemeralImageRequest struct {
-	// The image data in JPEG or PNG format
-	Request  shared.ImageCreateRequest `request:"mediaType=application/json"`
-	Security UploadEphemeralImageSecurity
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadEphemeralImageResponse struct {

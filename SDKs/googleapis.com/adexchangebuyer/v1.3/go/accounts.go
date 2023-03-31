@@ -33,20 +33,20 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdexchangebuyerAccountsGet - Gets one account by ID.
-func (s *accounts) AdexchangebuyerAccountsGet(ctx context.Context, request operations.AdexchangebuyerAccountsGetRequest) (*operations.AdexchangebuyerAccountsGetResponse, error) {
+func (s *accounts) AdexchangebuyerAccountsGet(ctx context.Context, request operations.AdexchangebuyerAccountsGetRequest, security operations.AdexchangebuyerAccountsGetSecurity) (*operations.AdexchangebuyerAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *accounts) AdexchangebuyerAccountsGet(ctx context.Context, request opera
 }
 
 // AdexchangebuyerAccountsList - Retrieves the authenticated user's list of accounts.
-func (s *accounts) AdexchangebuyerAccountsList(ctx context.Context, request operations.AdexchangebuyerAccountsListRequest) (*operations.AdexchangebuyerAccountsListResponse, error) {
+func (s *accounts) AdexchangebuyerAccountsList(ctx context.Context, request operations.AdexchangebuyerAccountsListRequest, security operations.AdexchangebuyerAccountsListSecurity) (*operations.AdexchangebuyerAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -90,11 +90,11 @@ func (s *accounts) AdexchangebuyerAccountsList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *accounts) AdexchangebuyerAccountsList(ctx context.Context, request oper
 }
 
 // AdexchangebuyerAccountsPatch - Updates an existing account. This method supports patch semantics.
-func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request operations.AdexchangebuyerAccountsPatchRequest) (*operations.AdexchangebuyerAccountsPatchResponse, error) {
+func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request operations.AdexchangebuyerAccountsPatchRequest, security operations.AdexchangebuyerAccountsPatchSecurity) (*operations.AdexchangebuyerAccountsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request ope
 }
 
 // AdexchangebuyerAccountsUpdate - Updates an existing account.
-func (s *accounts) AdexchangebuyerAccountsUpdate(ctx context.Context, request operations.AdexchangebuyerAccountsUpdateRequest) (*operations.AdexchangebuyerAccountsUpdateResponse, error) {
+func (s *accounts) AdexchangebuyerAccountsUpdate(ctx context.Context, request operations.AdexchangebuyerAccountsUpdateRequest, security operations.AdexchangebuyerAccountsUpdateSecurity) (*operations.AdexchangebuyerAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *accounts) AdexchangebuyerAccountsUpdate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

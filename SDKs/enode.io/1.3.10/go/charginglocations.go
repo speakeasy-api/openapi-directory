@@ -35,16 +35,16 @@ func newChargingLocations(defaultClient, securityClient HTTPClient, serverURL, l
 
 // DeleteCharginglocationsCharginglocationid - Delete Charging Location
 // Delete a Charging Location
-func (s *chargingLocations) DeleteCharginglocationsCharginglocationid(ctx context.Context, request operations.DeleteCharginglocationsCharginglocationidRequest) (*operations.DeleteCharginglocationsCharginglocationidResponse, error) {
+func (s *chargingLocations) DeleteCharginglocationsCharginglocationid(ctx context.Context, request operations.DeleteCharginglocationsCharginglocationidRequest, security operations.DeleteCharginglocationsCharginglocationidSecurity) (*operations.DeleteCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,7 +71,7 @@ func (s *chargingLocations) DeleteCharginglocationsCharginglocationid(ctx contex
 
 // GetCharginglocations - List Charging Locations
 // Returns a list of Charging Locations registered to the User
-func (s *chargingLocations) GetCharginglocations(ctx context.Context, request operations.GetCharginglocationsRequest) (*operations.GetCharginglocationsResponse, error) {
+func (s *chargingLocations) GetCharginglocations(ctx context.Context) (*operations.GetCharginglocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/charging-locations"
 
@@ -80,7 +80,7 @@ func (s *chargingLocations) GetCharginglocations(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,16 +115,16 @@ func (s *chargingLocations) GetCharginglocations(ctx context.Context, request op
 }
 
 // GetCharginglocationsCharginglocationid - Get Charging Location
-func (s *chargingLocations) GetCharginglocationsCharginglocationid(ctx context.Context, request operations.GetCharginglocationsCharginglocationidRequest) (*operations.GetCharginglocationsCharginglocationidResponse, error) {
+func (s *chargingLocations) GetCharginglocationsCharginglocationid(ctx context.Context, request operations.GetCharginglocationsCharginglocationidRequest, security operations.GetCharginglocationsCharginglocationidSecurity) (*operations.GetCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,7 +159,7 @@ func (s *chargingLocations) GetCharginglocationsCharginglocationid(ctx context.C
 }
 
 // PostCharginglocations - Create Charging Location
-func (s *chargingLocations) PostCharginglocations(ctx context.Context, request operations.PostCharginglocationsRequest) (*operations.PostCharginglocationsResponse, error) {
+func (s *chargingLocations) PostCharginglocations(ctx context.Context, request operations.PostCharginglocationsRequestBodyInput, security operations.PostCharginglocationsSecurity) (*operations.PostCharginglocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/charging-locations"
 
@@ -175,7 +175,7 @@ func (s *chargingLocations) PostCharginglocations(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,11 +211,11 @@ func (s *chargingLocations) PostCharginglocations(ctx context.Context, request o
 
 // PutCharginglocationsCharginglocationid - Update Charging Location
 // Updates a charging location with new configuration
-func (s *chargingLocations) PutCharginglocationsCharginglocationid(ctx context.Context, request operations.PutCharginglocationsCharginglocationidRequest) (*operations.PutCharginglocationsCharginglocationidResponse, error) {
+func (s *chargingLocations) PutCharginglocationsCharginglocationid(ctx context.Context, request operations.PutCharginglocationsCharginglocationidRequest, security operations.PutCharginglocationsCharginglocationidSecurity) (*operations.PutCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *chargingLocations) PutCharginglocationsCharginglocationid(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

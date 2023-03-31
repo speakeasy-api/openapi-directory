@@ -10,29 +10,24 @@ import (
 )
 
 type CloudidentityGroupsMembershipsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsListSecurity struct {
 	Option1 *CloudidentityGroupsMembershipsListSecurityOption1 `security:"option"`
 	Option2 *CloudidentityGroupsMembershipsListSecurityOption2 `security:"option"`
 	Option3 *CloudidentityGroupsMembershipsListSecurityOption3 `security:"option"`
-}
-
-type CloudidentityGroupsMembershipsListPathParams struct {
-	// Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the form `groups/{group}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudidentityGroupsMembershipsListViewEnum - The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
@@ -62,7 +57,7 @@ func (e *CloudidentityGroupsMembershipsListViewEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type CloudidentityGroupsMembershipsListQueryParams struct {
+type CloudidentityGroupsMembershipsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -81,6 +76,8 @@ type CloudidentityGroupsMembershipsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The `next_page_token` value returned from a previous search request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the form `groups/{group}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -91,12 +88,6 @@ type CloudidentityGroupsMembershipsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
 	View *CloudidentityGroupsMembershipsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudidentityGroupsMembershipsListRequest struct {
-	PathParams  CloudidentityGroupsMembershipsListPathParams
-	QueryParams CloudidentityGroupsMembershipsListQueryParams
-	Security    CloudidentityGroupsMembershipsListSecurity
 }
 
 type CloudidentityGroupsMembershipsListResponse struct {

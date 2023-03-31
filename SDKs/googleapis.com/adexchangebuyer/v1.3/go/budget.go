@@ -32,20 +32,20 @@ func newBudget(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // AdexchangebuyerBudgetGet - Returns the budget information for the adgroup specified by the accountId and billingId.
-func (s *budget) AdexchangebuyerBudgetGet(ctx context.Context, request operations.AdexchangebuyerBudgetGetRequest) (*operations.AdexchangebuyerBudgetGetResponse, error) {
+func (s *budget) AdexchangebuyerBudgetGet(ctx context.Context, request operations.AdexchangebuyerBudgetGetRequest, security operations.AdexchangebuyerBudgetGetSecurity) (*operations.AdexchangebuyerBudgetGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *budget) AdexchangebuyerBudgetGet(ctx context.Context, request operation
 }
 
 // AdexchangebuyerBudgetPatch - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
-func (s *budget) AdexchangebuyerBudgetPatch(ctx context.Context, request operations.AdexchangebuyerBudgetPatchRequest) (*operations.AdexchangebuyerBudgetPatchResponse, error) {
+func (s *budget) AdexchangebuyerBudgetPatch(ctx context.Context, request operations.AdexchangebuyerBudgetPatchRequest, security operations.AdexchangebuyerBudgetPatchSecurity) (*operations.AdexchangebuyerBudgetPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Budget", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *budget) AdexchangebuyerBudgetPatch(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *budget) AdexchangebuyerBudgetPatch(ctx context.Context, request operati
 }
 
 // AdexchangebuyerBudgetUpdate - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
-func (s *budget) AdexchangebuyerBudgetUpdate(ctx context.Context, request operations.AdexchangebuyerBudgetUpdateRequest) (*operations.AdexchangebuyerBudgetUpdateResponse, error) {
+func (s *budget) AdexchangebuyerBudgetUpdate(ctx context.Context, request operations.AdexchangebuyerBudgetUpdateRequest, security operations.AdexchangebuyerBudgetUpdateSecurity) (*operations.AdexchangebuyerBudgetUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}/{billingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Budget", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *budget) AdexchangebuyerBudgetUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

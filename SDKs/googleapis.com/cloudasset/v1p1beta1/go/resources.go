@@ -32,20 +32,20 @@ func newResources(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CloudassetResourcesSearchAll - Searches all the resources within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the resources within a scope, even if they don't have `.get` permission of all the resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will be rejected.
-func (s *resources) CloudassetResourcesSearchAll(ctx context.Context, request operations.CloudassetResourcesSearchAllRequest) (*operations.CloudassetResourcesSearchAllResponse, error) {
+func (s *resources) CloudassetResourcesSearchAll(ctx context.Context, request operations.CloudassetResourcesSearchAllRequest, security operations.CloudassetResourcesSearchAllSecurity) (*operations.CloudassetResourcesSearchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/resources:searchAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/resources:searchAll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

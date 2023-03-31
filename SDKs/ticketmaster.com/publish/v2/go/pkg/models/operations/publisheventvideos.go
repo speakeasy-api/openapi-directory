@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishEventVideosPathParams struct {
-	// ID of the event the video is linked to
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PublishEventVideosHeaders struct {
+type PublishEventVideosRequest struct {
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishEventVideosRequest struct {
-	PathParams PublishEventVideosPathParams
-	Headers    PublishEventVideosHeaders
 	// Video data
-	Request shared.Video `request:"mediaType=application/json"`
+	Video shared.Video `request:"mediaType=application/json"`
+	// ID of the event the video is linked to
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PublishEventVideosResponse struct {

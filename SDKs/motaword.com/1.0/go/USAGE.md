@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            MwoAuth: shared.SchemeMwoAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            MwoAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.DeleteCacheRequest{
-        PathParams: operations.DeleteCachePathParams{
-            Key: "corrupti",
-        },
+        Key: "corrupti",
     }
 
     ctx := context.Background()

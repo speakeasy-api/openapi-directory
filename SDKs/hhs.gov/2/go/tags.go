@@ -37,14 +37,14 @@ func newTags(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // List of Tags
 func (s *tags) GetResourcesTagsFormat(ctx context.Context, request operations.GetResourcesTagsFormatRequest) (*operations.GetResourcesTagsFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *tags) GetResourcesTagsFormat(ctx context.Context, request operations.Ge
 // List of Tag Languages
 func (s *tags) GetResourcesTagsTagLanguagesFormat(ctx context.Context, request operations.GetResourcesTagsTagLanguagesFormatRequest) (*operations.GetResourcesTagsTagLanguagesFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagLanguages.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagLanguages.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *tags) GetResourcesTagsTagLanguagesFormat(ctx context.Context, request o
 // List of Types
 func (s *tags) GetResourcesTagsTagTypesFormat(ctx context.Context, request operations.GetResourcesTagsTagTypesFormatRequest) (*operations.GetResourcesTagsTagTypesFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagTypes.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/tagTypes.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *tags) GetResourcesTagsTagTypesFormat(ctx context.Context, request opera
 // Information about a specific tag
 func (s *tags) GetResourcesTagsIDFormat(ctx context.Context, request operations.GetResourcesTagsIDFormatRequest) (*operations.GetResourcesTagsIDFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,14 +233,14 @@ func (s *tags) GetResourcesTagsIDFormat(ctx context.Context, request operations.
 // MediaItem
 func (s *tags) GetResourcesTagsIDMediaFormat(ctx context.Context, request operations.GetResourcesTagsIDMediaFormatRequest) (*operations.GetResourcesTagsIDMediaFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/media.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/media.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -285,14 +285,14 @@ func (s *tags) GetResourcesTagsIDMediaFormat(ctx context.Context, request operat
 // Information about related tags to a specific tag
 func (s *tags) GetResourcesTagsIDRelatedFormat(ctx context.Context, request operations.GetResourcesTagsIDRelatedFormatRequest) (*operations.GetResourcesTagsIDRelatedFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/related.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/related.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -337,14 +337,14 @@ func (s *tags) GetResourcesTagsIDRelatedFormat(ctx context.Context, request oper
 // MediaItem
 func (s *tags) GetResourcesTagsIDSyndicateFormat(ctx context.Context, request operations.GetResourcesTagsIDSyndicateFormatRequest) (*operations.GetResourcesTagsIDSyndicateFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/syndicate.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/tags/{id}/syndicate.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

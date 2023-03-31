@@ -41,7 +41,7 @@ func newRegistrationSchemas(defaultClient, securityClient HTTPClient, serverURL,
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrationSchemas) RegistrationSchemaRead(ctx context.Context, request operations.RegistrationSchemaReadRequest) (*operations.RegistrationSchemaReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schemas/registrations/{registration_schema_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schemas/registrations/{registration_schema_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

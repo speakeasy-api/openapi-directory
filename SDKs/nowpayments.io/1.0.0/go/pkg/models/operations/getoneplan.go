@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOnePlanPathParams struct {
-	PlanID string `pathParam:"style=simple,explode=false,name=plan-id"`
-}
-
-type GetOnePlanHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type GetOnePlanRequest struct {
-	PathParams GetOnePlanPathParams
-	Headers    GetOnePlanHeaders
+	PlanID  string  `pathParam:"style=simple,explode=false,name=plan-id"`
+	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetOnePlan404ApplicationJSON - 404

@@ -42,7 +42,7 @@ func newDomain(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Domainname is the fully qualified DNS name of the domain you get (e.g. *phantauth.net* or *phantauth.cf*).
 func (s *domain) GetDomainDomainname(ctx context.Context, request operations.GetDomainDomainnameRequest) (*operations.GetDomainDomainnameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domain/{domainname}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domain/{domainname}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

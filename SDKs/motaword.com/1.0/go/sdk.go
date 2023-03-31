@@ -368,7 +368,7 @@ func New(opts ...SDKOption) *SDK {
 // DeleteCache - Clear cache by key
 func (s *SDK) DeleteCache(ctx context.Context, request operations.DeleteCacheRequest) (*operations.DeleteCacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cache/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cache/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

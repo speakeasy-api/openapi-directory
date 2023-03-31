@@ -8,13 +8,7 @@ import (
 )
 
 type ParseNameGeoBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ParseNameGeoBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameGeoIn `request:"mediaType=application/json"`
-	Security ParseNameGeoBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ParseNameGeoBatchResponse struct {

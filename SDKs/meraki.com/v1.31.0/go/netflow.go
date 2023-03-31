@@ -34,7 +34,7 @@ func newNetflow(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Return the NetFlow traffic reporting settings for a network
 func (s *netflow) GetNetworkNetflow(ctx context.Context, request operations.GetNetworkNetflowRequest) (*operations.GetNetworkNetflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *netflow) GetNetworkNetflow(ctx context.Context, request operations.GetN
 // Update the NetFlow traffic reporting settings for a network
 func (s *netflow) UpdateNetworkNetflow(ctx context.Context, request operations.UpdateNetworkNetflowRequest) (*operations.UpdateNetworkNetflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetShowsQueryParams struct {
+type GetShowsRequest struct {
 	// Amount of items to return
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// The ending datetime. Maximum 1 hour in past.
@@ -23,10 +23,6 @@ type GetShowsQueryParams struct {
 	// The datetime starting from items must be returned. Maximum 1 hour in past.
 	//
 	Start *time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetShowsRequest struct {
-	QueryParams GetShowsQueryParams
 }
 
 type GetShows200ApplicationXMLLinks struct {

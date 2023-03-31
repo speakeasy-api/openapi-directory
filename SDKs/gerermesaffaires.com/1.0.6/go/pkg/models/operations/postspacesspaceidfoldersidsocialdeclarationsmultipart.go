@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartPathParams struct {
-	// Id of the folder social regime
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartFormDataAccountingWorkbookEnum string
@@ -89,10 +81,12 @@ type PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartFormData1 struct {
 }
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartPathParams
 	// Social declaration to add (either (Reference,DocumentId) either (File,Name,Content64Encoded,Title,Reference) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder social regime
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipart201ApplicationJSON - Id of document created

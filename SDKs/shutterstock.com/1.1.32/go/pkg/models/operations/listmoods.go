@@ -8,18 +8,13 @@ import (
 )
 
 type ListMoodsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type ListMoodsQueryParams struct {
-	// Which language the moods will be returned in
-	Language *string `queryParam:"style=form,explode=true,name=language"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListMoodsRequest struct {
-	QueryParams ListMoodsQueryParams
-	Security    ListMoodsSecurity
+	// Which language the moods will be returned in
+	Language *string `queryParam:"style=form,explode=true,name=language"`
 }
 
 type ListMoodsResponse struct {

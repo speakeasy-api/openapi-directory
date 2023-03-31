@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveSnippetSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveSnippetPathParams struct {
-	// The ID of the site that contains the snippet.
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveSnippetRequest struct {
-	PathParams RetrieveSnippetPathParams
-	Security   RetrieveSnippetSecurity
+	// The ID of the site that contains the snippet.
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type RetrieveSnippetResponse struct {

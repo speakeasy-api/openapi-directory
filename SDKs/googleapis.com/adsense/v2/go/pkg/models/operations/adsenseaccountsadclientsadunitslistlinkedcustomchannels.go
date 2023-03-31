@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurity struct {
@@ -22,12 +22,7 @@ type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurity struct {
 	Option2 *AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsPathParams struct {
-	// Required. The ad unit which owns the collection of custom channels. Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsQueryParams struct {
+type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListLinkedCustomChannels` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListLinkedCustomChannels` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The ad unit which owns the collection of custom channels. Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsRequest struct {
-	PathParams  AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsPathParams
-	QueryParams AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsQueryParams
-	Security    AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurity
 }
 
 type AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse struct {

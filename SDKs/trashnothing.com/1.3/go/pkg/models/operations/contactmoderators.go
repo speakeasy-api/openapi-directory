@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type ContactModeratorsPathParams struct {
-	// The group ID of the group whose moderators will be contacted.
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 type ContactModeratorsRequestBody struct {
 	// The body of the message.
 	Message string `multipartForm:"name=message"`
@@ -19,8 +14,9 @@ type ContactModeratorsRequestBody struct {
 }
 
 type ContactModeratorsRequest struct {
-	PathParams ContactModeratorsPathParams
-	Request    ContactModeratorsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ContactModeratorsRequestBody `request:"mediaType=multipart/form-data"`
+	// The group ID of the group whose moderators will be contacted.
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type ContactModeratorsResponse struct {

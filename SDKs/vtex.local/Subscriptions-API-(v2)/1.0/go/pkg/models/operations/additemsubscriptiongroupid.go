@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AdditemsubscriptionGroupIDPathParams struct {
-	// Group ID.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type AdditemsubscriptionGroupIDHeaders struct {
+type AdditemsubscriptionGroupIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Accept                            string                                   `header:"style=simple,explode=false,name=Accept"`
+	AdditemsubscriptionGroupIDRequest shared.AdditemsubscriptionGroupIDRequest `request:"mediaType=application/json"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AdditemsubscriptionGroupIDRequest struct {
-	PathParams AdditemsubscriptionGroupIDPathParams
-	Headers    AdditemsubscriptionGroupIDHeaders
-	Request    shared.AdditemsubscriptionGroupIDRequest `request:"mediaType=application/json"`
+	// Group ID.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type AdditemsubscriptionGroupIDResponse struct {

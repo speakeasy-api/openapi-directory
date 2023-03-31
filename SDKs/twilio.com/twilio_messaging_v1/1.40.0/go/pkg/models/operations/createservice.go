@@ -14,7 +14,8 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateServiceCreateServiceRequestFallbackMethodEnum - The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.
@@ -121,12 +122,6 @@ type CreateServiceCreateServiceRequest struct {
 	Usecase *string `form:"name=Usecase"`
 	// How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `14,400`.
 	ValidityPeriod *int64 `form:"name=ValidityPeriod"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

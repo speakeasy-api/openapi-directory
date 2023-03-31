@@ -21,11 +21,6 @@ type GetMarketdataSnapshotRequestBody struct {
 	Type *string `json:"type,omitempty"`
 }
 
-type GetMarketdataSnapshotRequest struct {
-	// Contract. Allowed combinations are [type and symbol and currency], or [type, symbol, exchange, and currency], or [conid].
-	Request []GetMarketdataSnapshotRequestBody `request:"mediaType=application/json"`
-}
-
 type GetMarketdataSnapshot200ApplicationJSONBid struct {
 	Market *float64 `json:"market,omitempty"`
 	Price  *float64 `json:"price,omitempty"`

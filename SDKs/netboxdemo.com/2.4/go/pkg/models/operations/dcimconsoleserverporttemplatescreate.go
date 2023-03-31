@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleServerPortTemplatesCreateRequest struct {
-	Request shared.WritableConsoleServerPortTemplateInput `request:"mediaType=application/json"`
-}
-
 type DcimConsoleServerPortTemplatesCreateResponse struct {
 	ConsoleServerPortTemplate *shared.ConsoleServerPortTemplate
 	ContentType               string

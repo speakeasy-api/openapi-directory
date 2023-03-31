@@ -35,7 +35,7 @@ func newViews(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get data for all views in a session
 func (s *views) SessionsIDViewsGet(ctx context.Context, request operations.SessionsIDViewsGetRequest) (*operations.SessionsIDViewsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}/views", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}/views", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,9 +94,9 @@ func (s *views) SessionsIDViewsGet(ctx context.Context, request operations.Sessi
 // Create a page view object for a viewing session
 func (s *views) SessionsIDViewsPost(ctx context.Context, request operations.SessionsIDViewsPostRequest) (*operations.SessionsIDViewsPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}/views", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}/views", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -163,7 +163,7 @@ func (s *views) SessionsIDViewsPost(ctx context.Context, request operations.Sess
 // Remove a view and dependant data.
 func (s *views) ViewsIDDelete(ctx context.Context, request operations.ViewsIDDeleteRequest) (*operations.ViewsIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/views/{view_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/views/{view_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -213,7 +213,7 @@ func (s *views) ViewsIDDelete(ctx context.Context, request operations.ViewsIDDel
 // Get view meta data
 func (s *views) ViewsIDGet(ctx context.Context, request operations.ViewsIDGetRequest) (*operations.ViewsIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/views/{view_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/views/{view_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

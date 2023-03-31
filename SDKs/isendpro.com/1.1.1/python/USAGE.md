@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AddShortlinkRequest(
-    request=shared.ShortlinkRequest(
-        keyid="reiciendis",
-        shortlink="voluptas",
-    ),
+
+
+req = shared.ShortlinkRequest(
+    keyid="corrupti",
+    shortlink="provident",
 )
     
 res = s.add_shortlink.add_shortlink(req)

@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeAPIKey struct {
-	APIKey string `security:"name=apikey"`
-}
-
 type Security struct {
-	APIKey SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=apikey"`
 }

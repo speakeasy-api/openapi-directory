@@ -12,22 +12,17 @@ var FetchSipAuthCallsIPAccessControlListMappingServerList = []string{
 }
 
 type FetchSipAuthCallsIPAccessControlListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSipAuthCallsIPAccessControlListMappingPathParams struct {
+type FetchSipAuthCallsIPAccessControlListMappingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the SIP domain that contains the resource to fetch.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// The Twilio-provided string that uniquely identifies the IpAccessControlListMapping resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSipAuthCallsIPAccessControlListMappingRequest struct {
-	PathParams FetchSipAuthCallsIPAccessControlListMappingPathParams
-	Security   FetchSipAuthCallsIPAccessControlListMappingSecurity
-	ServerURL  *string
 }
 
 type FetchSipAuthCallsIPAccessControlListMappingResponse struct {

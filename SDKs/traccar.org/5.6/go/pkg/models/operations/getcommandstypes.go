@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommandsTypesQueryParams struct {
+type GetCommandsTypesRequest struct {
 	// Internal device identifier. Only works if device has already reported some locations
 	DeviceID *int64 `queryParam:"style=form,explode=true,name=deviceId"`
 	// Protocol name. Can be used instead of device id
 	Protocol *string `queryParam:"style=form,explode=true,name=protocol"`
 	// When `true` return SMS commands. If not specified or `false` return data commands
 	TextChannel *bool `queryParam:"style=form,explode=true,name=textChannel"`
-}
-
-type GetCommandsTypesRequest struct {
-	QueryParams GetCommandsTypesQueryParams
 }
 
 type GetCommandsTypesResponse struct {

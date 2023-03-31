@@ -29,7 +29,6 @@ pkg/models/operations/taskstaskspatch.go
 pkg/models/operations/taskstasksupdate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/tasklist.go
 pkg/models/shared/tasklists.go
 pkg/models/shared/task.go

@@ -8,26 +8,24 @@ import (
 )
 
 type AppengineAppsDomainMappingsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppengineAppsDomainMappingsPatchPathParams struct {
-	// Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	DomainMappingsID string `pathParam:"style=simple,explode=false,name=domainMappingsId"`
-}
-
-type AppengineAppsDomainMappingsPatchQueryParams struct {
+type AppengineAppsDomainMappingsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DomainMapping *shared.DomainMapping `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Part of `name`. See documentation of `appsId`.
+	DomainMappingsID string `pathParam:"style=simple,explode=false,name=domainMappingsId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,13 +44,6 @@ type AppengineAppsDomainMappingsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsDomainMappingsPatchRequest struct {
-	PathParams  AppengineAppsDomainMappingsPatchPathParams
-	QueryParams AppengineAppsDomainMappingsPatchQueryParams
-	Request     *shared.DomainMapping `request:"mediaType=application/json"`
-	Security    AppengineAppsDomainMappingsPatchSecurity
 }
 
 type AppengineAppsDomainMappingsPatchResponse struct {

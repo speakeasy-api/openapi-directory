@@ -30,15 +30,11 @@ func (e *GetListeNoireGetListeNoireEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetListeNoireQueryParams struct {
+type GetListeNoireRequest struct {
 	// Doit valoir "1"
 	GetListeNoire GetListeNoireGetListeNoireEnum `queryParam:"style=form,explode=true,name=getListeNoire"`
 	// Clé API
 	Keyid string `queryParam:"style=form,explode=true,name=keyid"`
-}
-
-type GetListeNoireRequest struct {
-	QueryParams GetListeNoireQueryParams
 }
 
 type GetListeNoireResponse struct {

@@ -4,18 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateContactInMailinglistRequest(
-    path_params=operations.CreateContactInMailinglistPathParams(
-        directory_id="aut",
-        mailing_list_id="explicabo",
-    ),
-    request=shared.CreateContactInMailingList(
-        email="error",
-        first_name="consectetur",
-        last_name="quis",
+    create_contact_in_mailing_list=shared.CreateContactInMailingList(
+        email="Larue_Rau85@yahoo.com",
+        first_name="Karley",
+        last_name="Stamm",
         unsubscribed=False,
     ),
+    directory_id="vel",
+    mailing_list_id="error",
 )
     
 res = s.create_contact_in_mailinglist(req)

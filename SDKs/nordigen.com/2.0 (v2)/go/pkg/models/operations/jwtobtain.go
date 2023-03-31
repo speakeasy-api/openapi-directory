@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JWTObtainRequest struct {
-	Request shared.JWTObtainPairRequest `request:"mediaType=application/json"`
-}
-
 type JWTObtainResponse struct {
 	ContentType string
 	// Authentication failed

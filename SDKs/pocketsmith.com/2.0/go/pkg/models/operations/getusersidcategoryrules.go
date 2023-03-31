@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDCategoryRulesPathParams struct {
+type GetUsersIDCategoryRulesRequest struct {
 	// The unique identifier of the user.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDCategoryRulesRequest struct {
-	PathParams GetUsersIDCategoryRulesPathParams
 }
 
 type GetUsersIDCategoryRulesResponse struct {

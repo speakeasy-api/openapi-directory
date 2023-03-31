@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddSubscriptionRequest struct {
-	// A JSON object containing sibscription information
-	Request shared.SubscriptionInput `request:"mediaType=application/json"`
-}
-
 type AddSubscriptionResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

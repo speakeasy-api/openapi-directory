@@ -10,13 +10,8 @@ import (
 )
 
 type ResourcesettingsProjectsSettingsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ResourcesettingsProjectsSettingsGetPathParams struct {
-	// Required. The name of the setting to get. See Setting for naming requirements.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ResourcesettingsProjectsSettingsGetViewEnum - The SettingView for this request.
@@ -49,7 +44,7 @@ func (e *ResourcesettingsProjectsSettingsGetViewEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ResourcesettingsProjectsSettingsGetQueryParams struct {
+type ResourcesettingsProjectsSettingsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -62,6 +57,8 @@ type ResourcesettingsProjectsSettingsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the setting to get. See Setting for naming requirements.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -74,12 +71,6 @@ type ResourcesettingsProjectsSettingsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The SettingView for this request.
 	View *ResourcesettingsProjectsSettingsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ResourcesettingsProjectsSettingsGetRequest struct {
-	PathParams  ResourcesettingsProjectsSettingsGetPathParams
-	QueryParams ResourcesettingsProjectsSettingsGetQueryParams
-	Security    ResourcesettingsProjectsSettingsGetSecurity
 }
 
 type ResourcesettingsProjectsSettingsGetResponse struct {

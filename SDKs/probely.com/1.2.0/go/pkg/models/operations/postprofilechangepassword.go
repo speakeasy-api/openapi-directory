@@ -12,10 +12,6 @@ type PostProfileChangePasswordRequestBody struct {
 	Password        string `json:"password"`
 }
 
-type PostProfileChangePasswordRequest struct {
-	Request PostProfileChangePasswordRequestBody `request:"mediaType=application/json"`
-}
-
 // PostProfileChangePassword401ApplicationJSON - Access token is missing or invalid
 type PostProfileChangePassword401ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

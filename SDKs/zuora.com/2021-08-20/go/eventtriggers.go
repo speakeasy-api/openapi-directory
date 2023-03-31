@@ -38,14 +38,14 @@ func newEventTriggers(defaultClient, securityClient HTTPClient, serverURL, langu
 // DELETEEventTrigger - Delete an event trigger
 func (s *eventTriggers) DELETEEventTrigger(ctx context.Context, request operations.DELETEEventTriggerRequest) (*operations.DELETEEventTriggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *eventTriggers) DELETEEventTrigger(ctx context.Context, request operatio
 // GETEventTrigger - Retrieve an event trigger
 func (s *eventTriggers) GETEventTrigger(ctx context.Context, request operations.GETEventTriggerRequest) (*operations.GETEventTriggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -160,9 +160,9 @@ func (s *eventTriggers) GETEventTriggers(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -313,7 +313,7 @@ func (s *eventTriggers) POSTEventTrigger(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events/event-triggers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostEventTriggerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -328,7 +328,7 @@ func (s *eventTriggers) POSTEventTrigger(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -383,9 +383,9 @@ func (s *eventTriggers) POSTEventTrigger(ctx context.Context, request operations
 // PUTEventTrigger - Update an event trigger
 func (s *eventTriggers) PUTEventTrigger(ctx context.Context, request operations.PUTEventTriggerRequest) (*operations.PUTEventTriggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/event-triggers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutEventTriggerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -400,7 +400,7 @@ func (s *eventTriggers) PUTEventTrigger(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

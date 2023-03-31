@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodVideoPathParams struct {
+type GetVodVideoRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVodVideoRequest struct {
-	PathParams GetVodVideoPathParams
 }
 
 type GetVodVideoResponse struct {

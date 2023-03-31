@@ -4,52 +4,44 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest(
-    security=operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity(
-        option1=operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams(
-        parent="ipsa",
-    ),
-    query_params=operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="rerum",
-        alt="json",
-        callback="fuga",
-        connection_id="ad",
-        fields="rem",
-        key="neque",
-        oauth_token="voluptas",
-        pretty_print=False,
-        quota_user="distinctio",
-        upload_type="culpa",
-        upload_protocol="sunt",
-    ),
-    request=shared.ConnectionInput(
+    dollar_xgafv="2",
+    connection_input=shared.ConnectionInput(
         cloud_sql=shared.CloudSQLPropertiesInput(
             credential=shared.CloudSQLCredential(
-                password="incidunt",
-                username="quo",
+                password="provident",
+                username="Micheal_Sporer",
             ),
-            database="sed",
-            instance_id="est",
-            type="MYSQL",
+            database="corrupti",
+            instance_id="illum",
+            type="POSTGRES",
         ),
-        description="et",
-        friendly_name="eveniet",
-        name="et",
+        description="error",
+        friendly_name="deserunt",
+        name="suscipit",
     ),
+    access_token="iure",
+    alt="json",
+    callback="debitis",
+    connection_id="ipsa",
+    fields_="delectus",
+    key="tempora",
+    oauth_token="suscipit",
+    parent="molestiae",
+    pretty_print=False,
+    quota_user="minus",
+    upload_type="placeat",
+    upload_protocol="voluptatum",
 )
     
-res = s.projects.bigqueryconnection_projects_locations_connections_create(req)
+res = s.projects.bigqueryconnection_projects_locations_connections_create(req, operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity(
+    option1=operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.connection is not None:
     # handle response

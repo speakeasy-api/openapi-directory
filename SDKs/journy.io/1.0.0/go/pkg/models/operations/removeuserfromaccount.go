@@ -34,10 +34,6 @@ type RemoveUserFromAccountRequestBody struct {
 	Users   []RemoveUserFromAccountRequestBodyUsers `json:"users"`
 }
 
-type RemoveUserFromAccountRequest struct {
-	Request RemoveUserFromAccountRequestBody `request:"mediaType=application/json"`
-}
-
 type RemoveUserFromAccount500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

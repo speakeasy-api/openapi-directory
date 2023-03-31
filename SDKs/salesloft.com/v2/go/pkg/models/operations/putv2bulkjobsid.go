@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2BulkJobsIDPathParams struct {
-	// The id for the bulk job to which the job data relates
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2BulkJobsIDRequestBody struct {
 	// Name for your bulk job
 	Name *string `form:"name=name"`
@@ -19,8 +14,9 @@ type PutV2BulkJobsIDRequestBody struct {
 }
 
 type PutV2BulkJobsIDRequest struct {
-	PathParams PutV2BulkJobsIDPathParams
-	Request    *PutV2BulkJobsIDRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2BulkJobsIDRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// The id for the bulk job to which the job data relates
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2BulkJobsIDResponse struct {

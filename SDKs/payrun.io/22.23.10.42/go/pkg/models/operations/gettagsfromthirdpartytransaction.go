@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsFromThirdPartyTransactionPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The third party transaction unique identifier. E.g TP001
-	ThirdPartyTransactionID string `pathParam:"style=simple,explode=false,name=ThirdPartyTransactionId"`
-}
-
-type GetTagsFromThirdPartyTransactionHeaders struct {
+type GetTagsFromThirdPartyTransactionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagsFromThirdPartyTransactionRequest struct {
-	PathParams GetTagsFromThirdPartyTransactionPathParams
-	Headers    GetTagsFromThirdPartyTransactionHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The third party transaction unique identifier. E.g TP001
+	ThirdPartyTransactionID string `pathParam:"style=simple,explode=false,name=ThirdPartyTransactionId"`
 }
 
 type GetTagsFromThirdPartyTransactionResponse struct {

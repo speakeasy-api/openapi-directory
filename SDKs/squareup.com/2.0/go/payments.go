@@ -35,16 +35,16 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CancelPayment - CancelPayment
 // Cancels (voids) a payment. You can use this endpoint to cancel a payment with
 // the APPROVED `status`.
-func (s *payments) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest) (*operations.CancelPaymentResponse, error) {
+func (s *payments) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest, security operations.CancelPaymentSecurity) (*operations.CancelPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *payments) CancelPayment(ctx context.Context, request operations.CancelP
 //
 // Note that if no payment with the specified idempotency key is found, no action is taken and the endpoint
 // returns successfully.
-func (s *payments) CancelPaymentByIdempotencyKey(ctx context.Context, request operations.CancelPaymentByIdempotencyKeyRequest) (*operations.CancelPaymentByIdempotencyKeyResponse, error) {
+func (s *payments) CancelPaymentByIdempotencyKey(ctx context.Context, request shared.CancelPaymentByIdempotencyKeyRequest, security operations.CancelPaymentByIdempotencyKeySecurity) (*operations.CancelPaymentByIdempotencyKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/payments/cancel"
 
@@ -109,7 +109,7 @@ func (s *payments) CancelPaymentByIdempotencyKey(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,16 +148,16 @@ func (s *payments) CancelPaymentByIdempotencyKey(ctx context.Context, request op
 // By default, payments are set to complete immediately after they are created.
 //
 // You can use this endpoint to complete a payment with the APPROVED `status`.
-func (s *payments) CompletePayment(ctx context.Context, request operations.CompletePaymentRequest) (*operations.CompletePaymentResponse, error) {
+func (s *payments) CompletePayment(ctx context.Context, request operations.CompletePaymentRequest, security operations.CompletePaymentSecurity) (*operations.CompletePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/complete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/complete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -200,7 +200,7 @@ func (s *payments) CompletePayment(ctx context.Context, request operations.Compl
 //
 // The endpoint creates a
 // `Payment` object and returns it in the response.
-func (s *payments) CreatePayment(ctx context.Context, request operations.CreatePaymentRequest) (*operations.CreatePaymentResponse, error) {
+func (s *payments) CreatePayment(ctx context.Context, request shared.CreatePaymentRequest, security operations.CreatePaymentSecurity) (*operations.CreatePaymentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/payments"
 
@@ -219,7 +219,7 @@ func (s *payments) CreatePayment(ctx context.Context, request operations.CreateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -255,16 +255,16 @@ func (s *payments) CreatePayment(ctx context.Context, request operations.CreateP
 
 // GetPayment - GetPayment
 // Retrieves details for a specific payment.
-func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest) (*operations.GetPaymentResponse, error) {
+func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest, security operations.GetPaymentSecurity) (*operations.GetPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,11 +301,11 @@ func (s *payments) GetPayment(ctx context.Context, request operations.GetPayment
 // UpdatePayment - UpdatePayment
 // Updates a payment with the APPROVED status.
 // You can update the `amount_money` and `tip_money` using this endpoint.
-func (s *payments) UpdatePayment(ctx context.Context, request operations.UpdatePaymentRequest) (*operations.UpdatePaymentResponse, error) {
+func (s *payments) UpdatePayment(ctx context.Context, request operations.UpdatePaymentRequest, security operations.UpdatePaymentSecurity) (*operations.UpdatePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePaymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -320,7 +320,7 @@ func (s *payments) UpdatePayment(ctx context.Context, request operations.UpdateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,7 +361,7 @@ func (s *payments) UpdatePayment(ctx context.Context, request operations.UpdateP
 // seconds to appear.
 //
 // The maximum results per page is 100.
-func (s *payments) GetV2Payments(ctx context.Context, request operations.GetV2PaymentsRequest) (*operations.GetV2PaymentsResponse, error) {
+func (s *payments) GetV2Payments(ctx context.Context, request operations.GetV2PaymentsRequest, security operations.GetV2PaymentsSecurity) (*operations.GetV2PaymentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/payments"
 
@@ -370,11 +370,11 @@ func (s *payments) GetV2Payments(ctx context.Context, request operations.GetV2Pa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

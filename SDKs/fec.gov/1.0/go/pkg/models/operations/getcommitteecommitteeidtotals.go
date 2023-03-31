@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDTotalsPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
-type GetCommitteeCommitteeIDTotalsQueryParams struct {
+type GetCommitteeCommitteeIDTotalsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.
@@ -35,11 +32,6 @@ type GetCommitteeCommitteeIDTotalsQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCommitteeCommitteeIDTotalsRequest struct {
-	PathParams  GetCommitteeCommitteeIDTotalsPathParams
-	QueryParams GetCommitteeCommitteeIDTotalsQueryParams
 }
 
 type GetCommitteeCommitteeIDTotalsResponse struct {

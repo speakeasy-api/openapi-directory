@@ -38,16 +38,16 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // For a use case of this operation, see [View invoices](https://www.zuora.com/developer/api-guides/#View-invoices).
 func (s *transactions) GETTransactionInvoice(ctx context.Context, request operations.GETTransactionInvoiceRequest) (*operations.GETTransactionInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/invoices/accounts/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/invoices/accounts/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,16 +92,16 @@ func (s *transactions) GETTransactionInvoice(ctx context.Context, request operat
 // reverse chronological order by **updatedDate**.
 func (s *transactions) GETTransactionPayment(ctx context.Context, request operations.GETTransactionPaymentRequest) (*operations.GETTransactionPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/payments/accounts/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/payments/accounts/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

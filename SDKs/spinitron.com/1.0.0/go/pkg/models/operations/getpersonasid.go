@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPersonasIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPersonasIDQueryParams struct {
+type GetPersonasIDRequest struct {
 	// Allows to select extra fields
 	Expand []string `queryParam:"style=form,explode=true,name=expand"`
 	// Allows to select only needed fields
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-}
-
-type GetPersonasIDRequest struct {
-	PathParams  GetPersonasIDPathParams
-	QueryParams GetPersonasIDQueryParams
+	ID     int64    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPersonasIDResponse struct {

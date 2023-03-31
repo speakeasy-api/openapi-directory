@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ChangeMainCompanyNumberSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChangeMainCompanyNumberApplicationJSON struct {
 	// Provide either the unique identifier of the phone number (id) or the phone number itself in e164 format (e.g: +199955500123).
 	PhoneNumber *string `json:"phone_number,omitempty"`
-}
-
-type ChangeMainCompanyNumberRequest struct {
-	Request  *ChangeMainCompanyNumberApplicationJSON `request:"mediaType=application/json"`
-	Security ChangeMainCompanyNumberSecurity
 }
 
 type ChangeMainCompanyNumberResponse struct {

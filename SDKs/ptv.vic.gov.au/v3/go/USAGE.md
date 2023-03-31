@@ -14,31 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.DeparturesGetForStopRequest{
-        PathParams: operations.DeparturesGetForStopPathParams{
-            RouteType: "2",
-            StopID: 592845,
+        DateUtc: "2021-10-25T05:21:43.948Z",
+        Devid: "distinctio",
+        DirectionID: 844266,
+        Expand: []DeparturesGetForStopExpandEnum{
+            "VehiclePosition",
+            "Direction",
+            "VehiclePosition",
         },
-        QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "2021-04-24T16:27:50.833Z",
-            Devid: "unde",
-            DirectionID: 857946,
-            Expand: []DeparturesGetForStopExpandEnum{
-                "VehiclePosition",
-                "Run",
-                "Disruption",
-            },
-            Gtfs: false,
-            IncludeCancelled: false,
-            IncludeGeopath: false,
-            LookBackwards: false,
-            MaxResults: 645894,
-            PlatformNumbers: []int{
-                437587,
-                297534,
-            },
-            Signature: "debitis",
-            Token: "ipsa",
+        Gtfs: false,
+        IncludeCancelled: false,
+        IncludeGeopath: false,
+        LookBackwards: false,
+        MaxResults: 423655,
+        PlatformNumbers: []int{
+            645894,
+            384382,
+            437587,
         },
+        RouteType: "1",
+        Signature: "debitis",
+        StopID: 56713,
+        Token: "delectus",
     }
 
     ctx := context.Background()

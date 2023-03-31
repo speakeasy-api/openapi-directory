@@ -8,29 +8,20 @@ import (
 )
 
 type GetPayRunsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPayRunsQueryParams struct {
+type GetPayRunsRequest struct {
+	// Only records created or modified since this timestamp will be returned
+	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 	// Order by an any element
 	Order *string `queryParam:"style=form,explode=true,name=order"`
 	// e.g. page=1 – Up to 100 PayRuns will be returned in a single API call
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Filter by an any element
 	Where *string `queryParam:"style=form,explode=true,name=where"`
-}
-
-type GetPayRunsHeaders struct {
-	// Only records created or modified since this timestamp will be returned
-	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
-}
-
-type GetPayRunsRequest struct {
-	QueryParams GetPayRunsQueryParams
-	Headers     GetPayRunsHeaders
-	Security    GetPayRunsSecurity
 }
 
 type GetPayRunsResponse struct {

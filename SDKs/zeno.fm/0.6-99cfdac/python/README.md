@@ -1,0 +1,103 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/zeno.fm/0.6-99cfdac/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        api_key="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.CreatePodcastRequestBody(
+    file_logo=operations.CreatePodcastRequestBodyFileLogo(
+        content="corrupti".encode(),
+        file_logo="provident",
+    ),
+    podcast=shared.Podcast(
+        author="distinctio",
+        block=False,
+        categories=[
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
+        ],
+        copyright="vel",
+        country="Netherlands Antilles",
+        description="deserunt",
+        explicit=False,
+        image="suscipit",
+        key="iure",
+        keywords=[
+            "debitis",
+            "ipsa",
+        ],
+        language="delectus",
+        link="tempora",
+        owner_email="suscipit",
+        owner_name="molestiae",
+        show_type="minus",
+        subtitle="placeat",
+        summary="voluptatum",
+        title="Ms.",
+    ),
+)
+    
+res = s.api_v2.create_podcast(req)
+
+if res.body is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### api_v2
+
+* `create_podcast` - Create podcast
+* `create_podcast_episode` - Create podcast episode
+* `delete_podcast` - Delete podcast
+* `delete_podcast_1` - Delete podcast episode
+* `get_partner_aggregator_stations` - List stations
+* `get_podcast` - Get podcast
+* `get_podcast_categories` - Get the list of Categories that can be used to filter podcasts in the search podcasts request
+* `get_podcast_countries` - Get the list of Countries that can be used to filter podcasts in the search podcasts request
+* `get_podcast_episode` - Get podcast episode
+* `get_podcast_episodes` - Get podcast episodes
+* `get_podcast_languages` - Get the list of Languages that can be used to filter podcasts in the search podcasts request
+* `get_station_countries` - Get the list of Countries that can be used to filter stations in the search stations request
+* `get_station_genres` - Get the list of Genres that can be used to filter stations in the search stations request
+* `get_station_languages` - Get the list of Languages that can be used to filter stations in the search stations request
+* `search_podcasts` - Search podcasts
+* `search_stations` - Search stations
+* `update_podcast` - Update podcast
+* `update_podcast_episode` - Update podcast episode
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

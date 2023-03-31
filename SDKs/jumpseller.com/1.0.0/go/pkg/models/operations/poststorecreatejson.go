@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostStoreCreateJSONQueryParams struct {
+type PostStoreCreateJSONRequest struct {
+	// New partnered Store parameters.
+	PartnerStoreCreate shared.PartnerStoreCreate `request:"mediaType=application/json"`
 	// Partner authentication token.
 	AuthToken string `queryParam:"style=form,explode=true,name=auth_token"`
 	// Partner code.
 	PartnerCode string `queryParam:"style=form,explode=true,name=partner_code"`
-}
-
-type PostStoreCreateJSONRequest struct {
-	QueryParams PostStoreCreateJSONQueryParams
-	// New partnered Store parameters.
-	Request shared.PartnerStoreCreate `request:"mediaType=application/json"`
 }
 
 type PostStoreCreateJSONResponse struct {

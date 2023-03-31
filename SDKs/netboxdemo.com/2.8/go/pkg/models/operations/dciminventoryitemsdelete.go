@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimInventoryItemsDeletePathParams struct {
+type DcimInventoryItemsDeleteRequest struct {
 	// A unique integer value identifying this inventory item.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInventoryItemsDeleteRequest struct {
-	PathParams DcimInventoryItemsDeletePathParams
 }
 
 type DcimInventoryItemsDeleteResponse struct {

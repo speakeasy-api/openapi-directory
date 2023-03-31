@@ -38,7 +38,7 @@ func newPatrowlEngine(defaultClient, securityClient HTTPClient, serverURL, langu
 // Clean scan identified by id.
 func (s *patrowlEngine) CleanScanPage(ctx context.Context, request operations.CleanScanPageRequest) (*operations.CleanScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clean/{scanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clean/{scanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *patrowlEngine) CleanScansPage(ctx context.Context) (*operations.CleanSc
 // Get findings on finished scans.
 func (s *patrowlEngine) GetFindingPage(ctx context.Context, request operations.GetFindingPageRequest) (*operations.GetFindingPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getfindings/{scanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getfindings/{scanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *patrowlEngine) GetFindingPage(ctx context.Context, request operations.G
 
 // StartScanPage - Start a new scan
 // Start a new scan.
-func (s *patrowlEngine) StartScanPage(ctx context.Context, request operations.StartScanPageRequest) (*operations.StartScanPageResponse, error) {
+func (s *patrowlEngine) StartScanPage(ctx context.Context, request shared.ScanDefinition) (*operations.StartScanPageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/startscan"
 
@@ -228,7 +228,7 @@ func (s *patrowlEngine) StartScanPage(ctx context.Context, request operations.St
 // Status of a scan identified by id.
 func (s *patrowlEngine) StatusScanPage(ctx context.Context, request operations.StatusScanPageRequest) (*operations.StatusScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status/{scanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/status/{scanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +318,7 @@ func (s *patrowlEngine) StatusScansPage(ctx context.Context) (*operations.Status
 // Stop a scan identified by id.
 func (s *patrowlEngine) StopScanPage(ctx context.Context, request operations.StopScanPageRequest) (*operations.StopScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stop/{scanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stop/{scanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

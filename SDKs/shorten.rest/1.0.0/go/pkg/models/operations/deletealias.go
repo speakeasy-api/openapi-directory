@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAliasSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type DeleteAliasQueryParams struct {
+type DeleteAliasRequest struct {
 	// alias (without `/` at the beginning)
 	AliasName string `queryParam:"style=form,explode=true,name=aliasName"`
 	// domain which alias belongs to (string without `http/https` or `/`)
 	DomainName *string `queryParam:"style=form,explode=true,name=domainName"`
-}
-
-type DeleteAliasRequest struct {
-	QueryParams DeleteAliasQueryParams
-	Security    DeleteAliasSecurity
 }
 
 type DeleteAliasResponse struct {

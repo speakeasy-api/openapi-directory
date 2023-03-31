@@ -34,9 +34,9 @@ func newDhcpServerPolicy(defaultClient, securityClient HTTPClient, serverURL, la
 // Add a server to be trusted by Dynamic ARP Inspection on this network
 func (s *dhcpServerPolicy) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *dhcpServerPolicy) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrust
 // Remove a server from being trusted by Dynamic ARP Inspection on this network
 func (s *dhcpServerPolicy) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *dhcpServerPolicy) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrust
 // Return the DHCP server settings. Blocked/allowed servers are only applied when default policy is allow/block, respectively
 func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicy(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyRequest) (*operations.GetNetworkSwitchDhcpServerPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicy(ctx context.Context,
 // Return the list of servers trusted by Dynamic ARP Inspection on this network. These are also known as whitelisted snoop entries
 func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -221,14 +221,14 @@ func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedS
 // Return the devices that have a Dynamic ARP Inspection warning and their warnings
 func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -272,9 +272,9 @@ func (s *dhcpServerPolicy) GetNetworkSwitchDhcpServerPolicyArpInspectionWarnings
 // Update the DHCP server settings. Blocked/allowed servers are only applied when default policy is allow/block, respectively
 func (s *dhcpServerPolicy) UpdateNetworkSwitchDhcpServerPolicy(ctx context.Context, request operations.UpdateNetworkSwitchDhcpServerPolicyRequest) (*operations.UpdateNetworkSwitchDhcpServerPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,9 +324,9 @@ func (s *dhcpServerPolicy) UpdateNetworkSwitchDhcpServerPolicy(ctx context.Conte
 // Update a server that is trusted by Dynamic ARP Inspection on this network
 func (s *dhcpServerPolicy) UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,14 +8,10 @@ import (
 	"net/http"
 )
 
-type GetOrganizationConfigTemplateSwitchProfilePortsPathParams struct {
+type GetOrganizationConfigTemplateSwitchProfilePortsRequest struct {
 	ConfigTemplateID string `pathParam:"style=simple,explode=false,name=configTemplateId"`
 	OrganizationID   string `pathParam:"style=simple,explode=false,name=organizationId"`
 	ProfileID        string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type GetOrganizationConfigTemplateSwitchProfilePortsRequest struct {
-	PathParams GetOrganizationConfigTemplateSwitchProfilePortsPathParams
 }
 
 // GetOrganizationConfigTemplateSwitchProfilePorts200ApplicationJSONAccessPolicyTypeEnum - The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.

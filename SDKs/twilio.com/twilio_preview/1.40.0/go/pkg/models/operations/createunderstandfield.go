@@ -12,14 +12,8 @@ var CreateUnderstandFieldServerList = []string{
 }
 
 type CreateUnderstandFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandFieldPathParams struct {
-	// The unique ID of the parent Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The unique ID of the Task associated with this Field.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandFieldCreateUnderstandFieldRequest struct {
@@ -30,10 +24,11 @@ type CreateUnderstandFieldCreateUnderstandFieldRequest struct {
 }
 
 type CreateUnderstandFieldRequest struct {
-	PathParams CreateUnderstandFieldPathParams
-	Request    *CreateUnderstandFieldCreateUnderstandFieldRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandFieldSecurity
-	ServerURL  *string
+	// The unique ID of the parent Assistant.
+	AssistantSid string                                             `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandFieldCreateUnderstandFieldRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique ID of the Task associated with this Field.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type CreateUnderstandFieldResponse struct {

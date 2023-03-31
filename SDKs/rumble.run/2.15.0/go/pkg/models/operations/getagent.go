@@ -8,17 +8,12 @@ import (
 )
 
 type GetAgentSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAgentPathParams struct {
-	// UUID of the agent
-	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAgentRequest struct {
-	PathParams GetAgentPathParams
-	Security   GetAgentSecurity
+	// UUID of the agent
+	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
 }
 
 type GetAgentResponse struct {

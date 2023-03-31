@@ -43,7 +43,7 @@ func (s *billingSubPartnerAPI) GetAllTransfers(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,14 +86,14 @@ func (s *billingSubPartnerAPI) GetAllTransfers(ctx context.Context, request oper
 // If IP whitelisting is disabled, this request can be made by any user that has an API key.
 func (s *billingSubPartnerAPI) GetSubPartnerBalance(ctx context.Context, request operations.GetSubPartnerBalanceRequest) (*operations.GetSubPartnerBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/sub-partner/balance/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/sub-partner/balance/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -140,7 +140,7 @@ func (s *billingSubPartnerAPI) GetSubPartners(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,7 +173,7 @@ func (s *billingSubPartnerAPI) GetSubPartners(ctx context.Context, request opera
 // Get the actual information about the transfer. You need to provide the transfer ID in the request.
 func (s *billingSubPartnerAPI) GetTransfer(ctx context.Context, request operations.GetTransferRequest) (*operations.GetTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/sub-partner/transfer/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/sub-partner/transfer/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

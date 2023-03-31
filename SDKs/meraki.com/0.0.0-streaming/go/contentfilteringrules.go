@@ -34,7 +34,7 @@ func newContentFilteringRules(defaultClient, securityClient HTTPClient, serverUR
 // Return the content filtering settings for an MX network
 func (s *contentFilteringRules) GetNetworkContentFiltering(ctx context.Context, request operations.GetNetworkContentFilteringRequest) (*operations.GetNetworkContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *contentFilteringRules) GetNetworkContentFiltering(ctx context.Context, 
 // Update the content filtering settings for an MX network
 func (s *contentFilteringRules) UpdateNetworkContentFiltering(ctx context.Context, request operations.UpdateNetworkContentFilteringRequest) (*operations.UpdateNetworkContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

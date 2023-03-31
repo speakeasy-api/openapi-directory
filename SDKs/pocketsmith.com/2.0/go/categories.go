@@ -35,7 +35,7 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 // Deletes a particular category by its ID. This will delete all budgets within the category, and uncategorize all transactions assigned to the category.
 func (s *categories) DeleteCategoriesID(ctx context.Context, request operations.DeleteCategoriesIDRequest) (*operations.DeleteCategoriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *categories) DeleteCategoriesID(ctx context.Context, request operations.
 // Gets a particular category by its ID.
 func (s *categories) GetCategoriesID(ctx context.Context, request operations.GetCategoriesIDRequest) (*operations.GetCategoriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *categories) GetCategoriesID(ctx context.Context, request operations.Get
 // Lists all categories belonging to a user by their ID.
 func (s *categories) GetUsersIDCategories(ctx context.Context, request operations.GetUsersIDCategoriesRequest) (*operations.GetUsersIDCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,9 +197,9 @@ func (s *categories) GetUsersIDCategories(ctx context.Context, request operation
 // Creates a category belonging to the user by their ID.
 func (s *categories) PostUsersIDCategories(ctx context.Context, request operations.PostUsersIDCategoriesRequest) (*operations.PostUsersIDCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -263,9 +263,9 @@ func (s *categories) PostUsersIDCategories(ctx context.Context, request operatio
 // Updates a category by its ID.
 func (s *categories) PutCategoriesID(ctx context.Context, request operations.PutCategoriesIDRequest) (*operations.PutCategoriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

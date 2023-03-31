@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PolicyDeletePathParams struct {
-	// Policy ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PolicyDeleteHeaders struct {
+type PolicyDeleteRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PolicyDeleteRequest struct {
-	PathParams PolicyDeletePathParams
-	Headers    PolicyDeleteHeaders
+	// Policy ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PolicyDeleteResponse struct {

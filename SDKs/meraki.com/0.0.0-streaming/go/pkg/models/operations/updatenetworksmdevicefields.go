@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSmDeviceFieldsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields - The new fields of the device. Each field of this object is optional.
 type UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields struct {
 	// New name for the device
@@ -30,8 +26,8 @@ type UpdateNetworkSmDeviceFieldsRequestBody struct {
 }
 
 type UpdateNetworkSmDeviceFieldsRequest struct {
-	PathParams UpdateNetworkSmDeviceFieldsPathParams
-	Request    UpdateNetworkSmDeviceFieldsRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkSmDeviceFieldsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                 `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSmDeviceFieldsResponse struct {

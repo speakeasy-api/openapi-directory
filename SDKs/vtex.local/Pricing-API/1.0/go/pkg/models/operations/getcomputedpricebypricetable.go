@@ -11,34 +11,21 @@ var GetComputedPricebypricetableServerList = []string{
 	"https://api.vtex.com/{account}/pricing",
 }
 
-type GetComputedPricebypricetablePathParams struct {
-	// SKU ID.
-	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-	// SKU Price Table Name.
-	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
-}
-
-type GetComputedPricebypricetableQueryParams struct {
-	// Brand ID.
-	BrandID int64 `queryParam:"style=form,explode=true,name=brandId"`
-	// Category ID.
-	CategoryIds int64 `queryParam:"style=form,explode=true,name=categoryIds"`
-	// SKU quantity.
-	Quantity int64 `queryParam:"style=form,explode=true,name=quantity"`
-}
-
-type GetComputedPricebypricetableHeaders struct {
+type GetComputedPricebypricetableRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetComputedPricebypricetableRequest struct {
-	PathParams  GetComputedPricebypricetablePathParams
-	QueryParams GetComputedPricebypricetableQueryParams
-	Headers     GetComputedPricebypricetableHeaders
-	ServerURL   *string
+	// Brand ID.
+	BrandID int64 `queryParam:"style=form,explode=true,name=brandId"`
+	// Category ID.
+	CategoryIds int64 `queryParam:"style=form,explode=true,name=categoryIds"`
+	// SKU ID.
+	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
+	// SKU Price Table Name.
+	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
+	// SKU quantity.
+	Quantity int64 `queryParam:"style=form,explode=true,name=quantity"`
 }
 
 type GetComputedPricebypricetableResponse struct {

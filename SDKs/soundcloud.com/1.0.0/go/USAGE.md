@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteLikesPlaylistsPlaylistIDRequest{
-        Security: operations.DeleteLikesPlaylistsPlaylistIDSecurity{
-            AuthHeader: shared.SchemeAuthHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteLikesPlaylistsPlaylistIDPathParams{
-            PlaylistID: 548814,
-        },
+        PlaylistID: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.Likes.DeleteLikesPlaylistsPlaylistID(ctx, req)
+    res, err := s.Likes.DeleteLikesPlaylistsPlaylistID(ctx, req, operations.DeleteLikesPlaylistsPlaylistIDSecurity{
+        AuthHeader: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

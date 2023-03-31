@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type UploadGroupVBPathParams struct {
-	// Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type UploadGroupVBQueryParams struct {
-	// Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
-	FileIds *string `queryParam:"style=form,explode=true,name=file_ids"`
-}
-
 type UploadGroupVBRequestBody struct {
 	// Provide the file's path here.
 	File *string `multipartForm:"name=file"`
 }
 
 type UploadGroupVBRequest struct {
-	PathParams  UploadGroupVBPathParams
-	QueryParams UploadGroupVBQueryParams
-	Request     *UploadGroupVBRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadGroupVBRequestBody `request:"mediaType=multipart/form-data"`
+	// Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+	FileIds *string `queryParam:"style=form,explode=true,name=file_ids"`
+	// Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // UploadGroupVB201ApplicationXML - **HTTP Status Code:** `201` **Created** <br>

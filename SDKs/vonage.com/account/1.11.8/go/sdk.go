@@ -94,16 +94,16 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // AccountCtrlGetAccountServicesByAccountID - Get account data by ID
-func (s *SDK) AccountCtrlGetAccountServicesByAccountID(ctx context.Context, request operations.AccountCtrlGetAccountServicesByAccountIDRequest) (*operations.AccountCtrlGetAccountServicesByAccountIDResponse, error) {
+func (s *SDK) AccountCtrlGetAccountServicesByAccountID(ctx context.Context, request operations.AccountCtrlGetAccountServicesByAccountIDRequest, security operations.AccountCtrlGetAccountServicesByAccountIDSecurity) (*operations.AccountCtrlGetAccountServicesByAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,16 +139,16 @@ func (s *SDK) AccountCtrlGetAccountServicesByAccountID(ctx context.Context, requ
 }
 
 // AccountCtrlGetLocationByID - Get location data by account ID and location ID
-func (s *SDK) AccountCtrlGetLocationByID(ctx context.Context, request operations.AccountCtrlGetLocationByIDRequest) (*operations.AccountCtrlGetLocationByIDResponse, error) {
+func (s *SDK) AccountCtrlGetLocationByID(ctx context.Context, request operations.AccountCtrlGetLocationByIDRequest, security operations.AccountCtrlGetLocationByIDSecurity) (*operations.AccountCtrlGetLocationByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,16 +184,16 @@ func (s *SDK) AccountCtrlGetLocationByID(ctx context.Context, request operations
 }
 
 // AccountCtrlGetLocationsByAccountID - Get account locations data by account ID
-func (s *SDK) AccountCtrlGetLocationsByAccountID(ctx context.Context, request operations.AccountCtrlGetLocationsByAccountIDRequest) (*operations.AccountCtrlGetLocationsByAccountIDResponse, error) {
+func (s *SDK) AccountCtrlGetLocationsByAccountID(ctx context.Context, request operations.AccountCtrlGetLocationsByAccountIDRequest, security operations.AccountCtrlGetLocationsByAccountIDSecurity) (*operations.AccountCtrlGetLocationsByAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

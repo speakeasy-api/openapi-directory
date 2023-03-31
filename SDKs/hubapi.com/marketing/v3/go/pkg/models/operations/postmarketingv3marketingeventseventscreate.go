@@ -8,13 +8,8 @@ import (
 )
 
 type PostMarketingV3MarketingEventsEventsCreateSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostMarketingV3MarketingEventsEventsCreateRequest struct {
-	Request  shared.MarketingEventCreateRequestParams `request:"mediaType=application/json"`
-	Security PostMarketingV3MarketingEventsEventsCreateSecurity
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostMarketingV3MarketingEventsEventsCreateResponse struct {

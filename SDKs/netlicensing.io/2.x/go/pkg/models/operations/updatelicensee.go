@@ -8,12 +8,8 @@ import (
 )
 
 type UpdateLicenseeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateLicenseePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Licensee. Vendor can assign this number when creating a Licensee or let NetLicensing generate one. Read-only after creation of the first License for the Licensee.
-	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateLicenseeRequestBody struct {
@@ -27,9 +23,9 @@ type UpdateLicenseeRequestBody struct {
 }
 
 type UpdateLicenseeRequest struct {
-	PathParams UpdateLicenseePathParams
-	Request    *UpdateLicenseeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateLicenseeSecurity
+	RequestBody *UpdateLicenseeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique number (across all Products of a Vendor) that identifies the Licensee. Vendor can assign this number when creating a Licensee or let NetLicensing generate one. Read-only after creation of the first License for the Licensee.
+	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
 }
 
 type UpdateLicenseeResponse struct {

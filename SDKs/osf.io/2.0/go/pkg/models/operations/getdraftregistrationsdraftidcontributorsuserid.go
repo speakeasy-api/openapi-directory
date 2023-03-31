@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetDraftRegistrationsDraftIDContributorsUserIDPathParams struct {
+type GetDraftRegistrationsDraftIDContributorsUserIDRequest struct {
 	// The unique identifier of the Draft Registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
 	// The unique identifier of the Contributor.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetDraftRegistrationsDraftIDContributorsUserIDRequest struct {
-	PathParams GetDraftRegistrationsDraftIDContributorsUserIDPathParams
 }
 
 type GetDraftRegistrationsDraftIDContributorsUserIDResponse struct {

@@ -31,20 +31,20 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // AndroidpublisherOrdersRefund - Refund a user's subscription or in-app purchase order.
-func (s *orders) AndroidpublisherOrdersRefund(ctx context.Context, request operations.AndroidpublisherOrdersRefundRequest) (*operations.AndroidpublisherOrdersRefundResponse, error) {
+func (s *orders) AndroidpublisherOrdersRefund(ctx context.Context, request operations.AndroidpublisherOrdersRefundRequest, security operations.AndroidpublisherOrdersRefundSecurity) (*operations.AndroidpublisherOrdersRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/orders/{orderId}:refund", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/orders/{orderId}:refund", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

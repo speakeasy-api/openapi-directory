@@ -8,16 +8,11 @@ import (
 )
 
 type ContainerProjectsLocationsClustersNodePoolsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsLocationsClustersNodePoolsListPathParams struct {
-	// The parent (project, location, cluster name) where the node pools will be listed. Specified in the format `projects/*/locations/*/clusters/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ContainerProjectsLocationsClustersNodePoolsListQueryParams struct {
+type ContainerProjectsLocationsClustersNodePoolsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type ContainerProjectsLocationsClustersNodePoolsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The parent (project, location, cluster name) where the node pools will be listed. Specified in the format `projects/*/locations/*/clusters/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the parent field.
@@ -46,12 +43,6 @@ type ContainerProjectsLocationsClustersNodePoolsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
 	Zone *string `queryParam:"style=form,explode=true,name=zone"`
-}
-
-type ContainerProjectsLocationsClustersNodePoolsListRequest struct {
-	PathParams  ContainerProjectsLocationsClustersNodePoolsListPathParams
-	QueryParams ContainerProjectsLocationsClustersNodePoolsListQueryParams
-	Security    ContainerProjectsLocationsClustersNodePoolsListSecurity
 }
 
 type ContainerProjectsLocationsClustersNodePoolsListResponse struct {

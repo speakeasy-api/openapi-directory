@@ -10,7 +10,7 @@ import (
 )
 
 type PointPointGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 // PointPointGetLanguageLanguageEnum - An enumeration.
@@ -85,7 +85,7 @@ func (e *PointPointGetUnitsUnitsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PointPointGetQueryParams struct {
+type PointPointGetRequest struct {
 	// Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language of text summaries and place names (variable names are never translated). Available languages are:
@@ -133,11 +133,6 @@ type PointPointGetQueryParams struct {
 	// * `ca`: Same as ``metric``, except that wind speeds are in `km/h` and pressure is in `kPa`.
 	//
 	Units *PointPointGetUnitsUnitsEnum `queryParam:"style=form,explode=true,name=units"`
-}
-
-type PointPointGetRequest struct {
-	QueryParams PointPointGetQueryParams
-	Security    PointPointGetSecurity
 }
 
 type PointPointGetResponse struct {

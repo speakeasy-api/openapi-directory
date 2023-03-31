@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateInformationAboutPagesSitePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateInformationAboutPagesSiteRequestBody4Source2Enum - Update the source for the repository. Must include the branch name and path.
 type ReposUpdateInformationAboutPagesSiteRequestBody4Source2Enum string
 
@@ -267,8 +262,9 @@ type ReposUpdateInformationAboutPagesSiteRequestBody1 struct {
 }
 
 type ReposUpdateInformationAboutPagesSiteRequest struct {
-	PathParams ReposUpdateInformationAboutPagesSitePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	Owner       string      `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string      `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateInformationAboutPagesSiteResponse struct {

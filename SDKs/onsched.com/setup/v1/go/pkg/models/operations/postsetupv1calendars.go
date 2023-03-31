@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1CalendarsRequest struct {
-	Request *shared.ScheduleInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1CalendarsResponse struct {
 	ContentType string
 	// Success

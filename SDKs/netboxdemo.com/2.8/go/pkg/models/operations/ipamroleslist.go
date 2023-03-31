@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRolesListQueryParams struct {
+type IpamRolesListRequest struct {
 	ID    *string `queryParam:"style=form,explode=true,name=id"`
 	IDGt  *string `queryParam:"style=form,explode=true,name=id__gt"`
 	IDGte *string `queryParam:"style=form,explode=true,name=id__gte"`
@@ -39,10 +39,6 @@ type IpamRolesListQueryParams struct {
 	SlugNie  *string `queryParam:"style=form,explode=true,name=slug__nie"`
 	SlugNiew *string `queryParam:"style=form,explode=true,name=slug__niew"`
 	SlugNisw *string `queryParam:"style=form,explode=true,name=slug__nisw"`
-}
-
-type IpamRolesListRequest struct {
-	QueryParams IpamRolesListQueryParams
 }
 
 type IpamRolesList200ApplicationJSON struct {

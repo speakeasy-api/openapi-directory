@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAdminsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationAdminsRequest struct {
-	PathParams GetOrganizationAdminsPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationAdminsResponse struct {

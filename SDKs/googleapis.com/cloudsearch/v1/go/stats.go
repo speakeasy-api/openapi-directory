@@ -33,7 +33,7 @@ func newStats(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudsearchStatsGetIndex - Gets indexed item statistics aggreggated across all data sources. This API only returns statistics for previous dates; it doesn't return statistics for the current day. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsGetIndex(ctx context.Context, request operations.CloudsearchStatsGetIndexRequest) (*operations.CloudsearchStatsGetIndexResponse, error) {
+func (s *stats) CloudsearchStatsGetIndex(ctx context.Context, request operations.CloudsearchStatsGetIndexRequest, security operations.CloudsearchStatsGetIndexSecurity) (*operations.CloudsearchStatsGetIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stats/index"
 
@@ -42,11 +42,11 @@ func (s *stats) CloudsearchStatsGetIndex(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *stats) CloudsearchStatsGetIndex(ctx context.Context, request operations
 }
 
 // CloudsearchStatsGetQuery - Get the query statistics for customer. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsGetQuery(ctx context.Context, request operations.CloudsearchStatsGetQueryRequest) (*operations.CloudsearchStatsGetQueryResponse, error) {
+func (s *stats) CloudsearchStatsGetQuery(ctx context.Context, request operations.CloudsearchStatsGetQueryRequest, security operations.CloudsearchStatsGetQuerySecurity) (*operations.CloudsearchStatsGetQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stats/query"
 
@@ -90,11 +90,11 @@ func (s *stats) CloudsearchStatsGetQuery(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *stats) CloudsearchStatsGetQuery(ctx context.Context, request operations
 }
 
 // CloudsearchStatsGetSearchapplication - Get search application stats for customer. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsGetSearchapplication(ctx context.Context, request operations.CloudsearchStatsGetSearchapplicationRequest) (*operations.CloudsearchStatsGetSearchapplicationResponse, error) {
+func (s *stats) CloudsearchStatsGetSearchapplication(ctx context.Context, request operations.CloudsearchStatsGetSearchapplicationRequest, security operations.CloudsearchStatsGetSearchapplicationSecurity) (*operations.CloudsearchStatsGetSearchapplicationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stats/searchapplication"
 
@@ -138,11 +138,11 @@ func (s *stats) CloudsearchStatsGetSearchapplication(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *stats) CloudsearchStatsGetSearchapplication(ctx context.Context, reques
 }
 
 // CloudsearchStatsGetSession - Get the # of search sessions, % of successful sessions with a click query statistics for customer. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsGetSession(ctx context.Context, request operations.CloudsearchStatsGetSessionRequest) (*operations.CloudsearchStatsGetSessionResponse, error) {
+func (s *stats) CloudsearchStatsGetSession(ctx context.Context, request operations.CloudsearchStatsGetSessionRequest, security operations.CloudsearchStatsGetSessionSecurity) (*operations.CloudsearchStatsGetSessionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stats/session"
 
@@ -186,11 +186,11 @@ func (s *stats) CloudsearchStatsGetSession(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *stats) CloudsearchStatsGetSession(ctx context.Context, request operatio
 }
 
 // CloudsearchStatsGetUser - Get the users statistics for customer. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsGetUser(ctx context.Context, request operations.CloudsearchStatsGetUserRequest) (*operations.CloudsearchStatsGetUserResponse, error) {
+func (s *stats) CloudsearchStatsGetUser(ctx context.Context, request operations.CloudsearchStatsGetUserRequest, security operations.CloudsearchStatsGetUserSecurity) (*operations.CloudsearchStatsGetUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stats/user"
 
@@ -234,11 +234,11 @@ func (s *stats) CloudsearchStatsGetUser(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,20 +273,20 @@ func (s *stats) CloudsearchStatsGetUser(ctx context.Context, request operations.
 }
 
 // CloudsearchStatsIndexDatasourcesGet - Gets indexed item statistics for a single data source. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsIndexDatasourcesGet(ctx context.Context, request operations.CloudsearchStatsIndexDatasourcesGetRequest) (*operations.CloudsearchStatsIndexDatasourcesGetResponse, error) {
+func (s *stats) CloudsearchStatsIndexDatasourcesGet(ctx context.Context, request operations.CloudsearchStatsIndexDatasourcesGetRequest, security operations.CloudsearchStatsIndexDatasourcesGetSecurity) (*operations.CloudsearchStatsIndexDatasourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/index/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/index/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -321,20 +321,20 @@ func (s *stats) CloudsearchStatsIndexDatasourcesGet(ctx context.Context, request
 }
 
 // CloudsearchStatsQuerySearchapplicationsGet - Get the query statistics for search application. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsQuerySearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsQuerySearchapplicationsGetRequest) (*operations.CloudsearchStatsQuerySearchapplicationsGetResponse, error) {
+func (s *stats) CloudsearchStatsQuerySearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsQuerySearchapplicationsGetRequest, security operations.CloudsearchStatsQuerySearchapplicationsGetSecurity) (*operations.CloudsearchStatsQuerySearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/query/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/query/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,20 +369,20 @@ func (s *stats) CloudsearchStatsQuerySearchapplicationsGet(ctx context.Context, 
 }
 
 // CloudsearchStatsSessionSearchapplicationsGet - Get the # of search sessions, % of successful sessions with a click query statistics for search application. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsSessionSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsSessionSearchapplicationsGetRequest) (*operations.CloudsearchStatsSessionSearchapplicationsGetResponse, error) {
+func (s *stats) CloudsearchStatsSessionSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsSessionSearchapplicationsGetRequest, security operations.CloudsearchStatsSessionSearchapplicationsGetSecurity) (*operations.CloudsearchStatsSessionSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/session/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/session/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -417,20 +417,20 @@ func (s *stats) CloudsearchStatsSessionSearchapplicationsGet(ctx context.Context
 }
 
 // CloudsearchStatsUserSearchapplicationsGet - Get the users statistics for search application. **Note:** This API requires a standard end user account to execute.
-func (s *stats) CloudsearchStatsUserSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsUserSearchapplicationsGetRequest) (*operations.CloudsearchStatsUserSearchapplicationsGetResponse, error) {
+func (s *stats) CloudsearchStatsUserSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsUserSearchapplicationsGetRequest, security operations.CloudsearchStatsUserSearchapplicationsGetSecurity) (*operations.CloudsearchStatsUserSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/user/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/user/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

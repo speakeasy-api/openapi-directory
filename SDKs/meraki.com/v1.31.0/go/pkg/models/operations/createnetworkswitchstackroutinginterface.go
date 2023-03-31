@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchStackRoutingInterfacePathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
 // CreateNetworkSwitchStackRoutingInterfaceRequestBodyIpv6 - The IPv6 settings of the interface.
 type CreateNetworkSwitchStackRoutingInterfaceRequestBodyIpv6 struct {
 	// The IPv6 address of the interface. Required if assignmentMode is 'static'. Must not be included if assignmentMode is 'eui-64'.
@@ -82,8 +77,9 @@ type CreateNetworkSwitchStackRoutingInterfaceRequestBody struct {
 }
 
 type CreateNetworkSwitchStackRoutingInterfaceRequest struct {
-	PathParams CreateNetworkSwitchStackRoutingInterfacePathParams
-	Request    CreateNetworkSwitchStackRoutingInterfaceRequestBody `request:"mediaType=application/json"`
+	RequestBody   CreateNetworkSwitchStackRoutingInterfaceRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                                              `pathParam:"style=simple,explode=false,name=networkId"`
+	SwitchStackID string                                              `pathParam:"style=simple,explode=false,name=switchStackId"`
 }
 
 type CreateNetworkSwitchStackRoutingInterfaceResponse struct {

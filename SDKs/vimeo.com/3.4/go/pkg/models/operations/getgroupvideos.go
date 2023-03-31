@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupVideosPathParams struct {
-	// The ID of the group.
-	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 // GetGroupVideosDirectionEnum - The sort direction of the results.
 type GetGroupVideosDirectionEnum string
 
@@ -95,13 +90,15 @@ func (e *GetGroupVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGroupVideosQueryParams struct {
+type GetGroupVideosRequest struct {
 	// The sort direction of the results.
 	Direction *GetGroupVideosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
 	Filter *GetGroupVideosFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
 	FilterEmbeddable *bool `queryParam:"style=form,explode=true,name=filter_embeddable"`
+	// The ID of the group.
+	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
@@ -110,11 +107,6 @@ type GetGroupVideosQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetGroupVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetGroupVideosRequest struct {
-	PathParams  GetGroupVideosPathParams
-	QueryParams GetGroupVideosQueryParams
 }
 
 type GetGroupVideosResponse struct {

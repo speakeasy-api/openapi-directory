@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleVersionConfidentialityPathParams struct {
+type ArticleVersionConfidentialityRequest struct {
 	// Article Unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Version Number
 	VNumber int64 `pathParam:"style=simple,explode=false,name=v_number"`
-}
-
-type ArticleVersionConfidentialityRequest struct {
-	PathParams ArticleVersionConfidentialityPathParams
 }
 
 type ArticleVersionConfidentialityResponse struct {

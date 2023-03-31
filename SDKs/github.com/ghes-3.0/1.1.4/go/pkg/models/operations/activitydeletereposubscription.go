@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ActivityDeleteRepoSubscriptionPathParams struct {
+type ActivityDeleteRepoSubscriptionRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActivityDeleteRepoSubscriptionRequest struct {
-	PathParams ActivityDeleteRepoSubscriptionPathParams
 }
 
 type ActivityDeleteRepoSubscriptionResponse struct {

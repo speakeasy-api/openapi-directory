@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetV2TeamTemplatesIDJSONPathParams struct {
+type GetV2TeamTemplatesIDJSONRequest struct {
 	// Team Template ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2TeamTemplatesIDJSONQueryParams struct {
 	// Optionally will return the templates with the current user's email signature
 	IncludeSignature *bool `queryParam:"style=form,explode=true,name=include_signature"`
-}
-
-type GetV2TeamTemplatesIDJSONRequest struct {
-	PathParams  GetV2TeamTemplatesIDJSONPathParams
-	QueryParams GetV2TeamTemplatesIDJSONQueryParams
 }
 
 type GetV2TeamTemplatesIDJSONResponse struct {

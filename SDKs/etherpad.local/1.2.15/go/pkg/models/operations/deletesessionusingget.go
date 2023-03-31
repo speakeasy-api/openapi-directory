@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteSessionUsingGETQueryParams struct {
-	SessionID *string `queryParam:"style=form,explode=true,name=sessionID"`
-}
-
 type DeleteSessionUsingGETRequest struct {
-	QueryParams DeleteSessionUsingGETQueryParams
+	SessionID *string `queryParam:"style=form,explode=true,name=sessionID"`
 }
 
 // DeleteSessionUsingGET500ApplicationJSON - internal api error (code 2)

@@ -36,7 +36,7 @@ func (e *MybusinessbusinessinformationCategoriesListViewEnum) UnmarshalJSON(data
 	}
 }
 
-type MybusinessbusinessinformationCategoriesListQueryParams struct {
+type MybusinessbusinessinformationCategoriesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -71,10 +71,6 @@ type MybusinessbusinessinformationCategoriesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Specifies which parts to the Category resource should be returned in the response.
 	View *MybusinessbusinessinformationCategoriesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MybusinessbusinessinformationCategoriesListRequest struct {
-	QueryParams MybusinessbusinessinformationCategoriesListQueryParams
 }
 
 type MybusinessbusinessinformationCategoriesListResponse struct {

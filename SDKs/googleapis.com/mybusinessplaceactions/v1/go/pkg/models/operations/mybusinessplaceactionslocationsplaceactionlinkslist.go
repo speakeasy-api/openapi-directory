@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessplaceactionsLocationsPlaceActionLinksListPathParams struct {
-	// Required. The name of the location whose place action links will be listed. `locations/{location_id}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessplaceactionsLocationsPlaceActionLinksListQueryParams struct {
+type MybusinessplaceactionsLocationsPlaceActionLinksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -33,6 +28,8 @@ type MybusinessplaceactionsLocationsPlaceActionLinksListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. If specified, returns the next page of place action links.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the location whose place action links will be listed. `locations/{location_id}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -41,11 +38,6 @@ type MybusinessplaceactionsLocationsPlaceActionLinksListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessplaceactionsLocationsPlaceActionLinksListRequest struct {
-	PathParams  MybusinessplaceactionsLocationsPlaceActionLinksListPathParams
-	QueryParams MybusinessplaceactionsLocationsPlaceActionLinksListQueryParams
 }
 
 type MybusinessplaceactionsLocationsPlaceActionLinksListResponse struct {

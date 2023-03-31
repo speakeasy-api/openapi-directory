@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersUpdatePathParams struct {
+type UsersUpdateRequest struct {
+	// Parameters to update an existing user.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 	// The object ID or principal name of the user to update.
 	UpnOrObjectID string `pathParam:"style=simple,explode=false,name=upnOrObjectId"`
-}
-
-type UsersUpdateQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type UsersUpdateRequest struct {
-	PathParams  UsersUpdatePathParams
-	QueryParams UsersUpdateQueryParams
-	// Parameters to update an existing user.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UsersUpdateResponse struct {

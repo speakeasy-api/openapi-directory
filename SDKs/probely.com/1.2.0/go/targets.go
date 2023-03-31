@@ -48,7 +48,7 @@ func newTargets(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteTargetsID - Delete target
 func (s *targets) DeleteTargetsID(ctx context.Context, request operations.DeleteTargetsIDRequest) (*operations.DeleteTargetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *targets) GetTargets(ctx context.Context, request operations.GetTargetsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -191,7 +191,7 @@ func (s *targets) GetTargets(ctx context.Context, request operations.GetTargetsR
 // GetTargetsID - Retrieve target
 func (s *targets) GetTargetsID(ctx context.Context, request operations.GetTargetsIDRequest) (*operations.GetTargetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,9 +265,9 @@ func (s *targets) GetTargetsID(ctx context.Context, request operations.GetTarget
 // PatchTargetsID - Partial update target
 func (s *targets) PatchTargetsID(ctx context.Context, request operations.PatchTargetsIDRequest) (*operations.PatchTargetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -354,7 +354,7 @@ func (s *targets) PatchTargetsID(ctx context.Context, request operations.PatchTa
 }
 
 // PostTargets - Create target
-func (s *targets) PostTargets(ctx context.Context, request operations.PostTargetsRequest) (*operations.PostTargetsResponse, error) {
+func (s *targets) PostTargets(ctx context.Context, request shared.TargetInput) (*operations.PostTargetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/targets/"
 
@@ -447,9 +447,9 @@ func (s *targets) PostTargets(ctx context.Context, request operations.PostTarget
 // PutTargetsID - Update target
 func (s *targets) PutTargetsID(ctx context.Context, request operations.PutTargetsIDRequest) (*operations.PutTargetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

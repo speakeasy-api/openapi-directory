@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnEventSubscriptionRequest struct {
-	Request shared.CreateAnEventSubscriptionParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnEventSubscriptionDefaultApplicationJSON13StatusEnum string
 
 const (

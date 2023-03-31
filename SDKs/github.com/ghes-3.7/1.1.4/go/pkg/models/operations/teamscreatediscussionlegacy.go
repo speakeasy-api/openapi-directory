@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsCreateDiscussionLegacyRequestBody struct {
 	// The discussion post's body text.
 	Body string `json:"body"`
@@ -22,8 +17,9 @@ type TeamsCreateDiscussionLegacyRequestBody struct {
 }
 
 type TeamsCreateDiscussionLegacyRequest struct {
-	PathParams TeamsCreateDiscussionLegacyPathParams
-	Request    TeamsCreateDiscussionLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateDiscussionLegacyRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsCreateDiscussionLegacyResponse struct {

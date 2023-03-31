@@ -45,7 +45,11 @@ func (e *ListSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListQueryParams struct {
+type ListRequest struct {
+	// Unique identifier of the Market in which the request is happening
+	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
+	// Shopper ID to be operated on, if different from JWT<br/><b>Reseller subaccounts are not supported</b>
+	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
 	// Domain name to use as the filter of results
 	Domain *string `queryParam:"style=form,explode=true,name=domain"`
 	// Maximum number of items to return
@@ -64,18 +68,6 @@ type ListQueryParams struct {
 	ProductGroupID *int64 `queryParam:"style=form,explode=true,name=productGroupId"`
 	// Property name that will be used to sort results. '-' indicates descending
 	Sort *ListSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListHeaders struct {
-	// Unique identifier of the Market in which the request is happening
-	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
-	// Shopper ID to be operated on, if different from JWT<br/><b>Reseller subaccounts are not supported</b>
-	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
-}
-
-type ListRequest struct {
-	QueryParams ListQueryParams
-	Headers     ListHeaders
 }
 
 type ListResponse struct {

@@ -14,40 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest{
-        Security: operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
-            Option1: &operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        BindDeviceToGatewayRequest: &shared.BindDeviceToGatewayRequest{
+            DeviceID: "provident",
+            GatewayID: "distinctio",
         },
-        PathParams: operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.BindDeviceToGatewayRequest{
-            DeviceID: "suscipit",
-            GatewayID: "iure",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        Parent: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, req)
+    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, req, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
+        Option1: &operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

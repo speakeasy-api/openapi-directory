@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ObtainTokenRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request shared.ObtainTokenRequest `request:"mediaType=application/json"`
-}
-
 type ObtainTokenResponse struct {
 	ContentType string
 	// Success

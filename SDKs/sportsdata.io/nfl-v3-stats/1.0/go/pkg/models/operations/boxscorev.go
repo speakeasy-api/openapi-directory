@@ -33,7 +33,7 @@ func (e *BoxScoreVFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScoreVPathParams struct {
+type BoxScoreVRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoreVFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Abbreviation of a team playing in this game. Example: <code>WAS</code>.
@@ -46,10 +46,6 @@ type BoxScoreVPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type BoxScoreVRequest struct {
-	PathParams BoxScoreVPathParams
 }
 
 type BoxScoreVResponse struct {

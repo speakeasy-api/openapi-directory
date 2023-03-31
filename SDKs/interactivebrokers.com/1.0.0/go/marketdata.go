@@ -91,7 +91,7 @@ func (s *marketData) GetMarketdataExchangeComponents(ctx context.Context) (*oper
 // 0 => NYSE, 1 => ISLAND, 2 => ARCA then the exchanges contributing to the bid size are NYSE and ARCA.
 //
 // Similarly, if market=2, then only ISLAND is contributing.
-func (s *marketData) GetMarketdataSnapshot(ctx context.Context, request operations.GetMarketdataSnapshotRequest) (*operations.GetMarketdataSnapshotResponse, error) {
+func (s *marketData) GetMarketdataSnapshot(ctx context.Context, request []operations.GetMarketdataSnapshotRequestBody) (*operations.GetMarketdataSnapshotResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/marketdata/snapshot"
 

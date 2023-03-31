@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitRelyingpartyDownloadAccountSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitRelyingpartyDownloadAccountSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitRelyingpartyDownloadAccountSecurity struct {
@@ -22,7 +22,8 @@ type IdentitytoolkitRelyingpartyDownloadAccountSecurity struct {
 	Option2 *IdentitytoolkitRelyingpartyDownloadAccountSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitRelyingpartyDownloadAccountQueryParams struct {
+type IdentitytoolkitRelyingpartyDownloadAccountRequest struct {
+	IdentitytoolkitRelyingpartyDownloadAccountRequest *shared.IdentitytoolkitRelyingpartyDownloadAccountRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -37,12 +38,6 @@ type IdentitytoolkitRelyingpartyDownloadAccountQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type IdentitytoolkitRelyingpartyDownloadAccountRequest struct {
-	QueryParams IdentitytoolkitRelyingpartyDownloadAccountQueryParams
-	Request     *shared.IdentitytoolkitRelyingpartyDownloadAccountRequest `request:"mediaType=application/json"`
-	Security    IdentitytoolkitRelyingpartyDownloadAccountSecurity
 }
 
 type IdentitytoolkitRelyingpartyDownloadAccountResponse struct {

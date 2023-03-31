@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/github.com/ghes-3.0/1.1.4/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,13 +15,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest(
-    path_params=operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams(
-        org="natus",
-        repository_id=8643140321872946841,
-        runner_group_id=1926702589155937415,
-    ),
+    org="corrupti",
+    repository_id=592845,
+    runner_group_id=715190,
 )
     
 res = s.actions.actions_add_repo_access_to_self_hosted_runner_group_in_org(req)
@@ -32,7 +31,8 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### actions
 
@@ -145,7 +145,7 @@ if res.status_code == 200:
 
 ### apps
 
-* `apps_add_repo_to_installation` - Add a repository to an app installation
+* `apps_add_repo_to_installation_for_authenticated_user` - Add a repository to an app installation
 * `apps_check_authorization` - Check an authorization
 * `apps_check_token` - Check a token
 * `apps_create_content_attachment` - Create a content attachment
@@ -165,7 +165,7 @@ if res.status_code == 200:
 * `apps_list_installations` - List installations for the authenticated app
 * `apps_list_installations_for_authenticated_user` - List app installations accessible to the user access token
 * `apps_list_repos_accessible_to_installation` - List repositories accessible to the app installation
-* `apps_remove_repo_from_installation` - Remove a repository from an app installation
+* `apps_remove_repo_from_installation_for_authenticated_user` - Remove a repository from an app installation
 * `apps_reset_authorization` - Reset an authorization
 * `apps_reset_token` - Reset a token
 * `apps_revoke_authorization_for_application` - Revoke an authorization for an application
@@ -190,7 +190,7 @@ if res.status_code == 200:
 * `checks_set_suites_preferences` - Update repository preferences for check suites
 * `checks_update` - Update a check run
 
-### code-scanning
+### code_scanning
 
 * `code_scanning_get_alert` - Get a code scanning alert
 * `code_scanning_list_alerts_for_repo` - List code scanning alerts for a repository
@@ -198,7 +198,7 @@ if res.status_code == 200:
 * `code_scanning_update_alert` - Update a code scanning alert
 * `code_scanning_upload_sarif` - Upload an analysis as SARIF data
 
-### codes-of-conduct
+### codes_of_conduct
 
 * `codes_of_conduct_get_all_codes_of_conduct` - Get all codes of conduct
 * `codes_of_conduct_get_conduct_code` - Get a code of conduct
@@ -207,7 +207,7 @@ if res.status_code == 200:
 
 * `emojis_get` - Get emojis
 
-### enterprise-admin
+### enterprise_admin
 
 * `enterprise_admin_add_authorized_ssh_key` - Add an authorized SSH key
 * `enterprise_admin_add_org_access_to_self_hosted_runner_group_in_enterprise` - Add organization access to a self-hosted runner group in an enterprise
@@ -236,22 +236,32 @@ if res.status_code == 200:
 * `enterprise_admin_enable_or_disable_maintenance_mode` - Enable or disable maintenance mode
 * `enterprise_admin_enable_selected_organization_github_actions_enterprise` - Enable a selected organization for GitHub Actions in an enterprise
 * `enterprise_admin_get_all_authorized_ssh_keys` - Get all authorized SSH keys
+* `enterprise_admin_get_all_stats` - Get all statistics
 * `enterprise_admin_get_allowed_actions_enterprise` - Get allowed actions for an enterprise
 * `enterprise_admin_get_announcement` - Get the global announcement banner
+* `enterprise_admin_get_comment_stats` - Get comment statistics
 * `enterprise_admin_get_configuration_status` - Get the configuration status
 * `enterprise_admin_get_download_status_for_pre_receive_environment` - Get the download status for a pre-receive environment
+* `enterprise_admin_get_gist_stats` - Get gist statistics
 * `enterprise_admin_get_github_actions_permissions_enterprise` - Get GitHub Actions permissions for an enterprise
 * `enterprise_admin_get_global_webhook` - Get a global webhook
+* `enterprise_admin_get_hooks_stats` - Get hooks statistics
+* `enterprise_admin_get_issue_stats` - Get issue statistics
 * `enterprise_admin_get_license_information` - Get license information
 * `enterprise_admin_get_maintenance_status` - Get the maintenance status
+* `enterprise_admin_get_milestone_stats` - Get milestone statistics
+* `enterprise_admin_get_org_stats` - Get organization statistics
+* `enterprise_admin_get_pages_stats` - Get pages statistics
 * `enterprise_admin_get_pre_receive_environment` - Get a pre-receive environment
 * `enterprise_admin_get_pre_receive_hook` - Get a pre-receive hook
 * `enterprise_admin_get_pre_receive_hook_for_org` - Get a pre-receive hook for an organization
 * `enterprise_admin_get_pre_receive_hook_for_repo` - Get a pre-receive hook for a repository
+* `enterprise_admin_get_pull_request_stats` - Get pull request statistics
+* `enterprise_admin_get_repo_stats` - Get repository statistics
 * `enterprise_admin_get_self_hosted_runner_for_enterprise` - Get a self-hosted runner for an enterprise
 * `enterprise_admin_get_self_hosted_runner_group_for_enterprise` - Get a self-hosted runner group for an enterprise
 * `enterprise_admin_get_settings` - Get settings
-* `enterprise_admin_get_type_stats` - Get statistics
+* `enterprise_admin_get_user_stats` - Get users statistics
 * `enterprise_admin_list_global_webhooks` - List global webhooks
 * `enterprise_admin_list_org_access_to_self_hosted_runner_group_in_enterprise` - List organization access to a self-hosted runner group in an enterprise
 * `enterprise_admin_list_personal_access_tokens` - List personal access tokens
@@ -402,7 +412,7 @@ if res.status_code == 200:
 * `meta_get_zen` - Get the Zen of GitHub
 * `meta_root` - GitHub API Root
 
-### oauth-authorizations
+### oauth_authorizations
 
 * `oauth_authorizations_create_authorization` - Create a new authorization
 * `oauth_authorizations_delete_authorization` - Delete an authorization
@@ -506,7 +516,7 @@ if res.status_code == 200:
 * `pulls_update_review` - Update a review for a pull request
 * `pulls_update_review_comment` - Update a review comment for a pull request
 
-### rate-limit
+### rate_limit
 
 * `rate_limit_get` - Get rate limit status for the authenticated user
 
@@ -538,7 +548,7 @@ if res.status_code == 200:
 
 ### repos
 
-* `repos_accept_invitation` - Accept a repository invitation
+* `repos_accept_invitation_for_authenticated_user` - Accept a repository invitation
 * `repos_add_app_access_restrictions` - Add app access restrictions
 * `repos_add_collaborator` - Add a repository collaborator
 * `repos_add_status_check_contexts` - Add status check contexts
@@ -561,7 +571,7 @@ if res.status_code == 200:
 * `repos_create_release` - Create a release
 * `repos_create_using_template` - Create a repository using a template
 * `repos_create_webhook` - Create a repository webhook
-* `repos_decline_invitation` - Decline a repository invitation
+* `repos_decline_invitation_for_authenticated_user` - Decline a repository invitation
 * `repos_delete` - Delete a repository
 * `repos_delete_access_restrictions` - Delete access restrictions
 * `repos_delete_admin_branch_protection` - Delete admin branch protection
@@ -745,34 +755,44 @@ if res.status_code == 200:
 
 ### users
 
-* `users_add_email_for_authenticated` - Add an email address for the authenticated user
+* `users_add_email_for_authenticated_user` - Add an email address for the authenticated user
 * `users_check_following_for_user` - Check if a user follows another user
 * `users_check_person_is_followed_by_authenticated` - Check if a person is followed by the authenticated user
-* `users_create_gpg_key_for_authenticated` - Create a GPG key for the authenticated user
-* `users_create_public_ssh_key_for_authenticated` - Create a public SSH key for the authenticated user
-* `users_delete_email_for_authenticated` - Delete an email address for the authenticated user
-* `users_delete_gpg_key_for_authenticated` - Delete a GPG key for the authenticated user
-* `users_delete_public_ssh_key_for_authenticated` - Delete a public SSH key for the authenticated user
+* `users_create_gpg_key_for_authenticated_user` - Create a GPG key for the authenticated user
+* `users_create_public_ssh_key_for_authenticated_user` - Create a public SSH key for the authenticated user
+* `users_delete_email_for_authenticated_user` - Delete an email address for the authenticated user
+* `users_delete_gpg_key_for_authenticated_user` - Delete a GPG key for the authenticated user
+* `users_delete_public_ssh_key_for_authenticated_user` - Delete a public SSH key for the authenticated user
 * `users_follow` - Follow a user
 * `users_get_authenticated` - Get the authenticated user
 * `users_get_by_username` - Get a user
 * `users_get_context_for_user` - Get contextual information for a user
-* `users_get_gpg_key_for_authenticated` - Get a GPG key for the authenticated user
-* `users_get_public_ssh_key_for_authenticated` - Get a public SSH key for the authenticated user
+* `users_get_gpg_key_for_authenticated_user` - Get a GPG key for the authenticated user
+* `users_get_public_ssh_key_for_authenticated_user` - Get a public SSH key for the authenticated user
 * `users_list` - List users
-* `users_list_emails_for_authenticated` - List email addresses for the authenticated user
-* `users_list_followed_by_authenticated` - List the people the authenticated user follows
+* `users_list_emails_for_authenticated_user` - List email addresses for the authenticated user
+* `users_list_followed_by_authenticated_user` - List the people the authenticated user follows
 * `users_list_followers_for_authenticated_user` - List followers of the authenticated user
 * `users_list_followers_for_user` - List followers of a user
 * `users_list_following_for_user` - List the people a user follows
-* `users_list_gpg_keys_for_authenticated` - List GPG keys for the authenticated user
+* `users_list_gpg_keys_for_authenticated_user` - List GPG keys for the authenticated user
 * `users_list_gpg_keys_for_user` - List GPG keys for a user
-* `users_list_public_emails_for_authenticated` - List public email addresses for the authenticated user
+* `users_list_public_emails_for_authenticated_user` - List public email addresses for the authenticated user
 * `users_list_public_keys_for_user` - List public keys for a user
-* `users_list_public_ssh_keys_for_authenticated` - List public SSH keys for the authenticated user
+* `users_list_public_ssh_keys_for_authenticated_user` - List public SSH keys for the authenticated user
 * `users_unfollow` - Unfollow a user
 * `users_update_authenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

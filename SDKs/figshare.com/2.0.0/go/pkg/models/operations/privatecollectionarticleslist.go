@@ -8,15 +8,12 @@ import (
 )
 
 type PrivateCollectionArticlesListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateCollectionArticlesListPathParams struct {
+type PrivateCollectionArticlesListRequest struct {
 	// Collection unique identifier
 	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type PrivateCollectionArticlesListQueryParams struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
@@ -25,12 +22,6 @@ type PrivateCollectionArticlesListQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type PrivateCollectionArticlesListRequest struct {
-	PathParams  PrivateCollectionArticlesListPathParams
-	QueryParams PrivateCollectionArticlesListQueryParams
-	Security    PrivateCollectionArticlesListSecurity
 }
 
 type PrivateCollectionArticlesListResponse struct {

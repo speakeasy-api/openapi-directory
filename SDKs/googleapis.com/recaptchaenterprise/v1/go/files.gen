@@ -26,11 +26,10 @@ pkg/models/operations/recaptchaenterpriseprojectskeysretrievelegacysecretkey.go
 pkg/models/operations/recaptchaenterpriseprojectsrelatedaccountgroupmembershipssearch.go
 pkg/models/operations/recaptchaenterpriseprojectsrelatedaccountgroupslist.go
 pkg/models/operations/recaptchaenterpriseprojectsrelatedaccountgroupsmembershipslist.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1annotateassessmentrequest.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1transactionevent.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1assessment.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1tokenproperties.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1riskanalysis.go

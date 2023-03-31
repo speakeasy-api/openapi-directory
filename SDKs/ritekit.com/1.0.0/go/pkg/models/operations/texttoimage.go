@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type TextToImageQueryParams struct {
+type TextToImageRequest struct {
 	// Animation type: none, rays, glint, circle
 	Animation string `queryParam:"style=form,explode=true,name=animation"`
 	// Name of the author/source
@@ -41,10 +41,6 @@ type TextToImageQueryParams struct {
 	QuoteFontColor string `queryParam:"style=form,explode=true,name=quoteFontColor"`
 	// showing/hiding quote mark
 	ShowQuoteMark *int64 `queryParam:"style=form,explode=true,name=showQuoteMark"`
-}
-
-type TextToImageRequest struct {
-	QueryParams TextToImageQueryParams
 }
 
 type TextToImageResponse struct {

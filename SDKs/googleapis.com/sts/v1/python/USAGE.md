@@ -4,25 +4,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.StsIntrospectRequest(
-    query_params=operations.StsIntrospectQueryParams(
-        dollar_xgafv="2",
-        access_token="est",
-        alt="json",
-        callback="nostrum",
-        fields="ea",
-        key="omnis",
-        oauth_token="quia",
-        pretty_print=True,
-        quota_user="omnis",
-        upload_type="soluta",
-        upload_protocol="sequi",
+    dollar_xgafv="2",
+    google_identity_sts_v1_introspect_token_request=shared.GoogleIdentityStsV1IntrospectTokenRequest(
+        token="provident",
+        token_type_hint="distinctio",
     ),
-    request=shared.GoogleIdentityStsV1IntrospectTokenRequest(
-        token="neque",
-        token_type_hint="et",
-    ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
 res = s.v1.sts_introspect(req)

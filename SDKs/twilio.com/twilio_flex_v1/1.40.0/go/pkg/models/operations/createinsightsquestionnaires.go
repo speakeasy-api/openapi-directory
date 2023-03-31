@@ -12,12 +12,8 @@ var CreateInsightsQuestionnairesServerList = []string{
 }
 
 type CreateInsightsQuestionnairesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInsightsQuestionnairesHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInsightsQuestionnairesCreateInsightsQuestionnairesRequest struct {
@@ -32,10 +28,9 @@ type CreateInsightsQuestionnairesCreateInsightsQuestionnairesRequest struct {
 }
 
 type CreateInsightsQuestionnairesRequest struct {
-	Headers   CreateInsightsQuestionnairesHeaders
-	Request   *CreateInsightsQuestionnairesCreateInsightsQuestionnairesRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateInsightsQuestionnairesSecurity
-	ServerURL *string
+	RequestBody *CreateInsightsQuestionnairesCreateInsightsQuestionnairesRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type CreateInsightsQuestionnairesResponse struct {

@@ -35,9 +35,9 @@ func newChannelsCategories(defaultClient, securityClient HTTPClient, serverURL, 
 // This method adds multiple categories to the specified channel.
 func (s *channelsCategories) AddChannelCategories(ctx context.Context, request operations.AddChannelCategoriesRequest) (*operations.AddChannelCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,16 +103,16 @@ func (s *channelsCategories) AddChannelCategories(ctx context.Context, request o
 
 // CategorizeChannel - Categorize a channel
 // This method adds a channel to a category.
-func (s *channelsCategories) CategorizeChannel(ctx context.Context, request operations.CategorizeChannelRequest) (*operations.CategorizeChannelResponse, error) {
+func (s *channelsCategories) CategorizeChannel(ctx context.Context, request operations.CategorizeChannelRequest, security operations.CategorizeChannelSecurity) (*operations.CategorizeChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,16 +163,16 @@ func (s *channelsCategories) CategorizeChannel(ctx context.Context, request oper
 
 // DeleteChannelCategory - Remove a category from a channel
 // This method removes a single category from the specified channel.
-func (s *channelsCategories) DeleteChannelCategory(ctx context.Context, request operations.DeleteChannelCategoryRequest) (*operations.DeleteChannelCategoryResponse, error) {
+func (s *channelsCategories) DeleteChannelCategory(ctx context.Context, request operations.DeleteChannelCategoryRequest, security operations.DeleteChannelCategorySecurity) (*operations.DeleteChannelCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *channelsCategories) DeleteChannelCategory(ctx context.Context, request 
 // This method gets all the categories in the specified channel.
 func (s *channelsCategories) GetChannelCategories(ctx context.Context, request operations.GetChannelCategoriesRequest) (*operations.GetChannelCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteQuoteRequest{
-        Security: operations.DeleteQuoteSecurity{
-            XTheySaidSoAPISecret: shared.SchemeXTheySaidSoAPISecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.DeleteQuoteQueryParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.PrivateQuotes.DeleteQuote(ctx, req)
+    res, err := s.PrivateQuotes.DeleteQuote(ctx, req, operations.DeleteQuoteSecurity{
+        XTheySaidSoAPISecret: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

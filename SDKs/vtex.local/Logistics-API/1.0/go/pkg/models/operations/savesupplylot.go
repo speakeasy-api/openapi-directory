@@ -6,22 +6,6 @@ import (
 	"net/http"
 )
 
-type SaveSupplyLotPathParams struct {
-	// ID of the SKU whose availability is being scheduled.
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-	// ID of the Supply Lot in which the SKU's scheduling should be considered.
-	SupplyLotID string `pathParam:"style=simple,explode=false,name=supplyLotId"`
-	// ID of the warehouse where the SKU will arrive.
-	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
-}
-
-type SaveSupplyLotHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type SaveSupplyLotSaveSupplyLot struct {
 	DateOfSupplyUtc            string  `json:"dateOfSupplyUtc"`
 	KeepSellingAfterExpiration bool    `json:"keepSellingAfterExpiration"`
@@ -29,9 +13,17 @@ type SaveSupplyLotSaveSupplyLot struct {
 }
 
 type SaveSupplyLotRequest struct {
-	PathParams SaveSupplyLotPathParams
-	Headers    SaveSupplyLotHeaders
-	Request    SaveSupplyLotSaveSupplyLot `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                     `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody SaveSupplyLotSaveSupplyLot `request:"mediaType=application/json"`
+	// ID of the SKU whose availability is being scheduled.
+	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
+	// ID of the Supply Lot in which the SKU's scheduling should be considered.
+	SupplyLotID string `pathParam:"style=simple,explode=false,name=supplyLotId"`
+	// ID of the warehouse where the SKU will arrive.
+	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
 }
 
 type SaveSupplyLotResponse struct {

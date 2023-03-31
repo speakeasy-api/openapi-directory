@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCandidateCandidateIDCommitteesHistoryCyclePathParams struct {
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office.
-	//
-	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
-	// A two year election cycle that the committee was active- (after original registration
-	// date but before expiration date in Form 1s) The cycle begins with
-	// an odd year and is named for its ending, even year.
-	//
-	Cycle int `pathParam:"style=simple,explode=false,name=cycle"`
-}
-
 type GetCandidateCandidateIDCommitteesHistoryCycleDesignationEnum string
 
 const (
@@ -59,10 +47,19 @@ func (e *GetCandidateCandidateIDCommitteesHistoryCycleDesignationEnum) Unmarshal
 	}
 }
 
-type GetCandidateCandidateIDCommitteesHistoryCycleQueryParams struct {
+type GetCandidateCandidateIDCommitteesHistoryCycleRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each candidate registered with the FEC.
+	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	//
+	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
+	// A two year election cycle that the committee was active- (after original registration
+	// date but before expiration date in Form 1s) The cycle begins with
+	// an odd year and is named for its ending, even year.
+	//
+	Cycle int `pathParam:"style=simple,explode=false,name=cycle"`
 	// The one-letter designation code of the organization:
 	//          - A authorized by a candidate
 	//          - J joint fundraising committee
@@ -88,11 +85,6 @@ type GetCandidateCandidateIDCommitteesHistoryCycleQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCandidateCandidateIDCommitteesHistoryCycleRequest struct {
-	PathParams  GetCandidateCandidateIDCommitteesHistoryCyclePathParams
-	QueryParams GetCandidateCandidateIDCommitteesHistoryCycleQueryParams
 }
 
 type GetCandidateCandidateIDCommitteesHistoryCycleResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityListReposStarredByAuthenticatedUserQueryParams struct {
+type ActivityListReposStarredByAuthenticatedUserRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -16,10 +16,6 @@ type ActivityListReposStarredByAuthenticatedUserQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// One of `created` (when the repository was starred) or `updated` (when it was last pushed to).
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ActivityListReposStarredByAuthenticatedUserRequest struct {
-	QueryParams ActivityListReposStarredByAuthenticatedUserQueryParams
 }
 
 type ActivityListReposStarredByAuthenticatedUserResponse struct {

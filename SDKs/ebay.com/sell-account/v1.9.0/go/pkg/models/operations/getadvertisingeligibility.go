@@ -8,23 +8,14 @@ import (
 )
 
 type GetAdvertisingEligibilitySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetAdvertisingEligibilityQueryParams struct {
-	// A comma-separated list of eBay advertising programs.<br /><br /><span class="tablenote"><b>Tip:</b> See the <a href="/api-docs/sell/account/types/plser:AdvertisingProgramEnum"> AdvertisingProgramEnum</a> type for possible values.</span><br /><br />If no programs are specified, the results will be returned for all programs.
-	ProgramTypes *string `queryParam:"style=form,explode=true,name=program_types"`
-}
-
-type GetAdvertisingEligibilityHeaders struct {
-	// The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked.<br /><br /><span class="tablenote"><b>Note:</b> This value is case-sensitive.</span>
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAdvertisingEligibilityRequest struct {
-	QueryParams GetAdvertisingEligibilityQueryParams
-	Headers     GetAdvertisingEligibilityHeaders
-	Security    GetAdvertisingEligibilitySecurity
+	// The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked.<br /><br /><span class="tablenote"><b>Note:</b> This value is case-sensitive.</span>
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	// A comma-separated list of eBay advertising programs.<br /><br /><span class="tablenote"><b>Tip:</b> See the <a href="/api-docs/sell/account/types/plser:AdvertisingProgramEnum"> AdvertisingProgramEnum</a> type for possible values.</span><br /><br />If no programs are specified, the results will be returned for all programs.
+	ProgramTypes *string `queryParam:"style=form,explode=true,name=program_types"`
 }
 
 type GetAdvertisingEligibilityResponse struct {

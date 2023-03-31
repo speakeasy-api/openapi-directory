@@ -32,13 +32,9 @@ func (e *GetAreasFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAreasQueryParams struct {
+type GetAreasRequest struct {
 	// The format of the response
 	Format *GetAreasFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetAreasRequest struct {
-	QueryParams GetAreasQueryParams
 }
 
 type GetAreasResponse struct {

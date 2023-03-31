@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetFleetFleetnamePathParams struct {
+type GetFleetFleetnameRequest struct {
 	// The identifier or email address of the fleet; it is integrated in the `sub` property and is the basis of the other generated properties.
 	//
 	Fleetname string `pathParam:"style=simple,explode=false,name=fleetname"`
-}
-
-type GetFleetFleetnameRequest struct {
-	PathParams GetFleetFleetnamePathParams
 }
 
 // GetFleetFleetname200ApplicationJSON - OK

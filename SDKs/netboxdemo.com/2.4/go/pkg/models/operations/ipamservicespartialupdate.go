@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamServicesPartialUpdatePathParams struct {
+type IpamServicesPartialUpdateRequest struct {
+	WritableServiceInput shared.WritableServiceInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this service.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamServicesPartialUpdateRequest struct {
-	PathParams IpamServicesPartialUpdatePathParams
-	Request    shared.WritableServiceInput `request:"mediaType=application/json"`
 }
 
 type IpamServicesPartialUpdateResponse struct {

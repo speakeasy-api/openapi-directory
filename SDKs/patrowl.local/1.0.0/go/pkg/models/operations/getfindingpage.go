@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFindingPagePathParams struct {
+type GetFindingPageRequest struct {
 	// Numeric ID of the scan to get findings
 	ScanID int64 `pathParam:"style=simple,explode=false,name=scanId"`
-}
-
-type GetFindingPageRequest struct {
-	PathParams GetFindingPagePathParams
 }
 
 type GetFindingPageResponse struct {

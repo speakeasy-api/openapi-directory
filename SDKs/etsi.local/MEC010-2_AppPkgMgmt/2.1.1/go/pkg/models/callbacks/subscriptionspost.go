@@ -4,16 +4,10 @@ package callbacks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SubscriptionsPOSTNotificationPOSTResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type SubscriptionsPOSTNotificationPOSTRequest struct {
-	// Subscription notification
-	Request shared.AppPkgNotification `request:"mediaType=application/json"`
 }

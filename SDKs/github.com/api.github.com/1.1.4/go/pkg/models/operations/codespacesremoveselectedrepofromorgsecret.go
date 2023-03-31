@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesRemoveSelectedRepoFromOrgSecretPathParams struct {
+type CodespacesRemoveSelectedRepoFromOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesRemoveSelectedRepoFromOrgSecretRequest struct {
-	PathParams CodespacesRemoveSelectedRepoFromOrgSecretPathParams
 }
 
 type CodespacesRemoveSelectedRepoFromOrgSecretResponse struct {

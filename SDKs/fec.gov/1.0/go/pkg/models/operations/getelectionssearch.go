@@ -35,7 +35,7 @@ func (e *GetElectionsSearchOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetElectionsSearchQueryParams struct {
+type GetElectionsSearchRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -68,10 +68,6 @@ type GetElectionsSearchQueryParams struct {
 	State []string `queryParam:"style=form,explode=true,name=state"`
 	// Zip code
 	Zip []int `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetElectionsSearchRequest struct {
-	QueryParams GetElectionsSearchQueryParams
 }
 
 type GetElectionsSearchResponse struct {

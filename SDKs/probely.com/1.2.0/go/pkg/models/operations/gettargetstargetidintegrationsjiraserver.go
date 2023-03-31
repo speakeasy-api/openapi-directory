@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDIntegrationsJiraServerPathParams struct {
+type GetTargetsTargetIDIntegrationsJiraServerRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDIntegrationsJiraServerRequest struct {
-	PathParams GetTargetsTargetIDIntegrationsJiraServerPathParams
 }
 
 // GetTargetsTargetIDIntegrationsJiraServer403ApplicationJSON - Not allowed to perform operation

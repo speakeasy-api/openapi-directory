@@ -8,19 +8,15 @@ import (
 	"openapi/pkg/types"
 )
 
-type UpdateMonthCategoryPathParams struct {
+type UpdateMonthCategoryRequest struct {
+	// The category to update.  Only `budgeted` amount can be updated and any other fields specified will be ignored.
+	PatchMonthCategoryWrapper shared.PatchMonthCategoryWrapper `request:"mediaType=application/json"`
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The id of the category
 	CategoryID string `pathParam:"style=simple,explode=false,name=category_id"`
 	// The budget month in ISO format (e.g. 2016-12-01) ("current" can also be used to specify the current calendar month (UTC))
 	Month types.Date `pathParam:"style=simple,explode=false,name=month"`
-}
-
-type UpdateMonthCategoryRequest struct {
-	PathParams UpdateMonthCategoryPathParams
-	// The category to update.  Only `budgeted` amount can be updated and any other fields specified will be ignored.
-	Request shared.PatchMonthCategoryWrapper `request:"mediaType=application/json"`
 }
 
 type UpdateMonthCategoryResponse struct {

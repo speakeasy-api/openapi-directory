@@ -8,19 +8,14 @@ import (
 )
 
 type AddChannelTagSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddChannelTagPathParams struct {
+type AddChannelTagRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The word to use as the tag.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type AddChannelTagRequest struct {
-	PathParams AddChannelTagPathParams
-	Security   AddChannelTagSecurity
 }
 
 type AddChannelTagResponse struct {

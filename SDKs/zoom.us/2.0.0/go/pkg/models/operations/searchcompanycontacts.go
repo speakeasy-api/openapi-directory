@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-type SearchCompanyContactsQueryParams struct {
+type SearchCompanyContactsRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records to be returned with a single API call.
@@ -17,10 +17,6 @@ type SearchCompanyContactsQueryParams struct {
 	QueryPresenceStatus *string `queryParam:"style=form,explode=true,name=query_presence_status"`
 	// Provide the keyword - either first name, last name or email of the contact whom you have to search for.
 	SearchKey string `queryParam:"style=form,explode=true,name=search_key"`
-}
-
-type SearchCompanyContactsRequest struct {
-	QueryParams SearchCompanyContactsQueryParams
 }
 
 // SearchCompanyContacts200ApplicationXMLContactsPresenceStatusEnum - Presence status of the contact in Zoom Client. The value of this field can be one of the following:

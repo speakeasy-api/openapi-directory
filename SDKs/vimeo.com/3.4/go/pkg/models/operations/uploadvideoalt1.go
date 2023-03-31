@@ -553,10 +553,6 @@ type UploadVideoAlt1RequestBody struct {
 	Upload     UploadVideoAlt1RequestBodyUpload      `json:"upload"`
 }
 
-type UploadVideoAlt1Request struct {
-	Request UploadVideoAlt1RequestBody `request:"mediaType=application/vnd.vimeo.video+json"`
-}
-
 type UploadVideoAlt1Response struct {
 	ContentType string
 	StatusCode  int

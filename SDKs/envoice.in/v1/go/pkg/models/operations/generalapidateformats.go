@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GeneralAPIDateFormatsHeaders struct {
+type GeneralAPIDateFormatsRequest struct {
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type GeneralAPIDateFormatsRequest struct {
-	Headers GeneralAPIDateFormatsHeaders
 }
 
 type GeneralAPIDateFormatsResponse struct {

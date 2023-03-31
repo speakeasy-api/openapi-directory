@@ -54,10 +54,6 @@ type HTMLRenderRequestBody struct {
 	Zoom *float64 `form:"name=zoom"`
 }
 
-type HTMLRenderRequest struct {
-	Request HTMLRenderRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type HTMLRenderResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError                                 *shared.APIError

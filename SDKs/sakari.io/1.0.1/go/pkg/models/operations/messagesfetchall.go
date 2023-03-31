@@ -8,15 +8,12 @@ import (
 )
 
 type MessagesFetchAllSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MessagesFetchAllPathParams struct {
+type MessagesFetchAllRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type MessagesFetchAllQueryParams struct {
 	// ID of contact
 	ContactID *string `queryParam:"style=form,explode=true,name=contactId"`
 	// ID of conversation
@@ -25,12 +22,6 @@ type MessagesFetchAllQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Results to skip when paginating through a result set
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type MessagesFetchAllRequest struct {
-	PathParams  MessagesFetchAllPathParams
-	QueryParams MessagesFetchAllQueryParams
-	Security    MessagesFetchAllSecurity
 }
 
 type MessagesFetchAllResponse struct {

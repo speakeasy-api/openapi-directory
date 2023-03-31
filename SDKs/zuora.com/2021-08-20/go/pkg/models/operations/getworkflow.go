@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETWorkflowPathParams struct {
-	// The unique ID of a workflow. For example, 19080.
-	//
-	WorkflowID string `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
-type GETWorkflowHeaders struct {
+type GETWorkflowRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -25,11 +19,9 @@ type GETWorkflowHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETWorkflowRequest struct {
-	PathParams GETWorkflowPathParams
-	Headers    GETWorkflowHeaders
+	// The unique ID of a workflow. For example, 19080.
+	//
+	WorkflowID string `pathParam:"style=simple,explode=false,name=workflow_id"`
 }
 
 type GETWorkflowResponse struct {

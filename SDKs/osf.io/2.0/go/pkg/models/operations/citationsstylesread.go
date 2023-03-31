@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type CitationsStylesReadPathParams struct {
+type CitationsStylesReadRequest struct {
 	// The unique identifier of the citation style.
 	StyleID string `pathParam:"style=simple,explode=false,name=style_id"`
-}
-
-type CitationsStylesReadRequest struct {
-	PathParams CitationsStylesReadPathParams
 }
 
 // CitationsStylesReadCitationStyleAttributes - The properties of the citation style entity.

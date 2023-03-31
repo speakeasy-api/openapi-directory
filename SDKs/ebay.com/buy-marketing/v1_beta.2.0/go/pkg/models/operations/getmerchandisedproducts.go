@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetMerchandisedProductsSecurity struct {
-	ClientCredentials shared.SchemeClientCredentials `security:"scheme,type=oauth2"`
+	ClientCredentials string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetMerchandisedProductsQueryParams struct {
+type GetMerchandisedProductsRequest struct {
 	// The aspect name/value pairs used to further refine product results. <br /><br /> For example: <br />&nbsp;&nbsp;&nbsp;<code>/buy/marketing/v1_beta/merchandised_product?category_id=31388&metric_name=BEST_SELLING&aspect_filter=Brand:Canon</code>  <br /><br />You can use the Browse API <b>search</b> method with the <code>fieldgroups=ASPECT_REFINEMENTS</code> field to return the aspects of a product. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/buy/marketing/types/gct:MarketingAspectFilter
 	AspectFilter *string `queryParam:"style=form,explode=true,name=aspect_filter"`
 	// This query parameter limits the products returned to a specific eBay category.  <br /> <br />The list of eBay category IDs is not published and category IDs are not all the same across all the eBay maketplace. You can use the following techniques to find a category by site: <ul> <li>Use the <a href="https://pages.ebay.com/sellerinformation/news/categorychanges.html" target="_blank">Category Changes page</a>.</li> <li>Use the Taxonomy API. For details see <a href="/api-docs/buy/buy-categories.html">Get Categories for Buy APIs</a>. </li>  <li>Use the Browse API and submit the following method to get the <b> dominantCategoryId</b> for an item. <br /><code>/buy/browse/v1/item_summary/search?q=<em>keyword</em>&fieldgroups=ASPECT_REFINEMENTS  </code></li></ul>  <b> Maximum: </b> 1 <br /> <b> Required: </b> 1
@@ -20,11 +19,6 @@ type GetMerchandisedProductsQueryParams struct {
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// This value filters the result set by the specified metric. Only products in this metric are returned. Currently, the only metric supported is <code> BEST_SELLING</code>. <br /><br /><b> Default: </b>BEST_SELLING <br /> <b> Maximum: </b> 1 <br /> <b> Required: </b> 1
 	MetricName string `queryParam:"style=form,explode=true,name=metric_name"`
-}
-
-type GetMerchandisedProductsRequest struct {
-	QueryParams GetMerchandisedProductsQueryParams
-	Security    GetMerchandisedProductsSecurity
 }
 
 type GetMerchandisedProductsResponse struct {

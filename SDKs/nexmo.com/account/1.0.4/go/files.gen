@@ -36,6 +36,6 @@ pkg/models/shared/secretinfo.go
 pkg/models/shared/secretmgmtlinks.go
 pkg/models/shared/errorapikeynotfound.go
 pkg/models/shared/createsecretrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/errorsecretidnotfound.go
 USAGE.md
+pkg/models/operations/options.go

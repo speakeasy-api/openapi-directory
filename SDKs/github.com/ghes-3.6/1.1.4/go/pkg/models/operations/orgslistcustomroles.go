@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListCustomRolesPathParams struct {
+type OrgsListCustomRolesRequest struct {
 	// The unique identifier of the organization.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-}
-
-type OrgsListCustomRolesRequest struct {
-	PathParams OrgsListCustomRolesPathParams
 }
 
 // OrgsListCustomRoles200ApplicationJSON - Response - list of custom role names

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAllContentTypesRequest{
-        PathParams: operations.GetAllContentTypesPathParams{
-            BuilderID: "faststore",
-        },
+        BuilderID: "faststore",
     }
 
     ctx := context.Background()

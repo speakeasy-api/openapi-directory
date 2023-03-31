@@ -24,7 +24,6 @@ pkg/models/operations/videointelligenceprojectslocationsoperationslist.go
 pkg/models/operations/videointelligencevideosannotate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go

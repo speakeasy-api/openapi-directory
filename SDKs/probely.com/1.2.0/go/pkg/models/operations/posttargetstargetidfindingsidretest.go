@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDFindingsIDRetestPathParams struct {
+type PostTargetsTargetIDFindingsIDRetestRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PostTargetsTargetIDFindingsIDRetestRequest struct {
-	PathParams PostTargetsTargetIDFindingsIDRetestPathParams
 }
 
 // PostTargetsTargetIDFindingsIDRetest404ApplicationJSON - Not found

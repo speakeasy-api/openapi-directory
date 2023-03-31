@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ExtrasCustomFieldChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type ExtrasCustomFieldChoicesReadRequest struct {
-	PathParams ExtrasCustomFieldChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ExtrasCustomFieldChoicesReadResponse struct {

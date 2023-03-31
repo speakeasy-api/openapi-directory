@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GETMostemailedSectionTimePeriodJSONRequest{
-        Security: operations.GETMostemailedSectionTimePeriodJSONSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.GETMostemailedSectionTimePeriodJSONPathParams{
-            Section: "Public Editor",
-            TimePeriod: "7",
-        },
+        Section: "Public Editor",
+        TimePeriod: "7",
     }
 
     ctx := context.Background()
-    res, err := s.GETMostemailedSectionTimePeriodJSON(ctx, req)
+    res, err := s.GETMostemailedSectionTimePeriodJSON(ctx, req, operations.GETMostemailedSectionTimePeriodJSONSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

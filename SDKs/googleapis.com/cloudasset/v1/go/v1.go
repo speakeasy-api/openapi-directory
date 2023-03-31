@@ -32,20 +32,20 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // CloudassetAnalyzeIamPolicy - Analyzes IAM policies to answer which identities have what accesses on which resources.
-func (s *v1) CloudassetAnalyzeIamPolicy(ctx context.Context, request operations.CloudassetAnalyzeIamPolicyRequest) (*operations.CloudassetAnalyzeIamPolicyResponse, error) {
+func (s *v1) CloudassetAnalyzeIamPolicy(ctx context.Context, request operations.CloudassetAnalyzeIamPolicyRequest, security operations.CloudassetAnalyzeIamPolicySecurity) (*operations.CloudassetAnalyzeIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *v1) CloudassetAnalyzeIamPolicy(ctx context.Context, request operations.
 }
 
 // CloudassetAnalyzeIamPolicyLongrunning - Analyzes IAM policies asynchronously to answer which identities have what accesses on which resources, and writes the analysis results to a Google Cloud Storage or a BigQuery destination. For Cloud Storage destination, the output format is the JSON format that represents a AnalyzeIamPolicyResponse. This method implements the google.longrunning.Operation, which allows you to track the operation status. We recommend intervals of at least 2 seconds with exponential backoff retry to poll the operation result. The metadata contains the metadata for the long-running operation.
-func (s *v1) CloudassetAnalyzeIamPolicyLongrunning(ctx context.Context, request operations.CloudassetAnalyzeIamPolicyLongrunningRequest) (*operations.CloudassetAnalyzeIamPolicyLongrunningResponse, error) {
+func (s *v1) CloudassetAnalyzeIamPolicyLongrunning(ctx context.Context, request operations.CloudassetAnalyzeIamPolicyLongrunningRequest, security operations.CloudassetAnalyzeIamPolicyLongrunningSecurity) (*operations.CloudassetAnalyzeIamPolicyLongrunningResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeIamPolicyLongrunning", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeIamPolicyLongrunning", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeIamPolicyLongrunningRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *v1) CloudassetAnalyzeIamPolicyLongrunning(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *v1) CloudassetAnalyzeIamPolicyLongrunning(ctx context.Context, request 
 }
 
 // CloudassetAnalyzeMove - Analyze moving a resource to a specified destination without kicking off the actual move. The analysis is best effort depending on the user's permissions of viewing different hierarchical policies and configurations. The policies and configuration are subject to change before the actual resource migration takes place.
-func (s *v1) CloudassetAnalyzeMove(ctx context.Context, request operations.CloudassetAnalyzeMoveRequest) (*operations.CloudassetAnalyzeMoveResponse, error) {
+func (s *v1) CloudassetAnalyzeMove(ctx context.Context, request operations.CloudassetAnalyzeMoveRequest, security operations.CloudassetAnalyzeMoveSecurity) (*operations.CloudassetAnalyzeMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:analyzeMove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:analyzeMove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *v1) CloudassetAnalyzeMove(ctx context.Context, request operations.Cloud
 }
 
 // CloudassetAnalyzeOrgPolicies - Analyzes organization policies under a scope.
-func (s *v1) CloudassetAnalyzeOrgPolicies(ctx context.Context, request operations.CloudassetAnalyzeOrgPoliciesRequest) (*operations.CloudassetAnalyzeOrgPoliciesResponse, error) {
+func (s *v1) CloudassetAnalyzeOrgPolicies(ctx context.Context, request operations.CloudassetAnalyzeOrgPoliciesRequest, security operations.CloudassetAnalyzeOrgPoliciesSecurity) (*operations.CloudassetAnalyzeOrgPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *v1) CloudassetAnalyzeOrgPolicies(ctx context.Context, request operation
 }
 
 // CloudassetAnalyzeOrgPolicyGovernedAssets - Analyzes organization policies governed assets (Google Cloud resources or policies) under a scope. This RPC supports custom constraints and the following 10 canned constraints: * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin * compute.disableNestedVirtualization This RPC only returns either resources of types supported by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types), or IAM policies.
-func (s *v1) CloudassetAnalyzeOrgPolicyGovernedAssets(ctx context.Context, request operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest) (*operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse, error) {
+func (s *v1) CloudassetAnalyzeOrgPolicyGovernedAssets(ctx context.Context, request operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest, security operations.CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity) (*operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicyGovernedAssets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicyGovernedAssets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *v1) CloudassetAnalyzeOrgPolicyGovernedAssets(ctx context.Context, reque
 }
 
 // CloudassetAnalyzeOrgPolicyGovernedContainers - Analyzes organization policies governed containers (projects, folders or organization) under a scope.
-func (s *v1) CloudassetAnalyzeOrgPolicyGovernedContainers(ctx context.Context, request operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest) (*operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse, error) {
+func (s *v1) CloudassetAnalyzeOrgPolicyGovernedContainers(ctx context.Context, request operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest, security operations.CloudassetAnalyzeOrgPolicyGovernedContainersSecurity) (*operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicyGovernedContainers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicyGovernedContainers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,20 +327,20 @@ func (s *v1) CloudassetAnalyzeOrgPolicyGovernedContainers(ctx context.Context, r
 }
 
 // CloudassetBatchGetAssetsHistory - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
-func (s *v1) CloudassetBatchGetAssetsHistory(ctx context.Context, request operations.CloudassetBatchGetAssetsHistoryRequest) (*operations.CloudassetBatchGetAssetsHistoryResponse, error) {
+func (s *v1) CloudassetBatchGetAssetsHistory(ctx context.Context, request operations.CloudassetBatchGetAssetsHistoryRequest, security operations.CloudassetBatchGetAssetsHistorySecurity) (*operations.CloudassetBatchGetAssetsHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:batchGetAssetsHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:batchGetAssetsHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -375,11 +375,11 @@ func (s *v1) CloudassetBatchGetAssetsHistory(ctx context.Context, request operat
 }
 
 // CloudassetExportAssets - Exports assets with time and resource types to a given Cloud Storage location/BigQuery table. For Cloud Storage location destinations, the output format is newline-delimited JSON. Each line represents a google.cloud.asset.v1.Asset in the JSON format; for BigQuery table destinations, the output table stores the fields in asset Protobuf as columns. This API implements the google.longrunning.Operation API, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
-func (s *v1) CloudassetExportAssets(ctx context.Context, request operations.CloudassetExportAssetsRequest) (*operations.CloudassetExportAssetsResponse, error) {
+func (s *v1) CloudassetExportAssets(ctx context.Context, request operations.CloudassetExportAssetsRequest, security operations.CloudassetExportAssetsSecurity) (*operations.CloudassetExportAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:exportAssets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:exportAssets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportAssetsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -391,11 +391,11 @@ func (s *v1) CloudassetExportAssets(ctx context.Context, request operations.Clou
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,11 +430,11 @@ func (s *v1) CloudassetExportAssets(ctx context.Context, request operations.Clou
 }
 
 // CloudassetQueryAssets - Issue a job that queries assets using a SQL statement compatible with [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql). If the query execution finishes within timeout and there's no pagination, the full query results will be returned in the `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing extra requests with the `job_reference` from the a previous `QueryAssets` call. Note, the query result has approximately 10 GB limitation enforced by BigQuery https://cloud.google.com/bigquery/docs/best-practices-performance-output, queries return larger results will result in errors.
-func (s *v1) CloudassetQueryAssets(ctx context.Context, request operations.CloudassetQueryAssetsRequest) (*operations.CloudassetQueryAssetsResponse, error) {
+func (s *v1) CloudassetQueryAssets(ctx context.Context, request operations.CloudassetQueryAssetsRequest, security operations.CloudassetQueryAssetsSecurity) (*operations.CloudassetQueryAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:queryAssets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:queryAssets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryAssetsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -446,11 +446,11 @@ func (s *v1) CloudassetQueryAssets(ctx context.Context, request operations.Cloud
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,20 +485,20 @@ func (s *v1) CloudassetQueryAssets(ctx context.Context, request operations.Cloud
 }
 
 // CloudassetSearchAllIamPolicies - Searches all IAM policies within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllIamPolicies` permission on the desired scope, otherwise the request will be rejected.
-func (s *v1) CloudassetSearchAllIamPolicies(ctx context.Context, request operations.CloudassetSearchAllIamPoliciesRequest) (*operations.CloudassetSearchAllIamPoliciesResponse, error) {
+func (s *v1) CloudassetSearchAllIamPolicies(ctx context.Context, request operations.CloudassetSearchAllIamPoliciesRequest, security operations.CloudassetSearchAllIamPoliciesSecurity) (*operations.CloudassetSearchAllIamPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:searchAllIamPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:searchAllIamPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -533,20 +533,20 @@ func (s *v1) CloudassetSearchAllIamPolicies(ctx context.Context, request operati
 }
 
 // CloudassetSearchAllResources - Searches all Google Cloud resources within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on the desired scope, otherwise the request will be rejected.
-func (s *v1) CloudassetSearchAllResources(ctx context.Context, request operations.CloudassetSearchAllResourcesRequest) (*operations.CloudassetSearchAllResourcesResponse, error) {
+func (s *v1) CloudassetSearchAllResources(ctx context.Context, request operations.CloudassetSearchAllResourcesRequest, security operations.CloudassetSearchAllResourcesSecurity) (*operations.CloudassetSearchAllResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:searchAllResources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:searchAllResources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

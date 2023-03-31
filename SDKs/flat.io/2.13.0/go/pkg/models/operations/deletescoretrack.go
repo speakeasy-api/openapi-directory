@@ -8,21 +8,16 @@ import (
 )
 
 type DeleteScoreTrackSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteScoreTrackPathParams struct {
+type DeleteScoreTrackRequest struct {
 	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
 	//
 	Score string `pathParam:"style=simple,explode=false,name=score"`
 	// Unique identifier of a score audio track
 	//
 	Track string `pathParam:"style=simple,explode=false,name=track"`
-}
-
-type DeleteScoreTrackRequest struct {
-	PathParams DeleteScoreTrackPathParams
-	Security   DeleteScoreTrackSecurity
 }
 
 type DeleteScoreTrackResponse struct {

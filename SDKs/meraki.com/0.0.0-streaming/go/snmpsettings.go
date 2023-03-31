@@ -34,7 +34,7 @@ func newSNMPSettings(defaultClient, securityClient HTTPClient, serverURL, langua
 // Return the SNMP settings for a network
 func (s *snmpSettings) GetNetworkSnmpSettings(ctx context.Context, request operations.GetNetworkSnmpSettingsRequest) (*operations.GetNetworkSnmpSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmpSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmpSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *snmpSettings) GetNetworkSnmpSettings(ctx context.Context, request opera
 // Return the SNMP settings for an organization
 func (s *snmpSettings) GetOrganizationSnmp(ctx context.Context, request operations.GetOrganizationSnmpRequest) (*operations.GetOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

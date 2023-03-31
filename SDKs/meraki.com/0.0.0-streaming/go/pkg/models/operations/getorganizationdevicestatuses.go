@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDeviceStatusesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationDeviceStatusesRequest struct {
-	PathParams GetOrganizationDeviceStatusesPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationDeviceStatusesResponse struct {

@@ -11,15 +11,10 @@ var CancellationReasonsServerList = []string{
 	"https://api.sandbox.viator.com/partner",
 }
 
-type CancellationReasonsHeaders struct {
+type CancellationReasonsRequest struct {
 	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
 	//
 	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type CancellationReasonsRequest struct {
-	Headers   CancellationReasonsHeaders
-	ServerURL *string
 }
 
 type CancellationReasonsResponse struct {

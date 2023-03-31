@@ -14,60 +14,49 @@ func main() {
     s := sdk.New()
 
     req := operations.TagmanagerAccountsContainersCreateRequest{
-        Security: operations.TagmanagerAccountsContainersCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.TagmanagerAccountsContainersCreatePathParams{
-            AccountID: "corrupti",
-        },
-        QueryParams: operations.TagmanagerAccountsContainersCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.Container{
-            AccountID: "suscipit",
-            ContainerID: "iure",
+        DollarXgafv: "2",
+        Container: &shared.Container{
+            AccountID: "provident",
+            ContainerID: "distinctio",
             DomainName: []string{
-                "debitis",
-                "ipsa",
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             },
             EnabledBuiltInVariable: []shared.ContainerEnabledBuiltInVariableEnum{
-                "historySource",
-                "sdkVersion",
-                "ampReferrer",
-                "firebaseEventParameterNotificationTopic",
+                "ampGtmEvent",
+                "firebaseEventParameterCampaign",
             },
-            Fingerprint: "placeat",
-            Name: "voluptatum",
-            Notes: "iusto",
-            PublicID: "excepturi",
-            TimeZoneCountryID: "nisi",
-            TimeZoneID: "recusandae",
+            Fingerprint: "suscipit",
+            Name: "iure",
+            Notes: "magnam",
+            PublicID: "debitis",
+            TimeZoneCountryID: "ipsa",
+            TimeZoneID: "delectus",
             UsageContext: []shared.ContainerUsageContextEnum{
-                "web",
                 "ios",
-                "web",
-                "androidSdk5",
+                "ios",
             },
         },
+        AccessToken: "minus",
+        AccountID: "placeat",
+        Alt: "media",
+        Callback: "iusto",
+        Fields: "excepturi",
+        Key: "nisi",
+        OauthToken: "recusandae",
+        PrettyPrint: false,
+        QuotaUser: "temporibus",
+        UploadType: "ab",
+        UploadProtocol: "quis",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.TagmanagerAccountsContainersCreate(ctx, req)
+    res, err := s.Accounts.TagmanagerAccountsContainersCreate(ctx, req, operations.TagmanagerAccountsContainersCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAllFacilitiesRequest(
-    security=operations.GetAllFacilitiesSecurity(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    headers=operations.GetAllFacilitiesHeaders(
-        accept="application/geo+json",
-    ),
+    accept="application/vnd.geo+json",
 )
     
-res = s.facilities.get_all_facilities(req)
+res = s.facilities.get_all_facilities(req, operations.GetAllFacilitiesSecurity(
+    apikey="YOUR_API_KEY_HERE",
+))
 
 if res.geo_facilities_response is not None:
     # handle response

@@ -7,28 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatenewdocumentPathParams struct {
-	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
-	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-}
-
-type CreatenewdocumentQueryParams struct {
-	// Name of the schema the document to be created needs to be compliant with.
-	Schema *string `queryParam:"style=form,explode=true,name=_schema"`
-}
-
-type CreatenewdocumentHeaders struct {
+type CreatenewdocumentRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreatenewdocumentRequest struct {
-	PathParams  CreatenewdocumentPathParams
-	QueryParams CreatenewdocumentQueryParams
-	Headers     CreatenewdocumentHeaders
-	Request     map[string]string `request:"mediaType=application/json"`
+	ContentType string            `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody map[string]string `request:"mediaType=application/json"`
+	// Name of the schema the document to be created needs to be compliant with.
+	Schema *string `queryParam:"style=form,explode=true,name=_schema"`
+	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
 }
 
 type CreatenewdocumentResponse struct {

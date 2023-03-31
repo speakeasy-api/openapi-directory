@@ -8,16 +8,10 @@ import (
 )
 
 type DeleteSigningBasketSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type DeleteSigningBasketPathParams struct {
-	// This identification of the corresponding signing basket object.
-	//
-	BasketID string `pathParam:"style=simple,explode=false,name=basketId"`
-}
-
-type DeleteSigningBasketHeaders struct {
+type DeleteSigningBasketRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -67,12 +61,9 @@ type DeleteSigningBasketHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type DeleteSigningBasketRequest struct {
-	PathParams DeleteSigningBasketPathParams
-	Headers    DeleteSigningBasketHeaders
-	Security   DeleteSigningBasketSecurity
+	// This identification of the corresponding signing basket object.
+	//
+	BasketID string `pathParam:"style=simple,explode=false,name=basketId"`
 }
 
 type DeleteSigningBasketResponse struct {

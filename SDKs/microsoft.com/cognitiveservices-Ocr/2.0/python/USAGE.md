@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apim_key=shared.SchemeApimKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchReadFileRequest(
-    request=shared.ImageURL(
-        url="veniam",
+        apim_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = shared.ImageURL(
+    url="corrupti",
 )
     
 res = s.batch_read_file(req)

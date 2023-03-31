@@ -10,23 +10,18 @@ import (
 )
 
 type CalendarEventsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsInsertSecurity struct {
 	Option1 *CalendarEventsInsertSecurityOption1 `security:"option"`
 	Option2 *CalendarEventsInsertSecurityOption2 `security:"option"`
-}
-
-type CalendarEventsInsertPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 }
 
 // CalendarEventsInsertSendUpdatesEnum - Whether to send notifications about the creation of the new event. Note that some emails might still be sent. The default is false.
@@ -56,9 +51,12 @@ func (e *CalendarEventsInsertSendUpdatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CalendarEventsInsertQueryParams struct {
+type CalendarEventsInsertRequest struct {
+	Event *shared.Event `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
 	ConferenceDataVersion *int64 `queryParam:"style=form,explode=true,name=conferenceDataVersion"`
 	// Selector specifying which fields to include in a partial response.
@@ -83,13 +81,6 @@ type CalendarEventsInsertQueryParams struct {
 	SupportsAttachments *bool `queryParam:"style=form,explode=true,name=supportsAttachments"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsInsertRequest struct {
-	PathParams  CalendarEventsInsertPathParams
-	QueryParams CalendarEventsInsertQueryParams
-	Request     *shared.Event `request:"mediaType=application/json"`
-	Security    CalendarEventsInsertSecurity
 }
 
 type CalendarEventsInsertResponse struct {

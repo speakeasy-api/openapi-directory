@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/adyen.com/BalancePlatformService/1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,20 +15,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAccountHoldersIDRequest(
-    security=operations.GetAccountHoldersIDSecurity(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    path_params=operations.GetAccountHoldersIDPathParams(
-        id="dolorem",
-    ),
+    id="corrupti",
 )
     
-res = s.account_holders.get_account_holders_id(req)
+res = s.account_holders.get_account_holders_id(req, operations.GetAccountHoldersIDSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.account_holder is not None:
     # handle response
@@ -36,67 +31,83 @@ if res.account_holder is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Account holders
 
-* `get_account_holders_id` - Retrieve an account holder.
-* `get_account_holders_id_balance_accounts` - Retrieve all balance accounts of a specific account holder.
-* `patch_account_holders_id` - Update an account holder.
-* `post_account_holders` - Create an account holder.
+### account_holders
 
-### Balance accounts
+* `get_account_holders_id` - Get an account holder
+* `get_account_holders_id_balance_accounts` - Get all balance accounts of an account holder
+* `patch_account_holders_id` - Update an account holder
+* `post_account_holders` - Create an account holder
 
-* `get_balance_accounts_id` - Retrieve a balance account.
-* `get_balance_accounts_id_payment_instruments` - Retrieve all payment instruments for a specific balance account.
-* `patch_balance_accounts_id` - Update a balance account.
-* `post_balance_accounts` - Create a balance account.
+### balance_accounts
 
-### Documents
+* `get_balance_accounts_id` - Get a balance account
+* `get_balance_accounts_id_payment_instruments` - Get all payment instruments for a balance account
+* `patch_balance_accounts_id` - Update a balance account
+* `post_balance_accounts` - Create a balance account
 
-* `delete_documents_id` - Delete a document.
-* `get_documents_id` - Retrieve a document.
-* `patch_documents_id` - Update a document.
-* `post_documents` - Upload a document for verification checks.
+### bank_account_validation
 
-### General
+* `post_validate_bank_account_identification` - Validate a bank account
 
-* `get_balance_platforms_id` - Retrieve a balance platform.
-* `get_balance_platforms_id_account_holders` - Retrieve all account holders under a specific balance platform.
+### documents
 
-### Legal entities
+* `delete_documents_id` - Delete a document
+* `get_documents_id` - Get a document
+* `patch_documents_id` - Update a document
+* `post_documents` - Upload a document for verification checks
 
-* `get_legal_entities_id` - Retrieve a legal entity.
-* `patch_legal_entities_id` - Update a legal entity.
-* `post_legal_entities` - Create a legal entity.
+### legal_entities
 
-### Payment instrument groups
+* `get_legal_entities_id` - Get a legal entity
+* `patch_legal_entities_id` - Update a legal entity
+* `post_legal_entities` - Create a legal entity
 
-* `get_payment_instrument_groups_id` - Retrieve a payment instrument group.
-* `get_payment_instrument_groups_id_transaction_rules` - Retrieve all transaction rules for a specific payment instruments group.
-* `post_payment_instrument_groups` - Create a payment instrument group.
+### payment_instrument_groups
 
-### Payment instruments
+* `get_payment_instrument_groups_id` - Get a payment instrument group
+* `get_payment_instrument_groups_id_transaction_rules` - Get all transaction rules for a payment instrument group
+* `post_payment_instrument_groups` - Create a payment instrument group
 
-* `get_payment_instruments_id` - Retrieve a payment instrument.
-* `get_payment_instruments_id_transaction_rules` - Retrieve all transaction rules for a specific payment instrument.
-* `patch_payment_instruments_id` - Update a payment instrument.
-* `post_payment_instruments` - Create a payment instrument.
+### payment_instruments
 
-### Transaction rules
+* `get_payment_instruments_id` - Get a payment instrument
+* `get_payment_instruments_id_reveal` - Get the reveal information of a payment instrument
+* `get_payment_instruments_id_transaction_rules` - Get all transaction rules for a payment instrument
+* `patch_payment_instruments_id` - Update a payment instrument
+* `post_payment_instruments` - Create a payment instrument
 
-* `delete_transaction_rules_transaction_rule_id` - Delete a transaction rule.
-* `get_transaction_rules_transaction_rule_id` - Retrieve a transaction rule.
-* `patch_transaction_rules_transaction_rule_id` - Update a transaction rule.
-* `post_transaction_rules` - Create a transaction rule.
+### platform
 
-### Transfer instruments
+* `get_balance_platforms_id` - Get a balance platform
+* `get_balance_platforms_id_account_holders` - Get all account holders under a balance platform
+
+### transaction_rules
+
+* `delete_transaction_rules_transaction_rule_id` - Delete a transaction rule
+* `get_transaction_rules_transaction_rule_id` - Get a transaction rule
+* `patch_transaction_rules_transaction_rule_id` - Update a transaction rule
+* `post_transaction_rules` - Create a transaction rule
+
+### transfer_instruments
 
 * `delete_transfer_instruments_id` - Delete a transfer instrument
-* `get_transfer_instruments_id` - Retrieve a transfer instrument.
-* `patch_transfer_instruments_id` - Update a transfer instrument.
-* `post_transfer_instruments` - Create a transfer instrument.
-
+* `get_transfer_instruments_id` - Get a transfer instrument
+* `patch_transfer_instruments_id` - Update a transfer instrument
+* `post_transfer_instruments` - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

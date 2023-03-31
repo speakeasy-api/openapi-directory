@@ -12,12 +12,8 @@ var CreateCustomerProfileEvaluationServerList = []string{
 }
 
 type CreateCustomerProfileEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCustomerProfileEvaluationPathParams struct {
-	// The unique string that we created to identify the CustomerProfile resource.
-	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCustomerProfileEvaluationCreateCustomerProfileEvaluationRequest struct {
@@ -26,10 +22,9 @@ type CreateCustomerProfileEvaluationCreateCustomerProfileEvaluationRequest struc
 }
 
 type CreateCustomerProfileEvaluationRequest struct {
-	PathParams CreateCustomerProfileEvaluationPathParams
-	Request    *CreateCustomerProfileEvaluationCreateCustomerProfileEvaluationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCustomerProfileEvaluationSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the CustomerProfile resource.
+	CustomerProfileSid string                                                                 `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
+	RequestBody        *CreateCustomerProfileEvaluationCreateCustomerProfileEvaluationRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateCustomerProfileEvaluationResponse struct {

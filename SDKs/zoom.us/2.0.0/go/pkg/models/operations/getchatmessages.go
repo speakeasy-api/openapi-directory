@@ -6,19 +6,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type GetChatMessagesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetChatMessagesPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetChatMessagesQueryParams struct {
+type GetChatMessagesRequest struct {
 	// The query date for which you would like to get the chat messages.
 	Date *types.Date `queryParam:"style=form,explode=true,name=date"`
 	// **Optional** <br>
@@ -36,12 +31,7 @@ type GetChatMessagesQueryParams struct {
 	//
 	// Note: You must provide either `contact` or `channel` as a query parameter to retrieve messages either from an individual or a chat channel.
 	ToContact *string `queryParam:"style=form,explode=true,name=to_contact"`
-}
-
-type GetChatMessagesRequest struct {
-	PathParams  GetChatMessagesPathParams
-	QueryParams GetChatMessagesQueryParams
-	Security    GetChatMessagesSecurity
+	UserID    string  `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // GetChatMessages200ApplicationXMLMessagesStatusEnum - This field indicates whether a message is an original message(unedited), an edited message or a deleted message.

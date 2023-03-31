@@ -8,13 +8,13 @@ import (
 )
 
 type SasportalNodesNodesMoveSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalNodesNodesMoveSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalNodesNodesMoveSecurity struct {
@@ -22,14 +22,10 @@ type SasportalNodesNodesMoveSecurity struct {
 	Option2 *SasportalNodesNodesMoveSecurityOption2 `security:"option"`
 }
 
-type SasportalNodesNodesMovePathParams struct {
-	// Required. The name of the node to move.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type SasportalNodesNodesMoveQueryParams struct {
+type SasportalNodesNodesMoveRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SasPortalMoveNodeRequest *shared.SasPortalMoveNodeRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type SasportalNodesNodesMoveQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the node to move.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type SasportalNodesNodesMoveQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SasportalNodesNodesMoveRequest struct {
-	PathParams  SasportalNodesNodesMovePathParams
-	QueryParams SasportalNodesNodesMoveQueryParams
-	Request     *shared.SasPortalMoveNodeRequest `request:"mediaType=application/json"`
-	Security    SasportalNodesNodesMoveSecurity
 }
 
 type SasportalNodesNodesMoveResponse struct {

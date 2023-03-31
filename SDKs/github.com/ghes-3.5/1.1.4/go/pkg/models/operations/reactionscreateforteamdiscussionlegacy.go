@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionLegacyPathParams struct {
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.5/rest/reference/reactions#reaction-types) to add to the team discussion.
 type ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForTeamDiscussionLegacyRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionLegacyRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionLegacyPathParams
-	Request    ReactionsCreateForTeamDiscussionLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForTeamDiscussionLegacyRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsCreateForTeamDiscussionLegacyResponse struct {

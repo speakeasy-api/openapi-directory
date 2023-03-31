@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBundleRequest struct {
-	Request shared.CreateBundleRequest `request:"mediaType=application/vnd.api+json"`
-}
-
 type CreateBundleResponse struct {
 	ContentType string
 	// OK

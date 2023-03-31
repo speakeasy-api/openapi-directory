@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAllTransfersQueryParams struct {
+type GetAllTransfersRequest struct {
 	// int or array of int (optional)
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// (optional) default 10
@@ -19,10 +19,6 @@ type GetAllTransfersQueryParams struct {
 	// "WAITING"/"CREATED"/"FINISHED"/"REJECTED"
 	// (optional)
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetAllTransfersRequest struct {
-	QueryParams GetAllTransfersQueryParams
 }
 
 type GetAllTransfers200ApplicationJSONResult struct {

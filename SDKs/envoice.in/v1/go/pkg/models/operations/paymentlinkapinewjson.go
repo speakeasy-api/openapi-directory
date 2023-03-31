@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentLinkAPINewJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type PaymentLinkAPINewJSONRequest struct {
-	Headers PaymentLinkAPINewJSONHeaders
-	Request shared.PaymentLink `request:"mediaType=application/json"`
+	PaymentLink shared.PaymentLink `request:"mediaType=application/json"`
+	XAuthKey    string             `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret string             `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type PaymentLinkAPINewJSONResponse struct {

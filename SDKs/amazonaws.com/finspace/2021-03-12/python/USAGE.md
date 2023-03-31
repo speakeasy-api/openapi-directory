@@ -3,47 +3,54 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateEnvironmentRequest(
-    headers=operations.CreateEnvironmentHeaders(
-        x_amz_algorithm="vitae",
-        x_amz_content_sha256="nulla",
-        x_amz_credential="voluptatem",
-        x_amz_date="dolor",
-        x_amz_security_token="expedita",
-        x_amz_signature="ea",
-        x_amz_signed_headers="iure",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateEnvironmentRequestBody(
-        description="ratione",
-        federation_mode="FEDERATED",
+)
+
+
+req = operations.CreateEnvironmentRequest(
+    request_body=operations.CreateEnvironmentRequestBody(
+        data_bundles=[
+            "provident",
+            "distinctio",
+            "quibusdam",
+        ],
+        description="unde",
+        federation_mode="LOCAL",
         federation_parameters=operations.CreateEnvironmentRequestBodyFederationParameters(
-            application_call_back_url="sed",
+            application_call_back_url="corrupti",
             attribute_map={
-                "quae": "officia",
-                "aperiam": "molestiae",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            federation_provider_name="voluptatem",
-            federation_urn="impedit",
-            saml_metadata_document="debitis",
-            saml_metadata_url="quae",
+            federation_provider_name="delectus",
+            federation_urn="tempora",
+            saml_metadata_document="suscipit",
+            saml_metadata_url="molestiae",
         ),
-        kms_key_id="rerum",
-        name="ut",
+        kms_key_id="minus",
+        name="placeat",
+        superuser_parameters=operations.CreateEnvironmentRequestBodySuperuserParameters(
+            email_address="voluptatum",
+            first_name="Jaycee",
+            last_name="Mante",
+        ),
         tags={
-            "excepturi": "et",
-            "asperiores": "fugit",
-            "perspiciatis": "ratione",
+            "recusandae": "temporibus",
+            "ab": "quis",
         },
     ),
+    x_amz_algorithm="veritatis",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="perferendis",
+    x_amz_date="ipsam",
+    x_amz_security_token="repellendus",
+    x_amz_signature="sapiente",
+    x_amz_signed_headers="quo",
 )
     
 res = s.create_environment(req)

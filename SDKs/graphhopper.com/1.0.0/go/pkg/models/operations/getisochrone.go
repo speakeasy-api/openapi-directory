@@ -33,7 +33,7 @@ func (e *GetIsochroneWeightingEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetIsochroneQueryParams struct {
+type GetIsochroneRequest struct {
 	// Number by which to divide the given `time_limit` to create `buckets` nested isochrones of time intervals `time_limit-n*time_limit/buckets`. Applies analogously to `distance_limit`.
 	Buckets *int `queryParam:"style=form,explode=true,name=buckets"`
 	// Specify which distance the vehicle should travel. In meters.
@@ -51,10 +51,6 @@ type GetIsochroneQueryParams struct {
 	Vehicle *shared.VehicleProfileIDEnum `queryParam:"style=form,explode=true,name=vehicle"`
 	// Use `"shortest"` to get an isodistance line instead of an isochrone.
 	Weighting *GetIsochroneWeightingEnum `queryParam:"style=form,explode=true,name=weighting"`
-}
-
-type GetIsochroneRequest struct {
-	QueryParams GetIsochroneQueryParams
 }
 
 type GetIsochroneResponse struct {

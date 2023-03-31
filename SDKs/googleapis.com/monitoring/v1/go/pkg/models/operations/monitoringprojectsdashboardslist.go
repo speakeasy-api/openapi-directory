@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsDashboardsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsListSecurity struct {
@@ -28,12 +28,7 @@ type MonitoringProjectsDashboardsListSecurity struct {
 	Option3 *MonitoringProjectsDashboardsListSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsDashboardsListPathParams struct {
-	// Required. The scope of the dashboards to list. The format is: projects/[PROJECT_ID_OR_NUMBER]
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MonitoringProjectsDashboardsListQueryParams struct {
+type MonitoringProjectsDashboardsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type MonitoringProjectsDashboardsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return additional results from the previous method call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The scope of the dashboards to list. The format is: projects/[PROJECT_ID_OR_NUMBER]
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -60,12 +57,6 @@ type MonitoringProjectsDashboardsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsDashboardsListRequest struct {
-	PathParams  MonitoringProjectsDashboardsListPathParams
-	QueryParams MonitoringProjectsDashboardsListQueryParams
-	Security    MonitoringProjectsDashboardsListSecurity
 }
 
 type MonitoringProjectsDashboardsListResponse struct {

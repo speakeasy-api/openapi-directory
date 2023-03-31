@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceCellularGatewayPortForwardingRulesPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceCellularGatewayPortForwardingRulesRequest struct {
-	PathParams GetDeviceCellularGatewayPortForwardingRulesPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceCellularGatewayPortForwardingRulesResponse struct {

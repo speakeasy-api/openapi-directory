@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResolveUsaPathParams struct {
-	// ID of address suggestion
-	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type ResolveUsaQueryParams struct {
-	APIKey *string `queryParam:"style=form,explode=false,name=api_key"`
-}
-
 type ResolveUsaRequest struct {
-	PathParams  ResolveUsaPathParams
-	QueryParams ResolveUsaQueryParams
+	// ID of address suggestion
+	Address string  `pathParam:"style=simple,explode=false,name=address"`
+	APIKey  *string `queryParam:"style=form,explode=false,name=api_key"`
 }
 
 type ResolveUsaResponse struct {

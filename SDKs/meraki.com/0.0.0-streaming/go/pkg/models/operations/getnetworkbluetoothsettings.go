@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkBluetoothSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkBluetoothSettingsRequest struct {
-	PathParams GetNetworkBluetoothSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkBluetoothSettings200ApplicationJSON - Successful operation

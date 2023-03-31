@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectDocumentPathParams struct {
+type CreateProjectDocumentRequest struct {
+	DocumentUpdates *shared.DocumentUpdates `request:"mediaType=application/json"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateProjectDocumentRequest struct {
-	PathParams CreateProjectDocumentPathParams
-	Request    *shared.DocumentUpdates `request:"mediaType=application/json"`
 }
 
 type CreateProjectDocumentResponse struct {

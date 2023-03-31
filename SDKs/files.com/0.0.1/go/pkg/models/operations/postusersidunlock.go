@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostUsersIDUnlockPathParams struct {
+type PostUsersIDUnlockRequest struct {
 	// User ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostUsersIDUnlockRequest struct {
-	PathParams PostUsersIDUnlockPathParams
 }
 
 type PostUsersIDUnlockResponse struct {

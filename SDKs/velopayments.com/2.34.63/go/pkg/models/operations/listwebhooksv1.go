@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWebhooksV1QueryParams struct {
+type ListWebhooksV1Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The Payor ID
 	PayorID string `queryParam:"style=form,explode=true,name=payorId"`
-}
-
-type ListWebhooksV1Request struct {
-	QueryParams ListWebhooksV1QueryParams
 }
 
 type ListWebhooksV1Response struct {

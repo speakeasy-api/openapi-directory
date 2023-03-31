@@ -8,17 +8,12 @@ import (
 )
 
 type GetRiskSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetRiskPathParams struct {
-	// SHA2 hash of device firmware
-	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetRiskRequest struct {
-	PathParams GetRiskPathParams
-	Security   GetRiskSecurity
+	// SHA2 hash of device firmware
+	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
 }
 
 type GetRiskResponse struct {

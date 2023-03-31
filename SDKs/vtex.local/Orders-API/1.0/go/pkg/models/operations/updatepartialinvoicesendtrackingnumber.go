@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatepartialinvoiceSendTrackingNumberPathParams struct {
+type UpdatepartialinvoiceSendTrackingNumberRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType                                   string                                               `header:"style=simple,explode=false,name=Content-Type"`
+	UpdatepartialinvoiceSendTrackingNumberRequest shared.UpdatepartialinvoiceSendTrackingNumberRequest `request:"mediaType=application/json"`
 	// Number that identifies the invoice.
 	InvoiceNumber string `pathParam:"style=simple,explode=false,name=invoiceNumber"`
 	// Unique code that identifies the order whose invoice is being sent.
 	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type UpdatepartialinvoiceSendTrackingNumberHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdatepartialinvoiceSendTrackingNumberRequest struct {
-	PathParams UpdatepartialinvoiceSendTrackingNumberPathParams
-	Headers    UpdatepartialinvoiceSendTrackingNumberHeaders
-	Request    shared.UpdatepartialinvoiceSendTrackingNumberRequest `request:"mediaType=application/json"`
 }
 
 type UpdatepartialinvoiceSendTrackingNumberResponse struct {

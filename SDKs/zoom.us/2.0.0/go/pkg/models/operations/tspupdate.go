@@ -50,11 +50,6 @@ type TspUpdateApplicationJSON struct {
 	TspProvider *string `json:"tsp_provider,omitempty"`
 }
 
-type TspUpdateRequest struct {
-	// TSP Account
-	Request TspUpdateApplicationJSON `request:"mediaType=application/json"`
-}
-
 type TspUpdateResponse struct {
 	ContentType string
 	StatusCode  int

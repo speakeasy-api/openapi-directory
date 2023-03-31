@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsUpdateCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// gist_id parameter
-	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
 type GistsUpdateCommentRequestBody struct {
 	// The comment text.
 	Body string `json:"body"`
 }
 
 type GistsUpdateCommentRequest struct {
-	PathParams GistsUpdateCommentPathParams
-	Request    GistsUpdateCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody GistsUpdateCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// gist_id parameter
+	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
 }
 
 type GistsUpdateCommentResponse struct {

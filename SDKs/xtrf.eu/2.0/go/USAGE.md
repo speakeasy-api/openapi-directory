@@ -13,19 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            XAuthAccessToken: &shared.SchemeXAuthAccessToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            XAuthAccessToken: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.BrowseCSVRequest{
-        QueryParams: operations.BrowseCSVQueryParams{
-            AdditionalOrder: "corrupti",
-            SecondarySeparator: "provident",
-            Separator: "distinctio",
-            ViewID: 844266,
-        },
+        AdditionalOrder: "corrupti",
+        SecondarySeparator: "provident",
+        Separator: "distinctio",
+        ViewID: 844266,
     }
 
     ctx := context.Background()

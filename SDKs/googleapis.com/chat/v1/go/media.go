@@ -32,20 +32,20 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // ChatMediaDownload - Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
-func (s *media) ChatMediaDownload(ctx context.Context, request operations.ChatMediaDownloadRequest) (*operations.ChatMediaDownloadResponse, error) {
+func (s *media) ChatMediaDownload(ctx context.Context, request operations.ChatMediaDownloadRequest, security operations.ChatMediaDownloadSecurity) (*operations.ChatMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/media/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/media/{resourceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

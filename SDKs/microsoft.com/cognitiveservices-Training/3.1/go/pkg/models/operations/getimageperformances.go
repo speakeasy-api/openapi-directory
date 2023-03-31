@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagePerformancesPathParams struct {
-	// The iteration id. Defaults to workspace.
-	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // GetImagePerformancesOrderByEnum - The ordering. Defaults to newest.
 type GetImagePerformancesOrderByEnum string
 
@@ -40,26 +33,21 @@ func (e *GetImagePerformancesOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImagePerformancesQueryParams struct {
+type GetImagePerformancesRequest struct {
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
+	// The iteration id. Defaults to workspace.
+	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The ordering. Defaults to newest.
 	OrderBy *GetImagePerformancesOrderByEnum `queryParam:"style=form,explode=true,name=orderBy"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Number of images to skip before beginning the image batch. Defaults to 0.
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
 	// A list of tags ids to filter the images. Defaults to all tagged images when null. Limited to 20.
 	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
 	// Maximum number of images to return. Defaults to 50, limited to 256.
 	Take *int `queryParam:"style=form,explode=true,name=take"`
-}
-
-type GetImagePerformancesHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetImagePerformancesRequest struct {
-	PathParams  GetImagePerformancesPathParams
-	QueryParams GetImagePerformancesQueryParams
-	Headers     GetImagePerformancesHeaders
 }
 
 type GetImagePerformancesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersUserEmailBadgesPathParams struct {
+type GetUsersUserEmailBadgesRequest struct {
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type GetUsersUserEmailBadgesRequest struct {
-	PathParams GetUsersUserEmailBadgesPathParams
 }
 
 type GetUsersUserEmailBadgesResponse struct {

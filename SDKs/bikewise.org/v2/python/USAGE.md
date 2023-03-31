@@ -4,18 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.GetVersionIncidentsFormatRequest(
-    query_params=operations.GetVersionIncidentsFormatQueryParams(
-        incident_type="hazard",
-        occurred_after=7278960282919804440,
-        occurred_before=8123455823415940668,
-        page=279016587921788840,
-        per_page=6868718605133710902,
-        proximity="quibusdam",
-        proximity_square=2090439125431722263,
-        query="vel",
-    ),
+
+
+req = operations.GETVersionIncidentsFormatRequest(
+    incident_type="unconfirmed",
+    occurred_after=592845,
+    occurred_before=715190,
+    page=844266,
+    per_page=602763,
+    proximity="nulla",
+    proximity_square=544883,
+    query="illum",
 )
     
 res = s.incidents.get_version_incidents_format_(req)

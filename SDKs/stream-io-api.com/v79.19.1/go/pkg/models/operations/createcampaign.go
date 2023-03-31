@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCampaignRequest struct {
-	Request shared.CreateCampaignRequest `request:"mediaType=application/json"`
-}
-
 type CreateCampaignResponse struct {
 	// Bad request
 	APIError    *shared.APIError

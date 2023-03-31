@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostSchemaResponsesSchemaResponseIDActionsPathParams struct {
+type PostSchemaResponsesSchemaResponseIDActionsRequest struct {
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type PostSchemaResponsesSchemaResponseIDActionsRequest struct {
-	PathParams PostSchemaResponsesSchemaResponseIDActionsPathParams
 }
 
 type PostSchemaResponsesSchemaResponseIDActionsResponse struct {

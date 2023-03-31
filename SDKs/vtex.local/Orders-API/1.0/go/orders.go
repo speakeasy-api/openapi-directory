@@ -36,9 +36,9 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Add a Log in Interactions Order Array.
 func (s *orders) AddLog(ctx context.Context, request operations.AddLogRequest) (*operations.AddLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/interactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/interactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddLogRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *orders) AddLog(ctx context.Context, request operations.AddLogRequest) (
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -92,9 +92,9 @@ func (s *orders) AddLog(ctx context.Context, request operations.AddLogRequest) (
 // > The `Cancel order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) CancelOrder(ctx context.Context, request operations.CancelOrderRequest) (*operations.CancelOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *orders) CancelOrder(ctx context.Context, request operations.CancelOrder
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -575,14 +575,14 @@ func (s *orders) CancelOrder(ctx context.Context, request operations.CancelOrder
 // ```
 func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -641,9 +641,9 @@ func (s *orders) ListOrders(ctx context.Context, request operations.ListOrdersRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -704,9 +704,9 @@ func (s *orders) ListOrders(ctx context.Context, request operations.ListOrdersRe
 // > The `Change order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) RegisterChange(ctx context.Context, request operations.RegisterChangeRequest) (*operations.RegisterChangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/changes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegisterChangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,7 +721,7 @@ func (s *orders) RegisterChange(ctx context.Context, request operations.Register
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -765,14 +765,14 @@ func (s *orders) RegisterChange(ctx context.Context, request operations.Register
 // > The `Change order workflow status` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) StartHandling(ctx context.Context, request operations.StartHandlingRequest) (*operations.StartHandlingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/start-handling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/start-handling", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

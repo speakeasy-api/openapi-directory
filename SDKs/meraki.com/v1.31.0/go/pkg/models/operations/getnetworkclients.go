@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkClientsRecentDeviceConnectionsEnum string
 
 const (
@@ -58,7 +54,7 @@ func (e *GetNetworkClientsStatusesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNetworkClientsQueryParams struct {
+type GetNetworkClientsRequest struct {
 	// Filters clients based on a partial or full match for the description field.
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -70,7 +66,8 @@ type GetNetworkClientsQueryParams struct {
 	// Filters clients based on a partial or full match for the ip6Local address field.
 	Ip6Local *string `queryParam:"style=form,explode=true,name=ip6Local"`
 	// Filters clients based on a partial or full match for the mac address field.
-	Mac *string `queryParam:"style=form,explode=true,name=mac"`
+	Mac       *string `queryParam:"style=form,explode=true,name=mac"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Filters clients based on a partial or full match for the os (operating system) field.
 	Os *string `queryParam:"style=form,explode=true,name=os"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
@@ -87,11 +84,6 @@ type GetNetworkClientsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Filters clients based on the full match for the VLAN field.
 	Vlan *string `queryParam:"style=form,explode=true,name=vlan"`
-}
-
-type GetNetworkClientsRequest struct {
-	PathParams  GetNetworkClientsPathParams
-	QueryParams GetNetworkClientsQueryParams
 }
 
 // GetNetworkClients200ApplicationJSONRecentDeviceConnectionEnum - Client's most recent connection type

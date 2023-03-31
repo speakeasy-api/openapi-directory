@@ -34,16 +34,16 @@ func newPlaylists(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DeletePlaylistsPlaylistID - Deletes a playlist.
-func (s *playlists) DeletePlaylistsPlaylistID(ctx context.Context, request operations.DeletePlaylistsPlaylistIDRequest) (*operations.DeletePlaylistsPlaylistIDResponse, error) {
+func (s *playlists) DeletePlaylistsPlaylistID(ctx context.Context, request operations.DeletePlaylistsPlaylistIDRequest, security operations.DeletePlaylistsPlaylistIDSecurity) (*operations.DeletePlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,20 +79,20 @@ func (s *playlists) DeletePlaylistsPlaylistID(ctx context.Context, request opera
 }
 
 // GetPlaylistsPlaylistID - Returns a playlist.
-func (s *playlists) GetPlaylistsPlaylistID(ctx context.Context, request operations.GetPlaylistsPlaylistIDRequest) (*operations.GetPlaylistsPlaylistIDResponse, error) {
+func (s *playlists) GetPlaylistsPlaylistID(ctx context.Context, request operations.GetPlaylistsPlaylistIDRequest, security operations.GetPlaylistsPlaylistIDSecurity) (*operations.GetPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,20 +139,20 @@ func (s *playlists) GetPlaylistsPlaylistID(ctx context.Context, request operatio
 }
 
 // GetPlaylistsPlaylistIDReposters - Returns a collection of playlist's reposters.
-func (s *playlists) GetPlaylistsPlaylistIDReposters(ctx context.Context, request operations.GetPlaylistsPlaylistIDRepostersRequest) (*operations.GetPlaylistsPlaylistIDRepostersResponse, error) {
+func (s *playlists) GetPlaylistsPlaylistIDReposters(ctx context.Context, request operations.GetPlaylistsPlaylistIDRepostersRequest, security operations.GetPlaylistsPlaylistIDRepostersSecurity) (*operations.GetPlaylistsPlaylistIDRepostersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/reposters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/reposters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,20 +207,20 @@ func (s *playlists) GetPlaylistsPlaylistIDReposters(ctx context.Context, request
 }
 
 // GetPlaylistsPlaylistIDTracks - Returns tracks under a playlist.
-func (s *playlists) GetPlaylistsPlaylistIDTracks(ctx context.Context, request operations.GetPlaylistsPlaylistIDTracksRequest) (*operations.GetPlaylistsPlaylistIDTracksResponse, error) {
+func (s *playlists) GetPlaylistsPlaylistIDTracks(ctx context.Context, request operations.GetPlaylistsPlaylistIDTracksRequest, security operations.GetPlaylistsPlaylistIDTracksSecurity) (*operations.GetPlaylistsPlaylistIDTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/tracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *playlists) GetPlaylistsPlaylistIDTracks(ctx context.Context, request op
 }
 
 // PostPlaylists - Creates a playlist.
-func (s *playlists) PostPlaylists(ctx context.Context, request operations.PostPlaylistsRequest) (*operations.PostPlaylistsResponse, error) {
+func (s *playlists) PostPlaylists(ctx context.Context, request shared.CreateUpdatePlaylistRequest, security operations.PostPlaylistsSecurity) (*operations.PostPlaylistsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/playlists"
 
@@ -283,7 +283,7 @@ func (s *playlists) PostPlaylists(ctx context.Context, request operations.PostPl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -338,11 +338,11 @@ func (s *playlists) PostPlaylists(ctx context.Context, request operations.PostPl
 }
 
 // PutPlaylistsPlaylistID - Updates a playlist.
-func (s *playlists) PutPlaylistsPlaylistID(ctx context.Context, request operations.PutPlaylistsPlaylistIDRequest) (*operations.PutPlaylistsPlaylistIDResponse, error) {
+func (s *playlists) PutPlaylistsPlaylistID(ctx context.Context, request operations.PutPlaylistsPlaylistIDRequest, security operations.PutPlaylistsPlaylistIDSecurity) (*operations.PutPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUpdatePlaylistRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -354,7 +354,7 @@ func (s *playlists) PutPlaylistsPlaylistID(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

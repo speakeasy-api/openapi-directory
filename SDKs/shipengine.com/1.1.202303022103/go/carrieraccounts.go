@@ -37,9 +37,9 @@ func newCarrierAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 // Connect a carrier account
 func (s *carrierAccounts) ConnectCarrier(ctx context.Context, request operations.ConnectCarrierRequest) (*operations.ConnectCarrierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectCarrierRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *carrierAccounts) ConnectCarrier(ctx context.Context, request operations
 // Disconnect a carrier
 func (s *carrierAccounts) DisconnectCarrier(ctx context.Context, request operations.DisconnectCarrierRequest) (*operations.DisconnectCarrierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *carrierAccounts) DisconnectCarrier(ctx context.Context, request operati
 // Get carrier settings
 func (s *carrierAccounts) GetCarrierSettings(ctx context.Context, request operations.GetCarrierSettingsRequest) (*operations.GetCarrierSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,9 +229,9 @@ func (s *carrierAccounts) GetCarrierSettings(ctx context.Context, request operat
 // Update carrier settings
 func (s *carrierAccounts) UpdateCarrierSettings(ctx context.Context, request operations.UpdateCarrierSettingsRequest) (*operations.UpdateCarrierSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCarrierSettingsRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

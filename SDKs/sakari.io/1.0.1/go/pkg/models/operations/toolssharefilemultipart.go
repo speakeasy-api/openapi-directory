@@ -8,7 +8,7 @@ import (
 )
 
 type ToolsShareFileMultipartSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ToolsShareFileMultipartFormDataMedia struct {
@@ -18,11 +18,6 @@ type ToolsShareFileMultipartFormDataMedia struct {
 
 type ToolsShareFileMultipartFormData struct {
 	Media *ToolsShareFileMultipartFormDataMedia `multipartForm:"file"`
-}
-
-type ToolsShareFileMultipartRequest struct {
-	Request  ToolsShareFileMultipartFormData `request:"mediaType=multipart/form-data"`
-	Security ToolsShareFileMultipartSecurity
 }
 
 type ToolsShareFileMultipartResponse struct {

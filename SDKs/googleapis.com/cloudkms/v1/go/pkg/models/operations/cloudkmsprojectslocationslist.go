@@ -8,13 +8,13 @@ import (
 )
 
 type CloudkmsProjectsLocationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsListSecurity struct {
@@ -22,12 +22,7 @@ type CloudkmsProjectsLocationsListSecurity struct {
 	Option2 *CloudkmsProjectsLocationsListSecurityOption2 `security:"option"`
 }
 
-type CloudkmsProjectsLocationsListPathParams struct {
-	// The resource that owns the locations collection, if applicable.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudkmsProjectsLocationsListQueryParams struct {
+type CloudkmsProjectsLocationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type CloudkmsProjectsLocationsListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource that owns the locations collection, if applicable.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of results to return. If not set, the service selects a default.
@@ -56,12 +53,6 @@ type CloudkmsProjectsLocationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudkmsProjectsLocationsListRequest struct {
-	PathParams  CloudkmsProjectsLocationsListPathParams
-	QueryParams CloudkmsProjectsLocationsListQueryParams
-	Security    CloudkmsProjectsLocationsListSecurity
 }
 
 type CloudkmsProjectsLocationsListResponse struct {

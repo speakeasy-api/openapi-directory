@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteRoleServerList = []string{
@@ -12,18 +11,13 @@ var DeleteRoleServerList = []string{
 }
 
 type DeleteRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteRolePathParams struct {
-	// The SID of the Role resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteRoleRequest struct {
-	PathParams DeleteRolePathParams
-	Security   DeleteRoleSecurity
-	ServerURL  *string
+	// The SID of the Role resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteRoleResponse struct {

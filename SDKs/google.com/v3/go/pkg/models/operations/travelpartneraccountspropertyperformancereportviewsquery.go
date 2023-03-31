@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TravelpartnerAccountsPropertyPerformanceReportViewsQueryPathParams struct {
-	// The resource name of the account being queried. Format: accounts/{account_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type TravelpartnerAccountsPropertyPerformanceReportViewsQueryQueryParams struct {
+type TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -29,6 +24,8 @@ type TravelpartnerAccountsPropertyPerformanceReportViewsQueryQueryParams struct 
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the account being queried. Format: accounts/{account_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of participation results to return. The service may return fewer than this value. If unspecified, at most 10,000 results will be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
@@ -43,11 +40,6 @@ type TravelpartnerAccountsPropertyPerformanceReportViewsQueryQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest struct {
-	PathParams  TravelpartnerAccountsPropertyPerformanceReportViewsQueryPathParams
-	QueryParams TravelpartnerAccountsPropertyPerformanceReportViewsQueryQueryParams
 }
 
 type TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse struct {

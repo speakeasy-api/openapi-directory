@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/cloudidentity/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,27 +15,26 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudidentityCustomersUserinvitationsCancelRequest(
-    path_params=operations.CloudidentityCustomersUserinvitationsCancelPathParams(
-        name="natus",
-    ),
-    query_params=operations.CloudidentityCustomersUserinvitationsCancelQueryParams(
-        dollar_xgafv="1",
-        access_token="dolor",
-        alt="proto",
-        callback="consequatur",
-        fields="quo",
-        key="ipsum",
-        oauth_token="suscipit",
-        pretty_print=False,
-        quota_user="nisi",
-        upload_type="aspernatur",
-        upload_protocol="animi",
-    ),
-    request={
-        "voluptas": "voluptas",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
 res = s.customers.cloudidentity_customers_userinvitations_cancel(req)
@@ -46,7 +45,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### customers
 
@@ -74,17 +74,40 @@ if res.operation is not None:
 * `cloudidentity_groups_lookup` - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by its `EntityKey`.
 * `cloudidentity_groups_memberships_check_transitive_membership` - Check a potential member for membership in a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A member has membership to a group as long as there is a single viewable transitive membership between the group and the member. The actor must have view permissions to at least one transitive membership between the member and group.
 * `cloudidentity_groups_memberships_create` - Creates a `Membership`.
-* `cloudidentity_groups_memberships_delete` - Deletes a `Membership`.
-* `cloudidentity_groups_memberships_get` - Retrieves a `Membership`.
 * `cloudidentity_groups_memberships_get_membership_graph` - Get a membership graph of just a member or both a member and a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. Given a member, the response will contain all membership paths from the member. Given both a group and a member, the response will contain all membership paths between the group and the member.
 * `cloudidentity_groups_memberships_list` - Lists the `Membership`s within a `Group`.
 * `cloudidentity_groups_memberships_lookup` - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Membership` by its `EntityKey`.
 * `cloudidentity_groups_memberships_modify_membership_roles` - Modifies the `MembershipRole`s of a `Membership`.
+* `cloudidentity_groups_memberships_search_direct_groups` - Searches direct groups of a member.
 * `cloudidentity_groups_memberships_search_transitive_groups` - Search transitive groups of a member. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive group is any group that has a direct or indirect membership to the member. Actor must have view permissions all transitive groups.
 * `cloudidentity_groups_memberships_search_transitive_memberships` - Search transitive memberships of a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the group is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive membership is any direct or indirect membership of a group. Actor must have view permissions to all transitive memberships.
 * `cloudidentity_groups_search` - Searches for `Group` resources matching a specified query.
-* `cloudidentity_groups_update_security_settings` - Update Security Settings
 
+### inbound_saml_sso_profiles
+
+* `cloudidentity_inbound_saml_sso_profiles_create` - Creates an InboundSamlSsoProfile for a customer.
+* `cloudidentity_inbound_saml_sso_profiles_idp_credentials_add` - Adds an IdpCredential. Up to 2 credentials are allowed.
+* `cloudidentity_inbound_saml_sso_profiles_idp_credentials_list` - Returns a list of IdpCredentials in an InboundSamlSsoProfile.
+* `cloudidentity_inbound_saml_sso_profiles_list` - Lists InboundSamlSsoProfiles for a customer.
+
+### inbound_sso_assignments
+
+* `cloudidentity_inbound_sso_assignments_create` - Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or `OrgUnit`.
+* `cloudidentity_inbound_sso_assignments_delete` - Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has `sso_mode` == `SSO_OFF`.
+* `cloudidentity_inbound_sso_assignments_get` - Gets an InboundSsoAssignment.
+* `cloudidentity_inbound_sso_assignments_list` - Lists the InboundSsoAssignments for a `Customer`.
+* `cloudidentity_inbound_sso_assignments_patch` - Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field and the `update_mask` is relative to that. For example: a PATCH to `/v1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-targeted assignments down in priority.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

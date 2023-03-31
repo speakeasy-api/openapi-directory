@@ -8,17 +8,13 @@ import (
 )
 
 type OsBrowsersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type OsBrowsersQueryParams struct {
-	// Fetch details for a particular OS
-	Os *string `queryParam:"style=form,explode=true,name=os"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type OsBrowsersRequest struct {
-	QueryParams OsBrowsersQueryParams
-	Security    OsBrowsersSecurity
+	// Fetch details for a particular OS
+	Os *string `queryParam:"style=form,explode=true,name=os"`
 }
 
 type OsBrowsersResponse struct {

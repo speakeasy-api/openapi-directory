@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutVariantSetItemPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutVariantSetItemRequest struct {
-	PathParams PutVariantSetItemPathParams
-	Request    shared.VariantSet `request:"mediaType=application/json"`
+	ID         string            `pathParam:"style=simple,explode=false,name=id"`
+	VariantSet shared.VariantSet `request:"mediaType=application/json"`
 }
 
 type PutVariantSetItemResponse struct {

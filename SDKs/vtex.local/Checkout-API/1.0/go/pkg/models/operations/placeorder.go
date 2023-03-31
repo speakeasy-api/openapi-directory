@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type PlaceOrderQueryParams struct {
-	// Trade Policy (Sales Channel) identification. This query can be used to create an order for a specific sales channel.
-	Sc *int64 `queryParam:"style=form,explode=true,name=sc"`
-}
-
-type PlaceOrderHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // PlaceOrderRequestBodyClientProfileData - Customer's profile information. The `email` functions as a customer's ID.
 //
 // For customers already in your database, sending only the email address is enough to register the order to the shopper’s existing account.
@@ -310,9 +298,13 @@ type PlaceOrderRequestBody struct {
 }
 
 type PlaceOrderRequest struct {
-	QueryParams PlaceOrderQueryParams
-	Headers     PlaceOrderHeaders
-	Request     *PlaceOrderRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PlaceOrderRequestBody `request:"mediaType=application/json"`
+	// Trade Policy (Sales Channel) identification. This query can be used to create an order for a specific sales channel.
+	Sc *int64 `queryParam:"style=form,explode=true,name=sc"`
 }
 
 // PlaceOrder200ApplicationJSONOrdersClientProfileData - Customer's profile information.

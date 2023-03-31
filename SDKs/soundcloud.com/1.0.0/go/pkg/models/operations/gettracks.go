@@ -11,11 +11,11 @@ import (
 )
 
 type GetTracksSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetTracksQueryParams struct {
+type GetTracksRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
@@ -39,11 +39,6 @@ type GetTracksQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// A comma separated list of tags
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type GetTracksRequest struct {
-	QueryParams GetTracksQueryParams
-	Security    GetTracksSecurity
 }
 
 type GetTracks200ApplicationJSONType string

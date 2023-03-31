@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutGeofencesIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutGeofencesIDRequest struct {
-	PathParams PutGeofencesIDPathParams
-	Request    shared.Geofence `request:"mediaType=application/json"`
+	Geofence shared.Geofence `request:"mediaType=application/json"`
+	ID       int64           `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutGeofencesIDResponse struct {

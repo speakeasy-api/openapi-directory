@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletsPartialUpdatePathParams struct {
+type DcimPowerOutletsPartialUpdateRequest struct {
+	WritablePowerOutletInput shared.WritablePowerOutletInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this power outlet.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerOutletsPartialUpdateRequest struct {
-	PathParams DcimPowerOutletsPartialUpdatePathParams
-	Request    shared.WritablePowerOutletInput `request:"mediaType=application/json"`
 }
 
 type DcimPowerOutletsPartialUpdateResponse struct {

@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostVCustomPricesSessionSchemaHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type PostVCustomPricesSessionSchemaRequestBodyFields struct {
 	// Criteria name
 	Name string `json:"name"`
@@ -29,8 +22,11 @@ type PostVCustomPricesSessionSchemaRequestBody struct {
 }
 
 type PostVCustomPricesSessionSchemaRequest struct {
-	Headers PostVCustomPricesSessionSchemaHeaders
-	Request *PostVCustomPricesSessionSchemaRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent
+	ContentType string                                     `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PostVCustomPricesSessionSchemaRequestBody `request:"mediaType=application/json"`
 }
 
 type PostVCustomPricesSessionSchemaResponse struct {

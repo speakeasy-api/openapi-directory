@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFileContentSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetFileContentPathParams struct {
-	// File id for single object
-	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
-}
-
-type GetFileContentHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetFileContentRequest struct {
-	PathParams GetFileContentPathParams
-	Headers    GetFileContentHeaders
-	Security   GetFileContentSecurity
+	// File id for single object
+	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type GetFileContentResponse struct {

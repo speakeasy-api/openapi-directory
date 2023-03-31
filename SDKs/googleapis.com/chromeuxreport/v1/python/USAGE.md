@@ -4,35 +4,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ChromeuxreportRecordsQueryRecordRequest(
-    query_params=operations.ChromeuxreportRecordsQueryRecordQueryParams(
-        dollar_xgafv="2",
-        access_token="alias",
-        alt="json",
-        callback="officia",
-        fields="laborum",
-        key="ipsum",
-        oauth_token="quod",
-        pretty_print=False,
-        quota_user="optio",
-        upload_type="praesentium",
-        upload_protocol="pariatur",
-    ),
-    request=shared.QueryRequest(
-        effective_connection_type="dolorem",
-        form_factor="PHONE",
+
+
+req = operations.ChromeuxreportRecordsQueryHistoryRecordRequest(
+    dollar_xgafv="2",
+    query_history_request=shared.QueryHistoryRequest(
+        form_factor="DESKTOP",
         metrics=[
-            "reiciendis",
+            "quibusdam",
+            "unde",
+            "nulla",
         ],
-        origin="explicabo",
-        url="illo",
+        origin="corrupti",
+        url="illum",
     ),
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
-res = s.records.chromeuxreport_records_query_record(req)
+res = s.records.chromeuxreport_records_query_history_record(req)
 
-if res.query_response is not None:
+if res.query_history_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

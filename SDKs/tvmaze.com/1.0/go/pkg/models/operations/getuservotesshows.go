@@ -30,13 +30,9 @@ func (e *GetUserVotesShowsEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserVotesShowsQueryParams struct {
+type GetUserVotesShowsRequest struct {
 	// Embed full show info
 	Embed *GetUserVotesShowsEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetUserVotesShowsRequest struct {
-	QueryParams GetUserVotesShowsQueryParams
 }
 
 type GetUserVotesShowsResponse struct {

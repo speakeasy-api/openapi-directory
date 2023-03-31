@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSpacesIDTriggersNameSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSpacesIDTriggersNamePathParams struct {
+type DeleteSpacesIDTriggersNameRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// trigger name
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteSpacesIDTriggersNameRequest struct {
-	PathParams DeleteSpacesIDTriggersNamePathParams
-	Security   DeleteSpacesIDTriggersNameSecurity
 }
 
 type DeleteSpacesIDTriggersNameResponse struct {

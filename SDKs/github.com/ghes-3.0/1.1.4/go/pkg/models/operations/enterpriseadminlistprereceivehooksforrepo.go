@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListPreReceiveHooksForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // EnterpriseAdminListPreReceiveHooksForRepoSortEnum
 type EnterpriseAdminListPreReceiveHooksForRepoSortEnum string
 
@@ -41,19 +36,16 @@ func (e *EnterpriseAdminListPreReceiveHooksForRepoSortEnum) UnmarshalJSON(data [
 	}
 }
 
-type EnterpriseAdminListPreReceiveHooksForRepoQueryParams struct {
+type EnterpriseAdminListPreReceiveHooksForRepoRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Owner     string                `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64                                             `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string                                             `pathParam:"style=simple,explode=false,name=repo"`
 	Sort    *EnterpriseAdminListPreReceiveHooksForRepoSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPreReceiveHooksForRepoRequest struct {
-	PathParams  EnterpriseAdminListPreReceiveHooksForRepoPathParams
-	QueryParams EnterpriseAdminListPreReceiveHooksForRepoQueryParams
 }
 
 type EnterpriseAdminListPreReceiveHooksForRepoResponse struct {

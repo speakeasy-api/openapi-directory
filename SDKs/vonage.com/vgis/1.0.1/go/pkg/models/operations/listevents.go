@@ -126,7 +126,7 @@ func (e *ListEventsTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListEventsQueryParams struct {
+type ListEventsRequest struct {
 	// Filter by event direction
 	Direction *ListEventsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Return events that occurred after this point in time
@@ -145,10 +145,6 @@ type ListEventsQueryParams struct {
 	ToDate *int64 `queryParam:"style=form,explode=true,name=toDate"`
 	// Record type
 	Types *ListEventsTypesEnum `queryParam:"style=form,explode=true,name=types"`
-}
-
-type ListEventsRequest struct {
-	QueryParams ListEventsQueryParams
 }
 
 type ListEventsResponse struct {

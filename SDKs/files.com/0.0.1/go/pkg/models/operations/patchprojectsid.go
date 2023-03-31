@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchProjectsIDPathParams struct {
-	// Project ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchProjectsIDRequestBody struct {
 	// Global permissions.  Can be: `none`, `anyone_with_read`, `anyone_with_full`.
 	GlobalAccess string `multipartForm:"name=global_access"`
 }
 
 type PatchProjectsIDRequest struct {
-	PathParams PatchProjectsIDPathParams
-	Request    PatchProjectsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchProjectsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Project ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchProjectsIDResponse struct {

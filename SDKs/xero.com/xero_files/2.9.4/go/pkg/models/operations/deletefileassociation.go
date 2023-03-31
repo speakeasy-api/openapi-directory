@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteFileAssociationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteFileAssociationPathParams struct {
+type DeleteFileAssociationRequest struct {
 	// File id for single object
 	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
 	// Object id for single object
 	ObjectID string `pathParam:"style=simple,explode=false,name=ObjectId"`
-}
-
-type DeleteFileAssociationHeaders struct {
 	// Xero identifier for Tenant
 	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
-}
-
-type DeleteFileAssociationRequest struct {
-	PathParams DeleteFileAssociationPathParams
-	Headers    DeleteFileAssociationHeaders
-	Security   DeleteFileAssociationSecurity
 }
 
 type DeleteFileAssociationResponse struct {

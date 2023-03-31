@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MoveResourcesHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type MoveResourcesMoveResourcesRequestBody struct {
 	// Resource identifier of folder to move files/folders to.
 	ParentResource string `json:"parentResource"`
@@ -22,8 +15,11 @@ type MoveResourcesMoveResourcesRequestBody struct {
 }
 
 type MoveResourcesRequest struct {
-	Headers MoveResourcesHeaders
-	Request *MoveResourcesMoveResourcesRequestBody `request:"mediaType=application/json"`
+	RequestBody *MoveResourcesMoveResourcesRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type MoveResourcesResponse struct {

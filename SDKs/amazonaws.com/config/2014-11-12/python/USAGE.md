@@ -3,52 +3,48 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchGetAggregateResourceConfigRequest(
-    headers=operations.BatchGetAggregateResourceConfigHeaders(
-        x_amz_algorithm="dolor",
-        x_amz_content_sha256="nulla",
-        x_amz_credential="ipsa",
-        x_amz_date="ipsum",
-        x_amz_security_token="ab",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="sunt",
-        x_amz_target="StarlingDoveService.BatchGetAggregateResourceConfig",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchGetAggregateResourceConfigRequest(
-        configuration_aggregator_name="quas",
+)
+
+
+req = operations.BatchGetAggregateResourceConfigRequest(
+    batch_get_aggregate_resource_config_request=shared.BatchGetAggregateResourceConfigRequest(
+        configuration_aggregator_name="corrupti",
         resource_identifiers=[
             shared.AggregateResourceIdentifier(
-                resource_id="dicta",
-                resource_name="minima",
-                resource_type="AWS::ShieldRegional::Protection",
-                source_account_id="nesciunt",
-                source_region="ducimus",
+                resource_id="distinctio",
+                resource_name="quibusdam",
+                resource_type="AWS::DataSync::LocationNFS",
+                source_account_id="nulla",
+                source_region="corrupti",
             ),
             shared.AggregateResourceIdentifier(
-                resource_id="dolores",
-                resource_name="magni",
-                resource_type="AWS::RDS::DBCluster",
-                source_account_id="qui",
-                source_region="ab",
+                resource_id="illum",
+                resource_name="vel",
+                resource_type="AWS::GuardDuty::IPSet",
+                source_account_id="deserunt",
+                source_region="suscipit",
             ),
             shared.AggregateResourceIdentifier(
-                resource_id="accusantium",
-                resource_name="aliquam",
-                resource_type="AWS::RDS::DBClusterSnapshot",
-                source_account_id="et",
-                source_region="ipsa",
+                resource_id="iure",
+                resource_name="magnam",
+                resource_type="AWS::IoTSiteWise::Dashboard",
+                source_account_id="ipsa",
+                source_region="delectus",
             ),
         ],
     ),
+    x_amz_algorithm="tempora",
+    x_amz_content_sha256="suscipit",
+    x_amz_credential="molestiae",
+    x_amz_date="minus",
+    x_amz_security_token="placeat",
+    x_amz_signature="voluptatum",
+    x_amz_signed_headers="iusto",
+    x_amz_target="StarlingDoveService.BatchGetAggregateResourceConfig",
 )
     
 res = s.batch_get_aggregate_resource_config(req)

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitsListQueryParams struct {
+type CircuitsCircuitsListRequest struct {
 	Cid        *string  `queryParam:"style=form,explode=true,name=cid"`
 	CommitRate *float64 `queryParam:"style=form,explode=true,name=commit_rate"`
 	// Multiple values may be separated by commas.
@@ -28,10 +28,6 @@ type CircuitsCircuitsListQueryParams struct {
 	TenantID   *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	Type       *string `queryParam:"style=form,explode=true,name=type"`
 	TypeID     *string `queryParam:"style=form,explode=true,name=type_id"`
-}
-
-type CircuitsCircuitsListRequest struct {
-	QueryParams CircuitsCircuitsListQueryParams
 }
 
 type CircuitsCircuitsList200ApplicationJSON struct {

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials - (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
 type UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials struct {
 	// The logon name of the Active Directory account.
@@ -583,8 +578,9 @@ type UpdateNetworkWirelessSsidRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidRequest struct {
-	PathParams UpdateNetworkWirelessSsidPathParams
-	Request    *UpdateNetworkWirelessSsidRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidResponse struct {

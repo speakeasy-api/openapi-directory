@@ -81,14 +81,14 @@ func newDescribe(defaultClient, securityClient HTTPClient, serverURL, language, 
 // It is strongly recommended that your integration checks `<contexts>` elements in the response. If your integration does not check `<contexts>` elements, your integration may process fields that are not available for use in data source exports. See [Changes to the Describe API](https://knowledgecenter.zuora.com/DC_Developers/M_Export_ZOQL/Changes_to_the_Describe_API) for more information.
 func (s *describe) GETDescribe(ctx context.Context, request operations.GETDescribeRequest) (*operations.GETDescribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/describe/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/describe/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

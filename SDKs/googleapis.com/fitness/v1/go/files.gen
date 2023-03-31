@@ -32,7 +32,6 @@ pkg/models/shared/datatypefield.go
 pkg/models/shared/application.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listdatapointchangesresponse.go
 pkg/models/shared/datapoint.go
 pkg/models/shared/value.go

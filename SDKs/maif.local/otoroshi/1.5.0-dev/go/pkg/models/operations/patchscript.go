@@ -8,18 +8,14 @@ import (
 )
 
 type PatchScriptSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchScriptPathParams struct {
-	// The script id
-	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PatchScriptRequest struct {
-	PathParams PatchScriptPathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchScriptSecurity
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
+	// The script id
+	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
 }
 
 type PatchScriptResponse struct {

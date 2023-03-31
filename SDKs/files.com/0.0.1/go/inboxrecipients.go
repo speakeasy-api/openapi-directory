@@ -44,7 +44,7 @@ func (s *inboxRecipients) GetInboxRecipients(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,7 +103,7 @@ func (s *inboxRecipients) GetInboxRecipients(ctx context.Context, request operat
 
 // PostInboxRecipients - Create Inbox Recipient
 // Create Inbox Recipient
-func (s *inboxRecipients) PostInboxRecipients(ctx context.Context, request operations.PostInboxRecipientsRequest) (*operations.PostInboxRecipientsResponse, error) {
+func (s *inboxRecipients) PostInboxRecipients(ctx context.Context, request operations.PostInboxRecipientsRequestBody) (*operations.PostInboxRecipientsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inbox_recipients"
 

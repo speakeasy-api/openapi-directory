@@ -8,17 +8,12 @@ import (
 )
 
 type CastegroupIndianFullSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CastegroupIndianFullPathParams struct {
-	PersonalNameFull    string `pathParam:"style=simple,explode=false,name=personalNameFull"`
-	SubDivisionIso31662 string `pathParam:"style=simple,explode=false,name=subDivisionIso31662"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type CastegroupIndianFullRequest struct {
-	PathParams CastegroupIndianFullPathParams
-	Security   CastegroupIndianFullSecurity
+	PersonalNameFull    string `pathParam:"style=simple,explode=false,name=personalNameFull"`
+	SubDivisionIso31662 string `pathParam:"style=simple,explode=false,name=subDivisionIso31662"`
 }
 
 type CastegroupIndianFullResponse struct {

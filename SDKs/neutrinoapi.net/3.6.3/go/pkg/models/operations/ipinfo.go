@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IPInfoQueryParams struct {
+type IPInfoRequest struct {
 	// IPv4 or IPv6 address
 	IP string `queryParam:"style=form,explode=true,name=ip"`
 	// Do a reverse DNS (PTR) lookup. This option can add extra delay to the request so only use it if you need it
 	ReverseLookup *bool `queryParam:"style=form,explode=true,name=reverse-lookup"`
-}
-
-type IPInfoRequest struct {
-	QueryParams IPInfoQueryParams
 }
 
 type IPInfoResponse struct {

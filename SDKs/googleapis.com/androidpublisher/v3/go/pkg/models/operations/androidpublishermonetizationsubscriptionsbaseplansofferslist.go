@@ -8,26 +8,19 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListPathParams struct {
-	// Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to read all offers under a subscription.
-	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
-	// Required. The parent app (package name) for which the subscriptions should be read.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The parent subscription (ID) for which the offers should be read.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to read all offers under a subscription.
+	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -36,24 +29,22 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams str
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent app (package name) for which the subscriptions should be read.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// The maximum number of subscriptions to return. The service may return fewer than this value. If unspecified, at most 50 subscriptions will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListSubscriptionsOffers` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListSubscriptionOffers` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The parent subscription (ID) for which the offers should be read.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsBasePlansOffersListPathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams
-	Security    AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse struct {

@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetalistofReviewsQueryParams struct {
+type GetalistofReviewsRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Zero base starting record number, `0` is the default value.
 	From string `queryParam:"style=form,explode=true,name=from"`
 	// Case-sensitive fieldName to order records (optionally add `:asc` or `:desc`).
@@ -19,18 +23,6 @@ type GetalistofReviewsQueryParams struct {
 	Status bool `queryParam:"style=form,explode=true,name=status"`
 	// Zero base ending record number, `3` is the default value.
 	To string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetalistofReviewsHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetalistofReviewsRequest struct {
-	QueryParams GetalistofReviewsQueryParams
-	Headers     GetalistofReviewsHeaders
 }
 
 // GetalistofReviews200ApplicationJSONData - Review's information.

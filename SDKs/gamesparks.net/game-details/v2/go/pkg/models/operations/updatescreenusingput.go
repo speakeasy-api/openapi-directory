@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateScreenUsingPUTPathParams struct {
+type UpdateScreenUsingPUTRequest struct {
+	// screen
+	ManageScreen shared.ManageScreen `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// shortCode
 	ShortCode string `pathParam:"style=simple,explode=false,name=shortCode"`
-}
-
-type UpdateScreenUsingPUTRequest struct {
-	PathParams UpdateScreenUsingPUTPathParams
-	// screen
-	Request shared.ManageScreen `request:"mediaType=application/json"`
 }
 
 type UpdateScreenUsingPUTResponse struct {

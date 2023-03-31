@@ -14,42 +14,35 @@ func main() {
     s := sdk.New()
 
     req := operations.LanguageDocumentsAnalyzeEntitiesRequest{
-        Security: operations.LanguageDocumentsAnalyzeEntitiesSecurity{
-            Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.LanguageDocumentsAnalyzeEntitiesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.AnalyzeEntitiesRequest{
+        DollarXgafv: "2",
+        AnalyzeEntitiesRequest: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                Content: "deserunt",
-                GcsContentURI: "suscipit",
-                Language: "iure",
-                Type: "TYPE_UNSPECIFIED",
+                Content: "provident",
+                GcsContentURI: "distinctio",
+                Language: "quibusdam",
+                Type: "PLAIN_TEXT",
             },
             EncodingType: "UTF32",
         },
+        AccessToken: "corrupti",
+        Alt: "proto",
+        Callback: "vel",
+        Fields: "error",
+        Key: "deserunt",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, req)
+    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, req, operations.LanguageDocumentsAnalyzeEntitiesSecurity{
+        Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

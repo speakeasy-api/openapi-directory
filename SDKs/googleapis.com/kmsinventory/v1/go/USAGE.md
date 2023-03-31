@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.KmsinventoryOrganizationsProtectedResourcesSearchRequest{
-        Security: operations.KmsinventoryOrganizationsProtectedResourcesSearchSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.KmsinventoryOrganizationsProtectedResourcesSearchPathParams{
-            Scope: "corrupti",
-        },
-        QueryParams: operations.KmsinventoryOrganizationsProtectedResourcesSearchQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            CryptoKey: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PageSize: 623564,
-            PageToken: "deserunt",
-            PrettyPrint: false,
-            QuotaUser: "suscipit",
-            UploadType: "iure",
-            UploadProtocol: "magnam",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        CryptoKey: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PageSize: 423655,
+        PageToken: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        Scope: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.Organizations.KmsinventoryOrganizationsProtectedResourcesSearch(ctx, req)
+    res, err := s.Organizations.KmsinventoryOrganizationsProtectedResourcesSearch(ctx, req, operations.KmsinventoryOrganizationsProtectedResourcesSearchSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

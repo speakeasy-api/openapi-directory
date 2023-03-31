@@ -12,14 +12,8 @@ var UpdateOutgoingCallerIDServerList = []string{
 }
 
 type UpdateOutgoingCallerIDSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateOutgoingCallerIDPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the OutgoingCallerId resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateOutgoingCallerIDUpdateOutgoingCallerIDRequest struct {
@@ -28,10 +22,11 @@ type UpdateOutgoingCallerIDUpdateOutgoingCallerIDRequest struct {
 }
 
 type UpdateOutgoingCallerIDRequest struct {
-	PathParams UpdateOutgoingCallerIDPathParams
-	Request    *UpdateOutgoingCallerIDUpdateOutgoingCallerIDRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateOutgoingCallerIDSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to update.
+	AccountSid  string                                               `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateOutgoingCallerIDUpdateOutgoingCallerIDRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the OutgoingCallerId resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateOutgoingCallerIDResponse struct {

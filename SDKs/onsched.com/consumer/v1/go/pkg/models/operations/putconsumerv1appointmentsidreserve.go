@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConsumerV1AppointmentsIDReservePathParams struct {
-	// appointment id to reserve
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDReserveQueryParams struct {
-	SendNotifications *bool `queryParam:"style=form,explode=true,name=sendNotifications"`
-}
-
 type PutConsumerV1AppointmentsIDReserveRequest struct {
-	PathParams  PutConsumerV1AppointmentsIDReservePathParams
-	QueryParams PutConsumerV1AppointmentsIDReserveQueryParams
-	Request     *shared.AppointmentReserveModel `request:"mediaType=application/json"`
+	AppointmentReserveModel *shared.AppointmentReserveModel `request:"mediaType=application/json"`
+	// appointment id to reserve
+	ID                string `pathParam:"style=simple,explode=false,name=id"`
+	SendNotifications *bool  `queryParam:"style=form,explode=true,name=sendNotifications"`
 }
 
 type PutConsumerV1AppointmentsIDReserveResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteApplicationPathParams struct {
+type DeleteApplicationRequest struct {
 	// The ID of the application
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteApplicationRequest struct {
-	PathParams DeleteApplicationPathParams
 }
 
 // DeleteApplication406ApplicationJSON - Invalid Accept Header

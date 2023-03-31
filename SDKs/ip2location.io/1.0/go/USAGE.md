@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        QueryParams: operations.GetQueryParams{
-            Format: "xml",
-            IP: "8.8.8.8",
-            Key: "provident",
-            Lang: "pt",
-        },
+        Format: "xml",
+        IP: "8.8.8.8",
+        Key: "provident",
+        Lang: "pt",
     }
 
     ctx := context.Background()

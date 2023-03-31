@@ -8,10 +8,10 @@ import (
 )
 
 type ListEmployeesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListEmployeesQueryParams struct {
+type ListEmployeesRequest struct {
 	// A pagination cursor to retrieve the next set of results for your
 	// original query to the endpoint.
 	BatchToken *string `queryParam:"style=form,explode=true,name=batch_token"`
@@ -31,11 +31,6 @@ type ListEmployeesQueryParams struct {
 	Order *string `queryParam:"style=form,explode=true,name=order"`
 	// If provided, the endpoint returns only employee entities with the specified status (ACTIVE or INACTIVE).
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListEmployeesRequest struct {
-	QueryParams ListEmployeesQueryParams
-	Security    ListEmployeesSecurity
 }
 
 type ListEmployeesResponse struct {

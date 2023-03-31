@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMaintenanceQueryParams struct {
+type GetMaintenanceRequest struct {
 	// Can only be used by admins or managers to fetch all entities
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Standard users can use this only with _deviceId_s, they have access to
@@ -17,10 +17,6 @@ type GetMaintenanceQueryParams struct {
 	Refresh *bool  `queryParam:"style=form,explode=true,name=refresh"`
 	// Standard users can use this only with their own _userId_
 	UserID *int64 `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetMaintenanceRequest struct {
-	QueryParams GetMaintenanceQueryParams
 }
 
 type GetMaintenanceResponse struct {

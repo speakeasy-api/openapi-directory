@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBookingPathParams struct {
+type UpdateBookingRequest struct {
 	// The unique identifier of the booking you would like to update.
 	BookingID string `pathParam:"style=simple,explode=false,name=bookingId"`
-}
-
-type UpdateBookingRequest struct {
-	PathParams UpdateBookingPathParams
 	// Specifies the room you want to book for your guest.
-	Request *shared.UpdateBookingRequest `request:"mediaType=application/json"`
+	UpdateBookingRequest *shared.UpdateBookingRequest `request:"mediaType=application/json"`
 }
 
 type UpdateBookingResponse struct {

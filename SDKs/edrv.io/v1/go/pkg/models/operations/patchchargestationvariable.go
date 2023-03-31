@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchChargeStationVariablePathParams struct {
-	// ID of charge station
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchChargeStationVariableRequestBodyVariableEnum string
 
 const (
@@ -55,9 +50,10 @@ type PatchChargeStationVariableRequestBody struct {
 }
 
 type PatchChargeStationVariableRequest struct {
-	PathParams PatchChargeStationVariablePathParams
 	// Charge Station Variable to set
-	Request PatchChargeStationVariableRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchChargeStationVariableRequestBody `request:"mediaType=application/json"`
+	// ID of charge station
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PatchChargeStationVariable201ApplicationJSON - A successful response

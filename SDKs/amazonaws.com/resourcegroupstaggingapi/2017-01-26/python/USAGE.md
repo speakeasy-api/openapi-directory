@@ -3,30 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.DescribeReportCreationRequest(
-    headers=operations.DescribeReportCreationHeaders(
-        x_amz_algorithm="placeat",
-        x_amz_content_sha256="doloribus",
-        x_amz_credential="quibusdam",
-        x_amz_date="pariatur",
-        x_amz_security_token="sint",
-        x_amz_signature="ipsam",
-        x_amz_signed_headers="qui",
-        x_amz_target="ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request={
-        "dolores": "aut",
-        "est": "nobis",
+)
+
+
+req = operations.DescribeReportCreationRequest(
+    request_body={
+        "provident": "distinctio",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
     },
+    x_amz_algorithm="illum",
+    x_amz_content_sha256="vel",
+    x_amz_credential="error",
+    x_amz_date="deserunt",
+    x_amz_security_token="suscipit",
+    x_amz_signature="iure",
+    x_amz_signed_headers="magnam",
+    x_amz_target="ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
 )
     
 res = s.describe_report_creation(req)

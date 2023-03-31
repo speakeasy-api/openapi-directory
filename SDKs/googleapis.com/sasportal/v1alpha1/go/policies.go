@@ -33,11 +33,11 @@ func newPolicies(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // SasportalPoliciesGet - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *policies) SasportalPoliciesGet(ctx context.Context, request operations.SasportalPoliciesGetRequest) (*operations.SasportalPoliciesGetResponse, error) {
+func (s *policies) SasportalPoliciesGet(ctx context.Context, request operations.SasportalPoliciesGetRequest, security operations.SasportalPoliciesGetSecurity) (*operations.SasportalPoliciesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/policies:get"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalGetPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *policies) SasportalPoliciesGet(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *policies) SasportalPoliciesGet(ctx context.Context, request operations.
 }
 
 // SasportalPoliciesSet - Sets the access control policy on the specified resource. Replaces any existing policy.
-func (s *policies) SasportalPoliciesSet(ctx context.Context, request operations.SasportalPoliciesSetRequest) (*operations.SasportalPoliciesSetResponse, error) {
+func (s *policies) SasportalPoliciesSet(ctx context.Context, request operations.SasportalPoliciesSetRequest, security operations.SasportalPoliciesSetSecurity) (*operations.SasportalPoliciesSetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/policies:set"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalSetPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *policies) SasportalPoliciesSet(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *policies) SasportalPoliciesSet(ctx context.Context, request operations.
 }
 
 // SasportalPoliciesTest - Returns permissions that a caller has on the specified resource.
-func (s *policies) SasportalPoliciesTest(ctx context.Context, request operations.SasportalPoliciesTestRequest) (*operations.SasportalPoliciesTestResponse, error) {
+func (s *policies) SasportalPoliciesTest(ctx context.Context, request operations.SasportalPoliciesTestRequest, security operations.SasportalPoliciesTestSecurity) (*operations.SasportalPoliciesTestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/policies:test"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalTestPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *policies) SasportalPoliciesTest(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

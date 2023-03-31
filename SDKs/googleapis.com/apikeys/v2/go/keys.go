@@ -33,7 +33,7 @@ func newKeys(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // ApikeysKeysLookupKey - Find the parent project and resource name of the API key that matches the key string in the request. If the API key has been purged, resource name will not be set. The service account must have the `apikeys.keys.lookup` permission on the parent project.
-func (s *keys) ApikeysKeysLookupKey(ctx context.Context, request operations.ApikeysKeysLookupKeyRequest) (*operations.ApikeysKeysLookupKeyResponse, error) {
+func (s *keys) ApikeysKeysLookupKey(ctx context.Context, request operations.ApikeysKeysLookupKeyRequest, security operations.ApikeysKeysLookupKeySecurity) (*operations.ApikeysKeysLookupKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/keys:lookupKey"
 
@@ -42,11 +42,11 @@ func (s *keys) ApikeysKeysLookupKey(ctx context.Context, request operations.Apik
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

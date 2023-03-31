@@ -35,16 +35,16 @@ func newServe(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Delete an asset by its asset id. If a render creates multiple assets, such as thumbnail and poster images, each asset must be deleted individually by the asset id.
 //
 // **base URL:** https://api.shotstack.io/serve/{version}
-func (s *serve) DeleteAsset(ctx context.Context, request operations.DeleteAssetRequest) (*operations.DeleteAssetResponse, error) {
+func (s *serve) DeleteAsset(ctx context.Context, request operations.DeleteAssetRequest, security operations.DeleteAssetSecurity) (*operations.DeleteAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -73,16 +73,16 @@ func (s *serve) DeleteAsset(ctx context.Context, request operations.DeleteAssetR
 // The Serve API is used to interact with, and delete hosted assets including videos, images, audio files,  thumbnails and poster images. Use this endpoint to fetch an asset by asset id. Note that an asset id is unique for each asset and different from the render id.
 //
 // **base URL:** https://api.shotstack.io/serve/{version}
-func (s *serve) GetAsset(ctx context.Context, request operations.GetAssetRequest) (*operations.GetAssetResponse, error) {
+func (s *serve) GetAsset(ctx context.Context, request operations.GetAssetRequest, security operations.GetAssetSecurity) (*operations.GetAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,16 +120,16 @@ func (s *serve) GetAsset(ctx context.Context, request operations.GetAssetRequest
 // A render may generate more than one file, such as a video, thumbnail and poster image. When the assets are created the only known id is the render id returned by the original [render request](#render-video), status  request or webhook. This endpoint lets you look up one or more assets by the render id.
 //
 // **base URL:** https://api.shotstack.io/serve/{version}
-func (s *serve) GetAssetByRenderID(ctx context.Context, request operations.GetAssetByRenderIDRequest) (*operations.GetAssetByRenderIDResponse, error) {
+func (s *serve) GetAssetByRenderID(ctx context.Context, request operations.GetAssetByRenderIDRequest, security operations.GetAssetByRenderIDSecurity) (*operations.GetAssetByRenderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/render/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assets/render/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

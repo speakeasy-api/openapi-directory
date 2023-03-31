@@ -15,6 +15,7 @@ pkg/utils/utils.go
 pkg/models/operations/videointelligencevideosannotate.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudvideointelligencev1beta2annotatevideorequest.go
 pkg/models/shared/googlecloudvideointelligencev1beta2videocontext.go
 pkg/models/shared/googlecloudvideointelligencev1beta2textdetectionconfig.go
@@ -27,7 +28,5 @@ pkg/models/shared/googlecloudvideointelligencev1beta2objecttrackingconfig.go
 pkg/models/shared/googlecloudvideointelligencev1beta2labeldetectionconfig.go
 pkg/models/shared/googlecloudvideointelligencev1beta2facedetectionconfig.go
 pkg/models/shared/googlecloudvideointelligencev1beta2explicitcontentdetectionconfig.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

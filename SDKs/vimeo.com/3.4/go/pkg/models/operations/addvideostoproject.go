@@ -8,25 +8,16 @@ import (
 )
 
 type AddVideosToProjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddVideosToProjectPathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type AddVideosToProjectQueryParams struct {
-	// A comma-separated list of video URIs to add.
-	Uris string `queryParam:"style=form,explode=true,name=uris"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideosToProjectRequest struct {
-	PathParams  AddVideosToProjectPathParams
-	QueryParams AddVideosToProjectQueryParams
-	Security    AddVideosToProjectSecurity
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// A comma-separated list of video URIs to add.
+	Uris string `queryParam:"style=form,explode=true,name=uris"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type AddVideosToProjectResponse struct {

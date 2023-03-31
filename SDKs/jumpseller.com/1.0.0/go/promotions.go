@@ -36,14 +36,14 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 // DeletePromotionsIDJSON - Delete an existing Promotion.
 func (s *promotions) DeletePromotionsIDJSON(ctx context.Context, request operations.DeletePromotionsIDJSONRequest) (*operations.DeletePromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *promotions) GetPromotionsJSON(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *promotions) GetPromotionsJSON(ctx context.Context, request operations.G
 // GetPromotionsIDJSON - Retrieve a single Promotion.
 func (s *promotions) GetPromotionsIDJSON(ctx context.Context, request operations.GetPromotionsIDJSONRequest) (*operations.GetPromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -203,7 +203,7 @@ func (s *promotions) PostPromotionsJSON(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/promotions.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PromotionEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +218,7 @@ func (s *promotions) PostPromotionsJSON(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -269,9 +269,9 @@ func (s *promotions) PostPromotionsJSON(ctx context.Context, request operations.
 // PutPromotionsIDJSON - Update a Promotion.
 func (s *promotions) PutPromotionsIDJSON(ctx context.Context, request operations.PutPromotionsIDJSONRequest) (*operations.PutPromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PromotionEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,7 +286,7 @@ func (s *promotions) PutPromotionsIDJSON(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

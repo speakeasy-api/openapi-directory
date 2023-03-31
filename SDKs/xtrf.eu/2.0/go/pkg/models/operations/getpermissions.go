@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPermissionsPathParams struct {
+type GetPermissionsRequest struct {
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type GetPermissionsRequest struct {
-	PathParams GetPermissionsPathParams
 }
 
 type GetPermissionsResponse struct {

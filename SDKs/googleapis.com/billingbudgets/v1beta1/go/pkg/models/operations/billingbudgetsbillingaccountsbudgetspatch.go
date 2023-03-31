@@ -8,13 +8,13 @@ import (
 )
 
 type BillingbudgetsBillingAccountsBudgetsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsPatchSecurity struct {
@@ -22,14 +22,10 @@ type BillingbudgetsBillingAccountsBudgetsPatchSecurity struct {
 	Option2 *BillingbudgetsBillingAccountsBudgetsPatchSecurityOption2 `security:"option"`
 }
 
-type BillingbudgetsBillingAccountsBudgetsPatchPathParams struct {
-	// Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsPatchQueryParams struct {
+type BillingbudgetsBillingAccountsBudgetsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                              *shared.XgafvEnum                                                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput *shared.GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type BillingbudgetsBillingAccountsBudgetsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type BillingbudgetsBillingAccountsBudgetsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsPatchRequest struct {
-	PathParams  BillingbudgetsBillingAccountsBudgetsPatchPathParams
-	QueryParams BillingbudgetsBillingAccountsBudgetsPatchQueryParams
-	Request     *shared.GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput `request:"mediaType=application/json"`
-	Security    BillingbudgetsBillingAccountsBudgetsPatchSecurity
 }
 
 type BillingbudgetsBillingAccountsBudgetsPatchResponse struct {

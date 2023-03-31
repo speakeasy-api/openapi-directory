@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTodSetTracePathParams struct {
+type ProtocolTodSetTraceRequest struct {
 	// Agent to set the TOD tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the TOD tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolTodSetTraceRequest struct {
-	PathParams ProtocolTodSetTracePathParams
 }
 
 type ProtocolTodSetTraceResponse struct {

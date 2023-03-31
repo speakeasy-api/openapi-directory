@@ -3,32 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchDeleteWorldsRequest(
-    headers=operations.BatchDeleteWorldsHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ea",
-        x_amz_credential="sapiente",
-        x_amz_date="consequatur",
-        x_amz_security_token="et",
-        x_amz_signature="voluptate",
-        x_amz_signed_headers="dolore",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.BatchDeleteWorldsRequestBody(
+)
+
+
+req = operations.BatchDeleteWorldsRequest(
+    request_body=operations.BatchDeleteWorldsRequestBody(
         worlds=[
-            "quia",
-            "eum",
-            "iure",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.batch_delete_worlds(req)

@@ -42,7 +42,7 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *billing) AccountBilling(ctx context.Context, request operations.AccountBillingRequest) (*operations.AccountBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,14 +105,14 @@ func (s *billing) AccountBilling(ctx context.Context, request operations.Account
 // **Additional Rate Limit:** You can make **one** API request per account(`accountId`) every **five** minutes until the daily limit is reached. This API has a daily limit of **6** requests per account(`accountId`).
 func (s *billing) AccountBillingInvoices(ctx context.Context, request operations.AccountBillingInvoicesRequest) (*operations.AccountBillingInvoicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing/invoices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing/invoices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -169,9 +169,9 @@ func (s *billing) AccountBillingInvoices(ctx context.Context, request operations
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 func (s *billing) AccountBillingUpdate(ctx context.Context, request operations.AccountBillingUpdateRequest) (*operations.AccountBillingUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -228,11 +228,11 @@ func (s *billing) AccountBillingUpdate(ctx context.Context, request operations.A
 // * Pro or a higher plan with master account option enabled.
 // * The sub account must be a paid account.<br>
 // **Scope:** `billing:master`<br>
-func (s *billing) AccountPlanAddonCancel(ctx context.Context, request operations.AccountPlanAddonCancelRequest) (*operations.AccountPlanAddonCancelResponse, error) {
+func (s *billing) AccountPlanAddonCancel(ctx context.Context, request operations.AccountPlanAddonCancelRequest, security operations.AccountPlanAddonCancelSecurity) (*operations.AccountPlanAddonCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -244,7 +244,7 @@ func (s *billing) AccountPlanAddonCancel(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -302,9 +302,9 @@ func (s *billing) AccountPlanAddonCancel(ctx context.Context, request operations
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 func (s *billing) AccountPlanAddonCreate(ctx context.Context, request operations.AccountPlanAddonCreateRequest) (*operations.AccountPlanAddonCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,9 +360,9 @@ func (s *billing) AccountPlanAddonCreate(ctx context.Context, request operations
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 func (s *billing) AccountPlanAddonUpdate(ctx context.Context, request operations.AccountPlanAddonUpdateRequest) (*operations.AccountPlanAddonUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/addons", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -421,9 +421,9 @@ func (s *billing) AccountPlanAddonUpdate(ctx context.Context, request operations
 // * The sub account must have a Pro or a higher plan.
 func (s *billing) AccountPlanBaseDelete(ctx context.Context, request operations.AccountPlanBaseDeleteRequest) (*operations.AccountPlanBaseDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/base/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/base/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -491,9 +491,9 @@ func (s *billing) AccountPlanBaseDelete(ctx context.Context, request operations.
 // * The sub account must have a Pro or a higher plan.
 func (s *billing) AccountPlanBaseUpdate(ctx context.Context, request operations.AccountPlanBaseUpdateRequest) (*operations.AccountPlanBaseUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/base", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/base", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -546,9 +546,9 @@ func (s *billing) AccountPlanBaseUpdate(ctx context.Context, request operations.
 // **Scopes**: `billing:master`<br>
 func (s *billing) AccountPlanCreate(ctx context.Context, request operations.AccountPlanCreateRequest) (*operations.AccountPlanCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -632,7 +632,7 @@ func (s *billing) AccountPlanCreate(ctx context.Context, request operations.Acco
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *billing) AccountPlans(ctx context.Context, request operations.AccountPlansRequest) (*operations.AccountPlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -693,7 +693,7 @@ func (s *billing) AccountPlans(ctx context.Context, request operations.AccountPl
 // **Rate Limit:** You can make **one** request to this API every **thirty** minutes until the daily limit is reached. This API has a daily limit of **100** requests per **account**.
 func (s *billing) DownloadInvoicePDF(ctx context.Context, request operations.DownloadInvoicePDFRequest) (*operations.DownloadInvoicePDFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/download/billing/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/download/billing/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -753,7 +753,7 @@ func (s *billing) DownloadInvoicePDF(ctx context.Context, request operations.Dow
 // **Additional Rate Limit:** You can make **one** API request every **thirty** minutes until the daily limit is reached. This API has a daily limit of **100** requests per **account**.
 func (s *billing) GetAccountBillingInvoice(ctx context.Context, request operations.GetAccountBillingInvoiceRequest) (*operations.GetAccountBillingInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/billing/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,16 +810,16 @@ func (s *billing) GetAccountBillingInvoice(ctx context.Context, request operatio
 // **Scope:** `billing:master` for master and sub accounts. `account:read:admin` for regular Zoom accounts.<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *billing) GetPlanUsage(ctx context.Context, request operations.GetPlanUsageRequest) (*operations.GetPlanUsageResponse, error) {
+func (s *billing) GetPlanUsage(ctx context.Context, request operations.GetPlanUsageRequest, security operations.GetPlanUsageSecurity) (*operations.GetPlanUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/usage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/plans/usage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

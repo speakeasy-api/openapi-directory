@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type AddPaymentDataPathParams struct {
-	// ID of the orderForm that will receive client profile information.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type AddPaymentDataHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type AddPaymentDataRequestBodyPayments struct {
 	// Payment system group.
 	Group *string `json:"group,omitempty"`
@@ -45,9 +33,13 @@ type AddPaymentDataRequestBody struct {
 }
 
 type AddPaymentDataRequest struct {
-	PathParams AddPaymentDataPathParams
-	Headers    AddPaymentDataHeaders
-	Request    AddPaymentDataRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                    `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody AddPaymentDataRequestBody `request:"mediaType=application/json"`
+	// ID of the orderForm that will receive client profile information.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type AddPaymentDataResponse struct {

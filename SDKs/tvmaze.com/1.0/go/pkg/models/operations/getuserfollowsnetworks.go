@@ -30,13 +30,9 @@ func (e *GetUserFollowsNetworksEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserFollowsNetworksQueryParams struct {
+type GetUserFollowsNetworksRequest struct {
 	// Embed full network info
 	Embed *GetUserFollowsNetworksEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetUserFollowsNetworksRequest struct {
-	QueryParams GetUserFollowsNetworksQueryParams
 }
 
 type GetUserFollowsNetworksResponse struct {

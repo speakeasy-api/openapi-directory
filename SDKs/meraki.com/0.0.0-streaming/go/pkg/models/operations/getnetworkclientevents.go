@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientEventsPathParams struct {
-	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkClientEventsQueryParams struct {
+type GetNetworkClientEventsRequest struct {
+	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 100. Default is 100.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
-}
-
-type GetNetworkClientEventsRequest struct {
-	PathParams  GetNetworkClientEventsPathParams
-	QueryParams GetNetworkClientEventsQueryParams
 }
 
 type GetNetworkClientEventsResponse struct {

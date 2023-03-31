@@ -36,14 +36,14 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 // Returns a list of public collection articles
 func (s *collections) CollectionArticles(ctx context.Context, request operations.CollectionArticlesRequest) (*operations.CollectionArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/articles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,7 +92,7 @@ func (s *collections) CollectionArticles(ctx context.Context, request operations
 // View a collection
 func (s *collections) CollectionDetails(ctx context.Context, request operations.CollectionDetailsRequest) (*operations.CollectionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +142,7 @@ func (s *collections) CollectionDetails(ctx context.Context, request operations.
 // View details for a certain version of a collection
 func (s *collections) CollectionVersionDetails(ctx context.Context, request operations.CollectionVersionDetailsRequest) (*operations.CollectionVersionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/versions/{version_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/versions/{version_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *collections) CollectionVersionDetails(ctx context.Context, request oper
 // Returns a list of public collection Versions
 func (s *collections) CollectionVersions(ctx context.Context, request operations.CollectionVersionsRequest) (*operations.CollectionVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,9 +249,9 @@ func (s *collections) CollectionsList(ctx context.Context, request operations.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -302,7 +302,7 @@ func (s *collections) CollectionsSearch(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections/search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionSearch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -314,7 +314,7 @@ func (s *collections) CollectionsSearch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -359,16 +359,16 @@ func (s *collections) CollectionsSearch(ctx context.Context, request operations.
 
 // PrivateCollectionArticleDelete - Delete collection article
 // De-associate article from collection
-func (s *collections) PrivateCollectionArticleDelete(ctx context.Context, request operations.PrivateCollectionArticleDeleteRequest) (*operations.PrivateCollectionArticleDeleteResponse, error) {
+func (s *collections) PrivateCollectionArticleDelete(ctx context.Context, request operations.PrivateCollectionArticleDeleteRequest, security operations.PrivateCollectionArticleDeleteSecurity) (*operations.PrivateCollectionArticleDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles/{article_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles/{article_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -409,11 +409,11 @@ func (s *collections) PrivateCollectionArticleDelete(ctx context.Context, reques
 
 // PrivateCollectionArticlesAdd - Add collection articles
 // Associate new articles with the collection. This will add new articles to the list of already associated articles
-func (s *collections) PrivateCollectionArticlesAdd(ctx context.Context, request operations.PrivateCollectionArticlesAddRequest) (*operations.PrivateCollectionArticlesAddResponse, error) {
+func (s *collections) PrivateCollectionArticlesAdd(ctx context.Context, request operations.PrivateCollectionArticlesAddRequest, security operations.PrivateCollectionArticlesAddSecurity) (*operations.PrivateCollectionArticlesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticlesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -428,7 +428,7 @@ func (s *collections) PrivateCollectionArticlesAdd(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -481,20 +481,20 @@ func (s *collections) PrivateCollectionArticlesAdd(ctx context.Context, request 
 
 // PrivateCollectionArticlesList - List collection articles
 // List collection articles
-func (s *collections) PrivateCollectionArticlesList(ctx context.Context, request operations.PrivateCollectionArticlesListRequest) (*operations.PrivateCollectionArticlesListResponse, error) {
+func (s *collections) PrivateCollectionArticlesList(ctx context.Context, request operations.PrivateCollectionArticlesListRequest, security operations.PrivateCollectionArticlesListSecurity) (*operations.PrivateCollectionArticlesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -545,11 +545,11 @@ func (s *collections) PrivateCollectionArticlesList(ctx context.Context, request
 
 // PrivateCollectionArticlesReplace - Replace collection articles
 // Associate new articles with the collection. This will remove all already associated articles and add these new ones
-func (s *collections) PrivateCollectionArticlesReplace(ctx context.Context, request operations.PrivateCollectionArticlesReplaceRequest) (*operations.PrivateCollectionArticlesReplaceResponse, error) {
+func (s *collections) PrivateCollectionArticlesReplace(ctx context.Context, request operations.PrivateCollectionArticlesReplaceRequest, security operations.PrivateCollectionArticlesReplaceSecurity) (*operations.PrivateCollectionArticlesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/articles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticlesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -564,7 +564,7 @@ func (s *collections) PrivateCollectionArticlesReplace(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,16 +608,16 @@ func (s *collections) PrivateCollectionArticlesReplace(ctx context.Context, requ
 
 // PrivateCollectionAuthorDelete - Delete collection author
 // Delete collection author
-func (s *collections) PrivateCollectionAuthorDelete(ctx context.Context, request operations.PrivateCollectionAuthorDeleteRequest) (*operations.PrivateCollectionAuthorDeleteResponse, error) {
+func (s *collections) PrivateCollectionAuthorDelete(ctx context.Context, request operations.PrivateCollectionAuthorDeleteRequest, security operations.PrivateCollectionAuthorDeleteSecurity) (*operations.PrivateCollectionAuthorDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors/{author_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors/{author_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -658,11 +658,11 @@ func (s *collections) PrivateCollectionAuthorDelete(ctx context.Context, request
 
 // PrivateCollectionAuthorsAdd - Add collection authors
 // Associate new authors with the collection. This will add new authors to the list of already associated authors
-func (s *collections) PrivateCollectionAuthorsAdd(ctx context.Context, request operations.PrivateCollectionAuthorsAddRequest) (*operations.PrivateCollectionAuthorsAddResponse, error) {
+func (s *collections) PrivateCollectionAuthorsAdd(ctx context.Context, request operations.PrivateCollectionAuthorsAddRequest, security operations.PrivateCollectionAuthorsAddSecurity) (*operations.PrivateCollectionAuthorsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorsCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -677,7 +677,7 @@ func (s *collections) PrivateCollectionAuthorsAdd(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -730,16 +730,16 @@ func (s *collections) PrivateCollectionAuthorsAdd(ctx context.Context, request o
 
 // PrivateCollectionAuthorsList - List collection authors
 // List collection authors
-func (s *collections) PrivateCollectionAuthorsList(ctx context.Context, request operations.PrivateCollectionAuthorsListRequest) (*operations.PrivateCollectionAuthorsListResponse, error) {
+func (s *collections) PrivateCollectionAuthorsList(ctx context.Context, request operations.PrivateCollectionAuthorsListRequest, security operations.PrivateCollectionAuthorsListSecurity) (*operations.PrivateCollectionAuthorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -790,11 +790,11 @@ func (s *collections) PrivateCollectionAuthorsList(ctx context.Context, request 
 
 // PrivateCollectionAuthorsReplace - Replace collection authors
 // Associate new authors with the collection. This will remove all already associated authors and add these new ones
-func (s *collections) PrivateCollectionAuthorsReplace(ctx context.Context, request operations.PrivateCollectionAuthorsReplaceRequest) (*operations.PrivateCollectionAuthorsReplaceResponse, error) {
+func (s *collections) PrivateCollectionAuthorsReplace(ctx context.Context, request operations.PrivateCollectionAuthorsReplaceRequest, security operations.PrivateCollectionAuthorsReplaceSecurity) (*operations.PrivateCollectionAuthorsReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/authors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorsCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -809,7 +809,7 @@ func (s *collections) PrivateCollectionAuthorsReplace(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -853,11 +853,11 @@ func (s *collections) PrivateCollectionAuthorsReplace(ctx context.Context, reque
 
 // PrivateCollectionCategoriesAdd - Add collection categories
 // Associate new categories with the collection. This will add new categories to the list of already associated categories
-func (s *collections) PrivateCollectionCategoriesAdd(ctx context.Context, request operations.PrivateCollectionCategoriesAddRequest) (*operations.PrivateCollectionCategoriesAddResponse, error) {
+func (s *collections) PrivateCollectionCategoriesAdd(ctx context.Context, request operations.PrivateCollectionCategoriesAddRequest, security operations.PrivateCollectionCategoriesAddSecurity) (*operations.PrivateCollectionCategoriesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CategoriesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -872,7 +872,7 @@ func (s *collections) PrivateCollectionCategoriesAdd(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -925,16 +925,16 @@ func (s *collections) PrivateCollectionCategoriesAdd(ctx context.Context, reques
 
 // PrivateCollectionCategoriesList - List collection categories
 // List collection categories
-func (s *collections) PrivateCollectionCategoriesList(ctx context.Context, request operations.PrivateCollectionCategoriesListRequest) (*operations.PrivateCollectionCategoriesListResponse, error) {
+func (s *collections) PrivateCollectionCategoriesList(ctx context.Context, request operations.PrivateCollectionCategoriesListRequest, security operations.PrivateCollectionCategoriesListSecurity) (*operations.PrivateCollectionCategoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -985,11 +985,11 @@ func (s *collections) PrivateCollectionCategoriesList(ctx context.Context, reque
 
 // PrivateCollectionCategoriesReplace - Replace collection categories
 // Associate new categories with the collection. This will remove all already associated categories and add these new ones
-func (s *collections) PrivateCollectionCategoriesReplace(ctx context.Context, request operations.PrivateCollectionCategoriesReplaceRequest) (*operations.PrivateCollectionCategoriesReplaceResponse, error) {
+func (s *collections) PrivateCollectionCategoriesReplace(ctx context.Context, request operations.PrivateCollectionCategoriesReplaceRequest, security operations.PrivateCollectionCategoriesReplaceSecurity) (*operations.PrivateCollectionCategoriesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CategoriesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1004,7 +1004,7 @@ func (s *collections) PrivateCollectionCategoriesReplace(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1048,16 +1048,16 @@ func (s *collections) PrivateCollectionCategoriesReplace(ctx context.Context, re
 
 // PrivateCollectionCategoryDelete - Delete collection category
 // De-associate category from collection
-func (s *collections) PrivateCollectionCategoryDelete(ctx context.Context, request operations.PrivateCollectionCategoryDeleteRequest) (*operations.PrivateCollectionCategoryDeleteResponse, error) {
+func (s *collections) PrivateCollectionCategoryDelete(ctx context.Context, request operations.PrivateCollectionCategoryDeleteRequest, security operations.PrivateCollectionCategoryDeleteSecurity) (*operations.PrivateCollectionCategoryDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories/{category_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/categories/{category_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1098,7 +1098,7 @@ func (s *collections) PrivateCollectionCategoryDelete(ctx context.Context, reque
 
 // PrivateCollectionCreate - Create collection
 // Create a new Collection by sending collection information
-func (s *collections) PrivateCollectionCreate(ctx context.Context, request operations.PrivateCollectionCreateRequest) (*operations.PrivateCollectionCreateResponse, error) {
+func (s *collections) PrivateCollectionCreate(ctx context.Context, request shared.CollectionCreate, security operations.PrivateCollectionCreateSecurity) (*operations.PrivateCollectionCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/collections"
 
@@ -1117,7 +1117,7 @@ func (s *collections) PrivateCollectionCreate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1166,16 +1166,16 @@ func (s *collections) PrivateCollectionCreate(ctx context.Context, request opera
 
 // PrivateCollectionDelete - Delete collection
 // Delete n collection
-func (s *collections) PrivateCollectionDelete(ctx context.Context, request operations.PrivateCollectionDeleteRequest) (*operations.PrivateCollectionDeleteResponse, error) {
+func (s *collections) PrivateCollectionDelete(ctx context.Context, request operations.PrivateCollectionDeleteRequest, security operations.PrivateCollectionDeleteSecurity) (*operations.PrivateCollectionDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1218,16 +1218,16 @@ func (s *collections) PrivateCollectionDelete(ctx context.Context, request opera
 
 // PrivateCollectionDetails - Collection details
 // View a collection
-func (s *collections) PrivateCollectionDetails(ctx context.Context, request operations.PrivateCollectionDetailsRequest) (*operations.PrivateCollectionDetailsResponse, error) {
+func (s *collections) PrivateCollectionDetails(ctx context.Context, request operations.PrivateCollectionDetailsRequest, security operations.PrivateCollectionDetailsSecurity) (*operations.PrivateCollectionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1268,11 +1268,11 @@ func (s *collections) PrivateCollectionDetails(ctx context.Context, request oper
 
 // PrivateCollectionPrivateLinkCreate - Create collection private link
 // Create new private link
-func (s *collections) PrivateCollectionPrivateLinkCreate(ctx context.Context, request operations.PrivateCollectionPrivateLinkCreateRequest) (*operations.PrivateCollectionPrivateLinkCreateResponse, error) {
+func (s *collections) PrivateCollectionPrivateLinkCreate(ctx context.Context, request operations.PrivateCollectionPrivateLinkCreateRequest, security operations.PrivateCollectionPrivateLinkCreateSecurity) (*operations.PrivateCollectionPrivateLinkCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionPrivateLinkCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1284,7 +1284,7 @@ func (s *collections) PrivateCollectionPrivateLinkCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1337,16 +1337,16 @@ func (s *collections) PrivateCollectionPrivateLinkCreate(ctx context.Context, re
 
 // PrivateCollectionPrivateLinkDelete - Disable private link
 // Disable/delete private link for this collection
-func (s *collections) PrivateCollectionPrivateLinkDelete(ctx context.Context, request operations.PrivateCollectionPrivateLinkDeleteRequest) (*operations.PrivateCollectionPrivateLinkDeleteResponse, error) {
+func (s *collections) PrivateCollectionPrivateLinkDelete(ctx context.Context, request operations.PrivateCollectionPrivateLinkDeleteRequest, security operations.PrivateCollectionPrivateLinkDeleteSecurity) (*operations.PrivateCollectionPrivateLinkDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links/{link_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links/{link_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1389,11 +1389,11 @@ func (s *collections) PrivateCollectionPrivateLinkDelete(ctx context.Context, re
 
 // PrivateCollectionPrivateLinkUpdate - Update collection private link
 // Update existing private link for this collection
-func (s *collections) PrivateCollectionPrivateLinkUpdate(ctx context.Context, request operations.PrivateCollectionPrivateLinkUpdateRequest) (*operations.PrivateCollectionPrivateLinkUpdateResponse, error) {
+func (s *collections) PrivateCollectionPrivateLinkUpdate(ctx context.Context, request operations.PrivateCollectionPrivateLinkUpdateRequest, security operations.PrivateCollectionPrivateLinkUpdateSecurity) (*operations.PrivateCollectionPrivateLinkUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links/{link_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links/{link_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionPrivateLinkCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1405,7 +1405,7 @@ func (s *collections) PrivateCollectionPrivateLinkUpdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1451,16 +1451,16 @@ func (s *collections) PrivateCollectionPrivateLinkUpdate(ctx context.Context, re
 
 // PrivateCollectionPrivateLinksList - List collection private links
 // List article private links
-func (s *collections) PrivateCollectionPrivateLinksList(ctx context.Context, request operations.PrivateCollectionPrivateLinksListRequest) (*operations.PrivateCollectionPrivateLinksListResponse, error) {
+func (s *collections) PrivateCollectionPrivateLinksList(ctx context.Context, request operations.PrivateCollectionPrivateLinksListRequest, security operations.PrivateCollectionPrivateLinksListSecurity) (*operations.PrivateCollectionPrivateLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/private_links", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1511,16 +1511,16 @@ func (s *collections) PrivateCollectionPrivateLinksList(ctx context.Context, req
 
 // PrivateCollectionPublish - Private Collection Publish
 // When a collection is published, a new public version will be generated. Any further updates to the collection will affect the private collection data. In order to make these changes publicly visible, an explicit publish operation is needed.
-func (s *collections) PrivateCollectionPublish(ctx context.Context, request operations.PrivateCollectionPublishRequest) (*operations.PrivateCollectionPublishResponse, error) {
+func (s *collections) PrivateCollectionPublish(ctx context.Context, request operations.PrivateCollectionPublishRequest, security operations.PrivateCollectionPublishSecurity) (*operations.PrivateCollectionPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1571,16 +1571,16 @@ func (s *collections) PrivateCollectionPublish(ctx context.Context, request oper
 
 // PrivateCollectionReserveDoi - Private Collection Reserve DOI
 // Reserve DOI for collection
-func (s *collections) PrivateCollectionReserveDoi(ctx context.Context, request operations.PrivateCollectionReserveDoiRequest) (*operations.PrivateCollectionReserveDoiResponse, error) {
+func (s *collections) PrivateCollectionReserveDoi(ctx context.Context, request operations.PrivateCollectionReserveDoiRequest, security operations.PrivateCollectionReserveDoiSecurity) (*operations.PrivateCollectionReserveDoiResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/reserve_doi", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/reserve_doi", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1629,16 +1629,16 @@ func (s *collections) PrivateCollectionReserveDoi(ctx context.Context, request o
 
 // PrivateCollectionReserveHandle - Private Collection Reserve Handle
 // Reserve Handle for collection
-func (s *collections) PrivateCollectionReserveHandle(ctx context.Context, request operations.PrivateCollectionReserveHandleRequest) (*operations.PrivateCollectionReserveHandleResponse, error) {
+func (s *collections) PrivateCollectionReserveHandle(ctx context.Context, request operations.PrivateCollectionReserveHandleRequest, security operations.PrivateCollectionReserveHandleSecurity) (*operations.PrivateCollectionReserveHandleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/reserve_handle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/reserve_handle", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1687,11 +1687,11 @@ func (s *collections) PrivateCollectionReserveHandle(ctx context.Context, reques
 
 // PrivateCollectionResource - Private Collection Resource
 // Edit collection resource data.
-func (s *collections) PrivateCollectionResource(ctx context.Context, request operations.PrivateCollectionResourceRequest) (*operations.PrivateCollectionResourceResponse, error) {
+func (s *collections) PrivateCollectionResource(ctx context.Context, request operations.PrivateCollectionResourceRequest, security operations.PrivateCollectionResourceSecurity) (*operations.PrivateCollectionResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/resource", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/resource", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Resource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1706,7 +1706,7 @@ func (s *collections) PrivateCollectionResource(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1757,11 +1757,11 @@ func (s *collections) PrivateCollectionResource(ctx context.Context, request ope
 
 // PrivateCollectionUpdate - Update collection
 // Update collection details; request can also be made with the PATCH method.
-func (s *collections) PrivateCollectionUpdate(ctx context.Context, request operations.PrivateCollectionUpdateRequest) (*operations.PrivateCollectionUpdateResponse, error) {
+func (s *collections) PrivateCollectionUpdate(ctx context.Context, request operations.PrivateCollectionUpdateRequest, security operations.PrivateCollectionUpdateSecurity) (*operations.PrivateCollectionUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1776,7 +1776,7 @@ func (s *collections) PrivateCollectionUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1829,7 +1829,7 @@ func (s *collections) PrivateCollectionUpdate(ctx context.Context, request opera
 
 // PrivateCollectionsList - Private Collections List
 // List private collections
-func (s *collections) PrivateCollectionsList(ctx context.Context, request operations.PrivateCollectionsListRequest) (*operations.PrivateCollectionsListResponse, error) {
+func (s *collections) PrivateCollectionsList(ctx context.Context, request operations.PrivateCollectionsListRequest, security operations.PrivateCollectionsListSecurity) (*operations.PrivateCollectionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/collections"
 
@@ -1838,11 +1838,11 @@ func (s *collections) PrivateCollectionsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1891,7 +1891,7 @@ func (s *collections) PrivateCollectionsList(ctx context.Context, request operat
 
 // PrivateCollectionsSearch - Private Collections Search
 // Returns a list of private Collections
-func (s *collections) PrivateCollectionsSearch(ctx context.Context, request operations.PrivateCollectionsSearchRequest) (*operations.PrivateCollectionsSearchResponse, error) {
+func (s *collections) PrivateCollectionsSearch(ctx context.Context, request shared.PrivateCollectionSearch, security operations.PrivateCollectionsSearchSecurity) (*operations.PrivateCollectionsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/collections/search"
 
@@ -1910,7 +1910,7 @@ func (s *collections) PrivateCollectionsSearch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

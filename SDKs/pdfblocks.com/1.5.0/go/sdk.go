@@ -111,7 +111,7 @@ func New(opts ...SDKOption) *SDK {
 // AddImageWatermarkV1 - Add an image watermark to a PDF
 // Add an image watermark to each page of a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/add-watermark-image - Documentation and examples
-func (s *SDK) AddImageWatermarkV1(ctx context.Context, request operations.AddImageWatermarkV1Request) (*operations.AddImageWatermarkV1Response, error) {
+func (s *SDK) AddImageWatermarkV1(ctx context.Context, request operations.AddImageWatermarkV1RequestBody) (*operations.AddImageWatermarkV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/add_watermark/image"
 
@@ -177,7 +177,7 @@ func (s *SDK) AddImageWatermarkV1(ctx context.Context, request operations.AddIma
 // AddPasswordV1 - Add a password to a PDF
 // Protect a PDF document with a password. Encrypt the PDF document to prevent unauthorized access.
 // https://www.pdfblocks.com/docs/api/v1/add-password - Documentation and examples
-func (s *SDK) AddPasswordV1(ctx context.Context, request operations.AddPasswordV1Request) (*operations.AddPasswordV1Response, error) {
+func (s *SDK) AddPasswordV1(ctx context.Context, request operations.AddPasswordV1RequestBody) (*operations.AddPasswordV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/add_password"
 
@@ -243,7 +243,7 @@ func (s *SDK) AddPasswordV1(ctx context.Context, request operations.AddPasswordV
 // AddRestrictionsV1 - Add restrictions to a PDF
 // Add restrictions to prevent copying, printing, and modifying a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/add-restrictions - Documentation and examples
-func (s *SDK) AddRestrictionsV1(ctx context.Context, request operations.AddRestrictionsV1Request) (*operations.AddRestrictionsV1Response, error) {
+func (s *SDK) AddRestrictionsV1(ctx context.Context, request operations.AddRestrictionsV1RequestBody) (*operations.AddRestrictionsV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/add_restrictions"
 
@@ -309,7 +309,7 @@ func (s *SDK) AddRestrictionsV1(ctx context.Context, request operations.AddRestr
 // AddTextWatermarkV1 - Add a text watermark to a PDF
 // Add a text watermark to each page of a PDF document. Choose from several watermark templates.
 // https://www.pdfblocks.com/docs/api/v1/add-watermark-text - Documentation and examples
-func (s *SDK) AddTextWatermarkV1(ctx context.Context, request operations.AddTextWatermarkV1Request) (*operations.AddTextWatermarkV1Response, error) {
+func (s *SDK) AddTextWatermarkV1(ctx context.Context, request operations.AddTextWatermarkV1RequestBody) (*operations.AddTextWatermarkV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/add_watermark/text"
 
@@ -375,7 +375,7 @@ func (s *SDK) AddTextWatermarkV1(ctx context.Context, request operations.AddText
 // ExtractPagesV1 - Extract pages from a PDF
 // Extract one or more pages from a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/extract-pages - Documentation and examples
-func (s *SDK) ExtractPagesV1(ctx context.Context, request operations.ExtractPagesV1Request) (*operations.ExtractPagesV1Response, error) {
+func (s *SDK) ExtractPagesV1(ctx context.Context, request operations.ExtractPagesV1RequestBody) (*operations.ExtractPagesV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/extract_pages"
 
@@ -441,7 +441,7 @@ func (s *SDK) ExtractPagesV1(ctx context.Context, request operations.ExtractPage
 // MergeDocumentsV1 - Merge PDF documents
 // Combine multiple PDF documents into a single PDF document.
 // https://www.pdfblocks.com/docs/api/v1/merge-documents - Documentation and examples
-func (s *SDK) MergeDocumentsV1(ctx context.Context, request operations.MergeDocumentsV1Request) (*operations.MergeDocumentsV1Response, error) {
+func (s *SDK) MergeDocumentsV1(ctx context.Context, request operations.MergeDocumentsV1RequestBody) (*operations.MergeDocumentsV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/merge_documents"
 
@@ -507,7 +507,7 @@ func (s *SDK) MergeDocumentsV1(ctx context.Context, request operations.MergeDocu
 // RemovePagesV1 - Remove pages from a PDF
 // Remove one or more pages from a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/remove-pages - Documentation and examples
-func (s *SDK) RemovePagesV1(ctx context.Context, request operations.RemovePagesV1Request) (*operations.RemovePagesV1Response, error) {
+func (s *SDK) RemovePagesV1(ctx context.Context, request operations.RemovePagesV1RequestBody) (*operations.RemovePagesV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/remove_pages"
 
@@ -573,7 +573,7 @@ func (s *SDK) RemovePagesV1(ctx context.Context, request operations.RemovePagesV
 // RemovePasswordV1 - Remove the password from a PDF
 // Remove the password from an encrypted PDF document. The PDF document will no longer require a password to open.
 // https://www.pdfblocks.com/docs/api/v1/remove-password - Documentation and examples
-func (s *SDK) RemovePasswordV1(ctx context.Context, request operations.RemovePasswordV1Request) (*operations.RemovePasswordV1Response, error) {
+func (s *SDK) RemovePasswordV1(ctx context.Context, request operations.RemovePasswordV1RequestBody) (*operations.RemovePasswordV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/remove_password"
 
@@ -639,7 +639,7 @@ func (s *SDK) RemovePasswordV1(ctx context.Context, request operations.RemovePas
 // RemoveRestrictionsV1 - Remove the restrictions from a PDF
 // Remove all the restrictions from a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/remove-restrictions - Documentation and examples
-func (s *SDK) RemoveRestrictionsV1(ctx context.Context, request operations.RemoveRestrictionsV1Request) (*operations.RemoveRestrictionsV1Response, error) {
+func (s *SDK) RemoveRestrictionsV1(ctx context.Context, request operations.RemoveRestrictionsV1RequestBody) (*operations.RemoveRestrictionsV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/remove_restrictions"
 
@@ -705,7 +705,7 @@ func (s *SDK) RemoveRestrictionsV1(ctx context.Context, request operations.Remov
 // RemoveSignaturesV1 - Remove the signatures from a PDF
 // Remove the cryptographic signatures and timestamps from a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/remove-signatures - Documentation and examples
-func (s *SDK) RemoveSignaturesV1(ctx context.Context, request operations.RemoveSignaturesV1Request) (*operations.RemoveSignaturesV1Response, error) {
+func (s *SDK) RemoveSignaturesV1(ctx context.Context, request operations.RemoveSignaturesV1RequestBody) (*operations.RemoveSignaturesV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/remove_signatures"
 
@@ -771,7 +771,7 @@ func (s *SDK) RemoveSignaturesV1(ctx context.Context, request operations.RemoveS
 // ReversePagesV1 - Reverse the pages of a PDF
 // Reverse the order of the pages of a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/reverse-pages - Documentation and examples
-func (s *SDK) ReversePagesV1(ctx context.Context, request operations.ReversePagesV1Request) (*operations.ReversePagesV1Response, error) {
+func (s *SDK) ReversePagesV1(ctx context.Context, request operations.ReversePagesV1RequestBody) (*operations.ReversePagesV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/reverse_pages"
 
@@ -837,7 +837,7 @@ func (s *SDK) ReversePagesV1(ctx context.Context, request operations.ReversePage
 // RotatePagesV1 - Rotate pages in a PDF
 // Rotate one or more pages in a PDF document.
 // https://www.pdfblocks.com/docs/api/v1/rotate-pages - Documentation and examples
-func (s *SDK) RotatePagesV1(ctx context.Context, request operations.RotatePagesV1Request) (*operations.RotatePagesV1Response, error) {
+func (s *SDK) RotatePagesV1(ctx context.Context, request operations.RotatePagesV1RequestBody) (*operations.RotatePagesV1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/rotate_pages"
 

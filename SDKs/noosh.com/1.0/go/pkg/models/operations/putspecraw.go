@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSpecRawPathParams struct {
+type PutSpecRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	SpecID      string `pathParam:"style=simple,explode=false,name=spec_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PutSpecRawRequest struct {
-	PathParams PutSpecRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PutSpecRawResponse struct {

@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrdersSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OrdersPathParams struct {
+type OrdersRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Surname of traveller
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// Unique order identifier
 	OrderID string `pathParam:"style=simple,explode=false,name=orderID"`
-}
-
-type OrdersHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OrdersRequest struct {
-	PathParams OrdersPathParams
-	Headers    OrdersHeaders
-	Security   OrdersSecurity
 }
 
 type OrdersResponse struct {

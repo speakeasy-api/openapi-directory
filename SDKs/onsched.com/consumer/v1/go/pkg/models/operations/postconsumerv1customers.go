@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostConsumerV1CustomersRequest struct {
-	Request *shared.CustomerInputModel `request:"mediaType=application/json"`
-}
-
 type PostConsumerV1CustomersResponse struct {
 	ContentType string
 	// Success

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type BankTransferSweepListRequest struct {
-	Request shared.BankTransferSweepListRequest `request:"mediaType=application/json"`
-}
 
 type BankTransferSweepListResponse struct {
 	// OK

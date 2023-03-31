@@ -36,7 +36,7 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Retrieves a set of [orders](https://developer.squareup.com/reference/square_2021-08-18/objects/Order) by their IDs.
 //
 // If a given order ID does not exist, the ID is ignored instead of generating an error.
-func (s *orders) BatchRetrieveOrders(ctx context.Context, request operations.BatchRetrieveOrdersRequest) (*operations.BatchRetrieveOrdersResponse, error) {
+func (s *orders) BatchRetrieveOrders(ctx context.Context, request shared.BatchRetrieveOrdersRequest, security operations.BatchRetrieveOrdersSecurity) (*operations.BatchRetrieveOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/orders/batch-retrieve"
 
@@ -55,7 +55,7 @@ func (s *orders) BatchRetrieveOrders(ctx context.Context, request operations.Bat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *orders) BatchRetrieveOrders(ctx context.Context, request operations.Bat
 
 // CalculateOrder - CalculateOrder
 // Enables applications to preview order pricing without creating an order.
-func (s *orders) CalculateOrder(ctx context.Context, request operations.CalculateOrderRequest) (*operations.CalculateOrderResponse, error) {
+func (s *orders) CalculateOrder(ctx context.Context, request shared.CalculateOrderRequest, security operations.CalculateOrderSecurity) (*operations.CalculateOrderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/orders/calculate"
 
@@ -110,7 +110,7 @@ func (s *orders) CalculateOrder(ctx context.Context, request operations.Calculat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *orders) CalculateOrder(ctx context.Context, request operations.Calculat
 // [Pay for Orders](https://developer.squareup.com/docs/orders-api/pay-for-orders).
 //
 // You can modify open orders using the [UpdateOrder](https://developer.squareup.com/reference/square_2021-08-18/orders-api/update-order) endpoint.
-func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrderRequest) (*operations.CreateOrderResponse, error) {
+func (s *orders) CreateOrder(ctx context.Context, request shared.CreateOrderRequest, security operations.CreateOrderSecurity) (*operations.CreateOrderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/orders"
 
@@ -171,7 +171,7 @@ func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrder
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -220,11 +220,11 @@ func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrder
 // `payment_ids` is canceled.
 // - Be approved with [delayed capture](https://developer.squareup.com/docs/payments-api/take-payments#delayed-capture).
 // Using a delayed capture payment with `PayOrder` completes the approved payment.
-func (s *orders) PayOrder(ctx context.Context, request operations.PayOrderRequest) (*operations.PayOrderResponse, error) {
+func (s *orders) PayOrder(ctx context.Context, request operations.PayOrderRequest, security operations.PayOrderSecurity) (*operations.PayOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}/pay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}/pay", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,7 +239,7 @@ func (s *orders) PayOrder(ctx context.Context, request operations.PayOrderReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,7 +292,7 @@ func (s *orders) PayOrder(ctx context.Context, request operations.PayOrderReques
 // offline mode might not be transmitted to Square for up to 72 hours. Offline
 // orders have a `created_at` value that reflects the time the order was created,
 // not the time it was subsequently transmitted to Square.
-func (s *orders) SearchOrders(ctx context.Context, request operations.SearchOrdersRequest) (*operations.SearchOrdersResponse, error) {
+func (s *orders) SearchOrders(ctx context.Context, request shared.SearchOrdersRequest, security operations.SearchOrdersSecurity) (*operations.SearchOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/orders/search"
 
@@ -311,7 +311,7 @@ func (s *orders) SearchOrders(ctx context.Context, request operations.SearchOrde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -347,16 +347,16 @@ func (s *orders) SearchOrders(ctx context.Context, request operations.SearchOrde
 
 // GetV2OrdersOrderID - RetrieveOrder
 // Retrieves an [Order](https://developer.squareup.com/reference/square_2021-08-18/objects/Order) by ID.
-func (s *orders) GetV2OrdersOrderID(ctx context.Context, request operations.GetV2OrdersOrderIDRequest) (*operations.GetV2OrdersOrderIDResponse, error) {
+func (s *orders) GetV2OrdersOrderID(ctx context.Context, request operations.GetV2OrdersOrderIDRequest, security operations.GetV2OrdersOrderIDSecurity) (*operations.GetV2OrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,11 +406,11 @@ func (s *orders) GetV2OrdersOrderID(ctx context.Context, request operations.GetV
 //
 // To pay for an order, see
 // [Pay for Orders](https://developer.squareup.com/docs/orders-api/pay-for-orders).
-func (s *orders) PutV2OrdersOrderID(ctx context.Context, request operations.PutV2OrdersOrderIDRequest) (*operations.PutV2OrdersOrderIDResponse, error) {
+func (s *orders) PutV2OrdersOrderID(ctx context.Context, request operations.PutV2OrdersOrderIDRequest, security operations.PutV2OrdersOrderIDSecurity) (*operations.PutV2OrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,7 +425,7 @@ func (s *orders) PutV2OrdersOrderID(ctx context.Context, request operations.PutV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

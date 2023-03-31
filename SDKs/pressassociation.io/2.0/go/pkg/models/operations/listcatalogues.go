@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ListCataloguesSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListCataloguesRequest struct {
-	Security ListCataloguesSecurity
-}
 
 type ListCataloguesResponse struct {
 	ContentType                            string

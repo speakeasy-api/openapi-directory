@@ -13,19 +13,8 @@ var UpdateConversationParticipantServerList = []string{
 }
 
 type UpdateConversationParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConversationParticipantPathParams struct {
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateConversationParticipantHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConversationParticipantUpdateConversationParticipantRequest struct {
@@ -50,11 +39,13 @@ type UpdateConversationParticipantUpdateConversationParticipantRequest struct {
 }
 
 type UpdateConversationParticipantRequest struct {
-	PathParams UpdateConversationParticipantPathParams
-	Headers    UpdateConversationParticipantHeaders
-	Request    *UpdateConversationParticipantUpdateConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConversationParticipantSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+	ConversationSid string                                                             `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateConversationParticipantUpdateConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateConversationParticipantResponse struct {

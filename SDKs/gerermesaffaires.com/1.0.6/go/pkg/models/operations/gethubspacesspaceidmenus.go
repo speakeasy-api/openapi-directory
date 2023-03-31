@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetHubSpacesSpaceIDMenusPathParams struct {
+type GetHubSpacesSpaceIDMenusRequest struct {
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetHubSpacesSpaceIDMenusRequest struct {
-	PathParams GetHubSpacesSpaceIDMenusPathParams
 }
 
 type GetHubSpacesSpaceIDMenus200ApplicationJSONFolders struct {

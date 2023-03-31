@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceManagementInterfacePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceManagementInterfaceRequest struct {
-	PathParams GetDeviceManagementInterfacePathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceManagementInterfaceResponse struct {

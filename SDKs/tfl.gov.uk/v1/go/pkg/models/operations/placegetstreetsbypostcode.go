@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type PlaceGetStreetsByPostCodePathParams struct {
-	// Automatically added
-	Postcode string `pathParam:"style=simple,explode=false,name=Postcode"`
-}
-
-type PlaceGetStreetsByPostCodeQueryParams struct {
-	Postcode              string  `queryParam:"style=form,explode=true,name=postcode"`
-	PostcodeInputPostcode *string `queryParam:"style=form,explode=true,name=postcodeInput.postcode"`
-}
-
 type PlaceGetStreetsByPostCodeRequest struct {
-	PathParams  PlaceGetStreetsByPostCodePathParams
-	QueryParams PlaceGetStreetsByPostCodeQueryParams
+	// Automatically added
+	PostcodePathParameter  string  `pathParam:"style=simple,explode=false,name=Postcode"`
+	PostcodeInputPostcode  *string `queryParam:"style=form,explode=true,name=postcodeInput.postcode"`
+	PostcodeQueryParameter string  `queryParam:"style=form,explode=true,name=postcode"`
 }
 
 type PlaceGetStreetsByPostCodeResponse struct {

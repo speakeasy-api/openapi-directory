@@ -8,10 +8,10 @@ import (
 )
 
 type ListCustomersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCustomersQueryParams struct {
+type ListCustomersRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for your original query.
 	//
@@ -31,11 +31,6 @@ type ListCustomersQueryParams struct {
 	//
 	// The default value is `ASC`.
 	SortOrder *string `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type ListCustomersRequest struct {
-	QueryParams ListCustomersQueryParams
-	Security    ListCustomersSecurity
 }
 
 type ListCustomersResponse struct {

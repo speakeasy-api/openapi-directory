@@ -8,32 +8,6 @@ import (
 	"net/http"
 )
 
-// GetMapVersionNumberStaticimageVersionNumberEnum - Version of the service to call. The current version is 1.
-type GetMapVersionNumberStaticimageVersionNumberEnum string
-
-const (
-	GetMapVersionNumberStaticimageVersionNumberEnumOne GetMapVersionNumberStaticimageVersionNumberEnum = "1"
-)
-
-func (e *GetMapVersionNumberStaticimageVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberStaticimageVersionNumberEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageVersionNumberEnum: %s", s)
-	}
-}
-
-type GetMapVersionNumberStaticimagePathParams struct {
-	// Version of the service to call. The current version is 1.
-	VersionNumber GetMapVersionNumberStaticimageVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 // GetMapVersionNumberStaticimageFormatEnum - Image format to be returned
 type GetMapVersionNumberStaticimageFormatEnum string
 
@@ -110,6 +84,27 @@ func (e *GetMapVersionNumberStaticimageStyleEnum) UnmarshalJSON(data []byte) err
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageStyleEnum: %s", s)
+	}
+}
+
+// GetMapVersionNumberStaticimageVersionNumberEnum - Version of the service to call. The current version is 1.
+type GetMapVersionNumberStaticimageVersionNumberEnum string
+
+const (
+	GetMapVersionNumberStaticimageVersionNumberEnumOne GetMapVersionNumberStaticimageVersionNumberEnum = "1"
+)
+
+func (e *GetMapVersionNumberStaticimageVersionNumberEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		*e = GetMapVersionNumberStaticimageVersionNumberEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageVersionNumberEnum: %s", s)
 	}
 }
 
@@ -224,7 +219,7 @@ func (e *GetMapVersionNumberStaticimageZoomEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetMapVersionNumberStaticimageQueryParams struct {
+type GetMapVersionNumberStaticimageRequest struct {
 	// Bounding box for the image, using EPSG:3857 projection (functionally equivalent to EPSG:900910).
 	// Values <strong>must</strong> be in the order of minLon, minLat, maxLon, maxLat.
 	// MaxLat must be greater than minLat. Longitude values can be on both sides of the 180th meridian.
@@ -244,17 +239,14 @@ type GetMapVersionNumberStaticimageQueryParams struct {
 	Layer *GetMapVersionNumberStaticimageLayerEnum `queryParam:"style=form,explode=true,name=layer"`
 	// Map style to be returned
 	Style *GetMapVersionNumberStaticimageStyleEnum `queryParam:"style=form,explode=true,name=style"`
+	// Version of the service to call. The current version is 1.
+	VersionNumber GetMapVersionNumberStaticimageVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-api/maps-api-documentation-raster/raster-tile">documentation</a> for an explanation of how this works in live services.
 	View *GetMapVersionNumberStaticimageViewEnum `queryParam:"style=form,explode=true,name=view"`
 	// Width of the resulting image in pixels. Width must be a positive integer between 1 and 8192.
 	Width *int64 `queryParam:"style=form,explode=true,name=width"`
 	// Zoom level of map image to be returned.
 	Zoom *GetMapVersionNumberStaticimageZoomEnum `queryParam:"style=form,explode=true,name=zoom"`
-}
-
-type GetMapVersionNumberStaticimageRequest struct {
-	PathParams  GetMapVersionNumberStaticimagePathParams
-	QueryParams GetMapVersionNumberStaticimageQueryParams
 }
 
 type GetMapVersionNumberStaticimageResponse struct {

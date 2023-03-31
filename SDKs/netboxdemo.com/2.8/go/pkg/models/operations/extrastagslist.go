@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTagsListQueryParams struct {
+type ExtrasTagsListRequest struct {
 	Color     *string `queryParam:"style=form,explode=true,name=color"`
 	ColorIc   *string `queryParam:"style=form,explode=true,name=color__ic"`
 	ColorIe   *string `queryParam:"style=form,explode=true,name=color__ie"`
@@ -49,10 +49,6 @@ type ExtrasTagsListQueryParams struct {
 	SlugNie  *string `queryParam:"style=form,explode=true,name=slug__nie"`
 	SlugNiew *string `queryParam:"style=form,explode=true,name=slug__niew"`
 	SlugNisw *string `queryParam:"style=form,explode=true,name=slug__nisw"`
-}
-
-type ExtrasTagsListRequest struct {
-	QueryParams ExtrasTagsListQueryParams
 }
 
 type ExtrasTagsList200ApplicationJSON struct {

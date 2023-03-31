@@ -11,11 +11,11 @@ import (
 )
 
 type GetUsersSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// A comma separated list of track ids to filter on
 	Ids *string `queryParam:"style=form,explode=true,name=ids"`
 	// Number of results to return in the collection.
@@ -26,11 +26,6 @@ type GetUsersQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// search
 	Q string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
-	Security    GetUsersSecurity
 }
 
 type GetUsers200ApplicationJSONType string

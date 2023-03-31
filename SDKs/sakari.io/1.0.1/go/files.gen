@@ -52,7 +52,6 @@ pkg/models/shared/tokenrequest.go
 pkg/models/shared/campaignresponse.go
 pkg/models/shared/campaign.go
 pkg/models/shared/campaignrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/campaignsresponse.go
 pkg/models/shared/contactsresponse.go

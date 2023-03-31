@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileActionCopyPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type FileActionCopyRequestBody struct {
 	// Copy destination path.
 	Destination string `multipartForm:"name=destination"`
@@ -20,8 +15,9 @@ type FileActionCopyRequestBody struct {
 }
 
 type FileActionCopyRequest struct {
-	PathParams FileActionCopyPathParams
-	Request    FileActionCopyRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody FileActionCopyRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type FileActionCopyResponse struct {

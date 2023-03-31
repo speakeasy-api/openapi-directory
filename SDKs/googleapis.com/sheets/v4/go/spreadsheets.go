@@ -33,11 +33,11 @@ func newSpreadsheets(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // SheetsSpreadsheetsBatchUpdate - Applies one or more updates to the spreadsheet. Each request is validated before being applied. If any request is not valid then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. The replies will mirror the requests. For example, if you applied 4 updates and the 3rd one had a reply, then the response will have 2 empty replies, the actual reply, and another empty reply, in that order. Due to the collaborative nature of spreadsheets, it is not guaranteed that the spreadsheet will reflect exactly your changes after this completes, however it is guaranteed that the updates in the request will be applied together atomically. Your changes may be altered with respect to collaborator changes. If there are no collaborators, the spreadsheet should reflect your changes.
-func (s *spreadsheets) SheetsSpreadsheetsBatchUpdate(ctx context.Context, request operations.SheetsSpreadsheetsBatchUpdateRequest) (*operations.SheetsSpreadsheetsBatchUpdateResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsBatchUpdate(ctx context.Context, request operations.SheetsSpreadsheetsBatchUpdateRequest, security operations.SheetsSpreadsheetsBatchUpdateSecurity) (*operations.SheetsSpreadsheetsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateSpreadsheetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *spreadsheets) SheetsSpreadsheetsBatchUpdate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *spreadsheets) SheetsSpreadsheetsBatchUpdate(ctx context.Context, reques
 }
 
 // SheetsSpreadsheetsCreate - Creates a spreadsheet, returning the newly created spreadsheet.
-func (s *spreadsheets) SheetsSpreadsheetsCreate(ctx context.Context, request operations.SheetsSpreadsheetsCreateRequest) (*operations.SheetsSpreadsheetsCreateResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsCreate(ctx context.Context, request operations.SheetsSpreadsheetsCreateRequest, security operations.SheetsSpreadsheetsCreateSecurity) (*operations.SheetsSpreadsheetsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/spreadsheets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpreadsheetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *spreadsheets) SheetsSpreadsheetsCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *spreadsheets) SheetsSpreadsheetsCreate(ctx context.Context, request ope
 }
 
 // SheetsSpreadsheetsDeveloperMetadataGet - Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID and the developer metadata's unique metadataId.
-func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataGet(ctx context.Context, request operations.SheetsSpreadsheetsDeveloperMetadataGetRequest) (*operations.SheetsSpreadsheetsDeveloperMetadataGetResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataGet(ctx context.Context, request operations.SheetsSpreadsheetsDeveloperMetadataGetRequest, security operations.SheetsSpreadsheetsDeveloperMetadataGetSecurity) (*operations.SheetsSpreadsheetsDeveloperMetadataGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataGet(ctx context.Contex
 }
 
 // SheetsSpreadsheetsDeveloperMetadataSearch - Returns all developer metadata matching the specified DataFilter. If the provided DataFilter represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata entries selected by it. If the DataFilter represents a location in a spreadsheet, this will return all developer metadata associated with locations intersecting that region.
-func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataSearch(ctx context.Context, request operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest) (*operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataSearch(ctx context.Context, request operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest, security operations.SheetsSpreadsheetsDeveloperMetadataSearchSecurity) (*operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/developerMetadata:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/developerMetadata:search", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchDeveloperMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,11 +207,11 @@ func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataSearch(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,20 +246,20 @@ func (s *spreadsheets) SheetsSpreadsheetsDeveloperMetadataSearch(ctx context.Con
 }
 
 // SheetsSpreadsheetsGet - Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By default, data within grids is not returned. You can include grid data in one of 2 ways: * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData URL parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want. To retrieve only subsets of spreadsheet data, use the ranges URL parameter. Ranges are specified using [A1 notation](/sheets/api/guides/concepts#cell). You can define a single cell (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also get cells from other sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at once (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range returns only the portions of the spreadsheet that intersect the requested ranges.
-func (s *spreadsheets) SheetsSpreadsheetsGet(ctx context.Context, request operations.SheetsSpreadsheetsGetRequest) (*operations.SheetsSpreadsheetsGetResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsGet(ctx context.Context, request operations.SheetsSpreadsheetsGetRequest, security operations.SheetsSpreadsheetsGetSecurity) (*operations.SheetsSpreadsheetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *spreadsheets) SheetsSpreadsheetsGet(ctx context.Context, request operat
 }
 
 // SheetsSpreadsheetsGetByDataFilter - Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This method differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet data to return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying one or more data filters returns the portions of the spreadsheet that intersect ranges matched by any of the filters. By default, data within grids is not returned. You can include grid data one of 2 ways: * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
-func (s *spreadsheets) SheetsSpreadsheetsGetByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsGetByDataFilterRequest) (*operations.SheetsSpreadsheetsGetByDataFilterResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsGetByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsGetByDataFilterRequest, security operations.SheetsSpreadsheetsGetByDataFilterSecurity) (*operations.SheetsSpreadsheetsGetByDataFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}:getByDataFilter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}:getByDataFilter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetSpreadsheetByDataFilterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *spreadsheets) SheetsSpreadsheetsGetByDataFilter(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,11 +349,11 @@ func (s *spreadsheets) SheetsSpreadsheetsGetByDataFilter(ctx context.Context, re
 }
 
 // SheetsSpreadsheetsSheetsCopyTo - Copies a single sheet from a spreadsheet to another spreadsheet. Returns the properties of the newly created sheet.
-func (s *spreadsheets) SheetsSpreadsheetsSheetsCopyTo(ctx context.Context, request operations.SheetsSpreadsheetsSheetsCopyToRequest) (*operations.SheetsSpreadsheetsSheetsCopyToResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsSheetsCopyTo(ctx context.Context, request operations.SheetsSpreadsheetsSheetsCopyToRequest, security operations.SheetsSpreadsheetsSheetsCopyToSecurity) (*operations.SheetsSpreadsheetsSheetsCopyToResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopySheetToAnotherSpreadsheetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,11 +365,11 @@ func (s *spreadsheets) SheetsSpreadsheetsSheetsCopyTo(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,11 +404,11 @@ func (s *spreadsheets) SheetsSpreadsheetsSheetsCopyTo(ctx context.Context, reque
 }
 
 // SheetsSpreadsheetsValuesAppend - Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" within that range. Values will be appended to the next row of the table, starting with the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are detected and data is appended. The caller must specify the spreadsheet ID, range, and a valueInputOption. The `valueInputOption` only controls how the input data will be added to the sheet (column-wise or row-wise), it does not influence what cell the data starts being written to.
-func (s *spreadsheets) SheetsSpreadsheetsValuesAppend(ctx context.Context, request operations.SheetsSpreadsheetsValuesAppendRequest) (*operations.SheetsSpreadsheetsValuesAppendResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesAppend(ctx context.Context, request operations.SheetsSpreadsheetsValuesAppendRequest, security operations.SheetsSpreadsheetsValuesAppendSecurity) (*operations.SheetsSpreadsheetsValuesAppendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}:append", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}:append", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValueRange", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -420,11 +420,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesAppend(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,11 +459,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesAppend(ctx context.Context, reque
 }
 
 // SheetsSpreadsheetsValuesBatchClear - Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more ranges. Only values are cleared -- all other properties of the cell (such as formatting and data validation) are kept.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClear(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchClearRequest) (*operations.SheetsSpreadsheetsValuesBatchClearResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClear(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchClearRequest, security operations.SheetsSpreadsheetsValuesBatchClearSecurity) (*operations.SheetsSpreadsheetsValuesBatchClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchClear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchClear", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchClearValuesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -475,11 +475,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClear(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -514,11 +514,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClear(ctx context.Context, r
 }
 
 // SheetsSpreadsheetsValuesBatchClearByDataFilter - Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more DataFilters. Ranges matching any of the specified data filters will be cleared. Only values are cleared -- all other properties of the cell (such as formatting, data validation, etc..) are kept.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClearByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest) (*operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClearByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest, security operations.SheetsSpreadsheetsValuesBatchClearByDataFilterSecurity) (*operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchClearByDataFilter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchClearByDataFilter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchClearValuesByDataFilterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -530,11 +530,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClearByDataFilter(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -569,20 +569,20 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchClearByDataFilter(ctx contex
 }
 
 // SheetsSpreadsheetsValuesBatchGet - Returns one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more ranges.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGet(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchGetRequest) (*operations.SheetsSpreadsheetsValuesBatchGetResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGet(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchGetRequest, security operations.SheetsSpreadsheetsValuesBatchGetSecurity) (*operations.SheetsSpreadsheetsValuesBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,11 +617,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGet(ctx context.Context, req
 }
 
 // SheetsSpreadsheetsValuesBatchGetByDataFilter - Returns one or more ranges of values that match the specified data filters. The caller must specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data filters in the request will be returned.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGetByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest) (*operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGetByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest, security operations.SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity) (*operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchGetByDataFilter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchGetByDataFilter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchGetValuesByDataFilterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -633,11 +633,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGetByDataFilter(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,11 +672,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchGetByDataFilter(ctx context.
 }
 
 // SheetsSpreadsheetsValuesBatchUpdate - Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a valueInputOption, and one or more ValueRanges.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdate(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchUpdateRequest) (*operations.SheetsSpreadsheetsValuesBatchUpdateResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdate(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchUpdateRequest, security operations.SheetsSpreadsheetsValuesBatchUpdateSecurity) (*operations.SheetsSpreadsheetsValuesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateValuesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -688,11 +688,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -727,11 +727,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdate(ctx context.Context, 
 }
 
 // SheetsSpreadsheetsValuesBatchUpdateByDataFilter - Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a valueInputOption, and one or more DataFilterValueRanges.
-func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdateByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest) (*operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdateByDataFilter(ctx context.Context, request operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest, security operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterSecurity) (*operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateValuesByDataFilterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -743,11 +743,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdateByDataFilter(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -782,11 +782,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesBatchUpdateByDataFilter(ctx conte
 }
 
 // SheetsSpreadsheetsValuesClear - Clears values from a spreadsheet. The caller must specify the spreadsheet ID and range. Only values are cleared -- all other properties of the cell (such as formatting, data validation, etc..) are kept.
-func (s *spreadsheets) SheetsSpreadsheetsValuesClear(ctx context.Context, request operations.SheetsSpreadsheetsValuesClearRequest) (*operations.SheetsSpreadsheetsValuesClearResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesClear(ctx context.Context, request operations.SheetsSpreadsheetsValuesClearRequest, security operations.SheetsSpreadsheetsValuesClearSecurity) (*operations.SheetsSpreadsheetsValuesClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}:clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}:clear", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -798,11 +798,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesClear(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -837,20 +837,20 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesClear(ctx context.Context, reques
 }
 
 // SheetsSpreadsheetsValuesGet - Returns a range of values from a spreadsheet. The caller must specify the spreadsheet ID and a range.
-func (s *spreadsheets) SheetsSpreadsheetsValuesGet(ctx context.Context, request operations.SheetsSpreadsheetsValuesGetRequest) (*operations.SheetsSpreadsheetsValuesGetResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesGet(ctx context.Context, request operations.SheetsSpreadsheetsValuesGetRequest, security operations.SheetsSpreadsheetsValuesGetSecurity) (*operations.SheetsSpreadsheetsValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -885,11 +885,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesGet(ctx context.Context, request 
 }
 
 // SheetsSpreadsheetsValuesUpdate - Sets values in a range of a spreadsheet. The caller must specify the spreadsheet ID, range, and a valueInputOption.
-func (s *spreadsheets) SheetsSpreadsheetsValuesUpdate(ctx context.Context, request operations.SheetsSpreadsheetsValuesUpdateRequest) (*operations.SheetsSpreadsheetsValuesUpdateResponse, error) {
+func (s *spreadsheets) SheetsSpreadsheetsValuesUpdate(ctx context.Context, request operations.SheetsSpreadsheetsValuesUpdateRequest, security operations.SheetsSpreadsheetsValuesUpdateSecurity) (*operations.SheetsSpreadsheetsValuesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValueRange", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -901,11 +901,11 @@ func (s *spreadsheets) SheetsSpreadsheetsValuesUpdate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

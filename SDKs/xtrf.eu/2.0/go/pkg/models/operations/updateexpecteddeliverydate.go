@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateExpectedDeliveryDatePathParams struct {
+type UpdateExpectedDeliveryDateRequest struct {
+	// Updated Expected Delivery Date for a quote.
+	TimeDTO shared.TimeDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateExpectedDeliveryDateRequest struct {
-	PathParams UpdateExpectedDeliveryDatePathParams
-	// Updated Expected Delivery Date for a quote.
-	Request shared.TimeDTO `request:"mediaType=application/json"`
 }
 
 type UpdateExpectedDeliveryDateResponse struct {

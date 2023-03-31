@@ -34,7 +34,7 @@ func newFeature(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get information about the geographical feature with the specified featureId.
 func (s *feature) GetFeaturesFeatureID(ctx context.Context, request operations.GetFeaturesFeatureIDRequest) (*operations.GetFeaturesFeatureIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/features/{featureId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/features/{featureId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

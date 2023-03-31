@@ -34,9 +34,9 @@ func newExportEvents(defaultClient, securityClient HTTPClient, serverURL, langua
 // Imports event logs related to the onboarding app into elastisearch
 func (s *exportEvents) CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

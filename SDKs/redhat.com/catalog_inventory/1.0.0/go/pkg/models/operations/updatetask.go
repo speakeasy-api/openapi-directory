@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTaskPathParams struct {
+type UpdateTaskRequest struct {
+	// Task attributes to update
+	TaskInput shared.TaskInput `request:"mediaType=application/json"`
 	// UUID of task
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateTaskRequest struct {
-	PathParams UpdateTaskPathParams
-	// Task attributes to update
-	Request shared.TaskInput `request:"mediaType=application/json"`
 }
 
 type UpdateTaskResponse struct {

@@ -12,30 +12,21 @@ var ListRoomParticipantPublishedTrackServerList = []string{
 }
 
 type ListRoomParticipantPublishedTrackSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRoomParticipantPublishedTrackPathParams struct {
-	// The SID of the Participant resource with the published tracks to read.
-	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
-	// The SID of the Room resource where the Track resources to read are published.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
-}
-
-type ListRoomParticipantPublishedTrackQueryParams struct {
+type ListRoomParticipantPublishedTrackRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListRoomParticipantPublishedTrackRequest struct {
-	PathParams  ListRoomParticipantPublishedTrackPathParams
-	QueryParams ListRoomParticipantPublishedTrackQueryParams
-	Security    ListRoomParticipantPublishedTrackSecurity
-	ServerURL   *string
+	// The SID of the Participant resource with the published tracks to read.
+	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
+	// The SID of the Room resource where the Track resources to read are published.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 }
 
 type ListRoomParticipantPublishedTrackListRoomParticipantPublishedTrackResponseMeta struct {

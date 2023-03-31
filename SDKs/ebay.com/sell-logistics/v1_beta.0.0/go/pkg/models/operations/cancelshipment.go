@@ -8,17 +8,12 @@ import (
 )
 
 type CancelShipmentSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CancelShipmentPathParams struct {
-	// This path parameter specifies the unique eBay-assigned ID of the shipment to be canceled. The <b>shipmentId</b> value is generated and returned by a call to <b>createFromShippingQuote</b>.
-	ShipmentID string `pathParam:"style=simple,explode=false,name=shipmentId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelShipmentRequest struct {
-	PathParams CancelShipmentPathParams
-	Security   CancelShipmentSecurity
+	// This path parameter specifies the unique eBay-assigned ID of the shipment to be canceled. The <b>shipmentId</b> value is generated and returned by a call to <b>createFromShippingQuote</b>.
+	ShipmentID string `pathParam:"style=simple,explode=false,name=shipmentId"`
 }
 
 type CancelShipmentResponse struct {

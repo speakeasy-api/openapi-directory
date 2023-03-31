@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePayable1PathParams struct {
+type CreatePayable1Request struct {
+	// Adds a payable.
+	PayableCreateDTO shared.PayableCreateDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type CreatePayable1Request struct {
-	PathParams CreatePayable1PathParams
-	// Adds a payable.
-	Request shared.PayableCreateDTO `request:"mediaType=application/json"`
 }
 
 type CreatePayable1Response struct {

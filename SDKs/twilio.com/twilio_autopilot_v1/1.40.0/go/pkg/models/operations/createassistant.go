@@ -12,7 +12,8 @@ var CreateAssistantServerList = []string{
 }
 
 type CreateAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAssistantCreateAssistantRequest struct {
@@ -30,12 +31,6 @@ type CreateAssistantCreateAssistantRequest struct {
 	StyleSheet interface{} `form:"name=StyleSheet"`
 	// An application-defined string that uniquely identifies the new resource. It can be used as an alternative to the `sid` in the URL path to address the resource. The first 64 characters must be unique.
 	UniqueName *string `form:"name=UniqueName"`
-}
-
-type CreateAssistantRequest struct {
-	Request   *CreateAssistantCreateAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateAssistantSecurity
-	ServerURL *string
 }
 
 type CreateAssistantResponse struct {

@@ -8,23 +8,23 @@ import (
 )
 
 type FirebasedatabaseProjectsLocationsInstancesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasedatabaseProjectsLocationsInstancesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasedatabaseProjectsLocationsInstancesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasedatabaseProjectsLocationsInstancesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasedatabaseProjectsLocationsInstancesListSecurity struct {
@@ -34,12 +34,7 @@ type FirebasedatabaseProjectsLocationsInstancesListSecurity struct {
 	Option4 *FirebasedatabaseProjectsLocationsInstancesListSecurityOption4 `security:"option"`
 }
 
-type FirebasedatabaseProjectsLocationsInstancesListPathParams struct {
-	// Required. The parent project for which to list database instances, in the form: `projects/{project-number}/locations/{location-id}` To list across all locations, use a parent in the form: `projects/{project-number}/locations/-`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebasedatabaseProjectsLocationsInstancesListQueryParams struct {
+type FirebasedatabaseProjectsLocationsInstancesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,6 +53,8 @@ type FirebasedatabaseProjectsLocationsInstancesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token returned from a previous call to `ListDatabaseInstances` indicating where in the set of database instances to resume listing.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent project for which to list database instances, in the form: `projects/{project-number}/locations/{location-id}` To list across all locations, use a parent in the form: `projects/{project-number}/locations/-`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -68,12 +65,6 @@ type FirebasedatabaseProjectsLocationsInstancesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebasedatabaseProjectsLocationsInstancesListRequest struct {
-	PathParams  FirebasedatabaseProjectsLocationsInstancesListPathParams
-	QueryParams FirebasedatabaseProjectsLocationsInstancesListQueryParams
-	Security    FirebasedatabaseProjectsLocationsInstancesListSecurity
 }
 
 type FirebasedatabaseProjectsLocationsInstancesListResponse struct {

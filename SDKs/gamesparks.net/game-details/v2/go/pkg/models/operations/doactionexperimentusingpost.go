@@ -39,17 +39,13 @@ func (e *DoActionExperimentUsingPOSTActionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type DoActionExperimentUsingPOSTPathParams struct {
+type DoActionExperimentUsingPOSTRequest struct {
 	// action
 	Action DoActionExperimentUsingPOSTActionEnum `pathParam:"style=simple,explode=false,name=action"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// id
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DoActionExperimentUsingPOSTRequest struct {
-	PathParams DoActionExperimentUsingPOSTPathParams
 }
 
 type DoActionExperimentUsingPOSTResponse struct {

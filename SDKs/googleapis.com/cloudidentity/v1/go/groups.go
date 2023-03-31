@@ -33,11 +33,11 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CloudidentityGroupsCreate - Creates a Group.
-func (s *groups) CloudidentityGroupsCreate(ctx context.Context, request operations.CloudidentityGroupsCreateRequest) (*operations.CloudidentityGroupsCreateResponse, error) {
+func (s *groups) CloudidentityGroupsCreate(ctx context.Context, request operations.CloudidentityGroupsCreateRequest, security operations.CloudidentityGroupsCreateSecurity) (*operations.CloudidentityGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *groups) CloudidentityGroupsCreate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *groups) CloudidentityGroupsCreate(ctx context.Context, request operatio
 }
 
 // CloudidentityGroupsList - Lists the `Group` resources under a customer or namespace.
-func (s *groups) CloudidentityGroupsList(ctx context.Context, request operations.CloudidentityGroupsListRequest) (*operations.CloudidentityGroupsListResponse, error) {
+func (s *groups) CloudidentityGroupsList(ctx context.Context, request operations.CloudidentityGroupsListRequest, security operations.CloudidentityGroupsListSecurity) (*operations.CloudidentityGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/groups"
 
@@ -97,11 +97,11 @@ func (s *groups) CloudidentityGroupsList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *groups) CloudidentityGroupsList(ctx context.Context, request operations
 }
 
 // CloudidentityGroupsLookup - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by its `EntityKey`.
-func (s *groups) CloudidentityGroupsLookup(ctx context.Context, request operations.CloudidentityGroupsLookupRequest) (*operations.CloudidentityGroupsLookupResponse, error) {
+func (s *groups) CloudidentityGroupsLookup(ctx context.Context, request operations.CloudidentityGroupsLookupRequest, security operations.CloudidentityGroupsLookupSecurity) (*operations.CloudidentityGroupsLookupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/groups:lookup"
 
@@ -145,11 +145,11 @@ func (s *groups) CloudidentityGroupsLookup(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *groups) CloudidentityGroupsLookup(ctx context.Context, request operatio
 }
 
 // CloudidentityGroupsMembershipsCheckTransitiveMembership - Check a potential member for membership in a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A member has membership to a group as long as there is a single viewable transitive membership between the group and the member. The actor must have view permissions to at least one transitive membership between the member and group.
-func (s *groups) CloudidentityGroupsMembershipsCheckTransitiveMembership(ctx context.Context, request operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest) (*operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsCheckTransitiveMembership(ctx context.Context, request operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest, security operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurity) (*operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:checkTransitiveMembership", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:checkTransitiveMembership", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *groups) CloudidentityGroupsMembershipsCheckTransitiveMembership(ctx con
 }
 
 // CloudidentityGroupsMembershipsCreate - Creates a `Membership`.
-func (s *groups) CloudidentityGroupsMembershipsCreate(ctx context.Context, request operations.CloudidentityGroupsMembershipsCreateRequest) (*operations.CloudidentityGroupsMembershipsCreateResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsCreate(ctx context.Context, request operations.CloudidentityGroupsMembershipsCreateRequest, security operations.CloudidentityGroupsMembershipsCreateSecurity) (*operations.CloudidentityGroupsMembershipsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MembershipInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *groups) CloudidentityGroupsMembershipsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,20 +287,20 @@ func (s *groups) CloudidentityGroupsMembershipsCreate(ctx context.Context, reque
 }
 
 // CloudidentityGroupsMembershipsGetMembershipGraph - Get a membership graph of just a member or both a member and a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. Given a member, the response will contain all membership paths from the member. Given both a group and a member, the response will contain all membership paths between the group and the member.
-func (s *groups) CloudidentityGroupsMembershipsGetMembershipGraph(ctx context.Context, request operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest) (*operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsGetMembershipGraph(ctx context.Context, request operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest, security operations.CloudidentityGroupsMembershipsGetMembershipGraphSecurity) (*operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:getMembershipGraph", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:getMembershipGraph", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,20 +335,20 @@ func (s *groups) CloudidentityGroupsMembershipsGetMembershipGraph(ctx context.Co
 }
 
 // CloudidentityGroupsMembershipsList - Lists the `Membership`s within a `Group`.
-func (s *groups) CloudidentityGroupsMembershipsList(ctx context.Context, request operations.CloudidentityGroupsMembershipsListRequest) (*operations.CloudidentityGroupsMembershipsListResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsList(ctx context.Context, request operations.CloudidentityGroupsMembershipsListRequest, security operations.CloudidentityGroupsMembershipsListSecurity) (*operations.CloudidentityGroupsMembershipsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -383,20 +383,20 @@ func (s *groups) CloudidentityGroupsMembershipsList(ctx context.Context, request
 }
 
 // CloudidentityGroupsMembershipsLookup - Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Membership` by its `EntityKey`.
-func (s *groups) CloudidentityGroupsMembershipsLookup(ctx context.Context, request operations.CloudidentityGroupsMembershipsLookupRequest) (*operations.CloudidentityGroupsMembershipsLookupResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsLookup(ctx context.Context, request operations.CloudidentityGroupsMembershipsLookupRequest, security operations.CloudidentityGroupsMembershipsLookupSecurity) (*operations.CloudidentityGroupsMembershipsLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:lookup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:lookup", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,11 +431,11 @@ func (s *groups) CloudidentityGroupsMembershipsLookup(ctx context.Context, reque
 }
 
 // CloudidentityGroupsMembershipsModifyMembershipRoles - Modifies the `MembershipRole`s of a `Membership`.
-func (s *groups) CloudidentityGroupsMembershipsModifyMembershipRoles(ctx context.Context, request operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest) (*operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsModifyMembershipRoles(ctx context.Context, request operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest, security operations.CloudidentityGroupsMembershipsModifyMembershipRolesSecurity) (*operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:modifyMembershipRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:modifyMembershipRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyMembershipRolesRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -447,11 +447,11 @@ func (s *groups) CloudidentityGroupsMembershipsModifyMembershipRoles(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,14 +488,14 @@ func (s *groups) CloudidentityGroupsMembershipsModifyMembershipRoles(ctx context
 // CloudidentityGroupsMembershipsSearchDirectGroups - Searches direct groups of a member.
 func (s *groups) CloudidentityGroupsMembershipsSearchDirectGroups(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchDirectGroupsRequest) (*operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchDirectGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchDirectGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -534,20 +534,20 @@ func (s *groups) CloudidentityGroupsMembershipsSearchDirectGroups(ctx context.Co
 }
 
 // CloudidentityGroupsMembershipsSearchTransitiveGroups - Search transitive groups of a member. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive group is any group that has a direct or indirect membership to the member. Actor must have view permissions all transitive groups.
-func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveGroups(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest) (*operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveGroups(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest, security operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity) (*operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchTransitiveGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchTransitiveGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -582,20 +582,20 @@ func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveGroups(ctx contex
 }
 
 // CloudidentityGroupsMembershipsSearchTransitiveMemberships - Search transitive memberships of a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the group is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive membership is any direct or indirect membership of a group. Actor must have view permissions to all transitive memberships.
-func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveMemberships(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest) (*operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse, error) {
+func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveMemberships(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest, security operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurity) (*operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchTransitiveMemberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchTransitiveMemberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,7 +630,7 @@ func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveMemberships(ctx c
 }
 
 // CloudidentityGroupsSearch - Searches for `Group` resources matching a specified query.
-func (s *groups) CloudidentityGroupsSearch(ctx context.Context, request operations.CloudidentityGroupsSearchRequest) (*operations.CloudidentityGroupsSearchResponse, error) {
+func (s *groups) CloudidentityGroupsSearch(ctx context.Context, request operations.CloudidentityGroupsSearchRequest, security operations.CloudidentityGroupsSearchSecurity) (*operations.CloudidentityGroupsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/groups:search"
 
@@ -639,11 +639,11 @@ func (s *groups) CloudidentityGroupsSearch(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

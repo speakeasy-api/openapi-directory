@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type LandlordControllerGetSASReportPathParams struct {
+type LandlordControllerGetSASReportRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetSASReportQueryParams struct {
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
 	// The Tax Year End.
 	YearEnd int `queryParam:"style=form,explode=true,name=yearEnd"`
-}
-
-type LandlordControllerGetSASReportRequest struct {
-	PathParams  LandlordControllerGetSASReportPathParams
-	QueryParams LandlordControllerGetSASReportQueryParams
 }
 
 type LandlordControllerGetSASReportResponse struct {

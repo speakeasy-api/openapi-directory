@@ -8,18 +8,14 @@ import (
 )
 
 type PatchServiceSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchServicePathParams struct {
-	// The service id
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PatchServiceRequest struct {
-	PathParams PatchServicePathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchServiceSecurity
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
+	// The service id
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type PatchServiceResponse struct {

@@ -12,18 +12,13 @@ var FetchHostedNumbersHostedNumberOrderServerList = []string{
 }
 
 type FetchHostedNumbersHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchHostedNumbersHostedNumberOrderPathParams struct {
-	// A 34 character string that uniquely identifies this HostedNumberOrder.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchHostedNumbersHostedNumberOrderRequest struct {
-	PathParams FetchHostedNumbersHostedNumberOrderPathParams
-	Security   FetchHostedNumbersHostedNumberOrderSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this HostedNumberOrder.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchHostedNumbersHostedNumberOrderResponse struct {

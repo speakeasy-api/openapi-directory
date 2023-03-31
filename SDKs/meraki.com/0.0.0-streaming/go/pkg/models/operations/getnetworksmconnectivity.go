@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmConnectivityPathParams struct {
-	ID        string `pathParam:"style=simple,explode=false,name=id"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=network_id"`
-}
-
-type GetNetworkSmConnectivityQueryParams struct {
+type GetNetworkSmConnectivityRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	ID           string  `pathParam:"style=simple,explode=false,name=id"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=network_id"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
-}
-
-type GetNetworkSmConnectivityRequest struct {
-	PathParams  GetNetworkSmConnectivityPathParams
-	QueryParams GetNetworkSmConnectivityQueryParams
 }
 
 type GetNetworkSmConnectivityResponse struct {

@@ -36,7 +36,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // UsersAddEmailForAuthenticatedUser - Add an email address for the authenticated user
 // This endpoint is accessible with the `user` scope.
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#add-an-email-address-for-the-authenticated-user - API method documentation
-func (s *users) UsersAddEmailForAuthenticatedUser(ctx context.Context, request operations.UsersAddEmailForAuthenticatedUserRequest) (*operations.UsersAddEmailForAuthenticatedUserResponse, error) {
+func (s *users) UsersAddEmailForAuthenticatedUser(ctx context.Context, request operations.UsersAddEmailForAuthenticatedUserRequestBody) (*operations.UsersAddEmailForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/emails"
 
@@ -115,7 +115,7 @@ func (s *users) UsersAddEmailForAuthenticatedUser(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#check-if-a-user-follows-another-user - API method documentation
 func (s *users) UsersCheckFollowingForUser(ctx context.Context, request operations.UsersCheckFollowingForUserRequest) (*operations.UsersCheckFollowingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following/{target_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following/{target_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +153,7 @@ func (s *users) UsersCheckFollowingForUser(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#check-if-a-person-is-followed-by-the-authenticated-user - API method documentation
 func (s *users) UsersCheckPersonIsFollowedByAuthenticated(ctx context.Context, request operations.UsersCheckPersonIsFollowedByAuthenticatedRequest) (*operations.UsersCheckPersonIsFollowedByAuthenticatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +204,7 @@ func (s *users) UsersCheckPersonIsFollowedByAuthenticated(ctx context.Context, r
 // UsersCreateGpgKeyForAuthenticatedUser - Create a GPG key for the authenticated user
 // Adds a GPG key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:gpg_key` [scope](https://docs.github.com/enterprise-server@3.7/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#create-a-gpg-key-for-the-authenticated-user - API method documentation
-func (s *users) UsersCreateGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreateGpgKeyForAuthenticatedUserRequest) (*operations.UsersCreateGpgKeyForAuthenticatedUserResponse, error) {
+func (s *users) UsersCreateGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreateGpgKeyForAuthenticatedUserRequestBody) (*operations.UsersCreateGpgKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/gpg_keys"
 
@@ -285,7 +285,7 @@ func (s *users) UsersCreateGpgKeyForAuthenticatedUser(ctx context.Context, reque
 // UsersCreatePublicSSHKeyForAuthenticatedUser - Create a public SSH key for the authenticated user
 // Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://docs.github.com/enterprise-server@3.7/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#create-a-public-ssh-key-for-the-authenticated-user - API method documentation
-func (s *users) UsersCreatePublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreatePublicSSHKeyForAuthenticatedUserRequest) (*operations.UsersCreatePublicSSHKeyForAuthenticatedUserResponse, error) {
+func (s *users) UsersCreatePublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreatePublicSSHKeyForAuthenticatedUserRequestBody) (*operations.UsersCreatePublicSSHKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/keys"
 
@@ -366,7 +366,7 @@ func (s *users) UsersCreatePublicSSHKeyForAuthenticatedUser(ctx context.Context,
 // UsersCreateSSHSigningKeyForAuthenticatedUser - Create a SSH signing key for the authenticated user
 // Creates an SSH signing key for the authenticated user's GitHub account. You must authenticate with Basic Authentication, or you must authenticate with OAuth with at least `write:ssh_signing_key` scope. For more information, see "[Understanding scopes for OAuth apps](https://docs.github.com/enterprise-server@3.7/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#create-an-ssh-signing-key-for-the-authenticated-user - API method documentation
-func (s *users) UsersCreateSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreateSSHSigningKeyForAuthenticatedUserRequest) (*operations.UsersCreateSSHSigningKeyForAuthenticatedUserResponse, error) {
+func (s *users) UsersCreateSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersCreateSSHSigningKeyForAuthenticatedUserRequestBody) (*operations.UsersCreateSSHSigningKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/ssh_signing_keys"
 
@@ -447,7 +447,7 @@ func (s *users) UsersCreateSSHSigningKeyForAuthenticatedUser(ctx context.Context
 // UsersDeleteEmailForAuthenticatedUser - Delete an email address for the authenticated user
 // This endpoint is accessible with the `user` scope.
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#delete-an-email-address-for-the-authenticated-user - API method documentation
-func (s *users) UsersDeleteEmailForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteEmailForAuthenticatedUserRequest) (*operations.UsersDeleteEmailForAuthenticatedUserResponse, error) {
+func (s *users) UsersDeleteEmailForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteEmailForAuthenticatedUserRequestBody) (*operations.UsersDeleteEmailForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/emails"
 
@@ -519,7 +519,7 @@ func (s *users) UsersDeleteEmailForAuthenticatedUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#delete-a-gpg-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeleteGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteGpgKeyForAuthenticatedUserRequest) (*operations.UsersDeleteGpgKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -582,7 +582,7 @@ func (s *users) UsersDeleteGpgKeyForAuthenticatedUser(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#delete-a-public-ssh-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeletePublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeletePublicSSHKeyForAuthenticatedUserRequest) (*operations.UsersDeletePublicSSHKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -635,7 +635,7 @@ func (s *users) UsersDeletePublicSSHKeyForAuthenticatedUser(ctx context.Context,
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#delete-a-ssh-signing-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeleteSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteSSHSigningKeyForAuthenticatedUserRequest) (*operations.UsersDeleteSSHSigningKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -690,7 +690,7 @@ func (s *users) UsersDeleteSSHSigningKeyForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#follow-a-user - API method documentation
 func (s *users) UsersFollow(ctx context.Context, request operations.UsersFollowRequest) (*operations.UsersFollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -810,7 +810,7 @@ func (s *users) UsersGetAuthenticated(ctx context.Context) (*operations.UsersGet
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#get-a-user - API method documentation
 func (s *users) UsersGetByUsername(ctx context.Context, request operations.UsersGetByUsernameRequest) (*operations.UsersGetByUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -875,14 +875,14 @@ func (s *users) UsersGetByUsername(ctx context.Context, request operations.Users
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#get-contextual-information-for-a-user - API method documentation
 func (s *users) UsersGetContextForUser(ctx context.Context, request operations.UsersGetContextForUserRequest) (*operations.UsersGetContextForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/hovercard", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/hovercard", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -945,7 +945,7 @@ func (s *users) UsersGetContextForUser(ctx context.Context, request operations.U
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#get-a-gpg-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetGpgKeyForAuthenticatedUserRequest) (*operations.UsersGetGpgKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1006,7 +1006,7 @@ func (s *users) UsersGetGpgKeyForAuthenticatedUser(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetPublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetPublicSSHKeyForAuthenticatedUserRequest) (*operations.UsersGetPublicSSHKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1067,7 +1067,7 @@ func (s *users) UsersGetPublicSSHKeyForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#get-a-ssh-signing-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetSSHSigningKeyForAuthenticatedUserRequest) (*operations.UsersGetSSHSigningKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1137,7 +1137,7 @@ func (s *users) UsersList(ctx context.Context, request operations.UsersListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1190,7 +1190,7 @@ func (s *users) UsersListEmailsForAuthenticatedUser(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1257,7 +1257,7 @@ func (s *users) UsersListFollowedByAuthenticatedUser(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1322,7 +1322,7 @@ func (s *users) UsersListFollowersForAuthenticatedUser(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1380,14 +1380,14 @@ func (s *users) UsersListFollowersForAuthenticatedUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#list-followers-of-a-user - API method documentation
 func (s *users) UsersListFollowersForUser(ctx context.Context, request operations.UsersListFollowersForUserRequest) (*operations.UsersListFollowersForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/followers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/followers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1432,14 +1432,14 @@ func (s *users) UsersListFollowersForUser(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#list-the-people-a-user-follows - API method documentation
 func (s *users) UsersListFollowingForUser(ctx context.Context, request operations.UsersListFollowingForUserRequest) (*operations.UsersListFollowingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1491,7 +1491,7 @@ func (s *users) UsersListGpgKeysForAuthenticatedUser(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1551,14 +1551,14 @@ func (s *users) UsersListGpgKeysForAuthenticatedUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#list-gpg-keys-for-a-user - API method documentation
 func (s *users) UsersListGpgKeysForUser(ctx context.Context, request operations.UsersListGpgKeysForUserRequest) (*operations.UsersListGpgKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gpg_keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gpg_keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1610,7 +1610,7 @@ func (s *users) UsersListPublicEmailsForAuthenticatedUser(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1670,14 +1670,14 @@ func (s *users) UsersListPublicEmailsForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#list-public-keys-for-a-user - API method documentation
 func (s *users) UsersListPublicKeysForUser(ctx context.Context, request operations.UsersListPublicKeysForUserRequest) (*operations.UsersListPublicKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1729,7 +1729,7 @@ func (s *users) UsersListPublicSSHKeysForAuthenticatedUser(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1796,7 +1796,7 @@ func (s *users) UsersListSSHSigningKeysForAuthenticatedUser(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1856,14 +1856,14 @@ func (s *users) UsersListSSHSigningKeysForAuthenticatedUser(ctx context.Context,
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#list-ssh-signing-keys-for-a-user - API method documentation
 func (s *users) UsersListSSHSigningKeysForUser(ctx context.Context, request operations.UsersListSSHSigningKeysForUserRequest) (*operations.UsersListSSHSigningKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/ssh_signing_keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/ssh_signing_keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1908,7 +1908,7 @@ func (s *users) UsersListSSHSigningKeysForUser(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users#unfollow-a-user - API method documentation
 func (s *users) UsersUnfollow(ctx context.Context, request operations.UsersUnfollowRequest) (*operations.UsersUnfollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1959,7 +1959,7 @@ func (s *users) UsersUnfollow(ctx context.Context, request operations.UsersUnfol
 // UsersUpdateAuthenticated - Update the authenticated user
 // **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
 // https://docs.github.com/enterprise-server@3.7/rest/reference/users/#update-the-authenticated-user - API method documentation
-func (s *users) UsersUpdateAuthenticated(ctx context.Context, request operations.UsersUpdateAuthenticatedRequest) (*operations.UsersUpdateAuthenticatedResponse, error) {
+func (s *users) UsersUpdateAuthenticated(ctx context.Context, request operations.UsersUpdateAuthenticatedRequestBody) (*operations.UsersUpdateAuthenticatedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 

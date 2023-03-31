@@ -14,57 +14,47 @@ func main() {
     s := sdk.New()
 
     req := operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
-        Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            HubID: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.HubInput{
-            Description: "magnam",
+        DollarXgafv: "2",
+        HubInput: &shared.HubInput{
+            Description: "provident",
             Labels: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
-            Name: "iusto",
+            Name: "error",
             RoutingVpcs: []shared.RoutingVPCInput{
                 shared.RoutingVPCInput{
-                    URI: "http://velvety-spiderling.com",
+                    URI: "http://innocent-effect.org",
                 },
                 shared.RoutingVPCInput{
-                    URI: "http://bountiful-pension.com",
+                    URI: "http://whirlwind-diver.info",
                 },
                 shared.RoutingVPCInput{
-                    URI: "http://sympathetic-viewer.net",
+                    URI: "http://spotted-skyline.name",
                 },
             },
         },
+        AccessToken: "iusto",
+        Alt: "media",
+        Callback: "nisi",
+        Fields: "recusandae",
+        HubID: "temporibus",
+        Key: "ab",
+        OauthToken: "quis",
+        Parent: "veritatis",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        RequestID: "perferendis",
+        UploadType: "ipsam",
+        UploadProtocol: "repellendus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req)
+    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

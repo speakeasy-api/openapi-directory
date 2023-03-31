@@ -4,34 +4,26 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AndroidpublisherEditsApklistingsDeleteRequest(
-    security=operations.AndroidpublisherEditsApklistingsDeleteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.AndroidpublisherEditsApklistingsDeletePathParams(
-        apk_version_code=3804614449984271553,
-        edit_id="itaque",
-        language="eligendi",
-        package_name="libero",
-    ),
-    query_params=operations.AndroidpublisherEditsApklistingsDeleteQueryParams(
-        alt="json",
-        fields="eum",
-        key="quia",
-        oauth_token="harum",
-        pretty_print=False,
-        quota_user="nihil",
-        user_ip="consequatur",
-    ),
+    alt="json",
+    apk_version_code=548814,
+    edit_id="provident",
+    fields_="distinctio",
+    key="quibusdam",
+    language="unde",
+    oauth_token="nulla",
+    package_name="corrupti",
+    pretty_print=False,
+    quota_user="illum",
+    user_ip="vel",
 )
     
-res = s.edits.androidpublisher_edits_apklistings_delete(req)
+res = s.edits.androidpublisher_edits_apklistings_delete(req, operations.AndroidpublisherEditsApklistingsDeleteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

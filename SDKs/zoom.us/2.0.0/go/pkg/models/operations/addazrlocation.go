@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddAZRLocationSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddAZRLocationApplicationJSON struct {
@@ -18,11 +17,6 @@ type AddAZRLocationApplicationJSON struct {
 	Name *string `json:"name,omitempty"`
 	// The location ID of the location that is a level higher from the location that is being added.<br><br> For example, to add a City named "City 1" as the child location under a State named "State 1", you must provide the location ID of "State 1". This can be retrieved using the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API.
 	ParentLocationID *string `json:"parent_location_id,omitempty"`
-}
-
-type AddAZRLocationRequest struct {
-	Request  *AddAZRLocationApplicationJSON `request:"mediaType=application/json"`
-	Security AddAZRLocationSecurity
 }
 
 // AddAZRLocation200ApplicationXMLTypeEnum - Type of location. The value should be one of the following:<br>

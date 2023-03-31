@@ -34,9 +34,9 @@ func newFreightValues(defaultClient, securityClient HTTPClient, serverURL, langu
 // Creates or updates the freight values of your store's carriers. Learn more in [Shipping rate template](https://help.vtex.com/en/tutorial/planilha-de-frete--tutorials_127#).
 func (s *freightValues) CreateUpdateFreightValues(ctx context.Context, request operations.CreateUpdateFreightValuesRequest) (*operations.CreateUpdateFreightValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/values/update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/values/update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *freightValues) CreateUpdateFreightValues(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -82,14 +82,14 @@ func (s *freightValues) CreateUpdateFreightValues(ctx context.Context, request o
 // Lists freight values apointed to your store's carriers, searching by carrier ID and postal code (`cep`).
 func (s *freightValues) FreightValues(ctx context.Context, request operations.FreightValuesRequest) (*operations.FreightValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/{cep}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/{cep}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

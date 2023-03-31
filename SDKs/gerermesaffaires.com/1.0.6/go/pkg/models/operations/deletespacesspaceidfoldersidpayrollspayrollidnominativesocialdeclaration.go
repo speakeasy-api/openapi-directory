@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationPathParams struct {
+type DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationRequest struct {
 	// Id of the folder social
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the payroll
 	PayrollID string `pathParam:"style=simple,explode=false,name=payrollId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationRequest struct {
-	PathParams DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationPathParams
-	Security   DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationSecurity
 }
 
 type DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationResponse struct {

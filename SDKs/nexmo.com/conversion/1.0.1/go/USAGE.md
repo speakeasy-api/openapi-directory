@@ -14,22 +14,16 @@ func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
             Option1: &shared.SecurityOption1{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APISecret: shared.SchemeAPISecret{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
+                APIKey: "YOUR_API_KEY_HERE",
+                APISecret: "YOUR_API_KEY_HERE",
             },
         }),
     )
 
     req := operations.SmsConversionRequest{
-        QueryParams: operations.SmsConversionQueryParams{
-            Delivered: "0",
-            MessageID: "provident",
-            Timestamp: "distinctio",
-        },
+        Delivered: "0",
+        MessageID: "provident",
+        Timestamp: "distinctio",
     }
 
     ctx := context.Background()

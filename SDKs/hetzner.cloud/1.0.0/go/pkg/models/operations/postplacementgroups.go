@@ -38,10 +38,6 @@ type PostPlacementGroupsCreatePlacementGroupRequest struct {
 	Type PostPlacementGroupsCreatePlacementGroupRequestTypeEnum `json:"type"`
 }
 
-type PostPlacementGroupsRequest struct {
-	Request *PostPlacementGroupsCreatePlacementGroupRequest `request:"mediaType=application/json"`
-}
-
 // PostPlacementGroupsCreatePlacementGroupResponseNullableActionError - Error message for the Action if error occurred, otherwise null
 type PostPlacementGroupsCreatePlacementGroupResponseNullableActionError struct {
 	// Fixed machine readable code

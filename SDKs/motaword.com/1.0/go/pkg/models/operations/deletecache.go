@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCachePathParams struct {
+type DeleteCacheRequest struct {
 	// Cache key
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type DeleteCacheRequest struct {
-	PathParams DeleteCachePathParams
 }
 
 type DeleteCacheResponse struct {

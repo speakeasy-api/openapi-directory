@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExecuteSwitchTrasactionSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ExecuteSwitchTrasactionHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum - Mode of the instruction. If investment_product_id is `cash` mode can only be set to `value` or `percentage`
@@ -66,9 +60,9 @@ type ExecuteSwitchTrasactionSwitchInstructionRequest struct {
 }
 
 type ExecuteSwitchTrasactionRequest struct {
-	Headers  ExecuteSwitchTrasactionHeaders
-	Request  *ExecuteSwitchTrasactionSwitchInstructionRequest `request:"mediaType=application/json"`
-	Security ExecuteSwitchTrasactionSecurity
+	RequestBody *ExecuteSwitchTrasactionSwitchInstructionRequest `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // ExecuteSwitchTrasaction500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type TeamsDeleteDiscussionCommentInOrgPathParams struct {
+type TeamsDeleteDiscussionCommentInOrgRequest struct {
 	CommentNumber    int64  `pathParam:"style=simple,explode=false,name=comment_number"`
 	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
 	Org              string `pathParam:"style=simple,explode=false,name=org"`
 	// team_slug parameter
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsDeleteDiscussionCommentInOrgRequest struct {
-	PathParams TeamsDeleteDiscussionCommentInOrgPathParams
 }
 
 type TeamsDeleteDiscussionCommentInOrgResponse struct {

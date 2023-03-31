@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeletePreReceiveEnvironmentPathParams struct {
-	PreReceiveEnvironmentID int64 `pathParam:"style=simple,explode=false,name=pre_receive_environment_id"`
-}
-
 type EnterpriseAdminDeletePreReceiveEnvironmentRequest struct {
-	PathParams EnterpriseAdminDeletePreReceiveEnvironmentPathParams
+	PreReceiveEnvironmentID int64 `pathParam:"style=simple,explode=false,name=pre_receive_environment_id"`
 }
 
 type EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONErrors struct {

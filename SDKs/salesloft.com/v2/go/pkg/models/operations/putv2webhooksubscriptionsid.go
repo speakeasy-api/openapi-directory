@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type PutV2WebhookSubscriptionsIDPathParams struct {
-	// The Webhook Suscription id to update
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2WebhookSubscriptionsIDRequestBody struct {
 	// Enable or disable the webhook subscription
 	Enabled *bool `form:"name=enabled"`
 }
 
 type PutV2WebhookSubscriptionsIDRequest struct {
-	PathParams PutV2WebhookSubscriptionsIDPathParams
-	Request    *PutV2WebhookSubscriptionsIDRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2WebhookSubscriptionsIDRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Webhook Suscription id to update
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2WebhookSubscriptionsIDResponse struct {

@@ -35,14 +35,14 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // Cancels all Subscriptions of a subscription group. This operation does not have a rollback. Once cancelled, it cannot be re-activated
 func (s *subscriptions) CancelSubscriptionsbySubscriptionID(ctx context.Context, request operations.CancelSubscriptionsbySubscriptionIDRequest) (*operations.CancelSubscriptionsbySubscriptionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -80,7 +80,7 @@ func (s *subscriptions) GetSubscriptionList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -111,14 +111,14 @@ func (s *subscriptions) GetSubscriptionList(ctx context.Context, request operati
 // Lists frequency options for the Subscription, filtering by `subscriptionId`.
 func (s *subscriptions) GetfrequencyoptionsbysubscriptionID(ctx context.Context, request operations.GetfrequencyoptionsbysubscriptionIDRequest) (*operations.GetfrequencyoptionsbysubscriptionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/frequency-options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/frequency-options", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -149,14 +149,14 @@ func (s *subscriptions) GetfrequencyoptionsbysubscriptionID(ctx context.Context,
 // Lists Subscription's details, searching by `subscriptionId`.
 func (s *subscriptions) GetsubscriptionbyID(ctx context.Context, request operations.GetsubscriptionbyIDRequest) (*operations.GetsubscriptionbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -194,9 +194,9 @@ func (s *subscriptions) Getsubscriptionstocustomer(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,9 +229,9 @@ func (s *subscriptions) Getsubscriptionstocustomer(ctx context.Context, request 
 // Inserts address's information to complement the Subscription details.
 func (s *subscriptions) InsertAddressesforSubscription(ctx context.Context, request operations.InsertAddressesforSubscriptionRequest) (*operations.InsertAddressesforSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}/addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,7 +246,7 @@ func (s *subscriptions) InsertAddressesforSubscription(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -277,9 +277,9 @@ func (s *subscriptions) InsertAddressesforSubscription(ctx context.Context, requ
 // Update, add or alter information of a given Subscription, filtering by `subscriptionId`.
 func (s *subscriptions) UpdateSubscriptionsbySubscriptionID(ctx context.Context, request operations.UpdateSubscriptionsbySubscriptionIDRequest) (*operations.UpdateSubscriptionsbySubscriptionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionsbySubscriptionIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *subscriptions) UpdateSubscriptionsbySubscriptionID(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

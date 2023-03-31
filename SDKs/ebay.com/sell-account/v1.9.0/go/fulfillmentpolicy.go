@@ -33,7 +33,7 @@ func newFulfillmentPolicy(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // CreateFulfillmentPolicy - This method creates a new fulfillment policy where the policy encapsulates seller's terms for fulfilling item purchases. Fulfillment policies include the shipment options that the seller offers to buyers.  <br/><br/>Each policy targets a specific eBay marketplace and a category group type, and you can create multiple policies for each combination. <br/><br/>A successful request returns the <b>getFulfillmentPolicy</b> URI to the new policy in the <b>Location</b> response header and the ID for the new policy is returned in the response payload.  <p class="tablenote"><b>Tip:</b> For details on creating and using the business policies supported by the Account API, see <a href="/api-docs/sell/static/seller-accounts/business-policies.html">eBay business policies</a>.</p>  <p><b>Using the eBay standard envelope service (eSE)</b></p>  <p>The eBay standard envelope service (eSE) is a domestic envelope service with tracking through eBay. This service applies to specific Trading Cards categories (not all categories are supported), and to Coins & Paper Money, Postcards, and Stamps. See <a href="/api-docs/sell/static/seller-accounts/using-the-ebay-standard-envelope-service.html" target="_blank">Using the eBay standard envelope (eSE) service</a>.</p>
-func (s *fulfillmentPolicy) CreateFulfillmentPolicy(ctx context.Context, request operations.CreateFulfillmentPolicyRequest) (*operations.CreateFulfillmentPolicyResponse, error) {
+func (s *fulfillmentPolicy) CreateFulfillmentPolicy(ctx context.Context, request shared.FulfillmentPolicyRequest, security operations.CreateFulfillmentPolicySecurity) (*operations.CreateFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fulfillment_policy/"
 
@@ -52,7 +52,7 @@ func (s *fulfillmentPolicy) CreateFulfillmentPolicy(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,16 +92,16 @@ func (s *fulfillmentPolicy) CreateFulfillmentPolicy(ctx context.Context, request
 }
 
 // DeleteFulfillmentPolicy - This method deletes a fulfillment policy. Supply the ID of the policy you want to delete in the <b>fulfillmentPolicyId</b> path parameter.
-func (s *fulfillmentPolicy) DeleteFulfillmentPolicy(ctx context.Context, request operations.DeleteFulfillmentPolicyRequest) (*operations.DeleteFulfillmentPolicyResponse, error) {
+func (s *fulfillmentPolicy) DeleteFulfillmentPolicy(ctx context.Context, request operations.DeleteFulfillmentPolicyRequest, security operations.DeleteFulfillmentPolicySecurity) (*operations.DeleteFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *fulfillmentPolicy) DeleteFulfillmentPolicy(ctx context.Context, request
 }
 
 // GetFulfillmentPolicies - This method retrieves all the fulfillment policies configured for the marketplace you specify using the <code>marketplace_id</code> query parameter.  <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policies for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get the policies for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank">HTTP request headers</a>.
-func (s *fulfillmentPolicy) GetFulfillmentPolicies(ctx context.Context, request operations.GetFulfillmentPoliciesRequest) (*operations.GetFulfillmentPoliciesResponse, error) {
+func (s *fulfillmentPolicy) GetFulfillmentPolicies(ctx context.Context, request operations.GetFulfillmentPoliciesRequest, security operations.GetFulfillmentPoliciesSecurity) (*operations.GetFulfillmentPoliciesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fulfillment_policy"
 
@@ -144,11 +144,11 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicies(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,16 +186,16 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicies(ctx context.Context, request 
 }
 
 // GetFulfillmentPolicy - This method retrieves the complete details of a fulfillment policy. Supply the ID of the policy you want to retrieve using the <b>fulfillmentPolicyId</b> path parameter.
-func (s *fulfillmentPolicy) GetFulfillmentPolicy(ctx context.Context, request operations.GetFulfillmentPolicyRequest) (*operations.GetFulfillmentPolicyResponse, error) {
+func (s *fulfillmentPolicy) GetFulfillmentPolicy(ctx context.Context, request operations.GetFulfillmentPolicyRequest, security operations.GetFulfillmentPolicySecurity) (*operations.GetFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicy(ctx context.Context, request op
 }
 
 // GetFulfillmentPolicyByName - This method retrieves the details for a specific fulfillment policy. In the request, supply both the policy <code>name</code> and its associated <code>marketplace_id</code> as query parameters.   <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policy for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get a policy for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP">HTTP request headers</a>.
-func (s *fulfillmentPolicy) GetFulfillmentPolicyByName(ctx context.Context, request operations.GetFulfillmentPolicyByNameRequest) (*operations.GetFulfillmentPolicyByNameResponse, error) {
+func (s *fulfillmentPolicy) GetFulfillmentPolicyByName(ctx context.Context, request operations.GetFulfillmentPolicyByNameRequest, security operations.GetFulfillmentPolicyByNameSecurity) (*operations.GetFulfillmentPolicyByNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fulfillment_policy/get_by_policy_name"
 
@@ -244,11 +244,11 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicyByName(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicyByName(ctx context.Context, requ
 }
 
 // UpdateFulfillmentPolicy - This method updates an existing fulfillment policy. Specify the policy you want to update using the <b>fulfillment_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
-func (s *fulfillmentPolicy) UpdateFulfillmentPolicy(ctx context.Context, request operations.UpdateFulfillmentPolicyRequest) (*operations.UpdateFulfillmentPolicyResponse, error) {
+func (s *fulfillmentPolicy) UpdateFulfillmentPolicy(ctx context.Context, request operations.UpdateFulfillmentPolicyRequest, security operations.UpdateFulfillmentPolicySecurity) (*operations.UpdateFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FulfillmentPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *fulfillmentPolicy) UpdateFulfillmentPolicy(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

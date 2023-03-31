@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AgentStoreListPathParams struct {
+type AgentStoreListRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type AgentStoreListRequest struct {
-	PathParams AgentStoreListPathParams
 }
 
 type AgentStoreListResponse struct {

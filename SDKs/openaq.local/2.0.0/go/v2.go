@@ -43,7 +43,7 @@ func (s *v2) AveragesV2GetV2AveragesGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -101,7 +101,7 @@ func (s *v2) CitiesGetV2CitiesGet(ctx context.Context, request operations.Cities
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -152,14 +152,14 @@ func (s *v2) CitiesGetV2CitiesGet(ctx context.Context, request operations.Cities
 // CountriesGetV2CountriesCountryIDGet - Countries Get
 func (s *v2) CountriesGetV2CountriesCountryIDGet(ctx context.Context, request operations.CountriesGetV2CountriesCountryIDGetRequest) (*operations.CountriesGetV2CountriesCountryIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/countries/{country_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/countries/{country_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -217,7 +217,7 @@ func (s *v2) CountriesGetV2CountriesGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -313,14 +313,14 @@ func (s *v2) DemoV2LocationsTilesViewerGet(ctx context.Context) (*operations.Dem
 // GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet - Get Mobilegentile
 func (s *v2) GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet(ctx context.Context, request operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest) (*operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/mobile-generalized/{z}/{x}/{y}.pbf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/mobile-generalized/{z}/{x}/{y}.pbf", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -362,14 +362,14 @@ func (s *v2) GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet(ctx cont
 // GetMobiletileV2LocationsTilesMobileZXYPbfGet - Get Mobiletile
 func (s *v2) GetMobiletileV2LocationsTilesMobileZXYPbfGet(ctx context.Context, request operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest) (*operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/mobile/{z}/{x}/{y}.pbf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/mobile/{z}/{x}/{y}.pbf", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -411,14 +411,14 @@ func (s *v2) GetMobiletileV2LocationsTilesMobileZXYPbfGet(ctx context.Context, r
 // GetTileV2LocationsTilesZXYPbfGet - Get Tile
 func (s *v2) GetTileV2LocationsTilesZXYPbfGet(ctx context.Context, request operations.GetTileV2LocationsTilesZXYPbfGetRequest) (*operations.GetTileV2LocationsTilesZXYPbfGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/{z}/{x}/{y}.pbf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/tiles/{z}/{x}/{y}.pbf", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -460,14 +460,14 @@ func (s *v2) GetTileV2LocationsTilesZXYPbfGet(ctx context.Context, request opera
 // LatestGetV2LatestLocationIDGet - Latest Get
 func (s *v2) LatestGetV2LatestLocationIDGet(ctx context.Context, request operations.LatestGetV2LatestLocationIDGetRequest) (*operations.LatestGetV2LatestLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/latest/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/latest/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -525,7 +525,7 @@ func (s *v2) LatestGetV2LatestGet(ctx context.Context, request operations.Latest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -576,14 +576,14 @@ func (s *v2) LatestGetV2LatestGet(ctx context.Context, request operations.Latest
 // LocationsGetV2LocationsLocationIDGet - Locations Get
 func (s *v2) LocationsGetV2LocationsLocationIDGet(ctx context.Context, request operations.LocationsGetV2LocationsLocationIDGetRequest) (*operations.LocationsGetV2LocationsLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -641,7 +641,7 @@ func (s *v2) LocationsGetV2LocationsGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -699,7 +699,7 @@ func (s *v2) MeasurementsGetV2MeasurementsGet(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -933,7 +933,7 @@ func (s *v2) ParametersGetV2ParametersGet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -984,14 +984,14 @@ func (s *v2) ParametersGetV2ParametersGet(ctx context.Context, request operation
 // ProjectsGetV2ProjectsProjectIDGet - Projects Get
 func (s *v2) ProjectsGetV2ProjectsProjectIDGet(ctx context.Context, request operations.ProjectsGetV2ProjectsProjectIDGetRequest) (*operations.ProjectsGetV2ProjectsProjectIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1049,7 +1049,7 @@ func (s *v2) ProjectsGetV2ProjectsGet(ctx context.Context, request operations.Pr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1100,7 +1100,7 @@ func (s *v2) ProjectsGetV2ProjectsGet(ctx context.Context, request operations.Pr
 // ReadmeGetV2SourcesReadmeSlugGet - Readme Get
 func (s *v2) ReadmeGetV2SourcesReadmeSlugGet(ctx context.Context, request operations.ReadmeGetV2SourcesReadmeSlugGetRequest) (*operations.ReadmeGetV2SourcesReadmeSlugGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sources/readme/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sources/readme/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1161,7 +1161,7 @@ func (s *v2) SourcesGetV2SourcesGet(ctx context.Context, request operations.Sour
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

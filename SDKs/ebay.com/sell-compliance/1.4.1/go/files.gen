@@ -24,7 +24,6 @@ pkg/models/shared/variationdetails.go
 pkg/models/shared/correctiverecommendations.go
 pkg/models/shared/productrecommendation.go
 pkg/models/shared/aspectrecommendations.go
-pkg/models/shared/security.go
 pkg/models/shared/suppressviolationrequest.go
 pkg/models/shared/compliancesummary.go
 pkg/models/shared/compliancesummaryinfo.go

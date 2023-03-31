@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SmartMeDeviceConfigurationPostFormRequest struct {
-	Request shared.SmartMeDeviceConfigurationContainer `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type SmartMeDeviceConfigurationPostFormResponse struct {
 	ContentType string

@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCisLineTypeTagPathParams struct {
+type DeleteCisLineTypeTagRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The CIS line type unique identifier. E.g. TYPEA
 	CisLineTypeID string `pathParam:"style=simple,explode=false,name=CisLineTypeId"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type DeleteCisLineTypeTagHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeleteCisLineTypeTagRequest struct {
-	PathParams DeleteCisLineTypeTagPathParams
-	Headers    DeleteCisLineTypeTagHeaders
 }
 
 type DeleteCisLineTypeTagResponse struct {

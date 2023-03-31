@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1LocationsIDAppointmentremindersPathParams struct {
+type PutSetupV1LocationsIDAppointmentremindersRequest struct {
+	// input model for reminders
+	AppointmentRemindersInputModel *shared.AppointmentRemindersInputModel `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1LocationsIDAppointmentremindersRequest struct {
-	PathParams PutSetupV1LocationsIDAppointmentremindersPathParams
-	// input model for reminders
-	Request *shared.AppointmentRemindersInputModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1LocationsIDAppointmentremindersResponse struct {

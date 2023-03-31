@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type NodesPartialUpdatePathParams struct {
+type NodesPartialUpdateRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesPartialUpdateRequest struct {
-	PathParams NodesPartialUpdatePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type NodesPartialUpdateResponse struct {

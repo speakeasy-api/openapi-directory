@@ -8,21 +8,16 @@ import (
 )
 
 type DeleteLocalTaxByTaxCodeSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteLocalTaxByTaxCodePathParams struct {
+type DeleteLocalTaxByTaxCodeRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
 	// Tax Code
 	TaxCode string `pathParam:"style=simple,explode=false,name=taxCode"`
-}
-
-type DeleteLocalTaxByTaxCodeRequest struct {
-	PathParams DeleteLocalTaxByTaxCodePathParams
-	Security   DeleteLocalTaxByTaxCodeSecurity
 }
 
 type DeleteLocalTaxByTaxCodeResponse struct {

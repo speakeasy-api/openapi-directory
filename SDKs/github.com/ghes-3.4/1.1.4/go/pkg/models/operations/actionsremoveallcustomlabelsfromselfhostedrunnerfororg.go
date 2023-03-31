@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgPathParams struct {
+type ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest struct {
-	PathParams ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgPathParams
 }
 
 // ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSON - Response

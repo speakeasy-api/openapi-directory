@@ -36,7 +36,7 @@ func newPackageTypes(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // CreatePackageType - Create Custom Package Type
 // Create a custom package type to better assist in getting accurate rate estimates
-func (s *packageTypes) CreatePackageType(ctx context.Context, request operations.CreatePackageTypeRequest) (*operations.CreatePackageTypeResponse, error) {
+func (s *packageTypes) CreatePackageType(ctx context.Context, request shared.CreatePackageTypeRequestBody) (*operations.CreatePackageTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/packages"
 
@@ -105,7 +105,7 @@ func (s *packageTypes) CreatePackageType(ctx context.Context, request operations
 // Delete a custom package using the ID
 func (s *packageTypes) DeletePackageType(ctx context.Context, request operations.DeletePackageTypeRequest) (*operations.DeletePackageTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *packageTypes) DeletePackageType(ctx context.Context, request operations
 // Get Custom Package Type by ID
 func (s *packageTypes) GetPackageTypeByID(ctx context.Context, request operations.GetPackageTypeByIDRequest) (*operations.GetPackageTypeByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,9 +291,9 @@ func (s *packageTypes) ListPackageTypes(ctx context.Context) (*operations.ListPa
 // Update the custom package type object by ID
 func (s *packageTypes) UpdatePackageType(ctx context.Context, request operations.UpdatePackageTypeRequest) (*operations.UpdatePackageTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/packages/{package_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePackageTypeRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

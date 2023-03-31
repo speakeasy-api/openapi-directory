@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetOrdersRequest(
-    query_params=operations.GetOrdersQueryParams(
-        limit="odit",
-        offset="a",
-        order_status="Cancelled",
-    ),
+    limit="corrupti",
+    offset="provident",
+    order_status="Completed",
 )
     
 res = s.get_orders(req)

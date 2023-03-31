@@ -8,15 +8,10 @@ import (
 )
 
 type ExportSystemPackagesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type ExportSystemPackagesPathParams struct {
-	// Inventory ID
-	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
-}
-
-type ExportSystemPackagesQueryParams struct {
+type ExportSystemPackagesRequest struct {
 	// Filter
 	FilterDescription *string `queryParam:"style=form,explode=true,name=filter[description]"`
 	// Filter
@@ -27,14 +22,10 @@ type ExportSystemPackagesQueryParams struct {
 	FilterSummary *string `queryParam:"style=form,explode=true,name=filter[summary]"`
 	// Filter
 	FilterUpdatable *bool `queryParam:"style=form,explode=true,name=filter[updatable]"`
+	// Inventory ID
+	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
 	// Find matching text
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type ExportSystemPackagesRequest struct {
-	PathParams  ExportSystemPackagesPathParams
-	QueryParams ExportSystemPackagesQueryParams
-	Security    ExportSystemPackagesSecurity
 }
 
 type ExportSystemPackagesResponse struct {

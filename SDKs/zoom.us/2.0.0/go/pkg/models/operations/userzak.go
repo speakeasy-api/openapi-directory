@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type UserZakSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserZakRequest struct {
-	Security UserZakSecurity
-}
 
 // UserZak200ApplicationXML - OK
 type UserZak200ApplicationXML struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSigningKeyServerList = []string{
@@ -12,18 +11,13 @@ var DeleteSigningKeyServerList = []string{
 }
 
 type DeleteSigningKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSigningKeyPathParams struct {
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteSigningKeyRequest struct {
-	PathParams DeleteSigningKeyPathParams
-	Security   DeleteSigningKeySecurity
-	ServerURL  *string
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteSigningKeyResponse struct {

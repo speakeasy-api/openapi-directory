@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type IdentityVerificationListRequest struct {
-	Request shared.IdentityVerificationListRequest `request:"mediaType=application/json"`
-}
 
 type IdentityVerificationListResponse struct {
 	ContentType string

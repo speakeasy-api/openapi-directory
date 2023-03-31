@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type UserTSPsPathParams struct {
+type UserTSPsRequest struct {
 	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserTSPsRequest struct {
-	PathParams UserTSPsPathParams
 }
 
 // UserTSPs200ApplicationXMLTSPAccountsListDialInNumbersTypeEnum - Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number.<br>

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesCreateOrUpdateSecretForAuthenticatedUserPathParams struct {
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody struct {
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get the public key for the authenticated user](https://docs.github.com/rest/reference/codespaces#get-the-public-key-for-the-authenticated-user) endpoint.
 	EncryptedValue *string `json:"encrypted_value,omitempty"`
@@ -22,8 +17,9 @@ type CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody struct {
 }
 
 type CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest struct {
-	PathParams CodespacesCreateOrUpdateSecretForAuthenticatedUserPathParams
-	Request    CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type CodespacesCreateOrUpdateSecretForAuthenticatedUserResponse struct {

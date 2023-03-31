@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAddressBalancePathParams struct {
+type GetAddressBalanceRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type GetAddressBalanceRequest struct {
-	PathParams GetAddressBalancePathParams
 }
 
 type GetAddressBalanceResponse struct {

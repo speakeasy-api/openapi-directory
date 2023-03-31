@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectJSONRequest struct {
-	Request *shared.NewProject `request:"mediaType=application/json"`
-}
-
 type CreateProjectJSONResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall FileWasAlreadyUploaded

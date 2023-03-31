@@ -32,13 +32,9 @@ func (e *GetFeatureClassesOutputFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFeatureClassesQueryParams struct {
+type GetFeatureClassesRequest struct {
 	// The format of the output.
 	OutputFormat GetFeatureClassesOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-}
-
-type GetFeatureClassesRequest struct {
-	QueryParams GetFeatureClassesQueryParams
 }
 
 type GetFeatureClassesResponse struct {

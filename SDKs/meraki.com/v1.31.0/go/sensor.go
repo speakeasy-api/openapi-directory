@@ -34,9 +34,9 @@ func newSensor(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Creates a sensor alert profile for a network.
 func (s *sensor) CreateNetworkSensorAlertsProfile(ctx context.Context, request operations.CreateNetworkSensorAlertsProfileRequest) (*operations.CreateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *sensor) CreateNetworkSensorAlertsProfile(ctx context.Context, request o
 // Deletes a sensor alert profile from a network.
 func (s *sensor) DeleteNetworkSensorAlertsProfile(ctx context.Context, request operations.DeleteNetworkSensorAlertsProfileRequest) (*operations.DeleteNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *sensor) DeleteNetworkSensorAlertsProfile(ctx context.Context, request o
 // List the sensor roles for a given sensor or camera device.
 func (s *sensor) GetDeviceSensorRelationships(ctx context.Context, request operations.GetDeviceSensorRelationshipsRequest) (*operations.GetDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *sensor) GetDeviceSensorRelationships(ctx context.Context, request opera
 // Return an overview of currently alerting sensors by metric
 func (s *sensor) GetNetworkSensorAlertsCurrentOverviewByMetric(ctx context.Context, request operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest) (*operations.GetNetworkSensorAlertsCurrentOverviewByMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,14 +215,14 @@ func (s *sensor) GetNetworkSensorAlertsCurrentOverviewByMetric(ctx context.Conte
 // Return an overview of alert occurrences over a timespan, by metric
 func (s *sensor) GetNetworkSensorAlertsOverviewByMetric(ctx context.Context, request operations.GetNetworkSensorAlertsOverviewByMetricRequest) (*operations.GetNetworkSensorAlertsOverviewByMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/overview/byMetric", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/overview/byMetric", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -264,7 +264,7 @@ func (s *sensor) GetNetworkSensorAlertsOverviewByMetric(ctx context.Context, req
 // Show details of a sensor alert profile for a network.
 func (s *sensor) GetNetworkSensorAlertsProfile(ctx context.Context, request operations.GetNetworkSensorAlertsProfileRequest) (*operations.GetNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -309,7 +309,7 @@ func (s *sensor) GetNetworkSensorAlertsProfile(ctx context.Context, request oper
 // Lists all sensor alert profiles for a network.
 func (s *sensor) GetNetworkSensorAlertsProfiles(ctx context.Context, request operations.GetNetworkSensorAlertsProfilesRequest) (*operations.GetNetworkSensorAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -354,7 +354,7 @@ func (s *sensor) GetNetworkSensorAlertsProfiles(ctx context.Context, request ope
 // List the sensor roles for devices in a given network
 func (s *sensor) GetNetworkSensorRelationships(ctx context.Context, request operations.GetNetworkSensorRelationshipsRequest) (*operations.GetNetworkSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,14 +399,14 @@ func (s *sensor) GetNetworkSensorRelationships(ctx context.Context, request oper
 // Return all reported readings from sensors in a given timespan, sorted by timestamp
 func (s *sensor) GetOrganizationSensorReadingsHistory(ctx context.Context, request operations.GetOrganizationSensorReadingsHistoryRequest) (*operations.GetOrganizationSensorReadingsHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -450,14 +450,14 @@ func (s *sensor) GetOrganizationSensorReadingsHistory(ctx context.Context, reque
 // Return the latest available reading for each metric from each sensor, sorted by sensor serial
 func (s *sensor) GetOrganizationSensorReadingsLatest(ctx context.Context, request operations.GetOrganizationSensorReadingsLatestRequest) (*operations.GetOrganizationSensorReadingsLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -501,9 +501,9 @@ func (s *sensor) GetOrganizationSensorReadingsLatest(ctx context.Context, reques
 // Assign one or more sensor roles to a given sensor or camera device.
 func (s *sensor) UpdateDeviceSensorRelationships(ctx context.Context, request operations.UpdateDeviceSensorRelationshipsRequest) (*operations.UpdateDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -553,9 +553,9 @@ func (s *sensor) UpdateDeviceSensorRelationships(ctx context.Context, request op
 // Updates a sensor alert profile for a network.
 func (s *sensor) UpdateNetworkSensorAlertsProfile(ctx context.Context, request operations.UpdateNetworkSensorAlertsProfileRequest) (*operations.UpdateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

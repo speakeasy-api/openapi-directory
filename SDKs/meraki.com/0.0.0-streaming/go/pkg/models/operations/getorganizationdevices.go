@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDevicesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationDevicesQueryParams struct {
+type GetOrganizationDevicesRequest struct {
 	// Filter results by whether or not the device's configuration has been updated after the given timestamp
 	ConfigurationUpdatedAfter *string `queryParam:"style=form,explode=true,name=configurationUpdatedAfter"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	EndingBefore   *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	OrganizationID string  `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
-}
-
-type GetOrganizationDevicesRequest struct {
-	PathParams  GetOrganizationDevicesPathParams
-	QueryParams GetOrganizationDevicesQueryParams
 }
 
 type GetOrganizationDevicesResponse struct {

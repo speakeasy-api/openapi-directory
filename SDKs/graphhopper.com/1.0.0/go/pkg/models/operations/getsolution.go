@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSolutionPathParams struct {
+type GetSolutionRequest struct {
 	// Request solution with jobId
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetSolutionRequest struct {
-	PathParams GetSolutionPathParams
 }
 
 // GetSolution404ApplicationJSON - Requested solution could not be found.

@@ -34,7 +34,7 @@ func newCellularGateway(defaultClient, securityClient HTTPClient, serverURL, lan
 // Show the LAN Settings of a MG
 func (s *cellularGateway) GetDeviceCellularGatewayLan(ctx context.Context, request operations.GetDeviceCellularGatewayLanRequest) (*operations.GetDeviceCellularGatewayLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *cellularGateway) GetDeviceCellularGatewayLan(ctx context.Context, reque
 // Returns the port forwarding rules for a single MG.
 func (s *cellularGateway) GetDeviceCellularGatewayPortForwardingRules(ctx context.Context, request operations.GetDeviceCellularGatewayPortForwardingRulesRequest) (*operations.GetDeviceCellularGatewayPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *cellularGateway) GetDeviceCellularGatewayPortForwardingRules(ctx contex
 // Return the connectivity testing destinations for an MG network
 func (s *cellularGateway) GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx context.Context, request operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest) (*operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +169,7 @@ func (s *cellularGateway) GetNetworkCellularGatewayConnectivityMonitoringDestina
 // List common DHCP settings of MGs
 func (s *cellularGateway) GetNetworkCellularGatewayDhcp(ctx context.Context, request operations.GetNetworkCellularGatewayDhcpRequest) (*operations.GetNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *cellularGateway) GetNetworkCellularGatewayDhcp(ctx context.Context, req
 // Return the subnet pool and mask configured for MGs in the network.
 func (s *cellularGateway) GetNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.GetNetworkCellularGatewaySubnetPoolRequest) (*operations.GetNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *cellularGateway) GetNetworkCellularGatewaySubnetPool(ctx context.Contex
 // Returns the uplink settings for your MG network.
 func (s *cellularGateway) GetNetworkCellularGatewayUplink(ctx context.Context, request operations.GetNetworkCellularGatewayUplinkRequest) (*operations.GetNetworkCellularGatewayUplinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,14 +304,14 @@ func (s *cellularGateway) GetNetworkCellularGatewayUplink(ctx context.Context, r
 // List the uplink status of every Meraki MG cellular gateway in the organization
 func (s *cellularGateway) GetOrganizationCellularGatewayUplinkStatuses(ctx context.Context, request operations.GetOrganizationCellularGatewayUplinkStatusesRequest) (*operations.GetOrganizationCellularGatewayUplinkStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -355,9 +355,9 @@ func (s *cellularGateway) GetOrganizationCellularGatewayUplinkStatuses(ctx conte
 // Update the LAN Settings for a single MG.
 func (s *cellularGateway) UpdateDeviceCellularGatewayLan(ctx context.Context, request operations.UpdateDeviceCellularGatewayLanRequest) (*operations.UpdateDeviceCellularGatewayLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -407,9 +407,9 @@ func (s *cellularGateway) UpdateDeviceCellularGatewayLan(ctx context.Context, re
 // Updates the port forwarding rules for a single MG.
 func (s *cellularGateway) UpdateDeviceCellularGatewayPortForwardingRules(ctx context.Context, request operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest) (*operations.UpdateDeviceCellularGatewayPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -459,9 +459,9 @@ func (s *cellularGateway) UpdateDeviceCellularGatewayPortForwardingRules(ctx con
 // Update the connectivity testing destinations for an MG network
 func (s *cellularGateway) UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx context.Context, request operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest) (*operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -511,9 +511,9 @@ func (s *cellularGateway) UpdateNetworkCellularGatewayConnectivityMonitoringDest
 // Update common DHCP settings of MGs
 func (s *cellularGateway) UpdateNetworkCellularGatewayDhcp(ctx context.Context, request operations.UpdateNetworkCellularGatewayDhcpRequest) (*operations.UpdateNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -563,9 +563,9 @@ func (s *cellularGateway) UpdateNetworkCellularGatewayDhcp(ctx context.Context, 
 // Update the subnet pool and mask configuration for MGs in the network.
 func (s *cellularGateway) UpdateNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.UpdateNetworkCellularGatewaySubnetPoolRequest) (*operations.UpdateNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -615,9 +615,9 @@ func (s *cellularGateway) UpdateNetworkCellularGatewaySubnetPool(ctx context.Con
 // Updates the uplink settings for your MG network.
 func (s *cellularGateway) UpdateNetworkCellularGatewayUplink(ctx context.Context, request operations.UpdateNetworkCellularGatewayUplinkRequest) (*operations.UpdateNetworkCellularGatewayUplinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

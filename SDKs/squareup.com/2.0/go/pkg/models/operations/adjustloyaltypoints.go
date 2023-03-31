@@ -8,21 +8,16 @@ import (
 )
 
 type AdjustLoyaltyPointsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AdjustLoyaltyPointsPathParams struct {
-	// The ID of the [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) in which to adjust the points.
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdjustLoyaltyPointsRequest struct {
-	PathParams AdjustLoyaltyPointsPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.AdjustLoyaltyPointsRequest `request:"mediaType=application/json"`
-	Security AdjustLoyaltyPointsSecurity
+	AdjustLoyaltyPointsRequest shared.AdjustLoyaltyPointsRequest `request:"mediaType=application/json"`
+	// The ID of the [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) in which to adjust the points.
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type AdjustLoyaltyPointsResponse struct {

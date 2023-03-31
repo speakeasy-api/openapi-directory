@@ -8,7 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetHolidayBalanceReportOutputQueryParams struct {
+type GetHolidayBalanceReportOutputRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A comma separated list of the employee codes. E.g. EMP001,EMP002
 	EmployeeCodes *string `queryParam:"style=form,explode=true,name=EmployeeCodes"`
 	// The employer unique key. E.g. ER001
@@ -19,18 +23,6 @@ type GetHolidayBalanceReportOutputQueryParams struct {
 	MaxIndex *string `queryParam:"style=form,explode=true,name=MaxIndex"`
 	// The element index to begin the report. Used to control paging within large data sets. E.g. 1
 	StartIndex *string `queryParam:"style=form,explode=true,name=StartIndex"`
-}
-
-type GetHolidayBalanceReportOutputHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetHolidayBalanceReportOutputRequest struct {
-	QueryParams GetHolidayBalanceReportOutputQueryParams
-	Headers     GetHolidayBalanceReportOutputHeaders
 }
 
 type GetHolidayBalanceReportOutputResponse struct {

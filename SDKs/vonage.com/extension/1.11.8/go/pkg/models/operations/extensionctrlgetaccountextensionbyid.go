@@ -8,19 +8,14 @@ import (
 )
 
 type ExtensionCtrlGetAccountExtensionByIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ExtensionCtrlGetAccountExtensionByIDPathParams struct {
+type ExtensionCtrlGetAccountExtensionByIDRequest struct {
 	// The Vonage Business Cloud account ID
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 	// The extension number
 	ExtensionNumber float64 `pathParam:"style=simple,explode=false,name=extension_number"`
-}
-
-type ExtensionCtrlGetAccountExtensionByIDRequest struct {
-	PathParams ExtensionCtrlGetAccountExtensionByIDPathParams
-	Security   ExtensionCtrlGetAccountExtensionByIDSecurity
 }
 
 type ExtensionCtrlGetAccountExtensionByIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetappkeysfromaccountHeaders struct {
+type GetappkeysfromaccountRequest struct {
 	// The media type of the body of the request. Default value for license manager protocol is application/json
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetappkeysfromaccountRequest struct {
-	Headers GetappkeysfromaccountHeaders
 }
 
 type GetappkeysfromaccountResponse struct {

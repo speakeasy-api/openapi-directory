@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type ProvisionNetworkClientsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // ProvisionNetworkClientsRequestBodyDevicePolicyEnum - The policy to apply to the specified client. Can be 'Group policy', 'Whitelisted', 'Allowed', 'Blocked', 'Per connection' or 'Normal'. Required.
 type ProvisionNetworkClientsRequestBodyDevicePolicyEnum string
 
@@ -701,8 +697,8 @@ type ProvisionNetworkClientsRequestBody struct {
 }
 
 type ProvisionNetworkClientsRequest struct {
-	PathParams ProvisionNetworkClientsPathParams
-	Request    ProvisionNetworkClientsRequestBody `request:"mediaType=application/json"`
+	RequestBody ProvisionNetworkClientsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type ProvisionNetworkClientsResponse struct {

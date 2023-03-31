@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePackageTypePathParams struct {
-	// Package ID
-	PackageID string `pathParam:"style=simple,explode=false,name=package_id"`
-}
-
 type UpdatePackageTypeRequest struct {
-	PathParams UpdatePackageTypePathParams
-	Request    shared.UpdatePackageTypeRequestBody `request:"mediaType=application/json"`
+	// Package ID
+	PackageID                    string                              `pathParam:"style=simple,explode=false,name=package_id"`
+	UpdatePackageTypeRequestBody shared.UpdatePackageTypeRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdatePackageTypeResponse struct {

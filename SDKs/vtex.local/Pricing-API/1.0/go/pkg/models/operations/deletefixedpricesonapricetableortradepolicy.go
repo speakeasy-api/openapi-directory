@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeletefixedpricesonapricetableortradepolicyPathParams struct {
-	// SKU ID.
-	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-	// Price Table or Trade Policy Name.
-	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
-}
-
-type DeletefixedpricesonapricetableortradepolicyHeaders struct {
+type DeletefixedpricesonapricetableortradepolicyRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeletefixedpricesonapricetableortradepolicyRequest struct {
-	PathParams DeletefixedpricesonapricetableortradepolicyPathParams
-	Headers    DeletefixedpricesonapricetableortradepolicyHeaders
+	// SKU ID.
+	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
+	// Price Table or Trade Policy Name.
+	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
 }
 
 type DeletefixedpricesonapricetableortradepolicyResponse struct {

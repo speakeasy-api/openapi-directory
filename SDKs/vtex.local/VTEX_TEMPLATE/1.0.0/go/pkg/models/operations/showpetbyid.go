@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShowPetByIDPathParams struct {
+type ShowPetByIDRequest struct {
 	// The id of the pet to retrieve
 	PetID string `pathParam:"style=simple,explode=false,name=petId"`
-}
-
-type ShowPetByIDRequest struct {
-	PathParams ShowPetByIDPathParams
 }
 
 type ShowPetByIDResponse struct {

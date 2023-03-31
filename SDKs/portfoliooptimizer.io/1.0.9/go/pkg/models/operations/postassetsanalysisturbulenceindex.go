@@ -17,10 +17,6 @@ type PostAssetsAnalysisTurbulenceIndexRequestBody struct {
 	AssetsReturns []float64 `json:"assetsReturns"`
 }
 
-type PostAssetsAnalysisTurbulenceIndexRequest struct {
-	Request PostAssetsAnalysisTurbulenceIndexRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsAnalysisTurbulenceIndex200ApplicationJSON - OK
 type PostAssetsAnalysisTurbulenceIndex200ApplicationJSON struct {
 	// the turbulence index of the universe of assets

@@ -6,27 +6,19 @@ import (
 	"net/http"
 )
 
-type GetRealmUsersCountPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmUsersCountQueryParams struct {
+type GetRealmUsersCountRequest struct {
 	// email filter
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// first name filter
 	FirstName *string `queryParam:"style=form,explode=true,name=firstName"`
 	// last name filter
 	LastName *string `queryParam:"style=form,explode=true,name=lastName"`
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// arbitrary search string for all the fields below
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// username filter
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetRealmUsersCountRequest struct {
-	PathParams  GetRealmUsersCountPathParams
-	QueryParams GetRealmUsersCountQueryParams
 }
 
 type GetRealmUsersCountResponse struct {

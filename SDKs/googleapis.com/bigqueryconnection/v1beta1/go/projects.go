@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsCreate - Creates a new connection.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsCreate(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsCreate(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsCreate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsCreate(ctx cont
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsDelete - Deletes connection and associated credential.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsDelete(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsDelete(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsDeleteSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsDelete(ctx cont
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsGet - Returns specified connection.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGet(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGet(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsGetSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGet(ctx context
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicySecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(ct
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsList - Returns a list of connections in the given project.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsList(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsListRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsListResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsList(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsListRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsListSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsList(ctx contex
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicySecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(ct
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsTestIamPermissions(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsTestIamPermissions(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsTestIamPermissi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsTestIamPermissi
 }
 
 // BigqueryconnectionProjectsLocationsConnectionsUpdateCredential - Sets the credential for the specified connection.
-func (s *projects) BigqueryconnectionProjectsLocationsConnectionsUpdateCredential(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest) (*operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse, error) {
+func (s *projects) BigqueryconnectionProjectsLocationsConnectionsUpdateCredential(ctx context.Context, request operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest, security operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialSecurity) (*operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionCredential", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) BigqueryconnectionProjectsLocationsConnectionsUpdateCredentia
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

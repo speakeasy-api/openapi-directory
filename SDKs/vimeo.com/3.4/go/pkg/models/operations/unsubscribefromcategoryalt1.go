@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnsubscribeFromCategoryAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UnsubscribeFromCategoryAlt1PathParams struct {
-	// The name of the category.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnsubscribeFromCategoryAlt1Request struct {
-	PathParams UnsubscribeFromCategoryAlt1PathParams
-	Security   UnsubscribeFromCategoryAlt1Security
+	// The name of the category.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 }
 
 type UnsubscribeFromCategoryAlt1Response struct {

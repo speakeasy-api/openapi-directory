@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TrapListPathParams struct {
+type TrapListRequest struct {
 	// Agent to list the traps
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type TrapListRequest struct {
-	PathParams TrapListPathParams
 }
 
 type TrapListResponse struct {

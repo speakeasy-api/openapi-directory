@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05UsersAuthOnInitJSONHeaders struct {
+type PostV05UsersAuthOnInitJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization           string                         `header:"style=simple,explode=false,name=Authorization"`
+	PatientAuthInitResponse shared.PatientAuthInitResponse `request:"mediaType=application/json"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05UsersAuthOnInitJSONRequest struct {
-	Headers PostV05UsersAuthOnInitJSONHeaders
-	Request shared.PatientAuthInitResponse `request:"mediaType=application/json"`
 }
 
 type PostV05UsersAuthOnInitJSONResponse struct {

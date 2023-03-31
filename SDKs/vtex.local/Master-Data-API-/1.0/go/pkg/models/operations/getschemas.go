@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetschemasPathParams struct {
-	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
-	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-}
-
-type GetschemasHeaders struct {
+type GetschemasRequest struct {
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetschemasRequest struct {
-	PathParams GetschemasPathParams
-	Headers    GetschemasHeaders
+	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
 }
 
 type GetschemasResponse struct {

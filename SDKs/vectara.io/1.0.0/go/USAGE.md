@@ -13,67 +13,77 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            OAuth: shared.SchemeOAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            OAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.CreateCorpusRequest{
-        Headers: operations.CreateCorpusHeaders{
-            CustomerID: 548814,
-        },
-        Request: shared.AdminCreateCorpusRequest{
+        AdminCreateCorpusRequest: shared.AdminCreateCorpusRequest{
             Corpus: &shared.AdminCorpus{
                 CustomDimensions: []shared.AdminDimension{
                     shared.AdminDimension{
-                        Description: "distinctio",
-                        IndexingDefault: 8442.66,
-                        Name: "unde",
-                        ServingDefault: 8579.46,
+                        Description: "provident",
+                        IndexingDefault: 7151.9,
+                        Name: "quibusdam",
+                        ServingDefault: 6027.63,
                     },
                     shared.AdminDimension{
-                        Description: "corrupti",
-                        IndexingDefault: 8472.52,
-                        Name: "vel",
-                        ServingDefault: 6235.64,
+                        Description: "nulla",
+                        IndexingDefault: 5448.83,
+                        Name: "illum",
+                        ServingDefault: 4236.55,
                     },
                     shared.AdminDimension{
-                        Description: "deserunt",
-                        IndexingDefault: 3843.82,
-                        Name: "iure",
-                        ServingDefault: 2975.34,
+                        Description: "error",
+                        IndexingDefault: 6458.94,
+                        Name: "suscipit",
+                        ServingDefault: 4375.87,
                     },
                 },
-                Description: "debitis",
-                DtProvision: "ipsa",
+                Description: "magnam",
+                DtProvision: "debitis",
                 Enabled: false,
-                EncoderID: "delectus",
+                EncoderID: "ipsa",
                 Encrypted: false,
                 FilterAttributes: []shared.AdminFilterAttribute{
                     shared.AdminFilterAttribute{
-                        Description: "suscipit",
+                        Description: "tempora",
                         Indexed: false,
                         Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
-                        Name: "minus",
+                        Name: "molestiae",
                         Type: "FILTER_ATTRIBUTE_TYPE__TEXT",
                     },
                     shared.AdminFilterAttribute{
-                        Description: "voluptatum",
+                        Description: "placeat",
                         Indexed: false,
                         Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
-                        Name: "excepturi",
-                        Type: "FILTER_ATTRIBUTE_TYPE__INTEGER_LIST",
+                        Name: "iusto",
+                        Type: "FILTER_ATTRIBUTE_TYPE__REAL",
+                    },
+                    shared.AdminFilterAttribute{
+                        Description: "nisi",
+                        Indexed: false,
+                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART",
+                        Name: "temporibus",
+                        Type: "FILTER_ATTRIBUTE_TYPE__UNDEFINED",
+                    },
+                    shared.AdminFilterAttribute{
+                        Description: "quis",
+                        Indexed: false,
+                        Level: "FILTER_ATTRIBUTE_LEVEL__UNDEFINED",
+                        Name: "deserunt",
+                        Type: "FILTER_ATTRIBUTE_TYPE__UNDEFINED",
                     },
                 },
-                ID: 925597,
-                MetadataMaxBytes: 836079,
-                Name: "ab",
+                ID: 368241,
+                MetadataMaxBytes: 832620,
+                Name: "sapiente",
                 SwapIenc: false,
                 SwapQenc: false,
                 Textless: false,
             },
         },
+        CustomerID: 778157,
     }
 
     ctx := context.Background()

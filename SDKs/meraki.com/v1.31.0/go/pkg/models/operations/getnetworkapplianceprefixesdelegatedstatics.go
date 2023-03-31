@@ -7,12 +7,8 @@ import (
 	"time"
 )
 
-type GetNetworkAppliancePrefixesDelegatedStaticsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkAppliancePrefixesDelegatedStaticsRequest struct {
-	PathParams GetNetworkAppliancePrefixesDelegatedStaticsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkAppliancePrefixesDelegatedStatics200ApplicationJSONOrigin - WAN1/WAN2/Independent prefix.

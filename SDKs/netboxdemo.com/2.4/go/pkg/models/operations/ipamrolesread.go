@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRolesReadPathParams struct {
+type IpamRolesReadRequest struct {
 	// A unique integer value identifying this role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamRolesReadRequest struct {
-	PathParams IpamRolesReadPathParams
 }
 
 type IpamRolesReadResponse struct {

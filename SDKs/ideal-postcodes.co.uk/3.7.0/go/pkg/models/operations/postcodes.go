@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostcodesPathParams struct {
-	// Postcode to retrieve
-	Postcode string `pathParam:"style=simple,explode=false,name=postcode"`
-}
-
-type PostcodesQueryParams struct {
+type PostcodesRequest struct {
 	APIKey *string `queryParam:"style=form,explode=false,name=api_key"`
 	Filter *string `queryParam:"style=form,explode=false,name=filter"`
 	Page   *int    `queryParam:"style=form,explode=false,name=page"`
-}
-
-type PostcodesRequest struct {
-	PathParams  PostcodesPathParams
-	QueryParams PostcodesQueryParams
+	// Postcode to retrieve
+	Postcode string `pathParam:"style=simple,explode=false,name=postcode"`
 }
 
 type PostcodesResponse struct {

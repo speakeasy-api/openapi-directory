@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceFirewallFirewalledServicePathParams struct {
+type GetNetworkApplianceFirewallFirewalledServiceRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Service   string `pathParam:"style=simple,explode=false,name=service"`
-}
-
-type GetNetworkApplianceFirewallFirewalledServiceRequest struct {
-	PathParams GetNetworkApplianceFirewallFirewalledServicePathParams
 }
 
 type GetNetworkApplianceFirewallFirewalledServiceResponse struct {

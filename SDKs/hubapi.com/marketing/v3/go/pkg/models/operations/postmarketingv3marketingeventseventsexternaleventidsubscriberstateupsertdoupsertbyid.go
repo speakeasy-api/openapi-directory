@@ -8,24 +8,15 @@ import (
 )
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDPathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-	SubscriberState string `pathParam:"style=simple,explode=false,name=subscriberState"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDRequest struct {
-	PathParams  PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDPathParams
-	QueryParams PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDQueryParams
-	Request     shared.BatchInputMarketingEventSubscriber `request:"mediaType=application/json"`
-	Security    PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDSecurity
+	BatchInputMarketingEventSubscriber shared.BatchInputMarketingEventSubscriber `request:"mediaType=application/json"`
+	ExternalAccountID                  string                                    `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID                    string                                    `pathParam:"style=simple,explode=false,name=externalEventId"`
+	SubscriberState                    string                                    `pathParam:"style=simple,explode=false,name=subscriberState"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDResponse struct {

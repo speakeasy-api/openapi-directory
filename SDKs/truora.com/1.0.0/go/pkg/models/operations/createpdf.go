@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CreatePDFPathParams struct {
+type CreatePDFRequest struct {
 	// ID of the check
 	CheckID string `pathParam:"style=simple,explode=false,name=check_id"`
-}
-
-type CreatePDFRequest struct {
-	PathParams CreatePDFPathParams
 }
 
 type CreatePDFResponse struct {

@@ -8,19 +8,11 @@ import (
 	"time"
 )
 
-type ListShipmentRatesPathParams struct {
-	// Shipment ID
-	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
-}
-
-type ListShipmentRatesQueryParams struct {
+type ListShipmentRatesRequest struct {
 	// Used to create a filter for when a resource was created (ex. A shipment that was created after a certain time)
 	CreatedAtStart *time.Time `queryParam:"style=form,explode=true,name=created_at_start"`
-}
-
-type ListShipmentRatesRequest struct {
-	PathParams  ListShipmentRatesPathParams
-	QueryParams ListShipmentRatesQueryParams
+	// Shipment ID
+	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
 }
 
 type ListShipmentRatesResponse struct {

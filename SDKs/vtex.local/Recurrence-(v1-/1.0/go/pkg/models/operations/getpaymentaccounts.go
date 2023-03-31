@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetpaymentaccountsPathParams struct {
-	Recurrenceid string `pathParam:"style=simple,explode=false,name=recurrenceid"`
-}
-
-type GetpaymentaccountsHeaders struct {
+type GetpaymentaccountsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetpaymentaccountsRequest struct {
-	PathParams GetpaymentaccountsPathParams
-	Headers    GetpaymentaccountsHeaders
+	ContentType  string `header:"style=simple,explode=false,name=Content-Type"`
+	Recurrenceid string `pathParam:"style=simple,explode=false,name=recurrenceid"`
 }
 
 type GetpaymentaccountsResponse struct {

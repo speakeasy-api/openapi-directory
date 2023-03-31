@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type EditChatbotMessageSecurity struct {
-	ClientCredentials shared.SchemeClientCredentials `security:"scheme,type=oauth2"`
-}
-
-type EditChatbotMessagePathParams struct {
-	// Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot).
-	MessageID string `pathParam:"style=simple,explode=false,name=message_id"`
+	ClientCredentials string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditChatbotMessageApplicationJSON struct {
@@ -33,9 +27,9 @@ type EditChatbotMessageApplicationJSON struct {
 }
 
 type EditChatbotMessageRequest struct {
-	PathParams EditChatbotMessagePathParams
-	Request    *EditChatbotMessageApplicationJSON `request:"mediaType=application/json"`
-	Security   EditChatbotMessageSecurity
+	RequestBody *EditChatbotMessageApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot).
+	MessageID string `pathParam:"style=simple,explode=false,name=message_id"`
 }
 
 // EditChatbotMessage200ApplicationXML - **HTTP Status Code:** `200` **OK**<br>

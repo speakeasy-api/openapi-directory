@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnInboundWireDrawdownRequestPathParams struct {
-	InboundWireDrawdownRequestID string `pathParam:"style=simple,explode=false,name=inbound_wire_drawdown_request_id"`
-}
-
 type RetrieveAnInboundWireDrawdownRequestRequest struct {
-	PathParams RetrieveAnInboundWireDrawdownRequestPathParams
+	InboundWireDrawdownRequestID string `pathParam:"style=simple,explode=false,name=inbound_wire_drawdown_request_id"`
 }
 
 type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum string

@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateScheduleSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateSchedulePathParams struct {
-	// The ID of the schedule to update. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
-	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateScheduleRequest struct {
-	PathParams UpdateSchedulePathParams
 	// In the request payload: <strong>scheduleName</strong> is optional; <strong>preferredTriggerHour</strong>, <strong>preferredTriggerDayOfWeek</strong>, <strong>preferredTriggerDayOfMonth</strong>, <strong>scheduleStartDate</strong>, <strong>scheduleEndDate</strong>, and <strong>schemaVersion</strong> are conditional.
-	Request  shared.UpdateUserScheduleRequest `request:"mediaType=application/json"`
-	Security UpdateScheduleSecurity
+	UpdateUserScheduleRequest shared.UpdateUserScheduleRequest `request:"mediaType=application/json"`
+	// The ID of the schedule to update. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
+	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 
 type UpdateScheduleResponse struct {

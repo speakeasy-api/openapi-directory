@@ -16,7 +16,7 @@ pkg/models/operations/acceleratedmobilepageurlampurlsbatchget.go
 pkg/models/shared/batchgetampurlsresponse.go
 pkg/models/shared/ampurlerror.go
 pkg/models/shared/ampurl.go
-pkg/models/shared/batchgetampurlsrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/batchgetampurlsrequest.go
 pkg/models/shared/xgafvenum.go
 USAGE.md

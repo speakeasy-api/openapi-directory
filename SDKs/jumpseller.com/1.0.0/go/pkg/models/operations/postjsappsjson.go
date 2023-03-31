@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostJsappsJSONQueryParams struct {
+type PostJsappsJSONRequest struct {
+	// JSApp parameters to create
+	JSAppEdit shared.JSAppEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostJsappsJSONRequest struct {
-	QueryParams PostJsappsJSONQueryParams
-	// JSApp parameters to create
-	Request shared.JSAppEdit `request:"mediaType=application/json"`
 }
 
 type PostJsappsJSONResponse struct {

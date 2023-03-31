@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumsPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetAlbumsDirectionEnum - The sort direction of the results.
 type GetAlbumsDirectionEnum string
 
@@ -68,7 +63,7 @@ func (e *GetAlbumsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAlbumsQueryParams struct {
+type GetAlbumsRequest struct {
 	// The sort direction of the results.
 	Direction *GetAlbumsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -79,11 +74,8 @@ type GetAlbumsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetAlbumsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAlbumsRequest struct {
-	PathParams  GetAlbumsPathParams
-	QueryParams GetAlbumsQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetAlbumsResponse struct {

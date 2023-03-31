@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAssetCommentsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAssetCommentsPathParams struct {
-	// UUID of the asset to update
-	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAssetCommentsRequest struct {
-	PathParams UpdateAssetCommentsPathParams
 	// comments to apply to the asset
-	Request  shared.AssetComments `request:"mediaType=application/json"`
-	Security UpdateAssetCommentsSecurity
+	AssetComments shared.AssetComments `request:"mediaType=application/json"`
+	// UUID of the asset to update
+	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
 }
 
 type UpdateAssetCommentsResponse struct {

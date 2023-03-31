@@ -36,7 +36,7 @@ func newBusinessUsers(defaultClient, securityClient HTTPClient, serverURL, langu
 // <p>Use this endpoint to permanently <b>Delete</b> a Business User. A valid <b>businessUser id</b> is required.</p>
 func (s *businessUsers) DeleteSetupV1BusinessusersID(ctx context.Context, request operations.DeleteSetupV1BusinessusersIDRequest) (*operations.DeleteSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *businessUsers) GetSetupV1Businessusers(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,7 +128,7 @@ func (s *businessUsers) GetSetupV1BusinessusersPermissions(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -170,14 +170,14 @@ func (s *businessUsers) GetSetupV1BusinessusersPermissions(ctx context.Context, 
 // <p>Use this endpoint to return a <b>List of Companies</b> associated with the business users email requested. A business user <b>email</b> address is required. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *businessUsers) GetSetupV1BusinessusersEmailCompanies(ctx context.Context, request operations.GetSetupV1BusinessusersEmailCompaniesRequest) (*operations.GetSetupV1BusinessusersEmailCompaniesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{email}/companies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{email}/companies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -219,7 +219,7 @@ func (s *businessUsers) GetSetupV1BusinessusersEmailCompanies(ctx context.Contex
 // <p>Use this endpoint to return a <b>Business User</b> object. A valid <b>businessUser id</b> is required. Find businessUser id's using the <i>GET /setup/v1/businessusers</i> endpoint.</p>
 func (s *businessUsers) GetSetupV1BusinessusersID(ctx context.Context, request operations.GetSetupV1BusinessusersIDRequest) (*operations.GetSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +265,7 @@ func (s *businessUsers) GetSetupV1BusinessusersID(ctx context.Context, request o
 // <p>Required fields: <b>Name</b>, <b>Email</b> and <b>Role</b><b>Note:</b> If the businessUser is a bookable resource (bizresource) then a resourceId is required.</p>
 // <p>For role, use one of the values listed. <b>Business Roles Include: bizowner</b> (Business Owner), <b>bizadmin</b> (Business Administrator), <b>bizresource</b> (Business User - Bookable Resource).</p>
 // <p>The <b>sendRegistrationInvite</b> parameter is available to API consumers for their own use. It provides no added functionality in OnSched.</p>
-func (s *businessUsers) PostSetupV1Businessusers(ctx context.Context, request operations.PostSetupV1BusinessusersRequest) (*operations.PostSetupV1BusinessusersResponse, error) {
+func (s *businessUsers) PostSetupV1Businessusers(ctx context.Context, request shared.BusinessUserInputModel) (*operations.PostSetupV1BusinessusersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setup/v1/businessusers"
 
@@ -322,9 +322,9 @@ func (s *businessUsers) PostSetupV1Businessusers(ctx context.Context, request op
 //	<b>Business Roles Include: bizowner</b> (Business Owner), <b>bizadmin</b> (Business Administrator), <b>bizresource</b> (Business User - Bookable Resource).</p>
 func (s *businessUsers) PutSetupV1BusinessusersID(ctx context.Context, request operations.PutSetupV1BusinessusersIDRequest) (*operations.PutSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessUserUpdateModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

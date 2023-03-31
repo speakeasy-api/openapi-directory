@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveEnginePathParams struct {
+type RetrieveEngineRequest struct {
 	// The ID of the engine to use for this request
 	//
 	EngineID string `pathParam:"style=simple,explode=false,name=engine_id"`
-}
-
-type RetrieveEngineRequest struct {
-	PathParams RetrieveEnginePathParams
 }
 
 type RetrieveEngineResponse struct {

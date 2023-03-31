@@ -33,7 +33,7 @@ func newKeyManagement(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreateAKey - Create a key
 // Create a key
-func (s *keyManagement) CreateAKey(ctx context.Context, request operations.CreateAKeyRequest) (*operations.CreateAKeyResponse, error) {
+func (s *keyManagement) CreateAKey(ctx context.Context, request operations.CreateAKeyRequestBody) (*operations.CreateAKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keys"
 
@@ -121,7 +121,7 @@ func (s *keyManagement) GetKeys(ctx context.Context, request operations.GetKeysR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -188,7 +188,7 @@ func (s *keyManagement) GetOneKey(ctx context.Context) (*operations.GetOneKeyRes
 
 // UpdateAKey - Update a key
 // Update a key
-func (s *keyManagement) UpdateAKey(ctx context.Context, request operations.UpdateAKeyRequest) (*operations.UpdateAKeyResponse, error) {
+func (s *keyManagement) UpdateAKey(ctx context.Context, request operations.UpdateAKeyRequestBody) (*operations.UpdateAKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keys/wYZjGJyBcdb0621b97999c233246a8ec0a35d0fcd9a6417ef8ccee0c8978b64b123af2dd"
 

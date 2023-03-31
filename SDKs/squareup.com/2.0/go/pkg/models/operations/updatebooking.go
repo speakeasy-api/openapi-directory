@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateBookingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateBookingPathParams struct {
-	// The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-updated booking.
-	BookingID string `pathParam:"style=simple,explode=false,name=booking_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateBookingRequest struct {
-	PathParams UpdateBookingPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateBookingRequest `request:"mediaType=application/json"`
-	Security UpdateBookingSecurity
+	UpdateBookingRequest shared.UpdateBookingRequest `request:"mediaType=application/json"`
+	// The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-updated booking.
+	BookingID string `pathParam:"style=simple,explode=false,name=booking_id"`
 }
 
 type UpdateBookingResponse struct {

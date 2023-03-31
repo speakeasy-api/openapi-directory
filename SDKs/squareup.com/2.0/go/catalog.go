@@ -43,7 +43,7 @@ func newCatalog(defaultClient, securityClient HTTPClient, serverURL, language, s
 // `BatchDeleteCatalogObjects` succeeds even if only a portion of the targeted
 // IDs can be deleted. The response will only include IDs that were
 // actually deleted.
-func (s *catalog) BatchDeleteCatalogObjects(ctx context.Context, request operations.BatchDeleteCatalogObjectsRequest) (*operations.BatchDeleteCatalogObjectsResponse, error) {
+func (s *catalog) BatchDeleteCatalogObjects(ctx context.Context, request shared.BatchDeleteCatalogObjectsRequest, security operations.BatchDeleteCatalogObjectsSecurity) (*operations.BatchDeleteCatalogObjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/batch-delete"
 
@@ -62,7 +62,7 @@ func (s *catalog) BatchDeleteCatalogObjects(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,7 +103,7 @@ func (s *catalog) BatchDeleteCatalogObjects(ctx context.Context, request operati
 // [CatalogItemVariation](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItemVariation) objects, references to
 // its [CatalogModifierList](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogModifierList) objects, and the ids of
 // any [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to it.
-func (s *catalog) BatchRetrieveCatalogObjects(ctx context.Context, request operations.BatchRetrieveCatalogObjectsRequest) (*operations.BatchRetrieveCatalogObjectsResponse, error) {
+func (s *catalog) BatchRetrieveCatalogObjects(ctx context.Context, request shared.BatchRetrieveCatalogObjectsRequest, security operations.BatchRetrieveCatalogObjectsSecurity) (*operations.BatchRetrieveCatalogObjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/batch-retrieve"
 
@@ -122,7 +122,7 @@ func (s *catalog) BatchRetrieveCatalogObjects(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *catalog) BatchRetrieveCatalogObjects(ctx context.Context, request opera
 // batches will be processed in order as long as the total object count for the
 // request (items, variations, modifier lists, discounts, and taxes) is no more
 // than 10,000.
-func (s *catalog) BatchUpsertCatalogObjects(ctx context.Context, request operations.BatchUpsertCatalogObjectsRequest) (*operations.BatchUpsertCatalogObjectsResponse, error) {
+func (s *catalog) BatchUpsertCatalogObjects(ctx context.Context, request shared.BatchUpsertCatalogObjectsRequest, security operations.BatchUpsertCatalogObjectsSecurity) (*operations.BatchUpsertCatalogObjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/batch-upsert"
 
@@ -185,7 +185,7 @@ func (s *catalog) BatchUpsertCatalogObjects(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,7 +222,7 @@ func (s *catalog) BatchUpsertCatalogObjects(ctx context.Context, request operati
 // CatalogInfo - CatalogInfo
 // Retrieves information about the Square Catalog API, such as batch size
 // limits that can be used by the `BatchUpsertCatalogObjects` endpoint.
-func (s *catalog) CatalogInfo(ctx context.Context, request operations.CatalogInfoRequest) (*operations.CatalogInfoResponse, error) {
+func (s *catalog) CatalogInfo(ctx context.Context) (*operations.CatalogInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/info"
 
@@ -231,7 +231,7 @@ func (s *catalog) CatalogInfo(ctx context.Context, request operations.CatalogInf
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -272,16 +272,16 @@ func (s *catalog) CatalogInfo(ctx context.Context, request operations.CatalogInf
 // are also deleted. For example, deleting a [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem)
 // will also delete all of its
 // [CatalogItemVariation](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItemVariation) children.
-func (s *catalog) DeleteCatalogObject(ctx context.Context, request operations.DeleteCatalogObjectRequest) (*operations.DeleteCatalogObjectResponse, error) {
+func (s *catalog) DeleteCatalogObject(ctx context.Context, request operations.DeleteCatalogObjectRequest, security operations.DeleteCatalogObjectSecurity) (*operations.DeleteCatalogObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,7 +325,7 @@ func (s *catalog) DeleteCatalogObject(ctx context.Context, request operations.De
 // __Important:__ ListCatalog does not return deleted catalog items. To retrieve
 // deleted catalog items, use [SearchCatalogObjects](https://developer.squareup.com/reference/square_2021-08-18/catalog-api/search-catalog-objects)
 // and set the `include_deleted_objects` attribute value to `true`.
-func (s *catalog) ListCatalog(ctx context.Context, request operations.ListCatalogRequest) (*operations.ListCatalogResponse, error) {
+func (s *catalog) ListCatalog(ctx context.Context, request operations.ListCatalogRequest, security operations.ListCatalogSecurity) (*operations.ListCatalogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/list"
 
@@ -334,11 +334,11 @@ func (s *catalog) ListCatalog(ctx context.Context, request operations.ListCatalo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -380,20 +380,20 @@ func (s *catalog) ListCatalog(ctx context.Context, request operations.ListCatalo
 // children, references to its
 // [CatalogModifierList](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogModifierList) objects, and the ids of
 // any [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to it.
-func (s *catalog) RetrieveCatalogObject(ctx context.Context, request operations.RetrieveCatalogObjectRequest) (*operations.RetrieveCatalogObjectResponse, error) {
+func (s *catalog) RetrieveCatalogObject(ctx context.Context, request operations.RetrieveCatalogObjectRequest, security operations.RetrieveCatalogObjectSecurity) (*operations.RetrieveCatalogObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,7 +438,7 @@ func (s *catalog) RetrieveCatalogObject(ctx context.Context, request operations.
 // - `SearchCatalogItems` supports the custom attribute query filters to return items or item variations that contain custom attribute values, where `SearchCatalogObjects` does not.
 // - `SearchCatalogItems` does not support the `include_deleted_objects` filter to search for deleted items or item variations, whereas `SearchCatalogObjects` does.
 // - The both endpoints use different call conventions, including the query filter formats.
-func (s *catalog) SearchCatalogItems(ctx context.Context, request operations.SearchCatalogItemsRequest) (*operations.SearchCatalogItemsResponse, error) {
+func (s *catalog) SearchCatalogItems(ctx context.Context, request shared.SearchCatalogItemsRequest, security operations.SearchCatalogItemsSecurity) (*operations.SearchCatalogItemsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/search-catalog-items"
 
@@ -457,7 +457,7 @@ func (s *catalog) SearchCatalogItems(ctx context.Context, request operations.Sea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -502,7 +502,7 @@ func (s *catalog) SearchCatalogItems(ctx context.Context, request operations.Sea
 // - `SearchCatalogItems` supports the custom attribute query filters to return items or item variations that contain custom attribute values, where `SearchCatalogObjects` does not.
 // - `SearchCatalogItems` does not support the `include_deleted_objects` filter to search for deleted items or item variations, whereas `SearchCatalogObjects` does.
 // - The both endpoints have different call conventions, including the query filter formats.
-func (s *catalog) SearchCatalogObjects(ctx context.Context, request operations.SearchCatalogObjectsRequest) (*operations.SearchCatalogObjectsResponse, error) {
+func (s *catalog) SearchCatalogObjects(ctx context.Context, request shared.SearchCatalogObjectsRequest, security operations.SearchCatalogObjectsSecurity) (*operations.SearchCatalogObjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/search"
 
@@ -521,7 +521,7 @@ func (s *catalog) SearchCatalogObjects(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -559,7 +559,7 @@ func (s *catalog) SearchCatalogObjects(ctx context.Context, request operations.S
 // Updates the [CatalogModifierList](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogModifierList) objects
 // that apply to the targeted [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem) without having
 // to perform an upsert on the entire item.
-func (s *catalog) UpdateItemModifierLists(ctx context.Context, request operations.UpdateItemModifierListsRequest) (*operations.UpdateItemModifierListsResponse, error) {
+func (s *catalog) UpdateItemModifierLists(ctx context.Context, request shared.UpdateItemModifierListsRequest, security operations.UpdateItemModifierListsSecurity) (*operations.UpdateItemModifierListsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/update-item-modifier-lists"
 
@@ -578,7 +578,7 @@ func (s *catalog) UpdateItemModifierLists(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,7 +616,7 @@ func (s *catalog) UpdateItemModifierLists(ctx context.Context, request operation
 // Updates the [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to the
 // targeted [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem) without having to perform an
 // upsert on the entire item.
-func (s *catalog) UpdateItemTaxes(ctx context.Context, request operations.UpdateItemTaxesRequest) (*operations.UpdateItemTaxesResponse, error) {
+func (s *catalog) UpdateItemTaxes(ctx context.Context, request shared.UpdateItemTaxesRequest, security operations.UpdateItemTaxesSecurity) (*operations.UpdateItemTaxesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/update-item-taxes"
 
@@ -635,7 +635,7 @@ func (s *catalog) UpdateItemTaxes(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,7 +671,7 @@ func (s *catalog) UpdateItemTaxes(ctx context.Context, request operations.Update
 
 // UpsertCatalogObject - UpsertCatalogObject
 // Creates or updates the target [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject).
-func (s *catalog) UpsertCatalogObject(ctx context.Context, request operations.UpsertCatalogObjectRequest) (*operations.UpsertCatalogObjectResponse, error) {
+func (s *catalog) UpsertCatalogObject(ctx context.Context, request shared.UpsertCatalogObjectRequest, security operations.UpsertCatalogObjectSecurity) (*operations.UpsertCatalogObjectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/object"
 
@@ -690,7 +690,7 @@ func (s *catalog) UpsertCatalogObject(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

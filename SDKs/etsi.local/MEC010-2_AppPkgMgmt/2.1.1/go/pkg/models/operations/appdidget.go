@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppDIDGETPathParams struct {
+type AppDIDGETRequest struct {
 	// Identifier of an application descriptor
 	AppDID string `pathParam:"style=simple,explode=false,name=appDId"`
-}
-
-type AppDIDGETRequest struct {
-	PathParams AppDIDGETPathParams
 }
 
 type AppDIDGETResponse struct {

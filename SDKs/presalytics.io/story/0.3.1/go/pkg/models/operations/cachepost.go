@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CachePostRequest struct {
-	// parameters to identify an update a collaborator across multiple stories
-	Request shared.CachePostRequest `request:"mediaType=application/json"`
-}
-
 type CachePostResponse struct {
 	ContentType string
 	StatusCode  int

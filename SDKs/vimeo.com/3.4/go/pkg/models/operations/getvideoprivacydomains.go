@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoPrivacyDomainsPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVideoPrivacyDomainsQueryParams struct {
+type GetVideoPrivacyDomainsRequest struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVideoPrivacyDomainsRequest struct {
-	PathParams  GetVideoPrivacyDomainsPathParams
-	QueryParams GetVideoPrivacyDomainsQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetVideoPrivacyDomainsResponse struct {

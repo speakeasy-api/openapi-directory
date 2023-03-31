@@ -33,7 +33,7 @@ func newPi(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // GetNumbersPi - Get digits of pi (Ï€)
-func (s *pi) GetNumbersPi(ctx context.Context, request operations.GetNumbersPiRequest) (*operations.GetNumbersPiResponse, error) {
+func (s *pi) GetNumbersPi(ctx context.Context, request operations.GetNumbersPiRequest, security operations.GetNumbersPiSecurity) (*operations.GetNumbersPiResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/pi"
 
@@ -42,11 +42,11 @@ func (s *pi) GetNumbersPi(ctx context.Context, request operations.GetNumbersPiRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

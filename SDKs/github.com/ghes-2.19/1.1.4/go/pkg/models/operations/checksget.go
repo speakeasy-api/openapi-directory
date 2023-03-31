@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksGetPathParams struct {
+type ChecksGetRequest struct {
 	// check_run_id parameter
 	CheckRunID int64  `pathParam:"style=simple,explode=false,name=check_run_id"`
 	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksGetRequest struct {
-	PathParams ChecksGetPathParams
 }
 
 type ChecksGetResponse struct {

@@ -18,10 +18,9 @@ pkg/models/operations/smartdevicemanagemententerprisesstructureslist.go
 pkg/models/operations/smartdevicemanagemententerprisesstructuresroomsget.go
 pkg/models/operations/smartdevicemanagemententerprisesstructuresroomslist.go
 pkg/models/shared/googlehomeenterprisesdmv1executedevicecommandresponse.go
-pkg/models/shared/googlehomeenterprisesdmv1executedevicecommandrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googlehomeenterprisesdmv1executedevicecommandrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlehomeenterprisesdmv1listdevicesresponse.go
 pkg/models/shared/googlehomeenterprisesdmv1device.go
 pkg/models/shared/googlehomeenterprisesdmv1parentrelation.go

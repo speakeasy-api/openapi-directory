@@ -34,7 +34,7 @@ func newMX11NATRules(defaultClient, securityClient HTTPClient, serverURL, langua
 // Return the 1:1 NAT mapping rules for an MX network
 func (s *mx11NATRules) GetNetworkOneToOneNatRules(ctx context.Context, request operations.GetNetworkOneToOneNatRulesRequest) (*operations.GetNetworkOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/oneToOneNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *mx11NATRules) GetNetworkOneToOneNatRules(ctx context.Context, request o
 // Set the 1:1 NAT mapping rules for an MX network
 func (s *mx11NATRules) UpdateNetworkOneToOneNatRules(ctx context.Context, request operations.UpdateNetworkOneToOneNatRulesRequest) (*operations.UpdateNetworkOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/oneToOneNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

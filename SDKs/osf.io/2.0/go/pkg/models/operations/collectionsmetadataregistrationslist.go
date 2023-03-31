@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CollectionsMetadataRegistrationsListPathParams struct {
+type CollectionsMetadataRegistrationsListRequest struct {
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsMetadataRegistrationsListRequest struct {
-	PathParams CollectionsMetadataRegistrationsListPathParams
 }
 
 type CollectionsMetadataRegistrationsListResponse struct {

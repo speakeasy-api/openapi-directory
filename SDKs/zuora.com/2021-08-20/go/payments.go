@@ -40,14 +40,14 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // If you have the Invoice Settlement feature enabled, overpayments applied to credit balance cannot be deleted.
 func (s *payments) DELETEPayment(ctx context.Context, request operations.DELETEPaymentRequest) (*operations.DELETEPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *payments) DELETEPayment(ctx context.Context, request operations.DELETEP
 // Retrieves the information about one specific payment.
 func (s *payments) GETPayment(ctx context.Context, request operations.GETPaymentRequest) (*operations.GETPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -142,14 +142,14 @@ func (s *payments) GETPayment(ctx context.Context, request operations.GETPayment
 // Retrieves the information about a specific payment part item. A payment part item is a single line item in a payment part. A payment part can consist of several different types of items.
 func (s *payments) GETPaymentItemPart(ctx context.Context, request operations.GETPaymentItemPartRequest) (*operations.GETPaymentItemPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -193,16 +193,16 @@ func (s *payments) GETPaymentItemPart(ctx context.Context, request operations.GE
 // Retrieves the information about all items of a payment part. A payment part item is a single line item in a payment part. A payment part can consist of several different types of items.
 func (s *payments) GETPaymentItemParts(ctx context.Context, request operations.GETPaymentItemPartsRequest) (*operations.GETPaymentItemPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}/itemparts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}/itemparts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -248,14 +248,14 @@ func (s *payments) GETPaymentItemParts(ctx context.Context, request operations.G
 // Retrieves the information about a specific payment part. A payment can consist of an unapplied part, and several parts applied to invoices and debit memos.
 func (s *payments) GETPaymentPart(ctx context.Context, request operations.GETPaymentPartRequest) (*operations.GETPaymentPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts/{partid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -299,16 +299,16 @@ func (s *payments) GETPaymentPart(ctx context.Context, request operations.GETPay
 // Retrieves the information about all parts of a payment. A payment can consist of an unapplied part, and several parts applied to invoices and debit memos. You can use this operation to get all the applied and unapplied portions of a payment.
 func (s *payments) GETPaymentParts(ctx context.Context, request operations.GETPaymentPartsRequest) (*operations.GETPaymentPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/parts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -375,9 +375,9 @@ func (s *payments) GETRetrieveAllPayments(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -421,14 +421,14 @@ func (s *payments) GETRetrieveAllPayments(ctx context.Context, request operation
 // Deletes a payment. Only payments with the Cancelled status can be deleted.
 func (s *payments) ObjectDELETEPayment(ctx context.Context, request operations.ObjectDELETEPaymentRequest) (*operations.ObjectDELETEPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -482,14 +482,14 @@ func (s *payments) ObjectDELETEPayment(ctx context.Context, request operations.O
 // Retrieves the information about one specific payment.
 func (s *payments) ObjectGETPayment(ctx context.Context, request operations.ObjectGETPaymentRequest) (*operations.ObjectGETPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -557,7 +557,7 @@ func (s *payments) ObjectPOSTPayment(ctx context.Context, request operations.Obj
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/payment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreatePayment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -572,9 +572,9 @@ func (s *payments) ObjectPOSTPayment(ctx context.Context, request operations.Obj
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -642,9 +642,9 @@ func (s *payments) ObjectPOSTPayment(ctx context.Context, request operations.Obj
 // Updates a payment.
 func (s *payments) ObjectPUTPayment(ctx context.Context, request operations.ObjectPUTPaymentRequest) (*operations.ObjectPUTPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyPayment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -659,9 +659,9 @@ func (s *payments) ObjectPUTPayment(ctx context.Context, request operations.Obje
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -740,7 +740,7 @@ func (s *payments) POSTCreatePayment(ctx context.Context, request operations.POS
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreatePaymentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -755,7 +755,7 @@ func (s *payments) POSTCreatePayment(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -803,9 +803,9 @@ func (s *payments) POSTCreatePayment(ctx context.Context, request operations.POS
 // For a use case of this operation, see [Refund processing](https://www.zuora.com/developer/api-guides/#Refund-processing).
 func (s *payments) POSTRefundPayment(ctx context.Context, request operations.POSTRefundPaymentRequest) (*operations.POSTRefundPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/refunds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/refunds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostRefundType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -820,7 +820,7 @@ func (s *payments) POSTRefundPayment(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -872,9 +872,9 @@ func (s *payments) POSTRefundPayment(ctx context.Context, request operations.POS
 // For more information, see [Apply Unapplied Payments to Invoices and Debit Memos](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Apply_Unapplied_Payments_to_Invoices_and_Debit_Memos).
 func (s *payments) PUTApplyPayment(ctx context.Context, request operations.PUTApplyPaymentRequest) (*operations.PUTApplyPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/apply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/apply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplyPaymentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -889,7 +889,7 @@ func (s *payments) PUTApplyPayment(ctx context.Context, request operations.PUTAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -935,14 +935,14 @@ func (s *payments) PUTApplyPayment(ctx context.Context, request operations.PUTAp
 // If you have the Invoice Settlement feature enabled, overpayments applied to credit balance cannot be cancelled.
 func (s *payments) PUTCancelPayment(ctx context.Context, request operations.PUTCancelPaymentRequest) (*operations.PUTCancelPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -988,9 +988,9 @@ func (s *payments) PUTCancelPayment(ctx context.Context, request operations.PUTC
 // For more information, see [Transfer Unapplied Payments](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Transfer_Unapplied_Payments).
 func (s *payments) PUTTransferPayment(ctx context.Context, request operations.PUTTransferPaymentRequest) (*operations.PUTTransferPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/transfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/transfer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferPaymentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1005,7 +1005,7 @@ func (s *payments) PUTTransferPayment(ctx context.Context, request operations.PU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1058,9 +1058,9 @@ func (s *payments) PUTTransferPayment(ctx context.Context, request operations.PU
 // For more information, see [Unapply Payments from Invoices and Debit Memos](https://knowledgecenter.zuora.com/CB_Billing/Invoice_Settlement/A_Unapplied_Payments/Management_of_Unapplied_Payments/Unapply_Payments_from_Invoices_and_Debit_Memos).
 func (s *payments) PUTUnapplyPayment(ctx context.Context, request operations.PUTUnapplyPaymentRequest) (*operations.PUTUnapplyPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/unapply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}/unapply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnapplyPaymentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1075,7 +1075,7 @@ func (s *payments) PUTUnapplyPayment(ctx context.Context, request operations.PUT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1119,9 +1119,9 @@ func (s *payments) PUTUnapplyPayment(ctx context.Context, request operations.PUT
 // Updates a payment.
 func (s *payments) PUTUpdatePayment(ctx context.Context, request operations.PUTUpdatePaymentRequest) (*operations.PUTUpdatePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{paymentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePaymentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1136,7 +1136,7 @@ func (s *payments) PUTUpdatePayment(ctx context.Context, request operations.PUTU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

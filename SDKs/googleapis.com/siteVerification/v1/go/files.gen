@@ -20,7 +20,6 @@ pkg/models/operations/siteverificationwebresourcelist.go
 pkg/models/operations/siteverificationwebresourcepatch.go
 pkg/models/operations/siteverificationwebresourceupdate.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/siteverificationwebresourceresource.go
 pkg/models/shared/siteverificationwebresourcegettokenresponse.go
 pkg/models/shared/siteverificationwebresourcegettokenrequest.go

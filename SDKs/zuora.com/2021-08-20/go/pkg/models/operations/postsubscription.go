@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTSubscriptionHeaders struct {
+type POSTSubscriptionRequest struct {
+	POSTSubscriptionType shared.POSTSubscriptionType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -25,11 +26,6 @@ type POSTSubscriptionHeaders struct {
 	// * targetDate
 	//
 	ZuoraVersion *string `header:"style=simple,explode=false,name=zuora-version"`
-}
-
-type POSTSubscriptionRequest struct {
-	Headers POSTSubscriptionHeaders
-	Request shared.POSTSubscriptionType `request:"mediaType=application/json"`
 }
 
 type POSTSubscriptionResponse struct {

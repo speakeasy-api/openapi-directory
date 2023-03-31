@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsReadPathParams struct {
+type TagsReadRequest struct {
 	// A unique integer value identifying this Tag.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TagsReadRequest struct {
-	PathParams TagsReadPathParams
 }
 
 type TagsReadResponse struct {

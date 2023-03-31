@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDocumentServerList = []string{
@@ -12,20 +11,15 @@ var DeleteDocumentServerList = []string{
 }
 
 type DeleteDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteDocumentPathParams struct {
+type DeleteDocumentRequest struct {
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Document resource to delete. Can be the Document resource's `sid` or its `unique_name`.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteDocumentRequest struct {
-	PathParams DeleteDocumentPathParams
-	Security   DeleteDocumentSecurity
-	ServerURL  *string
 }
 
 type DeleteDocumentResponse struct {

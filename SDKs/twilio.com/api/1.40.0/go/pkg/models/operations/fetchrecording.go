@@ -12,26 +12,17 @@ var FetchRecordingServerList = []string{
 }
 
 type FetchRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRecordingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to fetch.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the Recording resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRecordingQueryParams struct {
-	// A boolean parameter indicating whether to retrieve soft deleted recordings or not. Recordings metadata are kept after deletion for a retention period of 40 days.
-	IncludeSoftDeleted *bool `queryParam:"style=form,explode=true,name=IncludeSoftDeleted"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchRecordingRequest struct {
-	PathParams  FetchRecordingPathParams
-	QueryParams FetchRecordingQueryParams
-	Security    FetchRecordingSecurity
-	ServerURL   *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to fetch.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// A boolean parameter indicating whether to retrieve soft deleted recordings or not. Recordings metadata are kept after deletion for a retention period of 40 days.
+	IncludeSoftDeleted *bool `queryParam:"style=form,explode=true,name=IncludeSoftDeleted"`
+	// The Twilio-provided string that uniquely identifies the Recording resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchRecordingResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurity struct {
@@ -22,14 +22,10 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecuri
 	Option2 *ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreatePathParams struct {
-	// Required. Parent resource identifying the connection for which the peered DNS domain will be created in the format: `services/{service}/projects/{project}/global/networks/{network}` {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is the number of the project that contains the service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC network.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateQueryParams struct {
+type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PeeredDNSDomain *shared.PeeredDNSDomain `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateQueryP
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Parent resource identifying the connection for which the peered DNS domain will be created in the format: `services/{service}/projects/{project}/global/networks/{network}` {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is the number of the project that contains the service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC network.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateRequest struct {
-	PathParams  ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreatePathParams
-	QueryParams ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateQueryParams
-	Request     *shared.PeeredDNSDomain `request:"mediaType=application/json"`
-	Security    ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurity
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateResponse struct {

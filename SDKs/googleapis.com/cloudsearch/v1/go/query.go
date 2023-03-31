@@ -33,11 +33,11 @@ func newQuery(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudsearchQuerySearch - The Cloud Search Query API provides the search method, which returns the most relevant results from a user query. The results can come from Google Workspace apps, such as Gmail or Google Drive, or they can come from data that you have indexed from a third party. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
-func (s *query) CloudsearchQuerySearch(ctx context.Context, request operations.CloudsearchQuerySearchRequest) (*operations.CloudsearchQuerySearchResponse, error) {
+func (s *query) CloudsearchQuerySearch(ctx context.Context, request operations.CloudsearchQuerySearchRequest, security operations.CloudsearchQuerySearchSecurity) (*operations.CloudsearchQuerySearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/query/search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *query) CloudsearchQuerySearch(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *query) CloudsearchQuerySearch(ctx context.Context, request operations.C
 }
 
 // CloudsearchQuerySourcesList - Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
-func (s *query) CloudsearchQuerySourcesList(ctx context.Context, request operations.CloudsearchQuerySourcesListRequest) (*operations.CloudsearchQuerySourcesListResponse, error) {
+func (s *query) CloudsearchQuerySourcesList(ctx context.Context, request operations.CloudsearchQuerySourcesListRequest, security operations.CloudsearchQuerySourcesListSecurity) (*operations.CloudsearchQuerySourcesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/query/sources"
 
@@ -97,11 +97,11 @@ func (s *query) CloudsearchQuerySourcesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *query) CloudsearchQuerySourcesList(ctx context.Context, request operati
 }
 
 // CloudsearchQuerySuggest - Provides suggestions for autocompleting the query. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
-func (s *query) CloudsearchQuerySuggest(ctx context.Context, request operations.CloudsearchQuerySuggestRequest) (*operations.CloudsearchQuerySuggestResponse, error) {
+func (s *query) CloudsearchQuerySuggest(ctx context.Context, request operations.CloudsearchQuerySuggestRequest, security operations.CloudsearchQuerySuggestSecurity) (*operations.CloudsearchQuerySuggestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/query/suggest"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuggestRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *query) CloudsearchQuerySuggest(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

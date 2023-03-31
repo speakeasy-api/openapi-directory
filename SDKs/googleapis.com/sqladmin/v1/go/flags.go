@@ -33,7 +33,7 @@ func newFlags(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // SQLFlagsList - Lists all available database flags for Cloud SQL instances.
-func (s *flags) SQLFlagsList(ctx context.Context, request operations.SQLFlagsListRequest) (*operations.SQLFlagsListResponse, error) {
+func (s *flags) SQLFlagsList(ctx context.Context, request operations.SQLFlagsListRequest, security operations.SQLFlagsListSecurity) (*operations.SQLFlagsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/flags"
 
@@ -42,11 +42,11 @@ func (s *flags) SQLFlagsList(ctx context.Context, request operations.SQLFlagsLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveARealTimeDecisionPathParams struct {
-	RealTimeDecisionID string `pathParam:"style=simple,explode=false,name=real_time_decision_id"`
-}
-
 type RetrieveARealTimeDecisionRequest struct {
-	PathParams RetrieveARealTimeDecisionPathParams
+	RealTimeDecisionID string `pathParam:"style=simple,explode=false,name=real_time_decision_id"`
 }
 
 type RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum string

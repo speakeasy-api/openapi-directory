@@ -3,30 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AbortMultipartUploadRequest(
-    path_params=operations.AbortMultipartUploadPathParams(
-        account_id="similique",
-        upload_id="recusandae",
-        vault_name="error",
-    ),
-    headers=operations.AbortMultipartUploadHeaders(
-        x_amz_algorithm="hic",
-        x_amz_content_sha256="atque",
-        x_amz_credential="rerum",
-        x_amz_date="voluptates",
-        x_amz_security_token="iste",
-        x_amz_signature="reiciendis",
-        x_amz_signed_headers="ipsam",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    account_id="illum",
+    upload_id="vel",
+    vault_name="error",
 )
     
 res = s.abort_multipart_upload(req)

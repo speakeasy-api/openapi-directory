@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetLocationsQueryParams struct {
+type GetLocationsRequest struct {
 	// Limits on `time_created`, Marks the start of a range, optionally use `before` to set the end. Result output excludes the given timestamp.
 	After *time.Time `queryParam:"style=form,explode=true,name=after"`
 	// Limits directly on `id`. Marks the start of a range, optionally use `before_id` to set the end. Result output excludes the given `id` value. Please note that `id` is in chronological order.
@@ -51,10 +51,6 @@ type GetLocationsQueryParams struct {
 	Until *string `queryParam:"style=form,explode=true,name=until"`
 	// Limits on `id`. Marks the end of a range, optionally use `from_id` to set the start. Result output includes the given `id` value. Please note that `id` is in chronological order.
 	UntilID *string `queryParam:"style=form,explode=true,name=until_id"`
-}
-
-type GetLocationsRequest struct {
-	QueryParams GetLocationsQueryParams
 }
 
 // GetLocations200ApplicationJSON - A JSON object containing a list of locations

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsCreateColumnPathParams struct {
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
 type ProjectsCreateColumnRequestBody struct {
 	// Name of the project column
 	Name string `json:"name"`
 }
 
 type ProjectsCreateColumnRequest struct {
-	PathParams ProjectsCreateColumnPathParams
-	Request    ProjectsCreateColumnRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsCreateColumnRequestBody `request:"mediaType=application/json"`
+	ProjectID   int64                           `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type ProjectsCreateColumnResponse struct {

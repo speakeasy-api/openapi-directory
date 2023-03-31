@@ -8,10 +8,10 @@ import (
 )
 
 type DeleteEarningByEarningCodeAndStartDateSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteEarningByEarningCodeAndStartDatePathParams struct {
+type DeleteEarningByEarningCodeAndStartDateRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Earning Code
@@ -20,11 +20,6 @@ type DeleteEarningByEarningCodeAndStartDatePathParams struct {
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
 	// Start Date
 	StartDate string `pathParam:"style=simple,explode=false,name=startDate"`
-}
-
-type DeleteEarningByEarningCodeAndStartDateRequest struct {
-	PathParams DeleteEarningByEarningCodeAndStartDatePathParams
-	Security   DeleteEarningByEarningCodeAndStartDateSecurity
 }
 
 type DeleteEarningByEarningCodeAndStartDateResponse struct {

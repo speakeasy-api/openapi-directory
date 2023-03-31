@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAssociationFilterQueryParams struct {
+type GetAssociationFilterRequest struct {
 	// Data source to consider.
 	Datasource *string `queryParam:"style=form,explode=true,name=datasource"`
 	// Type of data structure to return. Can be 'full', 'simple', 'ids', or 'count'.
@@ -52,10 +52,6 @@ type GetAssociationFilterQueryParams struct {
 	TherapeuticArea *string `queryParam:"style=form,explode=true,name=therapeutic_area"`
 	// A UniProt keyword (meaning all the targets linked to that keyword).
 	Uniprotkw *string `queryParam:"style=form,explode=true,name=uniprotkw"`
-}
-
-type GetAssociationFilterRequest struct {
-	QueryParams GetAssociationFilterQueryParams
 }
 
 type GetAssociationFilterResponse struct {

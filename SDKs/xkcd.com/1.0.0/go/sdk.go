@@ -140,7 +140,7 @@ func (s *SDK) GetInfo0JSON(ctx context.Context) (*operations.GetInfo0JSONRespons
 // GetComicIDInfo0JSON - Fetch comics and metadata  by comic id.
 func (s *SDK) GetComicIDInfo0JSON(ctx context.Context, request operations.GetComicIDInfo0JSONRequest) (*operations.GetComicIDInfo0JSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

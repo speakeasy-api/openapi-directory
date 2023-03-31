@@ -4,164 +4,197 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest(
-    security=operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="soluta",
-    ),
-    query_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="iusto",
-        alt="media",
-        callback="eum",
-        connection_profile_id="molestias",
-        fields="nihil",
-        key="ut",
-        oauth_token="qui",
-        pretty_print=False,
-        quota_user="id",
-        request_id="odit",
-        upload_type="maiores",
-        upload_protocol="vel",
-    ),
-    request=shared.ConnectionProfileInput(
+    dollar_xgafv="2",
+    connection_profile_input=shared.ConnectionProfileInput(
         alloydb=shared.AlloyDbConnectionProfileInput(
-            cluster_id="molestias",
+            cluster_id="provident",
             settings=shared.AlloyDbSettingsInput(
                 initial_user=shared.UserPasswordInput(
-                    password="aspernatur",
-                    user="et",
+                    password="distinctio",
+                    user="quibusdam",
                 ),
                 labels={
-                    "rerum": "cupiditate",
-                    "magnam": "cupiditate",
-                    "reiciendis": "ut",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
                 primary_instance_settings=shared.PrimaryInstanceSettingsInput(
                     database_flags={
-                        "repellat": "quibusdam",
-                        "et": "cum",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
                     },
-                    id="aut",
+                    id="delectus",
                     labels={
-                        "voluptatem": "incidunt",
-                        "delectus": "aut",
+                        "suscipit": "molestiae",
+                        "minus": "placeat",
                     },
                     machine_config=shared.MachineConfig(
-                        cpu_count=1865472394289304243,
+                        cpu_count=528895,
                     ),
                 ),
-                vpc_network="unde",
+                vpc_network="iusto",
             ),
         ),
         cloudsql=shared.CloudSQLConnectionProfileInput(
             settings=shared.CloudSQLSettingsInput(
-                activation_policy="SQL_ACTIVATION_POLICY_UNSPECIFIED",
+                activation_policy="ALWAYS",
                 auto_storage_increase=False,
                 availability_type="ZONAL",
-                cmek_key_name="ipsam",
-                collation="tenetur",
-                data_disk_size_gb="sit",
-                data_disk_type="SQL_DATA_DISK_TYPE_UNSPECIFIED",
+                cmek_key_name="recusandae",
+                collation="temporibus",
+                data_disk_size_gb="ab",
+                data_disk_type="PD_SSD",
                 database_flags={
-                    "sapiente": "aut",
-                    "perspiciatis": "qui",
-                    "inventore": "incidunt",
+                    "deserunt": "perferendis",
                 },
-                database_version="MYSQL_5_7",
+                database_version="POSTGRES_9_6",
                 ip_config=shared.SQLIPConfig(
                     authorized_networks=[
                         shared.SQLACLEntry(
-                            expire_time="ut",
-                            label="blanditiis",
-                            ttl="saepe",
-                            value="nesciunt",
+                            expire_time="sapiente",
+                            label="quo",
+                            ttl="odit",
+                            value="at",
                         ),
                         shared.SQLACLEntry(
-                            expire_time="optio",
-                            label="labore",
-                            ttl="illum",
-                            value="omnis",
+                            expire_time="at",
+                            label="maiores",
+                            ttl="molestiae",
+                            value="quod",
+                        ),
+                        shared.SQLACLEntry(
+                            expire_time="quod",
+                            label="esse",
+                            ttl="totam",
+                            value="porro",
+                        ),
+                        shared.SQLACLEntry(
+                            expire_time="dolorum",
+                            label="dicta",
+                            ttl="nam",
+                            value="officia",
                         ),
                     ],
-                    enable_ipv4=True,
-                    private_network="sit",
-                    require_ssl=True,
+                    enable_ipv4=False,
+                    private_network="occaecati",
+                    require_ssl=False,
                 ),
-                root_password="vel",
-                secondary_zone="consequatur",
-                source_id="eius",
-                storage_auto_resize_limit="eaque",
-                tier="quisquam",
+                root_password="fugit",
+                secondary_zone="deleniti",
+                source_id="hic",
+                storage_auto_resize_limit="optio",
+                tier="totam",
                 user_labels={
-                    "sed": "labore",
-                    "nemo": "magnam",
-                    "quam": "libero",
+                    "commodi": "molestiae",
                 },
-                zone="voluptate",
+                zone="modi",
             ),
         ),
-        display_name="sint",
+        display_name="qui",
         error=shared.Status(
-            code=8998435203028350084,
+            code=774234,
             details=[
                 {
-                    "numquam": "a",
-                    "cumque": "et",
+                    "ipsum": "excepturi",
+                    "aspernatur": "perferendis",
                 },
                 {
-                    "adipisci": "non",
+                    "natus": "sed",
+                    "iste": "dolor",
                 },
                 {
-                    "est": "praesentium",
-                    "magnam": "unde",
-                    "nisi": "odio",
+                    "laboriosam": "hic",
+                    "saepe": "fuga",
+                    "in": "corporis",
                 },
             ],
-            message="accusantium",
+            message="iste",
         ),
         labels={
-            "voluptas": "voluptatem",
+            "saepe": "quidem",
+            "architecto": "ipsa",
         },
         mysql=shared.MySQLConnectionProfileInput(
-            cloud_sql_id="maxime",
-            host="maiores",
-            password="eum",
-            port=8700369731861466797,
+            cloud_sql_id="reiciendis",
+            host="est",
+            password="mollitia",
+            port=670638,
             ssl=shared.SslConfigInput(
-                ca_certificate="quis",
-                client_certificate="expedita",
-                client_key="laborum",
+                ca_certificate="dolores",
+                client_certificate="dolorem",
+                client_key="corporis",
             ),
-            username="ipsam",
+            username="Braulio60",
         ),
-        name="voluptate",
-        postgresql=shared.PostgreSQLConnectionProfileInput(
-            cloud_sql_id="neque",
-            host="placeat",
-            password="et",
-            port=4811490384291894312,
-            ssl=shared.SslConfigInput(
-                ca_certificate="qui",
-                client_certificate="nihil",
-                client_key="accusamus",
+        name="nemo",
+        oracle=shared.OracleConnectionProfileInput(
+            database_service="minima",
+            forward_ssh_connectivity=shared.ForwardSSHTunnelConnectivity(
+                hostname="nippy-apse.info",
+                password="culpa",
+                port=988374,
+                private_key="sapiente",
+                username="Bart63",
             ),
-            username="necessitatibus",
+            host="consequuntur",
+            password="repellat",
+            port=653108,
+            private_connectivity=shared.PrivateConnectivity(
+                private_connection="occaecati",
+            ),
+            static_service_ip_connectivity={
+                "commodi": "quam",
+                "molestiae": "velit",
+            },
+            username="Linda.Cronin",
+        ),
+        postgresql=shared.PostgreSQLConnectionProfileInput(
+            cloud_sql_id="laborum",
+            host="animi",
+            password="enim",
+            port=138183,
+            private_service_connect_connectivity=shared.PrivateServiceConnectConnectivity(
+                service_attachment="quo",
+            ),
+            ssl=shared.SslConfigInput(
+                ca_certificate="sequi",
+                client_certificate="tenetur",
+                client_key="ipsam",
+            ),
+            static_ip_connectivity={
+                "possimus": "aut",
+                "quasi": "error",
+                "temporibus": "laborum",
+            },
+            username="Austyn_Witting46",
         ),
         provider="RDS",
-        state="STATE_UNSPECIFIED",
+        state="FAILED",
     ),
+    access_token="ipsa",
+    alt="media",
+    callback="voluptate",
+    connection_profile_id="cum",
+    fields_="perferendis",
+    key="doloremque",
+    oauth_token="reprehenderit",
+    parent="ut",
+    pretty_print=False,
+    quota_user="maiores",
+    request_id="dicta",
+    skip_validation=False,
+    upload_type="corporis",
+    upload_protocol="dolore",
+    validate_only=False,
 )
     
-res = s.projects.datamigration_projects_locations_connection_profiles_create(req)
+res = s.projects.datamigration_projects_locations_connection_profiles_create(req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

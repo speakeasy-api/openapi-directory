@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddBlobRequest struct {
-	// A JSON object containing blob information
-	Request shared.BlobInput `request:"mediaType=application/json"`
-}
-
 type AddBlobResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

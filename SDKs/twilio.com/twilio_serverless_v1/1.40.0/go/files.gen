@@ -51,7 +51,6 @@ pkg/models/operations/updatefunction.go
 pkg/models/operations/updateservice.go
 pkg/models/operations/updatevariable.go
 pkg/models/shared/serverlessv1serviceasset.go
-pkg/models/shared/security.go
 pkg/models/shared/serverlessv1servicebuild.go
 pkg/models/shared/buildenumstatusenum.go
 pkg/models/shared/buildenumruntimeenum.go
@@ -70,3 +69,4 @@ pkg/models/shared/serverlessv1servicefunctionfunctionversionfunctionversionconte
 pkg/models/shared/serverlessv1serviceenvironmentlog.go
 pkg/models/shared/logenumlevelenum.go
 USAGE.md
+pkg/models/operations/options.go

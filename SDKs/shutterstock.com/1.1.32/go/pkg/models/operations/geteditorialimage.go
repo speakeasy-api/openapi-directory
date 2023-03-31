@@ -8,24 +8,15 @@ import (
 )
 
 type GetEditorialImageSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetEditorialImagePathParams struct {
-	// Editorial ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEditorialImageQueryParams struct {
-	// Returns only if the content is available for distribution in a certain country
-	Country string `queryParam:"style=form,explode=true,name=country"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetEditorialImageRequest struct {
-	PathParams  GetEditorialImagePathParams
-	QueryParams GetEditorialImageQueryParams
-	Security    GetEditorialImageSecurity
+	// Returns only if the content is available for distribution in a certain country
+	Country string `queryParam:"style=form,explode=true,name=country"`
+	// Editorial ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetEditorialImageResponse struct {

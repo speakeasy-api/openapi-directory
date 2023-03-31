@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetBng2latlongEastingNorthingRequest(
-    path_params=operations.GetBng2latlongEastingNorthingPathParams(
-        easting=7711782718440894490,
-        northing=2018122545907442435,
-    ),
+    easting=548814,
+    northing=592845,
 )
     
 res = s.get_bng2latlong_easting_northing_(req)

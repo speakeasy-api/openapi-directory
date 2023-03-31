@@ -45,7 +45,7 @@ func (s *media) GetResourcesMediaJSON(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,7 +97,7 @@ func (s *media) GetResourcesMediaFeaturedJSON(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -142,14 +142,14 @@ func (s *media) GetResourcesMediaFeaturedJSON(ctx context.Context, request opera
 // Get the media with the highest ratings.
 func (s *media) GetResourcesMediaMostPopularMediaFormat(ctx context.Context, request operations.GetResourcesMediaMostPopularMediaFormatRequest) (*operations.GetResourcesMediaMostPopularMediaFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/mostPopularMedia.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/mostPopularMedia.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -201,7 +201,7 @@ func (s *media) GetResourcesMediaSearchResultsJSON(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -246,7 +246,7 @@ func (s *media) GetResourcesMediaSearchResultsJSON(ctx context.Context, request 
 // Information about a specific media item
 func (s *media) GetResourcesMediaIDJSON(ctx context.Context, request operations.GetResourcesMediaIDJSONRequest) (*operations.GetResourcesMediaIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -294,14 +294,14 @@ func (s *media) GetResourcesMediaIDJSON(ctx context.Context, request operations.
 // The actual media content (html, image, etc...)
 func (s *media) GetResourcesMediaIDContent(ctx context.Context, request operations.GetResourcesMediaIDContentRequest) (*operations.GetResourcesMediaIDContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -347,14 +347,14 @@ func (s *media) GetResourcesMediaIDContent(ctx context.Context, request operatio
 // Get the javascript or iframe embed code for this item (to embed it on a web page).
 func (s *media) GetResourcesMediaIDEmbedJSON(ctx context.Context, request operations.GetResourcesMediaIDEmbedJSONRequest) (*operations.GetResourcesMediaIDEmbedJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/embed.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/embed.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -400,7 +400,7 @@ func (s *media) GetResourcesMediaIDEmbedJSON(ctx context.Context, request operat
 // Get the jpg preview of the content item where applicable.
 func (s *media) GetResourcesMediaIDPreviewJpg(ctx context.Context, request operations.GetResourcesMediaIDPreviewJpgRequest) (*operations.GetResourcesMediaIDPreviewJpgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/preview.jpg", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/preview.jpg", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -448,14 +448,14 @@ func (s *media) GetResourcesMediaIDPreviewJpg(ctx context.Context, request opera
 // Get the media related to the current media item.
 func (s *media) GetResourcesMediaIDRelatedMediaFormat(ctx context.Context, request operations.GetResourcesMediaIDRelatedMediaFormatRequest) (*operations.GetResourcesMediaIDRelatedMediaFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/relatedMedia.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/relatedMedia.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -500,14 +500,14 @@ func (s *media) GetResourcesMediaIDRelatedMediaFormat(ctx context.Context, reque
 // Get syndicated content.
 func (s *media) GetResourcesMediaIDSyndicateFormat(ctx context.Context, request operations.GetResourcesMediaIDSyndicateFormatRequest) (*operations.GetResourcesMediaIDSyndicateFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/syndicate.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/syndicate.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -552,7 +552,7 @@ func (s *media) GetResourcesMediaIDSyndicateFormat(ctx context.Context, request 
 // Get the jpg thumbnail of the content item where applicable.
 func (s *media) GetResourcesMediaIDThumbnailJpg(ctx context.Context, request operations.GetResourcesMediaIDThumbnailJpgRequest) (*operations.GetResourcesMediaIDThumbnailJpgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/thumbnail.jpg", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/thumbnail.jpg", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -600,7 +600,7 @@ func (s *media) GetResourcesMediaIDThumbnailJpg(ctx context.Context, request ope
 // Youtube meta-data for a video item.
 func (s *media) GetResourcesMediaIDYoutubeMetaDataJSON(ctx context.Context, request operations.GetResourcesMediaIDYoutubeMetaDataJSONRequest) (*operations.GetResourcesMediaIDYoutubeMetaDataJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/youtubeMetaData.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/media/{id}/youtubeMetaData.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

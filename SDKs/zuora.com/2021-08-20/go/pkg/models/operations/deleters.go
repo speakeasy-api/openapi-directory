@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETERSPathParams struct {
-	// Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule:
-	// * Must be using a custom unlimited recognition rule.
-	// * Cannot have any revenue in a closed accounting period.
-	// * Cannot be included in a summary journal entry.
-	// * Cannot have a revenue schedule date in a closed accounting period.
-	//
-	RsNumber string `pathParam:"style=simple,explode=false,name=rs-number"`
-}
-
-type DELETERSHeaders struct {
+type DELETERSRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -26,11 +16,13 @@ type DELETERSHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETERSRequest struct {
-	PathParams DELETERSPathParams
-	Headers    DELETERSHeaders
+	// Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule:
+	// * Must be using a custom unlimited recognition rule.
+	// * Cannot have any revenue in a closed accounting period.
+	// * Cannot be included in a summary journal entry.
+	// * Cannot have a revenue schedule date in a closed accounting period.
+	//
+	RsNumber string `pathParam:"style=simple,explode=false,name=rs-number"`
 }
 
 type DELETERSResponse struct {

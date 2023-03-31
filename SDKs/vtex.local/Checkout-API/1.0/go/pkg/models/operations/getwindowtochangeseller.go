@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetWindowToChangeSellerHeaders struct {
+type GetWindowToChangeSellerRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetWindowToChangeSellerRequest struct {
-	Headers GetWindowToChangeSellerHeaders
 }
 
 type GetWindowToChangeSellerResponse struct {

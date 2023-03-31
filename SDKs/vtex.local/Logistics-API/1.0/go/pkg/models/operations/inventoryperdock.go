@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type InventoryperdockPathParams struct {
-	DockID string `pathParam:"style=simple,explode=false,name=dockId"`
-	SkuID  string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type InventoryperdockHeaders struct {
+type InventoryperdockRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type InventoryperdockRequest struct {
-	PathParams InventoryperdockPathParams
-	Headers    InventoryperdockHeaders
+	DockID      string `pathParam:"style=simple,explode=false,name=dockId"`
+	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 type Inventoryperdock200ApplicationJSON struct {

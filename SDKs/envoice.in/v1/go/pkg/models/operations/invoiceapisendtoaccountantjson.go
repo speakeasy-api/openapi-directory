@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvoiceAPISendToAccountantJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type InvoiceAPISendToAccountantJSONRequest struct {
-	Headers InvoiceAPISendToAccountantJSONHeaders
-	Request shared.SendInvoiceToAccountantAPIModel `request:"mediaType=application/json"`
+	SendInvoiceToAccountantAPIModel shared.SendInvoiceToAccountantAPIModel `request:"mediaType=application/json"`
+	XAuthKey                        string                                 `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret                     string                                 `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type InvoiceAPISendToAccountantJSONResponse struct {

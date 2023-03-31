@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFloatingIpsIDPathParams struct {
+type DeleteFloatingIpsIDRequest struct {
 	// ID of the Floating IP
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFloatingIpsIDRequest struct {
-	PathParams DeleteFloatingIpsIDPathParams
 }
 
 type DeleteFloatingIpsIDResponse struct {

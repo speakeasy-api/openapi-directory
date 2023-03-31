@@ -108,7 +108,9 @@ func (e *SearchUniquePodcastsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchQueryParams struct {
+type SearchRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Maximum number of episodes. Applicable only when type parameter is **podcast**.
 	//
 	EpisodeCountMax *int64 `queryParam:"style=form,explode=true,name=episode_count_max"`
@@ -173,16 +175,6 @@ type SearchQueryParams struct {
 	// Minimum update frequency in hours (how frequently does a podcast release a new episode). For example, if you want to find "weekly" podcasts, then you can set **update_freq_min**=144 hours (or 6 days) and **update_freq_max**=192 hours (or 8 days). Applicable only when type parameter is **podcast**.
 	//
 	UpdateFreqMin *int64 `queryParam:"style=form,explode=true,name=update_freq_min"`
-}
-
-type SearchHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type SearchRequest struct {
-	QueryParams SearchQueryParams
-	Headers     SearchHeaders
 }
 
 type SearchResponse struct {

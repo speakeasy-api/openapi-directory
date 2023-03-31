@@ -44,7 +44,7 @@ func (s *spin) GetSpins(ctx context.Context, request operations.GetSpinsRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,14 +92,14 @@ func (s *spin) GetSpins(ctx context.Context, request operations.GetSpinsRequest)
 // GetSpinsID - Get a Spin by id
 func (s *spin) GetSpinsID(ctx context.Context, request operations.GetSpinsIDRequest) (*operations.GetSpinsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spins/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spins/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -163,7 +163,7 @@ func (s *spin) GetSpinsID(ctx context.Context, request operations.GetSpinsIDRequ
 
 // PostSpins - Log a Spin
 // An endpoint for automation systems to log spins into the spin table.
-func (s *spin) PostSpins(ctx context.Context, request operations.PostSpinsRequest) (*operations.PostSpinsResponse, error) {
+func (s *spin) PostSpins(ctx context.Context, request operations.PostSpinsRequestBody) (*operations.PostSpinsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/spins"
 

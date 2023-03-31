@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETGeneBySymbolUsingGETPathParams struct {
+type GETGeneBySymbolUsingGETRequest struct {
 	// Species type key.  A list of species type keys can be found in the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
 	// Gene Symbol
 	Symbol string `pathParam:"style=simple,explode=false,name=symbol"`
-}
-
-type GETGeneBySymbolUsingGETRequest struct {
-	PathParams GETGeneBySymbolUsingGETPathParams
 }
 
 type GETGeneBySymbolUsingGETResponse struct {

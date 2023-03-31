@@ -11,7 +11,7 @@ import (
 )
 
 type GetCallsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetCallsOrderEnum - Either ascending or  descending order.
@@ -89,7 +89,7 @@ func (e *GetCallsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCallsQueryParams struct {
+type GetCallsRequest struct {
 	// Return all the records associated with a specific conversation.
 	ConversationUUID *string `queryParam:"style=form,explode=true,name=conversation_uuid"`
 	// Return the records that occurred before this point in time
@@ -104,11 +104,6 @@ type GetCallsQueryParams struct {
 	RecordIndex *int64 `queryParam:"style=form,explode=true,name=record_index"`
 	// Filter by call status
 	Status *GetCallsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetCallsRequest struct {
-	QueryParams GetCallsQueryParams
-	Security    GetCallsSecurity
 }
 
 type GetCallsResponse struct {

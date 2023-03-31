@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ConnectionsRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 // Connections200ApplicationJSONLastHandshake - Structure holding detailed information about the connection
 type Connections200ApplicationJSONLastHandshake struct {
 	// Agent name

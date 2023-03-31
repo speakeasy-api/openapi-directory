@@ -12,30 +12,21 @@ var ListSipCredentialServerList = []string{
 }
 
 type ListSipCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSipCredentialPathParams struct {
+type ListSipCredentialRequest struct {
 	// The unique id of the Account that is responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The unique id that identifies the credential list that contains the desired credentials.
 	CredentialListSid string `pathParam:"style=simple,explode=false,name=CredentialListSid"`
-}
-
-type ListSipCredentialQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSipCredentialRequest struct {
-	PathParams  ListSipCredentialPathParams
-	QueryParams ListSipCredentialQueryParams
-	Security    ListSipCredentialSecurity
-	ServerURL   *string
 }
 
 // ListSipCredentialListSipCredentialResponse - OK

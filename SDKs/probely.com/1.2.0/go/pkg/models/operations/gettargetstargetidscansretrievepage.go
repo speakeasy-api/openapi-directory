@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTargetsTargetIDScansRetrievePagePathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScansRetrievePageQueryParams struct {
+type GetTargetsTargetIDScansRetrievePageRequest struct {
 	// Date
 	Date types.Date `queryParam:"style=form,explode=true,name=date"`
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
-}
-
-type GetTargetsTargetIDScansRetrievePageRequest struct {
-	PathParams  GetTargetsTargetIDScansRetrievePagePathParams
-	QueryParams GetTargetsTargetIDScansRetrievePageQueryParams
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // GetTargetsTargetIDScansRetrievePage404ApplicationJSON - Not found

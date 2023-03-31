@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type CodespacesCreateOrUpdateRepoSecretPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type CodespacesCreateOrUpdateRepoSecretRequestBody struct {
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-a-repository-public-key) endpoint.
 	EncryptedValue *string `json:"encrypted_value,omitempty"`
@@ -23,8 +14,13 @@ type CodespacesCreateOrUpdateRepoSecretRequestBody struct {
 }
 
 type CodespacesCreateOrUpdateRepoSecretRequest struct {
-	PathParams CodespacesCreateOrUpdateRepoSecretPathParams
-	Request    CodespacesCreateOrUpdateRepoSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesCreateOrUpdateRepoSecretRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type CodespacesCreateOrUpdateRepoSecretResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppliedInventoriesTagsForServiceOfferingPathParams struct {
+type AppliedInventoriesTagsForServiceOfferingRequest struct {
+	// Parameters defining input data for computing inventories
+	AppliedInventoriesParametersServicePlan shared.AppliedInventoriesParametersServicePlan `request:"mediaType=application/json"`
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AppliedInventoriesTagsForServiceOfferingRequest struct {
-	PathParams AppliedInventoriesTagsForServiceOfferingPathParams
-	// Parameters defining input data for computing inventories
-	Request shared.AppliedInventoriesParametersServicePlan `request:"mediaType=application/json"`
 }
 
 type AppliedInventoriesTagsForServiceOfferingResponse struct {

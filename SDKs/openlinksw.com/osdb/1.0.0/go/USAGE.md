@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.ActionHelpRequest{
-        PathParams: operations.ActionHelpPathParams{
-            ActionID: "corrupti",
-            ServiceID: "provident",
-        },
+        ActionID: "corrupti",
+        ServiceID: "provident",
     }
 
     ctx := context.Background()

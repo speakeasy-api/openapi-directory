@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01SoundTouchSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01SoundTouchRequest struct {
-	// POST parameters
-	Request  *shared.SoundTouchParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01SoundTouchSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01SoundTouchResponse struct {

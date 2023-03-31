@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupMembersPathParams struct {
-	// The ID of the group.
-	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 // GetGroupMembersDirectionEnum - The sort direction of the results.
 type GetGroupMembersDirectionEnum string
 
@@ -83,11 +78,13 @@ func (e *GetGroupMembersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGroupMembersQueryParams struct {
+type GetGroupMembersRequest struct {
 	// The sort direction of the results.
 	Direction *GetGroupMembersDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
 	Filter *GetGroupMembersFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The ID of the group.
+	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
@@ -96,11 +93,6 @@ type GetGroupMembersQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetGroupMembersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetGroupMembersRequest struct {
-	PathParams  GetGroupMembersPathParams
-	QueryParams GetGroupMembersQueryParams
 }
 
 type GetGroupMembersResponse struct {

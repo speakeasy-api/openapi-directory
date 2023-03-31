@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReactionsDeleteForIssuePathParams struct {
+type ReactionsDeleteForIssueRequest struct {
 	// The number that identifies the issue.
 	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -15,10 +15,6 @@ type ReactionsDeleteForIssuePathParams struct {
 	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReactionsDeleteForIssueRequest struct {
-	PathParams ReactionsDeleteForIssuePathParams
 }
 
 type ReactionsDeleteForIssueResponse struct {

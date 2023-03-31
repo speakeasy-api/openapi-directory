@@ -3,20 +3,16 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteProjectUsernameProjectBuildCacheRequest(
-    path_params=operations.DeleteProjectUsernameProjectBuildCachePathParams(
-        project="necessitatibus",
-        username="quam",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.DeleteProjectUsernameProjectBuildCacheRequest(
+    project="corrupti",
+    username="Larue_Rau85",
 )
     
 res = s.delete_project_username_project_build_cache(req)

@@ -8,25 +8,16 @@ import (
 )
 
 type GetAPIV2CddriveFoldersFolderIDItemsSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAPIV2CddriveFoldersFolderIDItemsPathParams struct {
+type GetAPIV2CddriveFoldersFolderIDItemsRequest struct {
 	// The ID of the folder to get. Folder ID 0 represents the uppermost CD drive folder.
 	FolderID int64 `pathParam:"style=simple,explode=false,name=folder-id"`
-}
-
-type GetAPIV2CddriveFoldersFolderIDItemsQueryParams struct {
 	// The maximum number of items to return in the response.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// The offset into the items to begin the response.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetAPIV2CddriveFoldersFolderIDItemsRequest struct {
-	PathParams  GetAPIV2CddriveFoldersFolderIDItemsPathParams
-	QueryParams GetAPIV2CddriveFoldersFolderIDItemsQueryParams
-	Security    GetAPIV2CddriveFoldersFolderIDItemsSecurity
 }
 
 // GetAPIV2CddriveFoldersFolderIDItems200ApplicationJSON - The folder information.

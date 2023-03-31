@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxTransferSweepSimulateRequest struct {
-	Request shared.SandboxTransferSweepSimulateRequest `request:"mediaType=application/json"`
-}
 
 type SandboxTransferSweepSimulateResponse struct {
 	ContentType string

@@ -35,16 +35,16 @@ func newMetaPub(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetAPIV2MetapubProgramInformationBatchBatchID - Get an EPG batch operation.
 // Gets the batch information which can be used to check the status of the operation or retrieve more details if the batch fails.
-func (s *metaPub) GetAPIV2MetapubProgramInformationBatchBatchID(ctx context.Context, request operations.GetAPIV2MetapubProgramInformationBatchBatchIDRequest) (*operations.GetAPIV2MetapubProgramInformationBatchBatchIDResponse, error) {
+func (s *metaPub) GetAPIV2MetapubProgramInformationBatchBatchID(ctx context.Context, request operations.GetAPIV2MetapubProgramInformationBatchBatchIDRequest, security operations.GetAPIV2MetapubProgramInformationBatchBatchIDSecurity) (*operations.GetAPIV2MetapubProgramInformationBatchBatchIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/metapub/program-information/batch/{batch-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/metapub/program-information/batch/{batch-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *metaPub) GetAPIV2MetapubProgramInformationBatchBatchID(ctx context.Cont
 // A batch operation must be explicitly created rather than the server attempting to detect new metadata in order to allow for all the content to be uploaded including any supporting content like images. A batch operation is accepted and queued for asynchronous processing at a later time. A client can poll the batch periodically to determine when it completes and the resulting state.
 //
 // /api/epg-cd-mapping.html - Find RadioDns to ContentDepot Mapping here
-func (s *metaPub) PostAPIV2MetapubProgramInformationBatch(ctx context.Context, request operations.PostAPIV2MetapubProgramInformationBatchRequest) (*operations.PostAPIV2MetapubProgramInformationBatchResponse, error) {
+func (s *metaPub) PostAPIV2MetapubProgramInformationBatch(ctx context.Context, request operations.PostAPIV2MetapubProgramInformationBatchRequestBody, security operations.PostAPIV2MetapubProgramInformationBatchSecurity) (*operations.PostAPIV2MetapubProgramInformationBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/metapub/program-information/batch"
 
@@ -103,7 +103,7 @@ func (s *metaPub) PostAPIV2MetapubProgramInformationBatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

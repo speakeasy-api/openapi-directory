@@ -8,7 +8,7 @@ import (
 )
 
 type CreateGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateGroupRequestBody struct {
@@ -16,11 +16,6 @@ type CreateGroupRequestBody struct {
 	Description *string `json:"description,omitempty"`
 	// The name of the new group.
 	Name string `json:"name"`
-}
-
-type CreateGroupRequest struct {
-	Request  CreateGroupRequestBody `request:"mediaType=application/vnd.vimeo.group+json"`
-	Security CreateGroupSecurity
 }
 
 type CreateGroupResponse struct {

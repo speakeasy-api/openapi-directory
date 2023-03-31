@@ -7,11 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLabelByExternalShipmentIDPathParams struct {
+type GetLabelByExternalShipmentIDRequest struct {
 	ExternalShipmentID string `pathParam:"style=simple,explode=false,name=external_shipment_id"`
-}
-
-type GetLabelByExternalShipmentIDQueryParams struct {
 	// There are two different ways to [download a label](https://www.shipengine.com/docs/labels/downloading/):
 	//
 	// |Label Download Type | Description
@@ -20,11 +17,6 @@ type GetLabelByExternalShipmentIDQueryParams struct {
 	// |`inline`            |You will receive the Base64-encoded label as part of the response. No need for a second request to download the label.
 	//
 	LabelDownloadType *shared.LabelDownloadTypeEnum `queryParam:"style=form,explode=true,name=label_download_type"`
-}
-
-type GetLabelByExternalShipmentIDRequest struct {
-	PathParams  GetLabelByExternalShipmentIDPathParams
-	QueryParams GetLabelByExternalShipmentIDQueryParams
 }
 
 type GetLabelByExternalShipmentIDResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSourceAccountsV2QueryParams struct {
+type GetSourceAccountsV2Request struct {
 	// The funding account ID
 	FundingAccountID *string `queryParam:"style=form,explode=true,name=fundingAccountId"`
 	// Page number. Default is 1.
@@ -25,10 +25,6 @@ type GetSourceAccountsV2QueryParams struct {
 	// The supported sort fields are - fundingRef, name, balance
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetSourceAccountsV2Request struct {
-	QueryParams GetSourceAccountsV2QueryParams
 }
 
 type GetSourceAccountsV2Response struct {

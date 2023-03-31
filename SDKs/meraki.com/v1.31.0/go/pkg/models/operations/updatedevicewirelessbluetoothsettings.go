@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceWirelessBluetoothSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceWirelessBluetoothSettingsRequestBody struct {
 	// Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
 	Major *int64 `json:"major,omitempty"`
@@ -20,8 +16,8 @@ type UpdateDeviceWirelessBluetoothSettingsRequestBody struct {
 }
 
 type UpdateDeviceWirelessBluetoothSettingsRequest struct {
-	PathParams UpdateDeviceWirelessBluetoothSettingsPathParams
-	Request    *UpdateDeviceWirelessBluetoothSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceWirelessBluetoothSettingsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                            `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // UpdateDeviceWirelessBluetoothSettings200ApplicationJSON - Successful operation

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // VisionProjectsLocationsFilesAnnotate - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
-func (s *projects) VisionProjectsLocationsFilesAnnotate(ctx context.Context, request operations.VisionProjectsLocationsFilesAnnotateRequest) (*operations.VisionProjectsLocationsFilesAnnotateResponse, error) {
+func (s *projects) VisionProjectsLocationsFilesAnnotate(ctx context.Context, request operations.VisionProjectsLocationsFilesAnnotateRequest, security operations.VisionProjectsLocationsFilesAnnotateSecurity) (*operations.VisionProjectsLocationsFilesAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/files:annotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/files:annotate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) VisionProjectsLocationsFilesAnnotate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) VisionProjectsLocationsFilesAnnotate(ctx context.Context, req
 }
 
 // VisionProjectsLocationsFilesAsyncBatchAnnotate - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
-func (s *projects) VisionProjectsLocationsFilesAsyncBatchAnnotate(ctx context.Context, request operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest) (*operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse, error) {
+func (s *projects) VisionProjectsLocationsFilesAsyncBatchAnnotate(ctx context.Context, request operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest, security operations.VisionProjectsLocationsFilesAsyncBatchAnnotateSecurity) (*operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/files:asyncBatchAnnotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/files:asyncBatchAnnotate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) VisionProjectsLocationsFilesAsyncBatchAnnotate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) VisionProjectsLocationsFilesAsyncBatchAnnotate(ctx context.Co
 }
 
 // VisionProjectsLocationsImagesAnnotate - Run image detection and annotation for a batch of images.
-func (s *projects) VisionProjectsLocationsImagesAnnotate(ctx context.Context, request operations.VisionProjectsLocationsImagesAnnotateRequest) (*operations.VisionProjectsLocationsImagesAnnotateResponse, error) {
+func (s *projects) VisionProjectsLocationsImagesAnnotate(ctx context.Context, request operations.VisionProjectsLocationsImagesAnnotateRequest, security operations.VisionProjectsLocationsImagesAnnotateSecurity) (*operations.VisionProjectsLocationsImagesAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/images:annotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/images:annotate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p2beta1BatchAnnotateImagesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) VisionProjectsLocationsImagesAnnotate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) VisionProjectsLocationsImagesAnnotate(ctx context.Context, re
 }
 
 // VisionProjectsLocationsImagesAsyncBatchAnnotate - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
-func (s *projects) VisionProjectsLocationsImagesAsyncBatchAnnotate(ctx context.Context, request operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest) (*operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse, error) {
+func (s *projects) VisionProjectsLocationsImagesAsyncBatchAnnotate(ctx context.Context, request operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest, security operations.VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity) (*operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/images:asyncBatchAnnotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p2beta1/{parent}/images:asyncBatchAnnotate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p2beta1AsyncBatchAnnotateImagesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) VisionProjectsLocationsImagesAsyncBatchAnnotate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

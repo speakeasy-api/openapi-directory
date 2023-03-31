@@ -8,18 +8,14 @@ import (
 )
 
 type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreatePathParams struct {
-	// Required. The ID of the inventory source group to which the assignment will be assigned.
-	InventorySourceGroupID string `pathParam:"style=simple,explode=false,name=inventorySourceGroupId"`
-}
-
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateQueryParams struct {
+type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AssignedInventorySourceInput *shared.AssignedInventorySourceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// The ID of the advertiser that owns the parent inventory source group. The parent partner will not have access to this assigned inventory source.
@@ -30,6 +26,8 @@ type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateQueryParams 
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The ID of the inventory source group to which the assignment will be assigned.
+	InventorySourceGroupID string `pathParam:"style=simple,explode=false,name=inventorySourceGroupId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -44,13 +42,6 @@ type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateRequest struct {
-	PathParams  DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreatePathParams
-	QueryParams DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateQueryParams
-	Request     *shared.AssignedInventorySourceInput `request:"mediaType=application/json"`
-	Security    DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateSecurity
 }
 
 type DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse struct {

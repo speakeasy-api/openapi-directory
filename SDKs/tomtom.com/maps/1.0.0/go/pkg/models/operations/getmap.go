@@ -8,32 +8,6 @@ import (
 	"net/http"
 )
 
-// GetMapVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberEnum string
-
-const (
-	GetMapVersionNumberEnumOne GetMapVersionNumberEnum = "1"
-)
-
-func (e *GetMapVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberEnum: %s", s)
-	}
-}
-
-type GetMapPathParams struct {
-	// Version of the service to call. The current version is 1
-	VersionNumber GetMapVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 // GetMapFormatEnum - Image format to be returned
 type GetMapFormatEnum string
 
@@ -191,7 +165,28 @@ func (e *GetMapVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMapQueryParams struct {
+// GetMapVersionNumberEnum - Version of the service to call. The current version is 1
+type GetMapVersionNumberEnum string
+
+const (
+	GetMapVersionNumberEnumOne GetMapVersionNumberEnum = "1"
+)
+
+func (e *GetMapVersionNumberEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		*e = GetMapVersionNumberEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMapVersionNumberEnum: %s", s)
+	}
+}
+
+type GetMapRequest struct {
 	// Bounding box in the projection stated in <b>srs</b>
 	// (minLon,minLat,maxLon,maxLat)
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
@@ -215,13 +210,10 @@ type GetMapQueryParams struct {
 	Styles *GetMapStylesEnum `queryParam:"style=form,explode=true,name=styles"`
 	// WMS service version
 	Version GetMapVersionEnum `queryParam:"style=form,explode=true,name=version"`
+	// Version of the service to call. The current version is 1
+	VersionNumber GetMapVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Width of the resulting image, in pixels Maximum value is 2048
 	Width int64 `queryParam:"style=form,explode=true,name=width"`
-}
-
-type GetMapRequest struct {
-	PathParams  GetMapPathParams
-	QueryParams GetMapQueryParams
 }
 
 type GetMapResponse struct {

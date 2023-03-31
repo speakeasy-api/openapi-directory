@@ -8,18 +8,18 @@ import (
 )
 
 type ClassroomUserProfilesGuardiansGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansGetSecurity struct {
@@ -28,14 +28,7 @@ type ClassroomUserProfilesGuardiansGetSecurity struct {
 	Option3 *ClassroomUserProfilesGuardiansGetSecurityOption3 `security:"option"`
 }
 
-type ClassroomUserProfilesGuardiansGetPathParams struct {
-	// The `id` field from a `Guardian`.
-	GuardianID string `pathParam:"style=simple,explode=false,name=guardianId"`
-	// The student whose guardian is being requested. One of the following: * the numeric identifier for the user * the email address of the user * the string literal `"me"`, indicating the requesting user
-	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
-}
-
-type ClassroomUserProfilesGuardiansGetQueryParams struct {
+type ClassroomUserProfilesGuardiansGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +39,8 @@ type ClassroomUserProfilesGuardiansGetQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The `id` field from a `Guardian`.
+	GuardianID string `pathParam:"style=simple,explode=false,name=guardianId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -54,16 +49,12 @@ type ClassroomUserProfilesGuardiansGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The student whose guardian is being requested. One of the following: * the numeric identifier for the user * the email address of the user * the string literal `"me"`, indicating the requesting user
+	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomUserProfilesGuardiansGetRequest struct {
-	PathParams  ClassroomUserProfilesGuardiansGetPathParams
-	QueryParams ClassroomUserProfilesGuardiansGetQueryParams
-	Security    ClassroomUserProfilesGuardiansGetSecurity
 }
 
 type ClassroomUserProfilesGuardiansGetResponse struct {

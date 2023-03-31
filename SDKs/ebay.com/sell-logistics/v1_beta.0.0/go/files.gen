@@ -31,7 +31,6 @@ pkg/models/shared/weight.go
 pkg/models/shared/dimensions.go
 pkg/models/shared/order.go
 pkg/models/shared/shipmentcancellation.go
-pkg/models/shared/security.go
 pkg/models/shared/createshipmentfromquoterequest.go
 pkg/models/shared/shippingquote.go
 pkg/models/shared/error.go

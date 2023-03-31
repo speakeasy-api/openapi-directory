@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVariantAnalyzePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetVariantAnalyzeRequest struct {
-	PathParams GetVariantAnalyzePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetVariantAnalyzeResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetTaxiRanksByIdsPathParams struct {
+type StopPointGetTaxiRanksByIdsRequest struct {
 	// stopPointId is required to get the taxi ranks.
 	StopPointID string `pathParam:"style=simple,explode=false,name=stopPointId"`
-}
-
-type StopPointGetTaxiRanksByIdsRequest struct {
-	PathParams StopPointGetTaxiRanksByIdsPathParams
 }
 
 type StopPointGetTaxiRanksByIdsResponse struct {

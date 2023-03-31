@@ -38,16 +38,16 @@ func newDisputes(defaultClient, securityClient HTTPClient, serverURL, language, 
 //
 // Square debits the disputed amount from the seller’s Square account. If the Square account
 // does not have sufficient funds, Square debits the associated bank account.
-func (s *disputes) AcceptDispute(ctx context.Context, request operations.AcceptDisputeRequest) (*operations.AcceptDisputeResponse, error) {
+func (s *disputes) AcceptDispute(ctx context.Context, request operations.AcceptDisputeRequest, security operations.AcceptDisputeSecurity) (*operations.AcceptDisputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/accept", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,11 +83,11 @@ func (s *disputes) AcceptDispute(ctx context.Context, request operations.AcceptD
 
 // CreateDisputeEvidenceText - CreateDisputeEvidenceText
 // Uploads text to use as evidence for a dispute challenge.
-func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operations.CreateDisputeEvidenceTextRequest) (*operations.CreateDisputeEvidenceTextResponse, error) {
+func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operations.CreateDisputeEvidenceTextRequest, security operations.CreateDisputeEvidenceTextSecurity) (*operations.CreateDisputeEvidenceTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence-text", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence-text", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateDisputeEvidenceTextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -102,7 +102,7 @@ func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,16 +141,16 @@ func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operat
 //
 // Square does not send the bank any evidence that is removed. Also, you cannot remove evidence after
 // submitting it to the bank using [SubmitEvidence](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/submit-evidence).
-func (s *disputes) DeleteDisputeEvidence(ctx context.Context, request operations.DeleteDisputeEvidenceRequest) (*operations.DeleteDisputeEvidenceResponse, error) {
+func (s *disputes) DeleteDisputeEvidence(ctx context.Context, request operations.DeleteDisputeEvidenceRequest, security operations.DeleteDisputeEvidenceSecurity) (*operations.DeleteDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,20 +186,20 @@ func (s *disputes) DeleteDisputeEvidence(ctx context.Context, request operations
 
 // ListDisputeEvidence - ListDisputeEvidence
 // Returns a list of evidence associated with a dispute.
-func (s *disputes) ListDisputeEvidence(ctx context.Context, request operations.ListDisputeEvidenceRequest) (*operations.ListDisputeEvidenceResponse, error) {
+func (s *disputes) ListDisputeEvidence(ctx context.Context, request operations.ListDisputeEvidenceRequest, security operations.ListDisputeEvidenceSecurity) (*operations.ListDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *disputes) ListDisputeEvidence(ctx context.Context, request operations.L
 
 // ListDisputes - ListDisputes
 // Returns a list of disputes associated with a particular account.
-func (s *disputes) ListDisputes(ctx context.Context, request operations.ListDisputesRequest) (*operations.ListDisputesResponse, error) {
+func (s *disputes) ListDisputes(ctx context.Context, request operations.ListDisputesRequest, security operations.ListDisputesSecurity) (*operations.ListDisputesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/disputes"
 
@@ -244,11 +244,11 @@ func (s *disputes) ListDisputes(ctx context.Context, request operations.ListDisp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,16 +284,16 @@ func (s *disputes) ListDisputes(ctx context.Context, request operations.ListDisp
 
 // RetrieveDispute - RetrieveDispute
 // Returns details about a specific dispute.
-func (s *disputes) RetrieveDispute(ctx context.Context, request operations.RetrieveDisputeRequest) (*operations.RetrieveDisputeResponse, error) {
+func (s *disputes) RetrieveDispute(ctx context.Context, request operations.RetrieveDisputeRequest, security operations.RetrieveDisputeSecurity) (*operations.RetrieveDisputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,16 +332,16 @@ func (s *disputes) RetrieveDispute(ctx context.Context, request operations.Retri
 //
 // You must maintain a copy of the evidence you upload if you want to reference it later. You cannot
 // download the evidence after you upload it.
-func (s *disputes) RetrieveDisputeEvidence(ctx context.Context, request operations.RetrieveDisputeEvidenceRequest) (*operations.RetrieveDisputeEvidenceResponse, error) {
+func (s *disputes) RetrieveDisputeEvidence(ctx context.Context, request operations.RetrieveDisputeEvidenceRequest, security operations.RetrieveDisputeEvidenceSecurity) (*operations.RetrieveDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,16 +382,16 @@ func (s *disputes) RetrieveDisputeEvidence(ctx context.Context, request operatio
 // using the [CreateDisputeEvidenceFile](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/create-dispute-evidence-file) and
 // [CreateDisputeEvidenceText](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/create-dispute-evidence-text) endpoints and
 // evidence automatically provided by Square, when available.
-func (s *disputes) SubmitEvidence(ctx context.Context, request operations.SubmitEvidenceRequest) (*operations.SubmitEvidenceResponse, error) {
+func (s *disputes) SubmitEvidence(ctx context.Context, request operations.SubmitEvidenceRequest, security operations.SubmitEvidenceSecurity) (*operations.SubmitEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/submit-evidence", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/submit-evidence", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

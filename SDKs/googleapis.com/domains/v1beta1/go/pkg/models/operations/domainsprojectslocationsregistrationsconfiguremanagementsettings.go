@@ -8,18 +8,14 @@ import (
 )
 
 type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsPathParams struct {
-	// Required. The name of the `Registration` whose management settings are being updated, in the format `projects/*/locations/*/registrations/*`.
-	Registration string `pathParam:"style=simple,explode=false,name=registration"`
-}
-
-type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsQueryParams struct {
+type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                             *shared.XgafvEnum                               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ConfigureManagementSettingsRequestInput *shared.ConfigureManagementSettingsRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,17 +32,12 @@ type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsQueryParams
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the `Registration` whose management settings are being updated, in the format `projects/*/locations/*/registrations/*`.
+	Registration string `pathParam:"style=simple,explode=false,name=registration"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest struct {
-	PathParams  DomainsProjectsLocationsRegistrationsConfigureManagementSettingsPathParams
-	QueryParams DomainsProjectsLocationsRegistrationsConfigureManagementSettingsQueryParams
-	Request     *shared.ConfigureManagementSettingsRequestInput `request:"mediaType=application/json"`
-	Security    DomainsProjectsLocationsRegistrationsConfigureManagementSettingsSecurity
 }
 
 type DomainsProjectsLocationsRegistrationsConfigureManagementSettingsResponse struct {

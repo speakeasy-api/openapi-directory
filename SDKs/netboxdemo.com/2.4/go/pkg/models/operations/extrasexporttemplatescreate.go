@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasExportTemplatesCreateRequest struct {
-	Request shared.ExportTemplateInput `request:"mediaType=application/json"`
-}
-
 type ExtrasExportTemplatesCreateResponse struct {
 	ContentType    string
 	ExportTemplate *shared.ExportTemplate

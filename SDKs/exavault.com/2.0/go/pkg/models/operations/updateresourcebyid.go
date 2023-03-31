@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateResourceByIDPathParams struct {
-	// ID number of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateResourceByIDHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type UpdateResourceByIDUpdateResourceByIDRequestBody struct {
 	// The new name for the resource (file or folder).
 	Name *string `json:"name,omitempty"`
 }
 
 type UpdateResourceByIDRequest struct {
-	PathParams UpdateResourceByIDPathParams
-	Headers    UpdateResourceByIDHeaders
-	Request    *UpdateResourceByIDUpdateResourceByIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateResourceByIDUpdateResourceByIDRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// ID number of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateResourceByIDResponse struct {

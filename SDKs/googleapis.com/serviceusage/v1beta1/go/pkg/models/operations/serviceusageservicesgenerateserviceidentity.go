@@ -8,13 +8,13 @@ import (
 )
 
 type ServiceusageServicesGenerateServiceIdentitySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesGenerateServiceIdentitySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesGenerateServiceIdentitySecurity struct {
@@ -22,12 +22,7 @@ type ServiceusageServicesGenerateServiceIdentitySecurity struct {
 	Option2 *ServiceusageServicesGenerateServiceIdentitySecurityOption2 `security:"option"`
 }
 
-type ServiceusageServicesGenerateServiceIdentityPathParams struct {
-	// Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods currently only support projects. An example name would be: `projects/123/services/example.googleapis.com` where `123` is the project number.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceusageServicesGenerateServiceIdentityQueryParams struct {
+type ServiceusageServicesGenerateServiceIdentityRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type ServiceusageServicesGenerateServiceIdentityQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods currently only support projects. An example name would be: `projects/123/services/example.googleapis.com` where `123` is the project number.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type ServiceusageServicesGenerateServiceIdentityQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesGenerateServiceIdentityRequest struct {
-	PathParams  ServiceusageServicesGenerateServiceIdentityPathParams
-	QueryParams ServiceusageServicesGenerateServiceIdentityQueryParams
-	Security    ServiceusageServicesGenerateServiceIdentitySecurity
 }
 
 type ServiceusageServicesGenerateServiceIdentityResponse struct {

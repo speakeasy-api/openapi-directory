@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetApplicationsStatusRequest{
-        QueryParams: operations.GetApplicationsStatusQueryParams{
-            Key: "corrupti",
-        },
+        Key: "corrupti",
     }
 
     ctx := context.Background()

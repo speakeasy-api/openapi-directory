@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateAnAPIVersionPathParams struct {
-	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
-	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
 type UpdateAnAPIVersionRequestBodyVersion struct {
 	Name *string `json:"name,omitempty"`
 }
@@ -20,8 +15,9 @@ type UpdateAnAPIVersionRequestBody struct {
 }
 
 type UpdateAnAPIVersionRequest struct {
-	PathParams UpdateAnAPIVersionPathParams
-	Request    *UpdateAnAPIVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody  *UpdateAnAPIVersionRequestBody `request:"mediaType=application/json"`
+	APIID        string                         `pathParam:"style=simple,explode=false,name=apiId"`
+	APIVersionID string                         `pathParam:"style=simple,explode=false,name=apiVersionId"`
 }
 
 type UpdateAnAPIVersion200ApplicationJSONVersion struct {

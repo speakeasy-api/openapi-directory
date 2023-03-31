@@ -4,31 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ONDStatusSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ONDStatusQueryParams struct {
+type ONDStatusRequest struct {
+	// Mandatory http header:  application/xml or application/json
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Carrier for which the OND will be retrieved (e.g. 'LH')
 	Catalogues *string `queryParam:"style=form,explode=true,name=catalogues"`
 	// Enter if newly added routes should be returned in the response. (Acceptable values are: "", "true", "false")
 	NewRoutes *string `queryParam:"style=form,explode=true,name=new-routes"`
 	// Enter if old (deleted) routes should be returned in the response. (Acceptable values are: "", "true", "false")
 	OldRoutes *string `queryParam:"style=form,explode=true,name=old-routes"`
-}
-
-type ONDStatusHeaders struct {
-	// Mandatory http header:  application/xml or application/json
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ONDStatusRequest struct {
-	QueryParams ONDStatusQueryParams
-	Headers     ONDStatusHeaders
-	Security    ONDStatusSecurity
 }
 
 type ONDStatusResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type NodesContributorsListPathParams struct {
+type NodesContributorsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesContributorsListRequest struct {
-	PathParams NodesContributorsListPathParams
 }
 
 // NodesContributorsListContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.

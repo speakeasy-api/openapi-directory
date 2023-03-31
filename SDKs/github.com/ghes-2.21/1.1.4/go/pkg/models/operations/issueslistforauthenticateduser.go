@@ -105,7 +105,7 @@ func (e *IssuesListForAuthenticatedUserStateEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type IssuesListForAuthenticatedUserQueryParams struct {
+type IssuesListForAuthenticatedUserRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Indicates which sorts of issues to return. Can be one of:
@@ -127,10 +127,6 @@ type IssuesListForAuthenticatedUserQueryParams struct {
 	Sort *IssuesListForAuthenticatedUserSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
 	State *IssuesListForAuthenticatedUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListForAuthenticatedUserRequest struct {
-	QueryParams IssuesListForAuthenticatedUserQueryParams
 }
 
 type IssuesListForAuthenticatedUserResponse struct {

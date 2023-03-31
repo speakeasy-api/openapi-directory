@@ -8,18 +8,14 @@ import (
 )
 
 type CreateSubAccountSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSubAccountPathParams struct {
-	// ID of the primary account
-	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSubAccountRequest struct {
-	PathParams CreateSubAccountPathParams
-	Request    shared.NewSubaccountRequest `request:"mediaType=application/json"`
-	Security   CreateSubAccountSecurity
+	NewSubaccountRequest shared.NewSubaccountRequest `request:"mediaType=application/json"`
+	// ID of the primary account
+	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 }
 
 type CreateSubAccount422ApplicationJSONInvalidParameters struct {

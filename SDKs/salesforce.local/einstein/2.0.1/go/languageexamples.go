@@ -35,20 +35,20 @@ func newLanguageExamples(defaultClient, securityClient HTTPClient, serverURL, la
 
 // GetExamples - Get All Examples
 // Returns all the examples for the specified dataset,
-func (s *languageExamples) GetExamples(ctx context.Context, request operations.GetExamplesRequest) (*operations.GetExamplesResponse, error) {
+func (s *languageExamples) GetExamples(ctx context.Context, request operations.GetExamplesRequest, security operations.GetExamplesSecurity) (*operations.GetExamplesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/examples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/examples", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *languageExamples) GetExamples(ctx context.Context, request operations.G
 
 // GetExamplesByLabel - Get All Examples for Label
 // Returns all the examples for the specified label. Returns both uploaded examples and feedback examples.
-func (s *languageExamples) GetExamplesByLabel(ctx context.Context, request operations.GetExamplesByLabelRequest) (*operations.GetExamplesByLabelResponse, error) {
+func (s *languageExamples) GetExamplesByLabel(ctx context.Context, request operations.GetExamplesByLabelRequest, security operations.GetExamplesByLabelSecurity) (*operations.GetExamplesByLabelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/examples"
 
@@ -93,11 +93,11 @@ func (s *languageExamples) GetExamplesByLabel(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -133,7 +133,7 @@ func (s *languageExamples) GetExamplesByLabel(ctx context.Context, request opera
 
 // ProvideFeedback - Create a Feedback Example
 // Adds a feedback example to the dataset associated with the specified model.
-func (s *languageExamples) ProvideFeedback(ctx context.Context, request operations.ProvideFeedbackRequest) (*operations.ProvideFeedbackResponse, error) {
+func (s *languageExamples) ProvideFeedback(ctx context.Context, request operations.ProvideFeedbackRequestBody, security operations.ProvideFeedbackSecurity) (*operations.ProvideFeedbackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/feedback"
 
@@ -149,7 +149,7 @@ func (s *languageExamples) ProvideFeedback(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,11 +185,11 @@ func (s *languageExamples) ProvideFeedback(ctx context.Context, request operatio
 
 // UpdateDatasetAsync - Create Examples From a File
 // Adds examples from a .csv, .tsv, or .json file to a dataset.
-func (s *languageExamples) UpdateDatasetAsync(ctx context.Context, request operations.UpdateDatasetAsyncRequest) (*operations.UpdateDatasetAsyncResponse, error) {
+func (s *languageExamples) UpdateDatasetAsync(ctx context.Context, request operations.UpdateDatasetAsyncRequest, security operations.UpdateDatasetAsyncSecurity) (*operations.UpdateDatasetAsyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -201,7 +201,7 @@ func (s *languageExamples) UpdateDatasetAsync(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

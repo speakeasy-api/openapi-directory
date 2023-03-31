@@ -8,18 +8,13 @@ import (
 )
 
 type GetBankAccountByV1IDSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetBankAccountByV1IDPathParams struct {
-	// Connect V1 ID of the desired `BankAccount`. For more information, see
-	// [Retrieve a bank account by using an ID issued by V1 Bank Accounts API](https://developer.squareup.com/docs/bank-accounts-api#retrieve-a-bank-account-by-using-an-id-issued-by-v1-bank-accounts-api).
-	V1BankAccountID string `pathParam:"style=simple,explode=false,name=v1_bank_account_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetBankAccountByV1IDRequest struct {
-	PathParams GetBankAccountByV1IDPathParams
-	Security   GetBankAccountByV1IDSecurity
+	// Connect V1 ID of the desired `BankAccount`. For more information, see
+	// [Retrieve a bank account by using an ID issued by V1 Bank Accounts API](https://developer.squareup.com/docs/bank-accounts-api#retrieve-a-bank-account-by-using-an-id-issued-by-v1-bank-accounts-api).
+	V1BankAccountID string `pathParam:"style=simple,explode=false,name=v1_bank_account_id"`
 }
 
 type GetBankAccountByV1IDResponse struct {

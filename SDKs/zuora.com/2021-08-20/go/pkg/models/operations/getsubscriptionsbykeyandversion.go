@@ -7,16 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETSubscriptionsByKeyAndVersionPathParams struct {
-	// Subscription number. For example, A-S00000135.
+type GETSubscriptionsByKeyAndVersionRequest struct {
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
-	SubscriptionKey string `pathParam:"style=simple,explode=false,name=subscription-key"`
-	// Subscription version. For example, 1.
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
 	//
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GETSubscriptionsByKeyAndVersionQueryParams struct {
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// The segmented rate plan charges. When an amendment results in a change to a charge, Zuora creates a segmented rate plan charge. Use this field to track segment charges.
 	//
 	// Possible values are:
@@ -29,23 +28,12 @@ type GETSubscriptionsByKeyAndVersionQueryParams struct {
 	//  * __specific-segment&as-of-date=date__: The segmented charge that is active on a date you specified (effectiveStartDate <= specific date < effectiveEndDate). The format of the date is yyyy-mm-dd.
 	//
 	ChargeDetail *string `queryParam:"style=form,explode=true,name=charge-detail"`
-}
-
-type GETSubscriptionsByKeyAndVersionHeaders struct {
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	// Subscription number. For example, A-S00000135.
 	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	SubscriptionKey string `pathParam:"style=simple,explode=false,name=subscription-key"`
+	// Subscription version. For example, 1.
 	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETSubscriptionsByKeyAndVersionRequest struct {
-	PathParams  GETSubscriptionsByKeyAndVersionPathParams
-	QueryParams GETSubscriptionsByKeyAndVersionQueryParams
-	Headers     GETSubscriptionsByKeyAndVersionHeaders
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type GETSubscriptionsByKeyAndVersionResponse struct {

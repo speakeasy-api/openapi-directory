@@ -31,7 +31,6 @@ pkg/models/shared/acceleratortype.go
 pkg/models/shared/acceleratorconfig.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/generateserviceidentityresponse.go
 pkg/models/shared/serviceidentity.go
 pkg/models/shared/listlocationsresponse.go

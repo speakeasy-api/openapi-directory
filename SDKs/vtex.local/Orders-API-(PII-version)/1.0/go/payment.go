@@ -45,14 +45,14 @@ func newPayment(defaultClient, securityClient HTTPClient, serverURL, language, s
 // | `paymentId` | string | Payment ID |
 func (s *payment) SendPaymentNotification2(ctx context.Context, request operations.SendPaymentNotification2Request) (*operations.SendPaymentNotification2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

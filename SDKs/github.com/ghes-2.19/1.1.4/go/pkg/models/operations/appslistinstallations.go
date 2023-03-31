@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsListInstallationsQueryParams struct {
+type AppsListInstallationsRequest struct {
+	// This API is under preview and subject to change.
+	Accept string `header:"style=simple,explode=false,name=accept"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type AppsListInstallationsHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type AppsListInstallationsRequest struct {
-	QueryParams AppsListInstallationsQueryParams
-	Headers     AppsListInstallationsHeaders
 }
 
 type AppsListInstallationsResponse struct {

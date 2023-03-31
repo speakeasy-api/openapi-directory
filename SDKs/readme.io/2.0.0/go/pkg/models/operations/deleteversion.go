@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteVersionSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteVersionPathParams struct {
-	// Semver version indentifier
-	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteVersionRequest struct {
-	PathParams DeleteVersionPathParams
-	Security   DeleteVersionSecurity
+	// Semver version indentifier
+	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
 }
 
 type DeleteVersionResponse struct {

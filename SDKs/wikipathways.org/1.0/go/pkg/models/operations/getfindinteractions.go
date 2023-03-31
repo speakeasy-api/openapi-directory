@@ -44,14 +44,10 @@ func (e *GetFindInteractionsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFindInteractionsQueryParams struct {
+type GetFindInteractionsRequest struct {
 	Format *GetFindInteractionsFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The name of an entity to find interactions for (e.g. 'P53')
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetFindInteractionsRequest struct {
-	QueryParams GetFindInteractionsQueryParams
 }
 
 type GetFindInteractionsResponse struct {

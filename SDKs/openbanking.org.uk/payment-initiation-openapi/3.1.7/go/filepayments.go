@@ -34,11 +34,11 @@ func newFilePayments(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CreateFilePaymentConsentsConsentIDFileJSON - Create File Payment Consents
-func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileJSONRequest) (*operations.CreateFilePaymentConsentsConsentIDFileJSONResponse, error) {
+func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileJSONRequest, security operations.CreateFilePaymentConsentsConsentIDFileJSONSecurity) (*operations.CreateFilePaymentConsentsConsentIDFileJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -121,11 +121,11 @@ func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Co
 }
 
 // CreateFilePaymentConsentsConsentIDFileRaw - Create File Payment Consents
-func (s *filePayments) CreateFilePaymentConsentsConsentIDFileRaw(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileRawRequest) (*operations.CreateFilePaymentConsentsConsentIDFileRawResponse, error) {
+func (s *filePayments) CreateFilePaymentConsentsConsentIDFileRaw(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileRawRequest, security operations.CreateFilePaymentConsentsConsentIDFileRawSecurity) (*operations.CreateFilePaymentConsentsConsentIDFileRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -140,9 +140,9 @@ func (s *filePayments) CreateFilePaymentConsentsConsentIDFileRaw(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -208,11 +208,11 @@ func (s *filePayments) CreateFilePaymentConsentsConsentIDFileRaw(ctx context.Con
 }
 
 // CreateFilePaymentConsentsJSON - Create File Payment Consents
-func (s *filePayments) CreateFilePaymentConsentsJSON(ctx context.Context, request operations.CreateFilePaymentConsentsJSONRequest) (*operations.CreateFilePaymentConsentsJSONResponse, error) {
+func (s *filePayments) CreateFilePaymentConsentsJSON(ctx context.Context, request operations.CreateFilePaymentConsentsJSONRequest, security operations.CreateFilePaymentConsentsJSONSecurity) (*operations.CreateFilePaymentConsentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteFileConsent3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,9 +227,9 @@ func (s *filePayments) CreateFilePaymentConsentsJSON(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -317,11 +317,11 @@ func (s *filePayments) CreateFilePaymentConsentsJSON(ctx context.Context, reques
 }
 
 // CreateFilePaymentConsentsRaw - Create File Payment Consents
-func (s *filePayments) CreateFilePaymentConsentsRaw(ctx context.Context, request operations.CreateFilePaymentConsentsRawRequest) (*operations.CreateFilePaymentConsentsRawResponse, error) {
+func (s *filePayments) CreateFilePaymentConsentsRaw(ctx context.Context, request operations.CreateFilePaymentConsentsRawRequest, security operations.CreateFilePaymentConsentsRawSecurity) (*operations.CreateFilePaymentConsentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -336,9 +336,9 @@ func (s *filePayments) CreateFilePaymentConsentsRaw(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -426,11 +426,11 @@ func (s *filePayments) CreateFilePaymentConsentsRaw(ctx context.Context, request
 }
 
 // CreateFilePaymentsJSON - Create File Payments
-func (s *filePayments) CreateFilePaymentsJSON(ctx context.Context, request operations.CreateFilePaymentsJSONRequest) (*operations.CreateFilePaymentsJSONResponse, error) {
+func (s *filePayments) CreateFilePaymentsJSON(ctx context.Context, request operations.CreateFilePaymentsJSONRequest, security operations.CreateFilePaymentsJSONSecurity) (*operations.CreateFilePaymentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteFile2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -445,9 +445,9 @@ func (s *filePayments) CreateFilePaymentsJSON(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -535,11 +535,11 @@ func (s *filePayments) CreateFilePaymentsJSON(ctx context.Context, request opera
 }
 
 // CreateFilePaymentsRaw - Create File Payments
-func (s *filePayments) CreateFilePaymentsRaw(ctx context.Context, request operations.CreateFilePaymentsRawRequest) (*operations.CreateFilePaymentsRawResponse, error) {
+func (s *filePayments) CreateFilePaymentsRaw(ctx context.Context, request operations.CreateFilePaymentsRawRequest, security operations.CreateFilePaymentsRawSecurity) (*operations.CreateFilePaymentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -554,9 +554,9 @@ func (s *filePayments) CreateFilePaymentsRaw(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -644,18 +644,18 @@ func (s *filePayments) CreateFilePaymentsRaw(ctx context.Context, request operat
 }
 
 // GetFilePaymentConsentsConsentID - Get File Payment Consents
-func (s *filePayments) GetFilePaymentConsentsConsentID(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDRequest) (*operations.GetFilePaymentConsentsConsentIDResponse, error) {
+func (s *filePayments) GetFilePaymentConsentsConsentID(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDRequest, security operations.GetFilePaymentConsentsConsentIDSecurity) (*operations.GetFilePaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -741,18 +741,18 @@ func (s *filePayments) GetFilePaymentConsentsConsentID(ctx context.Context, requ
 }
 
 // GetFilePaymentConsentsConsentIDFile - Get File Payment Consents
-func (s *filePayments) GetFilePaymentConsentsConsentIDFile(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDFileRequest) (*operations.GetFilePaymentConsentsConsentIDFileResponse, error) {
+func (s *filePayments) GetFilePaymentConsentsConsentIDFile(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDFileRequest, security operations.GetFilePaymentConsentsConsentIDFileSecurity) (*operations.GetFilePaymentConsentsConsentIDFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -838,18 +838,18 @@ func (s *filePayments) GetFilePaymentConsentsConsentIDFile(ctx context.Context, 
 }
 
 // GetFilePaymentsFilePaymentID - Get File Payments
-func (s *filePayments) GetFilePaymentsFilePaymentID(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDRequest) (*operations.GetFilePaymentsFilePaymentIDResponse, error) {
+func (s *filePayments) GetFilePaymentsFilePaymentID(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDRequest, security operations.GetFilePaymentsFilePaymentIDSecurity) (*operations.GetFilePaymentsFilePaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -935,18 +935,18 @@ func (s *filePayments) GetFilePaymentsFilePaymentID(ctx context.Context, request
 }
 
 // GetFilePaymentsFilePaymentIDReportFile - Get File Payments
-func (s *filePayments) GetFilePaymentsFilePaymentIDReportFile(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDReportFileRequest) (*operations.GetFilePaymentsFilePaymentIDReportFileResponse, error) {
+func (s *filePayments) GetFilePaymentsFilePaymentIDReportFile(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDReportFileRequest, security operations.GetFilePaymentsFilePaymentIDReportFileSecurity) (*operations.GetFilePaymentsFilePaymentIDReportFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/report-file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/report-file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

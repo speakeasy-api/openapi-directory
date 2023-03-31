@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteChargeStationPathParams struct {
+type DeleteChargeStationRequest struct {
 	// The charge station id that needs to be deleted
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteChargeStationRequest struct {
-	PathParams DeleteChargeStationPathParams
 }
 
 type DeleteChargeStationResponse struct {

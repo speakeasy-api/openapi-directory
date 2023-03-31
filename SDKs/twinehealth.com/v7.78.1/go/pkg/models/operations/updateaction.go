@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateActionPathParams struct {
+type UpdateActionRequest struct {
+	UpdateActionRequestInput shared.UpdateActionRequestInput `request:"mediaType=application/vnd.api+json"`
 	// Action identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateActionRequest struct {
-	PathParams UpdateActionPathParams
-	Request    shared.UpdateActionRequestInput `request:"mediaType=application/vnd.api+json"`
 }
 
 type UpdateActionResponse struct {

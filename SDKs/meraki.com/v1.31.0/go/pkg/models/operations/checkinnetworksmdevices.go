@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CheckinNetworkSmDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CheckinNetworkSmDevicesRequestBody struct {
 	// The ids of the devices to be checked-in.
 	Ids []string `json:"ids,omitempty"`
@@ -22,8 +18,8 @@ type CheckinNetworkSmDevicesRequestBody struct {
 }
 
 type CheckinNetworkSmDevicesRequest struct {
-	PathParams CheckinNetworkSmDevicesPathParams
-	Request    *CheckinNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody *CheckinNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                              `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CheckinNetworkSmDevices200ApplicationJSON - Successful operation

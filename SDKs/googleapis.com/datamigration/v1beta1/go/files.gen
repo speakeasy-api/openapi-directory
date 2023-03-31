@@ -34,6 +34,7 @@ pkg/models/operations/datamigrationprojectslocationsoperationsget.go
 pkg/models/operations/datamigrationprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/connectionprofile.go
 pkg/models/shared/mysqlconnectionprofile.go
 pkg/models/shared/sslconfig.go
@@ -41,9 +42,7 @@ pkg/models/shared/cloudsqlconnectionprofile.go
 pkg/models/shared/cloudsqlsettings.go
 pkg/models/shared/sqlipconfig.go
 pkg/models/shared/sqlaclentry.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listconnectionprofilesresponse.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go

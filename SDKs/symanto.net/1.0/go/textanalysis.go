@@ -46,7 +46,7 @@ func (s *textAnalysis) Communication(ctx context.Context, request operations.Com
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/communication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *textAnalysis) Communication(ctx context.Context, request operations.Com
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *textAnalysis) EkmanEmotion(ctx context.Context, request operations.Ekma
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ekman-emotion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,7 +135,7 @@ func (s *textAnalysis) EkmanEmotion(ctx context.Context, request operations.Ekma
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,7 +199,7 @@ func (s *textAnalysis) Emotion(ctx context.Context, request operations.EmotionRe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/emotion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *textAnalysis) Emotion(ctx context.Context, request operations.EmotionRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -264,7 +264,7 @@ func (s *textAnalysis) Emotion(ctx context.Context, request operations.EmotionRe
 //
 // Returned labels:
 // * language_code of the detected language
-func (s *textAnalysis) LanguageDetection(ctx context.Context, request operations.LanguageDetectionRequest) (*operations.LanguageDetectionResponse, error) {
+func (s *textAnalysis) LanguageDetection(ctx context.Context, request []shared.LanguageDetection) (*operations.LanguageDetectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/language-detection"
 
@@ -337,7 +337,7 @@ func (s *textAnalysis) Personality(ctx context.Context, request operations.Perso
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/personality"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,7 +349,7 @@ func (s *textAnalysis) Personality(ctx context.Context, request operations.Perso
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -409,7 +409,7 @@ func (s *textAnalysis) Sentiment(ctx context.Context, request operations.Sentime
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sentiment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -421,7 +421,7 @@ func (s *textAnalysis) Sentiment(ctx context.Context, request operations.Sentime
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -474,7 +474,7 @@ func (s *textAnalysis) TopicSentiment(ctx context.Context, request operations.To
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/topic-sentiment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -486,7 +486,7 @@ func (s *textAnalysis) TopicSentiment(ctx context.Context, request operations.To
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

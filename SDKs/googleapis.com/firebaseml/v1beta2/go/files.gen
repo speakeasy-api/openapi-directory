@@ -20,12 +20,11 @@ pkg/models/operations/firebasemlprojectsmodelspatch.go
 pkg/models/operations/firebasemlprojectsoperationsget.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/model.go
 pkg/models/shared/tflitemodel.go
 pkg/models/shared/modelstate.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/downloadmodelresponse.go
 pkg/models/shared/listmodelsresponse.go
 USAGE.md

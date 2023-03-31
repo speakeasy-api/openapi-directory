@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GkehubProjectsLocationsFeaturesCreate - Adds a new Feature.
-func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesCreateRequest) (*operations.GkehubProjectsLocationsFeaturesCreateResponse, error) {
+func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesCreateRequest, security operations.GkehubProjectsLocationsFeaturesCreateSecurity) (*operations.GkehubProjectsLocationsFeaturesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/features", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeatureInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, re
 }
 
 // GkehubProjectsLocationsFeaturesList - Lists Features in a given project and location.
-func (s *projects) GkehubProjectsLocationsFeaturesList(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesListRequest) (*operations.GkehubProjectsLocationsFeaturesListResponse, error) {
+func (s *projects) GkehubProjectsLocationsFeaturesList(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesListRequest, security operations.GkehubProjectsLocationsFeaturesListSecurity) (*operations.GkehubProjectsLocationsFeaturesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) GkehubProjectsLocationsFeaturesList(ctx context.Context, requ
 }
 
 // GkehubProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest) (*operations.GkehubProjectsLocationsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest, security operations.GkehubProjectsLocationsListSecurity) (*operations.GkehubProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request oper
 }
 
 // GkehubProjectsLocationsMembershipsBindingsCreate - Creates a MembershipBinding.
-func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest) (*operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse, error) {
+func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest, security operations.GkehubProjectsLocationsMembershipsBindingsCreateSecurity) (*operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/bindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/bindings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MembershipBindingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.
 }
 
 // GkehubProjectsLocationsMembershipsBindingsList - Lists MembershipBindings.
-func (s *projects) GkehubProjectsLocationsMembershipsBindingsList(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsListRequest) (*operations.GkehubProjectsLocationsMembershipsBindingsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsMembershipsBindingsList(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsListRequest, security operations.GkehubProjectsLocationsMembershipsBindingsListSecurity) (*operations.GkehubProjectsLocationsMembershipsBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/bindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/bindings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsList(ctx context.Co
 }
 
 // GkehubProjectsLocationsMembershipsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) GkehubProjectsLocationsMembershipsGetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest) (*operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse, error) {
+func (s *projects) GkehubProjectsLocationsMembershipsGetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest, security operations.GkehubProjectsLocationsMembershipsGetIamPolicySecurity) (*operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsGetIamPolicy(ctx context.Co
 }
 
 // GkehubProjectsLocationsMembershipsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest) (*operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse, error) {
+func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest, security operations.GkehubProjectsLocationsMembershipsSetIamPolicySecurity) (*operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Co
 }
 
 // GkehubProjectsLocationsMembershipsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest) (*operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse, error) {
+func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest, security operations.GkehubProjectsLocationsMembershipsTestIamPermissionsSecurity) (*operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx cont
 }
 
 // GkehubProjectsLocationsNamespacesCreate - Creates a fleet namespace.
-func (s *projects) GkehubProjectsLocationsNamespacesCreate(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesCreateRequest) (*operations.GkehubProjectsLocationsNamespacesCreateResponse, error) {
+func (s *projects) GkehubProjectsLocationsNamespacesCreate(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesCreateRequest, security operations.GkehubProjectsLocationsNamespacesCreateSecurity) (*operations.GkehubProjectsLocationsNamespacesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/namespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/namespaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NamespaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) GkehubProjectsLocationsNamespacesCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,20 +499,20 @@ func (s *projects) GkehubProjectsLocationsNamespacesCreate(ctx context.Context, 
 }
 
 // GkehubProjectsLocationsNamespacesList - Lists fleet namespaces.
-func (s *projects) GkehubProjectsLocationsNamespacesList(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesListRequest) (*operations.GkehubProjectsLocationsNamespacesListResponse, error) {
+func (s *projects) GkehubProjectsLocationsNamespacesList(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesListRequest, security operations.GkehubProjectsLocationsNamespacesListSecurity) (*operations.GkehubProjectsLocationsNamespacesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/namespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/namespaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,11 +547,11 @@ func (s *projects) GkehubProjectsLocationsNamespacesList(ctx context.Context, re
 }
 
 // GkehubProjectsLocationsNamespacesRbacrolebindingsCreate - Creates a RBACRoleBinding.
-func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsCreate(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateRequest) (*operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse, error) {
+func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsCreate(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateRequest, security operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateSecurity) (*operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/rbacrolebindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/rbacrolebindings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RBACRoleBindingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -563,11 +563,11 @@ func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsCreate(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsCreate(ctx c
 }
 
 // GkehubProjectsLocationsNamespacesRbacrolebindingsList - Lists RBACRoleBinding.
-func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsList(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListRequest) (*operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsList(ctx context.Context, request operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListRequest, security operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListSecurity) (*operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/rbacrolebindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/rbacrolebindings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) GkehubProjectsLocationsNamespacesRbacrolebindingsList(ctx con
 }
 
 // GkehubProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest, security operations.GkehubProjectsLocationsOperationsCancelSecurity) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 }
 
 // GkehubProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest, security operations.GkehubProjectsLocationsOperationsListSecurity) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,11 +753,11 @@ func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, re
 }
 
 // GkehubProjectsLocationsScopesCreate - Creates a Scope.
-func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, request operations.GkehubProjectsLocationsScopesCreateRequest) (*operations.GkehubProjectsLocationsScopesCreateResponse, error) {
+func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, request operations.GkehubProjectsLocationsScopesCreateRequest, security operations.GkehubProjectsLocationsScopesCreateSecurity) (*operations.GkehubProjectsLocationsScopesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/scopes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScopeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,11 +769,11 @@ func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,20 +808,20 @@ func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, requ
 }
 
 // GkehubProjectsLocationsScopesDelete - Deletes a Scope.
-func (s *projects) GkehubProjectsLocationsScopesDelete(ctx context.Context, request operations.GkehubProjectsLocationsScopesDeleteRequest) (*operations.GkehubProjectsLocationsScopesDeleteResponse, error) {
+func (s *projects) GkehubProjectsLocationsScopesDelete(ctx context.Context, request operations.GkehubProjectsLocationsScopesDeleteRequest, security operations.GkehubProjectsLocationsScopesDeleteSecurity) (*operations.GkehubProjectsLocationsScopesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -856,20 +856,20 @@ func (s *projects) GkehubProjectsLocationsScopesDelete(ctx context.Context, requ
 }
 
 // GkehubProjectsLocationsScopesGet - Returns the details of a Scope.
-func (s *projects) GkehubProjectsLocationsScopesGet(ctx context.Context, request operations.GkehubProjectsLocationsScopesGetRequest) (*operations.GkehubProjectsLocationsScopesGetResponse, error) {
+func (s *projects) GkehubProjectsLocationsScopesGet(ctx context.Context, request operations.GkehubProjectsLocationsScopesGetRequest, security operations.GkehubProjectsLocationsScopesGetSecurity) (*operations.GkehubProjectsLocationsScopesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -904,20 +904,20 @@ func (s *projects) GkehubProjectsLocationsScopesGet(ctx context.Context, request
 }
 
 // GkehubProjectsLocationsScopesList - Lists Scopes.
-func (s *projects) GkehubProjectsLocationsScopesList(ctx context.Context, request operations.GkehubProjectsLocationsScopesListRequest) (*operations.GkehubProjectsLocationsScopesListResponse, error) {
+func (s *projects) GkehubProjectsLocationsScopesList(ctx context.Context, request operations.GkehubProjectsLocationsScopesListRequest, security operations.GkehubProjectsLocationsScopesListSecurity) (*operations.GkehubProjectsLocationsScopesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -952,11 +952,11 @@ func (s *projects) GkehubProjectsLocationsScopesList(ctx context.Context, reques
 }
 
 // GkehubProjectsLocationsScopesPatch - Updates a scopes.
-func (s *projects) GkehubProjectsLocationsScopesPatch(ctx context.Context, request operations.GkehubProjectsLocationsScopesPatchRequest) (*operations.GkehubProjectsLocationsScopesPatchResponse, error) {
+func (s *projects) GkehubProjectsLocationsScopesPatch(ctx context.Context, request operations.GkehubProjectsLocationsScopesPatchRequest, security operations.GkehubProjectsLocationsScopesPatchSecurity) (*operations.GkehubProjectsLocationsScopesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScopeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -968,11 +968,11 @@ func (s *projects) GkehubProjectsLocationsScopesPatch(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AddCalloutCountriesPathParams struct {
-	// Unique identifier of the account. To add Call-out enabled countries to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add Call-out enabled countries to a master account, provide `me` as the value of the `accountId` path parameter.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 type AddCalloutCountriesApplicationJSONCalloutCountries struct {
 	// Two letter country code of the  call-out country.
 	ID string `json:"id"`
@@ -22,8 +17,9 @@ type AddCalloutCountriesApplicationJSON struct {
 }
 
 type AddCalloutCountriesRequest struct {
-	PathParams AddCalloutCountriesPathParams
-	Request    *AddCalloutCountriesApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AddCalloutCountriesApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the account. To add Call-out enabled countries to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add Call-out enabled countries to a master account, provide `me` as the value of the `accountId` path parameter.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AddCalloutCountries201ApplicationXMLCalloutCountries struct {

@@ -32,20 +32,20 @@ func newOrgunits(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DirectoryOrgunitsDelete - Removes an organizational unit.
-func (s *orgunits) DirectoryOrgunitsDelete(ctx context.Context, request operations.DirectoryOrgunitsDeleteRequest) (*operations.DirectoryOrgunitsDeleteResponse, error) {
+func (s *orgunits) DirectoryOrgunitsDelete(ctx context.Context, request operations.DirectoryOrgunitsDeleteRequest, security operations.DirectoryOrgunitsDeleteSecurity) (*operations.DirectoryOrgunitsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *orgunits) DirectoryOrgunitsDelete(ctx context.Context, request operatio
 }
 
 // DirectoryOrgunitsGet - Retrieves an organizational unit.
-func (s *orgunits) DirectoryOrgunitsGet(ctx context.Context, request operations.DirectoryOrgunitsGetRequest) (*operations.DirectoryOrgunitsGetResponse, error) {
+func (s *orgunits) DirectoryOrgunitsGet(ctx context.Context, request operations.DirectoryOrgunitsGetRequest, security operations.DirectoryOrgunitsGetSecurity) (*operations.DirectoryOrgunitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *orgunits) DirectoryOrgunitsGet(ctx context.Context, request operations.
 }
 
 // DirectoryOrgunitsInsert - Adds an organizational unit.
-func (s *orgunits) DirectoryOrgunitsInsert(ctx context.Context, request operations.DirectoryOrgunitsInsertRequest) (*operations.DirectoryOrgunitsInsertResponse, error) {
+func (s *orgunits) DirectoryOrgunitsInsert(ctx context.Context, request operations.DirectoryOrgunitsInsertRequest, security operations.DirectoryOrgunitsInsertSecurity) (*operations.DirectoryOrgunitsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrgUnit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *orgunits) DirectoryOrgunitsInsert(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *orgunits) DirectoryOrgunitsInsert(ctx context.Context, request operatio
 }
 
 // DirectoryOrgunitsList - Retrieves a list of all organizational units for an account.
-func (s *orgunits) DirectoryOrgunitsList(ctx context.Context, request operations.DirectoryOrgunitsListRequest) (*operations.DirectoryOrgunitsListResponse, error) {
+func (s *orgunits) DirectoryOrgunitsList(ctx context.Context, request operations.DirectoryOrgunitsListRequest, security operations.DirectoryOrgunitsListSecurity) (*operations.DirectoryOrgunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *orgunits) DirectoryOrgunitsList(ctx context.Context, request operations
 }
 
 // DirectoryOrgunitsPatch - Updates an organizational unit. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch)
-func (s *orgunits) DirectoryOrgunitsPatch(ctx context.Context, request operations.DirectoryOrgunitsPatchRequest) (*operations.DirectoryOrgunitsPatchResponse, error) {
+func (s *orgunits) DirectoryOrgunitsPatch(ctx context.Context, request operations.DirectoryOrgunitsPatchRequest, security operations.DirectoryOrgunitsPatchSecurity) (*operations.DirectoryOrgunitsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrgUnit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *orgunits) DirectoryOrgunitsPatch(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *orgunits) DirectoryOrgunitsPatch(ctx context.Context, request operation
 }
 
 // DirectoryOrgunitsUpdate - Updates an organizational unit.
-func (s *orgunits) DirectoryOrgunitsUpdate(ctx context.Context, request operations.DirectoryOrgunitsUpdateRequest) (*operations.DirectoryOrgunitsUpdateResponse, error) {
+func (s *orgunits) DirectoryOrgunitsUpdate(ctx context.Context, request operations.DirectoryOrgunitsUpdateRequest, security operations.DirectoryOrgunitsUpdateSecurity) (*operations.DirectoryOrgunitsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrgUnit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *orgunits) DirectoryOrgunitsUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

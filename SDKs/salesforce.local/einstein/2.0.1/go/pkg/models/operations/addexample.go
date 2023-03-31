@@ -8,12 +8,7 @@ import (
 )
 
 type AddExampleSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type AddExamplePathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type AddExampleRequestBody struct {
@@ -26,9 +21,9 @@ type AddExampleRequestBody struct {
 }
 
 type AddExampleRequest struct {
-	PathParams AddExamplePathParams
-	Request    *AddExampleRequestBody `request:"mediaType=multipart/form-data"`
-	Security   AddExampleSecurity
+	RequestBody *AddExampleRequestBody `request:"mediaType=multipart/form-data"`
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 }
 
 type AddExampleResponse struct {

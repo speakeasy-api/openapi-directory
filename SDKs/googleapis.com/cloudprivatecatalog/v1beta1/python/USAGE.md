@@ -4,38 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest(
-    security=operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams(
-        resource="ea",
-    ),
-    query_params=operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams(
-        dollar_xgafv="2",
-        access_token="ad",
-        alt="proto",
-        callback="quod",
-        fields="similique",
-        key="cupiditate",
-        oauth_token="error",
-        page_size=757289501571609051,
-        page_token="aut",
-        pretty_print=True,
-        query="magnam",
-        quota_user="suscipit",
-        upload_type="earum",
-        upload_protocol="ut",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    query="error",
+    quota_user="deserunt",
+    resource="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.organizations.cloudprivatecatalog_organizations_catalogs_search(req)
+res = s.organizations.cloudprivatecatalog_organizations_catalogs_search(req, operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.body is not None:
     # handle response

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetMembershipForUserLegacyPathParams struct {
+type TeamsGetMembershipForUserLegacyRequest struct {
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type TeamsGetMembershipForUserLegacyRequest struct {
-	PathParams TeamsGetMembershipForUserLegacyPathParams
 }
 
 type TeamsGetMembershipForUserLegacyResponse struct {

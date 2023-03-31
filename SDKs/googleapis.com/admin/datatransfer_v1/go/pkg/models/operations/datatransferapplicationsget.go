@@ -8,13 +8,13 @@ import (
 )
 
 type DatatransferApplicationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatatransferApplicationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatatransferApplicationsGetSecurity struct {
@@ -22,18 +22,15 @@ type DatatransferApplicationsGetSecurity struct {
 	Option2 *DatatransferApplicationsGetSecurityOption2 `security:"option"`
 }
 
-type DatatransferApplicationsGetPathParams struct {
-	// ID of the application resource to be retrieved.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type DatatransferApplicationsGetQueryParams struct {
+type DatatransferApplicationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// ID of the application resource to be retrieved.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,12 +47,6 @@ type DatatransferApplicationsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatatransferApplicationsGetRequest struct {
-	PathParams  DatatransferApplicationsGetPathParams
-	QueryParams DatatransferApplicationsGetQueryParams
-	Security    DatatransferApplicationsGetSecurity
 }
 
 type DatatransferApplicationsGetResponse struct {

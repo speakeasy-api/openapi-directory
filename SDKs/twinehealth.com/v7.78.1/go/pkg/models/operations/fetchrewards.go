@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardsQueryParams struct {
+type FetchRewardsRequest struct {
 	// Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
 	//
 	FilterGroups *string `queryParam:"style=form,explode=true,name=filter[groups]"`
@@ -21,10 +21,6 @@ type FetchRewardsQueryParams struct {
 	FilterRewardProgramActivation *string `queryParam:"style=form,explode=true,name=filter[reward_program_activation]"`
 	// Thread identifier
 	FilterThread *string `queryParam:"style=form,explode=true,name=filter[thread]"`
-}
-
-type FetchRewardsRequest struct {
-	QueryParams FetchRewardsQueryParams
 }
 
 type FetchRewardsResponse struct {

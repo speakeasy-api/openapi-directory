@@ -8,16 +8,11 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsUserEventsCollectSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsUserEventsCollectPathParams struct {
-	// Required. The parent catalog name, such as `projects/1234/locations/global/catalogs/default_catalog`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RetailProjectsLocationsCatalogsUserEventsCollectQueryParams struct {
+type RetailProjectsLocationsCatalogsUserEventsCollectRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type RetailProjectsLocationsCatalogsUserEventsCollectQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent catalog name, such as `projects/1234/locations/global/catalogs/default_catalog`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// The prebuilt rule name that can convert a specific type of raw_json. For example: "ga4_bq" rule for the GA4 user event schema.
 	PrebuiltRule *string `queryParam:"style=form,explode=true,name=prebuiltRule"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type RetailProjectsLocationsCatalogsUserEventsCollectQueryParams struct {
 	URI *string `queryParam:"style=form,explode=true,name=uri"`
 	// Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
 	UserEvent *string `queryParam:"style=form,explode=true,name=userEvent"`
-}
-
-type RetailProjectsLocationsCatalogsUserEventsCollectRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsUserEventsCollectPathParams
-	QueryParams RetailProjectsLocationsCatalogsUserEventsCollectQueryParams
-	Security    RetailProjectsLocationsCatalogsUserEventsCollectSecurity
 }
 
 type RetailProjectsLocationsCatalogsUserEventsCollectResponse struct {

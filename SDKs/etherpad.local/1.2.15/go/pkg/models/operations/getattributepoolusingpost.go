@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetAttributePoolUsingPOSTQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type GetAttributePoolUsingPOSTRequest struct {
-	QueryParams GetAttributePoolUsingPOSTQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // GetAttributePoolUsingPOST500ApplicationJSON - internal api error (code 2)

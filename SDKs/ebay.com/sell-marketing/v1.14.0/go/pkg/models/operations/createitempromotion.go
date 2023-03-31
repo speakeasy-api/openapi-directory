@@ -8,13 +8,7 @@ import (
 )
 
 type CreateItemPromotionSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateItemPromotionRequest struct {
-	// This type defines the fields that describe an item promotion.
-	Request  *shared.ItemPromotion `request:"mediaType=application/json"`
-	Security CreateItemPromotionSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateItemPromotionResponse struct {

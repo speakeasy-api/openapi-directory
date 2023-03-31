@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAudioRequest{
-        PathParams: operations.GetAudioPathParams{
-            Word: "corrupti",
-        },
-        QueryParams: operations.GetAudioQueryParams{
-            Limit: 592845,
-            UseCanonical: "true",
-        },
+        Limit: 548814,
+        UseCanonical: "true",
+        Word: "distinctio",
     }
 
     ctx := context.Background()

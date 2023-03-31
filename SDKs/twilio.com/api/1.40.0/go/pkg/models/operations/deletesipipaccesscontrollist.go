@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipIPAccessControlListServerList = []string{
@@ -12,20 +11,15 @@ var DeleteSipIPAccessControlListServerList = []string{
 }
 
 type DeleteSipIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipIPAccessControlListPathParams struct {
+type DeleteSipIPAccessControlListRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies the resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipIPAccessControlListRequest struct {
-	PathParams DeleteSipIPAccessControlListPathParams
-	Security   DeleteSipIPAccessControlListSecurity
-	ServerURL  *string
 }
 
 type DeleteSipIPAccessControlListResponse struct {

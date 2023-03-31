@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum - Product code for requested service and specials : 3-letter eg: YNZ
@@ -82,7 +81,9 @@ func (e *CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnu
 	}
 }
 
-type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams struct {
+type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Arrival airport : 3-letter IATA airport code, e.g. HKG.
 	Destination string `pathParam:"style=simple,explode=false,name=destination"`
 	// Departure date in the local time of the departure airport. Based on LAT (Latest Acceptance Time). format : yyyy-MM-dd eg : 2017-07-15
@@ -91,17 +92,6 @@ type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams struct 
 	Origin string `pathParam:"style=simple,explode=false,name=origin"`
 	// Product code for requested service and specials : 3-letter eg: YNZ
 	ProductCode CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum `pathParam:"style=simple,explode=false,name=productCode"`
-}
-
-type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest struct {
-	PathParams CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams
-	Headers    CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders
-	Security   CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity
 }
 
 type CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse struct {

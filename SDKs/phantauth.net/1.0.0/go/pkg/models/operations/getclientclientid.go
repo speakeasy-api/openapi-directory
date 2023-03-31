@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetClientClientIDPathParams struct {
+type GetClientClientIDRequest struct {
 	// A client ID or email.
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type GetClientClientIDRequest struct {
-	PathParams GetClientClientIDPathParams
 }
 
 // GetClientClientID200ApplicationJSON - OK

@@ -8,16 +8,11 @@ import (
 )
 
 type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams struct {
-	// Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list documents under the default branch. If the caller does not have permission to list Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED error is returned.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams struct {
+type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token ListDocumentsResponse.next_page_token, received from a previous DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to DocumentService.ListDocuments must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT error is returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list documents under the default branch. If the caller does not have permission to list Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED error is returned.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest struct {
-	PathParams  DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams
-	QueryParams DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams
-	Security    DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity
 }
 
 type DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DatastoreProjectsAllocateIds - Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.
-func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request operations.DatastoreProjectsAllocateIdsRequest) (*operations.DatastoreProjectsAllocateIdsResponse, error) {
+func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request operations.DatastoreProjectsAllocateIdsRequest, security operations.DatastoreProjectsAllocateIdsSecurity) (*operations.DatastoreProjectsAllocateIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:allocateIds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:allocateIds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllocateIdsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request ope
 }
 
 // DatastoreProjectsBeginTransaction - Begins a new transaction.
-func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, request operations.DatastoreProjectsBeginTransactionRequest) (*operations.DatastoreProjectsBeginTransactionResponse, error) {
+func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, request operations.DatastoreProjectsBeginTransactionRequest, security operations.DatastoreProjectsBeginTransactionSecurity) (*operations.DatastoreProjectsBeginTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:beginTransaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:beginTransaction", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BeginTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, reques
 }
 
 // DatastoreProjectsCommit - Commits a transaction, optionally creating, deleting or modifying some entities.
-func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operations.DatastoreProjectsCommitRequest) (*operations.DatastoreProjectsCommitResponse, error) {
+func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operations.DatastoreProjectsCommitRequest, security operations.DatastoreProjectsCommitSecurity) (*operations.DatastoreProjectsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:commit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:commit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operatio
 }
 
 // DatastoreProjectsExport - Exports a copy of all or a subset of entities from Google Cloud Datastore to another storage system, such as Google Cloud Storage. Recent updates to entities may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
-func (s *projects) DatastoreProjectsExport(ctx context.Context, request operations.DatastoreProjectsExportRequest) (*operations.DatastoreProjectsExportResponse, error) {
+func (s *projects) DatastoreProjectsExport(ctx context.Context, request operations.DatastoreProjectsExportRequest, security operations.DatastoreProjectsExportSecurity) (*operations.DatastoreProjectsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDatastoreAdminV1ExportEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) DatastoreProjectsExport(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *projects) DatastoreProjectsExport(ctx context.Context, request operatio
 }
 
 // DatastoreProjectsImport - Imports entities into Google Cloud Datastore. Existing entities with the same key are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportEntities operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Datastore.
-func (s *projects) DatastoreProjectsImport(ctx context.Context, request operations.DatastoreProjectsImportRequest) (*operations.DatastoreProjectsImportResponse, error) {
+func (s *projects) DatastoreProjectsImport(ctx context.Context, request operations.DatastoreProjectsImportRequest, security operations.DatastoreProjectsImportSecurity) (*operations.DatastoreProjectsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDatastoreAdminV1ImportEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,11 +268,11 @@ func (s *projects) DatastoreProjectsImport(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,11 +307,11 @@ func (s *projects) DatastoreProjectsImport(ctx context.Context, request operatio
 }
 
 // DatastoreProjectsIndexesCreate - Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During index creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single property cannot be created.
-func (s *projects) DatastoreProjectsIndexesCreate(ctx context.Context, request operations.DatastoreProjectsIndexesCreateRequest) (*operations.DatastoreProjectsIndexesCreateResponse, error) {
+func (s *projects) DatastoreProjectsIndexesCreate(ctx context.Context, request operations.DatastoreProjectsIndexesCreateRequest, security operations.DatastoreProjectsIndexesCreateSecurity) (*operations.DatastoreProjectsIndexesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDatastoreAdminV1IndexInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,11 +323,11 @@ func (s *projects) DatastoreProjectsIndexesCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,20 +362,20 @@ func (s *projects) DatastoreProjectsIndexesCreate(ctx context.Context, request o
 }
 
 // DatastoreProjectsIndexesDelete - Deletes an existing index. An index can only be deleted if it is in a `READY` or `ERROR` state. On successful execution of the request, the index will be in a `DELETING` state. And on completion of the returned google.longrunning.Operation, the index will be removed. During index deletion, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, followed by calling delete again.
-func (s *projects) DatastoreProjectsIndexesDelete(ctx context.Context, request operations.DatastoreProjectsIndexesDeleteRequest) (*operations.DatastoreProjectsIndexesDeleteResponse, error) {
+func (s *projects) DatastoreProjectsIndexesDelete(ctx context.Context, request operations.DatastoreProjectsIndexesDeleteRequest, security operations.DatastoreProjectsIndexesDeleteSecurity) (*operations.DatastoreProjectsIndexesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes/{indexId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes/{indexId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,20 +410,20 @@ func (s *projects) DatastoreProjectsIndexesDelete(ctx context.Context, request o
 }
 
 // DatastoreProjectsIndexesGet - Gets an index.
-func (s *projects) DatastoreProjectsIndexesGet(ctx context.Context, request operations.DatastoreProjectsIndexesGetRequest) (*operations.DatastoreProjectsIndexesGetResponse, error) {
+func (s *projects) DatastoreProjectsIndexesGet(ctx context.Context, request operations.DatastoreProjectsIndexesGetRequest, security operations.DatastoreProjectsIndexesGetSecurity) (*operations.DatastoreProjectsIndexesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes/{indexId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes/{indexId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,20 +458,20 @@ func (s *projects) DatastoreProjectsIndexesGet(ctx context.Context, request oper
 }
 
 // DatastoreProjectsIndexesList - Lists the indexes that match the specified filters. Datastore uses an eventually consistent query to fetch the list of indexes and may occasionally return stale results.
-func (s *projects) DatastoreProjectsIndexesList(ctx context.Context, request operations.DatastoreProjectsIndexesListRequest) (*operations.DatastoreProjectsIndexesListResponse, error) {
+func (s *projects) DatastoreProjectsIndexesList(ctx context.Context, request operations.DatastoreProjectsIndexesListRequest, security operations.DatastoreProjectsIndexesListSecurity) (*operations.DatastoreProjectsIndexesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/indexes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,11 +506,11 @@ func (s *projects) DatastoreProjectsIndexesList(ctx context.Context, request ope
 }
 
 // DatastoreProjectsLookup - Looks up entities by key.
-func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operations.DatastoreProjectsLookupRequest) (*operations.DatastoreProjectsLookupResponse, error) {
+func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operations.DatastoreProjectsLookupRequest, security operations.DatastoreProjectsLookupSecurity) (*operations.DatastoreProjectsLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:lookup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:lookup", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LookupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -522,11 +522,11 @@ func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +561,20 @@ func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operatio
 }
 
 // DatastoreProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DatastoreProjectsOperationsCancel(ctx context.Context, request operations.DatastoreProjectsOperationsCancelRequest) (*operations.DatastoreProjectsOperationsCancelResponse, error) {
+func (s *projects) DatastoreProjectsOperationsCancel(ctx context.Context, request operations.DatastoreProjectsOperationsCancelRequest, security operations.DatastoreProjectsOperationsCancelSecurity) (*operations.DatastoreProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *projects) DatastoreProjectsOperationsCancel(ctx context.Context, reques
 }
 
 // DatastoreProjectsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) DatastoreProjectsOperationsDelete(ctx context.Context, request operations.DatastoreProjectsOperationsDeleteRequest) (*operations.DatastoreProjectsOperationsDeleteResponse, error) {
+func (s *projects) DatastoreProjectsOperationsDelete(ctx context.Context, request operations.DatastoreProjectsOperationsDeleteRequest, security operations.DatastoreProjectsOperationsDeleteSecurity) (*operations.DatastoreProjectsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +657,20 @@ func (s *projects) DatastoreProjectsOperationsDelete(ctx context.Context, reques
 }
 
 // DatastoreProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) DatastoreProjectsOperationsGet(ctx context.Context, request operations.DatastoreProjectsOperationsGetRequest) (*operations.DatastoreProjectsOperationsGetResponse, error) {
+func (s *projects) DatastoreProjectsOperationsGet(ctx context.Context, request operations.DatastoreProjectsOperationsGetRequest, security operations.DatastoreProjectsOperationsGetSecurity) (*operations.DatastoreProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) DatastoreProjectsOperationsGet(ctx context.Context, request o
 }
 
 // DatastoreProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) DatastoreProjectsOperationsList(ctx context.Context, request operations.DatastoreProjectsOperationsListRequest) (*operations.DatastoreProjectsOperationsListResponse, error) {
+func (s *projects) DatastoreProjectsOperationsList(ctx context.Context, request operations.DatastoreProjectsOperationsListRequest, security operations.DatastoreProjectsOperationsListSecurity) (*operations.DatastoreProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,11 +753,11 @@ func (s *projects) DatastoreProjectsOperationsList(ctx context.Context, request 
 }
 
 // DatastoreProjectsReserveIds - Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
-func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request operations.DatastoreProjectsReserveIdsRequest) (*operations.DatastoreProjectsReserveIdsResponse, error) {
+func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request operations.DatastoreProjectsReserveIdsRequest, security operations.DatastoreProjectsReserveIdsSecurity) (*operations.DatastoreProjectsReserveIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:reserveIds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:reserveIds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReserveIdsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,11 +769,11 @@ func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,11 +808,11 @@ func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request oper
 }
 
 // DatastoreProjectsRollback - Rolls back a transaction.
-func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operations.DatastoreProjectsRollbackRequest) (*operations.DatastoreProjectsRollbackResponse, error) {
+func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operations.DatastoreProjectsRollbackRequest, security operations.DatastoreProjectsRollbackSecurity) (*operations.DatastoreProjectsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:rollback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:rollback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -824,11 +824,11 @@ func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,11 +863,11 @@ func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operat
 }
 
 // DatastoreProjectsRunAggregationQuery - Runs an aggregation query.
-func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, request operations.DatastoreProjectsRunAggregationQueryRequest) (*operations.DatastoreProjectsRunAggregationQueryResponse, error) {
+func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, request operations.DatastoreProjectsRunAggregationQueryRequest, security operations.DatastoreProjectsRunAggregationQuerySecurity) (*operations.DatastoreProjectsRunAggregationQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:runAggregationQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:runAggregationQuery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunAggregationQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,11 +879,11 @@ func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,11 +918,11 @@ func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, req
 }
 
 // DatastoreProjectsRunQuery - Queries for entities.
-func (s *projects) DatastoreProjectsRunQuery(ctx context.Context, request operations.DatastoreProjectsRunQueryRequest) (*operations.DatastoreProjectsRunQueryResponse, error) {
+func (s *projects) DatastoreProjectsRunQuery(ctx context.Context, request operations.DatastoreProjectsRunQueryRequest, security operations.DatastoreProjectsRunQuerySecurity) (*operations.DatastoreProjectsRunQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:runQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}:runQuery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -934,11 +934,11 @@ func (s *projects) DatastoreProjectsRunQuery(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

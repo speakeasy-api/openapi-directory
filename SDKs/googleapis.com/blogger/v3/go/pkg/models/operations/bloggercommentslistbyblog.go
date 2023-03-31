@@ -10,22 +10,18 @@ import (
 )
 
 type BloggerCommentsListByBlogSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsListByBlogSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsListByBlogSecurity struct {
 	Option1 *BloggerCommentsListByBlogSecurityOption1 `security:"option"`
 	Option2 *BloggerCommentsListByBlogSecurityOption2 `security:"option"`
-}
-
-type BloggerCommentsListByBlogPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
 }
 
 type BloggerCommentsListByBlogStatusEnum string
@@ -57,13 +53,14 @@ func (e *BloggerCommentsListByBlogStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerCommentsListByBlogQueryParams struct {
+type BloggerCommentsListByBlogRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback    *string `queryParam:"style=form,explode=true,name=callback"`
 	EndDate     *string `queryParam:"style=form,explode=true,name=endDate"`
@@ -86,12 +83,6 @@ type BloggerCommentsListByBlogQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BloggerCommentsListByBlogRequest struct {
-	PathParams  BloggerCommentsListByBlogPathParams
-	QueryParams BloggerCommentsListByBlogQueryParams
-	Security    BloggerCommentsListByBlogSecurity
 }
 
 type BloggerCommentsListByBlogResponse struct {

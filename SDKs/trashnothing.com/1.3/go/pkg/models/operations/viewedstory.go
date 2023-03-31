@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ViewedStorySecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type ViewedStoryPathParams struct {
-	// The ID of the story viewed.
-	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ViewedStoryRequest struct {
-	PathParams ViewedStoryPathParams
-	Security   ViewedStorySecurity
+	// The ID of the story viewed.
+	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
 }
 
 type ViewedStoryResponse struct {

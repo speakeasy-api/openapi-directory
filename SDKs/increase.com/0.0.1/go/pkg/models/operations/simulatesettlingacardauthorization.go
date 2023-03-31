@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateSettlingACardAuthorizationRequest struct {
-	Request shared.SimulateSettlingACardAuthorizationParameters `request:"mediaType=application/json"`
-}
-
 type SimulateSettlingACardAuthorizationDefaultApplicationJSON13StatusEnum string
 
 const (

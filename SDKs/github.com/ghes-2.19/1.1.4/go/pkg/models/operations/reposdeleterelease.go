@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ReposDeleteReleasePathParams struct {
+type ReposDeleteReleaseRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// release_id parameter
 	ReleaseID int64  `pathParam:"style=simple,explode=false,name=release_id"`
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteReleaseRequest struct {
-	PathParams ReposDeleteReleasePathParams
 }
 
 type ReposDeleteReleaseResponse struct {

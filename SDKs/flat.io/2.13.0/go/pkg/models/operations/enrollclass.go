@@ -8,18 +8,13 @@ import (
 )
 
 type EnrollClassSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type EnrollClassPathParams struct {
-	// The enrollment code, available to the teacher in `ClassDetails`
-	//
-	EnrollmentCode string `pathParam:"style=simple,explode=false,name=enrollmentCode"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EnrollClassRequest struct {
-	PathParams EnrollClassPathParams
-	Security   EnrollClassSecurity
+	// The enrollment code, available to the teacher in `ClassDetails`
+	//
+	EnrollmentCode string `pathParam:"style=simple,explode=false,name=enrollmentCode"`
 }
 
 type EnrollClassResponse struct {

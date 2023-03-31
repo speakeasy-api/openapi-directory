@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetBankAccountSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBankAccountPathParams struct {
-	// Bank Account Id
-	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
-}
-
-type GetBankAccountHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetBankAccountRequest struct {
-	PathParams GetBankAccountPathParams
-	Headers    GetBankAccountHeaders
-	Security   GetBankAccountSecurity
+	// Bank Account Id
+	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetBankAccount500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

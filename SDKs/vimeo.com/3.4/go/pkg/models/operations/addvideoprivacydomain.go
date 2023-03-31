@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoPrivacyDomainSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoPrivacyDomainPathParams struct {
+type AddVideoPrivacyDomainRequest struct {
 	// The domain name.
 	Domain string `pathParam:"style=simple,explode=false,name=domain"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoPrivacyDomainRequest struct {
-	PathParams AddVideoPrivacyDomainPathParams
-	Security   AddVideoPrivacyDomainSecurity
 }
 
 type AddVideoPrivacyDomainResponse struct {

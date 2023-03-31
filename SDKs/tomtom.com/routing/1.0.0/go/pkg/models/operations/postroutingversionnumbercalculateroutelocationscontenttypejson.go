@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONPathParams struct {
-	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
-	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
-	// Locations through which the calculated route must pass.
-	Locations string `pathParam:"style=simple,explode=false,name=locations"`
-	// Service version number. The current value is 1.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams struct {
+type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONRequest struct {
 	// Specifies the efficiency of converting chemical energy stored in fuel to kinetic energy when the vehicle accelerates (i.e. KineticEnergyGained/ChemicalEnergyConsumed).
 	AccelerationEfficiency *float32 `queryParam:"style=form,explode=true,name=accelerationEfficiency"`
 	// Determines whether the alternative routes to be calculated should be better with respect to the planning criteria provided than the reference route.
@@ -33,7 +24,8 @@ type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams s
 	//   - unpavedRoads
 	//   - carpools
 	//   - alreadyUsedRoads
-	Avoid *string `queryParam:"style=form,explode=true,name=avoid"`
+	Avoid                            *string                                  `queryParam:"style=form,explode=true,name=avoid"`
+	CalculateRoutePostDataParameters *shared.CalculateRoutePostDataParameters `request:"mediaType=application/json"`
 	// Specifies the jsonp callback method.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Re-order the route waypoints to reduce the route length.
@@ -44,6 +36,8 @@ type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams s
 	ConstantSpeedConsumptionInLitersPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm"`
 	// Specifies the speed-dependent component of consumption. Provided as an unordered list of speed/consumption-rate pairs.
 	ConstantSpeedConsumptionInkWhPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm"`
+	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
+	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
 	// Specifies the current supply of fuel in liters.
 	CurrentFuelInLiters *float32 `queryParam:"style=form,explode=true,name=currentFuelInLiters"`
 	// Specifies the efficiency of converting kinetic energy to saved (not consumed) fuel when the vehicle decelerates (i.e. ChemicalEnergySaved/KineticEnergyLost).
@@ -60,6 +54,8 @@ type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams s
 	InstructionsType *shared.InstructionsTypeEnum `queryParam:"style=form,explode=true,name=instructionsType"`
 	// The language parameter determines the language of the guidance messages.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
+	// Locations through which the calculated route must pass.
+	Locations string `pathParam:"style=simple,explode=false,name=locations"`
 	// Number of alternative routes to be calculated.
 	MaxAlternatives *int64 `queryParam:"style=form,explode=true,name=maxAlternatives"`
 	// All alternative routes will follow the reference route for the specified minimum number of meters starting from the origin point.
@@ -126,14 +122,10 @@ type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams s
 	VehicleWeight *int64 `queryParam:"style=form,explode=true,name=vehicleWeight"`
 	// Width of the vehicle in meters.
 	VehicleWidth *float32 `queryParam:"style=form,explode=true,name=vehicleWidth"`
+	// Service version number. The current value is 1.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Amount that a thrilling route should wind.
 	Windingness *shared.WindingnessEnum `queryParam:"style=form,explode=true,name=windingness"`
-}
-
-type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONRequest struct {
-	PathParams  PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONPathParams
-	QueryParams PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONQueryParams
-	Request     *shared.CalculateRoutePostDataParameters `request:"mediaType=application/json"`
 }
 
 type PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONResponse struct {

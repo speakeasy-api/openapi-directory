@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutPolicyModulePathParams struct {
+type PutPolicyModuleRequest struct {
+	RequestBody string `request:"mediaType=text/plain"`
 	// The name of a policy module
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutPolicyModuleQueryParams struct {
 	// If true, compiler performance metrics will be returned in the response.
 	Metrics *bool `queryParam:"style=form,explode=true,name=metrics"`
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type PutPolicyModuleRequest struct {
-	PathParams  PutPolicyModulePathParams
-	QueryParams PutPolicyModuleQueryParams
-	Request     string `request:"mediaType=text/plain"`
 }
 
 type PutPolicyModuleResponse struct {

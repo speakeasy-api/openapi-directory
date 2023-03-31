@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAddressPathParams struct {
+type GetAddressRequest struct {
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type GetAddressRequest struct {
-	PathParams GetAddressPathParams
 }
 
 type GetAddressResponse struct {

@@ -14,16 +14,8 @@ var UpdateParticipantServerList = []string{
 }
 
 type UpdateParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateParticipantPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID or label of the participant to update. Non URL safe characters in a label must be percent encoded, for example, a space character is represented as %20.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The SID of the conference with the participant to update.
-	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum - The HTTP method we should use to call `announce_url`. Can be: `GET` or `POST` and defaults to `POST`.
@@ -162,10 +154,13 @@ type UpdateParticipantUpdateParticipantRequest struct {
 }
 
 type UpdateParticipantRequest struct {
-	PathParams UpdateParticipantPathParams
-	Request    *UpdateParticipantUpdateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateParticipantSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to update.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID or label of the participant to update. Non URL safe characters in a label must be percent encoded, for example, a space character is represented as %20.
+	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	// The SID of the conference with the participant to update.
+	ConferenceSid string                                     `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	RequestBody   *UpdateParticipantUpdateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateParticipantResponse struct {

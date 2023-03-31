@@ -8,16 +8,11 @@ import (
 )
 
 type NetworksecurityProjectsLocationsTLSInspectionPoliciesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NetworksecurityProjectsLocationsTLSInspectionPoliciesListPathParams struct {
-	// Required. The project and location from which the TlsInspectionPolicies should be listed, specified in the format `projects/{project}/locations/{location}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type NetworksecurityProjectsLocationsTLSInspectionPoliciesListQueryParams struct {
+type NetworksecurityProjectsLocationsTLSInspectionPoliciesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type NetworksecurityProjectsLocationsTLSInspectionPoliciesListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last 'ListTlsInspectionPoliciesResponse' Indicates that this is a continuation of a prior 'ListTlsInspectionPolicies' call, and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and location from which the TlsInspectionPolicies should be listed, specified in the format `projects/{project}/locations/{location}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type NetworksecurityProjectsLocationsTLSInspectionPoliciesListQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NetworksecurityProjectsLocationsTLSInspectionPoliciesListRequest struct {
-	PathParams  NetworksecurityProjectsLocationsTLSInspectionPoliciesListPathParams
-	QueryParams NetworksecurityProjectsLocationsTLSInspectionPoliciesListQueryParams
-	Security    NetworksecurityProjectsLocationsTLSInspectionPoliciesListSecurity
 }
 
 type NetworksecurityProjectsLocationsTLSInspectionPoliciesListResponse struct {

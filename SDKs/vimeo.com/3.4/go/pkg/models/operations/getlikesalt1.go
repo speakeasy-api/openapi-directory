@@ -66,7 +66,7 @@ func (e *GetLikesAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLikesAlt1QueryParams struct {
+type GetLikesAlt1Request struct {
 	// The attribute by which to filter the results.
 	Filter *GetLikesAlt1FilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
@@ -79,10 +79,6 @@ type GetLikesAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetLikesAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetLikesAlt1Request struct {
-	QueryParams GetLikesAlt1QueryParams
 }
 
 type GetLikesAlt1Response struct {

@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChannelRequest) (*operations.CreateChannelResponse, error) {
+func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChannelCreateChannelRequest, security operations.CreateChannelSecurity, opts ...operations.Option) (*operations.CreateChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Channels"
@@ -112,7 +122,7 @@ func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChanne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,10 +155,20 @@ func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChanne
 
 	return res, nil
 }
-func (s *SDK) CreateFlexFlow(ctx context.Context, request operations.CreateFlexFlowRequest) (*operations.CreateFlexFlowResponse, error) {
+func (s *SDK) CreateFlexFlow(ctx context.Context, request operations.CreateFlexFlowCreateFlexFlowRequest, security operations.CreateFlexFlowSecurity, opts ...operations.Option) (*operations.CreateFlexFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateFlexFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/FlexFlows"
@@ -165,7 +185,7 @@ func (s *SDK) CreateFlexFlow(ctx context.Context, request operations.CreateFlexF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -200,15 +220,25 @@ func (s *SDK) CreateFlexFlow(ctx context.Context, request operations.CreateFlexF
 }
 
 // CreateInsightsAssessments - Add assessments against conversation to dynamo db. Used in assessments screen by user. Users can select the questionnaire and pick up answers for each and every question.
-func (s *SDK) CreateInsightsAssessments(ctx context.Context, request operations.CreateInsightsAssessmentsRequest) (*operations.CreateInsightsAssessmentsResponse, error) {
+func (s *SDK) CreateInsightsAssessments(ctx context.Context, request operations.CreateInsightsAssessmentsRequest, security operations.CreateInsightsAssessmentsSecurity, opts ...operations.Option) (*operations.CreateInsightsAssessmentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsAssessmentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Assessments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -220,9 +250,9 @@ func (s *SDK) CreateInsightsAssessments(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -257,15 +287,25 @@ func (s *SDK) CreateInsightsAssessments(ctx context.Context, request operations.
 }
 
 // CreateInsightsAssessmentsComment - To create a comment assessment for a conversation
-func (s *SDK) CreateInsightsAssessmentsComment(ctx context.Context, request operations.CreateInsightsAssessmentsCommentRequest) (*operations.CreateInsightsAssessmentsCommentResponse, error) {
+func (s *SDK) CreateInsightsAssessmentsComment(ctx context.Context, request operations.CreateInsightsAssessmentsCommentRequest, security operations.CreateInsightsAssessmentsCommentSecurity, opts ...operations.Option) (*operations.CreateInsightsAssessmentsCommentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsAssessmentsCommentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Assessments/Comments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -277,9 +317,9 @@ func (s *SDK) CreateInsightsAssessmentsComment(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -314,15 +354,25 @@ func (s *SDK) CreateInsightsAssessmentsComment(ctx context.Context, request oper
 }
 
 // CreateInsightsQuestionnaires - To create a Questionnaire
-func (s *SDK) CreateInsightsQuestionnaires(ctx context.Context, request operations.CreateInsightsQuestionnairesRequest) (*operations.CreateInsightsQuestionnairesResponse, error) {
+func (s *SDK) CreateInsightsQuestionnaires(ctx context.Context, request operations.CreateInsightsQuestionnairesRequest, security operations.CreateInsightsQuestionnairesSecurity, opts ...operations.Option) (*operations.CreateInsightsQuestionnairesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsQuestionnairesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Questionnaires"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -334,9 +384,9 @@ func (s *SDK) CreateInsightsQuestionnaires(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -371,15 +421,25 @@ func (s *SDK) CreateInsightsQuestionnaires(ctx context.Context, request operatio
 }
 
 // CreateInsightsQuestionnairesCategory - To create a category for Questions
-func (s *SDK) CreateInsightsQuestionnairesCategory(ctx context.Context, request operations.CreateInsightsQuestionnairesCategoryRequest) (*operations.CreateInsightsQuestionnairesCategoryResponse, error) {
+func (s *SDK) CreateInsightsQuestionnairesCategory(ctx context.Context, request operations.CreateInsightsQuestionnairesCategoryRequest, security operations.CreateInsightsQuestionnairesCategorySecurity, opts ...operations.Option) (*operations.CreateInsightsQuestionnairesCategoryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsQuestionnairesCategoryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Categories"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -391,9 +451,9 @@ func (s *SDK) CreateInsightsQuestionnairesCategory(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -428,15 +488,25 @@ func (s *SDK) CreateInsightsQuestionnairesCategory(ctx context.Context, request 
 }
 
 // CreateInsightsQuestionnairesQuestion - To create a question for a Category
-func (s *SDK) CreateInsightsQuestionnairesQuestion(ctx context.Context, request operations.CreateInsightsQuestionnairesQuestionRequest) (*operations.CreateInsightsQuestionnairesQuestionResponse, error) {
+func (s *SDK) CreateInsightsQuestionnairesQuestion(ctx context.Context, request operations.CreateInsightsQuestionnairesQuestionRequest, security operations.CreateInsightsQuestionnairesQuestionSecurity, opts ...operations.Option) (*operations.CreateInsightsQuestionnairesQuestionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsQuestionnairesQuestionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Questions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -448,9 +518,9 @@ func (s *SDK) CreateInsightsQuestionnairesQuestion(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,10 +555,20 @@ func (s *SDK) CreateInsightsQuestionnairesQuestion(ctx context.Context, request 
 }
 
 // CreateInsightsSession - To obtain session details for fetching reports and dashboards
-func (s *SDK) CreateInsightsSession(ctx context.Context, request operations.CreateInsightsSessionRequest) (*operations.CreateInsightsSessionResponse, error) {
+func (s *SDK) CreateInsightsSession(ctx context.Context, request operations.CreateInsightsSessionRequest, security operations.CreateInsightsSessionSecurity, opts ...operations.Option) (*operations.CreateInsightsSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInsightsSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/Session"
@@ -498,9 +578,9 @@ func (s *SDK) CreateInsightsSession(ctx context.Context, request operations.Crea
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -535,10 +615,20 @@ func (s *SDK) CreateInsightsSession(ctx context.Context, request operations.Crea
 }
 
 // CreateInteraction - Create a new Interaction.
-func (s *SDK) CreateInteraction(ctx context.Context, request operations.CreateInteractionRequest) (*operations.CreateInteractionResponse, error) {
+func (s *SDK) CreateInteraction(ctx context.Context, request operations.CreateInteractionCreateInteractionRequest, security operations.CreateInteractionSecurity, opts ...operations.Option) (*operations.CreateInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Interactions"
@@ -555,7 +645,7 @@ func (s *SDK) CreateInteraction(ctx context.Context, request operations.CreateIn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -590,15 +680,25 @@ func (s *SDK) CreateInteraction(ctx context.Context, request operations.CreateIn
 }
 
 // CreateInteractionChannelInvite - Invite an Agent or a TaskQueue to a Channel.
-func (s *SDK) CreateInteractionChannelInvite(ctx context.Context, request operations.CreateInteractionChannelInviteRequest) (*operations.CreateInteractionChannelInviteResponse, error) {
-	baseURL := operations.CreateInteractionChannelInviteServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateInteractionChannelInvite(ctx context.Context, request operations.CreateInteractionChannelInviteRequest, security operations.CreateInteractionChannelInviteSecurity, opts ...operations.Option) (*operations.CreateInteractionChannelInviteResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateInteractionChannelInviteServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -610,7 +710,7 @@ func (s *SDK) CreateInteractionChannelInvite(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -645,15 +745,25 @@ func (s *SDK) CreateInteractionChannelInvite(ctx context.Context, request operat
 }
 
 // CreateInteractionChannelParticipant - Add a Participant to a Channel.
-func (s *SDK) CreateInteractionChannelParticipant(ctx context.Context, request operations.CreateInteractionChannelParticipantRequest) (*operations.CreateInteractionChannelParticipantResponse, error) {
-	baseURL := operations.CreateInteractionChannelParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateInteractionChannelParticipant(ctx context.Context, request operations.CreateInteractionChannelParticipantRequest, security operations.CreateInteractionChannelParticipantSecurity, opts ...operations.Option) (*operations.CreateInteractionChannelParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateInteractionChannelParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -665,7 +775,7 @@ func (s *SDK) CreateInteractionChannelParticipant(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -698,10 +808,20 @@ func (s *SDK) CreateInteractionChannelParticipant(ctx context.Context, request o
 
 	return res, nil
 }
-func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWebChannelRequest) (*operations.CreateWebChannelResponse, error) {
+func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWebChannelCreateWebChannelRequest, security operations.CreateWebChannelSecurity, opts ...operations.Option) (*operations.CreateWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/WebChannels"
@@ -718,7 +838,7 @@ func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWeb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -751,20 +871,30 @@ func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWeb
 
 	return res, nil
 }
-func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest) (*operations.DeleteChannelResponse, error) {
-	baseURL := operations.DeleteChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest, security operations.DeleteChannelSecurity, opts ...operations.Option) (*operations.DeleteChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Channels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -788,20 +918,30 @@ func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChanne
 
 	return res, nil
 }
-func (s *SDK) DeleteFlexFlow(ctx context.Context, request operations.DeleteFlexFlowRequest) (*operations.DeleteFlexFlowResponse, error) {
-	baseURL := operations.DeleteFlexFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteFlexFlow(ctx context.Context, request operations.DeleteFlexFlowRequest, security operations.DeleteFlexFlowSecurity, opts ...operations.Option) (*operations.DeleteFlexFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteFlexFlowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -827,22 +967,32 @@ func (s *SDK) DeleteFlexFlow(ctx context.Context, request operations.DeleteFlexF
 }
 
 // DeleteInsightsQuestionnaires - To delete the questionnaire
-func (s *SDK) DeleteInsightsQuestionnaires(ctx context.Context, request operations.DeleteInsightsQuestionnairesRequest) (*operations.DeleteInsightsQuestionnairesResponse, error) {
-	baseURL := operations.DeleteInsightsQuestionnairesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteInsightsQuestionnaires(ctx context.Context, request operations.DeleteInsightsQuestionnairesRequest, security operations.DeleteInsightsQuestionnairesSecurity, opts ...operations.Option) (*operations.DeleteInsightsQuestionnairesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteInsightsQuestionnairesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -866,22 +1016,32 @@ func (s *SDK) DeleteInsightsQuestionnaires(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *SDK) DeleteInsightsQuestionnairesCategory(ctx context.Context, request operations.DeleteInsightsQuestionnairesCategoryRequest) (*operations.DeleteInsightsQuestionnairesCategoryResponse, error) {
-	baseURL := operations.DeleteInsightsQuestionnairesCategoryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteInsightsQuestionnairesCategory(ctx context.Context, request operations.DeleteInsightsQuestionnairesCategoryRequest, security operations.DeleteInsightsQuestionnairesCategorySecurity, opts ...operations.Option) (*operations.DeleteInsightsQuestionnairesCategoryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Categories/{CategoryId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteInsightsQuestionnairesCategoryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Categories/{CategoryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -905,22 +1065,32 @@ func (s *SDK) DeleteInsightsQuestionnairesCategory(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *SDK) DeleteInsightsQuestionnairesQuestion(ctx context.Context, request operations.DeleteInsightsQuestionnairesQuestionRequest) (*operations.DeleteInsightsQuestionnairesQuestionResponse, error) {
-	baseURL := operations.DeleteInsightsQuestionnairesQuestionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteInsightsQuestionnairesQuestion(ctx context.Context, request operations.DeleteInsightsQuestionnairesQuestionRequest, security operations.DeleteInsightsQuestionnairesQuestionSecurity, opts ...operations.Option) (*operations.DeleteInsightsQuestionnairesQuestionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questions/{QuestionId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteInsightsQuestionnairesQuestionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questions/{QuestionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -944,20 +1114,30 @@ func (s *SDK) DeleteInsightsQuestionnairesQuestion(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *SDK) DeleteWebChannel(ctx context.Context, request operations.DeleteWebChannelRequest) (*operations.DeleteWebChannelResponse, error) {
-	baseURL := operations.DeleteWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteWebChannel(ctx context.Context, request operations.DeleteWebChannelRequest, security operations.DeleteWebChannelSecurity, opts ...operations.Option) (*operations.DeleteWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteWebChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -981,20 +1161,30 @@ func (s *SDK) DeleteWebChannel(ctx context.Context, request operations.DeleteWeb
 
 	return res, nil
 }
-func (s *SDK) FetchChannel(ctx context.Context, request operations.FetchChannelRequest) (*operations.FetchChannelResponse, error) {
-	baseURL := operations.FetchChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchChannel(ctx context.Context, request operations.FetchChannelRequest, security operations.FetchChannelSecurity, opts ...operations.Option) (*operations.FetchChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Channels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1027,10 +1217,20 @@ func (s *SDK) FetchChannel(ctx context.Context, request operations.FetchChannelR
 
 	return res, nil
 }
-func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchConfigurationRequest) (*operations.FetchConfigurationResponse, error) {
+func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchConfigurationRequest, security operations.FetchConfigurationSecurity, opts ...operations.Option) (*operations.FetchConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration"
@@ -1040,11 +1240,11 @@ func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1077,20 +1277,30 @@ func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchCo
 
 	return res, nil
 }
-func (s *SDK) FetchFlexFlow(ctx context.Context, request operations.FetchFlexFlowRequest) (*operations.FetchFlexFlowResponse, error) {
-	baseURL := operations.FetchFlexFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchFlexFlow(ctx context.Context, request operations.FetchFlexFlowRequest, security operations.FetchFlexFlowSecurity, opts ...operations.Option) (*operations.FetchFlexFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchFlexFlowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1125,22 +1335,32 @@ func (s *SDK) FetchFlexFlow(ctx context.Context, request operations.FetchFlexFlo
 }
 
 // FetchInsightsQuestionnaires - To get the Questionnaire Detail
-func (s *SDK) FetchInsightsQuestionnaires(ctx context.Context, request operations.FetchInsightsQuestionnairesRequest) (*operations.FetchInsightsQuestionnairesResponse, error) {
-	baseURL := operations.FetchInsightsQuestionnairesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchInsightsQuestionnaires(ctx context.Context, request operations.FetchInsightsQuestionnairesRequest, security operations.FetchInsightsQuestionnairesSecurity, opts ...operations.Option) (*operations.FetchInsightsQuestionnairesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchInsightsQuestionnairesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1175,22 +1395,32 @@ func (s *SDK) FetchInsightsQuestionnaires(ctx context.Context, request operation
 }
 
 // FetchInsightsSegments - To get the Segments of an Account
-func (s *SDK) FetchInsightsSegments(ctx context.Context, request operations.FetchInsightsSegmentsRequest) (*operations.FetchInsightsSegmentsResponse, error) {
-	baseURL := operations.FetchInsightsSegmentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchInsightsSegments(ctx context.Context, request operations.FetchInsightsSegmentsRequest, security operations.FetchInsightsSegmentsSecurity, opts ...operations.Option) (*operations.FetchInsightsSegmentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/Segments/{SegmentId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchInsightsSegmentsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/Segments/{SegmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1225,10 +1455,20 @@ func (s *SDK) FetchInsightsSegments(ctx context.Context, request operations.Fetc
 }
 
 // FetchInsightsSettingsAnswersets - To get the Answer Set Settings for an Account
-func (s *SDK) FetchInsightsSettingsAnswersets(ctx context.Context, request operations.FetchInsightsSettingsAnswersetsRequest) (*operations.FetchInsightsSettingsAnswersetsResponse, error) {
+func (s *SDK) FetchInsightsSettingsAnswersets(ctx context.Context, request operations.FetchInsightsSettingsAnswersetsRequest, security operations.FetchInsightsSettingsAnswersetsSecurity, opts ...operations.Option) (*operations.FetchInsightsSettingsAnswersetsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchInsightsSettingsAnswersetsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Settings/AnswerSets"
@@ -1238,9 +1478,9 @@ func (s *SDK) FetchInsightsSettingsAnswersets(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1275,10 +1515,20 @@ func (s *SDK) FetchInsightsSettingsAnswersets(ctx context.Context, request opera
 }
 
 // FetchInsightsSettingsComment - To get the Comment Settings for an Account
-func (s *SDK) FetchInsightsSettingsComment(ctx context.Context, request operations.FetchInsightsSettingsCommentRequest) (*operations.FetchInsightsSettingsCommentResponse, error) {
+func (s *SDK) FetchInsightsSettingsComment(ctx context.Context, request operations.FetchInsightsSettingsCommentRequest, security operations.FetchInsightsSettingsCommentSecurity, opts ...operations.Option) (*operations.FetchInsightsSettingsCommentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchInsightsSettingsCommentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Settings/CommentTags"
@@ -1288,9 +1538,9 @@ func (s *SDK) FetchInsightsSettingsComment(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1325,10 +1575,20 @@ func (s *SDK) FetchInsightsSettingsComment(ctx context.Context, request operatio
 }
 
 // FetchInsightsUserRoles - This is used by Flex UI and Quality Management to fetch the Flex Insights roles for the user
-func (s *SDK) FetchInsightsUserRoles(ctx context.Context, request operations.FetchInsightsUserRolesRequest) (*operations.FetchInsightsUserRolesResponse, error) {
+func (s *SDK) FetchInsightsUserRoles(ctx context.Context, request operations.FetchInsightsUserRolesRequest, security operations.FetchInsightsUserRolesSecurity, opts ...operations.Option) (*operations.FetchInsightsUserRolesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchInsightsUserRolesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/UserRoles"
@@ -1338,9 +1598,9 @@ func (s *SDK) FetchInsightsUserRoles(ctx context.Context, request operations.Fet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1373,20 +1633,30 @@ func (s *SDK) FetchInsightsUserRoles(ctx context.Context, request operations.Fet
 
 	return res, nil
 }
-func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInteractionRequest) (*operations.FetchInteractionResponse, error) {
-	baseURL := operations.FetchInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInteractionRequest, security operations.FetchInteractionSecurity, opts ...operations.Option) (*operations.FetchInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1421,20 +1691,30 @@ func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInte
 }
 
 // FetchInteractionChannel - Fetch a Channel for an Interaction.
-func (s *SDK) FetchInteractionChannel(ctx context.Context, request operations.FetchInteractionChannelRequest) (*operations.FetchInteractionChannelResponse, error) {
-	baseURL := operations.FetchInteractionChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchInteractionChannel(ctx context.Context, request operations.FetchInteractionChannelRequest, security operations.FetchInteractionChannelSecurity, opts ...operations.Option) (*operations.FetchInteractionChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchInteractionChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1467,20 +1747,30 @@ func (s *SDK) FetchInteractionChannel(ctx context.Context, request operations.Fe
 
 	return res, nil
 }
-func (s *SDK) FetchWebChannel(ctx context.Context, request operations.FetchWebChannelRequest) (*operations.FetchWebChannelResponse, error) {
-	baseURL := operations.FetchWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWebChannel(ctx context.Context, request operations.FetchWebChannelRequest, security operations.FetchWebChannelSecurity, opts ...operations.Option) (*operations.FetchWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWebChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1513,10 +1803,20 @@ func (s *SDK) FetchWebChannel(ctx context.Context, request operations.FetchWebCh
 
 	return res, nil
 }
-func (s *SDK) ListChannel(ctx context.Context, request operations.ListChannelRequest) (*operations.ListChannelResponse, error) {
+func (s *SDK) ListChannel(ctx context.Context, request operations.ListChannelRequest, security operations.ListChannelSecurity, opts ...operations.Option) (*operations.ListChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Channels"
@@ -1526,11 +1826,11 @@ func (s *SDK) ListChannel(ctx context.Context, request operations.ListChannelReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1563,10 +1863,20 @@ func (s *SDK) ListChannel(ctx context.Context, request operations.ListChannelReq
 
 	return res, nil
 }
-func (s *SDK) ListFlexFlow(ctx context.Context, request operations.ListFlexFlowRequest) (*operations.ListFlexFlowResponse, error) {
+func (s *SDK) ListFlexFlow(ctx context.Context, request operations.ListFlexFlowRequest, security operations.ListFlexFlowSecurity, opts ...operations.Option) (*operations.ListFlexFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListFlexFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/FlexFlows"
@@ -1576,11 +1886,11 @@ func (s *SDK) ListFlexFlow(ctx context.Context, request operations.ListFlexFlowR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1615,10 +1925,20 @@ func (s *SDK) ListFlexFlow(ctx context.Context, request operations.ListFlexFlowR
 }
 
 // ListInsightsAssessments - Get assessments done for a conversation by logged in user
-func (s *SDK) ListInsightsAssessments(ctx context.Context, request operations.ListInsightsAssessmentsRequest) (*operations.ListInsightsAssessmentsResponse, error) {
+func (s *SDK) ListInsightsAssessments(ctx context.Context, request operations.ListInsightsAssessmentsRequest, security operations.ListInsightsAssessmentsSecurity, opts ...operations.Option) (*operations.ListInsightsAssessmentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsAssessmentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Assessments"
@@ -1628,13 +1948,13 @@ func (s *SDK) ListInsightsAssessments(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1669,10 +1989,20 @@ func (s *SDK) ListInsightsAssessments(ctx context.Context, request operations.Li
 }
 
 // ListInsightsAssessmentsComment - To create a comment assessment for a conversation
-func (s *SDK) ListInsightsAssessmentsComment(ctx context.Context, request operations.ListInsightsAssessmentsCommentRequest) (*operations.ListInsightsAssessmentsCommentResponse, error) {
+func (s *SDK) ListInsightsAssessmentsComment(ctx context.Context, request operations.ListInsightsAssessmentsCommentRequest, security operations.ListInsightsAssessmentsCommentSecurity, opts ...operations.Option) (*operations.ListInsightsAssessmentsCommentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsAssessmentsCommentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Assessments/Comments"
@@ -1682,13 +2012,13 @@ func (s *SDK) ListInsightsAssessmentsComment(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1723,10 +2053,20 @@ func (s *SDK) ListInsightsAssessmentsComment(ctx context.Context, request operat
 }
 
 // ListInsightsConversations - To get conversation with segment id
-func (s *SDK) ListInsightsConversations(ctx context.Context, request operations.ListInsightsConversationsRequest) (*operations.ListInsightsConversationsResponse, error) {
+func (s *SDK) ListInsightsConversations(ctx context.Context, request operations.ListInsightsConversationsRequest, security operations.ListInsightsConversationsSecurity, opts ...operations.Option) (*operations.ListInsightsConversationsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsConversationsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/Conversations"
@@ -1736,13 +2076,13 @@ func (s *SDK) ListInsightsConversations(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1777,10 +2117,20 @@ func (s *SDK) ListInsightsConversations(ctx context.Context, request operations.
 }
 
 // ListInsightsQuestionnaires - To get all questionnaires with questions
-func (s *SDK) ListInsightsQuestionnaires(ctx context.Context, request operations.ListInsightsQuestionnairesRequest) (*operations.ListInsightsQuestionnairesResponse, error) {
+func (s *SDK) ListInsightsQuestionnaires(ctx context.Context, request operations.ListInsightsQuestionnairesRequest, security operations.ListInsightsQuestionnairesSecurity, opts ...operations.Option) (*operations.ListInsightsQuestionnairesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsQuestionnairesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Questionnaires"
@@ -1790,13 +2140,13 @@ func (s *SDK) ListInsightsQuestionnaires(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1831,10 +2181,20 @@ func (s *SDK) ListInsightsQuestionnaires(ctx context.Context, request operations
 }
 
 // ListInsightsQuestionnairesCategory - To get all the categories
-func (s *SDK) ListInsightsQuestionnairesCategory(ctx context.Context, request operations.ListInsightsQuestionnairesCategoryRequest) (*operations.ListInsightsQuestionnairesCategoryResponse, error) {
+func (s *SDK) ListInsightsQuestionnairesCategory(ctx context.Context, request operations.ListInsightsQuestionnairesCategoryRequest, security operations.ListInsightsQuestionnairesCategorySecurity, opts ...operations.Option) (*operations.ListInsightsQuestionnairesCategoryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsQuestionnairesCategoryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Categories"
@@ -1844,13 +2204,13 @@ func (s *SDK) ListInsightsQuestionnairesCategory(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1885,10 +2245,20 @@ func (s *SDK) ListInsightsQuestionnairesCategory(ctx context.Context, request op
 }
 
 // ListInsightsQuestionnairesQuestion - To get all the question for the given categories
-func (s *SDK) ListInsightsQuestionnairesQuestion(ctx context.Context, request operations.ListInsightsQuestionnairesQuestionRequest) (*operations.ListInsightsQuestionnairesQuestionResponse, error) {
+func (s *SDK) ListInsightsQuestionnairesQuestion(ctx context.Context, request operations.ListInsightsQuestionnairesQuestionRequest, security operations.ListInsightsQuestionnairesQuestionSecurity, opts ...operations.Option) (*operations.ListInsightsQuestionnairesQuestionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsQuestionnairesQuestionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/QM/Questions"
@@ -1898,13 +2268,13 @@ func (s *SDK) ListInsightsQuestionnairesQuestion(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1939,10 +2309,20 @@ func (s *SDK) ListInsightsQuestionnairesQuestion(ctx context.Context, request op
 }
 
 // ListInsightsSegments - To get segments for given reservation Ids
-func (s *SDK) ListInsightsSegments(ctx context.Context, request operations.ListInsightsSegmentsRequest) (*operations.ListInsightsSegmentsResponse, error) {
+func (s *SDK) ListInsightsSegments(ctx context.Context, request operations.ListInsightsSegmentsRequest, security operations.ListInsightsSegmentsSecurity, opts ...operations.Option) (*operations.ListInsightsSegmentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListInsightsSegmentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Insights/Segments"
@@ -1952,13 +2332,13 @@ func (s *SDK) ListInsightsSegments(ctx context.Context, request operations.ListI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1993,24 +2373,34 @@ func (s *SDK) ListInsightsSegments(ctx context.Context, request operations.ListI
 }
 
 // ListInteractionChannel - List all Channels for an Interaction.
-func (s *SDK) ListInteractionChannel(ctx context.Context, request operations.ListInteractionChannelRequest) (*operations.ListInteractionChannelResponse, error) {
-	baseURL := operations.ListInteractionChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListInteractionChannel(ctx context.Context, request operations.ListInteractionChannelRequest, security operations.ListInteractionChannelSecurity, opts ...operations.Option) (*operations.ListInteractionChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListInteractionChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2045,24 +2435,34 @@ func (s *SDK) ListInteractionChannel(ctx context.Context, request operations.Lis
 }
 
 // ListInteractionChannelInvite - List all Invites for a Channel.
-func (s *SDK) ListInteractionChannelInvite(ctx context.Context, request operations.ListInteractionChannelInviteRequest) (*operations.ListInteractionChannelInviteResponse, error) {
-	baseURL := operations.ListInteractionChannelInviteServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListInteractionChannelInvite(ctx context.Context, request operations.ListInteractionChannelInviteRequest, security operations.ListInteractionChannelInviteSecurity, opts ...operations.Option) (*operations.ListInteractionChannelInviteResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListInteractionChannelInviteServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2097,24 +2497,34 @@ func (s *SDK) ListInteractionChannelInvite(ctx context.Context, request operatio
 }
 
 // ListInteractionChannelParticipant - List all Participants for a Channel.
-func (s *SDK) ListInteractionChannelParticipant(ctx context.Context, request operations.ListInteractionChannelParticipantRequest) (*operations.ListInteractionChannelParticipantResponse, error) {
-	baseURL := operations.ListInteractionChannelParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListInteractionChannelParticipant(ctx context.Context, request operations.ListInteractionChannelParticipantRequest, security operations.ListInteractionChannelParticipantSecurity, opts ...operations.Option) (*operations.ListInteractionChannelParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListInteractionChannelParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2147,10 +2557,20 @@ func (s *SDK) ListInteractionChannelParticipant(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *SDK) ListWebChannel(ctx context.Context, request operations.ListWebChannelRequest) (*operations.ListWebChannelResponse, error) {
+func (s *SDK) ListWebChannel(ctx context.Context, request operations.ListWebChannelRequest, security operations.ListWebChannelSecurity, opts ...operations.Option) (*operations.ListWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/WebChannels"
@@ -2160,11 +2580,11 @@ func (s *SDK) ListWebChannel(ctx context.Context, request operations.ListWebChan
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2197,15 +2617,25 @@ func (s *SDK) ListWebChannel(ctx context.Context, request operations.ListWebChan
 
 	return res, nil
 }
-func (s *SDK) UpdateFlexFlow(ctx context.Context, request operations.UpdateFlexFlowRequest) (*operations.UpdateFlexFlowResponse, error) {
-	baseURL := operations.UpdateFlexFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateFlexFlow(ctx context.Context, request operations.UpdateFlexFlowRequest, security operations.UpdateFlexFlowSecurity, opts ...operations.Option) (*operations.UpdateFlexFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateFlexFlowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/FlexFlows/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2217,7 +2647,7 @@ func (s *SDK) UpdateFlexFlow(ctx context.Context, request operations.UpdateFlexF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2252,15 +2682,25 @@ func (s *SDK) UpdateFlexFlow(ctx context.Context, request operations.UpdateFlexF
 }
 
 // UpdateInsightsAssessments - Update a specific Assessment assessed earlier
-func (s *SDK) UpdateInsightsAssessments(ctx context.Context, request operations.UpdateInsightsAssessmentsRequest) (*operations.UpdateInsightsAssessmentsResponse, error) {
-	baseURL := operations.UpdateInsightsAssessmentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInsightsAssessments(ctx context.Context, request operations.UpdateInsightsAssessmentsRequest, security operations.UpdateInsightsAssessmentsSecurity, opts ...operations.Option) (*operations.UpdateInsightsAssessmentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Assessments/{AssessmentId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInsightsAssessmentsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Assessments/{AssessmentId}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2272,9 +2712,9 @@ func (s *SDK) UpdateInsightsAssessments(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2309,15 +2749,25 @@ func (s *SDK) UpdateInsightsAssessments(ctx context.Context, request operations.
 }
 
 // UpdateInsightsQuestionnaires - To update the questionnaire
-func (s *SDK) UpdateInsightsQuestionnaires(ctx context.Context, request operations.UpdateInsightsQuestionnairesRequest) (*operations.UpdateInsightsQuestionnairesResponse, error) {
-	baseURL := operations.UpdateInsightsQuestionnairesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInsightsQuestionnaires(ctx context.Context, request operations.UpdateInsightsQuestionnairesRequest, security operations.UpdateInsightsQuestionnairesSecurity, opts ...operations.Option) (*operations.UpdateInsightsQuestionnairesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInsightsQuestionnairesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questionnaires/{Id}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2329,9 +2779,9 @@ func (s *SDK) UpdateInsightsQuestionnaires(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2366,15 +2816,25 @@ func (s *SDK) UpdateInsightsQuestionnaires(ctx context.Context, request operatio
 }
 
 // UpdateInsightsQuestionnairesCategory - To update the category for Questions
-func (s *SDK) UpdateInsightsQuestionnairesCategory(ctx context.Context, request operations.UpdateInsightsQuestionnairesCategoryRequest) (*operations.UpdateInsightsQuestionnairesCategoryResponse, error) {
-	baseURL := operations.UpdateInsightsQuestionnairesCategoryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInsightsQuestionnairesCategory(ctx context.Context, request operations.UpdateInsightsQuestionnairesCategoryRequest, security operations.UpdateInsightsQuestionnairesCategorySecurity, opts ...operations.Option) (*operations.UpdateInsightsQuestionnairesCategoryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Categories/{CategoryId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInsightsQuestionnairesCategoryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Categories/{CategoryId}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2386,9 +2846,9 @@ func (s *SDK) UpdateInsightsQuestionnairesCategory(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2423,15 +2883,25 @@ func (s *SDK) UpdateInsightsQuestionnairesCategory(ctx context.Context, request 
 }
 
 // UpdateInsightsQuestionnairesQuestion - To update the question
-func (s *SDK) UpdateInsightsQuestionnairesQuestion(ctx context.Context, request operations.UpdateInsightsQuestionnairesQuestionRequest) (*operations.UpdateInsightsQuestionnairesQuestionResponse, error) {
-	baseURL := operations.UpdateInsightsQuestionnairesQuestionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInsightsQuestionnairesQuestion(ctx context.Context, request operations.UpdateInsightsQuestionnairesQuestionRequest, security operations.UpdateInsightsQuestionnairesQuestionSecurity, opts ...operations.Option) (*operations.UpdateInsightsQuestionnairesQuestionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questions/{QuestionId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInsightsQuestionnairesQuestionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Insights/QM/Questions/{QuestionId}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2443,9 +2913,9 @@ func (s *SDK) UpdateInsightsQuestionnairesQuestion(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2480,15 +2950,25 @@ func (s *SDK) UpdateInsightsQuestionnairesQuestion(ctx context.Context, request 
 }
 
 // UpdateInteractionChannel - Update an existing Interaction Channel.
-func (s *SDK) UpdateInteractionChannel(ctx context.Context, request operations.UpdateInteractionChannelRequest) (*operations.UpdateInteractionChannelResponse, error) {
-	baseURL := operations.UpdateInteractionChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInteractionChannel(ctx context.Context, request operations.UpdateInteractionChannelRequest, security operations.UpdateInteractionChannelSecurity, opts ...operations.Option) (*operations.UpdateInteractionChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInteractionChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2500,7 +2980,7 @@ func (s *SDK) UpdateInteractionChannel(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2535,15 +3015,25 @@ func (s *SDK) UpdateInteractionChannel(ctx context.Context, request operations.U
 }
 
 // UpdateInteractionChannelParticipant - Update an existing Channel Participant.
-func (s *SDK) UpdateInteractionChannelParticipant(ctx context.Context, request operations.UpdateInteractionChannelParticipantRequest) (*operations.UpdateInteractionChannelParticipantResponse, error) {
-	baseURL := operations.UpdateInteractionChannelParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateInteractionChannelParticipant(ctx context.Context, request operations.UpdateInteractionChannelParticipantRequest, security operations.UpdateInteractionChannelParticipantSecurity, opts ...operations.Option) (*operations.UpdateInteractionChannelParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateInteractionChannelParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2555,7 +3045,7 @@ func (s *SDK) UpdateInteractionChannelParticipant(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2588,15 +3078,25 @@ func (s *SDK) UpdateInteractionChannelParticipant(ctx context.Context, request o
 
 	return res, nil
 }
-func (s *SDK) UpdateWebChannel(ctx context.Context, request operations.UpdateWebChannelRequest) (*operations.UpdateWebChannelResponse, error) {
-	baseURL := operations.UpdateWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWebChannel(ctx context.Context, request operations.UpdateWebChannelRequest, security operations.UpdateWebChannelSecurity, opts ...operations.Option) (*operations.UpdateWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWebChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/WebChannels/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2608,7 +3108,7 @@ func (s *SDK) UpdateWebChannel(ctx context.Context, request operations.UpdateWeb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

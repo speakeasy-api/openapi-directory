@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TrackingfieldUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type TrackingfieldUpdatePathParams struct {
-	// The Tracking Field ID
-	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // TrackingfieldUpdateTrackingField - Tracking Field
@@ -29,9 +23,9 @@ type TrackingfieldUpdateTrackingField struct {
 }
 
 type TrackingfieldUpdateRequest struct {
-	PathParams TrackingfieldUpdatePathParams
-	Request    TrackingfieldUpdateTrackingField `request:"mediaType=application/json"`
-	Security   TrackingfieldUpdateSecurity
+	RequestBody TrackingfieldUpdateTrackingField `request:"mediaType=application/json"`
+	// The Tracking Field ID
+	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
 }
 
 type TrackingfieldUpdateResponse struct {

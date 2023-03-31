@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePathParams struct {
+type DeleteRequest struct {
 	// view's internal identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type DeleteRequest struct {
-	PathParams DeletePathParams
 }
 
 type DeleteResponse struct {

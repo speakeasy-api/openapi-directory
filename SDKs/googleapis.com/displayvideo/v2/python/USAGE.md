@@ -4,36 +4,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DisplayvideoAdvertisersAssetsUploadRequest(
-    security=operations.DisplayvideoAdvertisersAssetsUploadSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DisplayvideoAdvertisersAssetsUploadPathParams(
-        advertiser_id="et",
-    ),
-    query_params=operations.DisplayvideoAdvertisersAssetsUploadQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="json",
-        callback="aut",
-        fields="asperiores",
-        key="ea",
-        oauth_token="quam",
-        pretty_print=True,
-        quota_user="consequatur",
-        upload_type="et",
-        upload_protocol="natus",
-    ),
-    request="corrupti".encode(),
+    dollar_xgafv="2",
+    request_body="provident".encode(),
+    access_token="distinctio",
+    advertiser_id="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.advertisers.displayvideo_advertisers_assets_upload(req)
+res = s.advertisers.displayvideo_advertisers_assets_upload(req, operations.DisplayvideoAdvertisersAssetsUploadSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.create_asset_response is not None:
     # handle response

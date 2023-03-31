@@ -34,7 +34,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateWebhookV1 - Create Webhook
 // Create Webhook
-func (s *webhooks) CreateWebhookV1(ctx context.Context, request operations.CreateWebhookV1Request) (*operations.CreateWebhookV1Response, error) {
+func (s *webhooks) CreateWebhookV1(ctx context.Context, request shared.CreateWebhookRequest) (*operations.CreateWebhookV1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/webhooks"
 
@@ -111,7 +111,7 @@ func (s *webhooks) CreateWebhookV1(ctx context.Context, request operations.Creat
 // Get details about the given webhook.
 func (s *webhooks) GetWebhookV1(ctx context.Context, request operations.GetWebhookV1Request) (*operations.GetWebhookV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +194,7 @@ func (s *webhooks) ListWebhooksV1(ctx context.Context, request operations.ListWe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -254,7 +254,7 @@ func (s *webhooks) ListWebhooksV1(ctx context.Context, request operations.ListWe
 }
 func (s *webhooks) PingWebhookV1(ctx context.Context, request operations.PingWebhookV1Request) (*operations.PingWebhookV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}/ping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}/ping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -330,9 +330,9 @@ func (s *webhooks) PingWebhookV1(ctx context.Context, request operations.PingWeb
 // Update Webhook
 func (s *webhooks) UpdateWebhookV1(ctx context.Context, request operations.UpdateWebhookV1Request) (*operations.UpdateWebhookV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/webhooks/{webhookId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

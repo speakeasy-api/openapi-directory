@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetIsosQueryParams struct {
+type GetIsosRequest struct {
 	// Can be used to filter ISOs by their name. The response will only contain the ISO matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetIsosRequest struct {
-	QueryParams GetIsosQueryParams
 }
 
 // GetIsos200ApplicationJSONIsosTypeEnum - Type of the ISO

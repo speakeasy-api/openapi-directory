@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type TeamsRemoveRepoInOrgPathParams struct {
+type TeamsRemoveRepoInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -15,10 +15,6 @@ type TeamsRemoveRepoInOrgPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsRemoveRepoInOrgRequest struct {
-	PathParams TeamsRemoveRepoInOrgPathParams
 }
 
 type TeamsRemoveRepoInOrgResponse struct {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type MeterFolderInformationPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type MeterFolderInformationPostRawResponse struct {
 	ContentType string
 	StatusCode  int

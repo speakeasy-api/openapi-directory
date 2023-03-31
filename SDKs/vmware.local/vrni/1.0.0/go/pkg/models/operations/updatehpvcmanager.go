@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateHpvcManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateHpvcManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateHpvcManagerRequest struct {
-	PathParams UpdateHpvcManagerPathParams
-	Request    *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security   UpdateHpvcManagerSecurity
+	SwitchDataSource *shared.SwitchDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateHpvcManagerResponse struct {

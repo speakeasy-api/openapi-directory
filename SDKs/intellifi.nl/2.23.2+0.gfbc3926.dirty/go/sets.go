@@ -39,9 +39,9 @@ func newSets(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // AddItemIdsList - Add items to an existing list
 func (s *sets) AddItemIdsList(ctx context.Context, request operations.AddItemIdsListRequest) (*operations.AddItemIdsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -93,9 +93,9 @@ func (s *sets) AddItemIdsList(ctx context.Context, request operations.AddItemIds
 // AddItemIdsSpotList - Add spots to an existing list
 func (s *sets) AddItemIdsSpotList(ctx context.Context, request operations.AddItemIdsSpotListRequest) (*operations.AddItemIdsSpotListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *sets) AddItemIdsSpotList(ctx context.Context, request operations.AddIte
 }
 
 // AddItemList - Create item list
-func (s *sets) AddItemList(ctx context.Context, request operations.AddItemListRequest) (*operations.AddItemListResponse, error) {
+func (s *sets) AddItemList(ctx context.Context, request shared.ItemListInput) (*operations.AddItemListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sets/itemlists"
 
@@ -199,7 +199,7 @@ func (s *sets) AddItemList(ctx context.Context, request operations.AddItemListRe
 }
 
 // AddSpotList - Create spot list
-func (s *sets) AddSpotList(ctx context.Context, request operations.AddSpotListRequest) (*operations.AddSpotListResponse, error) {
+func (s *sets) AddSpotList(ctx context.Context, request shared.ItemListInput) (*operations.AddSpotListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sets/spotlists"
 
@@ -255,7 +255,7 @@ func (s *sets) AddSpotList(ctx context.Context, request operations.AddSpotListRe
 // DeleteItemIDFromItemList - Delete item from list
 func (s *sets) DeleteItemIDFromItemList(ctx context.Context, request operations.DeleteItemIDFromItemListRequest) (*operations.DeleteItemIDFromItemListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -299,7 +299,7 @@ func (s *sets) DeleteItemIDFromItemList(ctx context.Context, request operations.
 // DeleteItemIDFromSpotList - Delete spot from list
 func (s *sets) DeleteItemIDFromSpotList(ctx context.Context, request operations.DeleteItemIDFromSpotListRequest) (*operations.DeleteItemIDFromSpotListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +343,7 @@ func (s *sets) DeleteItemIDFromSpotList(ctx context.Context, request operations.
 // DeleteItemSet - Delete item list
 func (s *sets) DeleteItemSet(ctx context.Context, request operations.DeleteItemSetRequest) (*operations.DeleteItemSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -387,7 +387,7 @@ func (s *sets) DeleteItemSet(ctx context.Context, request operations.DeleteItemS
 // DeleteSpotList - Delete spot list
 func (s *sets) DeleteSpotList(ctx context.Context, request operations.DeleteSpotListRequest) (*operations.DeleteSpotListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -431,7 +431,7 @@ func (s *sets) DeleteSpotList(ctx context.Context, request operations.DeleteSpot
 // GetItemListByID - Get item list
 func (s *sets) GetItemListByID(ctx context.Context, request operations.GetItemListByIDRequest) (*operations.GetItemListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -475,7 +475,7 @@ func (s *sets) GetItemListByID(ctx context.Context, request operations.GetItemLi
 // GetItemListIdsByID - Get item ids for this list
 func (s *sets) GetItemListIdsByID(ctx context.Context, request operations.GetItemListIdsByIDRequest) (*operations.GetItemListIdsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}/ids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -526,7 +526,7 @@ func (s *sets) GetItemLists(ctx context.Context, request operations.GetItemLists
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -567,7 +567,7 @@ func (s *sets) GetItemLists(ctx context.Context, request operations.GetItemLists
 // GetSpotListByID - Info for a specific spot list
 func (s *sets) GetSpotListByID(ctx context.Context, request operations.GetSpotListByIDRequest) (*operations.GetSpotListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +611,7 @@ func (s *sets) GetSpotListByID(ctx context.Context, request operations.GetSpotLi
 // GetSpotListIdsByID - Get spot ids for this list
 func (s *sets) GetSpotListIdsByID(ctx context.Context, request operations.GetSpotListIdsByIDRequest) (*operations.GetSpotListIdsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}/ids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -662,7 +662,7 @@ func (s *sets) GetSpotLists(ctx context.Context, request operations.GetSpotLists
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -703,9 +703,9 @@ func (s *sets) GetSpotLists(ctx context.Context, request operations.GetSpotLists
 // UpdateItemList - Update existing item list
 func (s *sets) UpdateItemList(ctx context.Context, request operations.UpdateItemListRequest) (*operations.UpdateItemListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/itemlists/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItemListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -757,9 +757,9 @@ func (s *sets) UpdateItemList(ctx context.Context, request operations.UpdateItem
 // UpdateSpotList - Update existing spot list
 func (s *sets) UpdateSpotList(ctx context.Context, request operations.UpdateSpotListRequest) (*operations.UpdateSpotListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/spotlists/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpotListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

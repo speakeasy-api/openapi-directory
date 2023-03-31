@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PostAppsAppIDLivePathParams struct {
+type PostAppsAppIDLiveRequest struct {
 	// The id of the App to be changed
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type PostAppsAppIDLiveQueryParams struct {
 	// The unique id of the developer that is changing this AppVersion
 	DeveloperID string `queryParam:"style=form,explode=true,name=developerId"`
 	// The new version of the live App
 	Version string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type PostAppsAppIDLiveRequest struct {
-	PathParams  PostAppsAppIDLivePathParams
-	QueryParams PostAppsAppIDLiveQueryParams
 }
 
 type PostAppsAppIDLiveResponse struct {

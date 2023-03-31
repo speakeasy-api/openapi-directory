@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdateDiscussionCommentLegacyPathParams struct {
-	// The number that identifies the comment.
-	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsUpdateDiscussionCommentLegacyRequestBody struct {
 	// The discussion comment's body text.
 	Body string `json:"body"`
 }
 
 type TeamsUpdateDiscussionCommentLegacyRequest struct {
-	PathParams TeamsUpdateDiscussionCommentLegacyPathParams
-	Request    TeamsUpdateDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsUpdateDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the comment.
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsUpdateDiscussionCommentLegacyResponse struct {

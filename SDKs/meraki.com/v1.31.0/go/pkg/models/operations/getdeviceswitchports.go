@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchPortsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceSwitchPortsRequest struct {
-	PathParams GetDeviceSwitchPortsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // GetDeviceSwitchPorts200ApplicationJSONAccessPolicyTypeEnum - The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.

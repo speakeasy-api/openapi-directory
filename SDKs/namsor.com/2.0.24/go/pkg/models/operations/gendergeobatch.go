@@ -8,13 +8,7 @@ import (
 )
 
 type GenderGeoBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderGeoBatchRequest struct {
-	// A list of names, with country code.
-	Request  *shared.BatchFirstLastNameGeoIn `request:"mediaType=application/json"`
-	Security GenderGeoBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderGeoBatchResponse struct {

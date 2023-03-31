@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type ReservationbyWarehouseandSkuPathParams struct {
-	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
-	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
-}
-
-type ReservationbyWarehouseandSkuHeaders struct {
+type ReservationbyWarehouseandSkuRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ReservationbyWarehouseandSkuRequest struct {
-	PathParams ReservationbyWarehouseandSkuPathParams
-	Headers    ReservationbyWarehouseandSkuHeaders
+	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
+	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
 }
 
 type ReservationbyWarehouseandSkuResponse struct {

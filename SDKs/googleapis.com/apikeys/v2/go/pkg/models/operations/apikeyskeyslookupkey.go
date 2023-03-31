@@ -8,13 +8,13 @@ import (
 )
 
 type ApikeysKeysLookupKeySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ApikeysKeysLookupKeySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ApikeysKeysLookupKeySecurity struct {
@@ -22,7 +22,7 @@ type ApikeysKeysLookupKeySecurity struct {
 	Option2 *ApikeysKeysLookupKeySecurityOption2 `security:"option"`
 }
 
-type ApikeysKeysLookupKeyQueryParams struct {
+type ApikeysKeysLookupKeyRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -47,11 +47,6 @@ type ApikeysKeysLookupKeyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ApikeysKeysLookupKeyRequest struct {
-	QueryParams ApikeysKeysLookupKeyQueryParams
-	Security    ApikeysKeysLookupKeySecurity
 }
 
 type ApikeysKeysLookupKeyResponse struct {

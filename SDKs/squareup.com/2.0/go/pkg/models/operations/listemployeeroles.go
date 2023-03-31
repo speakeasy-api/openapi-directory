@@ -8,10 +8,10 @@ import (
 )
 
 type ListEmployeeRolesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListEmployeeRolesQueryParams struct {
+type ListEmployeeRolesRequest struct {
 	// A pagination cursor to retrieve the next set of results for your
 	// original query to the endpoint.
 	BatchToken *string `queryParam:"style=form,explode=true,name=batch_token"`
@@ -19,11 +19,6 @@ type ListEmployeeRolesQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The order in which employees are listed in the response, based on their created_at field.Default value: ASC
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type ListEmployeeRolesRequest struct {
-	QueryParams ListEmployeeRolesQueryParams
-	Security    ListEmployeeRolesSecurity
 }
 
 type ListEmployeeRolesResponse struct {

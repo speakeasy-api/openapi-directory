@@ -12,20 +12,15 @@ var FetchConversationScopedWebhookServerList = []string{
 }
 
 type FetchConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchConversationScopedWebhookPathParams struct {
+type FetchConversationScopedWebhookRequest struct {
 	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchConversationScopedWebhookRequest struct {
-	PathParams FetchConversationScopedWebhookPathParams
-	Security   FetchConversationScopedWebhookSecurity
-	ServerURL  *string
 }
 
 type FetchConversationScopedWebhookResponse struct {

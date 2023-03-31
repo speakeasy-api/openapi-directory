@@ -48,7 +48,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *users) UsersAddonAccountsList(ctx context.Context, request operations.UsersAddonAccountsListRequest) (*operations.UsersAddonAccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/accounts/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/accounts/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *users) UsersAddonAccountsList(ctx context.Context, request operations.U
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *users) UsersAddonAccountsRead(ctx context.Context, request operations.UsersAddonAccountsReadRequest) (*operations.UsersAddonAccountsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/accounts/{account_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/accounts/{account_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *users) UsersAddonAccountsRead(ctx context.Context, request operations.U
 // Attempting to request the accounts for an addon that is not enabled will result in a **404 Not Found** response.
 func (s *users) UsersAddonsList(ctx context.Context, request operations.UsersAddonsListRequest) (*operations.UsersAddonsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -219,7 +219,7 @@ func (s *users) UsersAddonsList(ctx context.Context, request operations.UsersAdd
 // Attempting to request the accounts for an addon that is not enabled will result in a **404 Not Found** response.
 func (s *users) UsersAddonsRead(ctx context.Context, request operations.UsersAddonsReadRequest) (*operations.UsersAddonsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/addons/{provider}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +270,7 @@ func (s *users) UsersAddonsRead(ctx context.Context, request operations.UsersAdd
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *users) UsersInstitutionsList(ctx context.Context, request operations.UsersInstitutionsListRequest) (*operations.UsersInstitutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/institutions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/institutions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +391,7 @@ func (s *users) UsersList(ctx context.Context) (*operations.UsersListResponse, e
 // Nodes may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, `preprint`, and `contributors`.
 func (s *users) UsersNodesList(ctx context.Context, request operations.UsersNodesListRequest) (*operations.UsersNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/nodes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/nodes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -444,9 +444,9 @@ func (s *users) UsersNodesList(ctx context.Context, request operations.UsersNode
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *users) UsersPartialUpdate(ctx context.Context, request operations.UsersPartialUpdateRequest) (*operations.UsersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -500,7 +500,7 @@ func (s *users) UsersPartialUpdate(ctx context.Context, request operations.Users
 // Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
 func (s *users) UsersPreprintsList(ctx context.Context, request operations.UsersPreprintsListRequest) (*operations.UsersPreprintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/preprints/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/preprints/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -555,7 +555,7 @@ func (s *users) UsersPreprintsList(ctx context.Context, request operations.Users
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *users) UsersRead(ctx context.Context, request operations.UsersReadRequest) (*operations.UsersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -614,7 +614,7 @@ func (s *users) UsersRead(ctx context.Context, request operations.UsersReadReque
 // Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
 func (s *users) UsersRegistrationsList(ctx context.Context, request operations.UsersRegistrationsListRequest) (*operations.UsersRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/registrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/registrations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

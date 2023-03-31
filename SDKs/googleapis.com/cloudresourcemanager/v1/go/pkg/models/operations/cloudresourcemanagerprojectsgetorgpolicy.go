@@ -8,13 +8,13 @@ import (
 )
 
 type CloudresourcemanagerProjectsGetOrgPolicySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerProjectsGetOrgPolicySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerProjectsGetOrgPolicySecurity struct {
@@ -22,14 +22,10 @@ type CloudresourcemanagerProjectsGetOrgPolicySecurity struct {
 	Option2 *CloudresourcemanagerProjectsGetOrgPolicySecurityOption2 `security:"option"`
 }
 
-type CloudresourcemanagerProjectsGetOrgPolicyPathParams struct {
-	// Name of the resource the `Policy` is set on.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type CloudresourcemanagerProjectsGetOrgPolicyQueryParams struct {
+type CloudresourcemanagerProjectsGetOrgPolicyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GetOrgPolicyRequest *shared.GetOrgPolicyRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type CloudresourcemanagerProjectsGetOrgPolicyQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Name of the resource the `Policy` is set on.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudresourcemanagerProjectsGetOrgPolicyRequest struct {
-	PathParams  CloudresourcemanagerProjectsGetOrgPolicyPathParams
-	QueryParams CloudresourcemanagerProjectsGetOrgPolicyQueryParams
-	Request     *shared.GetOrgPolicyRequest `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerProjectsGetOrgPolicySecurity
 }
 
 type CloudresourcemanagerProjectsGetOrgPolicyResponse struct {

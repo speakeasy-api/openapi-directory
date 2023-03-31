@@ -44,16 +44,12 @@ func (e *GetGetCurationTagHistoryFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetCurationTagHistoryQueryParams struct {
+type GetGetCurationTagHistoryRequest struct {
 	Format *GetGetCurationTagHistoryFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
 	// Only include history from after the given date
 	Timestamp *string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type GetGetCurationTagHistoryRequest struct {
-	QueryParams GetGetCurationTagHistoryQueryParams
 }
 
 type GetGetCurationTagHistoryResponse struct {

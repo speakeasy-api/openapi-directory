@@ -53,7 +53,6 @@ pkg/models/operations/updateservice.go
 pkg/models/operations/updateuser.go
 pkg/models/shared/chatv1servicechannel.go
 pkg/models/shared/channelenumchanneltypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/chatv1credential.go
 pkg/models/shared/credentialenumpushserviceenum.go
 pkg/models/shared/chatv1servicechannelinvite.go
@@ -67,3 +66,4 @@ pkg/models/shared/messageenumordertypeenum.go
 pkg/models/shared/chatv1serviceuseruserchannel.go
 pkg/models/shared/userchannelenumchannelstatusenum.go
 USAGE.md
+pkg/models/operations/options.go

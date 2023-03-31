@@ -34,14 +34,14 @@ func newPlatforms(defaultClient, securityClient HTTPClient, serverURL, language,
 // VersionhistoryPlatformsChannelsList - Returns list of channels that are available for a given platform.
 func (s *platforms) VersionhistoryPlatformsChannelsList(ctx context.Context, request operations.VersionhistoryPlatformsChannelsListRequest) (*operations.VersionhistoryPlatformsChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *platforms) VersionhistoryPlatformsChannelsList(ctx context.Context, req
 // VersionhistoryPlatformsChannelsVersionsList - Returns list of version for the given platform/channel.
 func (s *platforms) VersionhistoryPlatformsChannelsVersionsList(ctx context.Context, request operations.VersionhistoryPlatformsChannelsVersionsListRequest) (*operations.VersionhistoryPlatformsChannelsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,14 +130,14 @@ func (s *platforms) VersionhistoryPlatformsChannelsVersionsList(ctx context.Cont
 // VersionhistoryPlatformsChannelsVersionsReleasesList - Returns list of releases of the given version.
 func (s *platforms) VersionhistoryPlatformsChannelsVersionsReleasesList(ctx context.Context, request operations.VersionhistoryPlatformsChannelsVersionsReleasesListRequest) (*operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -178,14 +178,14 @@ func (s *platforms) VersionhistoryPlatformsChannelsVersionsReleasesList(ctx cont
 // VersionhistoryPlatformsList - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
 func (s *platforms) VersionhistoryPlatformsList(ctx context.Context, request operations.VersionhistoryPlatformsListRequest) (*operations.VersionhistoryPlatformsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/platforms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/platforms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

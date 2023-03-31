@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationNetworksPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationNetworksTagsFilterTypeEnum - An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 type GetOrganizationNetworksTagsFilterTypeEnum string
 
@@ -36,13 +32,14 @@ func (e *GetOrganizationNetworksTagsFilterTypeEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetOrganizationNetworksQueryParams struct {
+type GetOrganizationNetworksRequest struct {
 	// An optional parameter that is the ID of a config template. Will return all networks bound to that template.
 	ConfigTemplateID *string `queryParam:"style=form,explode=true,name=configTemplateId"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
-	IsBoundToConfigTemplate *bool `queryParam:"style=form,explode=true,name=isBoundToConfigTemplate"`
+	IsBoundToConfigTemplate *bool  `queryParam:"style=form,explode=true,name=isBoundToConfigTemplate"`
+	OrganizationID          string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -51,11 +48,6 @@ type GetOrganizationNetworksQueryParams struct {
 	Tags []string `queryParam:"style=form,explode=false,name=tags"`
 	// An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 	TagsFilterType *GetOrganizationNetworksTagsFilterTypeEnum `queryParam:"style=form,explode=true,name=tagsFilterType"`
-}
-
-type GetOrganizationNetworksRequest struct {
-	PathParams  GetOrganizationNetworksPathParams
-	QueryParams GetOrganizationNetworksQueryParams
 }
 
 type GetOrganizationNetworks200ApplicationJSON struct {

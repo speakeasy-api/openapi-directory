@@ -33,7 +33,7 @@ func newInfoTypes(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DlpInfoTypesList - Returns a list of the sensitive information types that DLP API supports. See https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
-func (s *infoTypes) DlpInfoTypesList(ctx context.Context, request operations.DlpInfoTypesListRequest) (*operations.DlpInfoTypesListResponse, error) {
+func (s *infoTypes) DlpInfoTypesList(ctx context.Context, request operations.DlpInfoTypesListRequest, security operations.DlpInfoTypesListSecurity) (*operations.DlpInfoTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/infoTypes"
 
@@ -42,11 +42,11 @@ func (s *infoTypes) DlpInfoTypesList(ctx context.Context, request operations.Dlp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

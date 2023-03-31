@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAssignedAppLinksPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type GetAssignedAppLinksRequest struct {
-	PathParams GetAssignedAppLinksPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetAssignedAppLinksResponse struct {

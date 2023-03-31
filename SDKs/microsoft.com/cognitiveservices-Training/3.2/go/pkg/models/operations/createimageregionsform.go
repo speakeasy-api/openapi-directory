@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageRegionsFormPathParams struct {
+type CreateImageRegionsFormRequest struct {
+	// Batch of image regions which include a tag and bounding box. Limited to 64.
+	ImageRegionCreateBatch shared.ImageRegionCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImageRegionsFormRequest struct {
-	PathParams CreateImageRegionsFormPathParams
-	// Batch of image regions which include a tag and bounding box. Limited to 64.
-	Request shared.ImageRegionCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateImageRegionsFormResponse struct {

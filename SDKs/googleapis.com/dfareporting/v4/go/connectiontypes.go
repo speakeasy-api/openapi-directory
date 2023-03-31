@@ -32,20 +32,20 @@ func newConnectionTypes(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DfareportingConnectionTypesGet - Gets one connection type by ID.
-func (s *connectionTypes) DfareportingConnectionTypesGet(ctx context.Context, request operations.DfareportingConnectionTypesGetRequest) (*operations.DfareportingConnectionTypesGetResponse, error) {
+func (s *connectionTypes) DfareportingConnectionTypesGet(ctx context.Context, request operations.DfareportingConnectionTypesGetRequest, security operations.DfareportingConnectionTypesGetSecurity) (*operations.DfareportingConnectionTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *connectionTypes) DfareportingConnectionTypesGet(ctx context.Context, re
 }
 
 // DfareportingConnectionTypesList - Retrieves a list of connection types.
-func (s *connectionTypes) DfareportingConnectionTypesList(ctx context.Context, request operations.DfareportingConnectionTypesListRequest) (*operations.DfareportingConnectionTypesListResponse, error) {
+func (s *connectionTypes) DfareportingConnectionTypesList(ctx context.Context, request operations.DfareportingConnectionTypesListRequest, security operations.DfareportingConnectionTypesListSecurity) (*operations.DfareportingConnectionTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

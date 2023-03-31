@@ -14,51 +14,42 @@ func main() {
     s := sdk.New()
 
     req := operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest{
-        Security: operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity{
-            Option1: &operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ConnectionID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.ConnectionInput{
+        DollarXgafv: "2",
+        ConnectionInput: &shared.ConnectionInput{
             CloudSQL: &shared.CloudSQLPropertiesInput{
                 Credential: &shared.CloudSQLCredential{
-                    Password: "iure",
-                    Username: "Eli96",
+                    Password: "provident",
+                    Username: "Micheal_Sporer",
                 },
-                Database: "tempora",
-                InstanceID: "suscipit",
+                Database: "corrupti",
+                InstanceID: "illum",
                 Type: "POSTGRES",
             },
-            Description: "minus",
-            FriendlyName: "placeat",
-            Name: "voluptatum",
+            Description: "error",
+            FriendlyName: "deserunt",
+            Name: "suscipit",
         },
+        AccessToken: "iure",
+        Alt: "json",
+        Callback: "debitis",
+        ConnectionID: "ipsa",
+        Fields: "delectus",
+        Key: "tempora",
+        OauthToken: "suscipit",
+        Parent: "molestiae",
+        PrettyPrint: false,
+        QuotaUser: "minus",
+        UploadType: "placeat",
+        UploadProtocol: "voluptatum",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BigqueryconnectionProjectsLocationsConnectionsCreate(ctx, req)
+    res, err := s.Projects.BigqueryconnectionProjectsLocationsConnectionsCreate(ctx, req, operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity{
+        Option1: &operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

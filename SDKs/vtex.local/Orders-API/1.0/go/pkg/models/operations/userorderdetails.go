@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserorderdetailsPathParams struct {
-	// Order ID is a unique code that identifies an order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type UserorderdetailsQueryParams struct {
-	// Customer email.
-	ClientEmail string `queryParam:"style=form,explode=true,name=clientEmail"`
-}
-
-type UserorderdetailsHeaders struct {
+type UserorderdetailsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UserorderdetailsRequest struct {
-	PathParams  UserorderdetailsPathParams
-	QueryParams UserorderdetailsQueryParams
-	Headers     UserorderdetailsHeaders
+	// Customer email.
+	ClientEmail string `queryParam:"style=form,explode=true,name=clientEmail"`
+	// Order ID is a unique code that identifies an order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type UserorderdetailsResponse struct {

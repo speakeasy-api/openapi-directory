@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAPIV1ScansRequest{
-        Security: operations.GetAPIV1ScansSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetAPIV1ScansQueryParams{
-            Name: "corrupti",
-            PerPage: "provident",
-        },
+        Name: "corrupti",
+        PerPage: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Scans.GetAPIV1Scans(ctx, req)
+    res, err := s.Scans.GetAPIV1Scans(ctx, req, operations.GetAPIV1ScansSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

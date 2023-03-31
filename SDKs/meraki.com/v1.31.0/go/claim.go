@@ -34,9 +34,9 @@ func newClaim(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Claim a vMX into a network
 func (s *claim) VmxNetworkDevicesClaim(ctx context.Context, request operations.VmxNetworkDevicesClaimRequest) (*operations.VmxNetworkDevicesClaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim/vmx", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim/vmx", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

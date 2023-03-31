@@ -8,18 +8,18 @@ import (
 )
 
 type BigquerydatatransferProjectsLocationsDataSourcesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsLocationsDataSourcesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsLocationsDataSourcesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsLocationsDataSourcesListSecurity struct {
@@ -28,12 +28,7 @@ type BigquerydatatransferProjectsLocationsDataSourcesListSecurity struct {
 	Option3 *BigquerydatatransferProjectsLocationsDataSourcesListSecurityOption3 `security:"option"`
 }
 
-type BigquerydatatransferProjectsLocationsDataSourcesListPathParams struct {
-	// Required. The BigQuery project id for which data sources should be returned. Must be in the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigquerydatatransferProjectsLocationsDataSourcesListQueryParams struct {
+type BigquerydatatransferProjectsLocationsDataSourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type BigquerydatatransferProjectsLocationsDataSourcesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Pagination token, which can be used to request a specific page of `ListDataSourcesRequest` list results. For multiple-page results, `ListDataSourcesResponse` outputs a `next_page` token, which can be used as the `page_token` value to request the next page of list results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The BigQuery project id for which data sources should be returned. Must be in the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -60,12 +57,6 @@ type BigquerydatatransferProjectsLocationsDataSourcesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigquerydatatransferProjectsLocationsDataSourcesListRequest struct {
-	PathParams  BigquerydatatransferProjectsLocationsDataSourcesListPathParams
-	QueryParams BigquerydatatransferProjectsLocationsDataSourcesListQueryParams
-	Security    BigquerydatatransferProjectsLocationsDataSourcesListSecurity
 }
 
 type BigquerydatatransferProjectsLocationsDataSourcesListResponse struct {

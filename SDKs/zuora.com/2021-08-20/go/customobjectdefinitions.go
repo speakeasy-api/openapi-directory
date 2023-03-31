@@ -51,14 +51,14 @@ func newCustomObjectDefinitions(defaultClient, securityClient HTTPClient, server
 // **Note:** A custom object definition can only be deleted if no record of this custom object type exists.
 func (s *customObjectDefinitions) DeleteCustomObjectDefinitionByType(ctx context.Context, request operations.DeleteCustomObjectDefinitionByTypeRequest) (*operations.DeleteCustomObjectDefinitionByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/definitions/default/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/definitions/default/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -108,9 +108,9 @@ func (s *customObjectDefinitions) GETAllCustomObjectDefinitionsInNamespace(ctx c
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *customObjectDefinitions) GETAllCustomObjectDefinitionsInNamespace(ctx c
 // Retrieves the custom object definition by type for the given tenant.
 func (s *customObjectDefinitions) GETCustomObjectDefinitionByType(ctx context.Context, request operations.GETCustomObjectDefinitionByTypeRequest) (*operations.GETCustomObjectDefinitionByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/definitions/default/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/definitions/default/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -235,7 +235,7 @@ func (s *customObjectDefinitions) POSTCustomObjectDefinitions(ctx context.Contex
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/objects/definitions/default"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostCustomObjectDefinitionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -250,7 +250,7 @@ func (s *customObjectDefinitions) POSTCustomObjectDefinitions(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -315,7 +315,7 @@ func (s *customObjectDefinitions) POSTUpdateCustomObjectDefinition(ctx context.C
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/objects/migrations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrationUpdateCustomObjectDefinitionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -330,7 +330,7 @@ func (s *customObjectDefinitions) POSTUpdateCustomObjectDefinition(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

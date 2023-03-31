@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCountryPathParams struct {
-	// The country key
-	CountryKey string `pathParam:"style=simple,explode=false,name=countryKey"`
-}
-
 // GetCountryOrderEnum - The direction to sort the result country states by.
 type GetCountryOrderEnum string
 
@@ -62,18 +57,15 @@ func (e *GetCountrySortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCountryQueryParams struct {
+type GetCountryRequest struct {
+	// The country key
+	CountryKey string `pathParam:"style=simple,explode=false,name=countryKey"`
 	// MarketId in which the request is being made, and for which responses should be localized
 	MarketID string `queryParam:"style=form,explode=true,name=marketId"`
 	// The direction to sort the result country states by.
 	Order *GetCountryOrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// The term to sort the result country states by.
 	Sort *GetCountrySortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCountryRequest struct {
-	PathParams  GetCountryPathParams
-	QueryParams GetCountryQueryParams
 }
 
 type GetCountryResponse struct {

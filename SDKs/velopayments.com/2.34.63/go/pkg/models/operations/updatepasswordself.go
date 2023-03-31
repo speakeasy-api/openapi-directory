@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePasswordSelfRequest struct {
-	// The password
-	Request shared.SelfUpdatePasswordRequest `request:"mediaType=application/json"`
-}
-
 type UpdatePasswordSelfResponse struct {
 	ContentType string
 	StatusCode  int

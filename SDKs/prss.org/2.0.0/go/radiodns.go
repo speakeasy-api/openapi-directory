@@ -109,10 +109,20 @@ func (s *radioDNS) GetRadiodnsSpi31GIXML(ctx context.Context) (*operations.GetRa
 // Based on [ETSI TS 102 818 v3.4.1](https://www.etsi.org/deliver/etsi_ts/102800_102899/102818/03.04.01_60/ts_102818v030401p.pdf) section 10.2.4, the SI document will be placed in a defined location on the service website. Using standard HTTP cache mechanisms, the SI document will only need to be fetched and processed occasionally.
 //
 // The response will use standard HTTP cache-control headers to indicate when the document should be refreshed as well as an ETag to allow for lightweight change detection.
-func (s *radioDNS) GetRadiodnsSpi31SIXML(ctx context.Context, request operations.GetRadiodnsSpi31SIXMLRequest) (*operations.GetRadiodnsSpi31SIXMLResponse, error) {
+func (s *radioDNS) GetRadiodnsSpi31SIXML(ctx context.Context, opts ...operations.Option) (*operations.GetRadiodnsSpi31SIXMLResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetRadiodnsSpi31SIXMLServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/radiodns/spi/3.1/SI.xml"
@@ -180,20 +190,30 @@ func (s *radioDNS) GetRadiodnsSpi31SIXML(ctx context.Context, request operations
 // Construction of the URL to the PI document is described in [ETSI TS 102 818 v3.4.1](https://www.etsi.org/deliver/etsi_ts/102800_102899/102818/03.04.01_60/ts_102818v030401p.pdf) section 10.3. Currently, MetaPub only supports PI URLs constructed from SPI SI, as described in [ETSI TS 103 270 v1.4.1](https://www.etsi.org/deliver/etsi_ts/103200_103299/103270/01.04.01_60/ts_103270v010401p.pdf) section 7.
 //
 // The response will use standard HTTP cache-control headers to indicate when the document should be refreshed as well as an ETag to allow for lightweight change detection.
-func (s *radioDNS) GetRadiodnsSpi31IDFqdnSidDatePIXML(ctx context.Context, request operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLRequest) (*operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLResponse, error) {
-	baseURL := operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *radioDNS) GetRadiodnsSpi31IDFqdnSidDatePIXML(ctx context.Context, request operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLRequest, opts ...operations.Option) (*operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetRadiodnsSpi31IDFqdnSidDatePIXMLServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

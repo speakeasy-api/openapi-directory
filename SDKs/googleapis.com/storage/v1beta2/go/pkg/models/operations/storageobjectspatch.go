@@ -10,25 +10,18 @@ import (
 )
 
 type StorageObjectsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsPatchSecurity struct {
 	Option1 *StorageObjectsPatchSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsPatchSecurityOption2 `security:"option"`
-}
-
-type StorageObjectsPatchPathParams struct {
-	// Name of the bucket in which the object resides.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 // StorageObjectsPatchProjectionEnum - Set of properties to return. Defaults to full.
@@ -55,9 +48,12 @@ func (e *StorageObjectsPatchProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsPatchQueryParams struct {
+type StorageObjectsPatchRequest struct {
+	Object1 *shared.Object `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which the object resides.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -74,6 +70,8 @@ type StorageObjectsPatchQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object.
+	ObjectPathParameter string `pathParam:"style=simple,explode=false,name=object"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Set of properties to return. Defaults to full.
@@ -82,13 +80,6 @@ type StorageObjectsPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectsPatchRequest struct {
-	PathParams  StorageObjectsPatchPathParams
-	QueryParams StorageObjectsPatchQueryParams
-	Request     *shared.Object `request:"mediaType=application/json"`
-	Security    StorageObjectsPatchSecurity
 }
 
 type StorageObjectsPatchResponse struct {

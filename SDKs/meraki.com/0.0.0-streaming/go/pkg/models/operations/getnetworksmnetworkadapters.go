@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmNetworkAdaptersPathParams struct {
+type GetNetworkSmNetworkAdaptersRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmNetworkAdaptersRequest struct {
-	PathParams GetNetworkSmNetworkAdaptersPathParams
 }
 
 type GetNetworkSmNetworkAdaptersResponse struct {

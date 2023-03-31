@@ -8,13 +8,7 @@ import (
 )
 
 type AddCiscoSwitchSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddCiscoSwitchRequest struct {
-	// Add a cisco switch as datasource.
-	Request  *shared.CiscoSwitchDataSourceRequest `request:"mediaType=application/json"`
-	Security AddCiscoSwitchSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddCiscoSwitchResponse struct {

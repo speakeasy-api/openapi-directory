@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetfullnameparsedmatchQueryParams struct {
+type GetfullnameparsedmatchRequest struct {
 	// First name from which to generate similarity key
 	Firstname string `queryParam:"style=form,explode=true,name=firstname"`
 	// Last name from which to generate similarity key
 	Lastname string `queryParam:"style=form,explode=true,name=lastname"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetfullnameparsedmatchRequest struct {
-	QueryParams GetfullnameparsedmatchQueryParams
 }
 
 // Getfullnameparsedmatch200ApplicationJSON - Generated similarity key for parsed full name data

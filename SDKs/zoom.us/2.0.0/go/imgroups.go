@@ -40,7 +40,7 @@ func newIMGroups(defaultClient, securityClient HTTPClient, serverURL, language, 
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *imGroups) ImGroup(ctx context.Context, request operations.ImGroupRequest) (*operations.ImGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *imGroups) ImGroup(ctx context.Context, request operations.ImGroupReques
 // **Scopes**: `imgroup:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *imGroups) ImGroupCreate(ctx context.Context, request operations.ImGroupCreateRequest) (*operations.ImGroupCreateResponse, error) {
+func (s *imGroups) ImGroupCreate(ctx context.Context, request operations.ImGroupCreateApplicationJSON) (*operations.ImGroupCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/im/groups"
 
@@ -170,7 +170,7 @@ func (s *imGroups) ImGroupCreate(ctx context.Context, request operations.ImGroup
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *imGroups) ImGroupDelete(ctx context.Context, request operations.ImGroupDeleteRequest) (*operations.ImGroupDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -211,20 +211,20 @@ func (s *imGroups) ImGroupDelete(ctx context.Context, request operations.ImGroup
 // **Scope:** `imgroup:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *imGroups) ImGroupMembers(ctx context.Context, request operations.ImGroupMembersRequest) (*operations.ImGroupMembersResponse, error) {
+func (s *imGroups) ImGroupMembers(ctx context.Context, request operations.ImGroupMembersRequest, security operations.ImGroupMembersSecurity) (*operations.ImGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,11 +273,11 @@ func (s *imGroups) ImGroupMembers(ctx context.Context, request operations.ImGrou
 // **Scope:** `imgroup:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *imGroups) ImGroupMembersCreate(ctx context.Context, request operations.ImGroupMembersCreateRequest) (*operations.ImGroupMembersCreateResponse, error) {
+func (s *imGroups) ImGroupMembersCreate(ctx context.Context, request operations.ImGroupMembersCreateRequest, security operations.ImGroupMembersCreateSecurity) (*operations.ImGroupMembersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -292,7 +292,7 @@ func (s *imGroups) ImGroupMembersCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,16 +343,16 @@ func (s *imGroups) ImGroupMembersCreate(ctx context.Context, request operations.
 // Scopes: `imgroup:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *imGroups) ImGroupMembersDelete(ctx context.Context, request operations.ImGroupMembersDeleteRequest) (*operations.ImGroupMembersDeleteResponse, error) {
+func (s *imGroups) ImGroupMembersDelete(ctx context.Context, request operations.ImGroupMembersDeleteRequest, security operations.ImGroupMembersDeleteSecurity) (*operations.ImGroupMembersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,9 +390,9 @@ func (s *imGroups) ImGroupMembersDelete(ctx context.Context, request operations.
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *imGroups) ImGroupUpdate(ctx context.Context, request operations.ImGroupUpdateRequest) (*operations.ImGroupUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

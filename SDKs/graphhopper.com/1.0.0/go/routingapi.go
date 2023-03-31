@@ -61,7 +61,7 @@ func (s *routingAPI) GetRoute(ctx context.Context, request operations.GetRouteRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -190,7 +190,7 @@ func (s *routingAPI) GetRouteInfo(ctx context.Context) (*operations.GetRouteInfo
 // ```bash
 // curl -X POST -H "Content-Type: application/json" "https://graphhopper.com/api/1/route?key=[YOUR_KEY]" -d '{"elevation":false,"points":[[-0.087891,51.534377],[-0.090637,51.467697]],"vehicle":"car"}'
 // ```
-func (s *routingAPI) PostRoute(ctx context.Context, request operations.PostRouteRequest) (*operations.PostRouteResponse, error) {
+func (s *routingAPI) PostRoute(ctx context.Context, request shared.RouteRequest) (*operations.PostRouteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/route"
 

@@ -4,17 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TaxRatesByCountryCodeRequest(
-    query_params=operations.TaxRatesByCountryCodeQueryParams(
-        country_code="temporibus",
-        date_="blanditiis",
-        domain="quam",
-        filter="totam",
-        product_codes_="commodi",
-        province="velit",
-        zip="quo",
-    ),
+    country_code="US",
+    date_="2020-09-02",
+    domain="api.taxrates.io",
+    filter="corrupti",
+    product_codes="C010",
+    province="provident",
+    zip="71642",
 )
     
 res = s.v1_tax.tax_rates_by_country_code(req)

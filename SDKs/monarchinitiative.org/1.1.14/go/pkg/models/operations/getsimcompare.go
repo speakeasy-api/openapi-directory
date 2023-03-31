@@ -42,7 +42,7 @@ func (e *GetSimCompareMetricEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimCompareQueryParams struct {
+type GetSimCompareRequest struct {
 	// set to true if *all* input ids are phenotypic features, else set to false
 	IsFeatureSet *bool `queryParam:"style=form,explode=true,name=is_feature_set"`
 	// Metric for computing similarity
@@ -51,10 +51,6 @@ type GetSimCompareQueryParams struct {
 	QueryID []string `queryParam:"style=form,explode=true,name=query_id"`
 	// A phenotype or identifier that is composed of phenotypes (eg disease, gene)
 	RefID []string `queryParam:"style=form,explode=true,name=ref_id"`
-}
-
-type GetSimCompareRequest struct {
-	QueryParams GetSimCompareQueryParams
 }
 
 type GetSimCompareResponse struct {

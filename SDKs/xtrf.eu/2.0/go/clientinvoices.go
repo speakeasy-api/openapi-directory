@@ -37,9 +37,9 @@ func newClientInvoices(defaultClient, securityClient HTTPClient, serverURL, lang
 // Adds a new payment to the client invoice. The invoice payment status (Not Paid, Partially Paid, Fully Paid) is automatically recalculated.
 func (s *clientInvoices) CreatePayment(ctx context.Context, request operations.CreatePaymentRequest) (*operations.CreatePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/payments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -81,7 +81,7 @@ func (s *clientInvoices) CreatePayment(ctx context.Context, request operations.C
 
 // Create1 - Creates a new invoice.
 // Creates a new invoice from tasks. Tasks are grouped by client and currency, therefore multiple invoices can be created.If any of the tasks cannot be invoiced (ie. it is already invoiced, not invoiceable, not associated with a project) then an error is reported.
-func (s *clientInvoices) Create1(ctx context.Context, request operations.Create1Request) (*operations.Create1Response, error) {
+func (s *clientInvoices) Create1(ctx context.Context, request shared.CustomerInvoiceCreateDTO) (*operations.Create1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/customers/invoices"
 
@@ -138,7 +138,7 @@ func (s *clientInvoices) Create1(ctx context.Context, request operations.Create1
 // Removes a client invoice.
 func (s *clientInvoices) Delete1(ctx context.Context, request operations.Delete1Request) (*operations.Delete1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +174,7 @@ func (s *clientInvoices) Delete1(ctx context.Context, request operations.Delete1
 // Removes a customer payment.
 func (s *clientInvoices) Delete2(ctx context.Context, request operations.Delete2Request) (*operations.Delete2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/payments/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -208,7 +208,7 @@ func (s *clientInvoices) Delete2(ctx context.Context, request operations.Delete2
 
 // DownloadDocuments - Generates client invoices' documents.
 // Generates client invoices' documents.
-func (s *clientInvoices) DownloadDocuments(ctx context.Context, request operations.DownloadDocumentsRequest) (*operations.DownloadDocumentsResponse, error) {
+func (s *clientInvoices) DownloadDocuments(ctx context.Context, request shared.DownloadDocumentsRequestDTO) (*operations.DownloadDocumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/customers/invoices/documents"
 
@@ -265,7 +265,7 @@ func (s *clientInvoices) DownloadDocuments(ctx context.Context, request operatio
 // Duplicate client invoice.
 func (s *clientInvoices) Duplicate(ctx context.Context, request operations.DuplicateRequest) (*operations.DuplicateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/duplicate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/duplicate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -310,7 +310,7 @@ func (s *clientInvoices) Duplicate(ctx context.Context, request operations.Dupli
 // Duplicate client invoice as pro forma.
 func (s *clientInvoices) DuplicateAsProForma(ctx context.Context, request operations.DuplicateAsProFormaRequest) (*operations.DuplicateAsProFormaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/duplicate/proForma", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/duplicate/proForma", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *clientInvoices) GetAll(ctx context.Context, request operations.GetAllRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -411,7 +411,7 @@ func (s *clientInvoices) GetAllIds(ctx context.Context, request operations.GetAl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -453,14 +453,14 @@ func (s *clientInvoices) GetAllIds(ctx context.Context, request operations.GetAl
 // Returns client invoice details.
 func (s *clientInvoices) GetByID(ctx context.Context, request operations.GetByIDRequest) (*operations.GetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -502,7 +502,7 @@ func (s *clientInvoices) GetByID(ctx context.Context, request operations.GetByID
 // Returns dates of a given client invoice.
 func (s *clientInvoices) GetDates(ctx context.Context, request operations.GetDatesRequest) (*operations.GetDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/dates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -547,7 +547,7 @@ func (s *clientInvoices) GetDates(ctx context.Context, request operations.GetDat
 // Generates client invoice document (PDF).
 func (s *clientInvoices) GetDocument(ctx context.Context, request operations.GetDocumentRequest) (*operations.GetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/document", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/document", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +592,7 @@ func (s *clientInvoices) GetDocument(ctx context.Context, request operations.Get
 // Returns payment terms of a given client invoice.
 func (s *clientInvoices) GetPaymentTerms(ctx context.Context, request operations.GetPaymentTermsRequest) (*operations.GetPaymentTermsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/paymentTerms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/paymentTerms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -637,7 +637,7 @@ func (s *clientInvoices) GetPaymentTerms(ctx context.Context, request operations
 // Returns all payments for the client invoice.
 func (s *clientInvoices) GetPayments(ctx context.Context, request operations.GetPaymentsRequest) (*operations.GetPaymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -682,7 +682,7 @@ func (s *clientInvoices) GetPayments(ctx context.Context, request operations.Get
 // Sends reminder.
 func (s *clientInvoices) SendReminder(ctx context.Context, request operations.SendReminderRequest) (*operations.SendReminderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/sendReminder", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/customers/invoices/{invoiceId}/sendReminder", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -716,7 +716,7 @@ func (s *clientInvoices) SendReminder(ctx context.Context, request operations.Se
 
 // SendReminders - Sends reminders. Returns number of sent e-mails.
 // Sends reminders. Returns number of sent e-mails.
-func (s *clientInvoices) SendReminders(ctx context.Context, request operations.SendRemindersRequest) (*operations.SendRemindersResponse, error) {
+func (s *clientInvoices) SendReminders(ctx context.Context, request shared.SendRemindersRequestDTO) (*operations.SendRemindersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/customers/invoices/sendReminders"
 

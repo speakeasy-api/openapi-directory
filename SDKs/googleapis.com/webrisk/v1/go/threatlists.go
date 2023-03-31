@@ -33,7 +33,7 @@ func newThreatLists(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // WebriskThreatListsComputeDiff - Gets the most recent threat list diffs. These diffs should be applied to a local database of hashes to keep it up-to-date. If the local database is empty or excessively out-of-date, a complete snapshot of the database will be returned. This Method only updates a single ThreatList at a time. To update multiple ThreatList databases, this method needs to be called once for each list.
-func (s *threatLists) WebriskThreatListsComputeDiff(ctx context.Context, request operations.WebriskThreatListsComputeDiffRequest) (*operations.WebriskThreatListsComputeDiffResponse, error) {
+func (s *threatLists) WebriskThreatListsComputeDiff(ctx context.Context, request operations.WebriskThreatListsComputeDiffRequest, security operations.WebriskThreatListsComputeDiffSecurity) (*operations.WebriskThreatListsComputeDiffResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/threatLists:computeDiff"
 
@@ -42,11 +42,11 @@ func (s *threatLists) WebriskThreatListsComputeDiff(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

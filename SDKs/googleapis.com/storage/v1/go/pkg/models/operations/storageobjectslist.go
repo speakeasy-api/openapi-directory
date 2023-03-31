@@ -10,28 +10,28 @@ import (
 )
 
 type StorageObjectsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsListSecurity struct {
@@ -40,11 +40,6 @@ type StorageObjectsListSecurity struct {
 	Option3 *StorageObjectsListSecurityOption3 `security:"option"`
 	Option4 *StorageObjectsListSecurityOption4 `security:"option"`
 	Option5 *StorageObjectsListSecurityOption5 `security:"option"`
-}
-
-type StorageObjectsListPathParams struct {
-	// Name of the bucket in which to look for objects.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageObjectsListProjectionEnum - Set of properties to return. Defaults to noAcl.
@@ -71,9 +66,11 @@ func (e *StorageObjectsListProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsListQueryParams struct {
+type StorageObjectsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to look for objects.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
 	Delimiter *string `queryParam:"style=form,explode=true,name=delimiter"`
 	// Filter results to objects whose names are lexicographically before endOffset. If startOffset is also set, the objects listed will have names between startOffset (inclusive) and endOffset (exclusive).
@@ -110,12 +107,6 @@ type StorageObjectsListQueryParams struct {
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
 	// If true, lists all versions of an object as distinct results. The default is false. For more information, see Object Versioning.
 	Versions *bool `queryParam:"style=form,explode=true,name=versions"`
-}
-
-type StorageObjectsListRequest struct {
-	PathParams  StorageObjectsListPathParams
-	QueryParams StorageObjectsListQueryParams
-	Security    StorageObjectsListSecurity
 }
 
 type StorageObjectsListResponse struct {

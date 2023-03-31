@@ -8,15 +8,12 @@ import (
 )
 
 type ExtensionCtrlGetAccountExtensionsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ExtensionCtrlGetAccountExtensionsPathParams struct {
+type ExtensionCtrlGetAccountExtensionsRequest struct {
 	// The Vonage Business Cloud account ID
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
-type ExtensionCtrlGetAccountExtensionsQueryParams struct {
 	// Filter by email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Filter by location id
@@ -29,12 +26,6 @@ type ExtensionCtrlGetAccountExtensionsQueryParams struct {
 	PageSize *float64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Filter by phone number
 	PhoneNumber *string `queryParam:"style=form,explode=true,name=phone_number"`
-}
-
-type ExtensionCtrlGetAccountExtensionsRequest struct {
-	PathParams  ExtensionCtrlGetAccountExtensionsPathParams
-	QueryParams ExtensionCtrlGetAccountExtensionsQueryParams
-	Security    ExtensionCtrlGetAccountExtensionsSecurity
 }
 
 type ExtensionCtrlGetAccountExtensionsResponse struct {

@@ -33,16 +33,12 @@ func (e *RaceResultsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RaceResultsPathParams struct {
+type RaceResultsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format RaceResultsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Race ID.
 	// Example:<code>1</code>, <code>2</code>, etc.
 	Raceid string `pathParam:"style=simple,explode=false,name=raceid"`
-}
-
-type RaceResultsRequest struct {
-	PathParams RaceResultsPathParams
 }
 
 type RaceResultsResponse struct {

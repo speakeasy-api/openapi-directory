@@ -32,13 +32,9 @@ func (e *SeasonUpcomingFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SeasonUpcomingPathParams struct {
+type SeasonUpcomingRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format SeasonUpcomingFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type SeasonUpcomingRequest struct {
-	PathParams SeasonUpcomingPathParams
 }
 
 type SeasonUpcomingResponse struct {

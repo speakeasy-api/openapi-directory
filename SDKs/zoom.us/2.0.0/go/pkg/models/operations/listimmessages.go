@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ListimmessagesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListimmessagesPathParams struct {
-	// The user ID or email address.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ListimmessagesQueryParams struct {
+type ListimmessagesRequest struct {
 	// IM Channel's ID.
 	Channel *string `queryParam:"style=form,explode=true,name=channel"`
 	// Chat user's ID or email address.
@@ -28,12 +22,8 @@ type ListimmessagesQueryParams struct {
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ListimmessagesRequest struct {
-	PathParams  ListimmessagesPathParams
-	QueryParams ListimmessagesQueryParams
-	Security    ListimmessagesSecurity
+	// The user ID or email address.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type Listimmessages200ApplicationXMLMessages struct {

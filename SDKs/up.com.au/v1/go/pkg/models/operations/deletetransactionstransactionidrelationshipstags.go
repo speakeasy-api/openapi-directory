@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteTransactionsTransactionIDRelationshipsTagsPathParams struct {
+type DeleteTransactionsTransactionIDRelationshipsTagsRequest struct {
+	UpdateTransactionTagsRequest *shared.UpdateTransactionTagsRequest `request:"mediaType=application/json"`
 	// The unique identifier for the transaction.
 	//
 	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type DeleteTransactionsTransactionIDRelationshipsTagsRequest struct {
-	PathParams DeleteTransactionsTransactionIDRelationshipsTagsPathParams
-	Request    *shared.UpdateTransactionTagsRequest `request:"mediaType=application/json"`
 }
 
 type DeleteTransactionsTransactionIDRelationshipsTagsResponse struct {

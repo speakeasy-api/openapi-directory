@@ -8,17 +8,14 @@ import (
 )
 
 type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsSecurity struct {
-	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsPathParams struct {
-	// InternationalStandingOrderPaymentId
-	InternationalStandingOrderPaymentID string `pathParam:"style=simple,explode=false,name=InternationalStandingOrderPaymentId"`
-}
-
-type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsHeaders struct {
+type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// InternationalStandingOrderPaymentId
+	InternationalStandingOrderPaymentID string `pathParam:"style=simple,explode=false,name=InternationalStandingOrderPaymentId"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -29,12 +26,6 @@ type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDet
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsRequest struct {
-	PathParams GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsPathParams
-	Headers    GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsHeaders
-	Security   GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsSecurity
 }
 
 type GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsResponse struct {

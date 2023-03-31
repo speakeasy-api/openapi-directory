@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportAcceptUsingPOSTPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type ImportAcceptUsingPOSTQueryParams struct {
-	// body
-	Body string `queryParam:"style=form,explode=true,name=body"`
-}
-
 type ImportAcceptUsingPOSTRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -28,9 +18,11 @@ type ImportAcceptUsingPOSTRequestBody struct {
 }
 
 type ImportAcceptUsingPOSTRequest struct {
-	PathParams  ImportAcceptUsingPOSTPathParams
-	QueryParams ImportAcceptUsingPOSTQueryParams
-	Request     ImportAcceptUsingPOSTRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ImportAcceptUsingPOSTRequestBody `request:"mediaType=multipart/form-data"`
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
+	// body
+	Body string `queryParam:"style=form,explode=true,name=body"`
 }
 
 type ImportAcceptUsingPOSTResponse struct {

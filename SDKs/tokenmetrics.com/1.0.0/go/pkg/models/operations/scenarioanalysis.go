@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ScenarioAnalysisQueryParams struct {
+type ScenarioAnalysisRequest struct {
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Tokens *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type ScenarioAnalysisRequest struct {
-	QueryParams ScenarioAnalysisQueryParams
 }
 
 type ScenarioAnalysisResponse struct {

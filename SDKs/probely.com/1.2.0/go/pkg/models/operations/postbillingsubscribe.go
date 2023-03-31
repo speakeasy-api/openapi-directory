@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBillingSubscribeRequest struct {
-	Request shared.SubscriptionInput `request:"mediaType=application/json"`
-}
-
 // PostBillingSubscribe403ApplicationJSON - Not allowed to perform operation
 type PostBillingSubscribe403ApplicationJSON struct {
 	// Error message.

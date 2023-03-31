@@ -71,5 +71,4 @@ pkg/models/operations/getswitch.go
 pkg/models/operations/getbegreeting.go
 pkg/models/operations/copyfiletos3.go
 pkg/models/operations/createwithdrawal.go
-pkg/models/shared/security.go
 USAGE.md

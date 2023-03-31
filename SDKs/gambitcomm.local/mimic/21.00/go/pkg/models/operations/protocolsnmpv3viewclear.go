@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3ViewClearPathParams struct {
+type ProtocolSnmpv3ViewClearRequest struct {
 	// Agent to add the SNMPv3 view
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmpv3ViewClearRequest struct {
-	PathParams ProtocolSnmpv3ViewClearPathParams
 }
 
 type ProtocolSnmpv3ViewClearResponse struct {

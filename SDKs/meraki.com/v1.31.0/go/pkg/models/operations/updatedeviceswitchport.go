@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceSwitchPortPathParams struct {
-	PortID string `pathParam:"style=simple,explode=false,name=portId"`
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum - The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
 type UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum string
 
@@ -185,8 +180,9 @@ type UpdateDeviceSwitchPortRequestBody struct {
 }
 
 type UpdateDeviceSwitchPortRequest struct {
-	PathParams UpdateDeviceSwitchPortPathParams
-	Request    *UpdateDeviceSwitchPortRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceSwitchPortRequestBody `request:"mediaType=application/json"`
+	PortID      string                             `pathParam:"style=simple,explode=false,name=portId"`
+	Serial      string                             `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // UpdateDeviceSwitchPort200ApplicationJSONAccessPolicyTypeEnum - The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.

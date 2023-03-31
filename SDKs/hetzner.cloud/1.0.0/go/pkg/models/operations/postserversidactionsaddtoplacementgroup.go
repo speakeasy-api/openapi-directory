@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsAddToPlacementGroupPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsAddToPlacementGroupAddToPlacementGroupRequest struct {
 	// ID of Placement Group the Server should be added to
 	PlacementGroup int64 `json:"placement_group"`
 }
 
 type PostServersIDActionsAddToPlacementGroupRequest struct {
-	PathParams PostServersIDActionsAddToPlacementGroupPathParams
-	Request    *PostServersIDActionsAddToPlacementGroupAddToPlacementGroupRequest `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsAddToPlacementGroupAddToPlacementGroupRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsAddToPlacementGroupActionResponseActionError - Error message for the Action if error occurred, otherwise null

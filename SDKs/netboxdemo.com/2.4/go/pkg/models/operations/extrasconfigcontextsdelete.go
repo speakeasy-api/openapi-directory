@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasConfigContextsDeletePathParams struct {
+type ExtrasConfigContextsDeleteRequest struct {
 	// A unique integer value identifying this config context.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasConfigContextsDeleteRequest struct {
-	PathParams ExtrasConfigContextsDeletePathParams
 }
 
 type ExtrasConfigContextsDeleteResponse struct {

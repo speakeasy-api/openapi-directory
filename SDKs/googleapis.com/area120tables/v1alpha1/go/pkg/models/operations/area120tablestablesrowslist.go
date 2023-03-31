@@ -10,33 +10,33 @@ import (
 )
 
 type Area120tablesTablesRowsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsListSecurity struct {
@@ -46,11 +46,6 @@ type Area120tablesTablesRowsListSecurity struct {
 	Option4 *Area120tablesTablesRowsListSecurityOption4 `security:"option"`
 	Option5 *Area120tablesTablesRowsListSecurityOption5 `security:"option"`
 	Option6 *Area120tablesTablesRowsListSecurityOption6 `security:"option"`
-}
-
-type Area120tablesTablesRowsListPathParams struct {
-	// Required. The parent table. Format: tables/{table}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // Area120tablesTablesRowsListViewEnum - Optional. Column key to use for values in the row. Defaults to user entered name.
@@ -77,7 +72,7 @@ func (e *Area120tablesTablesRowsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type Area120tablesTablesRowsListQueryParams struct {
+type Area120tablesTablesRowsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -100,6 +95,8 @@ type Area120tablesTablesRowsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListRows` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListRows` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent table. Format: tables/{table}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -110,12 +107,6 @@ type Area120tablesTablesRowsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Column key to use for values in the row. Defaults to user entered name.
 	View *Area120tablesTablesRowsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type Area120tablesTablesRowsListRequest struct {
-	PathParams  Area120tablesTablesRowsListPathParams
-	QueryParams Area120tablesTablesRowsListQueryParams
-	Security    Area120tablesTablesRowsListSecurity
 }
 
 type Area120tablesTablesRowsListResponse struct {

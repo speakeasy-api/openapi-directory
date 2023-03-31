@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PatchDeveloperAccountsDeveloperAccountIDPathParams struct {
-	// The id of the developer account to be updated
-	DeveloperAccountID string `pathParam:"style=simple,explode=false,name=developerAccountId"`
-}
-
-type PatchDeveloperAccountsDeveloperAccountIDQueryParams struct {
+type PatchDeveloperAccountsDeveloperAccountIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
+	// The id of the developer account to be updated
+	DeveloperAccountID string `pathParam:"style=simple,explode=false,name=developerAccountId"`
 	// The id of the developer that this account belongs to
 	DeveloperID string `queryParam:"style=form,explode=true,name=developerId"`
 	// The contact email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// The name for the account
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type PatchDeveloperAccountsDeveloperAccountIDRequest struct {
-	PathParams  PatchDeveloperAccountsDeveloperAccountIDPathParams
-	QueryParams PatchDeveloperAccountsDeveloperAccountIDQueryParams
 }
 
 type PatchDeveloperAccountsDeveloperAccountIDResponse struct {

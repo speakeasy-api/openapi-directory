@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPartnersStoresJSONQueryParams struct {
+type GetPartnersStoresJSONRequest struct {
 	// Partner authentication token.
 	AuthToken string `queryParam:"style=form,explode=true,name=auth_token"`
 	// Statistics start date. Should be in format 'Y-m-d'.
@@ -18,10 +18,6 @@ type GetPartnersStoresJSONQueryParams struct {
 	PartnerCode string `queryParam:"style=form,explode=true,name=partner_code"`
 	// Statistics end date. Should be in format 'Y-m-d'.
 	To string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPartnersStoresJSONRequest struct {
-	QueryParams GetPartnersStoresJSONQueryParams
 }
 
 type GetPartnersStoresJSONResponse struct {

@@ -35,10 +35,20 @@ func newAutocomplete(defaultClient, securityClient HTTPClient, serverURL, langua
 // Retrieves product's information related to the searched string.
 // `{{searchString}} is the part of string the user is looking for.
 // E.g.: `ref` | `refrig` | `refrigerator`
-func (s *autocomplete) AutoComplete(ctx context.Context, request operations.AutoCompleteRequest) (*operations.AutoCompleteResponse, error) {
+func (s *autocomplete) AutoComplete(ctx context.Context, request operations.AutoCompleteRequest, opts ...operations.Option) (*operations.AutoCompleteResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.AutoCompleteServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/buscaautocomplete"
@@ -48,9 +58,9 @@ func (s *autocomplete) AutoComplete(ctx context.Context, request operations.Auto
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

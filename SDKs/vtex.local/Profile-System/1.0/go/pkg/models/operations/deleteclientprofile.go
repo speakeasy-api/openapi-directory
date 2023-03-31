@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteClientProfilePathParams struct {
-	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type DeleteClientProfileHeaders struct {
+type DeleteClientProfileRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeleteClientProfileRequest struct {
-	PathParams DeleteClientProfilePathParams
-	Headers    DeleteClientProfileHeaders
+	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 }
 
 type DeleteClientProfileResponse struct {

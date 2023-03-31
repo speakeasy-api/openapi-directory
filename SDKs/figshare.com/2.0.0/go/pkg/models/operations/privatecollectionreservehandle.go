@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateCollectionReserveHandleSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionReserveHandlePathParams struct {
-	// Collection Unique identifier
-	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionReserveHandleRequest struct {
-	PathParams PrivateCollectionReserveHandlePathParams
-	Security   PrivateCollectionReserveHandleSecurity
+	// Collection Unique identifier
+	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type PrivateCollectionReserveHandleResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListPathParams struct {
-	// Required. The parent resource of the Connectivity Tests: `projects/{project_id}/locations/global`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListQueryParams struct {
+type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListQueryParams st
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token from an earlier query, as returned in `next_page_token`.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource of the Connectivity Tests: `projects/{project_id}/locations/global`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListRequest struct {
-	PathParams  NetworkmanagementProjectsLocationsGlobalConnectivityTestsListPathParams
-	QueryParams NetworkmanagementProjectsLocationsGlobalConnectivityTestsListQueryParams
-	Security    NetworkmanagementProjectsLocationsGlobalConnectivityTestsListSecurity
 }
 
 type NetworkmanagementProjectsLocationsGlobalConnectivityTestsListResponse struct {

@@ -35,14 +35,14 @@ func newDpsMessage(defaultClient, securityClient HTTPClient, serverURL, language
 // Deletes the DPS message
 func (s *dpsMessage) DeleteDpsMessage(ctx context.Context, request operations.DeleteDpsMessageRequest) (*operations.DeleteDpsMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *dpsMessage) DeleteDpsMessage(ctx context.Context, request operations.De
 // Gets the DPS message
 func (s *dpsMessage) GetDpsMessageFromEmployer(ctx context.Context, request operations.GetDpsMessageFromEmployerRequest) (*operations.GetDpsMessageFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *dpsMessage) GetDpsMessageFromEmployer(ctx context.Context, request oper
 // Gets the DPS message links
 func (s *dpsMessage) GetDpsMessagesFromEmployer(ctx context.Context, request operations.GetDpsMessagesFromEmployerRequest) (*operations.GetDpsMessagesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *dpsMessage) GetDpsMessagesFromEmployer(ctx context.Context, request ope
 // Patches the specified DPS message with the supplied values
 func (s *dpsMessage) PatchDpsMessage(ctx context.Context, request operations.PatchDpsMessageRequest) (*operations.PatchDpsMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *dpsMessage) PatchDpsMessage(ctx context.Context, request operations.Pat
 // Insert new DPS message
 func (s *dpsMessage) PostDpsMessage(ctx context.Context, request operations.PostDpsMessageRequest) (*operations.PostDpsMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,14 +341,14 @@ func (s *dpsMessage) PostDpsMessage(ctx context.Context, request operations.Post
 // Puts the DPS message
 func (s *dpsMessage) PutDpsMessage(ctx context.Context, request operations.PutDpsMessageRequest) (*operations.PutDpsMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -35,7 +35,7 @@ func newManage(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // CopySnapshotToExistingGameUsingPOST - copySnapshotToExistingGame
 func (s *manage) CopySnapshotToExistingGameUsingPOST(ctx context.Context, request operations.CopySnapshotToExistingGameUsingPOSTRequest) (*operations.CopySnapshotToExistingGameUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/copy/to/{targetApiKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/copy/to/{targetApiKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -92,9 +92,9 @@ func (s *manage) CopySnapshotToExistingGameUsingPOST(ctx context.Context, reques
 // CreateQueryUsingPOST - createQuery
 func (s *manage) CreateQueryUsingPOST(ctx context.Context, request operations.CreateQueryUsingPOSTRequest) (*operations.CreateQueryUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,9 +159,9 @@ func (s *manage) CreateQueryUsingPOST(ctx context.Context, request operations.Cr
 // CreateScreenUsingPOST - createScreen
 func (s *manage) CreateScreenUsingPOST(ctx context.Context, request operations.CreateScreenUsingPOSTRequest) (*operations.CreateScreenUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageScreen", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -226,9 +226,9 @@ func (s *manage) CreateScreenUsingPOST(ctx context.Context, request operations.C
 // CreateSnapshotUsingPOST - createSnapshot
 func (s *manage) CreateSnapshotUsingPOST(ctx context.Context, request operations.CreateSnapshotUsingPOSTRequest) (*operations.CreateSnapshotUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotCreationModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,9 +293,9 @@ func (s *manage) CreateSnapshotUsingPOST(ctx context.Context, request operations
 // CreateSnippetUsingPOST - createSnippet
 func (s *manage) CreateSnippetUsingPOST(ctx context.Context, request operations.CreateSnippetUsingPOSTRequest) (*operations.CreateSnippetUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageSnippet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,7 +360,7 @@ func (s *manage) CreateSnippetUsingPOST(ctx context.Context, request operations.
 // DELETEQueryUsingDELETE - deleteQuery
 func (s *manage) DELETEQueryUsingDELETE(ctx context.Context, request operations.DELETEQueryUsingDELETERequest) (*operations.DELETEQueryUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -417,7 +417,7 @@ func (s *manage) DELETEQueryUsingDELETE(ctx context.Context, request operations.
 // DELETEScreenUsingDELETE - deleteScreen
 func (s *manage) DELETEScreenUsingDELETE(ctx context.Context, request operations.DELETEScreenUsingDELETERequest) (*operations.DELETEScreenUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -474,7 +474,7 @@ func (s *manage) DELETEScreenUsingDELETE(ctx context.Context, request operations
 // DELETESnapshotUsingDELETE - deleteSnapshot
 func (s *manage) DELETESnapshotUsingDELETE(ctx context.Context, request operations.DELETESnapshotUsingDELETERequest) (*operations.DELETESnapshotUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -533,7 +533,7 @@ func (s *manage) DELETESnapshotUsingDELETE(ctx context.Context, request operatio
 // DELETESnippetUsingDELETE - deleteSnippet
 func (s *manage) DELETESnippetUsingDELETE(ctx context.Context, request operations.DELETESnippetUsingDELETERequest) (*operations.DELETESnippetUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -590,7 +590,7 @@ func (s *manage) DELETESnippetUsingDELETE(ctx context.Context, request operation
 // GETQueryUsingGET - getQuery
 func (s *manage) GETQueryUsingGET(ctx context.Context, request operations.GETQueryUsingGETRequest) (*operations.GETQueryUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -647,7 +647,7 @@ func (s *manage) GETQueryUsingGET(ctx context.Context, request operations.GETQue
 // GETScreenUsingGET - getScreen
 func (s *manage) GETScreenUsingGET(ctx context.Context, request operations.GETScreenUsingGETRequest) (*operations.GETScreenUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -704,7 +704,7 @@ func (s *manage) GETScreenUsingGET(ctx context.Context, request operations.GETSc
 // GETSnippetUsingGET - getSnippet
 func (s *manage) GETSnippetUsingGET(ctx context.Context, request operations.GETSnippetUsingGETRequest) (*operations.GETSnippetUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -761,7 +761,7 @@ func (s *manage) GETSnippetUsingGET(ctx context.Context, request operations.GETS
 // ListExecutableScreensUsingGET - listExecutableScreens
 func (s *manage) ListExecutableScreensUsingGET(ctx context.Context, request operations.ListExecutableScreensUsingGETRequest) (*operations.ListExecutableScreensUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/executable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/executable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -818,7 +818,7 @@ func (s *manage) ListExecutableScreensUsingGET(ctx context.Context, request oper
 // ListQueriesUsingGET - listQueries
 func (s *manage) ListQueriesUsingGET(ctx context.Context, request operations.ListQueriesUsingGETRequest) (*operations.ListQueriesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -875,7 +875,7 @@ func (s *manage) ListQueriesUsingGET(ctx context.Context, request operations.Lis
 // ListScreensUsingGET - listScreens
 func (s *manage) ListScreensUsingGET(ctx context.Context, request operations.ListScreensUsingGETRequest) (*operations.ListScreensUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -932,7 +932,7 @@ func (s *manage) ListScreensUsingGET(ctx context.Context, request operations.Lis
 // ListSnapshotsUsingGET - listSnapshots
 func (s *manage) ListSnapshotsUsingGET(ctx context.Context, request operations.ListSnapshotsUsingGETRequest) (*operations.ListSnapshotsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -989,7 +989,7 @@ func (s *manage) ListSnapshotsUsingGET(ctx context.Context, request operations.L
 // ListSnippetsUsingGET - listSnippets
 func (s *manage) ListSnippetsUsingGET(ctx context.Context, request operations.ListSnippetsUsingGETRequest) (*operations.ListSnippetsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1046,7 +1046,7 @@ func (s *manage) ListSnippetsUsingGET(ctx context.Context, request operations.Li
 // PublishSnapshotUsingPOST - publishSnapshot
 func (s *manage) PublishSnapshotUsingPOST(ctx context.Context, request operations.PublishSnapshotUsingPOSTRequest) (*operations.PublishSnapshotUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1103,7 +1103,7 @@ func (s *manage) PublishSnapshotUsingPOST(ctx context.Context, request operation
 // RevertSnapshotUsingPOST - revertSnapshot
 func (s *manage) RevertSnapshotUsingPOST(ctx context.Context, request operations.RevertSnapshotUsingPOSTRequest) (*operations.RevertSnapshotUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/revert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/revert", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1160,9 +1160,9 @@ func (s *manage) RevertSnapshotUsingPOST(ctx context.Context, request operations
 // UpdateQueryUsingPUT - updateQuery
 func (s *manage) UpdateQueryUsingPUT(ctx context.Context, request operations.UpdateQueryUsingPUTRequest) (*operations.UpdateQueryUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1227,9 +1227,9 @@ func (s *manage) UpdateQueryUsingPUT(ctx context.Context, request operations.Upd
 // UpdateScreenUsingPUT - updateScreen
 func (s *manage) UpdateScreenUsingPUT(ctx context.Context, request operations.UpdateScreenUsingPUTRequest) (*operations.UpdateScreenUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageScreen", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1294,9 +1294,9 @@ func (s *manage) UpdateScreenUsingPUT(ctx context.Context, request operations.Up
 // UpdateSnippetUsingPUT - updateSnippet
 func (s *manage) UpdateSnippetUsingPUT(ctx context.Context, request operations.UpdateSnippetUsingPUTRequest) (*operations.UpdateSnippetUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManageSnippet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

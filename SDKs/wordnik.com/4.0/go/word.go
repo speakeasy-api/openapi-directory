@@ -35,14 +35,14 @@ func newWord(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // The metadata includes a time-expiring fileUrl which allows reading the audio file directly from the API.  Currently only audio pronunciations from the American Heritage Dictionary in mp3 format are supported.
 func (s *word) GetAudio(ctx context.Context, request operations.GetAudioRequest) (*operations.GetAudioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/audio", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/audio", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *word) GetAudio(ctx context.Context, request operations.GetAudioRequest)
 // GetDefinitions - Return definitions for a word
 func (s *word) GetDefinitions(ctx context.Context, request operations.GetDefinitionsRequest) (*operations.GetDefinitionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/definitions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/definitions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *word) GetDefinitions(ctx context.Context, request operations.GetDefinit
 // GetEtymologies - Fetches etymology data
 func (s *word) GetEtymologies(ctx context.Context, request operations.GetEtymologiesRequest) (*operations.GetEtymologiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/etymologies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/etymologies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -179,14 +179,14 @@ func (s *word) GetEtymologies(ctx context.Context, request operations.GetEtymolo
 // GetExamples - Returns examples for a word
 func (s *word) GetExamples(ctx context.Context, request operations.GetExamplesRequest) (*operations.GetExamplesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/examples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/examples", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,14 +227,14 @@ func (s *word) GetExamples(ctx context.Context, request operations.GetExamplesRe
 // GetHyphenation - Returns syllable information for a word
 func (s *word) GetHyphenation(ctx context.Context, request operations.GetHyphenationRequest) (*operations.GetHyphenationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/hyphenation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/hyphenation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -275,14 +275,14 @@ func (s *word) GetHyphenation(ctx context.Context, request operations.GetHyphena
 // GetPhrases - Fetches bi-gram phrases for a word
 func (s *word) GetPhrases(ctx context.Context, request operations.GetPhrasesRequest) (*operations.GetPhrasesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/phrases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/phrases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -323,14 +323,14 @@ func (s *word) GetPhrases(ctx context.Context, request operations.GetPhrasesRequ
 // GetRelatedWords - Given a word as a string, returns relationships from the Word Graph
 func (s *word) GetRelatedWords(ctx context.Context, request operations.GetRelatedWordsRequest) (*operations.GetRelatedWordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/relatedWords", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/relatedWords", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -371,7 +371,7 @@ func (s *word) GetRelatedWords(ctx context.Context, request operations.GetRelate
 // GetScrabbleScore - Returns the Scrabble score for a word
 func (s *word) GetScrabbleScore(ctx context.Context, request operations.GetScrabbleScoreRequest) (*operations.GetScrabbleScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/scrabbleScore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/scrabbleScore", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -415,14 +415,14 @@ func (s *word) GetScrabbleScore(ctx context.Context, request operations.GetScrab
 // GetTextPronunciations - Returns text pronunciations for a given word
 func (s *word) GetTextPronunciations(ctx context.Context, request operations.GetTextPronunciationsRequest) (*operations.GetTextPronunciationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/pronunciations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/pronunciations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -463,14 +463,14 @@ func (s *word) GetTextPronunciations(ctx context.Context, request operations.Get
 // GetTopExample - Returns a top example for a word
 func (s *word) GetTopExample(ctx context.Context, request operations.GetTopExampleRequest) (*operations.GetTopExampleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/topExample", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/topExample", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -511,14 +511,14 @@ func (s *word) GetTopExample(ctx context.Context, request operations.GetTopExamp
 // GetWordFrequency - Returns word usage over time
 func (s *word) GetWordFrequency(ctx context.Context, request operations.GetWordFrequencyRequest) (*operations.GetWordFrequencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/frequency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/word.json/{word}/frequency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

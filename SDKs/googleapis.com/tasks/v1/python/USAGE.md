@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TasksTasklistsDeleteRequest(
-    security=operations.TasksTasklistsDeleteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.TasksTasklistsDeletePathParams(
-        tasklist="enim",
-    ),
-    query_params=operations.TasksTasklistsDeleteQueryParams(
-        dollar_xgafv="1",
-        access_token="reiciendis",
-        alt="media",
-        callback="ex",
-        fields="veritatis",
-        key="sit",
-        oauth_token="nisi",
-        pretty_print=True,
-        quota_user="omnis",
-        upload_type="ex",
-        upload_protocol="ipsum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    pretty_print=False,
+    quota_user="illum",
+    tasklist="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.tasklists.tasks_tasklists_delete(req)
+res = s.tasklists.tasks_tasklists_delete(req, operations.TasksTasklistsDeleteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

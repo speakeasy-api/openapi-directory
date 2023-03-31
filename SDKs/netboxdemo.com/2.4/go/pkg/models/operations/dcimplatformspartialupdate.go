@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPlatformsPartialUpdatePathParams struct {
+type DcimPlatformsPartialUpdateRequest struct {
+	WritablePlatformInput shared.WritablePlatformInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this platform.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPlatformsPartialUpdateRequest struct {
-	PathParams DcimPlatformsPartialUpdatePathParams
-	Request    shared.WritablePlatformInput `request:"mediaType=application/json"`
 }
 
 type DcimPlatformsPartialUpdateResponse struct {

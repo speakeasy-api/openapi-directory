@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetImagesIDPathParams struct {
+type GetImagesIDRequest struct {
 	// ID of the Image
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetImagesIDRequest struct {
-	PathParams GetImagesIDPathParams
 }
 
 // GetImagesID200ApplicationJSONImageCreatedFrom - Information about the Server the Image was created from

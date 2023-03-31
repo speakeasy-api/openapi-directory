@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BillingGetSharedStorageBillingUserPathParams struct {
+type BillingGetSharedStorageBillingUserRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type BillingGetSharedStorageBillingUserRequest struct {
-	PathParams BillingGetSharedStorageBillingUserPathParams
 }
 
 type BillingGetSharedStorageBillingUserResponse struct {

@@ -16,10 +16,6 @@ type ConvertRequestBody struct {
 	Unit *string `multipartForm:"name=unit"`
 }
 
-type ConvertRequest struct {
-	Request *ConvertRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type ConvertResponse struct {
 	ContentType string
 	StatusCode  int

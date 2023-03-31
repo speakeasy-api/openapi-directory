@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitCommentMultipartPathParams struct {
+type SubmitCommentMultipartRequest struct {
+	Comment1 *shared.Comment1 `request:"mediaType=multipart/form-data"`
 	// Activity ID
 	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type SubmitCommentMultipartRequest struct {
-	PathParams SubmitCommentMultipartPathParams
-	Request    *shared.Comment1 `request:"mediaType=multipart/form-data"`
 }
 
 type SubmitCommentMultipartResponse struct {

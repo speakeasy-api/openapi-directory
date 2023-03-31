@@ -3,29 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        http_bearer=shared.SchemeHTTPBearer(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetPersonasRequest(
-    query_params=operations.GetPersonasQueryParams(
-        count=2825906764813013527,
-        expand=[
-            "sit",
-        ],
-        fields=[
-            "dolor",
-            "voluptatem",
-            "illo",
-        ],
-        name="et",
-        page=39748128132020036,
+        access_token="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetPersonasRequest(
+    count=548814,
+    expand=[
+        "distinctio",
+        "quibusdam",
+        "unde",
+    ],
+    fields_=[
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+    ],
+    name="deserunt",
+    page=384382,
 )
     
 res = s.persona.get_personas(req)

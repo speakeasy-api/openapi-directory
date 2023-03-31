@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSourceAccountV3PathParams struct {
+type DeleteSourceAccountV3Request struct {
 	// Source account id
 	SourceAccountID string `pathParam:"style=simple,explode=false,name=sourceAccountId"`
-}
-
-type DeleteSourceAccountV3Request struct {
-	PathParams DeleteSourceAccountV3PathParams
 }
 
 type DeleteSourceAccountV3Response struct {

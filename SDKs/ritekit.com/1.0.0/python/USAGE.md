@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AnimateImageRequest(
-    query_params=operations.AnimateImageQueryParams(
-        type="deleniti",
-        url="libero",
-    ),
+    type="corrupti",
+    url="provident",
 )
     
 res = s.animate_image(req)

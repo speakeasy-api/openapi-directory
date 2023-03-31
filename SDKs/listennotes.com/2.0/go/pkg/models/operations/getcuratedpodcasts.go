@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCuratedPodcastsQueryParams struct {
-	// Page number of curated lists.
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetCuratedPodcastsHeaders struct {
+type GetCuratedPodcastsRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetCuratedPodcastsRequest struct {
-	QueryParams GetCuratedPodcastsQueryParams
-	Headers     GetCuratedPodcastsHeaders
+	// Page number of curated lists.
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 }
 
 type GetCuratedPodcastsResponse struct {

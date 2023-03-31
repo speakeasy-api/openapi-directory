@@ -32,13 +32,9 @@ func (e *LineRouteServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineRouteQueryParams struct {
+type LineRouteRequest struct {
 	// A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []LineRouteServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type LineRouteRequest struct {
-	QueryParams LineRouteQueryParams
 }
 
 type LineRouteResponse struct {

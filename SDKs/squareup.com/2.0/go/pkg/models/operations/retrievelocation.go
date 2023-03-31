@@ -8,18 +8,13 @@ import (
 )
 
 type RetrieveLocationSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveLocationPathParams struct {
-	// The ID of the location to retrieve. If you specify the string "main",
-	// then the endpoint returns the main location.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveLocationRequest struct {
-	PathParams RetrieveLocationPathParams
-	Security   RetrieveLocationSecurity
+	// The ID of the location to retrieve. If you specify the string "main",
+	// then the endpoint returns the main location.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 }
 
 type RetrieveLocationResponse struct {

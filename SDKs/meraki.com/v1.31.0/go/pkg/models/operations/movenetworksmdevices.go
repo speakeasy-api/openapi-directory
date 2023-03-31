@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type MoveNetworkSmDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type MoveNetworkSmDevicesRequestBody struct {
 	// The ids of the devices to be moved.
 	Ids []string `json:"ids,omitempty"`
@@ -24,8 +20,8 @@ type MoveNetworkSmDevicesRequestBody struct {
 }
 
 type MoveNetworkSmDevicesRequest struct {
-	PathParams MoveNetworkSmDevicesPathParams
-	Request    MoveNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody MoveNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // MoveNetworkSmDevices200ApplicationJSON - Successful operation

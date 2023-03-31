@@ -14,17 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest{
-        PathParams: operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams{
-            Org: "corrupti",
-            RunnerID: 592845,
-        },
-        Request: operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody{
+        RequestBody: operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody{
             Labels: []string{
+                "provident",
+                "distinctio",
                 "quibusdam",
-                "unde",
-                "nulla",
             },
         },
+        Org: "unde",
+        RunnerID: 857946,
     }
 
     ctx := context.Background()

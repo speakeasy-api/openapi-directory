@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateDigitalWalletProvisioningForACardRequest struct {
-	Request shared.SimulateDigitalWalletProvisioningForACardParameters `request:"mediaType=application/json"`
-}
-
 type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum string
 
 const (

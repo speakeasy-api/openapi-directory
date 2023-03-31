@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostGraphQLRequest struct {
-	// GraphQL Query Request
-	Request shared.GraphQLRequest `request:"mediaType=application/json"`
-}
-
 type PostGraphQLResponse struct {
 	ContentType string
 	// GraphQL Query Response

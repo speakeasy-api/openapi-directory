@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimCablesReadPathParams struct {
+type DcimCablesReadRequest struct {
 	// A unique integer value identifying this cable.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimCablesReadRequest struct {
-	PathParams DcimCablesReadPathParams
 }
 
 type DcimCablesReadResponse struct {

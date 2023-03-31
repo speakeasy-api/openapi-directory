@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteJobByIDPathParams struct {
+type DeleteJobByIDRequest struct {
 	// Rev.ai API Job Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteJobByIDRequest struct {
-	PathParams DeleteJobByIDPathParams
 }
 
 // DeleteJobByID409ApplicationProblemPlusJSON - Problem details object returned on errors

@@ -10,12 +10,7 @@ import (
 )
 
 type GetImageCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetImageCollectionPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetImageCollectionEmbedEnum string
@@ -41,17 +36,13 @@ func (e *GetImageCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImageCollectionQueryParams struct {
+type GetImageCollectionRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetImageCollectionEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Code to retrieve a shared collection
 	ShareCode *string `queryParam:"style=form,explode=true,name=share_code"`
-}
-
-type GetImageCollectionRequest struct {
-	PathParams  GetImageCollectionPathParams
-	QueryParams GetImageCollectionQueryParams
-	Security    GetImageCollectionSecurity
 }
 
 type GetImageCollectionResponse struct {

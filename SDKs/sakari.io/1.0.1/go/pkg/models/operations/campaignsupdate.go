@@ -8,19 +8,14 @@ import (
 )
 
 type CampaignsUpdateSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CampaignsUpdatePathParams struct {
+type CampaignsUpdateRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of campaign
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
-}
-
-type CampaignsUpdateRequest struct {
-	PathParams CampaignsUpdatePathParams
-	Security   CampaignsUpdateSecurity
 }
 
 type CampaignsUpdateResponse struct {

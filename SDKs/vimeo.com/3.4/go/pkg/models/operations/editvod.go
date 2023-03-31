@@ -8,12 +8,7 @@ import (
 )
 
 type EditVodSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVodPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVodRequestBodyPreorder struct {
@@ -38,9 +33,9 @@ type EditVodRequestBody struct {
 }
 
 type EditVodRequest struct {
-	PathParams EditVodPathParams
-	Request    *EditVodRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.page+json"`
-	Security   EditVodSecurity
+	RequestBody *EditVodRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.page+json"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 }
 
 type EditVodResponse struct {

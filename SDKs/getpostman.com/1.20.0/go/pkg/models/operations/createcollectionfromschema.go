@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateCollectionFromSchemaPathParams struct {
-	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
-	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-	SchemaID     string `pathParam:"style=simple,explode=false,name=schemaId"`
-}
-
-type CreateCollectionFromSchemaQueryParams struct {
-	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
 type CreateCollectionFromSchemaRequestBodyRelations struct {
 	Type *string `json:"type,omitempty"`
 }
@@ -26,9 +16,11 @@ type CreateCollectionFromSchemaRequestBody struct {
 }
 
 type CreateCollectionFromSchemaRequest struct {
-	PathParams  CreateCollectionFromSchemaPathParams
-	QueryParams CreateCollectionFromSchemaQueryParams
-	Request     *CreateCollectionFromSchemaRequestBody `request:"mediaType=application/json"`
+	RequestBody  *CreateCollectionFromSchemaRequestBody `request:"mediaType=application/json"`
+	APIID        string                                 `pathParam:"style=simple,explode=false,name=apiId"`
+	APIVersionID string                                 `pathParam:"style=simple,explode=false,name=apiVersionId"`
+	SchemaID     string                                 `pathParam:"style=simple,explode=false,name=schemaId"`
+	Workspace    *string                                `queryParam:"style=form,explode=true,name=workspace"`
 }
 
 type CreateCollectionFromSchema200ApplicationJSONCollection struct {

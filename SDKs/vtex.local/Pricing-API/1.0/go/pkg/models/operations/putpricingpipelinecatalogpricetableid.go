@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type PutPricingPipelineCatalogPriceTableIDPathParams struct {
-	// Price Table Name.
-	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
-}
-
-type PutPricingPipelineCatalogPriceTableIDHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // PutPricingPipelineCatalogPriceTableIDRequestBodyRulesContextDateRange - The rule will be active during this time range.
 type PutPricingPipelineCatalogPriceTableIDRequestBodyRulesContextDateRange struct {
 	// Date when rule will be activated. Date format: `RFC3339`.
@@ -66,9 +54,13 @@ type PutPricingPipelineCatalogPriceTableIDRequestBody struct {
 }
 
 type PutPricingPipelineCatalogPriceTableIDRequest struct {
-	PathParams PutPricingPipelineCatalogPriceTableIDPathParams
-	Headers    PutPricingPipelineCatalogPriceTableIDHeaders
-	Request    *PutPricingPipelineCatalogPriceTableIDRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                                            `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PutPricingPipelineCatalogPriceTableIDRequestBody `request:"mediaType=application/json"`
+	// Price Table Name.
+	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
 }
 
 type PutPricingPipelineCatalogPriceTableIDResponse struct {

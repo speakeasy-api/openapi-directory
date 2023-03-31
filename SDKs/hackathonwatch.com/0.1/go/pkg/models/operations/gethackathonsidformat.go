@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETHackathonsIDFormatPathParams struct {
+type GETHackathonsIDFormatRequest struct {
 	// ID of the hackathon for detail information
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETHackathonsIDFormatRequest struct {
-	PathParams GETHackathonsIDFormatPathParams
 }
 
 type GETHackathonsIDFormatResponse struct {

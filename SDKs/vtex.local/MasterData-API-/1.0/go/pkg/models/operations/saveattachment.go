@@ -6,22 +6,18 @@ import (
 	"net/http"
 )
 
-type SaveattachmentPathParams struct {
+type SaveattachmentRequestBody struct {
+	File [][]byte `multipartForm:"name=file,json"`
+}
+
+type SaveattachmentRequest struct {
+	RequestBody *SaveattachmentRequestBody `request:"mediaType=multipart/form-data"`
 	// Two letter word that identifies the data structure
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 	// Field to attach the file to, as described in admin
 	Field string `pathParam:"style=simple,explode=false,name=field"`
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SaveattachmentRequestBody struct {
-	File [][]byte `multipartForm:"name=file,json"`
-}
-
-type SaveattachmentRequest struct {
-	PathParams SaveattachmentPathParams
-	Request    *SaveattachmentRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type SaveattachmentResponse struct {

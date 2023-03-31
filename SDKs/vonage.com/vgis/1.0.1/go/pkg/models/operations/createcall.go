@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCallRequest struct {
-	// Place call parameters
-	Request shared.CallCreate `request:"mediaType=application/json"`
-}
-
 type CreateCallResponse struct {
 	// Successful
 	Calls       []shared.Call

@@ -33,7 +33,7 @@ func newEffectiveTags(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CloudresourcemanagerEffectiveTagsList - Return a list of effective tags for the given Google Cloud resource, as specified in `parent`.
-func (s *effectiveTags) CloudresourcemanagerEffectiveTagsList(ctx context.Context, request operations.CloudresourcemanagerEffectiveTagsListRequest) (*operations.CloudresourcemanagerEffectiveTagsListResponse, error) {
+func (s *effectiveTags) CloudresourcemanagerEffectiveTagsList(ctx context.Context, request operations.CloudresourcemanagerEffectiveTagsListRequest, security operations.CloudresourcemanagerEffectiveTagsListSecurity) (*operations.CloudresourcemanagerEffectiveTagsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/effectiveTags"
 
@@ -42,11 +42,11 @@ func (s *effectiveTags) CloudresourcemanagerEffectiveTagsList(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

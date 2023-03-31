@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ValidateForVoiceQueryParams struct {
+type ValidateForVoiceRequest struct {
 	// The callback URL which gets queried right after validation.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Determines the recipient. Can only be a number, not a contact from your address book.
 	Number string `queryParam:"style=form,explode=true,name=number"`
-}
-
-type ValidateForVoiceRequest struct {
-	QueryParams ValidateForVoiceQueryParams
 }
 
 // ValidateForVoice200ApplicationJSON - OK

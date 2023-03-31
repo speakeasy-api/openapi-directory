@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSyncLdapMappingForTeamPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type EnterpriseAdminSyncLdapMappingForTeamRequest struct {
-	PathParams EnterpriseAdminSyncLdapMappingForTeamPathParams
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 // EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON - Response

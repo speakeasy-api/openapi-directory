@@ -33,7 +33,7 @@ func newMetagame(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GamesMetagameGetMetagameConfig - Return the metagame configuration data for the calling application.
-func (s *metagame) GamesMetagameGetMetagameConfig(ctx context.Context, request operations.GamesMetagameGetMetagameConfigRequest) (*operations.GamesMetagameGetMetagameConfigResponse, error) {
+func (s *metagame) GamesMetagameGetMetagameConfig(ctx context.Context, request operations.GamesMetagameGetMetagameConfigRequest, security operations.GamesMetagameGetMetagameConfigSecurity) (*operations.GamesMetagameGetMetagameConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/metagameConfig"
 
@@ -42,11 +42,11 @@ func (s *metagame) GamesMetagameGetMetagameConfig(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *metagame) GamesMetagameGetMetagameConfig(ctx context.Context, request o
 }
 
 // GamesMetagameListCategoriesByPlayer - List play data aggregated per category for the player corresponding to `playerId`.
-func (s *metagame) GamesMetagameListCategoriesByPlayer(ctx context.Context, request operations.GamesMetagameListCategoriesByPlayerRequest) (*operations.GamesMetagameListCategoriesByPlayerResponse, error) {
+func (s *metagame) GamesMetagameListCategoriesByPlayer(ctx context.Context, request operations.GamesMetagameListCategoriesByPlayerRequest, security operations.GamesMetagameListCategoriesByPlayerSecurity) (*operations.GamesMetagameListCategoriesByPlayerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/categories/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/categories/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

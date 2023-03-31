@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PicoChargingHistoryGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PicoChargingHistoryGetRequest struct {
-	PathParams PicoChargingHistoryGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PicoChargingHistoryGetResponse struct {

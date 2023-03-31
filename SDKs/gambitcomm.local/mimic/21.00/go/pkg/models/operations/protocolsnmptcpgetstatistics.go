@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmptcpGetStatisticsPathParams struct {
+type ProtocolSnmptcpGetStatisticsRequest struct {
 	// Agent to show SNMPTCP statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmptcpGetStatisticsRequest struct {
-	PathParams ProtocolSnmptcpGetStatisticsPathParams
 }
 
 type ProtocolSnmptcpGetStatisticsResponse struct {

@@ -33,7 +33,7 @@ func newLiveBroadcasts(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // YoutubeLiveBroadcastsBind - Bind a broadcast to a stream.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsBind(ctx context.Context, request operations.YoutubeLiveBroadcastsBindRequest) (*operations.YoutubeLiveBroadcastsBindResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsBind(ctx context.Context, request operations.YoutubeLiveBroadcastsBindRequest, security operations.YoutubeLiveBroadcastsBindSecurity) (*operations.YoutubeLiveBroadcastsBindResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts/bind"
 
@@ -42,11 +42,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsBind(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsBind(ctx context.Context, request 
 }
 
 // YoutubeLiveBroadcastsDelete - Delete a given broadcast.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsDelete(ctx context.Context, request operations.YoutubeLiveBroadcastsDeleteRequest) (*operations.YoutubeLiveBroadcastsDeleteResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsDelete(ctx context.Context, request operations.YoutubeLiveBroadcastsDeleteRequest, security operations.YoutubeLiveBroadcastsDeleteSecurity) (*operations.YoutubeLiveBroadcastsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts"
 
@@ -90,11 +90,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsDelete(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsDelete(ctx context.Context, reques
 }
 
 // YoutubeLiveBroadcastsInsert - Inserts a new stream for the authenticated user.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsInsert(ctx context.Context, request operations.YoutubeLiveBroadcastsInsertRequest) (*operations.YoutubeLiveBroadcastsInsertResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsInsert(ctx context.Context, request operations.YoutubeLiveBroadcastsInsertRequest, security operations.YoutubeLiveBroadcastsInsertSecurity) (*operations.YoutubeLiveBroadcastsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiveBroadcast", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsInsert(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsInsert(ctx context.Context, reques
 }
 
 // YoutubeLiveBroadcastsInsertCuepoint - Insert cuepoints in a broadcast
-func (s *liveBroadcasts) YoutubeLiveBroadcastsInsertCuepoint(ctx context.Context, request operations.YoutubeLiveBroadcastsInsertCuepointRequest) (*operations.YoutubeLiveBroadcastsInsertCuepointResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsInsertCuepoint(ctx context.Context, request operations.YoutubeLiveBroadcastsInsertCuepointRequest, security operations.YoutubeLiveBroadcastsInsertCuepointSecurity) (*operations.YoutubeLiveBroadcastsInsertCuepointResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts/cuepoint"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Cuepoint", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsInsertCuepoint(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,7 +230,7 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsInsertCuepoint(ctx context.Context
 }
 
 // YoutubeLiveBroadcastsList - Retrieve the list of broadcasts associated with the given channel.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsList(ctx context.Context, request operations.YoutubeLiveBroadcastsListRequest) (*operations.YoutubeLiveBroadcastsListResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsList(ctx context.Context, request operations.YoutubeLiveBroadcastsListRequest, security operations.YoutubeLiveBroadcastsListSecurity) (*operations.YoutubeLiveBroadcastsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts"
 
@@ -239,11 +239,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsList(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,7 +278,7 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsList(ctx context.Context, request 
 }
 
 // YoutubeLiveBroadcastsTransition - Transition a broadcast to a given status.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsTransition(ctx context.Context, request operations.YoutubeLiveBroadcastsTransitionRequest) (*operations.YoutubeLiveBroadcastsTransitionResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsTransition(ctx context.Context, request operations.YoutubeLiveBroadcastsTransitionRequest, security operations.YoutubeLiveBroadcastsTransitionSecurity) (*operations.YoutubeLiveBroadcastsTransitionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts/transition"
 
@@ -287,11 +287,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsTransition(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -326,11 +326,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsTransition(ctx context.Context, re
 }
 
 // YoutubeLiveBroadcastsUpdate - Updates an existing broadcast for the authenticated user.
-func (s *liveBroadcasts) YoutubeLiveBroadcastsUpdate(ctx context.Context, request operations.YoutubeLiveBroadcastsUpdateRequest) (*operations.YoutubeLiveBroadcastsUpdateResponse, error) {
+func (s *liveBroadcasts) YoutubeLiveBroadcastsUpdate(ctx context.Context, request operations.YoutubeLiveBroadcastsUpdateRequest, security operations.YoutubeLiveBroadcastsUpdateSecurity) (*operations.YoutubeLiveBroadcastsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveBroadcasts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiveBroadcast", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -342,11 +342,11 @@ func (s *liveBroadcasts) YoutubeLiveBroadcastsUpdate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

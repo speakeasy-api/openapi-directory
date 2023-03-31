@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceStaticRoutePathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
 type UpdateNetworkApplianceStaticRouteRequestBodyReservedIPRanges struct {
 	// A text comment for the reserved range
 	Comment string `json:"comment"`
@@ -38,8 +33,9 @@ type UpdateNetworkApplianceStaticRouteRequestBody struct {
 }
 
 type UpdateNetworkApplianceStaticRouteRequest struct {
-	PathParams UpdateNetworkApplianceStaticRoutePathParams
-	Request    *UpdateNetworkApplianceStaticRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateNetworkApplianceStaticRouteRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                                        `pathParam:"style=simple,explode=false,name=networkId"`
+	StaticRouteID string                                        `pathParam:"style=simple,explode=false,name=staticRouteId"`
 }
 
 type UpdateNetworkApplianceStaticRouteResponse struct {

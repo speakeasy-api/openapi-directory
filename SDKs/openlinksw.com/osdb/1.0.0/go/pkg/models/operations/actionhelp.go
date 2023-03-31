@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionHelpPathParams struct {
+type ActionHelpRequest struct {
 	// Action ID of the action for which help text is being requested.
 	ActionID string `pathParam:"style=simple,explode=false,name=actionId"`
 	// Service ID of the service supporting the action.
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type ActionHelpRequest struct {
-	PathParams ActionHelpPathParams
 }
 
 type ActionHelpResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPaymentsForPayoutV3PathParams struct {
-	// Id of the payout
-	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
 // GetPaymentsForPayoutV3StatusEnum - Payment Status
 // * ACCEPTED: any payment which was accepted at submission time (status may have changed since)
 // * REJECTED: any payment rejected by initial submission processing
@@ -78,7 +73,7 @@ func (e *GetPaymentsForPayoutV3TransmissionTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetPaymentsForPayoutV3QueryParams struct {
+type GetPaymentsForPayoutV3Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -87,6 +82,8 @@ type GetPaymentsForPayoutV3QueryParams struct {
 	PaymentMemo *string `queryParam:"style=form,explode=true,name=paymentMemo"`
 	// Payor's Id of the Payment
 	PayorPaymentID *string `queryParam:"style=form,explode=true,name=payorPaymentId"`
+	// Id of the payout
+	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
 	// The remote id of the payees.
 	RemoteID *string `queryParam:"style=form,explode=true,name=remoteId"`
 	// Physical Account Name
@@ -104,11 +101,6 @@ type GetPaymentsForPayoutV3QueryParams struct {
 	// * WIRE
 	//
 	TransmissionType *GetPaymentsForPayoutV3TransmissionTypeEnum `queryParam:"style=form,explode=true,name=transmissionType"`
-}
-
-type GetPaymentsForPayoutV3Request struct {
-	PathParams  GetPaymentsForPayoutV3PathParams
-	QueryParams GetPaymentsForPayoutV3QueryParams
 }
 
 type GetPaymentsForPayoutV3Response struct {

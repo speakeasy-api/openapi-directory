@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsAddCollaboratorPathParams struct {
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ProjectsAddCollaboratorRequestBodyPermissionEnum - The permission to grant the collaborator.
 type ProjectsAddCollaboratorRequestBodyPermissionEnum string
 
@@ -49,8 +42,11 @@ type ProjectsAddCollaboratorRequestBody struct {
 }
 
 type ProjectsAddCollaboratorRequest struct {
-	PathParams ProjectsAddCollaboratorPathParams
-	Request    *ProjectsAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	RequestBody *ProjectsAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ProjectsAddCollaboratorResponse struct {

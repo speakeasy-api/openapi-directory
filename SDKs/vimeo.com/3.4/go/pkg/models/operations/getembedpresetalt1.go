@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmbedPresetAlt1PathParams struct {
+type GetEmbedPresetAlt1Request struct {
 	// The ID of the preset.
 	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
-}
-
-type GetEmbedPresetAlt1Request struct {
-	PathParams GetEmbedPresetAlt1PathParams
 }
 
 type GetEmbedPresetAlt1Response struct {

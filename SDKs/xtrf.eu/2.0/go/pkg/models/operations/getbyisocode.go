@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByIsoCodePathParams struct {
+type GetByIsoCodeRequest struct {
 	// iso code, https://www.xe.com/iso4217.php
 	IsoCode string `pathParam:"style=simple,explode=false,name=isoCode"`
-}
-
-type GetByIsoCodeRequest struct {
-	PathParams GetByIsoCodePathParams
 }
 
 type GetByIsoCodeResponse struct {

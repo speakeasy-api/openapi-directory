@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETTermUsingGETPathParams struct {
+type GETTermUsingGETRequest struct {
 	// Term Accession ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
-}
-
-type GETTermUsingGETRequest struct {
-	PathParams GETTermUsingGETPathParams
 }
 
 type GETTermUsingGETResponse struct {

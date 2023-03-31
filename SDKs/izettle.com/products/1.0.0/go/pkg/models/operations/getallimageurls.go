@@ -8,16 +8,11 @@ import (
 )
 
 type GetAllImageUrlsSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetAllImageUrlsPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAllImageUrlsRequest struct {
-	PathParams GetAllImageUrlsPathParams
-	Security   GetAllImageUrlsSecurity
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetAllImageUrlsResponse struct {

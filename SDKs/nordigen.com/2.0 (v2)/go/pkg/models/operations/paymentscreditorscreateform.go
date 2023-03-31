@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsCreditorsCreateFormRequest struct {
-	Request shared.CreditorAccountWriteRequest1 `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PaymentsCreditorsCreateFormResponse struct {
 	ContentType          string
 	CreditorAccountWrite *shared.CreditorAccountWrite

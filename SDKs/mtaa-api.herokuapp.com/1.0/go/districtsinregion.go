@@ -34,7 +34,7 @@ func newDistrictsInRegion(defaultClient, securityClient HTTPClient, serverURL, l
 // Returns a post code and all districts in a specified region
 func (s *districtsInRegion) DistrictsInARegion(ctx context.Context, request operations.DistrictsInARegionRequest) (*operations.DistrictsInARegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

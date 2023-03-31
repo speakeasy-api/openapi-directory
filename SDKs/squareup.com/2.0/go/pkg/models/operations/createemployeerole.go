@@ -8,13 +8,7 @@ import (
 )
 
 type CreateEmployeeRoleSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateEmployeeRoleRequest struct {
-	// An EmployeeRole object with a name and permissions, and an optional owner flag.
-	Request  shared.V1EmployeeRole `request:"mediaType=application/json"`
-	Security CreateEmployeeRoleSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateEmployeeRoleResponse struct {

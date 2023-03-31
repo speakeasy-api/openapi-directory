@@ -53,7 +53,6 @@ pkg/models/operations/settaxationmode.go
 pkg/models/operations/updatetaxrate.go
 pkg/models/shared/createcategoriesrequest.go
 pkg/models/shared/categorydto.go
-pkg/models/shared/security.go
 pkg/models/shared/categoryresponse.go
 pkg/models/shared/renamecategoryrequest.go
 pkg/models/shared/errorresponse.go

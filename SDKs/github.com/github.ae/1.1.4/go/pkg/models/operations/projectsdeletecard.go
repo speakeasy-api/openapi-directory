@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsDeleteCardPathParams struct {
+type ProjectsDeleteCardRequest struct {
 	// The unique identifier of the card.
 	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
-type ProjectsDeleteCardRequest struct {
-	PathParams ProjectsDeleteCardPathParams
 }
 
 // ProjectsDeleteCard403ApplicationJSON - Forbidden

@@ -8,13 +8,13 @@ import (
 )
 
 type ServicecontrolServicesCheckSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicecontrolServicesCheckSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicecontrolServicesCheckSecurity struct {
@@ -22,14 +22,10 @@ type ServicecontrolServicesCheckSecurity struct {
 	Option2 *ServicecontrolServicesCheckSecurityOption2 `security:"option"`
 }
 
-type ServicecontrolServicesCheckPathParams struct {
-	// The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
-	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
-}
-
-type ServicecontrolServicesCheckQueryParams struct {
+type ServicecontrolServicesCheckRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CheckRequest *shared.CheckRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type ServicecontrolServicesCheckQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
+	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicecontrolServicesCheckRequest struct {
-	PathParams  ServicecontrolServicesCheckPathParams
-	QueryParams ServicecontrolServicesCheckQueryParams
-	Request     *shared.CheckRequest `request:"mediaType=application/json"`
-	Security    ServicecontrolServicesCheckSecurity
 }
 
 type ServicecontrolServicesCheckResponse struct {

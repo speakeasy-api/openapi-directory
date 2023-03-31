@@ -8,18 +8,14 @@ import (
 )
 
 type VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams struct {
-	// Required. The full path name of the Group to add to.
-	Group string `pathParam:"style=simple,explode=false,name=group"`
-}
-
-type VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams struct {
+type VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AddGroupMigrationRequest *shared.AddGroupMigrationRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -28,6 +24,8 @@ type VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The full path name of the Group to add to.
+	Group string `pathParam:"style=simple,explode=false,name=group"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -40,13 +38,6 @@ type VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest struct {
-	PathParams  VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams
-	QueryParams VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams
-	Request     *shared.AddGroupMigrationRequest `request:"mediaType=application/json"`
-	Security    VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity
 }
 
 type VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse struct {

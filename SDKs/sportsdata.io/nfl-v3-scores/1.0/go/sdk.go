@@ -107,7 +107,7 @@ func New(opts ...SDKOption) *SDK {
 // Returns <code>true</code> if there is at least one game being played at the time of the request or <code>false</code> if there are none.
 func (s *SDK) AreGamesInProgress(ctx context.Context, request operations.AreGamesInProgressRequest) (*operations.AreGamesInProgressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/AreAnyGamesInProgress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/AreAnyGamesInProgress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *SDK) AreGamesInProgress(ctx context.Context, request operations.AreGame
 // Get bye weeks for the teams during a specified NFL season.
 func (s *SDK) ByeWeeks(ctx context.Context, request operations.ByeWeeksRequest) (*operations.ByeWeeksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Byes/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Byes/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *SDK) ByeWeeks(ctx context.Context, request operations.ByeWeeksRequest) 
 // Depth charts for all NFL teams split by offensive, defensive, and special teams position groupings.
 func (s *SDK) DepthCharts(ctx context.Context, request operations.DepthChartsRequest) (*operations.DepthChartsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DepthCharts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DepthCharts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +241,7 @@ func (s *SDK) DepthCharts(ctx context.Context, request operations.DepthChartsReq
 // GameStatsBySeasonDeprecatedUseTeamGameStatsInstead - Game Stats by Season (Deprecated, use Team Game Stats instead)
 func (s *SDK) GameStatsBySeasonDeprecatedUseTeamGameStatsInstead(ctx context.Context, request operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest) (*operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/GameStats/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/GameStats/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -285,7 +285,7 @@ func (s *SDK) GameStatsBySeasonDeprecatedUseTeamGameStatsInstead(ctx context.Con
 // GameStatsByWeekDeprecatedUseTeamGameStatsInstead - Game Stats by Week (Deprecated, use Team Game Stats instead)
 func (s *SDK) GameStatsByWeekDeprecatedUseTeamGameStatsInstead(ctx context.Context, request operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest) (*operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/GameStatsByWeek/{season}/{week}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/GameStatsByWeek/{season}/{week}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *SDK) GameStatsByWeekDeprecatedUseTeamGameStatsInstead(ctx context.Conte
 // News - News
 func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operations.NewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/News", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/News", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,7 +373,7 @@ func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operat
 // NewsByDate - News by Date
 func (s *SDK) NewsByDate(ctx context.Context, request operations.NewsByDateRequest) (*operations.NewsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -417,7 +417,7 @@ func (s *SDK) NewsByDate(ctx context.Context, request operations.NewsByDateReque
 // NewsByPlayer - News by Player
 func (s *SDK) NewsByPlayer(ctx context.Context, request operations.NewsByPlayerRequest) (*operations.NewsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByPlayerID/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByPlayerID/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -461,7 +461,7 @@ func (s *SDK) NewsByPlayer(ctx context.Context, request operations.NewsByPlayerR
 // NewsByTeam - News by Team
 func (s *SDK) NewsByTeam(ctx context.Context, request operations.NewsByTeamRequest) (*operations.NewsByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByTeam/{team}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByTeam/{team}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -505,7 +505,7 @@ func (s *SDK) NewsByTeam(ctx context.Context, request operations.NewsByTeamReque
 // PlayerDetailsByAvailable - Player Details by Available
 func (s *SDK) PlayerDetailsByAvailable(ctx context.Context, request operations.PlayerDetailsByAvailableRequest) (*operations.PlayerDetailsByAvailableResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +549,7 @@ func (s *SDK) PlayerDetailsByAvailable(ctx context.Context, request operations.P
 // PlayerDetailsByFreeAgents - Player Details by Free Agents
 func (s *SDK) PlayerDetailsByFreeAgents(ctx context.Context, request operations.PlayerDetailsByFreeAgentsRequest) (*operations.PlayerDetailsByFreeAgentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/FreeAgents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/FreeAgents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -593,7 +593,7 @@ func (s *SDK) PlayerDetailsByFreeAgents(ctx context.Context, request operations.
 // PlayerDetailsByPlayer - Player Details by Player
 func (s *SDK) PlayerDetailsByPlayer(ctx context.Context, request operations.PlayerDetailsByPlayerRequest) (*operations.PlayerDetailsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Player/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Player/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -637,7 +637,7 @@ func (s *SDK) PlayerDetailsByPlayer(ctx context.Context, request operations.Play
 // PlayerDetailsByRookieDraftYear - Player Details by Rookie Draft Year
 func (s *SDK) PlayerDetailsByRookieDraftYear(ctx context.Context, request operations.PlayerDetailsByRookieDraftYearRequest) (*operations.PlayerDetailsByRookieDraftYearResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Rookies/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Rookies/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -681,7 +681,7 @@ func (s *SDK) PlayerDetailsByRookieDraftYear(ctx context.Context, request operat
 // PlayerDetailsByTeam - Player Details by Team
 func (s *SDK) PlayerDetailsByTeam(ctx context.Context, request operations.PlayerDetailsByTeamRequest) (*operations.PlayerDetailsByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players/{team}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players/{team}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -726,7 +726,7 @@ func (s *SDK) PlayerDetailsByTeam(ctx context.Context, request operations.Player
 // Returns full list of NFL Referees
 func (s *SDK) Referees(ctx context.Context, request operations.RefereesRequest) (*operations.RefereesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Referees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Referees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -771,7 +771,7 @@ func (s *SDK) Referees(ctx context.Context, request operations.RefereesRequest) 
 // Game schedule for a specified season.
 func (s *SDK) Schedule(ctx context.Context, request operations.ScheduleRequest) (*operations.ScheduleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Schedules/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Schedules/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -816,7 +816,7 @@ func (s *SDK) Schedule(ctx context.Context, request operations.ScheduleRequest) 
 // Get game scores for a specified week of a season.
 func (s *SDK) ScoresByDate(ctx context.Context, request operations.ScoresByDateRequest) (*operations.ScoresByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/ScoresByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/ScoresByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -861,7 +861,7 @@ func (s *SDK) ScoresByDate(ctx context.Context, request operations.ScoresByDateR
 // Game scores for a specified season.
 func (s *SDK) ScoresBySeason(ctx context.Context, request operations.ScoresBySeasonRequest) (*operations.ScoresBySeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Scores/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Scores/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -906,7 +906,7 @@ func (s *SDK) ScoresBySeason(ctx context.Context, request operations.ScoresBySea
 // Get game scores for a specified week of a season.
 func (s *SDK) ScoresByWeek(ctx context.Context, request operations.ScoresByWeekRequest) (*operations.ScoresByWeekResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/ScoresByWeek/{season}/{week}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/ScoresByWeek/{season}/{week}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -951,7 +951,7 @@ func (s *SDK) ScoresByWeek(ctx context.Context, request operations.ScoresByWeekR
 // Gets simulated live scores of NFL games, covering the Conference Championship games on January 21, 2018.
 func (s *SDK) ScoresByWeekSimulation(ctx context.Context, request operations.ScoresByWeekSimulationRequest) (*operations.ScoresByWeekSimulationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedScores/{numberofplays}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedScores/{numberofplays}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -996,7 +996,7 @@ func (s *SDK) ScoresByWeekSimulation(ctx context.Context, request operations.Sco
 // Year of the current NFL season. This value changes at the start of the new NFL league year. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985.
 func (s *SDK) SeasonCurrent(ctx context.Context, request operations.SeasonCurrentRequest) (*operations.SeasonCurrentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentSeason", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentSeason", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1041,7 +1041,7 @@ func (s *SDK) SeasonCurrent(ctx context.Context, request operations.SeasonCurren
 // Year of the most recently completed season. this value changes immediately after the Super Bowl. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985.
 func (s *SDK) SeasonLastCompleted(ctx context.Context, request operations.SeasonLastCompletedRequest) (*operations.SeasonLastCompletedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/LastCompletedSeason", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/LastCompletedSeason", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1086,7 +1086,7 @@ func (s *SDK) SeasonLastCompleted(ctx context.Context, request operations.Season
 // Year of the current NFL season, if we are in the mid-season. If we are in the off-season, then year of the next upcoming season. This value changes immediately after the Super Bowl. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985.
 func (s *SDK) SeasonUpcoming(ctx context.Context, request operations.SeasonUpcomingRequest) (*operations.SeasonUpcomingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingSeason", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingSeason", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1131,7 +1131,7 @@ func (s *SDK) SeasonUpcoming(ctx context.Context, request operations.SeasonUpcom
 // This method returns all stadiums.
 func (s *SDK) Stadiums(ctx context.Context, request operations.StadiumsRequest) (*operations.StadiumsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Stadiums", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Stadiums", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1175,7 +1175,7 @@ func (s *SDK) Stadiums(ctx context.Context, request operations.StadiumsRequest) 
 // Standings - Standings
 func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest) (*operations.StandingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Standings/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Standings/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1220,7 +1220,7 @@ func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest
 // Game by game log of total team statistics.
 func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamGameLogsBySeasonRequest) (*operations.TeamGameLogsBySeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1264,7 +1264,7 @@ func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamG
 // TeamGameStats - Team Game Stats
 func (s *SDK) TeamGameStats(ctx context.Context, request operations.TeamGameStatsRequest) (*operations.TeamGameStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStats/{season}/{week}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStats/{season}/{week}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1308,7 +1308,7 @@ func (s *SDK) TeamGameStats(ctx context.Context, request operations.TeamGameStat
 // TeamSeasonStats - Team Season Stats
 func (s *SDK) TeamSeasonStats(ctx context.Context, request operations.TeamSeasonStatsRequest) (*operations.TeamSeasonStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamSeasonStats/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamSeasonStats/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1353,7 +1353,7 @@ func (s *SDK) TeamSeasonStats(ctx context.Context, request operations.TeamSeason
 // Gets all active teams.
 func (s *SDK) TeamsActive(ctx context.Context, request operations.TeamsActiveRequest) (*operations.TeamsActiveResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1398,7 +1398,7 @@ func (s *SDK) TeamsActive(ctx context.Context, request operations.TeamsActiveReq
 // Gets all teams, including pro bowl teams.
 func (s *SDK) TeamsAll(ctx context.Context, request operations.TeamsAllRequest) (*operations.TeamsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/AllTeams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/AllTeams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1443,7 +1443,7 @@ func (s *SDK) TeamsAll(ctx context.Context, request operations.TeamsAllRequest) 
 // List of teams playing in a specified season.
 func (s *SDK) TeamsBySeason(ctx context.Context, request operations.TeamsBySeasonRequest) (*operations.TeamsBySeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Teams/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Teams/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1488,7 +1488,7 @@ func (s *SDK) TeamsBySeason(ctx context.Context, request operations.TeamsBySeaso
 // Get detailed information about past, present, and future timeframes.
 func (s *SDK) Timeframes(ctx context.Context, request operations.TimeframesRequest) (*operations.TimeframesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Timeframes/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Timeframes/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1533,7 +1533,7 @@ func (s *SDK) Timeframes(ctx context.Context, request operations.TimeframesReque
 // Number of the current week of the NFL season. This value usually changes on Tuesday nights or Wednesday mornings at midnight ET.
 func (s *SDK) WeekCurrent(ctx context.Context, request operations.WeekCurrentRequest) (*operations.WeekCurrentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentWeek", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentWeek", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1578,7 +1578,7 @@ func (s *SDK) WeekCurrent(ctx context.Context, request operations.WeekCurrentReq
 // Number of the last completed week of the NFL season. This value usually changes on Tuesday nights or Wednesday mornings at midnight ET.
 func (s *SDK) WeekLastCompleted(ctx context.Context, request operations.WeekLastCompletedRequest) (*operations.WeekLastCompletedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/LastCompletedWeek", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/LastCompletedWeek", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1623,7 +1623,7 @@ func (s *SDK) WeekLastCompleted(ctx context.Context, request operations.WeekLast
 // Number of the upcoming week of the NFL season. This value usually changes on Tuesday nights or Wednesday mornings at midnight ET.
 func (s *SDK) WeekUpcoming(ctx context.Context, request operations.WeekUpcomingRequest) (*operations.WeekUpcomingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingWeek", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingWeek", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1668,7 +1668,7 @@ func (s *SDK) WeekUpcoming(ctx context.Context, request operations.WeekUpcomingR
 // Ping NFL API
 func (s *SDK) XPing(ctx context.Context, request operations.XPingRequest) (*operations.XPingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Ping/{seconds}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Ping/{seconds}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

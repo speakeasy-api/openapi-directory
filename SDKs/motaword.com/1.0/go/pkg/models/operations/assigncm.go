@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssignCMPathParams struct {
+type AssignCMRequest struct {
+	Cm *shared.Cm `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AssignCMRequest struct {
-	PathParams AssignCMPathParams
-	Request    *shared.Cm `request:"mediaType=application/json"`
 }
 
 type AssignCMResponse struct {

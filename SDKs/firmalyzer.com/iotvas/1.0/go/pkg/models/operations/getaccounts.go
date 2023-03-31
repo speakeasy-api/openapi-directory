@@ -8,17 +8,12 @@ import (
 )
 
 type GetAccountsSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAccountsPathParams struct {
-	// SHA2 hash of device firmware
-	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetAccountsRequest struct {
-	PathParams GetAccountsPathParams
-	Security   GetAccountsSecurity
+	// SHA2 hash of device firmware
+	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
 }
 
 type GetAccountsResponse struct {

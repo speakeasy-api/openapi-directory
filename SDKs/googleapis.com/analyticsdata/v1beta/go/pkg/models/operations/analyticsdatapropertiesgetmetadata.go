@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsdataPropertiesGetMetadataSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsdataPropertiesGetMetadataSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsdataPropertiesGetMetadataSecurity struct {
@@ -22,12 +22,7 @@ type AnalyticsdataPropertiesGetMetadataSecurity struct {
 	Option2 *AnalyticsdataPropertiesGetMetadataSecurityOption2 `security:"option"`
 }
 
-type AnalyticsdataPropertiesGetMetadataPathParams struct {
-	// Required. The resource name of the metadata to retrieve. This name field is specified in the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics common to all properties. In this special mode, this method will not return custom dimensions and metrics.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type AnalyticsdataPropertiesGetMetadataQueryParams struct {
+type AnalyticsdataPropertiesGetMetadataRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type AnalyticsdataPropertiesGetMetadataQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the metadata to retrieve. This name field is specified in the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics common to all properties. In this special mode, this method will not return custom dimensions and metrics.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type AnalyticsdataPropertiesGetMetadataQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AnalyticsdataPropertiesGetMetadataRequest struct {
-	PathParams  AnalyticsdataPropertiesGetMetadataPathParams
-	QueryParams AnalyticsdataPropertiesGetMetadataQueryParams
-	Security    AnalyticsdataPropertiesGetMetadataSecurity
 }
 
 type AnalyticsdataPropertiesGetMetadataResponse struct {

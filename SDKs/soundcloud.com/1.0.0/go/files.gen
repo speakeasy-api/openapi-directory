@@ -80,7 +80,6 @@ pkg/models/operations/getusersuseridplaylists.go
 pkg/models/operations/getusersuseridtracks.go
 pkg/models/operations/getusersuseridwebprofiles.go
 pkg/models/shared/error.go
-pkg/models/shared/security.go
 pkg/models/shared/toomanyrequests.go
 pkg/models/shared/completeuser.go
 pkg/models/shared/activities.go

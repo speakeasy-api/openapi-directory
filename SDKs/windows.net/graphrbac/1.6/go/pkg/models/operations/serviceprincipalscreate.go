@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsCreatePathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsCreateQueryParams struct {
+type ServicePrincipalsCreateRequest struct {
+	// Parameters to create a service principal.
+	ServicePrincipalCreateParameters shared.ServicePrincipalCreateParameters `request:"mediaType=application/json"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsCreateRequest struct {
-	PathParams  ServicePrincipalsCreatePathParams
-	QueryParams ServicePrincipalsCreateQueryParams
-	// Parameters to create a service principal.
-	Request shared.ServicePrincipalCreateParameters `request:"mediaType=application/json"`
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type ServicePrincipalsCreateResponse struct {

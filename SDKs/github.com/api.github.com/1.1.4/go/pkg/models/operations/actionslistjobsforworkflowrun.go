@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListJobsForWorkflowRunPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the workflow run.
-	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
 // ActionsListJobsForWorkflowRunFilterEnum - Filters jobs by their `completed_at` timestamp. `latest` returns jobs from the most recent execution of the workflow run. `all` returns all jobs for a workflow run, including from old executions of the workflow run.
 type ActionsListJobsForWorkflowRunFilterEnum string
 
@@ -42,18 +33,19 @@ func (e *ActionsListJobsForWorkflowRunFilterEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ActionsListJobsForWorkflowRunQueryParams struct {
+type ActionsListJobsForWorkflowRunRequest struct {
 	// Filters jobs by their `completed_at` timestamp. `latest` returns jobs from the most recent execution of the workflow run. `all` returns all jobs for a workflow run, including from old executions of the workflow run.
 	Filter *ActionsListJobsForWorkflowRunFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListJobsForWorkflowRunRequest struct {
-	PathParams  ActionsListJobsForWorkflowRunPathParams
-	QueryParams ActionsListJobsForWorkflowRunQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the workflow run.
+	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
 }
 
 // ActionsListJobsForWorkflowRun200ApplicationJSON - Response

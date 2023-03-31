@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectRawPathParams struct {
-	// The id of the project to update.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateProjectRawHeaders struct {
+type UpdateProjectRawRequest struct {
+	// The updated project model.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateProjectRawRequest struct {
-	PathParams UpdateProjectRawPathParams
-	Headers    UpdateProjectRawHeaders
-	// The updated project model.
-	Request []byte `request:"mediaType=text/xml"`
+	// The id of the project to update.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type UpdateProjectRawResponse struct {

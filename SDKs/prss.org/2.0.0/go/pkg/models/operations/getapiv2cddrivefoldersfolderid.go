@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV2CddriveFoldersFolderIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2CddriveFoldersFolderIDPathParams struct {
-	// The ID of the folder to get.
-	FolderID int64 `pathParam:"style=simple,explode=false,name=folder-id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2CddriveFoldersFolderIDRequest struct {
-	PathParams GetAPIV2CddriveFoldersFolderIDPathParams
-	Security   GetAPIV2CddriveFoldersFolderIDSecurity
+	// The ID of the folder to get.
+	FolderID int64 `pathParam:"style=simple,explode=false,name=folder-id"`
 }
 
 type GetAPIV2CddriveFoldersFolderIDResponse struct {

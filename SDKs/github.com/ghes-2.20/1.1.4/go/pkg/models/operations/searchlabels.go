@@ -33,7 +33,7 @@ func (e *SearchLabelsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchLabelsQueryParams struct {
+type SearchLabelsRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -46,10 +46,6 @@ type SearchLabelsQueryParams struct {
 	RepositoryID int64 `queryParam:"style=form,explode=true,name=repository_id"`
 	// Sorts the results of your query by when the label was `created` or `updated`. Default: [best match](https://docs.github.com/enterprise-server@2.20/rest/reference/search#ranking-search-results)
 	Sort *SearchLabelsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchLabelsRequest struct {
-	QueryParams SearchLabelsQueryParams
 }
 
 // SearchLabels200ApplicationJSON - Response

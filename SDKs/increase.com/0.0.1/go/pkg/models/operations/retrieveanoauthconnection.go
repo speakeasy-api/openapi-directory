@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnOauthConnectionPathParams struct {
-	OauthConnectionID string `pathParam:"style=simple,explode=false,name=oauth_connection_id"`
-}
-
 type RetrieveAnOauthConnectionRequest struct {
-	PathParams RetrieveAnOauthConnectionPathParams
+	OauthConnectionID string `pathParam:"style=simple,explode=false,name=oauth_connection_id"`
 }
 
 type RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum string

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListDeploymentStatusesPathParams struct {
+type ReposListDeploymentStatusesRequest struct {
 	// deployment_id parameter
 	DeploymentID int64  `pathParam:"style=simple,explode=false,name=deployment_id"`
 	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListDeploymentStatusesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListDeploymentStatusesRequest struct {
-	PathParams  ReposListDeploymentStatusesPathParams
-	QueryParams ReposListDeploymentStatusesQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListDeploymentStatusesResponse struct {

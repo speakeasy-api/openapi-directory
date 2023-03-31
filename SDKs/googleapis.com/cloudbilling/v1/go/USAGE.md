@@ -14,37 +14,30 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudbillingBillingAccountsCreateRequest{
-        Security: operations.CloudbillingBillingAccountsCreateSecurity{
-            Option1: &operations.CloudbillingBillingAccountsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        BillingAccountInput: &shared.BillingAccountInput{
+            DisplayName: "provident",
+            MasterBillingAccount: "distinctio",
         },
-        QueryParams: operations.CloudbillingBillingAccountsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.BillingAccountInput{
-            DisplayName: "deserunt",
-            MasterBillingAccount: "suscipit",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.BillingAccounts.CloudbillingBillingAccountsCreate(ctx, req)
+    res, err := s.BillingAccounts.CloudbillingBillingAccountsCreate(ctx, req, operations.CloudbillingBillingAccountsCreateSecurity{
+        Option1: &operations.CloudbillingBillingAccountsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

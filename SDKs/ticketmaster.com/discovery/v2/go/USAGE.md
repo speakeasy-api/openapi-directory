@@ -14,28 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.FindRequest{
-        QueryParams: operations.FindQueryParams{
-            ClassificationID: []interface{}{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            ClassificationName: []interface{}{
-                "nulla",
-                "corrupti",
-                "illum",
-            },
-            ID: "vel",
-            IncludeLicensedContent: " no",
-            IncludeSpellcheck: " no",
-            IncludeTest: " no",
-            Keyword: "iure",
-            Locale: "magnam",
-            Page: "debitis",
-            Size: "ipsa",
-            Sort: "delectus",
-            Source: " universe",
+        ClassificationID: []interface{}{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
+        ClassificationName: []interface{}{
+            "nulla",
+            "corrupti",
+            "illum",
+        },
+        ID: "vel",
+        IncludeLicensedContent: " no",
+        IncludeSpellcheck: " no",
+        IncludeTest: " no",
+        Keyword: "iure",
+        Locale: "magnam",
+        Page: "debitis",
+        Size: "ipsa",
+        Sort: "delectus",
+        Source: " universe",
     }
 
     ctx := context.Background()

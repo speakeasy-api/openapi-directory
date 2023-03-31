@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateQueryUsingPUTPathParams struct {
+type UpdateQueryUsingPUTRequest struct {
+	// query
+	ManageQuery shared.ManageQuery `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// shortCode
 	ShortCode string `pathParam:"style=simple,explode=false,name=shortCode"`
-}
-
-type UpdateQueryUsingPUTRequest struct {
-	PathParams UpdateQueryUsingPUTPathParams
-	// query
-	Request shared.ManageQuery `request:"mediaType=application/json"`
 }
 
 type UpdateQueryUsingPUTResponse struct {

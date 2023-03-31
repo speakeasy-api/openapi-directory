@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePaymentFormRequest struct {
-	Request shared.PaymentWriteRequest2 `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CreatePaymentFormResponse struct {
 	ContentType string
 	// Create payment

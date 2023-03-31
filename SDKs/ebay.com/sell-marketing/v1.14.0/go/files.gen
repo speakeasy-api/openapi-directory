@@ -100,7 +100,6 @@ pkg/models/shared/errorparameter.go
 pkg/models/shared/adreference.go
 pkg/models/shared/bulkcreateadsbyinventoryreferencerequest.go
 pkg/models/shared/createadsbyinventoryreferencerequest.go
-pkg/models/shared/security.go
 pkg/models/shared/bulkadresponse.go
 pkg/models/shared/adresponse.go
 pkg/models/shared/bulkcreateadrequest.go

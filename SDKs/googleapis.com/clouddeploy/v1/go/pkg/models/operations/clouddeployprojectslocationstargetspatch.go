@@ -8,18 +8,14 @@ import (
 )
 
 type ClouddeployProjectsLocationsTargetsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClouddeployProjectsLocationsTargetsPatchPathParams struct {
-	// Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ClouddeployProjectsLocationsTargetsPatchQueryParams struct {
+type ClouddeployProjectsLocationsTargetsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TargetInput *shared.TargetInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Optional. If set to true, updating a `Target` that does not exist will result in the creation of a new `Target`.
@@ -32,6 +28,8 @@ type ClouddeployProjectsLocationsTargetsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -48,13 +46,6 @@ type ClouddeployProjectsLocationsTargetsPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. If set to true, the request is validated and the user is provided with an expected result, but no actual change is made.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type ClouddeployProjectsLocationsTargetsPatchRequest struct {
-	PathParams  ClouddeployProjectsLocationsTargetsPatchPathParams
-	QueryParams ClouddeployProjectsLocationsTargetsPatchQueryParams
-	Request     *shared.TargetInput `request:"mediaType=application/json"`
-	Security    ClouddeployProjectsLocationsTargetsPatchSecurity
 }
 
 type ClouddeployProjectsLocationsTargetsPatchResponse struct {

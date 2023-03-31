@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDCompanyEntitiesPersonIDDetailsPathParams struct {
+type GetSpacesIDCompanyEntitiesPersonIDDetailsRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the company entity to get
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetSpacesIDCompanyEntitiesPersonIDDetailsRequest struct {
-	PathParams GetSpacesIDCompanyEntitiesPersonIDDetailsPathParams
 }
 
 type GetSpacesIDCompanyEntitiesPersonIDDetails200ApplicationJSONAddress struct {

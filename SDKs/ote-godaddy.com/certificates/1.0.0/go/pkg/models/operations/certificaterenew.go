@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateRenewPathParams struct {
+type CertificateRenewRequest struct {
+	// The renew request info
+	CertificateRenew shared.CertificateRenew `request:"mediaType=application/json"`
 	// Certificate id to renew
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateRenewRequest struct {
-	PathParams CertificateRenewPathParams
-	// The renew request info
-	Request shared.CertificateRenew `request:"mediaType=application/json"`
 }
 
 type CertificateRenewResponse struct {

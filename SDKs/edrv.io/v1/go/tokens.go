@@ -34,7 +34,7 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteToken - Use to delete a token
 func (s *tokens) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest) (*operations.DeleteTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,14 +69,14 @@ func (s *tokens) DeleteToken(ctx context.Context, request operations.DeleteToken
 // GetToken - Get a single token's data
 func (s *tokens) GetToken(ctx context.Context, request operations.GetTokenRequest) (*operations.GetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,7 +115,7 @@ func (s *tokens) GetTokens(ctx context.Context, request operations.GetTokensRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -157,9 +157,9 @@ func (s *tokens) GetTokens(ctx context.Context, request operations.GetTokensRequ
 // PatchToken - Update a token
 func (s *tokens) PatchToken(ctx context.Context, request operations.PatchTokenRequest) (*operations.PatchTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tokens/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -210,7 +210,7 @@ func (s *tokens) PatchToken(ctx context.Context, request operations.PatchTokenRe
 }
 
 // PostTokens - Create a new token
-func (s *tokens) PostTokens(ctx context.Context, request operations.PostTokensRequest) (*operations.PostTokensResponse, error) {
+func (s *tokens) PostTokens(ctx context.Context, request operations.PostTokensRequestBody) (*operations.PostTokensResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/tokens"
 

@@ -36,14 +36,14 @@ func newScrobbling(defaultClient, securityClient HTTPClient, serverURL, language
 // This endpoint can be used by all users, even without premium
 func (s *scrobbling) GetScrobbleShowsShowID(ctx context.Context, request operations.GetScrobbleShowsShowIDRequest) (*operations.GetScrobbleShowsShowIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scrobble/shows/{show_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scrobble/shows/{show_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *scrobbling) GetScrobbleShowsShowID(ctx context.Context, request operati
 
 // PostScrobbleEpisodes - Mark episodes as acquired or watched based on their IDs
 // This endpoint can be used by all users, even without premium
-func (s *scrobbling) PostScrobbleEpisodes(ctx context.Context, request operations.PostScrobbleEpisodesRequest) (*operations.PostScrobbleEpisodesResponse, error) {
+func (s *scrobbling) PostScrobbleEpisodes(ctx context.Context, request []operations.PostScrobbleEpisodesRequestBody) (*operations.PostScrobbleEpisodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scrobble/episodes"
 
@@ -145,7 +145,7 @@ func (s *scrobbling) PostScrobbleShows(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scrobble/shows"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -157,7 +157,7 @@ func (s *scrobbling) PostScrobbleShows(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -203,9 +203,9 @@ func (s *scrobbling) PostScrobbleShows(ctx context.Context, request operations.P
 // This endpoint can be used by all users, even without premium
 func (s *scrobbling) PutScrobbleEpisodesEpisodeID(ctx context.Context, request operations.PutScrobbleEpisodesEpisodeIDRequest) (*operations.PutScrobbleEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scrobble/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scrobble/episodes/{episode_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarkedEpisodeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

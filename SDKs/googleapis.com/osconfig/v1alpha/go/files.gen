@@ -31,7 +31,6 @@ pkg/models/shared/ospolicyresourcecomplianceexecresourceoutput.go
 pkg/models/shared/ospolicyresourceconfigstep.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listinventoriesresponse.go
 pkg/models/shared/inventory.go
 pkg/models/shared/inventoryosinfo.go

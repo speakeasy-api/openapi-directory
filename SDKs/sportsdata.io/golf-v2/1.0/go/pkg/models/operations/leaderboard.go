@@ -33,15 +33,11 @@ func (e *LeaderboardFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LeaderboardPathParams struct {
+type LeaderboardRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LeaderboardFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are <code>58</code>, <code>61</code>, etc.
 	Tournamentid string `pathParam:"style=simple,explode=false,name=tournamentid"`
-}
-
-type LeaderboardRequest struct {
-	PathParams LeaderboardPathParams
 }
 
 type LeaderboardResponse struct {

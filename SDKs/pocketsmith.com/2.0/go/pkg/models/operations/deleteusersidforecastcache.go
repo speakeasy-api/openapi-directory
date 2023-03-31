@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUsersIDForecastCachePathParams struct {
+type DeleteUsersIDForecastCacheRequest struct {
 	// The unique identifier of the user.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteUsersIDForecastCacheRequest struct {
-	PathParams DeleteUsersIDForecastCachePathParams
 }
 
 type DeleteUsersIDForecastCacheResponse struct {

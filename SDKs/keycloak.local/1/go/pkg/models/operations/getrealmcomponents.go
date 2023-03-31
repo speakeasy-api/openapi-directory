@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmComponentsPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmComponentsQueryParams struct {
+type GetRealmComponentsRequest struct {
 	Name   *string `queryParam:"style=form,explode=true,name=name"`
 	Parent *string `queryParam:"style=form,explode=true,name=parent"`
-	Type   *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetRealmComponentsRequest struct {
-	PathParams  GetRealmComponentsPathParams
-	QueryParams GetRealmComponentsQueryParams
+	// realm name (not id!)
+	Realm string  `pathParam:"style=simple,explode=false,name=realm"`
+	Type  *string `queryParam:"style=form,explode=true,name=type"`
 }
 
 type GetRealmComponentsResponse struct {

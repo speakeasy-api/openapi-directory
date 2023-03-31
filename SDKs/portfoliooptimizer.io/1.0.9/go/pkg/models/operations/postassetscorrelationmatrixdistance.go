@@ -45,10 +45,6 @@ type PostAssetsCorrelationMatrixDistanceRequestBody struct {
 	ReferenceCorrelationMatrix [][]float64 `json:"referenceCorrelationMatrix"`
 }
 
-type PostAssetsCorrelationMatrixDistanceRequest struct {
-	Request PostAssetsCorrelationMatrixDistanceRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixDistance200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixDistance200ApplicationJSON struct {
 	// The computed distance between the two correlation matrices

@@ -12,17 +12,12 @@ var FetchAccountSettingsServerList = []string{
 }
 
 type FetchAccountSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAccountSettingsQueryParams struct {
-	SubaccountSid *string `queryParam:"style=form,explode=true,name=SubaccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAccountSettingsRequest struct {
-	QueryParams FetchAccountSettingsQueryParams
-	Security    FetchAccountSettingsSecurity
-	ServerURL   *string
+	SubaccountSid *string `queryParam:"style=form,explode=true,name=SubaccountSid"`
 }
 
 type FetchAccountSettingsResponse struct {

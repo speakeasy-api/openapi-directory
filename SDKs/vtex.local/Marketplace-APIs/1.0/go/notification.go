@@ -38,16 +38,16 @@ func newNotification(defaultClient, securityClient HTTPClient, serverURL, langua
 // *Marketplaces* will then call the [fulfillment endpoint](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) provided in the seller registration form to get the updated inventory  information.
 func (s *notification) InventoryNotification(ctx context.Context, request operations.InventoryNotificationRequest) (*operations.InventoryNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notificator/{sellerId}/changenotification/{skuId}/inventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notificator/{sellerId}/changenotification/{skuId}/inventory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,16 +84,16 @@ func (s *notification) InventoryNotification(ctx context.Context, request operat
 // *Marketplaces* will then call the [fulfillment endpoint](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) provided in the seller registration form to get the updated price information.
 func (s *notification) PriceNotification(ctx context.Context, request operations.PriceNotificationRequest) (*operations.PriceNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notificator/{sellerId}/changenotification/{skuId}/price", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notificator/{sellerId}/changenotification/{skuId}/price", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

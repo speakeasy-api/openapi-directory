@@ -12,20 +12,15 @@ var FetchRoomParticipantSubscribeRuleServerList = []string{
 }
 
 type FetchRoomParticipantSubscribeRuleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRoomParticipantSubscribeRulePathParams struct {
+type FetchRoomParticipantSubscribeRuleRequest struct {
 	// The SID of the Participant resource with the subscribe rules to fetch.
 	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
 	// The SID of the Room resource where the subscribe rules to fetch apply.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
-}
-
-type FetchRoomParticipantSubscribeRuleRequest struct {
-	PathParams FetchRoomParticipantSubscribeRulePathParams
-	Security   FetchRoomParticipantSubscribeRuleSecurity
-	ServerURL  *string
 }
 
 type FetchRoomParticipantSubscribeRuleResponse struct {

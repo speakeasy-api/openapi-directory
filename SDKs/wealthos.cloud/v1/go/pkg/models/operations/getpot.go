@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetPotSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPotPathParams struct {
-	// Pot Id
-	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
-}
-
-type GetPotHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetPotRequest struct {
-	PathParams GetPotPathParams
-	Headers    GetPotHeaders
-	Security   GetPotSecurity
+	// Pot Id
+	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPot500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

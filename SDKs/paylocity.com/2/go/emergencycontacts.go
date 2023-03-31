@@ -33,11 +33,11 @@ func newEmergencyContacts(defaultClient, securityClient HTTPClient, serverURL, l
 
 // AddOrUpdateEmergencyContacts - Add/update emergency contacts
 // Sends new or updated employee emergency contacts directly to Web Pay.
-func (s *emergencyContacts) AddOrUpdateEmergencyContacts(ctx context.Context, request operations.AddOrUpdateEmergencyContactsRequest) (*operations.AddOrUpdateEmergencyContactsResponse, error) {
+func (s *emergencyContacts) AddOrUpdateEmergencyContacts(ctx context.Context, request operations.AddOrUpdateEmergencyContactsRequest, security operations.AddOrUpdateEmergencyContactsSecurity) (*operations.AddOrUpdateEmergencyContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmergencyContact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *emergencyContacts) AddOrUpdateEmergencyContacts(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

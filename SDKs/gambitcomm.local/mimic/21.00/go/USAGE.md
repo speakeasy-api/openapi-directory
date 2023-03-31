@@ -13,19 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 
     req := operations.AccessAddRequest{
-        PathParams: operations.AccessAddPathParams{
-            Agents: "corrupti",
-            Mask: "provident",
-            User: "distinctio",
-        },
+        Agents: "corrupti",
+        Mask: "provident",
+        User: "distinctio",
     }
 
     ctx := context.Background()

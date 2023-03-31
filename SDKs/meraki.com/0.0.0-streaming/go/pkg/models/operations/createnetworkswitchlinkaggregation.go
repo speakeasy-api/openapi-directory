@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchLinkAggregationPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkSwitchLinkAggregationRequestBodySwitchPorts struct {
 	// Port identifier of switch port. For modules, the identifier is "SlotNumber_ModuleType_PortNumber" (Ex: "1_8X10G_1"), otherwise it is just the port number (Ex: "8").
 	PortID string `json:"portId"`
@@ -32,8 +28,8 @@ type CreateNetworkSwitchLinkAggregationRequestBody struct {
 }
 
 type CreateNetworkSwitchLinkAggregationRequest struct {
-	PathParams CreateNetworkSwitchLinkAggregationPathParams
-	Request    *CreateNetworkSwitchLinkAggregationRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateNetworkSwitchLinkAggregationRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                         `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkSwitchLinkAggregationResponse struct {

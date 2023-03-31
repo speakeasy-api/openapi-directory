@@ -36,11 +36,11 @@ func newSwitchInstruction(defaultClient, securityClient HTTPClient, serverURL, l
 
 // ExecuteSwitchTrasaction - Execute Switch Instruction
 // Send a switch instruction with details of the investment products to be sold, free cash to be used (if any) and investment products to be bought.
-func (s *switchInstruction) ExecuteSwitchTrasaction(ctx context.Context, request operations.ExecuteSwitchTrasactionRequest) (*operations.ExecuteSwitchTrasactionResponse, error) {
+func (s *switchInstruction) ExecuteSwitchTrasaction(ctx context.Context, request operations.ExecuteSwitchTrasactionRequest, security operations.ExecuteSwitchTrasactionSecurity) (*operations.ExecuteSwitchTrasactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/switch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *switchInstruction) ExecuteSwitchTrasaction(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,22 +160,22 @@ func (s *switchInstruction) ExecuteSwitchTrasaction(ctx context.Context, request
 
 // GetSwitch - Retrieve Switch instruction from Switch ID
 // Retrieve the status of an existing switch instruction from the `switch_transaction_id`. If the status of the individual buy/sell transactions are required, you must send the request with include_details = `true`.
-func (s *switchInstruction) GetSwitch(ctx context.Context, request operations.GetSwitchRequest) (*operations.GetSwitchResponse, error) {
+func (s *switchInstruction) GetSwitch(ctx context.Context, request operations.GetSwitchRequest, security operations.GetSwitchSecurity) (*operations.GetSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/switch/{switch_transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/switch/{switch_transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -53,17 +53,13 @@ func (e *GetFirewallsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFirewallsQueryParams struct {
+type GetFirewallsRequest struct {
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter resources by their name. The response will only contain the resources matching the specified name
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Can be used multiple times.
 	Sort *GetFirewallsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFirewallsRequest struct {
-	QueryParams GetFirewallsQueryParams
 }
 
 type GetFirewallsFirewallsResponseFirewallAppliedToAppliedToResourcesServer struct {

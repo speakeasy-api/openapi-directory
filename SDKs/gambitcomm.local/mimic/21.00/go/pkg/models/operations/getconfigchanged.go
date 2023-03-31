@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetConfigChangedPathParams struct {
+type GetConfigChangedRequest struct {
 	// Agent to return the indicator
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetConfigChangedRequest struct {
-	PathParams GetConfigChangedPathParams
 }
 
 type GetConfigChangedResponse struct {

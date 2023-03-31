@@ -12,12 +12,8 @@ var CreateOriginationURLServerList = []string{
 }
 
 type CreateOriginationURLSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateOriginationURLPathParams struct {
-	// The SID of the Trunk to associate the resource with.
-	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateOriginationURLCreateOriginationURLRequest struct {
@@ -34,10 +30,9 @@ type CreateOriginationURLCreateOriginationURLRequest struct {
 }
 
 type CreateOriginationURLRequest struct {
-	PathParams CreateOriginationURLPathParams
-	Request    *CreateOriginationURLCreateOriginationURLRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateOriginationURLSecurity
-	ServerURL  *string
+	RequestBody *CreateOriginationURLCreateOriginationURLRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Trunk to associate the resource with.
+	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
 }
 
 type CreateOriginationURLResponse struct {

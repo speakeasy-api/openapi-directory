@@ -12,10 +12,11 @@ var ListParticipantConversationServerList = []string{
 }
 
 type ListParticipantConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListParticipantConversationQueryParams struct {
+type ListParticipantConversationRequest struct {
 	// A unique string identifier for the conversation participant who's not a Conversation User. This parameter could be found in messaging_binding.address field of Participant resource. It should be url-encoded.
 	Address *string `queryParam:"style=form,explode=true,name=Address"`
 	// A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.
@@ -26,12 +27,6 @@ type ListParticipantConversationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListParticipantConversationRequest struct {
-	QueryParams ListParticipantConversationQueryParams
-	Security    ListParticipantConversationSecurity
-	ServerURL   *string
 }
 
 type ListParticipantConversationListParticipantConversationResponseMeta struct {

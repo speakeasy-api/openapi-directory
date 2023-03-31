@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrder2PathParams struct {
-	// ID of the order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetOrder2QueryParams struct {
-	// Reason for requesting unmasked data.
-	Reason *string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type GetOrder2Headers struct {
+type GetOrder2Request struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetOrder2Request struct {
-	PathParams  GetOrder2PathParams
-	QueryParams GetOrder2QueryParams
-	Headers     GetOrder2Headers
+	// ID of the order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	// Reason for requesting unmasked data.
+	Reason *string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 // GetOrder2200ApplicationJSONItemsAdditionalInfo - Additional information.

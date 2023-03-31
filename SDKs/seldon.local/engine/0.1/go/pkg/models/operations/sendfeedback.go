@@ -8,18 +8,13 @@ import (
 )
 
 type SendFeedbackSecurity struct {
-	HTTPBearer shared.SchemeHTTPBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type SendFeedbackPathParams struct {
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
+	HTTPBearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type SendFeedbackRequest struct {
-	PathParams SendFeedbackPathParams
-	Request    shared.Feedback `request:"mediaType=application/json"`
-	Security   SendFeedbackSecurity
+	Feedback   shared.Feedback `request:"mediaType=application/json"`
+	Deployment string          `pathParam:"style=simple,explode=false,name=deployment"`
+	Namespace  string          `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type SendFeedbackResponse struct {

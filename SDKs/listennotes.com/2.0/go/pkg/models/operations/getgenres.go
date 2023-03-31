@@ -33,20 +33,12 @@ func (e *GetGenresTopLevelOnlyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGenresQueryParams struct {
+type GetGenresRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Just show top level genres? If 1, yes, just show top level genres. If 0, no, show all genres.
 	//
 	TopLevelOnly *GetGenresTopLevelOnlyEnum `queryParam:"style=form,explode=true,name=top_level_only"`
-}
-
-type GetGenresHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetGenresRequest struct {
-	QueryParams GetGenresQueryParams
-	Headers     GetGenresHeaders
 }
 
 type GetGenresResponse struct {

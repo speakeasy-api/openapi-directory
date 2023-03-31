@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAllEUAsForAnEndUserV2QueryParams struct {
+type RetrieveAllEUAsForAnEndUserV2Request struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type RetrieveAllEUAsForAnEndUserV2Request struct {
-	QueryParams RetrieveAllEUAsForAnEndUserV2QueryParams
 }
 
 type RetrieveAllEUAsForAnEndUserV2Response struct {

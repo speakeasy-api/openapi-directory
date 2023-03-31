@@ -8,16 +8,11 @@ import (
 )
 
 type BinaryauthorizationProjectsAttestorsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BinaryauthorizationProjectsAttestorsListPathParams struct {
-	// Required. The resource name of the project associated with the attestors, in the format `projects/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BinaryauthorizationProjectsAttestorsListQueryParams struct {
+type BinaryauthorizationProjectsAttestorsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type BinaryauthorizationProjectsAttestorsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return. Typically, this is the value of ListAttestorsResponse.next_page_token returned from the previous call to the `ListAttestors` method.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the project associated with the attestors, in the format `projects/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type BinaryauthorizationProjectsAttestorsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BinaryauthorizationProjectsAttestorsListRequest struct {
-	PathParams  BinaryauthorizationProjectsAttestorsListPathParams
-	QueryParams BinaryauthorizationProjectsAttestorsListQueryParams
-	Security    BinaryauthorizationProjectsAttestorsListSecurity
 }
 
 type BinaryauthorizationProjectsAttestorsListResponse struct {

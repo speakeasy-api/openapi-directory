@@ -33,14 +33,14 @@ func newGeocoding(defaultClient, securityClient HTTPClient, serverURL, language,
 // GetSearchVersionNumberGeocodeQueryExt - Geocode
 func (s *geocoding) GetSearchVersionNumberGeocodeQueryExt(ctx context.Context, request operations.GetSearchVersionNumberGeocodeQueryExtRequest) (*operations.GetSearchVersionNumberGeocodeQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geocode/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geocode/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *geocoding) GetSearchVersionNumberGeocodeQueryExt(ctx context.Context, r
 // GetSearchVersionNumberStructuredGeocodeExt - Structured Geocode
 func (s *geocoding) GetSearchVersionNumberStructuredGeocodeExt(ctx context.Context, request operations.GetSearchVersionNumberStructuredGeocodeExtRequest) (*operations.GetSearchVersionNumberStructuredGeocodeExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/structuredGeocode.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/structuredGeocode.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -38,7 +38,7 @@ func newPlacementGroups(defaultClient, securityClient HTTPClient, serverURL, lan
 // Deletes a PlacementGroup.
 func (s *placementGroups) DeletePlacementGroupsID(ctx context.Context, request operations.DeletePlacementGroupsIDRequest) (*operations.DeletePlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *placementGroups) GetPlacementGroups(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *placementGroups) GetPlacementGroups(ctx context.Context, request operat
 // Gets a specific PlacementGroup object.
 func (s *placementGroups) GetPlacementGroupsID(ctx context.Context, request operations.GetPlacementGroupsIDRequest) (*operations.GetPlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *placementGroups) GetPlacementGroupsID(ctx context.Context, request oper
 
 // PostPlacementGroups - Create a PlacementGroup
 // Creates a new PlacementGroup.
-func (s *placementGroups) PostPlacementGroups(ctx context.Context, request operations.PostPlacementGroupsRequest) (*operations.PostPlacementGroupsResponse, error) {
+func (s *placementGroups) PostPlacementGroups(ctx context.Context, request operations.PostPlacementGroupsCreatePlacementGroupRequest) (*operations.PostPlacementGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/placement_groups"
 
@@ -224,9 +224,9 @@ func (s *placementGroups) PostPlacementGroups(ctx context.Context, request opera
 // Note: if the PlacementGroup object changes during the request, the response will be a “conflict” error.
 func (s *placementGroups) PutPlacementGroupsID(ctx context.Context, request operations.PutPlacementGroupsIDRequest) (*operations.PutPlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

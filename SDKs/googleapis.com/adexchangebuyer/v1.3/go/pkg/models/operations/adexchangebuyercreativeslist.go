@@ -10,8 +10,8 @@ import (
 )
 
 type AdexchangebuyerCreativesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AdexchangebuyerCreativesListStatusFilterEnum - When specified, only creatives having the given status are returned.
@@ -41,7 +41,7 @@ func (e *AdexchangebuyerCreativesListStatusFilterEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type AdexchangebuyerCreativesListQueryParams struct {
+type AdexchangebuyerCreativesListRequest struct {
 	// When specified, only creatives for the given account ids are returned.
 	AccountID []int64 `queryParam:"style=form,explode=true,name=accountId"`
 	// Data format for the response.
@@ -66,11 +66,6 @@ type AdexchangebuyerCreativesListQueryParams struct {
 	StatusFilter *AdexchangebuyerCreativesListStatusFilterEnum `queryParam:"style=form,explode=true,name=statusFilter"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerCreativesListRequest struct {
-	QueryParams AdexchangebuyerCreativesListQueryParams
-	Security    AdexchangebuyerCreativesListSecurity
 }
 
 type AdexchangebuyerCreativesListResponse struct {

@@ -4,30 +4,20 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarRegistrantGetSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarRegistrantGetPathParams struct {
+type WebinarRegistrantGetRequest struct {
+	// The meeting occurrence ID.
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 	// The registrant ID.
 	RegistrantID string `pathParam:"style=simple,explode=false,name=registrantId"`
 	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
 	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarRegistrantGetQueryParams struct {
-	// The meeting occurrence ID.
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
-}
-
-type WebinarRegistrantGetRequest struct {
-	PathParams  WebinarRegistrantGetPathParams
-	QueryParams WebinarRegistrantGetQueryParams
-	Security    WebinarRegistrantGetSecurity
 }
 
 // WebinarRegistrantGetWebianrRegistrantCustomQuestions - Custom Question.

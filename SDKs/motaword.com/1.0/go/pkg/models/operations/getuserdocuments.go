@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserDocumentsPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // GetUserDocumentsOrderByEnum
 type GetUserDocumentsOrderByEnum string
 
@@ -98,7 +93,7 @@ func (e *GetUserDocumentsTypeFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserDocumentsQueryParams struct {
+type GetUserDocumentsRequest struct {
 	// searches in source language of documents, in source and target languages of document's quote
 	LanguageCode *string                      `queryParam:"style=form,explode=true,name=language_code"`
 	OrderBy      *GetUserDocumentsOrderByEnum `queryParam:"style=form,explode=true,name=order_by"`
@@ -109,11 +104,8 @@ type GetUserDocumentsQueryParams struct {
 	Recent     *bool                           `queryParam:"style=form,explode=true,name=recent"`
 	Search     *string                         `queryParam:"style=form,explode=true,name=search"`
 	TypeFilter *GetUserDocumentsTypeFilterEnum `queryParam:"style=form,explode=true,name=type_filter"`
-}
-
-type GetUserDocumentsRequest struct {
-	PathParams  GetUserDocumentsPathParams
-	QueryParams GetUserDocumentsQueryParams
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetUserDocumentsResponse struct {

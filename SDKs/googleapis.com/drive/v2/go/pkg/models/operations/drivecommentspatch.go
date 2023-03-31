@@ -8,13 +8,13 @@ import (
 )
 
 type DriveCommentsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsPatchSecurity struct {
@@ -22,18 +22,16 @@ type DriveCommentsPatchSecurity struct {
 	Option2 *DriveCommentsPatchSecurityOption2 `security:"option"`
 }
 
-type DriveCommentsPatchPathParams struct {
-	// The ID of the comment.
-	CommentID string `pathParam:"style=simple,explode=false,name=commentId"`
-	// The ID of the file.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveCommentsPatchQueryParams struct {
+type DriveCommentsPatchRequest struct {
+	Comment *shared.Comment `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the comment.
+	CommentID string `pathParam:"style=simple,explode=false,name=commentId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -44,13 +42,6 @@ type DriveCommentsPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveCommentsPatchRequest struct {
-	PathParams  DriveCommentsPatchPathParams
-	QueryParams DriveCommentsPatchQueryParams
-	Request     *shared.Comment `request:"mediaType=application/json"`
-	Security    DriveCommentsPatchSecurity
 }
 
 type DriveCommentsPatchResponse struct {

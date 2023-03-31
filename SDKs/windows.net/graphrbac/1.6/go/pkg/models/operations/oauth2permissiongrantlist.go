@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OAuth2PermissionGrantListPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type OAuth2PermissionGrantListQueryParams struct {
+type OAuth2PermissionGrantListRequest struct {
 	// This is the Service Principal ObjectId associated with the app
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type OAuth2PermissionGrantListRequest struct {
-	PathParams  OAuth2PermissionGrantListPathParams
-	QueryParams OAuth2PermissionGrantListQueryParams
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type OAuth2PermissionGrantListResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDiseaseGenotypeAssociationsPathParams struct {
-	// CURIE identifier of disease, e.g. Orphanet:399158, DOID:0080008. Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDiseaseGenotypeAssociationsQueryParams struct {
+type GetDiseaseGenotypeAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Set true to exclude inferred taxa
@@ -27,6 +22,8 @@ type GetDiseaseGenotypeAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of disease, e.g. Orphanet:399158, DOID:0080008. Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -45,11 +42,6 @@ type GetDiseaseGenotypeAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetDiseaseGenotypeAssociationsRequest struct {
-	PathParams  GetDiseaseGenotypeAssociationsPathParams
-	QueryParams GetDiseaseGenotypeAssociationsQueryParams
 }
 
 type GetDiseaseGenotypeAssociationsResponse struct {

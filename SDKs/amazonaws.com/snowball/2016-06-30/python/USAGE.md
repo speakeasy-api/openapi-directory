@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelClusterRequest(
-    headers=operations.CancelClusterHeaders(
-        x_amz_algorithm="perferendis",
-        x_amz_content_sha256="consequatur",
-        x_amz_credential="ut",
-        x_amz_date="soluta",
-        x_amz_security_token="voluptatem",
-        x_amz_signature="adipisci",
-        x_amz_signed_headers="nobis",
-        x_amz_target="AWSIESnowballJobManagementService.CancelCluster",
+    cancel_cluster_request=shared.CancelClusterRequest(
+        cluster_id="corrupti",
     ),
-    request=shared.CancelClusterRequest(
-        cluster_id="necessitatibus",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="AWSIESnowballJobManagementService.CancelCluster",
 )
     
 res = s.cancel_cluster(req)

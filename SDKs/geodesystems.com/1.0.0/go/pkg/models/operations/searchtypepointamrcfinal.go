@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointAmrcFinalQueryParams struct {
+type SearchTypePointAmrcFinalRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -48,10 +48,6 @@ type SearchTypePointAmrcFinalQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointAmrcFinalRequest struct {
-	QueryParams SearchTypePointAmrcFinalQueryParams
 }
 
 type SearchTypePointAmrcFinalResponse struct {

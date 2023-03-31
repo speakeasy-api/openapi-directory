@@ -35,9 +35,9 @@ func newUsersEssentials(defaultClient, securityClient HTTPClient, serverURL, lan
 // EditUser - Edit a user
 func (s *usersEssentials) EditUser(ctx context.Context, request operations.EditUserRequest) (*operations.EditUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -84,7 +84,7 @@ func (s *usersEssentials) EditUser(ctx context.Context, request operations.EditU
 }
 
 // EditUserAlt1 - Edit a user
-func (s *usersEssentials) EditUserAlt1(ctx context.Context, request operations.EditUserAlt1Request) (*operations.EditUserAlt1Response, error) {
+func (s *usersEssentials) EditUserAlt1(ctx context.Context, request operations.EditUserAlt1RequestBody) (*operations.EditUserAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -137,7 +137,7 @@ func (s *usersEssentials) EditUserAlt1(ctx context.Context, request operations.E
 // GetUser - Get a user
 func (s *usersEssentials) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

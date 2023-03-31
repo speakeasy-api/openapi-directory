@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetDiscussionCommentInOrgPathParams struct {
+type TeamsGetDiscussionCommentInOrgRequest struct {
 	CommentNumber    int64  `pathParam:"style=simple,explode=false,name=comment_number"`
 	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
 	Org              string `pathParam:"style=simple,explode=false,name=org"`
 	// team_slug parameter
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsGetDiscussionCommentInOrgRequest struct {
-	PathParams TeamsGetDiscussionCommentInOrgPathParams
 }
 
 type TeamsGetDiscussionCommentInOrgResponse struct {

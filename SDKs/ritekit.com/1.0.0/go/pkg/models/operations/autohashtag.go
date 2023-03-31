@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type AutoHashtagQueryParams struct {
+type AutoHashtagRequest struct {
 	// Position of hashtags: end => at the end, auto => anywhere
 	HashtagPosition *string `queryParam:"style=form,explode=true,name=hashtagPosition"`
 	// Max number of hashtags.
 	MaxHashtags *int64 `queryParam:"style=form,explode=true,name=maxHashtags"`
 	// Text of the post
 	Post string `queryParam:"style=form,explode=true,name=post"`
-}
-
-type AutoHashtagRequest struct {
-	QueryParams AutoHashtagQueryParams
 }
 
 type AutoHashtagResponse struct {

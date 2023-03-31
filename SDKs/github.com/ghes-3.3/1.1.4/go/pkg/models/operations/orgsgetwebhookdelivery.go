@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsGetWebhookDeliveryPathParams struct {
+type OrgsGetWebhookDeliveryRequest struct {
 	DeliveryID int64 `pathParam:"style=simple,explode=false,name=delivery_id"`
 	// The unique identifier of the hook.
 	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsGetWebhookDeliveryRequest struct {
-	PathParams OrgsGetWebhookDeliveryPathParams
 }
 
 type OrgsGetWebhookDeliveryResponse struct {

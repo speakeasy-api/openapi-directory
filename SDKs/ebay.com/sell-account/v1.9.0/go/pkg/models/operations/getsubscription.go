@@ -8,19 +8,14 @@ import (
 )
 
 type GetSubscriptionSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSubscriptionQueryParams struct {
+type GetSubscriptionRequest struct {
 	// This field is for future use.
 	ContinuationToken *string `queryParam:"style=form,explode=true,name=continuation_token"`
 	// This field is for future use.
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetSubscriptionRequest struct {
-	QueryParams GetSubscriptionQueryParams
-	Security    GetSubscriptionSecurity
 }
 
 type GetSubscriptionResponse struct {

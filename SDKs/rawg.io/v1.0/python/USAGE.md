@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreatorRolesListRequest(
-    query_params=operations.CreatorRolesListQueryParams(
-        page=2137558395804455772,
-        page_size=1857343205555021854,
-    ),
+    page=548814,
+    page_size=592845,
 )
     
 res = s.creator_roles.creator_roles_list(req)

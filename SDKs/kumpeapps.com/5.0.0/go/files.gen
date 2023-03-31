@@ -53,7 +53,6 @@ pkg/models/shared/fourhundredandfortynine.go
 pkg/models/shared/nodata.go
 pkg/models/shared/allowance.go
 pkg/models/shared/allowanceallowancetransaction.go
-pkg/models/shared/security.go
 pkg/models/shared/success.go
 pkg/models/shared/chorelist.go
 pkg/models/shared/chore.go
@@ -66,4 +65,5 @@ pkg/models/shared/wish.go
 pkg/models/shared/inlineresponse202.go
 pkg/models/shared/inlineresponse201.go
 pkg/models/shared/inlineresponse2011.go
+pkg/models/shared/security.go
 USAGE.md

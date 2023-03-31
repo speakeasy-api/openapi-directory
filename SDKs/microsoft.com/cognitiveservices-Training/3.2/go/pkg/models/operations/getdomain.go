@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainPathParams struct {
+type GetDomainRequest struct {
 	// The id of the domain to get information about.
 	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-}
-
-type GetDomainRequest struct {
-	PathParams GetDomainPathParams
 }
 
 type GetDomainResponse struct {

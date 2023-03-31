@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProfileQueryParams struct {
+type GetProfileRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -17,10 +17,6 @@ type GetProfileQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Search term
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetProfileRequest struct {
-	QueryParams GetProfileQueryParams
 }
 
 type GetProfileResponse struct {

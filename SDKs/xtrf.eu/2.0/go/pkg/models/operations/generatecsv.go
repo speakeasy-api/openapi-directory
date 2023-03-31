@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateCSVPathParams struct {
+type GenerateCSVRequest struct {
 	// report's internal identifier
 	ReportID int64 `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type GenerateCSVRequest struct {
-	PathParams GenerateCSVPathParams
 }
 
 type GenerateCSVResponse struct {

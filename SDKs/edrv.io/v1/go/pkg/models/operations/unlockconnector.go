@@ -11,10 +11,6 @@ type UnlockconnectorRequestBody struct {
 	Connector     *string `json:"connector,omitempty"`
 }
 
-type UnlockconnectorRequest struct {
-	Request UnlockconnectorRequestBody `request:"mediaType=application/json"`
-}
-
 // Unlockconnector201ApplicationJSON - A successful response
 type Unlockconnector201ApplicationJSON struct {
 	Command map[string]interface{} `json:"command,omitempty"`

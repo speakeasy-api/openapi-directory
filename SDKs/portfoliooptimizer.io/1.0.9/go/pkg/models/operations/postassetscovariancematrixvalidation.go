@@ -15,10 +15,6 @@ type PostAssetsCovarianceMatrixValidationRequestBody struct {
 	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
 }
 
-type PostAssetsCovarianceMatrixValidationRequest struct {
-	Request PostAssetsCovarianceMatrixValidationRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum - Indicates whether the matrix is a valid covariance matrix
 type PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum string
 

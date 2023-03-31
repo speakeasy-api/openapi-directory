@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsUpdateWebhookConfigForOrgPathParams struct {
-	// The unique identifier of the hook.
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type OrgsUpdateWebhookConfigForOrgRequestBody struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
 	ContentType *string                          `json:"content_type,omitempty"`
@@ -25,8 +18,11 @@ type OrgsUpdateWebhookConfigForOrgRequestBody struct {
 }
 
 type OrgsUpdateWebhookConfigForOrgRequest struct {
-	PathParams OrgsUpdateWebhookConfigForOrgPathParams
-	Request    *OrgsUpdateWebhookConfigForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsUpdateWebhookConfigForOrgRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the hook.
+	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsUpdateWebhookConfigForOrgResponse struct {

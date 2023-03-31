@@ -14,43 +14,38 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudresourcemanagerLiensCreateRequest{
-        Security: operations.CloudresourcemanagerLiensCreateSecurity{
-            Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.CloudresourcemanagerLiensCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.Lien{
-            CreateTime: "deserunt",
-            Name: "suscipit",
-            Origin: "iure",
-            Parent: "magnam",
-            Reason: "debitis",
+        DollarXgafv: "2",
+        Lien: &shared.Lien{
+            CreateTime: "provident",
+            Name: "distinctio",
+            Origin: "quibusdam",
+            Parent: "unde",
+            Reason: "nulla",
             Restrictions: []string{
-                "delectus",
+                "illum",
+                "vel",
+                "error",
             },
         },
+        AccessToken: "deserunt",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        OauthToken: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, req)
+    res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, req, operations.CloudresourcemanagerLiensCreateSecurity{
+        Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

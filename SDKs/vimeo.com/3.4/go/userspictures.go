@@ -33,16 +33,16 @@ func newUsersPictures(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CreatePicture - Add a user picture
-func (s *usersPictures) CreatePicture(ctx context.Context, request operations.CreatePictureRequest) (*operations.CreatePictureResponse, error) {
+func (s *usersPictures) CreatePicture(ctx context.Context, request operations.CreatePictureRequest, security operations.CreatePictureSecurity) (*operations.CreatePictureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *usersPictures) CreatePicture(ctx context.Context, request operations.Cr
 }
 
 // CreatePictureAlt1 - Add a user picture
-func (s *usersPictures) CreatePictureAlt1(ctx context.Context, request operations.CreatePictureAlt1Request) (*operations.CreatePictureAlt1Response, error) {
+func (s *usersPictures) CreatePictureAlt1(ctx context.Context) (*operations.CreatePictureAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/pictures"
 
@@ -86,7 +86,7 @@ func (s *usersPictures) CreatePictureAlt1(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -121,16 +121,16 @@ func (s *usersPictures) CreatePictureAlt1(ctx context.Context, request operation
 }
 
 // DeletePicture - Delete a user picture
-func (s *usersPictures) DeletePicture(ctx context.Context, request operations.DeletePictureRequest) (*operations.DeletePictureResponse, error) {
+func (s *usersPictures) DeletePicture(ctx context.Context, request operations.DeletePictureRequest, security operations.DeletePictureSecurity) (*operations.DeletePictureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,16 +156,16 @@ func (s *usersPictures) DeletePicture(ctx context.Context, request operations.De
 }
 
 // DeletePictureAlt1 - Delete a user picture
-func (s *usersPictures) DeletePictureAlt1(ctx context.Context, request operations.DeletePictureAlt1Request) (*operations.DeletePictureAlt1Response, error) {
+func (s *usersPictures) DeletePictureAlt1(ctx context.Context, request operations.DeletePictureAlt1Request, security operations.DeletePictureAlt1Security) (*operations.DeletePictureAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *usersPictures) DeletePictureAlt1(ctx context.Context, request operation
 }
 
 // EditPicture - Edit a user picture
-func (s *usersPictures) EditPicture(ctx context.Context, request operations.EditPictureRequest) (*operations.EditPictureResponse, error) {
+func (s *usersPictures) EditPicture(ctx context.Context, request operations.EditPictureRequest, security operations.EditPictureSecurity) (*operations.EditPictureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *usersPictures) EditPicture(ctx context.Context, request operations.Edit
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,11 +242,11 @@ func (s *usersPictures) EditPicture(ctx context.Context, request operations.Edit
 }
 
 // EditPictureAlt1 - Edit a user picture
-func (s *usersPictures) EditPictureAlt1(ctx context.Context, request operations.EditPictureAlt1Request) (*operations.EditPictureAlt1Response, error) {
+func (s *usersPictures) EditPictureAlt1(ctx context.Context, request operations.EditPictureAlt1Request, security operations.EditPictureAlt1Security) (*operations.EditPictureAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,7 +258,7 @@ func (s *usersPictures) EditPictureAlt1(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *usersPictures) EditPictureAlt1(ctx context.Context, request operations.
 // GetPicture - Get a specific user picture
 func (s *usersPictures) GetPicture(ctx context.Context, request operations.GetPictureRequest) (*operations.GetPictureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures/{portraitset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -339,7 +339,7 @@ func (s *usersPictures) GetPicture(ctx context.Context, request operations.GetPi
 // GetPictureAlt1 - Get a specific user picture
 func (s *usersPictures) GetPictureAlt1(ctx context.Context, request operations.GetPictureAlt1Request) (*operations.GetPictureAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/pictures/{portraitset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -383,14 +383,14 @@ func (s *usersPictures) GetPictureAlt1(ctx context.Context, request operations.G
 // GetPictures - Get all the pictures that belong to a user
 func (s *usersPictures) GetPictures(ctx context.Context, request operations.GetPicturesRequest) (*operations.GetPicturesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/pictures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -438,7 +438,7 @@ func (s *usersPictures) GetPicturesAlt1(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

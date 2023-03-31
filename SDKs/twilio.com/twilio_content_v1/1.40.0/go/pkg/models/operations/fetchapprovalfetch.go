@@ -12,18 +12,13 @@ var FetchApprovalFetchServerList = []string{
 }
 
 type FetchApprovalFetchSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchApprovalFetchPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Content resource whose approval information to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchApprovalFetchRequest struct {
-	PathParams FetchApprovalFetchPathParams
-	Security   FetchApprovalFetchSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Content resource whose approval information to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchApprovalFetchResponse struct {

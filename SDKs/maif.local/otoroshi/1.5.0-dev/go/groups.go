@@ -35,7 +35,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AllServiceGroups - Get all service groups
 // Get all service groups
-func (s *groups) AllServiceGroups(ctx context.Context, request operations.AllServiceGroupsRequest) (*operations.AllServiceGroupsResponse, error) {
+func (s *groups) AllServiceGroups(ctx context.Context) (*operations.AllServiceGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/groups"
 
@@ -44,7 +44,7 @@ func (s *groups) AllServiceGroups(ctx context.Context, request operations.AllSer
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *groups) AllServiceGroups(ctx context.Context, request operations.AllSer
 
 // CreateGroup - Create a new service group
 // Create a new service group
-func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroupRequest) (*operations.CreateGroupResponse, error) {
+func (s *groups) CreateGroup(ctx context.Context, request shared.Group, security operations.CreateGroupSecurity) (*operations.CreateGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/groups"
 
@@ -101,7 +101,7 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,16 +142,16 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 
 // DeleteGroup - Delete a service group
 // Delete a service group
-func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest) (*operations.DeleteGroupResponse, error) {
+func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest, security operations.DeleteGroupSecurity) (*operations.DeleteGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,11 +192,11 @@ func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroup
 
 // PatchGroup - Update a service group with a diff
 // Update a service group with a diff
-func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRequest) (*operations.PatchGroupResponse, error) {
+func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRequest, security operations.PatchGroupSecurity) (*operations.PatchGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -208,7 +208,7 @@ func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,16 +249,16 @@ func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRe
 
 // ServiceGroup - Get a service group
 // Get a service group
-func (s *groups) ServiceGroup(ctx context.Context, request operations.ServiceGroupRequest) (*operations.ServiceGroupResponse, error) {
+func (s *groups) ServiceGroup(ctx context.Context, request operations.ServiceGroupRequest, security operations.ServiceGroupSecurity) (*operations.ServiceGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,11 +299,11 @@ func (s *groups) ServiceGroup(ctx context.Context, request operations.ServiceGro
 
 // UpdateGroup - Update a service group
 // Update a service group
-func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroupRequest) (*operations.UpdateGroupResponse, error) {
+func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroupRequest, security operations.UpdateGroupSecurity) (*operations.UpdateGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -315,7 +315,7 @@ func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroup
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

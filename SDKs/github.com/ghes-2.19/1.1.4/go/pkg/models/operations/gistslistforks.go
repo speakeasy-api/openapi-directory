@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsListForksPathParams struct {
+type GistsListForksRequest struct {
 	// gist_id parameter
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsListForksQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GistsListForksRequest struct {
-	PathParams  GistsListForksPathParams
-	QueryParams GistsListForksQueryParams
 }
 
 type GistsListForksResponse struct {

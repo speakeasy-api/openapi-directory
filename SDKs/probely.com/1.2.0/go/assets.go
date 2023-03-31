@@ -37,7 +37,7 @@ func newAssets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteTargetsTargetIDAssetsID - Delete asset
 func (s *assets) DeleteTargetsTargetIDAssetsID(ctx context.Context, request operations.DeleteTargetsTargetIDAssetsIDRequest) (*operations.DeleteTargetsTargetIDAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -102,14 +102,14 @@ func (s *assets) DeleteTargetsTargetIDAssetsID(ctx context.Context, request oper
 // GetTargetsTargetIDAssets - List target's assets
 func (s *assets) GetTargetsTargetIDAssets(ctx context.Context, request operations.GetTargetsTargetIDAssetsRequest) (*operations.GetTargetsTargetIDAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -170,7 +170,7 @@ func (s *assets) GetTargetsTargetIDAssets(ctx context.Context, request operation
 // GetTargetsTargetIDAssetsID - Retrieve asset
 func (s *assets) GetTargetsTargetIDAssetsID(ctx context.Context, request operations.GetTargetsTargetIDAssetsIDRequest) (*operations.GetTargetsTargetIDAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,9 +244,9 @@ func (s *assets) GetTargetsTargetIDAssetsID(ctx context.Context, request operati
 // PatchTargetsTargetIDAssetsID - Partial update assets
 func (s *assets) PatchTargetsTargetIDAssetsID(ctx context.Context, request operations.PatchTargetsTargetIDAssetsIDRequest) (*operations.PatchTargetsTargetIDAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,9 +338,9 @@ func (s *assets) PatchTargetsTargetIDAssetsID(ctx context.Context, request opera
 // PostTargetsTargetIDAssets - Create new asset
 func (s *assets) PostTargetsTargetIDAssets(ctx context.Context, request operations.PostTargetsTargetIDAssetsRequest) (*operations.PostTargetsTargetIDAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -432,9 +432,9 @@ func (s *assets) PostTargetsTargetIDAssets(ctx context.Context, request operatio
 // PostTargetsTargetIDAssetsIDVerify - Verify asset ownership
 func (s *assets) PostTargetsTargetIDAssetsIDVerify(ctx context.Context, request operations.PostTargetsTargetIDAssetsIDVerifyRequest) (*operations.PostTargetsTargetIDAssetsIDVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/verify/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/verify/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -526,9 +526,9 @@ func (s *assets) PostTargetsTargetIDAssetsIDVerify(ctx context.Context, request 
 // PutTargetsTargetIDAssetsID - Update asset
 func (s *assets) PutTargetsTargetIDAssetsID(ctx context.Context, request operations.PutTargetsTargetIDAssetsIDRequest) (*operations.PutTargetsTargetIDAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/assets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

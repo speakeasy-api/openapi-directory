@@ -12,12 +12,8 @@ var UpdateAccountSecretServerList = []string{
 }
 
 type UpdateAccountSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAccountSecretPathParams struct {
-	// The secret key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAccountSecretUpdateAccountSecretRequest struct {
@@ -26,10 +22,9 @@ type UpdateAccountSecretUpdateAccountSecretRequest struct {
 }
 
 type UpdateAccountSecretRequest struct {
-	PathParams UpdateAccountSecretPathParams
-	Request    *UpdateAccountSecretUpdateAccountSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAccountSecretSecurity
-	ServerURL  *string
+	// The secret key; up to 100 characters.
+	Key         string                                         `pathParam:"style=simple,explode=false,name=Key"`
+	RequestBody *UpdateAccountSecretUpdateAccountSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateAccountSecretResponse struct {

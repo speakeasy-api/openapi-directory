@@ -8,43 +8,34 @@ import (
 )
 
 type AnalyticsManagementGoalsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementGoalsPatchPathParams struct {
+type AnalyticsManagementGoalsPatchRequest struct {
+	Goal *shared.Goal `request:"mediaType=application/json"`
 	// Account ID to update the goal.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Index of the goal to be updated.
-	GoalID string `pathParam:"style=simple,explode=false,name=goalId"`
-	// View (Profile) ID to update the goal.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to update the goal.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementGoalsPatchQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Index of the goal to be updated.
+	GoalID string `pathParam:"style=simple,explode=false,name=goalId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to update the goal.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementGoalsPatchRequest struct {
-	PathParams  AnalyticsManagementGoalsPatchPathParams
-	QueryParams AnalyticsManagementGoalsPatchQueryParams
-	Request     *shared.Goal `request:"mediaType=application/json"`
-	Security    AnalyticsManagementGoalsPatchSecurity
+	// Web property ID to update the goal.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementGoalsPatchResponse struct {

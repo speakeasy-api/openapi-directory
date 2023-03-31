@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ResetSynonymsRequest struct {
-	Request []byte `request:"mediaType=text/plain"`
-}
-
 type ResetSynonymsResponse struct {
 	ContentType string
 	StatusCode  int

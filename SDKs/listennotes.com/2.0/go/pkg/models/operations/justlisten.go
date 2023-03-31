@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JustListenHeaders struct {
+type JustListenRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type JustListenRequest struct {
-	Headers JustListenHeaders
 }
 
 type JustListenResponse struct {

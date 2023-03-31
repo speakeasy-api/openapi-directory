@@ -12,28 +12,19 @@ var ListChannelServerList = []string{
 }
 
 type ListChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListChannelPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListChannelQueryParams struct {
+type ListChannelRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
-	PageToken *string                             `queryParam:"style=form,explode=true,name=PageToken"`
-	Type      []shared.ChannelEnumChannelTypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type ListChannelRequest struct {
-	PathParams  ListChannelPathParams
-	QueryParams ListChannelQueryParams
-	Security    ListChannelSecurity
-	ServerURL   *string
+	PageToken  *string                             `queryParam:"style=form,explode=true,name=PageToken"`
+	ServiceSid string                              `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Type       []shared.ChannelEnumChannelTypeEnum `queryParam:"style=form,explode=true,name=Type"`
 }
 
 type ListChannelListChannelResponseMeta struct {

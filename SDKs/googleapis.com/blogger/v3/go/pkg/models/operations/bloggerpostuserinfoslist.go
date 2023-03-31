@@ -10,23 +10,18 @@ import (
 )
 
 type BloggerPostUserInfosListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPostUserInfosListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPostUserInfosListSecurity struct {
 	Option1 *BloggerPostUserInfosListSecurityOption1 `security:"option"`
 	Option2 *BloggerPostUserInfosListSecurityOption2 `security:"option"`
-}
-
-type BloggerPostUserInfosListPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // BloggerPostUserInfosListOrderByEnum
@@ -115,13 +110,14 @@ func (e *BloggerPostUserInfosListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerPostUserInfosListQueryParams struct {
+type BloggerPostUserInfosListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback    *string `queryParam:"style=form,explode=true,name=callback"`
 	EndDate     *string `queryParam:"style=form,explode=true,name=endDate"`
@@ -146,13 +142,8 @@ type BloggerPostUserInfosListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                           `queryParam:"style=form,explode=true,name=upload_protocol"`
+	UserID         string                            `pathParam:"style=simple,explode=false,name=userId"`
 	View           *BloggerPostUserInfosListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerPostUserInfosListRequest struct {
-	PathParams  BloggerPostUserInfosListPathParams
-	QueryParams BloggerPostUserInfosListQueryParams
-	Security    BloggerPostUserInfosListSecurity
 }
 
 type BloggerPostUserInfosListResponse struct {

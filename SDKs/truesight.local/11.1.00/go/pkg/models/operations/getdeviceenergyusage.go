@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceEnergyUsagePathParams struct {
-	// The ID of the device.
-	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
 // GetDeviceEnergyUsageBasisEnum - Subdivision of the period for which you wish to retrieve energy usage data.
 type GetDeviceEnergyUsageBasisEnum string
 
@@ -73,16 +68,13 @@ func (e *GetDeviceEnergyUsageRollPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDeviceEnergyUsageQueryParams struct {
+type GetDeviceEnergyUsageRequest struct {
 	// Subdivision of the period for which you wish to retrieve energy usage data.
 	Basis *GetDeviceEnergyUsageBasisEnum `queryParam:"style=form,explode=true,name=basis"`
+	// The ID of the device.
+	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
 	// The period for which you wish to retrieve energy usage data.
 	RollPeriod *GetDeviceEnergyUsageRollPeriodEnum `queryParam:"style=form,explode=true,name=rollPeriod"`
-}
-
-type GetDeviceEnergyUsageRequest struct {
-	PathParams  GetDeviceEnergyUsagePathParams
-	QueryParams GetDeviceEnergyUsageQueryParams
 }
 
 type GetDeviceEnergyUsageResponse struct {

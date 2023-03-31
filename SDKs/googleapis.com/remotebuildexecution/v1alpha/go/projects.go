@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // RemotebuildexecutionProjectsInstancesCreate - Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
-func (s *projects) RemotebuildexecutionProjectsInstancesCreate(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesCreateRequest) (*operations.RemotebuildexecutionProjectsInstancesCreateResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesCreate(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesCreateRequest, security operations.RemotebuildexecutionProjectsInstancesCreateSecurity) (*operations.RemotebuildexecutionProjectsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) RemotebuildexecutionProjectsInstancesCreate(ctx context.Conte
 }
 
 // RemotebuildexecutionProjectsInstancesList - Lists instances in a project.
-func (s *projects) RemotebuildexecutionProjectsInstancesList(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesListRequest) (*operations.RemotebuildexecutionProjectsInstancesListResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesList(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesListRequest, security operations.RemotebuildexecutionProjectsInstancesListSecurity) (*operations.RemotebuildexecutionProjectsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesList(ctx context.Context
 }
 
 // RemotebuildexecutionProjectsInstancesTestNotify - Sends a test notification to the specified instance. Returns a `google.protobuf.Empty` on success.
-func (s *projects) RemotebuildexecutionProjectsInstancesTestNotify(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest) (*operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesTestNotify(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest, security operations.RemotebuildexecutionProjectsInstancesTestNotifySecurity) (*operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:testNotify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:testNotify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesTestNotify(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesTestNotify(ctx context.C
 }
 
 // RemotebuildexecutionProjectsInstancesWorkerpoolsCreate - Creates a new worker pool with a specified size and configuration. Returns a long running operation which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `CREATING`.
-func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsCreate(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsCreate(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest, security operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateSecurity) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/workerpools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/workerpools", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsCreate(ctx co
 }
 
 // RemotebuildexecutionProjectsInstancesWorkerpoolsDelete - Deletes the specified worker pool. Returns a long running operation, which contains a `google.protobuf.Empty` response on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `DELETING`.
-func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsDelete(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsDelete(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest, security operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsDelete(ctx co
 }
 
 // RemotebuildexecutionProjectsInstancesWorkerpoolsList - Lists worker pools in an instance.
-func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsList(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsList(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest, security operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListSecurity) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/workerpools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/workerpools", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsList(ctx cont
 }
 
 // RemotebuildexecutionProjectsInstancesWorkerpoolsPatch - Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
-func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsPatch(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsPatch(ctx context.Context, request operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest, security operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity) (*operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsPatch(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) RemotebuildexecutionProjectsInstancesWorkerpoolsPatch(ctx con
 }
 
 // RemotebuildexecutionProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) RemotebuildexecutionProjectsOperationsGet(ctx context.Context, request operations.RemotebuildexecutionProjectsOperationsGetRequest) (*operations.RemotebuildexecutionProjectsOperationsGetResponse, error) {
+func (s *projects) RemotebuildexecutionProjectsOperationsGet(ctx context.Context, request operations.RemotebuildexecutionProjectsOperationsGetRequest, security operations.RemotebuildexecutionProjectsOperationsGetSecurity) (*operations.RemotebuildexecutionProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

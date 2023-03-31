@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/airbyte.local/config/1.0.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,234 +15,134 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-s.config_security(
-    security=shared.Security(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateConnectionRequest(
-    request=shared.ConnectionCreate(
-        destination_id="sed",
-        name="officiis",
-        namespace_definition="destination",
-        namespace_format="consectetur",
-        operation_ids=[
-            "odio",
-        ],
-        prefix="qui",
-        resource_requirements=shared.ResourceRequirements(
-            cpu_limit="recusandae",
-            cpu_request="at",
-            memory_limit="ipsum",
-            memory_request="eveniet",
-        ),
-        schedule=shared.ConnectionSchedule(
-            time_unit="months",
-            units=7338728586234333996,
-        ),
-        source_id="inventore",
-        status="deprecated",
-        sync_catalog=shared.AirbyteCatalog(
-            streams=[
-                shared.AirbyteStreamAndConfiguration(
-                    config=shared.AirbyteStreamConfiguration(
-                        alias_name="aut",
-                        cursor_field=[
-                            "tempore",
-                        ],
-                        destination_sync_mode="append",
-                        primary_key=[
-                            [
-                                "beatae",
-                                "veritatis",
-                            ],
-                            [
-                                "et",
-                                "omnis",
-                                "ipsum",
-                            ],
-                            [
-                                "dolores",
-                            ],
-                        ],
-                        selected=True,
-                        sync_mode="full_refresh",
-                    ),
-                    stream=shared.AirbyteStream(
-                        default_cursor_field=[
-                            "mollitia",
-                            "voluptas",
-                            "quam",
-                        ],
-                        json_schema={
-                            "qui": "qui",
-                        },
-                        name="unde",
-                        namespace="in",
-                        source_defined_cursor=False,
-                        source_defined_primary_key=[
-                            [
-                                "itaque",
-                                "ab",
-                                "neque",
-                            ],
-                        ],
-                        supported_sync_modes=[
-                            "full_refresh",
-                            "full_refresh",
-                            "full_refresh",
-                        ],
-                    ),
-                ),
-                shared.AirbyteStreamAndConfiguration(
-                    config=shared.AirbyteStreamConfiguration(
-                        alias_name="architecto",
-                        cursor_field=[
-                            "velit",
-                        ],
-                        destination_sync_mode="overwrite",
-                        primary_key=[
-                            [
-                                "voluptates",
-                                "magni",
-                            ],
-                        ],
-                        selected=False,
-                        sync_mode="incremental",
-                    ),
-                    stream=shared.AirbyteStream(
-                        default_cursor_field=[
-                            "earum",
-                        ],
-                        json_schema={
-                            "omnis": "ut",
-                        },
-                        name="consequatur",
-                        namespace="dolor",
-                        source_defined_cursor=True,
-                        source_defined_primary_key=[
-                            [
-                                "consectetur",
-                            ],
-                        ],
-                        supported_sync_modes=[
-                            "incremental",
-                        ],
-                    ),
-                ),
-                shared.AirbyteStreamAndConfiguration(
-                    config=shared.AirbyteStreamConfiguration(
-                        alias_name="laboriosam",
-                        cursor_field=[
-                            "a",
-                            "soluta",
-                            "aut",
-                        ],
-                        destination_sync_mode="append_dedup",
-                        primary_key=[
-                            [
-                                "autem",
-                            ],
-                            [
-                                "expedita",
-                            ],
-                            [
-                                "perferendis",
-                            ],
-                        ],
-                        selected=False,
-                        sync_mode="incremental",
-                    ),
-                    stream=shared.AirbyteStream(
-                        default_cursor_field=[
-                            "explicabo",
-                            "ea",
-                            "maxime",
-                        ],
-                        json_schema={
-                            "perferendis": "et",
-                        },
-                        name="rerum",
-                        namespace="reiciendis",
-                        source_defined_cursor=False,
-                        source_defined_primary_key=[
-                            [
-                                "necessitatibus",
-                            ],
-                            [
-                                "quis",
-                                "eum",
-                            ],
-                        ],
-                        supported_sync_modes=[
-                            "incremental",
-                        ],
-                    ),
-                ),
-            ],
-        ),
-    ),
-)
-    
-res = s.connection.create_connection(req)
 
-if res.connection_read is not None:
+
+req = shared.SaveStatsRequestBody(
+    attempt_number=548814,
+    job_id=592845,
+    stats=shared.AttemptStats(
+        bytes_emitted=715190,
+        estimated_bytes=844266,
+        estimated_records=602763,
+        records_committed=857946,
+        records_emitted=544883,
+        state_messages_emitted=847252,
+    ),
+    stream_stats=[
+        shared.AttemptStreamStats(
+            stats=shared.AttemptStats(
+                bytes_emitted=623564,
+                estimated_bytes=645894,
+                estimated_records=384382,
+                records_committed=437587,
+                records_emitted=297534,
+                state_messages_emitted=891773,
+            ),
+            stream_name="ipsa",
+            stream_namespace="delectus",
+        ),
+        shared.AttemptStreamStats(
+            stats=shared.AttemptStats(
+                bytes_emitted=272656,
+                estimated_bytes=383441,
+                estimated_records=477665,
+                records_committed=791725,
+                records_emitted=812169,
+                state_messages_emitted=528895,
+            ),
+            stream_name="iusto",
+            stream_namespace="excepturi",
+        ),
+    ],
+)
+    
+res = s.attempt.save_stats(req)
+
+if res.internal_operation_result is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
+
+### attempt
+
+* `save_stats` - For worker to set sync stats of a running attempt.
+* `save_sync_config` - For worker to save the AttemptSyncConfig for an attempt.
+* `set_workflow_in_attempt` - For worker to register the workflow id in attempt.
 
 ### connection
 
 * `create_connection` - Create a connection between a source and a destination
 * `delete_connection` - Delete a connection
 * `get_connection` - Get a connection
-* `get_state` - Fetch the current state for a connection.
+* `list_all_connections_for_workspace` - Returns all connections for a workspace, including deleted connections.
 * `list_connections_for_workspace` - Returns all connections for a workspace.
 * `reset_connection` - Reset the data for the connection. Deletes data generated by the connection in the destination. Resets any cursors back to initial state.
+* `search_connections` - Search connections
 * `sync_connection` - Trigger a manual sync of the connection
 * `update_connection` - Update a connection
-
-### deployment
-
-* `export_archive` - Export Airbyte Configuration and Data Archive
-* `import_archive` - Import Airbyte Configuration and Data Archive
 
 ### destination
 
 * `check_connection_to_destination` - Check connection to the destination
 * `check_connection_to_destination_for_update` - Check connection for a proposed update to a destination
+* `clone_destination` - Clone destination
 * `create_destination` - Create a destination
 * `delete_destination` - Delete the destination
 * `get_destination` - Get configured destination
 * `list_destinations_for_workspace` - List configured destinations for a workspace
+* `search_destinations` - Search destinations
 * `update_destination` - Update a destination
 
 ### destination_definition
 
-* `create_destination_definition` - Creates a destinationsDefinition
+* `create_custom_destination_definition` - Creates a custom destinationDefinition for the given workspace
+* `delete_destination_definition` - Delete a destination definition
 * `get_destination_definition` - Get destinationDefinition
+* `get_destination_definition_for_workspace` - Get a destinationDefinition that is configured for the given workspace
+* `grant_destination_definition_to_workspace` - grant a private, non-custom destinationDefinition to a given workspace
 * `list_destination_definitions` - List all the destinationDefinitions the current Airbyte deployment is configured to use
+* `list_destination_definitions_for_workspace` - List all the destinationDefinitions the given workspace is configured to use
 * `list_latest_destination_definitions` - List the latest destinationDefinitions Airbyte supports
+* `list_private_destination_definitions` - List all private, non-custom destinationDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
+* `revoke_destination_definition_from_workspace` - revoke a grant to a private, non-custom destinationDefinition from a given workspace
 * `update_destination_definition` - Update destinationDefinition
 
 ### destination_definition_specification
 
 * `get_destination_definition_specification` - Get specification for a destinationDefinition
 
+### destination_oauth
+
+* `complete_destination_o_auth` - Given a destination def ID generate an access/refresh token etc.
+* `get_destination_o_auth_consent` - Given a destination connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `set_instancewide_destination_oauth_params` - Sets instancewide variables to be used for the oauth flow when creating this destination. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
 ### health
 
 * `get_health_check` - Health Check
 
+### internal
+
+* `create_or_update_state` - Create or update the state for a connection.
+* `get_attempt_normalization_statuses_for_job` - Get normalization status to determine if we can bypass normalization phase
+* `save_stats` - For worker to set sync stats of a running attempt.
+* `save_sync_config` - For worker to save the AttemptSyncConfig for an attempt.
+* `set_workflow_in_attempt` - For worker to register the workflow id in attempt.
+* `write_discover_catalog_result` - Should only called from worker, to write result from discover activity back to DB.
+
 ### jobs
 
 * `cancel_job` - Cancels a job
+* `get_attempt_normalization_statuses_for_job` - Get normalization status to determine if we can bypass normalization phase
+* `get_job_debug_info` - Gets all information needed to debug this job
 * `get_job_info` - Get information about a job
+* `get_job_info_light` - Get information about a job excluding attempt info and logs
+* `get_last_replication_job`
 * `list_jobs_for` - Returns recent jobs for a connection. Jobs are returned in descending order by createdAt.
 
 ### logs
@@ -276,32 +176,60 @@ if res.connection_read is not None:
 
 * `check_connection_to_source` - Check connection to the source
 * `check_connection_to_source_for_update` - Check connection for a proposed update to a source
+* `clone_source` - Clone source
 * `create_source` - Create a source
 * `delete_source` - Delete a source
 * `discover_schema_for_source` - Discover the schema catalog of the source
+* `get_most_recent_source_actor_catalog` - Get most recent ActorCatalog for source
 * `get_source` - Get source
 * `list_sources_for_workspace` - List sources for workspace
+* `search_sources` - Search sources
 * `update_source` - Update a source
+* `write_discover_catalog_result` - Should only called from worker, to write result from discover activity back to DB.
 
 ### source_definition
 
-* `create_source_definition` - Creates a sourceDefinition
+* `create_custom_source_definition` - Creates a custom sourceDefinition for the given workspace
+* `delete_source_definition` - Delete a source definition
 * `get_source_definition` - Get source
+* `get_source_definition_for_workspace` - Get a sourceDefinition that is configured for the given workspace
+* `grant_source_definition_to_workspace` - grant a private, non-custom sourceDefinition to a given workspace
 * `list_latest_source_definitions` - List the latest sourceDefinitions Airbyte supports
+* `list_private_source_definitions` - List all private, non-custom sourceDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
 * `list_source_definitions` - List all the sourceDefinitions the current Airbyte deployment is configured to use
+* `list_source_definitions_for_workspace` - List all the sourceDefinitions the given workspace is configured to use
+* `revoke_source_definition_from_workspace` - revoke a grant to a private, non-custom sourceDefinition from a given workspace
 * `update_source_definition` - Update a sourceDefinition
 
 ### source_definition_specification
 
 * `get_source_definition_specification` - Get specification for a SourceDefinition.
 
+### source_oauth
+
+* `complete_source_o_auth` - Given a source def ID generate an access/refresh token etc.
+* `get_source_o_auth_consent` - Given a source connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `set_instancewide_source_oauth_params` - Sets instancewide variables to be used for the oauth flow when creating this source. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
+### state
+
+* `create_or_update_state` - Create or update the state for a connection.
+* `get_state` - Fetch the current state for a connection.
+
 ### web_backend
 
+* `get_state_type` - Fetch the current state type for a connection.
+* `web_backend_check_updates` - Returns a summary of source and destination definitions that could be updated.
 * `web_backend_create_connection` - Create a connection
 * `web_backend_get_connection` - Get a connection
-* `web_backend_list_connections_for_workspace` - Returns all connections for a workspace.
-* `web_backend_recreate_destination` - Recreate a destination
-* `web_backend_recreate_source` - Recreate a source
+* `web_backend_get_workspace_state` - Returns the current state of a workspace
+* `web_backend_list_connections_for_workspace` - Returns all non-deleted connections for a workspace.
+* `web_backend_list_geographies` - Returns available geographies can be selected to run data syncs in a particular geography.
+The 'auto' entry indicates that the sync will be automatically assigned to a geography according
+to the platform default behavior. Entries other than 'auto' are two-letter country codes that
+follow the ISO 3166-1 alpha-2 standard.
+
 * `web_backend_update_connection` - Update a connection
 
 ### workspace
@@ -309,10 +237,23 @@ if res.connection_read is not None:
 * `create_workspace` - Creates a workspace
 * `delete_workspace` - Deletes a workspace
 * `get_workspace` - Find workspace by ID
+* `get_workspace_by_connection_id` - Find workspace by connection id
 * `get_workspace_by_slug` - Find workspace by slug
 * `list_workspaces` - List all workspaces registered in the current Airbyte deployment
 * `update_workspace` - Update workspace state
-
+* `update_workspace_feedback` - Update workspace feedback state
+* `update_workspace_name` - Update workspace name
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

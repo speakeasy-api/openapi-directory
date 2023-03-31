@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationPolicyObjectPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-	PolicyObjectID string `pathParam:"style=simple,explode=false,name=policyObjectId"`
-}
-
 type UpdateOrganizationPolicyObjectRequestBody struct {
 	// CIDR Value of a policy object (e.g. 10.11.12.1/24")
 	Cidr *string `json:"cidr,omitempty"`
@@ -27,8 +22,9 @@ type UpdateOrganizationPolicyObjectRequestBody struct {
 }
 
 type UpdateOrganizationPolicyObjectRequest struct {
-	PathParams UpdateOrganizationPolicyObjectPathParams
-	Request    *UpdateOrganizationPolicyObjectRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationPolicyObjectRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                     `pathParam:"style=simple,explode=false,name=organizationId"`
+	PolicyObjectID string                                     `pathParam:"style=simple,explode=false,name=policyObjectId"`
 }
 
 type UpdateOrganizationPolicyObjectResponse struct {

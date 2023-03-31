@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetareacodeRequest{
-        QueryParams: operations.GetareacodeQueryParams{
-            Areacode: "corrupti",
-            License: "provident",
-        },
+        Areacode: "corrupti",
+        License: "provident",
     }
 
     ctx := context.Background()

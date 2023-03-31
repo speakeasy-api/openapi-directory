@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesSearchRangeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesSearchRangeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesSearchRangeSecurity struct {
@@ -22,14 +22,10 @@ type ServicenetworkingServicesSearchRangeSecurity struct {
 	Option2 *ServicenetworkingServicesSearchRangeSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesSearchRangePathParams struct {
-	// Required. This is in a form services/{service}. {service} the name of the private access management service, for example 'service-peering.example.com'.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicenetworkingServicesSearchRangeQueryParams struct {
+type ServicenetworkingServicesSearchRangeRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv        *shared.XgafvEnum          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SearchRangeRequest *shared.SearchRangeRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type ServicenetworkingServicesSearchRangeQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. This is in a form services/{service}. {service} the name of the private access management service, for example 'service-peering.example.com'.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type ServicenetworkingServicesSearchRangeQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesSearchRangeRequest struct {
-	PathParams  ServicenetworkingServicesSearchRangePathParams
-	QueryParams ServicenetworkingServicesSearchRangeQueryParams
-	Request     *shared.SearchRangeRequest `request:"mediaType=application/json"`
-	Security    ServicenetworkingServicesSearchRangeSecurity
 }
 
 type ServicenetworkingServicesSearchRangeResponse struct {

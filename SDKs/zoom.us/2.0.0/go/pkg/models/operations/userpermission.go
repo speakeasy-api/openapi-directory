@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UserPermissionPathParams struct {
+type UserPermissionRequest struct {
 	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserPermissionRequest struct {
-	PathParams UserPermissionPathParams
 }
 
 // UserPermission200ApplicationXML - **HTTP Status Code:** `200`<br>

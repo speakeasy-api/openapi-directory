@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGenerateReleaseNotesPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposGenerateReleaseNotesRequestBody struct {
 	// Specifies a path to a file in the repository containing configuration settings used for generating the release notes. If unspecified, the configuration file located in the repository at '.github/release.yml' or '.github/release.yaml' will be used. If that is not present, the default configuration will be used.
 	ConfigurationFilePath *string `json:"configuration_file_path,omitempty"`
@@ -26,8 +19,11 @@ type ReposGenerateReleaseNotesRequestBody struct {
 }
 
 type ReposGenerateReleaseNotesRequest struct {
-	PathParams ReposGenerateReleaseNotesPathParams
-	Request    ReposGenerateReleaseNotesRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposGenerateReleaseNotesRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGenerateReleaseNotesResponse struct {

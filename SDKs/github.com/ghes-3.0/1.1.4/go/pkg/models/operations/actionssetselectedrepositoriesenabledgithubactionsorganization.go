@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody struct {
 	// List of repository IDs to enable for GitHub Actions.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest struct {
-	PathParams ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams
-	Request    ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody `request:"mediaType=application/json"`
+	Org         string                                                                    `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse struct {

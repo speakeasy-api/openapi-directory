@@ -14,34 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.AdsenseAccountsAdclientsGetAdCodeRequest{
-        Security: operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
-            Option1: &operations.AdsenseAccountsAdclientsGetAdCodeSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.AdsenseAccountsAdclientsGetAdCodePathParams{
-            AccountID: "corrupti",
-            AdClientID: "provident",
-        },
-        QueryParams: operations.AdsenseAccountsAdclientsGetAdCodeQueryParams{
-            Alt: "json",
-            Fields: "quibusdam",
-            Key: "unde",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            TagPartner: "illum",
-            UserIP: "vel",
-        },
+        AccountID: "corrupti",
+        AdClientID: "provident",
+        Alt: "json",
+        Fields: "quibusdam",
+        Key: "unde",
+        OauthToken: "nulla",
+        PrettyPrint: false,
+        QuotaUser: "corrupti",
+        TagPartner: "illum",
+        UserIP: "vel",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, req)
+    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, req, operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
+        Option1: &operations.AdsenseAccountsAdclientsGetAdCodeSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

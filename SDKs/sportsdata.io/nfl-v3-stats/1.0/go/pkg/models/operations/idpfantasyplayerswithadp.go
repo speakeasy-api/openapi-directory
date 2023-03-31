@@ -33,13 +33,9 @@ func (e *IdpFantasyPlayersWithAdpFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IdpFantasyPlayersWithAdpPathParams struct {
+type IdpFantasyPlayersWithAdpRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format IdpFantasyPlayersWithAdpFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type IdpFantasyPlayersWithAdpRequest struct {
-	PathParams IdpFantasyPlayersWithAdpPathParams
 }
 
 type IdpFantasyPlayersWithAdpResponse struct {

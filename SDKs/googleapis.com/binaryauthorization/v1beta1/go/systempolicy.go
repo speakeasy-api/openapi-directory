@@ -32,20 +32,20 @@ func newSystempolicy(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // BinaryauthorizationSystempolicyGetPolicy - Gets the current system policy in the specified location.
-func (s *systempolicy) BinaryauthorizationSystempolicyGetPolicy(ctx context.Context, request operations.BinaryauthorizationSystempolicyGetPolicyRequest) (*operations.BinaryauthorizationSystempolicyGetPolicyResponse, error) {
+func (s *systempolicy) BinaryauthorizationSystempolicyGetPolicy(ctx context.Context, request operations.BinaryauthorizationSystempolicyGetPolicyRequest, security operations.BinaryauthorizationSystempolicyGetPolicySecurity) (*operations.BinaryauthorizationSystempolicyGetPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesPathParams struct {
+type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesRequest struct {
 	// Jira issue type id
 	IssueTypeID string `pathParam:"style=simple,explode=false,name=issue_type_id"`
 	// Jira Project Id
 	ProjectID string `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesRequest struct {
-	PathParams GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPrioritiesPathParams
 }
 
 // GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDPriorities403ApplicationJSON - Not allowed to perform operation

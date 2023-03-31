@@ -12,14 +12,8 @@ var CreateUnderstandSampleServerList = []string{
 }
 
 type CreateUnderstandSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandSamplePathParams struct {
-	// The unique ID of the Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The unique ID of the Task associated with this Sample.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandSampleCreateUnderstandSampleRequest struct {
@@ -32,10 +26,11 @@ type CreateUnderstandSampleCreateUnderstandSampleRequest struct {
 }
 
 type CreateUnderstandSampleRequest struct {
-	PathParams CreateUnderstandSamplePathParams
-	Request    *CreateUnderstandSampleCreateUnderstandSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandSampleSecurity
-	ServerURL  *string
+	// The unique ID of the Assistant.
+	AssistantSid string                                               `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandSampleCreateUnderstandSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique ID of the Task associated with this Sample.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type CreateUnderstandSampleResponse struct {

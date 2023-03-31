@@ -13,11 +13,6 @@ type RemotestopRequestBody struct {
 	Transaction   *string `json:"transaction,omitempty"`
 }
 
-type RemotestopRequest struct {
-	// Remote stop transaction info here.
-	Request RemotestopRequestBody `request:"mediaType=application/json"`
-}
-
 type RemotestopResponse struct {
 	ContentType string
 	StatusCode  int

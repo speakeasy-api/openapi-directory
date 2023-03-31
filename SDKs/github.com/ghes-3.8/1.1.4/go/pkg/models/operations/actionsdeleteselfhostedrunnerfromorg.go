@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteSelfHostedRunnerFromOrgPathParams struct {
+type ActionsDeleteSelfHostedRunnerFromOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsDeleteSelfHostedRunnerFromOrgRequest struct {
-	PathParams ActionsDeleteSelfHostedRunnerFromOrgPathParams
 }
 
 type ActionsDeleteSelfHostedRunnerFromOrgResponse struct {

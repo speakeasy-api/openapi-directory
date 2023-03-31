@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEmbeddingRequest struct {
-	Request shared.CreateEmbeddingRequest `request:"mediaType=application/json"`
-}
-
 type CreateEmbeddingResponse struct {
 	ContentType string
 	// OK

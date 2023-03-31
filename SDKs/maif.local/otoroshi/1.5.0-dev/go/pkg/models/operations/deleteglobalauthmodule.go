@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteGlobalAuthModuleSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteGlobalAuthModulePathParams struct {
-	// The auth. config id id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteGlobalAuthModuleRequest struct {
-	PathParams DeleteGlobalAuthModulePathParams
-	Security   DeleteGlobalAuthModuleSecurity
+	// The auth. config id id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteGlobalAuthModuleResponse struct {

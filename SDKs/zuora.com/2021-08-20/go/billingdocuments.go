@@ -38,14 +38,14 @@ func newBillingDocuments(defaultClient, securityClient HTTPClient, serverURL, la
 // **Note**: This operation can be used only if you have the Billing user permission "Hard Delete Billing Document Files" enabled.
 func (s *billingDocuments) GETBillingDocumentFilesDeletionJob(ctx context.Context, request operations.GETBillingDocumentFilesDeletionJobRequest) (*operations.GETBillingDocumentFilesDeletionJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/billing-documents/files/deletion-jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/billing-documents/files/deletion-jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -102,9 +102,9 @@ func (s *billingDocuments) GETBillingDocuments(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,7 +154,7 @@ func (s *billingDocuments) POSTBillingDocumentFilesDeletionJob(ctx context.Conte
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accounts/billing-documents/files/deletion-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTBillingDocumentFilesDeletionJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -169,7 +169,7 @@ func (s *billingDocuments) POSTBillingDocumentFilesDeletionJob(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -213,9 +213,9 @@ func (s *billingDocuments) POSTBillingDocumentFilesDeletionJob(ctx context.Conte
 // **Note**: You cannot generate billing documents for cancelled or suspended subscriptions.
 func (s *billingDocuments) POSTGenerateBillingDocuments(ctx context.Context, request operations.POSTGenerateBillingDocumentsRequest) (*operations.POSTGenerateBillingDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{id}/billing-documents/generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{id}/billing-documents/generate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostGenerateBillingDocumentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,7 +230,7 @@ func (s *billingDocuments) POSTGenerateBillingDocuments(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

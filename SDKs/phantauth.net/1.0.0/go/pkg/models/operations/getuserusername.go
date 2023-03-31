@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUserUsernamePathParams struct {
+type GetUserUsernameRequest struct {
 	// The username or email used for generation purposes.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUserUsernameRequest struct {
-	PathParams GetUserUsernamePathParams
 }
 
 // GetUserUsername200ApplicationJSONAddress - The user's preferred postal address.

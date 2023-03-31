@@ -8,18 +8,14 @@ import (
 )
 
 type IntegrationsProjectsLocationsAppsScriptProjectsLinkSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsAppsScriptProjectsLinkPathParams struct {
-	// Required. The project that the executed integration belongs to.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsAppsScriptProjectsLinkQueryParams struct {
+type IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                *shared.XgafvEnum                                                  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest *shared.GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type IntegrationsProjectsLocationsAppsScriptProjectsLinkQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project that the executed integration belongs to.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type IntegrationsProjectsLocationsAppsScriptProjectsLinkQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest struct {
-	PathParams  IntegrationsProjectsLocationsAppsScriptProjectsLinkPathParams
-	QueryParams IntegrationsProjectsLocationsAppsScriptProjectsLinkQueryParams
-	Request     *shared.GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest `request:"mediaType=application/json"`
-	Security    IntegrationsProjectsLocationsAppsScriptProjectsLinkSecurity
 }
 
 type IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse struct {

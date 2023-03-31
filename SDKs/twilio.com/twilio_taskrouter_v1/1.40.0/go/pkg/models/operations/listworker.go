@@ -12,15 +12,11 @@ var ListWorkerServerList = []string{
 }
 
 type ListWorkerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListWorkerPathParams struct {
-	// The SID of the Workspace with the Workers to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListWorkerQueryParams struct {
+type ListWorkerRequest struct {
 	// The `activity_name` of the Worker resources to read.
 	ActivityName *string `queryParam:"style=form,explode=true,name=ActivityName"`
 	// The `activity_sid` of the Worker resources to read.
@@ -43,13 +39,8 @@ type ListWorkerQueryParams struct {
 	TaskQueueName *string `queryParam:"style=form,explode=true,name=TaskQueueName"`
 	// The SID of the TaskQueue that the Workers to read are eligible for.
 	TaskQueueSid *string `queryParam:"style=form,explode=true,name=TaskQueueSid"`
-}
-
-type ListWorkerRequest struct {
-	PathParams  ListWorkerPathParams
-	QueryParams ListWorkerQueryParams
-	Security    ListWorkerSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the Workers to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListWorkerListWorkerResponseMeta struct {

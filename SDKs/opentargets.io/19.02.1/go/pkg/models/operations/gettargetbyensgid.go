@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTargetByENSGIDPathParams struct {
+type GetTargetByENSGIDRequest struct {
 	// An Ensembl gene ID for the target of interest.
 	Target string `pathParam:"style=simple,explode=false,name=target"`
-}
-
-type GetTargetByENSGIDRequest struct {
-	PathParams GetTargetByENSGIDPathParams
 }
 
 type GetTargetByENSGIDResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAllSupportedInstitutionsInAGivenCountryQueryParams struct {
+type RetrieveAllSupportedInstitutionsInAGivenCountryRequest struct {
 	// ISO 3166 two-character country code
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	// Boolean value, indicating if payments are enabled
 	PaymentsEnabled *string `queryParam:"style=form,explode=true,name=payments_enabled"`
-}
-
-type RetrieveAllSupportedInstitutionsInAGivenCountryRequest struct {
-	QueryParams RetrieveAllSupportedInstitutionsInAGivenCountryQueryParams
 }
 
 type RetrieveAllSupportedInstitutionsInAGivenCountryResponse struct {

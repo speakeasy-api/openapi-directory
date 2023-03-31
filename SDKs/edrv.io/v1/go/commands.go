@@ -32,7 +32,7 @@ func newCommands(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // Cancelreservation - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Cancelreservation(ctx context.Context, request operations.CancelreservationRequest) (*operations.CancelreservationResponse, error) {
+func (s *commands) Cancelreservation(ctx context.Context, request operations.CancelreservationRequestBody) (*operations.CancelreservationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/cancelreservation"
 
@@ -96,7 +96,7 @@ func (s *commands) GetCommands(ctx context.Context, request operations.GetComman
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,7 +128,7 @@ func (s *commands) GetCommands(ctx context.Context, request operations.GetComman
 // GetVariables - Get a charge station's config variables
 func (s *commands) GetVariables(ctx context.Context, request operations.GetVariablesRequest) (*operations.GetVariablesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,9 +163,9 @@ func (s *commands) GetVariables(ctx context.Context, request operations.GetVaria
 // PatchChargeStationVariable - Update config variables for a chargestation
 func (s *commands) PatchChargeStationVariable(ctx context.Context, request operations.PatchChargeStationVariableRequest) (*operations.PatchChargeStationVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -216,7 +216,7 @@ func (s *commands) PatchChargeStationVariable(ctx context.Context, request opera
 }
 
 // Remotestart - Use to request a remote start command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Remotestart(ctx context.Context, request operations.RemotestartRequest) (*operations.RemotestartResponse, error) {
+func (s *commands) Remotestart(ctx context.Context, request operations.RemotestartRequestBody) (*operations.RemotestartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/remotestart"
 
@@ -271,7 +271,7 @@ func (s *commands) Remotestart(ctx context.Context, request operations.Remotesta
 }
 
 // Remotestop - Use to request a remote stop command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Remotestop(ctx context.Context, request operations.RemotestopRequest) (*operations.RemotestopResponse, error) {
+func (s *commands) Remotestop(ctx context.Context, request operations.RemotestopRequestBody) (*operations.RemotestopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/remotestop"
 
@@ -318,7 +318,7 @@ func (s *commands) Remotestop(ctx context.Context, request operations.Remotestop
 }
 
 // Reserve - Use to request a reserve command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Reserve(ctx context.Context, request operations.ReserveRequest) (*operations.ReserveResponse, error) {
+func (s *commands) Reserve(ctx context.Context, request operations.ReserveRequestBody) (*operations.ReserveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/reserve"
 
@@ -373,7 +373,7 @@ func (s *commands) Reserve(ctx context.Context, request operations.ReserveReques
 }
 
 // Reset - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Reset(ctx context.Context, request operations.ResetRequest) (*operations.ResetResponse, error) {
+func (s *commands) Reset(ctx context.Context, request operations.ResetRequestBody) (*operations.ResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/reset"
 
@@ -428,7 +428,7 @@ func (s *commands) Reset(ctx context.Context, request operations.ResetRequest) (
 }
 
 // Unlockconnector - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-func (s *commands) Unlockconnector(ctx context.Context, request operations.UnlockconnectorRequest) (*operations.UnlockconnectorResponse, error) {
+func (s *commands) Unlockconnector(ctx context.Context, request operations.UnlockconnectorRequestBody) (*operations.UnlockconnectorResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/unlockconnector"
 

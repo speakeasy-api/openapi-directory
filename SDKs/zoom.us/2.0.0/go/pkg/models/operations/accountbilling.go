@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccountBillingPathParams struct {
+type AccountBillingRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountBillingRequest struct {
-	PathParams AccountBillingPathParams
 }
 
 // AccountBilling200ApplicationXML - Billing Contact object.

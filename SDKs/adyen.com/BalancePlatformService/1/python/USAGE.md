@@ -4,20 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAccountHoldersIDRequest(
-    security=operations.GetAccountHoldersIDSecurity(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    path_params=operations.GetAccountHoldersIDPathParams(
-        id="dolorem",
-    ),
+    id="corrupti",
 )
     
-res = s.account_holders.get_account_holders_id(req)
+res = s.account_holders.get_account_holders_id(req, operations.GetAccountHoldersIDSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.account_holder is not None:
     # handle response

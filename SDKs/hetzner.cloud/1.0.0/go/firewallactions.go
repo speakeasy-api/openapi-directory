@@ -34,14 +34,14 @@ func newFirewallActions(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns all Action objects for a Firewall. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
 func (s *firewallActions) GetFirewallsIDActions(ctx context.Context, request operations.GetFirewallsIDActionsRequest) (*operations.GetFirewallsIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *firewallActions) GetFirewallsIDActions(ctx context.Context, request ope
 // Returns a specific Action for a Firewall.
 func (s *firewallActions) GetFirewallsIDActionsActionID(ctx context.Context, request operations.GetFirewallsIDActionsActionIDRequest) (*operations.GetFirewallsIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/{action_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/{action_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,9 +138,9 @@ func (s *firewallActions) GetFirewallsIDActionsActionID(ctx context.Context, req
 // | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
 func (s *firewallActions) PostFirewallsIDActionsApplyToResources(ctx context.Context, request operations.PostFirewallsIDActionsApplyToResourcesRequest) (*operations.PostFirewallsIDActionsApplyToResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/apply_to_resources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/apply_to_resources", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,9 +200,9 @@ func (s *firewallActions) PostFirewallsIDActionsApplyToResources(ctx context.Con
 // | `firewall_managed_by_label_selector`  | Firewall was applied via label selector and cannot be removed manually |
 func (s *firewallActions) PostFirewallsIDActionsRemoveFromResources(ctx context.Context, request operations.PostFirewallsIDActionsRemoveFromResourcesRequest) (*operations.PostFirewallsIDActionsRemoveFromResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/remove_from_resources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/remove_from_resources", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,9 +261,9 @@ func (s *firewallActions) PostFirewallsIDActionsRemoveFromResources(ctx context.
 // | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
 func (s *firewallActions) PostFirewallsIDActionsSetRules(ctx context.Context, request operations.PostFirewallsIDActionsSetRulesRequest) (*operations.PostFirewallsIDActionsSetRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/set_rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/set_rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

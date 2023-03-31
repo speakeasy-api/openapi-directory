@@ -1,0 +1,94 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/wiremock.org/admin/2.35.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+    
+res = s.near_misses.get_admin_requests_unmatched_near_misses()
+
+if res.get_admin_requests_unmatched_near_misses_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### near_misses
+
+* `get_admin_requests_unmatched_near_misses` - Retrieve near-misses for all unmatched requests
+* `post_admin_near_misses_request` - Find near misses matching specific request
+* `post_admin_near_misses_request_pattern` - Find near misses matching request pattern
+
+### recordings
+
+* `get_admin_recordings_status` - Get recording status
+* `post_admin_recordings_snapshot` - Take a snapshot recording
+* `post_admin_recordings_start` - Start recording
+* `post_admin_recordings_stop` - Stop recording
+
+### requests
+
+* `delete_admin_requests` - Delete all requests in journal
+* `delete_admin_requests_request_id_` - Delete request by ID
+* `get_admin_requests` - Get all requests in journal
+* `get_admin_requests_unmatched` - Find unmatched requests
+* `get_admin_requests_request_id_` - Get request by ID
+* `post_admin_requests_count` - Count requests by criteria
+* `post_admin_requests_find` - Find requests by criteria
+* `post_admin_requests_remove` - Remove requests by criteria
+* `post_admin_requests_remove_by_metadata` - Delete requests mappings matching metadata
+* `post_admin_requests_reset` - Empty the request journal
+
+### scenarios
+
+* `get_admin_scenarios` - Get all scenarios
+* `post_admin_scenarios_reset` - Reset the state of all scenarios
+
+### stub_mappings
+
+* `delete_admin_mappings` - Delete all stub mappings
+* `delete_admin_mappings_stub_mapping_id_` - Delete a stub mapping
+* `get_admin_mappings` - Get all stub mappings
+* `get_admin_mappings_stub_mapping_id_` - Get stub mapping by ID
+* `post_admin_mappings` - Create a new stub mapping
+* `post_admin_mappings_find_by_metadata` - Find stubs by matching on their metadata
+* `post_admin_mappings_import` - Import stub mappings
+* `post_admin_mappings_remove_by_metadata` - Delete stub mappings matching metadata
+* `post_admin_mappings_reset` - Reset stub mappings
+* `post_admin_mappings_save` - Persist stub mappings
+* `put_admin_mappings_stub_mapping_id_` - Update a stub mapping
+
+### system
+
+* `post_admin_reset` - Reset mappings and request journal
+* `post_admin_settings` - Update global settings
+* `post_admin_shutdown` - Shutdown the WireMock server
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

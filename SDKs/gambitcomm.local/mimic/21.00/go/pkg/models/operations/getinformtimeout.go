@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetInformTimeoutPathParams struct {
+type GetInformTimeoutRequest struct {
 	// Agent to return the timeout setting
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetInformTimeoutRequest struct {
-	PathParams GetInformTimeoutPathParams
 }
 
 type GetInformTimeoutResponse struct {

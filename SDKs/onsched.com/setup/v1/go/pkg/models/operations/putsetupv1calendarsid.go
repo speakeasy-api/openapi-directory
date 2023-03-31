@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1CalendarsIDPathParams struct {
+type PutSetupV1CalendarsIDRequest struct {
+	// Input model for the calendar object
+	ScheduleUpdateModel *shared.ScheduleUpdateModel `request:"mediaType=application/json"`
 	// id of calendar object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1CalendarsIDRequest struct {
-	PathParams PutSetupV1CalendarsIDPathParams
-	// Input model for the calendar object
-	Request *shared.ScheduleUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1CalendarsIDResponse struct {

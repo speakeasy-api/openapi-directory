@@ -10,33 +10,33 @@ import (
 )
 
 type DriveFilesPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesPatchSecurity struct {
@@ -46,11 +46,6 @@ type DriveFilesPatchSecurity struct {
 	Option4 *DriveFilesPatchSecurityOption4 `security:"option"`
 	Option5 *DriveFilesPatchSecurityOption5 `security:"option"`
 	Option6 *DriveFilesPatchSecurityOption6 `security:"option"`
-}
-
-type DriveFilesPatchPathParams struct {
-	// The ID of the file to update.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 // DriveFilesPatchModifiedDateBehaviorEnum - Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
@@ -89,7 +84,8 @@ func (e *DriveFilesPatchModifiedDateBehaviorEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DriveFilesPatchQueryParams struct {
+type DriveFilesPatchRequest struct {
+	FileInput *shared.FileInput `request:"mediaType=application/json"`
 	// Comma-separated list of parent IDs to add.
 	AddParents *string `queryParam:"style=form,explode=true,name=addParents"`
 	// Data format for the response.
@@ -100,6 +96,8 @@ type DriveFilesPatchQueryParams struct {
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file to update.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -140,13 +138,6 @@ type DriveFilesPatchQueryParams struct {
 	UseContentAsIndexableText *bool `queryParam:"style=form,explode=true,name=useContentAsIndexableText"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesPatchRequest struct {
-	PathParams  DriveFilesPatchPathParams
-	QueryParams DriveFilesPatchQueryParams
-	Request     *shared.FileInput `request:"mediaType=application/json"`
-	Security    DriveFilesPatchSecurity
 }
 
 type DriveFilesPatchResponse struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderPathParams struct {
-	// GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderQueryParams struct {
+type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Folder      *shared.Folder    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderQueryParam
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,13 +44,6 @@ type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderQueryParam
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The variables to be moved to the folder.
 	VariableID []string `queryParam:"style=form,explode=true,name=variableId"`
-}
-
-type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest struct {
-	PathParams  TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderPathParams
-	QueryParams TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderQueryParams
-	Request     *shared.Folder `request:"mediaType=application/json"`
-	Security    TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderSecurity
 }
 
 type TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderResponse struct {

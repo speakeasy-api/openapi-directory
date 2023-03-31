@@ -8,25 +8,16 @@ import (
 )
 
 type DeleteCustomerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteCustomerPathParams struct {
+type DeleteCustomerRequest struct {
 	// The ID of the customer to delete.
 	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type DeleteCustomerQueryParams struct {
 	// The current version of the customer profile.
 	//
 	// As a best practice, you should include this parameter to enable [optimistic concurrency](https://developer.squareup.com/docs/working-with-apis/optimistic-concurrency) control.  For more information, see [Delete a customer profile](https://developer.squareup.com/docs/customers-api/use-the-api/keep-records#delete-customer-profile).
 	Version *int64 `queryParam:"style=form,explode=true,name=version"`
-}
-
-type DeleteCustomerRequest struct {
-	PathParams  DeleteCustomerPathParams
-	QueryParams DeleteCustomerQueryParams
-	Security    DeleteCustomerSecurity
 }
 
 type DeleteCustomerResponse struct {

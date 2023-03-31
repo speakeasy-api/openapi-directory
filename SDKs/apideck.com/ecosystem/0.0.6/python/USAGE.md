@@ -4,15 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CategoriesAllRequest(
-    path_params=operations.CategoriesAllPathParams(
-        ecosystem_id="itaque",
-    ),
-    query_params=operations.CategoriesAllQueryParams(
-        cursor="optio",
-        limit=7998526504416170211,
-    ),
+    cursor="corrupti",
+    ecosystem_id="provident",
+    limit=715190,
 )
     
 res = s.category.categories_all(req)

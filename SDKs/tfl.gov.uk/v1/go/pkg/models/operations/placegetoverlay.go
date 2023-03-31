@@ -6,31 +6,23 @@ import (
 	"net/http"
 )
 
-type PlaceGetOverlayPathParams struct {
+type PlaceGetOverlayRequest struct {
 	// Automatically added
-	Lat string `pathParam:"style=simple,explode=false,name=Lat"`
+	LatPathParameter string `pathParam:"style=simple,explode=false,name=Lat"`
 	// Automatically added
-	Lon string `pathParam:"style=simple,explode=false,name=Lon"`
+	LonPathParameter string `pathParam:"style=simple,explode=false,name=Lon"`
 	// The height of the requested overlay.
-	Height int `pathParam:"style=simple,explode=false,name=height"`
+	Height            int     `pathParam:"style=simple,explode=false,name=height"`
+	LatQueryParameter string  `queryParam:"style=form,explode=true,name=lat"`
+	LocationLat       float64 `queryParam:"style=form,explode=true,name=location.lat"`
+	LocationLon       float64 `queryParam:"style=form,explode=true,name=location.lon"`
+	LonQueryParameter string  `queryParam:"style=form,explode=true,name=lon"`
 	// The place type (a valid list of place types can be obtained from the /Place/Meta/placeTypes endpoint)
 	Type []string `pathParam:"style=simple,explode=false,name=type"`
 	// The width of the requested overlay.
 	Width int `pathParam:"style=simple,explode=false,name=width"`
 	// The zoom level
 	Z int `pathParam:"style=simple,explode=false,name=z"`
-}
-
-type PlaceGetOverlayQueryParams struct {
-	Lat         string  `queryParam:"style=form,explode=true,name=lat"`
-	LocationLat float64 `queryParam:"style=form,explode=true,name=location.lat"`
-	LocationLon float64 `queryParam:"style=form,explode=true,name=location.lon"`
-	Lon         string  `queryParam:"style=form,explode=true,name=lon"`
-}
-
-type PlaceGetOverlayRequest struct {
-	PathParams  PlaceGetOverlayPathParams
-	QueryParams PlaceGetOverlayQueryParams
 }
 
 type PlaceGetOverlayResponse struct {

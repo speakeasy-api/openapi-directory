@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnregisterMFAForSelfHeaders struct {
+type UnregisterMFAForSelfRequest struct {
 	// Bearer token authorization leg of validate
 	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type UnregisterMFAForSelfRequest struct {
-	Headers UnregisterMFAForSelfHeaders
 	// The MFA Type to unregister
-	Request shared.SelfMFATypeUnregisterRequest `request:"mediaType=application/json"`
+	SelfMFATypeUnregisterRequest shared.SelfMFATypeUnregisterRequest `request:"mediaType=application/json"`
 }
 
 type UnregisterMFAForSelfResponse struct {

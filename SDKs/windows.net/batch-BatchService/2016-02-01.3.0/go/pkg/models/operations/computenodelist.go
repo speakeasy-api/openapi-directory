@@ -7,37 +7,25 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ComputeNodeListPathParams struct {
-	// The id of the pool from which you want to list nodes.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-}
-
-type ComputeNodeListQueryParams struct {
+type ComputeNodeListRequest struct {
 	// An OData $filter clause.
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// An OData $select clause.
 	DollarSelect *string `queryParam:"style=form,explode=true,name=$select"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// The maximum number of items to return in the response.
-	Maxresults *int `queryParam:"style=form,explode=true,name=maxresults"`
-	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type ComputeNodeListHeaders struct {
 	// The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The maximum number of items to return in the response.
+	Maxresults *int `queryParam:"style=form,explode=true,name=maxresults"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// The id of the pool from which you want to list nodes.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Whether the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type ComputeNodeListRequest struct {
-	PathParams  ComputeNodeListPathParams
-	QueryParams ComputeNodeListQueryParams
-	Headers     ComputeNodeListHeaders
+	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type ComputeNodeListResponse struct {

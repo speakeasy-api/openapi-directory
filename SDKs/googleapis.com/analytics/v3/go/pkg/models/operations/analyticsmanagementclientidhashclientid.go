@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementClientIDHashClientIDSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementClientIDHashClientIDSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementClientIDHashClientIDSecurity struct {
@@ -22,7 +22,8 @@ type AnalyticsManagementClientIDHashClientIDSecurity struct {
 	Option2 *AnalyticsManagementClientIDHashClientIDSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementClientIDHashClientIDQueryParams struct {
+type AnalyticsManagementClientIDHashClientIDRequest struct {
+	HashClientIDRequest *shared.HashClientIDRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -37,12 +38,6 @@ type AnalyticsManagementClientIDHashClientIDQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementClientIDHashClientIDRequest struct {
-	QueryParams AnalyticsManagementClientIDHashClientIDQueryParams
-	Request     *shared.HashClientIDRequest `request:"mediaType=application/json"`
-	Security    AnalyticsManagementClientIDHashClientIDSecurity
 }
 
 type AnalyticsManagementClientIDHashClientIDResponse struct {

@@ -34,16 +34,16 @@ func newRatePlans(defaultClient, securityClient HTTPClient, serverURL, language,
 // ObjectGETRatePlan - CRUD: Retrieve a rate plan
 func (s *ratePlans) ObjectGETRatePlan(ctx context.Context, request operations.ObjectGETRatePlanRequest) (*operations.ObjectGETRatePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

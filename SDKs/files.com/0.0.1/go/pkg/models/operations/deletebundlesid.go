@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteBundlesIDPathParams struct {
+type DeleteBundlesIDRequest struct {
 	// Bundle ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteBundlesIDRequest struct {
-	PathParams DeleteBundlesIDPathParams
 }
 
 type DeleteBundlesIDResponse struct {

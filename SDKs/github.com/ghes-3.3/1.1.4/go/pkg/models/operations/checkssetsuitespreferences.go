@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksSetSuitesPreferencesPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks struct {
 	// The `id` of the GitHub App.
 	AppID int64 `json:"app_id"`
@@ -27,8 +20,11 @@ type ChecksSetSuitesPreferencesRequestBody struct {
 }
 
 type ChecksSetSuitesPreferencesRequest struct {
-	PathParams ChecksSetSuitesPreferencesPathParams
-	Request    ChecksSetSuitesPreferencesRequestBody `request:"mediaType=application/json"`
+	RequestBody ChecksSetSuitesPreferencesRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksSetSuitesPreferencesResponse struct {

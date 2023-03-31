@@ -6,7 +6,8 @@ import (
 	"net/http"
 )
 
-type GetManyRecurringPaymentsQueryParams struct {
+type GetManyRecurringPaymentsRequest struct {
+	RequestBody []byte `request:"mediaType=text/plain"`
 	// true / false
 	IsActive *string `queryParam:"style=form,explode=true,name=is_active"`
 	Limit    *string `queryParam:"style=form,explode=true,name=limit"`
@@ -14,16 +15,7 @@ type GetManyRecurringPaymentsQueryParams struct {
 	// "WAITING_PAY" / "PAID" /  "PARTIALLY_PAID" / "EXPIRED"
 	Status             *string `queryParam:"style=form,explode=true,name=status"`
 	SubscriptionPlanID *string `queryParam:"style=form,explode=true,name=subscription_plan_id"`
-}
-
-type GetManyRecurringPaymentsHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetManyRecurringPaymentsRequest struct {
-	QueryParams GetManyRecurringPaymentsQueryParams
-	Headers     GetManyRecurringPaymentsHeaders
-	Request     []byte `request:"mediaType=text/plain"`
+	XAPIKey            *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type GetManyRecurringPayments200ApplicationJSONResultSubscriber struct {

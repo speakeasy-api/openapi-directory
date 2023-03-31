@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSyslogGetAttrPathParams struct {
+type ProtocolSyslogGetAttrRequest struct {
 	// Agent to set the SYSLOG tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Attribute
 	Attr string `pathParam:"style=simple,explode=false,name=attr"`
-}
-
-type ProtocolSyslogGetAttrRequest struct {
-	PathParams ProtocolSyslogGetAttrPathParams
 }
 
 type ProtocolSyslogGetAttrResponse struct {

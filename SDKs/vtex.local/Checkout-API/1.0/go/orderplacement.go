@@ -39,7 +39,7 @@ func (s *orderPlacement) PlaceOrder(ctx context.Context, request operations.Plac
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/checkout/pub/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,9 +51,9 @@ func (s *orderPlacement) PlaceOrder(ctx context.Context, request operations.Plac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,9 +97,9 @@ func (s *orderPlacement) PlaceOrder(ctx context.Context, request operations.Plac
 // After the creation of an order with this request, you have five minutes to send payment information and then request payment processing.
 func (s *orderPlacement) PlaceOrderFromExistingOrderForm(ctx context.Context, request operations.PlaceOrderFromExistingOrderFormRequest) (*operations.PlaceOrderFromExistingOrderFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/transaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/transaction", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *orderPlacement) PlaceOrderFromExistingOrderForm(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -153,14 +153,14 @@ func (s *orderPlacement) PlaceOrderFromExistingOrderForm(ctx context.Context, re
 // > This request has to be made until five minutes after the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) or [Place order from existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) request has been made, or else, the order will not be processed.
 func (s *orderPlacement) ProcessOrder(ctx context.Context, request operations.ProcessOrderRequest) (*operations.ProcessOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/gatewayCallback/{orderGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/gatewayCallback/{orderGroup}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

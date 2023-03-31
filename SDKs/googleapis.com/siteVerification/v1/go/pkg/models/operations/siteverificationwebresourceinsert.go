@@ -8,13 +8,13 @@ import (
 )
 
 type SiteVerificationWebResourceInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SiteVerificationWebResourceInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SiteVerificationWebResourceInsertSecurity struct {
@@ -22,7 +22,8 @@ type SiteVerificationWebResourceInsertSecurity struct {
 	Option2 *SiteVerificationWebResourceInsertSecurityOption2 `security:"option"`
 }
 
-type SiteVerificationWebResourceInsertQueryParams struct {
+type SiteVerificationWebResourceInsertRequest struct {
+	SiteVerificationWebResourceResource *shared.SiteVerificationWebResourceResource `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -39,12 +40,6 @@ type SiteVerificationWebResourceInsertQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The method to use for verifying a site or domain.
 	VerificationMethod string `queryParam:"style=form,explode=true,name=verificationMethod"`
-}
-
-type SiteVerificationWebResourceInsertRequest struct {
-	QueryParams SiteVerificationWebResourceInsertQueryParams
-	Request     *shared.SiteVerificationWebResourceResource `request:"mediaType=application/json"`
-	Security    SiteVerificationWebResourceInsertSecurity
 }
 
 type SiteVerificationWebResourceInsertResponse struct {

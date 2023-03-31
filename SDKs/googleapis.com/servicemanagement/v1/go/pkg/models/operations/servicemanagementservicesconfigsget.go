@@ -10,23 +10,23 @@ import (
 )
 
 type ServicemanagementServicesConfigsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesConfigsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesConfigsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesConfigsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesConfigsGetSecurity struct {
@@ -34,13 +34,6 @@ type ServicemanagementServicesConfigsGetSecurity struct {
 	Option2 *ServicemanagementServicesConfigsGetSecurityOption2 `security:"option"`
 	Option3 *ServicemanagementServicesConfigsGetSecurityOption3 `security:"option"`
 	Option4 *ServicemanagementServicesConfigsGetSecurityOption4 `security:"option"`
-}
-
-type ServicemanagementServicesConfigsGetPathParams struct {
-	// Required. The id of the service configuration resource. This field must be specified for the server to return all fields, including `SourceInfo`.
-	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
-	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 }
 
 // ServicemanagementServicesConfigsGetViewEnum - Specifies which parts of the Service Config should be returned in the response.
@@ -67,7 +60,7 @@ func (e *ServicemanagementServicesConfigsGetViewEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ServicemanagementServicesConfigsGetQueryParams struct {
+type ServicemanagementServicesConfigsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -76,6 +69,8 @@ type ServicemanagementServicesConfigsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The id of the service configuration resource. This field must be specified for the server to return all fields, including `SourceInfo`.
+	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -86,18 +81,14 @@ type ServicemanagementServicesConfigsGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
+	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which parts of the Service Config should be returned in the response.
 	View *ServicemanagementServicesConfigsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServicemanagementServicesConfigsGetRequest struct {
-	PathParams  ServicemanagementServicesConfigsGetPathParams
-	QueryParams ServicemanagementServicesConfigsGetQueryParams
-	Security    ServicemanagementServicesConfigsGetSecurity
 }
 
 type ServicemanagementServicesConfigsGetResponse struct {

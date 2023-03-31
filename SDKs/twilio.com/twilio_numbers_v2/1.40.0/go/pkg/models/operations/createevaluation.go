@@ -12,18 +12,13 @@ var CreateEvaluationServerList = []string{
 }
 
 type CreateEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateEvaluationPathParams struct {
-	// The unique string that identifies the Bundle resource.
-	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEvaluationRequest struct {
-	PathParams CreateEvaluationPathParams
-	Security   CreateEvaluationSecurity
-	ServerURL  *string
+	// The unique string that identifies the Bundle resource.
+	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
 }
 
 type CreateEvaluationResponse struct {

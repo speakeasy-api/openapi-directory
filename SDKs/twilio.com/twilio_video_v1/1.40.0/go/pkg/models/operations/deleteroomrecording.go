@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteRoomRecordingServerList = []string{
@@ -12,20 +11,15 @@ var DeleteRoomRecordingServerList = []string{
 }
 
 type DeleteRoomRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteRoomRecordingPathParams struct {
+type DeleteRoomRecordingRequest struct {
 	// The SID of the room with the RoomRecording resource to delete.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// The SID of the RoomRecording resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteRoomRecordingRequest struct {
-	PathParams DeleteRoomRecordingPathParams
-	Security   DeleteRoomRecordingSecurity
-	ServerURL  *string
 }
 
 type DeleteRoomRecordingResponse struct {

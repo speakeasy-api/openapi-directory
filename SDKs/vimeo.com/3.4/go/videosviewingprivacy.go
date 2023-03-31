@@ -32,16 +32,16 @@ func newVideosViewingPrivacy(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // AddVideoPrivacyUser - Permit a specific user to view a private video
-func (s *videosViewingPrivacy) AddVideoPrivacyUser(ctx context.Context, request operations.AddVideoPrivacyUserRequest) (*operations.AddVideoPrivacyUserResponse, error) {
+func (s *videosViewingPrivacy) AddVideoPrivacyUser(ctx context.Context, request operations.AddVideoPrivacyUserRequest, security operations.AddVideoPrivacyUserSecurity) (*operations.AddVideoPrivacyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,16 +90,16 @@ func (s *videosViewingPrivacy) AddVideoPrivacyUser(ctx context.Context, request 
 // The body of this request should follow our
 // [batch request format](https://developer.vimeo.com/api/common-formats#batch-requests). Each object must contain
 // a single `URI` field, and the value of this field must be the URI of the user who can view this video.
-func (s *videosViewingPrivacy) AddVideoPrivacyUsers(ctx context.Context, request operations.AddVideoPrivacyUsersRequest) (*operations.AddVideoPrivacyUsersResponse, error) {
+func (s *videosViewingPrivacy) AddVideoPrivacyUsers(ctx context.Context, request operations.AddVideoPrivacyUsersRequest, security operations.AddVideoPrivacyUsersSecurity) (*operations.AddVideoPrivacyUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,16 +137,16 @@ func (s *videosViewingPrivacy) AddVideoPrivacyUsers(ctx context.Context, request
 // The body of this request should follow our
 // [batch request format](https://developer.vimeo.com/api/common-formats#batch-requests). Each object must contain
 // a single `URI` field, and the value of this field must be the URI of the user who can view this video.
-func (s *videosViewingPrivacy) AddVideoPrivacyUsersAlt1(ctx context.Context, request operations.AddVideoPrivacyUsersAlt1Request) (*operations.AddVideoPrivacyUsersAlt1Response, error) {
+func (s *videosViewingPrivacy) AddVideoPrivacyUsersAlt1(ctx context.Context, request operations.AddVideoPrivacyUsersAlt1Request, security operations.AddVideoPrivacyUsersAlt1Security) (*operations.AddVideoPrivacyUsersAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,16 +181,16 @@ func (s *videosViewingPrivacy) AddVideoPrivacyUsersAlt1(ctx context.Context, req
 }
 
 // DeleteVideoPrivacyUser - Restrict a user from viewing a private video
-func (s *videosViewingPrivacy) DeleteVideoPrivacyUser(ctx context.Context, request operations.DeleteVideoPrivacyUserRequest) (*operations.DeleteVideoPrivacyUserResponse, error) {
+func (s *videosViewingPrivacy) DeleteVideoPrivacyUser(ctx context.Context, request operations.DeleteVideoPrivacyUserRequest, security operations.DeleteVideoPrivacyUserSecurity) (*operations.DeleteVideoPrivacyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,14 +230,14 @@ func (s *videosViewingPrivacy) DeleteVideoPrivacyUser(ctx context.Context, reque
 // GetVideoPrivacyUsers - Get all the users who can view a user's private videos by default
 func (s *videosViewingPrivacy) GetVideoPrivacyUsers(ctx context.Context, request operations.GetVideoPrivacyUsersRequest) (*operations.GetVideoPrivacyUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,14 +288,14 @@ func (s *videosViewingPrivacy) GetVideoPrivacyUsers(ctx context.Context, request
 // GetVideoPrivacyUsersAlt1 - Get all the users who can view a user's private videos by default
 func (s *videosViewingPrivacy) GetVideoPrivacyUsersAlt1(ctx context.Context, request operations.GetVideoPrivacyUsersAlt1Request) (*operations.GetVideoPrivacyUsersAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -63,7 +63,7 @@ func (e *BoxScoresDeltaVPlayerstoincludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScoresDeltaVPathParams struct {
+type BoxScoresDeltaVRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoresDeltaVFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br><code>1</code>,
@@ -83,10 +83,6 @@ type BoxScoresDeltaVPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type BoxScoresDeltaVRequest struct {
-	PathParams BoxScoresDeltaVPathParams
 }
 
 type BoxScoresDeltaVResponse struct {

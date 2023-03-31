@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAlmawsV1TaskListsRequestedResourcesQueryParams struct {
+type PostAlmawsV1TaskListsRequestedResourcesRequest struct {
 	// The circulation desk where the action is being performed. Mandatory.
 	CircDesk *string `queryParam:"style=form,explode=true,name=circ_desk"`
 	// The library of the given circulation desk or department where the resources are located. Mandatory.
@@ -22,10 +22,6 @@ type PostAlmawsV1TaskListsRequestedResourcesQueryParams struct {
 	Printed *string `queryParam:"style=form,explode=true,name=printed"`
 	// Show reported results: Y/N. Optional.
 	Reported *string `queryParam:"style=form,explode=true,name=reported"`
-}
-
-type PostAlmawsV1TaskListsRequestedResourcesRequest struct {
-	QueryParams PostAlmawsV1TaskListsRequestedResourcesQueryParams
 }
 
 type PostAlmawsV1TaskListsRequestedResourcesResponse struct {

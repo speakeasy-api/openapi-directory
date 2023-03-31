@@ -33,11 +33,11 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // PubsubSubscriptionsAcknowledge - Acknowledges a particular received message: the Pub/Sub system can remove the given message from the subscription. Acknowledging a message whose Ack deadline has expired may succeed, but the message could have been already redelivered. Acknowledging a message more than once will not result in an error. This is only used for messages received via pull.
-func (s *subscriptions) PubsubSubscriptionsAcknowledge(ctx context.Context, request operations.PubsubSubscriptionsAcknowledgeRequest) (*operations.PubsubSubscriptionsAcknowledgeResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsAcknowledge(ctx context.Context, request operations.PubsubSubscriptionsAcknowledgeRequest, security operations.PubsubSubscriptionsAcknowledgeSecurity) (*operations.PubsubSubscriptionsAcknowledgeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions/acknowledge"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcknowledgeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *subscriptions) PubsubSubscriptionsAcknowledge(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *subscriptions) PubsubSubscriptionsAcknowledge(ctx context.Context, requ
 }
 
 // PubsubSubscriptionsCreate - Creates a subscription on a given topic for a given subscriber. If the subscription already exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND. If the name is not provided in the request, the server will assign a random name for this subscription on the same project as the topic.
-func (s *subscriptions) PubsubSubscriptionsCreate(ctx context.Context, request operations.PubsubSubscriptionsCreateRequest) (*operations.PubsubSubscriptionsCreateResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsCreate(ctx context.Context, request operations.PubsubSubscriptionsCreateRequest, security operations.PubsubSubscriptionsCreateSecurity) (*operations.PubsubSubscriptionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *subscriptions) PubsubSubscriptionsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *subscriptions) PubsubSubscriptionsCreate(ctx context.Context, request o
 }
 
 // PubsubSubscriptionsDelete - Deletes an existing subscription. All pending messages in the subscription are immediately dropped. Calls to Pull after deletion will return NOT_FOUND.
-func (s *subscriptions) PubsubSubscriptionsDelete(ctx context.Context, request operations.PubsubSubscriptionsDeleteRequest) (*operations.PubsubSubscriptionsDeleteResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsDelete(ctx context.Context, request operations.PubsubSubscriptionsDeleteRequest, security operations.PubsubSubscriptionsDeleteSecurity) (*operations.PubsubSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *subscriptions) PubsubSubscriptionsDelete(ctx context.Context, request o
 }
 
 // PubsubSubscriptionsGet - Gets the configuration details of a subscription.
-func (s *subscriptions) PubsubSubscriptionsGet(ctx context.Context, request operations.PubsubSubscriptionsGetRequest) (*operations.PubsubSubscriptionsGetResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsGet(ctx context.Context, request operations.PubsubSubscriptionsGetRequest, security operations.PubsubSubscriptionsGetSecurity) (*operations.PubsubSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,7 +239,7 @@ func (s *subscriptions) PubsubSubscriptionsGet(ctx context.Context, request oper
 }
 
 // PubsubSubscriptionsList - Lists matching subscriptions.
-func (s *subscriptions) PubsubSubscriptionsList(ctx context.Context, request operations.PubsubSubscriptionsListRequest) (*operations.PubsubSubscriptionsListResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsList(ctx context.Context, request operations.PubsubSubscriptionsListRequest, security operations.PubsubSubscriptionsListSecurity) (*operations.PubsubSubscriptionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions"
 
@@ -248,11 +248,11 @@ func (s *subscriptions) PubsubSubscriptionsList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *subscriptions) PubsubSubscriptionsList(ctx context.Context, request ope
 }
 
 // PubsubSubscriptionsModifyAckDeadline - Modifies the Ack deadline for a message received from a pull request.
-func (s *subscriptions) PubsubSubscriptionsModifyAckDeadline(ctx context.Context, request operations.PubsubSubscriptionsModifyAckDeadlineRequest) (*operations.PubsubSubscriptionsModifyAckDeadlineResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsModifyAckDeadline(ctx context.Context, request operations.PubsubSubscriptionsModifyAckDeadlineRequest, security operations.PubsubSubscriptionsModifyAckDeadlineSecurity) (*operations.PubsubSubscriptionsModifyAckDeadlineResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions/modifyAckDeadline"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyAckDeadlineRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *subscriptions) PubsubSubscriptionsModifyAckDeadline(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,11 +342,11 @@ func (s *subscriptions) PubsubSubscriptionsModifyAckDeadline(ctx context.Context
 }
 
 // PubsubSubscriptionsModifyPushConfig - Modifies the PushConfig for a specified subscription. This method can be used to suspend the flow of messages to an endpoint by clearing the PushConfig field in the request. Messages will be accumulated for delivery even if no push configuration is defined or while the configuration is modified.
-func (s *subscriptions) PubsubSubscriptionsModifyPushConfig(ctx context.Context, request operations.PubsubSubscriptionsModifyPushConfigRequest) (*operations.PubsubSubscriptionsModifyPushConfigResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsModifyPushConfig(ctx context.Context, request operations.PubsubSubscriptionsModifyPushConfigRequest, security operations.PubsubSubscriptionsModifyPushConfigSecurity) (*operations.PubsubSubscriptionsModifyPushConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions/modifyPushConfig"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyPushConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -358,11 +358,11 @@ func (s *subscriptions) PubsubSubscriptionsModifyPushConfig(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -397,11 +397,11 @@ func (s *subscriptions) PubsubSubscriptionsModifyPushConfig(ctx context.Context,
 }
 
 // PubsubSubscriptionsPull - Pulls a single message from the server. If return_immediately is true, and no messages are available in the subscription, this method returns FAILED_PRECONDITION. The system is free to return an UNAVAILABLE error if no messages are available in a reasonable amount of time (to reduce system load).
-func (s *subscriptions) PubsubSubscriptionsPull(ctx context.Context, request operations.PubsubSubscriptionsPullRequest) (*operations.PubsubSubscriptionsPullResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsPull(ctx context.Context, request operations.PubsubSubscriptionsPullRequest, security operations.PubsubSubscriptionsPullSecurity) (*operations.PubsubSubscriptionsPullResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions/pull"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PullRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,11 +413,11 @@ func (s *subscriptions) PubsubSubscriptionsPull(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,11 +452,11 @@ func (s *subscriptions) PubsubSubscriptionsPull(ctx context.Context, request ope
 }
 
 // PubsubSubscriptionsPullBatch - Pulls messages from the server. Returns an empty list if there are no messages available in the backlog. The system is free to return UNAVAILABLE if there are too many pull requests outstanding for the given subscription.
-func (s *subscriptions) PubsubSubscriptionsPullBatch(ctx context.Context, request operations.PubsubSubscriptionsPullBatchRequest) (*operations.PubsubSubscriptionsPullBatchResponse, error) {
+func (s *subscriptions) PubsubSubscriptionsPullBatch(ctx context.Context, request operations.PubsubSubscriptionsPullBatchRequest, security operations.PubsubSubscriptionsPullBatchSecurity) (*operations.PubsubSubscriptionsPullBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/subscriptions/pullBatch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PullBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,11 +468,11 @@ func (s *subscriptions) PubsubSubscriptionsPullBatch(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

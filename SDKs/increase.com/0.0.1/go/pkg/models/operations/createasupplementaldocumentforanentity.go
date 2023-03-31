@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateASupplementalDocumentForAnEntityPathParams struct {
-	EntityID string `pathParam:"style=simple,explode=false,name=entity_id"`
-}
-
 type CreateASupplementalDocumentForAnEntityRequest struct {
-	PathParams CreateASupplementalDocumentForAnEntityPathParams
-	Request    shared.CreateASupplementalDocumentForAnEntityParameters `request:"mediaType=application/json"`
+	CreateASupplementalDocumentForAnEntityParameters shared.CreateASupplementalDocumentForAnEntityParameters `request:"mediaType=application/json"`
+	EntityID                                         string                                                  `pathParam:"style=simple,explode=false,name=entity_id"`
 }
 
 type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum string

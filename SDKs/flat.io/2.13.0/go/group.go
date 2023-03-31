@@ -33,16 +33,16 @@ func newGroup(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetGroupDetails - Get group information
-func (s *group) GetGroupDetails(ctx context.Context, request operations.GetGroupDetailsRequest) (*operations.GetGroupDetailsResponse, error) {
+func (s *group) GetGroupDetails(ctx context.Context, request operations.GetGroupDetailsRequest, security operations.GetGroupDetailsSecurity) (*operations.GetGroupDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *group) GetGroupDetails(ctx context.Context, request operations.GetGroup
 
 // GetGroupScores - List group's scores
 // Get the list of scores shared with a group.
-func (s *group) GetGroupScores(ctx context.Context, request operations.GetGroupScoresRequest) (*operations.GetGroupScoresResponse, error) {
+func (s *group) GetGroupScores(ctx context.Context, request operations.GetGroupScoresRequest, security operations.GetGroupScoresSecurity) (*operations.GetGroupScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,20 +146,20 @@ func (s *group) GetGroupScores(ctx context.Context, request operations.GetGroupS
 }
 
 // ListGroupUsers - List group's users
-func (s *group) ListGroupUsers(ctx context.Context, request operations.ListGroupUsersRequest) (*operations.ListGroupUsersResponse, error) {
+func (s *group) ListGroupUsers(ctx context.Context, request operations.ListGroupUsersRequest, security operations.ListGroupUsersSecurity) (*operations.ListGroupUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

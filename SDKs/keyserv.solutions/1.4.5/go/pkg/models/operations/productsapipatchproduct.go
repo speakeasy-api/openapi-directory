@@ -54,10 +54,6 @@ func (u ProductsAPIPatchProductRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type ProductsAPIPatchProductRequest struct {
-	Request ProductsAPIPatchProductRequestBody `request:"mediaType=application/json"`
-}
-
 type ProductsAPIPatchProductResponse struct {
 	ContentType string
 	StatusCode  int

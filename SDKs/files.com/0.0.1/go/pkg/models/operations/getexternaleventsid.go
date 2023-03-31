@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExternalEventsIDPathParams struct {
+type GetExternalEventsIDRequest struct {
 	// External Event ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetExternalEventsIDRequest struct {
-	PathParams GetExternalEventsIDPathParams
 }
 
 type GetExternalEventsIDResponse struct {

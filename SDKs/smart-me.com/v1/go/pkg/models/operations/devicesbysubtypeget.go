@@ -57,12 +57,8 @@ func (e *DevicesBySubTypeGetMeterSubTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DevicesBySubTypeGetQueryParams struct {
-	MeterSubType DevicesBySubTypeGetMeterSubTypeEnum `queryParam:"style=form,explode=true,name=meterSubType"`
-}
-
 type DevicesBySubTypeGetRequest struct {
-	QueryParams DevicesBySubTypeGetQueryParams
+	MeterSubType DevicesBySubTypeGetMeterSubTypeEnum `queryParam:"style=form,explode=true,name=meterSubType"`
 }
 
 type DevicesBySubTypeGetResponse struct {

@@ -35,7 +35,7 @@ func newExport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // ExportAssetTopHWCSV - Top asset hardware products as CSV
-func (s *export) ExportAssetTopHWCSV(ctx context.Context, request operations.ExportAssetTopHWCSVRequest) (*operations.ExportAssetTopHWCSVResponse, error) {
+func (s *export) ExportAssetTopHWCSV(ctx context.Context) (*operations.ExportAssetTopHWCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.hw.csv"
 
@@ -44,7 +44,7 @@ func (s *export) ExportAssetTopHWCSV(ctx context.Context, request operations.Exp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *export) ExportAssetTopHWCSV(ctx context.Context, request operations.Exp
 }
 
 // ExportAssetTopOSCSV - Top asset operating systems as CSV
-func (s *export) ExportAssetTopOSCSV(ctx context.Context, request operations.ExportAssetTopOSCSVRequest) (*operations.ExportAssetTopOSCSVResponse, error) {
+func (s *export) ExportAssetTopOSCSV(ctx context.Context) (*operations.ExportAssetTopOSCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.os.csv"
 
@@ -89,7 +89,7 @@ func (s *export) ExportAssetTopOSCSV(ctx context.Context, request operations.Exp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *export) ExportAssetTopOSCSV(ctx context.Context, request operations.Exp
 }
 
 // ExportAssetTopTagsCSV - Top asset tags as CSV
-func (s *export) ExportAssetTopTagsCSV(ctx context.Context, request operations.ExportAssetTopTagsCSVRequest) (*operations.ExportAssetTopTagsCSVResponse, error) {
+func (s *export) ExportAssetTopTagsCSV(ctx context.Context) (*operations.ExportAssetTopTagsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.tags.csv"
 
@@ -134,7 +134,7 @@ func (s *export) ExportAssetTopTagsCSV(ctx context.Context, request operations.E
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *export) ExportAssetTopTagsCSV(ctx context.Context, request operations.E
 }
 
 // ExportAssetTopTypesCSV - Top asset types as CSV
-func (s *export) ExportAssetTopTypesCSV(ctx context.Context, request operations.ExportAssetTopTypesCSVRequest) (*operations.ExportAssetTopTypesCSVResponse, error) {
+func (s *export) ExportAssetTopTypesCSV(ctx context.Context) (*operations.ExportAssetTopTypesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.types.csv"
 
@@ -179,7 +179,7 @@ func (s *export) ExportAssetTopTypesCSV(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *export) ExportAssetTopTypesCSV(ctx context.Context, request operations.
 }
 
 // ExportAssetsCSV - Asset inventory as CSV
-func (s *export) ExportAssetsCSV(ctx context.Context, request operations.ExportAssetsCSVRequest) (*operations.ExportAssetsCSVResponse, error) {
+func (s *export) ExportAssetsCSV(ctx context.Context, request operations.ExportAssetsCSVRequest, security operations.ExportAssetsCSVSecurity) (*operations.ExportAssetsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.csv"
 
@@ -224,11 +224,11 @@ func (s *export) ExportAssetsCSV(ctx context.Context, request operations.ExportA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -264,7 +264,7 @@ func (s *export) ExportAssetsCSV(ctx context.Context, request operations.ExportA
 }
 
 // ExportAssetsJSON - Exports the asset inventory
-func (s *export) ExportAssetsJSON(ctx context.Context, request operations.ExportAssetsJSONRequest) (*operations.ExportAssetsJSONResponse, error) {
+func (s *export) ExportAssetsJSON(ctx context.Context, request operations.ExportAssetsJSONRequest, security operations.ExportAssetsJSONSecurity) (*operations.ExportAssetsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.json"
 
@@ -273,11 +273,11 @@ func (s *export) ExportAssetsJSON(ctx context.Context, request operations.Export
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,7 +313,7 @@ func (s *export) ExportAssetsJSON(ctx context.Context, request operations.Export
 }
 
 // ExportAssetsJSONL - Asset inventory as JSON line-delimited
-func (s *export) ExportAssetsJSONL(ctx context.Context, request operations.ExportAssetsJSONLRequest) (*operations.ExportAssetsJSONLResponse, error) {
+func (s *export) ExportAssetsJSONL(ctx context.Context, request operations.ExportAssetsJSONLRequest, security operations.ExportAssetsJSONLSecurity) (*operations.ExportAssetsJSONLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.jsonl"
 
@@ -322,11 +322,11 @@ func (s *export) ExportAssetsJSONL(ctx context.Context, request operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *export) ExportAssetsJSONL(ctx context.Context, request operations.Expor
 }
 
 // ExportAssetsNmapXML - Asset inventory as Nmap-style XML
-func (s *export) ExportAssetsNmapXML(ctx context.Context, request operations.ExportAssetsNmapXMLRequest) (*operations.ExportAssetsNmapXMLResponse, error) {
+func (s *export) ExportAssetsNmapXML(ctx context.Context, request operations.ExportAssetsNmapXMLRequest, security operations.ExportAssetsNmapXMLSecurity) (*operations.ExportAssetsNmapXMLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.nmap.xml"
 
@@ -371,11 +371,11 @@ func (s *export) ExportAssetsNmapXML(ctx context.Context, request operations.Exp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -411,7 +411,7 @@ func (s *export) ExportAssetsNmapXML(ctx context.Context, request operations.Exp
 }
 
 // ExportServicesCSV - Service inventory as CSV
-func (s *export) ExportServicesCSV(ctx context.Context, request operations.ExportServicesCSVRequest) (*operations.ExportServicesCSVResponse, error) {
+func (s *export) ExportServicesCSV(ctx context.Context, request operations.ExportServicesCSVRequest, security operations.ExportServicesCSVSecurity) (*operations.ExportServicesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/services.csv"
 
@@ -420,11 +420,11 @@ func (s *export) ExportServicesCSV(ctx context.Context, request operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -460,7 +460,7 @@ func (s *export) ExportServicesCSV(ctx context.Context, request operations.Expor
 }
 
 // ExportServicesJSON - Service inventory as JSON
-func (s *export) ExportServicesJSON(ctx context.Context, request operations.ExportServicesJSONRequest) (*operations.ExportServicesJSONResponse, error) {
+func (s *export) ExportServicesJSON(ctx context.Context, request operations.ExportServicesJSONRequest, security operations.ExportServicesJSONSecurity) (*operations.ExportServicesJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/services.json"
 
@@ -469,11 +469,11 @@ func (s *export) ExportServicesJSON(ctx context.Context, request operations.Expo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -509,7 +509,7 @@ func (s *export) ExportServicesJSON(ctx context.Context, request operations.Expo
 }
 
 // ExportServicesJSONL - Service inventory as JSON line-delimited
-func (s *export) ExportServicesJSONL(ctx context.Context, request operations.ExportServicesJSONLRequest) (*operations.ExportServicesJSONLResponse, error) {
+func (s *export) ExportServicesJSONL(ctx context.Context, request operations.ExportServicesJSONLRequest, security operations.ExportServicesJSONLSecurity) (*operations.ExportServicesJSONLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/services.jsonl"
 
@@ -518,11 +518,11 @@ func (s *export) ExportServicesJSONL(ctx context.Context, request operations.Exp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -558,7 +558,7 @@ func (s *export) ExportServicesJSONL(ctx context.Context, request operations.Exp
 }
 
 // ExportServicesTopProductsCSV - Top service products as CSV
-func (s *export) ExportServicesTopProductsCSV(ctx context.Context, request operations.ExportServicesTopProductsCSVRequest) (*operations.ExportServicesTopProductsCSVResponse, error) {
+func (s *export) ExportServicesTopProductsCSV(ctx context.Context) (*operations.ExportServicesTopProductsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.products.csv"
 
@@ -567,7 +567,7 @@ func (s *export) ExportServicesTopProductsCSV(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -603,7 +603,7 @@ func (s *export) ExportServicesTopProductsCSV(ctx context.Context, request opera
 }
 
 // ExportServicesTopProtocolsCSV - Top service protocols as CSV
-func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context, request operations.ExportServicesTopProtocolsCSVRequest) (*operations.ExportServicesTopProtocolsCSVResponse, error) {
+func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context) (*operations.ExportServicesTopProtocolsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.protocols.csv"
 
@@ -612,7 +612,7 @@ func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -648,7 +648,7 @@ func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context, request oper
 }
 
 // ExportServicesTopTCPCSV - Top TCP services as CSV
-func (s *export) ExportServicesTopTCPCSV(ctx context.Context, request operations.ExportServicesTopTCPCSVRequest) (*operations.ExportServicesTopTCPCSVResponse, error) {
+func (s *export) ExportServicesTopTCPCSV(ctx context.Context) (*operations.ExportServicesTopTCPCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.tcp.csv"
 
@@ -657,7 +657,7 @@ func (s *export) ExportServicesTopTCPCSV(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -693,7 +693,7 @@ func (s *export) ExportServicesTopTCPCSV(ctx context.Context, request operations
 }
 
 // ExportServicesTopUDPCSV - Top UDP services as CSV
-func (s *export) ExportServicesTopUDPCSV(ctx context.Context, request operations.ExportServicesTopUDPCSVRequest) (*operations.ExportServicesTopUDPCSVResponse, error) {
+func (s *export) ExportServicesTopUDPCSV(ctx context.Context) (*operations.ExportServicesTopUDPCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.udp.csv"
 
@@ -702,7 +702,7 @@ func (s *export) ExportServicesTopUDPCSV(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -738,7 +738,7 @@ func (s *export) ExportServicesTopUDPCSV(ctx context.Context, request operations
 }
 
 // ExportSitesCSV - Site list as CSV
-func (s *export) ExportSitesCSV(ctx context.Context, request operations.ExportSitesCSVRequest) (*operations.ExportSitesCSVResponse, error) {
+func (s *export) ExportSitesCSV(ctx context.Context) (*operations.ExportSitesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/sites.csv"
 
@@ -747,7 +747,7 @@ func (s *export) ExportSitesCSV(ctx context.Context, request operations.ExportSi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -783,7 +783,7 @@ func (s *export) ExportSitesCSV(ctx context.Context, request operations.ExportSi
 }
 
 // ExportSitesJSON - Export all sites
-func (s *export) ExportSitesJSON(ctx context.Context, request operations.ExportSitesJSONRequest) (*operations.ExportSitesJSONResponse, error) {
+func (s *export) ExportSitesJSON(ctx context.Context, request operations.ExportSitesJSONRequest, security operations.ExportSitesJSONSecurity) (*operations.ExportSitesJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/sites.json"
 
@@ -792,11 +792,11 @@ func (s *export) ExportSitesJSON(ctx context.Context, request operations.ExportS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -832,7 +832,7 @@ func (s *export) ExportSitesJSON(ctx context.Context, request operations.ExportS
 }
 
 // ExportSitesJSONL - Site list as JSON line-delimited
-func (s *export) ExportSitesJSONL(ctx context.Context, request operations.ExportSitesJSONLRequest) (*operations.ExportSitesJSONLResponse, error) {
+func (s *export) ExportSitesJSONL(ctx context.Context, request operations.ExportSitesJSONLRequest, security operations.ExportSitesJSONLSecurity) (*operations.ExportSitesJSONLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/sites.jsonl"
 
@@ -841,11 +841,11 @@ func (s *export) ExportSitesJSONL(ctx context.Context, request operations.Export
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -881,7 +881,7 @@ func (s *export) ExportSitesJSONL(ctx context.Context, request operations.Export
 }
 
 // ExportSubnetUtilizationStatsCSV - Subnet utilization statistics as as CSV
-func (s *export) ExportSubnetUtilizationStatsCSV(ctx context.Context, request operations.ExportSubnetUtilizationStatsCSVRequest) (*operations.ExportSubnetUtilizationStatsCSVResponse, error) {
+func (s *export) ExportSubnetUtilizationStatsCSV(ctx context.Context, request operations.ExportSubnetUtilizationStatsCSVRequest, security operations.ExportSubnetUtilizationStatsCSVSecurity) (*operations.ExportSubnetUtilizationStatsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/subnet.stats.csv"
 
@@ -890,11 +890,11 @@ func (s *export) ExportSubnetUtilizationStatsCSV(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -930,7 +930,7 @@ func (s *export) ExportSubnetUtilizationStatsCSV(ctx context.Context, request op
 }
 
 // ExportWirelessCSV - Wireless inventory as CSV
-func (s *export) ExportWirelessCSV(ctx context.Context, request operations.ExportWirelessCSVRequest) (*operations.ExportWirelessCSVResponse, error) {
+func (s *export) ExportWirelessCSV(ctx context.Context, request operations.ExportWirelessCSVRequest, security operations.ExportWirelessCSVSecurity) (*operations.ExportWirelessCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/wireless.csv"
 
@@ -939,11 +939,11 @@ func (s *export) ExportWirelessCSV(ctx context.Context, request operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -979,7 +979,7 @@ func (s *export) ExportWirelessCSV(ctx context.Context, request operations.Expor
 }
 
 // ExportWirelessJSON - Wireless inventory as JSON
-func (s *export) ExportWirelessJSON(ctx context.Context, request operations.ExportWirelessJSONRequest) (*operations.ExportWirelessJSONResponse, error) {
+func (s *export) ExportWirelessJSON(ctx context.Context, request operations.ExportWirelessJSONRequest, security operations.ExportWirelessJSONSecurity) (*operations.ExportWirelessJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/wireless.json"
 
@@ -988,11 +988,11 @@ func (s *export) ExportWirelessJSON(ctx context.Context, request operations.Expo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1028,7 +1028,7 @@ func (s *export) ExportWirelessJSON(ctx context.Context, request operations.Expo
 }
 
 // ExportWirelessJSONL - Wireless inventory as JSON line-delimited
-func (s *export) ExportWirelessJSONL(ctx context.Context, request operations.ExportWirelessJSONLRequest) (*operations.ExportWirelessJSONLResponse, error) {
+func (s *export) ExportWirelessJSONL(ctx context.Context, request operations.ExportWirelessJSONLRequest, security operations.ExportWirelessJSONLSecurity) (*operations.ExportWirelessJSONLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/wireless.jsonl"
 
@@ -1037,11 +1037,11 @@ func (s *export) ExportWirelessJSONL(ctx context.Context, request operations.Exp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

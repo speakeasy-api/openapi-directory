@@ -12,12 +12,8 @@ var UpdateSinkServerList = []string{
 }
 
 type UpdateSinkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSinkPathParams struct {
-	// A 34 character string that uniquely identifies this Sink.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSinkUpdateSinkRequest struct {
@@ -26,10 +22,9 @@ type UpdateSinkUpdateSinkRequest struct {
 }
 
 type UpdateSinkRequest struct {
-	PathParams UpdateSinkPathParams
-	Request    *UpdateSinkUpdateSinkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSinkSecurity
-	ServerURL  *string
+	RequestBody *UpdateSinkUpdateSinkRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this Sink.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSinkResponse struct {

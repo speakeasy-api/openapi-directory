@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StsIntrospectQueryParams struct {
+type StsIntrospectRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                               *shared.XgafvEnum                                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleIdentityStsV1IntrospectTokenRequest *shared.GoogleIdentityStsV1IntrospectTokenRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type StsIntrospectQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type StsIntrospectRequest struct {
-	QueryParams StsIntrospectQueryParams
-	Request     *shared.GoogleIdentityStsV1IntrospectTokenRequest `request:"mediaType=application/json"`
 }
 
 type StsIntrospectResponse struct {

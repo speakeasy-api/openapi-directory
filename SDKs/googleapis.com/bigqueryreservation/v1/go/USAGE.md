@@ -14,65 +14,61 @@ func main() {
     s := sdk.New()
 
     req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
-        Security: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
-            Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            CapacityCommitmentID: "nulla",
-            EnforceSingleAdminProjectPerOrg: false,
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.CapacityCommitmentInput{
-            Edition: "STANDARD",
+        DollarXgafv: "2",
+        CapacityCommitmentInput: &shared.CapacityCommitmentInput{
+            Edition: "ENTERPRISE",
             FailureStatus: &shared.Status{
-                Code: 297534,
+                Code: 715190,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "delectus": "tempora",
+                        "nulla": "corrupti",
+                        "illum": "vel",
+                        "error": "deserunt",
                     },
                     map[string]interface{}{
+                        "iure": "magnam",
+                        "debitis": "ipsa",
+                    },
+                    map[string]interface{}{
+                        "tempora": "suscipit",
                         "molestiae": "minus",
                         "placeat": "voluptatum",
+                        "iusto": "excepturi",
                     },
                     map[string]interface{}{
-                        "excepturi": "nisi",
                         "recusandae": "temporibus",
-                    },
-                    map[string]interface{}{
-                        "quis": "veritatis",
+                        "ab": "quis",
                     },
                 },
-                Message: "deserunt",
+                Message: "veritatis",
             },
             MultiRegionAuxiliary: false,
-            Plan: "COMMITMENT_PLAN_UNSPECIFIED",
-            RenewalPlan: "TRIAL",
-            SlotCount: "repellendus",
+            Plan: "ANNUAL",
+            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
+            SlotCount: "ipsam",
         },
+        AccessToken: "repellendus",
+        Alt: "proto",
+        Callback: "quo",
+        CapacityCommitmentID: "odit",
+        EnforceSingleAdminProjectPerOrg: false,
+        Fields: "at",
+        Key: "at",
+        OauthToken: "maiores",
+        Parent: "molestiae",
+        PrettyPrint: false,
+        QuotaUser: "quod",
+        UploadType: "quod",
+        UploadProtocol: "esse",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req)
+    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
+        Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

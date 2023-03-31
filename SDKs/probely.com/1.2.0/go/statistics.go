@@ -300,7 +300,7 @@ func (s *statistics) GetTargetsAllTopVulns(ctx context.Context) (*operations.Get
 // GetTargetsTargetIDAverageFixTime - Average vulnerability trend graph data
 func (s *statistics) GetTargetsTargetIDAverageFixTime(ctx context.Context, request operations.GetTargetsTargetIDAverageFixTimeRequest) (*operations.GetTargetsTargetIDAverageFixTimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/average_fix_time/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/average_fix_time/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +344,7 @@ func (s *statistics) GetTargetsTargetIDAverageFixTime(ctx context.Context, reque
 // GetTargetsTargetIDRiskTrend - Risk trend graph data
 func (s *statistics) GetTargetsTargetIDRiskTrend(ctx context.Context, request operations.GetTargetsTargetIDRiskTrendRequest) (*operations.GetTargetsTargetIDRiskTrendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/risk_trend/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/risk_trend/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,7 +388,7 @@ func (s *statistics) GetTargetsTargetIDRiskTrend(ctx context.Context, request op
 // GetTargetsTargetIDSeverityTrend - Severity trend graph data.
 func (s *statistics) GetTargetsTargetIDSeverityTrend(ctx context.Context, request operations.GetTargetsTargetIDSeverityTrendRequest) (*operations.GetTargetsTargetIDSeverityTrendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/severity_trend/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/severity_trend/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +432,7 @@ func (s *statistics) GetTargetsTargetIDSeverityTrend(ctx context.Context, reques
 // GetTargetsTargetIDTopVulns - Top 5 vulnerabilities
 func (s *statistics) GetTargetsTargetIDTopVulns(ctx context.Context, request operations.GetTargetsTargetIDTopVulnsRequest) (*operations.GetTargetsTargetIDTopVulnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/top_vulns/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/top_vulns/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

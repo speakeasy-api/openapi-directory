@@ -8,23 +8,14 @@ import (
 )
 
 type GetSecurityGroupSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetSecurityGroupPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSecurityGroupQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetSecurityGroupRequest struct {
-	PathParams  GetSecurityGroupPathParams
-	QueryParams GetSecurityGroupQueryParams
-	Security    GetSecurityGroupSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetSecurityGroupResponse struct {

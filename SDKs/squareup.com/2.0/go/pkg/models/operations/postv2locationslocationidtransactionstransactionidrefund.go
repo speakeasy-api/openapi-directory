@@ -8,23 +8,18 @@ import (
 )
 
 type PostV2LocationsLocationIDTransactionsTransactionIDRefundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostV2LocationsLocationIDTransactionsTransactionIDRefundPathParams struct {
+type PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest struct {
+	// An object containing the fields to POST for the request.
+	//
+	// See the corresponding object definition for field details.
+	CreateRefundRequest shared.CreateRefundRequest `request:"mediaType=application/json"`
 	// The ID of the original transaction's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The ID of the original transaction that includes the tender to refund.
 	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
-}
-
-type PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest struct {
-	PathParams PostV2LocationsLocationIDTransactionsTransactionIDRefundPathParams
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateRefundRequest `request:"mediaType=application/json"`
-	Security PostV2LocationsLocationIDTransactionsTransactionIDRefundSecurity
 }
 
 type PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse struct {

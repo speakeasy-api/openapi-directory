@@ -33,7 +33,7 @@ func newChannelSections(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // YoutubeChannelSectionsDelete - Deletes a resource.
-func (s *channelSections) YoutubeChannelSectionsDelete(ctx context.Context, request operations.YoutubeChannelSectionsDeleteRequest) (*operations.YoutubeChannelSectionsDeleteResponse, error) {
+func (s *channelSections) YoutubeChannelSectionsDelete(ctx context.Context, request operations.YoutubeChannelSectionsDeleteRequest, security operations.YoutubeChannelSectionsDeleteSecurity) (*operations.YoutubeChannelSectionsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/channelSections"
 
@@ -42,11 +42,11 @@ func (s *channelSections) YoutubeChannelSectionsDelete(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *channelSections) YoutubeChannelSectionsDelete(ctx context.Context, requ
 }
 
 // YoutubeChannelSectionsInsert - Inserts a new resource into this collection.
-func (s *channelSections) YoutubeChannelSectionsInsert(ctx context.Context, request operations.YoutubeChannelSectionsInsertRequest) (*operations.YoutubeChannelSectionsInsertResponse, error) {
+func (s *channelSections) YoutubeChannelSectionsInsert(ctx context.Context, request operations.YoutubeChannelSectionsInsertRequest, security operations.YoutubeChannelSectionsInsertSecurity) (*operations.YoutubeChannelSectionsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/channelSections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelSection", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *channelSections) YoutubeChannelSectionsInsert(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *channelSections) YoutubeChannelSectionsInsert(ctx context.Context, requ
 }
 
 // YoutubeChannelSectionsList - Retrieves a list of resources, possibly filtered.
-func (s *channelSections) YoutubeChannelSectionsList(ctx context.Context, request operations.YoutubeChannelSectionsListRequest) (*operations.YoutubeChannelSectionsListResponse, error) {
+func (s *channelSections) YoutubeChannelSectionsList(ctx context.Context, request operations.YoutubeChannelSectionsListRequest, security operations.YoutubeChannelSectionsListSecurity) (*operations.YoutubeChannelSectionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/channelSections"
 
@@ -136,11 +136,11 @@ func (s *channelSections) YoutubeChannelSectionsList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *channelSections) YoutubeChannelSectionsList(ctx context.Context, reques
 }
 
 // YoutubeChannelSectionsUpdate - Updates an existing resource.
-func (s *channelSections) YoutubeChannelSectionsUpdate(ctx context.Context, request operations.YoutubeChannelSectionsUpdateRequest) (*operations.YoutubeChannelSectionsUpdateResponse, error) {
+func (s *channelSections) YoutubeChannelSectionsUpdate(ctx context.Context, request operations.YoutubeChannelSectionsUpdateRequest, security operations.YoutubeChannelSectionsUpdateSecurity) (*operations.YoutubeChannelSectionsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/channelSections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelSection", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *channelSections) YoutubeChannelSectionsUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

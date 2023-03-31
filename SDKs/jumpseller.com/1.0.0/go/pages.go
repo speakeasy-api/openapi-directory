@@ -36,14 +36,14 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeletePagesIDJSON - Delete an existing Page.
 func (s *pages) DeletePagesIDJSON(ctx context.Context, request operations.DeletePagesIDJSONRequest) (*operations.DeletePagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *pages) GetPagesJSON(ctx context.Context, request operations.GetPagesJSO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,7 +150,7 @@ func (s *pages) GetPagesCountJSON(ctx context.Context, request operations.GetPag
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -191,14 +191,14 @@ func (s *pages) GetPagesCountJSON(ctx context.Context, request operations.GetPag
 // GetPagesIDJSON - Retrieve a single Page by id.
 func (s *pages) GetPagesIDJSON(ctx context.Context, request operations.GetPagesIDJSONRequest) (*operations.GetPagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -251,7 +251,7 @@ func (s *pages) PostPagesJSON(ctx context.Context, request operations.PostPagesJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pages.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PageModify", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,7 +266,7 @@ func (s *pages) PostPagesJSON(ctx context.Context, request operations.PostPagesJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -307,9 +307,9 @@ func (s *pages) PostPagesJSON(ctx context.Context, request operations.PostPagesJ
 // PutPagesIDJSON - Update a Page.
 func (s *pages) PutPagesIDJSON(ctx context.Context, request operations.PutPagesIDJSONRequest) (*operations.PutPagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PageModify", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,7 +324,7 @@ func (s *pages) PutPagesIDJSON(ctx context.Context, request operations.PutPagesI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

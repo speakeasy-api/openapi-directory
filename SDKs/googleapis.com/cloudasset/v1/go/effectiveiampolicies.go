@@ -32,20 +32,20 @@ func newEffectiveIamPolicies(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // CloudassetEffectiveIamPoliciesBatchGet - Gets effective IAM policies for a batch of resources.
-func (s *effectiveIamPolicies) CloudassetEffectiveIamPoliciesBatchGet(ctx context.Context, request operations.CloudassetEffectiveIamPoliciesBatchGetRequest) (*operations.CloudassetEffectiveIamPoliciesBatchGetResponse, error) {
+func (s *effectiveIamPolicies) CloudassetEffectiveIamPoliciesBatchGet(ctx context.Context, request operations.CloudassetEffectiveIamPoliciesBatchGetRequest, security operations.CloudassetEffectiveIamPoliciesBatchGetSecurity) (*operations.CloudassetEffectiveIamPoliciesBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/effectiveIamPolicies:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/effectiveIamPolicies:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

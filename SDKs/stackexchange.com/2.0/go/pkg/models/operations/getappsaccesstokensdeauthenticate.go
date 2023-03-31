@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAppsAccessTokensDeAuthenticatePathParams struct {
+type GetAppsAccessTokensDeAuthenticateRequest struct {
 	// String list (semicolon delimited).
 	AccessTokens string `pathParam:"style=simple,explode=false,name=accessTokens"`
-}
-
-type GetAppsAccessTokensDeAuthenticateQueryParams struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -49,11 +46,6 @@ type GetAppsAccessTokensDeAuthenticateQueryParams struct {
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetAppsAccessTokensDeAuthenticateRequest struct {
-	PathParams  GetAppsAccessTokensDeAuthenticatePathParams
-	QueryParams GetAppsAccessTokensDeAuthenticateQueryParams
 }
 
 type GetAppsAccessTokensDeAuthenticateResponse struct {

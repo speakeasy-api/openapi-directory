@@ -12,20 +12,15 @@ var FetchCallServerList = []string{
 }
 
 type FetchCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCallPathParams struct {
+type FetchCallRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the Call resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchCallRequest struct {
-	PathParams FetchCallPathParams
-	Security   FetchCallSecurity
-	ServerURL  *string
 }
 
 type FetchCallResponse struct {

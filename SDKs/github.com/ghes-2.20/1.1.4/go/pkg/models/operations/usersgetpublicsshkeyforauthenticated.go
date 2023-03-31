@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetPublicSSHKeyForAuthenticatedPathParams struct {
+type UsersGetPublicSSHKeyForAuthenticatedRequest struct {
 	// key_id parameter
 	KeyID int64 `pathParam:"style=simple,explode=false,name=key_id"`
-}
-
-type UsersGetPublicSSHKeyForAuthenticatedRequest struct {
-	PathParams UsersGetPublicSSHKeyForAuthenticatedPathParams
 }
 
 type UsersGetPublicSSHKeyForAuthenticatedResponse struct {

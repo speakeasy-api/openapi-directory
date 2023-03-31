@@ -34,9 +34,9 @@ func newVideosCredits(defaultClient, securityClient HTTPClient, serverURL, langu
 // AddVideoCredit - Credit a user in a video
 func (s *videosCredits) AddVideoCredit(ctx context.Context, request operations.AddVideoCreditRequest) (*operations.AddVideoCreditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -100,9 +100,9 @@ func (s *videosCredits) AddVideoCredit(ctx context.Context, request operations.A
 // AddVideoCreditAlt1 - Credit a user in a video
 func (s *videosCredits) AddVideoCreditAlt1(ctx context.Context, request operations.AddVideoCreditAlt1Request) (*operations.AddVideoCreditAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/credits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/credits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -164,16 +164,16 @@ func (s *videosCredits) AddVideoCreditAlt1(ctx context.Context, request operatio
 }
 
 // DeleteVideoCredit - Delete a credit for a user in a video
-func (s *videosCredits) DeleteVideoCredit(ctx context.Context, request operations.DeleteVideoCreditRequest) (*operations.DeleteVideoCreditResponse, error) {
+func (s *videosCredits) DeleteVideoCredit(ctx context.Context, request operations.DeleteVideoCreditRequest, security operations.DeleteVideoCreditSecurity) (*operations.DeleteVideoCreditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,11 +209,11 @@ func (s *videosCredits) DeleteVideoCredit(ctx context.Context, request operation
 }
 
 // EditVideoCredit - Edit a credit for a user in a video
-func (s *videosCredits) EditVideoCredit(ctx context.Context, request operations.EditVideoCreditRequest) (*operations.EditVideoCreditResponse, error) {
+func (s *videosCredits) EditVideoCredit(ctx context.Context, request operations.EditVideoCreditRequest, security operations.EditVideoCreditSecurity) (*operations.EditVideoCreditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -225,7 +225,7 @@ func (s *videosCredits) EditVideoCredit(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *videosCredits) EditVideoCredit(ctx context.Context, request operations.
 // GetVideoCredit - Get a specific credited user in a video
 func (s *videosCredits) GetVideoCredit(ctx context.Context, request operations.GetVideoCreditRequest) (*operations.GetVideoCreditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits/{credit_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,14 +328,14 @@ func (s *videosCredits) GetVideoCredit(ctx context.Context, request operations.G
 // GetVideoCredits - Get all the credited users in a video
 func (s *videosCredits) GetVideoCredits(ctx context.Context, request operations.GetVideoCreditsRequest) (*operations.GetVideoCreditsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/credits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -376,14 +376,14 @@ func (s *videosCredits) GetVideoCredits(ctx context.Context, request operations.
 // GetVideoCreditsAlt1 - Get all the credited users in a video
 func (s *videosCredits) GetVideoCreditsAlt1(ctx context.Context, request operations.GetVideoCreditsAlt1Request) (*operations.GetVideoCreditsAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/credits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/credits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

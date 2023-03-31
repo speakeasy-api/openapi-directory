@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeAPIKeyHeader struct {
-	APIKey string `security:"name=x-api-key"`
-}
-
 type Security struct {
-	APIKeyHeader SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }

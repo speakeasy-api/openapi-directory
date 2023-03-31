@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ListSIPTrunksPathParams struct {
+type ListSIPTrunksRequest struct {
 	// Unique Identifier of the Account. To retrieve SIP trunks assigned to a sub account, provide the account ID of the sub account in the as the value of this field. To retrieve SIP trunks of a master account, provide `me` as the value of this field.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type ListSIPTrunksRequest struct {
-	PathParams ListSIPTrunksPathParams
 }
 
 type ListSIPTrunks200ApplicationXMLSIPTrunks struct {

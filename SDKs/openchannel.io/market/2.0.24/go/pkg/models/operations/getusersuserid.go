@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUsersUserIDPathParams struct {
+type GetUsersUserIDRequest struct {
 	// The id of the user to be located
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetUsersUserIDRequest struct {
-	PathParams GetUsersUserIDPathParams
 }
 
 type GetUsersUserIDResponse struct {

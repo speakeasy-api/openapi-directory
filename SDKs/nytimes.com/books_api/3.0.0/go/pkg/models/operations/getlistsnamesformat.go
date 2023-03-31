@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETListsNamesFormatSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 // GETListsNamesFormatFormatEnum
@@ -37,18 +36,9 @@ func (e *GETListsNamesFormatFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListsNamesFormatPathParams struct {
-	Format GETListsNamesFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GETListsNamesFormatQueryParams struct {
-	APIKey *string `queryParam:"style=form,explode=true,name=api-key"`
-}
-
 type GETListsNamesFormatRequest struct {
-	PathParams  GETListsNamesFormatPathParams
-	QueryParams GETListsNamesFormatQueryParams
-	Security    GETListsNamesFormatSecurity
+	APIKey *string                       `queryParam:"style=form,explode=true,name=api-key"`
+	Format GETListsNamesFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 }
 
 type GETListsNamesFormat200ApplicationJSONResults struct {

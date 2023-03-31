@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientsApplicationUsagePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkClientsApplicationUsageSsidNumberEnum - An SSID number to include. If not specified, eveusage histories application usagents for all SSIDs will be returned.
 type GetNetworkClientsApplicationUsageSsidNumberEnum string
 
@@ -75,11 +71,12 @@ func (e *GetNetworkClientsApplicationUsageSsidNumberEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetNetworkClientsApplicationUsageQueryParams struct {
+type GetNetworkClientsApplicationUsageRequest struct {
 	// A list of client keys, MACs or IPs separated by comma.
 	Clients string `queryParam:"style=form,explode=true,name=clients"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// An SSID number to include. If not specified, eveusage histories application usagents for all SSIDs will be returned.
@@ -92,11 +89,6 @@ type GetNetworkClientsApplicationUsageQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkClientsApplicationUsageRequest struct {
-	PathParams  GetNetworkClientsApplicationUsagePathParams
-	QueryParams GetNetworkClientsApplicationUsageQueryParams
 }
 
 type GetNetworkClientsApplicationUsageResponse struct {

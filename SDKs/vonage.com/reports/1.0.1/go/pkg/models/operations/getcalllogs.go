@@ -10,12 +10,7 @@ import (
 )
 
 type GetCallLogsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetCallLogsPathParams struct {
-	// The Vonage Business Cloud account ID
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetCallLogsDirectionEnum - Filter by call direction.
@@ -42,7 +37,9 @@ func (e *GetCallLogsDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCallLogsQueryParams struct {
+type GetCallLogsRequest struct {
+	// The Vonage Business Cloud account ID
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 	// Filter by destination user
 	DestinationUser *string `queryParam:"style=form,explode=true,name=destination_user"`
 	// Filter by call direction.
@@ -65,12 +62,6 @@ type GetCallLogsQueryParams struct {
 	StartLte string `queryParam:"style=form,explode=true,name=start:lte"`
 	// Filter by called number
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetCallLogsRequest struct {
-	PathParams  GetCallLogsPathParams
-	QueryParams GetCallLogsQueryParams
-	Security    GetCallLogsSecurity
 }
 
 type GetCallLogsResponse struct {

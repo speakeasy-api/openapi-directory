@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddExpiryListingsRawRequest struct {
-	// An array of expiry listings to be loaded
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AddExpiryListingsRawResponse struct {
 	// Request was successful
 	AftermarketListingAction *shared.AftermarketListingAction

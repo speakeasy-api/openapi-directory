@@ -36,7 +36,7 @@ func newSmartMeDeviceConfiguration(defaultClient, securityClient HTTPClient, ser
 // SmartMeDeviceConfigurationGet - Gets the configuration of a smart-me device.
 func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationGet(ctx context.Context, request operations.SmartMeDeviceConfigurationGetRequest) (*operations.SmartMeDeviceConfigurationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/SmartMeDeviceConfiguration/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/SmartMeDeviceConfiguration/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationGet(ctx context.C
 }
 
 // SmartMeDeviceConfigurationPostForm - Sets the configuration of a smart-me device. The device needs to be online.
-func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostForm(ctx context.Context, request operations.SmartMeDeviceConfigurationPostFormRequest) (*operations.SmartMeDeviceConfigurationPostFormResponse, error) {
+func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostForm(ctx context.Context, request shared.SmartMeDeviceConfigurationContainer) (*operations.SmartMeDeviceConfigurationPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SmartMeDeviceConfiguration"
 
@@ -144,7 +144,7 @@ func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostForm(ctx cont
 }
 
 // SmartMeDeviceConfigurationPostJSON - Sets the configuration of a smart-me device. The device needs to be online.
-func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostJSON(ctx context.Context, request operations.SmartMeDeviceConfigurationPostJSONRequest) (*operations.SmartMeDeviceConfigurationPostJSONResponse, error) {
+func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostJSON(ctx context.Context, request shared.SmartMeDeviceConfigurationContainer) (*operations.SmartMeDeviceConfigurationPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SmartMeDeviceConfiguration"
 
@@ -189,7 +189,7 @@ func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostJSON(ctx cont
 }
 
 // SmartMeDeviceConfigurationPostRaw - Sets the configuration of a smart-me device. The device needs to be online.
-func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostRaw(ctx context.Context, request operations.SmartMeDeviceConfigurationPostRawRequest) (*operations.SmartMeDeviceConfigurationPostRawResponse, error) {
+func (s *smartMeDeviceConfiguration) SmartMeDeviceConfigurationPostRaw(ctx context.Context, request []byte) (*operations.SmartMeDeviceConfigurationPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SmartMeDeviceConfiguration"
 

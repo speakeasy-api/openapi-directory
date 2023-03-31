@@ -32,20 +32,20 @@ func newCollectionstatuses(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // ContentCollectionstatusesGet - Gets the status of a collection from your Merchant Center account.
-func (s *collectionstatuses) ContentCollectionstatusesGet(ctx context.Context, request operations.ContentCollectionstatusesGetRequest) (*operations.ContentCollectionstatusesGetResponse, error) {
+func (s *collectionstatuses) ContentCollectionstatusesGet(ctx context.Context, request operations.ContentCollectionstatusesGetRequest, security operations.ContentCollectionstatusesGetSecurity) (*operations.ContentCollectionstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses/{collectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses/{collectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *collectionstatuses) ContentCollectionstatusesGet(ctx context.Context, r
 }
 
 // ContentCollectionstatusesList - Lists the statuses of the collections in your Merchant Center account.
-func (s *collectionstatuses) ContentCollectionstatusesList(ctx context.Context, request operations.ContentCollectionstatusesListRequest) (*operations.ContentCollectionstatusesListResponse, error) {
+func (s *collectionstatuses) ContentCollectionstatusesList(ctx context.Context, request operations.ContentCollectionstatusesListRequest, security operations.ContentCollectionstatusesListSecurity) (*operations.ContentCollectionstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

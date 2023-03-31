@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVrfsUpdatePathParams struct {
+type IpamVrfsUpdateRequest struct {
+	WritableVRFInput shared.WritableVRFInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this VRF.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVrfsUpdateRequest struct {
-	PathParams IpamVrfsUpdatePathParams
-	Request    shared.WritableVRFInput `request:"mediaType=application/json"`
 }
 
 type IpamVrfsUpdateResponse struct {

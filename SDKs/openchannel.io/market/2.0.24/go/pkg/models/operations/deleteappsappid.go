@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteAppsAppIDPathParams struct {
+type DeleteAppsAppIDRequest struct {
 	// The id of the App to be removed
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type DeleteAppsAppIDQueryParams struct {
 	// The unique id of the developer that is removing this app
 	DeveloperID string `queryParam:"style=form,explode=true,name=developerId"`
-}
-
-type DeleteAppsAppIDRequest struct {
-	PathParams  DeleteAppsAppIDPathParams
-	QueryParams DeleteAppsAppIDQueryParams
 }
 
 type DeleteAppsAppIDResponse struct {

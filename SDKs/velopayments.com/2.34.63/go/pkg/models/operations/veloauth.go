@@ -8,17 +8,13 @@ import (
 )
 
 type VeloAuthSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type VeloAuthQueryParams struct {
-	// OAuth grant type. Should use 'client_credentials'
-	GrantType *string `queryParam:"style=form,explode=true,name=grant_type"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type VeloAuthRequest struct {
-	QueryParams VeloAuthQueryParams
-	Security    VeloAuthSecurity
+	// OAuth grant type. Should use 'client_credentials'
+	GrantType *string `queryParam:"style=form,explode=true,name=grant_type"`
 }
 
 type VeloAuthResponse struct {

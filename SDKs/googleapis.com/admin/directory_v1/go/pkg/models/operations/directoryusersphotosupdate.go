@@ -8,18 +8,14 @@ import (
 )
 
 type DirectoryUsersPhotosUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DirectoryUsersPhotosUpdatePathParams struct {
-	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryUsersPhotosUpdateQueryParams struct {
+type DirectoryUsersPhotosUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	UserPhoto   *shared.UserPhoto `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,13 +36,8 @@ type DirectoryUsersPhotosUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersPhotosUpdateRequest struct {
-	PathParams  DirectoryUsersPhotosUpdatePathParams
-	QueryParams DirectoryUsersPhotosUpdateQueryParams
-	Request     *shared.UserPhoto `request:"mediaType=application/json"`
-	Security    DirectoryUsersPhotosUpdateSecurity
+	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersPhotosUpdateResponse struct {

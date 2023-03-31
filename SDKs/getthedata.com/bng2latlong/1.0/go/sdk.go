@@ -104,7 +104,7 @@ func New(opts ...SDKOption) *SDK {
 // * error - an error message
 func (s *SDK) GetBng2latlongEastingNorthing(ctx context.Context, request operations.GetBng2latlongEastingNorthingRequest) (*operations.GetBng2latlongEastingNorthingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bng2latlong/{easting}/{northing}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bng2latlong/{easting}/{northing}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/mcw.edu/1.1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,11 +15,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.GetAffectedGenomicModelsUsingGetRequest(
-    path_params=operations.GetAffectedGenomicModelsUsingGetPathParams(
-        taxon_id="placeat",
-    ),
+
+
+req = operations.GETAffectedGenomicModelsUsingGETRequest(
+    taxon_id="corrupti",
 )
     
 res = s.agr.get_affected_genomic_models_using_get(req)
@@ -30,9 +29,10 @@ if res.body is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### AGR
+
+### agr
 
 * `get_affected_genomic_models_using_get` - Get affected genomic models (rat strains with gene alleles) submitted by RGD to AGR by taxonId
 * `get_alleles_for_taxon_using_get` - Get gene allele records submitted by RGD to AGR by taxonId
@@ -41,7 +41,7 @@ if res.body is not None:
 * `get_phenotypes_for_taxon_using_get` - Get phenotype annotations submitted by RGD to AGR by taxonId
 * `get_variants_for_taxon_using_get` - Get basic variant records submitted by RGD to AGR by taxonId
 
-### Annotation
+### annotation
 
 * `get_annotation_count_by_acc_id_and_object_type_using_get` - Returns annotation count for ontology accession ID and object type
 * `get_annotation_count_by_acc_id_and_species_using_get` - Returns annotation count for ontology accession ID and speicies
@@ -54,12 +54,12 @@ if res.body is not None:
 * `get_annots_by_refrerence_using_get` - Returns a list of annotations for a reference
 * `get_term_acc_ids_using_get` - Returns a list ontology term accession IDs annotated to an rgd object
 
-### Chromosome
+### chromosome
 
 * `get_chromosome_by_assembly_using_get` - Return a list of chromosomes
 * `get_chromosomes_by_assembly_using_get` - Return a list of chromosomes
 
-### Gene
+### gene
 
 * `get_all_annotated_genes_using_get` - Return a list of genes annotated to an ontology term
 * `get_annotated_genes_using_post` - Return a list of genes annotated to an ontology term
@@ -78,7 +78,7 @@ if res.body is not None:
 * `get_mapped_genes_by_position_using_get` - Return a list of genes position and map key
 * `get_orthologs_by_list_using_post` - Return a list of gene orthologs
 
-### Lookup
+### lookup
 
 * `get_ensembl_gene_mapping_using_get` - Translate an RGD ID to an Ensembl Gene  ID
 * `get_ensembl_gene_mapping_using_post` - Translate RGD IDs to Ensembl Gene IDs
@@ -105,45 +105,45 @@ if res.body is not None:
 * `get_uni_prot_mapping_using_get` - Translate an RGD ID to a UniProt ID
 * `get_uni_prot_mapping_using_post` - Translate RGD IDs to UniProt IDs
 
-### Map
+### map
 
 * `get_chromosome_by_assembly_using_get` - Return a list of chromosomes
 * `get_chromosomes_by_assembly_using_get` - Return a list of chromosomes
 * `get_maps_by_species_using_get` - Return a list of assemblies
 
-### Ontology
+### ontology
 
 * `get_ont_dags_using_get` - Returns child and parent terms for Accession ID
 * `get_term_using_get` - Returns term for Accession ID
 * `is_descendant_of_using_get` - Returns true or false for terms
 
-### Pathway
+### pathway
 
 * `get_pathways_with_diagrams_for_category_using_get` - Return a list of pathways based on category provided
 * `search_pathways_using_get` - Return a list of pathways based on search term
 
-### QTL
+### qtl
 
 * `get_mapped_qtl_by_position_using_get` - Returns a list QTL for given position and assembly map
 * `get_qtl_by_rgd_id_using_get` - Return a QTL for provided RGD ID
 * `get_qtl_list_by_position_using_get` - Returns a list QTL for given position and assembly map
 
-### Quantitative Phenotype
+### quantitative_phenotype
 
 * `get_chart_info_using_get` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla).  Reference RGD ID for a study works like a filter.
 * `get_chart_info_using_get_1` - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla)
 
-### Rat Strain
+### rat_strain
 
 * `get_all_strains_using_get` - Return all active strains in RGD
 * `get_strain_by_rgd_id_using_get` - Return a strain by RGD ID
 * `get_strains_by_position_using_get` - Return all active strains by position
 
-### SSLP
+### sslp
 
 * `get_mapped_sslp_by_position_using_get` - Returns a list SSLP for given position and assembly map
 
-### Statistics
+### statistics
 
 * `get_active_object_count_using_get` - Count of active objects by type, for specified species and date
 * `get_active_object_diff_using_get` - Count difference of active objects, by type, for specified species and date range
@@ -171,11 +171,21 @@ if res.body is not None:
 * `get_xdbs_count_using_get` - Count of external database ids, for specied species and date
 * `get_xdbs_diff_using_get` - Count difference of external database ids, for specified species and date range
 
-### enrichment-web-service
+### enrichment_web_service
 
 * `get_enrichment_data_using_post` - Return a list of genes annotated to the term.Genes are rgdids separated by comma.Species type is an integer value.term is the ontology
 * `get_enrichment_data_using_post_1` - Return a chart of ontology terms annotated to the genes.Genes are rgdids separated by comma.Species type is an integer value.Aspect is the Ontology group
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

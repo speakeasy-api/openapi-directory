@@ -35,14 +35,14 @@ func newSubContractor(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete the specified sub contractor
 func (s *subContractor) DeleteSubContractor(ctx context.Context, request operations.DeleteSubContractorRequest) (*operations.DeleteSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *subContractor) DeleteSubContractor(ctx context.Context, request operati
 // Deletes the specified sub contractor revision for the matching revision date
 func (s *subContractor) DeleteSubContractorRevision(ctx context.Context, request operations.DeleteSubContractorRevisionRequest) (*operations.DeleteSubContractorRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *subContractor) DeleteSubContractorRevision(ctx context.Context, request
 // Deletes the specified sub contractor revision for the matching revision number
 func (s *subContractor) DeleteSubContractorRevisionByNumber(ctx context.Context, request operations.DeleteSubContractorRevisionByNumberRequest) (*operations.DeleteSubContractorRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *subContractor) DeleteSubContractorRevisionByNumber(ctx context.Context,
 // Returns the sub contractor's state at the specified effective date.
 func (s *subContractor) GetSubContractorByEffectiveDate(ctx context.Context, request operations.GetSubContractorByEffectiveDateRequest) (*operations.GetSubContractorByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -260,14 +260,14 @@ func (s *subContractor) GetSubContractorByEffectiveDate(ctx context.Context, req
 // Gets the specified sub contractor from employer.
 func (s *subContractor) GetSubContractorFromEmployer(ctx context.Context, request operations.GetSubContractorFromEmployerRequest) (*operations.GetSubContractorFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -323,14 +323,14 @@ func (s *subContractor) GetSubContractorFromEmployer(ctx context.Context, reques
 // Get the sub contractor revision matching the specified revision number
 func (s *subContractor) GetSubContractorRevisionByNumber(ctx context.Context, request operations.GetSubContractorRevisionByNumberRequest) (*operations.GetSubContractorRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -386,14 +386,14 @@ func (s *subContractor) GetSubContractorRevisionByNumber(ctx context.Context, re
 // Gets links to all the sub contractor revisions
 func (s *subContractor) GetSubContractorRevisions(ctx context.Context, request operations.GetSubContractorRevisionsRequest) (*operations.GetSubContractorRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -449,14 +449,14 @@ func (s *subContractor) GetSubContractorRevisions(ctx context.Context, request o
 // Get links to all sub contractors for the employer on specified effective date.
 func (s *subContractor) GetSubContractorsByEffectiveDate(ctx context.Context, request operations.GetSubContractorsByEffectiveDateRequest) (*operations.GetSubContractorsByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -512,14 +512,14 @@ func (s *subContractor) GetSubContractorsByEffectiveDate(ctx context.Context, re
 // Get links to all sub contractors for the specified employer.
 func (s *subContractor) GetSubContractorsFromEmployer(ctx context.Context, request operations.GetSubContractorsFromEmployerRequest) (*operations.GetSubContractorsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,9 +575,9 @@ func (s *subContractor) GetSubContractorsFromEmployer(ctx context.Context, reque
 // Patches the specified sub contractor with the supplied values
 func (s *subContractor) PatchSubContractor(ctx context.Context, request operations.PatchSubContractorRequest) (*operations.PatchSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubContractor", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -592,7 +592,7 @@ func (s *subContractor) PatchSubContractor(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -648,9 +648,9 @@ func (s *subContractor) PatchSubContractor(ctx context.Context, request operatio
 // Create a new sub contractor object
 func (s *subContractor) PostSubContractorIntoEmployer(ctx context.Context, request operations.PostSubContractorIntoEmployerRequest) (*operations.PostSubContractorIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubContractor", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -665,7 +665,7 @@ func (s *subContractor) PostSubContractorIntoEmployer(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -721,9 +721,9 @@ func (s *subContractor) PostSubContractorIntoEmployer(ctx context.Context, reque
 // Updates the existing specified sub contractor object
 func (s *subContractor) PutSubContractorIntoEmployer(ctx context.Context, request operations.PutSubContractorIntoEmployerRequest) (*operations.PutSubContractorIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubContractor", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -738,7 +738,7 @@ func (s *subContractor) PutSubContractorIntoEmployer(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

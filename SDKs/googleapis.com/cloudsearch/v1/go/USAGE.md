@@ -14,46 +14,37 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest{
-        Security: operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity{
-            Option1: &operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            DebugOptionsEnableDebugging: false,
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.Principal{
-            GroupResourceName: "suscipit",
+        DollarXgafv: "2",
+        Principal: &shared.Principal{
+            GroupResourceName: "provident",
             GsuitePrincipal: &shared.GSuitePrincipal{
                 GsuiteDomain: false,
-                GsuiteGroupEmail: "iure",
-                GsuiteUserEmail: "magnam",
+                GsuiteGroupEmail: "distinctio",
+                GsuiteUserEmail: "quibusdam",
             },
-            UserResourceName: "debitis",
+            UserResourceName: "unde",
         },
+        AccessToken: "nulla",
+        Alt: "media",
+        Callback: "illum",
+        DebugOptionsEnableDebugging: false,
+        Fields: "vel",
+        Key: "error",
+        Name: "deserunt",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Debug.CloudsearchDebugDatasourcesItemsCheckAccess(ctx, req)
+    res, err := s.Debug.CloudsearchDebugDatasourcesItemsCheckAccess(ctx, req, operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity{
+        Option1: &operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

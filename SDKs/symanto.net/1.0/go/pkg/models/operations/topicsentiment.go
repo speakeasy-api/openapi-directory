@@ -39,14 +39,10 @@ func (e *TopicSentimentDomainEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TopicSentimentQueryParams struct {
+type TopicSentimentRequest struct {
+	RequestBody []shared.Post `request:"mediaType=application/json"`
 	// Provide analysis domain for better extraction (optional)
 	Domain *TopicSentimentDomainEnum `queryParam:"style=form,explode=true,name=domain"`
-}
-
-type TopicSentimentRequest struct {
-	QueryParams TopicSentimentQueryParams
-	Request     []shared.Post `request:"mediaType=application/json"`
 }
 
 type TopicSentimentResponse struct {

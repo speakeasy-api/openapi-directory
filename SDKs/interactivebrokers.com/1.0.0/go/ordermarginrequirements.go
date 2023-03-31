@@ -35,9 +35,9 @@ func newOrderMarginRequirements(defaultClient, securityClient HTTPClient, server
 // To specify the contract, you provide a value for the ContractId field, OR Ticker/ListingExchange/InstrumentType=STK for stocks OR Ticker/Currency/InstrumentType=CASH for FX.
 func (s *orderMarginRequirements) PostAccountsAccountOrderImpact(ctx context.Context, request operations.PostAccountsAccountOrderImpactRequest) (*operations.PostAccountsAccountOrderImpactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/order_impact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/order_impact", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

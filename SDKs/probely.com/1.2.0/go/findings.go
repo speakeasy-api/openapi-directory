@@ -42,14 +42,14 @@ func newFindings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetTargetsTargetIDFindings - List target findings
 func (s *findings) GetTargetsTargetIDFindings(ctx context.Context, request operations.GetTargetsTargetIDFindingsRequest) (*operations.GetTargetsTargetIDFindingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -110,14 +110,14 @@ func (s *findings) GetTargetsTargetIDFindings(ctx context.Context, request opera
 // GetTargetsTargetIDFindingsReport - Retrieve finding report PDF format
 func (s *findings) GetTargetsTargetIDFindingsReport(ctx context.Context, request operations.GetTargetsTargetIDFindingsReportRequest) (*operations.GetTargetsTargetIDFindingsReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/report/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/report/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -188,7 +188,7 @@ func (s *findings) GetTargetsTargetIDFindingsReport(ctx context.Context, request
 // GetTargetsTargetIDFindingsID - Retrieve finding
 func (s *findings) GetTargetsTargetIDFindingsID(ctx context.Context, request operations.GetTargetsTargetIDFindingsIDRequest) (*operations.GetTargetsTargetIDFindingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,7 +253,7 @@ func (s *findings) GetTargetsTargetIDFindingsID(ctx context.Context, request ope
 // Finding activity log.
 func (s *findings) GetTargetsTargetIDFindingsIDLog(ctx context.Context, request operations.GetTargetsTargetIDFindingsIDLogRequest) (*operations.GetTargetsTargetIDFindingsIDLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/log/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/log/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -317,9 +317,9 @@ func (s *findings) GetTargetsTargetIDFindingsIDLog(ctx context.Context, request 
 // PatchTargetsTargetIDFindingsBulkUpdate - Bulk update findings
 func (s *findings) PatchTargetsTargetIDFindingsBulkUpdate(ctx context.Context, request operations.PatchTargetsTargetIDFindingsBulkUpdateRequest) (*operations.PatchTargetsTargetIDFindingsBulkUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/update/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/update/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingBulkUpdateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -392,9 +392,9 @@ func (s *findings) PatchTargetsTargetIDFindingsBulkUpdate(ctx context.Context, r
 // PatchTargetsTargetIDFindingsID - Partial update finding
 func (s *findings) PatchTargetsTargetIDFindingsID(ctx context.Context, request operations.PatchTargetsTargetIDFindingsIDRequest) (*operations.PatchTargetsTargetIDFindingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingUpdateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -486,9 +486,9 @@ func (s *findings) PatchTargetsTargetIDFindingsID(ctx context.Context, request o
 // PostTargetsTargetIDFindingsBulkReport - Finding report
 func (s *findings) PostTargetsTargetIDFindingsBulkReport(ctx context.Context, request operations.PostTargetsTargetIDFindingsBulkReportRequest) (*operations.PostTargetsTargetIDFindingsBulkReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/report/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/report/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingBulkIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -561,9 +561,9 @@ func (s *findings) PostTargetsTargetIDFindingsBulkReport(ctx context.Context, re
 // PostTargetsTargetIDFindingsBulkRetest - Bulk retest findings
 func (s *findings) PostTargetsTargetIDFindingsBulkRetest(ctx context.Context, request operations.PostTargetsTargetIDFindingsBulkRetestRequest) (*operations.PostTargetsTargetIDFindingsBulkRetestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/retest/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/bulk/retest/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingBulkRetest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -636,7 +636,7 @@ func (s *findings) PostTargetsTargetIDFindingsBulkRetest(ctx context.Context, re
 // PostTargetsTargetIDFindingsIDRetest - Retest finding
 func (s *findings) PostTargetsTargetIDFindingsIDRetest(ctx context.Context, request operations.PostTargetsTargetIDFindingsIDRetestRequest) (*operations.PostTargetsTargetIDFindingsIDRetestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/retest/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/retest/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -710,9 +710,9 @@ func (s *findings) PostTargetsTargetIDFindingsIDRetest(ctx context.Context, requ
 // PutTargetsTargetIDFindingsID - Update finding
 func (s *findings) PutTargetsTargetIDFindingsID(ctx context.Context, request operations.PutTargetsTargetIDFindingsIDRequest) (*operations.PutTargetsTargetIDFindingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingUpdateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

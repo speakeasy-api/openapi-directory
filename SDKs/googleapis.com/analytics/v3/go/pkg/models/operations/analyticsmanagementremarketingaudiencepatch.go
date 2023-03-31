@@ -8,20 +8,14 @@ import (
 )
 
 type AnalyticsManagementRemarketingAudiencePatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementRemarketingAudiencePatchPathParams struct {
+type AnalyticsManagementRemarketingAudiencePatchRequest struct {
+	RemarketingAudienceInput *shared.RemarketingAudienceInput `request:"mediaType=application/json"`
 	// The account ID of the remarketing audience to update.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The ID of the remarketing audience to update.
-	RemarketingAudienceID string `pathParam:"style=simple,explode=false,name=remarketingAudienceId"`
-	// The web property ID of the remarketing audience to update.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementRemarketingAudiencePatchQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,15 +28,12 @@ type AnalyticsManagementRemarketingAudiencePatchQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the remarketing audience to update.
+	RemarketingAudienceID string `pathParam:"style=simple,explode=false,name=remarketingAudienceId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementRemarketingAudiencePatchRequest struct {
-	PathParams  AnalyticsManagementRemarketingAudiencePatchPathParams
-	QueryParams AnalyticsManagementRemarketingAudiencePatchQueryParams
-	Request     *shared.RemarketingAudienceInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementRemarketingAudiencePatchSecurity
+	// The web property ID of the remarketing audience to update.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementRemarketingAudiencePatchResponse struct {

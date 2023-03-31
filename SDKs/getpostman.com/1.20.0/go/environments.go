@@ -128,7 +128,7 @@ func (s *environments) AllEnvironments(ctx context.Context) (*operations.AllEnvi
 // You can also specify the context of a workspace to create an environment in directly by passing the `workspace` as a query param.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-func (s *environments) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequest) (*operations.CreateEnvironmentResponse, error) {
+func (s *environments) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequestBody) (*operations.CreateEnvironmentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/environments"
 
@@ -194,7 +194,7 @@ func (s *environments) CreateEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) DeleteEnvironment(ctx context.Context, request operations.DeleteEnvironmentRequest) (*operations.DeleteEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *environments) DeleteEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) SingleEnvironment(ctx context.Context, request operations.SingleEnvironmentRequest) (*operations.SingleEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,9 +355,9 @@ func (s *environments) SingleEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) UpdateEnvironment(ctx context.Context, request operations.UpdateEnvironmentRequest) (*operations.UpdateEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

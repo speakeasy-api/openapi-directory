@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollectionArticlesPathParams struct {
+type CollectionArticlesRequest struct {
 	// Collection Unique identifier
 	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionArticlesQueryParams struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
@@ -21,11 +18,6 @@ type CollectionArticlesQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type CollectionArticlesRequest struct {
-	PathParams  CollectionArticlesPathParams
-	QueryParams CollectionArticlesQueryParams
 }
 
 type CollectionArticlesResponse struct {

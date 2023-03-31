@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetProtocolsPathParams struct {
+type SetProtocolsRequest struct {
+	// Created agent object
+	RequestBody []string `request:"mediaType=application/json"`
 	// Agent to return the protocols arrary
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type SetProtocolsRequest struct {
-	PathParams SetProtocolsPathParams
-	// Created agent object
-	Request []string `request:"mediaType=application/json"`
 }
 
 type SetProtocolsResponse struct {

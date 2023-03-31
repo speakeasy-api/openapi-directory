@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostFlyMmeRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PostFlyMmeResponse struct {
 	ContentType string
 	StatusCode  int

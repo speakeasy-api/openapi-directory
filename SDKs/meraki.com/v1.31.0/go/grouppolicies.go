@@ -34,9 +34,9 @@ func newGroupPolicies(defaultClient, securityClient HTTPClient, serverURL, langu
 // Create a group policy
 func (s *groupPolicies) CreateNetworkGroupPolicy(ctx context.Context, request operations.CreateNetworkGroupPolicyRequest) (*operations.CreateNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *groupPolicies) CreateNetworkGroupPolicy(ctx context.Context, request op
 // Delete a group policy
 func (s *groupPolicies) DeleteNetworkGroupPolicy(ctx context.Context, request operations.DeleteNetworkGroupPolicyRequest) (*operations.DeleteNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *groupPolicies) DeleteNetworkGroupPolicy(ctx context.Context, request op
 // List the group policies in a network
 func (s *groupPolicies) GetNetworkGroupPolicies(ctx context.Context, request operations.GetNetworkGroupPoliciesRequest) (*operations.GetNetworkGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *groupPolicies) GetNetworkGroupPolicies(ctx context.Context, request ope
 // Display a group policy
 func (s *groupPolicies) GetNetworkGroupPolicy(ctx context.Context, request operations.GetNetworkGroupPolicyRequest) (*operations.GetNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *groupPolicies) GetNetworkGroupPolicy(ctx context.Context, request opera
 // Update a group policy
 func (s *groupPolicies) UpdateNetworkGroupPolicy(ctx context.Context, request operations.UpdateNetworkGroupPolicyRequest) (*operations.UpdateNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

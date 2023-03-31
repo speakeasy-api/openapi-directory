@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminUpdateUsernameForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminUpdateUsernameForUserRequestBody struct {
 	// The user's new username.
 	Login string `json:"login"`
 }
 
 type EnterpriseAdminUpdateUsernameForUserRequest struct {
-	PathParams EnterpriseAdminUpdateUsernameForUserPathParams
-	Request    EnterpriseAdminUpdateUsernameForUserRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminUpdateUsernameForUserRequestBody `request:"mediaType=application/json"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // EnterpriseAdminUpdateUsernameForUser202ApplicationJSON - Response

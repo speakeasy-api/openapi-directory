@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetResourcesMediaIDThumbnailJpgPathParams struct {
+type GetResourcesMediaIDThumbnailJpgRequest struct {
 	// The id of the media to get a thumbnail for.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDThumbnailJpgRequest struct {
-	PathParams GetResourcesMediaIDThumbnailJpgPathParams
 }
 
 type GetResourcesMediaIDThumbnailJpgResponse struct {

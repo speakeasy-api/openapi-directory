@@ -2,15 +2,7 @@
 
 package shared
 
-type SchemeBearer struct {
-	Authorization string `security:"name=Authorization"`
-}
-
-type SchemeCookie struct {
-	APIKey string `security:"name=mercureAuthorization"`
-}
-
 type Security struct {
-	Bearer *SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-	Cookie *SchemeCookie `security:"scheme,type=apiKey,subtype=cookie"`
+	Bearer *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+	Cookie *string `security:"scheme,type=apiKey,subtype=cookie,name=mercureAuthorization"`
 }

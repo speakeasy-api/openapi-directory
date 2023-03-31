@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationAdminPathParams struct {
-	AdminID        string `pathParam:"style=simple,explode=false,name=adminId"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationAdminRequestBodyNetworks struct {
 	// The privilege of the dashboard administrator on the network
 	Access string `json:"access"`
@@ -69,8 +64,9 @@ type UpdateOrganizationAdminRequestBody struct {
 }
 
 type UpdateOrganizationAdminRequest struct {
-	PathParams UpdateOrganizationAdminPathParams
-	Request    *UpdateOrganizationAdminRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationAdminRequestBody `request:"mediaType=application/json"`
+	AdminID        string                              `pathParam:"style=simple,explode=false,name=adminId"`
+	OrganizationID string                              `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationAdminResponse struct {

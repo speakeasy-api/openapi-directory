@@ -8,21 +8,16 @@ import (
 )
 
 type ArticleVersionUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ArticleVersionUpdatePathParams struct {
+type ArticleVersionUpdateRequest struct {
+	// Article description
+	ArticleUpdate shared.ArticleUpdate `request:"mediaType=application/json"`
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Article version identifier
 	VersionID int64 `pathParam:"style=simple,explode=false,name=version_id"`
-}
-
-type ArticleVersionUpdateRequest struct {
-	PathParams ArticleVersionUpdatePathParams
-	// Article description
-	Request  shared.ArticleUpdate `request:"mediaType=application/json"`
-	Security ArticleVersionUpdateSecurity
 }
 
 type ArticleVersionUpdateResponse struct {

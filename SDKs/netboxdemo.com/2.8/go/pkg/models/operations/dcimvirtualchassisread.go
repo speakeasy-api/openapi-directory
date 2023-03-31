@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimVirtualChassisReadPathParams struct {
+type DcimVirtualChassisReadRequest struct {
 	// A unique integer value identifying this virtual chassis.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimVirtualChassisReadRequest struct {
-	PathParams DcimVirtualChassisReadPathParams
 }
 
 type DcimVirtualChassisReadResponse struct {

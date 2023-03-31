@@ -32,11 +32,11 @@ func newTabledata(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // BigqueryTabledataInsertAll - Streams data into BigQuery one record at a time without needing to run a load job. Requires the WRITER dataset role.
-func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request operations.BigqueryTabledataInsertAllRequest) (*operations.BigqueryTabledataInsertAllResponse, error) {
+func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request operations.BigqueryTabledataInsertAllRequest, security operations.BigqueryTabledataInsertAllSecurity) (*operations.BigqueryTabledataInsertAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TableDataInsertAllRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request oper
 }
 
 // BigqueryTabledataList - Retrieves table data from a specified set of rows. Requires the READER dataset role.
-func (s *tabledata) BigqueryTabledataList(ctx context.Context, request operations.BigqueryTabledataListRequest) (*operations.BigqueryTabledataListResponse, error) {
+func (s *tabledata) BigqueryTabledataList(ctx context.Context, request operations.BigqueryTabledataListRequest, security operations.BigqueryTabledataListSecurity) (*operations.BigqueryTabledataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

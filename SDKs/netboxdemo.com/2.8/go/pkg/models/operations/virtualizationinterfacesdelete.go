@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type VirtualizationInterfacesDeletePathParams struct {
+type VirtualizationInterfacesDeleteRequest struct {
 	// A unique integer value identifying this interface.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationInterfacesDeleteRequest struct {
-	PathParams VirtualizationInterfacesDeletePathParams
 }
 
 type VirtualizationInterfacesDeleteResponse struct {

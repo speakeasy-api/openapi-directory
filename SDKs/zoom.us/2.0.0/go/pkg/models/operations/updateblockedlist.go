@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateBlockedListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateBlockedListPathParams struct {
-	// Unique Identifier of the blocked list.
-	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateBlockedListApplicationJSONBlockTypeEnum - State whether you want the block type to be inbound or outbound.<br>
@@ -116,9 +110,9 @@ type UpdateBlockedListApplicationJSON struct {
 }
 
 type UpdateBlockedListRequest struct {
-	PathParams UpdateBlockedListPathParams
-	Request    *UpdateBlockedListApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateBlockedListSecurity
+	RequestBody *UpdateBlockedListApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the blocked list.
+	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
 }
 
 type UpdateBlockedListResponse struct {

@@ -14,80 +14,68 @@ func main() {
     s := sdk.New()
 
     req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ScanConfig{
+        DollarXgafv: "2",
+        ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "suscipit",
-                    Password: "iure",
-                    Username: "Eli96",
+                    LoginURL: "provident",
+                    Password: "distinctio",
+                    Username: "Rosalinda_Mitchell84",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "tempora",
-                    Username: "Geraldine_Kreiger52",
+                    Password: "vel",
+                    Username: "Linda.Oberbrunner",
                 },
             },
             BlacklistPatterns: []string{
-                "excepturi",
-                "nisi",
+                "debitis",
+                "ipsa",
             },
-            DisplayName: "recusandae",
+            DisplayName: "delectus",
             LatestRun: &shared.ScanRun{
-                EndTime: "temporibus",
-                ExecutionState: "EXECUTION_STATE_UNSPECIFIED",
+                EndTime: "tempora",
+                ExecutionState: "QUEUED",
                 HasVulnerabilities: false,
-                Name: "quis",
-                ProgressPercent: 87129,
-                ResultState: "ERROR",
-                StartTime: "perferendis",
-                UrlsCrawledCount: "ipsam",
-                UrlsTestedCount: "repellendus",
+                Name: "molestiae",
+                ProgressPercent: 791725,
+                ResultState: "KILLED",
+                StartTime: "voluptatum",
+                UrlsCrawledCount: "iusto",
+                UrlsTestedCount: "excepturi",
             },
-            MaxQPS: 957156,
-            Name: "quo",
+            MaxQPS: 392785,
+            Name: "recusandae",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 140350,
-                ScheduleTime: "at",
+                IntervalDurationDays: 836079,
+                ScheduleTime: "ab",
             },
             StartingUrls: []string{
-                "maiores",
-                "molestiae",
-                "quod",
-                "quod",
+                "veritatis",
+                "deserunt",
             },
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
-                "COMPUTE",
-                "CLOUD_RUN",
+                "APP_ENGINE",
             },
-            UserAgent: "CHROME_ANDROID",
+            UserAgent: "SAFARI_IPHONE",
         },
+        AccessToken: "sapiente",
+        Alt: "proto",
+        Callback: "odit",
+        Fields: "at",
+        Key: "at",
+        OauthToken: "maiores",
+        Parent: "molestiae",
+        PrettyPrint: false,
+        QuotaUser: "quod",
+        UploadType: "quod",
+        UploadProtocol: "esse",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req)
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

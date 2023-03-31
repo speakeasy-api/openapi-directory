@@ -8,18 +8,18 @@ import (
 )
 
 type ClassroomUserProfilesGuardiansListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomUserProfilesGuardiansListSecurity struct {
@@ -28,12 +28,7 @@ type ClassroomUserProfilesGuardiansListSecurity struct {
 	Option3 *ClassroomUserProfilesGuardiansListSecurityOption3 `security:"option"`
 }
 
-type ClassroomUserProfilesGuardiansListPathParams struct {
-	// Filter results by the student who the guardian is linked to. The identifier can be one of the following: * the numeric identifier for the user * the email address of the user * the string literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating that results should be returned for all students that the requesting user has access to view.
-	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
-}
-
-type ClassroomUserProfilesGuardiansListQueryParams struct {
+type ClassroomUserProfilesGuardiansListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,16 +53,12 @@ type ClassroomUserProfilesGuardiansListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Filter results by the student who the guardian is linked to. The identifier can be one of the following: * the numeric identifier for the user * the email address of the user * the string literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating that results should be returned for all students that the requesting user has access to view.
+	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomUserProfilesGuardiansListRequest struct {
-	PathParams  ClassroomUserProfilesGuardiansListPathParams
-	QueryParams ClassroomUserProfilesGuardiansListQueryParams
-	Security    ClassroomUserProfilesGuardiansListSecurity
 }
 
 type ClassroomUserProfilesGuardiansListResponse struct {

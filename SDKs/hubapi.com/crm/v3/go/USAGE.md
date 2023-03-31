@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest{
-        Security: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity{
-            DeveloperHapikey: shared.SchemeDeveloperHapikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams{
-            AppID: 548814,
-            CardID: "provident",
-        },
+        AppID: 548814,
+        CardID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Cards.DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx, req)
+    res, err := s.Cards.DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx, req, operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity{
+        DeveloperHapikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

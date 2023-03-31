@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesSourcesIDSyndicateFormatPathParams struct {
+type GetResourcesSourcesIDSyndicateFormatRequest struct {
+	// Method used to render an html request. Accepts one: [mv, list, feed]
+	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// The id of the record to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesSourcesIDSyndicateFormatQueryParams struct {
-	// Method used to render an html request. Accepts one: [mv, list, feed]
-	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
-}
-
-type GetResourcesSourcesIDSyndicateFormatRequest struct {
-	PathParams  GetResourcesSourcesIDSyndicateFormatPathParams
-	QueryParams GetResourcesSourcesIDSyndicateFormatQueryParams
 }
 
 type GetResourcesSourcesIDSyndicateFormatResponse struct {

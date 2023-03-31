@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetPagesHealthCheckPathParams struct {
+type ReposGetPagesHealthCheckRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetPagesHealthCheckRequest struct {
-	PathParams ReposGetPagesHealthCheckPathParams
 }
 
 type ReposGetPagesHealthCheckResponse struct {

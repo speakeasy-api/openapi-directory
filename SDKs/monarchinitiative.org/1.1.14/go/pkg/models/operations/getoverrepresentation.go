@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetOverRepresentationQueryParams struct {
+type GetOverRepresentationRequest struct {
 	// Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
 	Background []string `queryParam:"style=form,explode=true,name=background"`
 	// Exclude results with p-value greater than this
@@ -21,10 +21,6 @@ type GetOverRepresentationQueryParams struct {
 	SubjectCategory *string `queryParam:"style=form,explode=true,name=subject_category"`
 	// must be NCBITaxon CURIE. Example: NCBITaxon:9606
 	Taxon *string `queryParam:"style=form,explode=true,name=taxon"`
-}
-
-type GetOverRepresentationRequest struct {
-	QueryParams GetOverRepresentationQueryParams
 }
 
 type GetOverRepresentationResponse struct {

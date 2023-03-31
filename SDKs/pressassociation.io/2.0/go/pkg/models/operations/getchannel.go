@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetChannelSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetChannelPathParams struct {
-	// The identifier for the selected channel.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-}
-
-type GetChannelQueryParams struct {
-	// Flag to display Legacy and Provider Ids.
-	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetChannelRequest struct {
-	PathParams  GetChannelPathParams
-	QueryParams GetChannelQueryParams
-	Security    GetChannelSecurity
+	// Flag to display Legacy and Provider Ids.
+	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	// The identifier for the selected channel.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 type GetChannelResponse struct {

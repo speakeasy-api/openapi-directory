@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type ChangeZoomRoomsAppVersionPathParams struct {
-	// Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices).
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-	// Unique Identifier of the Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
-}
-
 // ChangeZoomRoomsAppVersionApplicationJSONActionEnum - Specify one of the following values for this field:
 //
 // `upgrade`: Upgrade to the latest Zoom Rooms App Version.<br>
@@ -56,8 +49,11 @@ type ChangeZoomRoomsAppVersionApplicationJSON struct {
 }
 
 type ChangeZoomRoomsAppVersionRequest struct {
-	PathParams ChangeZoomRoomsAppVersionPathParams
-	Request    *ChangeZoomRoomsAppVersionApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *ChangeZoomRoomsAppVersionApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices).
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	// Unique Identifier of the Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 type ChangeZoomRoomsAppVersionResponse struct {

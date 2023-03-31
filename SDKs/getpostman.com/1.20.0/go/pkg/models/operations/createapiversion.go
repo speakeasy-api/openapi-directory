@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateAPIVersionPathParams struct {
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 type CreateAPIVersionRequestBodyVersionSourceRelations struct {
 	Documentation *bool `json:"documentation,omitempty"`
 	Mock          *bool `json:"mock,omitempty"`
@@ -32,8 +28,8 @@ type CreateAPIVersionRequestBody struct {
 }
 
 type CreateAPIVersionRequest struct {
-	PathParams CreateAPIVersionPathParams
-	Request    *CreateAPIVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateAPIVersionRequestBody `request:"mediaType=application/json"`
+	APIID       string                       `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type CreateAPIVersion200ApplicationJSONVersion struct {

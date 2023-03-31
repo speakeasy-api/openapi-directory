@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListChannelsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
-type ListChannelsQueryParams struct {
+type ListChannelsRequest struct {
 	// Flag to display Legacy and Provider Ids.
 	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
 	// Date of the Channel State to select, this will display channel names and attributes in the future or past.
@@ -26,11 +25,6 @@ type ListChannelsQueryParams struct {
 	ScheduleStart *string `queryParam:"style=form,explode=true,name=scheduleStart"`
 	// Schedule Updated Since
 	ScheduleUpdatedSince *string `queryParam:"style=form,explode=true,name=scheduleUpdatedSince"`
-}
-
-type ListChannelsRequest struct {
-	QueryParams ListChannelsQueryParams
-	Security    ListChannelsSecurity
 }
 
 type ListChannelsResponse struct {

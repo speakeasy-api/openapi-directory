@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentSessionsEntityTypesCreatePathParams struct {
-	// Required. The session to create a session entity type for. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateQueryParams struct {
+type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                   *shared.XgafvEnum                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowV2beta1SessionEntityType *shared.GoogleCloudDialogflowV2beta1SessionEntityType `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,6 +40,8 @@ type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateQueryParams struct
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The session to create a session entity type for. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentSessionsEntityTypesCreatePathParams
-	QueryParams DialogflowProjectsLocationsAgentSessionsEntityTypesCreateQueryParams
-	Request     *shared.GoogleCloudDialogflowV2beta1SessionEntityType `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurity
 }
 
 type DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse struct {

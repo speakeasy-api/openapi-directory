@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsQueryParams struct {
+type GetSetupV1LocationsRequest struct {
 	// Filter locations on deleted status
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// friendlyId of location
@@ -20,10 +20,6 @@ type GetSetupV1LocationsQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Find locations that offer this service
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
-}
-
-type GetSetupV1LocationsRequest struct {
-	QueryParams GetSetupV1LocationsQueryParams
 }
 
 type GetSetupV1LocationsResponse struct {

@@ -14,14 +14,8 @@ var UpdateIncomingPhoneNumberServerList = []string{
 }
 
 type UpdateIncomingPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateIncomingPhoneNumberPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resource to update.  For more information, see [Exchanging Numbers Between Subaccounts](https://www.twilio.com/docs/iam/api/subaccounts#exchanging-numbers).
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the IncomingPhoneNumber resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequestSmsFallbackMethodEnum - The HTTP method that we should use to call `sms_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.
@@ -252,10 +246,11 @@ type UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest struct {
 }
 
 type UpdateIncomingPhoneNumberRequest struct {
-	PathParams UpdateIncomingPhoneNumberPathParams
-	Request    *UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateIncomingPhoneNumberSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resource to update.  For more information, see [Exchanging Numbers Between Subaccounts](https://www.twilio.com/docs/iam/api/subaccounts#exchanging-numbers).
+	AccountSid  string                                                     `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the IncomingPhoneNumber resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateIncomingPhoneNumberResponse struct {

@@ -44,7 +44,6 @@ pkg/models/operations/updatedialingpermissionssettings.go
 pkg/models/operations/updateiprecord.go
 pkg/models/operations/updatesourceipmapping.go
 pkg/models/shared/voicev1byoctrunk.go
-pkg/models/shared/security.go
 pkg/models/shared/voicev1connectionpolicy.go
 pkg/models/shared/voicev1connectionpolicyconnectionpolicytarget.go
 pkg/models/shared/voicev1dialingpermissionsdialingpermissionscountrybulkupdate.go
@@ -55,3 +54,4 @@ pkg/models/shared/voicev1dialingpermissionsdialingpermissionssettings.go
 pkg/models/shared/voicev1dialingpermissionsdialingpermissionscountry.go
 pkg/models/shared/voicev1dialingpermissionsdialingpermissionscountrydialingpermissionshrsprefixes.go
 USAGE.md
+pkg/models/operations/options.go

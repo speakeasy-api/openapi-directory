@@ -36,7 +36,7 @@ func newInvoice(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List a specific invoice of project Level
 func (s *invoice) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest) (*operations.GetInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *invoice) GetInvoice(ctx context.Context, request operations.GetInvoiceR
 // List files of invoice Level
 func (s *invoice) GetInvoiceFiles(ctx context.Context, request operations.GetInvoiceFilesRequest) (*operations.GetInvoiceFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *invoice) GetInvoiceFiles(ctx context.Context, request operations.GetInv
 // List invoices by a specific order
 func (s *invoice) GetInvoices(ctx context.Context, request operations.GetInvoicesRequest) (*operations.GetInvoicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/orders/{order_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/orders/{order_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

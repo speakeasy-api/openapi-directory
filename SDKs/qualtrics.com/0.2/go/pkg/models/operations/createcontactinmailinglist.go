@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateContactInMailinglistPathParams struct {
+type CreateContactInMailinglistRequest struct {
+	// Contact data
+	CreateContactInMailingList shared.CreateContactInMailingList `request:"mediaType=application/json"`
 	// ID of the qualtrics directory to create the contact to
 	DirectoryID string `pathParam:"style=simple,explode=false,name=DirectoryId"`
 	// ID of the mailing list
 	MailingListID string `pathParam:"style=simple,explode=false,name=MailingListId"`
-}
-
-type CreateContactInMailinglistRequest struct {
-	PathParams CreateContactInMailinglistPathParams
-	// Contact data
-	Request shared.CreateContactInMailingList `request:"mediaType=application/json"`
 }
 
 type CreateContactInMailinglistResponse struct {

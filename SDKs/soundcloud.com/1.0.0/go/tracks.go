@@ -34,16 +34,16 @@ func newTracks(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // DeleteTracksTrackID - Deletes a track.
-func (s *tracks) DeleteTracksTrackID(ctx context.Context, request operations.DeleteTracksTrackIDRequest) (*operations.DeleteTracksTrackIDResponse, error) {
+func (s *tracks) DeleteTracksTrackID(ctx context.Context, request operations.DeleteTracksTrackIDRequest, security operations.DeleteTracksTrackIDSecurity) (*operations.DeleteTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,20 +79,20 @@ func (s *tracks) DeleteTracksTrackID(ctx context.Context, request operations.Del
 }
 
 // GetTracksTrackID - Returns a track.
-func (s *tracks) GetTracksTrackID(ctx context.Context, request operations.GetTracksTrackIDRequest) (*operations.GetTracksTrackIDResponse, error) {
+func (s *tracks) GetTracksTrackID(ctx context.Context, request operations.GetTracksTrackIDRequest, security operations.GetTracksTrackIDSecurity) (*operations.GetTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,20 +147,20 @@ func (s *tracks) GetTracksTrackID(ctx context.Context, request operations.GetTra
 }
 
 // GetTracksTrackIDComments - Returns the comments posted on the track(track_id).
-func (s *tracks) GetTracksTrackIDComments(ctx context.Context, request operations.GetTracksTrackIDCommentsRequest) (*operations.GetTracksTrackIDCommentsResponse, error) {
+func (s *tracks) GetTracksTrackIDComments(ctx context.Context, request operations.GetTracksTrackIDCommentsRequest, security operations.GetTracksTrackIDCommentsSecurity) (*operations.GetTracksTrackIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,20 +215,20 @@ func (s *tracks) GetTracksTrackIDComments(ctx context.Context, request operation
 }
 
 // GetTracksTrackIDFavoriters - Returns a list of users who have favorited or liked the track.
-func (s *tracks) GetTracksTrackIDFavoriters(ctx context.Context, request operations.GetTracksTrackIDFavoritersRequest) (*operations.GetTracksTrackIDFavoritersResponse, error) {
+func (s *tracks) GetTracksTrackIDFavoriters(ctx context.Context, request operations.GetTracksTrackIDFavoritersRequest, security operations.GetTracksTrackIDFavoritersSecurity) (*operations.GetTracksTrackIDFavoritersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/favoriters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/favoriters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -283,20 +283,20 @@ func (s *tracks) GetTracksTrackIDFavoriters(ctx context.Context, request operati
 }
 
 // GetTracksTrackIDRelated - Returns all related tracks of track on SoundCloud.
-func (s *tracks) GetTracksTrackIDRelated(ctx context.Context, request operations.GetTracksTrackIDRelatedRequest) (*operations.GetTracksTrackIDRelatedResponse, error) {
+func (s *tracks) GetTracksTrackIDRelated(ctx context.Context, request operations.GetTracksTrackIDRelatedRequest, security operations.GetTracksTrackIDRelatedSecurity) (*operations.GetTracksTrackIDRelatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/related", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/related", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,20 +351,20 @@ func (s *tracks) GetTracksTrackIDRelated(ctx context.Context, request operations
 }
 
 // GetTracksTrackIDReposters - Returns a collection of track's reposters.
-func (s *tracks) GetTracksTrackIDReposters(ctx context.Context, request operations.GetTracksTrackIDRepostersRequest) (*operations.GetTracksTrackIDRepostersResponse, error) {
+func (s *tracks) GetTracksTrackIDReposters(ctx context.Context, request operations.GetTracksTrackIDRepostersRequest, security operations.GetTracksTrackIDRepostersSecurity) (*operations.GetTracksTrackIDRepostersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/reposters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/reposters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -419,20 +419,20 @@ func (s *tracks) GetTracksTrackIDReposters(ctx context.Context, request operatio
 }
 
 // GetTracksTrackIDStreams - Returns a track's streamable URLs
-func (s *tracks) GetTracksTrackIDStreams(ctx context.Context, request operations.GetTracksTrackIDStreamsRequest) (*operations.GetTracksTrackIDStreamsResponse, error) {
+func (s *tracks) GetTracksTrackIDStreams(ctx context.Context, request operations.GetTracksTrackIDStreamsRequest, security operations.GetTracksTrackIDStreamsSecurity) (*operations.GetTracksTrackIDStreamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/streams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/streams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -487,7 +487,7 @@ func (s *tracks) GetTracksTrackIDStreams(ctx context.Context, request operations
 }
 
 // PostTracks - Uploads a new track.
-func (s *tracks) PostTracks(ctx context.Context, request operations.PostTracksRequest) (*operations.PostTracksResponse, error) {
+func (s *tracks) PostTracks(ctx context.Context, request shared.TrackDataRequest, security operations.PostTracksSecurity) (*operations.PostTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tracks"
 
@@ -503,7 +503,7 @@ func (s *tracks) PostTracks(ctx context.Context, request operations.PostTracksRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -550,11 +550,11 @@ func (s *tracks) PostTracks(ctx context.Context, request operations.PostTracksRe
 }
 
 // PostTracksTrackIDComments - Returns the newly created comment on success
-func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operations.PostTracksTrackIDCommentsRequest) (*operations.PostTracksTrackIDCommentsResponse, error) {
+func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operations.PostTracksTrackIDCommentsRequest, security operations.PostTracksTrackIDCommentsSecurity) (*operations.PostTracksTrackIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -569,7 +569,7 @@ func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -624,11 +624,11 @@ func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operatio
 }
 
 // PutTracksTrackIDJSON - Updates a track's information.
-func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.PutTracksTrackIDJSONRequest) (*operations.PutTracksTrackIDJSONResponse, error) {
+func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.PutTracksTrackIDJSONRequest, security operations.PutTracksTrackIDJSONSecurity) (*operations.PutTracksTrackIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TrackMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -640,7 +640,7 @@ func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.Pu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -687,11 +687,11 @@ func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.Pu
 }
 
 // PutTracksTrackIDMultipart - Updates a track's information.
-func (s *tracks) PutTracksTrackIDMultipart(ctx context.Context, request operations.PutTracksTrackIDMultipartRequest) (*operations.PutTracksTrackIDMultipartResponse, error) {
+func (s *tracks) PutTracksTrackIDMultipart(ctx context.Context, request operations.PutTracksTrackIDMultipartRequest, security operations.PutTracksTrackIDMultipartSecurity) (*operations.PutTracksTrackIDMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TrackDataRequest", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -703,7 +703,7 @@ func (s *tracks) PutTracksTrackIDMultipart(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

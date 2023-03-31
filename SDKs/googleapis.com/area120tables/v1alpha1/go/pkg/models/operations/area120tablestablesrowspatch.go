@@ -10,23 +10,23 @@ import (
 )
 
 type Area120tablesTablesRowsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsPatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsPatchSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsPatchSecurity struct {
@@ -34,11 +34,6 @@ type Area120tablesTablesRowsPatchSecurity struct {
 	Option2 *Area120tablesTablesRowsPatchSecurityOption2 `security:"option"`
 	Option3 *Area120tablesTablesRowsPatchSecurityOption3 `security:"option"`
 	Option4 *Area120tablesTablesRowsPatchSecurityOption4 `security:"option"`
-}
-
-type Area120tablesTablesRowsPatchPathParams struct {
-	// The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // Area120tablesTablesRowsPatchViewEnum - Optional. Column key to use for values in the row. Defaults to user entered name.
@@ -65,9 +60,10 @@ func (e *Area120tablesTablesRowsPatchViewEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type Area120tablesTablesRowsPatchQueryParams struct {
+type Area120tablesTablesRowsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Row         *shared.Row       `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -78,6 +74,8 @@ type Area120tablesTablesRowsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -92,13 +90,6 @@ type Area120tablesTablesRowsPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Column key to use for values in the row. Defaults to user entered name.
 	View *Area120tablesTablesRowsPatchViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type Area120tablesTablesRowsPatchRequest struct {
-	PathParams  Area120tablesTablesRowsPatchPathParams
-	QueryParams Area120tablesTablesRowsPatchQueryParams
-	Request     *shared.Row `request:"mediaType=application/json"`
-	Security    Area120tablesTablesRowsPatchSecurity
 }
 
 type Area120tablesTablesRowsPatchResponse struct {

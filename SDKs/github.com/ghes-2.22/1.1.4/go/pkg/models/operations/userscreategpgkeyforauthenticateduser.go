@@ -12,10 +12,6 @@ type UsersCreateGpgKeyForAuthenticatedUserRequestBody struct {
 	ArmoredPublicKey string `json:"armored_public_key"`
 }
 
-type UsersCreateGpgKeyForAuthenticatedUserRequest struct {
-	Request UsersCreateGpgKeyForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersCreateGpgKeyForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

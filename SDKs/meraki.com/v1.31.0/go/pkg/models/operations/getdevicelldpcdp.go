@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceLldpCdpPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceLldpCdpRequest struct {
-	PathParams GetDeviceLldpCdpPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceLldpCdpResponse struct {

@@ -8,26 +8,23 @@ import (
 )
 
 type DisplayvideoAdvertisersChannelsSitesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersChannelsSitesListPathParams struct {
-	// The ID of the advertiser that owns the parent channel.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the parent channel to which the requested sites belong.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-}
-
-type DisplayvideoAdvertisersChannelsSitesListQueryParams struct {
+type DisplayvideoAdvertisersChannelsSitesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the advertiser that owns the parent channel.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The ID of the parent channel to which the requested sites belong.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
@@ -52,12 +49,6 @@ type DisplayvideoAdvertisersChannelsSitesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersChannelsSitesListRequest struct {
-	PathParams  DisplayvideoAdvertisersChannelsSitesListPathParams
-	QueryParams DisplayvideoAdvertisersChannelsSitesListQueryParams
-	Security    DisplayvideoAdvertisersChannelsSitesListSecurity
 }
 
 type DisplayvideoAdvertisersChannelsSitesListResponse struct {

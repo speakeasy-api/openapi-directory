@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV2CddriveFilesFileIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2CddriveFilesFileIDPathParams struct {
-	// The ID of the file to access.
-	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2CddriveFilesFileIDRequest struct {
-	PathParams GetAPIV2CddriveFilesFileIDPathParams
-	Security   GetAPIV2CddriveFilesFileIDSecurity
+	// The ID of the file to access.
+	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
 }
 
 type GetAPIV2CddriveFilesFileIDResponse struct {

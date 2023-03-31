@@ -4,30 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PagespeedonlinePagespeedapiRunpagespeedRequest(
-    query_params=operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams(
-        alt="json",
-        fields="dicta",
-        filter_third_party_resources=True,
-        key="velit",
-        locale="et",
-        oauth_token="nemo",
-        pretty_print=False,
-        quota_user="ipsam",
-        rule=[
-            "ipsam",
-            "iure",
-            "tempora",
-        ],
-        screenshot=False,
-        snapshots=True,
-        strategy="desktop",
-        url="cum",
-        user_ip="quod",
-        utm_campaign="ullam",
-        utm_source="expedita",
-    ),
+    alt="json",
+    fields_="corrupti",
+    filter_third_party_resources=False,
+    key="provident",
+    locale="distinctio",
+    oauth_token="quibusdam",
+    pretty_print=False,
+    quota_user="unde",
+    rule=[
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+    ],
+    screenshot=False,
+    snapshots=False,
+    strategy="mobile",
+    url="suscipit",
+    user_ip="iure",
+    utm_campaign="magnam",
+    utm_source="debitis",
 )
     
 res = s.pagespeedapi.pagespeedonline_pagespeedapi_runpagespeed(req)

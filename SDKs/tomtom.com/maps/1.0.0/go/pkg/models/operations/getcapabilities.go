@@ -8,31 +8,6 @@ import (
 	"net/http"
 )
 
-// GetCapabilitiesVersionNumberEnum
-type GetCapabilitiesVersionNumberEnum string
-
-const (
-	GetCapabilitiesVersionNumberEnumOne GetCapabilitiesVersionNumberEnum = "1"
-)
-
-func (e *GetCapabilitiesVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "1":
-		*e = GetCapabilitiesVersionNumberEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetCapabilitiesVersionNumberEnum: %s", s)
-	}
-}
-
-type GetCapabilitiesPathParams struct {
-	VersionNumber GetCapabilitiesVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 // GetCapabilitiesRequestEnum
 type GetCapabilitiesRequestEnum string
 
@@ -96,16 +71,33 @@ func (e *GetCapabilitiesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCapabilitiesQueryParams struct {
-	Request GetCapabilitiesRequestEnum `queryParam:"style=form,explode=true,name=request"`
-	Service GetCapabilitiesServiceEnum `queryParam:"style=form,explode=true,name=service"`
-	// WMS service version
-	Version *GetCapabilitiesVersionEnum `queryParam:"style=form,explode=true,name=version"`
+// GetCapabilitiesVersionNumberEnum
+type GetCapabilitiesVersionNumberEnum string
+
+const (
+	GetCapabilitiesVersionNumberEnumOne GetCapabilitiesVersionNumberEnum = "1"
+)
+
+func (e *GetCapabilitiesVersionNumberEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		*e = GetCapabilitiesVersionNumberEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCapabilitiesVersionNumberEnum: %s", s)
+	}
 }
 
 type GetCapabilitiesRequest struct {
-	PathParams  GetCapabilitiesPathParams
-	QueryParams GetCapabilitiesQueryParams
+	Request GetCapabilitiesRequestEnum `queryParam:"style=form,explode=true,name=request"`
+	Service GetCapabilitiesServiceEnum `queryParam:"style=form,explode=true,name=service"`
+	// WMS service version
+	Version       *GetCapabilitiesVersionEnum      `queryParam:"style=form,explode=true,name=version"`
+	VersionNumber GetCapabilitiesVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetCapabilitiesResponse struct {

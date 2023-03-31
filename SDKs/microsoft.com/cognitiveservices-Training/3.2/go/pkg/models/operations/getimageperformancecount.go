@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagePerformanceCountPathParams struct {
+type GetImagePerformanceCountRequest struct {
 	// The iteration id. Defaults to workspace.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetImagePerformanceCountQueryParams struct {
 	// A list of tags ids to filter the images to count. Defaults to all tags when null.
 	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type GetImagePerformanceCountRequest struct {
-	PathParams  GetImagePerformanceCountPathParams
-	QueryParams GetImagePerformanceCountQueryParams
 }
 
 type GetImagePerformanceCountResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type VoidTransactionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type VoidTransactionPathParams struct {
-	LocationID    string `pathParam:"style=simple,explode=false,name=location_id"`
-	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VoidTransactionRequest struct {
-	PathParams VoidTransactionPathParams
-	Security   VoidTransactionSecurity
+	LocationID    string `pathParam:"style=simple,explode=false,name=location_id"`
+	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
 }
 
 type VoidTransactionResponse struct {

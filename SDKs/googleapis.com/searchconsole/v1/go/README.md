@@ -25,36 +25,31 @@ func main() {
     s := sdk.New()
 
     req := operations.WebmastersSearchanalyticsQueryRequest{
-        Security: operations.WebmastersSearchanalyticsQuerySecurity{
-            Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "corrupti",
-        },
-        QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.SearchAnalyticsQueryRequest{
+        DollarXgafv: "2",
+        SearchAnalyticsQueryRequest: &shared.SearchAnalyticsQueryRequest{
             AggregationType: "BY_PROPERTY",
-            DataState: "FINAL",
+            DataState: "ALL",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "SEARCH_APPEARANCE",
+                            Expression: "corrupti",
+                            Operator: "EXCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "error",
+                            Operator: "NOT_CONTAINS",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "PAGE",
+                            Expression: "iure",
+                            Operator: "NOT_EQUALS",
+                        },
+                    },
+                    GroupType: "AND",
+                },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
@@ -105,24 +100,64 @@ func main() {
                     },
                     GroupType: "AND",
                 },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "quod",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "totam",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "DEVICE",
+                            Expression: "dicta",
+                            Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "DEVICE",
+                            Expression: "occaecati",
+                            Operator: "EQUALS",
+                        },
+                    },
+                    GroupType: "AND",
+                },
             },
             Dimensions: []shared.SearchAnalyticsQueryRequestDimensionsEnum{
-                "PAGE",
+                "SEARCH_APPEARANCE",
                 "DEVICE",
-                "DEVICE",
-                "PAGE",
+                "COUNTRY",
             },
-            EndDate: "totam",
-            RowLimit: 780529,
-            SearchType: "DISCOVER",
-            StartDate: "dicta",
-            StartRow: 720633,
-            Type: "NEWS",
+            EndDate: "beatae",
+            RowLimit: 414662,
+            SearchType: "VIDEO",
+            StartDate: "modi",
+            StartRow: 186332,
+            Type: "DISCOVER",
         },
+        AccessToken: "cum",
+        Alt: "media",
+        Callback: "ipsum",
+        Fields: "excepturi",
+        Key: "aspernatur",
+        OauthToken: "perferendis",
+        PrettyPrint: false,
+        QuotaUser: "ad",
+        SiteURL: "natus",
+        UploadType: "sed",
+        UploadProtocol: "iste",
     }
 
     ctx := context.Background()
-    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req)
+    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req, operations.WebmastersSearchanalyticsQuerySecurity{
+        Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -135,7 +170,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Searchanalytics
@@ -165,4 +200,15 @@ func main() {
 * `SearchconsoleURLTestingToolsMobileFriendlyTestRun` - Runs Mobile-Friendly Test for a given URL.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

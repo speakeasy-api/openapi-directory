@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetDisruptionsByStopPathParams struct {
-	// Identifier of stop; values returned by Stops API - v3/stops
-	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
-}
-
 // DisruptionsGetDisruptionsByStopDisruptionStatusEnum - Filter by status of disruption
 type DisruptionsGetDisruptionsByStopDisruptionStatusEnum string
 
@@ -38,20 +33,17 @@ func (e *DisruptionsGetDisruptionsByStopDisruptionStatusEnum) UnmarshalJSON(data
 	}
 }
 
-type DisruptionsGetDisruptionsByStopQueryParams struct {
+type DisruptionsGetDisruptionsByStopRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by status of disruption
 	DisruptionStatus *DisruptionsGetDisruptionsByStopDisruptionStatusEnum `queryParam:"style=form,explode=true,name=disruption_status"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
+	// Identifier of stop; values returned by Stops API - v3/stops
+	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetDisruptionsByStopRequest struct {
-	PathParams  DisruptionsGetDisruptionsByStopPathParams
-	QueryParams DisruptionsGetDisruptionsByStopQueryParams
 }
 
 type DisruptionsGetDisruptionsByStopResponse struct {

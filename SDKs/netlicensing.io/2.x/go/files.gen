@@ -61,5 +61,4 @@ pkg/models/operations/updatetransaction.go
 pkg/models/operations/licensetypes.go
 pkg/models/operations/licensingmodels.go
 pkg/models/shared/netlicensing.go
-pkg/models/shared/security.go
 USAGE.md

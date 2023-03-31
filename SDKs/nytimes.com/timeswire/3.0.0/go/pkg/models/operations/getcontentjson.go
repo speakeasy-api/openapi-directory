@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentJSONQueryParams struct {
+type GetContentJSONRequest struct {
 	// The complete URL of a specific news item, URL-encoded or backslash-escaped
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetContentJSONRequest struct {
-	QueryParams GetContentJSONQueryParams
 }
 
 // GetContentJSON200ApplicationJSON - An array of Articles

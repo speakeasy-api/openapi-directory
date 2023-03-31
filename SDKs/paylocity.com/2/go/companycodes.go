@@ -33,16 +33,16 @@ func newCompanyCodes(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // GetAllCompanyCodesAndDescriptionsByResource - Get All Company Codes
 // Get All Company Codes for the selected company and resource
-func (s *companyCodes) GetAllCompanyCodesAndDescriptionsByResource(ctx context.Context, request operations.GetAllCompanyCodesAndDescriptionsByResourceRequest) (*operations.GetAllCompanyCodesAndDescriptionsByResourceResponse, error) {
+func (s *companyCodes) GetAllCompanyCodesAndDescriptionsByResource(ctx context.Context, request operations.GetAllCompanyCodesAndDescriptionsByResourceRequest, security operations.GetAllCompanyCodesAndDescriptionsByResourceSecurity) (*operations.GetAllCompanyCodesAndDescriptionsByResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/codes/{codeResource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/codes/{codeResource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

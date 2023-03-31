@@ -42,7 +42,7 @@ func (s *publishers) PublishersList(ctx context.Context, request operations.Publ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *publishers) PublishersList(ctx context.Context, request operations.Publ
 // PublishersRead - Get details of the publisher.
 func (s *publishers) PublishersRead(ctx context.Context, request operations.PublishersReadRequest) (*operations.PublishersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publishers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publishers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

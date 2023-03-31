@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETAllAnnotatedGenesUsingGETPathParams struct {
+type GETAllAnnotatedGenesUsingGETRequest struct {
 	// Accesstion ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
-}
-
-type GETAllAnnotatedGenesUsingGETRequest struct {
-	PathParams GETAllAnnotatedGenesUsingGETPathParams
 }
 
 type GETAllAnnotatedGenesUsingGETResponse struct {

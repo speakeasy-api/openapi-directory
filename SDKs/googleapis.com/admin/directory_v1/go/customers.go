@@ -32,11 +32,11 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AdminCustomersChromePrintServersBatchCreatePrintServers - Creates multiple print servers.
-func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest) (*operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest, security operations.AdminCustomersChromePrintServersBatchCreatePrintServersSecurity) (*operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePrintServersRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx 
 }
 
 // AdminCustomersChromePrintServersBatchDeletePrintServers - Deletes multiple print servers.
-func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest) (*operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest, security operations.AdminCustomersChromePrintServersBatchDeletePrintServersSecurity) (*operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePrintServersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx 
 }
 
 // AdminCustomersChromePrintServersCreate - Creates a print server.
-func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, request operations.AdminCustomersChromePrintServersCreateRequest) (*operations.AdminCustomersChromePrintServersCreateResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, request operations.AdminCustomersChromePrintServersCreateRequest, security operations.AdminCustomersChromePrintServersCreateSecurity) (*operations.AdminCustomersChromePrintServersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrintServerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, 
 }
 
 // AdminCustomersChromePrintServersDelete - Deletes a print server.
-func (s *customers) AdminCustomersChromePrintServersDelete(ctx context.Context, request operations.AdminCustomersChromePrintServersDeleteRequest) (*operations.AdminCustomersChromePrintServersDeleteResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersDelete(ctx context.Context, request operations.AdminCustomersChromePrintServersDeleteRequest, security operations.AdminCustomersChromePrintServersDeleteSecurity) (*operations.AdminCustomersChromePrintServersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *customers) AdminCustomersChromePrintServersDelete(ctx context.Context, 
 }
 
 // AdminCustomersChromePrintServersGet - Returns a print server's configuration.
-func (s *customers) AdminCustomersChromePrintServersGet(ctx context.Context, request operations.AdminCustomersChromePrintServersGetRequest) (*operations.AdminCustomersChromePrintServersGetResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersGet(ctx context.Context, request operations.AdminCustomersChromePrintServersGetRequest, security operations.AdminCustomersChromePrintServersGetSecurity) (*operations.AdminCustomersChromePrintServersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *customers) AdminCustomersChromePrintServersGet(ctx context.Context, req
 }
 
 // AdminCustomersChromePrintServersList - Lists print server configurations.
-func (s *customers) AdminCustomersChromePrintServersList(ctx context.Context, request operations.AdminCustomersChromePrintServersListRequest) (*operations.AdminCustomersChromePrintServersListResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersList(ctx context.Context, request operations.AdminCustomersChromePrintServersListRequest, security operations.AdminCustomersChromePrintServersListSecurity) (*operations.AdminCustomersChromePrintServersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *customers) AdminCustomersChromePrintServersList(ctx context.Context, re
 }
 
 // AdminCustomersChromePrintServersPatch - Updates a print server's configuration.
-func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, request operations.AdminCustomersChromePrintServersPatchRequest) (*operations.AdminCustomersChromePrintServersPatchResponse, error) {
+func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, request operations.AdminCustomersChromePrintServersPatchRequest, security operations.AdminCustomersChromePrintServersPatchSecurity) (*operations.AdminCustomersChromePrintServersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrintServerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, r
 }
 
 // AdminCustomersChromePrintersBatchCreatePrinters - Creates printers under given Organization Unit.
-func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchCreatePrintersRequest) (*operations.AdminCustomersChromePrintersBatchCreatePrintersResponse, error) {
+func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchCreatePrintersRequest, security operations.AdminCustomersChromePrintersBatchCreatePrintersSecurity) (*operations.AdminCustomersChromePrintersBatchCreatePrintersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePrintersRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.
 }
 
 // AdminCustomersChromePrintersBatchDeletePrinters - Deletes printers in batch.
-func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchDeletePrintersRequest) (*operations.AdminCustomersChromePrintersBatchDeletePrintersResponse, error) {
+func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchDeletePrintersRequest, security operations.AdminCustomersChromePrintersBatchDeletePrintersSecurity) (*operations.AdminCustomersChromePrintersBatchDeletePrintersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePrintersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,11 +506,11 @@ func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.
 }
 
 // AdminCustomersChromePrintersCreate - Creates a printer under given Organization Unit.
-func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, request operations.AdminCustomersChromePrintersCreateRequest) (*operations.AdminCustomersChromePrintersCreateResponse, error) {
+func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, request operations.AdminCustomersChromePrintersCreateRequest, security operations.AdminCustomersChromePrintersCreateSecurity) (*operations.AdminCustomersChromePrintersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrinterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -522,11 +522,11 @@ func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +561,20 @@ func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, requ
 }
 
 // AdminCustomersChromePrintersList - List printers configs.
-func (s *customers) AdminCustomersChromePrintersList(ctx context.Context, request operations.AdminCustomersChromePrintersListRequest) (*operations.AdminCustomersChromePrintersListResponse, error) {
+func (s *customers) AdminCustomersChromePrintersList(ctx context.Context, request operations.AdminCustomersChromePrintersListRequest, security operations.AdminCustomersChromePrintersListSecurity) (*operations.AdminCustomersChromePrintersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *customers) AdminCustomersChromePrintersList(ctx context.Context, reques
 }
 
 // AdminCustomersChromePrintersListPrinterModels - Lists the supported printer models.
-func (s *customers) AdminCustomersChromePrintersListPrinterModels(ctx context.Context, request operations.AdminCustomersChromePrintersListPrinterModelsRequest) (*operations.AdminCustomersChromePrintersListPrinterModelsResponse, error) {
+func (s *customers) AdminCustomersChromePrintersListPrinterModels(ctx context.Context, request operations.AdminCustomersChromePrintersListPrinterModelsRequest, security operations.AdminCustomersChromePrintersListPrinterModelsSecurity) (*operations.AdminCustomersChromePrintersListPrinterModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +657,20 @@ func (s *customers) AdminCustomersChromePrintersListPrinterModels(ctx context.Co
 }
 
 // DirectoryCustomersGet - Retrieves a customer.
-func (s *customers) DirectoryCustomersGet(ctx context.Context, request operations.DirectoryCustomersGetRequest) (*operations.DirectoryCustomersGetResponse, error) {
+func (s *customers) DirectoryCustomersGet(ctx context.Context, request operations.DirectoryCustomersGetRequest, security operations.DirectoryCustomersGetSecurity) (*operations.DirectoryCustomersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,11 +705,11 @@ func (s *customers) DirectoryCustomersGet(ctx context.Context, request operation
 }
 
 // DirectoryCustomersPatch - Patches a customer.
-func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operations.DirectoryCustomersPatchRequest) (*operations.DirectoryCustomersPatchResponse, error) {
+func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operations.DirectoryCustomersPatchRequest, security operations.DirectoryCustomersPatchSecurity) (*operations.DirectoryCustomersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,11 +721,11 @@ func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,11 +760,11 @@ func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operati
 }
 
 // DirectoryCustomersUpdate - Updates a customer.
-func (s *customers) DirectoryCustomersUpdate(ctx context.Context, request operations.DirectoryCustomersUpdateRequest) (*operations.DirectoryCustomersUpdateResponse, error) {
+func (s *customers) DirectoryCustomersUpdate(ctx context.Context, request operations.DirectoryCustomersUpdateRequest, security operations.DirectoryCustomersUpdateSecurity) (*operations.DirectoryCustomersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -776,11 +776,11 @@ func (s *customers) DirectoryCustomersUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

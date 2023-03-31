@@ -36,7 +36,7 @@ func newGenerate(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PostVisitorIdentificationV3TokensCreateGenerateToken - Generate a token
 // Generates a new visitor identification token. This token will be unique every time this endpoint is called, even if called with the same email address. This token is temporary and will expire after 12 hours
-func (s *generate) PostVisitorIdentificationV3TokensCreateGenerateToken(ctx context.Context, request operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest) (*operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse, error) {
+func (s *generate) PostVisitorIdentificationV3TokensCreateGenerateToken(ctx context.Context, request shared.IdentificationTokenGenerationRequest, security operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity) (*operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversations/v3/visitor-identification/tokens/create"
 
@@ -55,7 +55,7 @@ func (s *generate) PostVisitorIdentificationV3TokensCreateGenerateToken(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

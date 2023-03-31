@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCameraQualityAndRetentionPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceCameraQualityAndRetentionRequestBodyMotionDetectorVersionEnum - The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 type UpdateDeviceCameraQualityAndRetentionRequestBodyMotionDetectorVersionEnum string
 
@@ -123,8 +119,8 @@ type UpdateDeviceCameraQualityAndRetentionRequestBody struct {
 }
 
 type UpdateDeviceCameraQualityAndRetentionRequest struct {
-	PathParams UpdateDeviceCameraQualityAndRetentionPathParams
-	Request    *UpdateDeviceCameraQualityAndRetentionRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCameraQualityAndRetentionRequestBody `request:"mediaType=application/json"`
+	Serial      string                                            `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCameraQualityAndRetentionResponse struct {

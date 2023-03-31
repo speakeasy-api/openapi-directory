@@ -14,14 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.RetrievePrefixPricingRequest{
-        PathParams: operations.RetrievePrefixPricingPathParams{
-            Type: "corrupti",
-        },
-        QueryParams: operations.RetrievePrefixPricingQueryParams{
-            APIKey: "provident",
-            APISecret: "distinctio",
-            Prefix: "quibusdam",
-        },
+        APIKey: "corrupti",
+        APISecret: "provident",
+        Prefix: "distinctio",
+        Type: "quibusdam",
     }
 
     ctx := context.Background()

@@ -8,19 +8,15 @@ import (
 )
 
 type APIKeyFromGroupQuotasSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type APIKeyFromGroupQuotasPathParams struct {
+type APIKeyFromGroupQuotasRequest struct {
 	// the api key id
 	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// The api key group id
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type APIKeyFromGroupQuotasRequest struct {
-	PathParams APIKeyFromGroupQuotasPathParams
-	Security   APIKeyFromGroupQuotasSecurity
 }
 
 type APIKeyFromGroupQuotasResponse struct {

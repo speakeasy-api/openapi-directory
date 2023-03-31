@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ActionsPostFormRequest struct {
-	// The Action Data
-	Request shared.ActionToPost `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type ActionsPostFormResponse struct {
 	ContentType string

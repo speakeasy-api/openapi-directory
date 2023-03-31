@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetByModePathParams struct {
+type StopPointGetByModeRequest struct {
 	// A comma-seperated list of modes e.g. tube,dlr
 	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
-type StopPointGetByModeQueryParams struct {
 	// The data set page to return. Page 1 equates to the first 1000 stop points, page 2 equates to 1001-2000 etc. Must be entered for bus mode as data set is too large.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
-type StopPointGetByModeRequest struct {
-	PathParams  StopPointGetByModePathParams
-	QueryParams StopPointGetByModeQueryParams
 }
 
 type StopPointGetByModeResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsadminPropertiesAccessBindingsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsadminPropertiesAccessBindingsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsadminPropertiesAccessBindingsListSecurity struct {
@@ -22,12 +22,7 @@ type AnalyticsadminPropertiesAccessBindingsListSecurity struct {
 	Option2 *AnalyticsadminPropertiesAccessBindingsListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsadminPropertiesAccessBindingsListPathParams struct {
-	// Required. Formats: - accounts/{account} - properties/{property}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AnalyticsadminPropertiesAccessBindingsListQueryParams struct {
+type AnalyticsadminPropertiesAccessBindingsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type AnalyticsadminPropertiesAccessBindingsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListAccessBindings` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListAccessBindings` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Formats: - accounts/{account} - properties/{property}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type AnalyticsadminPropertiesAccessBindingsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AnalyticsadminPropertiesAccessBindingsListRequest struct {
-	PathParams  AnalyticsadminPropertiesAccessBindingsListPathParams
-	QueryParams AnalyticsadminPropertiesAccessBindingsListQueryParams
-	Security    AnalyticsadminPropertiesAccessBindingsListSecurity
 }
 
 type AnalyticsadminPropertiesAccessBindingsListResponse struct {

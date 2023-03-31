@@ -8,17 +8,12 @@ import (
 )
 
 type ImportLibraryV2Security struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type ImportLibraryV2PathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ImportLibraryV2Request struct {
-	PathParams ImportLibraryV2PathParams
-	Request    shared.BulkImportRequest `request:"mediaType=application/json"`
-	Security   ImportLibraryV2Security
+	BulkImportRequest shared.BulkImportRequest `request:"mediaType=application/json"`
+	OrganizationUUID  string                   `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type ImportLibraryV2Response struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRelationUsageBetweenResourcePathParams struct {
-	ObjectCategory  string `pathParam:"style=simple,explode=false,name=object_category"`
-	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
-}
-
-type GetRelationUsageBetweenResourceQueryParams struct {
+type GetRelationUsageBetweenResourceRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)
 	//                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.
 	//
-	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
+	Evidence        *string `queryParam:"style=form,explode=true,name=evidence"`
+	ObjectCategory  string  `pathParam:"style=simple,explode=false,name=object_category"`
+	SubjectCategory string  `pathParam:"style=simple,explode=false,name=subject_category"`
 	// SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
 	SubjectTaxon *string `queryParam:"style=form,explode=true,name=subject_taxon"`
-}
-
-type GetRelationUsageBetweenResourceRequest struct {
-	PathParams  GetRelationUsageBetweenResourcePathParams
-	QueryParams GetRelationUsageBetweenResourceQueryParams
 }
 
 type GetRelationUsageBetweenResourceResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETAnnotationsByAccIDAndRgdIDUsingGETPathParams struct {
+type GETAnnotationsByAccIDAndRgdIDUsingGETRequest struct {
 	// Ontology Term Accession ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETAnnotationsByAccIDAndRgdIDUsingGETRequest struct {
-	PathParams GETAnnotationsByAccIDAndRgdIDUsingGETPathParams
 }
 
 type GETAnnotationsByAccIDAndRgdIDUsingGETResponse struct {

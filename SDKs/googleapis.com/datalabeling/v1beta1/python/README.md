@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/datalabeling/v1beta1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,58 +15,55 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest(
-    security=operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams(
-        parent="doloremque",
-    ),
-    query_params=operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="laborum",
-        alt="json",
-        callback="officia",
-        fields="illo",
-        key="voluptatum",
-        oauth_token="aut",
-        pretty_print=False,
-        quota_user="saepe",
-        upload_type="aut",
-        upload_protocol="quisquam",
-    ),
-    request=shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest(
+    dollar_xgafv="2",
+    google_cloud_datalabeling_v1beta1_create_annotation_spec_set_request=shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest(
         annotation_spec_set=shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet(
             annotation_specs=[
                 shared.GoogleCloudDatalabelingV1beta1AnnotationSpec(
-                    description="dolorum",
-                    display_name="soluta",
-                    index=203986857844851483,
+                    description="distinctio",
+                    display_name="quibusdam",
+                    index=602763,
                 ),
                 shared.GoogleCloudDatalabelingV1beta1AnnotationSpec(
-                    description="perspiciatis",
-                    display_name="ea",
-                    index=616583927086284384,
+                    description="nulla",
+                    display_name="corrupti",
+                    index=847252,
+                ),
+                shared.GoogleCloudDatalabelingV1beta1AnnotationSpec(
+                    description="vel",
+                    display_name="error",
+                    index=645894,
                 ),
             ],
             blocking_resources=[
-                "consequuntur",
-                "vero",
+                "iure",
+                "magnam",
             ],
-            description="est",
-            display_name="praesentium",
-            name="voluptatibus",
+            description="debitis",
+            display_name="ipsa",
+            name="delectus",
         ),
     ),
+    access_token="tempora",
+    alt="media",
+    callback="molestiae",
+    fields_="minus",
+    key="placeat",
+    oauth_token="voluptatum",
+    parent="iusto",
+    pretty_print=False,
+    quota_user="excepturi",
+    upload_type="nisi",
+    upload_protocol="recusandae",
 )
     
-res = s.projects.datalabeling_projects_annotation_spec_sets_create(req)
+res = s.projects.datalabeling_projects_annotation_spec_sets_create(req, operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_datalabeling_v1beta1_annotation_spec_set is not None:
     # handle response
@@ -74,7 +71,8 @@ if res.google_cloud_datalabeling_v1beta1_annotation_spec_set is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -106,7 +104,17 @@ if res.google_cloud_datalabeling_v1beta1_annotation_spec_set is not None:
 * `datalabeling_projects_operations_delete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datalabeling_projects_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `datalabeling_projects_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

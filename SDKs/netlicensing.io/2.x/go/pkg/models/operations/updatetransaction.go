@@ -11,12 +11,8 @@ import (
 )
 
 type UpdateTransactionSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTransactionPathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Transaction
-	TransactionNumber string `pathParam:"style=simple,explode=false,name=transactionNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateTransactionRequestBodySourceEnum - AUTO Transaction for internal use only
@@ -80,9 +76,9 @@ type UpdateTransactionRequestBody struct {
 }
 
 type UpdateTransactionRequest struct {
-	PathParams UpdateTransactionPathParams
-	Request    *UpdateTransactionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTransactionSecurity
+	RequestBody *UpdateTransactionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique number (across all Products of a Vendor) that identifies the Transaction
+	TransactionNumber string `pathParam:"style=simple,explode=false,name=transactionNumber"`
 }
 
 type UpdateTransactionResponse struct {

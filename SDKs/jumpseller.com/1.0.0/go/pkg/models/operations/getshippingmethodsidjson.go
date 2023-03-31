@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetShippingMethodsIDJSONPathParams struct {
-	// Id of the Shipping Method
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetShippingMethodsIDJSONQueryParams struct {
+type GetShippingMethodsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Shipping Method
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetShippingMethodsIDJSONRequest struct {
-	PathParams  GetShippingMethodsIDJSONPathParams
-	QueryParams GetShippingMethodsIDJSONQueryParams
 }
 
 type GetShippingMethodsIDJSONResponse struct {

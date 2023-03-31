@@ -8,13 +8,13 @@ import (
 )
 
 type WebmastersSearchanalyticsQuerySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSearchanalyticsQuerySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSearchanalyticsQuerySecurity struct {
@@ -22,12 +22,8 @@ type WebmastersSearchanalyticsQuerySecurity struct {
 	Option2 *WebmastersSearchanalyticsQuerySecurityOption2 `security:"option"`
 }
 
-type WebmastersSearchanalyticsQueryPathParams struct {
-	// The site's URL, including protocol. For example: http://www.example.com/
-	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
-}
-
-type WebmastersSearchanalyticsQueryQueryParams struct {
+type WebmastersSearchanalyticsQueryRequest struct {
+	SearchAnalyticsQueryRequest *shared.SearchAnalyticsQueryRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,15 +36,10 @@ type WebmastersSearchanalyticsQueryQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The site's URL, including protocol. For example: http://www.example.com/
+	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type WebmastersSearchanalyticsQueryRequest struct {
-	PathParams  WebmastersSearchanalyticsQueryPathParams
-	QueryParams WebmastersSearchanalyticsQueryQueryParams
-	Request     *shared.SearchAnalyticsQueryRequest `request:"mediaType=application/json"`
-	Security    WebmastersSearchanalyticsQuerySecurity
 }
 
 type WebmastersSearchanalyticsQueryResponse struct {

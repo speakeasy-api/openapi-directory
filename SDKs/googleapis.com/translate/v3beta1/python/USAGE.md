@@ -4,78 +4,87 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TranslateProjectsLocationsBatchTranslateDocumentRequest(
-    security=operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams(
-        parent="et",
-    ),
-    query_params=operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams(
-        dollar_xgafv="1",
-        access_token="deserunt",
-        alt="media",
-        callback="sit",
-        fields="recusandae",
-        key="et",
-        oauth_token="quia",
-        pretty_print=True,
-        quota_user="aut",
-        upload_type="ut",
-        upload_protocol="sed",
-    ),
-    request=shared.BatchTranslateDocumentRequest(
+    dollar_xgafv="2",
+    batch_translate_document_request=shared.BatchTranslateDocumentRequest(
+        customized_attribution="provident",
+        enable_shadow_removal_native_pdf=False,
         format_conversions={
-            "iure": "ad",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
         },
         glossaries={
-            "omnis": shared.TranslateTextGlossaryConfig(
-                glossary="nam",
-                ignore_case=True,
+            "deserunt": shared.TranslateTextGlossaryConfig(
+                glossary="suscipit",
+                ignore_case=False,
+            ),
+            "iure": shared.TranslateTextGlossaryConfig(
+                glossary="magnam",
+                ignore_case=False,
+            ),
+            "debitis": shared.TranslateTextGlossaryConfig(
+                glossary="ipsa",
+                ignore_case=False,
             ),
         },
         input_configs=[
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="deleniti",
+                    input_uri="tempora",
                 ),
             ),
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="et",
+                    input_uri="suscipit",
                 ),
             ),
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="placeat",
+                    input_uri="molestiae",
+                ),
+            ),
+            shared.BatchDocumentInputConfig(
+                gcs_source=shared.GcsSource(
+                    input_uri="minus",
                 ),
             ),
         ],
         models={
-            "ut": "beatae",
-            "perferendis": "ipsa",
+            "voluptatum": "iusto",
+            "excepturi": "nisi",
+            "recusandae": "temporibus",
+            "ab": "quis",
         },
         output_config=shared.BatchDocumentOutputConfig(
             gcs_destination=shared.GcsDestination(
-                output_uri_prefix="et",
+                output_uri_prefix="veritatis",
             ),
         ),
-        source_language_code="soluta",
+        source_language_code="deserunt",
         target_language_codes=[
-            "mollitia",
-            "qui",
-            "quasi",
+            "ipsam",
         ],
     ),
+    access_token="repellendus",
+    alt="proto",
+    callback="quo",
+    fields_="odit",
+    key="at",
+    oauth_token="at",
+    parent="maiores",
+    pretty_print=False,
+    quota_user="molestiae",
+    upload_type="quod",
+    upload_protocol="quod",
 )
     
-res = s.projects.translate_projects_locations_batch_translate_document(req)
+res = s.projects.translate_projects_locations_batch_translate_document(req, operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

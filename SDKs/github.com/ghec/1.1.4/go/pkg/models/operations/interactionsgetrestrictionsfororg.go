@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type InteractionsGetRestrictionsForOrgPathParams struct {
+type InteractionsGetRestrictionsForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type InteractionsGetRestrictionsForOrgRequest struct {
-	PathParams InteractionsGetRestrictionsForOrgPathParams
 }
 
 type InteractionsGetRestrictionsForOrgResponse struct {

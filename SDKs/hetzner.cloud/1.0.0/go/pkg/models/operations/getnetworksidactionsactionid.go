@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetNetworksIDActionsActionIDPathParams struct {
+type GetNetworksIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Network
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetNetworksIDActionsActionIDRequest struct {
-	PathParams GetNetworksIDActionsActionIDPathParams
 }
 
 // GetNetworksIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

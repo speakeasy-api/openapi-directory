@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVrfsReadPathParams struct {
+type IpamVrfsReadRequest struct {
 	// A unique integer value identifying this VRF.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVrfsReadRequest struct {
-	PathParams IpamVrfsReadPathParams
 }
 
 type IpamVrfsReadResponse struct {

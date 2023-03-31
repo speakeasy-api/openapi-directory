@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type UnpublishIterationPathParams struct {
+type UnpublishIterationRequest struct {
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UnpublishIterationHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UnpublishIterationRequest struct {
-	PathParams UnpublishIterationPathParams
-	Headers    UnpublishIterationHeaders
 }
 
 type UnpublishIterationResponse struct {

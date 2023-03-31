@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // SQLProjectsInstancesGetDiskShrinkConfig - Get Disk Shrink Config for a given instance.
-func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, request operations.SQLProjectsInstancesGetDiskShrinkConfigRequest) (*operations.SQLProjectsInstancesGetDiskShrinkConfigResponse, error) {
+func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, request operations.SQLProjectsInstancesGetDiskShrinkConfigRequest, security operations.SQLProjectsInstancesGetDiskShrinkConfigSecurity) (*operations.SQLProjectsInstancesGetDiskShrinkConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, 
 }
 
 // SQLProjectsInstancesPerformDiskShrink - Perform Disk Shrink on primary instance.
-func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, request operations.SQLProjectsInstancesPerformDiskShrinkRequest) (*operations.SQLProjectsInstancesPerformDiskShrinkResponse, error) {
+func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, request operations.SQLProjectsInstancesPerformDiskShrinkRequest, security operations.SQLProjectsInstancesPerformDiskShrinkSecurity) (*operations.SQLProjectsInstancesPerformDiskShrinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PerformDiskShrinkContext", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, re
 }
 
 // SQLProjectsInstancesRescheduleMaintenance - Reschedules the maintenance on the given instance.
-func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context, request operations.SQLProjectsInstancesRescheduleMaintenanceRequest) (*operations.SQLProjectsInstancesRescheduleMaintenanceResponse, error) {
+func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context, request operations.SQLProjectsInstancesRescheduleMaintenanceRequest, security operations.SQLProjectsInstancesRescheduleMaintenanceSecurity) (*operations.SQLProjectsInstancesRescheduleMaintenanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesRescheduleMaintenanceRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context
 }
 
 // SQLProjectsInstancesResetReplicaSize - Reset Replica Size to primary instance disk size.
-func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, request operations.SQLProjectsInstancesResetReplicaSizeRequest) (*operations.SQLProjectsInstancesResetReplicaSizeResponse, error) {
+func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, request operations.SQLProjectsInstancesResetReplicaSizeRequest, security operations.SQLProjectsInstancesResetReplicaSizeSecurity) (*operations.SQLProjectsInstancesResetReplicaSizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, req
 }
 
 // SQLProjectsInstancesStartExternalSync - Start External primary instance migration.
-func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, request operations.SQLProjectsInstancesStartExternalSyncRequest) (*operations.SQLProjectsInstancesStartExternalSyncResponse, error) {
+func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, request operations.SQLProjectsInstancesStartExternalSyncRequest, security operations.SQLProjectsInstancesStartExternalSyncSecurity) (*operations.SQLProjectsInstancesStartExternalSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesStartExternalSyncRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, re
 }
 
 // SQLProjectsInstancesVerifyExternalSyncSettings - Verify External primary instance external sync settings.
-func (s *projects) SQLProjectsInstancesVerifyExternalSyncSettings(ctx context.Context, request operations.SQLProjectsInstancesVerifyExternalSyncSettingsRequest) (*operations.SQLProjectsInstancesVerifyExternalSyncSettingsResponse, error) {
+func (s *projects) SQLProjectsInstancesVerifyExternalSyncSettings(ctx context.Context, request operations.SQLProjectsInstancesVerifyExternalSyncSettingsRequest, security operations.SQLProjectsInstancesVerifyExternalSyncSettingsSecurity) (*operations.SQLProjectsInstancesVerifyExternalSyncSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesVerifyExternalSyncSettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *projects) SQLProjectsInstancesVerifyExternalSyncSettings(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

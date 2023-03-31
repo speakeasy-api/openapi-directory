@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateUserPaymentInfoPathParams struct {
+type UpdateUserPaymentInfoRequest struct {
+	PaymentInfo *shared.PaymentInfo `request:"mediaType=application/json"`
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UpdateUserPaymentInfoRequest struct {
-	PathParams UpdateUserPaymentInfoPathParams
-	Request    *shared.PaymentInfo `request:"mediaType=application/json"`
 }
 
 type UpdateUserPaymentInfoResponse struct {

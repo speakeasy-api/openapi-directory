@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 	"time"
@@ -94,7 +95,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // PostPerfectpdfAPI - Returns PDF document.
-func (s *SDK) PostPerfectpdfAPI(ctx context.Context, request operations.PostPerfectpdfAPIRequest) (*operations.PostPerfectpdfAPIResponse, error) {
+func (s *SDK) PostPerfectpdfAPI(ctx context.Context, request shared.PerfectpdfAPIBody) (*operations.PostPerfectpdfAPIResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/perfectpdf/api"
 

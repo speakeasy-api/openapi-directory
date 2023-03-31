@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmRolesRoleNameUsersPathParams struct {
+type GetRealmRolesRoleNameUsersRequest struct {
+	First *int `queryParam:"style=form,explode=true,name=first"`
+	Max   *int `queryParam:"style=form,explode=true,name=max"`
 	// realm name (not id!)
 	Realm    string `pathParam:"style=simple,explode=false,name=realm"`
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type GetRealmRolesRoleNameUsersQueryParams struct {
-	First *int `queryParam:"style=form,explode=true,name=first"`
-	Max   *int `queryParam:"style=form,explode=true,name=max"`
-}
-
-type GetRealmRolesRoleNameUsersRequest struct {
-	PathParams  GetRealmRolesRoleNameUsersPathParams
-	QueryParams GetRealmRolesRoleNameUsersQueryParams
 }
 
 type GetRealmRolesRoleNameUsersResponse struct {

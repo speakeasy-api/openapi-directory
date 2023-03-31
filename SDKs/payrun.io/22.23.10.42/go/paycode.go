@@ -35,14 +35,14 @@ func newPayCode(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete the specified pay code
 func (s *payCode) DeletePayCode(ctx context.Context, request operations.DeletePayCodeRequest) (*operations.DeletePayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *payCode) DeletePayCode(ctx context.Context, request operations.DeletePa
 // Delete the pay code revision for the specified date
 func (s *payCode) DeletePayCodeRevision(ctx context.Context, request operations.DeletePayCodeRevisionRequest) (*operations.DeletePayCodeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *payCode) DeletePayCodeRevision(ctx context.Context, request operations.
 // Deletes the specified pay code revision for the matching revision number
 func (s *payCode) DeletePayCodeRevisionByNumber(ctx context.Context, request operations.DeletePayCodeRevisionByNumberRequest) (*operations.DeletePayCodeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *payCode) DeletePayCodeRevisionByNumber(ctx context.Context, request ope
 // Gets all the pay code tags
 func (s *payCode) GetAllPayCodeTags(ctx context.Context, request operations.GetAllPayCodeTagsRequest) (*operations.GetAllPayCodeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -260,14 +260,14 @@ func (s *payCode) GetAllPayCodeTags(ctx context.Context, request operations.GetA
 // Gets the pay code revision for the specified effective date
 func (s *payCode) GetPayCodeByEffectiveDate(ctx context.Context, request operations.GetPayCodeByEffectiveDateRequest) (*operations.GetPayCodeByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -323,14 +323,14 @@ func (s *payCode) GetPayCodeByEffectiveDate(ctx context.Context, request operati
 // Returns the specified pay code from the employer
 func (s *payCode) GetPayCodeFromEmployer(ctx context.Context, request operations.GetPayCodeFromEmployerRequest) (*operations.GetPayCodeFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -386,14 +386,14 @@ func (s *payCode) GetPayCodeFromEmployer(ctx context.Context, request operations
 // Get the pay code revision matching the specified revision number
 func (s *payCode) GetPayCodeRevisionByNumber(ctx context.Context, request operations.GetPayCodeRevisionByNumberRequest) (*operations.GetPayCodeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -449,14 +449,14 @@ func (s *payCode) GetPayCodeRevisionByNumber(ctx context.Context, request operat
 // Returns links to all revisions of the pay code
 func (s *payCode) GetPayCodeRevisions(ctx context.Context, request operations.GetPayCodeRevisionsRequest) (*operations.GetPayCodeRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -512,14 +512,14 @@ func (s *payCode) GetPayCodeRevisions(ctx context.Context, request operations.Ge
 // Gets the effective pay code revision for the specified date
 func (s *payCode) GetPayCodesByEffectiveDate(ctx context.Context, request operations.GetPayCodesByEffectiveDateRequest) (*operations.GetPayCodesByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,14 +575,14 @@ func (s *payCode) GetPayCodesByEffectiveDate(ctx context.Context, request operat
 // Get links to all the pay codes for the specified employer
 func (s *payCode) GetPayCodesFromEmployer(ctx context.Context, request operations.GetPayCodesFromEmployerRequest) (*operations.GetPayCodesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -638,14 +638,14 @@ func (s *payCode) GetPayCodesFromEmployer(ctx context.Context, request operation
 // Get the pay codes that share the specified nominal code
 func (s *payCode) GetPayCodesFromNominalCode(ctx context.Context, request operations.GetPayCodesFromNominalCodeRequest) (*operations.GetPayCodesFromNominalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}/PayCodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}/PayCodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -701,14 +701,14 @@ func (s *payCode) GetPayCodesFromNominalCode(ctx context.Context, request operat
 // Gets the pay codes with the tag
 func (s *payCode) GetPayCodesWithTag(ctx context.Context, request operations.GetPayCodesWithTagRequest) (*operations.GetPayCodesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -764,9 +764,9 @@ func (s *payCode) GetPayCodesWithTag(ctx context.Context, request operations.Get
 // Patches the specified pay code object with the supplied values
 func (s *payCode) PatchPayCode(ctx context.Context, request operations.PatchPayCodeRequest) (*operations.PatchPayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -781,7 +781,7 @@ func (s *payCode) PatchPayCode(ctx context.Context, request operations.PatchPayC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -837,9 +837,9 @@ func (s *payCode) PatchPayCode(ctx context.Context, request operations.PatchPayC
 // Create a new pay code object
 func (s *payCode) PostPayCode(ctx context.Context, request operations.PostPayCodeRequest) (*operations.PostPayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -854,7 +854,7 @@ func (s *payCode) PostPayCode(ctx context.Context, request operations.PostPayCod
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -910,9 +910,9 @@ func (s *payCode) PostPayCode(ctx context.Context, request operations.PostPayCod
 // Updates the existing specified pay code object
 func (s *payCode) PutPayCode(ctx context.Context, request operations.PutPayCodeRequest) (*operations.PutPayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -927,7 +927,7 @@ func (s *payCode) PutPayCode(ctx context.Context, request operations.PutPayCodeR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

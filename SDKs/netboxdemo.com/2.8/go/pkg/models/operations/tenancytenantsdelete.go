@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TenancyTenantsDeletePathParams struct {
+type TenancyTenantsDeleteRequest struct {
 	// A unique integer value identifying this tenant.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TenancyTenantsDeleteRequest struct {
-	PathParams TenancyTenantsDeletePathParams
 }
 
 type TenancyTenantsDeleteResponse struct {

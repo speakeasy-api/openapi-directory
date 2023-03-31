@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLicenseePathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type CreateLicenseeQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type CreateLicenseeRequest struct {
-	PathParams  CreateLicenseePathParams
-	QueryParams CreateLicenseeQueryParams
-	Request     shared.LicenseeEditable `request:"mediaType=application/json"`
+	LicenseeEditable shared.LicenseeEditable `request:"mediaType=application/json"`
+	Key              string                  `pathParam:"style=simple,explode=false,name=key"`
+	UserToken        *string                 `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type CreateLicenseeResponse struct {

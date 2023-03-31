@@ -12,7 +12,8 @@ var CreateIPRecordServerList = []string{
 }
 
 type CreateIPRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateIPRecordCreateIPRecordRequest struct {
@@ -22,12 +23,6 @@ type CreateIPRecordCreateIPRecordRequest struct {
 	FriendlyName *string `form:"name=FriendlyName"`
 	// An IP address in dotted decimal notation, IPv4 only.
 	IPAddress string `form:"name=IpAddress"`
-}
-
-type CreateIPRecordRequest struct {
-	Request   *CreateIPRecordCreateIPRecordRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateIPRecordSecurity
-	ServerURL *string
 }
 
 type CreateIPRecordResponse struct {

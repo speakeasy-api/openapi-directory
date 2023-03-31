@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnpromisePostPathParams struct {
+type UnpromisePostRequest struct {
 	// The ID of the post to unpromise.
 	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
-type UnpromisePostRequest struct {
-	PathParams UnpromisePostPathParams
 }
 
 type UnpromisePostResponse struct {

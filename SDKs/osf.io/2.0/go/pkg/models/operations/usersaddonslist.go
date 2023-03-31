@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UsersAddonsListPathParams struct {
+type UsersAddonsListRequest struct {
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersAddonsListRequest struct {
-	PathParams UsersAddonsListPathParams
 }
 
 // UsersAddonsListUserAddonAttributes - The properties of the user addon entity.

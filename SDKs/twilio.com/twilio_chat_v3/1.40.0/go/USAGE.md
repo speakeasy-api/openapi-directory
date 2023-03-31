@@ -14,27 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.UpdateChannelRequest{
-        Security: operations.UpdateChannelSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.UpdateChannelPathParams{
-            ServiceSid: "corrupti",
-            Sid: "provident",
-        },
-        Headers: operations.UpdateChannelHeaders{
-            XTwilioWebhookEnabled: "false",
-        },
-        Request: &operations.UpdateChannelUpdateChannelRequest{
-            MessagingServiceSid: "quibusdam",
+        RequestBody: &operations.UpdateChannelUpdateChannelRequest{
+            MessagingServiceSid: "corrupti",
             Type: "private",
         },
+        ServiceSid: "distinctio",
+        Sid: "quibusdam",
+        XTwilioWebhookEnabled: "false",
     }
 
     ctx := context.Background()
-    res, err := s.UpdateChannel(ctx, req)
+    res, err := s.UpdateChannel(ctx, req, operations.UpdateChannelSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

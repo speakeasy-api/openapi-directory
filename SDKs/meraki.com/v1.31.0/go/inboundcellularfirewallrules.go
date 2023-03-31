@@ -34,7 +34,7 @@ func newInboundCellularFirewallRules(defaultClient, securityClient HTTPClient, s
 // Return the inbound cellular firewall rules for an MX network
 func (s *inboundCellularFirewallRules) GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *inboundCellularFirewallRules) GetNetworkApplianceFirewallInboundCellula
 // Update the inbound cellular firewall rules of an MX network
 func (s *inboundCellularFirewallRules) UpdateNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,10 +8,11 @@ import (
 )
 
 type UpdateSubmissionCommentSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateSubmissionCommentPathParams struct {
+type UpdateSubmissionCommentRequest struct {
+	AssignmentSubmissionCommentCreation shared.AssignmentSubmissionCommentCreation `request:"mediaType=application/json"`
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
@@ -20,12 +21,6 @@ type UpdateSubmissionCommentPathParams struct {
 	Comment string `pathParam:"style=simple,explode=false,name=comment"`
 	// Unique identifier of the submission
 	Submission string `pathParam:"style=simple,explode=false,name=submission"`
-}
-
-type UpdateSubmissionCommentRequest struct {
-	PathParams UpdateSubmissionCommentPathParams
-	Request    shared.AssignmentSubmissionCommentCreation `request:"mediaType=application/json"`
-	Security   UpdateSubmissionCommentSecurity
 }
 
 type UpdateSubmissionCommentResponse struct {

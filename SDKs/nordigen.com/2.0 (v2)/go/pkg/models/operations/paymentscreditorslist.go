@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsCreditorsListQueryParams struct {
+type PaymentsCreditorsListRequest struct {
 	Account        *string `queryParam:"style=form,explode=true,name=account"`
 	AddressCountry *string `queryParam:"style=form,explode=true,name=address_country"`
 	Agent          *string `queryParam:"style=form,explode=true,name=agent"`
@@ -18,10 +18,6 @@ type PaymentsCreditorsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Type   *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PaymentsCreditorsListRequest struct {
-	QueryParams PaymentsCreditorsListQueryParams
 }
 
 type PaymentsCreditorsListResponse struct {

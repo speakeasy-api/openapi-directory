@@ -35,14 +35,14 @@ func newRti(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Deletes the specified RTI transaction
 func (s *rti) DeleteRtiTransaction(ctx context.Context, request operations.DeleteRtiTransactionRequest) (*operations.DeleteRtiTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *rti) DeleteRtiTransaction(ctx context.Context, request operations.Delet
 // Gets all the RTI transaction tags
 func (s *rti) GetAllRtiTransactionTags(ctx context.Context, request operations.GetAllRtiTransactionTagsRequest) (*operations.GetAllRtiTransactionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *rti) GetAllRtiTransactionTags(ctx context.Context, request operations.G
 // Returns the specified RTI transaction
 func (s *rti) GetRtiTransactionFromEmployer(ctx context.Context, request operations.GetRtiTransactionFromEmployerRequest) (*operations.GetRtiTransactionFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *rti) GetRtiTransactionFromEmployer(ctx context.Context, request operati
 // Get links for all RTI transaction summaries for the specified employer
 func (s *rti) GetRtiTransactionSummariesFromEmployer(ctx context.Context, request operations.GetRtiTransactionSummariesFromEmployerRequest) (*operations.GetRtiTransactionSummariesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *rti) GetRtiTransactionSummariesFromEmployer(ctx context.Context, reques
 // Returns the specified RTI transaction summary data excluding some poroperties
 func (s *rti) GetRtiTransactionSummaryFromEmployer(ctx context.Context, request operations.GetRtiTransactionSummaryFromEmployerRequest) (*operations.GetRtiTransactionSummaryFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,14 +341,14 @@ func (s *rti) GetRtiTransactionSummaryFromEmployer(ctx context.Context, request 
 // Get links for all RTI transactions for the specified employer
 func (s *rti) GetRtiTransactionsFromEmployer(ctx context.Context, request operations.GetRtiTransactionsFromEmployerRequest) (*operations.GetRtiTransactionsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -404,14 +404,14 @@ func (s *rti) GetRtiTransactionsFromEmployer(ctx context.Context, request operat
 // Gets the RTI transactions with the tag
 func (s *rti) GetRtiTransactionsWithTag(ctx context.Context, request operations.GetRtiTransactionsWithTagRequest) (*operations.GetRtiTransactionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

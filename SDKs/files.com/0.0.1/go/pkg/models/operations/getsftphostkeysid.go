@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSftpHostKeysIDPathParams struct {
+type GetSftpHostKeysIDRequest struct {
 	// Sftp Host Key ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSftpHostKeysIDRequest struct {
-	PathParams GetSftpHostKeysIDPathParams
 }
 
 type GetSftpHostKeysIDResponse struct {

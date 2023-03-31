@@ -42,7 +42,7 @@ func (s *query) GetQuery(ctx context.Context, request operations.GetQueryRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -75,14 +75,14 @@ func (s *query) GetQuery(ctx context.Context, request operations.GetQueryRequest
 // https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-response-elements - OpenSearch github repository
 func (s *query) GetQueryExtension(ctx context.Context, request operations.GetQueryExtensionRequest) (*operations.GetQueryExtensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query.{extension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/query.{extension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -67,6 +67,7 @@ pkg/models/shared/googlecloudvisionv1p1beta1crophint.go
 pkg/models/shared/googlecloudvisionv1p1beta1imageannotationcontext.go
 pkg/models/shared/googlecloudvisionv1p1beta1inputconfig.go
 pkg/models/shared/googlecloudvisionv1p1beta1gcssource.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudvisionv1p1beta1batchannotatefilesrequest.go
 pkg/models/shared/googlecloudvisionv1p1beta1annotatefilerequest.go
 pkg/models/shared/googlecloudvisionv1p1beta1imagecontext.go
@@ -76,9 +77,7 @@ pkg/models/shared/googlecloudvisionv1p1beta1productsearchparams.go
 pkg/models/shared/googlecloudvisionv1p1beta1latlongrect.go
 pkg/models/shared/googlecloudvisionv1p1beta1crophintsparams.go
 pkg/models/shared/googlecloudvisionv1p1beta1feature.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/operation.go
 pkg/models/shared/googlecloudvisionv1p1beta1asyncbatchannotatefilesrequest.go
 pkg/models/shared/googlecloudvisionv1p1beta1asyncannotatefilerequest.go

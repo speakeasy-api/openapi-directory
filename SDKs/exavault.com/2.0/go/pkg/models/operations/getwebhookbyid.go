@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWebhookByIDPathParams struct {
-	// Webhook endpoint ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetWebhookByIDQueryParams struct {
-	//  Include metadata for related items; `ownerAccount` and/or `resource`
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetWebhookByIDHeaders struct {
+type GetWebhookByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetWebhookByIDRequest struct {
-	PathParams  GetWebhookByIDPathParams
-	QueryParams GetWebhookByIDQueryParams
-	Headers     GetWebhookByIDHeaders
+	// Webhook endpoint ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	//  Include metadata for related items; `ownerAccount` and/or `resource`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetWebhookByIDResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateActiveWidgetPathParams struct {
+type CreateActiveWidgetRequest struct {
+	ActiveWidget *shared.ActiveWidget `request:"mediaType=application/json"`
 	// Continuous project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateActiveWidgetRequest struct {
-	PathParams CreateActiveWidgetPathParams
-	Request    *shared.ActiveWidget `request:"mediaType=application/json"`
 }
 
 type CreateActiveWidgetResponse struct {

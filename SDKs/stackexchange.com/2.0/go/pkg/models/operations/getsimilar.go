@@ -62,7 +62,7 @@ func (e *GetSimilarSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimilarQueryParams struct {
+type GetSimilarRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -126,10 +126,6 @@ type GetSimilarQueryParams struct {
 	Title  *string `queryParam:"style=form,explode=true,name=title"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetSimilarRequest struct {
-	QueryParams GetSimilarQueryParams
 }
 
 type GetSimilarResponse struct {

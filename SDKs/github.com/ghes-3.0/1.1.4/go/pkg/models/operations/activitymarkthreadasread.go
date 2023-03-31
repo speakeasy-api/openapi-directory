@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityMarkThreadAsReadPathParams struct {
+type ActivityMarkThreadAsReadRequest struct {
 	// thread_id parameter
 	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
-}
-
-type ActivityMarkThreadAsReadRequest struct {
-	PathParams ActivityMarkThreadAsReadPathParams
 }
 
 type ActivityMarkThreadAsReadResponse struct {

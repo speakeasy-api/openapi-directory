@@ -4,36 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.YoutubeAnalyticsGroupItemsDeleteRequest(
-    security=operations.YoutubeAnalyticsGroupItemsDeleteSecurity(
-        option1=operations.YoutubeAnalyticsGroupItemsDeleteSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.YoutubeAnalyticsGroupItemsDeleteQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="proto",
-        callback="et",
-        fields="quis",
-        id="unde",
-        key="dolor",
-        oauth_token="id",
-        on_behalf_of_content_owner="mollitia",
-        pretty_print=True,
-        quota_user="dolores",
-        upload_type="qui",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    id="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    on_behalf_of_content_owner="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.group_items.youtube_analytics_group_items_delete(req)
+res = s.group_items.youtube_analytics_group_items_delete(req, operations.YoutubeAnalyticsGroupItemsDeleteSecurity(
+    option1=operations.YoutubeAnalyticsGroupItemsDeleteSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.empty_response is not None:
     # handle response

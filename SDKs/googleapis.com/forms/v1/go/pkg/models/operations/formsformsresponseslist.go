@@ -8,18 +8,18 @@ import (
 )
 
 type FormsFormsResponsesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FormsFormsResponsesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FormsFormsResponsesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FormsFormsResponsesListSecurity struct {
@@ -28,12 +28,7 @@ type FormsFormsResponsesListSecurity struct {
 	Option3 *FormsFormsResponsesListSecurityOption3 `security:"option"`
 }
 
-type FormsFormsResponsesListPathParams struct {
-	// Required. ID of the Form whose responses to list.
-	FormID string `pathParam:"style=simple,explode=false,name=formId"`
-}
-
-type FormsFormsResponsesListQueryParams struct {
+type FormsFormsResponsesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type FormsFormsResponsesListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Which form responses to return. Currently, the only supported filters are: * timestamp > *N* which means to get all form responses submitted after (but not at) timestamp *N*. * timestamp >= *N* which means to get all form responses submitted at and after timestamp *N*. For both supported filters, timestamp must be formatted in RFC3339 UTC "Zulu" format. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Required. ID of the Form whose responses to list.
+	FormID string `pathParam:"style=simple,explode=false,name=formId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -62,12 +59,6 @@ type FormsFormsResponsesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FormsFormsResponsesListRequest struct {
-	PathParams  FormsFormsResponsesListPathParams
-	QueryParams FormsFormsResponsesListQueryParams
-	Security    FormsFormsResponsesListSecurity
 }
 
 type FormsFormsResponsesListResponse struct {

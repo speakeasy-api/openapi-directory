@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscriptionsPOSTRequest struct {
-	// The input parameters of subscribe operation to notifications
-	Request shared.AppPkgSubscription `request:"mediaType=application/json"`
-}
-
 type SubscriptionsPOSTResponse struct {
 	// Successful response for created subscription
 	AppPkgSubscriptionInfo *shared.AppPkgSubscriptionInfo

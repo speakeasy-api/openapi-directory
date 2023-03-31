@@ -32,20 +32,20 @@ func newRemarketingListShares(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // DfareportingRemarketingListSharesGet - Gets one remarketing list share by remarketing list ID.
-func (s *remarketingListShares) DfareportingRemarketingListSharesGet(ctx context.Context, request operations.DfareportingRemarketingListSharesGetRequest) (*operations.DfareportingRemarketingListSharesGetResponse, error) {
+func (s *remarketingListShares) DfareportingRemarketingListSharesGet(ctx context.Context, request operations.DfareportingRemarketingListSharesGetRequest, security operations.DfareportingRemarketingListSharesGetSecurity) (*operations.DfareportingRemarketingListSharesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesGet(ctx context
 }
 
 // DfareportingRemarketingListSharesPatch - Updates an existing remarketing list share. This method supports patch semantics.
-func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx context.Context, request operations.DfareportingRemarketingListSharesPatchRequest) (*operations.DfareportingRemarketingListSharesPatchResponse, error) {
+func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx context.Context, request operations.DfareportingRemarketingListSharesPatchRequest, security operations.DfareportingRemarketingListSharesPatchSecurity) (*operations.DfareportingRemarketingListSharesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingListShare", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx conte
 }
 
 // DfareportingRemarketingListSharesUpdate - Updates an existing remarketing list share.
-func (s *remarketingListShares) DfareportingRemarketingListSharesUpdate(ctx context.Context, request operations.DfareportingRemarketingListSharesUpdateRequest) (*operations.DfareportingRemarketingListSharesUpdateResponse, error) {
+func (s *remarketingListShares) DfareportingRemarketingListSharesUpdate(ctx context.Context, request operations.DfareportingRemarketingListSharesUpdateRequest, security operations.DfareportingRemarketingListSharesUpdateSecurity) (*operations.DfareportingRemarketingListSharesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingListShare", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesUpdate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

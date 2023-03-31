@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcitystandardRequest(
-    query_params=operations.GetcitystandardQueryParams(
-        city="perferendis",
-        license="quia",
-    ),
+    city="Laruecester",
+    license="quibusdam",
 )
     
 res = s.city_data_standardization.getcitystandard(req)

@@ -10,8 +10,8 @@ import (
 )
 
 type AndroidpublisherEditsExpansionfilesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AndroidpublisherEditsExpansionfilesPatchExpansionFileTypeEnum
@@ -38,38 +38,29 @@ func (e *AndroidpublisherEditsExpansionfilesPatchExpansionFileTypeEnum) Unmarsha
 	}
 }
 
-type AndroidpublisherEditsExpansionfilesPatchPathParams struct {
+type AndroidpublisherEditsExpansionfilesPatchRequest struct {
+	ExpansionFile *shared.ExpansionFile `request:"mediaType=application/json"`
+	// Data format for the response.
+	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// The version code of the APK whose Expansion File configuration is being read or modified.
 	ApkVersionCode int64 `pathParam:"style=simple,explode=false,name=apkVersionCode"`
 	// Unique identifier for this edit.
 	EditID            string                                                        `pathParam:"style=simple,explode=false,name=editId"`
 	ExpansionFileType AndroidpublisherEditsExpansionfilesPatchExpansionFileTypeEnum `pathParam:"style=simple,explode=false,name=expansionFileType"`
-	// Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherEditsExpansionfilesPatchQueryParams struct {
-	// Data format for the response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherEditsExpansionfilesPatchRequest struct {
-	PathParams  AndroidpublisherEditsExpansionfilesPatchPathParams
-	QueryParams AndroidpublisherEditsExpansionfilesPatchQueryParams
-	Request     *shared.ExpansionFile `request:"mediaType=application/json"`
-	Security    AndroidpublisherEditsExpansionfilesPatchSecurity
 }
 
 type AndroidpublisherEditsExpansionfilesPatchResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagPathParams struct {
+type GetTagRequest struct {
+	// The iteration to retrieve this tag from. Optional, defaults to current training set.
+	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
 	// The project this tag belongs to.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The tag id.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type GetTagQueryParams struct {
-	// The iteration to retrieve this tag from. Optional, defaults to current training set.
-	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type GetTagRequest struct {
-	PathParams  GetTagPathParams
-	QueryParams GetTagQueryParams
 }
 
 type GetTagResponse struct {

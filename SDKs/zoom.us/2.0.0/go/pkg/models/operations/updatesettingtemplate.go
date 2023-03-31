@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateSettingTemplateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateSettingTemplatePathParams struct {
-	// The Template ID.
-	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateSettingTemplateApplicationJSONPolicyAdHocCallRecording struct {
@@ -634,9 +628,9 @@ type UpdateSettingTemplateApplicationJSON struct {
 }
 
 type UpdateSettingTemplateRequest struct {
-	PathParams UpdateSettingTemplatePathParams
-	Request    *UpdateSettingTemplateApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateSettingTemplateSecurity
+	RequestBody *UpdateSettingTemplateApplicationJSON `request:"mediaType=application/json"`
+	// The Template ID.
+	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
 }
 
 type UpdateSettingTemplateResponse struct {

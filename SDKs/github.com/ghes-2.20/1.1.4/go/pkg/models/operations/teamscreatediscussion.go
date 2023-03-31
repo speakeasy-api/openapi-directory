@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsCreateDiscussionRequestBody struct {
 	// The discussion post's body text.
 	Body string `json:"body"`
@@ -21,8 +17,8 @@ type TeamsCreateDiscussionRequestBody struct {
 }
 
 type TeamsCreateDiscussionRequest struct {
-	PathParams TeamsCreateDiscussionPathParams
-	Request    TeamsCreateDiscussionRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateDiscussionRequestBody `request:"mediaType=application/json"`
+	TeamID      int64                            `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsCreateDiscussionResponse struct {

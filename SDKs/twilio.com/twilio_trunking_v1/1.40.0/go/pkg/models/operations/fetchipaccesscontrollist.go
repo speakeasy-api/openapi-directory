@@ -12,20 +12,15 @@ var FetchIPAccessControlListServerList = []string{
 }
 
 type FetchIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchIPAccessControlListPathParams struct {
+type FetchIPAccessControlListRequest struct {
 	// The unique string that we created to identify the IpAccessControlList resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Trunk from which to fetch the IP Access Control List.
 	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
-}
-
-type FetchIPAccessControlListRequest struct {
-	PathParams FetchIPAccessControlListPathParams
-	Security   FetchIPAccessControlListSecurity
-	ServerURL  *string
 }
 
 type FetchIPAccessControlListResponse struct {

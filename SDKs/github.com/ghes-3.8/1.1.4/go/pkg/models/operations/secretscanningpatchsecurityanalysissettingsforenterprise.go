@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody struct {
 	// Whether Dependabot alerts are automatically enabled for new repositories. For more information, see "[About Dependabot alerts](https://docs.github.com/enterprise-server@3.8/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)."
 	DependabotAlertsEnabledForNewRepositories *bool `json:"dependabot_alerts_enabled_for_new_repositories,omitempty"`
 }
 
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest struct {
-	PathParams SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams
-	Request    *SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody *SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 }
 
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseResponse struct {

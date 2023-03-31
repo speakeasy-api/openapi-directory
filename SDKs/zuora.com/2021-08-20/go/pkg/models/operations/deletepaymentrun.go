@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEPaymentRunPathParams struct {
-	// The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566.
-	//
-	PaymentRunID string `pathParam:"style=simple,explode=false,name=paymentRunId"`
-}
-
-type DELETEPaymentRunHeaders struct {
+type DELETEPaymentRunRequest struct {
 	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
 	//
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEPaymentRunRequest struct {
-	PathParams DELETEPaymentRunPathParams
-	Headers    DELETEPaymentRunHeaders
+	// The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566.
+	//
+	PaymentRunID string `pathParam:"style=simple,explode=false,name=paymentRunId"`
 }
 
 type DELETEPaymentRunResponse struct {

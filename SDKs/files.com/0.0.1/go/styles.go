@@ -36,7 +36,7 @@ func newStyles(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Delete Style
 func (s *styles) DeleteStylesPath(ctx context.Context, request operations.DeleteStylesPathRequest) (*operations.DeleteStylesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *styles) DeleteStylesPath(ctx context.Context, request operations.Delete
 // Show Style
 func (s *styles) GetStylesPath(ctx context.Context, request operations.GetStylesPathRequest) (*operations.GetStylesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,9 +156,9 @@ func (s *styles) GetStylesPath(ctx context.Context, request operations.GetStyles
 // Update Style
 func (s *styles) PatchStylesPath(ctx context.Context, request operations.PatchStylesPathRequest) (*operations.PatchStylesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/styles/{path}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

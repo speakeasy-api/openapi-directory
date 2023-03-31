@@ -36,7 +36,7 @@ func newBillingDetails(defaultClient, securityClient HTTPClient, serverURL, lang
 // Retrieves the Billing Details.
 func (s *billingDetails) GetBillingDetails(ctx context.Context, request operations.GetBillingDetailsRequest) (*operations.GetBillingDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/billingDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/billingDetails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,9 +94,9 @@ func (s *billingDetails) GetBillingDetails(ctx context.Context, request operatio
 // Updates the Billing Details.
 func (s *billingDetails) PutBillingDetails(ctx context.Context, request operations.PutBillingDetailsRequest) (*operations.PutBillingDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/billingDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/billingDetails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillingDetailsModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

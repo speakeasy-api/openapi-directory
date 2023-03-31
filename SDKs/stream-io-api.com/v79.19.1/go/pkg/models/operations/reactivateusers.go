@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactivateUsersRequest struct {
-	Request shared.ReactivateUsersRequest `request:"mediaType=application/json"`
-}
-
 type ReactivateUsersResponse struct {
 	// Bad request
 	APIError    *shared.APIError

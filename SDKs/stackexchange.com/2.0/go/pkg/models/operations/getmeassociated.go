@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetMeAssociatedQueryParams struct {
+type GetMeAssociatedRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -44,10 +44,6 @@ type GetMeAssociatedQueryParams struct {
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetMeAssociatedRequest struct {
-	QueryParams GetMeAssociatedQueryParams
 }
 
 type GetMeAssociatedResponse struct {

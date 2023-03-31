@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type RequestreportbydateQueryParams struct {
+type RequestreportbydateRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// begin date of report interval, use format yyyyMMdd
 	BeginDate int `queryParam:"style=form,explode=true,name=beginDate"`
 	// end date of report interval, use format yyyyMMdd
 	EndDate int `queryParam:"style=form,explode=true,name=endDate"`
 	// Email that the report will be sent to
 	RequesterEmail string `queryParam:"style=form,explode=true,name=requesterEmail"`
-}
-
-type RequestreportbydateHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RequestreportbydateRequest struct {
-	QueryParams RequestreportbydateQueryParams
-	Headers     RequestreportbydateHeaders
 }
 
 type RequestreportbydateResponse struct {

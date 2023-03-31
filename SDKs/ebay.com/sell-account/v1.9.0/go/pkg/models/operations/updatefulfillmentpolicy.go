@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateFulfillmentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateFulfillmentPolicyPathParams struct {
-	// This path parameter specifies the ID of the fulfillment policy you want to update.
-	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateFulfillmentPolicyRequest struct {
-	PathParams UpdateFulfillmentPolicyPathParams
 	// Fulfillment policy request
-	Request  shared.FulfillmentPolicyRequest `request:"mediaType=application/json"`
-	Security UpdateFulfillmentPolicySecurity
+	FulfillmentPolicyRequest shared.FulfillmentPolicyRequest `request:"mediaType=application/json"`
+	// This path parameter specifies the ID of the fulfillment policy you want to update.
+	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
 }
 
 type UpdateFulfillmentPolicyResponse struct {

@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSessionSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSessionRequest struct {
-	Security GetSessionSecurity
-}
-
 type GetSessionResponse struct {
 	ContentType string
 	// A session

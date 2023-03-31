@@ -14,73 +14,67 @@ func main() {
     s := sdk.New()
 
     req := operations.FitnessUsersDataSourcesCreateRequest{
-        Security: operations.FitnessUsersDataSourcesCreateSecurity{
-            Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.FitnessUsersDataSourcesCreatePathParams{
-            UserID: "corrupti",
-        },
-        QueryParams: operations.FitnessUsersDataSourcesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.DataSource{
+        DollarXgafv: "2",
+        DataSource: &shared.DataSource{
             Application: &shared.Application{
-                DetailsURL: "suscipit",
-                Name: "iure",
-                PackageName: "magnam",
-                Version: "debitis",
+                DetailsURL: "provident",
+                Name: "distinctio",
+                PackageName: "quibusdam",
+                Version: "unde",
             },
             DataQualityStandard: []shared.DataSourceDataQualityStandardEnum{
-                "dataQualityBloodGlucoseIso151972013",
+                "dataQualityBloodPressureBhsAB",
+                "dataQualityBloodGlucoseIso151972003",
+                "dataQualityBloodPressureBhsAA",
+                "dataQualityBloodPressureBhsBA",
             },
-            DataStreamID: "tempora",
+            DataStreamID: "deserunt",
             DataStreamName: "suscipit",
             DataType: &shared.DataType{
                 Field: []shared.DataTypeField{
                     shared.DataTypeField{
-                        Format: "floatList",
-                        Name: "placeat",
+                        Format: "string",
+                        Name: "debitis",
                         Optional: false,
                     },
                     shared.DataTypeField{
-                        Format: "map",
-                        Name: "iusto",
+                        Format: "integer",
+                        Name: "delectus",
                         Optional: false,
                     },
                 },
-                Name: "excepturi",
+                Name: "tempora",
             },
             Device: &shared.Device{
-                Manufacturer: "nisi",
-                Model: "recusandae",
+                Manufacturer: "suscipit",
+                Model: "molestiae",
                 Type: "headMounted",
-                UID: "ab",
-                Version: "quis",
+                UID: "placeat",
+                Version: "voluptatum",
             },
-            Name: "veritatis",
+            Name: "iusto",
             Type: "derived",
         },
+        AccessToken: "nisi",
+        Alt: "proto",
+        Callback: "temporibus",
+        Fields: "ab",
+        Key: "quis",
+        OauthToken: "veritatis",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "perferendis",
+        UploadProtocol: "ipsam",
+        UserID: "repellendus",
     }
 
     ctx := context.Background()
-    res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, req)
+    res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, req, operations.FitnessUsersDataSourcesCreateSecurity{
+        Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

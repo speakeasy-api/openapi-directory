@@ -36,14 +36,14 @@ func newPermission(defaultClient, securityClient HTTPClient, serverURL, language
 // Deletes the permission object from the application
 func (s *permission) DeletePermission(ctx context.Context, request operations.DeletePermissionRequest) (*operations.DeletePermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *permission) DeletePermission(ctx context.Context, request operations.De
 // Deletes a tag from the Permission
 func (s *permission) DeletePermissionTag(ctx context.Context, request operations.DeletePermissionTagRequest) (*operations.DeletePermissionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -151,7 +151,7 @@ func (s *permission) GetAllPermissionTags(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -207,14 +207,14 @@ func (s *permission) GetAllPermissionTags(ctx context.Context, request operation
 // Gets the Permissions with the specified tag
 func (s *permission) GetAllPermissionsWithTag(ctx context.Context, request operations.GetAllPermissionsWithTagRequest) (*operations.GetAllPermissionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permissions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permissions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -270,14 +270,14 @@ func (s *permission) GetAllPermissionsWithTag(ctx context.Context, request opera
 // Gets the permission object for application
 func (s *permission) GetPermission(ctx context.Context, request operations.GetPermissionRequest) (*operations.GetPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -340,7 +340,7 @@ func (s *permission) GetPermissions(ctx context.Context, request operations.GetP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -396,14 +396,14 @@ func (s *permission) GetPermissions(ctx context.Context, request operations.GetP
 // Gets a tag from the Permission
 func (s *permission) GetTagFromPermission(ctx context.Context, request operations.GetTagFromPermissionRequest) (*operations.GetTagFromPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -459,14 +459,14 @@ func (s *permission) GetTagFromPermission(ctx context.Context, request operation
 // Gets all tags from the Permission
 func (s *permission) GetTagsFromPermission(ctx context.Context, request operations.GetTagsFromPermissionRequest) (*operations.GetTagsFromPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -522,14 +522,14 @@ func (s *permission) GetTagsFromPermission(ctx context.Context, request operatio
 // Gets the user permission instances
 func (s *permission) GetUserPermissions(ctx context.Context, request operations.GetUserPermissionsRequest) (*operations.GetUserPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -585,14 +585,14 @@ func (s *permission) GetUserPermissions(ctx context.Context, request operations.
 // Patch the permission object at the specified resource location
 func (s *permission) PatchPermission(ctx context.Context, request operations.PatchPermissionRequest) (*operations.PatchPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -655,7 +655,7 @@ func (s *permission) PostPermission(ctx context.Context, request operations.Post
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -711,14 +711,14 @@ func (s *permission) PostPermission(ctx context.Context, request operations.Post
 // Puts the permission object into the specified resource location
 func (s *permission) PutPermission(ctx context.Context, request operations.PutPermissionRequest) (*operations.PutPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -774,14 +774,14 @@ func (s *permission) PutPermission(ctx context.Context, request operations.PutPe
 // Inserts a tag on the Permission
 func (s *permission) PutPermissionTag(ctx context.Context, request operations.PutPermissionTagRequest) (*operations.PutPermissionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,10 +8,10 @@ import (
 )
 
 type GetCollectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetCollectionPathParams struct {
+type GetCollectionRequest struct {
 	// Unique identifier of the collection.
 	// The following aliases are supported:
 	// - `root`: The root collection of the account
@@ -19,18 +19,9 @@ type GetCollectionPathParams struct {
 	// - `trash`: Automatically contains resources that have been deleted
 	//
 	Collection string `pathParam:"style=simple,explode=false,name=collection"`
-}
-
-type GetCollectionQueryParams struct {
 	// This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
 	//
 	SharingKey *string `queryParam:"style=form,explode=true,name=sharingKey"`
-}
-
-type GetCollectionRequest struct {
-	PathParams  GetCollectionPathParams
-	QueryParams GetCollectionQueryParams
-	Security    GetCollectionSecurity
 }
 
 type GetCollectionResponse struct {

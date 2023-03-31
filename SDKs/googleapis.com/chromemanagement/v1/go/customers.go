@@ -32,20 +32,20 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ChromemanagementCustomersAppsCountChromeAppRequests - Generate summary of app installation requests.
-func (s *customers) ChromemanagementCustomersAppsCountChromeAppRequests(ctx context.Context, request operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest) (*operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse, error) {
+func (s *customers) ChromemanagementCustomersAppsCountChromeAppRequests(ctx context.Context, request operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest, security operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity) (*operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/apps:countChromeAppRequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/apps:countChromeAppRequests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *customers) ChromemanagementCustomersAppsCountChromeAppRequests(ctx cont
 }
 
 // ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttention - Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have no recent activity.
-func (s *customers) ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttention(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest) (*operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttention(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest, security operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionSecurity) (*operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeBrowsersNeedingAttention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeBrowsersNeedingAttention", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *customers) ChromemanagementCustomersReportsCountChromeBrowsersNeedingAt
 }
 
 // ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate - Generate report of the number of devices expiring in each month of the selected time frame. Devices are grouped by auto update expiration date and model. Further information can be found [here](https://support.google.com/chrome/a/answer/10564947).
-func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest) (*operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest, security operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateSecurity) (*operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeDevicesReachingAutoExpirationDate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeDevicesReachingAutoExpirationDate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,20 +176,20 @@ func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesReachingAu
 }
 
 // ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention - Counts of ChromeOS devices that have not synced policies or have lacked user activity in the past 28 days, are out of date, or are not complaint. Further information can be found here https://support.google.com/chrome/a/answer/10564947
-func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest) (*operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest, security operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionSecurity) (*operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeDevicesThatNeedAttention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeDevicesThatNeedAttention", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,20 +224,20 @@ func (s *customers) ChromemanagementCustomersReportsCountChromeDevicesThatNeedAt
 }
 
 // ChromemanagementCustomersReportsCountChromeHardwareFleetDevices - Counts of devices with a specific hardware specification from the requested hardware type (for example model name, processor type). Further information can be found here https://support.google.com/chrome/a/answer/10564947
-func (s *customers) ChromemanagementCustomersReportsCountChromeHardwareFleetDevices(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest) (*operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountChromeHardwareFleetDevices(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest, security operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesSecurity) (*operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeHardwareFleetDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeHardwareFleetDevices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -272,20 +272,20 @@ func (s *customers) ChromemanagementCustomersReportsCountChromeHardwareFleetDevi
 }
 
 // ChromemanagementCustomersReportsCountChromeVersions - Generate report of installed Chrome versions.
-func (s *customers) ChromemanagementCustomersReportsCountChromeVersions(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeVersionsRequest) (*operations.ChromemanagementCustomersReportsCountChromeVersionsResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountChromeVersions(ctx context.Context, request operations.ChromemanagementCustomersReportsCountChromeVersionsRequest, security operations.ChromemanagementCustomersReportsCountChromeVersionsSecurity) (*operations.ChromemanagementCustomersReportsCountChromeVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countChromeVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -320,20 +320,20 @@ func (s *customers) ChromemanagementCustomersReportsCountChromeVersions(ctx cont
 }
 
 // ChromemanagementCustomersReportsCountInstalledApps - Generate report of app installations.
-func (s *customers) ChromemanagementCustomersReportsCountInstalledApps(ctx context.Context, request operations.ChromemanagementCustomersReportsCountInstalledAppsRequest) (*operations.ChromemanagementCustomersReportsCountInstalledAppsResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountInstalledApps(ctx context.Context, request operations.ChromemanagementCustomersReportsCountInstalledAppsRequest, security operations.ChromemanagementCustomersReportsCountInstalledAppsSecurity) (*operations.ChromemanagementCustomersReportsCountInstalledAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countInstalledApps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countInstalledApps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,20 +368,20 @@ func (s *customers) ChromemanagementCustomersReportsCountInstalledApps(ctx conte
 }
 
 // ChromemanagementCustomersReportsCountPrintJobsByPrinter - Get a summary of printing done by each printer.
-func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByPrinter(ctx context.Context, request operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest) (*operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByPrinter(ctx context.Context, request operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest, security operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterSecurity) (*operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countPrintJobsByPrinter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countPrintJobsByPrinter", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,20 +416,20 @@ func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByPrinter(ctx 
 }
 
 // ChromemanagementCustomersReportsCountPrintJobsByUser - Get a summary of printing done by each user.
-func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByUser(ctx context.Context, request operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest) (*operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByUser(ctx context.Context, request operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest, security operations.ChromemanagementCustomersReportsCountPrintJobsByUserSecurity) (*operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countPrintJobsByUser", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:countPrintJobsByUser", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -464,20 +464,20 @@ func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByUser(ctx con
 }
 
 // ChromemanagementCustomersReportsFindInstalledAppDevices - Generate report of managed Chrome browser devices that have a specified app installed.
-func (s *customers) ChromemanagementCustomersReportsFindInstalledAppDevices(ctx context.Context, request operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest) (*operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse, error) {
+func (s *customers) ChromemanagementCustomersReportsFindInstalledAppDevices(ctx context.Context, request operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest, security operations.ChromemanagementCustomersReportsFindInstalledAppDevicesSecurity) (*operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:findInstalledAppDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:findInstalledAppDevices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -512,20 +512,20 @@ func (s *customers) ChromemanagementCustomersReportsFindInstalledAppDevices(ctx 
 }
 
 // ChromemanagementCustomersTelemetryDevicesList - List all telemetry devices.
-func (s *customers) ChromemanagementCustomersTelemetryDevicesList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryDevicesListRequest) (*operations.ChromemanagementCustomersTelemetryDevicesListResponse, error) {
+func (s *customers) ChromemanagementCustomersTelemetryDevicesList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryDevicesListRequest, security operations.ChromemanagementCustomersTelemetryDevicesListSecurity) (*operations.ChromemanagementCustomersTelemetryDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -560,20 +560,20 @@ func (s *customers) ChromemanagementCustomersTelemetryDevicesList(ctx context.Co
 }
 
 // ChromemanagementCustomersTelemetryEventsList - List telemetry events.
-func (s *customers) ChromemanagementCustomersTelemetryEventsList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryEventsListRequest) (*operations.ChromemanagementCustomersTelemetryEventsListResponse, error) {
+func (s *customers) ChromemanagementCustomersTelemetryEventsList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryEventsListRequest, security operations.ChromemanagementCustomersTelemetryEventsListSecurity) (*operations.ChromemanagementCustomersTelemetryEventsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,20 +608,20 @@ func (s *customers) ChromemanagementCustomersTelemetryEventsList(ctx context.Con
 }
 
 // ChromemanagementCustomersTelemetryUsersGet - Get telemetry user.
-func (s *customers) ChromemanagementCustomersTelemetryUsersGet(ctx context.Context, request operations.ChromemanagementCustomersTelemetryUsersGetRequest) (*operations.ChromemanagementCustomersTelemetryUsersGetResponse, error) {
+func (s *customers) ChromemanagementCustomersTelemetryUsersGet(ctx context.Context, request operations.ChromemanagementCustomersTelemetryUsersGetRequest, security operations.ChromemanagementCustomersTelemetryUsersGetSecurity) (*operations.ChromemanagementCustomersTelemetryUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -656,20 +656,20 @@ func (s *customers) ChromemanagementCustomersTelemetryUsersGet(ctx context.Conte
 }
 
 // ChromemanagementCustomersTelemetryUsersList - List all telemetry users.
-func (s *customers) ChromemanagementCustomersTelemetryUsersList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryUsersListRequest) (*operations.ChromemanagementCustomersTelemetryUsersListResponse, error) {
+func (s *customers) ChromemanagementCustomersTelemetryUsersList(ctx context.Context, request operations.ChromemanagementCustomersTelemetryUsersListRequest, security operations.ChromemanagementCustomersTelemetryUsersListSecurity) (*operations.ChromemanagementCustomersTelemetryUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/telemetry/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimPowerPanelsDeletePathParams struct {
+type DcimPowerPanelsDeleteRequest struct {
 	// A unique integer value identifying this power panel.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPanelsDeleteRequest struct {
-	PathParams DcimPowerPanelsDeletePathParams
 }
 
 type DcimPowerPanelsDeleteResponse struct {

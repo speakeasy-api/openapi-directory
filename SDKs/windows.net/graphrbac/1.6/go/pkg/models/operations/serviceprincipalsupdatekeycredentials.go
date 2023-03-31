@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsUpdateKeyCredentialsPathParams struct {
+type ServicePrincipalsUpdateKeyCredentialsRequest struct {
+	// Parameters to update the keyCredentials of an existing service principal.
+	KeyCredentialsUpdateParameters shared.KeyCredentialsUpdateParameters `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID for which to get service principal information.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsUpdateKeyCredentialsQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsUpdateKeyCredentialsRequest struct {
-	PathParams  ServicePrincipalsUpdateKeyCredentialsPathParams
-	QueryParams ServicePrincipalsUpdateKeyCredentialsQueryParams
-	// Parameters to update the keyCredentials of an existing service principal.
-	Request shared.KeyCredentialsUpdateParameters `request:"mediaType=application/json"`
 }
 
 type ServicePrincipalsUpdateKeyCredentialsResponse struct {

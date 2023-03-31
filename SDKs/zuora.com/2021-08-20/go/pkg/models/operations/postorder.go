@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTOrderQueryParams struct {
-	// Specify whether to return IDs associated with the numbers returned in the "Create an order" operation.
-	//
-	ReturnIds *bool `queryParam:"style=form,explode=true,name=returnIds"`
-}
-
-type POSTOrderHeaders struct {
+type POSTOrderRequest struct {
+	POSTOrderRequestType shared.POSTOrderRequestType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,6 +17,9 @@ type POSTOrderHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
+	// Specify whether to return IDs associated with the numbers returned in the "Create an order" operation.
+	//
+	ReturnIds *bool `queryParam:"style=form,explode=true,name=returnIds"`
 	// The minor version of the Zuora REST API.
 	//
 	// You need to set this parameter if you use the following fields:
@@ -29,12 +27,6 @@ type POSTOrderHeaders struct {
 	// * subscriptionNumbers
 	//
 	ZuoraVersion *string `header:"style=simple,explode=false,name=zuora-version"`
-}
-
-type POSTOrderRequest struct {
-	QueryParams POSTOrderQueryParams
-	Headers     POSTOrderHeaders
-	Request     shared.POSTOrderRequestType `request:"mediaType=application/json"`
 }
 
 type POSTOrderResponse struct {

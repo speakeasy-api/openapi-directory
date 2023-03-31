@@ -10,12 +10,7 @@ import (
 )
 
 type GetExamples1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetExamples1PathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetExamples1SourceEnum - return examples that were created in the dataset as feedback
@@ -45,19 +40,15 @@ func (e *GetExamples1SourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetExamples1QueryParams struct {
+type GetExamples1Request struct {
 	// Number of examples to return.
 	Count *string `queryParam:"style=form,explode=true,name=count"`
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Index of the example from which you want to start paging.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// return examples that were created in the dataset as feedback
 	Source *GetExamples1SourceEnum `queryParam:"style=form,explode=true,name=source"`
-}
-
-type GetExamples1Request struct {
-	PathParams  GetExamples1PathParams
-	QueryParams GetExamples1QueryParams
-	Security    GetExamples1Security
 }
 
 type GetExamples1Response struct {

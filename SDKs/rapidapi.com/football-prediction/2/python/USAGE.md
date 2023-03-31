@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAPIV2ListFederationsRequest(
-    headers=operations.GetAPIV2ListFederationsHeaders(
-        x_rapid_api_key="consequatur",
-    ),
+    x_rapid_api_key="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
 )
     
 res = s.get_api_v2_list_federations(req)

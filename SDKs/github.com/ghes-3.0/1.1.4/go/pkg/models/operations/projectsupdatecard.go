@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsUpdateCardPathParams struct {
-	// card_id parameter
-	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
 type ProjectsUpdateCardRequestBody struct {
 	// Whether or not the card is archived
 	Archived *bool `json:"archived,omitempty"`
@@ -20,8 +15,9 @@ type ProjectsUpdateCardRequestBody struct {
 }
 
 type ProjectsUpdateCardRequest struct {
-	PathParams ProjectsUpdateCardPathParams
-	Request    *ProjectsUpdateCardRequestBody `request:"mediaType=application/json"`
+	RequestBody *ProjectsUpdateCardRequestBody `request:"mediaType=application/json"`
+	// card_id parameter
+	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
 type ProjectsUpdateCardResponse struct {

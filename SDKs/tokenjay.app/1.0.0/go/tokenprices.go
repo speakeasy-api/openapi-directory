@@ -35,7 +35,7 @@ func newTokenPrices(defaultClient, securityClient HTTPClient, serverURL, languag
 // GetTokenPrice - Lists price and available volume for a certain token
 func (s *tokenPrices) GetTokenPrice(ctx context.Context, request operations.GetTokenPriceRequest) (*operations.GetTokenPriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/prices/{tokenId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tokens/prices/{tokenId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

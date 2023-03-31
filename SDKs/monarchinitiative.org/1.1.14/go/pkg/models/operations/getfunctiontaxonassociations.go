@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetFunctionTaxonAssociationsPathParams struct {
-	// CURIE identifier of a GO term, e.g. GO:0044598
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFunctionTaxonAssociationsQueryParams struct {
+type GetFunctionTaxonAssociationsRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence []string `queryParam:"style=form,explode=true,name=evidence"`
+	// CURIE identifier of a GO term, e.g. GO:0044598
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetFunctionTaxonAssociationsRequest struct {
-	PathParams  GetFunctionTaxonAssociationsPathParams
-	QueryParams GetFunctionTaxonAssociationsQueryParams
 }
 
 type GetFunctionTaxonAssociationsResponse struct {

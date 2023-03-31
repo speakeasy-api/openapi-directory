@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeleteGlobalWebhookPathParams struct {
+type EnterpriseAdminDeleteGlobalWebhookRequest struct {
 	// The unique identifier of the hook.
 	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminDeleteGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminDeleteGlobalWebhookPathParams
 }
 
 type EnterpriseAdminDeleteGlobalWebhookResponse struct {

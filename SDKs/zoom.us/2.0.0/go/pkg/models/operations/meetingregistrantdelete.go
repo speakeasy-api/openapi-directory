@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type MeetingregistrantdeletePathParams struct {
+type MeetingregistrantdeleteRequest struct {
 	// The meeting ID.
 	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-	// The meeting registrant ID.
-	RegistrantID string `pathParam:"style=simple,explode=false,name=registrantId"`
-}
-
-type MeetingregistrantdeleteQueryParams struct {
 	// The meeting occurence ID.
 	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
-}
-
-type MeetingregistrantdeleteRequest struct {
-	PathParams  MeetingregistrantdeletePathParams
-	QueryParams MeetingregistrantdeleteQueryParams
+	// The meeting registrant ID.
+	RegistrantID string `pathParam:"style=simple,explode=false,name=registrantId"`
 }
 
 type MeetingregistrantdeleteResponse struct {

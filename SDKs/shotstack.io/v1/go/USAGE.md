@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRenderRequest{
-        Security: operations.GetRenderSecurity{
-            DeveloperKey: shared.SchemeDeveloperKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.GetRenderPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Edit.GetRender(ctx, req)
+    res, err := s.Edit.GetRender(ctx, req, operations.GetRenderSecurity{
+        DeveloperKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

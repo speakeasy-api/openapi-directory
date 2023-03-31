@@ -12,12 +12,8 @@ var CreateUnderstandTaskServerList = []string{
 }
 
 type CreateUnderstandTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandTaskPathParams struct {
-	// The unique ID of the Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandTaskCreateUnderstandTaskRequest struct {
@@ -32,10 +28,9 @@ type CreateUnderstandTaskCreateUnderstandTaskRequest struct {
 }
 
 type CreateUnderstandTaskRequest struct {
-	PathParams CreateUnderstandTaskPathParams
-	Request    *CreateUnderstandTaskCreateUnderstandTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandTaskSecurity
-	ServerURL  *string
+	// The unique ID of the Assistant.
+	AssistantSid string                                           `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandTaskCreateUnderstandTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUnderstandTaskResponse struct {

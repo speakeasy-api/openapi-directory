@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsResetTokenPathParams struct {
-	// The client ID of your GitHub app.
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
 type AppsResetTokenRequestBody struct {
 	// The access_token of the OAuth application.
 	AccessToken string `json:"access_token"`
 }
 
 type AppsResetTokenRequest struct {
-	PathParams AppsResetTokenPathParams
-	Request    AppsResetTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody AppsResetTokenRequestBody `request:"mediaType=application/json"`
+	// The client ID of your GitHub app.
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type AppsResetTokenResponse struct {

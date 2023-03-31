@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RejectASandboxCheckDepositPathParams struct {
-	CheckDepositID string `pathParam:"style=simple,explode=false,name=check_deposit_id"`
-}
-
 type RejectASandboxCheckDepositRequest struct {
-	PathParams RejectASandboxCheckDepositPathParams
+	CheckDepositID string `pathParam:"style=simple,explode=false,name=check_deposit_id"`
 }
 
 type RejectASandboxCheckDepositDefaultApplicationJSON13StatusEnum string

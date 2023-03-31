@@ -8,13 +8,13 @@ import (
 )
 
 type TagmanagerAccountsContainersVariablesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersVariablesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersVariablesGetSecurity struct {
@@ -22,24 +22,19 @@ type TagmanagerAccountsContainersVariablesGetSecurity struct {
 	Option2 *TagmanagerAccountsContainersVariablesGetSecurityOption2 `security:"option"`
 }
 
-type TagmanagerAccountsContainersVariablesGetPathParams struct {
-	// The GTM Account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The GTM Container ID.
-	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
-	// The GTM Variable ID.
-	VariableID string `pathParam:"style=simple,explode=false,name=variableId"`
-}
-
-type TagmanagerAccountsContainersVariablesGetQueryParams struct {
+type TagmanagerAccountsContainersVariablesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The GTM Account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The GTM Container ID.
+	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -54,12 +49,8 @@ type TagmanagerAccountsContainersVariablesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersVariablesGetRequest struct {
-	PathParams  TagmanagerAccountsContainersVariablesGetPathParams
-	QueryParams TagmanagerAccountsContainersVariablesGetQueryParams
-	Security    TagmanagerAccountsContainersVariablesGetSecurity
+	// The GTM Variable ID.
+	VariableID string `pathParam:"style=simple,explode=false,name=variableId"`
 }
 
 type TagmanagerAccountsContainersVariablesGetResponse struct {

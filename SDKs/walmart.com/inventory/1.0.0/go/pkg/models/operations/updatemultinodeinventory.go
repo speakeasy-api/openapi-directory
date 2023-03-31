@@ -8,22 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateMultiNodeInventoryPathParams struct {
-	// An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’ as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
-	Sku string `pathParam:"style=simple,explode=false,name=sku"`
-}
-
-type UpdateMultiNodeInventoryHeaders struct {
-	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
-	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
-	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
-	// The access token retrieved in the Token API call
-	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
-	// Walmart Service Name
-	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
 // UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum - The unit of measurement. Example: 'EACH'
 type UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum string
 
@@ -70,10 +54,18 @@ type UpdateMultiNodeInventoryRequestBody struct {
 }
 
 type UpdateMultiNodeInventoryRequest struct {
-	PathParams UpdateMultiNodeInventoryPathParams
-	Headers    UpdateMultiNodeInventoryHeaders
 	// Request fields
-	Request UpdateMultiNodeInventoryRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateMultiNodeInventoryRequestBody `request:"mediaType=application/json"`
+	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
+	// The access token retrieved in the Token API call
+	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
+	// Walmart Service Name
+	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
+	// An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’ as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+	Sku string `pathParam:"style=simple,explode=false,name=sku"`
 }
 
 type UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum string

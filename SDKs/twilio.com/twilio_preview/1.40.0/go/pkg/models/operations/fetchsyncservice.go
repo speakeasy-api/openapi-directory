@@ -12,17 +12,12 @@ var FetchSyncServiceServerList = []string{
 }
 
 type FetchSyncServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSyncServicePathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSyncServiceRequest struct {
-	PathParams FetchSyncServicePathParams
-	Security   FetchSyncServiceSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSyncServiceResponse struct {

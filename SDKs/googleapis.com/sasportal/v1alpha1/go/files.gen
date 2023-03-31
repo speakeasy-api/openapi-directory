@@ -39,7 +39,6 @@ pkg/models/shared/sasportallistcustomersresponse.go
 pkg/models/shared/sasportalcustomer.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/sasportalprovisiondeploymentresponse.go
 pkg/models/shared/sasportalprovisiondeploymentrequest.go
 pkg/models/shared/sasportalgeneratesecretresponse.go

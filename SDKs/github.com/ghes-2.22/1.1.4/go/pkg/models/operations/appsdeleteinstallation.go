@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsDeleteInstallationPathParams struct {
+type AppsDeleteInstallationRequest struct {
 	// installation_id parameter
 	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
-type AppsDeleteInstallationRequest struct {
-	PathParams AppsDeleteInstallationPathParams
 }
 
 type AppsDeleteInstallationResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveGiftCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveGiftCardPathParams struct {
-	// The ID of the gift card to retrieve.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveGiftCardRequest struct {
-	PathParams RetrieveGiftCardPathParams
-	Security   RetrieveGiftCardSecurity
+	// The ID of the gift card to retrieve.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RetrieveGiftCardResponse struct {

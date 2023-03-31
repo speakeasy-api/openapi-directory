@@ -82,7 +82,7 @@ func (s *other) CategoriesList(ctx context.Context) (*operations.CategoriesListR
 // Starts the download of a file
 func (s *other) FileDownload(ctx context.Context, request operations.FileDownloadRequest) (*operations.FileDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file/download/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file/download/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,7 +118,7 @@ func (s *other) FileDownload(ctx context.Context, request operations.FileDownloa
 
 // ItemTypesList - Item Types
 // Returns the list of Item Types of the requested group. If no user is authenticated, returns the item types available for Figshare.
-func (s *other) ItemTypesList(ctx context.Context, request operations.ItemTypesListRequest) (*operations.ItemTypesListResponse, error) {
+func (s *other) ItemTypesList(ctx context.Context, request operations.ItemTypesListRequest, security operations.ItemTypesListSecurity) (*operations.ItemTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item_types"
 
@@ -127,11 +127,11 @@ func (s *other) ItemTypesList(ctx context.Context, request operations.ItemTypesL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -228,7 +228,7 @@ func (s *other) LicensesList(ctx context.Context) (*operations.LicensesListRespo
 
 // PrivateAccount - Private Account information
 // Account information for token/personal token
-func (s *other) PrivateAccount(ctx context.Context, request operations.PrivateAccountRequest) (*operations.PrivateAccountResponse, error) {
+func (s *other) PrivateAccount(ctx context.Context) (*operations.PrivateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -237,7 +237,7 @@ func (s *other) PrivateAccount(ctx context.Context, request operations.PrivateAc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,7 +284,7 @@ func (s *other) PrivateAccount(ctx context.Context, request operations.PrivateAc
 
 // PrivateFundingSearch - Search Funding
 // Search for fundings
-func (s *other) PrivateFundingSearch(ctx context.Context, request operations.PrivateFundingSearchRequest) (*operations.PrivateFundingSearchResponse, error) {
+func (s *other) PrivateFundingSearch(ctx context.Context, request shared.FundingSearch, security operations.PrivateFundingSearchSecurity) (*operations.PrivateFundingSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/funding/search"
 
@@ -300,7 +300,7 @@ func (s *other) PrivateFundingSearch(ctx context.Context, request operations.Pri
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,7 +349,7 @@ func (s *other) PrivateFundingSearch(ctx context.Context, request operations.Pri
 
 // PrivateLicensesList - Private Account Licenses
 // This is a private endpoint that requires OAuth. It will return a list with figshare public licenses AND licenses defined for account's institution.
-func (s *other) PrivateLicensesList(ctx context.Context, request operations.PrivateLicensesListRequest) (*operations.PrivateLicensesListResponse, error) {
+func (s *other) PrivateLicensesList(ctx context.Context) (*operations.PrivateLicensesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/licenses"
 
@@ -358,7 +358,7 @@ func (s *other) PrivateLicensesList(ctx context.Context, request operations.Priv
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

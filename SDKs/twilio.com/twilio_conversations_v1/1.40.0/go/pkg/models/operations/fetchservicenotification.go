@@ -12,18 +12,13 @@ var FetchServiceNotificationServerList = []string{
 }
 
 type FetchServiceNotificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchServiceNotificationPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchServiceNotificationRequest struct {
-	PathParams FetchServiceNotificationPathParams
-	Security   FetchServiceNotificationSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 }
 
 type FetchServiceNotificationResponse struct {

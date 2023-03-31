@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type HashtagsCleanerQueryParams struct {
+type HashtagsCleanerRequest struct {
 	// post
 	Post string `queryParam:"style=form,explode=true,name=post"`
-}
-
-type HashtagsCleanerRequest struct {
-	QueryParams HashtagsCleanerQueryParams
 }
 
 type HashtagsCleanerResponse struct {

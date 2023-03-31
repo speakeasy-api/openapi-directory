@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBehaviorsQueryParams struct {
+type GetBehaviorsRequest struct {
 	// If set, only shows folder behaviors matching this behavior type.
 	Behavior *string `queryParam:"style=form,explode=true,name=behavior"`
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
@@ -28,10 +28,6 @@ type GetBehaviorsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[behavior]=desc`). Valid fields are `behavior`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetBehaviorsRequest struct {
-	QueryParams GetBehaviorsQueryParams
 }
 
 type GetBehaviorsResponse struct {

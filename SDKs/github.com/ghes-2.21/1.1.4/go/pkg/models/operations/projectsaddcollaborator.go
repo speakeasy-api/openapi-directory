@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsAddCollaboratorPathParams struct {
-	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
-	Username  string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ProjectsAddCollaboratorRequestBodyPermissionEnum - The permission to grant the collaborator.
 type ProjectsAddCollaboratorRequestBodyPermissionEnum string
 
@@ -47,8 +42,9 @@ type ProjectsAddCollaboratorRequestBody struct {
 }
 
 type ProjectsAddCollaboratorRequest struct {
-	PathParams ProjectsAddCollaboratorPathParams
-	Request    *ProjectsAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	RequestBody *ProjectsAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	ProjectID   int64                               `pathParam:"style=simple,explode=false,name=project_id"`
+	Username    string                              `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // ProjectsAddCollaborator415ApplicationJSON - Preview header missing

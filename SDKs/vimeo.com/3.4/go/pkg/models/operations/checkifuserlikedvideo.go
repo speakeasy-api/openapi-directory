@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserLikedVideoPathParams struct {
+type CheckIfUserLikedVideoRequest struct {
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type CheckIfUserLikedVideoRequest struct {
-	PathParams CheckIfUserLikedVideoPathParams
 }
 
 type CheckIfUserLikedVideoResponse struct {

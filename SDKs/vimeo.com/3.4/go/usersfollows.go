@@ -35,7 +35,7 @@ func newUsersFollows(defaultClient, securityClient HTTPClient, serverURL, langua
 // CheckIfUserIsFollowing - Check if a user is following another user
 func (s *usersFollows) CheckIfUserIsFollowing(ctx context.Context, request operations.CheckIfUserIsFollowingRequest) (*operations.CheckIfUserIsFollowingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *usersFollows) CheckIfUserIsFollowing(ctx context.Context, request opera
 // CheckIfUserIsFollowingAlt1 - Check if a user is following another user
 func (s *usersFollows) CheckIfUserIsFollowingAlt1(ctx context.Context, request operations.CheckIfUserIsFollowingAlt1Request) (*operations.CheckIfUserIsFollowingAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,16 +123,16 @@ func (s *usersFollows) CheckIfUserIsFollowingAlt1(ctx context.Context, request o
 }
 
 // FollowUser - Follow a specific user
-func (s *usersFollows) FollowUser(ctx context.Context, request operations.FollowUserRequest) (*operations.FollowUserResponse, error) {
+func (s *usersFollows) FollowUser(ctx context.Context, request operations.FollowUserRequest, security operations.FollowUserSecurity) (*operations.FollowUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,16 +168,16 @@ func (s *usersFollows) FollowUser(ctx context.Context, request operations.Follow
 }
 
 // FollowUserAlt1 - Follow a specific user
-func (s *usersFollows) FollowUserAlt1(ctx context.Context, request operations.FollowUserAlt1Request) (*operations.FollowUserAlt1Response, error) {
+func (s *usersFollows) FollowUserAlt1(ctx context.Context, request operations.FollowUserAlt1Request, security operations.FollowUserAlt1Security) (*operations.FollowUserAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -213,11 +213,11 @@ func (s *usersFollows) FollowUserAlt1(ctx context.Context, request operations.Fo
 }
 
 // FollowUsers - Follow a list of users
-func (s *usersFollows) FollowUsers(ctx context.Context, request operations.FollowUsersRequest) (*operations.FollowUsersResponse, error) {
+func (s *usersFollows) FollowUsers(ctx context.Context, request operations.FollowUsersRequest, security operations.FollowUsersSecurity) (*operations.FollowUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -232,7 +232,7 @@ func (s *usersFollows) FollowUsers(ctx context.Context, request operations.Follo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *usersFollows) FollowUsers(ctx context.Context, request operations.Follo
 }
 
 // FollowUsersAlt1 - Follow a list of users
-func (s *usersFollows) FollowUsersAlt1(ctx context.Context, request operations.FollowUsersAlt1Request) (*operations.FollowUsersAlt1Response, error) {
+func (s *usersFollows) FollowUsersAlt1(ctx context.Context, request operations.FollowUsersAlt1RequestBody, security operations.FollowUsersAlt1Security) (*operations.FollowUsersAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/following"
 
@@ -295,7 +295,7 @@ func (s *usersFollows) FollowUsersAlt1(ctx context.Context, request operations.F
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,14 +341,14 @@ func (s *usersFollows) FollowUsersAlt1(ctx context.Context, request operations.F
 // GetFollowers - Get all the followers of a user
 func (s *usersFollows) GetFollowers(ctx context.Context, request operations.GetFollowersRequest) (*operations.GetFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -396,7 +396,7 @@ func (s *usersFollows) GetFollowersAlt1(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -437,14 +437,14 @@ func (s *usersFollows) GetFollowersAlt1(ctx context.Context, request operations.
 // GetUserFollowing - Get all the users that a user is following
 func (s *usersFollows) GetUserFollowing(ctx context.Context, request operations.GetUserFollowingRequest) (*operations.GetUserFollowingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -492,7 +492,7 @@ func (s *usersFollows) GetUserFollowingAlt1(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -531,16 +531,16 @@ func (s *usersFollows) GetUserFollowingAlt1(ctx context.Context, request operati
 }
 
 // UnfollowUser - Unfollow a user
-func (s *usersFollows) UnfollowUser(ctx context.Context, request operations.UnfollowUserRequest) (*operations.UnfollowUserResponse, error) {
+func (s *usersFollows) UnfollowUser(ctx context.Context, request operations.UnfollowUserRequest, security operations.UnfollowUserSecurity) (*operations.UnfollowUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -566,16 +566,16 @@ func (s *usersFollows) UnfollowUser(ctx context.Context, request operations.Unfo
 }
 
 // UnfollowUserAlt1 - Unfollow a user
-func (s *usersFollows) UnfollowUserAlt1(ctx context.Context, request operations.UnfollowUserAlt1Request) (*operations.UnfollowUserAlt1Response, error) {
+func (s *usersFollows) UnfollowUserAlt1(ctx context.Context, request operations.UnfollowUserAlt1Request, security operations.UnfollowUserAlt1Security) (*operations.UnfollowUserAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/following/{follow_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationSecurityIntrusionSettingsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules struct {
 	// Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
 	Message *string `json:"message,omitempty"`
@@ -23,8 +19,8 @@ type UpdateOrganizationSecurityIntrusionSettingsRequestBody struct {
 }
 
 type UpdateOrganizationSecurityIntrusionSettingsRequest struct {
-	PathParams UpdateOrganizationSecurityIntrusionSettingsPathParams
-	Request    UpdateOrganizationSecurityIntrusionSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody    UpdateOrganizationSecurityIntrusionSettingsRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                 `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationSecurityIntrusionSettingsResponse struct {

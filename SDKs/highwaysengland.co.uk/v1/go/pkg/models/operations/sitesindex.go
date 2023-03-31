@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SitesIndexPathParams struct {
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
 type SitesIndexRequest struct {
-	PathParams SitesIndexPathParams
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type SitesIndexResponse struct {

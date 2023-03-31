@@ -40,20 +40,30 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Note that maybe the response can be HTTP 200 or 206, 206 means that it's a partial content response.
 //
 // If it is a 206 take a look at the Headers, will be an entry called resources. E.g.: resources → 0-9/19. This means that the response is showing items from 0 to 9, 10 items, but there were 19 items found. See more information at the paging route example.
-func (s *search) ProductSearch(ctx context.Context, request operations.ProductSearchRequest) (*operations.ProductSearchResponse, error) {
-	baseURL := operations.ProductSearchServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *search) ProductSearch(ctx context.Context, request operations.ProductSearchRequest, opts ...operations.Option) (*operations.ProductSearchResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/search/{search}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/search/{search}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -166,10 +176,20 @@ func (s *search) ProductSearch(ctx context.Context, request operations.ProductSe
 //
 // - **Score**
 // `O=OrderByScoreDESC`
-func (s *search) ProductSearchFilteredandOrdered(ctx context.Context, request operations.ProductSearchFilteredandOrderedRequest) (*operations.ProductSearchFilteredandOrderedResponse, error) {
+func (s *search) ProductSearchFilteredandOrdered(ctx context.Context, request operations.ProductSearchFilteredandOrderedRequest, opts ...operations.Option) (*operations.ProductSearchFilteredandOrderedResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ProductSearchFilteredandOrderedServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/api/catalog_system/pub/products/search"
@@ -179,9 +199,9 @@ func (s *search) ProductSearchFilteredandOrdered(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -221,20 +241,30 @@ func (s *search) ProductSearchFilteredandOrdered(ctx context.Context, request op
 
 // Searchbyproducturl - Search Product by Product URL
 // Retrieves general information about the product of the URL you searched for.
-func (s *search) Searchbyproducturl(ctx context.Context, request operations.SearchbyproducturlRequest) (*operations.SearchbyproducturlResponse, error) {
-	baseURL := operations.SearchbyproducturlServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *search) Searchbyproducturl(ctx context.Context, request operations.SearchbyproducturlRequest, opts ...operations.Option) (*operations.SearchbyproducturlResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/search/{product-text-link}/p", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.SearchbyproducturlServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/search/{product-text-link}/p", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

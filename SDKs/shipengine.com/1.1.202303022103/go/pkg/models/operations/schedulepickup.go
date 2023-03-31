@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SchedulePickupRequest struct {
-	Request shared.SchedulePickupRequestBodyInput `request:"mediaType=application/json"`
-}
-
 type SchedulePickupResponse struct {
 	ContentType string
 	StatusCode  int

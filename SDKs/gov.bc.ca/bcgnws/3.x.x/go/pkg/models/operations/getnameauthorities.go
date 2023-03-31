@@ -32,13 +32,9 @@ func (e *GetNameAuthoritiesOutputFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNameAuthoritiesQueryParams struct {
+type GetNameAuthoritiesRequest struct {
 	// The format of the output.
 	OutputFormat GetNameAuthoritiesOutputFormatEnum `queryParam:"style=form,explode=true,name=outputFormat"`
-}
-
-type GetNameAuthoritiesRequest struct {
-	QueryParams GetNameAuthoritiesQueryParams
 }
 
 type GetNameAuthoritiesResponse struct {

@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDLoanPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum string
 
 const (
@@ -95,9 +88,12 @@ type PatchSpacesSpaceIDFoldersIDLoanRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDLoanRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDLoanPathParams
 	// Loan to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDLoanRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDLoanRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDLoanResponse struct {

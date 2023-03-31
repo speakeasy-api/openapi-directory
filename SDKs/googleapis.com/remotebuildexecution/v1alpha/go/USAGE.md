@@ -14,122 +14,118 @@ func main() {
     s := sdk.New()
 
     req := operations.RemotebuildexecutionProjectsInstancesCreateRequest{
-        Security: operations.RemotebuildexecutionProjectsInstancesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.RemotebuildexecutionProjectsInstancesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.RemotebuildexecutionProjectsInstancesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput{
+        DollarXgafv: "2",
+        GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput{
             Instance: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput{
                 FeaturePolicy: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy{
-                    ActionHermeticity: "ACTION_HERMETICITY_OFF",
-                    ActionIsolation: "ACTION_ISOLATION_OFF",
+                    ActionHermeticity: "ACTION_HERMETICITY_ENFORCED",
+                    ActionIsolation: "ACTION_ISOLATION_ENFORCED",
                     ContainerImageSources: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "debitis",
-                            "ipsa",
+                            "unde",
+                            "nulla",
+                            "corrupti",
+                            "illum",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: "ALLOWED",
                     },
                     DockerAddCapabilities: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
+                            "deserunt",
                             "suscipit",
-                            "molestiae",
+                            "iure",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: "ALLOWED",
                     },
                     DockerChrootPath: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "voluptatum",
-                            "iusto",
-                            "excepturi",
-                            "nisi",
+                            "ipsa",
+                            "delectus",
+                            "tempora",
+                            "suscipit",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: "ALLOWED",
                     },
                     DockerNetwork: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "ab",
-                            "quis",
-                            "veritatis",
-                            "deserunt",
+                            "placeat",
+                            "voluptatum",
+                            "iusto",
+                            "excepturi",
                         },
-                        Policy: "POLICY_UNSPECIFIED",
+                        Policy: "ALLOWED",
                     },
                     DockerPrivileged: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "repellendus",
-                            "sapiente",
+                            "temporibus",
+                            "ab",
+                            "quis",
+                            "veritatis",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: "FORBIDDEN",
                     },
                     DockerRunAsContainerProvidedUser: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "at",
+                            "ipsam",
                         },
                         Policy: "RESTRICTED",
                     },
                     DockerRunAsRoot: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "molestiae",
-                            "quod",
-                            "quod",
-                            "esse",
+                            "quo",
+                            "odit",
+                            "at",
+                            "at",
                         },
-                        Policy: "FORBIDDEN",
+                        Policy: "RESTRICTED",
                     },
                     DockerRuntime: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "dolorum",
-                            "dicta",
-                            "nam",
-                            "officia",
+                            "quod",
+                            "quod",
                         },
-                        Policy: "FORBIDDEN",
+                        Policy: "ALLOWED",
                     },
                     DockerSiblingContainers: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "deleniti",
+                            "porro",
+                            "dolorum",
+                            "dicta",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: "FORBIDDEN",
                     },
                     LinuxExecution: "LINUX_EXECUTION_HARDENED_GVISOR",
                     LinuxIsolation: "GVISOR",
                     MacExecution: "MAC_EXECUTION_UNSPECIFIED",
                     VMVerification: "VM_VERIFICATION_GCP_TOKEN",
-                    WindowsExecution: "WINDOWS_EXECUTION_FORBIDDEN",
+                    WindowsExecution: "WINDOWS_EXECUTION_TERMINAL",
                 },
-                Location: "modi",
+                Location: "optio",
                 SchedulerNotificationConfig: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig{
-                    Topic: "qui",
+                    Topic: "totam",
                 },
             },
-            InstanceID: "impedit",
-            Parent: "cum",
+            InstanceID: "beatae",
+            Parent: "commodi",
         },
+        AccessToken: "molestiae",
+        Alt: "json",
+        Callback: "qui",
+        Fields: "impedit",
+        Key: "cum",
+        OauthToken: "esse",
+        Parent: "ipsum",
+        PrettyPrint: false,
+        QuotaUser: "excepturi",
+        UploadType: "aspernatur",
+        UploadProtocol: "perferendis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.RemotebuildexecutionProjectsInstancesCreate(ctx, req)
+    res, err := s.Projects.RemotebuildexecutionProjectsInstancesCreate(ctx, req, operations.RemotebuildexecutionProjectsInstancesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

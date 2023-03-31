@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type TeamsDeleteInOrgPathParams struct {
+type TeamsDeleteInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsDeleteInOrgRequest struct {
-	PathParams TeamsDeleteInOrgPathParams
 }
 
 type TeamsDeleteInOrgResponse struct {

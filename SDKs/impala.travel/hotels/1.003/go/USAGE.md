@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuthentication: shared.SchemeAPIKeyAuthentication{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuthentication: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CancelBookingRequest{
-        PathParams: operations.CancelBookingPathParams{
-            BookingID: "corrupti",
-        },
+        BookingID: "corrupti",
     }
 
     ctx := context.Background()

@@ -8,18 +8,14 @@ import (
 )
 
 type UpdateServiceTemplateSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceTemplatePathParams struct {
-	// The service id
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceTemplateRequest struct {
-	PathParams UpdateServiceTemplatePathParams
-	Request    *shared.ErrorTemplate `request:"mediaType=application/json"`
-	Security   UpdateServiceTemplateSecurity
+	ErrorTemplate *shared.ErrorTemplate `request:"mediaType=application/json"`
+	// The service id
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type UpdateServiceTemplateResponse struct {

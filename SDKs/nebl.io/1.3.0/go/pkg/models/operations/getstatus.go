@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetStatusQueryParams struct {
+type GetStatusRequest struct {
 	// Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetStatusRequest struct {
-	QueryParams GetStatusQueryParams
 }
 
 type GetStatusResponse struct {

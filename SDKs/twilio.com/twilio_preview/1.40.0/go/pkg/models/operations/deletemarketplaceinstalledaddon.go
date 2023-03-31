@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteMarketplaceInstalledAddOnServerList = []string{
@@ -12,18 +11,13 @@ var DeleteMarketplaceInstalledAddOnServerList = []string{
 }
 
 type DeleteMarketplaceInstalledAddOnSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteMarketplaceInstalledAddOnPathParams struct {
-	// The SID of the InstalledAddOn resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteMarketplaceInstalledAddOnRequest struct {
-	PathParams DeleteMarketplaceInstalledAddOnPathParams
-	Security   DeleteMarketplaceInstalledAddOnSecurity
-	ServerURL  *string
+	// The SID of the InstalledAddOn resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteMarketplaceInstalledAddOnResponse struct {

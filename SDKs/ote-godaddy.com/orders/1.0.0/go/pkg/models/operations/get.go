@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPathParams struct {
-	// Order id whose details are to be retrieved
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetHeaders struct {
+type GetRequest struct {
 	// Unique identifier of the Market in which the request is happening
 	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
 	// Shopper ID to be operated on, if different from JWT<br/><b>Reseller subaccounts are not supported</b>
 	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
-}
-
-type GetRequest struct {
-	PathParams GetPathParams
-	Headers    GetHeaders
+	// Order id whose details are to be retrieved
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type GetResponse struct {

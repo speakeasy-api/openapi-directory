@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryOutlineSchemaPathParams struct {
+type StoryOutlineSchemaRequest struct {
 	// The semanitic version of a schema (e.g. '0.3.1')
 	SchemaVersion string `pathParam:"style=simple,explode=false,name=schema_version"`
-}
-
-type StoryOutlineSchemaRequest struct {
-	PathParams StoryOutlineSchemaPathParams
 }
 
 type StoryOutlineSchemaResponse struct {

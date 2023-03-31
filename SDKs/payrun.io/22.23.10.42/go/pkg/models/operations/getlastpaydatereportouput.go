@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLastPayDateReportOuputQueryParams struct {
-	// The employee unique key. E.g. EE001
-	EmployeeKey string `queryParam:"style=form,explode=true,name=EmployeeKey"`
-	// The employer unique key. E.g. ER001
-	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
-}
-
-type GetLastPayDateReportOuputHeaders struct {
+type GetLastPayDateReportOuputRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetLastPayDateReportOuputRequest struct {
-	QueryParams GetLastPayDateReportOuputQueryParams
-	Headers     GetLastPayDateReportOuputHeaders
+	// The employee unique key. E.g. EE001
+	EmployeeKey string `queryParam:"style=form,explode=true,name=EmployeeKey"`
+	// The employer unique key. E.g. ER001
+	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 }
 
 type GetLastPayDateReportOuputResponse struct {

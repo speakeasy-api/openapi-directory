@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountByIDPathParams struct {
+type GetAccountByIDRequest struct {
 	// The id of the account
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
-type GetAccountByIDRequest struct {
-	PathParams GetAccountByIDPathParams
 }
 
 type GetAccountByIDResponse struct {

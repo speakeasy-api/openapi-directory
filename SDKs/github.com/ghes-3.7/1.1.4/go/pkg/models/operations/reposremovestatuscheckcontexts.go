@@ -10,15 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposRemoveStatusCheckContextsPathParams struct {
-	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.7/graphql).
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposRemoveStatusCheckContextsRequestBody1 - The name of the status checks
 type ReposRemoveStatusCheckContextsRequestBody1 struct {
 	// The name of the status checks
@@ -94,8 +85,13 @@ func (u ReposRemoveStatusCheckContextsRequestBody) MarshalJSON() ([]byte, error)
 }
 
 type ReposRemoveStatusCheckContextsRequest struct {
-	PathParams ReposRemoveStatusCheckContextsPathParams
-	Request    *ReposRemoveStatusCheckContextsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposRemoveStatusCheckContextsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.7/graphql).
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposRemoveStatusCheckContextsResponse struct {

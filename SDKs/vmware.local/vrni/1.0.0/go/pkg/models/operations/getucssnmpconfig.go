@@ -8,17 +8,12 @@ import (
 )
 
 type GetUcsSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetUcsSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetUcsSnmpConfigRequest struct {
-	PathParams GetUcsSnmpConfigPathParams
-	Security   GetUcsSnmpConfigSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetUcsSnmpConfigResponse struct {

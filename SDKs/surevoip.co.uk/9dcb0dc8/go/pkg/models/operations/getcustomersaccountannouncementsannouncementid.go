@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomersAccountAnnouncementsAnnouncementIDPathParams struct {
+type GetCustomersAccountAnnouncementsAnnouncementIDRequest struct {
 	// Account ID of customer
 	Account int64 `pathParam:"style=simple,explode=false,name=account"`
 	// Announcement ID of audio file
 	AnnouncementID string `pathParam:"style=simple,explode=false,name=announcement_id"`
-}
-
-type GetCustomersAccountAnnouncementsAnnouncementIDRequest struct {
-	PathParams GetCustomersAccountAnnouncementsAnnouncementIDPathParams
 }
 
 // GetCustomersAccountAnnouncementsAnnouncementID404ApplicationJSON - Not found

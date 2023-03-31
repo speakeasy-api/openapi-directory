@@ -4,35 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SeatDetailsSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SeatDetailsPathParams struct {
+type SeatDetailsRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Aircraft type. 3-character IATA equipment code
 	AircraftCode string `pathParam:"style=simple,explode=false,name=aircraftCode"`
 	// Cabin class: M, E, C, F (Acceptable values are: "", "M", "E", "C", "F")
 	CabinCode string `pathParam:"style=simple,explode=false,name=cabinCode"`
-}
-
-type SeatDetailsQueryParams struct {
 	// 2-letter ISO 3166-1 language code
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type SeatDetailsHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type SeatDetailsRequest struct {
-	PathParams  SeatDetailsPathParams
-	QueryParams SeatDetailsQueryParams
-	Headers     SeatDetailsHeaders
-	Security    SeatDetailsSecurity
 }
 
 type SeatDetailsResponse struct {

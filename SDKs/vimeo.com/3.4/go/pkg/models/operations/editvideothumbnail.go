@@ -8,14 +8,7 @@ import (
 )
 
 type EditVideoThumbnailSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVideoThumbnailPathParams struct {
-	// The ID of the picture.
-	PictureID float64 `pathParam:"style=simple,explode=false,name=picture_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVideoThumbnailRequestBody struct {
@@ -24,9 +17,11 @@ type EditVideoThumbnailRequestBody struct {
 }
 
 type EditVideoThumbnailRequest struct {
-	PathParams EditVideoThumbnailPathParams
-	Request    *EditVideoThumbnailRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   EditVideoThumbnailSecurity
+	RequestBody *EditVideoThumbnailRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the picture.
+	PictureID float64 `pathParam:"style=simple,explode=false,name=picture_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type EditVideoThumbnailResponse struct {

@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateOrderTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateOrderTaskRequest struct {
-	// description not needed
-	Request  shared.CreateOrderTaskRequest `request:"mediaType=application/json"`
-	Security CreateOrderTaskSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateOrderTaskResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveCustomerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveCustomerPathParams struct {
-	// The ID of the customer to retrieve.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveCustomerRequest struct {
-	PathParams RetrieveCustomerPathParams
-	Security   RetrieveCustomerSecurity
+	// The ID of the customer to retrieve.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
 }
 
 type RetrieveCustomerResponse struct {

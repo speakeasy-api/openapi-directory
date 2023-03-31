@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsDeleteGrantPathParams struct {
+type OauthAuthorizationsDeleteGrantRequest struct {
 	// grant_id parameter
 	GrantID int64 `pathParam:"style=simple,explode=false,name=grant_id"`
-}
-
-type OauthAuthorizationsDeleteGrantRequest struct {
-	PathParams OauthAuthorizationsDeleteGrantPathParams
 }
 
 type OauthAuthorizationsDeleteGrantResponse struct {

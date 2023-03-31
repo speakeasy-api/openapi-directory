@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AllTaxRatesQueryParams struct {
+type AllTaxRatesRequest struct {
 	ProductCode *string `queryParam:"style=form,explode=true,name=Product_code"`
 	// Cursor shows from which record you want to get information. Default value is 0, next value can be retrieved from X-Cursor-Next header.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
@@ -14,10 +14,6 @@ type AllTaxRatesQueryParams struct {
 	Domain *string `queryParam:"style=form,explode=true,name=domain"`
 	// You can filter your taxes by one of following types: 'standard', 'CombinedRate', 'CountyRate', 'CityRate', 'SPDRate' and 'MTARate'.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-}
-
-type AllTaxRatesRequest struct {
-	QueryParams AllTaxRatesQueryParams
 }
 
 // AllTaxRates500ApplicationJSON - Unexpected error

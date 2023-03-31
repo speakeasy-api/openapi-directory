@@ -8,18 +8,11 @@ import (
 )
 
 type TasksTasksMoveSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TasksTasksMovePathParams struct {
-	// Task identifier.
-	Task string `pathParam:"style=simple,explode=false,name=task"`
-	// Task list identifier.
-	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
-}
-
-type TasksTasksMoveQueryParams struct {
+type TasksTasksMoveRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,16 +35,14 @@ type TasksTasksMoveQueryParams struct {
 	Previous *string `queryParam:"style=form,explode=true,name=previous"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Task identifier.
+	Task string `pathParam:"style=simple,explode=false,name=task"`
+	// Task list identifier.
+	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TasksTasksMoveRequest struct {
-	PathParams  TasksTasksMovePathParams
-	QueryParams TasksTasksMoveQueryParams
-	Security    TasksTasksMoveSecurity
 }
 
 type TasksTasksMoveResponse struct {

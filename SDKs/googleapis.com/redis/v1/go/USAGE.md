@@ -14,78 +14,44 @@ func main() {
     s := sdk.New()
 
     req := operations.RedisProjectsLocationsInstancesCreateRequest{
-        Security: operations.RedisProjectsLocationsInstancesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.RedisProjectsLocationsInstancesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.RedisProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            InstanceID: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.InstanceInput{
-            AlternativeLocationID: "iure",
+        DollarXgafv: "2",
+        InstanceInput: &shared.InstanceInput{
+            AlternativeLocationID: "provident",
             AuthEnabled: false,
-            AuthorizedNetwork: "magnam",
+            AuthorizedNetwork: "distinctio",
             AvailableMaintenanceVersions: []string{
-                "ipsa",
-                "delectus",
-                "tempora",
-                "suscipit",
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             },
             ConnectMode: "DIRECT_PEERING",
-            CustomerManagedKey: "minus",
-            DisplayName: "placeat",
+            CustomerManagedKey: "error",
+            DisplayName: "deserunt",
             Labels: map[string]string{
-                "iusto": "excepturi",
-                "nisi": "recusandae",
-                "temporibus": "ab",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            LocationID: "quis",
+            LocationID: "delectus",
             MaintenancePolicy: &shared.MaintenancePolicyInput{
-                Description: "veritatis",
+                Description: "tempora",
                 WeeklyMaintenanceWindow: []shared.WeeklyMaintenanceWindowInput{
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "DAY_OF_WEEK_UNSPECIFIED",
+                        Day: "WEDNESDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 368241,
-                            Minutes: 832620,
-                            Nanos: 957156,
-                            Seconds: 778157,
+                            Hours: 791725,
+                            Minutes: 812169,
+                            Nanos: 528895,
+                            Seconds: 479977,
                         },
                     },
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "MONDAY",
+                        Day: "THURSDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 870013,
-                            Minutes: 870088,
-                            Nanos: 978619,
-                            Seconds: 473608,
-                        },
-                    },
-                    shared.WeeklyMaintenanceWindowInput{
-                        Day: "SATURDAY",
-                        StartTime: &shared.TimeOfDay{
-                            Hours: 800911,
-                            Minutes: 461479,
-                            Nanos: 520478,
-                            Seconds: 780529,
+                            Hours: 392785,
+                            Minutes: 925597,
+                            Nanos: 836079,
+                            Seconds: 71036,
                         },
                     },
                 },
@@ -93,35 +59,52 @@ func main() {
             MaintenanceSchedule: &shared.MaintenanceScheduleInput{
                 CanReschedule: false,
             },
-            MaintenanceVersion: "dolorum",
-            MemorySizeGb: 118274,
-            Name: "nam",
+            MaintenanceVersion: "quis",
+            MemorySizeGb: 87129,
+            Name: "deserunt",
             PersistenceConfig: &shared.PersistenceConfigInput{
-                PersistenceMode: "DISABLED",
-                RdbSnapshotPeriod: "SIX_HOURS",
-                RdbSnapshotStartTime: "fugit",
+                PersistenceMode: "PERSISTENCE_MODE_UNSPECIFIED",
+                RdbSnapshotPeriod: "ONE_HOUR",
+                RdbSnapshotStartTime: "repellendus",
             },
-            ReadReplicasMode: "READ_REPLICAS_DISABLED",
+            ReadReplicasMode: "READ_REPLICAS_ENABLED",
             RedisConfigs: map[string]string{
-                "optio": "totam",
-                "beatae": "commodi",
-                "molestiae": "modi",
-                "qui": "impedit",
+                "odit": "at",
+                "at": "maiores",
+                "molestiae": "quod",
+                "quod": "esse",
             },
-            RedisVersion: "cum",
-            ReplicaCount: 456150,
-            ReservedIPRange: "ipsum",
-            SecondaryIPRange: "excepturi",
+            RedisVersion: "totam",
+            ReplicaCount: 780529,
+            ReservedIPRange: "dolorum",
+            SecondaryIPRange: "dicta",
             SuspensionReasons: []shared.InstanceSuspensionReasonsEnum{
+                "CUSTOMER_MANAGED_KEY_ISSUE",
+                "CUSTOMER_MANAGED_KEY_ISSUE",
                 "SUSPENSION_REASON_UNSPECIFIED",
             },
-            Tier: "TIER_UNSPECIFIED",
-            TransitEncryptionMode: "SERVER_AUTHENTICATION",
+            Tier: "BASIC",
+            TransitEncryptionMode: "DISABLED",
         },
+        AccessToken: "optio",
+        Alt: "media",
+        Callback: "beatae",
+        Fields: "commodi",
+        InstanceID: "molestiae",
+        Key: "modi",
+        OauthToken: "qui",
+        Parent: "impedit",
+        PrettyPrint: false,
+        QuotaUser: "cum",
+        UploadType: "esse",
+        UploadProtocol: "ipsum",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.RedisProjectsLocationsInstancesCreate(ctx, req)
+    res, err := s.Projects.RedisProjectsLocationsInstancesCreate(ctx, req, operations.RedisProjectsLocationsInstancesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

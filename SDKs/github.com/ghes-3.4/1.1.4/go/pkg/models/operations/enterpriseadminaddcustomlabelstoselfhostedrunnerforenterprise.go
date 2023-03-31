@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-	// Unique identifier of the self-hosted runner.
-	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
 type EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody struct {
 	// The names of the custom labels to add to the runner.
 	Labels []string `json:"labels"`
 }
 
 type EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest struct {
-	PathParams EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterprisePathParams
-	Request    EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
+	// Unique identifier of the self-hosted runner.
+	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
 }
 
 // EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterprise200ApplicationJSON - Response

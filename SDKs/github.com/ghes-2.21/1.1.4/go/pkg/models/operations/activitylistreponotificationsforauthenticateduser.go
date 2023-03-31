@@ -8,29 +8,21 @@ import (
 	"time"
 )
 
-type ActivityListRepoNotificationsForAuthenticatedUserPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActivityListRepoNotificationsForAuthenticatedUserQueryParams struct {
+type ActivityListRepoNotificationsForAuthenticatedUserRequest struct {
 	// If `true`, show notifications marked as read.
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Only show notifications updated before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Before *time.Time `queryParam:"style=form,explode=true,name=before"`
+	Owner  string     `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// If `true`, only shows notifications in which the user is directly participating or mentioned.
 	Participating *bool `queryParam:"style=form,explode=true,name=participating"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ActivityListRepoNotificationsForAuthenticatedUserRequest struct {
-	PathParams  ActivityListRepoNotificationsForAuthenticatedUserPathParams
-	QueryParams ActivityListRepoNotificationsForAuthenticatedUserQueryParams
 }
 
 type ActivityListRepoNotificationsForAuthenticatedUserResponse struct {

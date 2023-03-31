@@ -52,7 +52,7 @@ func newClusterAPI(defaultClient, securityClient HTTPClient, serverURL, language
 //   - send a POST request towards `https://graphhopper.com/api/1/cluster/calculate?key=<your_key>` and fetch the job_id.
 //   - poll the solution every 500ms until it gives `status=finished`. Do this with a GET request
 //     towards `https://graphhopper.com/api/1/cluster/solution/<job_id>?key=<your_key>`.
-func (s *clusterAPI) AsyncClusteringProblem(ctx context.Context, request operations.AsyncClusteringProblemRequest) (*operations.AsyncClusteringProblemResponse, error) {
+func (s *clusterAPI) AsyncClusteringProblem(ctx context.Context, request shared.ClusterRequest) (*operations.AsyncClusteringProblemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cluster/calculate"
 
@@ -132,7 +132,7 @@ func (s *clusterAPI) AsyncClusteringProblem(ctx context.Context, request operati
 // You can fetch it with the job_id, you have been sent.
 func (s *clusterAPI) GetClusterSolution(ctx context.Context, request operations.GetClusterSolutionRequest) (*operations.GetClusterSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/solution/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cluster/solution/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -202,7 +202,7 @@ func (s *clusterAPI) GetClusterSolution(ctx context.Context, request operations.
 // `https://graphhopper.com/api/1/cluster?key=<your_key>`. The solution will be provided in the JSON response.
 // Please note that for problems that take longer than 10 seconds a bad request error is returned.
 // In this case please use the asynchronous [Batch Cluster Endpoint](#operation/asyncClusteringProblem) instead.
-func (s *clusterAPI) SolveClusteringProblem(ctx context.Context, request operations.SolveClusteringProblemRequest) (*operations.SolveClusteringProblemResponse, error) {
+func (s *clusterAPI) SolveClusteringProblem(ctx context.Context, request shared.ClusterRequest) (*operations.SolveClusteringProblemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cluster"
 

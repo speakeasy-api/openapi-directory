@@ -11,10 +11,6 @@ type ResetRequestBody struct {
 	Type          *string `json:"type,omitempty"`
 }
 
-type ResetRequest struct {
-	Request ResetRequestBody `request:"mediaType=application/json"`
-}
-
 // Reset201ApplicationJSON - A successful response
 type Reset201ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

@@ -12,7 +12,8 @@ import (
 )
 
 type CreateAsyncReportSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAsyncReportRequestBodyType string
@@ -297,13 +298,6 @@ func (u CreateAsyncReportRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type CreateAsyncReportRequest struct {
-	// The parameters of the JSON body will be used to create and filter the report.<br> The value of the `product` field will define which product the report will be created for and which parameters are accepted.
-	//
-	Request  *CreateAsyncReportRequestBody `request:"mediaType=application/json"`
-	Security CreateAsyncReportSecurity
 }
 
 // CreateAsyncReport422ApplicationJSON - Unprocessable entity

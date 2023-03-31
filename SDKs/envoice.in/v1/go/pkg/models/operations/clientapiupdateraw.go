@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ClientAPIUpdateRawHeaders struct {
+type ClientAPIUpdateRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type ClientAPIUpdateRawRequest struct {
-	Headers ClientAPIUpdateRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type ClientAPIUpdateRawResponse struct {

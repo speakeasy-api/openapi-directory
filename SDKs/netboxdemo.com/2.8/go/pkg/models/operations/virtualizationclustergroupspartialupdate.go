@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClusterGroupsPartialUpdatePathParams struct {
+type VirtualizationClusterGroupsPartialUpdateRequest struct {
+	ClusterGroupInput shared.ClusterGroupInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this cluster group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationClusterGroupsPartialUpdateRequest struct {
-	PathParams VirtualizationClusterGroupsPartialUpdatePathParams
-	Request    shared.ClusterGroupInput `request:"mediaType=application/json"`
 }
 
 type VirtualizationClusterGroupsPartialUpdateResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type CountOrgaUsersSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CountOrgaUsersQueryParams struct {
+type CountOrgaUsersRequest struct {
 	// Filter users by group
 	Group []string `queryParam:"style=form,explode=true,name=group"`
 	// Filter users who don't have an active license
@@ -20,11 +20,6 @@ type CountOrgaUsersQueryParams struct {
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Filter users by role
 	Role []shared.RoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type CountOrgaUsersRequest struct {
-	QueryParams CountOrgaUsersQueryParams
-	Security    CountOrgaUsersSecurity
 }
 
 type CountOrgaUsersResponse struct {

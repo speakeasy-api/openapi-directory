@@ -32,15 +32,11 @@ func (e *GetCityFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCityQueryParams struct {
+type GetCityRequest struct {
 	Format *GetCityFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	Key    string             `queryParam:"style=form,explode=true,name=key"`
 	Lat    float64            `queryParam:"style=form,explode=true,name=lat"`
 	Lng    float64            `queryParam:"style=form,explode=true,name=lng"`
-}
-
-type GetCityRequest struct {
-	QueryParams GetCityQueryParams
 }
 
 type GetCityResponse struct {

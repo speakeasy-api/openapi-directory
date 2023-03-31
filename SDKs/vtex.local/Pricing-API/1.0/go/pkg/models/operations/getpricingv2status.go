@@ -10,16 +10,11 @@ var GetPricingv2StatusServerList = []string{
 	"https://api.vtex.com/{account}/pricing",
 }
 
-type GetPricingv2StatusHeaders struct {
+type GetPricingv2StatusRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetPricingv2StatusRequest struct {
-	Headers   GetPricingv2StatusHeaders
-	ServerURL *string
 }
 
 // GetPricingv2Status200ApplicationJSON - OK

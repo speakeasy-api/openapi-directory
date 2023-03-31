@@ -32,20 +32,20 @@ func newRemarketingLists(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // DfareportingRemarketingListsGet - Gets one remarketing list by ID.
-func (s *remarketingLists) DfareportingRemarketingListsGet(ctx context.Context, request operations.DfareportingRemarketingListsGetRequest) (*operations.DfareportingRemarketingListsGetResponse, error) {
+func (s *remarketingLists) DfareportingRemarketingListsGet(ctx context.Context, request operations.DfareportingRemarketingListsGetRequest, security operations.DfareportingRemarketingListsGetSecurity) (*operations.DfareportingRemarketingListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *remarketingLists) DfareportingRemarketingListsGet(ctx context.Context, 
 }
 
 // DfareportingRemarketingListsInsert - Inserts a new remarketing list.
-func (s *remarketingLists) DfareportingRemarketingListsInsert(ctx context.Context, request operations.DfareportingRemarketingListsInsertRequest) (*operations.DfareportingRemarketingListsInsertResponse, error) {
+func (s *remarketingLists) DfareportingRemarketingListsInsert(ctx context.Context, request operations.DfareportingRemarketingListsInsertRequest, security operations.DfareportingRemarketingListsInsertSecurity) (*operations.DfareportingRemarketingListsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *remarketingLists) DfareportingRemarketingListsInsert(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *remarketingLists) DfareportingRemarketingListsInsert(ctx context.Contex
 }
 
 // DfareportingRemarketingListsList - Retrieves a list of remarketing lists, possibly filtered. This method supports paging.
-func (s *remarketingLists) DfareportingRemarketingListsList(ctx context.Context, request operations.DfareportingRemarketingListsListRequest) (*operations.DfareportingRemarketingListsListResponse, error) {
+func (s *remarketingLists) DfareportingRemarketingListsList(ctx context.Context, request operations.DfareportingRemarketingListsListRequest, security operations.DfareportingRemarketingListsListSecurity) (*operations.DfareportingRemarketingListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *remarketingLists) DfareportingRemarketingListsList(ctx context.Context,
 }
 
 // DfareportingRemarketingListsPatch - Updates an existing remarketing list. This method supports patch semantics.
-func (s *remarketingLists) DfareportingRemarketingListsPatch(ctx context.Context, request operations.DfareportingRemarketingListsPatchRequest) (*operations.DfareportingRemarketingListsPatchResponse, error) {
+func (s *remarketingLists) DfareportingRemarketingListsPatch(ctx context.Context, request operations.DfareportingRemarketingListsPatchRequest, security operations.DfareportingRemarketingListsPatchSecurity) (*operations.DfareportingRemarketingListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *remarketingLists) DfareportingRemarketingListsPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *remarketingLists) DfareportingRemarketingListsPatch(ctx context.Context
 }
 
 // DfareportingRemarketingListsUpdate - Updates an existing remarketing list.
-func (s *remarketingLists) DfareportingRemarketingListsUpdate(ctx context.Context, request operations.DfareportingRemarketingListsUpdateRequest) (*operations.DfareportingRemarketingListsUpdateResponse, error) {
+func (s *remarketingLists) DfareportingRemarketingListsUpdate(ctx context.Context, request operations.DfareportingRemarketingListsUpdateRequest, security operations.DfareportingRemarketingListsUpdateSecurity) (*operations.DfareportingRemarketingListsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *remarketingLists) DfareportingRemarketingListsUpdate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

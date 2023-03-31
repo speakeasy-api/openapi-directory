@@ -12,12 +12,8 @@ var UpdateSubscriptionServerList = []string{
 }
 
 type UpdateSubscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSubscriptionPathParams struct {
-	// A 34 character string that uniquely identifies this Subscription.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSubscriptionUpdateSubscriptionRequest struct {
@@ -28,10 +24,9 @@ type UpdateSubscriptionUpdateSubscriptionRequest struct {
 }
 
 type UpdateSubscriptionRequest struct {
-	PathParams UpdateSubscriptionPathParams
-	Request    *UpdateSubscriptionUpdateSubscriptionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSubscriptionSecurity
-	ServerURL  *string
+	RequestBody *UpdateSubscriptionUpdateSubscriptionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this Subscription.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSubscriptionResponse struct {

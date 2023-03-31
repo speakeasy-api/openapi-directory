@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkContentFilteringPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum - URL category list size which is either 'topSites' or 'fullList'
 type UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum string
 
@@ -48,8 +44,8 @@ type UpdateNetworkContentFilteringRequestBody struct {
 }
 
 type UpdateNetworkContentFilteringRequest struct {
-	PathParams UpdateNetworkContentFilteringPathParams
-	Request    *UpdateNetworkContentFilteringRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkContentFilteringRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkContentFilteringResponse struct {

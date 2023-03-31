@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpinsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpinsIDQueryParams struct {
+type GetSpinsIDRequest struct {
 	// Allows to select extra fields
 	Expand []string `queryParam:"style=form,explode=true,name=expand"`
 	// Allows to select only needed fields
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-}
-
-type GetSpinsIDRequest struct {
-	PathParams  GetSpinsIDPathParams
-	QueryParams GetSpinsIDQueryParams
+	ID     int64    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpinsIDResponse struct {

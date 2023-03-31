@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlanGroupsUpdatePathParams struct {
+type IpamVlanGroupsUpdateRequest struct {
+	WritableVLANGroupInput shared.WritableVLANGroupInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this VLAN group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVlanGroupsUpdateRequest struct {
-	PathParams IpamVlanGroupsUpdatePathParams
-	Request    shared.WritableVLANGroupInput `request:"mediaType=application/json"`
 }
 
 type IpamVlanGroupsUpdateResponse struct {

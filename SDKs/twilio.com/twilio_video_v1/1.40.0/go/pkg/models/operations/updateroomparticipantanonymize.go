@@ -12,20 +12,15 @@ var UpdateRoomParticipantAnonymizeServerList = []string{
 }
 
 type UpdateRoomParticipantAnonymizeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type UpdateRoomParticipantAnonymizePathParams struct {
+type UpdateRoomParticipantAnonymizeRequest struct {
 	// The SID of the room with the participant to update.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// The SID of the RoomParticipant resource to update.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateRoomParticipantAnonymizeRequest struct {
-	PathParams UpdateRoomParticipantAnonymizePathParams
-	Security   UpdateRoomParticipantAnonymizeSecurity
-	ServerURL  *string
 }
 
 type UpdateRoomParticipantAnonymizeResponse struct {

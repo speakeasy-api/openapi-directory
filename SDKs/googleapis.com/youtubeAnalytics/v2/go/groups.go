@@ -33,7 +33,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // YoutubeAnalyticsGroupsDelete - Deletes a group.
-func (s *groups) YoutubeAnalyticsGroupsDelete(ctx context.Context, request operations.YoutubeAnalyticsGroupsDeleteRequest) (*operations.YoutubeAnalyticsGroupsDeleteResponse, error) {
+func (s *groups) YoutubeAnalyticsGroupsDelete(ctx context.Context, request operations.YoutubeAnalyticsGroupsDeleteRequest, security operations.YoutubeAnalyticsGroupsDeleteSecurity) (*operations.YoutubeAnalyticsGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groups"
 
@@ -42,11 +42,11 @@ func (s *groups) YoutubeAnalyticsGroupsDelete(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *groups) YoutubeAnalyticsGroupsDelete(ctx context.Context, request opera
 }
 
 // YoutubeAnalyticsGroupsInsert - Creates a group.
-func (s *groups) YoutubeAnalyticsGroupsInsert(ctx context.Context, request operations.YoutubeAnalyticsGroupsInsertRequest) (*operations.YoutubeAnalyticsGroupsInsertResponse, error) {
+func (s *groups) YoutubeAnalyticsGroupsInsert(ctx context.Context, request operations.YoutubeAnalyticsGroupsInsertRequest, security operations.YoutubeAnalyticsGroupsInsertSecurity) (*operations.YoutubeAnalyticsGroupsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *groups) YoutubeAnalyticsGroupsInsert(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *groups) YoutubeAnalyticsGroupsInsert(ctx context.Context, request opera
 }
 
 // YoutubeAnalyticsGroupsList - Returns a collection of groups that match the API request parameters. For example, you can retrieve all groups that the authenticated user owns, or you can retrieve one or more groups by their unique IDs.
-func (s *groups) YoutubeAnalyticsGroupsList(ctx context.Context, request operations.YoutubeAnalyticsGroupsListRequest) (*operations.YoutubeAnalyticsGroupsListResponse, error) {
+func (s *groups) YoutubeAnalyticsGroupsList(ctx context.Context, request operations.YoutubeAnalyticsGroupsListRequest, security operations.YoutubeAnalyticsGroupsListSecurity) (*operations.YoutubeAnalyticsGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groups"
 
@@ -145,11 +145,11 @@ func (s *groups) YoutubeAnalyticsGroupsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *groups) YoutubeAnalyticsGroupsList(ctx context.Context, request operati
 }
 
 // YoutubeAnalyticsGroupsUpdate - Modifies a group. For example, you could change a group's title.
-func (s *groups) YoutubeAnalyticsGroupsUpdate(ctx context.Context, request operations.YoutubeAnalyticsGroupsUpdateRequest) (*operations.YoutubeAnalyticsGroupsUpdateResponse, error) {
+func (s *groups) YoutubeAnalyticsGroupsUpdate(ctx context.Context, request operations.YoutubeAnalyticsGroupsUpdateRequest, security operations.YoutubeAnalyticsGroupsUpdateSecurity) (*operations.YoutubeAnalyticsGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *groups) YoutubeAnalyticsGroupsUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetUUIDRequest(
-    security=operations.GetUUIDSecurity(
-        x_fungenerators_api_secret=shared.SchemeXFungeneratorsAPISecret(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    query_params=operations.GetUUIDQueryParams(
-        count=7828643123862776481,
-    ),
+    count=548814,
 )
     
-res = s.uuid_generation.get_uuid(req)
+res = s.uuid_generation.get_uuid(req, operations.GetUUIDSecurity(
+    x_fungenerators_api_secret="YOUR_API_KEY_HERE",
+))
 
 if res.status_code == 200:
     # handle response

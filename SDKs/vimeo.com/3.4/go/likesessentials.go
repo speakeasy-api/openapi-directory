@@ -35,7 +35,7 @@ func newLikesEssentials(defaultClient, securityClient HTTPClient, serverURL, lan
 // CheckIfUserLikedVideo - Check if a user has liked a video
 func (s *likesEssentials) CheckIfUserLikedVideo(ctx context.Context, request operations.CheckIfUserLikedVideoRequest) (*operations.CheckIfUserLikedVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *likesEssentials) CheckIfUserLikedVideo(ctx context.Context, request ope
 // CheckIfUserLikedVideoAlt1 - Check if a user has liked a video
 func (s *likesEssentials) CheckIfUserLikedVideoAlt1(ctx context.Context, request operations.CheckIfUserLikedVideoAlt1Request) (*operations.CheckIfUserLikedVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -125,14 +125,14 @@ func (s *likesEssentials) CheckIfUserLikedVideoAlt1(ctx context.Context, request
 // GetLikes - Get all the videos that a user has liked
 func (s *likesEssentials) GetLikes(ctx context.Context, request operations.GetLikesRequest) (*operations.GetLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *likesEssentials) GetLikesAlt1(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -221,14 +221,14 @@ func (s *likesEssentials) GetLikesAlt1(ctx context.Context, request operations.G
 // GetVideoLikes - Get all the users who have liked a video
 func (s *likesEssentials) GetVideoLikes(ctx context.Context, request operations.GetVideoLikesRequest) (*operations.GetVideoLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -269,14 +269,14 @@ func (s *likesEssentials) GetVideoLikes(ctx context.Context, request operations.
 // GetVideoLikesAlt1 - Get all the users who have liked a video
 func (s *likesEssentials) GetVideoLikesAlt1(ctx context.Context, request operations.GetVideoLikesAlt1Request) (*operations.GetVideoLikesAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -318,14 +318,14 @@ func (s *likesEssentials) GetVideoLikesAlt1(ctx context.Context, request operati
 // This method gets all the users who have liked a particular video on an On Demand page.
 func (s *likesEssentials) GetVodLikes(ctx context.Context, request operations.GetVodLikesRequest) (*operations.GetVodLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -364,16 +364,16 @@ func (s *likesEssentials) GetVodLikes(ctx context.Context, request operations.Ge
 }
 
 // LikeVideo - Cause a user to like a video
-func (s *likesEssentials) LikeVideo(ctx context.Context, request operations.LikeVideoRequest) (*operations.LikeVideoResponse, error) {
+func (s *likesEssentials) LikeVideo(ctx context.Context, request operations.LikeVideoRequest, security operations.LikeVideoSecurity) (*operations.LikeVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -411,16 +411,16 @@ func (s *likesEssentials) LikeVideo(ctx context.Context, request operations.Like
 }
 
 // LikeVideoAlt1 - Cause a user to like a video
-func (s *likesEssentials) LikeVideoAlt1(ctx context.Context, request operations.LikeVideoAlt1Request) (*operations.LikeVideoAlt1Response, error) {
+func (s *likesEssentials) LikeVideoAlt1(ctx context.Context, request operations.LikeVideoAlt1Request, security operations.LikeVideoAlt1Security) (*operations.LikeVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,16 +458,16 @@ func (s *likesEssentials) LikeVideoAlt1(ctx context.Context, request operations.
 }
 
 // UnlikeVideo - Cause a user to unlike a video
-func (s *likesEssentials) UnlikeVideo(ctx context.Context, request operations.UnlikeVideoRequest) (*operations.UnlikeVideoResponse, error) {
+func (s *likesEssentials) UnlikeVideo(ctx context.Context, request operations.UnlikeVideoRequest, security operations.UnlikeVideoSecurity) (*operations.UnlikeVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -503,16 +503,16 @@ func (s *likesEssentials) UnlikeVideo(ctx context.Context, request operations.Un
 }
 
 // UnlikeVideoAlt1 - Cause a user to unlike a video
-func (s *likesEssentials) UnlikeVideoAlt1(ctx context.Context, request operations.UnlikeVideoAlt1Request) (*operations.UnlikeVideoAlt1Response, error) {
+func (s *likesEssentials) UnlikeVideoAlt1(ctx context.Context, request operations.UnlikeVideoAlt1Request, security operations.UnlikeVideoAlt1Security) (*operations.UnlikeVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/likes/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

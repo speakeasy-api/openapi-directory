@@ -4,20 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CashinRequest(
-    path_params=operations.CashinPathParams(
-        bet_id="cupiditate",
-    ),
-    query_params=operations.CashinQueryParams(
-        cash_in_value=76.099998,
-        cashin_bet_delay_id="et",
-    ),
-    headers=operations.CashinHeaders(
-        api_key="assumenda",
-        api_secret="perferendis",
-        api_ticket="ut",
-    ),
+    api_key="corrupti",
+    api_secret="provident",
+    api_ticket="distinctio",
+    bet_id="quibusdam",
+    cash_in_value=6027.63,
+    cashin_bet_delay_id="nulla",
 )
     
 res = s.bets.cashin(req)

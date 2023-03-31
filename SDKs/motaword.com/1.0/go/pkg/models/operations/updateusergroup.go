@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateUserGroupSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateUserGroupPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateUserGroupRequest struct {
-	PathParams UpdateUserGroupPathParams
-	Request    *shared.ActiveWidget `request:"mediaType=application/json"`
-	Security   UpdateUserGroupSecurity
+	ActiveWidget *shared.ActiveWidget `request:"mediaType=application/json"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UpdateUserGroupResponse struct {

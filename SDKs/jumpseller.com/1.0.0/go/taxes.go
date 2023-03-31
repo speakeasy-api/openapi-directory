@@ -42,7 +42,7 @@ func (s *taxes) GetTaxesJSON(ctx context.Context, request operations.GetTaxesJSO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *taxes) GetTaxesJSON(ctx context.Context, request operations.GetTaxesJSO
 // GetTaxesIDJSON - Retrieve a single Tax information.
 func (s *taxes) GetTaxesIDJSON(ctx context.Context, request operations.GetTaxesIDJSONRequest) (*operations.GetTaxesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/taxes/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/taxes/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,7 +143,7 @@ func (s *taxes) PostTaxesJSON(ctx context.Context, request operations.PostTaxesJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/taxes.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,7 +158,7 @@ func (s *taxes) PostTaxesJSON(ctx context.Context, request operations.PostTaxesJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

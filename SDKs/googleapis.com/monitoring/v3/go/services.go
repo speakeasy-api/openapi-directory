@@ -32,11 +32,11 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // MonitoringServicesCreate - Create a Service.
-func (s *services) MonitoringServicesCreate(ctx context.Context, request operations.MonitoringServicesCreateRequest) (*operations.MonitoringServicesCreateResponse, error) {
+func (s *services) MonitoringServicesCreate(ctx context.Context, request operations.MonitoringServicesCreateRequest, security operations.MonitoringServicesCreateSecurity) (*operations.MonitoringServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *services) MonitoringServicesCreate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *services) MonitoringServicesCreate(ctx context.Context, request operati
 }
 
 // MonitoringServicesList - List Services for this Metrics Scope.
-func (s *services) MonitoringServicesList(ctx context.Context, request operations.MonitoringServicesListRequest) (*operations.MonitoringServicesListResponse, error) {
+func (s *services) MonitoringServicesList(ctx context.Context, request operations.MonitoringServicesListRequest, security operations.MonitoringServicesListSecurity) (*operations.MonitoringServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *services) MonitoringServicesList(ctx context.Context, request operation
 }
 
 // MonitoringServicesServiceLevelObjectivesCreate - Create a ServiceLevelObjective for the given Service.
-func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesCreateRequest) (*operations.MonitoringServicesServiceLevelObjectivesCreateResponse, error) {
+func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesCreateRequest, security operations.MonitoringServicesServiceLevelObjectivesCreateSecurity) (*operations.MonitoringServicesServiceLevelObjectivesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceLevelObjective", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Co
 }
 
 // MonitoringServicesServiceLevelObjectivesDelete - Delete the given ServiceLevelObjective.
-func (s *services) MonitoringServicesServiceLevelObjectivesDelete(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesDeleteRequest) (*operations.MonitoringServicesServiceLevelObjectivesDeleteResponse, error) {
+func (s *services) MonitoringServicesServiceLevelObjectivesDelete(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesDeleteRequest, security operations.MonitoringServicesServiceLevelObjectivesDeleteSecurity) (*operations.MonitoringServicesServiceLevelObjectivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *services) MonitoringServicesServiceLevelObjectivesDelete(ctx context.Co
 }
 
 // MonitoringServicesServiceLevelObjectivesGet - Get a ServiceLevelObjective by name.
-func (s *services) MonitoringServicesServiceLevelObjectivesGet(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesGetRequest) (*operations.MonitoringServicesServiceLevelObjectivesGetResponse, error) {
+func (s *services) MonitoringServicesServiceLevelObjectivesGet(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesGetRequest, security operations.MonitoringServicesServiceLevelObjectivesGetSecurity) (*operations.MonitoringServicesServiceLevelObjectivesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *services) MonitoringServicesServiceLevelObjectivesGet(ctx context.Conte
 }
 
 // MonitoringServicesServiceLevelObjectivesList - List the ServiceLevelObjectives for the given Service.
-func (s *services) MonitoringServicesServiceLevelObjectivesList(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesListRequest) (*operations.MonitoringServicesServiceLevelObjectivesListResponse, error) {
+func (s *services) MonitoringServicesServiceLevelObjectivesList(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesListRequest, security operations.MonitoringServicesServiceLevelObjectivesListSecurity) (*operations.MonitoringServicesServiceLevelObjectivesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *services) MonitoringServicesServiceLevelObjectivesList(ctx context.Cont
 }
 
 // MonitoringServicesServiceLevelObjectivesPatch - Update the given ServiceLevelObjective.
-func (s *services) MonitoringServicesServiceLevelObjectivesPatch(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesPatchRequest) (*operations.MonitoringServicesServiceLevelObjectivesPatchResponse, error) {
+func (s *services) MonitoringServicesServiceLevelObjectivesPatch(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesPatchRequest, security operations.MonitoringServicesServiceLevelObjectivesPatchSecurity) (*operations.MonitoringServicesServiceLevelObjectivesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceLevelObjective", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *services) MonitoringServicesServiceLevelObjectivesPatch(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

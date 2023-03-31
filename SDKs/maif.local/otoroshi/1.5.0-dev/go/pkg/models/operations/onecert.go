@@ -8,17 +8,13 @@ import (
 )
 
 type OneCertSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type OneCertPathParams struct {
-	// The auth. config id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type OneCertRequest struct {
-	PathParams OneCertPathParams
-	Security   OneCertSecurity
+	// The auth. config id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type OneCertResponse struct {

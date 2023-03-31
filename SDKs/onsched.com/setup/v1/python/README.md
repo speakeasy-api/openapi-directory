@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/onsched.com/setup/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,32 +14,28 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetSetupV1AppointmentsRequest(
-    query_params=operations.GetSetupV1AppointmentsQueryParams(
-        booked_by="beatae",
-        calendar_id="ex",
-        customer_id="et",
-        email="tenetur",
-        end_date="1989-10-30T02:02:02Z",
-        lastname="dicta",
-        limit=161570741618821330,
-        location_id="rerum",
-        offset=3200987676983387320,
-        resource_id="eius",
-        service_allocation_id="quia",
-        service_id="ut",
-        start_date="1993-02-05T09:16:43Z",
-        status="animi",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetSetupV1AppointmentsRequest(
+    booked_by="corrupti",
+    calendar_id="provident",
+    customer_id="distinctio",
+    email="Leda_Stiedemann@hotmail.com",
+    end_date="2022-05-18T09:34:54.894Z",
+    lastname="Oberbrunner",
+    limit=384382,
+    location_id="iure",
+    offset=297534,
+    resource_id="debitis",
+    service_allocation_id="ipsa",
+    service_id="delectus",
+    start_date="2022-08-14T01:03:07.567Z",
+    status="molestiae",
 )
     
 res = s.appointments.get_setup_v1_appointments(req)
@@ -50,177 +46,187 @@ if res.appointment_list_view_model is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Appointments
 
-* `get_setup_v1_appointments` - Returns a list of appointments.
-* `get_setup_v1_appointments_id_` - Returns an appointment object.
-* `put_setup_v1_appointments_id_reassign_resource_resource_id_` - Reassigns the appointment to the supplied resourceId
+### appointments
 
-### BusinessUsers
+* `get_setup_v1_appointments` - List Appointments
+* `get_setup_v1_appointments_id_` - Get Appointment
+* `put_setup_v1_appointments_id_reassign_resource_resource_id_` - Reassign Appointment
 
-* `delete_setup_v1_businessusers_id_` - Permanently deletes businessUser object.
-* `get_setup_v1_businessusers` - Returns a list of business users.
-* `get_setup_v1_businessusers_permissions` - Returns a list of system roles and permission.
-* `get_setup_v1_businessusers_email_companies` - Returns a list of companies for the business user.
-* `get_setup_v1_businessusers_id_` - Returns a businessUser object.
-* `post_setup_v1_businessusers` - Creates a new businessUser object.
-* `put_setup_v1_businessusers_id_` - Updates a businessUser object.
+### business_users
 
-### Calendars
+* `delete_setup_v1_businessusers_id_` - Delete User
+* `get_setup_v1_businessusers` - List Users
+* `get_setup_v1_businessusers_permissions` - List User Permissions
+* `get_setup_v1_businessusers_email_companies` - List User Companies
+* `get_setup_v1_businessusers_id_` - Get User
+* `post_setup_v1_businessusers` - Create User
+* `put_setup_v1_businessusers_id_` - Update User
 
-* `delete_setup_v1_calendars_block_id_` - Delete a calendar block object
-* `delete_setup_v1_calendars_id_` - Deletes a calendar object.
-* `get_setup_v1_calendars` - Returns a list of calendars.
-* `get_setup_v1_calendars_blocks_id_` - Update a calendar block
-* `get_setup_v1_calendars_id_` - Returns a calendar object.
-* `get_setup_v1_calendars_id_blocks` - Returns a list of calendar blocks.
-* `get_setup_v1_calendars_id_services` - Returns a list of services linked to a calendar.
-* `post_setup_v1_calendars` - Creates a new calendar object.
-* `post_setup_v1_calendars_id_block` - Create a new calendar block
-* `put_setup_v1_calendars_block_id_` - Update a calendar block
-* `put_setup_v1_calendars_id_` - Updates a calendar object.
-* `put_setup_v1_calendars_id_recover` - Recovers a calendar object.
+### calendars
 
-### Companies
+* `delete_setup_v1_calendars_block_id_` - Delete Calendar Block
+* `delete_setup_v1_calendars_id_` - Delete Calendar
+* `get_setup_v1_calendars` - List Calendars
+* `get_setup_v1_calendars_blocks_id_` - Get Calendar Block
+* `get_setup_v1_calendars_id_` - Get Calendar
+* `get_setup_v1_calendars_id_blocks` - List Calendar Blocks
+* `get_setup_v1_calendars_id_services` - List Calendar Services
+* `post_setup_v1_calendars` - DEPRECATING: Create
+* `post_setup_v1_calendars_id_block` - Create Calendar Block
+* `put_setup_v1_calendars_block_id_` - Update Calendar Block
+* `put_setup_v1_calendars_id_` - Update Calendar
+* `put_setup_v1_calendars_id_recover` - Recover Calendar
 
-* `delete_setup_v1_companies_domains_id_` - Deletes a whitelisted domain for the authorized company
-Returns view of domain deleted
-* `delete_setup_v1_companies_email_templates_master` - Deletes custom master email template settings reverting to the default
-* `delete_setup_v1_companies_regions_id_` - Delete a region
-* `get_setup_v1_companies` - Returns a company profile information of the authorized company
-* `get_setup_v1_companies_domains` - Returns a list of whitelisted domains for the authorized company
-* `get_setup_v1_companies_domains_id_` - Returns a whitelisted domain for the authorized company
-* `get_setup_v1_companies_email_templates` - Returns email template list from the authorized company
-* `get_setup_v1_companies_email_templates_master` - Returns master email template settings
-* `get_setup_v1_companies_email_templates_template_name_` - Returns default or custom email template from the authorized company
-* `get_setup_v1_companies_regions` - Returns a list of regions.
-* `get_setup_v1_companies_regions_id_` - Get a Region
-* `get_setup_v1_companies_timezones_date_` - Returns timezone information for all supported Timezone's
-* `post_setup_v1_companies` - Creates a company profile.
-* `post_setup_v1_companies_domains` - Creates a whitelisted domain for the authorized company
-Returns view of domain created
-* `post_setup_v1_companies_email_templates_master` - Updates / creates custom master email template settings
-* `post_setup_v1_companies_regions` - Create a new region
-* `put_setup_v1_companies` - Updates a company object.
-* `put_setup_v1_companies_domains_id_` - Updates a whitelisted domain for the authorized company
-Returns view of domain updated
-* `put_setup_v1_companies_regions_id_` - Update a region
+### companies
 
-### Customers
+* `delete_setup_v1_companies_domains_id_` - Delete Company Domain
+* `delete_setup_v1_companies_email_templates_master` - Delete Master Template Settings
+* `delete_setup_v1_companies_regions_id_` - Delete Region
+* `get_setup_v1_companies` - Get Company
+* `get_setup_v1_companies_domains` - List Company Domains
+* `get_setup_v1_companies_domains_id_` - Get Company Domain
+* `get_setup_v1_companies_email_templates` - List Email Templates
+* `get_setup_v1_companies_email_templates_master` - Get Master Template Settings
+* `get_setup_v1_companies_email_templates_template_name_` - Get Email Template
+* `get_setup_v1_companies_regions` - List Regions
+* `get_setup_v1_companies_regions_id_` - Get Region
+* `get_setup_v1_companies_timezones_date_` - List Time Zones
+* `post_setup_v1_companies` - Create Company
+* `post_setup_v1_companies_domains` - Create Company Domain
+* `post_setup_v1_companies_email_templates_master` - Create Master Template Settings
+* `post_setup_v1_companies_regions` - Create Region
+* `put_setup_v1_companies` - Update Company
+* `put_setup_v1_companies_domains_id_` - Update Company Domain
+* `put_setup_v1_companies_regions_id_` - Update Region
 
-* `get_setup_v1_customers` - Returns a list of customers.
-* `get_setup_v1_customers_id_` - Returns a customer object.
-* `get_setup_v1_customers_id_privacy` - Returns a customer privacy report data.
+### customers
 
-### Locations
+* `get_setup_v1_customers` - List Customers
+* `get_setup_v1_customers_id_` - Get Customer
+* `get_setup_v1_customers_id_privacy` - Get Customer Data
 
-* `delete_setup_v1_locations_services_id_` - Deletes a location service from the specified location
-* `delete_setup_v1_locations_id_` - Deletes a location object.
-* `delete_setup_v1_locations_id_deleteallimages` - Deletes all images from location blob storage container
-* `delete_setup_v1_locations_id_deleteimage` - Removes a location image
-* `delete_setup_v1_locations_id_email_templates_master` - Deletes custom master email template settings reverting to the default
-* `delete_setup_v1_locations_id_email_templates_template_name_` - Deletes a custom email template
-* `delete_setup_v1_locations_id_google_service_account` - Remove authorized access to all google calendar users in an organization
-* `delete_setup_v1_locations_id_services` - Deletes all location services from the specified location
-* `get_setup_v1_locations` - Returns a list of business locations.
-* `get_setup_v1_locations_services_id_` - Returns a single location services.
-* `get_setup_v1_locations_id_` - Returns a business location object.
-* `get_setup_v1_locations_id_email_templates` - Returns email template list from the authorized company
-* `get_setup_v1_locations_id_email_templates_master` - Returns master email template settings
-* `get_setup_v1_locations_id_email_templates_template_name_` - Returns company default or custom email template from the specified location
-* `get_setup_v1_locations_id_google_service_account` - Returns google service account info
-* `get_setup_v1_locations_id_services` - Returns a list of location services.
-* `post_setup_v1_locations` - Creates a new location object.
-* `post_setup_v1_locations_bulk` - Creates new location objects.
-* `post_setup_v1_locations_id_email_templates` - Uploads a custom email template
-* `post_setup_v1_locations_id_email_templates_master` - Saves settings for the master email template
-* `post_setup_v1_locations_id_google_service_account` - Authorize access to all google calendar users in an organization
-* `post_setup_v1_locations_id_services` - Adds location services to the specified location
-* `post_setup_v1_locations_id_uploadimage` - Uploads a location image
-* `put_setup_v1_locations_id_` - Use this endpoint to change the scope of online booking settings
-* `put_setup_v1_locations_id_holidays_holiday_id_closed_` - Sets a business holiday to open or closed.
-* `put_setup_v1_locations_id_recover` - Recovers a location object.
-* `put_setup_v1_locations_id_settings_scope_settings_scope_` - Changes the scope of OnlineBooking Settings.
+### locations
 
-### ResourceGroups
+* `delete_setup_v1_locations_services_id_` - Unlink Service
+* `delete_setup_v1_locations_id_` - Delete Location
+* `delete_setup_v1_locations_id_deleteallimages` - Delete All Location Images
+* `delete_setup_v1_locations_id_deleteimage` - Delete Location Image
+* `delete_setup_v1_locations_id_email_templates_master` - Delete Master Template Settings
+* `delete_setup_v1_locations_id_email_templates_template_name_` - Delete Custom Template
+* `delete_setup_v1_locations_id_google_service_account` - Delete Google Cal Access
+* `delete_setup_v1_locations_id_services` - Delete Linked Services
+* `get_setup_v1_locations` - List Locations
+* `get_setup_v1_locations_services_id_` - Get Linked Service
+* `get_setup_v1_locations_id_` - Get Location
+* `get_setup_v1_locations_id_appointmentreminders` - Get Reminders
+* `get_setup_v1_locations_id_email_templates` - List Email Templates
+* `get_setup_v1_locations_id_email_templates_master` - Get Master Template Settings
+* `get_setup_v1_locations_id_email_templates_template_name_` - Get Email Template
+* `get_setup_v1_locations_id_services` - List Location Linked Services
+* `post_setup_v1_locations` - Create Location
+* `post_setup_v1_locations_bulk` - Create Locations Bulk
+* `post_setup_v1_locations_id_email_templates` - Create Custom Template
+* `post_setup_v1_locations_id_email_templates_master` - Create Master Template Settings
+* `post_setup_v1_locations_id_google_service_account` - Create Google Cal Access
+* `post_setup_v1_locations_id_services` - Create Linked Service
+* `post_setup_v1_locations_id_uploadimage` - Upload Location Image
+* `put_setup_v1_locations_id_` - Update Location
+* `put_setup_v1_locations_id_appointmentreminders` - Update Reminders
+* `put_setup_v1_locations_id_holidays_holiday_id_closed_` - Update Location Holidays
+* `put_setup_v1_locations_id_recover` - Recover Location
+* `put_setup_v1_locations_id_settings_scope_settings_scope_` - Update Location Scope
 
-* `delete_setup_v1_resourcegroups_id_` - Deletes a resource group object.
-* `get_setup_v1_resourcegroups` - Returns a list of resourcegroups.
-* `get_setup_v1_resourcegroups_id_` - Returns a resourceGroup object.
-* `post_setup_v1_resourcegroups` - Creates a new resource group object.
-* `put_setup_v1_resourcegroups_id_` - Updates a resource group object.
-* `put_setup_v1_resourcegroups_id_recover` - Recovers a resource group object.
+### resource_groups
 
-### Resources
+* `delete_setup_v1_resourcegroups_id_` - Delete Resource Group
+* `get_setup_v1_resourcegroups` - List Resource Groups
+* `get_setup_v1_resourcegroups_id_` - Get Resource Group
+* `post_setup_v1_resourcegroups` - Create Resource Group
+* `put_setup_v1_resourcegroups_id_` - Update Resource Group
+* `put_setup_v1_resourcegroups_id_recover` - Recover Resource Group
 
-* `delete_setup_v1_resources_allocations_id_` - Delete a resource allocation object
-* `delete_setup_v1_resources_block_id_` - Delete a resource block object
-* `delete_setup_v1_resources_id_` - Deletes a resource object.
-* `delete_setup_v1_resources_id_deleteimage` - Removes a resource image
-* `delete_setup_v1_resources_id_services` - Deletes resource services from the specified resource
-* `get_setup_v1_resources` - Returns a list of resources.
-* `get_setup_v1_resources_allocations_id_` - Update a resource allocation
-* `get_setup_v1_resources_blocks_id_` - Update a resource block
-* `get_setup_v1_resources_timezones`
-* `get_setup_v1_resources_id_` - Returns a resource object.
-* `get_setup_v1_resources_id_allocations` - Returns a list of resource allocations.
-* `get_setup_v1_resources_id_availability` - Returns a list of weekly availability
-* `get_setup_v1_resources_id_blocks` - Returns a list of resource blocks.
-* `get_setup_v1_resources_id_calendar_auth_google_google_email_address_` - Returns a resource object.
-* `get_setup_v1_resources_id_calendar_auth_outlook_outlook_email_address_` - Returns a resource object.
-* `post_setup_v1_resources` - Creates a new resource object.
-* `post_setup_v1_resources_bulk` - Creates new resource objects.
-* `post_setup_v1_resources_id_allocations` - Create a new resource allocation
-* `post_setup_v1_resources_id_block` - Create a new resource block
-* `post_setup_v1_resources_id_services` - Adds resource services to the specified resource
-* `post_setup_v1_resources_id_uploadimage` - Uploads a resource image
-* `put_setup_v1_resources_allocations_id_` - Update a resource allocation
-* `put_setup_v1_resources_block_id_` - Update a resource block
-* `put_setup_v1_resources_bulk` - Updates resource objects.
-* `put_setup_v1_resources_id_` - Updates a resource object.
-* `put_setup_v1_resources_id_availability` - Updates Weekly Availability
-* `put_setup_v1_resources_id_reassign_appointments_resource_id_` - Reassigns appointments to another resource
-* `put_setup_v1_resources_id_recover` - Recovers a resource object.
+### resources
 
-### Services
+* `delete_setup_v1_resources_allocations_id_` - Delete Allocation
+* `delete_setup_v1_resources_block_id_` - Delete Block
+* `delete_setup_v1_resources_id_` - Delete Resource
+* `delete_setup_v1_resources_id_deleteimage` - Delete Resource Image
+* `delete_setup_v1_resources_id_services` - Delete Linked Services
+* `get_setup_v1_resources` - List Resources
+* `get_setup_v1_resources_allocations_id_` - Get Allocation
+* `get_setup_v1_resources_blocks_id_` - Get Block
+* `get_setup_v1_resources_timezones` - Get Time Zones
+* `get_setup_v1_resources_id_` - Get Resource
+* `get_setup_v1_resources_id_allocations` - List Resource Allocations
+* `get_setup_v1_resources_id_availability` - List Weekly Availability
+* `get_setup_v1_resources_id_blocks` - List Resource Blocks
+* `get_setup_v1_resources_id_calendar_auth_google_google_email_address_` - Get Resource Google URL
+* `get_setup_v1_resources_id_calendar_auth_outlook_outlook_email_address_` - Get Resource Outlook URL
+* `post_setup_v1_resources` - Create Resource
+* `post_setup_v1_resources_bulk` - Create Resources Bulk
+* `post_setup_v1_resources_id_allocations` - Create Allocation
+* `post_setup_v1_resources_id_block` - Create Block
+* `post_setup_v1_resources_id_services` - Create Linked Services
+* `post_setup_v1_resources_id_uploadimage` - Upload Resource Image
+* `put_setup_v1_resources_allocations_id_` - Update Allocation
+* `put_setup_v1_resources_block_id_` - Update Block
+* `put_setup_v1_resources_bulk` - Update Resources Bulk
+* `put_setup_v1_resources_id_` - Update Resource
+* `put_setup_v1_resources_id_availability` - Update Weekly Availability
+* `put_setup_v1_resources_id_reassign_appointments_resource_id_` - Reassign Resource
+* `put_setup_v1_resources_id_recover` - Recover Resource
+* `put_setup_v1_resources_id_services` - Update Linked Services
 
-* `delete_setup_v1_services_allocations_id_` - Delete a service allocation object
-* `delete_setup_v1_services_block_id_` - Delete a service block object
-* `delete_setup_v1_services_bookingwindows_id_` - Permanently deletes bookingWindow object.
-* `delete_setup_v1_services_calendar_id_`
-* `delete_setup_v1_services_id_` - Deletes a service object.
-* `delete_setup_v1_services_id_deleteimage` - Removes a service image
-* `get_setup_v1_services` - Returns a list of services.
-* `get_setup_v1_services_allocations_id_` - Get a service allocation
-* `get_setup_v1_services_blocks_id_` - Get a service block
-* `get_setup_v1_services_bookingwindows_id_` - Get a booking window
-* `get_setup_v1_services_id_` - Returns a service object.
-* `get_setup_v1_services_id_allocations` - Returns a list of service allocations.
-* `get_setup_v1_services_id_availability` - Returns a list of weekly availability
-* `get_setup_v1_services_id_blocks` - Returns a list of service blocks.
-* `get_setup_v1_services_id_bookingwindows` - Returns a list of service booking windows.
-* `get_setup_v1_services_id_calendar` - Returns the linked calendar for the service
-* `get_setup_v1_services_id_resources` - Returns a list of resources for the specified service.
-* `post_setup_v1_services` - Creates a new service object.
-* `post_setup_v1_services_bookingwindows` - Creates a new bookingWindow object.
-* `post_setup_v1_services_calendar` - Links the service to a calendar
-* `post_setup_v1_services_id_allocations` - Create a new service allocation
-* `post_setup_v1_services_id_allocations_bulk` - Create new service allocations in bulk
-* `post_setup_v1_services_id_block` - Create a new service block
-* `post_setup_v1_services_id_uploadimage` - Uploads a service image
-* `put_setup_v1_services_allocations_id_` - Update a service allocation
-* `put_setup_v1_services_block_id_` - Update a service block
-* `put_setup_v1_services_bookingwindows_id_` - Updates a bookingWindow object.
-* `put_setup_v1_services_id_` - Updates a service object.
-* `put_setup_v1_services_id_availability` - Updates Weekly Availability
-* `put_setup_v1_services_id_recover` - Recovers a service object.
+### service_groups
 
-### StripePlans
+* `delete_setup_v1_servicegroups_id_` - Delete Service Group
+* `get_setup_v1_servicegroups` - List Service Groups
+* `get_setup_v1_servicegroups_id_` - Get Service Group
+* `post_setup_v1_servicegroups` - Create Service Group
+* `put_setup_v1_servicegroups_id_` - Update Service Group
+* `put_setup_v1_servicegroups_id_recover` - Recover Service Group
 
-* `get_plan_id_`
+### services
 
+* `delete_setup_v1_services_allocations_id_` - Delete Allocation
+* `delete_setup_v1_services_block_id_` - Delete Block
+* `delete_setup_v1_services_calendar_id_` - Delete Service Links
+* `delete_setup_v1_services_id_` - Delete Service
+* `delete_setup_v1_services_id_deleteimage` - Delete Service Image
+* `get_setup_v1_services` - List Services
+* `get_setup_v1_services_allocations_id_` - Get Allocation
+* `get_setup_v1_services_blocks_id_` - Get Block
+* `get_setup_v1_services_id_` - Get Service
+* `get_setup_v1_services_id_allocations` - List Service Allocations
+* `get_setup_v1_services_id_availability` - Get Weekly Availability
+* `get_setup_v1_services_id_blocks` - List Service Blocks
+* `get_setup_v1_services_id_calendar` - Get Linked Calendar
+* `get_setup_v1_services_id_resources` - List Resources for Service
+* `post_setup_v1_services` - Create Service
+* `post_setup_v1_services_calendar` - Link Service to Calendar
+* `post_setup_v1_services_id_allocations` - Create Allocation
+* `post_setup_v1_services_id_allocations_bulk` - Create Allocations Bulk
+* `post_setup_v1_services_id_block` - Create Block
+* `post_setup_v1_services_id_uploadimage` - Upload Service Image
+* `put_setup_v1_services_allocations_id_` - Update Allocation
+* `put_setup_v1_services_block_id_` - Update Block
+* `put_setup_v1_services_id_` - Update Service
+* `put_setup_v1_services_id_availability` - Update Weekly Availability
+* `put_setup_v1_services_id_recover` - Recover Service
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

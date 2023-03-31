@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountsQueryParams struct {
+type GetAccountsRequest struct {
 	// The type of account for which to return records. This
 	// can be used to filter Savers from spending accounts.
 	//
@@ -20,10 +20,6 @@ type GetAccountsQueryParams struct {
 	// The number of records to return in each page.
 	//
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type GetAccountsRequest struct {
-	QueryParams GetAccountsQueryParams
 }
 
 type GetAccountsResponse struct {

@@ -9,15 +9,11 @@ import (
 	"time"
 )
 
-type GetAtmsHeaders struct {
+type GetAtmsRequest struct {
 	// Used for conditional request, to retrieve data only if modified since a given date
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Used for conditional request, to retrieve data only if the given Etag value does not match
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetAtmsRequest struct {
-	Headers GetAtmsHeaders
 }
 
 // GetAtmsErrorObject - A standard error response.

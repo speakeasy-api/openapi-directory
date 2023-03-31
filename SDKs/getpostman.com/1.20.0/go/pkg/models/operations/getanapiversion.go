@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAnAPIVersionPathParams struct {
+type GetAnAPIVersionRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetAnAPIVersionRequest struct {
-	PathParams GetAnAPIVersionPathParams
 }
 
 type GetAnAPIVersion200ApplicationJSONVersion struct {

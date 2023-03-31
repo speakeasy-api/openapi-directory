@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBatchByExternalIDPathParams struct {
-	ExternalBatchID string `pathParam:"style=simple,explode=false,name=external_batch_id"`
-}
-
 type GetBatchByExternalIDRequest struct {
-	PathParams GetBatchByExternalIDPathParams
+	ExternalBatchID string `pathParam:"style=simple,explode=false,name=external_batch_id"`
 }
 
 type GetBatchByExternalIDResponse struct {

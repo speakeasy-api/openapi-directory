@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type LicensesReadPathParams struct {
+type LicensesReadRequest struct {
 	// The unique identifier of the license.
 	LicenseID string `pathParam:"style=simple,explode=false,name=license_id"`
-}
-
-type LicensesReadRequest struct {
-	PathParams LicensesReadPathParams
 }
 
 // LicensesReadLicenseAttributes - The properties of the license.

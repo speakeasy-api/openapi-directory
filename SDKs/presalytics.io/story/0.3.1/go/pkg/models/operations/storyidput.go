@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDPutPathParams struct {
+type StoryIDPutRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDPutQueryParams struct {
 	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
 	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
-}
-
-type StoryIDPutRequest struct {
-	PathParams  StoryIDPutPathParams
-	QueryParams StoryIDPutQueryParams
 	// The updated story object
-	Request shared.Story `request:"mediaType=application/json"`
+	Story shared.Story `request:"mediaType=application/json"`
 }
 
 type StoryIDPutResponse struct {

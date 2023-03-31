@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAgentContactPathParams struct {
+type CreateAgentContactRequest struct {
+	AgentContactCreateRequest shared.AgentContactCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the agent in Noyo
 	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
-}
-
-type CreateAgentContactRequest struct {
-	PathParams CreateAgentContactPathParams
-	Request    shared.AgentContactCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateAgentContactResponse struct {

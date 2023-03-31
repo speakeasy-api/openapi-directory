@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServiceOfferingServiceInstancesPathParams struct {
-	// ID of the resource
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ListServiceOfferingServiceInstancesQueryParams struct {
+type ListServiceOfferingServiceInstancesRequest struct {
 	// Filter for querying collections.
 	Filter map[string]interface{} `queryParam:"style=deepObject,explode=true,name=filter"`
+	// ID of the resource
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The numbers of items to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The number of items to skip before starting to collect the result set.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The list of attribute and order to sort the result set by.
 	SortBy map[string]interface{} `queryParam:"style=deepObject,explode=true,name=sort_by"`
-}
-
-type ListServiceOfferingServiceInstancesRequest struct {
-	PathParams  ListServiceOfferingServiceInstancesPathParams
-	QueryParams ListServiceOfferingServiceInstancesQueryParams
 }
 
 type ListServiceOfferingServiceInstancesResponse struct {

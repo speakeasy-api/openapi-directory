@@ -8,19 +8,15 @@ import (
 )
 
 type CreateDocSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateDocHeaders struct {
-	// Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
-	XReadmeVersion string `header:"style=simple,explode=false,name=x-readme-version"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDocRequest struct {
-	Headers CreateDocHeaders
 	// Doc object
-	Request  shared.Doc `request:"mediaType=application/json"`
-	Security CreateDocSecurity
+	Doc shared.Doc `request:"mediaType=application/json"`
+	// Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+	XReadmeVersion string `header:"style=simple,explode=false,name=x-readme-version"`
 }
 
 type CreateDocResponse struct {

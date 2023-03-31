@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateUsingTemplatePathParams struct {
-	TemplateOwner string `pathParam:"style=simple,explode=false,name=template_owner"`
-	TemplateRepo  string `pathParam:"style=simple,explode=false,name=template_repo"`
-}
-
 type ReposCreateUsingTemplateRequestBody struct {
 	// A short description of the new repository.
 	Description *string `json:"description,omitempty"`
@@ -26,8 +21,9 @@ type ReposCreateUsingTemplateRequestBody struct {
 }
 
 type ReposCreateUsingTemplateRequest struct {
-	PathParams ReposCreateUsingTemplatePathParams
-	Request    ReposCreateUsingTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody   ReposCreateUsingTemplateRequestBody `request:"mediaType=application/json"`
+	TemplateOwner string                              `pathParam:"style=simple,explode=false,name=template_owner"`
+	TemplateRepo  string                              `pathParam:"style=simple,explode=false,name=template_repo"`
 }
 
 type ReposCreateUsingTemplateResponse struct {

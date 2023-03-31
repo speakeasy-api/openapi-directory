@@ -34,7 +34,7 @@ func newMGLANSettings(defaultClient, securityClient HTTPClient, serverURL, langu
 // Show the LAN Settings of a MG
 func (s *mgLANSettings) GetDeviceCellularGatewaySettings(ctx context.Context, request operations.GetDeviceCellularGatewaySettingsRequest) (*operations.GetDeviceCellularGatewaySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *mgLANSettings) GetDeviceCellularGatewaySettings(ctx context.Context, re
 // Update the LAN Settings for a single MG.
 func (s *mgLANSettings) UpdateDeviceCellularGatewaySettings(ctx context.Context, request operations.UpdateDeviceCellularGatewaySettingsRequest) (*operations.UpdateDeviceCellularGatewaySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

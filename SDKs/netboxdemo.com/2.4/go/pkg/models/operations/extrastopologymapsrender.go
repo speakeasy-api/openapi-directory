@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTopologyMapsRenderPathParams struct {
+type ExtrasTopologyMapsRenderRequest struct {
 	// A unique integer value identifying this topology map.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTopologyMapsRenderRequest struct {
-	PathParams ExtrasTopologyMapsRenderPathParams
 }
 
 type ExtrasTopologyMapsRenderResponse struct {

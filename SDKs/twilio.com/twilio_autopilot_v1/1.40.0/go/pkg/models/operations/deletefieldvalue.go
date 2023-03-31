@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteFieldValueServerList = []string{
@@ -12,22 +11,17 @@ var DeleteFieldValueServerList = []string{
 }
 
 type DeleteFieldValueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteFieldValuePathParams struct {
+type DeleteFieldValueRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resources to delete.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The SID of the Field Type associated with the Field Value to delete.
 	FieldTypeSid string `pathParam:"style=simple,explode=false,name=FieldTypeSid"`
 	// The Twilio-provided string that uniquely identifies the FieldValue resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteFieldValueRequest struct {
-	PathParams DeleteFieldValuePathParams
-	Security   DeleteFieldValueSecurity
-	ServerURL  *string
 }
 
 type DeleteFieldValueResponse struct {

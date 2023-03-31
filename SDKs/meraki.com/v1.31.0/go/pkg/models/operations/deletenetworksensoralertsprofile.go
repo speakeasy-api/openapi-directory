@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSensorAlertsProfilePathParams struct {
+type DeleteNetworkSensorAlertsProfileRequest struct {
 	ID        string `pathParam:"style=simple,explode=false,name=id"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkSensorAlertsProfileRequest struct {
-	PathParams DeleteNetworkSensorAlertsProfilePathParams
 }
 
 type DeleteNetworkSensorAlertsProfileResponse struct {

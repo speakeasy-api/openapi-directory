@@ -36,7 +36,7 @@ func newPam(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Get the Pam  profile of a client for this client ID
 func (s *pam) GetClientProfileForPam(ctx context.Context, request operations.GetClientProfileForPamRequest) (*operations.GetClientProfileForPamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pam/profiles/client/{clientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pam/profiles/client/{clientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *pam) GetClientProfileForPam(ctx context.Context, request operations.Get
 // Get completion report data of a project
 func (s *pam) GetProjectCompletionReportForPam(ctx context.Context, request operations.GetProjectCompletionReportForPamRequest) (*operations.GetProjectCompletionReportForPamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pam/projects/{projectId}/completion-report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pam/projects/{projectId}/completion-report", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *pam) GetProjectCompletionReportForPam(ctx context.Context, request oper
 
 // PostMessage - Sends a message to chat
 // Sends a message to the channel.
-func (s *pam) PostMessage(ctx context.Context, request operations.PostMessageRequest) (*operations.PostMessageResponse, error) {
+func (s *pam) PostMessage(ctx context.Context, request shared.PamMessage) (*operations.PostMessageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pam/chat"
 

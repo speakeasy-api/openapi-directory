@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkPiiRequestPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkPiiRequestRequestBodyTypeEnum - One of "delete" or "restrict processing"
 type CreateNetworkPiiRequestRequestBodyTypeEnum string
 
@@ -54,8 +50,8 @@ type CreateNetworkPiiRequestRequestBody struct {
 }
 
 type CreateNetworkPiiRequestRequest struct {
-	PathParams CreateNetworkPiiRequestPathParams
-	Request    *CreateNetworkPiiRequestRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateNetworkPiiRequestRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                              `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkPiiRequestResponse struct {

@@ -8,20 +8,18 @@ import (
 )
 
 type TagmanagerAccountsPermissionsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TagmanagerAccountsPermissionsCreatePathParams struct {
-	// The GTM Account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type TagmanagerAccountsPermissionsCreateQueryParams struct {
+type TagmanagerAccountsPermissionsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	UserAccess  *shared.UserAccess `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The GTM Account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type TagmanagerAccountsPermissionsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsPermissionsCreateRequest struct {
-	PathParams  TagmanagerAccountsPermissionsCreatePathParams
-	QueryParams TagmanagerAccountsPermissionsCreateQueryParams
-	Request     *shared.UserAccess `request:"mediaType=application/json"`
-	Security    TagmanagerAccountsPermissionsCreateSecurity
 }
 
 type TagmanagerAccountsPermissionsCreateResponse struct {

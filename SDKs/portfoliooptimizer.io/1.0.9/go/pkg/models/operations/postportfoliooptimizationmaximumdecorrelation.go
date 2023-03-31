@@ -32,10 +32,6 @@ type PostPortfolioOptimizationMaximumDecorrelationRequestBody struct {
 	Constraints   *PostPortfolioOptimizationMaximumDecorrelationRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationMaximumDecorrelationRequest struct {
-	Request PostPortfolioOptimizationMaximumDecorrelationRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSON - OK
 type PostPortfolioOptimizationMaximumDecorrelation200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

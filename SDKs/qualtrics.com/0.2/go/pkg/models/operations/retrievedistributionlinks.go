@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrievedistributionlinksPathParams struct {
+type RetrievedistributionlinksRequest struct {
 	// ID of the distribution list
 	DistributionID string `pathParam:"style=simple,explode=false,name=DistributionId"`
-}
-
-type RetrievedistributionlinksQueryParams struct {
 	// ID of the survey (eg: SV_123)
 	SurveyID string `queryParam:"style=form,explode=true,name=surveyId"`
-}
-
-type RetrievedistributionlinksRequest struct {
-	PathParams  RetrievedistributionlinksPathParams
-	QueryParams RetrievedistributionlinksQueryParams
 }
 
 type RetrievedistributionlinksResponse struct {

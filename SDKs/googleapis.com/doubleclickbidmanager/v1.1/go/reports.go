@@ -32,20 +32,20 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DoubleclickbidmanagerReportsListreports - Retrieves stored reports.
-func (s *reports) DoubleclickbidmanagerReportsListreports(ctx context.Context, request operations.DoubleclickbidmanagerReportsListreportsRequest) (*operations.DoubleclickbidmanagerReportsListreportsResponse, error) {
+func (s *reports) DoubleclickbidmanagerReportsListreports(ctx context.Context, request operations.DoubleclickbidmanagerReportsListreportsRequest, security operations.DoubleclickbidmanagerReportsListreportsSecurity) (*operations.DoubleclickbidmanagerReportsListreportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteCompanyAttendancesIDRequest(
-    path_params=operations.DeleteCompanyAttendancesIDPathParams(
-        id=4122159384933783933,
-    ),
+    id=548814,
 )
     
 res = s.delete_company_attendances_id_(req)

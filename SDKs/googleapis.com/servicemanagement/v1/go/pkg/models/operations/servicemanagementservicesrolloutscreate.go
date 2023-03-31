@@ -8,13 +8,13 @@ import (
 )
 
 type ServicemanagementServicesRolloutsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesRolloutsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesRolloutsCreateSecurity struct {
@@ -22,14 +22,10 @@ type ServicemanagementServicesRolloutsCreateSecurity struct {
 	Option2 *ServicemanagementServicesRolloutsCreateSecurityOption2 `security:"option"`
 }
 
-type ServicemanagementServicesRolloutsCreatePathParams struct {
-	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
-	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
-}
-
-type ServicemanagementServicesRolloutsCreateQueryParams struct {
+type ServicemanagementServicesRolloutsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Rollout     *shared.Rollout   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type ServicemanagementServicesRolloutsCreateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
+	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicemanagementServicesRolloutsCreateRequest struct {
-	PathParams  ServicemanagementServicesRolloutsCreatePathParams
-	QueryParams ServicemanagementServicesRolloutsCreateQueryParams
-	Request     *shared.Rollout `request:"mediaType=application/json"`
-	Security    ServicemanagementServicesRolloutsCreateSecurity
 }
 
 type ServicemanagementServicesRolloutsCreateResponse struct {

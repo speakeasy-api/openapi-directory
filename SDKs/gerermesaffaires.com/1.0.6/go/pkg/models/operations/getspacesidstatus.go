@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDStatusPathParams struct {
+type GetSpacesIDStatusRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDStatusRequest struct {
-	PathParams GetSpacesIDStatusPathParams
 }
 
 type GetSpacesIDStatus200ApplicationJSON struct {

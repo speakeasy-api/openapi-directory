@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EchoQueryParams struct {
+type EchoRequest struct {
 	// Text to echo
 	Text *string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type EchoRequest struct {
-	QueryParams EchoQueryParams
 }
 
 type EchoResponse struct {

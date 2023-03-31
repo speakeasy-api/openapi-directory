@@ -4,15 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ListReportsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListReportsQueryParams struct {
+type ListReportsRequest struct {
 	// The account for which the list of reports will be queried.
 	AccountID string `queryParam:"style=form,explode=true,name=account_id"`
 	// ISO-8601 extended time zone offset or ISO-8601 UTC zone offset formatted date from which the list of reports will be queried. Format `yyyy-mm-ddThh:mm:ss[.sss]±hh:mm` or `yyyy-mm-ddThh:mm:ss[.sss]Z`.
@@ -21,11 +21,6 @@ type ListReportsQueryParams struct {
 	DateTo *types.Date `queryParam:"style=form,explode=true,name=date_to"`
 	// A comma-separated list of report status values. Reports with any of the statuses specified are returned. The values in the comma-seperated list specified for `status` can be any of `PENDING`, `PROCESSING`, `SUCCESS`, `ABORTED`, `FAILED`, `TRUNCATED`.
 	Status string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListReportsRequest struct {
-	QueryParams ListReportsQueryParams
-	Security    ListReportsSecurity
 }
 
 // ListReports401ApplicationJSON - Unauthorized

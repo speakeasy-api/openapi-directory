@@ -34,11 +34,11 @@ func newRebalance(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CreateRebalance - Trigger rebalance process
 // This endpoint allows you to trigger the rebalancing of a pot (or a group of pots), all pots belonging to an investor (or a group of investors) or all pots linked to a portfolio (or a group of portfolios). The response will contain a `rebalance_request_id` and `status` of the request.
-func (s *rebalance) CreateRebalance(ctx context.Context, request operations.CreateRebalanceRequest) (*operations.CreateRebalanceResponse, error) {
+func (s *rebalance) CreateRebalance(ctx context.Context, request operations.CreateRebalanceRequest, security operations.CreateRebalanceSecurity) (*operations.CreateRebalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/rebalance"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,9 +50,9 @@ func (s *rebalance) CreateRebalance(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,11 +158,11 @@ func (s *rebalance) CreateRebalance(ctx context.Context, request operations.Crea
 
 // EvaluateRebalance - Evaluate rebalance
 // Evaluate if a pot or a group of pots has deviated significatly from the target portfolio and eligible for rebalancing. The request can be sent for a pot (or a group of pots), all pots belonging to an investor (or a group of investors) or all pots linked to a portfolio (or a group of portfolios). The response will indicate if the pot is eligible for rebalance and % deviation from the target portfolio template.
-func (s *rebalance) EvaluateRebalance(ctx context.Context, request operations.EvaluateRebalanceRequest) (*operations.EvaluateRebalanceResponse, error) {
+func (s *rebalance) EvaluateRebalance(ctx context.Context, request operations.EvaluateRebalanceRequest, security operations.EvaluateRebalanceSecurity) (*operations.EvaluateRebalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/rebalance/evaluate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -174,9 +174,9 @@ func (s *rebalance) EvaluateRebalance(ctx context.Context, request operations.Ev
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -282,18 +282,18 @@ func (s *rebalance) EvaluateRebalance(ctx context.Context, request operations.Ev
 
 // GetRebalanceDetails - Retrieve rebalance request related details
 // Retrieve details of a rebalace request using the `rebalance_request_id`.
-func (s *rebalance) GetRebalanceDetails(ctx context.Context, request operations.GetRebalanceDetailsRequest) (*operations.GetRebalanceDetailsResponse, error) {
+func (s *rebalance) GetRebalanceDetails(ctx context.Context, request operations.GetRebalanceDetailsRequest, security operations.GetRebalanceDetailsSecurity) (*operations.GetRebalanceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/rebalance/{rebalance_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/rebalance/{rebalance_request_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetCommunicationPreferencesV3DefinitionsGetPageRequest{
-        Security: operations.GetCommunicationPreferencesV3DefinitionsGetPageSecurity{
-            Hapikey: &shared.SchemeHapikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Definition.GetCommunicationPreferencesV3DefinitionsGetPage(ctx, req)
+    res, err := s.Definition.GetCommunicationPreferencesV3DefinitionsGetPage(ctx)
     if err != nil {
         log.Fatal(err)
     }

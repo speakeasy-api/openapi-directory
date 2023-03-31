@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InstructPayoutV3PathParams struct {
+type InstructPayoutV3Request struct {
+	// Additional instruct payout parameters
+	InstructPayoutRequestV3 *shared.InstructPayoutRequestV3 `request:"mediaType=application/json"`
 	// Id of the payout
 	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
-type InstructPayoutV3Request struct {
-	PathParams InstructPayoutV3PathParams
-	// Additional instruct payout parameters
-	Request *shared.InstructPayoutRequestV3 `request:"mediaType=application/json"`
 }
 
 type InstructPayoutV3Response struct {

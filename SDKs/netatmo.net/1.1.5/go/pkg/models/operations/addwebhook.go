@@ -8,20 +8,15 @@ import (
 )
 
 type AddwebhookSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddwebhookQueryParams struct {
+type AddwebhookRequest struct {
 	// Webhooks are only available for Welcome, enter app_camera.
 	AppType string `queryParam:"style=form,explode=true,name=app_type"`
 	// Your webhook callback url
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type AddwebhookRequest struct {
-	QueryParams AddwebhookQueryParams
-	Security    AddwebhookSecurity
 }
 
 type AddwebhookResponse struct {

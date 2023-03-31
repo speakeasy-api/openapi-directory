@@ -8,23 +8,23 @@ import (
 )
 
 type YoutubeThumbnailsSetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeThumbnailsSetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeThumbnailsSetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeThumbnailsSetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeThumbnailsSetSecurity struct {
@@ -34,7 +34,7 @@ type YoutubeThumbnailsSetSecurity struct {
 	Option4 *YoutubeThumbnailsSetSecurityOption4 `security:"option"`
 }
 
-type YoutubeThumbnailsSetQueryParams struct {
+type YoutubeThumbnailsSetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -61,11 +61,6 @@ type YoutubeThumbnailsSetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Returns the Thumbnail with the given video IDs for Stubby or Apiary.
 	VideoID string `queryParam:"style=form,explode=true,name=videoId"`
-}
-
-type YoutubeThumbnailsSetRequest struct {
-	QueryParams YoutubeThumbnailsSetQueryParams
-	Security    YoutubeThumbnailsSetSecurity
 }
 
 type YoutubeThumbnailsSetResponse struct {

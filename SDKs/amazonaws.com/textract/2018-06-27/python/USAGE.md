@@ -3,49 +3,66 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AnalyzeDocumentRequest(
-    headers=operations.AnalyzeDocumentHeaders(
-        x_amz_algorithm="repellendus",
-        x_amz_content_sha256="corrupti",
-        x_amz_credential="ex",
-        x_amz_date="voluptatum",
-        x_amz_security_token="voluptas",
-        x_amz_signature="et",
-        x_amz_signed_headers="doloribus",
-        x_amz_target="Textract.AnalyzeDocument",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AnalyzeDocumentRequest(
+)
+
+
+req = operations.AnalyzeDocumentRequest(
+    analyze_document_request=shared.AnalyzeDocumentRequest(
         document=shared.Document(
-            bytes="sunt",
+            bytes="corrupti",
             s3_object=shared.S3Object(
-                bucket="et",
-                name="ea",
-                version="deserunt",
+                bucket="provident",
+                name="distinctio",
+                version="quibusdam",
             ),
         ),
         feature_types=[
-            "TABLES",
-            "FORMS",
+            "SIGNATURES",
+            "QUERIES",
+            "SIGNATURES",
         ],
         human_loop_config=shared.HumanLoopConfig(
             data_attributes=shared.HumanLoopDataAttributes(
                 content_classifiers=[
                     "FreeOfAdultContent",
+                    "FreeOfAdultContent",
                 ],
             ),
-            flow_definition_arn="magnam",
-            human_loop_name="dicta",
+            flow_definition_arn="suscipit",
+            human_loop_name="iure",
+        ),
+        queries_config=shared.QueriesConfig(
+            queries=[
+                shared.Query(
+                    alias="debitis",
+                    pages=[
+                        "delectus",
+                    ],
+                    text="tempora",
+                ),
+                shared.Query(
+                    alias="suscipit",
+                    pages=[
+                        "minus",
+                        "placeat",
+                    ],
+                    text="voluptatum",
+                ),
+            ],
         ),
     ),
+    x_amz_algorithm="iusto",
+    x_amz_content_sha256="excepturi",
+    x_amz_credential="nisi",
+    x_amz_date="recusandae",
+    x_amz_security_token="temporibus",
+    x_amz_signature="ab",
+    x_amz_signed_headers="quis",
+    x_amz_target="Textract.AnalyzeDocument",
 )
     
 res = s.analyze_document(req)

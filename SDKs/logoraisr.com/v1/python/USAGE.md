@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        token=shared.SchemeToken(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.PreviewsReadRequest(
-    path_params=operations.PreviewsReadPathParams(
-        file_id="optio",
+        token="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.PreviewsReadRequest(
+    file_id="corrupti",
 )
     
 res = s.previews.previews_read(req)

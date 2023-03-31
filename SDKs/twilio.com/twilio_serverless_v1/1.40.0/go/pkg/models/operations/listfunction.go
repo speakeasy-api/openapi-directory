@@ -12,28 +12,19 @@ var ListFunctionServerList = []string{
 }
 
 type ListFunctionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFunctionPathParams struct {
-	// The SID of the Service to read the Function resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListFunctionQueryParams struct {
+type ListFunctionRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListFunctionRequest struct {
-	PathParams  ListFunctionPathParams
-	QueryParams ListFunctionQueryParams
-	Security    ListFunctionSecurity
-	ServerURL   *string
+	// The SID of the Service to read the Function resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListFunctionListFunctionResponseMeta struct {

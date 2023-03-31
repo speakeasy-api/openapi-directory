@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDInstitutionsPathParams struct {
-	// The unique identifier of the user
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostUsersIDInstitutionsRequestBody struct {
 	// A currency code for the institution.
 	CurrencyCode string `json:"currency_code"`
@@ -20,8 +15,9 @@ type PostUsersIDInstitutionsRequestBody struct {
 }
 
 type PostUsersIDInstitutionsRequest struct {
-	PathParams PostUsersIDInstitutionsPathParams
-	Request    *PostUsersIDInstitutionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostUsersIDInstitutionsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostUsersIDInstitutionsResponse struct {

@@ -12,30 +12,21 @@ var ListRecordingTranscriptionServerList = []string{
 }
 
 type ListRecordingTranscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRecordingTranscriptionPathParams struct {
+type ListRecordingTranscriptionRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Recording](https://www.twilio.com/docs/voice/api/recording) that created the transcriptions to read.
-	RecordingSid string `pathParam:"style=simple,explode=false,name=RecordingSid"`
-}
-
-type ListRecordingTranscriptionQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListRecordingTranscriptionRequest struct {
-	PathParams  ListRecordingTranscriptionPathParams
-	QueryParams ListRecordingTranscriptionQueryParams
-	Security    ListRecordingTranscriptionSecurity
-	ServerURL   *string
+	// The SID of the [Recording](https://www.twilio.com/docs/voice/api/recording) that created the transcriptions to read.
+	RecordingSid string `pathParam:"style=simple,explode=false,name=RecordingSid"`
 }
 
 // ListRecordingTranscriptionListRecordingTranscriptionResponse - OK

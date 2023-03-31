@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleEmbargoUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleEmbargoUpdatePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleEmbargoUpdateRequest struct {
-	PathParams PrivateArticleEmbargoUpdatePathParams
 	// Embargo description
-	Request  shared.ArticleEmbargoUpdater `request:"mediaType=application/json"`
-	Security PrivateArticleEmbargoUpdateSecurity
+	ArticleEmbargoUpdater shared.ArticleEmbargoUpdater `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleEmbargoUpdateResponse struct {

@@ -12,15 +12,13 @@ var ListAddressServerList = []string{
 }
 
 type ListAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListAddressPathParams struct {
+type ListAddressRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListAddressQueryParams struct {
 	// The `customer_name` of the Address resources to read.
 	CustomerName *string `queryParam:"style=form,explode=true,name=CustomerName"`
 	// The string that identifies the Address resources to read.
@@ -33,13 +31,6 @@ type ListAddressQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListAddressRequest struct {
-	PathParams  ListAddressPathParams
-	QueryParams ListAddressQueryParams
-	Security    ListAddressSecurity
-	ServerURL   *string
 }
 
 // ListAddressListAddressResponse - OK

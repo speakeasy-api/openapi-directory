@@ -12,20 +12,15 @@ var FetchTrustProductEvaluationServerList = []string{
 }
 
 type FetchTrustProductEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTrustProductEvaluationPathParams struct {
+type FetchTrustProductEvaluationRequest struct {
 	// The unique string that identifies the Evaluation resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The unique string that we created to identify the trust_product resource.
 	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
-}
-
-type FetchTrustProductEvaluationRequest struct {
-	PathParams FetchTrustProductEvaluationPathParams
-	Security   FetchTrustProductEvaluationSecurity
-	ServerURL  *string
 }
 
 type FetchTrustProductEvaluationResponse struct {

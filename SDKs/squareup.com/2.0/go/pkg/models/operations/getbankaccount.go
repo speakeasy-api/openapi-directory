@@ -8,17 +8,12 @@ import (
 )
 
 type GetBankAccountSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetBankAccountPathParams struct {
-	// Square-issued ID of the desired `BankAccount`.
-	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetBankAccountRequest struct {
-	PathParams GetBankAccountPathParams
-	Security   GetBankAccountSecurity
+	// Square-issued ID of the desired `BankAccount`.
+	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
 }
 
 type GetBankAccountResponse struct {

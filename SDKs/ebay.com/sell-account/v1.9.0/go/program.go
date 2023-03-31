@@ -33,7 +33,7 @@ func newProgram(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GetOptedInPrograms - This method gets a list of the seller programs that the seller has opted-in to.
-func (s *program) GetOptedInPrograms(ctx context.Context, request operations.GetOptedInProgramsRequest) (*operations.GetOptedInProgramsResponse, error) {
+func (s *program) GetOptedInPrograms(ctx context.Context) (*operations.GetOptedInProgramsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/program/get_opted_in_programs"
 
@@ -42,7 +42,7 @@ func (s *program) GetOptedInPrograms(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *program) GetOptedInPrograms(ctx context.Context, request operations.Get
 }
 
 // OptInToProgram - This method opts the seller in to an eBay seller program. Refer to the <a href="/api-docs/sell/account/overview.html#opt-in" target="_blank">Account API overview</a> for information about available eBay seller programs.<br /><br /><span class="tablenote"><b>Note:</b> It can take up to 24-hours for eBay to process your request to opt-in to a Seller Program. Use the <a href="/api-docs/sell/account/resources/program/methods/getOptedInPrograms" target="_blank">getOptedInPrograms</a> call to check the status of your request after the processing period has passed.</span>
-func (s *program) OptInToProgram(ctx context.Context, request operations.OptInToProgramRequest) (*operations.OptInToProgramResponse, error) {
+func (s *program) OptInToProgram(ctx context.Context, request shared.Program, security operations.OptInToProgramSecurity) (*operations.OptInToProgramResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/program/opt_in"
 
@@ -101,7 +101,7 @@ func (s *program) OptInToProgram(ctx context.Context, request operations.OptInTo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *program) OptInToProgram(ctx context.Context, request operations.OptInTo
 }
 
 // OptOutOfProgram - This method opts the seller out of a seller program to which you have previously opted-in to. Get a list of the seller programs you have opted-in to using the <b>getOptedInPrograms</b> call.
-func (s *program) OptOutOfProgram(ctx context.Context, request operations.OptOutOfProgramRequest) (*operations.OptOutOfProgramResponse, error) {
+func (s *program) OptOutOfProgram(ctx context.Context, request shared.Program, security operations.OptOutOfProgramSecurity) (*operations.OptOutOfProgramResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/program/opt_out"
 
@@ -162,7 +162,7 @@ func (s *program) OptOutOfProgram(ctx context.Context, request operations.OptOut
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

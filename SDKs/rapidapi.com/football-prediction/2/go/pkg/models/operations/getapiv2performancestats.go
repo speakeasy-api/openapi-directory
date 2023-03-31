@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAPIV2PerformanceStatsHeaders struct {
+type GetAPIV2PerformanceStatsRequest struct {
 	// Your key obtained from https://boggio-analytics.com/fp-api/
 	XRapidAPIKey *string `header:"style=simple,explode=false,name=X-RapidApi-Key"`
-}
-
-type GetAPIV2PerformanceStatsRequest struct {
-	Headers GetAPIV2PerformanceStatsHeaders
 }
 
 // GetAPIV2PerformanceStats404ApplicationJSON - Bad request, check response for detailed errors.

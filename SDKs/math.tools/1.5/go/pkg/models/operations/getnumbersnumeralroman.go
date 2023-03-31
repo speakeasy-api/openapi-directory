@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersNumeralRomanSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersNumeralRomanQueryParams struct {
-	// Number to convert
-	Number *int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersNumeralRomanRequest struct {
-	QueryParams GetNumbersNumeralRomanQueryParams
-	Security    GetNumbersNumeralRomanSecurity
+	// Number to convert
+	Number *int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersNumeralRomanResponse struct {

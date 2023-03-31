@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPresidentialContributionsByCandidateQueryParams struct {
+type GetPresidentialContributionsByCandidateRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -28,10 +28,6 @@ type GetPresidentialContributionsByCandidateQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetPresidentialContributionsByCandidateRequest struct {
-	QueryParams GetPresidentialContributionsByCandidateQueryParams
 }
 
 type GetPresidentialContributionsByCandidateResponse struct {

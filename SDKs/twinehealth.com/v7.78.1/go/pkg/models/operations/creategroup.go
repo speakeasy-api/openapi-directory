@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGroupRequest struct {
-	Request shared.CreateGroupRequestInput `request:"mediaType=application/vnd.api+json"`
-}
-
 type CreateGroupResponse struct {
 	ContentType string
 	// Created

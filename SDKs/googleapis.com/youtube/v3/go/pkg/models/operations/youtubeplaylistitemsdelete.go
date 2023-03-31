@@ -8,18 +8,18 @@ import (
 )
 
 type YoutubePlaylistItemsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistItemsDeleteSecurity struct {
@@ -28,7 +28,7 @@ type YoutubePlaylistItemsDeleteSecurity struct {
 	Option3 *YoutubePlaylistItemsDeleteSecurityOption3 `security:"option"`
 }
 
-type YoutubePlaylistItemsDeleteQueryParams struct {
+type YoutubePlaylistItemsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,11 +54,6 @@ type YoutubePlaylistItemsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubePlaylistItemsDeleteRequest struct {
-	QueryParams YoutubePlaylistItemsDeleteQueryParams
-	Security    YoutubePlaylistItemsDeleteSecurity
 }
 
 type YoutubePlaylistItemsDeleteResponse struct {

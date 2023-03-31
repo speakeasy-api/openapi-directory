@@ -8,22 +8,20 @@ import (
 )
 
 type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpPathParams struct {
-	// Required. The current buyer who is sending the RFP in the format: `buyers/{accountId}`.
-	Buyer string `pathParam:"style=simple,explode=false,name=buyer"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpQueryParams struct {
+type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv    *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SendRfpRequest *shared.SendRfpRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The current buyer who is sending the RFP in the format: `buyers/{accountId}`.
+	Buyer string `pathParam:"style=simple,explode=false,name=buyer"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,13 +38,6 @@ type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest struct {
-	PathParams  AuthorizedbuyersmarketplaceBuyersProposalsSendRfpPathParams
-	QueryParams AuthorizedbuyersmarketplaceBuyersProposalsSendRfpQueryParams
-	Request     *shared.SendRfpRequest `request:"mediaType=application/json"`
-	Security    AuthorizedbuyersmarketplaceBuyersProposalsSendRfpSecurity
 }
 
 type AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse struct {

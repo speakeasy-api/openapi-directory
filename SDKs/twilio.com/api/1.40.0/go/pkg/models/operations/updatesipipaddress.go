@@ -12,16 +12,8 @@ var UpdateSipIPAddressServerList = []string{
 }
 
 type UpdateSipIPAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSipIPAddressPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The IpAccessControlList Sid that identifies the IpAddress resources to update.
-	IPAccessControlListSid string `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
-	// A 34 character string that identifies the IpAddress resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSipIPAddressUpdateSipIPAddressRequest struct {
@@ -34,10 +26,13 @@ type UpdateSipIPAddressUpdateSipIPAddressRequest struct {
 }
 
 type UpdateSipIPAddressRequest struct {
-	PathParams UpdateSipIPAddressPathParams
-	Request    *UpdateSipIPAddressUpdateSipIPAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSipIPAddressSecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The IpAccessControlList Sid that identifies the IpAddress resources to update.
+	IPAccessControlListSid string                                       `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
+	RequestBody            *UpdateSipIPAddressUpdateSipIPAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that identifies the IpAddress resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSipIPAddressResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWarehousePathParams struct {
+type UpdateWarehouseRequest struct {
+	UpdateWarehouseRequestBodyInput shared.UpdateWarehouseRequestBodyInput `request:"mediaType=application/json"`
 	// Warehouse ID
 	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouse_id"`
-}
-
-type UpdateWarehouseRequest struct {
-	PathParams UpdateWarehousePathParams
-	Request    shared.UpdateWarehouseRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateWarehouseResponse struct {

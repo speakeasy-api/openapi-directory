@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasGraphsDeletePathParams struct {
+type ExtrasGraphsDeleteRequest struct {
 	// A unique integer value identifying this graph.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasGraphsDeleteRequest struct {
-	PathParams ExtrasGraphsDeletePathParams
 }
 
 type ExtrasGraphsDeleteResponse struct {

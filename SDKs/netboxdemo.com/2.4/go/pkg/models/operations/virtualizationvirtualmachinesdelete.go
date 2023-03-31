@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type VirtualizationVirtualMachinesDeletePathParams struct {
+type VirtualizationVirtualMachinesDeleteRequest struct {
 	// A unique integer value identifying this virtual machine.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationVirtualMachinesDeleteRequest struct {
-	PathParams VirtualizationVirtualMachinesDeletePathParams
 }
 
 type VirtualizationVirtualMachinesDeleteResponse struct {

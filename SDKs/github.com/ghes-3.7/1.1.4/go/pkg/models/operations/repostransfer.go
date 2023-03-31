@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposTransferPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposTransferRequestBody struct {
 	// The new name to be given to the repository.
 	NewName *string `json:"new_name,omitempty"`
@@ -24,8 +17,11 @@ type ReposTransferRequestBody struct {
 }
 
 type ReposTransferRequest struct {
-	PathParams ReposTransferPathParams
-	Request    ReposTransferRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposTransferRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposTransferResponse struct {

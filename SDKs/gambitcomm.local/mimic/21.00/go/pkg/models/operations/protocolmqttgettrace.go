@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolMqttGetTracePathParams struct {
+type ProtocolMqttGetTraceRequest struct {
 	// Agent to show whether MQTT tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttGetTraceRequest struct {
-	PathParams ProtocolMqttGetTracePathParams
 }
 
 type ProtocolMqttGetTraceResponse struct {

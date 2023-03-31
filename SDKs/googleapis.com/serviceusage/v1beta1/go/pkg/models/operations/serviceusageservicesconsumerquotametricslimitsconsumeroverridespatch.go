@@ -10,23 +10,18 @@ import (
 )
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity struct {
 	Option1 *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption1 `security:"option"`
 	Option2 *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurityOption2 `security:"option"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchPathParams struct {
-	// The resource name of the override to update. An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchForceOnlyEnum string
@@ -55,9 +50,10 @@ func (e *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchFor
 	}
 }
 
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchQueryParams struct {
+type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	QuotaOverride *shared.QuotaOverride `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -72,6 +68,8 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchQueryPa
 	ForceOnly []ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchForceOnlyEnum `queryParam:"style=form,explode=true,name=forceOnly"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the override to update. An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -84,13 +82,6 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchQueryPa
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest struct {
-	PathParams  ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchPathParams
-	QueryParams ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchQueryParams
-	Request     *shared.QuotaOverride `request:"mediaType=application/json"`
-	Security    ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse struct {

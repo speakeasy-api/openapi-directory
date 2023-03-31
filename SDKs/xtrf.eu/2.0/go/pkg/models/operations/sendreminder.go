@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SendReminderPathParams struct {
+type SendReminderRequest struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type SendReminderRequest struct {
-	PathParams SendReminderPathParams
 }
 
 type SendReminderResponse struct {

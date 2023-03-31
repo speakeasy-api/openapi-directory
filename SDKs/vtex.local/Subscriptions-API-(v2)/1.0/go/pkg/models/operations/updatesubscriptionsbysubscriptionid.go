@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSubscriptionsbySubscriptionIDPathParams struct {
-	// Subscription ID.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type UpdateSubscriptionsbySubscriptionIDHeaders struct {
+type UpdateSubscriptionsbySubscriptionIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdateSubscriptionsbySubscriptionIDRequest struct {
-	PathParams UpdateSubscriptionsbySubscriptionIDPathParams
-	Headers    UpdateSubscriptionsbySubscriptionIDHeaders
-	Request    shared.UpdateSubscriptionsbySubscriptionIDRequest `request:"mediaType=application/json"`
+	ContentType                                string                                            `header:"style=simple,explode=false,name=Content-Type"`
+	UpdateSubscriptionsbySubscriptionIDRequest shared.UpdateSubscriptionsbySubscriptionIDRequest `request:"mediaType=application/json"`
+	// Subscription ID.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type UpdateSubscriptionsbySubscriptionIDResponse struct {

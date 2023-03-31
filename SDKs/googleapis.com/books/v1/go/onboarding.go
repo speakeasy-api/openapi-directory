@@ -33,7 +33,7 @@ func newOnboarding(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // BooksOnboardingListCategories - List categories for onboarding experience.
-func (s *onboarding) BooksOnboardingListCategories(ctx context.Context, request operations.BooksOnboardingListCategoriesRequest) (*operations.BooksOnboardingListCategoriesResponse, error) {
+func (s *onboarding) BooksOnboardingListCategories(ctx context.Context, request operations.BooksOnboardingListCategoriesRequest, security operations.BooksOnboardingListCategoriesSecurity) (*operations.BooksOnboardingListCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/onboarding/listCategories"
 
@@ -42,11 +42,11 @@ func (s *onboarding) BooksOnboardingListCategories(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *onboarding) BooksOnboardingListCategories(ctx context.Context, request 
 }
 
 // BooksOnboardingListCategoryVolumes - List available volumes under categories for onboarding experience.
-func (s *onboarding) BooksOnboardingListCategoryVolumes(ctx context.Context, request operations.BooksOnboardingListCategoryVolumesRequest) (*operations.BooksOnboardingListCategoryVolumesResponse, error) {
+func (s *onboarding) BooksOnboardingListCategoryVolumes(ctx context.Context, request operations.BooksOnboardingListCategoryVolumesRequest, security operations.BooksOnboardingListCategoryVolumesSecurity) (*operations.BooksOnboardingListCategoryVolumesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/onboarding/listCategoryVolumes"
 
@@ -90,11 +90,11 @@ func (s *onboarding) BooksOnboardingListCategoryVolumes(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

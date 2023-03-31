@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimInterfaceTemplatesDeletePathParams struct {
+type DcimInterfaceTemplatesDeleteRequest struct {
 	// A unique integer value identifying this interface template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInterfaceTemplatesDeleteRequest struct {
-	PathParams DcimInterfaceTemplatesDeletePathParams
 }
 
 type DcimInterfaceTemplatesDeleteResponse struct {

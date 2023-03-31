@@ -42,18 +42,13 @@ func (e *StopsStopDetailsRouteTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopsStopDetailsPathParams struct {
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType StopsStopDetailsRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-	// Identifier of stop; values returned by Stops API
-	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
-}
-
-type StopsStopDetailsQueryParams struct {
+type StopsStopDetailsRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Incdicates whether the stop_id is a GTFS ID or not
 	Gtfs *bool `queryParam:"style=form,explode=true,name=gtfs"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType StopsStopDetailsRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Indicates if stop accessibility information will be returned (default = false)
@@ -64,6 +59,8 @@ type StopsStopDetailsQueryParams struct {
 	StopContact *bool `queryParam:"style=form,explode=true,name=stop_contact"`
 	// Indicates if stop disruption information will be returned (default = false)
 	StopDisruptions *bool `queryParam:"style=form,explode=true,name=stop_disruptions"`
+	// Identifier of stop; values returned by Stops API
+	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
 	// Indicates if stop location information will be returned (default = false)
 	StopLocation *bool `queryParam:"style=form,explode=true,name=stop_location"`
 	// Indicates if stop staffing information will be returned (default = false)
@@ -72,11 +69,6 @@ type StopsStopDetailsQueryParams struct {
 	StopTicket *bool `queryParam:"style=form,explode=true,name=stop_ticket"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type StopsStopDetailsRequest struct {
-	PathParams  StopsStopDetailsPathParams
-	QueryParams StopsStopDetailsQueryParams
 }
 
 type StopsStopDetailsResponse struct {

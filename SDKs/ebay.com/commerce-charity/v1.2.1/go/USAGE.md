@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCharityOrgRequest{
-        Security: operations.GetCharityOrgSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetCharityOrgPathParams{
-            CharityOrgID: "corrupti",
-        },
-        Headers: operations.GetCharityOrgHeaders{
-            XEbayCMarketplaceID: "provident",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        CharityOrgID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.CharityOrg.GetCharityOrg(ctx, req)
+    res, err := s.CharityOrg.GetCharityOrg(ctx, req, operations.GetCharityOrgSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

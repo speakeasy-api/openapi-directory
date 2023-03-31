@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScrobbleShowsShowIDPathParams struct {
-	// ID of the target show
-	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
-}
-
 // GetScrobbleShowsShowIDEmbedEnum - Embed full episode info
 type GetScrobbleShowsShowIDEmbedEnum string
 
@@ -35,14 +30,11 @@ func (e *GetScrobbleShowsShowIDEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetScrobbleShowsShowIDQueryParams struct {
+type GetScrobbleShowsShowIDRequest struct {
 	// Embed full episode info
 	Embed *GetScrobbleShowsShowIDEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetScrobbleShowsShowIDRequest struct {
-	PathParams  GetScrobbleShowsShowIDPathParams
-	QueryParams GetScrobbleShowsShowIDQueryParams
+	// ID of the target show
+	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
 }
 
 type GetScrobbleShowsShowIDResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type SetLogRequest struct {
-	// The file name of the new log file
-	Request string `request:"mediaType=application/json"`
-}
-
 type SetLogResponse struct {
 	ContentType string
 	StatusCode  int

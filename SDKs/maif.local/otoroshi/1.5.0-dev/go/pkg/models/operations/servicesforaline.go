@@ -8,17 +8,13 @@ import (
 )
 
 type ServicesForALineSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ServicesForALinePathParams struct {
-	// The environment where to find services
-	Line string `pathParam:"style=simple,explode=false,name=line"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ServicesForALineRequest struct {
-	PathParams ServicesForALinePathParams
-	Security   ServicesForALineSecurity
+	// The environment where to find services
+	Line string `pathParam:"style=simple,explode=false,name=line"`
 }
 
 type ServicesForALineResponse struct {

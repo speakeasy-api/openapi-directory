@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CertificateActionRetrieveRequest{
-        PathParams: operations.CertificateActionRetrievePathParams{
-            CertificateID: "corrupti",
-        },
+        CertificateID: "corrupti",
     }
 
     ctx := context.Background()

@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type NodesAddonsFoldersListPathParams struct {
+type NodesAddonsFoldersListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the provider
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type NodesAddonsFoldersListRequest struct {
-	PathParams NodesAddonsFoldersListPathParams
 }
 
 type NodesAddonsFoldersListAddonAttributesCategoriesEnum string

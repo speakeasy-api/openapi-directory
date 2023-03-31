@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProductsJSONQueryParams struct {
+type PostProductsJSONRequest struct {
+	// Product parameters.
+	ProductEdit shared.ProductEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Locale code of the translation
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostProductsJSONRequest struct {
-	QueryParams PostProductsJSONQueryParams
-	// Product parameters.
-	Request shared.ProductEdit `request:"mediaType=application/json"`
 }
 
 type PostProductsJSONResponse struct {

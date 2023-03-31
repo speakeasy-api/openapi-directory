@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateCustomerProfile - Create a new Customer-Profile.
-func (s *SDK) CreateCustomerProfile(ctx context.Context, request operations.CreateCustomerProfileRequest) (*operations.CreateCustomerProfileResponse, error) {
+func (s *SDK) CreateCustomerProfile(ctx context.Context, request operations.CreateCustomerProfileCreateCustomerProfileRequest, security operations.CreateCustomerProfileSecurity, opts ...operations.Option) (*operations.CreateCustomerProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCustomerProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CustomerProfiles"
@@ -113,7 +123,7 @@ func (s *SDK) CreateCustomerProfile(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,15 +158,25 @@ func (s *SDK) CreateCustomerProfile(ctx context.Context, request operations.Crea
 }
 
 // CreateCustomerProfileChannelEndpointAssignment - Create a new Assigned Item.
-func (s *SDK) CreateCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.CreateCustomerProfileChannelEndpointAssignmentRequest) (*operations.CreateCustomerProfileChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.CreateCustomerProfileChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.CreateCustomerProfileChannelEndpointAssignmentRequest, security operations.CreateCustomerProfileChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.CreateCustomerProfileChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCustomerProfileChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +188,7 @@ func (s *SDK) CreateCustomerProfileChannelEndpointAssignment(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,15 +223,25 @@ func (s *SDK) CreateCustomerProfileChannelEndpointAssignment(ctx context.Context
 }
 
 // CreateCustomerProfileEntityAssignment - Create a new Assigned Item.
-func (s *SDK) CreateCustomerProfileEntityAssignment(ctx context.Context, request operations.CreateCustomerProfileEntityAssignmentRequest) (*operations.CreateCustomerProfileEntityAssignmentResponse, error) {
-	baseURL := operations.CreateCustomerProfileEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCustomerProfileEntityAssignment(ctx context.Context, request operations.CreateCustomerProfileEntityAssignmentRequest, security operations.CreateCustomerProfileEntityAssignmentSecurity, opts ...operations.Option) (*operations.CreateCustomerProfileEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCustomerProfileEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +253,7 @@ func (s *SDK) CreateCustomerProfileEntityAssignment(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,15 +288,25 @@ func (s *SDK) CreateCustomerProfileEntityAssignment(ctx context.Context, request
 }
 
 // CreateCustomerProfileEvaluation - Create a new Evaluation
-func (s *SDK) CreateCustomerProfileEvaluation(ctx context.Context, request operations.CreateCustomerProfileEvaluationRequest) (*operations.CreateCustomerProfileEvaluationResponse, error) {
-	baseURL := operations.CreateCustomerProfileEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCustomerProfileEvaluation(ctx context.Context, request operations.CreateCustomerProfileEvaluationRequest, security operations.CreateCustomerProfileEvaluationSecurity, opts ...operations.Option) (*operations.CreateCustomerProfileEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCustomerProfileEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,7 +318,7 @@ func (s *SDK) CreateCustomerProfileEvaluation(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,10 +353,20 @@ func (s *SDK) CreateCustomerProfileEvaluation(ctx context.Context, request opera
 }
 
 // CreateEndUser - Create a new End User.
-func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUserRequest) (*operations.CreateEndUserResponse, error) {
+func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUserCreateEndUserRequest, security operations.CreateEndUserSecurity, opts ...operations.Option) (*operations.CreateEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/EndUsers"
@@ -333,7 +383,7 @@ func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,10 +418,20 @@ func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUse
 }
 
 // CreateSupportingDocument - Create a new Supporting Document.
-func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.CreateSupportingDocumentRequest) (*operations.CreateSupportingDocumentResponse, error) {
+func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.CreateSupportingDocumentCreateSupportingDocumentRequest, security operations.CreateSupportingDocumentSecurity, opts ...operations.Option) (*operations.CreateSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SupportingDocuments"
@@ -388,7 +448,7 @@ func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,10 +483,20 @@ func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.C
 }
 
 // CreateTrustProduct - Create a new Customer-Profile.
-func (s *SDK) CreateTrustProduct(ctx context.Context, request operations.CreateTrustProductRequest) (*operations.CreateTrustProductResponse, error) {
+func (s *SDK) CreateTrustProduct(ctx context.Context, request operations.CreateTrustProductCreateTrustProductRequest, security operations.CreateTrustProductSecurity, opts ...operations.Option) (*operations.CreateTrustProductResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateTrustProductServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/TrustProducts"
@@ -443,7 +513,7 @@ func (s *SDK) CreateTrustProduct(ctx context.Context, request operations.CreateT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,15 +548,25 @@ func (s *SDK) CreateTrustProduct(ctx context.Context, request operations.CreateT
 }
 
 // CreateTrustProductChannelEndpointAssignment - Create a new Assigned Item.
-func (s *SDK) CreateTrustProductChannelEndpointAssignment(ctx context.Context, request operations.CreateTrustProductChannelEndpointAssignmentRequest) (*operations.CreateTrustProductChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.CreateTrustProductChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTrustProductChannelEndpointAssignment(ctx context.Context, request operations.CreateTrustProductChannelEndpointAssignmentRequest, security operations.CreateTrustProductChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.CreateTrustProductChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTrustProductChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -498,7 +578,7 @@ func (s *SDK) CreateTrustProductChannelEndpointAssignment(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -533,15 +613,25 @@ func (s *SDK) CreateTrustProductChannelEndpointAssignment(ctx context.Context, r
 }
 
 // CreateTrustProductEntityAssignment - Create a new Assigned Item.
-func (s *SDK) CreateTrustProductEntityAssignment(ctx context.Context, request operations.CreateTrustProductEntityAssignmentRequest) (*operations.CreateTrustProductEntityAssignmentResponse, error) {
-	baseURL := operations.CreateTrustProductEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTrustProductEntityAssignment(ctx context.Context, request operations.CreateTrustProductEntityAssignmentRequest, security operations.CreateTrustProductEntityAssignmentSecurity, opts ...operations.Option) (*operations.CreateTrustProductEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTrustProductEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -553,7 +643,7 @@ func (s *SDK) CreateTrustProductEntityAssignment(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,15 +678,25 @@ func (s *SDK) CreateTrustProductEntityAssignment(ctx context.Context, request op
 }
 
 // CreateTrustProductEvaluation - Create a new Evaluation
-func (s *SDK) CreateTrustProductEvaluation(ctx context.Context, request operations.CreateTrustProductEvaluationRequest) (*operations.CreateTrustProductEvaluationResponse, error) {
-	baseURL := operations.CreateTrustProductEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTrustProductEvaluation(ctx context.Context, request operations.CreateTrustProductEvaluationRequest, security operations.CreateTrustProductEvaluationSecurity, opts ...operations.Option) (*operations.CreateTrustProductEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTrustProductEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -608,7 +708,7 @@ func (s *SDK) CreateTrustProductEvaluation(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -643,20 +743,30 @@ func (s *SDK) CreateTrustProductEvaluation(ctx context.Context, request operatio
 }
 
 // DeleteCustomerProfile - Delete a specific Customer-Profile.
-func (s *SDK) DeleteCustomerProfile(ctx context.Context, request operations.DeleteCustomerProfileRequest) (*operations.DeleteCustomerProfileResponse, error) {
-	baseURL := operations.DeleteCustomerProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCustomerProfile(ctx context.Context, request operations.DeleteCustomerProfileRequest, security operations.DeleteCustomerProfileSecurity, opts ...operations.Option) (*operations.DeleteCustomerProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCustomerProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -682,20 +792,30 @@ func (s *SDK) DeleteCustomerProfile(ctx context.Context, request operations.Dele
 }
 
 // DeleteCustomerProfileChannelEndpointAssignment - Remove an Assignment Item Instance.
-func (s *SDK) DeleteCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.DeleteCustomerProfileChannelEndpointAssignmentRequest) (*operations.DeleteCustomerProfileChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.DeleteCustomerProfileChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.DeleteCustomerProfileChannelEndpointAssignmentRequest, security operations.DeleteCustomerProfileChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.DeleteCustomerProfileChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCustomerProfileChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -721,20 +841,30 @@ func (s *SDK) DeleteCustomerProfileChannelEndpointAssignment(ctx context.Context
 }
 
 // DeleteCustomerProfileEntityAssignment - Remove an Assignment Item Instance.
-func (s *SDK) DeleteCustomerProfileEntityAssignment(ctx context.Context, request operations.DeleteCustomerProfileEntityAssignmentRequest) (*operations.DeleteCustomerProfileEntityAssignmentResponse, error) {
-	baseURL := operations.DeleteCustomerProfileEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCustomerProfileEntityAssignment(ctx context.Context, request operations.DeleteCustomerProfileEntityAssignmentRequest, security operations.DeleteCustomerProfileEntityAssignmentSecurity, opts ...operations.Option) (*operations.DeleteCustomerProfileEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCustomerProfileEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,20 +890,30 @@ func (s *SDK) DeleteCustomerProfileEntityAssignment(ctx context.Context, request
 }
 
 // DeleteEndUser - Delete a specific End User.
-func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUserRequest) (*operations.DeleteEndUserResponse, error) {
-	baseURL := operations.DeleteEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUserRequest, security operations.DeleteEndUserSecurity, opts ...operations.Option) (*operations.DeleteEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -799,20 +939,30 @@ func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUse
 }
 
 // DeleteSupportingDocument - Delete a specific Supporting Document.
-func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.DeleteSupportingDocumentRequest) (*operations.DeleteSupportingDocumentResponse, error) {
-	baseURL := operations.DeleteSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.DeleteSupportingDocumentRequest, security operations.DeleteSupportingDocumentSecurity, opts ...operations.Option) (*operations.DeleteSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -838,20 +988,30 @@ func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.D
 }
 
 // DeleteTrustProduct - Delete a specific Customer-Profile.
-func (s *SDK) DeleteTrustProduct(ctx context.Context, request operations.DeleteTrustProductRequest) (*operations.DeleteTrustProductResponse, error) {
-	baseURL := operations.DeleteTrustProductServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTrustProduct(ctx context.Context, request operations.DeleteTrustProductRequest, security operations.DeleteTrustProductSecurity, opts ...operations.Option) (*operations.DeleteTrustProductResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTrustProductServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,20 +1037,30 @@ func (s *SDK) DeleteTrustProduct(ctx context.Context, request operations.DeleteT
 }
 
 // DeleteTrustProductChannelEndpointAssignment - Remove an Assignment Item Instance.
-func (s *SDK) DeleteTrustProductChannelEndpointAssignment(ctx context.Context, request operations.DeleteTrustProductChannelEndpointAssignmentRequest) (*operations.DeleteTrustProductChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.DeleteTrustProductChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTrustProductChannelEndpointAssignment(ctx context.Context, request operations.DeleteTrustProductChannelEndpointAssignmentRequest, security operations.DeleteTrustProductChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.DeleteTrustProductChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTrustProductChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -916,20 +1086,30 @@ func (s *SDK) DeleteTrustProductChannelEndpointAssignment(ctx context.Context, r
 }
 
 // DeleteTrustProductEntityAssignment - Remove an Assignment Item Instance.
-func (s *SDK) DeleteTrustProductEntityAssignment(ctx context.Context, request operations.DeleteTrustProductEntityAssignmentRequest) (*operations.DeleteTrustProductEntityAssignmentResponse, error) {
-	baseURL := operations.DeleteTrustProductEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTrustProductEntityAssignment(ctx context.Context, request operations.DeleteTrustProductEntityAssignmentRequest, security operations.DeleteTrustProductEntityAssignmentSecurity, opts ...operations.Option) (*operations.DeleteTrustProductEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTrustProductEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -955,20 +1135,30 @@ func (s *SDK) DeleteTrustProductEntityAssignment(ctx context.Context, request op
 }
 
 // FetchCustomerProfile - Fetch a specific Customer-Profile instance.
-func (s *SDK) FetchCustomerProfile(ctx context.Context, request operations.FetchCustomerProfileRequest) (*operations.FetchCustomerProfileResponse, error) {
-	baseURL := operations.FetchCustomerProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCustomerProfile(ctx context.Context, request operations.FetchCustomerProfileRequest, security operations.FetchCustomerProfileSecurity, opts ...operations.Option) (*operations.FetchCustomerProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCustomerProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1003,20 +1193,30 @@ func (s *SDK) FetchCustomerProfile(ctx context.Context, request operations.Fetch
 }
 
 // FetchCustomerProfileChannelEndpointAssignment - Fetch specific Assigned Item Instance.
-func (s *SDK) FetchCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.FetchCustomerProfileChannelEndpointAssignmentRequest) (*operations.FetchCustomerProfileChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.FetchCustomerProfileChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.FetchCustomerProfileChannelEndpointAssignmentRequest, security operations.FetchCustomerProfileChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.FetchCustomerProfileChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCustomerProfileChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1051,20 +1251,30 @@ func (s *SDK) FetchCustomerProfileChannelEndpointAssignment(ctx context.Context,
 }
 
 // FetchCustomerProfileEntityAssignment - Fetch specific Assigned Item Instance.
-func (s *SDK) FetchCustomerProfileEntityAssignment(ctx context.Context, request operations.FetchCustomerProfileEntityAssignmentRequest) (*operations.FetchCustomerProfileEntityAssignmentResponse, error) {
-	baseURL := operations.FetchCustomerProfileEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCustomerProfileEntityAssignment(ctx context.Context, request operations.FetchCustomerProfileEntityAssignmentRequest, security operations.FetchCustomerProfileEntityAssignmentSecurity, opts ...operations.Option) (*operations.FetchCustomerProfileEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCustomerProfileEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1099,20 +1309,30 @@ func (s *SDK) FetchCustomerProfileEntityAssignment(ctx context.Context, request 
 }
 
 // FetchCustomerProfileEvaluation - Fetch specific Evaluation Instance.
-func (s *SDK) FetchCustomerProfileEvaluation(ctx context.Context, request operations.FetchCustomerProfileEvaluationRequest) (*operations.FetchCustomerProfileEvaluationResponse, error) {
-	baseURL := operations.FetchCustomerProfileEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCustomerProfileEvaluation(ctx context.Context, request operations.FetchCustomerProfileEvaluationRequest, security operations.FetchCustomerProfileEvaluationSecurity, opts ...operations.Option) (*operations.FetchCustomerProfileEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCustomerProfileEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1147,20 +1367,30 @@ func (s *SDK) FetchCustomerProfileEvaluation(ctx context.Context, request operat
 }
 
 // FetchEndUser - Fetch specific End User Instance.
-func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserRequest) (*operations.FetchEndUserResponse, error) {
-	baseURL := operations.FetchEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserRequest, security operations.FetchEndUserSecurity, opts ...operations.Option) (*operations.FetchEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1195,20 +1425,30 @@ func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserR
 }
 
 // FetchEndUserType - Fetch a specific End-User Type Instance.
-func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndUserTypeRequest) (*operations.FetchEndUserTypeResponse, error) {
-	baseURL := operations.FetchEndUserTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndUserTypeRequest, security operations.FetchEndUserTypeSecurity, opts ...operations.Option) (*operations.FetchEndUserTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUserTypes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEndUserTypeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUserTypes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1243,20 +1483,30 @@ func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndU
 }
 
 // FetchPolicies - Fetch specific Policy Instance.
-func (s *SDK) FetchPolicies(ctx context.Context, request operations.FetchPoliciesRequest) (*operations.FetchPoliciesResponse, error) {
-	baseURL := operations.FetchPoliciesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchPolicies(ctx context.Context, request operations.FetchPoliciesRequest, security operations.FetchPoliciesSecurity, opts ...operations.Option) (*operations.FetchPoliciesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Policies/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchPoliciesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Policies/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1291,20 +1541,30 @@ func (s *SDK) FetchPolicies(ctx context.Context, request operations.FetchPolicie
 }
 
 // FetchSupportingDocument - Fetch specific Supporting Document Instance.
-func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.FetchSupportingDocumentRequest) (*operations.FetchSupportingDocumentResponse, error) {
-	baseURL := operations.FetchSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.FetchSupportingDocumentRequest, security operations.FetchSupportingDocumentSecurity, opts ...operations.Option) (*operations.FetchSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1339,20 +1599,30 @@ func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.Fe
 }
 
 // FetchSupportingDocumentType - Fetch a specific Supporting Document Type Instance.
-func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operations.FetchSupportingDocumentTypeRequest) (*operations.FetchSupportingDocumentTypeResponse, error) {
-	baseURL := operations.FetchSupportingDocumentTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operations.FetchSupportingDocumentTypeRequest, security operations.FetchSupportingDocumentTypeSecurity, opts ...operations.Option) (*operations.FetchSupportingDocumentTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocumentTypes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSupportingDocumentTypeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocumentTypes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1387,20 +1657,30 @@ func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operation
 }
 
 // FetchTrustProduct - Fetch a specific Customer-Profile instance.
-func (s *SDK) FetchTrustProduct(ctx context.Context, request operations.FetchTrustProductRequest) (*operations.FetchTrustProductResponse, error) {
-	baseURL := operations.FetchTrustProductServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrustProduct(ctx context.Context, request operations.FetchTrustProductRequest, security operations.FetchTrustProductSecurity, opts ...operations.Option) (*operations.FetchTrustProductResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrustProductServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1435,20 +1715,30 @@ func (s *SDK) FetchTrustProduct(ctx context.Context, request operations.FetchTru
 }
 
 // FetchTrustProductChannelEndpointAssignment - Fetch specific Assigned Item Instance.
-func (s *SDK) FetchTrustProductChannelEndpointAssignment(ctx context.Context, request operations.FetchTrustProductChannelEndpointAssignmentRequest) (*operations.FetchTrustProductChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.FetchTrustProductChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrustProductChannelEndpointAssignment(ctx context.Context, request operations.FetchTrustProductChannelEndpointAssignmentRequest, security operations.FetchTrustProductChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.FetchTrustProductChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrustProductChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1483,20 +1773,30 @@ func (s *SDK) FetchTrustProductChannelEndpointAssignment(ctx context.Context, re
 }
 
 // FetchTrustProductEntityAssignment - Fetch specific Assigned Item Instance.
-func (s *SDK) FetchTrustProductEntityAssignment(ctx context.Context, request operations.FetchTrustProductEntityAssignmentRequest) (*operations.FetchTrustProductEntityAssignmentResponse, error) {
-	baseURL := operations.FetchTrustProductEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrustProductEntityAssignment(ctx context.Context, request operations.FetchTrustProductEntityAssignmentRequest, security operations.FetchTrustProductEntityAssignmentSecurity, opts ...operations.Option) (*operations.FetchTrustProductEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrustProductEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1531,20 +1831,30 @@ func (s *SDK) FetchTrustProductEntityAssignment(ctx context.Context, request ope
 }
 
 // FetchTrustProductEvaluation - Fetch specific Evaluation Instance.
-func (s *SDK) FetchTrustProductEvaluation(ctx context.Context, request operations.FetchTrustProductEvaluationRequest) (*operations.FetchTrustProductEvaluationResponse, error) {
-	baseURL := operations.FetchTrustProductEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrustProductEvaluation(ctx context.Context, request operations.FetchTrustProductEvaluationRequest, security operations.FetchTrustProductEvaluationSecurity, opts ...operations.Option) (*operations.FetchTrustProductEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrustProductEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1579,10 +1889,20 @@ func (s *SDK) FetchTrustProductEvaluation(ctx context.Context, request operation
 }
 
 // ListCustomerProfile - Retrieve a list of all Customer-Profiles for an account.
-func (s *SDK) ListCustomerProfile(ctx context.Context, request operations.ListCustomerProfileRequest) (*operations.ListCustomerProfileResponse, error) {
+func (s *SDK) ListCustomerProfile(ctx context.Context, request operations.ListCustomerProfileRequest, security operations.ListCustomerProfileSecurity, opts ...operations.Option) (*operations.ListCustomerProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCustomerProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/CustomerProfiles"
@@ -1592,11 +1912,11 @@ func (s *SDK) ListCustomerProfile(ctx context.Context, request operations.ListCu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1631,24 +1951,34 @@ func (s *SDK) ListCustomerProfile(ctx context.Context, request operations.ListCu
 }
 
 // ListCustomerProfileChannelEndpointAssignment - Retrieve a list of all Assigned Items for an account.
-func (s *SDK) ListCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.ListCustomerProfileChannelEndpointAssignmentRequest) (*operations.ListCustomerProfileChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.ListCustomerProfileChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCustomerProfileChannelEndpointAssignment(ctx context.Context, request operations.ListCustomerProfileChannelEndpointAssignmentRequest, security operations.ListCustomerProfileChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.ListCustomerProfileChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCustomerProfileChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/ChannelEndpointAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1683,24 +2013,34 @@ func (s *SDK) ListCustomerProfileChannelEndpointAssignment(ctx context.Context, 
 }
 
 // ListCustomerProfileEntityAssignment - Retrieve a list of all Assigned Items for an account.
-func (s *SDK) ListCustomerProfileEntityAssignment(ctx context.Context, request operations.ListCustomerProfileEntityAssignmentRequest) (*operations.ListCustomerProfileEntityAssignmentResponse, error) {
-	baseURL := operations.ListCustomerProfileEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCustomerProfileEntityAssignment(ctx context.Context, request operations.ListCustomerProfileEntityAssignmentRequest, security operations.ListCustomerProfileEntityAssignmentSecurity, opts ...operations.Option) (*operations.ListCustomerProfileEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCustomerProfileEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/EntityAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1735,24 +2075,34 @@ func (s *SDK) ListCustomerProfileEntityAssignment(ctx context.Context, request o
 }
 
 // ListCustomerProfileEvaluation - Retrieve a list of Evaluations associated to the customer_profile resource.
-func (s *SDK) ListCustomerProfileEvaluation(ctx context.Context, request operations.ListCustomerProfileEvaluationRequest) (*operations.ListCustomerProfileEvaluationResponse, error) {
-	baseURL := operations.ListCustomerProfileEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCustomerProfileEvaluation(ctx context.Context, request operations.ListCustomerProfileEvaluationRequest, security operations.ListCustomerProfileEvaluationSecurity, opts ...operations.Option) (*operations.ListCustomerProfileEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCustomerProfileEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{CustomerProfileSid}/Evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1787,10 +2137,20 @@ func (s *SDK) ListCustomerProfileEvaluation(ctx context.Context, request operati
 }
 
 // ListEndUser - Retrieve a list of all End User for an account.
-func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserRequest) (*operations.ListEndUserResponse, error) {
+func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserRequest, security operations.ListEndUserSecurity, opts ...operations.Option) (*operations.ListEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/EndUsers"
@@ -1800,11 +2160,11 @@ func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1839,10 +2199,20 @@ func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserReq
 }
 
 // ListEndUserType - Retrieve a list of all End-User Types.
-func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUserTypeRequest) (*operations.ListEndUserTypeResponse, error) {
+func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUserTypeRequest, security operations.ListEndUserTypeSecurity, opts ...operations.Option) (*operations.ListEndUserTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEndUserTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/EndUserTypes"
@@ -1852,11 +2222,11 @@ func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUse
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1891,10 +2261,20 @@ func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUse
 }
 
 // ListPolicies - Retrieve a list of all Policys.
-func (s *SDK) ListPolicies(ctx context.Context, request operations.ListPoliciesRequest) (*operations.ListPoliciesResponse, error) {
+func (s *SDK) ListPolicies(ctx context.Context, request operations.ListPoliciesRequest, security operations.ListPoliciesSecurity, opts ...operations.Option) (*operations.ListPoliciesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListPoliciesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Policies"
@@ -1904,11 +2284,11 @@ func (s *SDK) ListPolicies(ctx context.Context, request operations.ListPoliciesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1943,10 +2323,20 @@ func (s *SDK) ListPolicies(ctx context.Context, request operations.ListPoliciesR
 }
 
 // ListSupportingDocument - Retrieve a list of all Supporting Document for an account.
-func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.ListSupportingDocumentRequest) (*operations.ListSupportingDocumentResponse, error) {
+func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.ListSupportingDocumentRequest, security operations.ListSupportingDocumentSecurity, opts ...operations.Option) (*operations.ListSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SupportingDocuments"
@@ -1956,11 +2346,11 @@ func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1995,10 +2385,20 @@ func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.Lis
 }
 
 // ListSupportingDocumentType - Retrieve a list of all Supporting Document Types.
-func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations.ListSupportingDocumentTypeRequest) (*operations.ListSupportingDocumentTypeResponse, error) {
+func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations.ListSupportingDocumentTypeRequest, security operations.ListSupportingDocumentTypeSecurity, opts ...operations.Option) (*operations.ListSupportingDocumentTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSupportingDocumentTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SupportingDocumentTypes"
@@ -2008,11 +2408,11 @@ func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2047,10 +2447,20 @@ func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations
 }
 
 // ListTrustProduct - Retrieve a list of all Customer-Profiles for an account.
-func (s *SDK) ListTrustProduct(ctx context.Context, request operations.ListTrustProductRequest) (*operations.ListTrustProductResponse, error) {
+func (s *SDK) ListTrustProduct(ctx context.Context, request operations.ListTrustProductRequest, security operations.ListTrustProductSecurity, opts ...operations.Option) (*operations.ListTrustProductResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListTrustProductServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/TrustProducts"
@@ -2060,11 +2470,11 @@ func (s *SDK) ListTrustProduct(ctx context.Context, request operations.ListTrust
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2099,24 +2509,34 @@ func (s *SDK) ListTrustProduct(ctx context.Context, request operations.ListTrust
 }
 
 // ListTrustProductChannelEndpointAssignment - Retrieve a list of all Assigned Items for an account.
-func (s *SDK) ListTrustProductChannelEndpointAssignment(ctx context.Context, request operations.ListTrustProductChannelEndpointAssignmentRequest) (*operations.ListTrustProductChannelEndpointAssignmentResponse, error) {
-	baseURL := operations.ListTrustProductChannelEndpointAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTrustProductChannelEndpointAssignment(ctx context.Context, request operations.ListTrustProductChannelEndpointAssignmentRequest, security operations.ListTrustProductChannelEndpointAssignmentSecurity, opts ...operations.Option) (*operations.ListTrustProductChannelEndpointAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTrustProductChannelEndpointAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/ChannelEndpointAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2151,24 +2571,34 @@ func (s *SDK) ListTrustProductChannelEndpointAssignment(ctx context.Context, req
 }
 
 // ListTrustProductEntityAssignment - Retrieve a list of all Assigned Items for an account.
-func (s *SDK) ListTrustProductEntityAssignment(ctx context.Context, request operations.ListTrustProductEntityAssignmentRequest) (*operations.ListTrustProductEntityAssignmentResponse, error) {
-	baseURL := operations.ListTrustProductEntityAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTrustProductEntityAssignment(ctx context.Context, request operations.ListTrustProductEntityAssignmentRequest, security operations.ListTrustProductEntityAssignmentSecurity, opts ...operations.Option) (*operations.ListTrustProductEntityAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTrustProductEntityAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/EntityAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2203,24 +2633,34 @@ func (s *SDK) ListTrustProductEntityAssignment(ctx context.Context, request oper
 }
 
 // ListTrustProductEvaluation - Retrieve a list of Evaluations associated to the trust_product resource.
-func (s *SDK) ListTrustProductEvaluation(ctx context.Context, request operations.ListTrustProductEvaluationRequest) (*operations.ListTrustProductEvaluationResponse, error) {
-	baseURL := operations.ListTrustProductEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTrustProductEvaluation(ctx context.Context, request operations.ListTrustProductEvaluationRequest, security operations.ListTrustProductEvaluationSecurity, opts ...operations.Option) (*operations.ListTrustProductEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTrustProductEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{TrustProductSid}/Evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2255,15 +2695,25 @@ func (s *SDK) ListTrustProductEvaluation(ctx context.Context, request operations
 }
 
 // UpdateCustomerProfile - Updates a Customer-Profile in an account.
-func (s *SDK) UpdateCustomerProfile(ctx context.Context, request operations.UpdateCustomerProfileRequest) (*operations.UpdateCustomerProfileResponse, error) {
-	baseURL := operations.UpdateCustomerProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCustomerProfile(ctx context.Context, request operations.UpdateCustomerProfileRequest, security operations.UpdateCustomerProfileSecurity, opts ...operations.Option) (*operations.UpdateCustomerProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCustomerProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/CustomerProfiles/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2275,7 +2725,7 @@ func (s *SDK) UpdateCustomerProfile(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2310,15 +2760,25 @@ func (s *SDK) UpdateCustomerProfile(ctx context.Context, request operations.Upda
 }
 
 // UpdateEndUser - Update an existing End User.
-func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUserRequest) (*operations.UpdateEndUserResponse, error) {
-	baseURL := operations.UpdateEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUserRequest, security operations.UpdateEndUserSecurity, opts ...operations.Option) (*operations.UpdateEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/EndUsers/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2330,7 +2790,7 @@ func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2365,15 +2825,25 @@ func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUse
 }
 
 // UpdateSupportingDocument - Update an existing Supporting Document.
-func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.UpdateSupportingDocumentRequest) (*operations.UpdateSupportingDocumentResponse, error) {
-	baseURL := operations.UpdateSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.UpdateSupportingDocumentRequest, security operations.UpdateSupportingDocumentSecurity, opts ...operations.Option) (*operations.UpdateSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SupportingDocuments/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2385,7 +2855,7 @@ func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2420,15 +2890,25 @@ func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.U
 }
 
 // UpdateTrustProduct - Updates a Customer-Profile in an account.
-func (s *SDK) UpdateTrustProduct(ctx context.Context, request operations.UpdateTrustProductRequest) (*operations.UpdateTrustProductResponse, error) {
-	baseURL := operations.UpdateTrustProductServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateTrustProduct(ctx context.Context, request operations.UpdateTrustProductRequest, security operations.UpdateTrustProductSecurity, opts ...operations.Option) (*operations.UpdateTrustProductResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateTrustProductServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/TrustProducts/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2440,7 +2920,7 @@ func (s *SDK) UpdateTrustProduct(ctx context.Context, request operations.UpdateT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

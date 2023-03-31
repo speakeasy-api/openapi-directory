@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDCollectiveDecisionPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum - If true returns only invoices with a CompanyRegistrationCertificate
 type GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum string
 
@@ -109,7 +104,7 @@ func (e *GetSpacesIDCollectiveDecisionHasStatusEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetSpacesIDCollectiveDecisionQueryParams struct {
+type GetSpacesIDCollectiveDecisionRequest struct {
 	// Date of the collective decision YYYMMDD
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// Event of the collective decision (see post for the list of events)
@@ -124,11 +119,8 @@ type GetSpacesIDCollectiveDecisionQueryParams struct {
 	HasStatus *GetSpacesIDCollectiveDecisionHasStatusEnum `queryParam:"style=form,explode=true,name=HasStatus"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesIDCollectiveDecisionRequest struct {
-	PathParams  GetSpacesIDCollectiveDecisionPathParams
-	QueryParams GetSpacesIDCollectiveDecisionQueryParams
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum string

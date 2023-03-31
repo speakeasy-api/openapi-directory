@@ -64,7 +64,6 @@ pkg/models/shared/logindto.go
 pkg/models/shared/defaultresponsedtoofgymdto.go
 pkg/models/shared/problemdetails.go
 pkg/models/shared/memberdto.go
-pkg/models/shared/security.go
 pkg/models/shared/defaultresponsedtoofstring.go
 pkg/models/shared/defaultresponsedtoofboolean.go
 pkg/models/shared/defaultresponsedtoofpackagedto.go
@@ -76,4 +75,5 @@ pkg/models/shared/defaultresponsedtooflistofpackagesearchdto.go
 pkg/models/shared/messagestatus.go
 pkg/models/shared/testdto.go
 pkg/models/shared/userdto.go
+pkg/models/shared/security.go
 USAGE.md

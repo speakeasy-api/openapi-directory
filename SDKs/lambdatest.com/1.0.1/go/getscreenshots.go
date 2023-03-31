@@ -33,16 +33,16 @@ func newGetScreenshots(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // Screenshots - Fetch specified screenshot details
 // To fetch specified screenshot details
-func (s *getScreenshots) Screenshots(ctx context.Context, request operations.ScreenshotsRequest) (*operations.ScreenshotsResponse, error) {
+func (s *getScreenshots) Screenshots(ctx context.Context, request operations.ScreenshotsRequest, security operations.ScreenshotsSecurity) (*operations.ScreenshotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{test_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{test_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

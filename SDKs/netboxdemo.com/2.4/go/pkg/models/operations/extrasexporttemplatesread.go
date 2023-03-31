@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasExportTemplatesReadPathParams struct {
+type ExtrasExportTemplatesReadRequest struct {
 	// A unique integer value identifying this export template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasExportTemplatesReadRequest struct {
-	PathParams ExtrasExportTemplatesReadPathParams
 }
 
 type ExtrasExportTemplatesReadResponse struct {

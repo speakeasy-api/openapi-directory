@@ -14,38 +14,30 @@ func main() {
     s := sdk.New()
 
     req := operations.RealtimebiddingBiddersCreativesWatchRequest{
-        Security: operations.RealtimebiddingBiddersCreativesWatchSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        RequestBody: map[string]interface{}{
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        PathParams: operations.RealtimebiddingBiddersCreativesWatchPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.RealtimebiddingBiddersCreativesWatchQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: map[string]interface{}{
-            "iure": "magnam",
-            "debitis": "ipsa",
-        },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        Parent: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()
-    res, err := s.Bidders.RealtimebiddingBiddersCreativesWatch(ctx, req)
+    res, err := s.Bidders.RealtimebiddingBiddersCreativesWatch(ctx, req, operations.RealtimebiddingBiddersCreativesWatchSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCompanyTimeOffsIDPathParams struct {
+type GetCompanyTimeOffsIDRequest struct {
 	// Numeric `id` of the absence period
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCompanyTimeOffsIDRequest struct {
-	PathParams GetCompanyTimeOffsIDPathParams
 }
 
 type GetCompanyTimeOffsIDResponse struct {

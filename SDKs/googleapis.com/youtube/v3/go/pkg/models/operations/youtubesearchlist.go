@@ -10,23 +10,23 @@ import (
 )
 
 type YoutubeSearchListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeSearchListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeSearchListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeSearchListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeSearchListSecurity struct {
@@ -390,7 +390,7 @@ func (e *YoutubeSearchListVideoTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type YoutubeSearchListQueryParams struct {
+type YoutubeSearchListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -475,11 +475,6 @@ type YoutubeSearchListQueryParams struct {
 	VideoSyndicated *YoutubeSearchListVideoSyndicatedEnum `queryParam:"style=form,explode=true,name=videoSyndicated"`
 	// Filter on videos of a specific type.
 	VideoType *YoutubeSearchListVideoTypeEnum `queryParam:"style=form,explode=true,name=videoType"`
-}
-
-type YoutubeSearchListRequest struct {
-	QueryParams YoutubeSearchListQueryParams
-	Security    YoutubeSearchListSecurity
 }
 
 type YoutubeSearchListResponse struct {

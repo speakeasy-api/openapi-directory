@@ -8,11 +8,11 @@ import (
 )
 
 type BooksFamilysharingShareSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksFamilysharingShareQueryParams struct {
+type BooksFamilysharingShareRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -41,11 +41,6 @@ type BooksFamilysharingShareQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The volume to share.
 	VolumeID *string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksFamilysharingShareRequest struct {
-	QueryParams BooksFamilysharingShareQueryParams
-	Security    BooksFamilysharingShareSecurity
 }
 
 type BooksFamilysharingShareResponse struct {

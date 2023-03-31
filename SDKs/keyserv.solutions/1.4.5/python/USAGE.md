@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.KeysAPICurrentRequest(
-    path_params=operations.KeysAPICurrentPathParams(
-        serial="eum",
-    ),
+    serial="corrupti",
 )
     
 res = s.keys_api.keys_api_current(req)

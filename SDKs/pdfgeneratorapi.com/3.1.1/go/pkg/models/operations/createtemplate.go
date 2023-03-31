@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTemplateRequest struct {
-	// Template configuration as JSON string
-	Request shared.TemplateDefinitionNew `request:"mediaType=application/json"`
-}
-
 // CreateTemplate500ApplicationJSON - Internal Server Error
 type CreateTemplate500ApplicationJSON struct {
 	// Error description

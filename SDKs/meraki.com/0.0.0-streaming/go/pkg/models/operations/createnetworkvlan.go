@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkVlanPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkVlanRequestBody struct {
 	// The local IP of the appliance on the VLAN
 	ApplianceIP string `json:"applianceIp"`
@@ -24,8 +20,8 @@ type CreateNetworkVlanRequestBody struct {
 }
 
 type CreateNetworkVlanRequest struct {
-	PathParams CreateNetworkVlanPathParams
-	Request    CreateNetworkVlanRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkVlanRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                       `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkVlanResponse struct {

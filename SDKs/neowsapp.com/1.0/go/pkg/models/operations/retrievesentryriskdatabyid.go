@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveSentryRiskDataByIDPathParams struct {
+type RetrieveSentryRiskDataByIDRequest struct {
 	// ID of NearEarth object.  ID can be SPK_ID, Asteroid des (designation) or Sentry ID
 	AsteroidID string `pathParam:"style=simple,explode=false,name=asteroid_id"`
-}
-
-type RetrieveSentryRiskDataByIDRequest struct {
-	PathParams RetrieveSentryRiskDataByIDPathParams
 }
 
 type RetrieveSentryRiskDataByIDResponse struct {

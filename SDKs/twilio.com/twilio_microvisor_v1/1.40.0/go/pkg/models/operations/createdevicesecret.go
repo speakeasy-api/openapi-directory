@@ -12,12 +12,8 @@ var CreateDeviceSecretServerList = []string{
 }
 
 type CreateDeviceSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateDeviceSecretPathParams struct {
-	// A 34-character string that uniquely identifies the Device.
-	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDeviceSecretCreateDeviceSecretRequest struct {
@@ -28,10 +24,9 @@ type CreateDeviceSecretCreateDeviceSecretRequest struct {
 }
 
 type CreateDeviceSecretRequest struct {
-	PathParams CreateDeviceSecretPathParams
-	Request    *CreateDeviceSecretCreateDeviceSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateDeviceSecretSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies the Device.
+	DeviceSid   string                                       `pathParam:"style=simple,explode=false,name=DeviceSid"`
+	RequestBody *CreateDeviceSecretCreateDeviceSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateDeviceSecretResponse struct {

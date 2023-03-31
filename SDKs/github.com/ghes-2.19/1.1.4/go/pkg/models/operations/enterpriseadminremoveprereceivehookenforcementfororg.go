@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams struct {
+type EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// pre_receive_hook_id parameter
 	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-}
-
-type EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest struct {
-	PathParams EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams
 }
 
 type EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse struct {

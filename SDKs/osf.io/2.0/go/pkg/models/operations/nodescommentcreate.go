@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type NodesCommentCreatePathParams struct {
-	// The unique identifier of the node you want to comment on.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // NodesCommentCreateCommentAttributesInput - The properties of the comment entity.
 type NodesCommentCreateCommentAttributesInput struct {
 	// The content of the comment.
@@ -23,8 +18,9 @@ type NodesCommentCreateCommentInput struct {
 }
 
 type NodesCommentCreateRequest struct {
-	PathParams NodesCommentCreatePathParams
-	Request    NodesCommentCreateCommentInput `request:"mediaType=application/json"`
+	RequestBody NodesCommentCreateCommentInput `request:"mediaType=application/json"`
+	// The unique identifier of the node you want to comment on.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type NodesCommentCreateResponse struct {

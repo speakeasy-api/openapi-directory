@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolCoapGetTracePathParams struct {
+type ProtocolCoapGetTraceRequest struct {
 	// Agent to show whether COAP tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolCoapGetTraceRequest struct {
-	PathParams ProtocolCoapGetTracePathParams
 }
 
 type ProtocolCoapGetTraceResponse struct {

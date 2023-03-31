@@ -10,10 +10,6 @@ var EnterpriseAdminStartConfigurationProcessServerList = []string{
 	"https://{protocol}://{hostname}",
 }
 
-type EnterpriseAdminStartConfigurationProcessRequest struct {
-	ServerURL *string
-}
-
 type EnterpriseAdminStartConfigurationProcessResponse struct {
 	ContentType string
 	StatusCode  int

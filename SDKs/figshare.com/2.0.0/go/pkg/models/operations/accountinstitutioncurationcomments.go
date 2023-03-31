@@ -8,25 +8,16 @@ import (
 )
 
 type AccountInstitutionCurationCommentsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AccountInstitutionCurationCommentsPathParams struct {
+type AccountInstitutionCurationCommentsRequest struct {
 	// ID of the curation
 	CurationID int64 `pathParam:"style=simple,explode=false,name=curation_id"`
-}
-
-type AccountInstitutionCurationCommentsQueryParams struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type AccountInstitutionCurationCommentsRequest struct {
-	PathParams  AccountInstitutionCurationCommentsPathParams
-	QueryParams AccountInstitutionCurationCommentsQueryParams
-	Security    AccountInstitutionCurationCommentsSecurity
 }
 
 type AccountInstitutionCurationCommentsResponse struct {

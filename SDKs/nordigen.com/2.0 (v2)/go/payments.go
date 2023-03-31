@@ -33,7 +33,7 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CreatePaymentForm - Create payment
-func (s *payments) CreatePaymentForm(ctx context.Context, request operations.CreatePaymentFormRequest) (*operations.CreatePaymentFormResponse, error) {
+func (s *payments) CreatePaymentForm(ctx context.Context, request shared.PaymentWriteRequest2) (*operations.CreatePaymentFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/"
 
@@ -117,7 +117,7 @@ func (s *payments) CreatePaymentForm(ctx context.Context, request operations.Cre
 }
 
 // CreatePaymentJSON - Create payment
-func (s *payments) CreatePaymentJSON(ctx context.Context, request operations.CreatePaymentJSONRequest) (*operations.CreatePaymentJSONResponse, error) {
+func (s *payments) CreatePaymentJSON(ctx context.Context, request shared.PaymentWriteRequest) (*operations.CreatePaymentJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/"
 
@@ -201,7 +201,7 @@ func (s *payments) CreatePaymentJSON(ctx context.Context, request operations.Cre
 }
 
 // CreatePaymentMultipart - Create payment
-func (s *payments) CreatePaymentMultipart(ctx context.Context, request operations.CreatePaymentMultipartRequest) (*operations.CreatePaymentMultipartResponse, error) {
+func (s *payments) CreatePaymentMultipart(ctx context.Context, request shared.PaymentWriteRequest2) (*operations.CreatePaymentMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/"
 
@@ -287,7 +287,7 @@ func (s *payments) CreatePaymentMultipart(ctx context.Context, request operation
 // DeletePeriodicPayment - Delete periodic payment
 func (s *payments) DeletePeriodicPayment(ctx context.Context, request operations.DeletePeriodicPaymentRequest) (*operations.DeletePeriodicPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -381,7 +381,7 @@ func (s *payments) DeletePeriodicPayment(ctx context.Context, request operations
 // ListMinimumRequiredFieldsForInstitution - List minimum required fields for institution
 func (s *payments) ListMinimumRequiredFieldsForInstitution(ctx context.Context, request operations.ListMinimumRequiredFieldsForInstitutionRequest) (*operations.ListMinimumRequiredFieldsForInstitutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/fields/{institution_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/fields/{institution_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -462,7 +462,7 @@ func (s *payments) ListPayments(ctx context.Context, request operations.ListPaym
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -531,7 +531,7 @@ func (s *payments) ListPayments(ctx context.Context, request operations.ListPaym
 }
 
 // PaymentsCreditorsCreateForm - API endpoints related to creditor accounts.
-func (s *payments) PaymentsCreditorsCreateForm(ctx context.Context, request operations.PaymentsCreditorsCreateFormRequest) (*operations.PaymentsCreditorsCreateFormResponse, error) {
+func (s *payments) PaymentsCreditorsCreateForm(ctx context.Context, request shared.CreditorAccountWriteRequest1) (*operations.PaymentsCreditorsCreateFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/creditors/"
 
@@ -585,7 +585,7 @@ func (s *payments) PaymentsCreditorsCreateForm(ctx context.Context, request oper
 }
 
 // PaymentsCreditorsCreateJSON - API endpoints related to creditor accounts.
-func (s *payments) PaymentsCreditorsCreateJSON(ctx context.Context, request operations.PaymentsCreditorsCreateJSONRequest) (*operations.PaymentsCreditorsCreateJSONResponse, error) {
+func (s *payments) PaymentsCreditorsCreateJSON(ctx context.Context, request shared.CreditorAccountWriteRequest) (*operations.PaymentsCreditorsCreateJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/creditors/"
 
@@ -639,7 +639,7 @@ func (s *payments) PaymentsCreditorsCreateJSON(ctx context.Context, request oper
 }
 
 // PaymentsCreditorsCreateMultipart - API endpoints related to creditor accounts.
-func (s *payments) PaymentsCreditorsCreateMultipart(ctx context.Context, request operations.PaymentsCreditorsCreateMultipartRequest) (*operations.PaymentsCreditorsCreateMultipartResponse, error) {
+func (s *payments) PaymentsCreditorsCreateMultipart(ctx context.Context, request shared.CreditorAccountWriteRequest1) (*operations.PaymentsCreditorsCreateMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/payments/creditors/"
 
@@ -695,7 +695,7 @@ func (s *payments) PaymentsCreditorsCreateMultipart(ctx context.Context, request
 // PaymentsCreditorsDestroy - API endpoints related to creditor accounts.
 func (s *payments) PaymentsCreditorsDestroy(ctx context.Context, request operations.PaymentsCreditorsDestroyRequest) (*operations.PaymentsCreditorsDestroyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -737,7 +737,7 @@ func (s *payments) PaymentsCreditorsList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -778,7 +778,7 @@ func (s *payments) PaymentsCreditorsList(ctx context.Context, request operations
 // PaymentsCreditorsRetrieve - API endpoints related to creditor accounts.
 func (s *payments) PaymentsCreditorsRetrieve(ctx context.Context, request operations.PaymentsCreditorsRetrieveRequest) (*operations.PaymentsCreditorsRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -896,7 +896,7 @@ func (s *payments) RetrieveAllPaymentCreditorAccounts(ctx context.Context) (*ope
 // RetrievePayment - Retrieve payment
 func (s *payments) RetrievePayment(ctx context.Context, request operations.RetrievePaymentRequest) (*operations.RetrievePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

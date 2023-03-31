@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteChangelogSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteChangelogPathParams struct {
-	// Slug of changelog
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteChangelogRequest struct {
-	PathParams DeleteChangelogPathParams
-	Security   DeleteChangelogSecurity
+	// Slug of changelog
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type DeleteChangelogResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type ContactsFetchSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContactsFetchPathParams struct {
+type ContactsFetchRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of contact to return
 	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
-}
-
-type ContactsFetchRequest struct {
-	PathParams ContactsFetchPathParams
-	Security   ContactsFetchSecurity
 }
 
 type ContactsFetchResponse struct {

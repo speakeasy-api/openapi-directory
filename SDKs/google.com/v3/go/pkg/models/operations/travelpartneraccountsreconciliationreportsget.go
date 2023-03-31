@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TravelpartnerAccountsReconciliationReportsGetPathParams struct {
-	// The resource name of the reconciliation report to fetch. The format is `accounts/{account_id}/reconciliationReports/{datetime}~{filename}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type TravelpartnerAccountsReconciliationReportsGetQueryParams struct {
+type TravelpartnerAccountsReconciliationReportsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type TravelpartnerAccountsReconciliationReportsGetQueryParams struct {
 	IncludePixels *bool `queryParam:"style=form,explode=true,name=includePixels"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the reconciliation report to fetch. The format is `accounts/{account_id}/reconciliationReports/{datetime}~{filename}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -41,11 +38,6 @@ type TravelpartnerAccountsReconciliationReportsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TravelpartnerAccountsReconciliationReportsGetRequest struct {
-	PathParams  TravelpartnerAccountsReconciliationReportsGetPathParams
-	QueryParams TravelpartnerAccountsReconciliationReportsGetQueryParams
 }
 
 type TravelpartnerAccountsReconciliationReportsGetResponse struct {

@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.PostAuthRequest{
-        QueryParams: operations.PostAuthQueryParams{
-            ClientID: "corrupti",
-            ClientSecret: "provident",
-        },
+        ClientID: "corrupti",
+        ClientSecret: "provident",
     }
 
     ctx := context.Background()

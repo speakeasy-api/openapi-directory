@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPlanUsageSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPlanUsagePathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPlanUsageRequest struct {
-	PathParams GetPlanUsagePathParams
-	Security   GetPlanUsageSecurity
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type GetPlanUsage200ApplicationXMLPlanBase struct {

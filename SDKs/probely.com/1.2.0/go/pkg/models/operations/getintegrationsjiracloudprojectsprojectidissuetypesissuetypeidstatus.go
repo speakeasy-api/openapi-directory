@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusPathParams struct {
+type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusRequest struct {
 	// Jira issue type id
 	IssueTypeID string `pathParam:"style=simple,explode=false,name=issue_type_id"`
 	// Jira Project Id
 	ProjectID string `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusRequest struct {
-	PathParams GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatusPathParams
 }
 
 // GetIntegrationsJiraCloudProjectsProjectIDIssueTypesIssueTypeIDStatus404ApplicationJSON - Not found

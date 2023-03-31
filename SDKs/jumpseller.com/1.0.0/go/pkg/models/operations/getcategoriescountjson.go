@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesCountJSONQueryParams struct {
+type GetCategoriesCountJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCategoriesCountJSONRequest struct {
-	QueryParams GetCategoriesCountJSONQueryParams
 }
 
 type GetCategoriesCountJSONResponse struct {

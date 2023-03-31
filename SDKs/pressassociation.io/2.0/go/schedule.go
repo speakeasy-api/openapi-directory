@@ -36,7 +36,7 @@ func newSchedule(defaultClient, securityClient HTTPClient, serverURL, language, 
 //
 //   - The date range supplied must be no larger than 21 days.
 //   - If no end data is passed the API will default to start date + 24 hours.
-func (s *schedule) ListSchedule(ctx context.Context, request operations.ListScheduleRequest) (*operations.ListScheduleResponse, error) {
+func (s *schedule) ListSchedule(ctx context.Context, request operations.ListScheduleRequest, security operations.ListScheduleSecurity) (*operations.ListScheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/schedule"
 
@@ -45,11 +45,11 @@ func (s *schedule) ListSchedule(ctx context.Context, request operations.ListSche
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

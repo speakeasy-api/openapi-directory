@@ -8,21 +8,16 @@ import (
 )
 
 type CreateOrReplaceSalesTaxSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateOrReplaceSalesTaxPathParams struct {
+type CreateOrReplaceSalesTaxRequest struct {
+	// A container that describes the how the sales tax is calculated.
+	SalesTaxBase shared.SalesTaxBase `request:"mediaType=application/json"`
 	// This path parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> code for the country for which you want to create a sales tax table entry.
 	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
 	// This path parameter specifies the ID of the tax jurisdiction for the table entry you want to create. Retrieve valid jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.
 	JurisdictionID string `pathParam:"style=simple,explode=false,name=jurisdictionId"`
-}
-
-type CreateOrReplaceSalesTaxRequest struct {
-	PathParams CreateOrReplaceSalesTaxPathParams
-	// A container that describes the how the sales tax is calculated.
-	Request  shared.SalesTaxBase `request:"mediaType=application/json"`
-	Security CreateOrReplaceSalesTaxSecurity
 }
 
 type CreateOrReplaceSalesTaxResponse struct {

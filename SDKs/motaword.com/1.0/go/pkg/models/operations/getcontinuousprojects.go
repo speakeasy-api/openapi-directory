@@ -30,13 +30,9 @@ func (e *GetContinuousProjectsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetContinuousProjectsQueryParams struct {
+type GetContinuousProjectsRequest struct {
 	// Type of continuous project.
 	Type *GetContinuousProjectsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetContinuousProjectsRequest struct {
-	QueryParams GetContinuousProjectsQueryParams
 }
 
 type GetContinuousProjectsResponse struct {

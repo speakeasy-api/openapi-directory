@@ -14,42 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest{
-        Security: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity{
-            Option1: &operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        Names: []string{
+            "illum",
+            "vel",
+            "error",
         },
-        PathParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            Names: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
-            },
-            OauthToken: "iure",
-            PrettyPrint: false,
-            QuotaUser: "magnam",
-            UploadType: "debitis",
-            UploadProtocol: "ipsa",
-        },
+        OauthToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx, req)
+    res, err := s.Projects.FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx, req, operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity{
+        Option1: &operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

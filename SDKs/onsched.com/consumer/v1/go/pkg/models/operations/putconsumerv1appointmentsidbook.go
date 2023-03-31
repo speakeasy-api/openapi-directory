@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConsumerV1AppointmentsIDBookPathParams struct {
+type PutConsumerV1AppointmentsIDBookRequest struct {
+	AppointmentBookModel *shared.AppointmentBookModel `request:"mediaType=application/json"`
 	// appointment id to book
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDBookRequest struct {
-	PathParams PutConsumerV1AppointmentsIDBookPathParams
-	Request    *shared.AppointmentBookModel `request:"mediaType=application/json"`
 }
 
 type PutConsumerV1AppointmentsIDBookResponse struct {

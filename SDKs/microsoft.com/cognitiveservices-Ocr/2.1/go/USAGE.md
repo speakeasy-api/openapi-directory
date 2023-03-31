@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            ApimKey: shared.SchemeApimKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            ApimKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.BatchReadFileRequest{
-        Request: shared.ImageURL{
-            URL: "corrupti",
-        },
+    req := shared.ImageURL{
+        URL: "corrupti",
     }
 
     ctx := context.Background()

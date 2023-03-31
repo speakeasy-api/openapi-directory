@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.CancelReportRequest{
-        Security: operations.CancelReportSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CancelReportPathParams{
-            ReportID: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-        },
+        ReportID: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
     }
 
     ctx := context.Background()
-    res, err := s.CancelReport(ctx, req)
+    res, err := s.CancelReport(ctx, req, operations.CancelReportSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

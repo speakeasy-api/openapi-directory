@@ -9,35 +9,6 @@ import (
 	"time"
 )
 
-// PostDistanceBetweenPairsOutputFormatOutputFormatEnum - Format of representation
-type PostDistanceBetweenPairsOutputFormatOutputFormatEnum string
-
-const (
-	PostDistanceBetweenPairsOutputFormatOutputFormatEnumJSON PostDistanceBetweenPairsOutputFormatOutputFormatEnum = "json"
-	PostDistanceBetweenPairsOutputFormatOutputFormatEnumHTML PostDistanceBetweenPairsOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *PostDistanceBetweenPairsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "html":
-		*e = PostDistanceBetweenPairsOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type PostDistanceBetweenPairsOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat PostDistanceBetweenPairsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // PostDistanceBetweenPairsOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type PostDistanceBetweenPairsOutputFormatCriteriaEnum string
 
@@ -86,6 +57,30 @@ func (e *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum) UnmarshalJSON(dat
 	}
 }
 
+// PostDistanceBetweenPairsOutputFormatOutputFormatEnum - Format of representation
+type PostDistanceBetweenPairsOutputFormatOutputFormatEnum string
+
+const (
+	PostDistanceBetweenPairsOutputFormatOutputFormatEnumJSON PostDistanceBetweenPairsOutputFormatOutputFormatEnum = "json"
+	PostDistanceBetweenPairsOutputFormatOutputFormatEnumHTML PostDistanceBetweenPairsOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *PostDistanceBetweenPairsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "html":
+		*e = PostDistanceBetweenPairsOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // PostDistanceBetweenPairsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type PostDistanceBetweenPairsOutputFormatOutputSrsEnum string
 
@@ -128,7 +123,7 @@ func (e *PostDistanceBetweenPairsOutputFormatOutputSrsEnum) UnmarshalJSON(data [
 	}
 }
 
-type PostDistanceBetweenPairsOutputFormatQueryParams struct {
+type PostDistanceBetweenPairsOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start and end points.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -143,17 +138,14 @@ type PostDistanceBetweenPairsOutputFormatQueryParams struct {
 	FromPoints string `queryParam:"style=form,explode=true,name=fromPoints"`
 	// The maximum number of pairs to return for each toPoint.  Pairs are ordered by distance/time from fromPoint. For example, given 1 fromPoint, and 10 toPoints, and maxPairs=1 , return the nearest toPoint to the fromPoint. Given 3 fromPoints and 10 toPoints, maxPairs=3 means return the 3 nearest toPoints to each fromPoint.
 	MaxPairs *int64 `queryParam:"style=form,explode=true,name=maxPairs"`
+	// Format of representation
+	OutputFormat PostDistanceBetweenPairsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *PostDistanceBetweenPairsOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
 	// A comma-separated list of destination points. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#toPoints target='_blank'>toPoints</a>
 	ToPoints string `queryParam:"style=form,explode=true,name=toPoints"`
-}
-
-type PostDistanceBetweenPairsOutputFormatRequest struct {
-	PathParams  PostDistanceBetweenPairsOutputFormatPathParams
-	QueryParams PostDistanceBetweenPairsOutputFormatQueryParams
 }
 
 type PostDistanceBetweenPairsOutputFormatResponse struct {

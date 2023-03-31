@@ -8,12 +8,8 @@ import (
 )
 
 type CreateScriptSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateScriptRequest struct {
-	Request  *shared.Script `request:"mediaType=application/json"`
-	Security CreateScriptSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateScriptResponse struct {

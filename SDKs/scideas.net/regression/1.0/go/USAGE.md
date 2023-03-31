@@ -13,38 +13,36 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostRegressionAPIRequest{
-        Request: shared.RegressionAPIBody{
-            ConvertDateTo: "month",
-            Data: []map[string]interface{}{
-                map[string]interface{}{
-                    "distinctio": "quibusdam",
-                    "unde": "nulla",
-                    "corrupti": "illum",
-                },
-                map[string]interface{}{
-                    "error": "deserunt",
-                    "suscipit": "iure",
-                },
-                map[string]interface{}{
-                    "debitis": "ipsa",
-                    "delectus": "tempora",
-                },
+    req := shared.RegressionAPIBody{
+        ConvertDateTo: "month",
+        Data: []map[string]interface{}{
+            map[string]interface{}{
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            IgnoreVariables: []map[string]interface{}{
-                map[string]interface{}{
-                    "minus": "placeat",
-                    "voluptatum": "iusto",
-                },
-                map[string]interface{}{
-                    "nisi": "recusandae",
-                    "temporibus": "ab",
-                    "quis": "veritatis",
-                },
+            map[string]interface{}{
+                "error": "deserunt",
+                "suscipit": "iure",
             },
-            Key: "abc123",
-            OutcomeVariable: "sales",
+            map[string]interface{}{
+                "debitis": "ipsa",
+                "delectus": "tempora",
+            },
         },
+        IgnoreVariables: []map[string]interface{}{
+            map[string]interface{}{
+                "minus": "placeat",
+                "voluptatum": "iusto",
+            },
+            map[string]interface{}{
+                "nisi": "recusandae",
+                "temporibus": "ab",
+                "quis": "veritatis",
+            },
+        },
+        Key: "abc123",
+        OutcomeVariable: "sales",
     }
 
     ctx := context.Background()

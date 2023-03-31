@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDeviceSwitchRoutingStaticRoutePathParams struct {
+type DeleteDeviceSwitchRoutingStaticRouteRequest struct {
 	Serial        string `pathParam:"style=simple,explode=false,name=serial"`
 	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
-type DeleteDeviceSwitchRoutingStaticRouteRequest struct {
-	PathParams DeleteDeviceSwitchRoutingStaticRoutePathParams
 }
 
 type DeleteDeviceSwitchRoutingStaticRouteResponse struct {

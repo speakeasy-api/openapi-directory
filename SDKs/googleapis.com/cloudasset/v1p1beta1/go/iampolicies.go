@@ -32,20 +32,20 @@ func newIamPolicies(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // CloudassetIamPoliciesSearchAll - Searches all the IAM policies within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope, otherwise the request will be rejected.
-func (s *iamPolicies) CloudassetIamPoliciesSearchAll(ctx context.Context, request operations.CloudassetIamPoliciesSearchAllRequest) (*operations.CloudassetIamPoliciesSearchAllResponse, error) {
+func (s *iamPolicies) CloudassetIamPoliciesSearchAll(ctx context.Context, request operations.CloudassetIamPoliciesSearchAllRequest, security operations.CloudassetIamPoliciesSearchAllSecurity) (*operations.CloudassetIamPoliciesSearchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/iamPolicies:searchAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/iamPolicies:searchAll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

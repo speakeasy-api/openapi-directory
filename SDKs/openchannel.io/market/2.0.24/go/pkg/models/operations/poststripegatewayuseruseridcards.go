@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PostStripeGatewayUserUserIDCardsPathParams struct {
-	// The id of the user adding their credit card
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PostStripeGatewayUserUserIDCardsQueryParams struct {
+type PostStripeGatewayUserUserIDCardsRequest struct {
 	// Set to true if this should be set to be the default credit card
 	IsDefault *bool `queryParam:"style=form,explode=true,name=isDefault"`
 	// The Stripe token returned by the Stripe.js Stripe.card.createToken call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type PostStripeGatewayUserUserIDCardsRequest struct {
-	PathParams  PostStripeGatewayUserUserIDCardsPathParams
-	QueryParams PostStripeGatewayUserUserIDCardsQueryParams
+	// The id of the user adding their credit card
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type PostStripeGatewayUserUserIDCardsResponse struct {

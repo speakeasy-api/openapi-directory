@@ -12,14 +12,8 @@ var CreateMessageServerList = []string{
 }
 
 type CreateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessagePathParams struct {
-	// The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the new resource belongs to. Can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to create the resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessageCreateMessageRequest struct {
@@ -32,10 +26,11 @@ type CreateMessageCreateMessageRequest struct {
 }
 
 type CreateMessageRequest struct {
-	PathParams CreateMessagePathParams
-	Request    *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessageSecurity
-	ServerURL  *string
+	// The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the new resource belongs to. Can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                             `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to create the resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateMessageResponse struct {

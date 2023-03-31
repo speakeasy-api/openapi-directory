@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AsyncVRPRequest struct {
-	// The request that contains the problem to be solved.
-	Request shared.Request `request:"mediaType=application/json"`
-}
-
 type AsyncVRPResponse struct {
 	// Error occurred when reading client request. Request is invalid.
 	BadRequest  *shared.BadRequest

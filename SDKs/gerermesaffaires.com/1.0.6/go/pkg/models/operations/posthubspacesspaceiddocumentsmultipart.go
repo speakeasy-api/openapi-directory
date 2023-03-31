@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostHubSpacesSpaceIDDocumentsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostHubSpacesSpaceIDDocumentsMultipartPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostHubSpacesSpaceIDDocumentsMultipartFormDataAccountingWorkbookEnum string
@@ -85,10 +79,10 @@ type PostHubSpacesSpaceIDDocumentsMultipartFormData1 struct {
 }
 
 type PostHubSpacesSpaceIDDocumentsMultipartRequest struct {
-	PathParams PostHubSpacesSpaceIDDocumentsMultipartPathParams
 	// Document to add
-	Request  PostHubSpacesSpaceIDDocumentsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostHubSpacesSpaceIDDocumentsMultipartSecurity
+	RequestBody PostHubSpacesSpaceIDDocumentsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostHubSpacesSpaceIDDocumentsMultipart201ApplicationJSON - Id of documents created

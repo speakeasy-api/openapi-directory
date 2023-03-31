@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PostAppsAppIDVersionsVersionStatusPathParams struct {
-	// The id of the App to be updated
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The version of the App to be updated
-	Version int64 `pathParam:"style=simple,explode=false,name=version"`
-}
-
 // PostAppsAppIDVersionsVersionStatusModifiedByEnum - The role initiating this status change. Can be either 'developer' or 'administrator' (default)
 type PostAppsAppIDVersionsVersionStatusModifiedByEnum string
 
@@ -69,7 +62,9 @@ func (e *PostAppsAppIDVersionsVersionStatusStatusEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type PostAppsAppIDVersionsVersionStatusQueryParams struct {
+type PostAppsAppIDVersionsVersionStatusRequest struct {
+	// The id of the App to be updated
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 	// The unique id of the developer that is modifying this app
 	DeveloperID *string `queryParam:"style=form,explode=true,name=developerId"`
 	// The role initiating this status change. Can be either 'developer' or 'administrator' (default)
@@ -78,11 +73,8 @@ type PostAppsAppIDVersionsVersionStatusQueryParams struct {
 	Reason *string `queryParam:"style=form,explode=true,name=reason"`
 	// The new status for this app. Can be either 'inReview', 'approved', 'suspended' or 'rejected'
 	Status *PostAppsAppIDVersionsVersionStatusStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type PostAppsAppIDVersionsVersionStatusRequest struct {
-	PathParams  PostAppsAppIDVersionsVersionStatusPathParams
-	QueryParams PostAppsAppIDVersionsVersionStatusQueryParams
+	// The version of the App to be updated
+	Version int64 `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type PostAppsAppIDVersionsVersionStatusResponse struct {

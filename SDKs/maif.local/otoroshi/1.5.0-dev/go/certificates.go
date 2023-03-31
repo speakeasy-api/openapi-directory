@@ -35,7 +35,7 @@ func newCertificates(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // AllCerts - Get all certificates
 // Get all certificates
-func (s *certificates) AllCerts(ctx context.Context, request operations.AllCertsRequest) (*operations.AllCertsResponse, error) {
+func (s *certificates) AllCerts(ctx context.Context) (*operations.AllCertsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/certificates"
 
@@ -44,7 +44,7 @@ func (s *certificates) AllCerts(ctx context.Context, request operations.AllCerts
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *certificates) AllCerts(ctx context.Context, request operations.AllCerts
 
 // CreateCert - Create one certificate
 // Create one certificate
-func (s *certificates) CreateCert(ctx context.Context, request operations.CreateCertRequest) (*operations.CreateCertResponse, error) {
+func (s *certificates) CreateCert(ctx context.Context, request shared.Certificate, security operations.CreateCertSecurity) (*operations.CreateCertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/certificates"
 
@@ -101,7 +101,7 @@ func (s *certificates) CreateCert(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,16 +142,16 @@ func (s *certificates) CreateCert(ctx context.Context, request operations.Create
 
 // DeleteCert - Delete one certificate by id
 // Delete one certificate by id
-func (s *certificates) DeleteCert(ctx context.Context, request operations.DeleteCertRequest) (*operations.DeleteCertResponse, error) {
+func (s *certificates) DeleteCert(ctx context.Context, request operations.DeleteCertRequest, security operations.DeleteCertSecurity) (*operations.DeleteCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,16 +192,16 @@ func (s *certificates) DeleteCert(ctx context.Context, request operations.Delete
 
 // OneCert - Get one certificate by id
 // Get one certificate by id
-func (s *certificates) OneCert(ctx context.Context, request operations.OneCertRequest) (*operations.OneCertResponse, error) {
+func (s *certificates) OneCert(ctx context.Context, request operations.OneCertRequest, security operations.OneCertSecurity) (*operations.OneCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,11 +242,11 @@ func (s *certificates) OneCert(ctx context.Context, request operations.OneCertRe
 
 // PatchCert - Update one certificate by id
 // Update one certificate by id
-func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCertRequest) (*operations.PatchCertResponse, error) {
+func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCertRequest, security operations.PatchCertSecurity) (*operations.PatchCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,7 +258,7 @@ func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,11 +299,11 @@ func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCe
 
 // PutCert - Update one certificate by id
 // Update one certificate by id
-func (s *certificates) PutCert(ctx context.Context, request operations.PutCertRequest) (*operations.PutCertResponse, error) {
+func (s *certificates) PutCert(ctx context.Context, request operations.PutCertRequest, security operations.PutCertSecurity) (*operations.PutCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Certificate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -315,7 +315,7 @@ func (s *certificates) PutCert(ctx context.Context, request operations.PutCertRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

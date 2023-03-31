@@ -8,18 +8,13 @@ import (
 )
 
 type CreateTimesheetSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateTimesheetHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateTimesheetRequest struct {
-	Headers  CreateTimesheetHeaders
-	Request  []shared.TimesheetInput `request:"mediaType=application/json"`
-	Security CreateTimesheetSecurity
+	RequestBody []shared.TimesheetInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreateTimesheetResponse struct {

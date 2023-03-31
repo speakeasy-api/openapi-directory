@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointDisruptionByModePathParams struct {
+type StopPointDisruptionByModeRequest struct {
+	IncludeRouteBlockedStops *bool `queryParam:"style=form,explode=true,name=includeRouteBlockedStops"`
 	// A comma-seperated list of modes e.g. tube,dlr
 	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
-type StopPointDisruptionByModeQueryParams struct {
-	IncludeRouteBlockedStops *bool `queryParam:"style=form,explode=true,name=includeRouteBlockedStops"`
-}
-
-type StopPointDisruptionByModeRequest struct {
-	PathParams  StopPointDisruptionByModePathParams
-	QueryParams StopPointDisruptionByModeQueryParams
 }
 
 type StopPointDisruptionByModeResponse struct {

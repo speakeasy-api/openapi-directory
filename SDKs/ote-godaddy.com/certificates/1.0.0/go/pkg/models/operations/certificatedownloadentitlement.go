@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateDownloadEntitlementQueryParams struct {
+type CertificateDownloadEntitlementRequest struct {
 	// Entitlement id to download
 	EntitlementID string `queryParam:"style=form,explode=true,name=entitlementId"`
-}
-
-type CertificateDownloadEntitlementRequest struct {
-	QueryParams CertificateDownloadEntitlementQueryParams
 }
 
 type CertificateDownloadEntitlementResponse struct {

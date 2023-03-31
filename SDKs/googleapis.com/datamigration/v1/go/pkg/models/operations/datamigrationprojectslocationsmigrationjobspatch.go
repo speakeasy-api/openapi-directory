@@ -8,18 +8,14 @@ import (
 )
 
 type DatamigrationProjectsLocationsMigrationJobsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatamigrationProjectsLocationsMigrationJobsPatchPathParams struct {
-	// The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DatamigrationProjectsLocationsMigrationJobsPatchQueryParams struct {
+type DatamigrationProjectsLocationsMigrationJobsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	MigrationJobInput *shared.MigrationJobInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type DatamigrationProjectsLocationsMigrationJobsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -46,13 +44,6 @@ type DatamigrationProjectsLocationsMigrationJobsPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Only validate the connection profile, but don't update any resources. The default is false. Only supported for Oracle connection profiles.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type DatamigrationProjectsLocationsMigrationJobsPatchRequest struct {
-	PathParams  DatamigrationProjectsLocationsMigrationJobsPatchPathParams
-	QueryParams DatamigrationProjectsLocationsMigrationJobsPatchQueryParams
-	Request     *shared.MigrationJobInput `request:"mediaType=application/json"`
-	Security    DatamigrationProjectsLocationsMigrationJobsPatchSecurity
 }
 
 type DatamigrationProjectsLocationsMigrationJobsPatchResponse struct {

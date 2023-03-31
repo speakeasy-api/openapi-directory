@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardEarningFulfillmentPathParams struct {
+type FetchRewardEarningFulfillmentRequest struct {
 	// Reward earning fulfillment identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchRewardEarningFulfillmentRequest struct {
-	PathParams FetchRewardEarningFulfillmentPathParams
 }
 
 type FetchRewardEarningFulfillmentResponse struct {

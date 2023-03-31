@@ -12,16 +12,8 @@ var UpdateSyncSyncListPermissionServerList = []string{
 }
 
 type UpdateSyncSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncSyncListPermissionPathParams struct {
-	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// Identifier of the Sync List. Either a SID or a unique name.
-	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
-	// The unique SID identifier of the Sync Service Instance.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest struct {
 }
 
 type UpdateSyncSyncListPermissionRequest struct {
-	PathParams UpdateSyncSyncListPermissionPathParams
-	Request    *UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncSyncListPermissionSecurity
-	ServerURL  *string
+	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
+	// Identifier of the Sync List. Either a SID or a unique name.
+	ListSid     string                                                           `pathParam:"style=simple,explode=false,name=ListSid"`
+	RequestBody *UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Sync Service Instance.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncSyncListPermissionResponse struct {

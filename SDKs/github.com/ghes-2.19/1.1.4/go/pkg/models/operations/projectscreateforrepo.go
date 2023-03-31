@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsCreateForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ProjectsCreateForRepoRequestBody struct {
 	// The description of the project.
 	Body *string `json:"body,omitempty"`
@@ -20,8 +15,9 @@ type ProjectsCreateForRepoRequestBody struct {
 }
 
 type ProjectsCreateForRepoRequest struct {
-	PathParams ProjectsCreateForRepoPathParams
-	Request    ProjectsCreateForRepoRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsCreateForRepoRequestBody `request:"mediaType=application/json"`
+	Owner       string                           `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                           `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ProjectsCreateForRepoResponse struct {

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGiftCardusingJSONHeaders struct {
+type GetGiftCardusingJSONRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request. Default value for payment provider protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	ContentType                 string                             `header:"style=simple,explode=false,name=Content-Type"`
+	GetGiftCardusingJSONRequest shared.GetGiftCardusingJSONRequest `request:"mediaType=application/json"`
 	// PaginationB control.B ThisB queryB variableB mustB followB theB formatB _resources={from}-{to}_.
 	RESTRange *string `header:"style=simple,explode=false,name=REST-Range"`
-}
-
-type GetGiftCardusingJSONRequest struct {
-	Headers GetGiftCardusingJSONHeaders
-	Request shared.GetGiftCardusingJSONRequest `request:"mediaType=application/json"`
 }
 
 type GetGiftCardusingJSONResponse struct {

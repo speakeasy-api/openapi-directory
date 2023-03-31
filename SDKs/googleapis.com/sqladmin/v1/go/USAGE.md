@@ -14,38 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.SQLBackupRunsDeleteRequest{
-        Security: operations.SQLBackupRunsDeleteSecurity{
-            Option1: &operations.SQLBackupRunsDeleteSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.SQLBackupRunsDeletePathParams{
-            ID: "corrupti",
-            Instance: "provident",
-            Project: "distinctio",
-        },
-        QueryParams: operations.SQLBackupRunsDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "unde",
-            Alt: "proto",
-            Callback: "corrupti",
-            Fields: "illum",
-            Key: "vel",
-            OauthToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        ID: "nulla",
+        Instance: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        Project: "error",
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.BackupRuns.SQLBackupRunsDelete(ctx, req)
+    res, err := s.BackupRuns.SQLBackupRunsDelete(ctx, req, operations.SQLBackupRunsDeleteSecurity{
+        Option1: &operations.SQLBackupRunsDeleteSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -33,20 +33,20 @@ func newShelves(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // LibraryagentShelvesBooksBorrow - Borrow a book from the library. Returns the book if it is borrowed successfully. Returns NOT_FOUND if the book does not exist in the library. Returns quota exceeded error if the amount of books borrowed exceeds allocation quota in any dimensions.
-func (s *shelves) LibraryagentShelvesBooksBorrow(ctx context.Context, request operations.LibraryagentShelvesBooksBorrowRequest) (*operations.LibraryagentShelvesBooksBorrowResponse, error) {
+func (s *shelves) LibraryagentShelvesBooksBorrow(ctx context.Context, request operations.LibraryagentShelvesBooksBorrowRequest, security operations.LibraryagentShelvesBooksBorrowSecurity) (*operations.LibraryagentShelvesBooksBorrowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:borrow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:borrow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *shelves) LibraryagentShelvesBooksBorrow(ctx context.Context, request op
 }
 
 // LibraryagentShelvesBooksGet - Gets a book. Returns NOT_FOUND if the book does not exist.
-func (s *shelves) LibraryagentShelvesBooksGet(ctx context.Context, request operations.LibraryagentShelvesBooksGetRequest) (*operations.LibraryagentShelvesBooksGetResponse, error) {
+func (s *shelves) LibraryagentShelvesBooksGet(ctx context.Context, request operations.LibraryagentShelvesBooksGetRequest, security operations.LibraryagentShelvesBooksGetSecurity) (*operations.LibraryagentShelvesBooksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *shelves) LibraryagentShelvesBooksGet(ctx context.Context, request opera
 }
 
 // LibraryagentShelvesBooksList - Lists books in a shelf. The order is unspecified but deterministic. Newly created books will not necessarily be added to the end of this list. Returns NOT_FOUND if the shelf does not exist.
-func (s *shelves) LibraryagentShelvesBooksList(ctx context.Context, request operations.LibraryagentShelvesBooksListRequest) (*operations.LibraryagentShelvesBooksListResponse, error) {
+func (s *shelves) LibraryagentShelvesBooksList(ctx context.Context, request operations.LibraryagentShelvesBooksListRequest, security operations.LibraryagentShelvesBooksListSecurity) (*operations.LibraryagentShelvesBooksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/books", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/books", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,20 +177,20 @@ func (s *shelves) LibraryagentShelvesBooksList(ctx context.Context, request oper
 }
 
 // LibraryagentShelvesBooksReturn - Return a book to the library. Returns the book if it is returned to the library successfully. Returns error if the book does not belong to the library or the users didn't borrow before.
-func (s *shelves) LibraryagentShelvesBooksReturn(ctx context.Context, request operations.LibraryagentShelvesBooksReturnRequest) (*operations.LibraryagentShelvesBooksReturnResponse, error) {
+func (s *shelves) LibraryagentShelvesBooksReturn(ctx context.Context, request operations.LibraryagentShelvesBooksReturnRequest, security operations.LibraryagentShelvesBooksReturnSecurity) (*operations.LibraryagentShelvesBooksReturnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:return", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:return", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *shelves) LibraryagentShelvesBooksReturn(ctx context.Context, request op
 }
 
 // LibraryagentShelvesList - Lists shelves. The order is unspecified but deterministic. Newly created shelves will not necessarily be added to the end of this list.
-func (s *shelves) LibraryagentShelvesList(ctx context.Context, request operations.LibraryagentShelvesListRequest) (*operations.LibraryagentShelvesListResponse, error) {
+func (s *shelves) LibraryagentShelvesList(ctx context.Context, request operations.LibraryagentShelvesListRequest, security operations.LibraryagentShelvesListSecurity) (*operations.LibraryagentShelvesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shelves"
 
@@ -234,11 +234,11 @@ func (s *shelves) LibraryagentShelvesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

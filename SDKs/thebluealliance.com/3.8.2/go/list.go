@@ -33,18 +33,18 @@ func newList(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetDistrictEvents - Gets a list of events in the given district.
-func (s *list) GetDistrictEvents(ctx context.Context, request operations.GetDistrictEventsRequest) (*operations.GetDistrictEventsResponse, error) {
+func (s *list) GetDistrictEvents(ctx context.Context, request operations.GetDistrictEventsRequest, security operations.GetDistrictEventsSecurity) (*operations.GetDistrictEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,18 +84,18 @@ func (s *list) GetDistrictEvents(ctx context.Context, request operations.GetDist
 }
 
 // GetDistrictEventsKeys - Gets a list of event keys for events in the given district.
-func (s *list) GetDistrictEventsKeys(ctx context.Context, request operations.GetDistrictEventsKeysRequest) (*operations.GetDistrictEventsKeysResponse, error) {
+func (s *list) GetDistrictEventsKeys(ctx context.Context, request operations.GetDistrictEventsKeysRequest, security operations.GetDistrictEventsKeysSecurity) (*operations.GetDistrictEventsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,18 +135,18 @@ func (s *list) GetDistrictEventsKeys(ctx context.Context, request operations.Get
 }
 
 // GetDistrictEventsSimple - Gets a short-form list of events in the given district.
-func (s *list) GetDistrictEventsSimple(ctx context.Context, request operations.GetDistrictEventsSimpleRequest) (*operations.GetDistrictEventsSimpleResponse, error) {
+func (s *list) GetDistrictEventsSimple(ctx context.Context, request operations.GetDistrictEventsSimpleRequest, security operations.GetDistrictEventsSimpleSecurity) (*operations.GetDistrictEventsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,18 +186,18 @@ func (s *list) GetDistrictEventsSimple(ctx context.Context, request operations.G
 }
 
 // GetDistrictRankings - Gets a list of team district rankings for the given district.
-func (s *list) GetDistrictRankings(ctx context.Context, request operations.GetDistrictRankingsRequest) (*operations.GetDistrictRankingsResponse, error) {
+func (s *list) GetDistrictRankings(ctx context.Context, request operations.GetDistrictRankingsRequest, security operations.GetDistrictRankingsSecurity) (*operations.GetDistrictRankingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/rankings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/rankings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,18 +237,18 @@ func (s *list) GetDistrictRankings(ctx context.Context, request operations.GetDi
 }
 
 // GetDistrictTeams - Gets a list of `Team` objects that competed in events in the given district.
-func (s *list) GetDistrictTeams(ctx context.Context, request operations.GetDistrictTeamsRequest) (*operations.GetDistrictTeamsResponse, error) {
+func (s *list) GetDistrictTeams(ctx context.Context, request operations.GetDistrictTeamsRequest, security operations.GetDistrictTeamsSecurity) (*operations.GetDistrictTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -288,18 +288,18 @@ func (s *list) GetDistrictTeams(ctx context.Context, request operations.GetDistr
 }
 
 // GetDistrictTeamsKeys - Gets a list of `Team` objects that competed in events in the given district.
-func (s *list) GetDistrictTeamsKeys(ctx context.Context, request operations.GetDistrictTeamsKeysRequest) (*operations.GetDistrictTeamsKeysResponse, error) {
+func (s *list) GetDistrictTeamsKeys(ctx context.Context, request operations.GetDistrictTeamsKeysRequest, security operations.GetDistrictTeamsKeysSecurity) (*operations.GetDistrictTeamsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -339,18 +339,18 @@ func (s *list) GetDistrictTeamsKeys(ctx context.Context, request operations.GetD
 }
 
 // GetDistrictTeamsSimple - Gets a short-form list of `Team` objects that competed in events in the given district.
-func (s *list) GetDistrictTeamsSimple(ctx context.Context, request operations.GetDistrictTeamsSimpleRequest) (*operations.GetDistrictTeamsSimpleResponse, error) {
+func (s *list) GetDistrictTeamsSimple(ctx context.Context, request operations.GetDistrictTeamsSimpleRequest, security operations.GetDistrictTeamsSimpleSecurity) (*operations.GetDistrictTeamsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,18 +390,18 @@ func (s *list) GetDistrictTeamsSimple(ctx context.Context, request operations.Ge
 }
 
 // GetEventTeams - Gets a list of `Team` objects that competed in the given event.
-func (s *list) GetEventTeams(ctx context.Context, request operations.GetEventTeamsRequest) (*operations.GetEventTeamsResponse, error) {
+func (s *list) GetEventTeams(ctx context.Context, request operations.GetEventTeamsRequest, security operations.GetEventTeamsSecurity) (*operations.GetEventTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,18 +441,18 @@ func (s *list) GetEventTeams(ctx context.Context, request operations.GetEventTea
 }
 
 // GetEventTeamsKeys - Gets a list of `Team` keys that competed in the given event.
-func (s *list) GetEventTeamsKeys(ctx context.Context, request operations.GetEventTeamsKeysRequest) (*operations.GetEventTeamsKeysResponse, error) {
+func (s *list) GetEventTeamsKeys(ctx context.Context, request operations.GetEventTeamsKeysRequest, security operations.GetEventTeamsKeysSecurity) (*operations.GetEventTeamsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,18 +492,18 @@ func (s *list) GetEventTeamsKeys(ctx context.Context, request operations.GetEven
 }
 
 // GetEventTeamsSimple - Gets a short-form list of `Team` objects that competed in the given event.
-func (s *list) GetEventTeamsSimple(ctx context.Context, request operations.GetEventTeamsSimpleRequest) (*operations.GetEventTeamsSimpleResponse, error) {
+func (s *list) GetEventTeamsSimple(ctx context.Context, request operations.GetEventTeamsSimpleRequest, security operations.GetEventTeamsSimpleSecurity) (*operations.GetEventTeamsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -543,18 +543,18 @@ func (s *list) GetEventTeamsSimple(ctx context.Context, request operations.GetEv
 }
 
 // GetEventTeamsStatuses - Gets a key-value list of the event statuses for teams competing at the given event.
-func (s *list) GetEventTeamsStatuses(ctx context.Context, request operations.GetEventTeamsStatusesRequest) (*operations.GetEventTeamsStatusesResponse, error) {
+func (s *list) GetEventTeamsStatuses(ctx context.Context, request operations.GetEventTeamsStatusesRequest, security operations.GetEventTeamsStatusesSecurity) (*operations.GetEventTeamsStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/teams/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -594,18 +594,18 @@ func (s *list) GetEventTeamsStatuses(ctx context.Context, request operations.Get
 }
 
 // GetEventsByYear - Gets a list of events in the given year.
-func (s *list) GetEventsByYear(ctx context.Context, request operations.GetEventsByYearRequest) (*operations.GetEventsByYearResponse, error) {
+func (s *list) GetEventsByYear(ctx context.Context, request operations.GetEventsByYearRequest, security operations.GetEventsByYearSecurity) (*operations.GetEventsByYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{year}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{year}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -645,18 +645,18 @@ func (s *list) GetEventsByYear(ctx context.Context, request operations.GetEvents
 }
 
 // GetEventsByYearKeys - Gets a list of event keys in the given year.
-func (s *list) GetEventsByYearKeys(ctx context.Context, request operations.GetEventsByYearKeysRequest) (*operations.GetEventsByYearKeysResponse, error) {
+func (s *list) GetEventsByYearKeys(ctx context.Context, request operations.GetEventsByYearKeysRequest, security operations.GetEventsByYearKeysSecurity) (*operations.GetEventsByYearKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{year}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{year}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -696,18 +696,18 @@ func (s *list) GetEventsByYearKeys(ctx context.Context, request operations.GetEv
 }
 
 // GetEventsByYearSimple - Gets a short-form list of events in the given year.
-func (s *list) GetEventsByYearSimple(ctx context.Context, request operations.GetEventsByYearSimpleRequest) (*operations.GetEventsByYearSimpleResponse, error) {
+func (s *list) GetEventsByYearSimple(ctx context.Context, request operations.GetEventsByYearSimpleRequest, security operations.GetEventsByYearSimpleSecurity) (*operations.GetEventsByYearSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{year}/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{year}/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -747,18 +747,18 @@ func (s *list) GetEventsByYearSimple(ctx context.Context, request operations.Get
 }
 
 // GetTeamEventsStatusesByYear - Gets a key-value list of the event statuses for events this team has competed at in the given year.
-func (s *list) GetTeamEventsStatusesByYear(ctx context.Context, request operations.GetTeamEventsStatusesByYearRequest) (*operations.GetTeamEventsStatusesByYearResponse, error) {
+func (s *list) GetTeamEventsStatusesByYear(ctx context.Context, request operations.GetTeamEventsStatusesByYearRequest, security operations.GetTeamEventsStatusesByYearSecurity) (*operations.GetTeamEventsStatusesByYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/events/{year}/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/events/{year}/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -798,18 +798,18 @@ func (s *list) GetTeamEventsStatusesByYear(ctx context.Context, request operatio
 }
 
 // GetTeams - Gets a list of `Team` objects, paginated in groups of 500.
-func (s *list) GetTeams(ctx context.Context, request operations.GetTeamsRequest) (*operations.GetTeamsResponse, error) {
+func (s *list) GetTeams(ctx context.Context, request operations.GetTeamsRequest, security operations.GetTeamsSecurity) (*operations.GetTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -849,18 +849,18 @@ func (s *list) GetTeams(ctx context.Context, request operations.GetTeamsRequest)
 }
 
 // GetTeamsByYear - Gets a list of `Team` objects that competed in the given year, paginated in groups of 500.
-func (s *list) GetTeamsByYear(ctx context.Context, request operations.GetTeamsByYearRequest) (*operations.GetTeamsByYearResponse, error) {
+func (s *list) GetTeamsByYear(ctx context.Context, request operations.GetTeamsByYearRequest, security operations.GetTeamsByYearSecurity) (*operations.GetTeamsByYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -900,18 +900,18 @@ func (s *list) GetTeamsByYear(ctx context.Context, request operations.GetTeamsBy
 }
 
 // GetTeamsByYearKeys - Gets a list Team Keys that competed in the given year, paginated in groups of 500.
-func (s *list) GetTeamsByYearKeys(ctx context.Context, request operations.GetTeamsByYearKeysRequest) (*operations.GetTeamsByYearKeysResponse, error) {
+func (s *list) GetTeamsByYearKeys(ctx context.Context, request operations.GetTeamsByYearKeysRequest, security operations.GetTeamsByYearKeysSecurity) (*operations.GetTeamsByYearKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -951,18 +951,18 @@ func (s *list) GetTeamsByYearKeys(ctx context.Context, request operations.GetTea
 }
 
 // GetTeamsByYearSimple - Gets a list of short form `Team_Simple` objects that competed in the given year, paginated in groups of 500.
-func (s *list) GetTeamsByYearSimple(ctx context.Context, request operations.GetTeamsByYearSimpleRequest) (*operations.GetTeamsByYearSimpleResponse, error) {
+func (s *list) GetTeamsByYearSimple(ctx context.Context, request operations.GetTeamsByYearSimpleRequest, security operations.GetTeamsByYearSimpleSecurity) (*operations.GetTeamsByYearSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{year}/{page_num}/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1002,18 +1002,18 @@ func (s *list) GetTeamsByYearSimple(ctx context.Context, request operations.GetT
 }
 
 // GetTeamsKeys - Gets a list of Team keys, paginated in groups of 500. (Note, each page will not have 500 teams, but will include the teams within that range of 500.)
-func (s *list) GetTeamsKeys(ctx context.Context, request operations.GetTeamsKeysRequest) (*operations.GetTeamsKeysResponse, error) {
+func (s *list) GetTeamsKeys(ctx context.Context, request operations.GetTeamsKeysRequest, security operations.GetTeamsKeysSecurity) (*operations.GetTeamsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1053,18 +1053,18 @@ func (s *list) GetTeamsKeys(ctx context.Context, request operations.GetTeamsKeys
 }
 
 // GetTeamsSimple - Gets a list of short form `Team_Simple` objects, paginated in groups of 500.
-func (s *list) GetTeamsSimple(ctx context.Context, request operations.GetTeamsSimpleRequest) (*operations.GetTeamsSimpleResponse, error) {
+func (s *list) GetTeamsSimple(ctx context.Context, request operations.GetTeamsSimpleRequest, security operations.GetTeamsSimpleSecurity) (*operations.GetTeamsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{page_num}/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

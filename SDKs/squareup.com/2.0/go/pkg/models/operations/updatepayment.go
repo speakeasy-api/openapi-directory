@@ -8,21 +8,16 @@ import (
 )
 
 type UpdatePaymentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdatePaymentPathParams struct {
-	// The ID of the payment to update.
-	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdatePaymentRequest struct {
-	PathParams UpdatePaymentPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdatePaymentRequest `request:"mediaType=application/json"`
-	Security UpdatePaymentSecurity
+	UpdatePaymentRequest shared.UpdatePaymentRequest `request:"mediaType=application/json"`
+	// The ID of the payment to update.
+	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
 }
 
 type UpdatePaymentResponse struct {

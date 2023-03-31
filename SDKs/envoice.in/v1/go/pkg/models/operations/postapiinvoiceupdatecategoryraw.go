@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAPIInvoiceUpdatecategoryRawHeaders struct {
+type PostAPIInvoiceUpdatecategoryRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type PostAPIInvoiceUpdatecategoryRawRequest struct {
-	Headers PostAPIInvoiceUpdatecategoryRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type PostAPIInvoiceUpdatecategoryRawResponse struct {

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetReservationsQueryParams struct {
+type GetReservationsRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -31,10 +31,6 @@ type GetReservationsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetReservationsRequest struct {
-	QueryParams GetReservationsQueryParams
 }
 
 type GetReservationsResponse struct {

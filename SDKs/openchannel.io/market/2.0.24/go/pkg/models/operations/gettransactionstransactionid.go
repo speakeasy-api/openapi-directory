@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTransactionsTransactionIDPathParams struct {
+type GetTransactionsTransactionIDRequest struct {
 	// The id of the transaction to return
 	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type GetTransactionsTransactionIDRequest struct {
-	PathParams GetTransactionsTransactionIDPathParams
 }
 
 type GetTransactionsTransactionIDResponse struct {

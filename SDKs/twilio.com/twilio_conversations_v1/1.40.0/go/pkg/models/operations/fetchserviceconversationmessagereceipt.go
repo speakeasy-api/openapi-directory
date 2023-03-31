@@ -12,10 +12,11 @@ var FetchServiceConversationMessageReceiptServerList = []string{
 }
 
 type FetchServiceConversationMessageReceiptSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchServiceConversationMessageReceiptPathParams struct {
+type FetchServiceConversationMessageReceiptRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Message resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -24,12 +25,6 @@ type FetchServiceConversationMessageReceiptPathParams struct {
 	MessageSid string `pathParam:"style=simple,explode=false,name=MessageSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchServiceConversationMessageReceiptRequest struct {
-	PathParams FetchServiceConversationMessageReceiptPathParams
-	Security   FetchServiceConversationMessageReceiptSecurity
-	ServerURL  *string
 }
 
 type FetchServiceConversationMessageReceiptResponse struct {

@@ -46,10 +46,6 @@ type AddPasswordV1RequestBody struct {
 	Password string `multipartForm:"name=password"`
 }
 
-type AddPasswordV1Request struct {
-	Request AddPasswordV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // AddPasswordV14XXApplicationProblemPlusJSON - Error
 type AddPasswordV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

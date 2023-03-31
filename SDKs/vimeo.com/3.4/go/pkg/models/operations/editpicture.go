@@ -8,14 +8,7 @@ import (
 )
 
 type EditPictureSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditPicturePathParams struct {
-	// The ID of the picture.
-	PortraitsetID float64 `pathParam:"style=simple,explode=false,name=portraitset_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditPictureRequestBody struct {
@@ -24,9 +17,11 @@ type EditPictureRequestBody struct {
 }
 
 type EditPictureRequest struct {
-	PathParams EditPicturePathParams
-	Request    *EditPictureRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   EditPictureSecurity
+	RequestBody *EditPictureRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the picture.
+	PortraitsetID float64 `pathParam:"style=simple,explode=false,name=portraitset_id"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type EditPictureResponse struct {

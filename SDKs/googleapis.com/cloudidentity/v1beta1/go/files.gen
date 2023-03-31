@@ -65,7 +65,6 @@ pkg/models/shared/endpointverificationspecificattributes.go
 pkg/models/shared/certificateattributes.go
 pkg/models/shared/certificatetemplate.go
 pkg/models/shared/androidattributes.go
-pkg/models/shared/security.go
 pkg/models/shared/approvedeviceuserrequest.go
 pkg/models/shared/blockdeviceuserrequest.go
 pkg/models/shared/cancelwipedeviceuserrequest.go

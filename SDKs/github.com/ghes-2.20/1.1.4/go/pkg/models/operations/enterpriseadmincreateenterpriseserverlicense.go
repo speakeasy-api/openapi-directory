@@ -15,10 +15,6 @@ type EnterpriseAdminCreateEnterpriseServerLicenseRequestBody struct {
 	Settings *string `form:"name=settings"`
 }
 
-type EnterpriseAdminCreateEnterpriseServerLicenseRequest struct {
-	Request EnterpriseAdminCreateEnterpriseServerLicenseRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type EnterpriseAdminCreateEnterpriseServerLicenseResponse struct {
 	ContentType string
 	StatusCode  int

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type MgetInfoPathParams struct {
+type MgetInfoRequest struct {
 	// Multiple strings of info.
 	InfoArray []string `pathParam:"style=simple,explode=false,name=infoArray"`
-}
-
-type MgetInfoRequest struct {
-	PathParams MgetInfoPathParams
 }
 
 type MgetInfoResponse struct {

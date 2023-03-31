@@ -3,39 +3,49 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateParallelDataRequest(
-    headers=operations.CreateParallelDataHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ut",
-        x_amz_credential="sapiente",
-        x_amz_date="laborum",
-        x_amz_security_token="dolor",
-        x_amz_signature="accusamus",
-        x_amz_signed_headers="pariatur",
-        x_amz_target="AWSShineFrontendService_20170701.CreateParallelData",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateParallelDataRequest(
-        client_token="eos",
-        description="ut",
+)
+
+
+req = operations.CreateParallelDataRequest(
+    create_parallel_data_request=shared.CreateParallelDataRequest(
+        client_token="corrupti",
+        description="provident",
         encryption_key=shared.EncryptionKey(
-            id="animi",
+            id="distinctio",
             type="KMS",
         ),
-        name="eum",
+        name="quibusdam",
         parallel_data_config=shared.ParallelDataConfig(
-            format="TMX",
-            s3_uri="maiores",
+            format="CSV",
+            s3_uri="nulla",
         ),
+        tags=[
+            shared.Tag(
+                key="illum",
+                value="vel",
+            ),
+            shared.Tag(
+                key="error",
+                value="deserunt",
+            ),
+            shared.Tag(
+                key="suscipit",
+                value="iure",
+            ),
+        ],
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
+    x_amz_target="AWSShineFrontendService_20170701.CreateParallelData",
 )
     
 res = s.create_parallel_data(req)

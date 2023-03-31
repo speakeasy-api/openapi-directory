@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationLicensesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationLicensesStateEnum - Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive'
 type GetOrganizationLicensesStateEnum string
 
@@ -48,24 +44,20 @@ func (e *GetOrganizationLicensesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOrganizationLicensesQueryParams struct {
+type GetOrganizationLicensesRequest struct {
 	// Filter the licenses to those assigned to a particular device. Returned in the same order that they are queued to the device.
 	DeviceSerial *string `queryParam:"style=form,explode=true,name=deviceSerial"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Filter the licenses to those assigned in a particular network
-	NetworkID *string `queryParam:"style=form,explode=true,name=networkId"`
+	NetworkID      *string `queryParam:"style=form,explode=true,name=networkId"`
+	OrganizationID string  `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
 	// Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive'
 	State *GetOrganizationLicensesStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetOrganizationLicensesRequest struct {
-	PathParams  GetOrganizationLicensesPathParams
-	QueryParams GetOrganizationLicensesQueryParams
 }
 
 type GetOrganizationLicenses200ApplicationJSONPermanentlyQueuedLicenses struct {

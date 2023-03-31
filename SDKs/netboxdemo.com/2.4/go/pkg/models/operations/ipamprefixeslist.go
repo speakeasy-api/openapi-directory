@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamPrefixesListQueryParams struct {
+type IpamPrefixesListRequest struct {
 	Contains *string `queryParam:"style=form,explode=true,name=contains"`
 	Family   *string `queryParam:"style=form,explode=true,name=family"`
 	// Multiple values may be separated by commas.
@@ -33,10 +33,6 @@ type IpamPrefixesListQueryParams struct {
 	VrfID         *string  `queryParam:"style=form,explode=true,name=vrf_id"`
 	Within        *string  `queryParam:"style=form,explode=true,name=within"`
 	WithinInclude *string  `queryParam:"style=form,explode=true,name=within_include"`
-}
-
-type IpamPrefixesListRequest struct {
-	QueryParams IpamPrefixesListQueryParams
 }
 
 type IpamPrefixesList200ApplicationJSON struct {

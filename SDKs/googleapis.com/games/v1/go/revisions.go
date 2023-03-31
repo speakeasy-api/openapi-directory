@@ -33,7 +33,7 @@ func newRevisions(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GamesRevisionsCheck - Checks whether the games client is out of date.
-func (s *revisions) GamesRevisionsCheck(ctx context.Context, request operations.GamesRevisionsCheckRequest) (*operations.GamesRevisionsCheckResponse, error) {
+func (s *revisions) GamesRevisionsCheck(ctx context.Context, request operations.GamesRevisionsCheckRequest, security operations.GamesRevisionsCheckSecurity) (*operations.GamesRevisionsCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/revisions/check"
 
@@ -42,11 +42,11 @@ func (s *revisions) GamesRevisionsCheck(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

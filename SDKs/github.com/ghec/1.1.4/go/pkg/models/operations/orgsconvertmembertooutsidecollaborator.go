@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsConvertMemberToOutsideCollaboratorPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type OrgsConvertMemberToOutsideCollaboratorRequestBody struct {
 	// When set to `true`, the request will be performed asynchronously. Returns a 202 status code when the job is successfully queued.
 	Async *bool `json:"async,omitempty"`
 }
 
 type OrgsConvertMemberToOutsideCollaboratorRequest struct {
-	PathParams OrgsConvertMemberToOutsideCollaboratorPathParams
-	Request    *OrgsConvertMemberToOutsideCollaboratorRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsConvertMemberToOutsideCollaboratorRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type OrgsConvertMemberToOutsideCollaboratorResponse struct {

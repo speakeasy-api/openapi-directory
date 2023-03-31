@@ -8,17 +8,12 @@ import (
 )
 
 type GetConnectionsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetConnectionsQueryParams struct {
-	// Filter by authEventId
-	AuthEventID *string `queryParam:"style=form,explode=true,name=authEventId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetConnectionsRequest struct {
-	QueryParams GetConnectionsQueryParams
-	Security    GetConnectionsSecurity
+	// Filter by authEventId
+	AuthEventID *string `queryParam:"style=form,explode=true,name=authEventId"`
 }
 
 type GetConnectionsResponse struct {

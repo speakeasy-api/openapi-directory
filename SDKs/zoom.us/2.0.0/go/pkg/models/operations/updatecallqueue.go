@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateCallQueuePathParams struct {
-	// Unique Identifier of the Call Queue.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateCallQueueApplicationJSONStatusEnum - Status of the Call Queue. Allowed values:<br>
@@ -64,9 +58,9 @@ type UpdateCallQueueApplicationJSON struct {
 }
 
 type UpdateCallQueueRequest struct {
-	PathParams UpdateCallQueuePathParams
-	Request    *UpdateCallQueueApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateCallQueueSecurity
+	RequestBody *UpdateCallQueueApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Call Queue.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type UpdateCallQueueResponse struct {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceManagementInterfacePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceManagementInterfaceRequestBodyWan1WanEnabledEnum - Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
 type UpdateDeviceManagementInterfaceRequestBodyWan1WanEnabledEnum string
 
@@ -110,8 +106,8 @@ type UpdateDeviceManagementInterfaceRequestBody struct {
 }
 
 type UpdateDeviceManagementInterfaceRequest struct {
-	PathParams UpdateDeviceManagementInterfacePathParams
-	Request    *UpdateDeviceManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	Serial      string                                      `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceManagementInterfaceResponse struct {

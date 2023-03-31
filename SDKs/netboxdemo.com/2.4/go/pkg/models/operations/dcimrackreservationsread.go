@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackReservationsReadPathParams struct {
+type DcimRackReservationsReadRequest struct {
 	// A unique integer value identifying this rack reservation.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRackReservationsReadRequest struct {
-	PathParams DcimRackReservationsReadPathParams
 }
 
 type DcimRackReservationsReadResponse struct {

@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnAchReturnRequest struct {
-	Request shared.CreateAnAchReturnParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnAchReturnDefaultApplicationJSON13StatusEnum string
 
 const (

@@ -12,21 +12,17 @@ var ListSyncMapItemServerList = []string{
 }
 
 type ListSyncMapItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSyncMapItemPathParams struct {
-	// The SID of the Sync Map with the Sync Map Item resource to fetch. Can be the Sync Map resource's `sid` or its `unique_name`.
-	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Map Item resources to read.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListSyncMapItemQueryParams struct {
+type ListSyncMapItemRequest struct {
 	// Whether to include the Map Item referenced by the `from` parameter. Can be: `inclusive` to include the Map Item referenced by the `from` parameter or `exclusive` to start with the next Map Item. The default value is `inclusive`.
 	Bounds *shared.SyncMapItemEnumQueryFromBoundTypeEnum `queryParam:"style=form,explode=true,name=Bounds"`
 	// The `key` of the first Sync Map Item resource to read. See also `bounds`.
 	From *string `queryParam:"style=form,explode=true,name=From"`
+	// The SID of the Sync Map with the Sync Map Item resource to fetch. Can be the Sync Map resource's `sid` or its `unique_name`.
+	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
 	// How to order the Map Items returned by their `key` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending. Map Items are [ordered lexicographically](https://en.wikipedia.org/wiki/Lexicographical_order) by Item key.
 	Order *shared.SyncMapItemEnumQueryResultOrderEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -35,13 +31,8 @@ type ListSyncMapItemQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSyncMapItemRequest struct {
-	PathParams  ListSyncMapItemPathParams
-	QueryParams ListSyncMapItemQueryParams
-	Security    ListSyncMapItemSecurity
-	ServerURL   *string
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Map Item resources to read.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListSyncMapItemListSyncMapItemResponseMeta struct {

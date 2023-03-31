@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type IssuesListCommentsPathParams struct {
+type IssuesListCommentsRequest struct {
 	// issue_number parameter
 	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
 	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesListCommentsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
-}
-
-type IssuesListCommentsRequest struct {
-	PathParams  IssuesListCommentsPathParams
-	QueryParams IssuesListCommentsQueryParams
 }
 
 type IssuesListCommentsResponse struct {

@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ConferenceRecordStartSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ConferenceRecordStartRequest struct {
-	// POST parameters
-	Request  *shared.ConferenceRecordStartParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ConferenceRecordStartSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ConferenceRecordStartResponse struct {

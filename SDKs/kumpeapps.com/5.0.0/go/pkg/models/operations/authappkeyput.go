@@ -8,17 +8,12 @@ import (
 )
 
 type AuthAppkeyPutSecurity struct {
-	AppKey shared.SchemeAppKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AuthAppkeyPutQueryParams struct {
-	// app key to deactivate
-	AppKey string `queryParam:"style=form,explode=true,name=app_key"`
+	AppKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 type AuthAppkeyPutRequest struct {
-	QueryParams AuthAppkeyPutQueryParams
-	Security    AuthAppkeyPutSecurity
+	// app key to deactivate
+	AppKey string `queryParam:"style=form,explode=true,name=app_key"`
 }
 
 type AuthAppkeyPutResponse struct {

@@ -37,7 +37,7 @@ func newCoach(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get a coach record by id.
 func (s *coach) FetchCoach(ctx context.Context, request operations.FetchCoachRequest) (*operations.FetchCoachResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/coach/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/coach/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *coach) FetchCoaches(ctx context.Context, request operations.FetchCoache
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

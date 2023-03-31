@@ -10,25 +10,18 @@ import (
 )
 
 type CalendarEventsMoveSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsMoveSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsMoveSecurity struct {
 	Option1 *CalendarEventsMoveSecurityOption1 `security:"option"`
 	Option2 *CalendarEventsMoveSecurityOption2 `security:"option"`
-}
-
-type CalendarEventsMovePathParams struct {
-	// Calendar identifier of the source calendar where the event currently is on.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-	// Event identifier.
-	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
 }
 
 // CalendarEventsMoveSendUpdatesEnum - Guests who should receive notifications about the change of the event's organizer.
@@ -58,11 +51,15 @@ func (e *CalendarEventsMoveSendUpdatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CalendarEventsMoveQueryParams struct {
+type CalendarEventsMoveRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier of the source calendar where the event currently is on.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Calendar identifier of the target calendar where the event is to be moved to.
 	Destination string `queryParam:"style=form,explode=true,name=destination"`
+	// Event identifier.
+	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -81,12 +78,6 @@ type CalendarEventsMoveQueryParams struct {
 	SendUpdates *CalendarEventsMoveSendUpdatesEnum `queryParam:"style=form,explode=true,name=sendUpdates"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsMoveRequest struct {
-	PathParams  CalendarEventsMovePathParams
-	QueryParams CalendarEventsMoveQueryParams
-	Security    CalendarEventsMoveSecurity
 }
 
 type CalendarEventsMoveResponse struct {

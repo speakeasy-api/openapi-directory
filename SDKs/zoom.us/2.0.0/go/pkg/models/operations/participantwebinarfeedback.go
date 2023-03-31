@@ -9,13 +9,6 @@ import (
 	"time"
 )
 
-type ParticipantWebinarFeedbackPathParams struct {
-	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
 // ParticipantWebinarFeedbackTypeEnum - Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:<br> <br>`past` - Meeting that already occurred in the specified date range.<br>`pastOne` - Past meetings that were attended by only one user. <br>`live` - Live meetings.<br><br>
 //
 // If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
@@ -45,7 +38,7 @@ func (e *ParticipantWebinarFeedbackTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ParticipantWebinarFeedbackQueryParams struct {
+type ParticipantWebinarFeedbackRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
@@ -54,11 +47,10 @@ type ParticipantWebinarFeedbackQueryParams struct {
 	//
 	// If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
 	Type *ParticipantWebinarFeedbackTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ParticipantWebinarFeedbackRequest struct {
-	PathParams  ParticipantWebinarFeedbackPathParams
-	QueryParams ParticipantWebinarFeedbackQueryParams
+	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // ParticipantWebinarFeedback200ApplicationXMLParticipantsQualityEnum - Feedback submitted by the participant.

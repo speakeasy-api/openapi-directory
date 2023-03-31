@@ -32,20 +32,20 @@ func newLayers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // BooksLayersAnnotationDataGet - Gets the annotation data.
-func (s *layers) BooksLayersAnnotationDataGet(ctx context.Context, request operations.BooksLayersAnnotationDataGetRequest) (*operations.BooksLayersAnnotationDataGetResponse, error) {
+func (s *layers) BooksLayersAnnotationDataGet(ctx context.Context, request operations.BooksLayersAnnotationDataGetRequest, security operations.BooksLayersAnnotationDataGetSecurity) (*operations.BooksLayersAnnotationDataGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *layers) BooksLayersAnnotationDataGet(ctx context.Context, request opera
 }
 
 // BooksLayersAnnotationDataList - Gets the annotation data for a volume and layer.
-func (s *layers) BooksLayersAnnotationDataList(ctx context.Context, request operations.BooksLayersAnnotationDataListRequest) (*operations.BooksLayersAnnotationDataListResponse, error) {
+func (s *layers) BooksLayersAnnotationDataList(ctx context.Context, request operations.BooksLayersAnnotationDataListRequest, security operations.BooksLayersAnnotationDataListSecurity) (*operations.BooksLayersAnnotationDataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *layers) BooksLayersAnnotationDataList(ctx context.Context, request oper
 }
 
 // BooksLayersGet - Gets the layer summary for a volume.
-func (s *layers) BooksLayersGet(ctx context.Context, request operations.BooksLayersGetRequest) (*operations.BooksLayersGetResponse, error) {
+func (s *layers) BooksLayersGet(ctx context.Context, request operations.BooksLayersGetRequest, security operations.BooksLayersGetSecurity) (*operations.BooksLayersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layersummary/{summaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layersummary/{summaryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,20 +176,20 @@ func (s *layers) BooksLayersGet(ctx context.Context, request operations.BooksLay
 }
 
 // BooksLayersList - List the layer summaries for a volume.
-func (s *layers) BooksLayersList(ctx context.Context, request operations.BooksLayersListRequest) (*operations.BooksLayersListResponse, error) {
+func (s *layers) BooksLayersList(ctx context.Context, request operations.BooksLayersListRequest, security operations.BooksLayersListSecurity) (*operations.BooksLayersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layersummary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layersummary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,20 +224,20 @@ func (s *layers) BooksLayersList(ctx context.Context, request operations.BooksLa
 }
 
 // BooksLayersVolumeAnnotationsGet - Gets the volume annotation.
-func (s *layers) BooksLayersVolumeAnnotationsGet(ctx context.Context, request operations.BooksLayersVolumeAnnotationsGetRequest) (*operations.BooksLayersVolumeAnnotationsGetResponse, error) {
+func (s *layers) BooksLayersVolumeAnnotationsGet(ctx context.Context, request operations.BooksLayersVolumeAnnotationsGetRequest, security operations.BooksLayersVolumeAnnotationsGetSecurity) (*operations.BooksLayersVolumeAnnotationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -272,20 +272,20 @@ func (s *layers) BooksLayersVolumeAnnotationsGet(ctx context.Context, request op
 }
 
 // BooksLayersVolumeAnnotationsList - Gets the volume annotations for a volume and layer.
-func (s *layers) BooksLayersVolumeAnnotationsList(ctx context.Context, request operations.BooksLayersVolumeAnnotationsListRequest) (*operations.BooksLayersVolumeAnnotationsListResponse, error) {
+func (s *layers) BooksLayersVolumeAnnotationsList(ctx context.Context, request operations.BooksLayersVolumeAnnotationsListRequest, security operations.BooksLayersVolumeAnnotationsListSecurity) (*operations.BooksLayersVolumeAnnotationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/layers/{layerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

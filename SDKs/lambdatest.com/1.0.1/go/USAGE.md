@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.DevicesRequest{
-        Security: operations.DevicesSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        QueryParams: operations.DevicesQueryParams{
-            Os: "corrupti",
-        },
+        Os: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.GetDevices.Devices(ctx, req)
+    res, err := s.GetDevices.Devices(ctx, req, operations.DevicesSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

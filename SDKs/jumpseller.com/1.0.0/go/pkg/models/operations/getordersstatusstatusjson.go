@@ -39,21 +39,13 @@ func (e *GetOrdersStatusStatusJSONStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOrdersStatusStatusJSONPathParams struct {
-	// Status of the Order used as filter
-	Status GetOrdersStatusStatusJSONStatusEnum `pathParam:"style=simple,explode=false,name=status"`
-}
-
-type GetOrdersStatusStatusJSONQueryParams struct {
+type GetOrdersStatusStatusJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetOrdersStatusStatusJSONRequest struct {
-	PathParams  GetOrdersStatusStatusJSONPathParams
-	QueryParams GetOrdersStatusStatusJSONQueryParams
+	// Status of the Order used as filter
+	Status GetOrdersStatusStatusJSONStatusEnum `pathParam:"style=simple,explode=false,name=status"`
 }
 
 type GetOrdersStatusStatusJSONResponse struct {

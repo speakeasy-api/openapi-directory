@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConnectCarrierPathParams struct {
-	// The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
-	CarrierName shared.CarrierNameEnum `pathParam:"style=simple,explode=false,name=carrier_name"`
-}
-
 type ConnectCarrierRequest struct {
-	PathParams ConnectCarrierPathParams
-	Request    shared.ConnectCarrierRequestBody `request:"mediaType=application/json"`
+	// The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+	CarrierName               shared.CarrierNameEnum           `pathParam:"style=simple,explode=false,name=carrier_name"`
+	ConnectCarrierRequestBody shared.ConnectCarrierRequestBody `request:"mediaType=application/json"`
 }
 
 type ConnectCarrierResponse struct {

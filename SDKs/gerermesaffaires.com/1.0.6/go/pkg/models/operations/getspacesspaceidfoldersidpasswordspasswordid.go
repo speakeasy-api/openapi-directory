@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDPasswordsPasswordIDPathParams struct {
+type GetSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest struct {
 	// Id of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the password
 	PasswordID string `pathParam:"style=simple,explode=false,name=passwordId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest struct {
-	PathParams GetSpacesSpaceIDFoldersIDPasswordsPasswordIDPathParams
 }
 
 // GetSpacesSpaceIDFoldersIDPasswordsPasswordID200ApplicationJSON - A password

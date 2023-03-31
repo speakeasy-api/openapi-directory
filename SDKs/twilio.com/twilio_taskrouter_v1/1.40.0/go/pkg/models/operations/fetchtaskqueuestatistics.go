@@ -13,17 +13,11 @@ var FetchTaskQueueStatisticsServerList = []string{
 }
 
 type FetchTaskQueueStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskQueueStatisticsPathParams struct {
-	// The SID of the TaskQueue for which to fetch statistics.
-	TaskQueueSid string `pathParam:"style=simple,explode=false,name=TaskQueueSid"`
-	// The SID of the Workspace with the TaskQueue to fetch.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchTaskQueueStatisticsQueryParams struct {
+type FetchTaskQueueStatisticsRequest struct {
 	// Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// Only calculate statistics since this many minutes in the past. The default is 15 minutes.
@@ -34,13 +28,10 @@ type FetchTaskQueueStatisticsQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
 	// Only calculate real-time and cumulative statistics for the specified TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
 	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
-}
-
-type FetchTaskQueueStatisticsRequest struct {
-	PathParams  FetchTaskQueueStatisticsPathParams
-	QueryParams FetchTaskQueueStatisticsQueryParams
-	Security    FetchTaskQueueStatisticsSecurity
-	ServerURL   *string
+	// The SID of the TaskQueue for which to fetch statistics.
+	TaskQueueSid string `pathParam:"style=simple,explode=false,name=TaskQueueSid"`
+	// The SID of the Workspace with the TaskQueue to fetch.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type FetchTaskQueueStatisticsResponse struct {

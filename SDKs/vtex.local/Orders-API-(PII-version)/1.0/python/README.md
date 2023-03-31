@@ -1,0 +1,105 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/vtex.local/Orders-API-(PII-version)/1.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        app_key="YOUR_API_KEY_HERE",
+        app_token="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.InvoiceNotification2Request(
+    accept="application/json",
+    content_type="application/json",
+    invoice_notification_request=shared.InvoiceNotificationRequest(
+        cfop="6.104",
+        courier="corrupti",
+        extra_value=100,
+        invoice_key="provident",
+        invoice_number="123456789",
+        invoice_url="distinctio",
+        invoice_value="2499",
+        issued_date="2020-07-15",
+        items=[
+            shared.Item1(
+                item_index="67",
+                price=2499,
+                quantity=3,
+            ),
+            shared.Item1(
+                item_index="67",
+                price=2499,
+                quantity=3,
+            ),
+            shared.Item1(
+                item_index="67",
+                price=2499,
+                quantity=3,
+            ),
+            shared.Item1(
+                item_index="67",
+                price=2499,
+                quantity=3,
+            ),
+        ],
+        tracking_number="unde",
+        tracking_url="nulla",
+        type="Output",
+        volumes=3,
+    ),
+    order_id="70caf3941s6df1",
+)
+    
+res = s.invoice.invoice_notification2(req)
+
+if res.invoice_notification2_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### invoice
+
+* `invoice_notification2` - Order invoice notification
+
+### orders
+
+* `cancel_order2` - Cancel order
+* `get_order2` - Get order
+* `list_orders2` - List orders
+* `start_handling2` - Start handling order
+
+### payment
+
+* `send_payment_notification2` - Send payment notification
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

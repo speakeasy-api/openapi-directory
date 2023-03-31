@@ -56,7 +56,7 @@ func (e *GetRandomWordsSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRandomWordsQueryParams struct {
+type GetRandomWordsRequest struct {
 	// CSV part-of-speech values to exclude (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
 	ExcludePartOfSpeech *string `queryParam:"style=form,explode=true,name=excludePartOfSpeech"`
 	// Only return words with dictionary definitions
@@ -81,10 +81,6 @@ type GetRandomWordsQueryParams struct {
 	SortBy *GetRandomWordsSortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// Sort direction
 	SortOrder *GetRandomWordsSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
-}
-
-type GetRandomWordsRequest struct {
-	QueryParams GetRandomWordsQueryParams
 }
 
 type GetRandomWordsResponse struct {

@@ -36,7 +36,7 @@ func newOsdb(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Returns the help text for a given service action
 func (s *osdb) ActionHelp(ctx context.Context, request operations.ActionHelpRequest) (*operations.ActionHelpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}/help", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}/help", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *osdb) ActionHelp(ctx context.Context, request operations.ActionHelpRequ
 // Returns a description of a given service action.
 func (s *osdb) DescribeAction(ctx context.Context, request operations.DescribeActionRequest) (*operations.DescribeActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *osdb) DescribeAction(ctx context.Context, request operations.DescribeAc
 // Returns a description of a given service
 func (s *osdb) DescribeService(ctx context.Context, request operations.DescribeServiceRequest) (*operations.DescribeServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/services/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/services/{serviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,9 +216,9 @@ func (s *osdb) DescribeService(ctx context.Context, request operations.DescribeS
 // * ```curl -ik -X POST -d '{ "Content-Location": "http://demo.openlinksw.co.uk/pubs", "osdb:body_data_src_url": "http://ods-qa.openlinksw.com/DAV/home/osdb/pubs.csv", "extractor": "csv", "osdb:response_format": "application/rdf+xml", "osdb:body_data_encoding": "text/csv" }' -H 'Content-Type: application/json' https://osdb.openlinksw.com/osdb/api/v1/actions/csv_transformer/transform/exec```
 func (s *osdb) ExecuteAction(ctx context.Context, request operations.ExecuteActionRequest) (*operations.ExecuteActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}/exec", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}/{actionId}/exec", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,7 +269,7 @@ func (s *osdb) ExecuteAction(ctx context.Context, request operations.ExecuteActi
 // Returns an array of action descriptions for the actions supported by the given service
 func (s *osdb) ListActions(ctx context.Context, request operations.ListActionsRequest) (*operations.ListActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/actions/{serviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +377,7 @@ func (s *osdb) ListServices(ctx context.Context) (*operations.ListServicesRespon
 
 // LoadService - Load service
 // Loads a service description into the OSDB Service Registry
-func (s *osdb) LoadService(ctx context.Context, request operations.LoadServiceRequest) (*operations.LoadServiceResponse, error) {
+func (s *osdb) LoadService(ctx context.Context, request operations.LoadServiceRequestBody) (*operations.LoadServiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/services"
 
@@ -551,7 +551,7 @@ func (s *osdb) Logout(ctx context.Context) (*operations.LogoutResponse, error) {
 // Removes a service description from the OSDB Service Registry
 func (s *osdb) UnloadService(ctx context.Context, request operations.UnloadServiceRequest) (*operations.UnloadServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/services/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/services/{serviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

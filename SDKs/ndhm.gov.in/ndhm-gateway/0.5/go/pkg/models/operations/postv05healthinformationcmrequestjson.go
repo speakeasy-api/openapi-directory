@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05HealthInformationCmRequestJSONHeaders struct {
+type PostV05HealthInformationCmRequestJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization string           `header:"style=simple,explode=false,name=Authorization"`
+	HIRequest     shared.HIRequest `request:"mediaType=application/json"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05HealthInformationCmRequestJSONRequest struct {
-	Headers PostV05HealthInformationCmRequestJSONHeaders
-	Request shared.HIRequest `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationCmRequestJSONResponse struct {

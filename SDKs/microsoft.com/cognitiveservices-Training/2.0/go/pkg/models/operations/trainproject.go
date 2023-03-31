@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrainProjectPathParams struct {
+type TrainProjectRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type TrainProjectHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type TrainProjectRequest struct {
-	PathParams TrainProjectPathParams
-	Headers    TrainProjectHeaders
 }
 
 type TrainProjectResponse struct {

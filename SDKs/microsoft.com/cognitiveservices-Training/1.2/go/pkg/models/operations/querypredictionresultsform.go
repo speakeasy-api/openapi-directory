@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryPredictionResultsFormPathParams struct {
+type QueryPredictionResultsFormRequest struct {
+	// Parameters used to query the predictions. Limited to combining 2 tags
+	PredictionQueryTokenInput shared.PredictionQueryTokenInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TrainingKey               string                           `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QueryPredictionResultsFormHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type QueryPredictionResultsFormRequest struct {
-	PathParams QueryPredictionResultsFormPathParams
-	Headers    QueryPredictionResultsFormHeaders
-	// Parameters used to query the predictions. Limited to combining 2 tags
-	Request shared.PredictionQueryTokenInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type QueryPredictionResultsFormResponse struct {

@@ -34,7 +34,7 @@ func newVlanAssignments(defaultClient, securityClient HTTPClient, serverURL, lan
 // Return prefixes assigned to all IPv6 enabled VLANs on an appliance.
 func (s *vlanAssignments) GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx context.Context, request operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest) (*operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

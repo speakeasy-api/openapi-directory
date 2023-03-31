@@ -8,7 +8,8 @@ import (
 )
 
 type CreateLicenseTemplateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateLicenseTemplateRequestBody struct {
@@ -42,11 +43,6 @@ type CreateLicenseTemplateRequestBody struct {
 	TimeVolume *string `form:"name=timeVolume"`
 	// For 'TIMEVOLUME' License Type.
 	TimeVolumePeriod *string `form:"name=timeVolumePeriod"`
-}
-
-type CreateLicenseTemplateRequest struct {
-	Request  CreateLicenseTemplateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateLicenseTemplateSecurity
 }
 
 type CreateLicenseTemplateResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFileByID2PathParams struct {
+type GetFileByID2Request struct {
 	// file's internal identifier
 	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type GetFileByID2Request struct {
-	PathParams GetFileByID2PathParams
 }
 
 type GetFileByID2Response struct {

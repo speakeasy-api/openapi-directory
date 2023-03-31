@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRealmClientSessionStatsPathParams struct {
+type GetRealmClientSessionStatsRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientSessionStatsRequest struct {
-	PathParams GetRealmClientSessionStatsPathParams
 }
 
 type GetRealmClientSessionStatsResponse struct {

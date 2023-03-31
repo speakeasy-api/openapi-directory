@@ -8,16 +8,11 @@ import (
 )
 
 type ParseJapaneseNameSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ParseJapaneseNamePathParams struct {
-	JapaneseName string `pathParam:"style=simple,explode=false,name=japaneseName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ParseJapaneseNameRequest struct {
-	PathParams ParseJapaneseNamePathParams
-	Security   ParseJapaneseNameSecurity
+	JapaneseName string `pathParam:"style=simple,explode=false,name=japaneseName"`
 }
 
 type ParseJapaneseNameResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateGroupApplicationPathParams struct {
+type ValidateGroupApplicationRequest struct {
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type ValidateGroupApplicationRequest struct {
-	PathParams ValidateGroupApplicationPathParams
 }
 
 type ValidateGroupApplicationResponse struct {

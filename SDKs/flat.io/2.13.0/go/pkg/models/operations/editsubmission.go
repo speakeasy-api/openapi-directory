@@ -8,22 +8,17 @@ import (
 )
 
 type EditSubmissionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type EditSubmissionPathParams struct {
+type EditSubmissionRequest struct {
+	AssignmentSubmissionUpdate shared.AssignmentSubmissionUpdate `request:"mediaType=application/json"`
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
 	// Unique identifier of the submission
 	Submission string `pathParam:"style=simple,explode=false,name=submission"`
-}
-
-type EditSubmissionRequest struct {
-	PathParams EditSubmissionPathParams
-	Request    shared.AssignmentSubmissionUpdate `request:"mediaType=application/json"`
-	Security   EditSubmissionSecurity
 }
 
 type EditSubmissionResponse struct {

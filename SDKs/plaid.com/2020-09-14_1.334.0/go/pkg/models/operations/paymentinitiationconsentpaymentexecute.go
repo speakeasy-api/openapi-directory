@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PaymentInitiationConsentPaymentExecuteRequest struct {
-	Request shared.PaymentInitiationConsentPaymentExecuteRequest `request:"mediaType=application/json"`
-}
 
 type PaymentInitiationConsentPaymentExecuteResponse struct {
 	ContentType string

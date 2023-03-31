@@ -4,43 +4,37 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudassetAssetsListRequest(
-    security=operations.CloudassetAssetsListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudassetAssetsListPathParams(
-        parent="occaecati",
-    ),
-    query_params=operations.CloudassetAssetsListQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="json",
-        asset_types=[
-            "enim",
-            "voluptas",
-        ],
-        callback="voluptas",
-        content_type="RESOURCE",
-        fields="atque",
-        key="dolores",
-        oauth_token="optio",
-        page_size=2232215791667708434,
-        page_token="aut",
-        pretty_print=True,
-        quota_user="totam",
-        read_time="ut",
-        upload_type="et",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    asset_types=[
+        "unde",
+        "nulla",
+        "corrupti",
+        "illum",
+    ],
+    callback="vel",
+    content_type="ORG_POLICY",
+    fields_="deserunt",
+    key="suscipit",
+    oauth_token="iure",
+    page_size=297534,
+    page_token="debitis",
+    parent="ipsa",
+    pretty_print=False,
+    quota_user="delectus",
+    read_time="tempora",
+    upload_type="suscipit",
+    upload_protocol="molestiae",
 )
     
-res = s.assets.cloudasset_assets_list(req)
+res = s.assets.cloudasset_assets_list(req, operations.CloudassetAssetsListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.list_assets_response is not None:
     # handle response

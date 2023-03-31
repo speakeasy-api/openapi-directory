@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateDispatchEventPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateDispatchEventRequestBody struct {
 	// JSON payload with extra information about the webhook event that your action or worklow may use.
 	ClientPayload map[string]interface{} `json:"client_payload,omitempty"`
@@ -22,8 +15,11 @@ type ReposCreateDispatchEventRequestBody struct {
 }
 
 type ReposCreateDispatchEventRequest struct {
-	PathParams ReposCreateDispatchEventPathParams
-	Request    ReposCreateDispatchEventRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateDispatchEventRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateDispatchEventResponse struct {

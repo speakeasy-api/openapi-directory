@@ -12,20 +12,15 @@ var CreateLinkshorteningMessagingServiceServerList = []string{
 }
 
 type CreateLinkshorteningMessagingServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type CreateLinkshorteningMessagingServicePathParams struct {
+type CreateLinkshorteningMessagingServiceRequest struct {
 	// The domain SID to associate with a messaging service. With URL shortening enabled, links in messages sent with the associated messaging service will be shortened to the provided domain
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A messaging service SID to associate with a domain. With URL shortening enabled, links in messages sent with the provided messaging service will be shortened to the associated domain
 	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
-}
-
-type CreateLinkshorteningMessagingServiceRequest struct {
-	PathParams CreateLinkshorteningMessagingServicePathParams
-	Security   CreateLinkshorteningMessagingServiceSecurity
-	ServerURL  *string
 }
 
 type CreateLinkshorteningMessagingServiceResponse struct {

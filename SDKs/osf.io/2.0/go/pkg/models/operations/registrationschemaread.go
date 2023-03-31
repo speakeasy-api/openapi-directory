@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RegistrationSchemaReadPathParams struct {
+type RegistrationSchemaReadRequest struct {
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	RegistrationSchemaID string `pathParam:"style=simple,explode=false,name=registration_schema_id"`
-}
-
-type RegistrationSchemaReadRequest struct {
-	PathParams RegistrationSchemaReadPathParams
 }
 
 // RegistrationSchemaReadRegistrationSchemaAttributes - The attributes of the Registration Schema.

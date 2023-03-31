@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeviceCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DeviceCreateTheH323SIPDeviceObjectEncryptionEnum - Device encryption:<br>`auto` - auto.<br>`yes` - yes.<br>`no` - no.
@@ -74,12 +73,6 @@ type DeviceCreateTheH323SIPDeviceObject struct {
 	Name string `json:"name" multipartForm:"name=name"`
 	// Device protocol:<br>`H.323` - H.323.<br>`SIP` - SIP.
 	Protocol DeviceCreateTheH323SIPDeviceObjectProtocolEnum `json:"protocol" multipartForm:"name=protocol"`
-}
-
-type DeviceCreateRequest struct {
-	// H.323/SIP device.
-	Request  DeviceCreateTheH323SIPDeviceObject `request:"mediaType=application/json"`
-	Security DeviceCreateSecurity
 }
 
 // DeviceCreateTheH323SIPDeviceObject1 - The H.323/SIP device object.

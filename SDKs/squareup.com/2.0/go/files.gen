@@ -248,7 +248,6 @@ pkg/models/operations/updateorder.go
 pkg/models/shared/registerdomainresponse.go
 pkg/models/shared/error.go
 pkg/models/shared/registerdomainrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/getbankaccountresponse.go
 pkg/models/shared/bankaccount.go
 pkg/models/shared/getbankaccountbyv1idresponse.go

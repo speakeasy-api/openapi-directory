@@ -4,14 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CollectNowRequest(
-    path_params=operations.CollectNowPathParams(
-        device_id=7415012023453953318,
-    ),
-    query_params=operations.CollectNowQueryParams(
-        monitor_class="velit",
-    ),
+    device_id=548814,
+    monitor_class="provident",
 )
     
 res = s.actions.collect_now(req)

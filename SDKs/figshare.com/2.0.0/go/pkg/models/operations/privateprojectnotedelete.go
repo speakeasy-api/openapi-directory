@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateProjectNoteDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateProjectNoteDeletePathParams struct {
+type PrivateProjectNoteDeleteRequest struct {
 	// Note unique identifier
 	NoteID int64 `pathParam:"style=simple,explode=false,name=note_id"`
 	// Project unique identifier
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type PrivateProjectNoteDeleteRequest struct {
-	PathParams PrivateProjectNoteDeletePathParams
-	Security   PrivateProjectNoteDeleteSecurity
 }
 
 type PrivateProjectNoteDeleteResponse struct {

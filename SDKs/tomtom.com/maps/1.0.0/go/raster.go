@@ -36,14 +36,14 @@ func newRaster(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // using either a center point plus width and height or a bounding box.
 func (s *raster) GetMapVersionNumberStaticimage(ctx context.Context, request operations.GetMapVersionNumberStaticimageRequest) (*operations.GetMapVersionNumberStaticimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/staticimage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/staticimage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,14 +84,14 @@ func (s *raster) GetMapVersionNumberStaticimage(ctx context.Context, request ope
 // The Maps API Raster Service delivers raster tiles, which are representations of square sections of map data.
 func (s *raster) GetMapVersionNumberTileLayerStyleZoomXYFormat(ctx context.Context, request operations.GetMapVersionNumberTileLayerStyleZoomXYFormatRequest) (*operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

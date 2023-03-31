@@ -100,7 +100,7 @@ func (e *GetCandidatesOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCandidatesQueryParams struct {
+type GetCandidatesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -168,10 +168,6 @@ type GetCandidatesQueryParams struct {
 	State []string `queryParam:"style=form,explode=true,name=state"`
 	// Retrieve records pertaining to a particular election year. The list of election years is based on a candidate filing a statement of candidacy (F2) for that year.
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCandidatesRequest struct {
-	QueryParams GetCandidatesQueryParams
 }
 
 type GetCandidatesResponse struct {

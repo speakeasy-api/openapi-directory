@@ -25,211 +25,146 @@ func main() {
     s := sdk.New()
 
     req := operations.MybusinessbusinessinformationAccountsLocationsCreateRequest{
-        PathParams: operations.MybusinessbusinessinformationAccountsLocationsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.MybusinessbusinessinformationAccountsLocationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            RequestID: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-            ValidateOnly: false,
-        },
-        Request: &shared.LocationInput{
+        DollarXgafv: "2",
+        LocationInput: &shared.LocationInput{
             AdWordsLocationExtensions: &shared.AdWordsLocationExtensions{
-                AdPhone: "iure",
+                AdPhone: "provident",
             },
             Categories: &shared.CategoriesInput{
                 AdditionalCategories: []shared.CategoryInput{
                     shared.CategoryInput{
-                        Name: "debitis",
+                        Name: "quibusdam",
                     },
                     shared.CategoryInput{
-                        Name: "ipsa",
+                        Name: "unde",
+                    },
+                    shared.CategoryInput{
+                        Name: "nulla",
                     },
                 },
                 PrimaryCategory: &shared.CategoryInput{
-                    Name: "delectus",
+                    Name: "corrupti",
                 },
             },
             Labels: []string{
+                "vel",
+                "error",
+                "deserunt",
                 "suscipit",
-                "molestiae",
             },
-            LanguageCode: "minus",
+            LanguageCode: "iure",
             Latlng: &shared.LatLng{
-                Latitude: 8121.69,
-                Longitude: 5288.95,
+                Latitude: 2975.34,
+                Longitude: 8917.73,
             },
             MoreHours: []shared.MoreHours{
                 shared.MoreHours{
-                    HoursTypeID: "excepturi",
+                    HoursTypeID: "delectus",
                     Periods: []shared.TimePeriod{
-                        shared.TimePeriod{
-                            CloseDay: "SUNDAY",
-                            CloseTime: &shared.TimeOfDay{
-                                Hours: 836079,
-                                Minutes: 71036,
-                                Nanos: 337396,
-                                Seconds: 87129,
-                            },
-                            OpenDay: "FRIDAY",
-                            OpenTime: &shared.TimeOfDay{
-                                Hours: 20218,
-                                Minutes: 368241,
-                                Nanos: 832620,
-                                Seconds: 957156,
-                            },
-                        },
-                        shared.TimePeriod{
-                            CloseDay: "SATURDAY",
-                            CloseTime: &shared.TimeOfDay{
-                                Hours: 140350,
-                                Minutes: 870013,
-                                Nanos: 870088,
-                                Seconds: 978619,
-                            },
-                            OpenDay: "WEDNESDAY",
-                            OpenTime: &shared.TimeOfDay{
-                                Hours: 799159,
-                                Minutes: 800911,
-                                Nanos: 461479,
-                                Seconds: 520478,
-                            },
-                        },
-                    },
-                },
-                shared.MoreHours{
-                    HoursTypeID: "porro",
-                    Periods: []shared.TimePeriod{
-                        shared.TimePeriod{
-                            CloseDay: "DAY_OF_WEEK_UNSPECIFIED",
-                            CloseTime: &shared.TimeOfDay{
-                                Hours: 720633,
-                                Minutes: 639921,
-                                Nanos: 582020,
-                                Seconds: 143353,
-                            },
-                            OpenDay: "THURSDAY",
-                            OpenTime: &shared.TimeOfDay{
-                                Hours: 944669,
-                                Minutes: 758616,
-                                Nanos: 521848,
-                                Seconds: 105907,
-                            },
-                        },
                         shared.TimePeriod{
                             CloseDay: "WEDNESDAY",
                             CloseTime: &shared.TimeOfDay{
-                                Hours: 473600,
-                                Minutes: 264555,
-                                Nanos: 186332,
-                                Seconds: 774234,
+                                Hours: 477665,
+                                Minutes: 791725,
+                                Nanos: 812169,
+                                Seconds: 528895,
                             },
-                            OpenDay: "FRIDAY",
+                            OpenDay: "WEDNESDAY",
                             OpenTime: &shared.TimeOfDay{
-                                Hours: 456150,
-                                Minutes: 216550,
-                                Nanos: 568434,
-                                Seconds: 135218,
+                                Hours: 568045,
+                                Minutes: 392785,
+                                Nanos: 925597,
+                                Seconds: 836079,
                             },
                         },
                         shared.TimePeriod{
                             CloseDay: "DAY_OF_WEEK_UNSPECIFIED",
                             CloseTime: &shared.TimeOfDay{
-                                Hours: 324141,
-                                Minutes: 617636,
-                                Nanos: 149675,
-                                Seconds: 612096,
+                                Hours: 337396,
+                                Minutes: 87129,
+                                Nanos: 648172,
+                                Seconds: 20218,
                             },
-                            OpenDay: "MONDAY",
+                            OpenDay: "TUESDAY",
                             OpenTime: &shared.TimeOfDay{
-                                Hours: 616934,
-                                Minutes: 386489,
-                                Nanos: 943749,
-                                Seconds: 902599,
+                                Hours: 832620,
+                                Minutes: 957156,
+                                Nanos: 778157,
+                                Seconds: 140350,
                             },
                         },
                     },
                 },
             },
-            Name: "fuga",
+            Name: "at",
             OpenInfo: &shared.OpenInfoInput{
                 OpeningDate: &shared.Date{
-                    Day: 449950,
-                    Month: 359508,
-                    Year: 613064,
+                    Day: 870088,
+                    Month: 978619,
+                    Year: 473608,
                 },
-                Status: "OPEN",
+                Status: "CLOSED_TEMPORARILY",
             },
             PhoneNumbers: &shared.PhoneNumbers{
                 AdditionalPhones: []string{
-                    "quidem",
-                    "architecto",
-                    "ipsa",
-                    "reiciendis",
+                    "esse",
+                    "totam",
+                    "porro",
+                    "dolorum",
                 },
-                PrimaryPhone: "est",
+                PrimaryPhone: "dicta",
             },
             Profile: &shared.Profile{
-                Description: "mollitia",
+                Description: "nam",
             },
             RegularHours: &shared.BusinessHours{
                 Periods: []shared.TimePeriod{
                     shared.TimePeriod{
+                        CloseDay: "THURSDAY",
+                        CloseTime: &shared.TimeOfDay{
+                            Hours: 143353,
+                            Minutes: 537373,
+                            Nanos: 944669,
+                            Seconds: 758616,
+                        },
+                        OpenDay: "THURSDAY",
+                        OpenTime: &shared.TimeOfDay{
+                            Hours: 105907,
+                            Minutes: 414662,
+                            Nanos: 473600,
+                            Seconds: 264555,
+                        },
+                    },
+                    shared.TimePeriod{
                         CloseDay: "MONDAY",
                         CloseTime: &shared.TimeOfDay{
-                            Hours: 210382,
-                            Minutes: 358152,
-                            Nanos: 128926,
-                            Seconds: 750686,
+                            Hours: 774234,
+                            Minutes: 736918,
+                            Nanos: 456150,
+                            Seconds: 216550,
                         },
-                        OpenDay: "TUESDAY",
+                        OpenDay: "THURSDAY",
                         OpenTime: &shared.TimeOfDay{
-                            Hours: 607831,
-                            Minutes: 363711,
-                            Nanos: 325047,
-                            Seconds: 570197,
+                            Hours: 135218,
+                            Minutes: 18789,
+                            Nanos: 324141,
+                            Seconds: 617636,
                         },
                     },
                     shared.TimePeriod{
-                        CloseDay: "DAY_OF_WEEK_UNSPECIFIED",
+                        CloseDay: "MONDAY",
                         CloseTime: &shared.TimeOfDay{
-                            Hours: 438601,
-                            Minutes: 634274,
-                            Nanos: 988374,
-                            Seconds: 958950,
+                            Hours: 612096,
+                            Minutes: 222321,
+                            Nanos: 616934,
+                            Seconds: 386489,
                         },
-                        OpenDay: "DAY_OF_WEEK_UNSPECIFIED",
+                        OpenDay: "SUNDAY",
                         OpenTime: &shared.TimeOfDay{
-                            Hours: 652790,
-                            Minutes: 208876,
-                            Nanos: 635059,
-                            Seconds: 161309,
-                        },
-                    },
-                    shared.TimePeriod{
-                        CloseDay: "SUNDAY",
-                        CloseTime: &shared.TimeOfDay{
-                            Hours: 653108,
-                            Minutes: 581850,
-                            Nanos: 253291,
-                            Seconds: 414369,
-                        },
-                        OpenDay: "WEDNESDAY",
-                        OpenTime: &shared.TimeOfDay{
-                            Hours: 474697,
-                            Minutes: 244425,
-                            Nanos: 623510,
-                            Seconds: 158969,
+                            Hours: 902599,
+                            Minutes: 681820,
+                            Nanos: 449950,
+                            Seconds: 359508,
                         },
                     },
                 },
@@ -237,111 +172,73 @@ func main() {
             RelationshipData: &shared.RelationshipData{
                 ChildrenLocations: []shared.RelevantLocation{
                     shared.RelevantLocation{
-                        PlaceID: "vitae",
+                        PlaceID: "iure",
                         RelationType: "INDEPENDENT_ESTABLISHMENT_IN",
                     },
                     shared.RelevantLocation{
-                        PlaceID: "animi",
+                        PlaceID: "quidem",
                         RelationType: "RELATION_TYPE_UNSPECIFIED",
                     },
+                    shared.RelevantLocation{
+                        PlaceID: "ipsa",
+                        RelationType: "INDEPENDENT_ESTABLISHMENT_IN",
+                    },
                 },
-                ParentChain: "odit",
+                ParentChain: "est",
                 ParentLocation: &shared.RelevantLocation{
-                    PlaceID: "quo",
-                    RelationType: "RELATION_TYPE_UNSPECIFIED",
+                    PlaceID: "mollitia",
+                    RelationType: "INDEPENDENT_ESTABLISHMENT_IN",
                 },
             },
             ServiceArea: &shared.ServiceAreaBusiness{
-                BusinessType: "CUSTOMER_AND_BUSINESS_LOCATION",
+                BusinessType: "BUSINESS_TYPE_UNSPECIFIED",
                 Places: &shared.Places{
                     PlaceInfos: []shared.PlaceInfo{
                         shared.PlaceInfo{
-                            PlaceID: "id",
-                            PlaceName: "possimus",
-                        },
-                        shared.PlaceInfo{
-                            PlaceID: "aut",
-                            PlaceName: "quasi",
+                            PlaceID: "corporis",
+                            PlaceName: "explicabo",
                         },
                     },
                 },
-                RegionCode: "error",
+                RegionCode: "nobis",
             },
             ServiceItems: []shared.ServiceItem{
                 shared.ServiceItem{
                     FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "laborum",
-                        Label: &shared.Label{
-                            Description: "quasi",
-                            DisplayName: "reiciendis",
-                            LanguageCode: "voluptatibus",
-                        },
-                    },
-                    Price: &shared.Money{
-                        CurrencyCode: "vero",
-                        Nanos: 468651,
-                        Units: "praesentium",
-                    },
-                    StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "voluptatibus",
-                        ServiceTypeID: "ipsa",
-                    },
-                },
-                shared.ServiceItem{
-                    FreeFormServiceItem: &shared.FreeFormServiceItem{
                         Category: "omnis",
                         Label: &shared.Label{
-                            Description: "voluptate",
-                            DisplayName: "cum",
-                            LanguageCode: "perferendis",
+                            Description: "nemo",
+                            DisplayName: "minima",
+                            LanguageCode: "excepturi",
                         },
                     },
                     Price: &shared.Money{
-                        CurrencyCode: "doloremque",
-                        Nanos: 441711,
-                        Units: "ut",
+                        CurrencyCode: "accusantium",
+                        Nanos: 438601,
+                        Units: "culpa",
                     },
                     StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "maiores",
-                        ServiceTypeID: "dicta",
+                        Description: "doloribus",
+                        ServiceTypeID: "sapiente",
                     },
                 },
                 shared.ServiceItem{
                     FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "corporis",
+                        Category: "architecto",
                         Label: &shared.Label{
-                            Description: "dolore",
-                            DisplayName: "iusto",
-                            LanguageCode: "dicta",
+                            Description: "mollitia",
+                            DisplayName: "dolorem",
+                            LanguageCode: "culpa",
                         },
                     },
                     Price: &shared.Money{
-                        CurrencyCode: "harum",
-                        Nanos: 317983,
-                        Units: "accusamus",
+                        CurrencyCode: "consequuntur",
+                        Nanos: 995300,
+                        Units: "mollitia",
                     },
                     StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "commodi",
-                        ServiceTypeID: "repudiandae",
-                    },
-                },
-                shared.ServiceItem{
-                    FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "quae",
-                        Label: &shared.Label{
-                            Description: "ipsum",
-                            DisplayName: "quidem",
-                            LanguageCode: "molestias",
-                        },
-                    },
-                    Price: &shared.Money{
-                        CurrencyCode: "excepturi",
-                        Nanos: 865103,
-                        Units: "modi",
-                    },
-                    StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "praesentium",
-                        ServiceTypeID: "rem",
+                        Description: "occaecati",
+                        ServiceTypeID: "numquam",
                     },
                 },
             },
@@ -349,131 +246,91 @@ func main() {
                 SpecialHourPeriods: []shared.SpecialHourPeriod{
                     shared.SpecialHourPeriod{
                         CloseTime: &shared.TimeOfDay{
-                            Hours: 93940,
-                            Minutes: 921158,
-                            Nanos: 575947,
-                            Seconds: 83112,
+                            Hours: 466311,
+                            Minutes: 474697,
+                            Nanos: 244425,
+                            Seconds: 623510,
                         },
                         Closed: false,
                         EndDate: &shared.Date{
-                            Day: 929297,
-                            Month: 277718,
-                            Year: 318569,
+                            Day: 158969,
+                            Month: 338007,
+                            Year: 110375,
                         },
                         OpenTime: &shared.TimeOfDay{
-                            Hours: 9356,
-                            Minutes: 667411,
-                            Nanos: 842342,
-                            Seconds: 131797,
+                            Hours: 674752,
+                            Minutes: 656330,
+                            Nanos: 317202,
+                            Seconds: 138183,
                         },
                         StartDate: &shared.Date{
-                            Day: 647174,
-                            Month: 716327,
-                            Year: 841386,
+                            Day: 778346,
+                            Month: 196582,
+                            Year: 949572,
                         },
                     },
                     shared.SpecialHourPeriod{
                         CloseTime: &shared.TimeOfDay{
-                            Hours: 289406,
-                            Minutes: 264730,
-                            Nanos: 183191,
-                            Seconds: 397821,
+                            Hours: 368725,
+                            Minutes: 662527,
+                            Nanos: 820994,
+                            Seconds: 13571,
                         },
                         Closed: false,
                         EndDate: &shared.Date{
-                            Day: 586513,
-                            Month: 552822,
-                            Year: 20107,
+                            Day: 97101,
+                            Month: 622846,
+                            Year: 837945,
                         },
                         OpenTime: &shared.TimeOfDay{
-                            Hours: 164940,
-                            Minutes: 828940,
-                            Nanos: 369808,
-                            Seconds: 4695,
+                            Hours: 673660,
+                            Minutes: 96098,
+                            Nanos: 971945,
+                            Seconds: 976460,
                         },
                         StartDate: &shared.Date{
-                            Day: 146441,
-                            Month: 677817,
-                            Year: 569618,
-                        },
-                    },
-                    shared.SpecialHourPeriod{
-                        CloseTime: &shared.TimeOfDay{
-                            Hours: 270008,
-                            Minutes: 703737,
-                            Nanos: 735194,
-                            Seconds: 288476,
-                        },
-                        Closed: false,
-                        EndDate: &shared.Date{
-                            Day: 962189,
-                            Month: 433288,
-                            Year: 248753,
-                        },
-                        OpenTime: &shared.TimeOfDay{
-                            Hours: 756107,
-                            Minutes: 576157,
-                            Nanos: 396098,
-                            Seconds: 592042,
-                        },
-                        StartDate: &shared.Date{
-                            Day: 896039,
-                            Month: 572252,
-                            Year: 638921,
-                        },
-                    },
-                    shared.SpecialHourPeriod{
-                        CloseTime: &shared.TimeOfDay{
-                            Hours: 223081,
-                            Minutes: 891555,
-                            Nanos: 952749,
-                            Seconds: 680056,
-                        },
-                        Closed: false,
-                        EndDate: &shared.Date{
-                            Day: 447125,
-                            Month: 449198,
-                            Year: 846409,
-                        },
-                        OpenTime: &shared.TimeOfDay{
-                            Hours: 978571,
-                            Minutes: 699479,
-                            Nanos: 116202,
-                            Seconds: 297437,
-                        },
-                        StartDate: &shared.Date{
-                            Day: 767024,
-                            Month: 813798,
-                            Year: 411820,
+                            Day: 878194,
+                            Month: 468651,
+                            Year: 509624,
                         },
                     },
                 },
             },
-            StoreCode: "aliquid",
+            StoreCode: "voluptatibus",
             StorefrontAddress: &shared.PostalAddress{
                 AddressLines: []string{
-                    "accusamus",
-                    "non",
-                    "occaecati",
-                },
-                AdministrativeArea: "enim",
-                LanguageCode: "accusamus",
-                Locality: "delectus",
-                Organization: "quidem",
-                PostalCode: "76559-2634",
-                Recipients: []string{
                     "omnis",
-                    "molestiae",
-                    "perferendis",
                 },
-                RegionCode: "nihil",
-                Revision: 301575,
-                SortingCode: "distinctio",
-                Sublocality: "id",
+                AdministrativeArea: "voluptate",
+                LanguageCode: "cum",
+                Locality: "perferendis",
+                Organization: "doloremque",
+                PostalCode: "29132",
+                Recipients: []string{
+                    "dicta",
+                    "harum",
+                },
+                RegionCode: "enim",
+                Revision: 880476,
+                SortingCode: "commodi",
+                Sublocality: "repudiandae",
             },
-            Title: "Mrs.",
-            WebsiteURI: "labore",
+            Title: "Mr.",
+            WebsiteURI: "ipsum",
         },
+        AccessToken: "quidem",
+        Alt: "media",
+        Callback: "excepturi",
+        Fields: "pariatur",
+        Key: "modi",
+        OauthToken: "praesentium",
+        Parent: "rem",
+        PrettyPrint: false,
+        QuotaUser: "voluptates",
+        RequestID: "quasi",
+        UploadType: "repudiandae",
+        UploadProtocol: "sint",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
@@ -490,7 +347,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Accounts
@@ -525,4 +382,15 @@ func main() {
 * `MybusinessbusinessinformationLocationsUpdateAttributes` - Update attributes for a given location.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

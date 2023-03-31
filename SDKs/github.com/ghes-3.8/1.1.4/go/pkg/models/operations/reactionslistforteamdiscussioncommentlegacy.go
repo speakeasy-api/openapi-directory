@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionCommentLegacyPathParams struct {
-	// The number that identifies the comment.
-	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsListForTeamDiscussionCommentLegacyContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.8/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 type ReactionsListForTeamDiscussionCommentLegacyContentEnum string
 
@@ -60,18 +51,19 @@ func (e *ReactionsListForTeamDiscussionCommentLegacyContentEnum) UnmarshalJSON(d
 	}
 }
 
-type ReactionsListForTeamDiscussionCommentLegacyQueryParams struct {
+type ReactionsListForTeamDiscussionCommentLegacyRequest struct {
+	// The number that identifies the comment.
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.8/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 	Content *ReactionsListForTeamDiscussionCommentLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionCommentLegacyRequest struct {
-	PathParams  ReactionsListForTeamDiscussionCommentLegacyPathParams
-	QueryParams ReactionsListForTeamDiscussionCommentLegacyQueryParams
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsListForTeamDiscussionCommentLegacyResponse struct {

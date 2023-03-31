@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AppendTextUsingGETQueryParams struct {
+type AppendTextUsingGETRequest struct {
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 	Text  *string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type AppendTextUsingGETRequest struct {
-	QueryParams AppendTextUsingGETQueryParams
 }
 
 // AppendTextUsingGET500ApplicationJSON - internal api error (code 2)

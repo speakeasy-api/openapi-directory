@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetPreferredPathParams struct {
+type SetPreferredRequest struct {
+	// Marked report as preferred or not.
+	PreferredRequestDTO shared.PreferredRequestDTO `request:"mediaType=application/json"`
 	// report's internal identifier
 	ReportID int64 `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type SetPreferredRequest struct {
-	PathParams SetPreferredPathParams
-	// Marked report as preferred or not.
-	Request shared.PreferredRequestDTO `request:"mediaType=application/json"`
 }
 
 type SetPreferredResponse struct {

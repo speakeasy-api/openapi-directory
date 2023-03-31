@@ -94,16 +94,16 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // GETMostemailedSectionTimePeriodJSON - Most Emailed by Section & Time Period
-func (s *SDK) GETMostemailedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostemailedSectionTimePeriodJSONRequest) (*operations.GETMostemailedSectionTimePeriodJSONResponse, error) {
+func (s *SDK) GETMostemailedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostemailedSectionTimePeriodJSONRequest, security operations.GETMostemailedSectionTimePeriodJSONSecurity) (*operations.GETMostemailedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostemailed/{section}/{time-period}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mostemailed/{section}/{time-period}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,16 +179,16 @@ func (s *SDK) GETMostemailedSectionTimePeriodJSON(ctx context.Context, request o
 }
 
 // GETMostsharedSectionTimePeriodJSON - Most Shared by Section & Time Period
-func (s *SDK) GETMostsharedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostsharedSectionTimePeriodJSONRequest) (*operations.GETMostsharedSectionTimePeriodJSONResponse, error) {
+func (s *SDK) GETMostsharedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostsharedSectionTimePeriodJSONRequest, security operations.GETMostsharedSectionTimePeriodJSONSecurity) (*operations.GETMostsharedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostshared/{section}/{time-period}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mostshared/{section}/{time-period}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,16 +233,16 @@ func (s *SDK) GETMostsharedSectionTimePeriodJSON(ctx context.Context, request op
 }
 
 // GETMostviewedSectionTimePeriodJSON - Most Viewed by Section & Time Period
-func (s *SDK) GETMostviewedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostviewedSectionTimePeriodJSONRequest) (*operations.GETMostviewedSectionTimePeriodJSONResponse, error) {
+func (s *SDK) GETMostviewedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostviewedSectionTimePeriodJSONRequest, security operations.GETMostviewedSectionTimePeriodJSONSecurity) (*operations.GETMostviewedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostviewed/{section}/{time-period}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mostviewed/{section}/{time-period}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

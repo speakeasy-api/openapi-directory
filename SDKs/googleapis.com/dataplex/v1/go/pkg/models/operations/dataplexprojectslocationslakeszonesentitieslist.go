@@ -10,13 +10,8 @@ import (
 )
 
 type DataplexProjectsLocationsLakesZonesEntitiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesListPathParams struct {
-	// Required. The resource name of the parent zone: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DataplexProjectsLocationsLakesZonesEntitiesListViewEnum - Required. Specify the entity view to make a partial list request.
@@ -46,7 +41,7 @@ func (e *DataplexProjectsLocationsLakesZonesEntitiesListViewEnum) UnmarshalJSON(
 	}
 }
 
-type DataplexProjectsLocationsLakesZonesEntitiesListQueryParams struct {
+type DataplexProjectsLocationsLakesZonesEntitiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,6 +62,8 @@ type DataplexProjectsLocationsLakesZonesEntitiesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token received from a previous ListEntities call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListEntities must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the parent zone: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -77,12 +74,6 @@ type DataplexProjectsLocationsLakesZonesEntitiesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Specify the entity view to make a partial list request.
 	View *DataplexProjectsLocationsLakesZonesEntitiesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesListRequest struct {
-	PathParams  DataplexProjectsLocationsLakesZonesEntitiesListPathParams
-	QueryParams DataplexProjectsLocationsLakesZonesEntitiesListQueryParams
-	Security    DataplexProjectsLocationsLakesZonesEntitiesListSecurity
 }
 
 type DataplexProjectsLocationsLakesZonesEntitiesListResponse struct {

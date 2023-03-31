@@ -12,18 +12,13 @@ var FetchSinkServerList = []string{
 }
 
 type FetchSinkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSinkPathParams struct {
-	// A 34 character string that uniquely identifies this Sink.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSinkRequest struct {
-	PathParams FetchSinkPathParams
-	Security   FetchSinkSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this Sink.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSinkResponse struct {

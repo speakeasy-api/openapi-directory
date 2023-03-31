@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CreateAuthorIfNotExistsForUsingGETQueryParams struct {
+type CreateAuthorIfNotExistsForUsingGETRequest struct {
 	AuthorMapper *string `queryParam:"style=form,explode=true,name=authorMapper"`
 	Name         *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type CreateAuthorIfNotExistsForUsingGETRequest struct {
-	QueryParams CreateAuthorIfNotExistsForUsingGETQueryParams
 }
 
 // CreateAuthorIfNotExistsForUsingGET500ApplicationJSON - internal api error (code 2)

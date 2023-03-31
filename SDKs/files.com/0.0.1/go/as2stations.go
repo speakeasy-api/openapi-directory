@@ -37,7 +37,7 @@ func newAs2Stations(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete As2 Station
 func (s *as2Stations) DeleteAs2StationsID(ctx context.Context, request operations.DeleteAs2StationsIDRequest) (*operations.DeleteAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *as2Stations) GetAs2Stations(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *as2Stations) GetAs2Stations(ctx context.Context, request operations.Get
 // Show As2 Station
 func (s *as2Stations) GetAs2StationsID(ctx context.Context, request operations.GetAs2StationsIDRequest) (*operations.GetAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *as2Stations) GetAs2StationsID(ctx context.Context, request operations.G
 // Update As2 Station
 func (s *as2Stations) PatchAs2StationsID(ctx context.Context, request operations.PatchAs2StationsIDRequest) (*operations.PatchAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *as2Stations) PatchAs2StationsID(ctx context.Context, request operations
 
 // PostAs2Stations - Create As2 Station
 // Create As2 Station
-func (s *as2Stations) PostAs2Stations(ctx context.Context, request operations.PostAs2StationsRequest) (*operations.PostAs2StationsResponse, error) {
+func (s *as2Stations) PostAs2Stations(ctx context.Context, request operations.PostAs2StationsRequestBody) (*operations.PostAs2StationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/as2_stations"
 

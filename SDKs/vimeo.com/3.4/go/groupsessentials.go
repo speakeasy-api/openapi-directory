@@ -33,7 +33,7 @@ func newGroupsEssentials(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // CreateGroup - Create a group
-func (s *groupsEssentials) CreateGroup(ctx context.Context, request operations.CreateGroupRequest) (*operations.CreateGroupResponse, error) {
+func (s *groupsEssentials) CreateGroup(ctx context.Context, request operations.CreateGroupRequestBody, security operations.CreateGroupSecurity) (*operations.CreateGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -52,7 +52,7 @@ func (s *groupsEssentials) CreateGroup(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,16 +99,16 @@ func (s *groupsEssentials) CreateGroup(ctx context.Context, request operations.C
 }
 
 // DeleteGroup - Delete a group
-func (s *groupsEssentials) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest) (*operations.DeleteGroupResponse, error) {
+func (s *groupsEssentials) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest, security operations.DeleteGroupSecurity) (*operations.DeleteGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *groupsEssentials) DeleteGroup(ctx context.Context, request operations.D
 // GetGroup - Get a specific group
 func (s *groupsEssentials) GetGroup(ctx context.Context, request operations.GetGroupRequest) (*operations.GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *groupsEssentials) GetGroups(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

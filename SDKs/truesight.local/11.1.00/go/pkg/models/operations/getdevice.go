@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDevicePathParams struct {
+type GetDeviceRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type GetDeviceRequest struct {
-	PathParams GetDevicePathParams
 }
 
 type GetDeviceResponse struct {

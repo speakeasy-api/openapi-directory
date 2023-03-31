@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DashboardMeetingDetailSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardMeetingDetailPathParams struct {
-	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardMeetingDetailTypeEnum - The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
@@ -48,15 +40,13 @@ func (e *DashboardMeetingDetailTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DashboardMeetingDetailQueryParams struct {
+type DashboardMeetingDetailRequest struct {
+	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
 	// The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
 	Type *DashboardMeetingDetailTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardMeetingDetailRequest struct {
-	PathParams  DashboardMeetingDetailPathParams
-	QueryParams DashboardMeetingDetailQueryParams
-	Security    DashboardMeetingDetailSecurity
 }
 
 type DashboardMeetingDetailMeetingMetricsCustomKeys struct {

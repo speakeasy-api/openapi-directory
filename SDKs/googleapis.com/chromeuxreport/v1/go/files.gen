@@ -23,8 +23,8 @@ pkg/models/shared/timeseriesbin.go
 pkg/models/shared/historykey.go
 pkg/models/shared/collectionperiod.go
 pkg/models/shared/date.go
-pkg/models/shared/queryhistoryrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/queryhistoryrequest.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/queryresponse.go
 pkg/models/shared/record.go

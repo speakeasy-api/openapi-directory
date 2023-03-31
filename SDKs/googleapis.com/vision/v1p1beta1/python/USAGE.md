@@ -4,106 +4,94 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VisionFilesAnnotateRequest(
-    security=operations.VisionFilesAnnotateSecurity(
-        option1=operations.VisionFilesAnnotateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.VisionFilesAnnotateQueryParams(
-        dollar_xgafv="1",
-        access_token="eius",
-        alt="proto",
-        callback="minus",
-        fields="esse",
-        key="autem",
-        oauth_token="rerum",
-        pretty_print=True,
-        quota_user="laboriosam",
-        upload_type="sint",
-        upload_protocol="nisi",
-    ),
-    request=shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest(
-        parent="recusandae",
+    dollar_xgafv="2",
+    google_cloud_vision_v1p1beta1_batch_annotate_files_request=shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest(
+        parent="provident",
         requests=[
             shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest(
                 features=[
                     shared.GoogleCloudVisionV1p1beta1Feature(
-                        max_results=3971315781086113626,
-                        model="esse",
-                        type="CROP_HINTS",
+                        max_results=602763,
+                        model="nulla",
+                        type="SAFE_SEARCH_DETECTION",
                     ),
                     shared.GoogleCloudVisionV1p1beta1Feature(
-                        max_results=3280961666086257703,
-                        model="dolore",
-                        type="PRODUCT_SEARCH",
+                        max_results=847252,
+                        model="vel",
+                        type="IMAGE_PROPERTIES",
                     ),
                     shared.GoogleCloudVisionV1p1beta1Feature(
-                        max_results=2168295586647050175,
-                        model="reprehenderit",
-                        type="LOGO_DETECTION",
+                        max_results=645894,
+                        model="suscipit",
+                        type="TEXT_DETECTION",
+                    ),
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=297534,
+                        model="debitis",
+                        type="TYPE_UNSPECIFIED",
                     ),
                 ],
                 image_context=shared.GoogleCloudVisionV1p1beta1ImageContext(
                     crop_hints_params=shared.GoogleCloudVisionV1p1beta1CropHintsParams(
                         aspect_ratios=[
-                            33.200001,
-                            24.200001,
-                            19.200001,
+                            2726.56,
+                            3834.41,
+                            4776.65,
+                            7917.25,
                         ],
                     ),
                     language_hints=[
-                        "ducimus",
-                        "quam",
-                        "voluptas",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
+                        "nisi",
                     ],
                     lat_long_rect=shared.GoogleCloudVisionV1p1beta1LatLongRect(
                         max_lat_lng=shared.LatLng(
-                            latitude=66.099998,
-                            longitude=11.100000,
+                            latitude=9255.97,
+                            longitude=8360.79,
                         ),
                         min_lat_lng=shared.LatLng(
-                            latitude=97.099998,
-                            longitude=99.199997,
+                            latitude=710.36,
+                            longitude=3373.96,
                         ),
                     ),
                     product_search_params=shared.GoogleCloudVisionV1p1beta1ProductSearchParams(
                         bounding_poly=shared.GoogleCloudVisionV1p1beta1BoundingPoly(
                             normalized_vertices=[
                                 shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
-                                    x=73.199997,
-                                    y=20.200001,
+                                    x=6481.72,
+                                    y=202.18,
                                 ),
                             ],
                             vertices=[
                                 shared.GoogleCloudVisionV1p1beta1Vertex(
-                                    x=4811534959094338657,
-                                    y=8138503825895719319,
+                                    x=832620,
+                                    y=957156,
                                 ),
                                 shared.GoogleCloudVisionV1p1beta1Vertex(
-                                    x=3370215413715443786,
-                                    y=894693224882232375,
+                                    x=778157,
+                                    y=140350,
                                 ),
                             ],
                         ),
-                        filter="enim",
+                        filter="at",
                         product_categories=[
-                            "voluptatem",
-                            "et",
+                            "maiores",
+                            "molestiae",
+                            "quod",
+                            "quod",
                         ],
-                        product_set="quia",
+                        product_set="esse",
                     ),
                     text_detection_params=shared.GoogleCloudVisionV1p1beta1TextDetectionParams(
                         advanced_ocr_options=[
-                            "omnis",
-                            "libero",
-                            "eum",
+                            "porro",
+                            "dolorum",
+                            "dicta",
                         ],
                         enable_text_detection_confidence_score=False,
                     ),
@@ -112,21 +100,231 @@ req = operations.VisionFilesAnnotateRequest(
                     ),
                 ),
                 input_config=shared.GoogleCloudVisionV1p1beta1InputConfig(
-                    content="est",
+                    content="nam",
                     gcs_source=shared.GoogleCloudVisionV1p1beta1GcsSource(
-                        uri="soluta",
+                        uri="https://oily-cephalopod.name",
                     ),
-                    mime_type="consequatur",
+                    mime_type="hic",
                 ),
                 pages=[
-                    888600988671988232,
+                    521848,
+                    105907,
+                    414662,
+                    473600,
+                ],
+            ),
+            shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest(
+                features=[
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=186332,
+                        model="impedit",
+                        type="CROP_HINTS",
+                    ),
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=456150,
+                        model="ipsum",
+                        type="SAFE_SEARCH_DETECTION",
+                    ),
+                ],
+                image_context=shared.GoogleCloudVisionV1p1beta1ImageContext(
+                    crop_hints_params=shared.GoogleCloudVisionV1p1beta1CropHintsParams(
+                        aspect_ratios=[
+                            187.89,
+                        ],
+                    ),
+                    language_hints=[
+                        "natus",
+                        "sed",
+                    ],
+                    lat_long_rect=shared.GoogleCloudVisionV1p1beta1LatLongRect(
+                        max_lat_lng=shared.LatLng(
+                            latitude=6120.96,
+                            longitude=2223.21,
+                        ),
+                        min_lat_lng=shared.LatLng(
+                            latitude=6169.34,
+                            longitude=3864.89,
+                        ),
+                    ),
+                    product_search_params=shared.GoogleCloudVisionV1p1beta1ProductSearchParams(
+                        bounding_poly=shared.GoogleCloudVisionV1p1beta1BoundingPoly(
+                            normalized_vertices=[
+                                shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
+                                    x=9025.99,
+                                    y=6818.2,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
+                                    x=4499.5,
+                                    y=3595.08,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
+                                    x=6130.64,
+                                    y=4370.32,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
+                                    x=9023.49,
+                                    y=6976.31,
+                                ),
+                            ],
+                            vertices=[
+                                shared.GoogleCloudVisionV1p1beta1Vertex(
+                                    x=60225,
+                                    y=969810,
+                                ),
+                            ],
+                        ),
+                        filter="est",
+                        product_categories=[
+                            "laborum",
+                            "dolores",
+                            "dolorem",
+                        ],
+                        product_set="corporis",
+                    ),
+                    text_detection_params=shared.GoogleCloudVisionV1p1beta1TextDetectionParams(
+                        advanced_ocr_options=[
+                            "nobis",
+                        ],
+                        enable_text_detection_confidence_score=False,
+                    ),
+                    web_detection_params=shared.GoogleCloudVisionV1p1beta1WebDetectionParams(
+                        include_geo_results=False,
+                    ),
+                ),
+                input_config=shared.GoogleCloudVisionV1p1beta1InputConfig(
+                    content="enim",
+                    gcs_source=shared.GoogleCloudVisionV1p1beta1GcsSource(
+                        uri="https://gummy-expedition.name",
+                    ),
+                    mime_type="accusantium",
+                ),
+                pages=[
+                    634274,
+                    988374,
+                ],
+            ),
+            shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest(
+                features=[
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=102044,
+                        model="mollitia",
+                        type="LANDMARK_DETECTION",
+                    ),
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=635059,
+                        model="consequuntur",
+                        type="OBJECT_LOCALIZATION",
+                    ),
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=653108,
+                        model="occaecati",
+                        type="LOGO_DETECTION",
+                    ),
+                    shared.GoogleCloudVisionV1p1beta1Feature(
+                        max_results=414369,
+                        model="quam",
+                        type="DOCUMENT_TEXT_DETECTION",
+                    ),
+                ],
+                image_context=shared.GoogleCloudVisionV1p1beta1ImageContext(
+                    crop_hints_params=shared.GoogleCloudVisionV1p1beta1CropHintsParams(
+                        aspect_ratios=[
+                            6235.1,
+                        ],
+                    ),
+                    language_hints=[
+                        "quis",
+                    ],
+                    lat_long_rect=shared.GoogleCloudVisionV1p1beta1LatLongRect(
+                        max_lat_lng=shared.LatLng(
+                            latitude=1103.75,
+                            longitude=6747.52,
+                        ),
+                        min_lat_lng=shared.LatLng(
+                            latitude=6563.3,
+                            longitude=3172.02,
+                        ),
+                    ),
+                    product_search_params=shared.GoogleCloudVisionV1p1beta1ProductSearchParams(
+                        bounding_poly=shared.GoogleCloudVisionV1p1beta1BoundingPoly(
+                            normalized_vertices=[
+                                shared.GoogleCloudVisionV1p1beta1NormalizedVertex(
+                                    x=7783.46,
+                                    y=1965.82,
+                                ),
+                            ],
+                            vertices=[
+                                shared.GoogleCloudVisionV1p1beta1Vertex(
+                                    x=368725,
+                                    y=662527,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1Vertex(
+                                    x=820994,
+                                    y=13571,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1Vertex(
+                                    x=97101,
+                                    y=622846,
+                                ),
+                                shared.GoogleCloudVisionV1p1beta1Vertex(
+                                    x=837945,
+                                    y=673660,
+                                ),
+                            ],
+                        ),
+                        filter="quasi",
+                        product_categories=[
+                            "voluptatibus",
+                            "vero",
+                            "nihil",
+                            "praesentium",
+                        ],
+                        product_set="voluptatibus",
+                    ),
+                    text_detection_params=shared.GoogleCloudVisionV1p1beta1TextDetectionParams(
+                        advanced_ocr_options=[
+                            "omnis",
+                        ],
+                        enable_text_detection_confidence_score=False,
+                    ),
+                    web_detection_params=shared.GoogleCloudVisionV1p1beta1WebDetectionParams(
+                        include_geo_results=False,
+                    ),
+                ),
+                input_config=shared.GoogleCloudVisionV1p1beta1InputConfig(
+                    content="voluptate",
+                    gcs_source=shared.GoogleCloudVisionV1p1beta1GcsSource(
+                        uri="https://agile-arch-rival.info",
+                    ),
+                    mime_type="ut",
+                ),
+                pages=[
+                    120196,
+                    359444,
+                    296140,
+                    480894,
                 ],
             ),
         ],
     ),
+    access_token="dicta",
+    alt="proto",
+    callback="enim",
+    fields_="accusamus",
+    key="commodi",
+    oauth_token="repudiandae",
+    pretty_print=False,
+    quota_user="quae",
+    upload_type="ipsum",
+    upload_protocol="quidem",
 )
     
-res = s.files.vision_files_annotate(req)
+res = s.files.vision_files_annotate(req, operations.VisionFilesAnnotateSecurity(
+    option1=operations.VisionFilesAnnotateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.google_cloud_vision_v1p1beta1_batch_annotate_files_response is not None:
     # handle response

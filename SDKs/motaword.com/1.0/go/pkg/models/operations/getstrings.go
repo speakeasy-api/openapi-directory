@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStringsQueryParams struct {
+type GetStringsRequest struct {
 	// Requested page
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Source Language Code
 	SourceLanguage *string `queryParam:"style=form,explode=true,name=source_language"`
-}
-
-type GetStringsRequest struct {
-	QueryParams GetStringsQueryParams
 }
 
 type GetStringsResponse struct {

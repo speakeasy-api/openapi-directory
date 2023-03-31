@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetUserContactSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetUserContactPathParams struct {
-	// The user's contact Id or email address. The contact can be either a company contact or an external contact.
-	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
-}
-
-type GetUserContactQueryParams struct {
-	// The presence status of the contact.
-	// Include this query parameter with a value of `true` to get the presence status of the contact in the response.
-	QueryPresenceStatus *bool `queryParam:"style=form,explode=true,name=query_presence_status"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetUserContactRequest struct {
-	PathParams  GetUserContactPathParams
-	QueryParams GetUserContactQueryParams
-	Security    GetUserContactSecurity
+	// The user's contact Id or email address. The contact can be either a company contact or an external contact.
+	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
+	// The presence status of the contact.
+	// Include this query parameter with a value of `true` to get the presence status of the contact in the response.
+	QueryPresenceStatus *bool `queryParam:"style=form,explode=true,name=query_presence_status"`
 }
 
 // GetUserContact200ApplicationXMLPresenceStatusEnum - Contact's Presence Status in the Zoom Chat Client. The status can be one of the following: <br> `Do_Not_Disturb`<br> `Away`<br> `Available`<br> `Offline`

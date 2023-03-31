@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DashboardWebinarParticipantsQOSSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardWebinarParticipantsQOSPathParams struct {
-	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardWebinarParticipantsQOSTypeEnum - The webinar type.
@@ -45,19 +37,17 @@ func (e *DashboardWebinarParticipantsQOSTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DashboardWebinarParticipantsQOSQueryParams struct {
+type DashboardWebinarParticipantsQOSRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of items returned per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The webinar type.
 	Type *DashboardWebinarParticipantsQOSTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardWebinarParticipantsQOSRequest struct {
-	PathParams  DashboardWebinarParticipantsQOSPathParams
-	QueryParams DashboardWebinarParticipantsQOSQueryParams
-	Security    DashboardWebinarParticipantsQOSSecurity
+	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // DashboardWebinarParticipantsQOSParticipantQOSListParticipantQOSUserQOSAsDeviceFromCrc - QoS metrics on screen shares by a participant who joined the meeting via a Cloud Room Connector.

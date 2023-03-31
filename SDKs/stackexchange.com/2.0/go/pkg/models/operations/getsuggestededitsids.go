@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetSuggestedEditsIdsPathParams struct {
-	// Number list (semicolon delimited).
-	Ids string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 // GetSuggestedEditsIdsOrderEnum
 type GetSuggestedEditsIdsOrderEnum string
 
@@ -64,7 +59,7 @@ func (e *GetSuggestedEditsIdsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSuggestedEditsIdsQueryParams struct {
+type GetSuggestedEditsIdsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -102,6 +97,8 @@ type GetSuggestedEditsIdsQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	// Number list (semicolon delimited).
+	Ids string `pathParam:"style=simple,explode=false,name=ids"`
 	// sort = creation => date
 	// sort = approval => date
 	// sort = rejection => date
@@ -121,11 +118,6 @@ type GetSuggestedEditsIdsQueryParams struct {
 	Sort *GetSuggestedEditsIdsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetSuggestedEditsIdsRequest struct {
-	PathParams  GetSuggestedEditsIdsPathParams
-	QueryParams GetSuggestedEditsIdsQueryParams
 }
 
 type GetSuggestedEditsIdsResponse struct {

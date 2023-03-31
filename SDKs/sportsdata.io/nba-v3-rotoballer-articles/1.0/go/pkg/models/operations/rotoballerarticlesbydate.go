@@ -33,16 +33,12 @@ func (e *RotoballerArticlesByDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RotoballerArticlesByDatePathParams struct {
+type RotoballerArticlesByDateRequest struct {
 	// The date of the news.
 	// <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format RotoballerArticlesByDateFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type RotoballerArticlesByDateRequest struct {
-	PathParams RotoballerArticlesByDatePathParams
 }
 
 type RotoballerArticlesByDateResponse struct {

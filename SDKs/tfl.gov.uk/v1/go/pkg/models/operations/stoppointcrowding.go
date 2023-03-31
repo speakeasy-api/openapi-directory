@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointCrowdingPathParams struct {
-	// The Naptan id of the stop
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// A particular line e.g. victoria, circle, northern etc.
-	Line string `pathParam:"style=simple,explode=false,name=line"`
-}
-
 // StopPointCrowdingDirectionEnum - The direction of travel. Can be inbound or outbound.
 type StopPointCrowdingDirectionEnum string
 
@@ -43,14 +36,13 @@ func (e *StopPointCrowdingDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopPointCrowdingQueryParams struct {
+type StopPointCrowdingRequest struct {
 	// The direction of travel. Can be inbound or outbound.
 	Direction StopPointCrowdingDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-}
-
-type StopPointCrowdingRequest struct {
-	PathParams  StopPointCrowdingPathParams
-	QueryParams StopPointCrowdingQueryParams
+	// The Naptan id of the stop
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// A particular line e.g. victoria, circle, northern etc.
+	Line string `pathParam:"style=simple,explode=false,name=line"`
 }
 
 type StopPointCrowdingResponse struct {

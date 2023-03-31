@@ -9,21 +9,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDocumentWithWebHookPathParams struct {
+type GetDocumentWithWebHookRequest struct {
+	// The input document (in JSON format)
+	RequestBody []byte `request:"mediaType=application/x-yaml"`
 	// A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type GetDocumentWithWebHookQueryParams struct {
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type GetDocumentWithWebHookRequest struct {
-	PathParams  GetDocumentWithWebHookPathParams
-	QueryParams GetDocumentWithWebHookQueryParams
-	// The input document (in JSON format)
-	Request []byte `request:"mediaType=application/x-yaml"`
 }
 
 type GetDocumentWithWebHook200ApplicationJSONExplanationLocalsKey struct {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDevicesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationDevicesProductTypesEnum string
 
 const (
@@ -74,7 +70,7 @@ func (e *GetOrganizationDevicesTagsFilterTypeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetOrganizationDevicesQueryParams struct {
+type GetOrganizationDevicesRequest struct {
 	// Filter results by whether or not the device's configuration has been updated after the given timestamp
 	ConfigurationUpdatedAfter *string `queryParam:"style=form,explode=true,name=configurationUpdatedAfter"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -90,7 +86,8 @@ type GetOrganizationDevicesQueryParams struct {
 	// Optional parameter to filter devices by name. All returned devices will have a name that contains the search term or is an exact match.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Optional parameter to filter devices by network.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
@@ -109,11 +106,6 @@ type GetOrganizationDevicesQueryParams struct {
 	Tags []string `queryParam:"style=form,explode=false,name=tags"`
 	// Optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 	TagsFilterType *GetOrganizationDevicesTagsFilterTypeEnum `queryParam:"style=form,explode=true,name=tagsFilterType"`
-}
-
-type GetOrganizationDevicesRequest struct {
-	PathParams  GetOrganizationDevicesPathParams
-	QueryParams GetOrganizationDevicesQueryParams
 }
 
 type GetOrganizationDevicesResponse struct {

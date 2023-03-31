@@ -8,18 +8,16 @@ import (
 )
 
 type CalendarACLWatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CalendarACLWatchPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-}
-
-type CalendarACLWatchQueryParams struct {
+type CalendarACLWatchRequest struct {
+	Channel *shared.Channel `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -43,13 +41,6 @@ type CalendarACLWatchQueryParams struct {
 	SyncToken *string `queryParam:"style=form,explode=true,name=syncToken"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarACLWatchRequest struct {
-	PathParams  CalendarACLWatchPathParams
-	QueryParams CalendarACLWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    CalendarACLWatchSecurity
 }
 
 type CalendarACLWatchResponse struct {

@@ -12,19 +12,14 @@ var UpdateAccountSettingsServerList = []string{
 }
 
 type UpdateAccountSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAccountSettingsUpdateAccountSettingsRequest struct {
 	AdvancedFeatures *bool   `form:"name=AdvancedFeatures"`
 	SubaccountSid    *string `form:"name=SubaccountSid"`
 	VoiceTrace       *bool   `form:"name=VoiceTrace"`
-}
-
-type UpdateAccountSettingsRequest struct {
-	Request   *UpdateAccountSettingsUpdateAccountSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateAccountSettingsSecurity
-	ServerURL *string
 }
 
 type UpdateAccountSettingsResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationBySubjectCategorySearchPathParams struct {
-	// Category of entity at link Subject (source), e.g. gene, disease, phenotype
-	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
-}
-
-type GetAssociationBySubjectCategorySearchQueryParams struct {
+type GetAssociationBySubjectCategorySearchRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
 	// If true, excludes associations that involve IEAs (ECO:0000501)
@@ -25,17 +20,14 @@ type GetAssociationBySubjectCategorySearchQueryParams struct {
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// Category of entity at link Subject (source), e.g. gene, disease, phenotype
+	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
 	// Subject taxon ID, e.g. NCBITaxon:9606 (Includes inferred associations, by default)
 	SubjectTaxon *string `queryParam:"style=form,explode=true,name=subject_taxon"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAssociationBySubjectCategorySearchRequest struct {
-	PathParams  GetAssociationBySubjectCategorySearchPathParams
-	QueryParams GetAssociationBySubjectCategorySearchQueryParams
 }
 
 type GetAssociationBySubjectCategorySearchResponse struct {

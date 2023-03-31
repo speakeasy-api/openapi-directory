@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SharePostPathParams struct {
+type SharePostRequest struct {
 	// The ID of the post to share.
 	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
-type SharePostRequest struct {
-	PathParams SharePostPathParams
 }
 
 type SharePostResponse struct {

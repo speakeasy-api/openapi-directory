@@ -93,7 +93,7 @@ func (s *login) Logout(ctx context.Context) (*operations.LogoutResponse, error) 
 // <p>Reset password </p>
 // <p>An email with an embedded link will be sent to the receipient of the email address </p>
 // <p>The link will contain a token to be used for resetting the password </p>
-func (s *login) ResetPassword(ctx context.Context, request operations.ResetPasswordRequest) (*operations.ResetPasswordResponse, error) {
+func (s *login) ResetPassword(ctx context.Context, request shared.ResetPasswordRequest) (*operations.ResetPasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/password/reset"
 
@@ -154,7 +154,7 @@ func (s *login) ValidateAccessToken(ctx context.Context, request operations.Vali
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/validate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccessTokenValidationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -169,7 +169,7 @@ func (s *login) ValidateAccessToken(ctx context.Context, request operations.Vali
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -232,7 +232,7 @@ func (s *login) ValidateAccessToken(ctx context.Context, request operations.Vali
 // <p>e.g. Given an ApiKey: 44a9537d-d55d-4b47-8082-14061c2bcdd8 and ApiSecret: c396b26b-137a-44fd-87f5-34631f8fd529</p>
 // <p>Using a Base64 encode function Base64Encoder().encode("44a9537d-d55d-4b47-8082-14061c2bcdd8:c396b26b-137a-44fd-87f5-34631f8fd529")</p>
 // <p>Included as a Basic Authorization header: -H "Authorization: Basic NDRhOTUzN2QtZDU1ZC00YjQ3LTgwODItMTQwNjFjMmJjZGQ4OmMzOTZiMjZiLTEzN2EtNDRmZC04N2Y1LTM0NjMxZjhmZDUyOQ==" </p>
-func (s *login) VeloAuth(ctx context.Context, request operations.VeloAuthRequest) (*operations.VeloAuthResponse, error) {
+func (s *login) VeloAuth(ctx context.Context, request operations.VeloAuthRequest, security operations.VeloAuthSecurity) (*operations.VeloAuthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/authenticate"
 
@@ -241,11 +241,11 @@ func (s *login) VeloAuth(ctx context.Context, request operations.VeloAuthRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

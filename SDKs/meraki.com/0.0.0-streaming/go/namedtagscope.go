@@ -34,9 +34,9 @@ func newNamedTagScope(defaultClient, securityClient HTTPClient, serverURL, langu
 // Add a target group
 func (s *namedTagScope) CreateNetworkSmTargetGroup(ctx context.Context, request operations.CreateNetworkSmTargetGroupRequest) (*operations.CreateNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,7 +86,7 @@ func (s *namedTagScope) CreateNetworkSmTargetGroup(ctx context.Context, request 
 // Delete a target group from a network
 func (s *namedTagScope) DeleteNetworkSmTargetGroup(ctx context.Context, request operations.DeleteNetworkSmTargetGroupRequest) (*operations.DeleteNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,14 +122,14 @@ func (s *namedTagScope) DeleteNetworkSmTargetGroup(ctx context.Context, request 
 // Return a target group
 func (s *namedTagScope) GetNetworkSmTargetGroup(ctx context.Context, request operations.GetNetworkSmTargetGroupRequest) (*operations.GetNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,14 +171,14 @@ func (s *namedTagScope) GetNetworkSmTargetGroup(ctx context.Context, request ope
 // List the target groups in this network
 func (s *namedTagScope) GetNetworkSmTargetGroups(ctx context.Context, request operations.GetNetworkSmTargetGroupsRequest) (*operations.GetNetworkSmTargetGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -220,9 +220,9 @@ func (s *namedTagScope) GetNetworkSmTargetGroups(ctx context.Context, request op
 // Update a target group
 func (s *namedTagScope) UpdateNetworkSmTargetGroup(ctx context.Context, request operations.UpdateNetworkSmTargetGroupRequest) (*operations.UpdateNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

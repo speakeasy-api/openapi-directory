@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLanguageCombinationPathParams struct {
+type CreateLanguageCombinationRequest struct {
+	// Created language combination for a given project without creating a task.
+	CommonLanguageCombinationDTO shared.CommonLanguageCombinationDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateLanguageCombinationRequest struct {
-	PathParams CreateLanguageCombinationPathParams
-	// Created language combination for a given project without creating a task.
-	Request shared.CommonLanguageCombinationDTO `request:"mediaType=application/json"`
 }
 
 type CreateLanguageCombinationResponse struct {

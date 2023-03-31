@@ -14,12 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.MaintenanceControllerCreateMaintenanceJobFormRequest{
-        PathParams: operations.MaintenanceControllerCreateMaintenanceJobFormPathParams{
-            BranchID: "corrupti",
-            ShortName: "provident",
-        },
-        Request: shared.MaintenanceIssueModel{
+        MaintenanceIssueModel: shared.MaintenanceIssueModel{
             Documents: []shared.MaintenanceDocumentModel{
+                shared.MaintenanceDocumentModel{
+                    MimeType: "provident",
+                    URL: "distinctio",
+                },
                 shared.MaintenanceDocumentModel{
                     MimeType: "quibusdam",
                     URL: "unde",
@@ -28,31 +28,29 @@ func main() {
                     MimeType: "nulla",
                     URL: "corrupti",
                 },
-                shared.MaintenanceDocumentModel{
-                    MimeType: "illum",
-                    URL: "vel",
-                },
             },
-            ExternalID: "error",
-            IssueFault: "deserunt",
-            IssueNotes: "suscipit",
+            ExternalID: "illum",
+            IssueFault: "vel",
+            IssueNotes: "error",
             IssuePriority: "Medium",
-            IssueTitle: "magnam",
-            PropertyAddress1: "debitis",
-            PropertyAddress2: "ipsa",
-            PropertyAddress3: "delectus",
-            PropertyAddress4: "tempora",
-            PropertyCountry: "suscipit",
-            PropertyPostcode: "molestiae",
-            ReportedAt: "2020-07-25T16:12:20.938Z",
-            TenantEMailAddress: "voluptatum",
-            TenantForename: "iusto",
-            TenantPhonePrimary: "excepturi",
-            TenantPhoneSecondary: "nisi",
+            IssueTitle: "suscipit",
+            PropertyAddress1: "iure",
+            PropertyAddress2: "magnam",
+            PropertyAddress3: "debitis",
+            PropertyAddress4: "ipsa",
+            PropertyCountry: "delectus",
+            PropertyPostcode: "tempora",
+            ReportedAt: "2022-07-10T15:39:12.517Z",
+            TenantEMailAddress: "minus",
+            TenantForename: "placeat",
+            TenantPhonePrimary: "voluptatum",
+            TenantPhoneSecondary: "iusto",
             TenantPresenceRequested: false,
-            TenantSurname: "recusandae",
-            TenantTitle: "temporibus",
+            TenantSurname: "excepturi",
+            TenantTitle: "nisi",
         },
+        BranchID: "recusandae",
+        ShortName: "temporibus",
     }
 
     ctx := context.Background()

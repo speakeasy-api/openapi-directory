@@ -45,7 +45,7 @@ func (s *users) GetV2UsersJSON(ctx context.Context, request operations.GetV2User
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *users) GetV2UsersJSON(ctx context.Context, request operations.GetV2User
 // Fetches a user, by ID only.
 func (s *users) GetV2UsersIDJSON(ctx context.Context, request operations.GetV2UsersIDJSONRequest) (*operations.GetV2UsersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

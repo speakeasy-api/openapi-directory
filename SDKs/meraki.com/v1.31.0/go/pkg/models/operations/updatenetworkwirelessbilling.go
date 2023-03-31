@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessBillingPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits - The uplink bandwidth settings for the pricing plan.
 type UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits struct {
 	// The maximum download limit (integer, in Kbps). null indicates no limit
@@ -69,8 +65,8 @@ type UpdateNetworkWirelessBillingRequestBody struct {
 }
 
 type UpdateNetworkWirelessBillingRequest struct {
-	PathParams UpdateNetworkWirelessBillingPathParams
-	Request    *UpdateNetworkWirelessBillingRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessBillingRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                   `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkWirelessBillingResponse struct {

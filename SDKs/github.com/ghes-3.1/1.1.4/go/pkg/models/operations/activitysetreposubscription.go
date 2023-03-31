@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivitySetRepoSubscriptionPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ActivitySetRepoSubscriptionRequestBody struct {
 	// Determines if all notifications should be blocked from this repository.
 	Ignored *bool `json:"ignored,omitempty"`
@@ -22,8 +15,11 @@ type ActivitySetRepoSubscriptionRequestBody struct {
 }
 
 type ActivitySetRepoSubscriptionRequest struct {
-	PathParams ActivitySetRepoSubscriptionPathParams
-	Request    *ActivitySetRepoSubscriptionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ActivitySetRepoSubscriptionRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActivitySetRepoSubscriptionResponse struct {

@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type PostDevelopersDeveloperIDPathParams struct {
-	// The id of the developer to be located
-	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type PostDevelopersDeveloperIDQueryParams struct {
+type PostDevelopersDeveloperIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
+	// The id of the developer to be located
+	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
 	// The developer's email
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// The developer's name
@@ -22,11 +19,6 @@ type PostDevelopersDeveloperIDQueryParams struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// The developer's username
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type PostDevelopersDeveloperIDRequest struct {
-	PathParams  PostDevelopersDeveloperIDPathParams
-	QueryParams PostDevelopersDeveloperIDQueryParams
 }
 
 type PostDevelopersDeveloperIDResponse struct {

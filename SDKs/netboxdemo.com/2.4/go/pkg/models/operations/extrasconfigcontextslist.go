@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasConfigContextsListQueryParams struct {
+type ExtrasConfigContextsListRequest struct {
 	IsActive *string `queryParam:"style=form,explode=true,name=is_active"`
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
@@ -27,10 +27,6 @@ type ExtrasConfigContextsListQueryParams struct {
 	TenantGroup   *string `queryParam:"style=form,explode=true,name=tenant_group"`
 	TenantGroupID *string `queryParam:"style=form,explode=true,name=tenant_group_id"`
 	TenantID      *string `queryParam:"style=form,explode=true,name=tenant_id"`
-}
-
-type ExtrasConfigContextsListRequest struct {
-	QueryParams ExtrasConfigContextsListQueryParams
 }
 
 type ExtrasConfigContextsList200ApplicationJSON struct {

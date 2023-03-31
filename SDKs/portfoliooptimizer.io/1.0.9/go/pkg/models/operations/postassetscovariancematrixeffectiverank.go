@@ -13,10 +13,6 @@ type PostAssetsCovarianceMatrixEffectiveRankRequestBody struct {
 	AssetsCovarianceMatrix [][]float64 `json:"assetsCovarianceMatrix"`
 }
 
-type PostAssetsCovarianceMatrixEffectiveRankRequest struct {
-	Request PostAssetsCovarianceMatrixEffectiveRankRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON - OK
 type PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON struct {
 	// The effective rank of the asset covariance matrix

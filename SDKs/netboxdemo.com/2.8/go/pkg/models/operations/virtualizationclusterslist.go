@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClustersListQueryParams struct {
+type VirtualizationClustersListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -61,10 +61,6 @@ type VirtualizationClustersListQueryParams struct {
 	TypeN          *string `queryParam:"style=form,explode=true,name=type__n"`
 	TypeID         *string `queryParam:"style=form,explode=true,name=type_id"`
 	TypeIDN        *string `queryParam:"style=form,explode=true,name=type_id__n"`
-}
-
-type VirtualizationClustersListRequest struct {
-	QueryParams VirtualizationClustersListQueryParams
 }
 
 type VirtualizationClustersList200ApplicationJSON struct {

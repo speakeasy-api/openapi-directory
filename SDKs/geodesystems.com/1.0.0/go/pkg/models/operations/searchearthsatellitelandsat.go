@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchEarthSatelliteLandsatQueryParams struct {
+type SearchEarthSatelliteLandsatRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -54,10 +54,6 @@ type SearchEarthSatelliteLandsatQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchEarthSatelliteLandsatRequest struct {
-	QueryParams SearchEarthSatelliteLandsatQueryParams
 }
 
 type SearchEarthSatelliteLandsatResponse struct {

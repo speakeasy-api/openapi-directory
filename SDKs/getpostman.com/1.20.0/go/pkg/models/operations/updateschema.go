@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateSchemaPathParams struct {
-	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
-	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-	SchemaID     string `pathParam:"style=simple,explode=false,name=schemaId"`
-}
-
 type UpdateSchemaRequestBodySchema struct {
 	Language *string `json:"language,omitempty"`
 	Schema   *string `json:"schema,omitempty"`
@@ -23,8 +17,10 @@ type UpdateSchemaRequestBody struct {
 }
 
 type UpdateSchemaRequest struct {
-	PathParams UpdateSchemaPathParams
-	Request    *UpdateSchemaRequestBody `request:"mediaType=application/json"`
+	RequestBody  *UpdateSchemaRequestBody `request:"mediaType=application/json"`
+	APIID        string                   `pathParam:"style=simple,explode=false,name=apiId"`
+	APIVersionID string                   `pathParam:"style=simple,explode=false,name=apiVersionId"`
+	SchemaID     string                   `pathParam:"style=simple,explode=false,name=schemaId"`
 }
 
 type UpdateSchema200ApplicationJSONSchema struct {

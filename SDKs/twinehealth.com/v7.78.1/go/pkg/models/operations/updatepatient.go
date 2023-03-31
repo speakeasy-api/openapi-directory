@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePatientPathParams struct {
+type UpdatePatientRequest struct {
+	UpdatePatientRequestInput shared.UpdatePatientRequestInput `request:"mediaType=application/vnd.api+json"`
 	// Patient identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdatePatientRequest struct {
-	PathParams UpdatePatientPathParams
-	Request    shared.UpdatePatientRequestInput `request:"mediaType=application/vnd.api+json"`
 }
 
 type UpdatePatientResponse struct {

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TspURLUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type TspURLUpdatePathParams struct {
-	// The userId or email address of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // TSPURLUpdateTSPGlobalDialInURLSetting - Global dial-in URL of the user.
@@ -23,10 +17,10 @@ type TSPURLUpdateTSPGlobalDialInURLSetting struct {
 }
 
 type TspURLUpdateRequest struct {
-	PathParams TspURLUpdatePathParams
 	// Global dial-in URL of the user.
-	Request  *TSPURLUpdateTSPGlobalDialInURLSetting `request:"mediaType=application/json"`
-	Security TspURLUpdateSecurity
+	RequestBody *TSPURLUpdateTSPGlobalDialInURLSetting `request:"mediaType=application/json"`
+	// The userId or email address of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type TspURLUpdateResponse struct {

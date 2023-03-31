@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Archive1Request struct {
-	// Prepared ZIP archive that contains the specified files.
-	Request shared.FilesDto `request:"mediaType=application/json"`
-}
-
 type Archive1Response struct {
 	ContentType string
 	// Success

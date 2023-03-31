@@ -10,13 +10,8 @@ import (
 )
 
 type PeoplePeopleUpdateContactSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type PeoplePeopleUpdateContactPathParams struct {
-	// The resource name for the person, assigned by the server. An ASCII string in the form of `people/{person_id}`.
-	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PeoplePeopleUpdateContactSourcesEnum string
@@ -48,9 +43,10 @@ func (e *PeoplePeopleUpdateContactSourcesEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type PeoplePeopleUpdateContactQueryParams struct {
+type PeoplePeopleUpdateContactRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PersonInput *shared.PersonInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -69,6 +65,8 @@ type PeoplePeopleUpdateContactQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The resource name for the person, assigned by the server. An ASCII string in the form of `people/{person_id}`.
+	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 	// Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
 	Sources []PeoplePeopleUpdateContactSourcesEnum `queryParam:"style=form,explode=true,name=sources"`
 	// Required. A field mask to restrict which fields on the person are updated. Multiple fields can be specified by separating them with commas. All updated fields will be replaced. Valid values are: * addresses * biographies * birthdays * calendarUrls * clientData * emailAddresses * events * externalIds * genders * imClients * interests * locales * locations * memberships * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * relations * sipAddresses * urls * userDefined
@@ -77,13 +75,6 @@ type PeoplePeopleUpdateContactQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PeoplePeopleUpdateContactRequest struct {
-	PathParams  PeoplePeopleUpdateContactPathParams
-	QueryParams PeoplePeopleUpdateContactQueryParams
-	Request     *shared.PersonInput `request:"mediaType=application/json"`
-	Security    PeoplePeopleUpdateContactSecurity
 }
 
 type PeoplePeopleUpdateContactResponse struct {

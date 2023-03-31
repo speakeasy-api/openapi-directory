@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVrfsListQueryParams struct {
+type IpamVrfsListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -56,10 +56,6 @@ type IpamVrfsListQueryParams struct {
 	TenantGroupIDN *string `queryParam:"style=form,explode=true,name=tenant_group_id__n"`
 	TenantID       *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	TenantIDN      *string `queryParam:"style=form,explode=true,name=tenant_id__n"`
-}
-
-type IpamVrfsListRequest struct {
-	QueryParams IpamVrfsListQueryParams
 }
 
 type IpamVrfsList200ApplicationJSON struct {

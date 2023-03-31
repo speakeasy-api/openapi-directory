@@ -9,15 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLimitsQueryParams struct {
+type ListLimitsRequest struct {
 	Cursor  *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit   *int64  `queryParam:"style=form,explode=true,name=limit"`
 	ModelID *string `queryParam:"style=form,explode=true,name=model_id"`
 	Status  *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListLimitsRequest struct {
-	QueryParams ListLimitsQueryParams
 }
 
 type ListLimitsDefaultApplicationJSON13StatusEnum string

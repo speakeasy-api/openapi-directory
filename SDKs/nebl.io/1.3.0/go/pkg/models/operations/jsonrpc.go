@@ -13,13 +13,8 @@ var JSONRPCServerList = []string{
 }
 
 type JSONRPCSecurity struct {
-	RPCAuth shared.SchemeRPCAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type JSONRPCRequest struct {
-	Request   shared.RPCRequest `request:"mediaType=application/json"`
-	Security  JSONRPCSecurity
-	ServerURL *string
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type JSONRPCResponse struct {

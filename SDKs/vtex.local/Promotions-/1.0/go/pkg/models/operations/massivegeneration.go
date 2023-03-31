@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type MassiveGenerationQueryParams struct {
-	// Quantity of coupons to generate
-	Quantity int64 `queryParam:"style=form,explode=true,name=quantity"`
-}
-
-type MassiveGenerationHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type MassiveGenerationRequestBody struct {
 	// Coupon code.
 	CouponCode string `json:"couponCode"`
@@ -32,9 +20,13 @@ type MassiveGenerationRequestBody struct {
 }
 
 type MassiveGenerationRequest struct {
-	QueryParams MassiveGenerationQueryParams
-	Headers     MassiveGenerationHeaders
-	Request     MassiveGenerationRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                       `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody MassiveGenerationRequestBody `request:"mediaType=application/json"`
+	// Quantity of coupons to generate
+	Quantity int64 `queryParam:"style=form,explode=true,name=quantity"`
 }
 
 type MassiveGenerationResponse struct {

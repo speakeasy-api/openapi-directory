@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteWebhookServerList = []string{
@@ -12,20 +11,15 @@ var DeleteWebhookServerList = []string{
 }
 
 type DeleteWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteWebhookPathParams struct {
+type DeleteWebhookRequest struct {
 	// The unique SID identifier of the Service.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Webhook resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteWebhookRequest struct {
-	PathParams DeleteWebhookPathParams
-	Security   DeleteWebhookSecurity
-	ServerURL  *string
 }
 
 type DeleteWebhookResponse struct {

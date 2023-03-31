@@ -12,10 +12,11 @@ var ListSmsCommandServerList = []string{
 }
 
 type ListSmsCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSmsCommandQueryParams struct {
+type ListSmsCommandRequest struct {
 	// The direction of the SMS Command. Can be `to_sim` or `from_sim`. The value of `to_sim` is synonymous with the term `mobile terminated`, and `from_sim` is synonymous with the term `mobile originated`.
 	Direction *shared.SmsCommandEnumDirectionEnum `queryParam:"style=form,explode=true,name=Direction"`
 	// The page index. This value is simply for client state.
@@ -28,12 +29,6 @@ type ListSmsCommandQueryParams struct {
 	Sim *string `queryParam:"style=form,explode=true,name=Sim"`
 	// The status of the SMS Command. Can be: `queued`, `sent`, `delivered`, `received` or `failed`. See the [SMS Command Status Values](https://www.twilio.com/docs/iot/supersim/api/smscommand-resource#status-values) for a description of each.
 	Status *shared.SmsCommandEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListSmsCommandRequest struct {
-	QueryParams ListSmsCommandQueryParams
-	Security    ListSmsCommandSecurity
-	ServerURL   *string
 }
 
 type ListSmsCommandListSmsCommandResponseMeta struct {

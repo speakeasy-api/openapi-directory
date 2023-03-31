@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlockPathParams struct {
+type GetBlockRequest struct {
 	// Block Hash
 	Blockhash string `pathParam:"style=simple,explode=false,name=blockhash"`
-}
-
-type GetBlockRequest struct {
-	PathParams GetBlockPathParams
 }
 
 type GetBlockResponse struct {

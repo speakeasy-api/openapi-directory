@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetSetConfigPathParams struct {
+type ProtocolTelnetSetConfigRequest struct {
 	// Agent to set the TELNET configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the TELNET configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the TELNET configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolTelnetSetConfigRequest struct {
-	PathParams ProtocolTelnetSetConfigPathParams
 }
 
 type ProtocolTelnetSetConfigResponse struct {

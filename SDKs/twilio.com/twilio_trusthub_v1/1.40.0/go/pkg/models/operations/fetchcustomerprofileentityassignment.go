@@ -12,20 +12,15 @@ var FetchCustomerProfileEntityAssignmentServerList = []string{
 }
 
 type FetchCustomerProfileEntityAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCustomerProfileEntityAssignmentPathParams struct {
+type FetchCustomerProfileEntityAssignmentRequest struct {
 	// The unique string that we created to identify the CustomerProfile resource.
 	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
 	// The unique string that we created to identify the Identity resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchCustomerProfileEntityAssignmentRequest struct {
-	PathParams FetchCustomerProfileEntityAssignmentPathParams
-	Security   FetchCustomerProfileEntityAssignmentSecurity
-	ServerURL  *string
 }
 
 type FetchCustomerProfileEntityAssignmentResponse struct {

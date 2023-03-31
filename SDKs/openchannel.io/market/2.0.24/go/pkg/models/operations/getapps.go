@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAppsQueryParams struct {
+type GetAppsRequest struct {
 	// Whether this result should only contain apps that are owned by this user
 	IsOwner *bool `queryParam:"style=form,explode=true,name=isOwner"`
 	// The maximum number of results to return per page
@@ -19,10 +19,6 @@ type GetAppsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The unique id of the user requesting this resource
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetAppsRequest struct {
-	QueryParams GetAppsQueryParams
 }
 
 type GetAppsResponse struct {

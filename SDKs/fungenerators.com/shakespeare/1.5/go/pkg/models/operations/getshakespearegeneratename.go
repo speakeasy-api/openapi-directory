@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetShakespeareGenerateNameSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetShakespeareGenerateNameQueryParams struct {
+type GetShakespeareGenerateNameRequest struct {
 	// No of names to generate
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Variation to generate `male/female`.
 	Variation *string `queryParam:"style=form,explode=true,name=variation"`
-}
-
-type GetShakespeareGenerateNameRequest struct {
-	QueryParams GetShakespeareGenerateNameQueryParams
-	Security    GetShakespeareGenerateNameSecurity
 }
 
 type GetShakespeareGenerateNameResponse struct {

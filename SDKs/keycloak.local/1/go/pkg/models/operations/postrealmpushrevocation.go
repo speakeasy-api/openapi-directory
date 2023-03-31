@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostRealmPushRevocationPathParams struct {
+type PostRealmPushRevocationRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmPushRevocationRequest struct {
-	PathParams PostRealmPushRevocationPathParams
 }
 
 type PostRealmPushRevocationResponse struct {

@@ -8,12 +8,7 @@ import (
 )
 
 type SentimentMultipartSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type SentimentMultipartRequest struct {
-	Request  *shared.SentimentPredictRequest `request:"mediaType=application/json"`
-	Security SentimentMultipartSecurity
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type SentimentMultipartResponse struct {

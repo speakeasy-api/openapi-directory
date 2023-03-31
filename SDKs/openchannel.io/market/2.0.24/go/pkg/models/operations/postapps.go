@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostAppsQueryParams struct {
+type PostAppsRequest struct {
 	// JSON array of data access requirements
 	Access *string `queryParam:"style=form,explode=true,name=access"`
 	// JSON object to restrict users from owning or viewing this app. Example: {'view':{'country':['Canada','Mexico']},'own':{'country':['Canada','Mexico']}} restricts users from canada and mexico from viewing or owning this app
@@ -25,10 +25,6 @@ type PostAppsQueryParams struct {
 	Restrict *string `queryParam:"style=form,explode=true,name=restrict"`
 	// The type for this app
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PostAppsRequest struct {
-	QueryParams PostAppsQueryParams
 }
 
 type PostAppsResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByID8PathParams struct {
-	// quote's internal identifier
-	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type GetByID8QueryParams struct {
+type GetByID8Request struct {
 	// list of adittional fields which should be embedded in the response (ie. tasks)
 	Embed *string `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetByID8Request struct {
-	PathParams  GetByID8PathParams
-	QueryParams GetByID8QueryParams
+	// quote's internal identifier
+	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
 }
 
 type GetByID8Response struct {

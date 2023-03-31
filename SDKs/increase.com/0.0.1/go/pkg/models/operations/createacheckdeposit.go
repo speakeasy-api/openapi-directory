@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateACheckDepositRequest struct {
-	Request shared.CreateACheckDepositParameters `request:"mediaType=application/json"`
-}
-
 type CreateACheckDepositDefaultApplicationJSON13StatusEnum string
 
 const (

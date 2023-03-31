@@ -33,11 +33,11 @@ func newCatalogs(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudprivatecatalogproducerCatalogsAssociationsCreate - Creates an Association instance under a given Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest) (*operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx con
 }
 
 // CloudprivatecatalogproducerCatalogsAssociationsList - Lists all Association resources under a catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest) (*operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest, security operations.CloudprivatecatalogproducerCatalogsAssociationsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsList(ctx conte
 }
 
 // CloudprivatecatalogproducerCatalogsCreate - Creates a new Catalog resource.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsCreateRequest) (*operations.CloudprivatecatalogproducerCatalogsCreateResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/catalogs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Catalog", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsCreate(ctx context.Context
 }
 
 // CloudprivatecatalogproducerCatalogsGetIamPolicy - Gets IAM policy for the specified Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsGetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest) (*operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsGetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest, security operations.CloudprivatecatalogproducerCatalogsGetIamPolicySecurity) (*operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,7 +240,7 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsGetIamPolicy(ctx context.C
 
 // CloudprivatecatalogproducerCatalogsList - Lists Catalog resources that the producer has access to, within the
 // scope of the parent resource.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsListRequest) (*operations.CloudprivatecatalogproducerCatalogsListResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsListRequest, security operations.CloudprivatecatalogproducerCatalogsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/catalogs"
 
@@ -249,11 +249,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsList(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -288,11 +288,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsList(ctx context.Context, 
 }
 
 // CloudprivatecatalogproducerCatalogsProductsCopy - Copies a Product under another Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest, security operations.CloudprivatecatalogproducerCatalogsProductsCopySecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:copy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1CopyProductRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -304,11 +304,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,11 +343,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.C
 }
 
 // CloudprivatecatalogproducerCatalogsProductsCreate - Creates a Product instance under a given Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsProductsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Product", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -359,11 +359,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,11 +403,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context
 // If Product already has a non-default icon, the action creates
 // a new Icon instance, associates the newly created
 // Icon with the given Product and deletes the old icon.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest, security operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{product}/icons:upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{product}/icons:upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,11 +419,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,20 +459,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx co
 
 // CloudprivatecatalogproducerCatalogsProductsList - Lists Product resources that the producer has access to, within the
 // scope of the parent catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsListRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsListResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsListRequest, security operations.CloudprivatecatalogproducerCatalogsProductsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,11 +507,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsList(ctx context.C
 }
 
 // CloudprivatecatalogproducerCatalogsProductsVersionsCreate - Creates a Version instance under a given Product.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,11 +523,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,20 +562,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx
 }
 
 // CloudprivatecatalogproducerCatalogsProductsVersionsDelete - Hard deletes a Version.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsDelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsDelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,20 +610,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsDelete(ctx
 }
 
 // CloudprivatecatalogproducerCatalogsProductsVersionsGet - Returns the requested Version resource.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsGet(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsGet(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -659,20 +659,20 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsGet(ctx co
 
 // CloudprivatecatalogproducerCatalogsProductsVersionsList - Lists Version resources that the producer has access to, within the
 // scope of the parent Product.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -707,11 +707,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsList(ctx c
 }
 
 // CloudprivatecatalogproducerCatalogsProductsVersionsPatch - Updates a specific Version resource.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -723,11 +723,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -762,11 +762,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx 
 }
 
 // CloudprivatecatalogproducerCatalogsSetIamPolicy - Sets the IAM policy for the specified Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest) (*operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest, security operations.CloudprivatecatalogproducerCatalogsSetIamPolicySecurity) (*operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -778,11 +778,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -817,11 +817,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.C
 }
 
 // CloudprivatecatalogproducerCatalogsTestIamPermissions - Tests the IAM permissions for the specified Catalog.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest) (*operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest, security operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsSecurity) (*operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -833,11 +833,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -872,11 +872,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx con
 }
 
 // CloudprivatecatalogproducerCatalogsUndelete - Undeletes a deleted Catalog and all resources under it.
-func (s *catalogs) CloudprivatecatalogproducerCatalogsUndelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsUndeleteRequest) (*operations.CloudprivatecatalogproducerCatalogsUndeleteResponse, error) {
+func (s *catalogs) CloudprivatecatalogproducerCatalogsUndelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsUndeleteRequest, security operations.CloudprivatecatalogproducerCatalogsUndeleteSecurity) (*operations.CloudprivatecatalogproducerCatalogsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -888,11 +888,11 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsUndelete(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

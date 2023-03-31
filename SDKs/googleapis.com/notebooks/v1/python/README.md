@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/notebooks/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,50 +15,42 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NotebooksProjectsLocationsEnvironmentsCreateRequest(
-    security=operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams(
-        parent="corrupti",
-    ),
-    query_params=operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="sit",
-        alt="json",
-        callback="possimus",
-        environment_id="illo",
-        fields="perferendis",
-        key="vitae",
-        oauth_token="aperiam",
-        pretty_print=False,
-        quota_user="sit",
-        upload_type="et",
-        upload_protocol="dolorum",
-    ),
-    request=shared.EnvironmentInput(
+    dollar_xgafv="2",
+    environment_input=shared.EnvironmentInput(
         container_image=shared.ContainerImage(
-            repository="et",
-            tag="velit",
+            repository="provident",
+            tag="distinctio",
         ),
-        description="cupiditate",
-        display_name="ex",
-        post_startup_script="sequi",
+        description="quibusdam",
+        display_name="unde",
+        post_startup_script="nulla",
         vm_image=shared.VMImage(
-            image_family="laborum",
-            image_name="reprehenderit",
-            project="modi",
+            image_family="corrupti",
+            image_name="illum",
+            project="vel",
         ),
     ),
+    access_token="error",
+    alt="media",
+    callback="suscipit",
+    environment_id="iure",
+    fields_="magnam",
+    key="debitis",
+    oauth_token="ipsa",
+    parent="delectus",
+    pretty_print=False,
+    quota_user="tempora",
+    upload_type="suscipit",
+    upload_protocol="molestiae",
 )
     
-res = s.projects.notebooks_projects_locations_environments_create(req)
+res = s.projects.notebooks_projects_locations_environments_create(req, operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -66,7 +58,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -90,7 +83,7 @@ if res.operation is not None:
 * `notebooks_projects_locations_instances_upgrade_internal` - Allows notebook instances to call this endpoint to upgrade themselves. Do not use this method directly.
 * `notebooks_projects_locations_list` - Lists information about the supported locations for this service.
 * `notebooks_projects_locations_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `notebooks_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `notebooks_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `notebooks_projects_locations_runtimes_create` - Creates a new Runtime in a given project and location.
 * `notebooks_projects_locations_runtimes_diagnose` - Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
 * `notebooks_projects_locations_runtimes_get_iam_policy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -110,7 +103,17 @@ if res.operation is not None:
 * `notebooks_projects_locations_schedules_get` - Gets details of schedule
 * `notebooks_projects_locations_schedules_list` - Lists schedules in a given project and location.
 * `notebooks_projects_locations_schedules_trigger` - Triggers execution of an existing schedule.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

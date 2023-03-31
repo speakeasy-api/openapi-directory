@@ -33,13 +33,9 @@ func (e *CanceledMembershipsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CanceledMembershipsPathParams struct {
+type CanceledMembershipsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format CanceledMembershipsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type CanceledMembershipsRequest struct {
-	PathParams CanceledMembershipsPathParams
 }
 
 type CanceledMembershipsResponse struct {

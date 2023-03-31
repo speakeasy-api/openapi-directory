@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListReposLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsListReposLegacyQueryParams struct {
+type TeamsListReposLegacyRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListReposLegacyRequest struct {
-	PathParams  TeamsListReposLegacyPathParams
-	QueryParams TeamsListReposLegacyQueryParams
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListReposLegacyResponse struct {

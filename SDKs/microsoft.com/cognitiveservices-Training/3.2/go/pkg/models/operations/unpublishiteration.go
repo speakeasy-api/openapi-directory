@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type UnpublishIterationPathParams struct {
+type UnpublishIterationRequest struct {
 	// The iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UnpublishIterationRequest struct {
-	PathParams UnpublishIterationPathParams
 }
 
 type UnpublishIterationResponse struct {

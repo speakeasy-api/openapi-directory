@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsCancelInvitationPathParams struct {
+type OrgsCancelInvitationRequest struct {
 	// The unique identifier of the invitation.
 	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsCancelInvitationRequest struct {
-	PathParams OrgsCancelInvitationPathParams
 }
 
 type OrgsCancelInvitationResponse struct {

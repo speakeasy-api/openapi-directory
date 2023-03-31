@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintPathParams struct {
-	// The client ID of your GitHub app.
-	ClientID    string `pathParam:"style=simple,explode=false,name=client_id"`
-	Fingerprint string `pathParam:"style=simple,explode=false,name=fingerprint"`
-}
-
 type OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody struct {
 	// The OAuth app client secret for which to create the token.
 	ClientSecret string `json:"client_secret"`
@@ -25,8 +19,10 @@ type OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody 
 }
 
 type OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest struct {
-	PathParams OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintPathParams
-	Request    OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody `request:"mediaType=application/json"`
+	RequestBody OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody `request:"mediaType=application/json"`
+	// The client ID of your GitHub app.
+	ClientID    string `pathParam:"style=simple,explode=false,name=client_id"`
+	Fingerprint string `pathParam:"style=simple,explode=false,name=fingerprint"`
 }
 
 type OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse struct {

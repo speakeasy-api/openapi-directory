@@ -40,7 +40,7 @@ func newScript(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CreateShopScriptTag - スクリプトタグの作成
-func (s *script) CreateShopScriptTag(ctx context.Context, request operations.CreateShopScriptTagRequest) (*operations.CreateShopScriptTagResponse, error) {
+func (s *script) CreateShopScriptTag(ctx context.Context, request operations.CreateShopScriptTagRequestBody, security operations.CreateShopScriptTagSecurity) (*operations.CreateShopScriptTagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appstore/v1/script_tags.json"
 
@@ -56,7 +56,7 @@ func (s *script) CreateShopScriptTag(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,16 +91,16 @@ func (s *script) CreateShopScriptTag(ctx context.Context, request operations.Cre
 }
 
 // DeleteScriptTag - スクリプトタグの削除
-func (s *script) DeleteScriptTag(ctx context.Context, request operations.DeleteScriptTagRequest) (*operations.DeleteScriptTagResponse, error) {
+func (s *script) DeleteScriptTag(ctx context.Context, request operations.DeleteScriptTagRequest, security operations.DeleteScriptTagSecurity) (*operations.DeleteScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,16 +126,16 @@ func (s *script) DeleteScriptTag(ctx context.Context, request operations.DeleteS
 }
 
 // GetShopScriptTag - スクリプトタグの取得
-func (s *script) GetShopScriptTag(ctx context.Context, request operations.GetShopScriptTagRequest) (*operations.GetShopScriptTagResponse, error) {
+func (s *script) GetShopScriptTag(ctx context.Context, request operations.GetShopScriptTagRequest, security operations.GetShopScriptTagSecurity) (*operations.GetShopScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *script) GetShopScriptTag(ctx context.Context, request operations.GetSho
 }
 
 // GetShopScriptTags - スクリプトタグの取得
-func (s *script) GetShopScriptTags(ctx context.Context, request operations.GetShopScriptTagsRequest) (*operations.GetShopScriptTagsResponse, error) {
+func (s *script) GetShopScriptTags(ctx context.Context) (*operations.GetShopScriptTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appstore/v1/script_tags.json"
 
@@ -179,7 +179,7 @@ func (s *script) GetShopScriptTags(ctx context.Context, request operations.GetSh
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,11 +214,11 @@ func (s *script) GetShopScriptTags(ctx context.Context, request operations.GetSh
 }
 
 // UpdateShopScriptTag - スクリプトタグの更新
-func (s *script) UpdateShopScriptTag(ctx context.Context, request operations.UpdateShopScriptTagRequest) (*operations.UpdateShopScriptTagResponse, error) {
+func (s *script) UpdateShopScriptTag(ctx context.Context, request operations.UpdateShopScriptTagRequest, security operations.UpdateShopScriptTagSecurity) (*operations.UpdateShopScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,7 +230,7 @@ func (s *script) UpdateShopScriptTag(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

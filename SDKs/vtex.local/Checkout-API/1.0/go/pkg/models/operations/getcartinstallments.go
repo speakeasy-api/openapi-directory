@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type GetCartInstallmentsPathParams struct {
-	// ID of the `orderForm` to be consulted for installments.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type GetCartInstallmentsQueryParams struct {
-	// ID of the payment method to be consulted for installments.
-	PaymentSystem int64 `queryParam:"style=form,explode=true,name=paymentSystem"`
-}
-
-type GetCartInstallmentsHeaders struct {
+type GetCartInstallmentsRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetCartInstallmentsRequest struct {
-	PathParams  GetCartInstallmentsPathParams
-	QueryParams GetCartInstallmentsQueryParams
-	Headers     GetCartInstallmentsHeaders
+	// ID of the `orderForm` to be consulted for installments.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
+	// ID of the payment method to be consulted for installments.
+	PaymentSystem int64 `queryParam:"style=form,explode=true,name=paymentSystem"`
 }
 
 type GetCartInstallmentsResponse struct {

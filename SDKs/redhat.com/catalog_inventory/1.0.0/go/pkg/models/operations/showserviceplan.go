@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShowServicePlanPathParams struct {
+type ShowServicePlanRequest struct {
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ShowServicePlanRequest struct {
-	PathParams ShowServicePlanPathParams
 }
 
 type ShowServicePlanResponse struct {

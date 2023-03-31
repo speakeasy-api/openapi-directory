@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETGenesByAffyIDUsingGETPathParams struct {
+type GETGenesByAffyIDUsingGETRequest struct {
 	// Affymetrix ID
 	AffyID string `pathParam:"style=simple,explode=false,name=affyId"`
 	// A list of RGD species type keys can be found in the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETGenesByAffyIDUsingGETRequest struct {
-	PathParams GETGenesByAffyIDUsingGETPathParams
 }
 
 type GETGenesByAffyIDUsingGETResponse struct {

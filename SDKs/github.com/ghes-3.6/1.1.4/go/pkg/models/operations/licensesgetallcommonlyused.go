@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LicensesGetAllCommonlyUsedQueryParams struct {
+type LicensesGetAllCommonlyUsedRequest struct {
 	Featured *bool `queryParam:"style=form,explode=true,name=featured"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type LicensesGetAllCommonlyUsedRequest struct {
-	QueryParams LicensesGetAllCommonlyUsedQueryParams
 }
 
 type LicensesGetAllCommonlyUsedResponse struct {

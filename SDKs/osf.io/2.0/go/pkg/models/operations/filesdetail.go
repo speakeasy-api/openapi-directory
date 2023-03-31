@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type FilesDetailPathParams struct {
+type FilesDetailRequest struct {
 	// The unique identifier of the file you wish to retrieve.
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type FilesDetailRequest struct {
-	PathParams FilesDetailPathParams
 }
 
 // FilesDetailFileAttributes - The properties of the file entity.

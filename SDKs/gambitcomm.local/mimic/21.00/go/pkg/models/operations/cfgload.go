@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CfgLoadPathParams struct {
+type CfgLoadRequest struct {
 	// MIMIC agent configuration file to load
 	CfgFile string `pathParam:"style=simple,explode=false,name=cfgFile"`
 	// Agent number in cfgFile to start the loading
@@ -15,10 +15,6 @@ type CfgLoadPathParams struct {
 	LastAgentNum int `pathParam:"style=simple,explode=false,name=lastAgentNum"`
 	// Agent number in current configuration to start placing the new agents
 	StartAgentNum int `pathParam:"style=simple,explode=false,name=startAgentNum"`
-}
-
-type CfgLoadRequest struct {
-	PathParams CfgLoadPathParams
 }
 
 type CfgLoadResponse struct {

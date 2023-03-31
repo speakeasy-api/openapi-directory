@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForCommitCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsListForCommitCommentContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.3/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a commit comment.
 type ReactionsListForCommitCommentContentEnum string
 
@@ -60,18 +51,19 @@ func (e *ReactionsListForCommitCommentContentEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ReactionsListForCommitCommentQueryParams struct {
+type ReactionsListForCommitCommentRequest struct {
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.3/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a commit comment.
 	Content *ReactionsListForCommitCommentContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForCommitCommentRequest struct {
-	PathParams  ReactionsListForCommitCommentPathParams
-	QueryParams ReactionsListForCommitCommentQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsListForCommitCommentResponse struct {

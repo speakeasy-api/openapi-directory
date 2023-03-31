@@ -12,7 +12,8 @@ var CreateTrustProductServerList = []string{
 }
 
 type CreateTrustProductSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTrustProductCreateTrustProductRequest struct {
@@ -24,12 +25,6 @@ type CreateTrustProductCreateTrustProductRequest struct {
 	PolicySid string `form:"name=PolicySid"`
 	// The URL we call to inform your application of status changes.
 	StatusCallback *string `form:"name=StatusCallback"`
-}
-
-type CreateTrustProductRequest struct {
-	Request   *CreateTrustProductCreateTrustProductRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateTrustProductSecurity
-	ServerURL *string
 }
 
 type CreateTrustProductResponse struct {

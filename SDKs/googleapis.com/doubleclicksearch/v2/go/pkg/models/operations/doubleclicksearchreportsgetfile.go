@@ -8,18 +8,11 @@ import (
 )
 
 type DoubleclicksearchReportsGetFileSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DoubleclicksearchReportsGetFilePathParams struct {
-	// The index of the report fragment to download.
-	ReportFragment int64 `pathParam:"style=simple,explode=false,name=reportFragment"`
-	// ID of the report.
-	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type DoubleclicksearchReportsGetFileQueryParams struct {
+type DoubleclicksearchReportsGetFileRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,16 +31,14 @@ type DoubleclicksearchReportsGetFileQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The index of the report fragment to download.
+	ReportFragment int64 `pathParam:"style=simple,explode=false,name=reportFragment"`
+	// ID of the report.
+	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DoubleclicksearchReportsGetFileRequest struct {
-	PathParams  DoubleclicksearchReportsGetFilePathParams
-	QueryParams DoubleclicksearchReportsGetFileQueryParams
-	Security    DoubleclicksearchReportsGetFileSecurity
 }
 
 type DoubleclicksearchReportsGetFileResponse struct {

@@ -32,13 +32,9 @@ func (e *MetalsBenchmarkSupportedMetalsGETFormatEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type MetalsBenchmarkSupportedMetalsGETQueryParams struct {
+type MetalsBenchmarkSupportedMetalsGETRequest struct {
 	// to override content negotiation specify a value of json or xml
 	Format *MetalsBenchmarkSupportedMetalsGETFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type MetalsBenchmarkSupportedMetalsGETRequest struct {
-	QueryParams MetalsBenchmarkSupportedMetalsGETQueryParams
 }
 
 type MetalsBenchmarkSupportedMetalsGETResponse struct {

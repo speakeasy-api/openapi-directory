@@ -30,10 +30,6 @@ type EnterpriseAdminCreateGlobalWebhookRequestBody struct {
 	Name string `json:"name"`
 }
 
-type EnterpriseAdminCreateGlobalWebhookRequest struct {
-	Request EnterpriseAdminCreateGlobalWebhookRequestBody `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminCreateGlobalWebhookResponse struct {
 	ContentType string
 	StatusCode  int

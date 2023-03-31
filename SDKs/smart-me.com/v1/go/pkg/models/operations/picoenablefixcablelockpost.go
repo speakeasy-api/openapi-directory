@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PicoEnableFixCableLockPostPathParams struct {
+type PicoEnableFixCableLockPostRequest struct {
 	// The ID of the pico
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PicoEnableFixCableLockPostRequest struct {
-	PathParams PicoEnableFixCableLockPostPathParams
 }
 
 type PicoEnableFixCableLockPostResponse struct {

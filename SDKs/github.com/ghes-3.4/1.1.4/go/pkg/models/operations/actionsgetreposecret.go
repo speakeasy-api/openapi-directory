@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetRepoSecretPathParams struct {
+type ActionsGetRepoSecretRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsGetRepoSecretRequest struct {
-	PathParams ActionsGetRepoSecretPathParams
 }
 
 type ActionsGetRepoSecretResponse struct {

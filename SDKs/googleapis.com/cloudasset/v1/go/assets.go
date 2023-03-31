@@ -32,20 +32,20 @@ func newAssets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CloudassetAssetsList - Lists assets with time and resource types and returns paged results in response.
-func (s *assets) CloudassetAssetsList(ctx context.Context, request operations.CloudassetAssetsListRequest) (*operations.CloudassetAssetsListResponse, error) {
+func (s *assets) CloudassetAssetsList(ctx context.Context, request operations.CloudassetAssetsListRequest, security operations.CloudassetAssetsListSecurity) (*operations.CloudassetAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

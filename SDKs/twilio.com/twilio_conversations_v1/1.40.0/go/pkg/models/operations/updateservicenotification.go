@@ -12,12 +12,8 @@ var UpdateServiceNotificationServerList = []string{
 }
 
 type UpdateServiceNotificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceNotificationPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceNotificationUpdateServiceNotificationRequest struct {
@@ -50,10 +46,9 @@ type UpdateServiceNotificationUpdateServiceNotificationRequest struct {
 }
 
 type UpdateServiceNotificationRequest struct {
-	PathParams UpdateServiceNotificationPathParams
-	Request    *UpdateServiceNotificationUpdateServiceNotificationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceNotificationSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
+	ChatServiceSid string                                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *UpdateServiceNotificationUpdateServiceNotificationRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateServiceNotificationResponse struct {

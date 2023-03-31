@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePathParams struct {
-	// The ID of the shopper to delete. Must agree with the shopper id on the token or header, if present. *Note*: **shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)
-	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
-type DeleteQueryParams struct {
+type DeleteRequest struct {
 	// The client IP of the user who originated the request leading to this call.
 	AuditClientIP string `queryParam:"style=form,explode=true,name=auditClientIp"`
-}
-
-type DeleteRequest struct {
-	PathParams  DeletePathParams
-	QueryParams DeleteQueryParams
+	// The ID of the shopper to delete. Must agree with the shopper id on the token or header, if present. *Note*: **shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)
+	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
 }
 
 type DeleteResponse struct {

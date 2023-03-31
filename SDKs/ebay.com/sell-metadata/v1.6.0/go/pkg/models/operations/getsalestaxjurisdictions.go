@@ -8,17 +8,12 @@ import (
 )
 
 type GetSalesTaxJurisdictionsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSalesTaxJurisdictionsPathParams struct {
-	// This path parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> country code for the country whose jurisdictions you want to retrieve. eBay provides sales tax jurisdiction information for Canada and the United States.Valid values for this path parameter are <code>CA</code> and <code>US</code>.
-	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSalesTaxJurisdictionsRequest struct {
-	PathParams GetSalesTaxJurisdictionsPathParams
-	Security   GetSalesTaxJurisdictionsSecurity
+	// This path parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> country code for the country whose jurisdictions you want to retrieve. eBay provides sales tax jurisdiction information for Canada and the United States.Valid values for this path parameter are <code>CA</code> and <code>US</code>.
+	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
 }
 
 type GetSalesTaxJurisdictionsResponse struct {

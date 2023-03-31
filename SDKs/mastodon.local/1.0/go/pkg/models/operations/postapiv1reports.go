@@ -8,7 +8,7 @@ import (
 )
 
 type PostAPIV1ReportsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1ReportsRequestBody struct {
@@ -20,11 +20,6 @@ type PostAPIV1ReportsRequestBody struct {
 	Forward *bool `json:"forward,omitempty"`
 	// Array of Statuses to attach to the report, for context
 	StatusIds []string `json:"status_ids,omitempty"`
-}
-
-type PostAPIV1ReportsRequest struct {
-	Request  *PostAPIV1ReportsRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1ReportsSecurity
 }
 
 type PostAPIV1ReportsResponse struct {

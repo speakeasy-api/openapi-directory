@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUpdateWarehouseHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock struct {
 	Cost          string `json:"cost"`
 	CostToDisplay string `json:"costToDisplay"`
@@ -29,8 +22,11 @@ type CreateUpdateWarehouseCreateUpdateWarehouseRequest struct {
 }
 
 type CreateUpdateWarehouseRequest struct {
-	Headers CreateUpdateWarehouseHeaders
-	Request CreateUpdateWarehouseCreateUpdateWarehouseRequest `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                                            `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody CreateUpdateWarehouseCreateUpdateWarehouseRequest `request:"mediaType=application/json"`
 }
 
 type CreateUpdateWarehouseResponse struct {

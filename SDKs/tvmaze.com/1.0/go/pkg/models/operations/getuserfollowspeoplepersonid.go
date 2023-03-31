@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserFollowsPeoplePersonIDPathParams struct {
-	PersonID int64 `pathParam:"style=simple,explode=false,name=person_id"`
-}
-
 type GetUserFollowsPeoplePersonIDRequest struct {
-	PathParams GetUserFollowsPeoplePersonIDPathParams
+	PersonID int64 `pathParam:"style=simple,explode=false,name=person_id"`
 }
 
 type GetUserFollowsPeoplePersonIDResponse struct {

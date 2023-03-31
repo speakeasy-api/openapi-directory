@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetOrganizationDevicesUplinksLossAndLatencyPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum - Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks.
 type GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum string
 
@@ -40,9 +36,10 @@ func (e *GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum) UnmarshalJSON(da
 	}
 }
 
-type GetOrganizationDevicesUplinksLossAndLatencyQueryParams struct {
+type GetOrganizationDevicesUplinksLossAndLatencyRequest struct {
 	// Optional filter for a specific destination IP. Default will return all destination IPs.
-	IP *string `queryParam:"style=form,explode=true,name=ip"`
+	IP             *string `queryParam:"style=form,explode=true,name=ip"`
+	OrganizationID string  `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The beginning of the timespan for the data. The maximum lookback period is 60 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past.
@@ -51,11 +48,6 @@ type GetOrganizationDevicesUplinksLossAndLatencyQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks.
 	Uplink *GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum `queryParam:"style=form,explode=true,name=uplink"`
-}
-
-type GetOrganizationDevicesUplinksLossAndLatencyRequest struct {
-	PathParams  GetOrganizationDevicesUplinksLossAndLatencyPathParams
-	QueryParams GetOrganizationDevicesUplinksLossAndLatencyQueryParams
 }
 
 type GetOrganizationDevicesUplinksLossAndLatency200ApplicationJSONTimeSeries struct {

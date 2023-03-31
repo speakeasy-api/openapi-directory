@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetArtifactPathParams struct {
+type ActionsGetArtifactRequest struct {
 	// The unique identifier of the artifact.
 	ArtifactID int64 `pathParam:"style=simple,explode=false,name=artifact_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsGetArtifactRequest struct {
-	PathParams ActionsGetArtifactPathParams
 }
 
 type ActionsGetArtifactResponse struct {

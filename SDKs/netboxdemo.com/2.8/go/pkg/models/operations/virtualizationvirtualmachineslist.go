@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationVirtualMachinesListQueryParams struct {
+type VirtualizationVirtualMachinesListRequest struct {
 	Cluster         *string `queryParam:"style=form,explode=true,name=cluster"`
 	ClusterN        *string `queryParam:"style=form,explode=true,name=cluster__n"`
 	ClusterGroup    *string `queryParam:"style=form,explode=true,name=cluster_group"`
@@ -104,10 +104,6 @@ type VirtualizationVirtualMachinesListQueryParams struct {
 	VcpusLt        *string `queryParam:"style=form,explode=true,name=vcpus__lt"`
 	VcpusLte       *string `queryParam:"style=form,explode=true,name=vcpus__lte"`
 	VcpusN         *string `queryParam:"style=form,explode=true,name=vcpus__n"`
-}
-
-type VirtualizationVirtualMachinesListRequest struct {
-	QueryParams VirtualizationVirtualMachinesListQueryParams
 }
 
 type VirtualizationVirtualMachinesList200ApplicationJSON struct {

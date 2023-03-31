@@ -8,23 +8,15 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetEmployerSummaryReportOuputQueryParams struct {
-	// The date context for the report. E.g. 2018-04-30
-	ContextDate types.Date `queryParam:"style=form,explode=true,name=ContextDate"`
-	// The employer unique key. E.g. ER001
-	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
-}
-
-type GetEmployerSummaryReportOuputHeaders struct {
+type GetEmployerSummaryReportOuputRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetEmployerSummaryReportOuputRequest struct {
-	QueryParams GetEmployerSummaryReportOuputQueryParams
-	Headers     GetEmployerSummaryReportOuputHeaders
+	// The date context for the report. E.g. 2018-04-30
+	ContextDate types.Date `queryParam:"style=form,explode=true,name=ContextDate"`
+	// The employer unique key. E.g. ER001
+	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 }
 
 type GetEmployerSummaryReportOuputResponse struct {

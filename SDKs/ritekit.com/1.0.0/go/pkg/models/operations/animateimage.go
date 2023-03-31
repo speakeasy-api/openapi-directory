@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type AnimateImageQueryParams struct {
+type AnimateImageRequest struct {
 	// URL of the company
 	Type string `queryParam:"style=form,explode=true,name=type"`
 	// URL of the company
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type AnimateImageRequest struct {
-	QueryParams AnimateImageQueryParams
 }
 
 type AnimateImageResponse struct {

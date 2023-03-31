@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ObjectsGetObjectsByObjectIdsPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ObjectsGetObjectsByObjectIdsQueryParams struct {
+type ObjectsGetObjectsByObjectIdsRequest struct {
+	// Objects filtering parameters.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ObjectsGetObjectsByObjectIdsRequest struct {
-	PathParams  ObjectsGetObjectsByObjectIdsPathParams
-	QueryParams ObjectsGetObjectsByObjectIdsQueryParams
-	// Objects filtering parameters.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type ObjectsGetObjectsByObjectIdsResponse struct {

@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams struct {
+type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Cabin class: 'M', 'E', 'C', 'F'. Some flights have fewer classes (Acceptable values are: "M", "E", "C", "F")
 	CabinClass string `pathParam:"style=simple,explode=false,name=cabinClass"`
 	// Departure date (YYYY-MM-DD)
@@ -22,17 +23,6 @@ type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams
 	FlightNumber string `pathParam:"style=simple,explode=false,name=flightNumber"`
 	// Departure airport. 3-letter IATA airport code (e.g. 'TXL')
 	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-}
-
-type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest struct {
-	PathParams OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams
-	Headers    OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders
-	Security   OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity
 }
 
 type OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse struct {

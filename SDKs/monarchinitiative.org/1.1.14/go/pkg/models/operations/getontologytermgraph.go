@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOntologyTermGraphPathParams struct {
-	// CURIE identifier of a GO term, e.g. GO:0000981
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetOntologyTermGraphGraphTypeEnum - graph type ('topology_graph', 'regulates_transitivity_graph' or 'neighborhood_graph')
 type GetOntologyTermGraphGraphTypeEnum string
 
@@ -43,14 +38,11 @@ func (e *GetOntologyTermGraphGraphTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOntologyTermGraphQueryParams struct {
+type GetOntologyTermGraphRequest struct {
 	// graph type ('topology_graph', 'regulates_transitivity_graph' or 'neighborhood_graph')
 	GraphType *GetOntologyTermGraphGraphTypeEnum `queryParam:"style=form,explode=true,name=graph_type"`
-}
-
-type GetOntologyTermGraphRequest struct {
-	PathParams  GetOntologyTermGraphPathParams
-	QueryParams GetOntologyTermGraphQueryParams
+	// CURIE identifier of a GO term, e.g. GO:0000981
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetOntologyTermGraphResponse struct {

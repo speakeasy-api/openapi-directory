@@ -12,14 +12,8 @@ var UpdateChannelServerList = []string{
 }
 
 type UpdateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChannelPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Channel resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChannelUpdateChannelRequest struct {
@@ -32,10 +26,11 @@ type UpdateChannelUpdateChannelRequest struct {
 }
 
 type UpdateChannelRequest struct {
-	PathParams UpdateChannelPathParams
-	Request    *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateChannelSecurity
-	ServerURL  *string
+	RequestBody *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Channel resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateChannelResponse struct {

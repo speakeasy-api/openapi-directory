@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PrivateProjectsSearchRequest struct {
-	// Search Parameters
-	Request *shared.ProjectsSearch `request:"mediaType=application/json"`
-}
-
 type PrivateProjectsSearchResponse struct {
 	ContentType string
 	// OK. An array of projects

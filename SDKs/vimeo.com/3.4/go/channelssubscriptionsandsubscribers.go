@@ -34,7 +34,7 @@ func newChannelsSubscriptionsAndSubscribers(defaultClient, securityClient HTTPCl
 // CheckIfUserSubscribedToChannel - Check if a user follows a channel
 func (s *channelsSubscriptionsAndSubscribers) CheckIfUserSubscribedToChannel(ctx context.Context, request operations.CheckIfUserSubscribedToChannelRequest) (*operations.CheckIfUserSubscribedToChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *channelsSubscriptionsAndSubscribers) CheckIfUserSubscribedToChannel(ctx
 // CheckIfUserSubscribedToChannelAlt1 - Check if a user follows a channel
 func (s *channelsSubscriptionsAndSubscribers) CheckIfUserSubscribedToChannelAlt1(ctx context.Context, request operations.CheckIfUserSubscribedToChannelAlt1Request) (*operations.CheckIfUserSubscribedToChannelAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,14 +124,14 @@ func (s *channelsSubscriptionsAndSubscribers) CheckIfUserSubscribedToChannelAlt1
 // GetChannelSubscribers - Get all the followers of a channel
 func (s *channelsSubscriptionsAndSubscribers) GetChannelSubscribers(ctx context.Context, request operations.GetChannelSubscribersRequest) (*operations.GetChannelSubscribersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,16 +180,16 @@ func (s *channelsSubscriptionsAndSubscribers) GetChannelSubscribers(ctx context.
 }
 
 // SubscribeToChannel - Subscribe a user to a specific channel
-func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannel(ctx context.Context, request operations.SubscribeToChannelRequest) (*operations.SubscribeToChannelResponse, error) {
+func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannel(ctx context.Context, request operations.SubscribeToChannelRequest, security operations.SubscribeToChannelSecurity) (*operations.SubscribeToChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,16 +225,16 @@ func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannel(ctx context.Con
 }
 
 // SubscribeToChannelAlt1 - Subscribe a user to a specific channel
-func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannelAlt1(ctx context.Context, request operations.SubscribeToChannelAlt1Request) (*operations.SubscribeToChannelAlt1Response, error) {
+func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannelAlt1(ctx context.Context, request operations.SubscribeToChannelAlt1Request, security operations.SubscribeToChannelAlt1Security) (*operations.SubscribeToChannelAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,16 +270,16 @@ func (s *channelsSubscriptionsAndSubscribers) SubscribeToChannelAlt1(ctx context
 }
 
 // UnsubscribeFromChannel - Unsubscribe a user from a specific channel
-func (s *channelsSubscriptionsAndSubscribers) UnsubscribeFromChannel(ctx context.Context, request operations.UnsubscribeFromChannelRequest) (*operations.UnsubscribeFromChannelResponse, error) {
+func (s *channelsSubscriptionsAndSubscribers) UnsubscribeFromChannel(ctx context.Context, request operations.UnsubscribeFromChannelRequest, security operations.UnsubscribeFromChannelSecurity) (*operations.UnsubscribeFromChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -315,16 +315,16 @@ func (s *channelsSubscriptionsAndSubscribers) UnsubscribeFromChannel(ctx context
 }
 
 // UnsubscribeFromChannelAlt1 - Unsubscribe a user from a specific channel
-func (s *channelsSubscriptionsAndSubscribers) UnsubscribeFromChannelAlt1(ctx context.Context, request operations.UnsubscribeFromChannelAlt1Request) (*operations.UnsubscribeFromChannelAlt1Response, error) {
+func (s *channelsSubscriptionsAndSubscribers) UnsubscribeFromChannelAlt1(ctx context.Context, request operations.UnsubscribeFromChannelAlt1Request, security operations.UnsubscribeFromChannelAlt1Security) (*operations.UnsubscribeFromChannelAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

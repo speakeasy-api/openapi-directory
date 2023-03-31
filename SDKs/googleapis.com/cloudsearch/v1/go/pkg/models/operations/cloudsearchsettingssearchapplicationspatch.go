@@ -8,18 +8,18 @@ import (
 )
 
 type CloudsearchSettingsSearchapplicationsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsPatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsPatchSecurity struct {
@@ -28,14 +28,10 @@ type CloudsearchSettingsSearchapplicationsPatchSecurity struct {
 	Option3 *CloudsearchSettingsSearchapplicationsPatchSecurityOption3 `security:"option"`
 }
 
-type CloudsearchSettingsSearchapplicationsPatchPathParams struct {
-	// The name of the Search Application. Format: searchapplications/{application_id}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudsearchSettingsSearchapplicationsPatchQueryParams struct {
+type CloudsearchSettingsSearchapplicationsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SearchApplicationInput *shared.SearchApplicationInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,6 +42,8 @@ type CloudsearchSettingsSearchapplicationsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the Search Application. Format: searchapplications/{application_id}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -58,13 +56,6 @@ type CloudsearchSettingsSearchapplicationsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchSettingsSearchapplicationsPatchRequest struct {
-	PathParams  CloudsearchSettingsSearchapplicationsPatchPathParams
-	QueryParams CloudsearchSettingsSearchapplicationsPatchQueryParams
-	Request     *shared.SearchApplicationInput `request:"mediaType=application/json"`
-	Security    CloudsearchSettingsSearchapplicationsPatchSecurity
 }
 
 type CloudsearchSettingsSearchapplicationsPatchResponse struct {

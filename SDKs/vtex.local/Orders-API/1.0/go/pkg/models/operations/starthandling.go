@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type StartHandlingPathParams struct {
-	// Order ID is a unique code that identifies an order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type StartHandlingHeaders struct {
+type StartHandlingRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type StartHandlingRequest struct {
-	PathParams StartHandlingPathParams
-	Headers    StartHandlingHeaders
+	// Order ID is a unique code that identifies an order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // StartHandling409ApplicationJSONError - Object containing the error information

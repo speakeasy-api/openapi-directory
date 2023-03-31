@@ -8,18 +8,18 @@ import (
 )
 
 type StorageNotificationsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsDeleteSecurity struct {
@@ -28,20 +28,17 @@ type StorageNotificationsDeleteSecurity struct {
 	Option3 *StorageNotificationsDeleteSecurityOption3 `security:"option"`
 }
 
-type StorageNotificationsDeletePathParams struct {
-	// The parent bucket of the notification.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// ID of the notification to delete.
-	Notification string `pathParam:"style=simple,explode=false,name=notification"`
-}
-
-type StorageNotificationsDeleteQueryParams struct {
+type StorageNotificationsDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The parent bucket of the notification.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// ID of the notification to delete.
+	Notification string `pathParam:"style=simple,explode=false,name=notification"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -54,12 +51,6 @@ type StorageNotificationsDeleteQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageNotificationsDeleteRequest struct {
-	PathParams  StorageNotificationsDeletePathParams
-	QueryParams StorageNotificationsDeleteQueryParams
-	Security    StorageNotificationsDeleteSecurity
 }
 
 type StorageNotificationsDeleteResponse struct {

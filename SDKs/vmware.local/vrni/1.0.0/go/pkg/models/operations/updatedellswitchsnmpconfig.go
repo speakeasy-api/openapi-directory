@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateDellSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateDellSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateDellSwitchSnmpConfigRequest struct {
-	PathParams UpdateDellSwitchSnmpConfigPathParams
-	Request    *shared.SNMPConfig `request:"mediaType=application/json"`
-	Security   UpdateDellSwitchSnmpConfigSecurity
+	SNMPConfig *shared.SNMPConfig `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateDellSwitchSnmpConfigResponse struct {

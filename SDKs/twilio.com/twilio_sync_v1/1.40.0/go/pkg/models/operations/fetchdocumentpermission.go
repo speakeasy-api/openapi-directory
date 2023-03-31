@@ -12,22 +12,17 @@ var FetchDocumentPermissionServerList = []string{
 }
 
 type FetchDocumentPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchDocumentPermissionPathParams struct {
+type FetchDocumentPermissionRequest struct {
 	// The SID of the Sync Document with the Document Permission resource to fetch. Can be the Document resource's `sid` or its `unique_name`.
 	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
 	// The application-defined string that uniquely identifies the User's Document Permission resource to fetch.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type FetchDocumentPermissionRequest struct {
-	PathParams FetchDocumentPermissionPathParams
-	Security   FetchDocumentPermissionSecurity
-	ServerURL  *string
 }
 
 type FetchDocumentPermissionResponse struct {

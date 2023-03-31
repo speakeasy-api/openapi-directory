@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ImGroupDeletePathParams struct {
+type ImGroupDeleteRequest struct {
 	// The group ID.<br>
 	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type ImGroupDeleteRequest struct {
-	PathParams ImGroupDeletePathParams
 }
 
 type ImGroupDeleteResponse struct {

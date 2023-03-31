@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchGroupPathParams struct {
+type FetchGroupRequest struct {
 	// Group identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchGroupRequest struct {
-	PathParams FetchGroupPathParams
 }
 
 type FetchGroupResponse struct {

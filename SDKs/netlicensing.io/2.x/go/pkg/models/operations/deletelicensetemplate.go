@@ -8,23 +8,15 @@ import (
 )
 
 type DeleteLicenseTemplateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteLicenseTemplatePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the License Template.
-	LicenseTemplateNumber string `pathParam:"style=simple,explode=false,name=licenseTemplateNumber"`
-}
-
-type DeleteLicenseTemplateQueryParams struct {
-	// Force object deletion and all descendants.
-	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteLicenseTemplateRequest struct {
-	PathParams  DeleteLicenseTemplatePathParams
-	QueryParams DeleteLicenseTemplateQueryParams
-	Security    DeleteLicenseTemplateSecurity
+	// Force object deletion and all descendants.
+	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	// Unique number (across all Products of a Vendor) that identifies the License Template.
+	LicenseTemplateNumber string `pathParam:"style=simple,explode=false,name=licenseTemplateNumber"`
 }
 
 type DeleteLicenseTemplateResponse struct {

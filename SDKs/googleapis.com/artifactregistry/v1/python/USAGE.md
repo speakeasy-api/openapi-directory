@@ -4,40 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ArtifactregistryProjectsLocationsListRequest(
-    security=operations.ArtifactregistryProjectsLocationsListSecurity(
-        option1=operations.ArtifactregistryProjectsLocationsListSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.ArtifactregistryProjectsLocationsListPathParams(
-        name="et",
-    ),
-    query_params=operations.ArtifactregistryProjectsLocationsListQueryParams(
-        dollar_xgafv="1",
-        access_token="dolorum",
-        alt="json",
-        callback="distinctio",
-        fields="quaerat",
-        filter="sit",
-        key="eum",
-        oauth_token="consequuntur",
-        page_size=6576755010906771304,
-        page_token="perspiciatis",
-        pretty_print=False,
-        quota_user="delectus",
-        upload_type="sapiente",
-        upload_protocol="quae",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    name="illum",
+    oauth_token="vel",
+    page_size=623564,
+    page_token="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.projects.artifactregistry_projects_locations_list(req)
+res = s.projects.artifactregistry_projects_locations_list(req, operations.ArtifactregistryProjectsLocationsListSecurity(
+    option1=operations.ArtifactregistryProjectsLocationsListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.list_locations_response is not None:
     # handle response

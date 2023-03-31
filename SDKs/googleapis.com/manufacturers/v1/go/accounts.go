@@ -32,20 +32,20 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ManufacturersAccountsLanguagesProductCertificationsDelete - Deletes a product certification by its name. This method can only be called by certification bodies.
-func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsDelete(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest) (*operations.ManufacturersAccountsLanguagesProductCertificationsDeleteResponse, error) {
+func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsDelete(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest, security operations.ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity) (*operations.ManufacturersAccountsLanguagesProductCertificationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsDelete(ctx
 }
 
 // ManufacturersAccountsLanguagesProductCertificationsGet - Gets a product certification by its name. This method can only be called by certification bodies.
-func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsGet(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsGetRequest) (*operations.ManufacturersAccountsLanguagesProductCertificationsGetResponse, error) {
+func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsGet(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsGetRequest, security operations.ManufacturersAccountsLanguagesProductCertificationsGetSecurity) (*operations.ManufacturersAccountsLanguagesProductCertificationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsGet(ctx co
 }
 
 // ManufacturersAccountsLanguagesProductCertificationsList - Lists product certifications from a specified certification body. This method can only be called by certification bodies.
-func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsList(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsListRequest) (*operations.ManufacturersAccountsLanguagesProductCertificationsListResponse, error) {
+func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsList(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsListRequest, security operations.ManufacturersAccountsLanguagesProductCertificationsListSecurity) (*operations.ManufacturersAccountsLanguagesProductCertificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/productCertifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/productCertifications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,11 +176,11 @@ func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsList(ctx c
 }
 
 // ManufacturersAccountsLanguagesProductCertificationsPatch - Updates (or creates if allow_missing = true) a product certification which links certifications with products. This method can only be called by certification bodies.
-func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsPatch(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsPatchRequest) (*operations.ManufacturersAccountsLanguagesProductCertificationsPatchResponse, error) {
+func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsPatch(ctx context.Context, request operations.ManufacturersAccountsLanguagesProductCertificationsPatchRequest, security operations.ManufacturersAccountsLanguagesProductCertificationsPatchSecurity) (*operations.ManufacturersAccountsLanguagesProductCertificationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductCertificationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -192,11 +192,11 @@ func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsPatch(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *accounts) ManufacturersAccountsLanguagesProductCertificationsPatch(ctx 
 }
 
 // ManufacturersAccountsProductsDelete - Deletes the product from a Manufacturer Center account.
-func (s *accounts) ManufacturersAccountsProductsDelete(ctx context.Context, request operations.ManufacturersAccountsProductsDeleteRequest) (*operations.ManufacturersAccountsProductsDeleteResponse, error) {
+func (s *accounts) ManufacturersAccountsProductsDelete(ctx context.Context, request operations.ManufacturersAccountsProductsDeleteRequest, security operations.ManufacturersAccountsProductsDeleteSecurity) (*operations.ManufacturersAccountsProductsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *accounts) ManufacturersAccountsProductsDelete(ctx context.Context, requ
 }
 
 // ManufacturersAccountsProductsGet - Gets the product from a Manufacturer Center account, including product issues. A recently updated product takes around 15 minutes to process. Changes are only visible after it has been processed. While some issues may be available once the product has been processed, other issues may take days to appear.
-func (s *accounts) ManufacturersAccountsProductsGet(ctx context.Context, request operations.ManufacturersAccountsProductsGetRequest) (*operations.ManufacturersAccountsProductsGetResponse, error) {
+func (s *accounts) ManufacturersAccountsProductsGet(ctx context.Context, request operations.ManufacturersAccountsProductsGetRequest, security operations.ManufacturersAccountsProductsGetSecurity) (*operations.ManufacturersAccountsProductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,20 +327,20 @@ func (s *accounts) ManufacturersAccountsProductsGet(ctx context.Context, request
 }
 
 // ManufacturersAccountsProductsList - Lists all the products in a Manufacturer Center account.
-func (s *accounts) ManufacturersAccountsProductsList(ctx context.Context, request operations.ManufacturersAccountsProductsListRequest) (*operations.ManufacturersAccountsProductsListResponse, error) {
+func (s *accounts) ManufacturersAccountsProductsList(ctx context.Context, request operations.ManufacturersAccountsProductsListRequest, security operations.ManufacturersAccountsProductsListSecurity) (*operations.ManufacturersAccountsProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -375,11 +375,11 @@ func (s *accounts) ManufacturersAccountsProductsList(ctx context.Context, reques
 }
 
 // ManufacturersAccountsProductsUpdate - Inserts or updates the attributes of the product in a Manufacturer Center account. Creates a product with the provided attributes. If the product already exists, then all attributes are replaced with the new ones. The checks at upload time are minimal. All required attributes need to be present for a product to be valid. Issues may show up later after the API has accepted a new upload for a product and it is possible to overwrite an existing valid product with an invalid product. To detect this, you should retrieve the product and check it for issues once the new version is available. Uploaded attributes first need to be processed before they can be retrieved. Until then, new products will be unavailable, and retrieval of previously uploaded products will return the original state of the product.
-func (s *accounts) ManufacturersAccountsProductsUpdate(ctx context.Context, request operations.ManufacturersAccountsProductsUpdateRequest) (*operations.ManufacturersAccountsProductsUpdateResponse, error) {
+func (s *accounts) ManufacturersAccountsProductsUpdate(ctx context.Context, request operations.ManufacturersAccountsProductsUpdateRequest, security operations.ManufacturersAccountsProductsUpdateSecurity) (*operations.ManufacturersAccountsProductsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Attributes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -391,11 +391,11 @@ func (s *accounts) ManufacturersAccountsProductsUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

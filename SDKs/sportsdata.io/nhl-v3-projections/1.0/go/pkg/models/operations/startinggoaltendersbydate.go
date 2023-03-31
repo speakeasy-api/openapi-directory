@@ -33,16 +33,12 @@ func (e *StartingGoaltendersByDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StartingGoaltendersByDatePathParams struct {
+type StartingGoaltendersByDateRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2021-OCT-12</code>, <code>2021-DEC-09</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format StartingGoaltendersByDateFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type StartingGoaltendersByDateRequest struct {
-	PathParams StartingGoaltendersByDatePathParams
 }
 
 type StartingGoaltendersByDateResponse struct {

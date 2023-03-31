@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteParticipantServerList = []string{
@@ -12,22 +11,17 @@ var DeleteParticipantServerList = []string{
 }
 
 type DeleteParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteParticipantPathParams struct {
+type DeleteParticipantRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID or label of the participant to delete. Non URL safe characters in a label must be percent encoded, for example, a space character is represented as %20.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The SID of the conference with the participants to delete.
 	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
-}
-
-type DeleteParticipantRequest struct {
-	PathParams DeleteParticipantPathParams
-	Security   DeleteParticipantSecurity
-	ServerURL  *string
 }
 
 type DeleteParticipantResponse struct {

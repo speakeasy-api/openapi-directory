@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetMibsPathParams struct {
+type SetMibsRequest struct {
+	RequestBody []shared.Triplet `request:"mediaType=application/json"`
 	// Agent to return the MIB triplets
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type SetMibsRequest struct {
-	PathParams SetMibsPathParams
-	Request    []shared.Triplet `request:"mediaType=application/json"`
 }
 
 type SetMibsResponse struct {

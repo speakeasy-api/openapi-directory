@@ -8,12 +8,7 @@ import (
 )
 
 type CustomFieldsUploadSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CustomFieldsUploadPathParams struct {
-	// Custom field identifier
-	CustomFieldID int64 `pathParam:"style=simple,explode=false,name=custom_field_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CustomFieldsUploadRequestBodyExternalFile struct {
@@ -27,9 +22,9 @@ type CustomFieldsUploadRequestBody struct {
 }
 
 type CustomFieldsUploadRequest struct {
-	PathParams CustomFieldsUploadPathParams
-	Request    *CustomFieldsUploadRequestBody `request:"mediaType=multipart/form-data"`
-	Security   CustomFieldsUploadSecurity
+	RequestBody *CustomFieldsUploadRequestBody `request:"mediaType=multipart/form-data"`
+	// Custom field identifier
+	CustomFieldID int64 `pathParam:"style=simple,explode=false,name=custom_field_id"`
 }
 
 type CustomFieldsUploadResponse struct {

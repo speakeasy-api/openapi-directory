@@ -12,12 +12,8 @@ var UpdateCustomerProfileServerList = []string{
 }
 
 type UpdateCustomerProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCustomerProfilePathParams struct {
-	// The unique string that we created to identify the Customer-Profile resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCustomerProfileUpdateCustomerProfileRequest struct {
@@ -31,10 +27,9 @@ type UpdateCustomerProfileUpdateCustomerProfileRequest struct {
 }
 
 type UpdateCustomerProfileRequest struct {
-	PathParams UpdateCustomerProfilePathParams
-	Request    *UpdateCustomerProfileUpdateCustomerProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCustomerProfileSecurity
-	ServerURL  *string
+	RequestBody *UpdateCustomerProfileUpdateCustomerProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the Customer-Profile resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCustomerProfileResponse struct {

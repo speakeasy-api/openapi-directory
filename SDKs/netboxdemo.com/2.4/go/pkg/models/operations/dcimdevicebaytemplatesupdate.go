@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceBayTemplatesUpdatePathParams struct {
+type DcimDeviceBayTemplatesUpdateRequest struct {
+	WritableDeviceBayTemplateInput shared.WritableDeviceBayTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this device bay template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceBayTemplatesUpdateRequest struct {
-	PathParams DcimDeviceBayTemplatesUpdatePathParams
-	Request    shared.WritableDeviceBayTemplateInput `request:"mediaType=application/json"`
 }
 
 type DcimDeviceBayTemplatesUpdateResponse struct {

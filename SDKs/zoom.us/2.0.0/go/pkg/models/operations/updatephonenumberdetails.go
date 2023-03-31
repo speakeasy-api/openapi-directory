@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdatePhoneNumberDetailsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdatePhoneNumberDetailsPathParams struct {
-	// Phone number ID.
-	NumberID string `pathParam:"style=simple,explode=false,name=numberId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdatePhoneNumberDetailsApplicationJSON struct {
@@ -24,9 +18,9 @@ type UpdatePhoneNumberDetailsApplicationJSON struct {
 }
 
 type UpdatePhoneNumberDetailsRequest struct {
-	PathParams UpdatePhoneNumberDetailsPathParams
-	Request    *UpdatePhoneNumberDetailsApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdatePhoneNumberDetailsSecurity
+	RequestBody *UpdatePhoneNumberDetailsApplicationJSON `request:"mediaType=application/json"`
+	// Phone number ID.
+	NumberID string `pathParam:"style=simple,explode=false,name=numberId"`
 }
 
 type UpdatePhoneNumberDetailsResponse struct {

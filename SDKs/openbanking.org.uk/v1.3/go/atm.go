@@ -42,7 +42,7 @@ func (s *atm) GetAtms(ctx context.Context, request operations.GetAtmsRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -162,7 +162,7 @@ func (s *atm) HeadAtms(ctx context.Context, request operations.HeadAtmsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

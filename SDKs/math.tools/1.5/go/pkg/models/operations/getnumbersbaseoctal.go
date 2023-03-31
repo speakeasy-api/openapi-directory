@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersBaseOctalSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
-type GetNumbersBaseOctalQueryParams struct {
+type GetNumbersBaseOctalRequest struct {
 	// Base of the supplied number (Optional base 10 assumed by default)
 	From *int64 `queryParam:"style=form,explode=true,name=from"`
 	// Number to convert to octal
 	Number int64 `queryParam:"style=form,explode=true,name=number"`
-}
-
-type GetNumbersBaseOctalRequest struct {
-	QueryParams GetNumbersBaseOctalQueryParams
-	Security    GetNumbersBaseOctalSecurity
 }
 
 type GetNumbersBaseOctalResponse struct {

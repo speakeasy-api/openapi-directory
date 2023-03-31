@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccessSavePathParams struct {
+type AccessSaveRequest struct {
 	// Filename to save
 	Filename string `pathParam:"style=simple,explode=false,name=filename"`
-}
-
-type AccessSaveRequest struct {
-	PathParams AccessSavePathParams
 }
 
 type AccessSaveResponse struct {

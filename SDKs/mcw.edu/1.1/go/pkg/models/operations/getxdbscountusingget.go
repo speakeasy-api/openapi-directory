@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETXdbsCountUsingGETPathParams struct {
+type GETXdbsCountUsingGETRequest struct {
 	// dateYYYYMMDD
 	DateYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETXdbsCountUsingGETRequest struct {
-	PathParams GETXdbsCountUsingGETPathParams
 }
 
 type GETXdbsCountUsingGETResponse struct {

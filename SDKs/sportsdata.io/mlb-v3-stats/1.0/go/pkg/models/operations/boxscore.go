@@ -33,15 +33,11 @@ func (e *BoxScoreFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScorePathParams struct {
+type BoxScoreRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoreFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The GameID of an MLB game.  GameIDs can be found in the Games API.  Valid entries are <code>14620</code> or <code>16905</code>
 	Gameid string `pathParam:"style=simple,explode=false,name=gameid"`
-}
-
-type BoxScoreRequest struct {
-	PathParams BoxScorePathParams
 }
 
 type BoxScoreResponse struct {

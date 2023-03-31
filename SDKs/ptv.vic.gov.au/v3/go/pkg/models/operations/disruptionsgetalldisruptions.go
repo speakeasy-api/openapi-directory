@@ -124,7 +124,7 @@ func (e *DisruptionsGetAllDisruptionsRouteTypesEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DisruptionsGetAllDisruptionsQueryParams struct {
+type DisruptionsGetAllDisruptionsRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by disruption_mode; values returned via v3/disruptions/modes API
@@ -137,10 +137,6 @@ type DisruptionsGetAllDisruptionsQueryParams struct {
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetAllDisruptionsRequest struct {
-	QueryParams DisruptionsGetAllDisruptionsQueryParams
 }
 
 type DisruptionsGetAllDisruptionsResponse struct {

@@ -33,11 +33,11 @@ func newTagKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CloudresourcemanagerTagKeysCreate - Creates a new TagKey. If another request with the same parameters is sent while the original request is in process, the second request will receive an error. A maximum of 1000 TagKeys can exist under a parent at any given time.
-func (s *tagKeys) CloudresourcemanagerTagKeysCreate(ctx context.Context, request operations.CloudresourcemanagerTagKeysCreateRequest) (*operations.CloudresourcemanagerTagKeysCreateResponse, error) {
+func (s *tagKeys) CloudresourcemanagerTagKeysCreate(ctx context.Context, request operations.CloudresourcemanagerTagKeysCreateRequest, security operations.CloudresourcemanagerTagKeysCreateSecurity) (*operations.CloudresourcemanagerTagKeysCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagKeys"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagKeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *tagKeys) CloudresourcemanagerTagKeysCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *tagKeys) CloudresourcemanagerTagKeysCreate(ctx context.Context, request
 }
 
 // CloudresourcemanagerTagKeysList - Lists all TagKeys for a parent resource.
-func (s *tagKeys) CloudresourcemanagerTagKeysList(ctx context.Context, request operations.CloudresourcemanagerTagKeysListRequest) (*operations.CloudresourcemanagerTagKeysListResponse, error) {
+func (s *tagKeys) CloudresourcemanagerTagKeysList(ctx context.Context, request operations.CloudresourcemanagerTagKeysListRequest, security operations.CloudresourcemanagerTagKeysListSecurity) (*operations.CloudresourcemanagerTagKeysListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagKeys"
 
@@ -97,11 +97,11 @@ func (s *tagKeys) CloudresourcemanagerTagKeysList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -3,233 +3,452 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateLifecyclePolicyRequest(
-    headers=operations.CreateLifecyclePolicyHeaders(
-        x_amz_algorithm="doloremque",
-        x_amz_content_sha256="nulla",
-        x_amz_credential="et",
-        x_amz_date="ut",
-        x_amz_security_token="praesentium",
-        x_amz_signature="labore",
-        x_amz_signed_headers="accusamus",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateLifecyclePolicyRequestBody(
-        description="aut",
-        execution_role_arn="alias",
+)
+
+
+req = operations.CreateLifecyclePolicyRequest(
+    request_body=operations.CreateLifecyclePolicyRequestBody(
+        description="corrupti",
+        execution_role_arn="provident",
         policy_details=operations.CreateLifecyclePolicyRequestBodyPolicyDetails(
             actions=[
                 shared.Action(
                     cross_region_copy=[
                         shared.CrossRegionCopyAction(
                             encryption_configuration=shared.EncryptionConfiguration(
-                                cmk_arn="voluptatem",
+                                cmk_arn="unde",
                                 encrypted=False,
                             ),
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=5320768077586043095,
-                                interval_unit="DAYS",
+                                interval=857946,
+                                interval_unit="MONTHS",
                             ),
-                            target="nostrum",
+                            target="illum",
                         ),
                         shared.CrossRegionCopyAction(
                             encryption_configuration=shared.EncryptionConfiguration(
-                                cmk_arn="adipisci",
-                                encrypted=True,
+                                cmk_arn="vel",
+                                encrypted=False,
                             ),
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=6537984888763423894,
+                                interval=623564,
+                                interval_unit="MONTHS",
+                            ),
+                            target="suscipit",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="iure",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=297534,
+                                interval_unit="YEARS",
+                            ),
+                            target="ipsa",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="delectus",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=272656,
                                 interval_unit="WEEKS",
                             ),
-                            target="delectus",
+                            target="molestiae",
                         ),
                     ],
-                    name="tenetur",
+                    name="minus",
                 ),
                 shared.Action(
                     cross_region_copy=[
                         shared.CrossRegionCopyAction(
                             encryption_configuration=shared.EncryptionConfiguration(
-                                cmk_arn="quia",
-                                encrypted=True,
+                                cmk_arn="voluptatum",
+                                encrypted=False,
                             ),
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=8697756961697963853,
-                                interval_unit="YEARS",
+                                interval=479977,
+                                interval_unit="MONTHS",
                             ),
-                            target="nostrum",
+                            target="nisi",
                         ),
                         shared.CrossRegionCopyAction(
                             encryption_configuration=shared.EncryptionConfiguration(
-                                cmk_arn="autem",
-                                encrypted=True,
+                                cmk_arn="recusandae",
+                                encrypted=False,
                             ),
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=4506911669298280718,
+                                interval=836079,
+                                interval_unit="DAYS",
+                            ),
+                            target="quis",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="veritatis",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=648172,
+                                interval_unit="DAYS",
+                            ),
+                            target="ipsam",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="repellendus",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=957156,
                                 interval_unit="YEARS",
                             ),
-                            target="molestias",
+                            target="odit",
                         ),
                     ],
-                    name="nihil",
+                    name="at",
+                ),
+                shared.Action(
+                    cross_region_copy=[
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="maiores",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=473608,
+                                interval_unit="YEARS",
+                            ),
+                            target="quod",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="esse",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=520478,
+                                interval_unit="YEARS",
+                            ),
+                            target="dolorum",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="dicta",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=720633,
+                                interval_unit="MONTHS",
+                            ),
+                            target="occaecati",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="fugit",
+                                encrypted=False,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=537373,
+                                interval_unit="YEARS",
+                            ),
+                            target="optio",
+                        ),
+                    ],
+                    name="totam",
                 ),
             ],
             event_source=shared.EventSource(
                 parameters=shared.EventParameters(
-                    description_regex="consequatur",
+                    description_regex="beatae",
                     event_type="shareSnapshot",
                     snapshot_owner=[
-                        "quae",
-                        "natus",
+                        "molestiae",
+                        "modi",
                     ],
                 ),
                 type="MANAGED_CWE",
             ),
             parameters=shared.Parameters(
                 exclude_boot_volume=False,
-                no_reboot=True,
+                exclude_data_volume_tags=[
+                    shared.Tag(
+                        key="impedit",
+                        value="cum",
+                    ),
+                ],
+                no_reboot=False,
             ),
-            policy_type="EBS_SNAPSHOT_MANAGEMENT",
+            policy_type="IMAGE_MANAGEMENT",
             resource_locations=[
                 "OUTPOST",
-                "CLOUD",
             ],
             resource_types=[
-                "INSTANCE",
-                "INSTANCE",
-                "INSTANCE",
+                "VOLUME",
             ],
             schedules=[
                 shared.Schedule(
+                    archive_rule=shared.ArchiveRule(
+                        retain_rule=shared.ArchiveRetainRule(
+                            retention_archive_tier=shared.RetentionArchiveTier(
+                                count=617636,
+                                interval=149675,
+                                interval_unit="MONTHS",
+                            ),
+                        ),
+                    ),
                     copy_tags=False,
                     create_rule=shared.CreateRule(
-                        cron_expression="sapiente",
-                        interval=4642672273651120892,
+                        cron_expression="dolor",
+                        interval=616934,
                         interval_unit="HOURS",
                         location="CLOUD",
                         times=[
-                            "quo",
+                            "saepe",
+                            "fuga",
+                            "in",
+                            "corporis",
                         ],
                     ),
                     cross_region_copy_rules=[
                         shared.CrossRegionCopyRule(
-                            cmk_arn="ratione",
+                            cmk_arn="iure",
                             copy_tags=False,
                             deprecate_rule=shared.CrossRegionCopyDeprecateRule(
-                                interval=6134675409536001115,
-                                interval_unit="DAYS",
-                            ),
-                            encrypted=True,
-                            retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=1000668831263546934,
+                                interval=902349,
                                 interval_unit="MONTHS",
                             ),
-                            target="aut",
-                            target_region="minima",
+                            encrypted=False,
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=99280,
+                                interval_unit="DAYS",
+                            ),
+                            target="reiciendis",
+                            target_region="est",
                         ),
                         shared.CrossRegionCopyRule(
-                            cmk_arn="at",
-                            copy_tags=True,
+                            cmk_arn="mollitia",
+                            copy_tags=False,
                             deprecate_rule=shared.CrossRegionCopyDeprecateRule(
-                                interval=127225875950264235,
-                                interval_unit="YEARS",
+                                interval=670638,
+                                interval_unit="DAYS",
                             ),
-                            encrypted=True,
+                            encrypted=False,
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=1325682419092169393,
+                                interval=210382,
+                                interval_unit="WEEKS",
+                            ),
+                            target="explicabo",
+                            target_region="nobis",
+                        ),
+                        shared.CrossRegionCopyRule(
+                            cmk_arn="enim",
+                            copy_tags=False,
+                            deprecate_rule=shared.CrossRegionCopyDeprecateRule(
+                                interval=607831,
+                                interval_unit="WEEKS",
+                            ),
+                            encrypted=False,
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=325047,
                                 interval_unit="MONTHS",
                             ),
                             target="accusantium",
-                            target_region="qui",
-                        ),
-                        shared.CrossRegionCopyRule(
-                            cmk_arn="ea",
-                            copy_tags=True,
-                            deprecate_rule=shared.CrossRegionCopyDeprecateRule(
-                                interval=8037355963908866572,
-                                interval_unit="MONTHS",
-                            ),
-                            encrypted=True,
-                            retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=5643905309582698835,
-                                interval_unit="MONTHS",
-                            ),
-                            target="vero",
-                            target_region="quis",
+                            target_region="iure",
                         ),
                     ],
                     deprecate_rule=shared.DeprecateRule(
-                        count=3816780269387027271,
-                        interval=3292878388625507251,
-                        interval_unit="WEEKS",
+                        count=634274,
+                        interval=988374,
+                        interval_unit="YEARS",
                     ),
                     fast_restore_rule=shared.FastRestoreRule(
                         availability_zones=[
-                            "vitae",
-                            "nesciunt",
-                            "fugit",
+                            "mollitia",
                         ],
-                        count=2502521760373555910,
-                        interval=4666865012529559949,
+                        count=208876,
+                        interval=635059,
                         interval_unit="DAYS",
                     ),
-                    name="magni",
+                    name="repellat",
                     retain_rule=shared.RetainRule(
-                        count=5403100475415031532,
-                        interval=500970383850890347,
-                        interval_unit="MONTHS",
+                        count=653108,
+                        interval=581850,
+                        interval_unit="WEEKS",
                     ),
                     share_rules=[
                         shared.ShareRule(
                             target_accounts=[
-                                "qui",
+                                "molestiae",
+                                "velit",
                             ],
-                            unshare_interval=4416889129261804116,
-                            unshare_interval_unit="YEARS",
+                            unshare_interval=623510,
+                            unshare_interval_unit="DAYS",
+                        ),
+                        shared.ShareRule(
+                            target_accounts=[
+                                "vitae",
+                                "laborum",
+                            ],
+                            unshare_interval=656330,
+                            unshare_interval_unit="WEEKS",
                         ),
                     ],
                     tags_to_add=[
                         shared.Tag(
-                            key="doloribus",
-                            value="accusantium",
-                        ),
-                        shared.Tag(
-                            key="explicabo",
-                            value="rem",
-                        ),
-                        shared.Tag(
-                            key="corporis",
-                            value="pariatur",
+                            key="quo",
+                            value="sequi",
                         ),
                     ],
                     variable_tags=[
                         shared.Tag(
-                            key="quisquam",
-                            value="animi",
+                            key="ipsam",
+                            value="id",
+                        ),
+                        shared.Tag(
+                            key="possimus",
+                            value="aut",
+                        ),
+                        shared.Tag(
+                            key="quasi",
+                            value="error",
+                        ),
+                        shared.Tag(
+                            key="temporibus",
+                            value="laborum",
+                        ),
+                    ],
+                ),
+                shared.Schedule(
+                    archive_rule=shared.ArchiveRule(
+                        retain_rule=shared.ArchiveRetainRule(
+                            retention_archive_tier=shared.RetentionArchiveTier(
+                                count=96098,
+                                interval=971945,
+                                interval_unit="YEARS",
+                            ),
+                        ),
+                    ),
+                    copy_tags=False,
+                    create_rule=shared.CreateRule(
+                        cron_expression="vero",
+                        interval=468651,
+                        interval_unit="HOURS",
+                        location="OUTPOST_LOCAL",
+                        times=[
+                            "ipsa",
+                            "omnis",
+                            "voluptate",
+                            "cum",
+                        ],
+                    ),
+                    cross_region_copy_rules=[
+                        shared.CrossRegionCopyRule(
+                            cmk_arn="doloremque",
+                            copy_tags=False,
+                            deprecate_rule=shared.CrossRegionCopyDeprecateRule(
+                                interval=441711,
+                                interval_unit="WEEKS",
+                            ),
+                            encrypted=False,
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=979587,
+                                interval_unit="DAYS",
+                            ),
+                            target="corporis",
+                            target_region="dolore",
+                        ),
+                    ],
+                    deprecate_rule=shared.DeprecateRule(
+                        count=480894,
+                        interval=118727,
+                        interval_unit="MONTHS",
+                    ),
+                    fast_restore_rule=shared.FastRestoreRule(
+                        availability_zones=[
+                            "accusamus",
+                            "commodi",
+                        ],
+                        count=918236,
+                        interval=64147,
+                        interval_unit="DAYS",
+                    ),
+                    name="quidem",
+                    retain_rule=shared.RetainRule(
+                        count=565189,
+                        interval=566602,
+                        interval_unit="YEARS",
+                    ),
+                    share_rules=[
+                        shared.ShareRule(
+                            target_accounts=[
+                                "rem",
+                                "voluptates",
+                                "quasi",
+                            ],
+                            unshare_interval=921158,
+                            unshare_interval_unit="MONTHS",
+                        ),
+                        shared.ShareRule(
+                            target_accounts=[
+                                "itaque",
+                            ],
+                            unshare_interval=277718,
+                            unshare_interval_unit="WEEKS",
+                        ),
+                    ],
+                    tags_to_add=[
+                        shared.Tag(
+                            key="est",
+                            value="quibusdam",
+                        ),
+                    ],
+                    variable_tags=[
+                        shared.Tag(
+                            key="deserunt",
+                            value="distinctio",
                         ),
                     ],
                 ),
             ],
             target_tags=[
                 shared.Tag(
-                    key="beatae",
-                    value="iste",
+                    key="labore",
+                    value="modi",
+                ),
+                shared.Tag(
+                    key="qui",
+                    value="aliquid",
+                ),
+                shared.Tag(
+                    key="cupiditate",
+                    value="quos",
+                ),
+                shared.Tag(
+                    key="perferendis",
+                    value="magni",
                 ),
             ],
         ),
         state="DISABLED",
         tags={
-            "corporis": "quo",
+            "alias": "fugit",
+            "dolorum": "excepturi",
         },
     ),
+    x_amz_algorithm="tempora",
+    x_amz_content_sha256="facilis",
+    x_amz_credential="tempore",
+    x_amz_date="labore",
+    x_amz_security_token="delectus",
+    x_amz_signature="eum",
+    x_amz_signed_headers="non",
 )
     
 res = s.create_lifecycle_policy(req)

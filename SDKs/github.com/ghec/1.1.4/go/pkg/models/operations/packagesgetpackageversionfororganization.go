@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagesGetPackageVersionForOrganizationPathParams struct {
+type PackagesGetPackageVersionForOrganizationRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the package.
@@ -16,10 +16,6 @@ type PackagesGetPackageVersionForOrganizationPathParams struct {
 	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
 	// Unique identifier of the package version.
 	PackageVersionID int64 `pathParam:"style=simple,explode=false,name=package_version_id"`
-}
-
-type PackagesGetPackageVersionForOrganizationRequest struct {
-	PathParams PackagesGetPackageVersionForOrganizationPathParams
 }
 
 type PackagesGetPackageVersionForOrganizationResponse struct {

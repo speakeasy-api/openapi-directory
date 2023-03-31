@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkAlertSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkAlertSettingsRequestBodyAlertsAlertDestinations - A hash of destinations for this specific alert
 type UpdateNetworkAlertSettingsRequestBodyAlertsAlertDestinations struct {
 	// If true, then all network admins will receive emails for this alert
@@ -53,8 +49,8 @@ type UpdateNetworkAlertSettingsRequestBody struct {
 }
 
 type UpdateNetworkAlertSettingsRequest struct {
-	PathParams UpdateNetworkAlertSettingsPathParams
-	Request    *UpdateNetworkAlertSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkAlertSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                 `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkAlertSettingsResponse struct {

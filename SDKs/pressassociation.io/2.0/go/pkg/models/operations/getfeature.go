@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFeatureSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetFeaturePathParams struct {
-	// The identifier for the selected feature.
-	FeatureID string `pathParam:"style=simple,explode=false,name=featureId"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetFeatureRequest struct {
-	PathParams GetFeaturePathParams
-	Security   GetFeatureSecurity
+	// The identifier for the selected feature.
+	FeatureID string `pathParam:"style=simple,explode=false,name=featureId"`
 }
 
 type GetFeatureResponse struct {

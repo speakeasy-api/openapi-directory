@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReinitializePathParams struct {
+type ReinitializeRequest struct {
+	// The request body as a JSON payload.
+	ReinitializeActionConfiguration shared.ReinitializeActionConfiguration `request:"mediaType=application/json"`
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type ReinitializeRequest struct {
-	PathParams ReinitializePathParams
-	// The request body as a JSON payload.
-	Request shared.ReinitializeActionConfiguration `request:"mediaType=application/json"`
 }
 
 type ReinitializeResponse struct {

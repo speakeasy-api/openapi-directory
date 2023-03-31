@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CustomFieldsJSONQueryParams struct {
+type GetV2CustomFieldsJSONRequest struct {
 	// Type of field to fetch. Value must be one of: person, company, opportunity
 	FieldType *string `queryParam:"style=form,explode=true,name=field_type"`
 	// IDs of custom fields to fetch.
@@ -23,10 +23,6 @@ type GetV2CustomFieldsJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2CustomFieldsJSONRequest struct {
-	QueryParams GetV2CustomFieldsJSONQueryParams
 }
 
 type GetV2CustomFieldsJSONResponse struct {

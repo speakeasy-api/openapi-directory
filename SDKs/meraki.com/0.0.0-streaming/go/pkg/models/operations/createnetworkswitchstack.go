@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchStackPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkSwitchStackRequestBody struct {
 	// The name of the new stack
 	Name string `json:"name"`
@@ -18,8 +14,8 @@ type CreateNetworkSwitchStackRequestBody struct {
 }
 
 type CreateNetworkSwitchStackRequest struct {
-	PathParams CreateNetworkSwitchStackPathParams
-	Request    CreateNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                              `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkSwitchStackResponse struct {

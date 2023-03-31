@@ -10,15 +10,8 @@ import (
 )
 
 type DataprocProjectsRegionsClustersCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DataprocProjectsRegionsClustersCreatePathParams struct {
-	// Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. The Dataproc region in which to handle the request.
-	Region string `pathParam:"style=simple,explode=false,name=region"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DataprocProjectsRegionsClustersCreateActionOnFailedPrimaryWorkersEnum - Optional. Failure action when primary worker creation fails.
@@ -48,9 +41,10 @@ func (e *DataprocProjectsRegionsClustersCreateActionOnFailedPrimaryWorkersEnum) 
 	}
 }
 
-type DataprocProjectsRegionsClustersCreateQueryParams struct {
+type DataprocProjectsRegionsClustersCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ClusterInput *shared.ClusterInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Optional. Failure action when primary worker creation fails.
@@ -67,21 +61,18 @@ type DataprocProjectsRegionsClustersCreateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the Google Cloud Platform project that the cluster belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The Dataproc region in which to handle the request.
+	Region string `pathParam:"style=simple,explode=false,name=region"`
 	// Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first google.longrunning.Operation created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
 	RequestID *string `queryParam:"style=form,explode=true,name=requestId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsClustersCreateRequest struct {
-	PathParams  DataprocProjectsRegionsClustersCreatePathParams
-	QueryParams DataprocProjectsRegionsClustersCreateQueryParams
-	Request     *shared.ClusterInput `request:"mediaType=application/json"`
-	Security    DataprocProjectsRegionsClustersCreateSecurity
 }
 
 type DataprocProjectsRegionsClustersCreateResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type GetKeywordsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetKeywordsQueryParams struct {
-	// The asset ID or upload ID to suggest keywords for
-	AssetID interface{} `queryParam:"style=form,explode=true,name=asset_id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetKeywordsRequest struct {
-	QueryParams GetKeywordsQueryParams
-	Security    GetKeywordsSecurity
+	// The asset ID or upload ID to suggest keywords for
+	AssetID interface{} `queryParam:"style=form,explode=true,name=asset_id"`
 }
 
 type GetKeywordsResponse struct {

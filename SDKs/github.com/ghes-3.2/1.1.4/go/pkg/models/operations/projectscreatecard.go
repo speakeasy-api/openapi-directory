@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsCreateCardPathParams struct {
-	// The unique identifier of the column.
-	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
 type ProjectsCreateCardRequestBody2 struct {
 	// The unique identifier of the content associated with the card
 	ContentID int64 `json:"content_id"`
@@ -96,8 +91,9 @@ func (u ProjectsCreateCardRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type ProjectsCreateCardRequest struct {
-	PathParams ProjectsCreateCardPathParams
-	Request    ProjectsCreateCardRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsCreateCardRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the column.
+	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
 }
 
 type ProjectsCreateCard503ApplicationJSONErrors struct {

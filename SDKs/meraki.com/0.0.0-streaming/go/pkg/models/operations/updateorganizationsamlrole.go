@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationSamlRolePathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-	SamlRoleID     string `pathParam:"style=simple,explode=false,name=samlRoleId"`
-}
-
 type UpdateOrganizationSamlRoleRequestBodyNetworks struct {
 	// The privilege of the SAML administrator on the network
 	Access string `json:"access"`
@@ -37,8 +32,9 @@ type UpdateOrganizationSamlRoleRequestBody struct {
 }
 
 type UpdateOrganizationSamlRoleRequest struct {
-	PathParams UpdateOrganizationSamlRolePathParams
-	Request    *UpdateOrganizationSamlRoleRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationSamlRoleRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                 `pathParam:"style=simple,explode=false,name=organizationId"`
+	SamlRoleID     string                                 `pathParam:"style=simple,explode=false,name=samlRoleId"`
 }
 
 type UpdateOrganizationSamlRoleResponse struct {

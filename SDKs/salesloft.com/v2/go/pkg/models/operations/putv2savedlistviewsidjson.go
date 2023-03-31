@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2SavedListViewsIDJSONPathParams struct {
-	// Saved List View ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2SavedListViewsIDJSONRequestBody struct {
 	// Whether the saved list view is the default
 	IsDefault *bool `form:"name=is_default"`
@@ -21,8 +16,9 @@ type PutV2SavedListViewsIDJSONRequestBody struct {
 }
 
 type PutV2SavedListViewsIDJSONRequest struct {
-	PathParams PutV2SavedListViewsIDJSONPathParams
-	Request    *PutV2SavedListViewsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2SavedListViewsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Saved List View ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2SavedListViewsIDJSONResponse struct {

@@ -14,42 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest{
-        Security: operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity{
-            Option1: &operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        DatabaseInstanceInput: &shared.DatabaseInstanceInput{
+            Name: "provident",
+            Type: "USER_DATABASE",
         },
-        PathParams: operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            DatabaseID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-            ValidateOnly: false,
-        },
-        Request: &shared.DatabaseInstanceInput{
-            Name: "iure",
-            Type: "DATABASE_INSTANCE_TYPE_UNSPECIFIED",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        DatabaseID: "corrupti",
+        Fields: "illum",
+        Key: "vel",
+        OauthToken: "error",
+        Parent: "deserunt",
+        PrettyPrint: false,
+        QuotaUser: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FirebasedatabaseProjectsLocationsInstancesCreate(ctx, req)
+    res, err := s.Projects.FirebasedatabaseProjectsLocationsInstancesCreate(ctx, req, operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity{
+        Option1: &operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

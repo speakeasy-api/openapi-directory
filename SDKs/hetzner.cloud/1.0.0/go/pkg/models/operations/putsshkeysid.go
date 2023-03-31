@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutSSHKeysIDPathParams struct {
-	// ID of the SSH key
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutSSHKeysIDRequestBody struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -19,8 +14,9 @@ type PutSSHKeysIDRequestBody struct {
 }
 
 type PutSSHKeysIDRequest struct {
-	PathParams PutSSHKeysIDPathParams
-	Request    *PutSSHKeysIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutSSHKeysIDRequestBody `request:"mediaType=application/json"`
+	// ID of the SSH key
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutSSHKeysID200ApplicationJSONSSHKey struct {

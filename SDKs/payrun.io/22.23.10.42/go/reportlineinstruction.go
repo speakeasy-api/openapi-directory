@@ -35,14 +35,14 @@ func newReportLineInstruction(defaultClient, securityClient HTTPClient, serverUR
 // Delete the specified reporting instruction
 func (s *reportLineInstruction) DeleteReportingInstruction(ctx context.Context, request operations.DeleteReportingInstructionRequest) (*operations.DeleteReportingInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *reportLineInstruction) DeleteReportingInstruction(ctx context.Context, 
 // Returns the specified pay instruction from employee
 func (s *reportLineInstruction) GetReportingInstructionFromEmployer(ctx context.Context, request operations.GetReportingInstructionFromEmployerRequest) (*operations.GetReportingInstructionFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *reportLineInstruction) GetReportingInstructionFromEmployer(ctx context.
 // Get links to all pay instructions for the specified employee
 func (s *reportLineInstruction) GetReportingInstructionsFromEmployer(ctx context.Context, request operations.GetReportingInstructionsFromEmployerRequest) (*operations.GetReportingInstructionsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,9 +215,9 @@ func (s *reportLineInstruction) GetReportingInstructionsFromEmployer(ctx context
 // Creates a new reporting instruction object
 func (s *reportLineInstruction) PostReportingInstruction(ctx context.Context, request operations.PostReportingInstructionRequest) (*operations.PostReportingInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportingInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -232,7 +232,7 @@ func (s *reportLineInstruction) PostReportingInstruction(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -288,9 +288,9 @@ func (s *reportLineInstruction) PostReportingInstruction(ctx context.Context, re
 // Updates the existing specified reporting instruction object
 func (s *reportLineInstruction) PutReportingInstruction(ctx context.Context, request operations.PutReportingInstructionRequest) (*operations.PutReportingInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportingInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *reportLineInstruction) PutReportingInstruction(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

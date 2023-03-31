@@ -32,15 +32,11 @@ func (e *UserTSPDeleteTSPIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UserTSPDeletePathParams struct {
+type UserTSPDeleteRequest struct {
 	// TSP account ID.
 	TspID UserTSPDeleteTSPIDEnum `pathParam:"style=simple,explode=false,name=tspId"`
 	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserTSPDeleteRequest struct {
-	PathParams UserTSPDeletePathParams
 }
 
 type UserTSPDeleteResponse struct {

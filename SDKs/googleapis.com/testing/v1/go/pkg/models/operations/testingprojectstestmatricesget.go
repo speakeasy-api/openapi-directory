@@ -8,13 +8,13 @@ import (
 )
 
 type TestingProjectsTestMatricesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TestingProjectsTestMatricesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TestingProjectsTestMatricesGetSecurity struct {
@@ -22,14 +22,7 @@ type TestingProjectsTestMatricesGetSecurity struct {
 	Option2 *TestingProjectsTestMatricesGetSecurityOption2 `security:"option"`
 }
 
-type TestingProjectsTestMatricesGetPathParams struct {
-	// Cloud project that owns the test matrix.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Unique test matrix id which was assigned by the service.
-	TestMatrixID string `pathParam:"style=simple,explode=false,name=testMatrixId"`
-}
-
-type TestingProjectsTestMatricesGetQueryParams struct {
+type TestingProjectsTestMatricesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,18 +39,16 @@ type TestingProjectsTestMatricesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Cloud project that owns the test matrix.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Unique test matrix id which was assigned by the service.
+	TestMatrixID string `pathParam:"style=simple,explode=false,name=testMatrixId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TestingProjectsTestMatricesGetRequest struct {
-	PathParams  TestingProjectsTestMatricesGetPathParams
-	QueryParams TestingProjectsTestMatricesGetQueryParams
-	Security    TestingProjectsTestMatricesGetSecurity
 }
 
 type TestingProjectsTestMatricesGetResponse struct {

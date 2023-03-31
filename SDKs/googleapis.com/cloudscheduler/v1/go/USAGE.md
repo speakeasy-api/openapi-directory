@@ -14,106 +14,111 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudschedulerProjectsLocationsJobsCreateRequest{
-        Security: operations.CloudschedulerProjectsLocationsJobsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CloudschedulerProjectsLocationsJobsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudschedulerProjectsLocationsJobsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.Job{
+        DollarXgafv: "2",
+        Job: &shared.Job{
             AppEngineHTTPTarget: &shared.AppEngineHTTPTarget{
                 AppEngineRouting: &shared.AppEngineRouting{
-                    Host: "suscipit",
-                    Instance: "iure",
-                    Service: "magnam",
-                    Version: "debitis",
+                    Host: "provident",
+                    Instance: "distinctio",
+                    Service: "quibusdam",
+                    Version: "unde",
                 },
-                Body: "ipsa",
+                Body: "nulla",
                 Headers: map[string]string{
-                    "tempora": "suscipit",
-                    "molestiae": "minus",
-                    "placeat": "voluptatum",
-                    "iusto": "excepturi",
-                },
-                HTTPMethod: "HEAD",
-                RelativeURI: "recusandae",
-            },
-            AttemptDeadline: "temporibus",
-            Description: "ab",
-            HTTPTarget: &shared.HTTPTarget{
-                Body: "quis",
-                Headers: map[string]string{
-                    "deserunt": "perferendis",
+                    "illum": "vel",
+                    "error": "deserunt",
+                    "suscipit": "iure",
                 },
                 HTTPMethod: "GET",
+                RelativeURI: "debitis",
+            },
+            AttemptDeadline: "ipsa",
+            Description: "delectus",
+            HTTPTarget: &shared.HTTPTarget{
+                Body: "tempora",
+                Headers: map[string]string{
+                    "molestiae": "minus",
+                    "placeat": "voluptatum",
+                },
+                HTTPMethod: "HEAD",
                 OauthToken: &shared.OAuthToken{
-                    Scope: "repellendus",
-                    ServiceAccountEmail: "sapiente",
+                    Scope: "excepturi",
+                    ServiceAccountEmail: "nisi",
                 },
                 OidcToken: &shared.OidcToken{
-                    Audience: "quo",
-                    ServiceAccountEmail: "odit",
+                    Audience: "recusandae",
+                    ServiceAccountEmail: "temporibus",
                 },
-                URI: "https://trim-wheat.info",
+                URI: "http://gloomy-blanket.name",
             },
-            LastAttemptTime: "quod",
-            Name: "quod",
+            LastAttemptTime: "perferendis",
+            Name: "ipsam",
             PubsubTarget: &shared.PubsubTarget{
                 Attributes: map[string]string{
-                    "totam": "porro",
-                    "dolorum": "dicta",
+                    "sapiente": "quo",
+                    "odit": "at",
+                    "at": "maiores",
+                    "molestiae": "quod",
                 },
-                Data: "nam",
-                TopicName: "officia",
+                Data: "quod",
+                TopicName: "esse",
             },
             RetryConfig: &shared.RetryConfig{
-                MaxBackoffDuration: "occaecati",
-                MaxDoublings: 143353,
-                MaxRetryDuration: "deleniti",
-                MinBackoffDuration: "hic",
-                RetryCount: 758616,
+                MaxBackoffDuration: "totam",
+                MaxDoublings: 780529,
+                MaxRetryDuration: "dolorum",
+                MinBackoffDuration: "dicta",
+                RetryCount: 720633,
             },
-            Schedule: "totam",
-            ScheduleTime: "beatae",
-            State: "PAUSED",
+            Schedule: "officia",
+            ScheduleTime: "occaecati",
+            State: "STATE_UNSPECIFIED",
             Status: &shared.Status{
-                Code: 473600,
+                Code: 537373,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
+                        "totam": "beatae",
+                        "commodi": "molestiae",
+                        "modi": "qui",
                         "impedit": "cum",
                     },
                     map[string]interface{}{
                         "ipsum": "excepturi",
                         "aspernatur": "perferendis",
                     },
+                    map[string]interface{}{
+                        "natus": "sed",
+                        "iste": "dolor",
+                    },
+                    map[string]interface{}{
+                        "laboriosam": "hic",
+                        "saepe": "fuga",
+                        "in": "corporis",
+                    },
                 },
-                Message: "ad",
+                Message: "iste",
             },
-            TimeZone: "natus",
-            UserUpdateTime: "sed",
+            TimeZone: "iure",
+            UserUpdateTime: "saepe",
         },
+        AccessToken: "quidem",
+        Alt: "json",
+        Callback: "ipsa",
+        Fields: "reiciendis",
+        Key: "est",
+        OauthToken: "mollitia",
+        Parent: "laborum",
+        PrettyPrint: false,
+        QuotaUser: "dolores",
+        UploadType: "dolorem",
+        UploadProtocol: "corporis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.CloudschedulerProjectsLocationsJobsCreate(ctx, req)
+    res, err := s.Projects.CloudschedulerProjectsLocationsJobsCreate(ctx, req, operations.CloudschedulerProjectsLocationsJobsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

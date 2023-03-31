@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSetupV1LocationsIDDeleteallimagesPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1LocationsIDDeleteallimagesQueryParams struct {
-	Uppercase *bool `queryParam:"style=form,explode=true,name=uppercase"`
-}
-
 type DeleteSetupV1LocationsIDDeleteallimagesRequest struct {
-	PathParams  DeleteSetupV1LocationsIDDeleteallimagesPathParams
-	QueryParams DeleteSetupV1LocationsIDDeleteallimagesQueryParams
+	ID        string `pathParam:"style=simple,explode=false,name=id"`
+	Uppercase *bool  `queryParam:"style=form,explode=true,name=uppercase"`
 }
 
 type DeleteSetupV1LocationsIDDeleteallimagesResponse struct {

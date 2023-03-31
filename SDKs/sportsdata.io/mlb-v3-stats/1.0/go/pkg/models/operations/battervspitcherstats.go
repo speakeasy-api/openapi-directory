@@ -33,7 +33,7 @@ func (e *BatterVsPitcherStatsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BatterVsPitcherStatsPathParams struct {
+type BatterVsPitcherStatsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BatterVsPitcherStatsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
@@ -42,10 +42,6 @@ type BatterVsPitcherStatsPathParams struct {
 	// Unique FantasyData Player ID.
 	// Example:<code>10000618</code>.
 	Pitcherid string `pathParam:"style=simple,explode=false,name=pitcherid"`
-}
-
-type BatterVsPitcherStatsRequest struct {
-	PathParams BatterVsPitcherStatsPathParams
 }
 
 type BatterVsPitcherStatsResponse struct {

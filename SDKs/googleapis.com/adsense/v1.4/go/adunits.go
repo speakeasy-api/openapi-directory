@@ -32,20 +32,20 @@ func newAdunits(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AdsenseAdunitsCustomchannelsList - List all custom channels which the specified ad unit belongs to.
-func (s *adunits) AdsenseAdunitsCustomchannelsList(ctx context.Context, request operations.AdsenseAdunitsCustomchannelsListRequest) (*operations.AdsenseAdunitsCustomchannelsListResponse, error) {
+func (s *adunits) AdsenseAdunitsCustomchannelsList(ctx context.Context, request operations.AdsenseAdunitsCustomchannelsListRequest, security operations.AdsenseAdunitsCustomchannelsListSecurity) (*operations.AdsenseAdunitsCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *adunits) AdsenseAdunitsCustomchannelsList(ctx context.Context, request 
 }
 
 // AdsenseAdunitsGet - Gets the specified ad unit in the specified ad client.
-func (s *adunits) AdsenseAdunitsGet(ctx context.Context, request operations.AdsenseAdunitsGetRequest) (*operations.AdsenseAdunitsGetResponse, error) {
+func (s *adunits) AdsenseAdunitsGet(ctx context.Context, request operations.AdsenseAdunitsGetRequest, security operations.AdsenseAdunitsGetSecurity) (*operations.AdsenseAdunitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *adunits) AdsenseAdunitsGet(ctx context.Context, request operations.Adse
 }
 
 // AdsenseAdunitsGetAdCode - Get ad code for the specified ad unit.
-func (s *adunits) AdsenseAdunitsGetAdCode(ctx context.Context, request operations.AdsenseAdunitsGetAdCodeRequest) (*operations.AdsenseAdunitsGetAdCodeResponse, error) {
+func (s *adunits) AdsenseAdunitsGetAdCode(ctx context.Context, request operations.AdsenseAdunitsGetAdCodeRequest, security operations.AdsenseAdunitsGetAdCodeSecurity) (*operations.AdsenseAdunitsGetAdCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/adcode", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,20 +176,20 @@ func (s *adunits) AdsenseAdunitsGetAdCode(ctx context.Context, request operation
 }
 
 // AdsenseAdunitsList - List all ad units in the specified ad client for this AdSense account.
-func (s *adunits) AdsenseAdunitsList(ctx context.Context, request operations.AdsenseAdunitsListRequest) (*operations.AdsenseAdunitsListResponse, error) {
+func (s *adunits) AdsenseAdunitsList(ctx context.Context, request operations.AdsenseAdunitsListRequest, security operations.AdsenseAdunitsListSecurity) (*operations.AdsenseAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

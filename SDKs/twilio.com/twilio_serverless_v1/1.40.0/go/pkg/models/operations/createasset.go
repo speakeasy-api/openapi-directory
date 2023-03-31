@@ -12,12 +12,8 @@ var CreateAssetServerList = []string{
 }
 
 type CreateAssetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAssetPathParams struct {
-	// The SID of the Service to create the Asset resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAssetCreateAssetRequest struct {
@@ -26,10 +22,9 @@ type CreateAssetCreateAssetRequest struct {
 }
 
 type CreateAssetRequest struct {
-	PathParams CreateAssetPathParams
-	Request    *CreateAssetCreateAssetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateAssetSecurity
-	ServerURL  *string
+	RequestBody *CreateAssetCreateAssetRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Asset resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateAssetResponse struct {

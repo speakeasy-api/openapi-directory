@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationNetworkPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationNetworkRequestBody struct {
 	// The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
 	CopyFromNetworkID *string `json:"copyFromNetworkId,omitempty"`
@@ -28,8 +24,8 @@ type CreateOrganizationNetworkRequestBody struct {
 }
 
 type CreateOrganizationNetworkRequest struct {
-	PathParams CreateOrganizationNetworkPathParams
-	Request    CreateOrganizationNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationNetworkRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                               `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationNetworkResponse struct {

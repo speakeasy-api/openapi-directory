@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetfullnamematchRequest{
-        QueryParams: operations.GetfullnamematchQueryParams{
-            Fullname: "corrupti",
-            License: "provident",
-        },
+        Fullname: "corrupti",
+        License: "provident",
     }
 
     ctx := context.Background()

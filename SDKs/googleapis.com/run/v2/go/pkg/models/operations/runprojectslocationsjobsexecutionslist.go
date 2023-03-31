@@ -8,16 +8,11 @@ import (
 )
 
 type RunProjectsLocationsJobsExecutionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsJobsExecutionsListPathParams struct {
-	// Required. The Execution from which the Executions should be listed. To list all Executions across Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id or number.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunProjectsLocationsJobsExecutionsListQueryParams struct {
+type RunProjectsLocationsJobsExecutionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RunProjectsLocationsJobsExecutionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token received from a previous call to ListExecutions. All other parameters must match.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The Execution from which the Executions should be listed. To list all Executions across Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id or number.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type RunProjectsLocationsJobsExecutionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunProjectsLocationsJobsExecutionsListRequest struct {
-	PathParams  RunProjectsLocationsJobsExecutionsListPathParams
-	QueryParams RunProjectsLocationsJobsExecutionsListQueryParams
-	Security    RunProjectsLocationsJobsExecutionsListSecurity
 }
 
 type RunProjectsLocationsJobsExecutionsListResponse struct {

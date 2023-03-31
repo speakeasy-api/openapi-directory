@@ -67,7 +67,7 @@ func (s *dcim) DcimChoicesList(ctx context.Context) (*operations.DcimChoicesList
 }
 func (s *dcim) DcimChoicesRead(ctx context.Context, request operations.DcimChoicesReadRequest) (*operations.DcimChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,7 +114,7 @@ func (s *dcim) DcimConnectedDeviceList(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -160,7 +160,7 @@ func (s *dcim) DcimConsoleConnectionsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -197,7 +197,7 @@ func (s *dcim) DcimConsoleConnectionsList(ctx context.Context, request operation
 
 	return res, nil
 }
-func (s *dcim) DcimConsolePortTemplatesCreate(ctx context.Context, request operations.DcimConsolePortTemplatesCreateRequest) (*operations.DcimConsolePortTemplatesCreateResponse, error) {
+func (s *dcim) DcimConsolePortTemplatesCreate(ctx context.Context, request shared.WritableConsolePortTemplateInput) (*operations.DcimConsolePortTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/console-port-templates/"
 
@@ -251,7 +251,7 @@ func (s *dcim) DcimConsolePortTemplatesCreate(ctx context.Context, request opera
 }
 func (s *dcim) DcimConsolePortTemplatesDelete(ctx context.Context, request operations.DcimConsolePortTemplatesDeleteRequest) (*operations.DcimConsolePortTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *dcim) DcimConsolePortTemplatesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -330,9 +330,9 @@ func (s *dcim) DcimConsolePortTemplatesList(ctx context.Context, request operati
 }
 func (s *dcim) DcimConsolePortTemplatesPartialUpdate(ctx context.Context, request operations.DcimConsolePortTemplatesPartialUpdateRequest) (*operations.DcimConsolePortTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsolePortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -382,7 +382,7 @@ func (s *dcim) DcimConsolePortTemplatesPartialUpdate(ctx context.Context, reques
 }
 func (s *dcim) DcimConsolePortTemplatesRead(ctx context.Context, request operations.DcimConsolePortTemplatesReadRequest) (*operations.DcimConsolePortTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -424,9 +424,9 @@ func (s *dcim) DcimConsolePortTemplatesRead(ctx context.Context, request operati
 }
 func (s *dcim) DcimConsolePortTemplatesUpdate(ctx context.Context, request operations.DcimConsolePortTemplatesUpdateRequest) (*operations.DcimConsolePortTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsolePortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,7 +474,7 @@ func (s *dcim) DcimConsolePortTemplatesUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *dcim) DcimConsolePortsCreate(ctx context.Context, request operations.DcimConsolePortsCreateRequest) (*operations.DcimConsolePortsCreateResponse, error) {
+func (s *dcim) DcimConsolePortsCreate(ctx context.Context, request shared.WritableConsolePortInput) (*operations.DcimConsolePortsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/console-ports/"
 
@@ -528,7 +528,7 @@ func (s *dcim) DcimConsolePortsCreate(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimConsolePortsDelete(ctx context.Context, request operations.DcimConsolePortsDeleteRequest) (*operations.DcimConsolePortsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -568,7 +568,7 @@ func (s *dcim) DcimConsolePortsList(ctx context.Context, request operations.Dcim
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -607,9 +607,9 @@ func (s *dcim) DcimConsolePortsList(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimConsolePortsPartialUpdate(ctx context.Context, request operations.DcimConsolePortsPartialUpdateRequest) (*operations.DcimConsolePortsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsolePortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -659,7 +659,7 @@ func (s *dcim) DcimConsolePortsPartialUpdate(ctx context.Context, request operat
 }
 func (s *dcim) DcimConsolePortsRead(ctx context.Context, request operations.DcimConsolePortsReadRequest) (*operations.DcimConsolePortsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,9 +701,9 @@ func (s *dcim) DcimConsolePortsRead(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimConsolePortsUpdate(ctx context.Context, request operations.DcimConsolePortsUpdateRequest) (*operations.DcimConsolePortsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsolePortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -751,7 +751,7 @@ func (s *dcim) DcimConsolePortsUpdate(ctx context.Context, request operations.Dc
 
 	return res, nil
 }
-func (s *dcim) DcimConsoleServerPortTemplatesCreate(ctx context.Context, request operations.DcimConsoleServerPortTemplatesCreateRequest) (*operations.DcimConsoleServerPortTemplatesCreateResponse, error) {
+func (s *dcim) DcimConsoleServerPortTemplatesCreate(ctx context.Context, request shared.WritableConsoleServerPortTemplateInput) (*operations.DcimConsoleServerPortTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/console-server-port-templates/"
 
@@ -805,7 +805,7 @@ func (s *dcim) DcimConsoleServerPortTemplatesCreate(ctx context.Context, request
 }
 func (s *dcim) DcimConsoleServerPortTemplatesDelete(ctx context.Context, request operations.DcimConsoleServerPortTemplatesDeleteRequest) (*operations.DcimConsoleServerPortTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -845,7 +845,7 @@ func (s *dcim) DcimConsoleServerPortTemplatesList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -884,9 +884,9 @@ func (s *dcim) DcimConsoleServerPortTemplatesList(ctx context.Context, request o
 }
 func (s *dcim) DcimConsoleServerPortTemplatesPartialUpdate(ctx context.Context, request operations.DcimConsoleServerPortTemplatesPartialUpdateRequest) (*operations.DcimConsoleServerPortTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsoleServerPortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -936,7 +936,7 @@ func (s *dcim) DcimConsoleServerPortTemplatesPartialUpdate(ctx context.Context, 
 }
 func (s *dcim) DcimConsoleServerPortTemplatesRead(ctx context.Context, request operations.DcimConsoleServerPortTemplatesReadRequest) (*operations.DcimConsoleServerPortTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -978,9 +978,9 @@ func (s *dcim) DcimConsoleServerPortTemplatesRead(ctx context.Context, request o
 }
 func (s *dcim) DcimConsoleServerPortTemplatesUpdate(ctx context.Context, request operations.DcimConsoleServerPortTemplatesUpdateRequest) (*operations.DcimConsoleServerPortTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsoleServerPortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1028,7 +1028,7 @@ func (s *dcim) DcimConsoleServerPortTemplatesUpdate(ctx context.Context, request
 
 	return res, nil
 }
-func (s *dcim) DcimConsoleServerPortsCreate(ctx context.Context, request operations.DcimConsoleServerPortsCreateRequest) (*operations.DcimConsoleServerPortsCreateResponse, error) {
+func (s *dcim) DcimConsoleServerPortsCreate(ctx context.Context, request shared.WritableConsoleServerPortInput) (*operations.DcimConsoleServerPortsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/console-server-ports/"
 
@@ -1082,7 +1082,7 @@ func (s *dcim) DcimConsoleServerPortsCreate(ctx context.Context, request operati
 }
 func (s *dcim) DcimConsoleServerPortsDelete(ctx context.Context, request operations.DcimConsoleServerPortsDeleteRequest) (*operations.DcimConsoleServerPortsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1122,7 +1122,7 @@ func (s *dcim) DcimConsoleServerPortsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1161,9 +1161,9 @@ func (s *dcim) DcimConsoleServerPortsList(ctx context.Context, request operation
 }
 func (s *dcim) DcimConsoleServerPortsPartialUpdate(ctx context.Context, request operations.DcimConsoleServerPortsPartialUpdateRequest) (*operations.DcimConsoleServerPortsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsoleServerPortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1213,7 +1213,7 @@ func (s *dcim) DcimConsoleServerPortsPartialUpdate(ctx context.Context, request 
 }
 func (s *dcim) DcimConsoleServerPortsRead(ctx context.Context, request operations.DcimConsoleServerPortsReadRequest) (*operations.DcimConsoleServerPortsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1255,9 +1255,9 @@ func (s *dcim) DcimConsoleServerPortsRead(ctx context.Context, request operation
 }
 func (s *dcim) DcimConsoleServerPortsUpdate(ctx context.Context, request operations.DcimConsoleServerPortsUpdateRequest) (*operations.DcimConsoleServerPortsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/console-server-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConsoleServerPortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1305,7 +1305,7 @@ func (s *dcim) DcimConsoleServerPortsUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *dcim) DcimDeviceBayTemplatesCreate(ctx context.Context, request operations.DcimDeviceBayTemplatesCreateRequest) (*operations.DcimDeviceBayTemplatesCreateResponse, error) {
+func (s *dcim) DcimDeviceBayTemplatesCreate(ctx context.Context, request shared.WritableDeviceBayTemplateInput) (*operations.DcimDeviceBayTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/device-bay-templates/"
 
@@ -1359,7 +1359,7 @@ func (s *dcim) DcimDeviceBayTemplatesCreate(ctx context.Context, request operati
 }
 func (s *dcim) DcimDeviceBayTemplatesDelete(ctx context.Context, request operations.DcimDeviceBayTemplatesDeleteRequest) (*operations.DcimDeviceBayTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1399,7 +1399,7 @@ func (s *dcim) DcimDeviceBayTemplatesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1438,9 +1438,9 @@ func (s *dcim) DcimDeviceBayTemplatesList(ctx context.Context, request operation
 }
 func (s *dcim) DcimDeviceBayTemplatesPartialUpdate(ctx context.Context, request operations.DcimDeviceBayTemplatesPartialUpdateRequest) (*operations.DcimDeviceBayTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceBayTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1490,7 +1490,7 @@ func (s *dcim) DcimDeviceBayTemplatesPartialUpdate(ctx context.Context, request 
 }
 func (s *dcim) DcimDeviceBayTemplatesRead(ctx context.Context, request operations.DcimDeviceBayTemplatesReadRequest) (*operations.DcimDeviceBayTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1532,9 +1532,9 @@ func (s *dcim) DcimDeviceBayTemplatesRead(ctx context.Context, request operation
 }
 func (s *dcim) DcimDeviceBayTemplatesUpdate(ctx context.Context, request operations.DcimDeviceBayTemplatesUpdateRequest) (*operations.DcimDeviceBayTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bay-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceBayTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1582,7 +1582,7 @@ func (s *dcim) DcimDeviceBayTemplatesUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *dcim) DcimDeviceBaysCreate(ctx context.Context, request operations.DcimDeviceBaysCreateRequest) (*operations.DcimDeviceBaysCreateResponse, error) {
+func (s *dcim) DcimDeviceBaysCreate(ctx context.Context, request shared.WritableDeviceBayInput) (*operations.DcimDeviceBaysCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/device-bays/"
 
@@ -1636,7 +1636,7 @@ func (s *dcim) DcimDeviceBaysCreate(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimDeviceBaysDelete(ctx context.Context, request operations.DcimDeviceBaysDeleteRequest) (*operations.DcimDeviceBaysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1676,7 +1676,7 @@ func (s *dcim) DcimDeviceBaysList(ctx context.Context, request operations.DcimDe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1715,9 +1715,9 @@ func (s *dcim) DcimDeviceBaysList(ctx context.Context, request operations.DcimDe
 }
 func (s *dcim) DcimDeviceBaysPartialUpdate(ctx context.Context, request operations.DcimDeviceBaysPartialUpdateRequest) (*operations.DcimDeviceBaysPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceBayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1767,7 +1767,7 @@ func (s *dcim) DcimDeviceBaysPartialUpdate(ctx context.Context, request operatio
 }
 func (s *dcim) DcimDeviceBaysRead(ctx context.Context, request operations.DcimDeviceBaysReadRequest) (*operations.DcimDeviceBaysReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1809,9 +1809,9 @@ func (s *dcim) DcimDeviceBaysRead(ctx context.Context, request operations.DcimDe
 }
 func (s *dcim) DcimDeviceBaysUpdate(ctx context.Context, request operations.DcimDeviceBaysUpdateRequest) (*operations.DcimDeviceBaysUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-bays/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceBayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1859,7 +1859,7 @@ func (s *dcim) DcimDeviceBaysUpdate(ctx context.Context, request operations.Dcim
 
 	return res, nil
 }
-func (s *dcim) DcimDeviceRolesCreate(ctx context.Context, request operations.DcimDeviceRolesCreateRequest) (*operations.DcimDeviceRolesCreateResponse, error) {
+func (s *dcim) DcimDeviceRolesCreate(ctx context.Context, request shared.DeviceRoleInput) (*operations.DcimDeviceRolesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/device-roles/"
 
@@ -1913,7 +1913,7 @@ func (s *dcim) DcimDeviceRolesCreate(ctx context.Context, request operations.Dci
 }
 func (s *dcim) DcimDeviceRolesDelete(ctx context.Context, request operations.DcimDeviceRolesDeleteRequest) (*operations.DcimDeviceRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1953,7 +1953,7 @@ func (s *dcim) DcimDeviceRolesList(ctx context.Context, request operations.DcimD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1992,9 +1992,9 @@ func (s *dcim) DcimDeviceRolesList(ctx context.Context, request operations.DcimD
 }
 func (s *dcim) DcimDeviceRolesPartialUpdate(ctx context.Context, request operations.DcimDeviceRolesPartialUpdateRequest) (*operations.DcimDeviceRolesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2044,7 +2044,7 @@ func (s *dcim) DcimDeviceRolesPartialUpdate(ctx context.Context, request operati
 }
 func (s *dcim) DcimDeviceRolesRead(ctx context.Context, request operations.DcimDeviceRolesReadRequest) (*operations.DcimDeviceRolesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2086,9 +2086,9 @@ func (s *dcim) DcimDeviceRolesRead(ctx context.Context, request operations.DcimD
 }
 func (s *dcim) DcimDeviceRolesUpdate(ctx context.Context, request operations.DcimDeviceRolesUpdateRequest) (*operations.DcimDeviceRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2136,7 +2136,7 @@ func (s *dcim) DcimDeviceRolesUpdate(ctx context.Context, request operations.Dci
 
 	return res, nil
 }
-func (s *dcim) DcimDeviceTypesCreate(ctx context.Context, request operations.DcimDeviceTypesCreateRequest) (*operations.DcimDeviceTypesCreateResponse, error) {
+func (s *dcim) DcimDeviceTypesCreate(ctx context.Context, request shared.WritableDeviceTypeInput) (*operations.DcimDeviceTypesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/device-types/"
 
@@ -2190,7 +2190,7 @@ func (s *dcim) DcimDeviceTypesCreate(ctx context.Context, request operations.Dci
 }
 func (s *dcim) DcimDeviceTypesDelete(ctx context.Context, request operations.DcimDeviceTypesDeleteRequest) (*operations.DcimDeviceTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2230,7 +2230,7 @@ func (s *dcim) DcimDeviceTypesList(ctx context.Context, request operations.DcimD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2269,9 +2269,9 @@ func (s *dcim) DcimDeviceTypesList(ctx context.Context, request operations.DcimD
 }
 func (s *dcim) DcimDeviceTypesPartialUpdate(ctx context.Context, request operations.DcimDeviceTypesPartialUpdateRequest) (*operations.DcimDeviceTypesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2321,7 +2321,7 @@ func (s *dcim) DcimDeviceTypesPartialUpdate(ctx context.Context, request operati
 }
 func (s *dcim) DcimDeviceTypesRead(ctx context.Context, request operations.DcimDeviceTypesReadRequest) (*operations.DcimDeviceTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2363,9 +2363,9 @@ func (s *dcim) DcimDeviceTypesRead(ctx context.Context, request operations.DcimD
 }
 func (s *dcim) DcimDeviceTypesUpdate(ctx context.Context, request operations.DcimDeviceTypesUpdateRequest) (*operations.DcimDeviceTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/device-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2413,7 +2413,7 @@ func (s *dcim) DcimDeviceTypesUpdate(ctx context.Context, request operations.Dci
 
 	return res, nil
 }
-func (s *dcim) DcimDevicesCreate(ctx context.Context, request operations.DcimDevicesCreateRequest) (*operations.DcimDevicesCreateResponse, error) {
+func (s *dcim) DcimDevicesCreate(ctx context.Context, request shared.WritableDeviceInput) (*operations.DcimDevicesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/devices/"
 
@@ -2467,7 +2467,7 @@ func (s *dcim) DcimDevicesCreate(ctx context.Context, request operations.DcimDev
 }
 func (s *dcim) DcimDevicesDelete(ctx context.Context, request operations.DcimDevicesDeleteRequest) (*operations.DcimDevicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2507,7 +2507,7 @@ func (s *dcim) DcimDevicesList(ctx context.Context, request operations.DcimDevic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2548,7 +2548,7 @@ func (s *dcim) DcimDevicesList(ctx context.Context, request operations.DcimDevic
 // DcimDevicesNapalm - Execute a NAPALM method on a Device
 func (s *dcim) DcimDevicesNapalm(ctx context.Context, request operations.DcimDevicesNapalmRequest) (*operations.DcimDevicesNapalmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/napalm/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/napalm/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2590,9 +2590,9 @@ func (s *dcim) DcimDevicesNapalm(ctx context.Context, request operations.DcimDev
 }
 func (s *dcim) DcimDevicesPartialUpdate(ctx context.Context, request operations.DcimDevicesPartialUpdateRequest) (*operations.DcimDevicesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2642,7 +2642,7 @@ func (s *dcim) DcimDevicesPartialUpdate(ctx context.Context, request operations.
 }
 func (s *dcim) DcimDevicesRead(ctx context.Context, request operations.DcimDevicesReadRequest) (*operations.DcimDevicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2684,9 +2684,9 @@ func (s *dcim) DcimDevicesRead(ctx context.Context, request operations.DcimDevic
 }
 func (s *dcim) DcimDevicesUpdate(ctx context.Context, request operations.DcimDevicesUpdateRequest) (*operations.DcimDevicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/devices/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableDeviceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2734,7 +2734,7 @@ func (s *dcim) DcimDevicesUpdate(ctx context.Context, request operations.DcimDev
 
 	return res, nil
 }
-func (s *dcim) DcimInterfaceConnectionsCreate(ctx context.Context, request operations.DcimInterfaceConnectionsCreateRequest) (*operations.DcimInterfaceConnectionsCreateResponse, error) {
+func (s *dcim) DcimInterfaceConnectionsCreate(ctx context.Context, request shared.WritableInterfaceConnectionInput) (*operations.DcimInterfaceConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/interface-connections/"
 
@@ -2788,7 +2788,7 @@ func (s *dcim) DcimInterfaceConnectionsCreate(ctx context.Context, request opera
 }
 func (s *dcim) DcimInterfaceConnectionsDelete(ctx context.Context, request operations.DcimInterfaceConnectionsDeleteRequest) (*operations.DcimInterfaceConnectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2828,7 +2828,7 @@ func (s *dcim) DcimInterfaceConnectionsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2867,9 +2867,9 @@ func (s *dcim) DcimInterfaceConnectionsList(ctx context.Context, request operati
 }
 func (s *dcim) DcimInterfaceConnectionsPartialUpdate(ctx context.Context, request operations.DcimInterfaceConnectionsPartialUpdateRequest) (*operations.DcimInterfaceConnectionsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2919,7 +2919,7 @@ func (s *dcim) DcimInterfaceConnectionsPartialUpdate(ctx context.Context, reques
 }
 func (s *dcim) DcimInterfaceConnectionsRead(ctx context.Context, request operations.DcimInterfaceConnectionsReadRequest) (*operations.DcimInterfaceConnectionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2961,9 +2961,9 @@ func (s *dcim) DcimInterfaceConnectionsRead(ctx context.Context, request operati
 }
 func (s *dcim) DcimInterfaceConnectionsUpdate(ctx context.Context, request operations.DcimInterfaceConnectionsUpdateRequest) (*operations.DcimInterfaceConnectionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-connections/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3011,7 +3011,7 @@ func (s *dcim) DcimInterfaceConnectionsUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *dcim) DcimInterfaceTemplatesCreate(ctx context.Context, request operations.DcimInterfaceTemplatesCreateRequest) (*operations.DcimInterfaceTemplatesCreateResponse, error) {
+func (s *dcim) DcimInterfaceTemplatesCreate(ctx context.Context, request shared.WritableInterfaceTemplateInput) (*operations.DcimInterfaceTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/interface-templates/"
 
@@ -3065,7 +3065,7 @@ func (s *dcim) DcimInterfaceTemplatesCreate(ctx context.Context, request operati
 }
 func (s *dcim) DcimInterfaceTemplatesDelete(ctx context.Context, request operations.DcimInterfaceTemplatesDeleteRequest) (*operations.DcimInterfaceTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3105,7 +3105,7 @@ func (s *dcim) DcimInterfaceTemplatesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3144,9 +3144,9 @@ func (s *dcim) DcimInterfaceTemplatesList(ctx context.Context, request operation
 }
 func (s *dcim) DcimInterfaceTemplatesPartialUpdate(ctx context.Context, request operations.DcimInterfaceTemplatesPartialUpdateRequest) (*operations.DcimInterfaceTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3196,7 +3196,7 @@ func (s *dcim) DcimInterfaceTemplatesPartialUpdate(ctx context.Context, request 
 }
 func (s *dcim) DcimInterfaceTemplatesRead(ctx context.Context, request operations.DcimInterfaceTemplatesReadRequest) (*operations.DcimInterfaceTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3238,9 +3238,9 @@ func (s *dcim) DcimInterfaceTemplatesRead(ctx context.Context, request operation
 }
 func (s *dcim) DcimInterfaceTemplatesUpdate(ctx context.Context, request operations.DcimInterfaceTemplatesUpdateRequest) (*operations.DcimInterfaceTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interface-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3288,7 +3288,7 @@ func (s *dcim) DcimInterfaceTemplatesUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *dcim) DcimInterfacesCreate(ctx context.Context, request operations.DcimInterfacesCreateRequest) (*operations.DcimInterfacesCreateResponse, error) {
+func (s *dcim) DcimInterfacesCreate(ctx context.Context, request shared.WritableInterfaceInput) (*operations.DcimInterfacesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/interfaces/"
 
@@ -3342,7 +3342,7 @@ func (s *dcim) DcimInterfacesCreate(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimInterfacesDelete(ctx context.Context, request operations.DcimInterfacesDeleteRequest) (*operations.DcimInterfacesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3377,7 +3377,7 @@ func (s *dcim) DcimInterfacesDelete(ctx context.Context, request operations.Dcim
 // DcimInterfacesGraphs - A convenience method for rendering graphs for a particular interface.
 func (s *dcim) DcimInterfacesGraphs(ctx context.Context, request operations.DcimInterfacesGraphsRequest) (*operations.DcimInterfacesGraphsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/graphs/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/graphs/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3426,7 +3426,7 @@ func (s *dcim) DcimInterfacesList(ctx context.Context, request operations.DcimIn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3465,9 +3465,9 @@ func (s *dcim) DcimInterfacesList(ctx context.Context, request operations.DcimIn
 }
 func (s *dcim) DcimInterfacesPartialUpdate(ctx context.Context, request operations.DcimInterfacesPartialUpdateRequest) (*operations.DcimInterfacesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3517,7 +3517,7 @@ func (s *dcim) DcimInterfacesPartialUpdate(ctx context.Context, request operatio
 }
 func (s *dcim) DcimInterfacesRead(ctx context.Context, request operations.DcimInterfacesReadRequest) (*operations.DcimInterfacesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3559,9 +3559,9 @@ func (s *dcim) DcimInterfacesRead(ctx context.Context, request operations.DcimIn
 }
 func (s *dcim) DcimInterfacesUpdate(ctx context.Context, request operations.DcimInterfacesUpdateRequest) (*operations.DcimInterfacesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/interfaces/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInterfaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3609,7 +3609,7 @@ func (s *dcim) DcimInterfacesUpdate(ctx context.Context, request operations.Dcim
 
 	return res, nil
 }
-func (s *dcim) DcimInventoryItemsCreate(ctx context.Context, request operations.DcimInventoryItemsCreateRequest) (*operations.DcimInventoryItemsCreateResponse, error) {
+func (s *dcim) DcimInventoryItemsCreate(ctx context.Context, request shared.WritableInventoryItemInput) (*operations.DcimInventoryItemsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/inventory-items/"
 
@@ -3663,7 +3663,7 @@ func (s *dcim) DcimInventoryItemsCreate(ctx context.Context, request operations.
 }
 func (s *dcim) DcimInventoryItemsDelete(ctx context.Context, request operations.DcimInventoryItemsDeleteRequest) (*operations.DcimInventoryItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3703,7 +3703,7 @@ func (s *dcim) DcimInventoryItemsList(ctx context.Context, request operations.Dc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3742,9 +3742,9 @@ func (s *dcim) DcimInventoryItemsList(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimInventoryItemsPartialUpdate(ctx context.Context, request operations.DcimInventoryItemsPartialUpdateRequest) (*operations.DcimInventoryItemsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInventoryItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3794,7 +3794,7 @@ func (s *dcim) DcimInventoryItemsPartialUpdate(ctx context.Context, request oper
 }
 func (s *dcim) DcimInventoryItemsRead(ctx context.Context, request operations.DcimInventoryItemsReadRequest) (*operations.DcimInventoryItemsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3836,9 +3836,9 @@ func (s *dcim) DcimInventoryItemsRead(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimInventoryItemsUpdate(ctx context.Context, request operations.DcimInventoryItemsUpdateRequest) (*operations.DcimInventoryItemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/inventory-items/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableInventoryItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3886,7 +3886,7 @@ func (s *dcim) DcimInventoryItemsUpdate(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *dcim) DcimManufacturersCreate(ctx context.Context, request operations.DcimManufacturersCreateRequest) (*operations.DcimManufacturersCreateResponse, error) {
+func (s *dcim) DcimManufacturersCreate(ctx context.Context, request shared.ManufacturerInput) (*operations.DcimManufacturersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/manufacturers/"
 
@@ -3940,7 +3940,7 @@ func (s *dcim) DcimManufacturersCreate(ctx context.Context, request operations.D
 }
 func (s *dcim) DcimManufacturersDelete(ctx context.Context, request operations.DcimManufacturersDeleteRequest) (*operations.DcimManufacturersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3980,7 +3980,7 @@ func (s *dcim) DcimManufacturersList(ctx context.Context, request operations.Dci
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4019,9 +4019,9 @@ func (s *dcim) DcimManufacturersList(ctx context.Context, request operations.Dci
 }
 func (s *dcim) DcimManufacturersPartialUpdate(ctx context.Context, request operations.DcimManufacturersPartialUpdateRequest) (*operations.DcimManufacturersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManufacturerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4071,7 +4071,7 @@ func (s *dcim) DcimManufacturersPartialUpdate(ctx context.Context, request opera
 }
 func (s *dcim) DcimManufacturersRead(ctx context.Context, request operations.DcimManufacturersReadRequest) (*operations.DcimManufacturersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4113,9 +4113,9 @@ func (s *dcim) DcimManufacturersRead(ctx context.Context, request operations.Dci
 }
 func (s *dcim) DcimManufacturersUpdate(ctx context.Context, request operations.DcimManufacturersUpdateRequest) (*operations.DcimManufacturersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/manufacturers/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManufacturerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4163,7 +4163,7 @@ func (s *dcim) DcimManufacturersUpdate(ctx context.Context, request operations.D
 
 	return res, nil
 }
-func (s *dcim) DcimPlatformsCreate(ctx context.Context, request operations.DcimPlatformsCreateRequest) (*operations.DcimPlatformsCreateResponse, error) {
+func (s *dcim) DcimPlatformsCreate(ctx context.Context, request shared.WritablePlatformInput) (*operations.DcimPlatformsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/platforms/"
 
@@ -4217,7 +4217,7 @@ func (s *dcim) DcimPlatformsCreate(ctx context.Context, request operations.DcimP
 }
 func (s *dcim) DcimPlatformsDelete(ctx context.Context, request operations.DcimPlatformsDeleteRequest) (*operations.DcimPlatformsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4257,7 +4257,7 @@ func (s *dcim) DcimPlatformsList(ctx context.Context, request operations.DcimPla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4296,9 +4296,9 @@ func (s *dcim) DcimPlatformsList(ctx context.Context, request operations.DcimPla
 }
 func (s *dcim) DcimPlatformsPartialUpdate(ctx context.Context, request operations.DcimPlatformsPartialUpdateRequest) (*operations.DcimPlatformsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePlatformInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4348,7 +4348,7 @@ func (s *dcim) DcimPlatformsPartialUpdate(ctx context.Context, request operation
 }
 func (s *dcim) DcimPlatformsRead(ctx context.Context, request operations.DcimPlatformsReadRequest) (*operations.DcimPlatformsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4390,9 +4390,9 @@ func (s *dcim) DcimPlatformsRead(ctx context.Context, request operations.DcimPla
 }
 func (s *dcim) DcimPlatformsUpdate(ctx context.Context, request operations.DcimPlatformsUpdateRequest) (*operations.DcimPlatformsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/platforms/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePlatformInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4449,7 +4449,7 @@ func (s *dcim) DcimPowerConnectionsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4486,7 +4486,7 @@ func (s *dcim) DcimPowerConnectionsList(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *dcim) DcimPowerOutletTemplatesCreate(ctx context.Context, request operations.DcimPowerOutletTemplatesCreateRequest) (*operations.DcimPowerOutletTemplatesCreateResponse, error) {
+func (s *dcim) DcimPowerOutletTemplatesCreate(ctx context.Context, request shared.WritablePowerOutletTemplateInput) (*operations.DcimPowerOutletTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/power-outlet-templates/"
 
@@ -4540,7 +4540,7 @@ func (s *dcim) DcimPowerOutletTemplatesCreate(ctx context.Context, request opera
 }
 func (s *dcim) DcimPowerOutletTemplatesDelete(ctx context.Context, request operations.DcimPowerOutletTemplatesDeleteRequest) (*operations.DcimPowerOutletTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4580,7 +4580,7 @@ func (s *dcim) DcimPowerOutletTemplatesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4619,9 +4619,9 @@ func (s *dcim) DcimPowerOutletTemplatesList(ctx context.Context, request operati
 }
 func (s *dcim) DcimPowerOutletTemplatesPartialUpdate(ctx context.Context, request operations.DcimPowerOutletTemplatesPartialUpdateRequest) (*operations.DcimPowerOutletTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerOutletTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4671,7 +4671,7 @@ func (s *dcim) DcimPowerOutletTemplatesPartialUpdate(ctx context.Context, reques
 }
 func (s *dcim) DcimPowerOutletTemplatesRead(ctx context.Context, request operations.DcimPowerOutletTemplatesReadRequest) (*operations.DcimPowerOutletTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4713,9 +4713,9 @@ func (s *dcim) DcimPowerOutletTemplatesRead(ctx context.Context, request operati
 }
 func (s *dcim) DcimPowerOutletTemplatesUpdate(ctx context.Context, request operations.DcimPowerOutletTemplatesUpdateRequest) (*operations.DcimPowerOutletTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlet-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerOutletTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4763,7 +4763,7 @@ func (s *dcim) DcimPowerOutletTemplatesUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *dcim) DcimPowerOutletsCreate(ctx context.Context, request operations.DcimPowerOutletsCreateRequest) (*operations.DcimPowerOutletsCreateResponse, error) {
+func (s *dcim) DcimPowerOutletsCreate(ctx context.Context, request shared.WritablePowerOutletInput) (*operations.DcimPowerOutletsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/power-outlets/"
 
@@ -4817,7 +4817,7 @@ func (s *dcim) DcimPowerOutletsCreate(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimPowerOutletsDelete(ctx context.Context, request operations.DcimPowerOutletsDeleteRequest) (*operations.DcimPowerOutletsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4857,7 +4857,7 @@ func (s *dcim) DcimPowerOutletsList(ctx context.Context, request operations.Dcim
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4896,9 +4896,9 @@ func (s *dcim) DcimPowerOutletsList(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimPowerOutletsPartialUpdate(ctx context.Context, request operations.DcimPowerOutletsPartialUpdateRequest) (*operations.DcimPowerOutletsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerOutletInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4948,7 +4948,7 @@ func (s *dcim) DcimPowerOutletsPartialUpdate(ctx context.Context, request operat
 }
 func (s *dcim) DcimPowerOutletsRead(ctx context.Context, request operations.DcimPowerOutletsReadRequest) (*operations.DcimPowerOutletsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4990,9 +4990,9 @@ func (s *dcim) DcimPowerOutletsRead(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimPowerOutletsUpdate(ctx context.Context, request operations.DcimPowerOutletsUpdateRequest) (*operations.DcimPowerOutletsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-outlets/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerOutletInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5040,7 +5040,7 @@ func (s *dcim) DcimPowerOutletsUpdate(ctx context.Context, request operations.Dc
 
 	return res, nil
 }
-func (s *dcim) DcimPowerPortTemplatesCreate(ctx context.Context, request operations.DcimPowerPortTemplatesCreateRequest) (*operations.DcimPowerPortTemplatesCreateResponse, error) {
+func (s *dcim) DcimPowerPortTemplatesCreate(ctx context.Context, request shared.WritablePowerPortTemplateInput) (*operations.DcimPowerPortTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/power-port-templates/"
 
@@ -5094,7 +5094,7 @@ func (s *dcim) DcimPowerPortTemplatesCreate(ctx context.Context, request operati
 }
 func (s *dcim) DcimPowerPortTemplatesDelete(ctx context.Context, request operations.DcimPowerPortTemplatesDeleteRequest) (*operations.DcimPowerPortTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5134,7 +5134,7 @@ func (s *dcim) DcimPowerPortTemplatesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5173,9 +5173,9 @@ func (s *dcim) DcimPowerPortTemplatesList(ctx context.Context, request operation
 }
 func (s *dcim) DcimPowerPortTemplatesPartialUpdate(ctx context.Context, request operations.DcimPowerPortTemplatesPartialUpdateRequest) (*operations.DcimPowerPortTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerPortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5225,7 +5225,7 @@ func (s *dcim) DcimPowerPortTemplatesPartialUpdate(ctx context.Context, request 
 }
 func (s *dcim) DcimPowerPortTemplatesRead(ctx context.Context, request operations.DcimPowerPortTemplatesReadRequest) (*operations.DcimPowerPortTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5267,9 +5267,9 @@ func (s *dcim) DcimPowerPortTemplatesRead(ctx context.Context, request operation
 }
 func (s *dcim) DcimPowerPortTemplatesUpdate(ctx context.Context, request operations.DcimPowerPortTemplatesUpdateRequest) (*operations.DcimPowerPortTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-port-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerPortTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5317,7 +5317,7 @@ func (s *dcim) DcimPowerPortTemplatesUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *dcim) DcimPowerPortsCreate(ctx context.Context, request operations.DcimPowerPortsCreateRequest) (*operations.DcimPowerPortsCreateResponse, error) {
+func (s *dcim) DcimPowerPortsCreate(ctx context.Context, request shared.WritablePowerPortInput) (*operations.DcimPowerPortsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/power-ports/"
 
@@ -5371,7 +5371,7 @@ func (s *dcim) DcimPowerPortsCreate(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimPowerPortsDelete(ctx context.Context, request operations.DcimPowerPortsDeleteRequest) (*operations.DcimPowerPortsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5411,7 +5411,7 @@ func (s *dcim) DcimPowerPortsList(ctx context.Context, request operations.DcimPo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5450,9 +5450,9 @@ func (s *dcim) DcimPowerPortsList(ctx context.Context, request operations.DcimPo
 }
 func (s *dcim) DcimPowerPortsPartialUpdate(ctx context.Context, request operations.DcimPowerPortsPartialUpdateRequest) (*operations.DcimPowerPortsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerPortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5502,7 +5502,7 @@ func (s *dcim) DcimPowerPortsPartialUpdate(ctx context.Context, request operatio
 }
 func (s *dcim) DcimPowerPortsRead(ctx context.Context, request operations.DcimPowerPortsReadRequest) (*operations.DcimPowerPortsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5544,9 +5544,9 @@ func (s *dcim) DcimPowerPortsRead(ctx context.Context, request operations.DcimPo
 }
 func (s *dcim) DcimPowerPortsUpdate(ctx context.Context, request operations.DcimPowerPortsUpdateRequest) (*operations.DcimPowerPortsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/power-ports/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePowerPortInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5594,7 +5594,7 @@ func (s *dcim) DcimPowerPortsUpdate(ctx context.Context, request operations.Dcim
 
 	return res, nil
 }
-func (s *dcim) DcimRackGroupsCreate(ctx context.Context, request operations.DcimRackGroupsCreateRequest) (*operations.DcimRackGroupsCreateResponse, error) {
+func (s *dcim) DcimRackGroupsCreate(ctx context.Context, request shared.WritableRackGroupInput) (*operations.DcimRackGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/rack-groups/"
 
@@ -5648,7 +5648,7 @@ func (s *dcim) DcimRackGroupsCreate(ctx context.Context, request operations.Dcim
 }
 func (s *dcim) DcimRackGroupsDelete(ctx context.Context, request operations.DcimRackGroupsDeleteRequest) (*operations.DcimRackGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5688,7 +5688,7 @@ func (s *dcim) DcimRackGroupsList(ctx context.Context, request operations.DcimRa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5727,9 +5727,9 @@ func (s *dcim) DcimRackGroupsList(ctx context.Context, request operations.DcimRa
 }
 func (s *dcim) DcimRackGroupsPartialUpdate(ctx context.Context, request operations.DcimRackGroupsPartialUpdateRequest) (*operations.DcimRackGroupsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5779,7 +5779,7 @@ func (s *dcim) DcimRackGroupsPartialUpdate(ctx context.Context, request operatio
 }
 func (s *dcim) DcimRackGroupsRead(ctx context.Context, request operations.DcimRackGroupsReadRequest) (*operations.DcimRackGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5821,9 +5821,9 @@ func (s *dcim) DcimRackGroupsRead(ctx context.Context, request operations.DcimRa
 }
 func (s *dcim) DcimRackGroupsUpdate(ctx context.Context, request operations.DcimRackGroupsUpdateRequest) (*operations.DcimRackGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5871,7 +5871,7 @@ func (s *dcim) DcimRackGroupsUpdate(ctx context.Context, request operations.Dcim
 
 	return res, nil
 }
-func (s *dcim) DcimRackReservationsCreate(ctx context.Context, request operations.DcimRackReservationsCreateRequest) (*operations.DcimRackReservationsCreateResponse, error) {
+func (s *dcim) DcimRackReservationsCreate(ctx context.Context, request shared.WritableRackReservationInput) (*operations.DcimRackReservationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/rack-reservations/"
 
@@ -5925,7 +5925,7 @@ func (s *dcim) DcimRackReservationsCreate(ctx context.Context, request operation
 }
 func (s *dcim) DcimRackReservationsDelete(ctx context.Context, request operations.DcimRackReservationsDeleteRequest) (*operations.DcimRackReservationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5965,7 +5965,7 @@ func (s *dcim) DcimRackReservationsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6004,9 +6004,9 @@ func (s *dcim) DcimRackReservationsList(ctx context.Context, request operations.
 }
 func (s *dcim) DcimRackReservationsPartialUpdate(ctx context.Context, request operations.DcimRackReservationsPartialUpdateRequest) (*operations.DcimRackReservationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackReservationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6056,7 +6056,7 @@ func (s *dcim) DcimRackReservationsPartialUpdate(ctx context.Context, request op
 }
 func (s *dcim) DcimRackReservationsRead(ctx context.Context, request operations.DcimRackReservationsReadRequest) (*operations.DcimRackReservationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6098,9 +6098,9 @@ func (s *dcim) DcimRackReservationsRead(ctx context.Context, request operations.
 }
 func (s *dcim) DcimRackReservationsUpdate(ctx context.Context, request operations.DcimRackReservationsUpdateRequest) (*operations.DcimRackReservationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-reservations/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackReservationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6148,7 +6148,7 @@ func (s *dcim) DcimRackReservationsUpdate(ctx context.Context, request operation
 
 	return res, nil
 }
-func (s *dcim) DcimRackRolesCreate(ctx context.Context, request operations.DcimRackRolesCreateRequest) (*operations.DcimRackRolesCreateResponse, error) {
+func (s *dcim) DcimRackRolesCreate(ctx context.Context, request shared.RackRoleInput) (*operations.DcimRackRolesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/rack-roles/"
 
@@ -6202,7 +6202,7 @@ func (s *dcim) DcimRackRolesCreate(ctx context.Context, request operations.DcimR
 }
 func (s *dcim) DcimRackRolesDelete(ctx context.Context, request operations.DcimRackRolesDeleteRequest) (*operations.DcimRackRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6242,7 +6242,7 @@ func (s *dcim) DcimRackRolesList(ctx context.Context, request operations.DcimRac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6281,9 +6281,9 @@ func (s *dcim) DcimRackRolesList(ctx context.Context, request operations.DcimRac
 }
 func (s *dcim) DcimRackRolesPartialUpdate(ctx context.Context, request operations.DcimRackRolesPartialUpdateRequest) (*operations.DcimRackRolesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RackRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6333,7 +6333,7 @@ func (s *dcim) DcimRackRolesPartialUpdate(ctx context.Context, request operation
 }
 func (s *dcim) DcimRackRolesRead(ctx context.Context, request operations.DcimRackRolesReadRequest) (*operations.DcimRackRolesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6375,9 +6375,9 @@ func (s *dcim) DcimRackRolesRead(ctx context.Context, request operations.DcimRac
 }
 func (s *dcim) DcimRackRolesUpdate(ctx context.Context, request operations.DcimRackRolesUpdateRequest) (*operations.DcimRackRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/rack-roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RackRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6425,7 +6425,7 @@ func (s *dcim) DcimRackRolesUpdate(ctx context.Context, request operations.DcimR
 
 	return res, nil
 }
-func (s *dcim) DcimRacksCreate(ctx context.Context, request operations.DcimRacksCreateRequest) (*operations.DcimRacksCreateResponse, error) {
+func (s *dcim) DcimRacksCreate(ctx context.Context, request shared.WritableRackInput) (*operations.DcimRacksCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/racks/"
 
@@ -6479,7 +6479,7 @@ func (s *dcim) DcimRacksCreate(ctx context.Context, request operations.DcimRacks
 }
 func (s *dcim) DcimRacksDelete(ctx context.Context, request operations.DcimRacksDeleteRequest) (*operations.DcimRacksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6519,7 +6519,7 @@ func (s *dcim) DcimRacksList(ctx context.Context, request operations.DcimRacksLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6558,9 +6558,9 @@ func (s *dcim) DcimRacksList(ctx context.Context, request operations.DcimRacksLi
 }
 func (s *dcim) DcimRacksPartialUpdate(ctx context.Context, request operations.DcimRacksPartialUpdateRequest) (*operations.DcimRacksPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6610,7 +6610,7 @@ func (s *dcim) DcimRacksPartialUpdate(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimRacksRead(ctx context.Context, request operations.DcimRacksReadRequest) (*operations.DcimRacksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6654,7 +6654,7 @@ func (s *dcim) DcimRacksRead(ctx context.Context, request operations.DcimRacksRe
 // DcimRacksUnits - List rack units (by rack)
 func (s *dcim) DcimRacksUnits(ctx context.Context, request operations.DcimRacksUnitsRequest) (*operations.DcimRacksUnitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/units/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/units/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6696,9 +6696,9 @@ func (s *dcim) DcimRacksUnits(ctx context.Context, request operations.DcimRacksU
 }
 func (s *dcim) DcimRacksUpdate(ctx context.Context, request operations.DcimRacksUpdateRequest) (*operations.DcimRacksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/racks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRackInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6746,7 +6746,7 @@ func (s *dcim) DcimRacksUpdate(ctx context.Context, request operations.DcimRacks
 
 	return res, nil
 }
-func (s *dcim) DcimRegionsCreate(ctx context.Context, request operations.DcimRegionsCreateRequest) (*operations.DcimRegionsCreateResponse, error) {
+func (s *dcim) DcimRegionsCreate(ctx context.Context, request shared.WritableRegionInput) (*operations.DcimRegionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/regions/"
 
@@ -6800,7 +6800,7 @@ func (s *dcim) DcimRegionsCreate(ctx context.Context, request operations.DcimReg
 }
 func (s *dcim) DcimRegionsDelete(ctx context.Context, request operations.DcimRegionsDeleteRequest) (*operations.DcimRegionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6840,7 +6840,7 @@ func (s *dcim) DcimRegionsList(ctx context.Context, request operations.DcimRegio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6879,9 +6879,9 @@ func (s *dcim) DcimRegionsList(ctx context.Context, request operations.DcimRegio
 }
 func (s *dcim) DcimRegionsPartialUpdate(ctx context.Context, request operations.DcimRegionsPartialUpdateRequest) (*operations.DcimRegionsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRegionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6931,7 +6931,7 @@ func (s *dcim) DcimRegionsPartialUpdate(ctx context.Context, request operations.
 }
 func (s *dcim) DcimRegionsRead(ctx context.Context, request operations.DcimRegionsReadRequest) (*operations.DcimRegionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6973,9 +6973,9 @@ func (s *dcim) DcimRegionsRead(ctx context.Context, request operations.DcimRegio
 }
 func (s *dcim) DcimRegionsUpdate(ctx context.Context, request operations.DcimRegionsUpdateRequest) (*operations.DcimRegionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/regions/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableRegionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7023,7 +7023,7 @@ func (s *dcim) DcimRegionsUpdate(ctx context.Context, request operations.DcimReg
 
 	return res, nil
 }
-func (s *dcim) DcimSitesCreate(ctx context.Context, request operations.DcimSitesCreateRequest) (*operations.DcimSitesCreateResponse, error) {
+func (s *dcim) DcimSitesCreate(ctx context.Context, request shared.WritableSiteInput) (*operations.DcimSitesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/sites/"
 
@@ -7077,7 +7077,7 @@ func (s *dcim) DcimSitesCreate(ctx context.Context, request operations.DcimSites
 }
 func (s *dcim) DcimSitesDelete(ctx context.Context, request operations.DcimSitesDeleteRequest) (*operations.DcimSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -7112,7 +7112,7 @@ func (s *dcim) DcimSitesDelete(ctx context.Context, request operations.DcimSites
 // DcimSitesGraphs - A convenience method for rendering graphs for a particular site.
 func (s *dcim) DcimSitesGraphs(ctx context.Context, request operations.DcimSitesGraphsRequest) (*operations.DcimSitesGraphsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/graphs/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/graphs/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7161,7 +7161,7 @@ func (s *dcim) DcimSitesList(ctx context.Context, request operations.DcimSitesLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7200,9 +7200,9 @@ func (s *dcim) DcimSitesList(ctx context.Context, request operations.DcimSitesLi
 }
 func (s *dcim) DcimSitesPartialUpdate(ctx context.Context, request operations.DcimSitesPartialUpdateRequest) (*operations.DcimSitesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableSiteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7252,7 +7252,7 @@ func (s *dcim) DcimSitesPartialUpdate(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimSitesRead(ctx context.Context, request operations.DcimSitesReadRequest) (*operations.DcimSitesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7294,9 +7294,9 @@ func (s *dcim) DcimSitesRead(ctx context.Context, request operations.DcimSitesRe
 }
 func (s *dcim) DcimSitesUpdate(ctx context.Context, request operations.DcimSitesUpdateRequest) (*operations.DcimSitesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/sites/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableSiteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7344,7 +7344,7 @@ func (s *dcim) DcimSitesUpdate(ctx context.Context, request operations.DcimSites
 
 	return res, nil
 }
-func (s *dcim) DcimVirtualChassisCreate(ctx context.Context, request operations.DcimVirtualChassisCreateRequest) (*operations.DcimVirtualChassisCreateResponse, error) {
+func (s *dcim) DcimVirtualChassisCreate(ctx context.Context, request shared.WritableVirtualChassisInput) (*operations.DcimVirtualChassisCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dcim/virtual-chassis/"
 
@@ -7398,7 +7398,7 @@ func (s *dcim) DcimVirtualChassisCreate(ctx context.Context, request operations.
 }
 func (s *dcim) DcimVirtualChassisDelete(ctx context.Context, request operations.DcimVirtualChassisDeleteRequest) (*operations.DcimVirtualChassisDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -7438,7 +7438,7 @@ func (s *dcim) DcimVirtualChassisList(ctx context.Context, request operations.Dc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7477,9 +7477,9 @@ func (s *dcim) DcimVirtualChassisList(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimVirtualChassisPartialUpdate(ctx context.Context, request operations.DcimVirtualChassisPartialUpdateRequest) (*operations.DcimVirtualChassisPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualChassisInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7529,7 +7529,7 @@ func (s *dcim) DcimVirtualChassisPartialUpdate(ctx context.Context, request oper
 }
 func (s *dcim) DcimVirtualChassisRead(ctx context.Context, request operations.DcimVirtualChassisReadRequest) (*operations.DcimVirtualChassisReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7571,9 +7571,9 @@ func (s *dcim) DcimVirtualChassisRead(ctx context.Context, request operations.Dc
 }
 func (s *dcim) DcimVirtualChassisUpdate(ctx context.Context, request operations.DcimVirtualChassisUpdateRequest) (*operations.DcimVirtualChassisUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dcim/virtual-chassis/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualChassisInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

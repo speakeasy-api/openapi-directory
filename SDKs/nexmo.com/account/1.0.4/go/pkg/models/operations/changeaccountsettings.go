@@ -11,17 +11,12 @@ var ChangeAccountSettingsServerList = []string{
 	"https://rest.nexmo.com",
 }
 
-type ChangeAccountSettingsQueryParams struct {
+type ChangeAccountSettingsRequest struct {
+	AccountSettingsRequest *shared.AccountSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 	// Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
-}
-
-type ChangeAccountSettingsRequest struct {
-	QueryParams ChangeAccountSettingsQueryParams
-	Request     *shared.AccountSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL   *string
 }
 
 type ChangeAccountSettingsResponse struct {

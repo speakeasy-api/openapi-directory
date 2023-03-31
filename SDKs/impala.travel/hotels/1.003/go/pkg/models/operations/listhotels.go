@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListHotelsQueryParams struct {
+type ListHotelsRequest struct {
 	// Allows for filtering based on the country of a property. The only available modifier for this parameter is equal to (`eq`). Usage example: `?country[eq]=GBR`
 	Country map[string]interface{} `queryParam:"style=deepObject,explode=true,name=country"`
 	// Allows for filtering based on the date and time when this hotel was first added to the Impala platform, in ISO 8601 format (e.g. `2020-11-04T17:37:37Z`) and UTC timezone. Available modifiers include less than (`lt`), greater than (`gt`), lower than or equal to (`lte`), greater than or equal to (`gte`) and equal to (`eq`). Usage example: `?created[lte]=2020-11-04T19:37:37Z&created[gte]=2020-11-04T15:56:37.000Z`
@@ -36,10 +36,6 @@ type ListHotelsQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// Allows for filtering based on the date and time the content of this hotel was last updated, in ISO 8601 format (e.g. `2020-11-04T17:37:37Z`) and UTC timezone. Available modifiers include less than (`lt`), greater than (`gt`), lower than or equal to (`lte`), greater than or equal to (`gte`) and equal to (`eq`). Usage example: `?updated[lte]=2020-11-04T19:37:37Z&updated[gte]=2020-11-04T15:56:37.000Z`
 	Updated map[string]interface{} `queryParam:"style=deepObject,explode=true,name=updated"`
-}
-
-type ListHotelsRequest struct {
-	QueryParams ListHotelsQueryParams
 }
 
 // ListHotels200ApplicationJSON - Returns a paginated list of hotels.

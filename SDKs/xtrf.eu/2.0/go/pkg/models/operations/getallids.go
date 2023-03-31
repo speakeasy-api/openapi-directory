@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAllIdsQueryParams struct {
+type GetAllIdsRequest struct {
 	// only client invoices modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllIdsRequest struct {
-	QueryParams GetAllIdsQueryParams
 }
 
 type GetAllIdsResponse struct {

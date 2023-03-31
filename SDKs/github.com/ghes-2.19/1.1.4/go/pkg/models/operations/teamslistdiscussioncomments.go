@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionCommentsPathParams struct {
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsListDiscussionCommentsDirectionEnum - Sorts the discussion comments by the date they were created. To return the oldest comments first, set to `asc`. Can be one of `asc` or `desc`.
 type TeamsListDiscussionCommentsDirectionEnum string
 
@@ -38,18 +33,15 @@ func (e *TeamsListDiscussionCommentsDirectionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type TeamsListDiscussionCommentsQueryParams struct {
+type TeamsListDiscussionCommentsRequest struct {
 	// Sorts the discussion comments by the date they were created. To return the oldest comments first, set to `asc`. Can be one of `asc` or `desc`.
-	Direction *TeamsListDiscussionCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Direction        *TeamsListDiscussionCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	DiscussionNumber int64                                     `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListDiscussionCommentsRequest struct {
-	PathParams  TeamsListDiscussionCommentsPathParams
-	QueryParams TeamsListDiscussionCommentsQueryParams
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListDiscussionCommentsResponse struct {

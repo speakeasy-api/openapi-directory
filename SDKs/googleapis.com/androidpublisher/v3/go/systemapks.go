@@ -32,11 +32,11 @@ func newSystemapks(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AndroidpublisherSystemapksVariantsCreate - Creates an APK which is suitable for inclusion in a system image from an already uploaded Android App Bundle.
-func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsCreateRequest) (*operations.AndroidpublisherSystemapksVariantsCreateResponse, error) {
+func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsCreateRequest, security operations.AndroidpublisherSystemapksVariantsCreateSecurity) (*operations.AndroidpublisherSystemapksVariantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VariantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Contex
 }
 
 // AndroidpublisherSystemapksVariantsDownload - Downloads a previously created system APK which is suitable for inclusion in a system image.
-func (s *systemapks) AndroidpublisherSystemapksVariantsDownload(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsDownloadRequest) (*operations.AndroidpublisherSystemapksVariantsDownloadResponse, error) {
+func (s *systemapks) AndroidpublisherSystemapksVariantsDownload(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsDownloadRequest, security operations.AndroidpublisherSystemapksVariantsDownloadSecurity) (*operations.AndroidpublisherSystemapksVariantsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsDownload(ctx context.Cont
 }
 
 // AndroidpublisherSystemapksVariantsGet - Returns a previously created system APK variant.
-func (s *systemapks) AndroidpublisherSystemapksVariantsGet(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsGetRequest) (*operations.AndroidpublisherSystemapksVariantsGetResponse, error) {
+func (s *systemapks) AndroidpublisherSystemapksVariantsGet(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsGetRequest, security operations.AndroidpublisherSystemapksVariantsGetSecurity) (*operations.AndroidpublisherSystemapksVariantsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsGet(ctx context.Context, 
 }
 
 // AndroidpublisherSystemapksVariantsList - Returns the list of previously created system APK variants.
-func (s *systemapks) AndroidpublisherSystemapksVariantsList(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsListRequest) (*operations.AndroidpublisherSystemapksVariantsListResponse, error) {
+func (s *systemapks) AndroidpublisherSystemapksVariantsList(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsListRequest, security operations.AndroidpublisherSystemapksVariantsListSecurity) (*operations.AndroidpublisherSystemapksVariantsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

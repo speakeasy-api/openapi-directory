@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateInventoryBySkuandWarehousePathParams struct {
-	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
-	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
-}
-
-type UpdateInventoryBySkuandWarehouseHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest struct {
 	// Defines the corresponding moment to the informed warehouse. It is useful due to the liberation of handling order reservations.
 	//
@@ -29,9 +17,13 @@ type UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest str
 }
 
 type UpdateInventoryBySkuandWarehouseRequest struct {
-	PathParams UpdateInventoryBySkuandWarehousePathParams
-	Headers    UpdateInventoryBySkuandWarehouseHeaders
-	Request    UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                                                                  `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest `request:"mediaType=application/json"`
+	SkuID       string                                                                  `pathParam:"style=simple,explode=false,name=skuId"`
+	WarehouseID string                                                                  `pathParam:"style=simple,explode=false,name=warehouseId"`
 }
 
 type UpdateInventoryBySkuandWarehouseResponse struct {

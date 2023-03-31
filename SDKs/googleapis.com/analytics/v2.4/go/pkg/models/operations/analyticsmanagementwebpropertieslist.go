@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementWebpropertiesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebpropertiesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebpropertiesListSecurity struct {
@@ -22,12 +22,9 @@ type AnalyticsManagementWebpropertiesListSecurity struct {
 	Option2 *AnalyticsManagementWebpropertiesListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementWebpropertiesListPathParams struct {
+type AnalyticsManagementWebpropertiesListRequest struct {
 	// Account ID to retrieve web properties for. Can either be a specific account ID or '~all', which refers to all the accounts that user has access to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AnalyticsManagementWebpropertiesListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,12 +43,6 @@ type AnalyticsManagementWebpropertiesListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebpropertiesListRequest struct {
-	PathParams  AnalyticsManagementWebpropertiesListPathParams
-	QueryParams AnalyticsManagementWebpropertiesListQueryParams
-	Security    AnalyticsManagementWebpropertiesListSecurity
 }
 
 type AnalyticsManagementWebpropertiesListResponse struct {

@@ -6,18 +6,13 @@ import (
 	"net/http"
 )
 
-type PostAppsAppIDVersionsVersionPathParams struct {
-	// The id of the App to be updated
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The version of the App to be updated
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type PostAppsAppIDVersionsVersionQueryParams struct {
+type PostAppsAppIDVersionsVersionRequest struct {
 	// JSON array of data access requirements
 	Access *string `queryParam:"style=form,explode=true,name=access"`
 	// JSON object to allow users to purchase or view this app. Example: {'purchase':{'country':['Canada','Mexico']}} allows only users from canada and mexico to purchase this app
 	Allow *string `queryParam:"style=form,explode=true,name=allow"`
+	// The id of the App to be updated
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 	// False if updates should skip the approval process and be available immediately. Default is True
 	ApprovalRequired *string `queryParam:"style=form,explode=true,name=approvalRequired"`
 	// A custom set of app attributes defined by the administrator and attached to this app
@@ -34,11 +29,8 @@ type PostAppsAppIDVersionsVersionQueryParams struct {
 	Restrict *string `queryParam:"style=form,explode=true,name=restrict"`
 	// The type for this app
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PostAppsAppIDVersionsVersionRequest struct {
-	PathParams  PostAppsAppIDVersionsVersionPathParams
-	QueryParams PostAppsAppIDVersionsVersionQueryParams
+	// The version of the App to be updated
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type PostAppsAppIDVersionsVersionResponse struct {

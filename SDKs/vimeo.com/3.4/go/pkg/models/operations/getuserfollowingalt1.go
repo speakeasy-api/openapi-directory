@@ -78,7 +78,7 @@ func (e *GetUserFollowingAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserFollowingAlt1QueryParams struct {
+type GetUserFollowingAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetUserFollowingAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -91,10 +91,6 @@ type GetUserFollowingAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetUserFollowingAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserFollowingAlt1Request struct {
-	QueryParams GetUserFollowingAlt1QueryParams
 }
 
 type GetUserFollowingAlt1Response struct {

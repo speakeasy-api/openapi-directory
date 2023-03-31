@@ -40,7 +40,7 @@ func newVolumes(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Deletes a volume. All Volume data is irreversibly destroyed. The Volume must not be attached to a Server and it must not have delete protection enabled.
 func (s *volumes) DeleteVolumesID(ctx context.Context, request operations.DeleteVolumesIDRequest) (*operations.DeleteVolumesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *volumes) GetVolumes(ctx context.Context, request operations.GetVolumesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *volumes) GetVolumes(ctx context.Context, request operations.GetVolumesR
 // Gets a specific Volume object.
 func (s *volumes) GetVolumesID(ctx context.Context, request operations.GetVolumesIDRequest) (*operations.GetVolumesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *volumes) GetVolumesID(ctx context.Context, request operations.GetVolume
 // | Code                                | Description                                         |
 // |-------------------------------------|-----------------------------------------------------|
 // | `no_space_left_in_location`         | There is no volume space left in the given location |
-func (s *volumes) PostVolumes(ctx context.Context, request operations.PostVolumesRequest) (*operations.PostVolumesResponse, error) {
+func (s *volumes) PostVolumes(ctx context.Context, request operations.PostVolumesCreateVolumeRequest) (*operations.PostVolumesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/volumes"
 
@@ -236,9 +236,9 @@ func (s *volumes) PostVolumes(ctx context.Context, request operations.PostVolume
 // Note that when updating labels, the volume’s current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *volumes) PutVolumesID(ctx context.Context, request operations.PutVolumesIDRequest) (*operations.PutVolumesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

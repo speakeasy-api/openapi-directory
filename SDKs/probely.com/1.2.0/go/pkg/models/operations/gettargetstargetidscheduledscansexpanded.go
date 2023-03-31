@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDScheduledscansExpandedPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScheduledscansExpandedQueryParams struct {
+type GetTargetsTargetIDScheduledscansExpandedRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
-}
-
-type GetTargetsTargetIDScheduledscansExpandedRequest struct {
-	PathParams  GetTargetsTargetIDScheduledscansExpandedPathParams
-	QueryParams GetTargetsTargetIDScheduledscansExpandedQueryParams
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // GetTargetsTargetIDScheduledscansExpanded404ApplicationJSON - Not found

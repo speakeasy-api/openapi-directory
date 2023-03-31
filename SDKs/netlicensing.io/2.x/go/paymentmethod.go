@@ -37,16 +37,16 @@ func newPaymentMethod(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GetPaymentMethod - Get Payment Method
 // Return a Payment Method info by 'paymentMethodNumber'
-func (s *paymentMethod) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest) (*operations.GetPaymentMethodResponse, error) {
+func (s *paymentMethod) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest, security operations.GetPaymentMethodSecurity) (*operations.GetPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *paymentMethod) GetPaymentMethod(ctx context.Context, request operations
 
 // ListPaymentMethods - List Payment Methods
 // Return a list of all Payment Methods for the current Vendor
-func (s *paymentMethod) ListPaymentMethods(ctx context.Context, request operations.ListPaymentMethodsRequest) (*operations.ListPaymentMethodsResponse, error) {
+func (s *paymentMethod) ListPaymentMethods(ctx context.Context) (*operations.ListPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/paymentmethod"
 
@@ -105,7 +105,7 @@ func (s *paymentMethod) ListPaymentMethods(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,11 +155,11 @@ func (s *paymentMethod) ListPaymentMethods(ctx context.Context, request operatio
 
 // UpdatePaymentMethod - Update Payment Method
 // Sets the provided properties to a Payment Method. Return an updated Payment Method
-func (s *paymentMethod) UpdatePaymentMethod(ctx context.Context, request operations.UpdatePaymentMethodRequest) (*operations.UpdatePaymentMethodResponse, error) {
+func (s *paymentMethod) UpdatePaymentMethod(ctx context.Context, request operations.UpdatePaymentMethodRequest, security operations.UpdatePaymentMethodSecurity) (*operations.UpdatePaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -171,7 +171,7 @@ func (s *paymentMethod) UpdatePaymentMethod(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

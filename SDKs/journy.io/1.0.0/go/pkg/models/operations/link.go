@@ -21,10 +21,6 @@ type LinkRequestBody struct {
 	Identification LinkRequestBodyIdentification `json:"identification"`
 }
 
-type LinkRequest struct {
-	Request LinkRequestBody `request:"mediaType=application/json"`
-}
-
 type Link500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchClickwrapsIDPathParams struct {
-	// Clickwrap ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchClickwrapsIDRequestBodyUseWithBundlesEnum - Use this Clickwrap for Bundles?
 type PatchClickwrapsIDRequestBodyUseWithBundlesEnum string
 
@@ -106,8 +101,9 @@ type PatchClickwrapsIDRequestBody struct {
 }
 
 type PatchClickwrapsIDRequest struct {
-	PathParams PatchClickwrapsIDPathParams
-	Request    *PatchClickwrapsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchClickwrapsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Clickwrap ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchClickwrapsIDResponse struct {

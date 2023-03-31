@@ -33,16 +33,16 @@ func newProjectsVideos(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // AddVideoToProject - Add a specific video to a project
 // This method adds a single video to the specified project.
-func (s *projectsVideos) AddVideoToProject(ctx context.Context, request operations.AddVideoToProjectRequest) (*operations.AddVideoToProjectResponse, error) {
+func (s *projectsVideos) AddVideoToProject(ctx context.Context, request operations.AddVideoToProjectRequest, security operations.AddVideoToProjectSecurity) (*operations.AddVideoToProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,16 +79,16 @@ func (s *projectsVideos) AddVideoToProject(ctx context.Context, request operatio
 
 // AddVideoToProjectAlt1 - Add a specific video to a project
 // This method adds a single video to the specified project.
-func (s *projectsVideos) AddVideoToProjectAlt1(ctx context.Context, request operations.AddVideoToProjectAlt1Request) (*operations.AddVideoToProjectAlt1Response, error) {
+func (s *projectsVideos) AddVideoToProjectAlt1(ctx context.Context, request operations.AddVideoToProjectAlt1Request, security operations.AddVideoToProjectAlt1Security) (*operations.AddVideoToProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,20 +125,20 @@ func (s *projectsVideos) AddVideoToProjectAlt1(ctx context.Context, request oper
 
 // AddVideosToProject - Add a list of videos to a project
 // This method adds multiple videos to the specified project.
-func (s *projectsVideos) AddVideosToProject(ctx context.Context, request operations.AddVideosToProjectRequest) (*operations.AddVideosToProjectResponse, error) {
+func (s *projectsVideos) AddVideosToProject(ctx context.Context, request operations.AddVideosToProjectRequest, security operations.AddVideosToProjectSecurity) (*operations.AddVideosToProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,20 +179,20 @@ func (s *projectsVideos) AddVideosToProject(ctx context.Context, request operati
 
 // AddVideosToProjectAlt1 - Add a list of videos to a project
 // This method adds multiple videos to the specified project.
-func (s *projectsVideos) AddVideosToProjectAlt1(ctx context.Context, request operations.AddVideosToProjectAlt1Request) (*operations.AddVideosToProjectAlt1Response, error) {
+func (s *projectsVideos) AddVideosToProjectAlt1(ctx context.Context, request operations.AddVideosToProjectAlt1Request, security operations.AddVideosToProjectAlt1Security) (*operations.AddVideosToProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,20 +233,20 @@ func (s *projectsVideos) AddVideosToProjectAlt1(ctx context.Context, request ope
 
 // GetProjectVideos - Get all the videos in a project
 // This method gets all the videos that belong to the specified project.
-func (s *projectsVideos) GetProjectVideos(ctx context.Context, request operations.GetProjectVideosRequest) (*operations.GetProjectVideosResponse, error) {
+func (s *projectsVideos) GetProjectVideos(ctx context.Context, request operations.GetProjectVideosRequest, security operations.GetProjectVideosSecurity) (*operations.GetProjectVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,20 +294,20 @@ func (s *projectsVideos) GetProjectVideos(ctx context.Context, request operation
 
 // GetProjectVideosAlt1 - Get all the videos in a project
 // This method gets all the videos that belong to the specified project.
-func (s *projectsVideos) GetProjectVideosAlt1(ctx context.Context, request operations.GetProjectVideosAlt1Request) (*operations.GetProjectVideosAlt1Response, error) {
+func (s *projectsVideos) GetProjectVideosAlt1(ctx context.Context, request operations.GetProjectVideosAlt1Request, security operations.GetProjectVideosAlt1Security) (*operations.GetProjectVideosAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,16 +355,16 @@ func (s *projectsVideos) GetProjectVideosAlt1(ctx context.Context, request opera
 
 // RemoveVideoFromProject - Remove a specific video from a project
 // This method removes a single video from the specified project.
-func (s *projectsVideos) RemoveVideoFromProject(ctx context.Context, request operations.RemoveVideoFromProjectRequest) (*operations.RemoveVideoFromProjectResponse, error) {
+func (s *projectsVideos) RemoveVideoFromProject(ctx context.Context, request operations.RemoveVideoFromProjectRequest, security operations.RemoveVideoFromProjectSecurity) (*operations.RemoveVideoFromProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -405,16 +405,16 @@ func (s *projectsVideos) RemoveVideoFromProject(ctx context.Context, request ope
 
 // RemoveVideoFromProjectAlt1 - Remove a specific video from a project
 // This method removes a single video from the specified project.
-func (s *projectsVideos) RemoveVideoFromProjectAlt1(ctx context.Context, request operations.RemoveVideoFromProjectAlt1Request) (*operations.RemoveVideoFromProjectAlt1Response, error) {
+func (s *projectsVideos) RemoveVideoFromProjectAlt1(ctx context.Context, request operations.RemoveVideoFromProjectAlt1Request, security operations.RemoveVideoFromProjectAlt1Security) (*operations.RemoveVideoFromProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -455,20 +455,20 @@ func (s *projectsVideos) RemoveVideoFromProjectAlt1(ctx context.Context, request
 
 // RemoveVideosFromProject - Remove a list of videos from a project
 // This method removed multiple videos from the specified project.
-func (s *projectsVideos) RemoveVideosFromProject(ctx context.Context, request operations.RemoveVideosFromProjectRequest) (*operations.RemoveVideosFromProjectResponse, error) {
+func (s *projectsVideos) RemoveVideosFromProject(ctx context.Context, request operations.RemoveVideosFromProjectRequest, security operations.RemoveVideosFromProjectSecurity) (*operations.RemoveVideosFromProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -509,20 +509,20 @@ func (s *projectsVideos) RemoveVideosFromProject(ctx context.Context, request op
 
 // RemoveVideosFromProjectAlt1 - Remove a list of videos from a project
 // This method removed multiple videos from the specified project.
-func (s *projectsVideos) RemoveVideosFromProjectAlt1(ctx context.Context, request operations.RemoveVideosFromProjectAlt1Request) (*operations.RemoveVideosFromProjectAlt1Response, error) {
+func (s *projectsVideos) RemoveVideosFromProjectAlt1(ctx context.Context, request operations.RemoveVideosFromProjectAlt1Request, security operations.RemoveVideosFromProjectAlt1Security) (*operations.RemoveVideosFromProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

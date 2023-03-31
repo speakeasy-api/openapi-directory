@@ -35,7 +35,7 @@ func newMarkedEpisodes(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteUserEpisodesEpisodeID - Unmark an episode
 func (s *markedEpisodes) DeleteUserEpisodesEpisodeID(ctx context.Context, request operations.DeleteUserEpisodesEpisodeIDRequest) (*operations.DeleteUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *markedEpisodes) GetUserEpisodes(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -120,7 +120,7 @@ func (s *markedEpisodes) GetUserEpisodes(ctx context.Context, request operations
 // GetUserEpisodesEpisodeID - Check if an episode is marked
 func (s *markedEpisodes) GetUserEpisodesEpisodeID(ctx context.Context, request operations.GetUserEpisodesEpisodeIDRequest) (*operations.GetUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,9 +166,9 @@ func (s *markedEpisodes) GetUserEpisodesEpisodeID(ctx context.Context, request o
 // Set `marked_at` to `NULL` or leave it out to use the current time.
 func (s *markedEpisodes) PutUserEpisodesEpisodeID(ctx context.Context, request operations.PutUserEpisodesEpisodeIDRequest) (*operations.PutUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarkedEpisodeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

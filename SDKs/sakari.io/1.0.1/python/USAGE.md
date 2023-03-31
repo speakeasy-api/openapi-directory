@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AuthTokenRequest(
-    request=shared.TokenRequest(
-        client_id="quis",
-        client_secret="beatae",
-        grant_type="eos",
-    ),
+
+
+req = shared.TokenRequest(
+    client_id="00000000-0000-0000-0000-00000000000",
+    client_secret="00000000-0000-0000-0000-00000000000",
+    grant_type="client_credentials",
 )
     
 res = s.authentication.auth_token(req)

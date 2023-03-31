@@ -36,7 +36,7 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Incremental Refresh a source object
 func (s *source) IncrementalRefreshSource(ctx context.Context, request operations.IncrementalRefreshSourceRequest) (*operations.IncrementalRefreshSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/incremental_refresh", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/incremental_refresh", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -78,14 +78,14 @@ func (s *source) IncrementalRefreshSource(ctx context.Context, request operation
 // Returns an array of ServiceInstance objects
 func (s *source) ListSourceServiceInstances(ctx context.Context, request operations.ListSourceServiceInstancesRequest) (*operations.ListSourceServiceInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *source) ListSourceServiceInstances(ctx context.Context, request operati
 // Returns an array of ServiceInventory objects
 func (s *source) ListSourceServiceInventories(ctx context.Context, request operations.ListSourceServiceInventoriesRequest) (*operations.ListSourceServiceInventoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_inventories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_inventories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -196,14 +196,14 @@ func (s *source) ListSourceServiceInventories(ctx context.Context, request opera
 // Returns an array of ServiceOfferingNode objects
 func (s *source) ListSourceServiceOfferingNodes(ctx context.Context, request operations.ListSourceServiceOfferingNodesRequest) (*operations.ListSourceServiceOfferingNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_offering_nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_offering_nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -255,14 +255,14 @@ func (s *source) ListSourceServiceOfferingNodes(ctx context.Context, request ope
 // Returns an array of ServiceOffering objects
 func (s *source) ListSourceServiceOfferings(ctx context.Context, request operations.ListSourceServiceOfferingsRequest) (*operations.ListSourceServiceOfferingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_offerings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_offerings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -314,14 +314,14 @@ func (s *source) ListSourceServiceOfferings(ctx context.Context, request operati
 // Returns an array of ServicePlan objects
 func (s *source) ListSourceServicePlans(ctx context.Context, request operations.ListSourceServicePlansRequest) (*operations.ListSourceServicePlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/service_plans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -373,14 +373,14 @@ func (s *source) ListSourceServicePlans(ctx context.Context, request operations.
 // Returns an array of Task objects
 func (s *source) ListSourceTasks(ctx context.Context, request operations.ListSourceTasksRequest) (*operations.ListSourceTasksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,7 +439,7 @@ func (s *source) ListSources(ctx context.Context, request operations.ListSources
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -481,7 +481,7 @@ func (s *source) ListSources(ctx context.Context, request operations.ListSources
 // Refresh a source object
 func (s *source) RefreshSource(ctx context.Context, request operations.RefreshSourceRequest) (*operations.RefreshSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/refresh", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}/refresh", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -523,7 +523,7 @@ func (s *source) RefreshSource(ctx context.Context, request operations.RefreshSo
 // Returns a Source object
 func (s *source) ShowSource(ctx context.Context, request operations.ShowSourceRequest) (*operations.ShowSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sources/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

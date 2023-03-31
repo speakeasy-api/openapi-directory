@@ -12,12 +12,7 @@ import (
 )
 
 type PostAPIV1StatusesSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1StatusesHeaders struct {
-	// Prevent duplicate submissions of the same status. Idempotency keys are stored for up to 1 hour, and can be any arbitrary string. Consider using a hash or UUID generated client-side.
-	IdempotencyKey *string `header:"style=simple,explode=false,name=Idempotency-Key"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // PostAPIV1StatusesRequestBodyVisibilityEnum - Visibility of the posted status. Enumerable oneOf public, unlisted, private, direct.
@@ -71,9 +66,9 @@ type PostAPIV1StatusesRequestBody struct {
 }
 
 type PostAPIV1StatusesRequest struct {
-	Headers  PostAPIV1StatusesHeaders
-	Request  []PostAPIV1StatusesRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1StatusesSecurity
+	// Prevent duplicate submissions of the same status. Idempotency keys are stored for up to 1 hour, and can be any arbitrary string. Consider using a hash or UUID generated client-side.
+	IdempotencyKey *string                        `header:"style=simple,explode=false,name=Idempotency-Key"`
+	RequestBody    []PostAPIV1StatusesRequestBody `request:"mediaType=application/json"`
 }
 
 type PostAPIV1Statuses200ApplicationJSONType string

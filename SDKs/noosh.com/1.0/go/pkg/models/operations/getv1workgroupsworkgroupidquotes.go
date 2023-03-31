@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV1WorkgroupsWorkgroupIDQuotesPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetV1WorkgroupsWorkgroupIDQuotesQueryParams struct {
+type GetV1WorkgroupsWorkgroupIDQuotesRequest struct {
 	// Quote Object State Id, use /workgroups/{workgroup_id}/quoteStates to get correct value
 	QuoteStateIDUseFiltersEqualQuoteStateID111111 *string `queryParam:"style=form,explode=true,name=quote_state_id, use filters={\"quote_state_id\":111111}"`
-}
-
-type GetV1WorkgroupsWorkgroupIDQuotesRequest struct {
-	PathParams  GetV1WorkgroupsWorkgroupIDQuotesPathParams
-	QueryParams GetV1WorkgroupsWorkgroupIDQuotesQueryParams
+	WorkgroupID                                   string  `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type GetV1WorkgroupsWorkgroupIDQuotesResponse struct {

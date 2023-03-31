@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePayRunTagPathParams struct {
+type DeletePayRunTagRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The pay runs' unique identifier. E.g. PR001
@@ -16,18 +20,6 @@ type DeletePayRunTagPathParams struct {
 	PayScheduleID string `pathParam:"style=simple,explode=false,name=PayScheduleId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type DeletePayRunTagHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeletePayRunTagRequest struct {
-	PathParams DeletePayRunTagPathParams
-	Headers    DeletePayRunTagHeaders
 }
 
 type DeletePayRunTagResponse struct {

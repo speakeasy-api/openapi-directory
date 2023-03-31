@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type FromDelPathParams struct {
+type FromDelRequest struct {
 	// IP of the source
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to delete the IP source
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// port of the source
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type FromDelRequest struct {
-	PathParams FromDelPathParams
 }
 
 type FromDelResponse struct {

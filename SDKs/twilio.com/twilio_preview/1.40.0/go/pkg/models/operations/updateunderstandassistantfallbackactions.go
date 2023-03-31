@@ -12,11 +12,8 @@ var UpdateUnderstandAssistantFallbackActionsServerList = []string{
 }
 
 type UpdateUnderstandAssistantFallbackActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandAssistantFallbackActionsPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest struct {
@@ -24,10 +21,8 @@ type UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackAc
 }
 
 type UpdateUnderstandAssistantFallbackActionsRequest struct {
-	PathParams UpdateUnderstandAssistantFallbackActionsPathParams
-	Request    *UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandAssistantFallbackActionsSecurity
-	ServerURL  *string
+	AssistantSid string                                                                                   `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateUnderstandAssistantFallbackActionsResponse struct {

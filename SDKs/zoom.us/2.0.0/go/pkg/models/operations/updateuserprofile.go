@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateUserProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateUserProfilePathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateUserProfileApplicationJSON struct {
@@ -23,9 +18,8 @@ type UpdateUserProfileApplicationJSON struct {
 }
 
 type UpdateUserProfileRequest struct {
-	PathParams UpdateUserProfilePathParams
-	Request    *UpdateUserProfileApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateUserProfileSecurity
+	RequestBody *UpdateUserProfileApplicationJSON `request:"mediaType=application/json"`
+	UserID      string                            `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UpdateUserProfileResponse struct {

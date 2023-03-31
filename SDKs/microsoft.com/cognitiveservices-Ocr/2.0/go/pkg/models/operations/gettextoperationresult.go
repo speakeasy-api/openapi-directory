@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTextOperationResultPathParams struct {
+type GetTextOperationResultRequest struct {
 	// Id of the text operation returned in the response of the 'Recognize Text'
 	OperationID string `pathParam:"style=simple,explode=false,name=operationId"`
-}
-
-type GetTextOperationResultRequest struct {
-	PathParams GetTextOperationResultPathParams
 }
 
 type GetTextOperationResultResponse struct {

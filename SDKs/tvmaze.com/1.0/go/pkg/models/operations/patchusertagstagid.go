@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchUserTagsTagIDPathParams struct {
-	TagID int64 `pathParam:"style=simple,explode=false,name=tag_id"`
-}
-
 type PatchUserTagsTagIDRequest struct {
-	PathParams PatchUserTagsTagIDPathParams
-	Request    *shared.TagInput `request:"mediaType=application/json"`
+	TagInput *shared.TagInput `request:"mediaType=application/json"`
+	TagID    int64            `pathParam:"style=simple,explode=false,name=tag_id"`
 }
 
 type PatchUserTagsTagIDResponse struct {

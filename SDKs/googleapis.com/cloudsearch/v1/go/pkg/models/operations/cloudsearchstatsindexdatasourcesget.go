@@ -8,18 +8,18 @@ import (
 )
 
 type CloudsearchStatsIndexDatasourcesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsIndexDatasourcesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsIndexDatasourcesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsIndexDatasourcesGetSecurity struct {
@@ -28,12 +28,7 @@ type CloudsearchStatsIndexDatasourcesGetSecurity struct {
 	Option3 *CloudsearchStatsIndexDatasourcesGetSecurityOption3 `security:"option"`
 }
 
-type CloudsearchStatsIndexDatasourcesGetPathParams struct {
-	// The resource id of the data source to retrieve statistics for, in the following format: "datasources/{source_id}"
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudsearchStatsIndexDatasourcesGetQueryParams struct {
+type CloudsearchStatsIndexDatasourcesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type CloudsearchStatsIndexDatasourcesGetQueryParams struct {
 	FromDateYear *int64 `queryParam:"style=form,explode=true,name=fromDate.year"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource id of the data source to retrieve statistics for, in the following format: "datasources/{source_id}"
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -68,12 +65,6 @@ type CloudsearchStatsIndexDatasourcesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchStatsIndexDatasourcesGetRequest struct {
-	PathParams  CloudsearchStatsIndexDatasourcesGetPathParams
-	QueryParams CloudsearchStatsIndexDatasourcesGetQueryParams
-	Security    CloudsearchStatsIndexDatasourcesGetSecurity
 }
 
 type CloudsearchStatsIndexDatasourcesGetResponse struct {

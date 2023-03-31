@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsDismissReviewPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-	// review_id parameter
-	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
 type PullsDismissReviewRequestBody struct {
 	Event *string `json:"event,omitempty"`
 	// The message for the pull request review dismissal
@@ -22,8 +14,12 @@ type PullsDismissReviewRequestBody struct {
 }
 
 type PullsDismissReviewRequest struct {
-	PathParams PullsDismissReviewPathParams
-	Request    PullsDismissReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsDismissReviewRequestBody `request:"mediaType=application/json"`
+	Owner       string                        `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                         `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                        `pathParam:"style=simple,explode=false,name=repo"`
+	// review_id parameter
+	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
 }
 
 type PullsDismissReviewResponse struct {

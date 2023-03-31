@@ -34,11 +34,11 @@ func newInternationalPayments(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // CreateInternationalPaymentConsentsJSON - Create International Payment Consents
-func (s *internationalPayments) CreateInternationalPaymentConsentsJSON(ctx context.Context, request operations.CreateInternationalPaymentConsentsJSONRequest) (*operations.CreateInternationalPaymentConsentsJSONResponse, error) {
+func (s *internationalPayments) CreateInternationalPaymentConsentsJSON(ctx context.Context, request operations.CreateInternationalPaymentConsentsJSONRequest, security operations.CreateInternationalPaymentConsentsJSONSecurity) (*operations.CreateInternationalPaymentConsentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteInternationalConsent5", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *internationalPayments) CreateInternationalPaymentConsentsJSON(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *internationalPayments) CreateInternationalPaymentConsentsJSON(ctx conte
 }
 
 // CreateInternationalPaymentConsentsRaw - Create International Payment Consents
-func (s *internationalPayments) CreateInternationalPaymentConsentsRaw(ctx context.Context, request operations.CreateInternationalPaymentConsentsRawRequest) (*operations.CreateInternationalPaymentConsentsRawResponse, error) {
+func (s *internationalPayments) CreateInternationalPaymentConsentsRaw(ctx context.Context, request operations.CreateInternationalPaymentConsentsRawRequest, security operations.CreateInternationalPaymentConsentsRawSecurity) (*operations.CreateInternationalPaymentConsentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,9 +162,9 @@ func (s *internationalPayments) CreateInternationalPaymentConsentsRaw(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *internationalPayments) CreateInternationalPaymentConsentsRaw(ctx contex
 }
 
 // CreateInternationalPaymentsJSON - Create International Payments
-func (s *internationalPayments) CreateInternationalPaymentsJSON(ctx context.Context, request operations.CreateInternationalPaymentsJSONRequest) (*operations.CreateInternationalPaymentsJSONResponse, error) {
+func (s *internationalPayments) CreateInternationalPaymentsJSON(ctx context.Context, request operations.CreateInternationalPaymentsJSONRequest, security operations.CreateInternationalPaymentsJSONSecurity) (*operations.CreateInternationalPaymentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteInternational3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,9 +271,9 @@ func (s *internationalPayments) CreateInternationalPaymentsJSON(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,11 +361,11 @@ func (s *internationalPayments) CreateInternationalPaymentsJSON(ctx context.Cont
 }
 
 // CreateInternationalPaymentsRaw - Create International Payments
-func (s *internationalPayments) CreateInternationalPaymentsRaw(ctx context.Context, request operations.CreateInternationalPaymentsRawRequest) (*operations.CreateInternationalPaymentsRawResponse, error) {
+func (s *internationalPayments) CreateInternationalPaymentsRaw(ctx context.Context, request operations.CreateInternationalPaymentsRawRequest, security operations.CreateInternationalPaymentsRawSecurity) (*operations.CreateInternationalPaymentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,9 +380,9 @@ func (s *internationalPayments) CreateInternationalPaymentsRaw(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -470,18 +470,18 @@ func (s *internationalPayments) CreateInternationalPaymentsRaw(ctx context.Conte
 }
 
 // GetInternationalPaymentConsentsConsentID - Get International Payment Consents
-func (s *internationalPayments) GetInternationalPaymentConsentsConsentID(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDRequest) (*operations.GetInternationalPaymentConsentsConsentIDResponse, error) {
+func (s *internationalPayments) GetInternationalPaymentConsentsConsentID(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDRequest, security operations.GetInternationalPaymentConsentsConsentIDSecurity) (*operations.GetInternationalPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,18 +567,18 @@ func (s *internationalPayments) GetInternationalPaymentConsentsConsentID(ctx con
 }
 
 // GetInternationalPaymentConsentsConsentIDFundsConfirmation - Get International Payment Consents Funds Confirmation
-func (s *internationalPayments) GetInternationalPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationRequest) (*operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationResponse, error) {
+func (s *internationalPayments) GetInternationalPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationRequest, security operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationSecurity) (*operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}/funds-confirmation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}/funds-confirmation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,18 +664,18 @@ func (s *internationalPayments) GetInternationalPaymentConsentsConsentIDFundsCon
 }
 
 // GetInternationalPaymentsInternationalPaymentID - Get International Payments
-func (s *internationalPayments) GetInternationalPaymentsInternationalPaymentID(ctx context.Context, request operations.GetInternationalPaymentsInternationalPaymentIDRequest) (*operations.GetInternationalPaymentsInternationalPaymentIDResponse, error) {
+func (s *internationalPayments) GetInternationalPaymentsInternationalPaymentID(ctx context.Context, request operations.GetInternationalPaymentsInternationalPaymentIDRequest, security operations.GetInternationalPaymentsInternationalPaymentIDSecurity) (*operations.GetInternationalPaymentsInternationalPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,12 +8,12 @@ import (
 )
 
 type GetStoriesSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetStoriesQueryParams struct {
+type GetStoriesRequest struct {
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
 	// Find groups near the given latitude and longitude.
@@ -27,11 +27,6 @@ type GetStoriesQueryParams struct {
 	// How to sort the stories that are returned.  One of: date, distance, likes, views <br /><br /> Setting sort_by to date will sort posts from newest to oldest.  Setting sort_by to distance will sort posts from nearest to farthest.  Setting sort_by to likes will sort posts with the most likes first.  Setting sort_by to views will show the posts with the most views first.
 	//
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetStoriesRequest struct {
-	QueryParams GetStoriesQueryParams
-	Security    GetStoriesSecurity
 }
 
 // GetStories200ApplicationJSON - The stories and paging data.

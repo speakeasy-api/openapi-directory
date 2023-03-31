@@ -33,11 +33,11 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // VisionImagesAnnotate - Run image detection and annotation for a batch of images.
-func (s *images) VisionImagesAnnotate(ctx context.Context, request operations.VisionImagesAnnotateRequest) (*operations.VisionImagesAnnotateResponse, error) {
+func (s *images) VisionImagesAnnotate(ctx context.Context, request operations.VisionImagesAnnotateRequest, security operations.VisionImagesAnnotateSecurity) (*operations.VisionImagesAnnotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/images:annotate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p1beta1BatchAnnotateImagesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *images) VisionImagesAnnotate(ctx context.Context, request operations.Vi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *images) VisionImagesAnnotate(ctx context.Context, request operations.Vi
 }
 
 // VisionImagesAsyncBatchAnnotate - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
-func (s *images) VisionImagesAsyncBatchAnnotate(ctx context.Context, request operations.VisionImagesAsyncBatchAnnotateRequest) (*operations.VisionImagesAsyncBatchAnnotateResponse, error) {
+func (s *images) VisionImagesAsyncBatchAnnotate(ctx context.Context, request operations.VisionImagesAsyncBatchAnnotateRequest, security operations.VisionImagesAsyncBatchAnnotateSecurity) (*operations.VisionImagesAsyncBatchAnnotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/images:asyncBatchAnnotate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *images) VisionImagesAsyncBatchAnnotate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

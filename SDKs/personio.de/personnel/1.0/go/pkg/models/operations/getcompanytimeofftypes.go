@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCompanyTimeOffTypesQueryParams struct {
+type GetCompanyTimeOffTypesRequest struct {
 	// Pagination attribute to limit how many records will be returned per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Pagination attribute to identify which page you are requesting, by the form of telling an offset from the first record that would be returned.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetCompanyTimeOffTypesRequest struct {
-	QueryParams GetCompanyTimeOffTypesQueryParams
 }
 
 type GetCompanyTimeOffTypes200ApplicationJSON struct {

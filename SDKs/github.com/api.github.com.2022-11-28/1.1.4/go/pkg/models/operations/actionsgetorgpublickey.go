@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetOrgPublicKeyPathParams struct {
+type ActionsGetOrgPublicKeyRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsGetOrgPublicKeyRequest struct {
-	PathParams ActionsGetOrgPublicKeyPathParams
 }
 
 type ActionsGetOrgPublicKeyResponse struct {

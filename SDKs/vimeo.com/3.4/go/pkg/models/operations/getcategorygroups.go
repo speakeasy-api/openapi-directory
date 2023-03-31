@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoryGroupsPathParams struct {
-	// The name of the category.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
 // GetCategoryGroupsDirectionEnum - The sort direction of the results.
 type GetCategoryGroupsDirectionEnum string
 
@@ -68,7 +63,9 @@ func (e *GetCategoryGroupsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCategoryGroupsQueryParams struct {
+type GetCategoryGroupsRequest struct {
+	// The name of the category.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The sort direction of the results.
 	Direction *GetCategoryGroupsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -79,11 +76,6 @@ type GetCategoryGroupsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetCategoryGroupsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCategoryGroupsRequest struct {
-	PathParams  GetCategoryGroupsPathParams
-	QueryParams GetCategoryGroupsQueryParams
 }
 
 type GetCategoryGroupsResponse struct {

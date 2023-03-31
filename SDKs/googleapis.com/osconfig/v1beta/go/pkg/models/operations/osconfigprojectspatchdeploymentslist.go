@@ -8,16 +8,11 @@ import (
 )
 
 type OsconfigProjectsPatchDeploymentsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OsconfigProjectsPatchDeploymentsListPathParams struct {
-	// Required. The resource name of the parent in the form `projects/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsconfigProjectsPatchDeploymentsListQueryParams struct {
+type OsconfigProjectsPatchDeploymentsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type OsconfigProjectsPatchDeploymentsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A pagination token returned from a previous call to ListPatchDeployments that indicates where this listing should continue from.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the parent in the form `projects/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type OsconfigProjectsPatchDeploymentsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsconfigProjectsPatchDeploymentsListRequest struct {
-	PathParams  OsconfigProjectsPatchDeploymentsListPathParams
-	QueryParams OsconfigProjectsPatchDeploymentsListQueryParams
-	Security    OsconfigProjectsPatchDeploymentsListSecurity
 }
 
 type OsconfigProjectsPatchDeploymentsListResponse struct {

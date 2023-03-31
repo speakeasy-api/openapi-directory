@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePayable3PathParams struct {
+type DeletePayable3Request struct {
 	// payable's internal identifier
 	PayableID int64 `pathParam:"style=simple,explode=false,name=payableId"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type DeletePayable3Request struct {
-	PathParams DeletePayable3PathParams
 }
 
 type DeletePayable3Response struct {

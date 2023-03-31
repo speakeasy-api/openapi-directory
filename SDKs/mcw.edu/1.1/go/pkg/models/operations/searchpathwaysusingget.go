@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SearchPathwaysUsingGETPathParams struct {
+type SearchPathwaysUsingGETRequest struct {
 	// Free text search string
 	SearchString string `pathParam:"style=simple,explode=false,name=searchString"`
-}
-
-type SearchPathwaysUsingGETRequest struct {
-	PathParams SearchPathwaysUsingGETPathParams
 }
 
 type SearchPathwaysUsingGETResponse struct {

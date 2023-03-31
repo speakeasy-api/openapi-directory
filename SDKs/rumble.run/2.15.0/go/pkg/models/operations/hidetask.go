@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type HideTaskSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type HideTaskPathParams struct {
-	// UUID of the task to hide
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type HideTaskRequest struct {
-	PathParams HideTaskPathParams
-	Security   HideTaskSecurity
+	// UUID of the task to hide
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type HideTaskResponse struct {

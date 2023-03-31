@@ -4,19 +4,18 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PostCompileRequest(
-    query_params=operations.PostCompileQueryParams(
-        explain="quia",
-        instrument=True,
-        metrics=True,
-        pretty=False,
-    ),
-    request={
-        "et": "blanditiis",
-        "qui": "iure",
-        "tempora": "sunt",
+    request_body={
+        "provident": "distinctio",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
     },
+    explain="illum",
+    instrument=False,
+    metrics=False,
+    pretty=False,
 )
     
 res = s.compile_api.post_compile(req)

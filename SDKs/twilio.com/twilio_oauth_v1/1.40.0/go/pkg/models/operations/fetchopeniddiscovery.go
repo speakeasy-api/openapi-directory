@@ -11,15 +11,6 @@ var FetchOpenidDiscoveryServerList = []string{
 	"https://oauth.twilio.com",
 }
 
-type FetchOpenidDiscoverySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchOpenidDiscoveryRequest struct {
-	Security  FetchOpenidDiscoverySecurity
-	ServerURL *string
-}
-
 type FetchOpenidDiscoveryResponse struct {
 	ContentType string
 	StatusCode  int

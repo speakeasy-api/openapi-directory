@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CancelAuthorizationRequest{
-        PathParams: operations.CancelAuthorizationPathParams{
-            AuthorizationToken: "corrupti",
-        },
+        AuthorizationToken: "corrupti",
     }
 
     ctx := context.Background()

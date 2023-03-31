@@ -8,22 +8,14 @@ import (
 )
 
 type ContainerProjectsZonesOperationsCancelSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsZonesOperationsCancelPathParams struct {
-	// Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced by the name field.
-	OperationID string `pathParam:"style=simple,explode=false,name=operationId"`
-	// Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides. This field has been deprecated and replaced by the name field.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ContainerProjectsZonesOperationsCancelQueryParams struct {
+type ContainerProjectsZonesOperationsCancelRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CancelOperationRequest *shared.CancelOperationRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,21 +28,20 @@ type ContainerProjectsZonesOperationsCancelQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced by the name field.
+	OperationID string `pathParam:"style=simple,explode=false,name=operationId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContainerProjectsZonesOperationsCancelRequest struct {
-	PathParams  ContainerProjectsZonesOperationsCancelPathParams
-	QueryParams ContainerProjectsZonesOperationsCancelQueryParams
-	Request     *shared.CancelOperationRequest `request:"mediaType=application/json"`
-	Security    ContainerProjectsZonesOperationsCancelSecurity
+	// Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides. This field has been deprecated and replaced by the name field.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ContainerProjectsZonesOperationsCancelResponse struct {

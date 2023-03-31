@@ -8,18 +8,18 @@ import (
 )
 
 type DocsDocumentsBatchUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsBatchUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsBatchUpdateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsBatchUpdateSecurity struct {
@@ -28,20 +28,18 @@ type DocsDocumentsBatchUpdateSecurity struct {
 	Option3 *DocsDocumentsBatchUpdateSecurityOption3 `security:"option"`
 }
 
-type DocsDocumentsBatchUpdatePathParams struct {
-	// The ID of the document to update.
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type DocsDocumentsBatchUpdateQueryParams struct {
+type DocsDocumentsBatchUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                *shared.XgafvEnum                  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BatchUpdateDocumentRequest *shared.BatchUpdateDocumentRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the document to update.
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,13 +54,6 @@ type DocsDocumentsBatchUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocsDocumentsBatchUpdateRequest struct {
-	PathParams  DocsDocumentsBatchUpdatePathParams
-	QueryParams DocsDocumentsBatchUpdateQueryParams
-	Request     *shared.BatchUpdateDocumentRequest `request:"mediaType=application/json"`
-	Security    DocsDocumentsBatchUpdateSecurity
 }
 
 type DocsDocumentsBatchUpdateResponse struct {

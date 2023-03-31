@@ -36,11 +36,11 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // UpdateBankAccount - Update existing bank account details
 // Update an existing Bank Account. WealthOS will update only the fields sent in the request.
-func (s *bankAccounts) UpdateBankAccount(ctx context.Context, request operations.UpdateBankAccountRequest) (*operations.UpdateBankAccountResponse, error) {
+func (s *bankAccounts) UpdateBankAccount(ctx context.Context, request operations.UpdateBankAccountRequest, security operations.UpdateBankAccountSecurity) (*operations.UpdateBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -55,9 +55,9 @@ func (s *bankAccounts) UpdateBankAccount(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -162,11 +162,11 @@ func (s *bankAccounts) UpdateBankAccount(ctx context.Context, request operations
 }
 
 // CreateBankAccount - Create new bank account
-func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations.CreateBankAccountRequest) (*operations.CreateBankAccountResponse, error) {
+func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations.CreateBankAccountRequest, security operations.CreateBankAccountSecurity) (*operations.CreateBankAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/bank-accounts/v1"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -178,9 +178,9 @@ func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,7 +285,7 @@ func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations
 }
 
 // GetAllBankAccounts - Retrieve all the bank accounts of a particular investor
-func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operations.GetAllBankAccountsRequest) (*operations.GetAllBankAccountsResponse, error) {
+func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operations.GetAllBankAccountsRequest, security operations.GetAllBankAccountsSecurity) (*operations.GetAllBankAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/bank-accounts/v1"
 
@@ -294,13 +294,13 @@ func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -405,18 +405,18 @@ func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operation
 }
 
 // GetBankAccount - Retrieve existing bank account from bank account id
-func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest) (*operations.GetBankAccountResponse, error) {
+func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest, security operations.GetBankAccountSecurity) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

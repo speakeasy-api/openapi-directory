@@ -13,18 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetTimestagsRequest{
-        QueryParams: operations.GetTimestagsQueryParams{
-            Filter: "Org",
-            Max: 592845,
-            Query: "distinctio",
-        },
+        Filter: "Org",
+        Max: 592845,
+        Query: "distinctio",
     }
 
     ctx := context.Background()

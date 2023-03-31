@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type AddShippingAddressPathParams struct {
-	// ID of the orderForm that will receive client profile information.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type AddShippingAddressHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type AddShippingAddressRequestBodyLogisticsInfo struct {
 	// Index of item in items array
 	ItemIndex *int64 `json:"itemIndex,omitempty"`
@@ -64,9 +52,13 @@ type AddShippingAddressRequestBody struct {
 }
 
 type AddShippingAddressRequest struct {
-	PathParams AddShippingAddressPathParams
-	Headers    AddShippingAddressHeaders
-	Request    AddShippingAddressRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                        `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody AddShippingAddressRequestBody `request:"mediaType=application/json"`
+	// ID of the orderForm that will receive client profile information.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type AddShippingAddressResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolWebPortAddPathParams struct {
+type ProtocolWebPortAddRequest struct {
 	// Agent to add WEB port
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// TCP port
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolWebPortAddRequest struct {
-	PathParams ProtocolWebPortAddPathParams
 }
 
 type ProtocolWebPortAddResponse struct {

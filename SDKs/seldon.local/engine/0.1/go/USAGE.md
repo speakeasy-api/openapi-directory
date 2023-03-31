@@ -14,30 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.PredictJSONRequest{
-        Security: operations.PredictJSONSecurity{
-            HTTPBearer: shared.SchemeHTTPBearer{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.PredictJSONPathParams{
-            Deployment: "corrupti",
-            Namespace: "provident",
-        },
-        Request: shared.SeldonMessage{
-            BinData: "distinctio",
+        SeldonMessage: shared.SeldonMessage{
+            BinData: "corrupti",
             Data: &shared.DefaultData{
                 Names: []string{
+                    "distinctio",
+                    "quibusdam",
                     "unde",
-                    "nulla",
-                    "corrupti",
-                    "illum",
                 },
                 Ndarray: []interface{}{
+                    "corrupti",
+                    "illum",
+                    "vel",
                     "error",
-                    "deserunt",
                 },
                 Tensor: &shared.Tensor{
                     Shape: []int{
+                        384382,
                         437587,
                         297534,
                     },
@@ -216,10 +209,14 @@ func main() {
             },
             StrData: "animi",
         },
+        Deployment: "enim",
+        Namespace: "odit",
     }
 
     ctx := context.Background()
-    res, err := s.ExternalAmbassadorAPI.PredictJSON(ctx, req)
+    res, err := s.ExternalAmbassadorAPI.PredictJSON(ctx, req, operations.PredictJSONSecurity{
+        HTTPBearer: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

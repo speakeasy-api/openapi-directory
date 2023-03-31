@@ -12,7 +12,8 @@ var CreateTokenServerList = []string{
 }
 
 type CreateTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTokenCreateTokenRequest struct {
@@ -32,12 +33,6 @@ type CreateTokenCreateTokenRequest struct {
 	GrantType string `form:"name=GrantType"`
 	// JWT token related to the refresh token grant type.
 	RefreshToken *string `form:"name=RefreshToken"`
-}
-
-type CreateTokenRequest struct {
-	Request   *CreateTokenCreateTokenRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateTokenSecurity
-	ServerURL *string
 }
 
 type CreateTokenResponse struct {

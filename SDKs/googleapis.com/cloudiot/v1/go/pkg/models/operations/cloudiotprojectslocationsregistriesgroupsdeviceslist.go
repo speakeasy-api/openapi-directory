@@ -10,23 +10,18 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity struct {
 	Option1 *CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 `security:"option"`
 	Option2 *CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 `security:"option"`
-}
-
-type CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams struct {
-	// Required. The device registry path. Required. For example, `projects/my-project/locations/us-central1/registries/my-registry`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum - If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified, only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified, all devices are returned.
@@ -56,7 +51,7 @@ func (e *CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsG
 	}
 }
 
-type CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams struct {
+type CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -87,6 +82,8 @@ type CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a prior `ListDevices` call and the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The device registry path. Required. For example, `projects/my-project/locations/us-central1/registries/my-registry`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -95,12 +92,6 @@ type CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams
-	QueryParams CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams
-	Security    CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity
 }
 
 type CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse struct {

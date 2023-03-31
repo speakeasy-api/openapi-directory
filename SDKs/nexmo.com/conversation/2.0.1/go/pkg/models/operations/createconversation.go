@@ -19,11 +19,6 @@ type CreateConversationRequestBody struct {
 	Properties *shared.ConversationProperties `json:"properties,omitempty"`
 }
 
-type CreateConversationRequest struct {
-	// Conversation Request Payload Object
-	Request *CreateConversationRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateConversation200ApplicationJSON - Create / Update Conversation Response Payload Object
 type CreateConversation200ApplicationJSON struct {
 	// A link towards a conversation included in Conversation API

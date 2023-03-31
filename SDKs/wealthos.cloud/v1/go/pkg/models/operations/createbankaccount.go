@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CreateBankAccountSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateBankAccountHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // CreateBankAccountRequestBodyAccountStatusEnum - If not populated, will be defaulted to inactive
@@ -81,9 +75,9 @@ type CreateBankAccountRequestBodyInput struct {
 }
 
 type CreateBankAccountRequest struct {
-	Headers  CreateBankAccountHeaders
-	Request  *CreateBankAccountRequestBodyInput `request:"mediaType=application/json"`
-	Security CreateBankAccountSecurity
+	RequestBody *CreateBankAccountRequestBodyInput `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateBankAccount500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

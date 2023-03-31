@@ -36,14 +36,14 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Deletes previously uploaded file
 func (s *messages) DeleteFile(ctx context.Context, request operations.DeleteFileRequest) (*operations.DeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -107,14 +107,14 @@ func (s *messages) DeleteFile(ctx context.Context, request operations.DeleteFile
 // Deletes previously uploaded image
 func (s *messages) DeleteImage(ctx context.Context, request operations.DeleteImageRequest) (*operations.DeleteImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/image", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,7 +176,7 @@ func (s *messages) DeleteImage(ctx context.Context, request operations.DeleteIma
 
 // Flag - Flag
 // Reports message or user for review by moderators
-func (s *messages) Flag(ctx context.Context, request operations.FlagRequest) (*operations.FlagResponse, error) {
+func (s *messages) Flag(ctx context.Context, request shared.FlagRequest) (*operations.FlagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/flag"
 
@@ -262,7 +262,7 @@ func (s *messages) GetOG(ctx context.Context, request operations.GetOGRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,7 +324,7 @@ func (s *messages) GetOG(ctx context.Context, request operations.GetOGRequest) (
 
 // MarkChannelsRead - Mark channels as read
 // Marks channels as read up to the specific message. If no channels is given, mark all channel as read
-func (s *messages) MarkChannelsRead(ctx context.Context, request operations.MarkChannelsReadRequest) (*operations.MarkChannelsReadResponse, error) {
+func (s *messages) MarkChannelsRead(ctx context.Context, request shared.MarkChannelsReadRequest) (*operations.MarkChannelsReadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels/read"
 
@@ -410,7 +410,7 @@ func (s *messages) QueryMessageFlags(ctx context.Context, request operations.Que
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -481,7 +481,7 @@ func (s *messages) Search(ctx context.Context, request operations.SearchRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -545,9 +545,9 @@ func (s *messages) Search(ctx context.Context, request operations.SearchRequest)
 // Translates message to a given language using automated translation software
 func (s *messages) TranslateMessage(ctx context.Context, request operations.TranslateMessageRequest) (*operations.TranslateMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}/translate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}/translate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TranslateMessageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -620,7 +620,7 @@ func (s *messages) TranslateMessage(ctx context.Context, request operations.Tran
 
 // Unflag - Unflag
 // Removes previously created user or message flag
-func (s *messages) Unflag(ctx context.Context, request operations.UnflagRequest) (*operations.UnflagResponse, error) {
+func (s *messages) Unflag(ctx context.Context, request shared.FlagRequest) (*operations.UnflagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/unflag"
 
@@ -699,9 +699,9 @@ func (s *messages) Unflag(ctx context.Context, request operations.UnflagRequest)
 // Updates message with new data
 func (s *messages) UpdateMessage(ctx context.Context, request operations.UpdateMessageRequest) (*operations.UpdateMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMessageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -776,9 +776,9 @@ func (s *messages) UpdateMessage(ctx context.Context, request operations.UpdateM
 // Updates certain fields of the message
 func (s *messages) UpdateMessagePartial(ctx context.Context, request operations.UpdateMessagePartialRequest) (*operations.UpdateMessagePartialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMessagePartialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

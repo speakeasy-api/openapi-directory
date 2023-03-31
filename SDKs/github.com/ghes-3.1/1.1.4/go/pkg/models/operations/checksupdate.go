@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksUpdatePathParams struct {
+type ChecksUpdateRequest struct {
+	RequestBody interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the check run.
 	CheckRunID int64 `pathParam:"style=simple,explode=false,name=check_run_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksUpdateRequest struct {
-	PathParams ChecksUpdatePathParams
-	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type ChecksUpdateResponse struct {

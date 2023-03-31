@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyAvailabilityPathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
 type KeyAvailabilityRequest struct {
-	PathParams KeyAvailabilityPathParams
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 }
 
 type KeyAvailabilityResponse struct {

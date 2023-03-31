@@ -32,20 +32,20 @@ func newStorelayoutpages(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // AndroidenterpriseStorelayoutpagesDelete - Deletes a store page.
-func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesDelete(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesDeleteRequest) (*operations.AndroidenterpriseStorelayoutpagesDeleteResponse, error) {
+func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesDelete(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesDeleteRequest, security operations.AndroidenterpriseStorelayoutpagesDeleteSecurity) (*operations.AndroidenterpriseStorelayoutpagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesDelete(ctx context.C
 }
 
 // AndroidenterpriseStorelayoutpagesGet - Retrieves details of a store page.
-func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesGet(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesGetRequest) (*operations.AndroidenterpriseStorelayoutpagesGetResponse, error) {
+func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesGet(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesGetRequest, security operations.AndroidenterpriseStorelayoutpagesGetSecurity) (*operations.AndroidenterpriseStorelayoutpagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesGet(ctx context.Cont
 }
 
 // AndroidenterpriseStorelayoutpagesInsert - Inserts a new store page.
-func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesInsert(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesInsertRequest) (*operations.AndroidenterpriseStorelayoutpagesInsertResponse, error) {
+func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesInsert(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesInsertRequest, security operations.AndroidenterpriseStorelayoutpagesInsertSecurity) (*operations.AndroidenterpriseStorelayoutpagesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StorePage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesInsert(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesInsert(ctx context.C
 }
 
 // AndroidenterpriseStorelayoutpagesList - Retrieves the details of all pages in the store.
-func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesList(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesListRequest) (*operations.AndroidenterpriseStorelayoutpagesListResponse, error) {
+func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesList(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesListRequest, security operations.AndroidenterpriseStorelayoutpagesListSecurity) (*operations.AndroidenterpriseStorelayoutpagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesList(ctx context.Con
 }
 
 // AndroidenterpriseStorelayoutpagesUpdate - Updates the content of a store page.
-func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesUpdate(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesUpdateRequest) (*operations.AndroidenterpriseStorelayoutpagesUpdateResponse, error) {
+func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesUpdate(ctx context.Context, request operations.AndroidenterpriseStorelayoutpagesUpdateRequest, security operations.AndroidenterpriseStorelayoutpagesUpdateSecurity) (*operations.AndroidenterpriseStorelayoutpagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StorePage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *storelayoutpages) AndroidenterpriseStorelayoutpagesUpdate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

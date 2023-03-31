@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostFirewallsIDActionsRemoveFromResourcesPathParams struct {
-	// ID of the Firewall
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector - Configuration for type label_selector, required if type is `label_selector`
 type PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector struct {
 	// Label selector
@@ -64,8 +59,9 @@ type PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequest struct 
 }
 
 type PostFirewallsIDActionsRemoveFromResourcesRequest struct {
-	PathParams PostFirewallsIDActionsRemoveFromResourcesPathParams
-	Request    *PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequest `request:"mediaType=application/json"`
+	RequestBody *PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequest `request:"mediaType=application/json"`
+	// ID of the Firewall
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionError - Error message for the Action if error occurred, otherwise null

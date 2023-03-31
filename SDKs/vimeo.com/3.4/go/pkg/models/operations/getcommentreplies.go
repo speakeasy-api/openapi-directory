@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommentRepliesPathParams struct {
+type GetCommentRepliesRequest struct {
 	// The ID of the comment.
 	CommentID float64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetCommentRepliesQueryParams struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetCommentRepliesRequest struct {
-	PathParams  GetCommentRepliesPathParams
-	QueryParams GetCommentRepliesQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetCommentRepliesResponse struct {

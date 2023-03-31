@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams struct {
+type EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest struct {
-	PathParams  EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams
-	QueryParams EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 // EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSON - Response

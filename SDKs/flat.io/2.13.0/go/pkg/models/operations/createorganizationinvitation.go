@@ -8,12 +8,7 @@ import (
 )
 
 type CreateOrganizationInvitationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateOrganizationInvitationRequest struct {
-	Request  *shared.OrganizationInvitationCreation `request:"mediaType=application/json"`
-	Security CreateOrganizationInvitationSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateOrganizationInvitationResponse struct {

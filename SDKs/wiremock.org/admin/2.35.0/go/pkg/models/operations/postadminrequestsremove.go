@@ -35,10 +35,6 @@ type PostAdminRequestsRemoveRequestBody struct {
 	URLPattern *string `json:"urlPattern,omitempty"`
 }
 
-type PostAdminRequestsRemoveRequest struct {
-	Request PostAdminRequestsRemoveRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminRequestsRemoveResponse struct {
 	ContentType string
 	StatusCode  int

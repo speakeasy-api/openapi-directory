@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteSpacesSpaceIDFoldersIDSocialRegimesPathParams struct {
+type DeleteSpacesSpaceIDFoldersIDSocialRegimesRequest struct {
 	// Id of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type DeleteSpacesSpaceIDFoldersIDSocialRegimesRequest struct {
-	PathParams DeleteSpacesSpaceIDFoldersIDSocialRegimesPathParams
 }
 
 type DeleteSpacesSpaceIDFoldersIDSocialRegimesResponse struct {

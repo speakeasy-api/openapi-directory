@@ -12,20 +12,15 @@ var FetchActivityServerList = []string{
 }
 
 type FetchActivitySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchActivityPathParams struct {
+type FetchActivityRequest struct {
 	// The SID of the Activity resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Activity resources to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchActivityRequest struct {
-	PathParams FetchActivityPathParams
-	Security   FetchActivitySecurity
-	ServerURL  *string
 }
 
 type FetchActivityResponse struct {

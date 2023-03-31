@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveAssetSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveAssetPathParams struct {
-	// UUID of the asset to remove
-	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveAssetRequest struct {
-	PathParams RemoveAssetPathParams
-	Security   RemoveAssetSecurity
+	// UUID of the asset to remove
+	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
 }
 
 type RemoveAssetResponse struct {

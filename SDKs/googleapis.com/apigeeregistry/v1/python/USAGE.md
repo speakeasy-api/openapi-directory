@@ -4,54 +4,45 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ApigeeregistryProjectsLocationsApisCreateRequest(
-    security=operations.ApigeeregistryProjectsLocationsApisCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ApigeeregistryProjectsLocationsApisCreatePathParams(
-        parent="modi",
-    ),
-    query_params=operations.ApigeeregistryProjectsLocationsApisCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="dolores",
-        alt="media",
-        api_id="delectus",
-        callback="sint",
-        fields="non",
-        key="labore",
-        oauth_token="ut",
-        pretty_print=False,
-        quota_user="magni",
-        upload_type="eveniet",
-        upload_protocol="consectetur",
-    ),
-    request=shared.APIInput(
+    dollar_xgafv="2",
+    api_input=shared.APIInput(
         annotations={
-            "eum": "rerum",
-            "ut": "est",
-            "quas": "quia",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        availability="rem",
-        description="incidunt",
-        display_name="modi",
+        availability="vel",
+        description="error",
+        display_name="deserunt",
         labels={
-            "ex": "maiores",
-            "inventore": "quia",
-            "amet": "ullam",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
-        name="ut",
-        recommended_deployment="fugit",
-        recommended_version="temporibus",
+        name="delectus",
+        recommended_deployment="tempora",
+        recommended_version="suscipit",
     ),
+    access_token="molestiae",
+    alt="proto",
+    api_id="placeat",
+    callback="voluptatum",
+    fields_="iusto",
+    key="excepturi",
+    oauth_token="nisi",
+    parent="recusandae",
+    pretty_print=False,
+    quota_user="temporibus",
+    upload_type="ab",
+    upload_protocol="quis",
 )
     
-res = s.projects.apigeeregistry_projects_locations_apis_create(req)
+res = s.projects.apigeeregistry_projects_locations_apis_create(req, operations.ApigeeregistryProjectsLocationsApisCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.api is not None:
     # handle response

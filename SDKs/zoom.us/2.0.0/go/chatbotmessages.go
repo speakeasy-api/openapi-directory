@@ -36,11 +36,11 @@ func newChatbotMessages(defaultClient, securityClient HTTPClient, serverURL, lan
 // Delete a message that was sent by your chatbot app.<br><br> **Scopes:** `imchat:bot`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>**Authorization Flow**: Client Credentials Flow<br><br>To get authorized, make a POST request to `/oauth/token` endpoint with grant type as `client_credentials`. <br>Use `https://api.zoom.us/oauth/token?grant_type=client_credentials` as the endpoint for the request.
 // You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`<br><br> Next, use the token received (access_token) as a bearer token while making the DELETE /im/chat/messages/{message_id} request to delete a message.<br><br>
 // Learn more about how to authotize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
-func (s *chatbotMessages) DeleteAChatbotMessage(ctx context.Context, request operations.DeleteAChatbotMessageRequest) (*operations.DeleteAChatbotMessageResponse, error) {
+func (s *chatbotMessages) DeleteAChatbotMessage(ctx context.Context, request operations.DeleteAChatbotMessageRequest, security operations.DeleteAChatbotMessageSecurity) (*operations.DeleteAChatbotMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/chat/messages/{message_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/chat/messages/{message_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *chatbotMessages) DeleteAChatbotMessage(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -104,11 +104,11 @@ func (s *chatbotMessages) DeleteAChatbotMessage(ctx context.Context, request ope
 // To get authorized, make a POST request to `/oauth/token` endpoint with grant type as `client_credentials`. <br>Use `https://api.zoom.us/oauth/token?grant_type=client_credentials` as the endpoint for the request.
 // You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`<br><br> Next, use the token received (access_token) as a bearer token while making the PUT /im/chat/messages/{message_id} request to edit a chatbot message.<br><br>
 // Learn more about how to authotize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
-func (s *chatbotMessages) EditChatbotMessage(ctx context.Context, request operations.EditChatbotMessageRequest) (*operations.EditChatbotMessageResponse, error) {
+func (s *chatbotMessages) EditChatbotMessage(ctx context.Context, request operations.EditChatbotMessageRequest, security operations.EditChatbotMessageSecurity) (*operations.EditChatbotMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/im/chat/messages/{message_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/im/chat/messages/{message_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -120,7 +120,7 @@ func (s *chatbotMessages) EditChatbotMessage(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *chatbotMessages) EditChatbotMessage(ctx context.Context, request operat
 // To get authorized, make a POST request to `/oauth/token` endpoint with grant type as `client_credentials`. <br>Use `https://api.zoom.us/oauth/token?grant_type=client_credentials` as the endpoint for the request.
 // You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`<br><br> Next, use the token recieved (access_token) as a bearer token while making the POST /im/chat/messages request to send chatbot messages.<br><br>
 // Learn more about how to authorize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
-func (s *chatbotMessages) Sendchatbot(ctx context.Context, request operations.SendchatbotRequest) (*operations.SendchatbotResponse, error) {
+func (s *chatbotMessages) Sendchatbot(ctx context.Context, request operations.SendchatbotApplicationJSON, security operations.SendchatbotSecurity) (*operations.SendchatbotResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/im/chat/messages"
 
@@ -187,7 +187,7 @@ func (s *chatbotMessages) Sendchatbot(ctx context.Context, request operations.Se
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

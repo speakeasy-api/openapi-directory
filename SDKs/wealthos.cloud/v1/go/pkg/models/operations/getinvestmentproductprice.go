@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type GetInvestmentProductPriceSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // GetInvestmentProductPriceCategoryIDEnum - Investment Product Category Id
@@ -35,22 +34,13 @@ func (e *GetInvestmentProductPriceCategoryIDEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetInvestmentProductPricePathParams struct {
+type GetInvestmentProductPriceRequest struct {
 	// Investment Product Category Id
 	CategoryID GetInvestmentProductPriceCategoryIDEnum `pathParam:"style=simple,explode=false,name=category_id"`
 	// Investment Product Id
 	InvestmentProductID string `pathParam:"style=simple,explode=false,name=investment_product_id"`
-}
-
-type GetInvestmentProductPriceHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetInvestmentProductPriceRequest struct {
-	PathParams GetInvestmentProductPricePathParams
-	Headers    GetInvestmentProductPriceHeaders
-	Security   GetInvestmentProductPriceSecurity
 }
 
 // GetInvestmentProductPrice500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

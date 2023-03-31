@@ -8,16 +8,11 @@ import (
 )
 
 type DirectoryUsersSignOutSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DirectoryUsersSignOutPathParams struct {
-	// Identifies the target user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryUsersSignOutQueryParams struct {
+type DirectoryUsersSignOutRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,12 +35,8 @@ type DirectoryUsersSignOutQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersSignOutRequest struct {
-	PathParams  DirectoryUsersSignOutPathParams
-	QueryParams DirectoryUsersSignOutQueryParams
-	Security    DirectoryUsersSignOutSecurity
+	// Identifies the target user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersSignOutResponse struct {

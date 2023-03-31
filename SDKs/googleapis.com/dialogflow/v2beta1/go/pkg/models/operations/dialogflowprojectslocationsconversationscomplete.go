@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsConversationsCompleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsConversationsCompleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsConversationsCompleteSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsConversationsCompleteSecurity struct {
 	Option2 *DialogflowProjectsLocationsConversationsCompleteSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsConversationsCompletePathParams struct {
-	// Required. Resource identifier of the conversation to close. Format: `projects//locations//conversations/`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DialogflowProjectsLocationsConversationsCompleteQueryParams struct {
+type DialogflowProjectsLocationsConversationsCompleteRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type DialogflowProjectsLocationsConversationsCompleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Resource identifier of the conversation to close. Format: `projects//locations//conversations/`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type DialogflowProjectsLocationsConversationsCompleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsConversationsCompleteRequest struct {
-	PathParams  DialogflowProjectsLocationsConversationsCompletePathParams
-	QueryParams DialogflowProjectsLocationsConversationsCompleteQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsConversationsCompleteSecurity
 }
 
 type DialogflowProjectsLocationsConversationsCompleteResponse struct {

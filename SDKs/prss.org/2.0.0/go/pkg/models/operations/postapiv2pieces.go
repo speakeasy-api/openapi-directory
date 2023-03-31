@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV2PiecesSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PostAPIV2PiecesRequest struct {
-	Request  *shared.PieceInput `request:"mediaType=application/json"`
-	Security PostAPIV2PiecesSecurity
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAPIV2PiecesResponse struct {

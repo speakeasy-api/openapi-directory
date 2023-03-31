@@ -33,16 +33,16 @@ func newFeature(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetFeature - Feature Detail
 // Return the content of the selected feature.
-func (s *feature) GetFeature(ctx context.Context, request operations.GetFeatureRequest) (*operations.GetFeatureResponse, error) {
+func (s *feature) GetFeature(ctx context.Context, request operations.GetFeatureRequest, security operations.GetFeatureSecurity) (*operations.GetFeatureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/feature/{featureId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/feature/{featureId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *feature) GetFeature(ctx context.Context, request operations.GetFeatureR
 
 // ListFeatureTypes - Feature Type Collection
 // Return a collection of Feature Types.
-func (s *feature) ListFeatureTypes(ctx context.Context, request operations.ListFeatureTypesRequest) (*operations.ListFeatureTypesResponse, error) {
+func (s *feature) ListFeatureTypes(ctx context.Context) (*operations.ListFeatureTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/feature-type"
 
@@ -87,7 +87,7 @@ func (s *feature) ListFeatureTypes(ctx context.Context, request operations.ListF
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,7 +123,7 @@ func (s *feature) ListFeatureTypes(ctx context.Context, request operations.ListF
 
 // ListFeatures - Feature Collection
 // Return a collection of Feature.
-func (s *feature) ListFeatures(ctx context.Context, request operations.ListFeaturesRequest) (*operations.ListFeaturesResponse, error) {
+func (s *feature) ListFeatures(ctx context.Context, request operations.ListFeaturesRequest, security operations.ListFeaturesSecurity) (*operations.ListFeaturesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/feature"
 
@@ -132,11 +132,11 @@ func (s *feature) ListFeatures(ctx context.Context, request operations.ListFeatu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

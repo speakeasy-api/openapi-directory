@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDatacentersIDPathParams struct {
+type GetDatacentersIDRequest struct {
 	// ID of Datacenter
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDatacentersIDRequest struct {
-	PathParams GetDatacentersIDPathParams
 }
 
 type GetDatacentersID200ApplicationJSONDatacenterLocation struct {

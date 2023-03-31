@@ -10,23 +10,18 @@ import (
 )
 
 type BloggerCommentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsListSecurity struct {
 	Option1 *BloggerCommentsListSecurityOption1 `security:"option"`
 	Option2 *BloggerCommentsListSecurityOption2 `security:"option"`
-}
-
-type BloggerCommentsListPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
-	PostID string `pathParam:"style=simple,explode=false,name=postId"`
 }
 
 // BloggerCommentsListStatusEnum
@@ -89,13 +84,14 @@ func (e *BloggerCommentsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerCommentsListQueryParams struct {
+type BloggerCommentsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback    *string `queryParam:"style=form,explode=true,name=callback"`
 	EndDate     *string `queryParam:"style=form,explode=true,name=endDate"`
@@ -108,6 +104,7 @@ type BloggerCommentsListQueryParams struct {
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	PageToken  *string `queryParam:"style=form,explode=true,name=pageToken"`
+	PostID     string  `pathParam:"style=simple,explode=false,name=postId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -119,12 +116,6 @@ type BloggerCommentsListQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                      `queryParam:"style=form,explode=true,name=upload_protocol"`
 	View           *BloggerCommentsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerCommentsListRequest struct {
-	PathParams  BloggerCommentsListPathParams
-	QueryParams BloggerCommentsListQueryParams
-	Security    BloggerCommentsListSecurity
 }
 
 type BloggerCommentsListResponse struct {

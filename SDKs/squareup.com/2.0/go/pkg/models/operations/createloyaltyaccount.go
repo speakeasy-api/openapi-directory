@@ -8,15 +8,7 @@ import (
 )
 
 type CreateLoyaltyAccountSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateLoyaltyAccountRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateLoyaltyAccountRequest `request:"mediaType=application/json"`
-	Security CreateLoyaltyAccountSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateLoyaltyAccountResponse struct {

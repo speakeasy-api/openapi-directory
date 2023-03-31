@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResendWebhookActivityEntryPathParams struct {
+type ResendWebhookActivityEntryRequest struct {
 	// Webhooks activity entry ID
 	ActivityID string `pathParam:"style=simple,explode=false,name=activityId"`
-}
-
-type ResendWebhookActivityEntryHeaders struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type ResendWebhookActivityEntryRequest struct {
-	PathParams ResendWebhookActivityEntryPathParams
-	Headers    ResendWebhookActivityEntryHeaders
 }
 
 type ResendWebhookActivityEntryResponse struct {

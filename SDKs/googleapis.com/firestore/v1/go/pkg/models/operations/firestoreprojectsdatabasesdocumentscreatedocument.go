@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesDocumentsCreateDocumentSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsCreateDocumentSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity struct {
@@ -22,22 +22,18 @@ type FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity struct {
 	Option2 *FirestoreProjectsDatabasesDocumentsCreateDocumentSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesDocumentsCreateDocumentPathParams struct {
-	// Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
-	// Required. The parent resource. For example: `projects/{project_id}/databases/{database_id}/documents` or `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams struct {
+type FirestoreProjectsDatabasesDocumentsCreateDocumentRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Document    *shared.Document  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 	// The client-assigned document ID to use for this document. Optional. If not specified, an ID will be assigned by the service.
 	DocumentID *string `queryParam:"style=form,explode=true,name=documentId"`
 	// Selector specifying which fields to include in a partial response.
@@ -48,6 +44,8 @@ type FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams struct {
 	MaskFieldPaths []string `queryParam:"style=form,explode=true,name=mask.fieldPaths"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource. For example: `projects/{project_id}/databases/{database_id}/documents` or `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -56,13 +54,6 @@ type FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesDocumentsCreateDocumentRequest struct {
-	PathParams  FirestoreProjectsDatabasesDocumentsCreateDocumentPathParams
-	QueryParams FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams
-	Request     *shared.Document `request:"mediaType=application/json"`
-	Security    FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity
 }
 
 type FirestoreProjectsDatabasesDocumentsCreateDocumentResponse struct {

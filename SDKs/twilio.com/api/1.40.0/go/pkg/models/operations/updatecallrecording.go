@@ -12,16 +12,8 @@ var UpdateCallRecordingServerList = []string{
 }
 
 type UpdateCallRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCallRecordingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource to update.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The Twilio-provided string that uniquely identifies the Recording resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCallRecordingUpdateCallRecordingRequest struct {
@@ -31,10 +23,13 @@ type UpdateCallRecordingUpdateCallRecordingRequest struct {
 }
 
 type UpdateCallRecordingRequest struct {
-	PathParams UpdateCallRecordingPathParams
-	Request    *UpdateCallRecordingUpdateCallRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCallRecordingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to update.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource to update.
+	CallSid     string                                         `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdateCallRecordingUpdateCallRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Recording resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCallRecordingResponse struct {

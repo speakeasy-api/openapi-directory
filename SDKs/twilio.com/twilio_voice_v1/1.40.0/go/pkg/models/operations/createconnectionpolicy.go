@@ -12,18 +12,13 @@ var CreateConnectionPolicyServerList = []string{
 }
 
 type CreateConnectionPolicySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConnectionPolicyCreateConnectionPolicyRequest struct {
 	// A descriptive string that you create to describe the resource. It is not unique and can be up to 255 characters long.
 	FriendlyName *string `form:"name=FriendlyName"`
-}
-
-type CreateConnectionPolicyRequest struct {
-	Request   *CreateConnectionPolicyCreateConnectionPolicyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateConnectionPolicySecurity
-	ServerURL *string
 }
 
 type CreateConnectionPolicyResponse struct {

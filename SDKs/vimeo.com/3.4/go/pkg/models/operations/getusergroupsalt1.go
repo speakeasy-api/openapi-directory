@@ -84,7 +84,7 @@ func (e *GetUserGroupsAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserGroupsAlt1QueryParams struct {
+type GetUserGroupsAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetUserGroupsAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -97,10 +97,6 @@ type GetUserGroupsAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetUserGroupsAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserGroupsAlt1Request struct {
-	QueryParams GetUserGroupsAlt1QueryParams
 }
 
 type GetUserGroupsAlt1Response struct {

@@ -33,11 +33,11 @@ func newAccessPolicies(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AccesscontextmanagerAccessPoliciesAccessLevelsCreate - Creates an access level. The long-running operation from this RPC has a successful status after the access level propagates to long-lasting storage. If access levels contain errors, an error response is returned for the first error encountered.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest, security operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccessLevel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ct
 }
 
 // AccesscontextmanagerAccessPoliciesAccessLevelsList - Lists all access levels for an access policy.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest, security operations.AccesscontextmanagerAccessPoliciesAccessLevelsListSecurity) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsList(ctx 
 }
 
 // AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAll - Replaces all existing access levels in an access policy with the access levels provided. This is done atomically. The long-running operation from this RPC has a successful status after all replacements propagate to long-lasting storage. If the replacement contains errors, an error response is returned for the first error encountered. Upon error, the replacement is cancelled, and existing access levels are not affected. The Operation.response field contains ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters result in an error.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAll(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAllRequest) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAllResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAll(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAllRequest, security operations.AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAllSecurity) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels:replaceAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/accessLevels:replaceAll", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceAccessLevelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAl
 }
 
 // AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate - Creates an authorized orgs desc. The long-running operation from this RPC has a successful status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc contains errors, an error response is returned for the first error encountered. The name of this `AuthorizedOrgsDesc` will be assigned during creation.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateRequest, security operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizedOrgsDesc", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,11 +207,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,20 +246,20 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCr
 }
 
 // AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList - Lists all authorized orgs descs for an access policy.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListRequest) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListRequest, security operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListSecurity) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsLi
 }
 
 // AccesscontextmanagerAccessPoliciesCreate - Creates an access policy. This method fails if the organization already has an access policy. The long-running operation has a successful status after the access policy propagates to long-lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesCreateResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesCreateRequest, security operations.AccesscontextmanagerAccessPoliciesCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessPolicies"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccessPolicy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,11 +349,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesCreate(ctx context.Co
 }
 
 // AccesscontextmanagerAccessPoliciesGetIamPolicy - Gets the IAM policy for the specified Access Context Manager access policy.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesGetIamPolicy(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesGetIamPolicyRequest) (*operations.AccesscontextmanagerAccessPoliciesGetIamPolicyResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesGetIamPolicy(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesGetIamPolicyRequest, security operations.AccesscontextmanagerAccessPoliciesGetIamPolicySecurity) (*operations.AccesscontextmanagerAccessPoliciesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,11 +365,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesGetIamPolicy(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,7 +404,7 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesGetIamPolicy(ctx cont
 }
 
 // AccesscontextmanagerAccessPoliciesList - Lists all access policies in an organization.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesListRequest) (*operations.AccesscontextmanagerAccessPoliciesListResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesListRequest, security operations.AccesscontextmanagerAccessPoliciesListSecurity) (*operations.AccesscontextmanagerAccessPoliciesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessPolicies"
 
@@ -413,11 +413,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesList(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,11 +452,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesList(ctx context.Cont
 }
 
 // AccesscontextmanagerAccessPoliciesServicePerimetersCommit - Commits the dry-run specification for all the service perimeters in an access policy. A commit operation on a service perimeter involves copying its `spec` field to the `status` field of the service perimeter. Only service perimeters with `use_explicit_dry_run_spec` field set to true are affected by a commit operation. The long-running operation from this RPC has a successful status after the dry-run specifications for all the service perimeters have been committed. If a commit fails, it causes the long-running operation to return an error response and the entire commit operation is cancelled. When successful, the Operation.response field contains CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are cleared after a successful commit operation.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCommit(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersCommitRequest) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersCommitResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCommit(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersCommitRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersCommitSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters:commit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters:commit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitServicePerimetersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,11 +468,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersComm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,11 +507,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersComm
 }
 
 // AccesscontextmanagerAccessPoliciesServicePerimetersCreate - Creates a service perimeter. The long-running operation from this RPC has a successful status after the service perimeter propagates to long-lasting storage. If a service perimeter contains errors, an error response is returned for the first error encountered.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServicePerimeter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,11 +523,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCrea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,20 +562,20 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCrea
 }
 
 // AccesscontextmanagerAccessPoliciesServicePerimetersList - Lists all service perimeters for an access policy.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersListSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,11 +610,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersList
 }
 
 // AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAll - Replace all existing service perimeters in an access policy with the service perimeters provided. This is done atomically. The long-running operation from this RPC has a successful status after all replacements propagate to long-lasting storage. Replacements containing errors result in an error response for the first error encountered. Upon an error, replacement are cancelled and existing service perimeters are not affected. The Operation.response field contains ReplaceServicePerimetersResponse.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAll(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAllRequest) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAllResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAll(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAllRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAllSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersReplaceAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters:replaceAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/servicePerimeters:replaceAll", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceServicePerimetersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -626,11 +626,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersRepl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -665,11 +665,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersRepl
 }
 
 // AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissions - Returns the IAM permissions that the caller has on the specified Access Context Manager resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not support other resources.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissions(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissionsRequest) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissionsResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissions(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissionsRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissionsSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -681,11 +681,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersTest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -720,11 +720,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersTest
 }
 
 // AccesscontextmanagerAccessPoliciesSetIamPolicy - Sets the IAM policy for the specified Access Context Manager access policy. This method replaces the existing IAM policy on the access policy. The IAM policy controls the set of users who can perform specific operations on the Access Context Manager access policy.
-func (s *accessPolicies) AccesscontextmanagerAccessPoliciesSetIamPolicy(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesSetIamPolicyRequest) (*operations.AccesscontextmanagerAccessPoliciesSetIamPolicyResponse, error) {
+func (s *accessPolicies) AccesscontextmanagerAccessPoliciesSetIamPolicy(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesSetIamPolicyRequest, security operations.AccesscontextmanagerAccessPoliciesSetIamPolicySecurity) (*operations.AccesscontextmanagerAccessPoliciesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -736,11 +736,11 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesSetIamPolicy(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

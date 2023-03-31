@@ -38,6 +38,7 @@ pkg/models/operations/clouddeployprojectslocationstargetssetiampolicy.go
 pkg/models/operations/clouddeployprojectslocationstargetstestiampermissions.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/deliverypipeline.go
 pkg/models/shared/serialpipeline.go
 pkg/models/shared/stage.go
@@ -56,9 +57,7 @@ pkg/models/shared/pipelinecondition.go
 pkg/models/shared/targetstypecondition.go
 pkg/models/shared/targetspresentcondition.go
 pkg/models/shared/pipelinereadycondition.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listdeliverypipelinesresponse.go
 pkg/models/shared/release.go
 pkg/models/shared/releasecondition.go

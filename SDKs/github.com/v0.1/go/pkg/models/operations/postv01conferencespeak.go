@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ConferenceSpeakSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ConferenceSpeakRequest struct {
-	// POST parameters
-	Request  *shared.ConferenceSpeakParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ConferenceSpeakSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ConferenceSpeakResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSflowGetConfigPathParams struct {
+type ProtocolSflowGetConfigRequest struct {
 	// Agent to show the SFLOW configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSflowGetConfigRequest struct {
-	PathParams ProtocolSflowGetConfigPathParams
 }
 
 type ProtocolSflowGetConfigResponse struct {

@@ -8,20 +8,11 @@ import (
 )
 
 type AndroidpublisherPurchasesSubscriptionsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherPurchasesSubscriptionsGetPathParams struct {
-	// The package name of the application for which this subscription was purchased (for example, 'com.some.thing').
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// The purchased subscription ID (for example, 'monthly001').
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-	// The token provided to the user's device when the subscription was purchased.
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type AndroidpublisherPurchasesSubscriptionsGetQueryParams struct {
+type AndroidpublisherPurchasesSubscriptionsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -30,18 +21,18 @@ type AndroidpublisherPurchasesSubscriptionsGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The package name of the application for which this subscription was purchased (for example, 'com.some.thing').
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The purchased subscription ID (for example, 'monthly001').
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
+	// The token provided to the user's device when the subscription was purchased.
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherPurchasesSubscriptionsGetRequest struct {
-	PathParams  AndroidpublisherPurchasesSubscriptionsGetPathParams
-	QueryParams AndroidpublisherPurchasesSubscriptionsGetQueryParams
-	Security    AndroidpublisherPurchasesSubscriptionsGetSecurity
 }
 
 type AndroidpublisherPurchasesSubscriptionsGetResponse struct {

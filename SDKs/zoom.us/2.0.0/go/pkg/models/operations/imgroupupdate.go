@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type ImGroupUpdatePathParams struct {
-	// The group ID.<br>
-	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
 // ImGroupUpdateApplicationJSONTypeEnum - IM Group types:<br>`normal` - Only group members can automatically see others in their group. Other people can search for members in the group.<br>`shared` - Everyone under the account can see the group and members automatically.<br>`restricted` - Nobody can see the group or search for members except for the members in the group.
 type ImGroupUpdateApplicationJSONTypeEnum string
 
@@ -55,8 +49,10 @@ type ImGroupUpdateApplicationJSON struct {
 }
 
 type ImGroupUpdateRequest struct {
-	PathParams ImGroupUpdatePathParams
-	Request    ImGroupUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody ImGroupUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The group ID.<br>
+	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type ImGroupUpdateResponse struct {

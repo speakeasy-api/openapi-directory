@@ -10,13 +10,8 @@ import (
 )
 
 type GetFeaturedVideoCollectionSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetFeaturedVideoCollectionPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFeaturedVideoCollectionEmbedEnum - What information to include in the response, such as a URL to the collection
@@ -40,15 +35,11 @@ func (e *GetFeaturedVideoCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFeaturedVideoCollectionQueryParams struct {
+type GetFeaturedVideoCollectionRequest struct {
 	// What information to include in the response, such as a URL to the collection
 	Embed *GetFeaturedVideoCollectionEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetFeaturedVideoCollectionRequest struct {
-	PathParams  GetFeaturedVideoCollectionPathParams
-	QueryParams GetFeaturedVideoCollectionQueryParams
-	Security    GetFeaturedVideoCollectionSecurity
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetFeaturedVideoCollectionResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteTrunkServerList = []string{
@@ -12,18 +11,13 @@ var DeleteTrunkServerList = []string{
 }
 
 type DeleteTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteTrunkPathParams struct {
-	// The unique string that we created to identify the Trunk resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteTrunkRequest struct {
-	PathParams DeleteTrunkPathParams
-	Security   DeleteTrunkSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Trunk resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteTrunkResponse struct {

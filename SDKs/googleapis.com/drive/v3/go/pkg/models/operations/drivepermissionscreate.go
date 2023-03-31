@@ -8,13 +8,13 @@ import (
 )
 
 type DrivePermissionsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DrivePermissionsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DrivePermissionsCreateSecurity struct {
@@ -22,12 +22,8 @@ type DrivePermissionsCreateSecurity struct {
 	Option2 *DrivePermissionsCreateSecurityOption2 `security:"option"`
 }
 
-type DrivePermissionsCreatePathParams struct {
-	// The ID of the file or shared drive.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DrivePermissionsCreateQueryParams struct {
+type DrivePermissionsCreateRequest struct {
+	PermissionInput *shared.PermissionInput `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// A plain text custom message to include in the notification email.
@@ -36,6 +32,8 @@ type DrivePermissionsCreateQueryParams struct {
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file or shared drive.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// This parameter will only take effect if the item is not in a shared drive and the request is attempting to transfer the ownership of the item. If set to true, the item will be moved to the new owner's My Drive root folder and all prior parents removed. If set to false, parents are not changed.
@@ -58,13 +56,6 @@ type DrivePermissionsCreateQueryParams struct {
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DrivePermissionsCreateRequest struct {
-	PathParams  DrivePermissionsCreatePathParams
-	QueryParams DrivePermissionsCreateQueryParams
-	Request     *shared.PermissionInput `request:"mediaType=application/json"`
-	Security    DrivePermissionsCreateSecurity
 }
 
 type DrivePermissionsCreateResponse struct {

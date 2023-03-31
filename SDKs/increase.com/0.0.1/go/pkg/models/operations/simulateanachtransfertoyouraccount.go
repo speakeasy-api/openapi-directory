@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateAnAchTransferToYourAccountRequest struct {
-	Request shared.SimulateAnAchTransferToYourAccountParameters `request:"mediaType=application/json"`
-}
-
 type SimulateAnAchTransferToYourAccountDefaultApplicationJSON13StatusEnum string
 
 const (

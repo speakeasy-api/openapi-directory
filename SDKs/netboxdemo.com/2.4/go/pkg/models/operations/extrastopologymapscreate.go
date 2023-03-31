@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTopologyMapsCreateRequest struct {
-	Request shared.WritableTopologyMapInput `request:"mediaType=application/json"`
-}
-
 type ExtrasTopologyMapsCreateResponse struct {
 	ContentType string
 	StatusCode  int

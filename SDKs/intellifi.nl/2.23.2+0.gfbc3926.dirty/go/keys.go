@@ -39,7 +39,7 @@ func newKeys(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // AddKey - Create key
 // Can only be used by an **administrative** user.
-func (s *keys) AddKey(ctx context.Context, request operations.AddKeyRequest) (*operations.AddKeyResponse, error) {
+func (s *keys) AddKey(ctx context.Context, request shared.KeyInput, security operations.AddKeySecurity) (*operations.AddKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keys"
 
@@ -58,7 +58,7 @@ func (s *keys) AddKey(ctx context.Context, request operations.AddKeyRequest) (*o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,16 +94,16 @@ func (s *keys) AddKey(ctx context.Context, request operations.AddKeyRequest) (*o
 
 // DeleteKey - Delete key
 // Can only be used by an **administrative** user.
-func (s *keys) DeleteKey(ctx context.Context, request operations.DeleteKeyRequest) (*operations.DeleteKeyResponse, error) {
+func (s *keys) DeleteKey(ctx context.Context, request operations.DeleteKeyRequest, security operations.DeleteKeySecurity) (*operations.DeleteKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,16 +139,16 @@ func (s *keys) DeleteKey(ctx context.Context, request operations.DeleteKeyReques
 
 // GetKeyByID - Get key
 // Can only be used by an **administrative** user.
-func (s *keys) GetKeyByID(ctx context.Context, request operations.GetKeyByIDRequest) (*operations.GetKeyByIDResponse, error) {
+func (s *keys) GetKeyByID(ctx context.Context, request operations.GetKeyByIDRequest, security operations.GetKeyByIDSecurity) (*operations.GetKeyByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *keys) GetKeyByID(ctx context.Context, request operations.GetKeyByIDRequ
 
 // GetKeys - Get all keys
 // Can only be used by an **administrative** user.
-func (s *keys) GetKeys(ctx context.Context, request operations.GetKeysRequest) (*operations.GetKeysResponse, error) {
+func (s *keys) GetKeys(ctx context.Context, request operations.GetKeysRequest, security operations.GetKeysSecurity) (*operations.GetKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keys"
 
@@ -193,11 +193,11 @@ func (s *keys) GetKeys(ctx context.Context, request operations.GetKeysRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,11 +233,11 @@ func (s *keys) GetKeys(ctx context.Context, request operations.GetKeysRequest) (
 
 // UpdateKey - Update existing key
 // Can only be used by an **administrative** user.
-func (s *keys) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest) (*operations.UpdateKeyResponse, error) {
+func (s *keys) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest, security operations.UpdateKeySecurity) (*operations.UpdateKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -252,7 +252,7 @@ func (s *keys) UpdateKey(ctx context.Context, request operations.UpdateKeyReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

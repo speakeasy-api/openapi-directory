@@ -35,7 +35,7 @@ func newAdditionalDeviceInformation(defaultClient, securityClient HTTPClient, se
 // Gets the additional information (e.g. Firmware Version) about a device.
 func (s *additionalDeviceInformation) AdditionalDeviceInformationGet(ctx context.Context, request operations.AdditionalDeviceInformationGetRequest) (*operations.AdditionalDeviceInformationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/AdditionalDeviceInformation/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/AdditionalDeviceInformation/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

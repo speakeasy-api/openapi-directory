@@ -37,7 +37,7 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateProduct - Create Product
 // Creates a new Product
-func (s *product) CreateProduct(ctx context.Context, request operations.CreateProductRequest) (*operations.CreateProductResponse, error) {
+func (s *product) CreateProduct(ctx context.Context, request operations.CreateProductRequestBody, security operations.CreateProductSecurity) (*operations.CreateProductResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/product"
 
@@ -53,7 +53,7 @@ func (s *product) CreateProduct(ctx context.Context, request operations.CreatePr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,20 +105,20 @@ func (s *product) CreateProduct(ctx context.Context, request operations.CreatePr
 
 // DeleteProduct - Delete Product
 // Delete a Product by 'number'
-func (s *product) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest) (*operations.DeleteProductResponse, error) {
+func (s *product) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest, security operations.DeleteProductSecurity) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *product) DeleteProduct(ctx context.Context, request operations.DeletePr
 
 // ListProducts - List Products
 // Return a list of all configured Products for the current Vendor
-func (s *product) ListProducts(ctx context.Context, request operations.ListProductsRequest) (*operations.ListProductsResponse, error) {
+func (s *product) ListProducts(ctx context.Context) (*operations.ListProductsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/product"
 
@@ -177,7 +177,7 @@ func (s *product) ListProducts(ctx context.Context, request operations.ListProdu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,16 +227,16 @@ func (s *product) ListProducts(ctx context.Context, request operations.ListProdu
 
 // ProductNumber - Get Product
 // Return a Product by 'productNumber'
-func (s *product) ProductNumber(ctx context.Context, request operations.ProductNumberRequest) (*operations.ProductNumberResponse, error) {
+func (s *product) ProductNumber(ctx context.Context, request operations.ProductNumberRequest, security operations.ProductNumberSecurity) (*operations.ProductNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *product) ProductNumber(ctx context.Context, request operations.ProductN
 
 // UpdateProduct - Update Product
 // Sets the provided properties to a Product. Return an updated Product
-func (s *product) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest) (*operations.UpdateProductResponse, error) {
+func (s *product) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest, security operations.UpdateProductSecurity) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,7 +302,7 @@ func (s *product) UpdateProduct(ctx context.Context, request operations.UpdatePr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

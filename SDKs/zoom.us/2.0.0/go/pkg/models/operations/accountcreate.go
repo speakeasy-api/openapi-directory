@@ -72,11 +72,6 @@ type AccountCreateApplicationJSON struct {
 	Password string `json:"password"`
 }
 
-type AccountCreateRequest struct {
-	// Account.
-	Request AccountCreateApplicationJSON `request:"mediaType=application/json"`
-}
-
 // AccountCreate201ApplicationXML - Account created.
 type AccountCreate201ApplicationXML struct {
 	// Account created date time.

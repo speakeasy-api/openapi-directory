@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.ClearUserSessionsRequest{
-        PathParams: operations.ClearUserSessionsPathParams{
-            UserID: "corrupti",
-        },
-        Request: []byte("provident"),
+        RequestBody: []byte("corrupti"),
+        UserID: "provident",
     }
 
     ctx := context.Background()

@@ -8,7 +8,7 @@ import (
 )
 
 type PostAPIV1MediaSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1MediaRequestBody struct {
@@ -20,11 +20,6 @@ type PostAPIV1MediaRequestBody struct {
 	Focus *string
 	// The custom thumbnail of the media to be attached, using multipart form data.
 	Thumbnail []byte
-}
-
-type PostAPIV1MediaRequest struct {
-	Request  []byte `request:"mediaType=application/form-data"`
-	Security PostAPIV1MediaSecurity
 }
 
 type PostAPIV1MediaResponse struct {

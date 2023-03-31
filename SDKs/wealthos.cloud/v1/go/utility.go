@@ -34,11 +34,11 @@ func newUtility(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CopyFileToS3 - Upload a file
 // Copy a file from the Wealth Manager's data store (system must have read permission for this store) to an internal data store
-func (s *utility) CopyFileToS3(ctx context.Context, request operations.CopyFileToS3Request) (*operations.CopyFileToS3Response, error) {
+func (s *utility) CopyFileToS3(ctx context.Context, request operations.CopyFileToS3Request, security operations.CopyFileToS3Security) (*operations.CopyFileToS3Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/utility/v1/upload-a-file"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,9 +50,9 @@ func (s *utility) CopyFileToS3(ctx context.Context, request operations.CopyFileT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

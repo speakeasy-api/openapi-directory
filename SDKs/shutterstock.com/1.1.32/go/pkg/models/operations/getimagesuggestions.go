@@ -8,20 +8,15 @@ import (
 )
 
 type GetImageSuggestionsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetImageSuggestionsQueryParams struct {
+type GetImageSuggestionsRequest struct {
 	// Limit the number of suggestions
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search term for which you want keyword suggestions
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetImageSuggestionsRequest struct {
-	QueryParams GetImageSuggestionsQueryParams
-	Security    GetImageSuggestionsSecurity
 }
 
 type GetImageSuggestionsResponse struct {

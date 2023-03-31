@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams struct {
+type GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest struct {
 	// Expected response format.
 	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
 	Heading float32 `pathParam:"style=simple,explode=false,name=heading"`
-	// This is specified as a comma separated string composed of lat., lon.
-	Position string `pathParam:"style=simple,explode=false,name=position"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams struct {
 	// List of POIs to filter. The only required attribute of a POI is position, everything else is optional and will be echoed back when passed in.
 	PoiList string `queryParam:"style=form,explode=true,name=poiList"`
+	// This is specified as a comma separated string composed of lat., lon.
+	Position string `pathParam:"style=simple,explode=false,name=position"`
 	// Only return results that arrive from routing engine within this time limit.
 	RoutingTimeout *int64 `queryParam:"style=form,explode=true,name=routingTimeout"`
-}
-
-type GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest struct {
-	PathParams  GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams
-	QueryParams GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse struct {

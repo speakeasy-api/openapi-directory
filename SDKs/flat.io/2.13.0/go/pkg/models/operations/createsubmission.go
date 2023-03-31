@@ -8,20 +8,15 @@ import (
 )
 
 type CreateSubmissionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateSubmissionPathParams struct {
+type CreateSubmissionRequest struct {
+	AssignmentSubmissionUpdate shared.AssignmentSubmissionUpdate `request:"mediaType=application/json"`
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
-}
-
-type CreateSubmissionRequest struct {
-	PathParams CreateSubmissionPathParams
-	Request    shared.AssignmentSubmissionUpdate `request:"mediaType=application/json"`
-	Security   CreateSubmissionSecurity
 }
 
 type CreateSubmissionResponse struct {

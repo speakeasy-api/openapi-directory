@@ -33,7 +33,7 @@ func (e *FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum) UnmarshalJSON(da
 	}
 }
 
-type FantasyPlayerOwnershipPercentagesSeasonLongPathParams struct {
+type FantasyPlayerOwnershipPercentagesSeasonLongRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -44,10 +44,6 @@ type FantasyPlayerOwnershipPercentagesSeasonLongPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type FantasyPlayerOwnershipPercentagesSeasonLongRequest struct {
-	PathParams FantasyPlayerOwnershipPercentagesSeasonLongPathParams
 }
 
 type FantasyPlayerOwnershipPercentagesSeasonLongResponse struct {

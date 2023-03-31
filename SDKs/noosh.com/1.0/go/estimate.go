@@ -36,7 +36,7 @@ func newEstimate(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a specific estimate of project
 func (s *estimate) GetEstimate(ctx context.Context, request operations.GetEstimateRequest) (*operations.GetEstimateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates/{estimate_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates/{estimate_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *estimate) GetEstimate(ctx context.Context, request operations.GetEstima
 // List the Estimates
 func (s *estimate) GetEstimateList(ctx context.Context, request operations.GetEstimateListRequest) (*operations.GetEstimateListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,9 +346,9 @@ func (s *estimate) GetEstimateList(ctx context.Context, request operations.GetEs
 // Create a Estimate
 func (s *estimate) PostEstimateJSON(ctx context.Context, request operations.PostEstimateJSONRequest) (*operations.PostEstimateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EstimatePO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,9 +508,9 @@ func (s *estimate) PostEstimateJSON(ctx context.Context, request operations.Post
 // Create a Estimate
 func (s *estimate) PostEstimateRaw(ctx context.Context, request operations.PostEstimateRawRequest) (*operations.PostEstimateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type GetSellersByRegionPathParams struct {
-	// ID of the region corresponding to the shopper's location.
-	RegionID string `pathParam:"style=simple,explode=false,name=regionId"`
-}
-
-type GetSellersByRegionQueryParams struct {
+type GetSellersByRegionRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Three letter country code refering to the `postalCode` field.
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// Geocoordinates (first longitude, semicolon, then latitude) corresponding to the shopper's location.
 	GeoCoordinates []float64 `queryParam:"style=form,explode=true,name=geoCoordinates"`
 	// Postal code corresponding to the shopper's location.
 	PostalCode *string `queryParam:"style=form,explode=true,name=postalCode"`
-}
-
-type GetSellersByRegionHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetSellersByRegionRequest struct {
-	PathParams  GetSellersByRegionPathParams
-	QueryParams GetSellersByRegionQueryParams
-	Headers     GetSellersByRegionHeaders
+	// ID of the region corresponding to the shopper's location.
+	RegionID string `pathParam:"style=simple,explode=false,name=regionId"`
 }
 
 type GetSellersByRegion200ApplicationJSONSellers struct {

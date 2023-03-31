@@ -4,16 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type ReportSignInSignOutActivitiesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReportSignInSignOutActivitiesQueryParams struct {
+type ReportSignInSignOutActivitiesRequest struct {
 	// Start date for which you would like to view the activity logs report. Using the `from` and `to` parameters, specify a monthly date range for the report as the API only provides one month worth of data in one request. The specified date range should fall within the last six months.
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// Next page token is used to paginate through large result sets
@@ -22,11 +21,6 @@ type ReportSignInSignOutActivitiesQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// End date up to which you would like to view the activity logs report.
 	To *types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ReportSignInSignOutActivitiesRequest struct {
-	QueryParams ReportSignInSignOutActivitiesQueryParams
-	Security    ReportSignInSignOutActivitiesSecurity
 }
 
 type ReportSignInSignOutActivities200ApplicationXMLActivityLogs struct {

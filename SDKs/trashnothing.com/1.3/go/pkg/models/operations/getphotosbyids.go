@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPhotosByIdsQueryParams struct {
+type GetPhotosByIdsRequest struct {
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
 	// The IDs of the photos to retrieve.  If more than 50 photo IDs are passed, only the first 50 photos will be returned.
 	PhotoIds string `queryParam:"style=form,explode=true,name=photo_ids"`
-}
-
-type GetPhotosByIdsRequest struct {
-	QueryParams GetPhotosByIdsQueryParams
 }
 
 type GetPhotosByIdsResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteCallLogPathParams struct {
+type DeleteCallLogRequest struct {
 	// Unique identifier of the call log. The value for this field can be retrieved from [account's call logs](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/accountcalllogs) or [user's call logs](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/phoneusercalllogs).
 	CallLogID string `pathParam:"style=simple,explode=false,name=callLogId"`
 	// The user ID or email address of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteCallLogRequest struct {
-	PathParams DeleteCallLogPathParams
 }
 
 type DeleteCallLogResponse struct {

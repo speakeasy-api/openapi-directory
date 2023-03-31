@@ -8,16 +8,11 @@ import (
 )
 
 type ContentSettlementreportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentSettlementreportsListPathParams struct {
-	// The Merchant Center account to list settlements for.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentSettlementreportsListQueryParams struct {
+type ContentSettlementreportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type ContentSettlementreportsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The maximum number of settlements to return in the response, used for paging. The default value is 200 returns per page, and the maximum allowed value is 5000 returns per page.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The Merchant Center account to list settlements for.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
@@ -48,12 +45,6 @@ type ContentSettlementreportsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentSettlementreportsListRequest struct {
-	PathParams  ContentSettlementreportsListPathParams
-	QueryParams ContentSettlementreportsListQueryParams
-	Security    ContentSettlementreportsListSecurity
 }
 
 type ContentSettlementreportsListResponse struct {

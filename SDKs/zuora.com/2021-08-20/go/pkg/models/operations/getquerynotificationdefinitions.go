@@ -7,20 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETQueryNotificationDefinitionsQueryParams struct {
-	// The ID of the email template.
-	EmailTemplateID *string `queryParam:"style=form,explode=true,name=emailTemplateId"`
-	// The name of the event.
-	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
-	// The maximum number of results the query should return.
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Id of the profile.
-	ProfileID *string `queryParam:"style=form,explode=true,name=profileId"`
-	// The first index of the query result.
-	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GETQueryNotificationDefinitionsHeaders struct {
+type GETQueryNotificationDefinitionsRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -34,11 +21,16 @@ type GETQueryNotificationDefinitionsHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETQueryNotificationDefinitionsRequest struct {
-	QueryParams GETQueryNotificationDefinitionsQueryParams
-	Headers     GETQueryNotificationDefinitionsHeaders
+	// The ID of the email template.
+	EmailTemplateID *string `queryParam:"style=form,explode=true,name=emailTemplateId"`
+	// The name of the event.
+	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
+	// The maximum number of results the query should return.
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Id of the profile.
+	ProfileID *string `queryParam:"style=form,explode=true,name=profileId"`
+	// The first index of the query result.
+	Start *int `queryParam:"style=form,explode=true,name=start"`
 }
 
 // GETQueryNotificationDefinitions200ApplicationJSON - OK

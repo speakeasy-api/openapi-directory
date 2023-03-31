@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TaxonomiesReadPathParams struct {
+type TaxonomiesReadRequest struct {
 	// The unique identifier of the taxonomy.
 	TaxonomyID string `pathParam:"style=simple,explode=false,name=taxonomy_id"`
-}
-
-type TaxonomiesReadRequest struct {
-	PathParams TaxonomiesReadPathParams
 }
 
 // TaxonomiesReadTaxonomyAttributes - The properties of the taxonomy entity.

@@ -11,10 +11,6 @@ type PostAssetsCorrelationMatrixRandomRequestBody struct {
 	Assets int64 `json:"assets"`
 }
 
-type PostAssetsCorrelationMatrixRandomRequest struct {
-	Request PostAssetsCorrelationMatrixRandomRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixRandom200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixRandom200ApplicationJSON struct {
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j

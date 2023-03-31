@@ -103,10 +103,6 @@ func (u PostPortfolioAnalysisBetaRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostPortfolioAnalysisBetaRequest struct {
-	Request PostPortfolioAnalysisBetaRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisBeta200ApplicationJSONPortfolios struct {
 	// The portfolio beta, which correponds to the portfolio systematic risk in the Capital Asset Pricing Model (CAPM)
 	PortfolioBeta float64 `json:"portfolioBeta"`

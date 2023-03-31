@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionsInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListDiscussionsInOrgQueryParams struct {
+type TeamsListDiscussionsInOrgRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Pinned discussions only filter
 	Pinned *string `queryParam:"style=form,explode=true,name=pinned"`
-}
-
-type TeamsListDiscussionsInOrgRequest struct {
-	PathParams  TeamsListDiscussionsInOrgPathParams
-	QueryParams TeamsListDiscussionsInOrgQueryParams
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListDiscussionsInOrgResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentLinkAPIDeleteJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type PaymentLinkAPIDeleteJSONRequest struct {
-	Headers PaymentLinkAPIDeleteJSONHeaders
-	Request shared.PaymentLink `request:"mediaType=application/json"`
+	PaymentLink shared.PaymentLink `request:"mediaType=application/json"`
+	XAuthKey    string             `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret string             `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type PaymentLinkAPIDeleteJSONResponse struct {

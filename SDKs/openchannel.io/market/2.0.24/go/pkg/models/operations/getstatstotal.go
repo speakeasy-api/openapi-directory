@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetStatsTotalQueryParams struct {
+type GetStatsTotalRequest struct {
 	// The end date for this total (in millis)
 	End *int64 `queryParam:"style=form,explode=true,name=end"`
 	// A comma seperated list of all the fields to be returned in the total (available by default: dislikes, likes, reviews, totalSales, developerSales, marketplaceSales, downloads, ownerships, views)
@@ -15,10 +15,6 @@ type GetStatsTotalQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The start date for this total (in millis)
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetStatsTotalRequest struct {
-	QueryParams GetStatsTotalQueryParams
 }
 
 type GetStatsTotalResponse struct {

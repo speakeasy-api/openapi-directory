@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteADeviceSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteADevicePathParams struct {
-	// Unique Identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteADeviceRequest struct {
-	PathParams DeleteADevicePathParams
-	Security   DeleteADeviceSecurity
+	// Unique Identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type DeleteADeviceResponse struct {

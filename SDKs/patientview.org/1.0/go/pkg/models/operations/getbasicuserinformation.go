@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetBasicUserInformationPathParams struct {
+type GetBasicUserInformationRequest struct {
 	// token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type GetBasicUserInformationRequest struct {
-	PathParams GetBasicUserInformationPathParams
 }
 
 type GetBasicUserInformationResponse struct {

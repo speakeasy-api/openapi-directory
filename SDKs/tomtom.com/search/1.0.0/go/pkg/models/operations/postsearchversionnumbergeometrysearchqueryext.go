@@ -7,16 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSearchVersionNumberGeometrySearchQueryExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Query string. Must be properly URL encoded.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
+type PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList struct {
+	Position *string  `json:"position,omitempty"`
+	Radius   *int64   `json:"radius,omitempty"`
+	Type     *string  `json:"type,omitempty"`
+	Vertices []string `json:"vertices,omitempty"`
 }
 
-type PostSearchVersionNumberGeometrySearchQueryExtQueryParams struct {
+type PostSearchVersionNumberGeometrySearchQueryExtRequestBody struct {
+	GeometryList []PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList `json:"geometryList,omitempty"`
+}
+
+type PostSearchVersionNumberGeometrySearchQueryExtRequest struct {
+	RequestBody *PostSearchVersionNumberGeometrySearchQueryExtRequestBody `request:"mediaType=application/json"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// Indexes for which extended postal codes should be included in the results. Available indexes are:
 	//   - <b>Addr</b> = Address ranges
 	//   - <b>Geo</b> = Geographies
@@ -37,23 +42,10 @@ type PostSearchVersionNumberGeometrySearchQueryExtQueryParams struct {
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Maximum number of search results that will be returned.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList struct {
-	Position *string  `json:"position,omitempty"`
-	Radius   *int64   `json:"radius,omitempty"`
-	Type     *string  `json:"type,omitempty"`
-	Vertices []string `json:"vertices,omitempty"`
-}
-
-type PostSearchVersionNumberGeometrySearchQueryExtRequestBody struct {
-	GeometryList []PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList `json:"geometryList,omitempty"`
-}
-
-type PostSearchVersionNumberGeometrySearchQueryExtRequest struct {
-	PathParams  PostSearchVersionNumberGeometrySearchQueryExtPathParams
-	QueryParams PostSearchVersionNumberGeometrySearchQueryExtQueryParams
-	Request     *PostSearchVersionNumberGeometrySearchQueryExtRequestBody `request:"mediaType=application/json"`
+	// Query string. Must be properly URL encoded.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type PostSearchVersionNumberGeometrySearchQueryExtResponse struct {

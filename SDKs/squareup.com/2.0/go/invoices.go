@@ -37,11 +37,11 @@ func newInvoices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // the canceled invoice.
 //
 // You cannot cancel an invoice in the `DRAFT` state or in a terminal state: `PAID`, `REFUNDED`, `CANCELED`, or `FAILED`.
-func (s *invoices) CancelInvoice(ctx context.Context, request operations.CancelInvoiceRequest) (*operations.CancelInvoiceResponse, error) {
+func (s *invoices) CancelInvoice(ctx context.Context, request operations.CancelInvoiceRequest, security operations.CancelInvoiceSecurity) (*operations.CancelInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *invoices) CancelInvoice(ctx context.Context, request operations.CancelI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *invoices) CancelInvoice(ctx context.Context, request operations.CancelI
 //
 // A draft invoice remains in your account and no action is taken.
 // You must publish the invoice before Square can process it (send it to the customer's email address or charge the customer’s card on file).
-func (s *invoices) CreateInvoice(ctx context.Context, request operations.CreateInvoiceRequest) (*operations.CreateInvoiceResponse, error) {
+func (s *invoices) CreateInvoice(ctx context.Context, request shared.CreateInvoiceRequest, security operations.CreateInvoiceSecurity) (*operations.CreateInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices"
 
@@ -115,7 +115,7 @@ func (s *invoices) CreateInvoice(ctx context.Context, request operations.CreateI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -153,20 +153,20 @@ func (s *invoices) CreateInvoice(ctx context.Context, request operations.CreateI
 // Deletes the specified invoice. When an invoice is deleted, the
 // associated order status changes to CANCELED. You can only delete a draft
 // invoice (you cannot delete a published invoice, including one that is scheduled for processing).
-func (s *invoices) DeleteInvoice(ctx context.Context, request operations.DeleteInvoiceRequest) (*operations.DeleteInvoiceResponse, error) {
+func (s *invoices) DeleteInvoice(ctx context.Context, request operations.DeleteInvoiceRequest, security operations.DeleteInvoiceSecurity) (*operations.DeleteInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -202,16 +202,16 @@ func (s *invoices) DeleteInvoice(ctx context.Context, request operations.DeleteI
 
 // GetInvoice - GetInvoice
 // Retrieves an invoice by invoice ID.
-func (s *invoices) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest) (*operations.GetInvoiceResponse, error) {
+func (s *invoices) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest, security operations.GetInvoiceSecurity) (*operations.GetInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *invoices) GetInvoice(ctx context.Context, request operations.GetInvoice
 // Returns a list of invoices for a given location. The response
 // is paginated. If truncated, the response includes a `cursor` that you
 // use in a subsequent request to retrieve the next set of invoices.
-func (s *invoices) ListInvoices(ctx context.Context, request operations.ListInvoicesRequest) (*operations.ListInvoicesResponse, error) {
+func (s *invoices) ListInvoices(ctx context.Context, request operations.ListInvoicesRequest, security operations.ListInvoicesSecurity) (*operations.ListInvoicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices"
 
@@ -258,11 +258,11 @@ func (s *invoices) ListInvoices(ctx context.Context, request operations.ListInvo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,11 +308,11 @@ func (s *invoices) ListInvoices(ctx context.Context, request operations.ListInvo
 // based on the invoice configuration. For example, the status changes to `UNPAID` if
 // Square emails the invoice or `PARTIALLY_PAID` if Square charge a card on file for a portion of the
 // invoice amount.
-func (s *invoices) PublishInvoice(ctx context.Context, request operations.PublishInvoiceRequest) (*operations.PublishInvoiceResponse, error) {
+func (s *invoices) PublishInvoice(ctx context.Context, request operations.PublishInvoiceRequest, security operations.PublishInvoiceSecurity) (*operations.PublishInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/publish", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -327,7 +327,7 @@ func (s *invoices) PublishInvoice(ctx context.Context, request operations.Publis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,7 +369,7 @@ func (s *invoices) PublishInvoice(ctx context.Context, request operations.Publis
 //
 // The response is paginated. If truncated, the response includes a `cursor`
 // that you use in a subsequent request to retrieve the next set of invoices.
-func (s *invoices) SearchInvoices(ctx context.Context, request operations.SearchInvoicesRequest) (*operations.SearchInvoicesResponse, error) {
+func (s *invoices) SearchInvoices(ctx context.Context, request shared.SearchInvoicesRequest, security operations.SearchInvoicesSecurity) (*operations.SearchInvoicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices/search"
 
@@ -388,7 +388,7 @@ func (s *invoices) SearchInvoices(ctx context.Context, request operations.Search
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -427,11 +427,11 @@ func (s *invoices) SearchInvoices(ctx context.Context, request operations.Search
 // `Invoice` object to add fields or change values and use the `fields_to_clear` field to specify fields to clear.
 // However, some restrictions apply. For example, you cannot change the `order_id` or `location_id` field and you
 // must provide the complete `custom_fields` list to update a custom field. Published invoices have additional restrictions.
-func (s *invoices) UpdateInvoice(ctx context.Context, request operations.UpdateInvoiceRequest) (*operations.UpdateInvoiceResponse, error) {
+func (s *invoices) UpdateInvoice(ctx context.Context, request operations.UpdateInvoiceRequest, security operations.UpdateInvoiceSecurity) (*operations.UpdateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -446,7 +446,7 @@ func (s *invoices) UpdateInvoice(ctx context.Context, request operations.UpdateI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

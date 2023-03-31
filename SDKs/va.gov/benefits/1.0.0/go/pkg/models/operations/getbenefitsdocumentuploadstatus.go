@@ -8,17 +8,12 @@ import (
 )
 
 type GetBenefitsDocumentUploadStatusSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBenefitsDocumentUploadStatusPathParams struct {
-	// ID as returned by a previous create upload request
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetBenefitsDocumentUploadStatusRequest struct {
-	PathParams GetBenefitsDocumentUploadStatusPathParams
-	Security   GetBenefitsDocumentUploadStatusSecurity
+	// ID as returned by a previous create upload request
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetBenefitsDocumentUploadStatus500ApplicationJSON - Internal server error

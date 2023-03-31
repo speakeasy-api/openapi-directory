@@ -35,14 +35,14 @@ func newDocks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Activates dock through dock ID.
 func (s *docks) ActivateDock(ctx context.Context, request operations.ActivateDockRequest) (*operations.ActivateDockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/activation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/activation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -80,7 +80,7 @@ func (s *docks) AllDocks(ctx context.Context, request operations.AllDocksRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -124,7 +124,7 @@ func (s *docks) CreateUpdateDock(ctx context.Context, request operations.CreateU
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/logistics/pvt/configuration/docks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -139,7 +139,7 @@ func (s *docks) CreateUpdateDock(ctx context.Context, request operations.CreateU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -170,14 +170,14 @@ func (s *docks) CreateUpdateDock(ctx context.Context, request operations.CreateU
 // Deactivate dock by dock ID
 func (s *docks) DeactivateDock(ctx context.Context, request operations.DeactivateDockRequest) (*operations.DeactivateDockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/deactivation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/deactivation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -208,14 +208,14 @@ func (s *docks) DeactivateDock(ctx context.Context, request operations.Deactivat
 // Deletes dock by dock ID.
 func (s *docks) Dock(ctx context.Context, request operations.DockRequest) (*operations.DockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -246,14 +246,14 @@ func (s *docks) Dock(ctx context.Context, request operations.DockRequest) (*oper
 // Informs a given dock's information, searching by dock ID.
 func (s *docks) DockByID(ctx context.Context, request operations.DockByIDRequest) (*operations.DockByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

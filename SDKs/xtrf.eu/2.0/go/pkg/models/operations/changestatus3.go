@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeStatus3PathParams struct {
+type ChangeStatus3Request struct {
+	// Changed Quote status.
+	ProjectStatusDTO shared.ProjectStatusDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type ChangeStatus3Request struct {
-	PathParams ChangeStatus3PathParams
-	// Changed Quote status.
-	Request shared.ProjectStatusDTO `request:"mediaType=application/json"`
 }
 
 type ChangeStatus3Response struct {

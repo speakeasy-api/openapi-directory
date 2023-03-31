@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityListWatchedReposForAuthenticatedUserQueryParams struct {
+type ActivityListWatchedReposForAuthenticatedUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActivityListWatchedReposForAuthenticatedUserRequest struct {
-	QueryParams ActivityListWatchedReposForAuthenticatedUserQueryParams
 }
 
 type ActivityListWatchedReposForAuthenticatedUserResponse struct {

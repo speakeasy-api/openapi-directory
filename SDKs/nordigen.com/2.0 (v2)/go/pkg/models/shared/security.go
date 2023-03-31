@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeJwtAuth struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	JwtAuth SchemeJwtAuth `security:"scheme,type=http,subtype=bearer"`
+	JwtAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }

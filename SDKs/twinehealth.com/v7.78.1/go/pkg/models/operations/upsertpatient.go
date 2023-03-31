@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpsertPatientRequest struct {
-	Request shared.UpsertPatientRequestInput `request:"mediaType=application/vnd.api+json"`
-}
-
 type UpsertPatientResponse struct {
 	ContentType string
 	// Unauthorized

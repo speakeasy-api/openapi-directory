@@ -34,16 +34,16 @@ func newSpotInsertions(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DeleteAPIV2SpotinsertionsID - Deletes the spot insertion with the given ID.
-func (s *spotInsertions) DeleteAPIV2SpotinsertionsID(ctx context.Context, request operations.DeleteAPIV2SpotinsertionsIDRequest) (*operations.DeleteAPIV2SpotinsertionsIDResponse, error) {
+func (s *spotInsertions) DeleteAPIV2SpotinsertionsID(ctx context.Context, request operations.DeleteAPIV2SpotinsertionsIDRequest, security operations.DeleteAPIV2SpotinsertionsIDSecurity) (*operations.DeleteAPIV2SpotinsertionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *spotInsertions) DeleteAPIV2SpotinsertionsID(ctx context.Context, reques
 }
 
 // GetAPIV2Spotinsertions - Returns the spot insertions matching the query parameters.
-func (s *spotInsertions) GetAPIV2Spotinsertions(ctx context.Context, request operations.GetAPIV2SpotinsertionsRequest) (*operations.GetAPIV2SpotinsertionsResponse, error) {
+func (s *spotInsertions) GetAPIV2Spotinsertions(ctx context.Context, request operations.GetAPIV2SpotinsertionsRequest, security operations.GetAPIV2SpotinsertionsSecurity) (*operations.GetAPIV2SpotinsertionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/spotinsertions"
 
@@ -90,11 +90,11 @@ func (s *spotInsertions) GetAPIV2Spotinsertions(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,16 +139,16 @@ func (s *spotInsertions) GetAPIV2Spotinsertions(ctx context.Context, request ope
 }
 
 // GetAPIV2SpotinsertionsID - Returns the spot insertion matching the given ID.
-func (s *spotInsertions) GetAPIV2SpotinsertionsID(ctx context.Context, request operations.GetAPIV2SpotinsertionsIDRequest) (*operations.GetAPIV2SpotinsertionsIDResponse, error) {
+func (s *spotInsertions) GetAPIV2SpotinsertionsID(ctx context.Context, request operations.GetAPIV2SpotinsertionsIDRequest, security operations.GetAPIV2SpotinsertionsIDSecurity) (*operations.GetAPIV2SpotinsertionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -195,7 +195,7 @@ func (s *spotInsertions) GetAPIV2SpotinsertionsID(ctx context.Context, request o
 }
 
 // PostAPIV2Spotinsertions - Creates a new spot insertion.
-func (s *spotInsertions) PostAPIV2Spotinsertions(ctx context.Context, request operations.PostAPIV2SpotinsertionsRequest) (*operations.PostAPIV2SpotinsertionsResponse, error) {
+func (s *spotInsertions) PostAPIV2Spotinsertions(ctx context.Context, request shared.SpotInsertionInput, security operations.PostAPIV2SpotinsertionsSecurity) (*operations.PostAPIV2SpotinsertionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/spotinsertions"
 
@@ -211,7 +211,7 @@ func (s *spotInsertions) PostAPIV2Spotinsertions(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

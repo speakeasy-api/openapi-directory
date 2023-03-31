@@ -32,20 +32,20 @@ func newCompositeTypes(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DeploymentmanagerCompositeTypesDelete - Deletes a composite type.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesDelete(ctx context.Context, request operations.DeploymentmanagerCompositeTypesDeleteRequest) (*operations.DeploymentmanagerCompositeTypesDeleteResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesDelete(ctx context.Context, request operations.DeploymentmanagerCompositeTypesDeleteRequest, security operations.DeploymentmanagerCompositeTypesDeleteSecurity) (*operations.DeploymentmanagerCompositeTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesDelete(ctx context.Conte
 }
 
 // DeploymentmanagerCompositeTypesGet - Gets information about a specific composite type.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesGet(ctx context.Context, request operations.DeploymentmanagerCompositeTypesGetRequest) (*operations.DeploymentmanagerCompositeTypesGetResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesGet(ctx context.Context, request operations.DeploymentmanagerCompositeTypesGetRequest, security operations.DeploymentmanagerCompositeTypesGetSecurity) (*operations.DeploymentmanagerCompositeTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesGet(ctx context.Context,
 }
 
 // DeploymentmanagerCompositeTypesInsert - Creates a composite type.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesInsert(ctx context.Context, request operations.DeploymentmanagerCompositeTypesInsertRequest) (*operations.DeploymentmanagerCompositeTypesInsertResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesInsert(ctx context.Context, request operations.DeploymentmanagerCompositeTypesInsertRequest, security operations.DeploymentmanagerCompositeTypesInsertSecurity) (*operations.DeploymentmanagerCompositeTypesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompositeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesInsert(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesInsert(ctx context.Conte
 }
 
 // DeploymentmanagerCompositeTypesList - Lists all composite types for Deployment Manager.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesList(ctx context.Context, request operations.DeploymentmanagerCompositeTypesListRequest) (*operations.DeploymentmanagerCompositeTypesListResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesList(ctx context.Context, request operations.DeploymentmanagerCompositeTypesListRequest, security operations.DeploymentmanagerCompositeTypesListSecurity) (*operations.DeploymentmanagerCompositeTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesList(ctx context.Context
 }
 
 // DeploymentmanagerCompositeTypesPatch - Patches a composite type.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesPatch(ctx context.Context, request operations.DeploymentmanagerCompositeTypesPatchRequest) (*operations.DeploymentmanagerCompositeTypesPatchResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesPatch(ctx context.Context, request operations.DeploymentmanagerCompositeTypesPatchRequest, security operations.DeploymentmanagerCompositeTypesPatchSecurity) (*operations.DeploymentmanagerCompositeTypesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompositeType1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesPatch(ctx context.Contex
 }
 
 // DeploymentmanagerCompositeTypesUpdate - Updates a composite type.
-func (s *compositeTypes) DeploymentmanagerCompositeTypesUpdate(ctx context.Context, request operations.DeploymentmanagerCompositeTypesUpdateRequest) (*operations.DeploymentmanagerCompositeTypesUpdateResponse, error) {
+func (s *compositeTypes) DeploymentmanagerCompositeTypesUpdate(ctx context.Context, request operations.DeploymentmanagerCompositeTypesUpdateRequest, security operations.DeploymentmanagerCompositeTypesUpdateSecurity) (*operations.DeploymentmanagerCompositeTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompositeType1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *compositeTypes) DeploymentmanagerCompositeTypesUpdate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

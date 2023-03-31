@@ -10,10 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NetworkUnblockRequest struct {
-	Request shared.NetworkUnblock `request:"mediaType=application/json"`
-}
-
 type NetworkUnblock422ApplicationJSONType string
 
 const (

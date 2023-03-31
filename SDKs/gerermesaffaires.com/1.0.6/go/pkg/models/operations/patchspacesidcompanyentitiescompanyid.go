@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDCompanyEntitiesCompanyIDPathParams struct {
-	// Id of the company entity to modify
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchSpacesIDCompanyEntitiesCompanyIDRequestBody - Company entity to modify
 type PatchSpacesIDCompanyEntitiesCompanyIDRequestBody struct {
 	ApeCode            *string `json:"ApeCode,omitempty"`
@@ -27,9 +20,12 @@ type PatchSpacesIDCompanyEntitiesCompanyIDRequestBody struct {
 }
 
 type PatchSpacesIDCompanyEntitiesCompanyIDRequest struct {
-	PathParams PatchSpacesIDCompanyEntitiesCompanyIDPathParams
 	// Company entity to modify
-	Request PatchSpacesIDCompanyEntitiesCompanyIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDCompanyEntitiesCompanyIDRequestBody `request:"mediaType=application/json"`
+	// Id of the company entity to modify
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchSpacesIDCompanyEntitiesCompanyIDResponse struct {

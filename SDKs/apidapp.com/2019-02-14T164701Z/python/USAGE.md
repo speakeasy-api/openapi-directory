@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteKeyKeyRequest(
-    path_params=operations.DeleteKeyKeyPathParams(
-        key="nulla",
-    ),
+    key="corrupti",
 )
     
 res = s.delete_key_key_(req)

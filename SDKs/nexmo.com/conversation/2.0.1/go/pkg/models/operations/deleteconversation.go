@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteConversationPathParams struct {
+type DeleteConversationRequest struct {
 	// Conversation ID
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type DeleteConversationRequest struct {
-	PathParams DeleteConversationPathParams
 }
 
 type DeleteConversationResponse struct {

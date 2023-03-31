@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.ApplyArchiveRuleRequest(
-    headers=operations.ApplyArchiveRuleHeaders(
-        x_amz_algorithm="rerum",
-        x_amz_content_sha256="ut",
-        x_amz_credential="laborum",
-        x_amz_date="fugit",
-        x_amz_security_token="quis",
-        x_amz_signature="minus",
-        x_amz_signed_headers="soluta",
+    request_body=operations.ApplyArchiveRuleRequestBody(
+        analyzer_arn="corrupti",
+        client_token="provident",
+        rule_name="distinctio",
     ),
-    request=operations.ApplyArchiveRuleRequestBody(
-        analyzer_arn="aperiam",
-        client_token="consequuntur",
-        rule_name="excepturi",
-    ),
+    x_amz_algorithm="quibusdam",
+    x_amz_content_sha256="unde",
+    x_amz_credential="nulla",
+    x_amz_date="corrupti",
+    x_amz_security_token="illum",
+    x_amz_signature="vel",
+    x_amz_signed_headers="error",
 )
     
 res = s.apply_archive_rule(req)

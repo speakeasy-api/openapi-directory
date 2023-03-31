@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateDeploymentStatusPathParams struct {
-	// deployment_id parameter
-	DeploymentID int64  `pathParam:"style=simple,explode=false,name=deployment_id"`
-	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreateDeploymentStatusRequestBodyEnvironmentEnum - Name for the target deployment environment, which can be changed when setting a deploy status. For example, `production`, `staging`, or `qa`. **Note:** This parameter requires you to use the [`application/vnd.github.flash-preview+json`](https://docs.github.com/enterprise-server@2.20/rest/overview/api-previews#deployment-statuses) custom media type.
 type ReposCreateDeploymentStatusRequestBodyEnvironmentEnum string
 
@@ -104,8 +97,11 @@ type ReposCreateDeploymentStatusRequestBody struct {
 }
 
 type ReposCreateDeploymentStatusRequest struct {
-	PathParams ReposCreateDeploymentStatusPathParams
-	Request    ReposCreateDeploymentStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateDeploymentStatusRequestBody `request:"mediaType=application/json"`
+	// deployment_id parameter
+	DeploymentID int64  `pathParam:"style=simple,explode=false,name=deployment_id"`
+	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateDeploymentStatusResponse struct {

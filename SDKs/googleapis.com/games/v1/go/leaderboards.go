@@ -33,20 +33,20 @@ func newLeaderboards(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GamesLeaderboardsGet - Retrieves the metadata of the leaderboard with the given ID.
-func (s *leaderboards) GamesLeaderboardsGet(ctx context.Context, request operations.GamesLeaderboardsGetRequest) (*operations.GamesLeaderboardsGetResponse, error) {
+func (s *leaderboards) GamesLeaderboardsGet(ctx context.Context, request operations.GamesLeaderboardsGetRequest, security operations.GamesLeaderboardsGetSecurity) (*operations.GamesLeaderboardsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *leaderboards) GamesLeaderboardsGet(ctx context.Context, request operati
 }
 
 // GamesLeaderboardsList - Lists all the leaderboard metadata for your application.
-func (s *leaderboards) GamesLeaderboardsList(ctx context.Context, request operations.GamesLeaderboardsListRequest) (*operations.GamesLeaderboardsListResponse, error) {
+func (s *leaderboards) GamesLeaderboardsList(ctx context.Context, request operations.GamesLeaderboardsListRequest, security operations.GamesLeaderboardsListSecurity) (*operations.GamesLeaderboardsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/leaderboards"
 
@@ -90,11 +90,11 @@ func (s *leaderboards) GamesLeaderboardsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

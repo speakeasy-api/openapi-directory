@@ -7,21 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PoolExistsPathParams struct {
-	// The id of the pool to get.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-}
-
-type PoolExistsQueryParams struct {
+type PoolExistsRequest struct {
 	// Sets an OData $select clause.
 	DollarSelect *string `queryParam:"style=form,explode=true,name=$select"`
-	// Client API Version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type PoolExistsHeaders struct {
 	// An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
 	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
 	// Specify this header to perform the operation only if the resource has been modified since the specified date/time.
@@ -30,18 +18,18 @@ type PoolExistsHeaders struct {
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
 	// Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
 	IfUnmodifiedSince *string `header:"style=simple,explode=false,name=If-Unmodified-Since"`
+	// Client API Version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// The id of the pool to get.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type PoolExistsRequest struct {
-	PathParams  PoolExistsPathParams
-	QueryParams PoolExistsQueryParams
-	Headers     PoolExistsHeaders
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type PoolExistsResponse struct {

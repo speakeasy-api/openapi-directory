@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // EventarcProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) EventarcProjectsLocationsList(ctx context.Context, request operations.EventarcProjectsLocationsListRequest) (*operations.EventarcProjectsLocationsListResponse, error) {
+func (s *projects) EventarcProjectsLocationsList(ctx context.Context, request operations.EventarcProjectsLocationsListRequest, security operations.EventarcProjectsLocationsListSecurity) (*operations.EventarcProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) EventarcProjectsLocationsList(ctx context.Context, request op
 }
 
 // EventarcProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context, request operations.EventarcProjectsLocationsOperationsCancelRequest) (*operations.EventarcProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context, request operations.EventarcProjectsLocationsOperationsCancelRequest, security operations.EventarcProjectsLocationsOperationsCancelSecurity) (*operations.EventarcProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context
 }
 
 // EventarcProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) EventarcProjectsLocationsOperationsList(ctx context.Context, request operations.EventarcProjectsLocationsOperationsListRequest) (*operations.EventarcProjectsLocationsOperationsListResponse, error) {
+func (s *projects) EventarcProjectsLocationsOperationsList(ctx context.Context, request operations.EventarcProjectsLocationsOperationsListRequest, security operations.EventarcProjectsLocationsOperationsListSecurity) (*operations.EventarcProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) EventarcProjectsLocationsOperationsList(ctx context.Context, 
 }
 
 // EventarcProjectsLocationsTriggersCreate - Create a new trigger in a particular project and location.
-func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, request operations.EventarcProjectsLocationsTriggersCreateRequest) (*operations.EventarcProjectsLocationsTriggersCreateResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, request operations.EventarcProjectsLocationsTriggersCreateRequest, security operations.EventarcProjectsLocationsTriggersCreateSecurity) (*operations.EventarcProjectsLocationsTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/triggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/triggers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TriggerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, 
 }
 
 // EventarcProjectsLocationsTriggersDelete - Delete a single trigger.
-func (s *projects) EventarcProjectsLocationsTriggersDelete(ctx context.Context, request operations.EventarcProjectsLocationsTriggersDeleteRequest) (*operations.EventarcProjectsLocationsTriggersDeleteResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersDelete(ctx context.Context, request operations.EventarcProjectsLocationsTriggersDeleteRequest, security operations.EventarcProjectsLocationsTriggersDeleteSecurity) (*operations.EventarcProjectsLocationsTriggersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) EventarcProjectsLocationsTriggersDelete(ctx context.Context, 
 }
 
 // EventarcProjectsLocationsTriggersGet - Get a single trigger.
-func (s *projects) EventarcProjectsLocationsTriggersGet(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetRequest) (*operations.EventarcProjectsLocationsTriggersGetResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersGet(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetRequest, security operations.EventarcProjectsLocationsTriggersGetSecurity) (*operations.EventarcProjectsLocationsTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,20 +334,20 @@ func (s *projects) EventarcProjectsLocationsTriggersGet(ctx context.Context, req
 }
 
 // EventarcProjectsLocationsTriggersGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) EventarcProjectsLocationsTriggersGetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetIamPolicyRequest) (*operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersGetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetIamPolicyRequest, security operations.EventarcProjectsLocationsTriggersGetIamPolicySecurity) (*operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,20 +382,20 @@ func (s *projects) EventarcProjectsLocationsTriggersGetIamPolicy(ctx context.Con
 }
 
 // EventarcProjectsLocationsTriggersList - List triggers.
-func (s *projects) EventarcProjectsLocationsTriggersList(ctx context.Context, request operations.EventarcProjectsLocationsTriggersListRequest) (*operations.EventarcProjectsLocationsTriggersListResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersList(ctx context.Context, request operations.EventarcProjectsLocationsTriggersListRequest, security operations.EventarcProjectsLocationsTriggersListSecurity) (*operations.EventarcProjectsLocationsTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/triggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/triggers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,11 +430,11 @@ func (s *projects) EventarcProjectsLocationsTriggersList(ctx context.Context, re
 }
 
 // EventarcProjectsLocationsTriggersPatch - Update a single trigger.
-func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, request operations.EventarcProjectsLocationsTriggersPatchRequest) (*operations.EventarcProjectsLocationsTriggersPatchResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, request operations.EventarcProjectsLocationsTriggersPatchRequest, security operations.EventarcProjectsLocationsTriggersPatchSecurity) (*operations.EventarcProjectsLocationsTriggersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TriggerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -446,11 +446,11 @@ func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,11 +485,11 @@ func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, r
 }
 
 // EventarcProjectsLocationsTriggersSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersSetIamPolicyRequest) (*operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersSetIamPolicyRequest, security operations.EventarcProjectsLocationsTriggersSetIamPolicySecurity) (*operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,11 +501,11 @@ func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,11 +540,11 @@ func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Con
 }
 
 // EventarcProjectsLocationsTriggersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) EventarcProjectsLocationsTriggersTestIamPermissions(ctx context.Context, request operations.EventarcProjectsLocationsTriggersTestIamPermissionsRequest) (*operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse, error) {
+func (s *projects) EventarcProjectsLocationsTriggersTestIamPermissions(ctx context.Context, request operations.EventarcProjectsLocationsTriggersTestIamPermissionsRequest, security operations.EventarcProjectsLocationsTriggersTestIamPermissionsSecurity) (*operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,11 +556,11 @@ func (s *projects) EventarcProjectsLocationsTriggersTestIamPermissions(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

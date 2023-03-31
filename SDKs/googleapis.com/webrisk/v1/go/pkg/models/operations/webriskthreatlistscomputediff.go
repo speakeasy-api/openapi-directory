@@ -10,8 +10,8 @@ import (
 )
 
 type WebriskThreatListsComputeDiffSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum string
@@ -73,7 +73,7 @@ func (e *WebriskThreatListsComputeDiffThreatTypeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type WebriskThreatListsComputeDiffQueryParams struct {
+type WebriskThreatListsComputeDiffRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -106,11 +106,6 @@ type WebriskThreatListsComputeDiffQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The current version token of the client for the requested list (the client version that was received from the last successful diff). If the client does not have a version token (this is the first time calling ComputeThreatListDiff), this may be left empty and a full database snapshot will be returned.
 	VersionToken *string `queryParam:"style=form,explode=true,name=versionToken"`
-}
-
-type WebriskThreatListsComputeDiffRequest struct {
-	QueryParams WebriskThreatListsComputeDiffQueryParams
-	Security    WebriskThreatListsComputeDiffSecurity
 }
 
 type WebriskThreatListsComputeDiffResponse struct {

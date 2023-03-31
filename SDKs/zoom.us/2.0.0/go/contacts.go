@@ -41,20 +41,20 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // **Scope**: `chat_contact:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *contacts) GetUserContact(ctx context.Context, request operations.GetUserContactRequest) (*operations.GetUserContactResponse, error) {
+func (s *contacts) GetUserContact(ctx context.Context, request operations.GetUserContactRequest, security operations.GetUserContactSecurity) (*operations.GetUserContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/me/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/me/contacts/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *contacts) GetUserContact(ctx context.Context, request operations.GetUse
 // **Scope**: `chat_contact:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *contacts) GetUserContacts(ctx context.Context, request operations.GetUserContactsRequest) (*operations.GetUserContactsResponse, error) {
+func (s *contacts) GetUserContacts(ctx context.Context, request operations.GetUserContactsRequest, security operations.GetUserContactsSecurity) (*operations.GetUserContactsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/chat/users/me/contacts"
 
@@ -115,11 +115,11 @@ func (s *contacts) GetUserContacts(ctx context.Context, request operations.GetUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *contacts) SearchCompanyContacts(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

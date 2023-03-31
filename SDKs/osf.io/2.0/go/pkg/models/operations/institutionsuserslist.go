@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type InstitutionsUsersListPathParams struct {
+type InstitutionsUsersListRequest struct {
 	// The unique identifier of the institution you wish to retrieve.
 	InstitutionID string `pathParam:"style=simple,explode=false,name=institution_id"`
-}
-
-type InstitutionsUsersListRequest struct {
-	PathParams InstitutionsUsersListPathParams
 }
 
 // InstitutionsUsersListUserAttributes - The properties of the user entity.

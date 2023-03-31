@@ -12,7 +12,8 @@ var CreateAccountSecretServerList = []string{
 }
 
 type CreateAccountSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAccountSecretCreateAccountSecretRequest struct {
@@ -20,12 +21,6 @@ type CreateAccountSecretCreateAccountSecretRequest struct {
 	Key string `form:"name=Key"`
 	// The secret value; up to 4096 characters.
 	Value string `form:"name=Value"`
-}
-
-type CreateAccountSecretRequest struct {
-	Request   *CreateAccountSecretCreateAccountSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateAccountSecretSecurity
-	ServerURL *string
 }
 
 type CreateAccountSecretResponse struct {

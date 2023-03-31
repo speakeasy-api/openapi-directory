@@ -8,17 +8,12 @@ import (
 )
 
 type ItemTypesListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type ItemTypesListQueryParams struct {
-	// Identifier of the group for which the item types are requested
-	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ItemTypesListRequest struct {
-	QueryParams ItemTypesListQueryParams
-	Security    ItemTypesListSecurity
+	// Identifier of the group for which the item types are requested
+	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
 }
 
 type ItemTypesListResponse struct {

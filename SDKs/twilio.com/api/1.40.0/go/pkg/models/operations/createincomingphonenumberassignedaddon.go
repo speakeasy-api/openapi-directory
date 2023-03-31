@@ -12,14 +12,8 @@ var CreateIncomingPhoneNumberAssignedAddOnServerList = []string{
 }
 
 type CreateIncomingPhoneNumberAssignedAddOnSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateIncomingPhoneNumberAssignedAddOnPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the Phone Number to assign the Add-on.
-	ResourceSid string `pathParam:"style=simple,explode=false,name=ResourceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest struct {
@@ -28,10 +22,11 @@ type CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddO
 }
 
 type CreateIncomingPhoneNumberAssignedAddOnRequest struct {
-	PathParams CreateIncomingPhoneNumberAssignedAddOnPathParams
-	Request    *CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateIncomingPhoneNumberAssignedAddOnSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                                                                               `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Phone Number to assign the Add-on.
+	ResourceSid string `pathParam:"style=simple,explode=false,name=ResourceSid"`
 }
 
 type CreateIncomingPhoneNumberAssignedAddOnResponse struct {

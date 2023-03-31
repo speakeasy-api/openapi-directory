@@ -8,10 +8,10 @@ import (
 )
 
 type GetOrderTasksSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetOrderTasksQueryParams struct {
+type GetOrderTasksRequest struct {
 	// The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the <strong>look_back_days</strong> parameter. <br /><br /><b>Format: </b>UTC   <br /><br /> <b> For example: </b> <br /><br />Tasks within a range  <br /> <code>yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ </code> <br /><br /> Tasks created on September 8, 2019<br /> <code>2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z</code><br />
 	DateRange *string `queryParam:"style=form,explode=true,name=date_range"`
 	// The feed type associated with the task. The only presently supported value is <code>LMS_ORDER_REPORT</code>. Do not use with the <strong>schedule_id</strong> parameter. Since schedules are based on feed types, you can specify a schedule (<strong>schedule_id</strong>) that returns the needed <strong>feed_type</strong>.
@@ -24,11 +24,6 @@ type GetOrderTasksQueryParams struct {
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see <strong>scheduleTemplateId</strong> in <strong>createSchedule</strong>). Do not use with the <strong>feed_type</strong> parameter. Since schedules are based on feed types, you can specify a schedule (<strong>schedule_id</strong>) that returns the needed <strong>feed_type</strong>.
 	ScheduleID *string `queryParam:"style=form,explode=true,name=schedule_id"`
-}
-
-type GetOrderTasksRequest struct {
-	QueryParams GetOrderTasksQueryParams
-	Security    GetOrderTasksSecurity
 }
 
 type GetOrderTasksResponse struct {

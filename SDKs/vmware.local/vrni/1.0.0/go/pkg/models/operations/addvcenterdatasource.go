@@ -8,13 +8,7 @@ import (
 )
 
 type AddVcenterDatasourceSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddVcenterDatasourceRequest struct {
-	// VCenter Credentials
-	Request  shared.VCenterDataSourceRequest `request:"mediaType=application/json"`
-	Security AddVcenterDatasourceSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddVcenterDatasourceResponse struct {

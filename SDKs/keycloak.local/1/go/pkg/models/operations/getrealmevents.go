@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmEventsPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmEventsQueryParams struct {
+type GetRealmEventsRequest struct {
 	// App or oauth client name
 	Client *string `queryParam:"style=form,explode=true,name=client"`
 	// From date
@@ -25,15 +20,12 @@ type GetRealmEventsQueryParams struct {
 	IPAddress *string `queryParam:"style=form,explode=true,name=ipAddress"`
 	// Maximum results size (defaults to 100)
 	Max *int `queryParam:"style=form,explode=true,name=max"`
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// The types of events to return
 	Type []string `queryParam:"style=form,explode=true,name=type"`
 	// User id
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetRealmEventsRequest struct {
-	PathParams  GetRealmEventsPathParams
-	QueryParams GetRealmEventsQueryParams
 }
 
 type GetRealmEventsResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type RetrieveDisputeEvidenceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveDisputeEvidencePathParams struct {
+type RetrieveDisputeEvidenceRequest struct {
 	// The ID of the dispute that you want to retrieve evidence from.
 	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 	// The ID of the evidence to retrieve.
 	EvidenceID string `pathParam:"style=simple,explode=false,name=evidence_id"`
-}
-
-type RetrieveDisputeEvidenceRequest struct {
-	PathParams RetrieveDisputeEvidencePathParams
-	Security   RetrieveDisputeEvidenceSecurity
 }
 
 type RetrieveDisputeEvidenceResponse struct {

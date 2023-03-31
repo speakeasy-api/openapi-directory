@@ -39,23 +39,15 @@ func (e *GetPlaylistsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPlaylistsQueryParams struct {
+type GetPlaylistsRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Page number of playlists.
 	//
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// How do you want to sort playlists?
 	//
 	Sort *GetPlaylistsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPlaylistsHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPlaylistsRequest struct {
-	QueryParams GetPlaylistsQueryParams
-	Headers     GetPlaylistsHeaders
 }
 
 type GetPlaylistsResponse struct {

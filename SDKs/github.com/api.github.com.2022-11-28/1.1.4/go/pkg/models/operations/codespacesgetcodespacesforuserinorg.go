@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesGetCodespacesForUserInOrgPathParams struct {
+type CodespacesGetCodespacesForUserInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type CodespacesGetCodespacesForUserInOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type CodespacesGetCodespacesForUserInOrgRequest struct {
-	PathParams  CodespacesGetCodespacesForUserInOrgPathParams
-	QueryParams CodespacesGetCodespacesForUserInOrgQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // CodespacesGetCodespacesForUserInOrg200ApplicationJSON - Response

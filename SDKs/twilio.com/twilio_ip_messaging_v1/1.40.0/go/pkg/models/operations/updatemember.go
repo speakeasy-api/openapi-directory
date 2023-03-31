@@ -12,13 +12,8 @@ var UpdateMemberServerList = []string{
 }
 
 type UpdateMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMemberPathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMemberUpdateMemberRequest struct {
@@ -27,10 +22,10 @@ type UpdateMemberUpdateMemberRequest struct {
 }
 
 type UpdateMemberRequest struct {
-	PathParams UpdateMemberPathParams
-	Request    *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMemberSecurity
-	ServerURL  *string
+	ChannelSid  string                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                           `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid         string                           `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMemberResponse struct {

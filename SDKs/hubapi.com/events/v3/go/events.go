@@ -34,7 +34,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetEventsV3EventsGetPage - Returns a collection of events matching a query.
-func (s *events) GetEventsV3EventsGetPage(ctx context.Context, request operations.GetEventsV3EventsGetPageRequest) (*operations.GetEventsV3EventsGetPageResponse, error) {
+func (s *events) GetEventsV3EventsGetPage(ctx context.Context, request operations.GetEventsV3EventsGetPageRequest, security operations.GetEventsV3EventsGetPageSecurity) (*operations.GetEventsV3EventsGetPageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events/v3/events"
 
@@ -43,11 +43,11 @@ func (s *events) GetEventsV3EventsGetPage(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

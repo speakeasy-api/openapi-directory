@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksUpdatePathParams struct {
+type ChecksUpdateRequest struct {
+	RequestBody interface{} `request:"mediaType=application/json"`
 	// check_run_id parameter
 	CheckRunID int64  `pathParam:"style=simple,explode=false,name=check_run_id"`
 	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksUpdateRequest struct {
-	PathParams ChecksUpdatePathParams
-	Request    interface{} `request:"mediaType=application/json"`
 }
 
 type ChecksUpdateResponse struct {

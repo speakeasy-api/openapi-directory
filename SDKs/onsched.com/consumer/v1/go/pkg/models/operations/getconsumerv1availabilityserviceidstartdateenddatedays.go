@@ -8,27 +8,19 @@ import (
 	"time"
 )
 
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysPathParams struct {
+type GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysRequest struct {
 	// Format YYYY-MM-DD: End Date for availability search
 	EndDate time.Time `pathParam:"style=simple,explode=false,name=endDate"`
-	// Service Id for day availability search
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-	// Format YYYY-MM-DD: Start Date for availability search
-	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysQueryParams struct {
 	// Id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Resource Id to filter on
 	ResourceID *string `queryParam:"style=form,explode=true,name=resourceId"`
+	// Service Id for day availability search
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	// Format YYYY-MM-DD: Start Date for availability search
+	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
 	// Timezone offset to view availability for
 	TzOffset *int `queryParam:"style=form,explode=true,name=tzOffset"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysRequest struct {
-	PathParams  GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysPathParams
-	QueryParams GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysQueryParams
 }
 
 type GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysResponse struct {

@@ -32,20 +32,20 @@ func newManagedconfigurationssettings(defaultClient, securityClient HTTPClient, 
 }
 
 // AndroidenterpriseManagedconfigurationssettingsList - Lists all the managed configurations settings for the specified app.
-func (s *managedconfigurationssettings) AndroidenterpriseManagedconfigurationssettingsList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationssettingsListRequest) (*operations.AndroidenterpriseManagedconfigurationssettingsListResponse, error) {
+func (s *managedconfigurationssettings) AndroidenterpriseManagedconfigurationssettingsList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationssettingsListRequest, security operations.AndroidenterpriseManagedconfigurationssettingsListSecurity) (*operations.AndroidenterpriseManagedconfigurationssettingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

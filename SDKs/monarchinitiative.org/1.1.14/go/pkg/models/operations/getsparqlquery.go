@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSparqlQueryPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type GetSparqlQueryRequest struct {
-	PathParams GetSparqlQueryPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 type GetSparqlQueryResponse struct {

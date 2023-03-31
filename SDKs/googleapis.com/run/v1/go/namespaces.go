@@ -32,20 +32,20 @@ func newNamespaces(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // RunNamespacesAuthorizeddomainsList - List authorized domains.
-func (s *namespaces) RunNamespacesAuthorizeddomainsList(ctx context.Context, request operations.RunNamespacesAuthorizeddomainsListRequest) (*operations.RunNamespacesAuthorizeddomainsListResponse, error) {
+func (s *namespaces) RunNamespacesAuthorizeddomainsList(ctx context.Context, request operations.RunNamespacesAuthorizeddomainsListRequest, security operations.RunNamespacesAuthorizeddomainsListSecurity) (*operations.RunNamespacesAuthorizeddomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/authorizeddomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/authorizeddomains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *namespaces) RunNamespacesAuthorizeddomainsList(ctx context.Context, req
 }
 
 // RunNamespacesConfigurationsList - List configurations.
-func (s *namespaces) RunNamespacesConfigurationsList(ctx context.Context, request operations.RunNamespacesConfigurationsListRequest) (*operations.RunNamespacesConfigurationsListResponse, error) {
+func (s *namespaces) RunNamespacesConfigurationsList(ctx context.Context, request operations.RunNamespacesConfigurationsListRequest, security operations.RunNamespacesConfigurationsListSecurity) (*operations.RunNamespacesConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/configurations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/configurations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *namespaces) RunNamespacesConfigurationsList(ctx context.Context, reques
 }
 
 // RunNamespacesDomainmappingsCreate - Create a new domain mapping.
-func (s *namespaces) RunNamespacesDomainmappingsCreate(ctx context.Context, request operations.RunNamespacesDomainmappingsCreateRequest) (*operations.RunNamespacesDomainmappingsCreateResponse, error) {
+func (s *namespaces) RunNamespacesDomainmappingsCreate(ctx context.Context, request operations.RunNamespacesDomainmappingsCreateRequest, security operations.RunNamespacesDomainmappingsCreateSecurity) (*operations.RunNamespacesDomainmappingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainMapping", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *namespaces) RunNamespacesDomainmappingsCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *namespaces) RunNamespacesDomainmappingsCreate(ctx context.Context, requ
 }
 
 // RunNamespacesDomainmappingsDelete - Delete a domain mapping.
-func (s *namespaces) RunNamespacesDomainmappingsDelete(ctx context.Context, request operations.RunNamespacesDomainmappingsDeleteRequest) (*operations.RunNamespacesDomainmappingsDeleteResponse, error) {
+func (s *namespaces) RunNamespacesDomainmappingsDelete(ctx context.Context, request operations.RunNamespacesDomainmappingsDeleteRequest, security operations.RunNamespacesDomainmappingsDeleteSecurity) (*operations.RunNamespacesDomainmappingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *namespaces) RunNamespacesDomainmappingsDelete(ctx context.Context, requ
 }
 
 // RunNamespacesDomainmappingsGet - Get information about a domain mapping.
-func (s *namespaces) RunNamespacesDomainmappingsGet(ctx context.Context, request operations.RunNamespacesDomainmappingsGetRequest) (*operations.RunNamespacesDomainmappingsGetResponse, error) {
+func (s *namespaces) RunNamespacesDomainmappingsGet(ctx context.Context, request operations.RunNamespacesDomainmappingsGetRequest, security operations.RunNamespacesDomainmappingsGetSecurity) (*operations.RunNamespacesDomainmappingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *namespaces) RunNamespacesDomainmappingsGet(ctx context.Context, request
 }
 
 // RunNamespacesDomainmappingsList - List all domain mappings.
-func (s *namespaces) RunNamespacesDomainmappingsList(ctx context.Context, request operations.RunNamespacesDomainmappingsListRequest) (*operations.RunNamespacesDomainmappingsListResponse, error) {
+func (s *namespaces) RunNamespacesDomainmappingsList(ctx context.Context, request operations.RunNamespacesDomainmappingsListRequest, security operations.RunNamespacesDomainmappingsListSecurity) (*operations.RunNamespacesDomainmappingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,11 +327,11 @@ func (s *namespaces) RunNamespacesDomainmappingsList(ctx context.Context, reques
 }
 
 // RunNamespacesExecutionsCancel - Cancel an execution.
-func (s *namespaces) RunNamespacesExecutionsCancel(ctx context.Context, request operations.RunNamespacesExecutionsCancelRequest) (*operations.RunNamespacesExecutionsCancelResponse, error) {
+func (s *namespaces) RunNamespacesExecutionsCancel(ctx context.Context, request operations.RunNamespacesExecutionsCancelRequest, security operations.RunNamespacesExecutionsCancelSecurity) (*operations.RunNamespacesExecutionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,11 +343,11 @@ func (s *namespaces) RunNamespacesExecutionsCancel(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,20 +382,20 @@ func (s *namespaces) RunNamespacesExecutionsCancel(ctx context.Context, request 
 }
 
 // RunNamespacesExecutionsList - List executions.
-func (s *namespaces) RunNamespacesExecutionsList(ctx context.Context, request operations.RunNamespacesExecutionsListRequest) (*operations.RunNamespacesExecutionsListResponse, error) {
+func (s *namespaces) RunNamespacesExecutionsList(ctx context.Context, request operations.RunNamespacesExecutionsListRequest, security operations.RunNamespacesExecutionsListSecurity) (*operations.RunNamespacesExecutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/executions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,11 +430,11 @@ func (s *namespaces) RunNamespacesExecutionsList(ctx context.Context, request op
 }
 
 // RunNamespacesJobsCreate - Create a job.
-func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operations.RunNamespacesJobsCreateRequest) (*operations.RunNamespacesJobsCreateResponse, error) {
+func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operations.RunNamespacesJobsCreateRequest, security operations.RunNamespacesJobsCreateSecurity) (*operations.RunNamespacesJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/jobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -446,11 +446,11 @@ func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,20 +485,20 @@ func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operat
 }
 
 // RunNamespacesJobsDelete - Delete a job.
-func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operations.RunNamespacesJobsDeleteRequest) (*operations.RunNamespacesJobsDeleteResponse, error) {
+func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operations.RunNamespacesJobsDeleteRequest, security operations.RunNamespacesJobsDeleteSecurity) (*operations.RunNamespacesJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -533,20 +533,20 @@ func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operat
 }
 
 // RunNamespacesJobsList - List jobs.
-func (s *namespaces) RunNamespacesJobsList(ctx context.Context, request operations.RunNamespacesJobsListRequest) (*operations.RunNamespacesJobsListResponse, error) {
+func (s *namespaces) RunNamespacesJobsList(ctx context.Context, request operations.RunNamespacesJobsListRequest, security operations.RunNamespacesJobsListSecurity) (*operations.RunNamespacesJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -581,11 +581,11 @@ func (s *namespaces) RunNamespacesJobsList(ctx context.Context, request operatio
 }
 
 // RunNamespacesJobsReplaceJob - Replace a job. Only the spec and metadata labels and annotations are modifiable. After the Replace request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
-func (s *namespaces) RunNamespacesJobsReplaceJob(ctx context.Context, request operations.RunNamespacesJobsReplaceJobRequest) (*operations.RunNamespacesJobsReplaceJobResponse, error) {
+func (s *namespaces) RunNamespacesJobsReplaceJob(ctx context.Context, request operations.RunNamespacesJobsReplaceJobRequest, security operations.RunNamespacesJobsReplaceJobSecurity) (*operations.RunNamespacesJobsReplaceJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -597,11 +597,11 @@ func (s *namespaces) RunNamespacesJobsReplaceJob(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -636,11 +636,11 @@ func (s *namespaces) RunNamespacesJobsReplaceJob(ctx context.Context, request op
 }
 
 // RunNamespacesJobsRun - Trigger creation of a new execution of this job.
-func (s *namespaces) RunNamespacesJobsRun(ctx context.Context, request operations.RunNamespacesJobsRunRequest) (*operations.RunNamespacesJobsRunResponse, error) {
+func (s *namespaces) RunNamespacesJobsRun(ctx context.Context, request operations.RunNamespacesJobsRunRequest, security operations.RunNamespacesJobsRunSecurity) (*operations.RunNamespacesJobsRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}:run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}:run", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,11 +652,11 @@ func (s *namespaces) RunNamespacesJobsRun(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -691,20 +691,20 @@ func (s *namespaces) RunNamespacesJobsRun(ctx context.Context, request operation
 }
 
 // RunNamespacesRevisionsList - List revisions.
-func (s *namespaces) RunNamespacesRevisionsList(ctx context.Context, request operations.RunNamespacesRevisionsListRequest) (*operations.RunNamespacesRevisionsListResponse, error) {
+func (s *namespaces) RunNamespacesRevisionsList(ctx context.Context, request operations.RunNamespacesRevisionsListRequest, security operations.RunNamespacesRevisionsListSecurity) (*operations.RunNamespacesRevisionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -739,20 +739,20 @@ func (s *namespaces) RunNamespacesRevisionsList(ctx context.Context, request ope
 }
 
 // RunNamespacesRoutesList - List routes.
-func (s *namespaces) RunNamespacesRoutesList(ctx context.Context, request operations.RunNamespacesRoutesListRequest) (*operations.RunNamespacesRoutesListResponse, error) {
+func (s *namespaces) RunNamespacesRoutesList(ctx context.Context, request operations.RunNamespacesRoutesListRequest, security operations.RunNamespacesRoutesListSecurity) (*operations.RunNamespacesRoutesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/routes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/routes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -787,11 +787,11 @@ func (s *namespaces) RunNamespacesRoutesList(ctx context.Context, request operat
 }
 
 // RunNamespacesServicesCreate - Creates a new Service. Service creation will trigger a new deployment. Use GetService, and check service.status to determine if the Service is ready.
-func (s *namespaces) RunNamespacesServicesCreate(ctx context.Context, request operations.RunNamespacesServicesCreateRequest) (*operations.RunNamespacesServicesCreateResponse, error) {
+func (s *namespaces) RunNamespacesServicesCreate(ctx context.Context, request operations.RunNamespacesServicesCreateRequest, security operations.RunNamespacesServicesCreateSecurity) (*operations.RunNamespacesServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/services", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -803,11 +803,11 @@ func (s *namespaces) RunNamespacesServicesCreate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -842,20 +842,20 @@ func (s *namespaces) RunNamespacesServicesCreate(ctx context.Context, request op
 }
 
 // RunNamespacesServicesDelete - Deletes the provided service. This will cause the Service to stop serving traffic and will delete all associated Revisions.
-func (s *namespaces) RunNamespacesServicesDelete(ctx context.Context, request operations.RunNamespacesServicesDeleteRequest) (*operations.RunNamespacesServicesDeleteResponse, error) {
+func (s *namespaces) RunNamespacesServicesDelete(ctx context.Context, request operations.RunNamespacesServicesDeleteRequest, security operations.RunNamespacesServicesDeleteSecurity) (*operations.RunNamespacesServicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -890,20 +890,20 @@ func (s *namespaces) RunNamespacesServicesDelete(ctx context.Context, request op
 }
 
 // RunNamespacesServicesGet - Gets information about a service.
-func (s *namespaces) RunNamespacesServicesGet(ctx context.Context, request operations.RunNamespacesServicesGetRequest) (*operations.RunNamespacesServicesGetResponse, error) {
+func (s *namespaces) RunNamespacesServicesGet(ctx context.Context, request operations.RunNamespacesServicesGetRequest, security operations.RunNamespacesServicesGetSecurity) (*operations.RunNamespacesServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -938,20 +938,20 @@ func (s *namespaces) RunNamespacesServicesGet(ctx context.Context, request opera
 }
 
 // RunNamespacesServicesList - Lists services for the given project and region.
-func (s *namespaces) RunNamespacesServicesList(ctx context.Context, request operations.RunNamespacesServicesListRequest) (*operations.RunNamespacesServicesListResponse, error) {
+func (s *namespaces) RunNamespacesServicesList(ctx context.Context, request operations.RunNamespacesServicesListRequest, security operations.RunNamespacesServicesListSecurity) (*operations.RunNamespacesServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -986,11 +986,11 @@ func (s *namespaces) RunNamespacesServicesList(ctx context.Context, request oper
 }
 
 // RunNamespacesServicesReplaceService - Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
-func (s *namespaces) RunNamespacesServicesReplaceService(ctx context.Context, request operations.RunNamespacesServicesReplaceServiceRequest) (*operations.RunNamespacesServicesReplaceServiceResponse, error) {
+func (s *namespaces) RunNamespacesServicesReplaceService(ctx context.Context, request operations.RunNamespacesServicesReplaceServiceRequest, security operations.RunNamespacesServicesReplaceServiceSecurity) (*operations.RunNamespacesServicesReplaceServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/serving.knative.dev/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1002,11 +1002,11 @@ func (s *namespaces) RunNamespacesServicesReplaceService(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1041,20 +1041,20 @@ func (s *namespaces) RunNamespacesServicesReplaceService(ctx context.Context, re
 }
 
 // RunNamespacesTasksGet - Get information about a task.
-func (s *namespaces) RunNamespacesTasksGet(ctx context.Context, request operations.RunNamespacesTasksGetRequest) (*operations.RunNamespacesTasksGetResponse, error) {
+func (s *namespaces) RunNamespacesTasksGet(ctx context.Context, request operations.RunNamespacesTasksGetRequest, security operations.RunNamespacesTasksGetSecurity) (*operations.RunNamespacesTasksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1089,20 +1089,20 @@ func (s *namespaces) RunNamespacesTasksGet(ctx context.Context, request operatio
 }
 
 // RunNamespacesTasksList - List tasks.
-func (s *namespaces) RunNamespacesTasksList(ctx context.Context, request operations.RunNamespacesTasksListRequest) (*operations.RunNamespacesTasksListResponse, error) {
+func (s *namespaces) RunNamespacesTasksList(ctx context.Context, request operations.RunNamespacesTasksListRequest, security operations.RunNamespacesTasksListSecurity) (*operations.RunNamespacesTasksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1/{parent}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

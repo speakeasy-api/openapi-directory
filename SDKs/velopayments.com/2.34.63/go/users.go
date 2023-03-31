@@ -36,7 +36,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Delete User by Id.
 func (s *users) DeleteUserByIDV2(ctx context.Context, request operations.DeleteUserByIDV2Request) (*operations.DeleteUserByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -105,7 +105,7 @@ func (s *users) DeleteUserByIDV2(ctx context.Context, request operations.DeleteU
 // <p>When a user is disabled any active access tokens will be revoked and the user will not be able to log in</p>
 func (s *users) DisableUserV2(ctx context.Context, request operations.DisableUserV2Request) (*operations.DisableUserV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *users) DisableUserV2(ctx context.Context, request operations.DisableUse
 // <p>If enabling a payor user would breach the limit for master admin payor users the request will be rejected </p>
 func (s *users) EnableUserV2(ctx context.Context, request operations.EnableUserV2Request) (*operations.EnableUserV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -326,7 +326,7 @@ func (s *users) GetSelf(ctx context.Context) (*operations.GetSelfResponse, error
 // Get a Single User by Id.
 func (s *users) GetUserByIDV2(ctx context.Context, request operations.GetUserByIDV2Request) (*operations.GetUserByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +399,7 @@ func (s *users) GetUserByIDV2(ctx context.Context, request operations.GetUserByI
 
 // InviteUser - Invite a User
 // Create a User and invite them to the system
-func (s *users) InviteUser(ctx context.Context, request operations.InviteUserRequest) (*operations.InviteUserResponse, error) {
+func (s *users) InviteUser(ctx context.Context, request shared.InviteUserRequest) (*operations.InviteUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/invite"
 
@@ -504,7 +504,7 @@ func (s *users) ListUsers(ctx context.Context, request operations.ListUsersReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -577,7 +577,7 @@ func (s *users) ListUsers(ctx context.Context, request operations.ListUsersReque
 // <p>Used for manual verification of a user </p>
 // <p>The backoffice user initiates the request to send the OTP to the user's sms </p>
 // <p>The user then reads back the OTP which the backoffice user enters in the verifactionCode property for requests that require it</p>
-func (s *users) RegisterSms(ctx context.Context, request operations.RegisterSmsRequest) (*operations.RegisterSmsResponse, error) {
+func (s *users) RegisterSms(ctx context.Context, request shared.RegisterSmsRequest) (*operations.RegisterSmsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/registration/sms"
 
@@ -657,9 +657,9 @@ func (s *users) RegisterSms(ctx context.Context, request operations.RegisterSmsR
 // <p>It will be revoked and a new one issued</p>
 func (s *users) ResendToken(ctx context.Context, request operations.ResendTokenRequest) (*operations.ResendTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/tokens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -733,9 +733,9 @@ func (s *users) ResendToken(ctx context.Context, request operations.ResendTokenR
 // <p>Update the user's Role</p>
 func (s *users) RoleUpdate(ctx context.Context, request operations.RoleUpdateRequest) (*operations.RoleUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/roleUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/roleUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -819,7 +819,7 @@ func (s *users) RoleUpdate(ctx context.Context, request operations.RoleUpdateReq
 // If a user is locked this endpoint will unlock them
 func (s *users) UnlockUserV2(ctx context.Context, request operations.UnlockUserV2Request) (*operations.UnlockUserV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/unlock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/unlock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -896,9 +896,9 @@ func (s *users) UnlockUserV2(ctx context.Context, request operations.UnlockUserV
 // <p>If the user does not require further verification then a register new MFA device token will be sent to them via their email address</p>
 func (s *users) UnregisterMFA(ctx context.Context, request operations.UnregisterMFARequest) (*operations.UnregisterMFAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/mfa/unregister", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/mfa/unregister", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnregisterMFARequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -985,7 +985,7 @@ func (s *users) UnregisterMFAForSelf(ctx context.Context, request operations.Unr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/self/mfa/unregister"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SelfMFATypeUnregisterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1000,7 +1000,7 @@ func (s *users) UnregisterMFAForSelf(ctx context.Context, request operations.Unr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1059,7 +1059,7 @@ func (s *users) UnregisterMFAForSelf(ctx context.Context, request operations.Unr
 
 // UpdatePasswordSelf - Update Password for self
 // Update password for self
-func (s *users) UpdatePasswordSelf(ctx context.Context, request operations.UpdatePasswordSelfRequest) (*operations.UpdatePasswordSelfResponse, error) {
+func (s *users) UpdatePasswordSelf(ctx context.Context, request shared.SelfUpdatePasswordRequest) (*operations.UpdatePasswordSelfResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/self/password"
 
@@ -1138,9 +1138,9 @@ func (s *users) UpdatePasswordSelf(ctx context.Context, request operations.Updat
 // <p>When updating Payor users with the role of payor.master_admin a verificationCode is required</p>
 func (s *users) UserDetailsUpdate(ctx context.Context, request operations.UserDetailsUpdateRequest) (*operations.UserDetailsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/userDetailsUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/userDetailsUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserDetailsUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1233,7 +1233,7 @@ func (s *users) UserDetailsUpdate(ctx context.Context, request operations.UserDe
 // UserDetailsUpdateForSelf - Update User Details for self
 // <p>Update the profile details for the given user</p>
 // <p>Only Payee user types are supported</p>
-func (s *users) UserDetailsUpdateForSelf(ctx context.Context, request operations.UserDetailsUpdateForSelfRequest) (*operations.UserDetailsUpdateForSelfResponse, error) {
+func (s *users) UserDetailsUpdateForSelf(ctx context.Context, request shared.PayeeUserSelfUpdateRequest) (*operations.UserDetailsUpdateForSelfResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/self/userDetailsUpdate"
 
@@ -1319,7 +1319,7 @@ func (s *users) UserDetailsUpdateForSelf(ctx context.Context, request operations
 
 // ValidatePasswordSelf - Validate the proposed password
 // validate the password and return a score
-func (s *users) ValidatePasswordSelf(ctx context.Context, request operations.ValidatePasswordSelfRequest) (*operations.ValidatePasswordSelfResponse, error) {
+func (s *users) ValidatePasswordSelf(ctx context.Context, request shared.PasswordRequest) (*operations.ValidatePasswordSelfResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/self/password/validate"
 

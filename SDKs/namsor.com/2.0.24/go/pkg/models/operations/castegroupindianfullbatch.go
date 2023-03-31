@@ -8,13 +8,7 @@ import (
 )
 
 type CastegroupIndianFullBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CastegroupIndianFullBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameSubdivisionIn `request:"mediaType=application/json"`
-	Security CastegroupIndianFullBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type CastegroupIndianFullBatchResponse struct {

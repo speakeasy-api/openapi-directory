@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackRolesPartialUpdatePathParams struct {
+type DcimRackRolesPartialUpdateRequest struct {
+	RackRoleInput shared.RackRoleInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this rack role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRackRolesPartialUpdateRequest struct {
-	PathParams DcimRackRolesPartialUpdatePathParams
-	Request    shared.RackRoleInput `request:"mediaType=application/json"`
 }
 
 type DcimRackRolesPartialUpdateResponse struct {

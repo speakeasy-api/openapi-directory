@@ -36,7 +36,7 @@ func newEnvironments(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // AllLines - Get all environments
 // Get all environments provided by the current Otoroshi instance
-func (s *environments) AllLines(ctx context.Context, request operations.AllLinesRequest) (*operations.AllLinesResponse, error) {
+func (s *environments) AllLines(ctx context.Context) (*operations.AllLinesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lines"
 
@@ -45,7 +45,7 @@ func (s *environments) AllLines(ctx context.Context, request operations.AllLines
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *environments) AllLines(ctx context.Context, request operations.AllLines
 
 // ServicesForALine - Get all services for an environment
 // Get all services for an environment provided by the current Otoroshi instance
-func (s *environments) ServicesForALine(ctx context.Context, request operations.ServicesForALineRequest) (*operations.ServicesForALineResponse, error) {
+func (s *environments) ServicesForALine(ctx context.Context, request operations.ServicesForALineRequest, security operations.ServicesForALineSecurity) (*operations.ServicesForALineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lines/{line}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lines/{line}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

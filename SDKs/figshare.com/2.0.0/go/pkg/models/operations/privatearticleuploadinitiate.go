@@ -8,18 +8,13 @@ import (
 )
 
 type PrivateArticleUploadInitiateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleUploadInitiatePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleUploadInitiateRequest struct {
-	PathParams PrivateArticleUploadInitiatePathParams
-	Request    shared.FileCreator `request:"mediaType=application/json"`
-	Security   PrivateArticleUploadInitiateSecurity
+	FileCreator shared.FileCreator `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleUploadInitiateResponse struct {

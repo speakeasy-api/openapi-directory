@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SendchatbotSecurity struct {
-	ClientCredentials shared.SchemeClientCredentials `security:"scheme,type=oauth2"`
+	ClientCredentials string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SendchatbotApplicationJSON struct {
@@ -28,11 +27,6 @@ type SendchatbotApplicationJSON struct {
 	UserJid *string `json:"user_jid,omitempty"`
 	// **Optional**<br>Allow a Chatbot to send a message to a group channel, but have only one designated person in that group channel see the message by providing the person's UserID in this field.
 	VisibleToUser *string `json:"visible_to_user,omitempty"`
-}
-
-type SendchatbotRequest struct {
-	Request  *SendchatbotApplicationJSON `request:"mediaType=application/json"`
-	Security SendchatbotSecurity
 }
 
 type SendchatbotResponse struct {

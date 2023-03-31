@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum - Per switch exception (combined, redundant, useNetworkSetting)
 type UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum string
 
@@ -56,8 +52,8 @@ type UpdateNetworkSwitchSettingsRequestBody struct {
 }
 
 type UpdateNetworkSwitchSettingsRequest struct {
-	PathParams UpdateNetworkSwitchSettingsPathParams
-	Request    *UpdateNetworkSwitchSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                  `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchSettingsResponse struct {

@@ -32,20 +32,20 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DlpLocationsInfoTypesList - Returns a list of the sensitive information types that DLP API supports. See https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
-func (s *locations) DlpLocationsInfoTypesList(ctx context.Context, request operations.DlpLocationsInfoTypesListRequest) (*operations.DlpLocationsInfoTypesListResponse, error) {
+func (s *locations) DlpLocationsInfoTypesList(ctx context.Context, request operations.DlpLocationsInfoTypesListRequest, security operations.DlpLocationsInfoTypesListSecurity) (*operations.DlpLocationsInfoTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/infoTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/infoTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

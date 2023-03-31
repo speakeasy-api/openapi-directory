@@ -33,16 +33,16 @@ func newVideosEmbedPrivacy(defaultClient, securityClient HTTPClient, serverURL, 
 
 // AddVideoPrivacyDomain - Permit a video to be embedded on a domain
 // If domain privacy is enabled for this video, this method permits the video to be embedded on the specified domain.
-func (s *videosEmbedPrivacy) AddVideoPrivacyDomain(ctx context.Context, request operations.AddVideoPrivacyDomainRequest) (*operations.AddVideoPrivacyDomainResponse, error) {
+func (s *videosEmbedPrivacy) AddVideoPrivacyDomain(ctx context.Context, request operations.AddVideoPrivacyDomainRequest, security operations.AddVideoPrivacyDomainSecurity) (*operations.AddVideoPrivacyDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains/{domain}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains/{domain}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,16 +78,16 @@ func (s *videosEmbedPrivacy) AddVideoPrivacyDomain(ctx context.Context, request 
 }
 
 // DeleteVideoPrivacyDomain - Restrict a video from being embedded on a domain
-func (s *videosEmbedPrivacy) DeleteVideoPrivacyDomain(ctx context.Context, request operations.DeleteVideoPrivacyDomainRequest) (*operations.DeleteVideoPrivacyDomainResponse, error) {
+func (s *videosEmbedPrivacy) DeleteVideoPrivacyDomain(ctx context.Context, request operations.DeleteVideoPrivacyDomainRequest, security operations.DeleteVideoPrivacyDomainSecurity) (*operations.DeleteVideoPrivacyDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains/{domain}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains/{domain}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,14 +127,14 @@ func (s *videosEmbedPrivacy) DeleteVideoPrivacyDomain(ctx context.Context, reque
 // GetVideoPrivacyDomains - Get all the domains on which a video can be embedded
 func (s *videosEmbedPrivacy) GetVideoPrivacyDomains(ctx context.Context, request operations.GetVideoPrivacyDomainsRequest) (*operations.GetVideoPrivacyDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/privacy/domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

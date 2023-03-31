@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type ExportTransactionsCsvv3QueryParams struct {
+type ExportTransactionsCsvv3Request struct {
 	// End date, inclusive. Format is YYYY-MM-DD
 	EndDate *types.Date `queryParam:"style=form,explode=true,name=endDate"`
 	// The Payor ID for whom you wish to run the report.
@@ -17,10 +17,6 @@ type ExportTransactionsCsvv3QueryParams struct {
 	PayorID *string `queryParam:"style=form,explode=true,name=payorId"`
 	// Start date, inclusive. Format is YYYY-MM-DD
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type ExportTransactionsCsvv3Request struct {
-	QueryParams ExportTransactionsCsvv3QueryParams
 }
 
 type ExportTransactionsCsvv3Response struct {

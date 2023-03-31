@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2BulkJobsIDPathParams struct {
+type GetV2BulkJobsIDRequest struct {
 	// The id for the Bulk Job
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2BulkJobsIDRequest struct {
-	PathParams GetV2BulkJobsIDPathParams
 }
 
 type GetV2BulkJobsIDResponse struct {

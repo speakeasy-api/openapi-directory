@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type ChangeNotificationPathParams struct {
-	// A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use to look for the SKU whose change the seller wants to inform. If the marketplace finds this ID, it responds with status code `200`. Otherwise, it responds with status code `404`.
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type ChangeNotificationHeaders struct {
+type ChangeNotificationRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ChangeNotificationRequest struct {
-	PathParams ChangeNotificationPathParams
-	Headers    ChangeNotificationHeaders
+	// A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use to look for the SKU whose change the seller wants to inform. If the marketplace finds this ID, it responds with status code `200`. Otherwise, it responds with status code `404`.
+	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 type ChangeNotificationResponse struct {

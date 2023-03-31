@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetServerGetKeymapPathParams struct {
+type ProtocolTelnetServerGetKeymapRequest struct {
 	// Agent to show TELNET statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTelnetServerGetKeymapRequest struct {
-	PathParams ProtocolTelnetServerGetKeymapPathParams
 }
 
 type ProtocolTelnetServerGetKeymapResponse struct {

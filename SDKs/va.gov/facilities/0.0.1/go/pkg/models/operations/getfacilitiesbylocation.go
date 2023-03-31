@@ -10,7 +10,7 @@ import (
 )
 
 type GetFacilitiesByLocationSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 // GetFacilitiesByLocationTypeEnum - Optional facility type search filter
@@ -43,7 +43,7 @@ func (e *GetFacilitiesByLocationTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFacilitiesByLocationQueryParams struct {
+type GetFacilitiesByLocationRequest struct {
 	// Bounding box (longitude, latitude, longitude, latitude) within which facilities will be returned. (WGS84 coordinate reference system)
 	Bbox []float32 `queryParam:"style=form,explode=true,name=bbox[]"`
 	// List of comma-separated facility IDs to retrieve in a single request. Can be combined with lat and long parameters to retrieve facilities sorted by distance from a location.
@@ -68,11 +68,6 @@ type GetFacilitiesByLocationQueryParams struct {
 	Visn *float64 `queryParam:"style=form,explode=true,name=visn"`
 	// Zip code to search for facilities. More detailed zip codes can be passed in, but only the first five digits are used to determine facilities to return.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetFacilitiesByLocationRequest struct {
-	QueryParams GetFacilitiesByLocationQueryParams
-	Security    GetFacilitiesByLocationSecurity
 }
 
 type GetFacilitiesByLocationResponse struct {

@@ -14,52 +14,45 @@ func main() {
     s := sdk.New()
 
     req := operations.DriveactivityActivityQueryRequest{
-        Security: operations.DriveactivityActivityQuerySecurity{
-            Option1: &operations.DriveactivityActivityQuerySecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.DriveactivityActivityQueryQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.QueryDriveActivityRequest{
-            AncestorName: "deserunt",
+        DollarXgafv: "2",
+        QueryDriveActivityRequest: &shared.QueryDriveActivityRequest{
+            AncestorName: "provident",
             ConsolidationStrategy: &shared.ConsolidationStrategy{
                 Legacy: map[string]interface{}{
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                },
+                None: map[string]interface{}{
+                    "deserunt": "suscipit",
                     "iure": "magnam",
                     "debitis": "ipsa",
                 },
-                None: map[string]interface{}{
-                    "tempora": "suscipit",
-                    "molestiae": "minus",
-                    "placeat": "voluptatum",
-                    "iusto": "excepturi",
-                },
             },
-            Filter: "nisi",
-            ItemName: "recusandae",
-            PageSize: 836079,
-            PageToken: "ab",
+            Filter: "delectus",
+            ItemName: "tempora",
+            PageSize: 383441,
+            PageToken: "molestiae",
         },
+        AccessToken: "minus",
+        Alt: "proto",
+        Callback: "voluptatum",
+        Fields: "iusto",
+        Key: "excepturi",
+        OauthToken: "nisi",
+        PrettyPrint: false,
+        QuotaUser: "recusandae",
+        UploadType: "temporibus",
+        UploadProtocol: "ab",
     }
 
     ctx := context.Background()
-    res, err := s.Activity.DriveactivityActivityQuery(ctx, req)
+    res, err := s.Activity.DriveactivityActivityQuery(ctx, req, operations.DriveactivityActivityQuerySecurity{
+        Option1: &operations.DriveactivityActivityQuerySecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

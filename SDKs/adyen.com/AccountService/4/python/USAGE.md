@@ -4,18 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostCloseAccountHolderRequest(
-    security=operations.PostCloseAccountHolderSecurity(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    request="voluptatum",
+
+
+req = shared.CloseAccountHolderRequest(
+    account_holder_code="corrupti",
 )
     
-res = s.account_holders.post_close_account_holder(req)
+res = s.account_holders.post_close_account_holder(req, operations.PostCloseAccountHolderSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.close_account_holder_response is not None:
     # handle response

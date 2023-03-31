@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ServicesQueryParams struct {
+type GetConsumerV1ServicesRequest struct {
 	// Search All Locations, default is false
 	AllLocations *bool `queryParam:"style=form,explode=true,name=allLocations"`
 	// Filter by default service, default is false
@@ -30,10 +30,6 @@ type GetConsumerV1ServicesQueryParams struct {
 	SortDescending *bool `queryParam:"style=form,explode=true,name=sortDescending"`
 	// Sort results using Natural Sort or Sorted alphabetically by Service Names, default is natural
 	SortOrder *shared.ServiceSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
-}
-
-type GetConsumerV1ServicesRequest struct {
-	QueryParams GetConsumerV1ServicesQueryParams
 }
 
 type GetConsumerV1ServicesResponse struct {

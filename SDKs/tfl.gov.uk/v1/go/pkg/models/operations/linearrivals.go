@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineArrivalsPathParams struct {
-	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-	// Optional. Id of stop to get arrival predictions for (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
-	StopPointID string `pathParam:"style=simple,explode=false,name=stopPointId"`
-}
-
 // LineArrivalsDirectionEnum - Optional. The direction of travel. Can be inbound or outbound or all. If left blank, and destinationStopId is set, will default to all
 type LineArrivalsDirectionEnum string
 
@@ -43,16 +36,15 @@ func (e *LineArrivalsDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineArrivalsQueryParams struct {
+type LineArrivalsRequest struct {
 	// Optional. Id of destination stop
 	DestinationStationID *string `queryParam:"style=form,explode=true,name=destinationStationId"`
 	// Optional. The direction of travel. Can be inbound or outbound or all. If left blank, and destinationStopId is set, will default to all
 	Direction *LineArrivalsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-}
-
-type LineArrivalsRequest struct {
-	PathParams  LineArrivalsPathParams
-	QueryParams LineArrivalsQueryParams
+	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
+	// Optional. Id of stop to get arrival predictions for (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+	StopPointID string `pathParam:"style=simple,explode=false,name=stopPointId"`
 }
 
 type LineArrivalsResponse struct {

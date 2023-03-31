@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnExternalAccountPathParams struct {
-	ExternalAccountID string `pathParam:"style=simple,explode=false,name=external_account_id"`
-}
-
 type RetrieveAnExternalAccountRequest struct {
-	PathParams RetrieveAnExternalAccountPathParams
+	ExternalAccountID string `pathParam:"style=simple,explode=false,name=external_account_id"`
 }
 
 type RetrieveAnExternalAccountDefaultApplicationJSON13StatusEnum string

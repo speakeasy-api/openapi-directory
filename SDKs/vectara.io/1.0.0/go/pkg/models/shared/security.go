@@ -2,14 +2,6 @@
 
 package shared
 
-type SchemeAPIKeyAuth struct {
-	APIKey string `security:"name=x-api-key"`
-}
-
-type SchemeOAuth struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	OAuth SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }

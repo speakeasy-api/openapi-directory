@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateMembershipForUserLegacyPathParams struct {
-	TeamID   int64  `pathParam:"style=simple,explode=false,name=team_id"`
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum - The role that this user should have in the team. Can be one of:
 // \* `member` - a normal member of the team.
 // \* `maintainer` - a team maintainer. Able to add/remove other team members, promote other team members to team maintainer, and edit the team's name and description.
@@ -48,8 +43,9 @@ type TeamsAddOrUpdateMembershipForUserLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateMembershipForUserLegacyRequest struct {
-	PathParams TeamsAddOrUpdateMembershipForUserLegacyPathParams
-	Request    *TeamsAddOrUpdateMembershipForUserLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateMembershipForUserLegacyRequestBody `request:"mediaType=application/json"`
+	TeamID      int64                                               `pathParam:"style=simple,explode=false,name=team_id"`
+	Username    string                                              `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type TeamsAddOrUpdateMembershipForUserLegacyResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelModeratorPathParams struct {
+type GetChannelModeratorRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetChannelModeratorRequest struct {
-	PathParams GetChannelModeratorPathParams
 }
 
 type GetChannelModeratorResponse struct {

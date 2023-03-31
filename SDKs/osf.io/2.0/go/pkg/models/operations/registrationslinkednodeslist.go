@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type RegistrationsLinkedNodesListPathParams struct {
+type RegistrationsLinkedNodesListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsLinkedNodesListRequest struct {
-	PathParams RegistrationsLinkedNodesListPathParams
 }
 
 // RegistrationsLinkedNodesListNodeAttributesCategoryEnum - The category of the node, as selected by project contributors.

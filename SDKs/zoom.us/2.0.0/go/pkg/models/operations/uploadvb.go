@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type UploadVBPathParams struct {
-	// Unique identifier of the account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 type UploadVBRequestBody struct {
 	// Provide the file's path here.
 	File *string `multipartForm:"name=file"`
 }
 
 type UploadVBRequest struct {
-	PathParams UploadVBPathParams
-	Request    *UploadVBRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadVBRequestBody `request:"mediaType=multipart/form-data"`
+	// Unique identifier of the account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 // UploadVB201ApplicationXML - **HTTP Status Code:** `201` **Created** <br>

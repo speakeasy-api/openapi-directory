@@ -8,18 +8,14 @@ import (
 )
 
 type CreateAPISecretSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAPISecretPathParams struct {
-	// The API key to manage secrets for
-	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAPISecretRequest struct {
-	PathParams CreateAPISecretPathParams
-	Request    shared.CreateSecretRequest `request:"mediaType=application/json"`
-	Security   CreateAPISecretSecurity
+	// The API key to manage secrets for
+	APIKey              string                     `pathParam:"style=simple,explode=false,name=api_key"`
+	CreateSecretRequest shared.CreateSecretRequest `request:"mediaType=application/json"`
 }
 
 // CreateAPISecret401ApplicationJSON - Credentials are missing or invalid

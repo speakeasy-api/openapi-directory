@@ -35,16 +35,16 @@ func newLanguageDatasets(defaultClient, securityClient HTTPClient, serverURL, la
 
 // DeleteDataset - Delete a Dataset
 // Deletes the specified dataset and associated labels and examples.
-func (s *languageDatasets) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest) (*operations.DeleteDatasetResponse, error) {
+func (s *languageDatasets) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest, security operations.DeleteDatasetSecurity) (*operations.DeleteDatasetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,16 +80,16 @@ func (s *languageDatasets) DeleteDataset(ctx context.Context, request operations
 
 // Get - Get Deletion Status
 // Returns the status of a language dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
-func (s *languageDatasets) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
+func (s *languageDatasets) Get(ctx context.Context, request operations.GetRequest, security operations.GetSecurity) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/deletion/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/deletion/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,16 +125,16 @@ func (s *languageDatasets) Get(ctx context.Context, request operations.GetReques
 
 // GetDataset - Get a Dataset
 // Returns a single dataset.
-func (s *languageDatasets) GetDataset(ctx context.Context, request operations.GetDatasetRequest) (*operations.GetDatasetResponse, error) {
+func (s *languageDatasets) GetDataset(ctx context.Context, request operations.GetDatasetRequest, security operations.GetDatasetSecurity) (*operations.GetDatasetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *languageDatasets) GetDataset(ctx context.Context, request operations.Ge
 
 // ListDatasets - Get All Datasets
 // Returns a list of datasets and their labels that were created by the current user. The response is sorted by dataset ID.
-func (s *languageDatasets) ListDatasets(ctx context.Context, request operations.ListDatasetsRequest) (*operations.ListDatasetsResponse, error) {
+func (s *languageDatasets) ListDatasets(ctx context.Context, request operations.ListDatasetsRequest, security operations.ListDatasetsSecurity) (*operations.ListDatasetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/datasets"
 
@@ -179,11 +179,11 @@ func (s *languageDatasets) ListDatasets(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -219,7 +219,7 @@ func (s *languageDatasets) ListDatasets(ctx context.Context, request operations.
 
 // UploadDatasetAsync - Create a Dataset From a File Asynchronously
 // Creates a dataset, labels, and examples from the specified .csv, .tsv, or .json file. The call returns immediately and continues to upload data in the background.
-func (s *languageDatasets) UploadDatasetAsync(ctx context.Context, request operations.UploadDatasetAsyncRequest) (*operations.UploadDatasetAsyncResponse, error) {
+func (s *languageDatasets) UploadDatasetAsync(ctx context.Context, request operations.UploadDatasetAsyncRequestBody, security operations.UploadDatasetAsyncSecurity) (*operations.UploadDatasetAsyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/datasets/upload"
 
@@ -235,7 +235,7 @@ func (s *languageDatasets) UploadDatasetAsync(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *languageDatasets) UploadDatasetAsync(ctx context.Context, request opera
 
 // UploadDatasetSync - Create a Dataset From a File Synchronously
 // Creates a dataset, labels, and examples from the specified .csv, .tsv, or .json file. The call returns after the dataset is created and all of the data is uploaded.
-func (s *languageDatasets) UploadDatasetSync(ctx context.Context, request operations.UploadDatasetSyncRequest) (*operations.UploadDatasetSyncResponse, error) {
+func (s *languageDatasets) UploadDatasetSync(ctx context.Context, request operations.UploadDatasetSyncRequestBody, security operations.UploadDatasetSyncSecurity) (*operations.UploadDatasetSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/datasets/upload/sync"
 
@@ -287,7 +287,7 @@ func (s *languageDatasets) UploadDatasetSync(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

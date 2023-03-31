@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetPasswordRequest struct {
-	// An Email address to send the reset password link to
-	Request shared.ResetPasswordRequest `request:"mediaType=application/json"`
-}
-
 type ResetPasswordResponse struct {
 	ContentType string
 	StatusCode  int

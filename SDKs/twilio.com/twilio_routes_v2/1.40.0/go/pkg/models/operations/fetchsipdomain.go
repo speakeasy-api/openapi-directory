@@ -12,17 +12,12 @@ var FetchSipDomainServerList = []string{
 }
 
 type FetchSipDomainSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSipDomainPathParams struct {
-	SipDomain string `pathParam:"style=simple,explode=false,name=SipDomain"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSipDomainRequest struct {
-	PathParams FetchSipDomainPathParams
-	Security   FetchSipDomainSecurity
-	ServerURL  *string
+	SipDomain string `pathParam:"style=simple,explode=false,name=SipDomain"`
 }
 
 type FetchSipDomainResponse struct {

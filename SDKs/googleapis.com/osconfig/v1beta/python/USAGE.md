@@ -4,181 +4,211 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.OsconfigProjectsGuestPoliciesCreateRequest(
-    security=operations.OsconfigProjectsGuestPoliciesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.OsconfigProjectsGuestPoliciesCreatePathParams(
-        parent="nesciunt",
-    ),
-    query_params=operations.OsconfigProjectsGuestPoliciesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="doloremque",
-        alt="json",
-        callback="dolor",
-        fields="accusantium",
-        guest_policy_id="repellat",
-        key="dolores",
-        oauth_token="sed",
-        pretty_print=False,
-        quota_user="modi",
-        upload_type="voluptas",
-        upload_protocol="rerum",
-    ),
-    request=shared.GuestPolicyInput(
+    dollar_xgafv="2",
+    guest_policy_input=shared.GuestPolicyInput(
         assignment=shared.Assignment(
             group_labels=[
                 shared.AssignmentGroupLabel(
                     labels={
-                        "quos": "voluptas",
-                        "eos": "deserunt",
+                        "quibusdam": "unde",
+                        "nulla": "corrupti",
+                        "illum": "vel",
                     },
                 ),
                 shared.AssignmentGroupLabel(
                     labels={
-                        "laboriosam": "adipisci",
-                        "porro": "enim",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
+                    },
+                ),
+                shared.AssignmentGroupLabel(
+                    labels={
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
+                        "iusto": "excepturi",
                     },
                 ),
             ],
             instance_name_prefixes=[
-                "consectetur",
-                "veniam",
-                "et",
+                "recusandae",
+                "temporibus",
             ],
             instances=[
-                "consequatur",
-                "sed",
-                "unde",
+                "quis",
             ],
             os_types=[
                 shared.AssignmentOsType(
-                    os_architecture="aut",
-                    os_short_name="eveniet",
-                    os_version="eaque",
+                    os_architecture="deserunt",
+                    os_short_name="perferendis",
+                    os_version="ipsam",
                 ),
             ],
             zones=[
-                "id",
+                "sapiente",
+                "quo",
+                "odit",
+                "at",
             ],
         ),
-        description="officiis",
-        etag="cum",
-        name="fugit",
+        description="at",
+        etag="maiores",
+        name="molestiae",
         package_repositories=[
+            shared.PackageRepository(
+                apt=shared.AptRepository(
+                    archive_type="DEB_SRC",
+                    components=[
+                        "totam",
+                        "porro",
+                    ],
+                    distribution="dolorum",
+                    gpg_key="dicta",
+                    uri="https://posh-muffin.com",
+                ),
+                goo=shared.GooRepository(
+                    name="deleniti",
+                    url="hic",
+                ),
+                yum=shared.YumRepository(
+                    base_url="optio",
+                    display_name="totam",
+                    gpg_keys=[
+                        "commodi",
+                    ],
+                    id="molestiae",
+                ),
+                zypper=shared.ZypperRepository(
+                    base_url="modi",
+                    display_name="qui",
+                    gpg_keys=[
+                        "cum",
+                        "esse",
+                        "ipsum",
+                        "excepturi",
+                    ],
+                    id="aspernatur",
+                ),
+            ),
             shared.PackageRepository(
                 apt=shared.AptRepository(
                     archive_type="ARCHIVE_TYPE_UNSPECIFIED",
                     components=[
-                        "esse",
+                        "natus",
+                        "sed",
                     ],
-                    distribution="ea",
-                    gpg_key="et",
-                    uri="est",
+                    distribution="iste",
+                    gpg_key="dolor",
+                    uri="https://hoarse-upper.org",
                 ),
                 goo=shared.GooRepository(
-                    name="doloremque",
+                    name="fuga",
+                    url="in",
+                ),
+                yum=shared.YumRepository(
+                    base_url="corporis",
+                    display_name="iste",
+                    gpg_keys=[
+                        "saepe",
+                        "quidem",
+                    ],
+                    id="architecto",
+                ),
+                zypper=shared.ZypperRepository(
+                    base_url="ipsa",
+                    display_name="reiciendis",
+                    gpg_keys=[
+                        "mollitia",
+                        "laborum",
+                        "dolores",
+                    ],
+                    id="dolorem",
+                ),
+            ),
+            shared.PackageRepository(
+                apt=shared.AptRepository(
+                    archive_type="DEB",
+                    components=[
+                        "nobis",
+                    ],
+                    distribution="enim",
+                    gpg_key="omnis",
+                    uri="http://general-mobster.com",
+                ),
+                goo=shared.GooRepository(
+                    name="iure",
                     url="culpa",
                 ),
                 yum=shared.YumRepository(
-                    base_url="omnis",
-                    display_name="rerum",
+                    base_url="doloribus",
+                    display_name="sapiente",
                     gpg_keys=[
-                        "quidem",
+                        "mollitia",
                     ],
-                    id="distinctio",
+                    id="dolorem",
                 ),
                 zypper=shared.ZypperRepository(
-                    base_url="quia",
-                    display_name="et",
+                    base_url="culpa",
+                    display_name="consequuntur",
                     gpg_keys=[
-                        "omnis",
-                    ],
-                    id="at",
-                ),
-            ),
-            shared.PackageRepository(
-                apt=shared.AptRepository(
-                    archive_type="DEB_SRC",
-                    components=[
-                        "nobis",
-                        "cum",
-                        "at",
-                    ],
-                    distribution="fugit",
-                    gpg_key="saepe",
-                    uri="nesciunt",
-                ),
-                goo=shared.GooRepository(
-                    name="sit",
-                    url="sequi",
-                ),
-                yum=shared.YumRepository(
-                    base_url="ut",
-                    display_name="ea",
-                    gpg_keys=[
-                        "dolorem",
+                        "mollitia",
                         "occaecati",
-                        "enim",
+                        "numquam",
+                        "commodi",
                     ],
-                    id="expedita",
-                ),
-                zypper=shared.ZypperRepository(
-                    base_url="nihil",
-                    display_name="ut",
-                    gpg_keys=[
-                        "ducimus",
-                        "quas",
-                    ],
-                    id="error",
+                    id="quam",
                 ),
             ),
             shared.PackageRepository(
                 apt=shared.AptRepository(
-                    archive_type="DEB_SRC",
+                    archive_type="DEB",
                     components=[
-                        "nisi",
-                        "perspiciatis",
-                        "reiciendis",
+                        "error",
                     ],
-                    distribution="eveniet",
-                    gpg_key="ipsa",
-                    uri="at",
+                    distribution="quia",
+                    gpg_key="quis",
+                    uri="http://quixotic-physics.biz",
                 ),
                 goo=shared.GooRepository(
-                    name="in",
-                    url="exercitationem",
+                    name="odit",
+                    url="quo",
                 ),
                 yum=shared.YumRepository(
-                    base_url="autem",
-                    display_name="quasi",
+                    base_url="sequi",
+                    display_name="tenetur",
                     gpg_keys=[
-                        "quis",
+                        "id",
+                        "possimus",
                     ],
-                    id="assumenda",
+                    id="aut",
                 ),
                 zypper=shared.ZypperRepository(
-                    base_url="praesentium",
-                    display_name="consequatur",
+                    base_url="quasi",
+                    display_name="error",
                     gpg_keys=[
-                        "culpa",
-                        "non",
+                        "laborum",
+                        "quasi",
+                        "reiciendis",
+                        "voluptatibus",
                     ],
-                    id="laborum",
+                    id="vero",
                 ),
             ),
         ],
         packages=[
             shared.Package(
-                desired_state="INSTALLED",
-                manager="ANY",
-                name="exercitationem",
+                desired_state="UPDATED",
+                manager="GOO",
+                name="ipsa",
+            ),
+            shared.Package(
+                desired_state="UPDATED",
+                manager="APT",
+                name="cum",
             ),
         ],
         recipes=[
@@ -187,359 +217,14 @@ req = operations.OsconfigProjectsGuestPoliciesCreateRequest(
                     shared.SoftwareRecipeArtifact(
                         allow_insecure=False,
                         gcs=shared.SoftwareRecipeArtifactGcs(
-                            bucket="corporis",
-                            generation="repudiandae",
-                            object="quia",
+                            bucket="reprehenderit",
+                            generation="ut",
+                            object="maiores",
                         ),
-                        id="dolorem",
+                        id="dicta",
                         remote=shared.SoftwareRecipeArtifactRemote(
-                            checksum="omnis",
-                            uri="cumque",
-                        ),
-                    ),
-                ],
-                desired_state="REMOVED",
-                install_steps=[
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="ipsam",
-                            destination="quia",
-                            type="TAR_BZIP",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="placeat",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="dolores",
-                            destination="sed",
-                            overwrite=True,
-                            permissions="vel",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                9134721168044289150,
-                                8287065599722341482,
-                            ],
-                            args=[
-                                "itaque",
-                            ],
-                            artifact_id="dicta",
-                            local_path="eveniet",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                690112705371468465,
-                                4867558918095733630,
-                            ],
-                            artifact_id="sint",
-                            flags=[
-                                "magnam",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="totam",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                754219091083576970,
-                            ],
-                            interpreter="INTERPRETER_UNSPECIFIED",
-                            script="id",
-                        ),
-                    ),
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="dolorem",
-                            destination="optio",
-                            type="TAR_LZMA",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="deserunt",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="qui",
-                            destination="tempore",
-                            overwrite=False,
-                            permissions="nam",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                8793209053376710740,
-                            ],
-                            args=[
-                                "culpa",
-                            ],
-                            artifact_id="et",
-                            local_path="ipsam",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                5307257071466976304,
-                                7731894160449095532,
-                            ],
-                            artifact_id="non",
-                            flags=[
-                                "illo",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="est",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                7311567196592526190,
-                                7065331002350441844,
-                            ],
-                            interpreter="POWERSHELL",
-                            script="ut",
-                        ),
-                    ),
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="soluta",
-                            destination="officiis",
-                            type="TAR_GZIP",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="quia",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="aut",
-                            destination="soluta",
-                            overwrite=False,
-                            permissions="a",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                7548634123433902254,
-                                9163379974432239274,
-                                4567328112829630430,
-                            ],
-                            args=[
-                                "molestiae",
-                                "eos",
-                                "sit",
-                            ],
-                            artifact_id="nisi",
-                            local_path="necessitatibus",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                6868700370850489401,
-                                1909886773700121370,
-                                7494288104748988191,
-                            ],
-                            artifact_id="veniam",
-                            flags=[
-                                "fuga",
-                                "quis",
-                                "fugiat",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="aliquam",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                8905429026475596149,
-                            ],
-                            interpreter="POWERSHELL",
-                            script="doloribus",
-                        ),
-                    ),
-                ],
-                name="hic",
-                update_steps=[
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="vel",
-                            destination="quidem",
-                            type="TAR_XZ",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="rerum",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="ut",
-                            destination="ab",
-                            overwrite=True,
-                            permissions="corporis",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                317333352940701154,
-                                7718237478852746607,
-                            ],
-                            args=[
-                                "porro",
-                                "est",
-                            ],
-                            artifact_id="animi",
-                            local_path="adipisci",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                1093372993589537983,
-                                835673949948974773,
-                            ],
-                            artifact_id="itaque",
-                            flags=[
-                                "blanditiis",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="vitae",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                3745253425102893423,
-                                5749266165684136517,
-                            ],
-                            interpreter="INTERPRETER_UNSPECIFIED",
-                            script="amet",
-                        ),
-                    ),
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="qui",
-                            destination="nam",
-                            type="TAR_GZIP",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="nihil",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="tenetur",
-                            destination="non",
-                            overwrite=True,
-                            permissions="quisquam",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                1535830095347270033,
-                                1861628215480870937,
-                                7333236625738123594,
-                            ],
-                            args=[
-                                "molestiae",
-                            ],
-                            artifact_id="praesentium",
-                            local_path="esse",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                8413237545438082841,
-                            ],
-                            artifact_id="excepturi",
-                            flags=[
-                                "perspiciatis",
-                                "dolor",
-                                "qui",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="non",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                1633645323203759788,
-                                3986226800661513180,
-                            ],
-                            interpreter="POWERSHELL",
-                            script="dolorum",
-                        ),
-                    ),
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="consequatur",
-                            destination="debitis",
-                            type="ARCHIVE_TYPE_UNSPECIFIED",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="maiores",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="cupiditate",
-                            destination="placeat",
-                            overwrite=False,
-                            permissions="optio",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                5269999584461583918,
-                            ],
-                            args=[
-                                "consequatur",
-                                "delectus",
-                            ],
-                            artifact_id="qui",
-                            local_path="placeat",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                2295364640798743177,
-                                3519472727047299483,
-                                7145868117933600204,
-                            ],
-                            artifact_id="veniam",
-                            flags=[
-                                "dolorem",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="ab",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                1870534018162441106,
-                                2647384656287055547,
-                            ],
-                            interpreter="INTERPRETER_UNSPECIFIED",
-                            script="iste",
-                        ),
-                    ),
-                ],
-                version="ut",
-            ),
-            shared.SoftwareRecipe(
-                artifacts=[
-                    shared.SoftwareRecipeArtifact(
-                        allow_insecure=False,
-                        gcs=shared.SoftwareRecipeArtifactGcs(
-                            bucket="nisi",
-                            generation="fugit",
-                            object="corrupti",
-                        ),
-                        id="labore",
-                        remote=shared.SoftwareRecipeArtifactRemote(
-                            checksum="voluptatibus",
-                            uri="et",
-                        ),
-                    ),
-                    shared.SoftwareRecipeArtifact(
-                        allow_insecure=False,
-                        gcs=shared.SoftwareRecipeArtifactGcs(
-                            bucket="dolorum",
-                            generation="maiores",
-                            object="quam",
-                        ),
-                        id="autem",
-                        remote=shared.SoftwareRecipeArtifactRemote(
-                            checksum="fuga",
-                            uri="adipisci",
-                        ),
-                    ),
-                    shared.SoftwareRecipeArtifact(
-                        allow_insecure=True,
-                        gcs=shared.SoftwareRecipeArtifactGcs(
-                            bucket="impedit",
-                            generation="numquam",
-                            object="dolores",
-                        ),
-                        id="amet",
-                        remote=shared.SoftwareRecipeArtifactRemote(
-                            checksum="quia",
-                            uri="maiores",
+                            checksum="corporis",
+                            uri="http://lazy-butterfly.net",
                         ),
                     ),
                 ],
@@ -547,168 +232,458 @@ req = operations.OsconfigProjectsGuestPoliciesCreateRequest(
                 install_steps=[
                     shared.SoftwareRecipeStep(
                         archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="non",
-                            destination="ipsum",
-                            type="TAR_LZMA",
+                            artifact_id="commodi",
+                            destination="repudiandae",
+                            type="ARCHIVE_TYPE_UNSPECIFIED",
                         ),
                         dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="est",
+                            artifact_id="ipsum",
                         ),
                         file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="ut",
+                            artifact_id="quidem",
+                            destination="molestias",
+                            overwrite=False,
+                            permissions="excepturi",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                265389,
+                                508969,
+                                523248,
+                                916723,
+                            ],
+                            args=[
+                                "repudiandae",
+                            ],
+                            artifact_id="sint",
+                            local_path="veritatis",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                277718,
+                                318569,
+                                9356,
+                                667411,
+                            ],
+                            artifact_id="quibusdam",
+                            flags=[
+                                "deserunt",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="distinctio",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                289406,
+                                264730,
+                                183191,
+                                397821,
+                            ],
+                            interpreter="SHELL",
+                            script="quos",
+                        ),
+                    ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="perferendis",
+                            destination="magni",
+                            type="TAR_XZ",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="ipsam",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="alias",
                             destination="fugit",
-                            overwrite=True,
+                            overwrite=False,
+                            permissions="dolorum",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                270008,
+                                703737,
+                                735194,
+                            ],
+                            args=[
+                                "delectus",
+                                "eum",
+                            ],
+                            artifact_id="non",
+                            local_path="eligendi",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                396098,
+                                592042,
+                                896039,
+                            ],
+                            artifact_id="sint",
+                            flags=[
+                                "dolor",
+                                "debitis",
+                                "a",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="dolorum",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                449198,
+                                846409,
+                            ],
+                            interpreter="POWERSHELL",
+                            script="rerum",
+                        ),
+                    ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="dicta",
+                            destination="magnam",
+                            type="TAR_XZ",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="facere",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="ea",
+                            destination="aliquid",
+                            overwrite=False,
+                            permissions="laborum",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                249796,
+                                581273,
+                                313218,
+                                881736,
+                            ],
+                            args=[
+                                "quidem",
+                                "provident",
+                                "nam",
+                                "id",
+                            ],
+                            artifact_id="blanditiis",
+                            local_path="deleniti",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                230533,
+                                643990,
+                                394869,
+                                423855,
+                            ],
+                            artifact_id="natus",
+                            flags=[
+                                "molestiae",
+                                "perferendis",
+                                "nihil",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="magnam",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                660174,
+                                287991,
+                                290077,
+                            ],
+                            interpreter="SHELL",
+                            script="natus",
+                        ),
+                    ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="nobis",
+                            destination="eum",
+                            type="ZIP",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="aspernatur",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="architecto",
+                            destination="magnam",
+                            overwrite=False,
                             permissions="et",
                         ),
                         file_exec=shared.SoftwareRecipeStepExecFile(
                             allowed_exit_codes=[
-                                2046821017381962614,
+                                354047,
+                                590873,
+                                551816,
                             ],
                             args=[
-                                "nostrum",
-                                "nihil",
+                                "accusantium",
+                                "mollitia",
+                                "reiciendis",
                             ],
-                            artifact_id="vel",
-                            local_path="provident",
+                            artifact_id="mollitia",
+                            local_path="ad",
                         ),
                         msi_installation=shared.SoftwareRecipeStepInstallMsi(
                             allowed_exit_codes=[
-                                5115579402291521256,
-                                8362444646066491279,
+                                221262,
+                                896547,
                             ],
-                            artifact_id="itaque",
+                            artifact_id="odit",
                             flags=[
-                                "nesciunt",
-                                "eaque",
+                                "quasi",
+                                "iure",
                             ],
                         ),
                         rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="adipisci",
+                            artifact_id="doloribus",
                         ),
                         script_run=shared.SoftwareRecipeStepRunScript(
                             allowed_exit_codes=[
-                                4301373599773600027,
-                                6569871436799027729,
-                                556482886722781407,
+                                260341,
+                                806194,
+                                537023,
+                                703889,
                             ],
                             interpreter="SHELL",
-                            script="consequuntur",
-                        ),
-                    ),
-                    shared.SoftwareRecipeStep(
-                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="dolore",
-                            destination="tempora",
-                            type="ZIP",
-                        ),
-                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="laborum",
-                        ),
-                        file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="fugit",
-                            destination="rerum",
-                            overwrite=True,
-                            permissions="ut",
-                        ),
-                        file_exec=shared.SoftwareRecipeStepExecFile(
-                            allowed_exit_codes=[
-                                243424504991073673,
-                            ],
-                            args=[
-                                "eligendi",
-                                "minima",
-                            ],
-                            artifact_id="optio",
-                            local_path="rerum",
-                        ),
-                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
-                            allowed_exit_codes=[
-                                1785559331512169032,
-                            ],
-                            artifact_id="nesciunt",
-                            flags=[
-                                "inventore",
-                                "labore",
-                                "temporibus",
-                            ],
-                        ),
-                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="explicabo",
-                        ),
-                        script_run=shared.SoftwareRecipeStepRunScript(
-                            allowed_exit_codes=[
-                                8910019275254905426,
-                                5122229621349885895,
-                                9120435409453809129,
-                            ],
-                            interpreter="POWERSHELL",
-                            script="placeat",
+                            script="architecto",
                         ),
                     ),
                 ],
-                name="magni",
+                name="architecto",
                 update_steps=[
                     shared.SoftwareRecipeStep(
                         archive_extraction=shared.SoftwareRecipeStepExtractArchive(
-                            artifact_id="exercitationem",
-                            destination="et",
-                            type="TAR",
+                            artifact_id="ullam",
+                            destination="expedita",
+                            type="TAR_BZIP",
                         ),
                         dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
-                            artifact_id="rem",
+                            artifact_id="repellat",
                         ),
                         file_copy=shared.SoftwareRecipeStepCopyFile(
-                            artifact_id="quam",
-                            destination="facilis",
+                            artifact_id="quibusdam",
+                            destination="sed",
                             overwrite=False,
-                            permissions="illum",
+                            permissions="saepe",
                         ),
                         file_exec=shared.SoftwareRecipeStepExecFile(
                             allowed_exit_codes=[
-                                1836968562645587117,
-                                6479001440367543136,
-                                4825787330679690160,
+                                37559,
+                                162493,
+                                508315,
+                                615560,
                             ],
                             args=[
-                                "quae",
-                                "consectetur",
-                                "quia",
+                                "sunt",
                             ],
-                            artifact_id="aut",
-                            local_path="praesentium",
+                            artifact_id="quo",
+                            local_path="illum",
                         ),
                         msi_installation=shared.SoftwareRecipeStepInstallMsi(
                             allowed_exit_codes=[
-                                795014595159360525,
-                                2003049065110562287,
-                                6450800268264121731,
+                                807319,
+                                411397,
+                                569101,
+                                139972,
                             ],
-                            artifact_id="molestias",
+                            artifact_id="ea",
                             flags=[
-                                "dolores",
+                                "ab",
                             ],
                         ),
                         rpm_installation=shared.SoftwareRecipeStepInstallRpm(
-                            artifact_id="ut",
+                            artifact_id="maiores",
                         ),
                         script_run=shared.SoftwareRecipeStepRunScript(
                             allowed_exit_codes=[
-                                3356807277038008064,
-                                3480416170086794467,
-                                4364032926460360182,
+                                373291,
+                                453543,
+                                420075,
+                            ],
+                            interpreter="POWERSHELL",
+                            script="eaque",
+                        ),
+                    ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="pariatur",
+                            destination="nemo",
+                            type="ZIP",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="perferendis",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="fugiat",
+                            destination="amet",
+                            overwrite=False,
+                            permissions="aut",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                359978,
+                                944124,
+                                729991,
+                                749999,
+                            ],
+                            args=[
+                                "quis",
+                            ],
+                            artifact_id="totam",
+                            local_path="dignissimos",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                338985,
+                            ],
+                            artifact_id="nesciunt",
+                            flags=[
+                                "perferendis",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="dolores",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                463451,
+                                223924,
+                                874573,
+                                345352,
+                            ],
+                            interpreter="POWERSHELL",
+                            script="recusandae",
+                        ),
+                    ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="omnis",
+                            destination="facilis",
+                            type="TAR_LZMA",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="voluptatem",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="porro",
+                            destination="consequuntur",
+                            overwrite=False,
+                            permissions="blanditiis",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                50370,
+                                577229,
+                                699098,
+                            ],
+                            args=[
+                                "asperiores",
+                            ],
+                            artifact_id="earum",
+                            local_path="modi",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                679091,
+                                535633,
+                                864282,
+                            ],
+                            artifact_id="provident",
+                            flags=[
+                                "libero",
+                                "delectus",
+                                "quaerat",
+                                "quos",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="aliquid",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                209843,
                             ],
                             interpreter="INTERPRETER_UNSPECIFIED",
                             script="qui",
                         ),
                     ),
+                    shared.SoftwareRecipeStep(
+                        archive_extraction=shared.SoftwareRecipeStepExtractArchive(
+                            artifact_id="ipsum",
+                            destination="hic",
+                            type="TAR_BZIP",
+                        ),
+                        dpkg_installation=shared.SoftwareRecipeStepInstallDpkg(
+                            artifact_id="cum",
+                        ),
+                        file_copy=shared.SoftwareRecipeStepCopyFile(
+                            artifact_id="voluptate",
+                            destination="dignissimos",
+                            overwrite=False,
+                            permissions="reiciendis",
+                        ),
+                        file_exec=shared.SoftwareRecipeStepExecFile(
+                            allowed_exit_codes=[
+                                680545,
+                            ],
+                            args=[
+                                "veritatis",
+                                "ipsa",
+                            ],
+                            artifact_id="ipsa",
+                            local_path="iure",
+                        ),
+                        msi_installation=shared.SoftwareRecipeStepInstallMsi(
+                            allowed_exit_codes=[
+                                311796,
+                                881005,
+                            ],
+                            artifact_id="quidem",
+                            flags=[
+                                "voluptas",
+                                "natus",
+                                "eos",
+                                "atque",
+                            ],
+                        ),
+                        rpm_installation=shared.SoftwareRecipeStepInstallRpm(
+                            artifact_id="sit",
+                        ),
+                        script_run=shared.SoftwareRecipeStepRunScript(
+                            allowed_exit_codes=[
+                                67249,
+                                743835,
+                                679393,
+                                478596,
+                            ],
+                            interpreter="SHELL",
+                            script="dolorum",
+                        ),
+                    ),
                 ],
-                version="necessitatibus",
+                version="deleniti",
             ),
         ],
     ),
+    access_token="omnis",
+    alt="proto",
+    callback="distinctio",
+    fields_="asperiores",
+    guest_policy_id="nihil",
+    key="ipsum",
+    oauth_token="voluptate",
+    parent="id",
+    pretty_print=False,
+    quota_user="saepe",
+    upload_type="eius",
+    upload_protocol="aspernatur",
 )
     
-res = s.projects.osconfig_projects_guest_policies_create(req)
+res = s.projects.osconfig_projects_guest_policies_create(req, operations.OsconfigProjectsGuestPoliciesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.guest_policy is not None:
     # handle response

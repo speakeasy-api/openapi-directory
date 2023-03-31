@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessClientConnectivityEventsPathParams struct {
-	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkWirelessClientConnectivityEventsBandEnum - Filter results by band (either '2.4', '5', '6').
 type GetNetworkWirelessClientConnectivityEventsBandEnum string
 
@@ -176,15 +171,17 @@ func (e *GetNetworkWirelessClientConnectivityEventsTypesEnum) UnmarshalJSON(data
 	}
 }
 
-type GetNetworkWirelessClientConnectivityEventsQueryParams struct {
+type GetNetworkWirelessClientConnectivityEventsRequest struct {
 	// Filter results by band (either '2.4', '5', '6').
-	Band *GetNetworkWirelessClientConnectivityEventsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	Band     *GetNetworkWirelessClientConnectivityEventsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	ClientID string                                              `pathParam:"style=simple,explode=false,name=clientId"`
 	// Filter results by an AP's serial number.
 	DeviceSerial *string `queryParam:"style=form,explode=true,name=deviceSerial"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// A list of severities to include. If not specified, events of all severities will be returned. Valid severities are 'good', 'info', 'warn' and/or 'bad'.
 	IncludedSeverities []GetNetworkWirelessClientConnectivityEventsIncludedSeveritiesEnum `queryParam:"style=form,explode=false,name=includedSeverities"`
+	NetworkID          string                                                             `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// An SSID number to include. If not specified, events for all SSIDs will be returned.
@@ -199,11 +196,6 @@ type GetNetworkWirelessClientConnectivityEventsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// A list of event types to include. If not specified, events of all types will be returned. Valid types are 'assoc', 'disassoc', 'auth', 'deauth', 'dns', 'dhcp', 'roam', 'connection' and/or 'sticky'.
 	Types []GetNetworkWirelessClientConnectivityEventsTypesEnum `queryParam:"style=form,explode=false,name=types"`
-}
-
-type GetNetworkWirelessClientConnectivityEventsRequest struct {
-	PathParams  GetNetworkWirelessClientConnectivityEventsPathParams
-	QueryParams GetNetworkWirelessClientConnectivityEventsQueryParams
 }
 
 type GetNetworkWirelessClientConnectivityEventsResponse struct {

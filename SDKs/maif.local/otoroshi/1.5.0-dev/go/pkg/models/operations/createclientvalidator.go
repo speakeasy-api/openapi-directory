@@ -8,12 +8,8 @@ import (
 )
 
 type CreateClientValidatorSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateClientValidatorRequest struct {
-	Request  *shared.ValidationAuthority `request:"mediaType=application/json"`
-	Security CreateClientValidatorSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateClientValidatorResponse struct {

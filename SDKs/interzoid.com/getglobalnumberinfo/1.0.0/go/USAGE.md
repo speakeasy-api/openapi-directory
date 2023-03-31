@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetglobalnumberinfoRequest{
-        QueryParams: operations.GetglobalnumberinfoQueryParams{
-            Intlnumber: "corrupti",
-            License: "provident",
-        },
+        Intlnumber: "corrupti",
+        License: "provident",
     }
 
     ctx := context.Background()

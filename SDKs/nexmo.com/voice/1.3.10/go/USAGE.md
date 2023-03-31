@@ -13,17 +13,12 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCallRequest{
-        Security: operations.CreateCallSecurity{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        Request: &operations.CreateCallRequestBody{},
-    }
+    req := operations.CreateCallRequestBody{}
 
     ctx := context.Background()
-    res, err := s.Calls.CreateCall(ctx, req)
+    res, err := s.Calls.CreateCall(ctx, req, operations.CreateCallSecurity{
+        BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

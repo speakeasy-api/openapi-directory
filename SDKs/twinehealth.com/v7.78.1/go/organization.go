@@ -36,7 +36,7 @@ func newOrganization(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get an organization record by id.
 func (s *organization) FetchOrganization(ctx context.Context, request operations.FetchOrganizationRequest) (*operations.FetchOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organization/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organization/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

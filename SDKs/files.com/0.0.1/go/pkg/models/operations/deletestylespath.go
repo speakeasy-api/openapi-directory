@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteStylesPathPathParams struct {
+type DeleteStylesPathRequest struct {
 	// Style path.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type DeleteStylesPathRequest struct {
-	PathParams DeleteStylesPathPathParams
 }
 
 type DeleteStylesPathResponse struct {

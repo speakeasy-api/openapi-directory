@@ -35,7 +35,7 @@ func newCalendarEventResponse(defaultClient, securityClient HTTPClient, serverUR
 
 // CreateCalendarEventResponse - Create calendar event response
 // Create a calendar event response for an attendee of a calendar event, the attendee can be a coach or patient.  Calendar event responses cannot be fetched, updated nor deleted.  Use calendar event api to fetch the response status for attendees.
-func (s *calendarEventResponse) CreateCalendarEventResponse(ctx context.Context, request operations.CreateCalendarEventResponseRequest) (*operations.CreateCalendarEventResponseResponse, error) {
+func (s *calendarEventResponse) CreateCalendarEventResponse(ctx context.Context, request shared.CreateCalendarEventResponseRequest) (*operations.CreateCalendarEventResponseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calendar_event_response"
 

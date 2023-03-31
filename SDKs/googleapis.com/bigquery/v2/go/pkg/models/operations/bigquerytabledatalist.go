@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryTabledataListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTabledataListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTabledataListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTabledataListSecurity struct {
@@ -28,18 +28,11 @@ type BigqueryTabledataListSecurity struct {
 	Option3 *BigqueryTabledataListSecurityOption3 `security:"option"`
 }
 
-type BigqueryTabledataListPathParams struct {
-	// Dataset ID of the table to read
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Project ID of the table to read
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Table ID of the table to read
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-}
-
-type BigqueryTabledataListQueryParams struct {
+type BigqueryTabledataListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Dataset ID of the table to read
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,20 +45,18 @@ type BigqueryTabledataListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the table to read
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// List of fields to return (comma-separated). If unspecified, all fields are returned
 	SelectedFields *string `queryParam:"style=form,explode=true,name=selectedFields"`
 	// Zero-based index of the starting row to read
 	StartIndex *string `queryParam:"style=form,explode=true,name=startIndex"`
+	// Table ID of the table to read
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryTabledataListRequest struct {
-	PathParams  BigqueryTabledataListPathParams
-	QueryParams BigqueryTabledataListQueryParams
-	Security    BigqueryTabledataListSecurity
 }
 
 type BigqueryTabledataListResponse struct {

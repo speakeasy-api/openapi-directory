@@ -58,7 +58,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteTargetsTargetIDWebhooksID - Delete target webhook
 func (s *events) DeleteTargetsTargetIDWebhooksID(ctx context.Context, request operations.DeleteTargetsTargetIDWebhooksIDRequest) (*operations.DeleteTargetsTargetIDWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,7 +123,7 @@ func (s *events) DeleteTargetsTargetIDWebhooksID(ctx context.Context, request op
 // DeleteWebhooksID - Delete account webhook
 func (s *events) DeleteWebhooksID(ctx context.Context, request operations.DeleteWebhooksIDRequest) (*operations.DeleteWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -252,7 +252,7 @@ func (s *events) GetEvents(ctx context.Context) (*operations.GetEventsResponse, 
 // GetEventsID - Retrieve account event
 func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsIDRequest) (*operations.GetEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +326,7 @@ func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsID
 // GetTargetsTargetIDEvents - List target events
 func (s *events) GetTargetsTargetIDEvents(ctx context.Context, request operations.GetTargetsTargetIDEventsRequest) (*operations.GetTargetsTargetIDEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/events/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/events/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -400,7 +400,7 @@ func (s *events) GetTargetsTargetIDEvents(ctx context.Context, request operation
 // GetTargetsTargetIDEventsID - Retrieve target event
 func (s *events) GetTargetsTargetIDEventsID(ctx context.Context, request operations.GetTargetsTargetIDEventsIDRequest) (*operations.GetTargetsTargetIDEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/events/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/events/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -474,7 +474,7 @@ func (s *events) GetTargetsTargetIDEventsID(ctx context.Context, request operati
 // GetTargetsTargetIDWebhooks - List target webhooks
 func (s *events) GetTargetsTargetIDWebhooks(ctx context.Context, request operations.GetTargetsTargetIDWebhooksRequest) (*operations.GetTargetsTargetIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -538,7 +538,7 @@ func (s *events) GetTargetsTargetIDWebhooks(ctx context.Context, request operati
 // GetTargetsTargetIDWebhooksID - Retrieve target webhook
 func (s *events) GetTargetsTargetIDWebhooksID(ctx context.Context, request operations.GetTargetsTargetIDWebhooksIDRequest) (*operations.GetTargetsTargetIDWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +666,7 @@ func (s *events) GetWebhooks(ctx context.Context) (*operations.GetWebhooksRespon
 // GetWebhooksID - Retrieve account webhook
 func (s *events) GetWebhooksID(ctx context.Context, request operations.GetWebhooksIDRequest) (*operations.GetWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -730,9 +730,9 @@ func (s *events) GetWebhooksID(ctx context.Context, request operations.GetWebhoo
 // PatchTargetsTargetIDWebhooksID - Partial update target webhook
 func (s *events) PatchTargetsTargetIDWebhooksID(ctx context.Context, request operations.PatchTargetsTargetIDWebhooksIDRequest) (*operations.PatchTargetsTargetIDWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -824,9 +824,9 @@ func (s *events) PatchTargetsTargetIDWebhooksID(ctx context.Context, request ope
 // PatchWebhooksID - Partial update account webhook
 func (s *events) PatchWebhooksID(ctx context.Context, request operations.PatchWebhooksIDRequest) (*operations.PatchWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -918,9 +918,9 @@ func (s *events) PatchWebhooksID(ctx context.Context, request operations.PatchWe
 // PostTargetsTargetIDWebhooks - Create new target webhook
 func (s *events) PostTargetsTargetIDWebhooks(ctx context.Context, request operations.PostTargetsTargetIDWebhooksRequest) (*operations.PostTargetsTargetIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1010,7 +1010,7 @@ func (s *events) PostTargetsTargetIDWebhooks(ctx context.Context, request operat
 }
 
 // PostWebhooks - Create new account webhook
-func (s *events) PostWebhooks(ctx context.Context, request operations.PostWebhooksRequest) (*operations.PostWebhooksResponse, error) {
+func (s *events) PostWebhooks(ctx context.Context, request shared.WebhookInput) (*operations.PostWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks/"
 
@@ -1106,9 +1106,9 @@ func (s *events) PostWebhooks(ctx context.Context, request operations.PostWebhoo
 // PutTargetsTargetIDWebhooksID - Update target webhook
 func (s *events) PutTargetsTargetIDWebhooksID(ctx context.Context, request operations.PutTargetsTargetIDWebhooksIDRequest) (*operations.PutTargetsTargetIDWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/webhooks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1200,9 +1200,9 @@ func (s *events) PutTargetsTargetIDWebhooksID(ctx context.Context, request opera
 // PutWebhooksID - Update account webhook
 func (s *events) PutWebhooksID(ctx context.Context, request operations.PutWebhooksIDRequest) (*operations.PutWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

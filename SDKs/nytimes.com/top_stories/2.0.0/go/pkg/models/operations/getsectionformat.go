@@ -129,22 +129,14 @@ func (e *GetSectionFormatSectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSectionFormatPathParams struct {
+type GetSectionFormatRequest struct {
+	// The name of the function the API call results will be passed to. Required when using JSONP. This parameter has only one valid value per section. The format is {section_name}TopStoriesCallback.
+	//
+	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// if this is JSONP or JSON
 	Format GetSectionFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The section the story appears in.
 	Section GetSectionFormatSectionEnum `pathParam:"style=simple,explode=false,name=section"`
-}
-
-type GetSectionFormatQueryParams struct {
-	// The name of the function the API call results will be passed to. Required when using JSONP. This parameter has only one valid value per section. The format is {section_name}TopStoriesCallback.
-	//
-	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-}
-
-type GetSectionFormatRequest struct {
-	PathParams  GetSectionFormatPathParams
-	QueryParams GetSectionFormatQueryParams
 }
 
 // GetSectionFormat200ApplicationJSON - An array of articles

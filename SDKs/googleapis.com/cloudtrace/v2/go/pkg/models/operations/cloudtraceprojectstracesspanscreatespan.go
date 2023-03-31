@@ -8,13 +8,13 @@ import (
 )
 
 type CloudtraceProjectsTracesSpansCreateSpanSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTracesSpansCreateSpanSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTracesSpansCreateSpanSecurity struct {
@@ -22,14 +22,10 @@ type CloudtraceProjectsTracesSpansCreateSpanSecurity struct {
 	Option2 *CloudtraceProjectsTracesSpansCreateSpanSecurityOption2 `security:"option"`
 }
 
-type CloudtraceProjectsTracesSpansCreateSpanPathParams struct {
-	// Required. The resource name of the span in the following format: * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte array. It should not be zero. .
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudtraceProjectsTracesSpansCreateSpanQueryParams struct {
+type CloudtraceProjectsTracesSpansCreateSpanRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Span        *shared.Span      `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type CloudtraceProjectsTracesSpansCreateSpanQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the span in the following format: * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte array. It should not be zero. .
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type CloudtraceProjectsTracesSpansCreateSpanQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudtraceProjectsTracesSpansCreateSpanRequest struct {
-	PathParams  CloudtraceProjectsTracesSpansCreateSpanPathParams
-	QueryParams CloudtraceProjectsTracesSpansCreateSpanQueryParams
-	Request     *shared.Span `request:"mediaType=application/json"`
-	Security    CloudtraceProjectsTracesSpansCreateSpanSecurity
 }
 
 type CloudtraceProjectsTracesSpansCreateSpanResponse struct {

@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetPaymentsForPayoutV4PathParams struct {
-	// The id (UUID) of the payout.
-	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
 // GetPaymentsForPayoutV4StatusEnum - Payment Status
 type GetPaymentsForPayoutV4StatusEnum string
 
@@ -103,7 +98,7 @@ func (e *GetPaymentsForPayoutV4TransmissionTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetPaymentsForPayoutV4QueryParams struct {
+type GetPaymentsForPayoutV4Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -112,6 +107,8 @@ type GetPaymentsForPayoutV4QueryParams struct {
 	PaymentAmountFrom *int `queryParam:"style=form,explode=true,name=paymentAmountFrom"`
 	// The payment amount to range filter. Filters for paymentAmount ⇐ paymentAmountTo
 	PaymentAmountTo *int `queryParam:"style=form,explode=true,name=paymentAmountTo"`
+	// The id (UUID) of the payout.
+	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
 	// The remote id of the payees.
 	RemoteID *string `queryParam:"style=form,explode=true,name=remoteId"`
 	// The id of the remote system that is orchestrating payments
@@ -142,11 +139,6 @@ type GetPaymentsForPayoutV4QueryParams struct {
 	// * GACHO
 	//
 	TransmissionType *GetPaymentsForPayoutV4TransmissionTypeEnum `queryParam:"style=form,explode=true,name=transmissionType"`
-}
-
-type GetPaymentsForPayoutV4Request struct {
-	PathParams  GetPaymentsForPayoutV4PathParams
-	QueryParams GetPaymentsForPayoutV4QueryParams
 }
 
 type GetPaymentsForPayoutV4Response struct {

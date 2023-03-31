@@ -3,27 +3,32 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
         basic_auth=shared.SchemeBasicAuth(
             password="YOUR_PASSWORD_HERE",
             username="YOUR_USERNAME_HERE",
         ),
-    )
+    ),
 )
-    
+
+
 req = operations.RequestAccessTokenRequest(
-    path_params=operations.RequestAccessTokenPathParams(
-        key_name="dolor",
+    request_body=shared.SignedTokenRequest(
+        capability={
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
+        },
+        client_id="vel",
+        key_name="xVLyHw.LMJZxw",
+        mac="error",
+        nonce="deserunt",
+        timestamp=384382,
     ),
-    query_params=operations.RequestAccessTokenQueryParams(
-        format="html",
-    ),
-    headers=operations.RequestAccessTokenHeaders(
-        x_ably_version="voluptas",
-    ),
-    request="fugit",
+    x_ably_version="iure",
+    format="jsonp",
+    key_name="debitis",
 )
     
 res = s.authentication.request_access_token(req)

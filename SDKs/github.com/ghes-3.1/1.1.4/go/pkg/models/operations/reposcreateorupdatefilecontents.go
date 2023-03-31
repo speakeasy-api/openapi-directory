@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateOrUpdateFileContentsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// path parameter
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreateOrUpdateFileContentsRequestBodyAuthor - The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
 type ReposCreateOrUpdateFileContentsRequestBodyAuthor struct {
 	Date *string `json:"date,omitempty"`
@@ -50,8 +41,13 @@ type ReposCreateOrUpdateFileContentsRequestBody struct {
 }
 
 type ReposCreateOrUpdateFileContentsRequest struct {
-	PathParams ReposCreateOrUpdateFileContentsPathParams
-	Request    ReposCreateOrUpdateFileContentsRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateOrUpdateFileContentsRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// path parameter
+	Path string `pathParam:"style=simple,explode=false,name=path"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateOrUpdateFileContentsResponse struct {

@@ -12,16 +12,8 @@ var UpdateSyncDocumentPermissionServerList = []string{
 }
 
 type UpdateSyncDocumentPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncDocumentPermissionPathParams struct {
-	// Identifier of the Sync Document. Either a SID or a unique name.
-	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
-	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// The unique SID identifier of the Sync Service Instance.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest struct {
 }
 
 type UpdateSyncDocumentPermissionRequest struct {
-	PathParams UpdateSyncDocumentPermissionPathParams
-	Request    *UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncDocumentPermissionSecurity
-	ServerURL  *string
+	// Identifier of the Sync Document. Either a SID or a unique name.
+	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
+	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+	Identity    string                                                           `pathParam:"style=simple,explode=false,name=Identity"`
+	RequestBody *UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Sync Service Instance.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncDocumentPermissionResponse struct {

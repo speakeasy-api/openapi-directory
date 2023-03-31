@@ -12,12 +12,8 @@ var CreateNewKeyServerList = []string{
 }
 
 type CreateNewKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateNewKeyPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateNewKeyCreateNewKeyRequest struct {
@@ -26,10 +22,9 @@ type CreateNewKeyCreateNewKeyRequest struct {
 }
 
 type CreateNewKeyRequest struct {
-	PathParams CreateNewKeyPathParams
-	Request    *CreateNewKeyCreateNewKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateNewKeySecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
+	AccountSid  string                           `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateNewKeyCreateNewKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateNewKeyResponse struct {

@@ -12,12 +12,8 @@ var UpdateNetworkAccessProfileServerList = []string{
 }
 
 type UpdateNetworkAccessProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateNetworkAccessProfilePathParams struct {
-	// The SID of the Network Access Profile to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest struct {
@@ -26,10 +22,9 @@ type UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest struct {
 }
 
 type UpdateNetworkAccessProfileRequest struct {
-	PathParams UpdateNetworkAccessProfilePathParams
-	Request    *UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateNetworkAccessProfileSecurity
-	ServerURL  *string
+	RequestBody *UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Network Access Profile to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateNetworkAccessProfileResponse struct {

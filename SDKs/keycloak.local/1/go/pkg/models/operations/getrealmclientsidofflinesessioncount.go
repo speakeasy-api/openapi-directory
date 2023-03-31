@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRealmClientsIDOfflineSessionCountPathParams struct {
+type GetRealmClientsIDOfflineSessionCountRequest struct {
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsIDOfflineSessionCountRequest struct {
-	PathParams GetRealmClientsIDOfflineSessionCountPathParams
 }
 
 type GetRealmClientsIDOfflineSessionCountResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAccountsAccountOrdersPathParams struct {
-	// Account Number
-	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
 // PostAccountsAccountOrdersRequestBodySideEnum - Buy = '1', Sell = '2'
 type PostAccountsAccountOrdersRequestBodySideEnum string
 
@@ -98,9 +93,10 @@ type PostAccountsAccountOrdersRequestBody struct {
 }
 
 type PostAccountsAccountOrdersRequest struct {
-	PathParams PostAccountsAccountOrdersPathParams
 	// Order Parameters
-	Request PostAccountsAccountOrdersRequestBody `request:"mediaType=application/json"`
+	RequestBody PostAccountsAccountOrdersRequestBody `request:"mediaType=application/json"`
+	// Account Number
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 }
 
 type PostAccountsAccountOrdersResponse struct {

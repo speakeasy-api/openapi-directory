@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteUsersUseridSecurity struct {
-	ClientAccessToken shared.SchemeClientAccessToken `security:"scheme,type=oauth2"`
-}
-
-type DeleteUsersUseridPathParams struct {
-	// ID of the User
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	ClientAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteUsersUseridRequest struct {
-	PathParams DeleteUsersUseridPathParams
-	Security   DeleteUsersUseridSecurity
+	// ID of the User
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DeleteUsersUseridResponse struct {

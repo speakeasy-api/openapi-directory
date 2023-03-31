@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteInternalCallOutCountryPathParams struct {
+type DeleteInternalCallOutCountryRequest struct {
 	// Unique Identifier of the Account.<br>
 	// To remove Call-out country from a sub account, provide the account ID of the sub account in the `accountId` path parameter. To remove Call-out country from a master account, provide `me` as the value of the `accountId` path parameter.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Two lettered Id of the country.
 	CountryID string `pathParam:"style=simple,explode=false,name=countryId"`
-}
-
-type DeleteInternalCallOutCountryRequest struct {
-	PathParams DeleteInternalCallOutCountryPathParams
 }
 
 type DeleteInternalCallOutCountryResponse struct {

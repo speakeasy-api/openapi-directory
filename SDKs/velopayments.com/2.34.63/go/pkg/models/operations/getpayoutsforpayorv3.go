@@ -55,7 +55,7 @@ func (e *GetPayoutsForPayorV3StatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPayoutsForPayorV3QueryParams struct {
+type GetPayoutsForPayorV3Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -75,10 +75,6 @@ type GetPayoutsForPayorV3QueryParams struct {
 	SubmittedDateFrom *types.Date `queryParam:"style=form,explode=true,name=submittedDateFrom"`
 	// The submitted date to range filter. Format is yyyy-MM-dd.
 	SubmittedDateTo *types.Date `queryParam:"style=form,explode=true,name=submittedDateTo"`
-}
-
-type GetPayoutsForPayorV3Request struct {
-	QueryParams GetPayoutsForPayorV3QueryParams
 }
 
 type GetPayoutsForPayorV3Response struct {

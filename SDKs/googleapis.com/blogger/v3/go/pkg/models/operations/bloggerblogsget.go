@@ -10,22 +10,18 @@ import (
 )
 
 type BloggerBlogsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerBlogsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerBlogsGetSecurity struct {
 	Option1 *BloggerBlogsGetSecurityOption1 `security:"option"`
 	Option2 *BloggerBlogsGetSecurityOption2 `security:"option"`
-}
-
-type BloggerBlogsGetPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
 }
 
 // BloggerBlogsGetViewEnum
@@ -58,13 +54,14 @@ func (e *BloggerBlogsGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerBlogsGetQueryParams struct {
+type BloggerBlogsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -83,12 +80,6 @@ type BloggerBlogsGetQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                  `queryParam:"style=form,explode=true,name=upload_protocol"`
 	View           *BloggerBlogsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerBlogsGetRequest struct {
-	PathParams  BloggerBlogsGetPathParams
-	QueryParams BloggerBlogsGetQueryParams
-	Security    BloggerBlogsGetSecurity
 }
 
 type BloggerBlogsGetResponse struct {

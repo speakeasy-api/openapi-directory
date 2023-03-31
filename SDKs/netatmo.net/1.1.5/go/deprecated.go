@@ -35,7 +35,7 @@ func newDeprecated(defaultClient, securityClient HTTPClient, serverURL, language
 
 // Devicelist - The method devicelist returns the list of devices owned by the user, and their modules.
 // A device is identified by its _id (which is its mac address) and each device may have one, several or no modules, also identified by an _id.
-func (s *deprecated) Devicelist(ctx context.Context, request operations.DevicelistRequest) (*operations.DevicelistResponse, error) {
+func (s *deprecated) Devicelist(ctx context.Context, request operations.DevicelistRequest, security operations.DevicelistSecurity) (*operations.DevicelistResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devicelist"
 
@@ -44,11 +44,11 @@ func (s *deprecated) Devicelist(ctx context.Context, request operations.Deviceli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *deprecated) Devicelist(ctx context.Context, request operations.Deviceli
 }
 
 // Getthermstate - The method getthermstate returns the last Thermostat measurements, its current weekly schedule, and, if present, its current manual temperature setpoint.
-func (s *deprecated) Getthermstate(ctx context.Context, request operations.GetthermstateRequest) (*operations.GetthermstateResponse, error) {
+func (s *deprecated) Getthermstate(ctx context.Context, request operations.GetthermstateRequest, security operations.GetthermstateSecurity) (*operations.GetthermstateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getthermstate"
 
@@ -92,11 +92,11 @@ func (s *deprecated) Getthermstate(ctx context.Context, request operations.Getth
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *deprecated) Getthermstate(ctx context.Context, request operations.Getth
 }
 
 // Getuser - The method getuser returns information about a user such as prefered language, prefered units, and list of devices.
-func (s *deprecated) Getuser(ctx context.Context, request operations.GetuserRequest) (*operations.GetuserResponse, error) {
+func (s *deprecated) Getuser(ctx context.Context) (*operations.GetuserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getuser"
 
@@ -140,7 +140,7 @@ func (s *deprecated) Getuser(ctx context.Context, request operations.GetuserRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

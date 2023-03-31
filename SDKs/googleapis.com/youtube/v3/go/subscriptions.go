@@ -33,7 +33,7 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // YoutubeSubscriptionsDelete - Deletes a resource.
-func (s *subscriptions) YoutubeSubscriptionsDelete(ctx context.Context, request operations.YoutubeSubscriptionsDeleteRequest) (*operations.YoutubeSubscriptionsDeleteResponse, error) {
+func (s *subscriptions) YoutubeSubscriptionsDelete(ctx context.Context, request operations.YoutubeSubscriptionsDeleteRequest, security operations.YoutubeSubscriptionsDeleteSecurity) (*operations.YoutubeSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/subscriptions"
 
@@ -42,11 +42,11 @@ func (s *subscriptions) YoutubeSubscriptionsDelete(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *subscriptions) YoutubeSubscriptionsDelete(ctx context.Context, request 
 }
 
 // YoutubeSubscriptionsInsert - Inserts a new resource into this collection.
-func (s *subscriptions) YoutubeSubscriptionsInsert(ctx context.Context, request operations.YoutubeSubscriptionsInsertRequest) (*operations.YoutubeSubscriptionsInsertResponse, error) {
+func (s *subscriptions) YoutubeSubscriptionsInsert(ctx context.Context, request operations.YoutubeSubscriptionsInsertRequest, security operations.YoutubeSubscriptionsInsertSecurity) (*operations.YoutubeSubscriptionsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/subscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *subscriptions) YoutubeSubscriptionsInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *subscriptions) YoutubeSubscriptionsInsert(ctx context.Context, request 
 }
 
 // YoutubeSubscriptionsList - Retrieves a list of resources, possibly filtered.
-func (s *subscriptions) YoutubeSubscriptionsList(ctx context.Context, request operations.YoutubeSubscriptionsListRequest) (*operations.YoutubeSubscriptionsListResponse, error) {
+func (s *subscriptions) YoutubeSubscriptionsList(ctx context.Context, request operations.YoutubeSubscriptionsListRequest, security operations.YoutubeSubscriptionsListSecurity) (*operations.YoutubeSubscriptionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/subscriptions"
 
@@ -136,11 +136,11 @@ func (s *subscriptions) YoutubeSubscriptionsList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

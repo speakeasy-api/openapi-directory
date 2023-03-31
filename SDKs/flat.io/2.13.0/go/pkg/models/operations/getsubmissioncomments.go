@@ -8,21 +8,16 @@ import (
 )
 
 type GetSubmissionCommentsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSubmissionCommentsPathParams struct {
+type GetSubmissionCommentsRequest struct {
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
 	// Unique identifier of the submission
 	Submission string `pathParam:"style=simple,explode=false,name=submission"`
-}
-
-type GetSubmissionCommentsRequest struct {
-	PathParams GetSubmissionCommentsPathParams
-	Security   GetSubmissionCommentsSecurity
 }
 
 type GetSubmissionCommentsResponse struct {

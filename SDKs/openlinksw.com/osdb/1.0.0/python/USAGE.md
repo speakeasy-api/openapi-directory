@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ActionHelpRequest(
-    path_params=operations.ActionHelpPathParams(
-        action_id="molestias",
-        service_id="praesentium",
-    ),
+    action_id="corrupti",
+    service_id="provident",
 )
     
 res = s.osdb.action_help(req)

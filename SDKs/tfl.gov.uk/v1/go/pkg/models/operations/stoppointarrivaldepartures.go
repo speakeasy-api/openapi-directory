@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointArrivalDeparturesPathParams struct {
+type StopPointArrivalDeparturesRequest struct {
 	// A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StopPointArrivalDeparturesQueryParams struct {
 	// A comma-separated list of line ids e.g. elizabeth, london-overground, thameslink
 	LineIds []string `queryParam:"style=form,explode=true,name=lineIds"`
-}
-
-type StopPointArrivalDeparturesRequest struct {
-	PathParams  StopPointArrivalDeparturesPathParams
-	QueryParams StopPointArrivalDeparturesQueryParams
 }
 
 type StopPointArrivalDeparturesResponse struct {

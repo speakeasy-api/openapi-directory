@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForProjectPathParams struct {
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-	TeamID    int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsCheckPermissionsForProjectHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
 type TeamsCheckPermissionsForProjectRequest struct {
-	PathParams TeamsCheckPermissionsForProjectPathParams
-	Headers    TeamsCheckPermissionsForProjectHeaders
+	// This API is under preview and subject to change.
+	Accept    string `header:"style=simple,explode=false,name=accept"`
+	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
+	TeamID    int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsCheckPermissionsForProjectResponse struct {

@@ -38,10 +38,6 @@ type UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestBody struct {
 	Visibility UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestBodyVisibilityEnum `json:"visibility"`
 }
 
-type UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequest struct {
-	Request UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersSetPrimaryEmailVisibilityForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

@@ -33,20 +33,20 @@ func newProposals(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AdexchangebuyerProposalsGet - Get a proposal given its id
-func (s *proposals) AdexchangebuyerProposalsGet(ctx context.Context, request operations.AdexchangebuyerProposalsGetRequest) (*operations.AdexchangebuyerProposalsGetResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsGet(ctx context.Context, request operations.AdexchangebuyerProposalsGetRequest, security operations.AdexchangebuyerProposalsGetSecurity) (*operations.AdexchangebuyerProposalsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *proposals) AdexchangebuyerProposalsGet(ctx context.Context, request ope
 }
 
 // AdexchangebuyerProposalsInsert - Create the given list of proposals
-func (s *proposals) AdexchangebuyerProposalsInsert(ctx context.Context, request operations.AdexchangebuyerProposalsInsertRequest) (*operations.AdexchangebuyerProposalsInsertResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsInsert(ctx context.Context, request operations.AdexchangebuyerProposalsInsertRequest, security operations.AdexchangebuyerProposalsInsertSecurity) (*operations.AdexchangebuyerProposalsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proposals/insert"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOrdersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *proposals) AdexchangebuyerProposalsInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *proposals) AdexchangebuyerProposalsInsert(ctx context.Context, request 
 }
 
 // AdexchangebuyerProposalsPatch - Update the given proposal. This method supports patch semantics.
-func (s *proposals) AdexchangebuyerProposalsPatch(ctx context.Context, request operations.AdexchangebuyerProposalsPatchRequest) (*operations.AdexchangebuyerProposalsPatchResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsPatch(ctx context.Context, request operations.AdexchangebuyerProposalsPatchRequest, security operations.AdexchangebuyerProposalsPatchSecurity) (*operations.AdexchangebuyerProposalsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Proposal", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *proposals) AdexchangebuyerProposalsPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *proposals) AdexchangebuyerProposalsPatch(ctx context.Context, request o
 }
 
 // AdexchangebuyerProposalsSearch - Search for proposals using pql query
-func (s *proposals) AdexchangebuyerProposalsSearch(ctx context.Context, request operations.AdexchangebuyerProposalsSearchRequest) (*operations.AdexchangebuyerProposalsSearchResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsSearch(ctx context.Context, request operations.AdexchangebuyerProposalsSearchRequest, security operations.AdexchangebuyerProposalsSearchSecurity) (*operations.AdexchangebuyerProposalsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proposals/search"
 
@@ -200,11 +200,11 @@ func (s *proposals) AdexchangebuyerProposalsSearch(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *proposals) AdexchangebuyerProposalsSearch(ctx context.Context, request 
 }
 
 // AdexchangebuyerProposalsSetupcomplete - Update the given proposal to indicate that setup has been completed.
-func (s *proposals) AdexchangebuyerProposalsSetupcomplete(ctx context.Context, request operations.AdexchangebuyerProposalsSetupcompleteRequest) (*operations.AdexchangebuyerProposalsSetupcompleteResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsSetupcomplete(ctx context.Context, request operations.AdexchangebuyerProposalsSetupcompleteRequest, security operations.AdexchangebuyerProposalsSetupcompleteSecurity) (*operations.AdexchangebuyerProposalsSetupcompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/setupcomplete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/setupcomplete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,11 +278,11 @@ func (s *proposals) AdexchangebuyerProposalsSetupcomplete(ctx context.Context, r
 }
 
 // AdexchangebuyerProposalsUpdate - Update the given proposal
-func (s *proposals) AdexchangebuyerProposalsUpdate(ctx context.Context, request operations.AdexchangebuyerProposalsUpdateRequest) (*operations.AdexchangebuyerProposalsUpdateResponse, error) {
+func (s *proposals) AdexchangebuyerProposalsUpdate(ctx context.Context, request operations.AdexchangebuyerProposalsUpdateRequest, security operations.AdexchangebuyerProposalsUpdateSecurity) (*operations.AdexchangebuyerProposalsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Proposal", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,11 +294,11 @@ func (s *proposals) AdexchangebuyerProposalsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

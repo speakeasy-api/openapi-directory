@@ -40,7 +40,7 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // **Note**: Refer to examples for different scenarios.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header.
-func (s *importT) ImportExportedData(ctx context.Context, request operations.ImportExportedDataRequest) (*operations.ImportExportedDataResponse, error) {
+func (s *importT) ImportExportedData(ctx context.Context, request []byte) (*operations.ImportExportedDataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/exported"
 
@@ -120,7 +120,7 @@ func (s *importT) ImportExportedData(ctx context.Context, request operations.Imp
 // **Note**: Refer to examples for different scenarios.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header.
-func (s *importT) ImportExternalAPISpecification(ctx context.Context, request operations.ImportExternalAPISpecificationRequest) (*operations.ImportExternalAPISpecificationResponse, error) {
+func (s *importT) ImportExternalAPISpecification(ctx context.Context, request operations.ImportExternalAPISpecificationRequestBody) (*operations.ImportExternalAPISpecificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/openapi"
 

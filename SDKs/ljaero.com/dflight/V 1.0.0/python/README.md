@@ -1,0 +1,100 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/ljaero.com/dflight/V 1.0.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest(
+    aerodromes_by_distance=shared.AerodromesByDistance(
+        distance=592845,
+        latitude=844266,
+        longitude=857946,
+    ),
+    x_api_key="corrupti",
+)
+    
+res = s.aerodromes.aerodromes_by_distance_us_v1_aerodromes_distance_query_post(req)
+
+if res.aerodrome_distance_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### aerodromes
+
+* `aerodromes_by_distance_us_v1_aerodromes_distance_query_post` - Retrieve aerodromes within given distance of location.
+* `aerodromes_by_poly_us_v1_aerodromes_polygon_query_post` - Retrieve aerodromes located within given area.
+* `aerodromes_by_route_us_v1_aerodromes_route_query_post` - Retrieve aerodromes found along a route.
+
+### airspace
+
+* `asp_by_distance_us_v1_airspace_distance_query_post` - Retrieve all requested types of airspace located within given distance of location.
+* `asp_by_poly_us_v1_airspace_polygon_query_post` - Retrieve all requested types of airspace located within given GeoJSON Polygon.
+* `asp_by_route_us_v1_airspace_route_query_post` - Retrieve all requested types of airspace traversed by route.
+
+### flight_restrictions
+
+* `tfr_by_distance_us_v1_restrictions_distance_query_post` - Retrieve flight restrictions applicable within given distance of location.
+* `tfr_by_poly_us_v1_restrictions_polygon_query_post` - Retrieve flight restrictions applicable within given area.
+* `tfr_by_route_us_v1_restrictions_route_query_post` - Retrieve flight restrictions applicable along route.
+
+### restricted_public_venues
+
+* `ven_by_distance_us_v1_venues_distance_query_post` - Retrieve all restricted public venues located within given distance of location.
+* `ven_by_poly_us_v1_venues_polygon_query_post` - Retrieve all restricted public venues located within given GeoJSON Polygon.
+* `ven_by_route_us_v1_venues_route_query_post` - Retrieve all restricted public venues traversed by route.
+
+### special_security_areas
+
+* `ssa_by_distance_us_v1_ssa_distance_query_post` - Retrieve all special security areas located within given distance of location.
+* `ssa_by_poly_us_v1_ssa_polygon_query_post` - Retrieve all special security areas located within given GeoJSON Polygon.
+* `ssa_by_route_us_v1_ssa_route_query_post` - Retrieve all special security areas traversed by route.
+
+### surface_obstacles
+
+* `obstacles_by_distance_us_v1_obstacles_distance_query_post` - Retrieve obstacles within given distance of location.
+* `obstacles_by_poly_us_v1_obstacles_polygon_query_post` - Retrieve obstacles located within given area.
+* `obstacles_by_route_us_v1_obstacles_route_query_post` - Retrieve obstacles found along a route.
+
+### uas_operating_areas
+
+* `uoa_by_distance_us_v1_uoa_distance_query_post` - Retrieve UAS Operating Areas (UOAs) found within given distance of location.
+* `uoa_by_poly_us_v1_uoa_polygon_query_post` - Retrieve UAS Operating Areas (UOAs) found within given area.
+* `uoa_by_route_us_v1_uoa_route_query_post` - Retrieve UAS Operating Areas (UOAs) found along route.
+
+### weather
+
+* `wx_by_distance_us_v1_wx_forecast_distance_query_post` - Retrieve forecast values within given distance of location for all requested weather elements and time periods.
+* `wx_by_poly_us_v1_wx_forecast_polygon_query_post` - Retrieve forecast values within given GeoJSON polygon for all requested weather elements and time periods.
+* `wx_by_route_us_v1_wx_forecast_route_query_post` - Retrieve forecast values along a route for all requested weather elements and time periods.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

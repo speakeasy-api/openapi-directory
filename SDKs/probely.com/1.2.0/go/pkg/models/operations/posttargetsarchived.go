@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsArchivedRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 // PostTargetsArchived403ApplicationJSON - Not allowed to perform operation
 type PostTargetsArchived403ApplicationJSON struct {
 	// Error message.

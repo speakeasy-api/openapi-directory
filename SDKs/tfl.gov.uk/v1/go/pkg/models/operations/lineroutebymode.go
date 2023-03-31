@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineRouteByModePathParams struct {
-	// A comma-separated list of modes e.g. tube,dlr
-	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
 type LineRouteByModeServiceTypesEnum string
 
 const (
@@ -37,14 +32,11 @@ func (e *LineRouteByModeServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineRouteByModeQueryParams struct {
+type LineRouteByModeRequest struct {
+	// A comma-separated list of modes e.g. tube,dlr
+	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
 	// A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []LineRouteByModeServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type LineRouteByModeRequest struct {
-	PathParams  LineRouteByModePathParams
-	QueryParams LineRouteByModeQueryParams
 }
 
 type LineRouteByModeResponse struct {

@@ -4,24 +4,19 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PredictImageRequest(
-    path_params=operations.PredictImagePathParams(
-        project_id="quae",
-    ),
-    query_params=operations.PredictImageQueryParams(
-        application="assumenda",
-        iteration_id="consequatur",
-    ),
-    headers=operations.PredictImageHeaders(
-        prediction_key="nostrum",
-    ),
-    request=operations.PredictImageRequestBody(
+    prediction_key="corrupti",
+    request_body=operations.PredictImageRequestBody(
         image_data=operations.PredictImageRequestBodyImageData(
-            content="aut".encode(),
-            image_data="quia",
+            content="provident".encode(),
+            image_data="distinctio",
         ),
     ),
+    application="quibusdam",
+    iteration_id="9d8d69a6-74e0-4f46-bcc8-796ed151a05d",
+    project_id="fc2ddf7c-c78c-4a1b-a928-fc816742cb73",
 )
     
 res = s.image_prediction_api.predict_image(req)

@@ -11,7 +11,8 @@ import (
 )
 
 type CreateGlobalAuthModuleSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateGlobalAuthModuleRequestBodyType string
@@ -104,11 +105,6 @@ func (u CreateGlobalAuthModuleRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type CreateGlobalAuthModuleRequest struct {
-	Request  *CreateGlobalAuthModuleRequestBody `request:"mediaType=application/json"`
-	Security CreateGlobalAuthModuleSecurity
 }
 
 type CreateGlobalAuthModule200ApplicationJSONType string

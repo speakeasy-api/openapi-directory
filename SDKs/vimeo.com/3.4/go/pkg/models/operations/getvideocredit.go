@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoCreditPathParams struct {
+type GetVideoCreditRequest struct {
 	// The ID of the credit.
 	CreditID float64 `pathParam:"style=simple,explode=false,name=credit_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVideoCreditRequest struct {
-	PathParams GetVideoCreditPathParams
 }
 
 type GetVideoCreditResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteEngagementServerList = []string{
@@ -12,20 +11,15 @@ var DeleteEngagementServerList = []string{
 }
 
 type DeleteEngagementSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteEngagementPathParams struct {
+type DeleteEngagementRequest struct {
 	// The SID of the Flow to delete Engagements from.
 	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
 	// The SID of the Engagement resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteEngagementRequest struct {
-	PathParams DeleteEngagementPathParams
-	Security   DeleteEngagementSecurity
-	ServerURL  *string
 }
 
 type DeleteEngagementResponse struct {

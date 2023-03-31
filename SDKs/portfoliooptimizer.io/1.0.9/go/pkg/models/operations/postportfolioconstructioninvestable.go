@@ -28,10 +28,6 @@ type PostPortfolioConstructionInvestableRequestBody struct {
 	PortfolioValue float64 `json:"portfolioValue"`
 }
 
-type PostPortfolioConstructionInvestableRequest struct {
-	Request PostPortfolioConstructionInvestableRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioConstructionInvestable200ApplicationJSON - OK
 type PostPortfolioConstructionInvestable200ApplicationJSON struct {
 	// assetsPositions[i] is the number of shares of the asset i in the portfolio

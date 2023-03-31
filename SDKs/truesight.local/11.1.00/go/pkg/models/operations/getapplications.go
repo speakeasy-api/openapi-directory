@@ -32,7 +32,7 @@ func (e *GetApplicationsDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetApplicationsQueryParams struct {
+type GetApplicationsRequest struct {
 	// The sorting order (case insensitive).
 	Direction *GetApplicationsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The maximum number of entries per page.
@@ -41,10 +41,6 @@ type GetApplicationsQueryParams struct {
 	Page *string `queryParam:"style=form,explode=true,name=page"`
 	// The column to sort by (case insensitive).
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetApplicationsRequest struct {
-	QueryParams GetApplicationsQueryParams
 }
 
 type GetApplicationsResponse struct {

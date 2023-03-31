@@ -93,20 +93,30 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // DeleteContent - Deletes a Content resource
-func (s *SDK) DeleteContent(ctx context.Context, request operations.DeleteContentRequest) (*operations.DeleteContentResponse, error) {
-	baseURL := operations.DeleteContentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteContent(ctx context.Context, request operations.DeleteContentRequest, security operations.DeleteContentSecurity, opts ...operations.Option) (*operations.DeleteContentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteContentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,20 +142,30 @@ func (s *SDK) DeleteContent(ctx context.Context, request operations.DeleteConten
 }
 
 // FetchApprovalFetch - Fetch a Content resource's approval status by its unique Content Sid
-func (s *SDK) FetchApprovalFetch(ctx context.Context, request operations.FetchApprovalFetchRequest) (*operations.FetchApprovalFetchResponse, error) {
-	baseURL := operations.FetchApprovalFetchServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchApprovalFetch(ctx context.Context, request operations.FetchApprovalFetchRequest, security operations.FetchApprovalFetchSecurity, opts ...operations.Option) (*operations.FetchApprovalFetchResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}/ApprovalRequests", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchApprovalFetchServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}/ApprovalRequests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,20 +200,30 @@ func (s *SDK) FetchApprovalFetch(ctx context.Context, request operations.FetchAp
 }
 
 // FetchContent - Fetch a Content resource by its unique Content Sid
-func (s *SDK) FetchContent(ctx context.Context, request operations.FetchContentRequest) (*operations.FetchContentResponse, error) {
-	baseURL := operations.FetchContentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchContent(ctx context.Context, request operations.FetchContentRequest, security operations.FetchContentSecurity, opts ...operations.Option) (*operations.FetchContentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchContentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Content/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -228,10 +258,20 @@ func (s *SDK) FetchContent(ctx context.Context, request operations.FetchContentR
 }
 
 // ListContent - Retrieve a list of Contents belonging to the account used to make the request
-func (s *SDK) ListContent(ctx context.Context, request operations.ListContentRequest) (*operations.ListContentResponse, error) {
+func (s *SDK) ListContent(ctx context.Context, request operations.ListContentRequest, security operations.ListContentSecurity, opts ...operations.Option) (*operations.ListContentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListContentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Content"
@@ -241,11 +281,11 @@ func (s *SDK) ListContent(ctx context.Context, request operations.ListContentReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,10 +320,20 @@ func (s *SDK) ListContent(ctx context.Context, request operations.ListContentReq
 }
 
 // ListContentAndApprovals - Retrieve a list of Contents with approval statuses belonging to the account used to make the request
-func (s *SDK) ListContentAndApprovals(ctx context.Context, request operations.ListContentAndApprovalsRequest) (*operations.ListContentAndApprovalsResponse, error) {
+func (s *SDK) ListContentAndApprovals(ctx context.Context, request operations.ListContentAndApprovalsRequest, security operations.ListContentAndApprovalsSecurity, opts ...operations.Option) (*operations.ListContentAndApprovalsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListContentAndApprovalsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ContentAndApprovals"
@@ -293,11 +343,11 @@ func (s *SDK) ListContentAndApprovals(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,10 +382,20 @@ func (s *SDK) ListContentAndApprovals(ctx context.Context, request operations.Li
 }
 
 // ListLegacyContent - Retrieve a list of Legacy Contents belonging to the account used to make the request
-func (s *SDK) ListLegacyContent(ctx context.Context, request operations.ListLegacyContentRequest) (*operations.ListLegacyContentResponse, error) {
+func (s *SDK) ListLegacyContent(ctx context.Context, request operations.ListLegacyContentRequest, security operations.ListLegacyContentSecurity, opts ...operations.Option) (*operations.ListLegacyContentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListLegacyContentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/LegacyContent"
@@ -345,11 +405,11 @@ func (s *SDK) ListLegacyContent(ctx context.Context, request operations.ListLega
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

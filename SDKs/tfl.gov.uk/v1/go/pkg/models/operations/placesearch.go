@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlaceSearchQueryParams struct {
+type PlaceSearchRequest struct {
 	// The name of the place, you can use the /Place/Types/{types} endpoint to get a list of places for a given type including their names.
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// A comma-separated list of the types to return. Max. approx 12 types.
 	Types []string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type PlaceSearchRequest struct {
-	QueryParams PlaceSearchQueryParams
 }
 
 type PlaceSearchResponse struct {

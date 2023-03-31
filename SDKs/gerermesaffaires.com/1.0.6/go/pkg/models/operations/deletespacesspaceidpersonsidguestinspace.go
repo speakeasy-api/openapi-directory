@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSpacesSpaceIDPersonsIDGuestInSpaceSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSpacesSpaceIDPersonsIDGuestInSpacePathParams struct {
+type DeleteSpacesSpaceIDPersonsIDGuestInSpaceRequest struct {
 	// Id of the person
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type DeleteSpacesSpaceIDPersonsIDGuestInSpaceRequest struct {
-	PathParams DeleteSpacesSpaceIDPersonsIDGuestInSpacePathParams
-	Security   DeleteSpacesSpaceIDPersonsIDGuestInSpaceSecurity
 }
 
 type DeleteSpacesSpaceIDPersonsIDGuestInSpaceResponse struct {

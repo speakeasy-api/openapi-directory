@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/cloudfunctions/v2beta/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,160 +15,156 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest(
-    security=operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudfunctionsProjectsLocationsFunctionsCreatePathParams(
-        parent="et",
-    ),
-    query_params=operations.CloudfunctionsProjectsLocationsFunctionsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="nesciunt",
-        alt="proto",
-        callback="pariatur",
-        fields="odio",
-        function_id="occaecati",
-        key="eveniet",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="nostrum",
-        upload_type="quaerat",
-        upload_protocol="voluptas",
-    ),
-    request=shared.FunctionInput(
+    dollar_xgafv="2",
+    function_input=shared.FunctionInput(
         build_config=shared.BuildConfigInput(
-            buildpack_stack="recusandae",
+            buildpack_stack="provident",
             docker_registry="ARTIFACT_REGISTRY",
-            docker_repository="eum",
-            entry_point="esse",
+            docker_repository="quibusdam",
+            entry_point="unde",
             environment_variables={
-                "pariatur": "omnis",
-                "perspiciatis": "et",
-                "impedit": "rem",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
             },
-            runtime="quam",
+            runtime="debitis",
             source=shared.Source(
                 repo_source=shared.RepoSource(
-                    branch_name="maiores",
-                    commit_sha="ut",
-                    dir="et",
-                    invert_regex=True,
-                    project_id="aperiam",
-                    repo_name="mollitia",
-                    tag_name="officia",
+                    branch_name="ipsa",
+                    commit_sha="delectus",
+                    dir="tempora",
+                    invert_regex=False,
+                    project_id="suscipit",
+                    repo_name="molestiae",
+                    tag_name="minus",
                 ),
                 storage_source=shared.StorageSource(
-                    bucket="quaerat",
-                    generation="nam",
-                    object="modi",
+                    bucket="placeat",
+                    generation="voluptatum",
+                    object="iusto",
                 ),
             ),
             source_provenance=shared.SourceProvenance(
                 resolved_repo_source=shared.RepoSource(
-                    branch_name="officia",
-                    commit_sha="in",
-                    dir="commodi",
+                    branch_name="excepturi",
+                    commit_sha="nisi",
+                    dir="recusandae",
                     invert_regex=False,
-                    project_id="laudantium",
-                    repo_name="vel",
-                    tag_name="reprehenderit",
+                    project_id="temporibus",
+                    repo_name="ab",
+                    tag_name="quis",
                 ),
                 resolved_storage_source=shared.StorageSource(
-                    bucket="nihil",
-                    generation="nam",
-                    object="est",
+                    bucket="veritatis",
+                    generation="deserunt",
+                    object="perferendis",
                 ),
             ),
-            worker_pool="dolorum",
+            worker_pool="ipsam",
         ),
-        description="voluptatem",
+        description="repellendus",
         environment="GEN_2",
         event_trigger=shared.EventTriggerInput(
-            channel="magni",
+            channel="quo",
             event_filters=[
                 shared.EventFilter(
-                    attribute="quibusdam",
-                    operator="dolore",
-                    value="eveniet",
-                ),
-                shared.EventFilter(
-                    attribute="pariatur",
-                    operator="quisquam",
-                    value="sapiente",
+                    attribute="at",
+                    operator="at",
+                    value="maiores",
                 ),
             ],
-            event_type="et",
-            pubsub_topic="ut",
+            event_type="molestiae",
+            pubsub_topic="quod",
             retry_policy="RETRY_POLICY_RETRY",
-            service_account_email="magnam",
-            trigger_region="at",
+            service_account_email="esse",
+            trigger_region="totam",
         ),
+        kms_key_name="porro",
         labels={
-            "cupiditate": "ut",
-            "sint": "minus",
-            "fugiat": "quae",
+            "dicta": "nam",
+            "officia": "occaecati",
+            "fugit": "deleniti",
         },
-        name="rerum",
+        name="hic",
         service_config=shared.ServiceConfigInput(
             all_traffic_on_latest_revision=False,
-            available_cpu="quo",
-            available_memory="nemo",
+            available_cpu="optio",
+            available_memory="totam",
             environment_variables={
-                "atque": "impedit",
+                "commodi": "molestiae",
             },
-            ingress_settings="INGRESS_SETTINGS_UNSPECIFIED",
-            max_instance_count=792269188445923293,
-            max_instance_request_concurrency=7397228704190247381,
-            min_instance_count=1487699710755746120,
+            ingress_settings="ALLOW_ALL",
+            max_instance_count=186332,
+            max_instance_request_concurrency=774234,
+            min_instance_count=736918,
             secret_environment_variables=[
                 shared.SecretEnvVar(
-                    key="earum",
-                    project_id="in",
-                    secret="molestias",
-                    version="delectus",
+                    key="ipsum",
+                    project_id="excepturi",
+                    secret="aspernatur",
+                    version="perferendis",
+                ),
+                shared.SecretEnvVar(
+                    key="ad",
+                    project_id="natus",
+                    secret="sed",
+                    version="iste",
                 ),
             ],
             secret_volumes=[
                 shared.SecretVolume(
-                    mount_path="omnis",
-                    project_id="ipsa",
-                    secret="ut",
+                    mount_path="natus",
+                    project_id="laboriosam",
+                    secret="hic",
                     versions=[
                         shared.SecretVersion(
-                            path="culpa",
-                            version="ut",
+                            path="fuga",
+                            version="in",
                         ),
-                    ],
-                ),
-                shared.SecretVolume(
-                    mount_path="velit",
-                    project_id="laudantium",
-                    secret="rem",
-                    versions=[
                         shared.SecretVersion(
-                            path="assumenda",
-                            version="facere",
+                            path="corporis",
+                            version="iste",
+                        ),
+                        shared.SecretVersion(
+                            path="iure",
+                            version="saepe",
+                        ),
+                        shared.SecretVersion(
+                            path="quidem",
+                            version="architecto",
                         ),
                     ],
                 ),
             ],
             security_level="SECURITY_LEVEL_UNSPECIFIED",
-            service_account_email="in",
-            timeout_seconds=5600512735016871670,
-            vpc_connector="eum",
-            vpc_connector_egress_settings="PRIVATE_RANGES_ONLY",
+            service_account_email="reiciendis",
+            timeout_seconds=666767,
+            vpc_connector="mollitia",
+            vpc_connector_egress_settings="ALL_TRAFFIC",
         ),
     ),
+    access_token="dolores",
+    alt="json",
+    callback="corporis",
+    fields_="explicabo",
+    function_id="nobis",
+    key="enim",
+    oauth_token="omnis",
+    parent="nemo",
+    pretty_print=False,
+    quota_user="minima",
+    upload_type="excepturi",
+    upload_protocol="accusantium",
 )
     
-res = s.projects.cloudfunctions_projects_locations_functions_create(req)
+res = s.projects.cloudfunctions_projects_locations_functions_create(req, operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -176,7 +172,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -191,9 +188,19 @@ if res.operation is not None:
 * `cloudfunctions_projects_locations_functions_test_iam_permissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `cloudfunctions_projects_locations_list` - Lists information about the supported locations for this service.
 * `cloudfunctions_projects_locations_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `cloudfunctions_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `cloudfunctions_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `cloudfunctions_projects_locations_runtimes_list` - Returns a list of runtimes that are supported for the requested project.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

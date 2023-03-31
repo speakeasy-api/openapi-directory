@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostImageTagsRawPathParams struct {
+type PostImageTagsRawRequest struct {
+	// Batch of image tags. Limited to 128 tags per batch
+	RequestBody []byte `request:"mediaType=text/xml"`
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PostImageTagsRawHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type PostImageTagsRawRequest struct {
-	PathParams PostImageTagsRawPathParams
-	Headers    PostImageTagsRawHeaders
-	// Batch of image tags. Limited to 128 tags per batch
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type PostImageTagsRawResponse struct {

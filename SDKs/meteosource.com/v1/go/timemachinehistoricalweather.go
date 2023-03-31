@@ -43,7 +43,7 @@ func newTimeMachineHistoricalWeather(defaultClient, securityClient HTTPClient, s
 // 2. **OR** specify the name of the place using the parameter `place_id`. To obtain the `place_id` for the location you want, please use endpoints `/find_places_prefix` (search by prefix) or `/find_places` (search by full name).
 //
 // *Note: For mountains, it is usually better to specify the `place_id` rather than the `lat` and `lon`. When you use `place_id`, you are guaranteed to receive data for the precise elevation of the peak. When you specify the coordinates, the elevation can be less precise.*
-func (s *timeMachineHistoricalWeather) TimeMachineTimeMachineGet(ctx context.Context, request operations.TimeMachineTimeMachineGetRequest) (*operations.TimeMachineTimeMachineGetResponse, error) {
+func (s *timeMachineHistoricalWeather) TimeMachineTimeMachineGet(ctx context.Context, request operations.TimeMachineTimeMachineGetRequest, security operations.TimeMachineTimeMachineGetSecurity) (*operations.TimeMachineTimeMachineGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/time_machine"
 
@@ -52,11 +52,11 @@ func (s *timeMachineHistoricalWeather) TimeMachineTimeMachineGet(ctx context.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangePasswordPathParams struct {
+type ChangePasswordRequest struct {
+	// The value to set the subaccount's password to
+	Secret shared.Secret `request:"mediaType=application/json"`
 	// Shopper whose password will be set
 	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
-type ChangePasswordRequest struct {
-	PathParams ChangePasswordPathParams
-	// The value to set the subaccount's password to
-	Request shared.Secret `request:"mediaType=application/json"`
 }
 
 type ChangePasswordResponse struct {

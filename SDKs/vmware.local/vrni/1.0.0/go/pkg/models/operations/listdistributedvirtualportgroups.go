@@ -8,10 +8,10 @@ import (
 )
 
 type ListDistributedVirtualPortgroupsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ListDistributedVirtualPortgroupsQueryParams struct {
+type ListDistributedVirtualPortgroupsRequest struct {
 	// cursor from previous response
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// end time for query in epoch seconds
@@ -20,11 +20,6 @@ type ListDistributedVirtualPortgroupsQueryParams struct {
 	Size *float64 `queryParam:"style=form,explode=true,name=size"`
 	// start time for query in epoch seconds
 	StartTime *float64 `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListDistributedVirtualPortgroupsRequest struct {
-	QueryParams ListDistributedVirtualPortgroupsQueryParams
-	Security    ListDistributedVirtualPortgroupsSecurity
 }
 
 type ListDistributedVirtualPortgroupsResponse struct {

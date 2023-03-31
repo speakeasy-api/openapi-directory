@@ -33,16 +33,12 @@ func (e *StandingsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StandingsPathParams struct {
+type StandingsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format StandingsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Round ID. RoundIDs can be found in the Competitions and Competition Details endpoints.
 	// Example: <code>100000278</code>, etc
 	Roundid string `pathParam:"style=simple,explode=false,name=roundid"`
-}
-
-type StandingsRequest struct {
-	PathParams StandingsPathParams
 }
 
 type StandingsResponse struct {

@@ -44,7 +44,7 @@ func (s *externalEvents) GetExternalEvents(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *externalEvents) GetExternalEvents(ctx context.Context, request operatio
 // Show External Event
 func (s *externalEvents) GetExternalEventsID(ctx context.Context, request operations.GetExternalEventsIDRequest) (*operations.GetExternalEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/external_events/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *externalEvents) GetExternalEventsID(ctx context.Context, request operat
 
 // PostExternalEvents - Create External Event
 // Create External Event
-func (s *externalEvents) PostExternalEvents(ctx context.Context, request operations.PostExternalEventsRequest) (*operations.PostExternalEventsResponse, error) {
+func (s *externalEvents) PostExternalEvents(ctx context.Context, request operations.PostExternalEventsRequestBody) (*operations.PostExternalEventsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/external_events"
 

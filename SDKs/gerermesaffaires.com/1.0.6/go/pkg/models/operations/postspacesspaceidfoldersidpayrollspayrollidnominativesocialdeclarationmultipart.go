@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartPathParams struct {
-	// Id of the folder social
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the payroll
-	PayrollID string `pathParam:"style=simple,explode=false,name=payrollId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartFormDataAccountingWorkbookEnum string
@@ -89,10 +79,14 @@ type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMulti
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartPathParams
 	// Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder social
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the payroll
+	PayrollID string `pathParam:"style=simple,explode=false,name=payrollId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipart201ApplicationJSON - Id of document created

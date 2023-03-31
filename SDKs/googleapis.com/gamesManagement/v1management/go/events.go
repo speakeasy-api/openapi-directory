@@ -32,20 +32,20 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GamesManagementEventsReset - Resets all player progress on the event with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
-func (s *events) GamesManagementEventsReset(ctx context.Context, request operations.GamesManagementEventsResetRequest) (*operations.GamesManagementEventsResetResponse, error) {
+func (s *events) GamesManagementEventsReset(ctx context.Context, request operations.GamesManagementEventsResetRequest, security operations.GamesManagementEventsResetSecurity) (*operations.GamesManagementEventsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/reset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/reset", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,7 +71,7 @@ func (s *events) GamesManagementEventsReset(ctx context.Context, request operati
 }
 
 // GamesManagementEventsResetAll - Resets all player progress on all events for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
-func (s *events) GamesManagementEventsResetAll(ctx context.Context, request operations.GamesManagementEventsResetAllRequest) (*operations.GamesManagementEventsResetAllResponse, error) {
+func (s *events) GamesManagementEventsResetAll(ctx context.Context, request operations.GamesManagementEventsResetAllRequest, security operations.GamesManagementEventsResetAllSecurity) (*operations.GamesManagementEventsResetAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/events/reset"
 
@@ -80,11 +80,11 @@ func (s *events) GamesManagementEventsResetAll(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,7 +110,7 @@ func (s *events) GamesManagementEventsResetAll(ctx context.Context, request oper
 }
 
 // GamesManagementEventsResetAllForAllPlayers - Resets all draft events for all players. This method is only available to user accounts for your developer console.
-func (s *events) GamesManagementEventsResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetAllForAllPlayersRequest) (*operations.GamesManagementEventsResetAllForAllPlayersResponse, error) {
+func (s *events) GamesManagementEventsResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetAllForAllPlayersRequest, security operations.GamesManagementEventsResetAllForAllPlayersSecurity) (*operations.GamesManagementEventsResetAllForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/events/resetAllForAllPlayers"
 
@@ -119,11 +119,11 @@ func (s *events) GamesManagementEventsResetAllForAllPlayers(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -149,20 +149,20 @@ func (s *events) GamesManagementEventsResetAllForAllPlayers(ctx context.Context,
 }
 
 // GamesManagementEventsResetForAllPlayers - Resets the event with the given ID for all players. This method is only available to user accounts for your developer console. Only draft events can be reset.
-func (s *events) GamesManagementEventsResetForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetForAllPlayersRequest) (*operations.GamesManagementEventsResetForAllPlayersResponse, error) {
+func (s *events) GamesManagementEventsResetForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetForAllPlayersRequest, security operations.GamesManagementEventsResetForAllPlayersSecurity) (*operations.GamesManagementEventsResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/resetForAllPlayers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/resetForAllPlayers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -188,11 +188,11 @@ func (s *events) GamesManagementEventsResetForAllPlayers(ctx context.Context, re
 }
 
 // GamesManagementEventsResetMultipleForAllPlayers - Resets events with the given IDs for all players. This method is only available to user accounts for your developer console. Only draft events may be reset.
-func (s *events) GamesManagementEventsResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetMultipleForAllPlayersRequest) (*operations.GamesManagementEventsResetMultipleForAllPlayersResponse, error) {
+func (s *events) GamesManagementEventsResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetMultipleForAllPlayersRequest, security operations.GamesManagementEventsResetMultipleForAllPlayersSecurity) (*operations.GamesManagementEventsResetMultipleForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/events/resetMultipleForAllPlayers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventsResetMultipleForAllRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -204,11 +204,11 @@ func (s *events) GamesManagementEventsResetMultipleForAllPlayers(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,7 +33,7 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AppsactivityActivitiesList - Returns a list of activities visible to the current logged in user. Visible activities are determined by the visibility settings of the object that was acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is scoped to activities from a given Google service using the source parameter.
-func (s *activities) AppsactivityActivitiesList(ctx context.Context, request operations.AppsactivityActivitiesListRequest) (*operations.AppsactivityActivitiesListResponse, error) {
+func (s *activities) AppsactivityActivitiesList(ctx context.Context, request operations.AppsactivityActivitiesListRequest, security operations.AppsactivityActivitiesListSecurity) (*operations.AppsactivityActivitiesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/activities"
 
@@ -42,11 +42,11 @@ func (s *activities) AppsactivityActivitiesList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -21,7 +21,6 @@ pkg/models/shared/subscriptiondefinitionsresponse.go
 pkg/models/shared/subscriptiondefinition.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
-pkg/models/shared/security.go
 pkg/models/shared/publicsubscriptionstatusesresponse.go
 pkg/models/shared/publicsubscriptionstatus.go
 pkg/models/shared/publicupdatesubscriptionstatusrequest.go

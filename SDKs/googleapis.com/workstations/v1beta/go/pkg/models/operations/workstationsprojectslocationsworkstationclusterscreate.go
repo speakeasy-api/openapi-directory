@@ -8,18 +8,14 @@ import (
 )
 
 type WorkstationsProjectsLocationsWorkstationClustersCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WorkstationsProjectsLocationsWorkstationClustersCreatePathParams struct {
-	// Required. Parent resource name.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersCreateQueryParams struct {
+type WorkstationsProjectsLocationsWorkstationClustersCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WorkstationClusterInput *shared.WorkstationClusterInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type WorkstationsProjectsLocationsWorkstationClustersCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Parent resource name.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,13 +42,6 @@ type WorkstationsProjectsLocationsWorkstationClustersCreateQueryParams struct {
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
 	// Required. ID to use for the workstation cluster.
 	WorkstationClusterID *string `queryParam:"style=form,explode=true,name=workstationClusterId"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersCreateRequest struct {
-	PathParams  WorkstationsProjectsLocationsWorkstationClustersCreatePathParams
-	QueryParams WorkstationsProjectsLocationsWorkstationClustersCreateQueryParams
-	Request     *shared.WorkstationClusterInput `request:"mediaType=application/json"`
-	Security    WorkstationsProjectsLocationsWorkstationClustersCreateSecurity
 }
 
 type WorkstationsProjectsLocationsWorkstationClustersCreateResponse struct {

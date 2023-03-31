@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleResourceSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleResourcePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleResourceRequest struct {
-	PathParams PrivateArticleResourcePathParams
 	// Resource data
-	Request  shared.Resource `request:"mediaType=application/json"`
-	Security PrivateArticleResourceSecurity
+	Resource shared.Resource `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleResourceResponse struct {

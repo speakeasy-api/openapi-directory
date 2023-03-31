@@ -40,7 +40,7 @@ func newPhoneSite(defaultClient, securityClient HTTPClient, serverURL, language,
 // **Scope:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneSite) CreatePhoneSite(ctx context.Context, request operations.CreatePhoneSiteRequest) (*operations.CreatePhoneSiteResponse, error) {
+func (s *phoneSite) CreatePhoneSite(ctx context.Context, request operations.CreatePhoneSiteApplicationJSON, security operations.CreatePhoneSiteSecurity) (*operations.CreatePhoneSiteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/sites"
 
@@ -56,7 +56,7 @@ func (s *phoneSite) CreatePhoneSite(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,20 +108,20 @@ func (s *phoneSite) CreatePhoneSite(ctx context.Context, request operations.Crea
 // <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneSite) DeletePhoneSite(ctx context.Context, request operations.DeletePhoneSiteRequest) (*operations.DeletePhoneSiteResponse, error) {
+func (s *phoneSite) DeletePhoneSite(ctx context.Context, request operations.DeletePhoneSiteRequest, security operations.DeletePhoneSiteSecurity) (*operations.DeletePhoneSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,16 +174,16 @@ func (s *phoneSite) DeletePhoneSite(ctx context.Context, request operations.Dele
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneSite) GetASite(ctx context.Context, request operations.GetASiteRequest) (*operations.GetASiteResponse, error) {
+func (s *phoneSite) GetASite(ctx context.Context, request operations.GetASiteRequest, security operations.GetASiteSecurity) (*operations.GetASiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *phoneSite) ListPhoneSites(ctx context.Context, request operations.ListP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -295,11 +295,11 @@ func (s *phoneSite) ListPhoneSites(ctx context.Context, request operations.ListP
 //   - Account must have a Pro or a higher plan with Zoom Phone license.
 //   - **Scope:** `phone:write:admin`<br>
 //     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneSite) UpdateSiteDetails(ctx context.Context, request operations.UpdateSiteDetailsRequest) (*operations.UpdateSiteDetailsResponse, error) {
+func (s *phoneSite) UpdateSiteDetails(ctx context.Context, request operations.UpdateSiteDetailsRequest, security operations.UpdateSiteDetailsSecurity) (*operations.UpdateSiteDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/sites/{siteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -311,7 +311,7 @@ func (s *phoneSite) UpdateSiteDetails(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

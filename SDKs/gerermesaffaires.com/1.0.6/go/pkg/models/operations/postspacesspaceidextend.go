@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDExtendSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDExtendPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDExtendRequest struct {
-	PathParams PostSpacesSpaceIDExtendPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
-	Security   PostSpacesSpaceIDExtendSecurity
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDExtend201ApplicationJSON - Id of document created

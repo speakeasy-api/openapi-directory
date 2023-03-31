@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDeployedDevicesFleetServerList = []string{
@@ -12,18 +11,13 @@ var DeleteDeployedDevicesFleetServerList = []string{
 }
 
 type DeleteDeployedDevicesFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDeployedDevicesFleetPathParams struct {
-	// Provides a 34 character string that uniquely identifies the requested Fleet resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDeployedDevicesFleetRequest struct {
-	PathParams DeleteDeployedDevicesFleetPathParams
-	Security   DeleteDeployedDevicesFleetSecurity
-	ServerURL  *string
+	// Provides a 34 character string that uniquely identifies the requested Fleet resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteDeployedDevicesFleetResponse struct {

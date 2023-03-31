@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleAddMeasureUnitRequest struct {
-	// list of measureUnit
-	Request []shared.MeasureUnitDTO `request:"mediaType=application/json"`
-}
-
 type ArticleAddMeasureUnitResponse struct {
 	APIResponse                   *shared.APIResponse
 	ContentType                   string

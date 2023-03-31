@@ -8,17 +8,12 @@ import (
 )
 
 type GetPaymentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetPaymentPathParams struct {
-	// A unique ID for the desired payment.
-	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPaymentRequest struct {
-	PathParams GetPaymentPathParams
-	Security   GetPaymentSecurity
+	// A unique ID for the desired payment.
+	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
 }
 
 type GetPaymentResponse struct {

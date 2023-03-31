@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingAdvertiserGroupsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingAdvertiserGroupsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingAdvertiserGroupsListSortFieldEnum - Field by which to sort the list.
@@ -67,7 +62,7 @@ func (e *DfareportingAdvertiserGroupsListSortOrderEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DfareportingAdvertiserGroupsListQueryParams struct {
+type DfareportingAdvertiserGroupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -90,6 +85,8 @@ type DfareportingAdvertiserGroupsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "advertiser*2015" will return objects with names like "advertiser group June 2015", "advertiser group April 2015", or simply "advertiser group 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "advertisergroup" will match objects with name "my advertisergroup", "advertisergroup 2015", or simply "advertisergroup".
@@ -102,12 +99,6 @@ type DfareportingAdvertiserGroupsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingAdvertiserGroupsListRequest struct {
-	PathParams  DfareportingAdvertiserGroupsListPathParams
-	QueryParams DfareportingAdvertiserGroupsListQueryParams
-	Security    DfareportingAdvertiserGroupsListSecurity
 }
 
 type DfareportingAdvertiserGroupsListResponse struct {

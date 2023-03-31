@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type AddPathParams struct {
+type AddRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object (column) of the table in the agent's value space
 	Instance string `pathParam:"style=simple,explode=false,name=instance"`
 	// Object (column) of the table in the agent's value space
 	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type AddRequest struct {
-	PathParams AddPathParams
 }
 
 type AddResponse struct {

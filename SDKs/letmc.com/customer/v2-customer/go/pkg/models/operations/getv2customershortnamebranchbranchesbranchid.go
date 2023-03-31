@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2CustomerShortNameBranchBranchesBranchIDPathParams struct {
+type GetV2CustomerShortNameBranchBranchesBranchIDRequest struct {
 	// The unique ID of the Branch
 	BranchID string `pathParam:"style=simple,explode=false,name=branchID"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type GetV2CustomerShortNameBranchBranchesBranchIDRequest struct {
-	PathParams GetV2CustomerShortNameBranchBranchesBranchIDPathParams
 }
 
 type GetV2CustomerShortNameBranchBranchesBranchIDResponse struct {

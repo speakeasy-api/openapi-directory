@@ -10,12 +10,9 @@ import (
 	"net/http"
 )
 
-type GetAccountLockSettingsPathParams struct {
+type GetAccountLockSettingsRequest struct {
 	// Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. <br> To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountLockSettingsQueryParams struct {
 	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
 	// {
 	//     "schedule_meeting": {
@@ -26,11 +23,6 @@ type GetAccountLockSettingsQueryParams struct {
 	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
 	// `meeting_security`: Use this query parameter to view meeting security settings applied on the account.<br>
 	Option *string `queryParam:"style=form,explode=true,name=option"`
-}
-
-type GetAccountLockSettingsRequest struct {
-	PathParams  GetAccountLockSettingsPathParams
-	QueryParams GetAccountLockSettingsQueryParams
 }
 
 // GetAccountLockSettings200ApplicationXMLMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>

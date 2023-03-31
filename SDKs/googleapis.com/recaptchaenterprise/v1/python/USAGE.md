@@ -4,42 +4,43 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest(
-    security=operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams(
-        name="vel",
-    ),
-    query_params=operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams(
-        dollar_xgafv="2",
-        access_token="sint",
-        alt="json",
-        callback="voluptatem",
-        fields="eligendi",
-        key="ratione",
-        oauth_token="exercitationem",
-        pretty_print=False,
-        quota_user="voluptatem",
-        upload_type="qui",
-        upload_protocol="cumque",
-    ),
-    request=shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest(
+    dollar_xgafv="2",
+    google_cloud_recaptchaenterprise_v1_annotate_assessment_request=shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest(
         annotation="FRAUDULENT",
-        hashed_account_id="ullam",
+        hashed_account_id="distinctio",
         reasons=[
-            "INCORRECT_PASSWORD",
+            "INITIATED_TWO_FACTOR",
+            "CORRECT_PASSWORD",
+            "PAYMENT_HEURISTICS",
+            "CORRECT_PASSWORD",
         ],
+        transaction_event=shared.GoogleCloudRecaptchaenterpriseV1TransactionEvent(
+            event_time="vel",
+            event_type="FRAUD_NOTIFICATION",
+            reason="deserunt",
+            value=3843.82,
+        ),
     ),
+    access_token="iure",
+    alt="json",
+    callback="debitis",
+    fields_="ipsa",
+    key="delectus",
+    name="tempora",
+    oauth_token="suscipit",
+    pretty_print=False,
+    quota_user="molestiae",
+    upload_type="minus",
+    upload_protocol="placeat",
 )
     
-res = s.projects.recaptchaenterprise_projects_assessments_annotate(req)
+res = s.projects.recaptchaenterprise_projects_assessments_annotate(req, operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_recaptchaenterprise_v1_annotate_assessment_response is not None:
     # handle response

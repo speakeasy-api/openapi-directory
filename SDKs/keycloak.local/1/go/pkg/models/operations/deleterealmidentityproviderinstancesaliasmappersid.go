@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteRealmIdentityProviderInstancesAliasMappersIDPathParams struct {
+type DeleteRealmIdentityProviderInstancesAliasMappersIDRequest struct {
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// Mapper id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmIdentityProviderInstancesAliasMappersIDRequest struct {
-	PathParams DeleteRealmIdentityProviderInstancesAliasMappersIDPathParams
 }
 
 type DeleteRealmIdentityProviderInstancesAliasMappersIDResponse struct {

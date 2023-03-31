@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForIssuePathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForIssueRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types) to add to the issue.
 type ReactionsCreateForIssueRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForIssueRequestBody struct {
 }
 
 type ReactionsCreateForIssueRequest struct {
-	PathParams ReactionsCreateForIssuePathParams
-	Request    ReactionsCreateForIssueRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForIssueRequestBody `request:"mediaType=application/json"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReactionsCreateForIssue415ApplicationJSON - Preview header missing

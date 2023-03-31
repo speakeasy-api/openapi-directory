@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomField3PathParams struct {
+type UpdateCustomField3Request struct {
+	// Updated custom field with a specified key in a quote.
+	SmartCustomFieldDTO shared.SmartCustomFieldDTO `request:"mediaType=application/json"`
 	// custom field's key
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateCustomField3Request struct {
-	PathParams UpdateCustomField3PathParams
-	// Updated custom field with a specified key in a quote.
-	Request shared.SmartCustomFieldDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCustomField3Response struct {

@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ConvertcurrencyRequest(
-    query_params=operations.ConvertcurrencyQueryParams(
-        amount="nobis",
-        from_="mollitia",
-        license="sed",
-        to="soluta",
-    ),
+    amount="corrupti",
+    from_="provident",
+    license="distinctio",
+    to="quibusdam",
 )
     
 res = s.live_currency_rate_conversion.convertcurrency(req)

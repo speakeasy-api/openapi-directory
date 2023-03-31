@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSnapshotsUsingPOSTPathParams struct {
+type CreateSnapshotsUsingPOSTRequest struct {
+	// description
+	SnapshotCreationModel shared.SnapshotCreationModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateSnapshotsUsingPOSTRequest struct {
-	PathParams CreateSnapshotsUsingPOSTPathParams
-	// description
-	Request shared.SnapshotCreationModel `request:"mediaType=application/json"`
 }
 
 type CreateSnapshotsUsingPOSTResponse struct {

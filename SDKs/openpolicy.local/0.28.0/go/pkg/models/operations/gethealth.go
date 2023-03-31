@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetHealthQueryParams struct {
+type GetHealthRequest struct {
 	// Reports on bundle activation status (useful for 'ready' checks at startup).
 	//
 	// This includes any discovery bundles or bundles defined in the loaded discovery configuration.
 	Bundles *bool `queryParam:"style=form,explode=true,name=bundles"`
 	// Reports on plugin status
 	Plugins *bool `queryParam:"style=form,explode=true,name=plugins"`
-}
-
-type GetHealthRequest struct {
-	QueryParams GetHealthQueryParams
 }
 
 type GetHealthResponse struct {

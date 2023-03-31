@@ -36,7 +36,7 @@ func newQuote(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get a specific quote of project
 func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest) (*operations.GetQuoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,14 +191,14 @@ func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest
 // List the quotes
 func (s *quote) GetQuoteList(ctx context.Context, request operations.GetQuoteListRequest) (*operations.GetQuoteListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -350,7 +350,7 @@ func (s *quote) GetQuoteList(ctx context.Context, request operations.GetQuoteLis
 // List the quote states
 func (s *quote) GetQuoteStateList(ctx context.Context, request operations.GetQuoteStateListRequest) (*operations.GetQuoteStateListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/quoteStates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/quoteStates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -505,14 +505,14 @@ func (s *quote) GetQuoteStateList(ctx context.Context, request operations.GetQuo
 // List the quotes of workgroup level
 func (s *quote) GetV1WorkgroupsWorkgroupIDQuotes(ctx context.Context, request operations.GetV1WorkgroupsWorkgroupIDQuotesRequest) (*operations.GetV1WorkgroupsWorkgroupIDQuotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/quotes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/quotes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -664,9 +664,9 @@ func (s *quote) GetV1WorkgroupsWorkgroupIDQuotes(ctx context.Context, request op
 // Accept / Reject a Quote
 func (s *quote) PutQuoteJSON(ctx context.Context, request operations.PutQuoteJSONRequest) (*operations.PutQuoteJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuotePutPersistVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,9 +769,9 @@ func (s *quote) PutQuoteJSON(ctx context.Context, request operations.PutQuoteJSO
 // Accept / Reject a Quote
 func (s *quote) PutQuoteRaw(ctx context.Context, request operations.PutQuoteRawRequest) (*operations.PutQuoteRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

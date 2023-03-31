@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationAdaptivePolicyGroupPathParams struct {
-	ID             string `pathParam:"style=simple,explode=false,name=id"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationAdaptivePolicyGroupRequestBodyPolicyObjects struct {
 	// The ID of the policy object
 	ID *string `json:"id,omitempty"`
@@ -30,8 +25,9 @@ type UpdateOrganizationAdaptivePolicyGroupRequestBody struct {
 }
 
 type UpdateOrganizationAdaptivePolicyGroupRequest struct {
-	PathParams UpdateOrganizationAdaptivePolicyGroupPathParams
-	Request    *UpdateOrganizationAdaptivePolicyGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationAdaptivePolicyGroupRequestBody `request:"mediaType=application/json"`
+	ID             string                                            `pathParam:"style=simple,explode=false,name=id"`
+	OrganizationID string                                            `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationAdaptivePolicyGroupResponse struct {

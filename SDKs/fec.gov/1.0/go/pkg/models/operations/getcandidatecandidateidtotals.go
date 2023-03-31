@@ -7,17 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCandidateCandidateIDTotalsPathParams struct {
+type GetCandidateCandidateIDTotalsRequest struct {
+	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+	//
+	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
 	//
 	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
-}
-
-type GetCandidateCandidateIDTotalsQueryParams struct {
-	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
-	//
-	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.
@@ -39,11 +36,6 @@ type GetCandidateCandidateIDTotalsQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCandidateCandidateIDTotalsRequest struct {
-	PathParams  GetCandidateCandidateIDTotalsPathParams
-	QueryParams GetCandidateCandidateIDTotalsQueryParams
 }
 
 type GetCandidateCandidateIDTotalsResponse struct {

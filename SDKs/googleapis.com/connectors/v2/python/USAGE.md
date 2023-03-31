@@ -4,41 +4,34 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest(
-    security=operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams(
-        name="est",
-    ),
-    query_params=operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams(
-        dollar_xgafv="1",
-        access_token="velit",
-        alt="media",
-        callback="deleniti",
-        fields="eligendi",
-        key="dolorem",
-        oauth_token="corporis",
-        pretty_print=False,
-        quota_user="voluptas",
-        upload_type="qui",
-        upload_protocol="aut",
-    ),
-    request=shared.ExecuteActionRequest(
+    dollar_xgafv="2",
+    execute_action_request=shared.ExecuteActionRequest(
         parameters={
-            "ut": "aspernatur",
-            "qui": "praesentium",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
     ),
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.projects.connectors_projects_locations_connections_actions_execute(req)
+res = s.projects.connectors_projects_locations_connections_actions_execute(req, operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.execute_action_response is not None:
     # handle response

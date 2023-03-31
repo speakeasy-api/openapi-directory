@@ -43,9 +43,9 @@ func (s *paymentsAPI) GetEstimatedPrice(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,9 +103,9 @@ func (s *paymentsAPI) GetListOfPayments(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -166,14 +166,14 @@ func (s *paymentsAPI) GetListOfPayments(ctx context.Context, request operations.
 // - invoice_id - this parameter shows invoice ID from which the payment was created
 func (s *paymentsAPI) GetPaymentStatus(ctx context.Context, request operations.GetPaymentStatusRequest) (*operations.GetPaymentStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{payment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{payment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -230,9 +230,9 @@ func (s *paymentsAPI) GetTheMinimumPaymentAmount(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -285,14 +285,14 @@ func (s *paymentsAPI) GetTheMinimumPaymentAmount(ctx context.Context, request op
 // `expiration_estimate_date` - expiration date of this estimate
 func (s *paymentsAPI) GetUpdatePaymentEstimate(ctx context.Context, request operations.GetUpdatePaymentEstimateRequest) (*operations.GetUpdatePaymentEstimateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{id}/update-merchant-estimate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{id}/update-merchant-estimate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -10,7 +10,7 @@ import (
 )
 
 type PrivateProjectsListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PrivateProjectsListOrderEnum - The field by which to order.
@@ -88,7 +88,7 @@ func (e *PrivateProjectsListStorageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PrivateProjectsListQueryParams struct {
+type PrivateProjectsListRequest struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
@@ -104,11 +104,6 @@ type PrivateProjectsListQueryParams struct {
 	Roles *string `queryParam:"style=form,explode=true,name=roles"`
 	// only return collections from this institution
 	Storage *PrivateProjectsListStorageEnum `queryParam:"style=form,explode=true,name=storage"`
-}
-
-type PrivateProjectsListRequest struct {
-	QueryParams PrivateProjectsListQueryParams
-	Security    PrivateProjectsListSecurity
 }
 
 type PrivateProjectsListResponse struct {

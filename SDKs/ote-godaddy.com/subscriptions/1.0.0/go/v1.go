@@ -36,14 +36,14 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // Cancel - Cancel the specified Subscription
 func (s *v1) Cancel(ctx context.Context, request operations.CancelRequest) (*operations.CancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -161,14 +161,14 @@ func (s *v1) Cancel(ctx context.Context, request operations.CancelRequest) (*ope
 // Get - Retrieve details for the specified Subscription
 func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -330,9 +330,9 @@ func (s *v1) List(ctx context.Context, request operations.ListRequest) (*operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -492,7 +492,7 @@ func (s *v1) ProductGroups(ctx context.Context, request operations.ProductGroups
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -642,9 +642,9 @@ func (s *v1) ProductGroups(ctx context.Context, request operations.ProductGroups
 // Only Subscription properties that can be changed without immediate financial impact can be modified via PATCH, whereas some properties can be changed by purchasing a renewal<br/><strong>This endpoint only supports JWT authentication</strong>
 func (s *v1) UpdateForm(ctx context.Context, request operations.UpdateFormRequest) (*operations.UpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionUpdate", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -713,9 +713,9 @@ func (s *v1) UpdateForm(ctx context.Context, request operations.UpdateFormReques
 // Only Subscription properties that can be changed without immediate financial impact can be modified via PATCH, whereas some properties can be changed by purchasing a renewal<br/><strong>This endpoint only supports JWT authentication</strong>
 func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONRequest) (*operations.UpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -784,9 +784,9 @@ func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONReques
 // Only Subscription properties that can be changed without immediate financial impact can be modified via PATCH, whereas some properties can be changed by purchasing a renewal<br/><strong>This endpoint only supports JWT authentication</strong>
 func (s *v1) UpdateRaw(ctx context.Context, request operations.UpdateRawRequest) (*operations.UpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

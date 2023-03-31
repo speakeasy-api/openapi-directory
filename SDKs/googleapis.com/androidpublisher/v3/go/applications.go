@@ -32,11 +32,11 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AndroidpublisherApplicationsDeviceTierConfigsCreate - Creates a new device tier config for an app.
-func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest) (*operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse, error) {
+func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceTierConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx c
 }
 
 // AndroidpublisherApplicationsDeviceTierConfigsGet - Returns a particular device tier config.
-func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsGet(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest) (*operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse, error) {
+func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsGet(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsGetSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsGet(ctx cont
 }
 
 // AndroidpublisherApplicationsDeviceTierConfigsList - Returns created device tier configs, ordered by descending creation time.
-func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsList(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest) (*operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse, error) {
+func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsList(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsListSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

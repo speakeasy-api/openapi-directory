@@ -8,18 +8,14 @@ import (
 )
 
 type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchPathParams struct {
-	// Full name of this resource.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchQueryParams struct {
+type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv      *shared.XgafvEnum        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WorkstationInput *shared.WorkstationInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// If set, and the config is not found, a new config will be created. In this situation, update_mask is ignored.
@@ -32,6 +28,8 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstati
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Full name of this resource.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -46,13 +44,6 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstati
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// If set, validate the request and preview the review, but do not actually apply it.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchRequest struct {
-	PathParams  WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchPathParams
-	QueryParams WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchQueryParams
-	Request     *shared.WorkstationInput `request:"mediaType=application/json"`
-	Security    WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchSecurity
 }
 
 type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse struct {

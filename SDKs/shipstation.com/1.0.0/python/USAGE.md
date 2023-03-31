@@ -4,15 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.CreateANewQuestionRequest(
-    request=operations.CreateANewQuestionRequestBody(
-        choices=[
-            "excepturi",
-            "cumque",
-        ],
-        question="et",
-    ),
+
+
+req = operations.CreateANewQuestionRequestBody(
+    choices=[
+        "provident",
+        "distinctio",
+        "quibusdam",
+    ],
+    question="unde",
 )
     
 res = s.create_a_new_question(req)

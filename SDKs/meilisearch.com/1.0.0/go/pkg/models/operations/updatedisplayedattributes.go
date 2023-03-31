@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDisplayedAttributesRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type UpdateDisplayedAttributesResponse struct {
 	ContentType string
 	StatusCode  int

@@ -44,10 +44,6 @@ type SubmitPostRequestBody struct {
 	Type string `multipartForm:"name=type"`
 }
 
-type SubmitPostRequest struct {
-	Request *SubmitPostRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // SubmitPost200ApplicationJSON - Post submission result.
 type SubmitPost200ApplicationJSON struct {
 	// When an error or warning is returned, this will contain a short string representing the type of error or warning that occurred.  Is null on success.

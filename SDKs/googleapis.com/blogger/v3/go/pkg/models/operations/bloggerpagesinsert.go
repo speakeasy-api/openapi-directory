@@ -8,21 +8,19 @@ import (
 )
 
 type BloggerPagesInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BloggerPagesInsertPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
-}
-
-type BloggerPagesInsertQueryParams struct {
+type BloggerPagesInsertRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Page        *shared.Page      `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,13 +38,6 @@ type BloggerPagesInsertQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BloggerPagesInsertRequest struct {
-	PathParams  BloggerPagesInsertPathParams
-	QueryParams BloggerPagesInsertQueryParams
-	Request     *shared.Page `request:"mediaType=application/json"`
-	Security    BloggerPagesInsertSecurity
 }
 
 type BloggerPagesInsertResponse struct {

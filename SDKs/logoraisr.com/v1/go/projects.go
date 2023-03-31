@@ -34,7 +34,7 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // ProjectsCreate - Create a new project.
 // This POST-Method creates a new project.
-func (s *projects) ProjectsCreate(ctx context.Context, request operations.ProjectsCreateRequest) (*operations.ProjectsCreateResponse, error) {
+func (s *projects) ProjectsCreate(ctx context.Context, request shared.ProjectRequest) (*operations.ProjectsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects/"
 
@@ -144,7 +144,7 @@ func (s *projects) ProjectsList(ctx context.Context) (*operations.ProjectsListRe
 // This GET-Method returns a specific project.
 func (s *projects) ProjectsRead(ctx context.Context, request operations.ProjectsReadRequest) (*operations.ProjectsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_number}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_number}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

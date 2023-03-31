@@ -8,18 +8,11 @@ import (
 )
 
 type ContentRepricingrulesRepricingreportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentRepricingrulesRepricingreportsListPathParams struct {
-	// Required. Id of the merchant who owns the Repricing rule.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-	// Required. Id of the Repricing rule.
-	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
-}
-
-type ContentRepricingrulesRepricingreportsListQueryParams struct {
+type ContentRepricingrulesRepricingreportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +27,8 @@ type ContentRepricingrulesRepricingreportsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Id of the merchant who owns the Repricing rule.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Maximum number of daily reports to return. Each report includes data from a single 24-hour period. The page size defaults to 50 and values above 1000 are coerced to 1000. This service may return fewer days than this value, for example, if the time between your start and end date is less than page size.
@@ -44,18 +39,14 @@ type ContentRepricingrulesRepricingreportsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Id of the Repricing rule.
+	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
 	// Gets Repricing reports on and after this date in the merchant's timezone, up to one year ago. Do not use a start date later than 7 days ago (default). Format: YYYY-MM-DD.
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentRepricingrulesRepricingreportsListRequest struct {
-	PathParams  ContentRepricingrulesRepricingreportsListPathParams
-	QueryParams ContentRepricingrulesRepricingreportsListQueryParams
-	Security    ContentRepricingrulesRepricingreportsListSecurity
 }
 
 type ContentRepricingrulesRepricingreportsListResponse struct {

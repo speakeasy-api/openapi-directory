@@ -33,11 +33,11 @@ func newV1beta(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CloudbillingEstimateCostScenario - Estimate list prices using a `CostScenario` without a defined `billingAccount`.
-func (s *v1beta) CloudbillingEstimateCostScenario(ctx context.Context, request operations.CloudbillingEstimateCostScenarioRequest) (*operations.CloudbillingEstimateCostScenarioResponse, error) {
+func (s *v1beta) CloudbillingEstimateCostScenario(ctx context.Context, request operations.CloudbillingEstimateCostScenarioRequest, security operations.CloudbillingEstimateCostScenarioSecurity) (*operations.CloudbillingEstimateCostScenarioResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta:estimateCostScenario"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EstimateCostScenarioWithListPriceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *v1beta) CloudbillingEstimateCostScenario(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

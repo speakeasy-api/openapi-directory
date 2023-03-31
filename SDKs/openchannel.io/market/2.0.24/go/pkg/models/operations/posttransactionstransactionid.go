@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type PostTransactionsTransactionIDPathParams struct {
-	// The id of the transaction to be updated
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type PostTransactionsTransactionIDQueryParams struct {
+type PostTransactionsTransactionIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
-}
-
-type PostTransactionsTransactionIDRequest struct {
-	PathParams  PostTransactionsTransactionIDPathParams
-	QueryParams PostTransactionsTransactionIDQueryParams
+	// The id of the transaction to be updated
+	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 type PostTransactionsTransactionIDResponse struct {

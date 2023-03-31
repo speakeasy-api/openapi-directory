@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationInterfacesUpdatePathParams struct {
+type VirtualizationInterfacesUpdateRequest struct {
+	WritableVirtualMachineInterfaceInput shared.WritableVirtualMachineInterfaceInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this interface.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationInterfacesUpdateRequest struct {
-	PathParams VirtualizationInterfacesUpdatePathParams
-	Request    shared.WritableVirtualMachineInterfaceInput `request:"mediaType=application/json"`
 }
 
 type VirtualizationInterfacesUpdateResponse struct {

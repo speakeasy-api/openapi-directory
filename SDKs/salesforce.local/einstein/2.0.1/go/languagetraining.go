@@ -35,16 +35,16 @@ func newLanguageTraining(defaultClient, securityClient HTTPClient, serverURL, la
 
 // GetTrainStatusAndProgress - Get Training Status
 // Returns the status of a model's training process. Use the progress field to determine how far the training has progressed. When training completes successfully, the status is SUCCEEDED and the progress is 1.
-func (s *languageTraining) GetTrainStatusAndProgress(ctx context.Context, request operations.GetTrainStatusAndProgressRequest) (*operations.GetTrainStatusAndProgressResponse, error) {
+func (s *languageTraining) GetTrainStatusAndProgress(ctx context.Context, request operations.GetTrainStatusAndProgressRequest, security operations.GetTrainStatusAndProgressSecurity) (*operations.GetTrainStatusAndProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/train/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/train/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *languageTraining) GetTrainStatusAndProgress(ctx context.Context, reques
 
 // Retrain - Retrain a Dataset
 // Retrains a dataset and updates a model. Use this API call when you want to update a model and keep the model ID instead of creating a new model.
-func (s *languageTraining) Retrain(ctx context.Context, request operations.RetrainRequest) (*operations.RetrainResponse, error) {
+func (s *languageTraining) Retrain(ctx context.Context, request operations.RetrainRequestBody, security operations.RetrainSecurity) (*operations.RetrainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/retrain"
 
@@ -96,7 +96,7 @@ func (s *languageTraining) Retrain(ctx context.Context, request operations.Retra
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,7 +132,7 @@ func (s *languageTraining) Retrain(ctx context.Context, request operations.Retra
 
 // Train - Train a Dataset
 // Trains a dataset and creates a model.
-func (s *languageTraining) Train(ctx context.Context, request operations.TrainRequest) (*operations.TrainResponse, error) {
+func (s *languageTraining) Train(ctx context.Context, request operations.TrainRequestBody, security operations.TrainSecurity) (*operations.TrainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/train"
 
@@ -148,7 +148,7 @@ func (s *languageTraining) Train(ctx context.Context, request operations.TrainRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

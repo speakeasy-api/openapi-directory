@@ -43,7 +43,7 @@ func (s *v1) GetCountries(ctx context.Context, request operations.GetCountriesRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -107,14 +107,14 @@ func (s *v1) GetCountries(ctx context.Context, request operations.GetCountriesRe
 // Authorization is not required
 func (s *v1) GetCountry(ctx context.Context, request operations.GetCountryRequest) (*operations.GetCountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{countryKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{countryKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

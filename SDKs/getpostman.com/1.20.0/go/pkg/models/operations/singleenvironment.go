@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleEnvironmentPathParams struct {
-	EnvironmentUID string `pathParam:"style=simple,explode=false,name=environment_uid"`
-}
-
 type SingleEnvironmentRequest struct {
-	PathParams SingleEnvironmentPathParams
+	EnvironmentUID string `pathParam:"style=simple,explode=false,name=environment_uid"`
 }
 
 type SingleEnvironment200ApplicationJSONEnvironmentValues struct {

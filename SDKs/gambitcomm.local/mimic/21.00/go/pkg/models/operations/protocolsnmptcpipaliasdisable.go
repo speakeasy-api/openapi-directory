@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmptcpIpaliasDisablePathParams struct {
+type ProtocolSnmptcpIpaliasDisableRequest struct {
 	// Agent to manipulate SNMPTCP IP alias
 	AgentNum  int    `pathParam:"style=simple,explode=false,name=agentNum"`
 	Ipaddress string `pathParam:"style=simple,explode=false,name=ipaddress"`
 	Port      int    `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolSnmptcpIpaliasDisableRequest struct {
-	PathParams ProtocolSnmptcpIpaliasDisablePathParams
 }
 
 type ProtocolSnmptcpIpaliasDisableResponse struct {

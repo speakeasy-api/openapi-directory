@@ -15,11 +15,6 @@ type EnterpriseAdminUpgradeLicenseRequestBody struct {
 	License *string `multipartForm:"name=license"`
 }
 
-type EnterpriseAdminUpgradeLicenseRequest struct {
-	Request   *EnterpriseAdminUpgradeLicenseRequestBody `request:"mediaType=multipart/form-data"`
-	ServerURL *string
-}
-
 type EnterpriseAdminUpgradeLicenseResponse struct {
 	ContentType string
 	StatusCode  int

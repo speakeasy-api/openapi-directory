@@ -8,16 +8,11 @@ import (
 )
 
 type ServicebrokerProjectsBrokersV2CatalogListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerProjectsBrokersV2CatalogListPathParams struct {
-	// Parent must match `projects/[PROJECT_ID]/brokers/[BROKER_ID]`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicebrokerProjectsBrokersV2CatalogListQueryParams struct {
+type ServicebrokerProjectsBrokersV2CatalogListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -39,6 +34,8 @@ type ServicebrokerProjectsBrokersV2CatalogListQueryParams struct {
 	// Specifies a page token to use. Set `pageToken` to a `nextPageToken`
 	// returned by a previous list request to get the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Parent must match `projects/[PROJECT_ID]/brokers/[BROKER_ID]`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -47,12 +44,6 @@ type ServicebrokerProjectsBrokersV2CatalogListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerProjectsBrokersV2CatalogListRequest struct {
-	PathParams  ServicebrokerProjectsBrokersV2CatalogListPathParams
-	QueryParams ServicebrokerProjectsBrokersV2CatalogListQueryParams
-	Security    ServicebrokerProjectsBrokersV2CatalogListSecurity
 }
 
 type ServicebrokerProjectsBrokersV2CatalogListResponse struct {

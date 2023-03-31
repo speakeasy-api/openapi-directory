@@ -43,10 +43,6 @@ type PostAssetsCorrelationMatrixInformativenessRequestBody struct {
 	DistanceMetric *PostAssetsCorrelationMatrixInformativenessRequestBodyDistanceMetricEnum `json:"distanceMetric,omitempty"`
 }
 
-type PostAssetsCorrelationMatrixInformativenessRequest struct {
-	Request PostAssetsCorrelationMatrixInformativenessRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixInformativeness200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixInformativeness200ApplicationJSON struct {
 	// The informativeness of the asset correlation matrix

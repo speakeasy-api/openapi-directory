@@ -37,7 +37,7 @@ func (s *pools) PoolAdd(ctx context.Context, request operations.PoolAddRequest) 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pools"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolAddParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *pools) PoolAdd(ctx context.Context, request operations.PoolAddRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,16 +98,16 @@ func (s *pools) PoolAdd(ctx context.Context, request operations.PoolAddRequest) 
 // PoolDelete - Deletes a pool from the specified account.
 func (s *pools) PoolDelete(ctx context.Context, request operations.PoolDeleteRequest) (*operations.PoolDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -151,16 +151,16 @@ func (s *pools) PoolDelete(ctx context.Context, request operations.PoolDeleteReq
 // PoolDisableAutoScale - Disables automatic scaling for a pool.
 func (s *pools) PoolDisableAutoScale(ctx context.Context, request operations.PoolDisableAutoScaleRequest) (*operations.PoolDisableAutoScaleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/disableautoscale", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/disableautoscale", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,9 +204,9 @@ func (s *pools) PoolDisableAutoScale(ctx context.Context, request operations.Poo
 // PoolEnableAutoScale - Enables automatic scaling for a pool.
 func (s *pools) PoolEnableAutoScale(ctx context.Context, request operations.PoolEnableAutoScaleRequest) (*operations.PoolEnableAutoScaleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/enableautoscale", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/enableautoscale", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolEnableAutoScaleParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -221,9 +221,9 @@ func (s *pools) PoolEnableAutoScale(ctx context.Context, request operations.Pool
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -267,9 +267,9 @@ func (s *pools) PoolEnableAutoScale(ctx context.Context, request operations.Pool
 // PoolEvaluateAutoScale - Gets the result of evaluating an automatic scaling formula on the pool.
 func (s *pools) PoolEvaluateAutoScale(ctx context.Context, request operations.PoolEvaluateAutoScaleRequest) (*operations.PoolEvaluateAutoScaleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/evaluateautoscale", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/evaluateautoscale", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolEvaluateAutoScaleParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -284,9 +284,9 @@ func (s *pools) PoolEvaluateAutoScale(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -339,16 +339,16 @@ func (s *pools) PoolEvaluateAutoScale(ctx context.Context, request operations.Po
 // PoolExists - Gets basic properties of a pool.
 func (s *pools) PoolExists(ctx context.Context, request operations.PoolExistsRequest) (*operations.PoolExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -393,16 +393,16 @@ func (s *pools) PoolExists(ctx context.Context, request operations.PoolExistsReq
 // PoolGet - Gets information about the specified pool.
 func (s *pools) PoolGet(ctx context.Context, request operations.PoolGetRequest) (*operations.PoolGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -462,9 +462,9 @@ func (s *pools) PoolGetAllPoolsLifetimeStatistics(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -524,9 +524,9 @@ func (s *pools) PoolList(ctx context.Context, request operations.PoolListRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -586,9 +586,9 @@ func (s *pools) PoolListPoolUsageMetrics(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -641,9 +641,9 @@ func (s *pools) PoolListPoolUsageMetrics(ctx context.Context, request operations
 // PoolPatch - Updates the properties of a pool.
 func (s *pools) PoolPatch(ctx context.Context, request operations.PoolPatchRequest) (*operations.PoolPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolPatchParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -658,9 +658,9 @@ func (s *pools) PoolPatch(ctx context.Context, request operations.PoolPatchReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -704,9 +704,9 @@ func (s *pools) PoolPatch(ctx context.Context, request operations.PoolPatchReque
 // PoolResize - Changes the number of compute nodes that are assigned to a pool.
 func (s *pools) PoolResize(ctx context.Context, request operations.PoolResizeRequest) (*operations.PoolResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/resize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/resize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolResizeParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,9 +721,9 @@ func (s *pools) PoolResize(ctx context.Context, request operations.PoolResizeReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -767,16 +767,16 @@ func (s *pools) PoolResize(ctx context.Context, request operations.PoolResizeReq
 // PoolStopResize - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 func (s *pools) PoolStopResize(ctx context.Context, request operations.PoolStopResizeRequest) (*operations.PoolStopResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/stopresize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/stopresize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -820,9 +820,9 @@ func (s *pools) PoolStopResize(ctx context.Context, request operations.PoolStopR
 // PoolUpdateProperties - Updates the properties of a pool.
 func (s *pools) PoolUpdateProperties(ctx context.Context, request operations.PoolUpdatePropertiesRequest) (*operations.PoolUpdatePropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/updateproperties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/updateproperties", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolUpdatePropertiesParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -837,9 +837,9 @@ func (s *pools) PoolUpdateProperties(ctx context.Context, request operations.Poo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -883,9 +883,9 @@ func (s *pools) PoolUpdateProperties(ctx context.Context, request operations.Poo
 // PoolUpgradeOS - Upgrades the operating system of the specified pool.
 func (s *pools) PoolUpgradeOS(ctx context.Context, request operations.PoolUpgradeOSRequest) (*operations.PoolUpgradeOSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/upgradeos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/upgradeos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolUpgradeOSParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -900,9 +900,9 @@ func (s *pools) PoolUpgradeOS(ctx context.Context, request operations.PoolUpgrad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

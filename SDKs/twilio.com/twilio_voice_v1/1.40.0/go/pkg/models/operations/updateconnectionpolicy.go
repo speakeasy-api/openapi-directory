@@ -12,12 +12,8 @@ var UpdateConnectionPolicyServerList = []string{
 }
 
 type UpdateConnectionPolicySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConnectionPolicyPathParams struct {
-	// The unique string that we created to identify the Connection Policy resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConnectionPolicyUpdateConnectionPolicyRequest struct {
@@ -26,10 +22,9 @@ type UpdateConnectionPolicyUpdateConnectionPolicyRequest struct {
 }
 
 type UpdateConnectionPolicyRequest struct {
-	PathParams UpdateConnectionPolicyPathParams
-	Request    *UpdateConnectionPolicyUpdateConnectionPolicyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConnectionPolicySecurity
-	ServerURL  *string
+	RequestBody *UpdateConnectionPolicyUpdateConnectionPolicyRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the Connection Policy resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConnectionPolicyResponse struct {

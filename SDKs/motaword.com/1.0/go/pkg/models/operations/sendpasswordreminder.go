@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendPasswordReminderRequest struct {
-	Request *shared.Email `request:"mediaType=application/json"`
-}
-
 type SendPasswordReminderResponse struct {
 	ContentType string
 	// Reminder already sent, wait for a while before new request!

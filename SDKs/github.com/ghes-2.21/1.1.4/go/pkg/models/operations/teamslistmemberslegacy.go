@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListMembersLegacyPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsListMembersLegacyRoleEnum - Filters members returned by their role in the team. Can be one of:
 // \* `member` - normal members of the team.
 // \* `maintainer` - team maintainers.
@@ -43,7 +39,7 @@ func (e *TeamsListMembersLegacyRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TeamsListMembersLegacyQueryParams struct {
+type TeamsListMembersLegacyRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
@@ -52,12 +48,8 @@ type TeamsListMembersLegacyQueryParams struct {
 	// \* `member` - normal members of the team.
 	// \* `maintainer` - team maintainers.
 	// \* `all` - all members of the team.
-	Role *TeamsListMembersLegacyRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type TeamsListMembersLegacyRequest struct {
-	PathParams  TeamsListMembersLegacyPathParams
-	QueryParams TeamsListMembersLegacyQueryParams
+	Role   *TeamsListMembersLegacyRoleEnum `queryParam:"style=form,explode=true,name=role"`
+	TeamID int64                           `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListMembersLegacyResponse struct {

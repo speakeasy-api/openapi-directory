@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveWageSettingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveWageSettingPathParams struct {
-	// The ID of the team member for which to retrieve the wage setting.
-	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveWageSettingRequest struct {
-	PathParams RetrieveWageSettingPathParams
-	Security   RetrieveWageSettingSecurity
+	// The ID of the team member for which to retrieve the wage setting.
+	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
 }
 
 type RetrieveWageSettingResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type RunNamespacesServicesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunNamespacesServicesDeletePathParams struct {
-	// Required. The fully qualified name of the service to delete. It can be any of the following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RunNamespacesServicesDeleteQueryParams struct {
+type RunNamespacesServicesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RunNamespacesServicesDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Not supported, and ignored by Cloud Run.
 	Kind *string `queryParam:"style=form,explode=true,name=kind"`
+	// Required. The fully qualified name of the service to delete. It can be any of the following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -48,12 +45,6 @@ type RunNamespacesServicesDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunNamespacesServicesDeleteRequest struct {
-	PathParams  RunNamespacesServicesDeletePathParams
-	QueryParams RunNamespacesServicesDeleteQueryParams
-	Security    RunNamespacesServicesDeleteSecurity
 }
 
 type RunNamespacesServicesDeleteResponse struct {

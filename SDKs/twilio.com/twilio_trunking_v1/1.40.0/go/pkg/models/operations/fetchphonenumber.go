@@ -12,20 +12,15 @@ var FetchPhoneNumberServerList = []string{
 }
 
 type FetchPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchPhoneNumberPathParams struct {
+type FetchPhoneNumberRequest struct {
 	// The unique string that we created to identify the PhoneNumber resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Trunk from which to fetch the PhoneNumber resource.
 	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
-}
-
-type FetchPhoneNumberRequest struct {
-	PathParams FetchPhoneNumberPathParams
-	Security   FetchPhoneNumberSecurity
-	ServerURL  *string
 }
 
 type FetchPhoneNumberResponse struct {

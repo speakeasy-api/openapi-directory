@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDPersonsMemberIDPlayerPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// memberId of the person
-	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
 type PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum string
 
 const (
@@ -82,9 +75,12 @@ type PatchSpacesIDPersonsMemberIDPlayerRequestBody struct {
 }
 
 type PatchSpacesIDPersonsMemberIDPlayerRequest struct {
-	PathParams PatchSpacesIDPersonsMemberIDPlayerPathParams
 	// Person to modify
-	Request PatchSpacesIDPersonsMemberIDPlayerRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDPersonsMemberIDPlayerRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// memberId of the person
+	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 }
 
 type PatchSpacesIDPersonsMemberIDPlayerResponse struct {

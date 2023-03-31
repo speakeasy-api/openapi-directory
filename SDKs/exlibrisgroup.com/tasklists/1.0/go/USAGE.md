@@ -13,22 +13,18 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
-        QueryParams: operations.GetAlmawsV1TaskListsRsLendingRequestsQueryParams{
-            Library: "corrupti",
-            Partner: "provident",
-            Printed: "distinctio",
-            Reported: "quibusdam",
-            RequestedFormat: "unde",
-            Status: "nulla",
-            SuppliedFormat: "corrupti",
-        },
+        Library: "corrupti",
+        Partner: "provident",
+        Printed: "distinctio",
+        Reported: "quibusdam",
+        RequestedFormat: "unde",
+        Status: "nulla",
+        SuppliedFormat: "corrupti",
     }
 
     ctx := context.Background()

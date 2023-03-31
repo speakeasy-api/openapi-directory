@@ -32,20 +32,20 @@ func newRegions(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DfareportingRegionsList - Retrieves a list of regions.
-func (s *regions) DfareportingRegionsList(ctx context.Context, request operations.DfareportingRegionsListRequest) (*operations.DfareportingRegionsListResponse, error) {
+func (s *regions) DfareportingRegionsList(ctx context.Context, request operations.DfareportingRegionsListRequest, security operations.DfareportingRegionsListSecurity) (*operations.DfareportingRegionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/regions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/regions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

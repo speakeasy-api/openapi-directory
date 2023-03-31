@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/izettle.com/products/1.0.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,27 +15,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateCategoriesRequest(
-    security=operations.CreateCategoriesSecurity(
-        zettle_api_key=shared.SchemeZettleAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    path_params=operations.CreateCategoriesPathParams(
-        organization_uuid="aut",
-    ),
-    request=shared.CategoryRequest(
+    create_categories_request=shared.CreateCategoriesRequest(
         categories=[
-            shared.CategoryDto(
-                name="debitis",
-                uuid="ut",
+            shared.CategoryDTO(
+                name="provident",
+                uuid="bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+            ),
+            shared.CategoryDTO(
+                name="ipsam",
+                uuid="dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
+            ),
+            shared.CategoryDTO(
+                name="ipsum",
+                uuid="92059293-96fe-4a75-96eb-10faaa2352c5",
             ),
         ],
     ),
+    organization_uuid="955907af-f1a3-4a2f-a946-7739251aa52c",
 )
     
-res = s.categories.create_categories(req)
+res = s.categories.create_categories(req, operations.CreateCategoriesSecurity(
+    zettle_oauth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response
@@ -43,62 +47,75 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### categories
 
-* `create_categories` - Creates a new category
-* `get_product_types` - Retrieves all categories
+* `create_categories` - Create a new category
+* `delete_category` - Delete a category
+* `get_product_types` - Retrieve all categories
+* `rename_category` - Rename a category
 
 ### discounts
 
-* `create_discount` - Creates a discount
-* `delete_discount` - Deletes a single discount 
-* `get_all_discounts` - Retrieves all discounts
-* `get_discount` - Retrieves a single discount
-* `update_discount` - Updates a single discount
+* `create_discount` - Create a discount
+* `delete_discount` - Delete a single discount 
+* `get_all_discounts` - Retrieve all discounts
+* `get_discount` - Retrieve a single discount
+* `update_discount` - Update a single discount
 
 ### images
 
-* `get_all_image_urls` - Retrieves all library item images
+* `get_all_image_urls` - Retrieve all library item images
 
-### import
+### import_
 
-* `get_latest_import_status` - Gets status for latest import
-* `get_status_by_uuid` - Gets status for an import
-* `import_library_v2` - Bulk import library items
+* `get_latest_import_status` - Get status for latest import
+* `get_status_by_uuid` - Get status for an import
+* `import_library_v2` - Import library items
 
 ### library
 
-* `get_library` - Retrieves the entire library
+* `get_library` - Retrieve the entire library
 
 ### products
 
-* `count_all_products` - Retrieves the count of existing products
-* `create_product` - Creates a new product
-* `delete_product` - Deletes a single product
-* `delete_products` - Deletes a list of products
-* `get_all_options` - Retrieves an aggregate of active Options in the library
-* `get_all_products_in_pos` - Retrieves all products visible in POS
-* `get_all_products_v2` - Retrieves all products visible in POS – v2
-* `get_product` - Retrieves a single product
-* `update_product` - Updates a single product
+* `count_all_products` - Retrieve the count of existing products
+* `create_product` - Create a new product
+* `delete_product` - Delete a single product
+* `delete_products` - Delete a list of products
+* `get_all_options` - Retrieve an aggregate of active Options in the library
+* `get_all_products_in_pos` - Retrieve all products visible in POS
+* `get_all_products_v2` - Retrieve all products visible in POS – v2
+* `get_product` - Retrieve a single product
+* `update_product` - Update a single product
 
-### products/online
+### products_online
 
-* `create_product_slug` - Creates a product identifier
+* `create_product_slug` - Create a product identifier
 
 ### taxes
 
-* `create_tax_rates` - Creates new tax rates
-* `delete_tax_rate` - Deletes a single tax rate
-* `get_product_count_for_all_taxes` - Gets all tax rates and a count of products associated with each
-* `get_tax_rate` - Gets a single tax rate
-* `get_tax_rates` - Gets all tax rates available
-* `get_tax_settings` - Gets the organization tax settings 
-* `set_taxation_mode` - Updates the organization tax settings
-* `update_tax_rate` - Updates a single tax rate
-
+* `create_tax_rates` - Create new tax rates
+* `delete_tax_rate` - Delete a single tax rate
+* `get_product_count_for_all_taxes` - Get all tax rates and a count of products associated with each
+* `get_tax_rate` - Get a single tax rate
+* `get_tax_rates` - Get all available tax rates
+* `get_tax_settings` - Get the organization tax settings 
+* `set_taxation_mode` - Update the organization tax settings
+* `update_tax_rate` - Update a single tax rate
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

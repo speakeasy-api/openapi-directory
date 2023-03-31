@@ -58,3 +58,4 @@ pkg/models/shared/getpromotions.go
 pkg/models/shared/gettaxes.go
 pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PauseNowPathParams struct {
+type PauseNowRequest struct {
 	// Agent to return the primary IP
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type PauseNowRequest struct {
-	PathParams PauseNowPathParams
 }
 
 type PauseNowResponse struct {

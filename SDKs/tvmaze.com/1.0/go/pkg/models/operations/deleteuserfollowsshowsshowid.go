@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteUserFollowsShowsShowIDPathParams struct {
-	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
-}
-
 type DeleteUserFollowsShowsShowIDRequest struct {
-	PathParams DeleteUserFollowsShowsShowIDPathParams
+	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
 }
 
 type DeleteUserFollowsShowsShowIDResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PutWebhooksV3AppIDSettingsConfigureSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PutWebhooksV3AppIDSettingsConfigurePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PutWebhooksV3AppIDSettingsConfigureRequest struct {
-	PathParams PutWebhooksV3AppIDSettingsConfigurePathParams
-	Request    shared.SettingsChangeRequest `request:"mediaType=application/json"`
-	Security   PutWebhooksV3AppIDSettingsConfigureSecurity
+	SettingsChangeRequest shared.SettingsChangeRequest `request:"mediaType=application/json"`
+	AppID                 int                          `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PutWebhooksV3AppIDSettingsConfigureResponse struct {

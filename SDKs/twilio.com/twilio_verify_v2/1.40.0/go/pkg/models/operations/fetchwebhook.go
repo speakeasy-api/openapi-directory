@@ -12,20 +12,15 @@ var FetchWebhookServerList = []string{
 }
 
 type FetchWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchWebhookPathParams struct {
+type FetchWebhookRequest struct {
 	// The unique SID identifier of the Service.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Webhook resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchWebhookRequest struct {
-	PathParams FetchWebhookPathParams
-	Security   FetchWebhookSecurity
-	ServerURL  *string
 }
 
 type FetchWebhookResponse struct {

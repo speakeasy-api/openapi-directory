@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetVCustomPricesSessionSchemaRequest{
-        Headers: operations.GetVCustomPricesSessionSchemaHeaders{
-            Accept: "corrupti",
-            ContentType: "provident",
-        },
+        Accept: "corrupti",
+        ContentType: "provident",
     }
 
     ctx := context.Background()

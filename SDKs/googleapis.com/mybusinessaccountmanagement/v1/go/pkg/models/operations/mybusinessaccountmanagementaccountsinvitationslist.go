@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessaccountmanagementAccountsInvitationsListPathParams struct {
-	// Required. The name of the account from which the list of invitations is being retrieved. `accounts/{account_id}/invitations`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessaccountmanagementAccountsInvitationsListQueryParams struct {
+type MybusinessaccountmanagementAccountsInvitationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -29,6 +24,8 @@ type MybusinessaccountmanagementAccountsInvitationsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the account from which the list of invitations is being retrieved. `accounts/{account_id}/invitations`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -37,11 +34,6 @@ type MybusinessaccountmanagementAccountsInvitationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessaccountmanagementAccountsInvitationsListRequest struct {
-	PathParams  MybusinessaccountmanagementAccountsInvitationsListPathParams
-	QueryParams MybusinessaccountmanagementAccountsInvitationsListQueryParams
 }
 
 type MybusinessaccountmanagementAccountsInvitationsListResponse struct {

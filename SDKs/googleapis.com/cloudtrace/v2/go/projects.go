@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudtraceProjectsTracesBatchWrite - Batch writes new spans to new or existing traces. You cannot update existing spans.
-func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, request operations.CloudtraceProjectsTracesBatchWriteRequest) (*operations.CloudtraceProjectsTracesBatchWriteResponse, error) {
+func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, request operations.CloudtraceProjectsTracesBatchWriteRequest, security operations.CloudtraceProjectsTracesBatchWriteSecurity) (*operations.CloudtraceProjectsTracesBatchWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/traces:batchWrite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/traces:batchWrite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchWriteSpansRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, reque
 }
 
 // CloudtraceProjectsTracesSpansCreateSpan - Creates a new span.
-func (s *projects) CloudtraceProjectsTracesSpansCreateSpan(ctx context.Context, request operations.CloudtraceProjectsTracesSpansCreateSpanRequest) (*operations.CloudtraceProjectsTracesSpansCreateSpanResponse, error) {
+func (s *projects) CloudtraceProjectsTracesSpansCreateSpan(ctx context.Context, request operations.CloudtraceProjectsTracesSpansCreateSpanRequest, security operations.CloudtraceProjectsTracesSpansCreateSpanSecurity) (*operations.CloudtraceProjectsTracesSpansCreateSpanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Span", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) CloudtraceProjectsTracesSpansCreateSpan(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,15 +8,7 @@ import (
 )
 
 type CalculateOrderSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CalculateOrderRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CalculateOrderRequest `request:"mediaType=application/json"`
-	Security CalculateOrderSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalculateOrderResponse struct {

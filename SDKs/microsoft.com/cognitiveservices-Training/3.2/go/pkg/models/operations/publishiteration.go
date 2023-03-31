@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishIterationPathParams struct {
+type PublishIterationRequest struct {
 	// The iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PublishIterationQueryParams struct {
 	// The id of the prediction resource to publish to.
 	PredictionID string `queryParam:"style=form,explode=true,name=predictionId"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The name to give the published iteration.
 	PublishName string `queryParam:"style=form,explode=true,name=publishName"`
-}
-
-type PublishIterationRequest struct {
-	PathParams  PublishIterationPathParams
-	QueryParams PublishIterationQueryParams
 }
 
 type PublishIterationResponse struct {

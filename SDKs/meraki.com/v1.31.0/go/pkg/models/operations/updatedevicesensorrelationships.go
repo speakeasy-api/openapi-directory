@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceSensorRelationshipsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceSensorRelationshipsRequestBodyLivestreamRelatedDevices struct {
 	// The serial of the related device
 	Serial string `json:"serial"`
@@ -29,8 +25,8 @@ type UpdateDeviceSensorRelationshipsRequestBody struct {
 }
 
 type UpdateDeviceSensorRelationshipsRequest struct {
-	PathParams UpdateDeviceSensorRelationshipsPathParams
-	Request    *UpdateDeviceSensorRelationshipsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceSensorRelationshipsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                      `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // UpdateDeviceSensorRelationships200ApplicationJSONLivestreamRelatedDevicesProductTypeEnum - The product type of the related device

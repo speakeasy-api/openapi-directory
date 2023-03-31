@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxOauthSelectAccountsRequest struct {
-	Request shared.SandboxOauthSelectAccountsRequest `request:"mediaType=application/json"`
-}
 
 type SandboxOauthSelectAccountsResponse struct {
 	ContentType string

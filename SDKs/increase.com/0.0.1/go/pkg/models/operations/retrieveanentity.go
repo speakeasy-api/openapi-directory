@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnEntityPathParams struct {
-	EntityID string `pathParam:"style=simple,explode=false,name=entity_id"`
-}
-
 type RetrieveAnEntityRequest struct {
-	PathParams RetrieveAnEntityPathParams
+	EntityID string `pathParam:"style=simple,explode=false,name=entity_id"`
 }
 
 type RetrieveAnEntityDefaultApplicationJSON13StatusEnum string

@@ -12,12 +12,8 @@ var CreateAlphaSenderServerList = []string{
 }
 
 type CreateAlphaSenderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAlphaSenderPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAlphaSenderCreateAlphaSenderRequest struct {
@@ -26,10 +22,9 @@ type CreateAlphaSenderCreateAlphaSenderRequest struct {
 }
 
 type CreateAlphaSenderRequest struct {
-	PathParams CreateAlphaSenderPathParams
-	Request    *CreateAlphaSenderCreateAlphaSenderRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateAlphaSenderSecurity
-	ServerURL  *string
+	RequestBody *CreateAlphaSenderCreateAlphaSenderRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateAlphaSenderResponse struct {

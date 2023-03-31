@@ -8,13 +8,13 @@ import (
 )
 
 type CloudresourcemanagerProjectsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerProjectsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerProjectsGetSecurity struct {
@@ -22,12 +22,7 @@ type CloudresourcemanagerProjectsGetSecurity struct {
 	Option2 *CloudresourcemanagerProjectsGetSecurityOption2 `security:"option"`
 }
 
-type CloudresourcemanagerProjectsGetPathParams struct {
-	// Required. The Project ID (for example, `my-project-123`).
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CloudresourcemanagerProjectsGetQueryParams struct {
+type CloudresourcemanagerProjectsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,18 +39,14 @@ type CloudresourcemanagerProjectsGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The Project ID (for example, `my-project-123`).
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudresourcemanagerProjectsGetRequest struct {
-	PathParams  CloudresourcemanagerProjectsGetPathParams
-	QueryParams CloudresourcemanagerProjectsGetQueryParams
-	Security    CloudresourcemanagerProjectsGetSecurity
 }
 
 type CloudresourcemanagerProjectsGetResponse struct {

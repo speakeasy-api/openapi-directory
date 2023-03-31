@@ -12,10 +12,11 @@ var ListSimServerList = []string{
 }
 
 type ListSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSimQueryParams struct {
+type ListSimRequest struct {
 	// Deprecated.
 	EID *string `queryParam:"style=form,explode=true,name=EId"`
 	// Only return Sim resources with this ICCID. This will return a list with a maximum size of 1.
@@ -32,12 +33,6 @@ type ListSimQueryParams struct {
 	SimRegistrationCode *string `queryParam:"style=form,explode=true,name=SimRegistrationCode"`
 	// Only return Sim resources with this status.
 	Status *shared.SimEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListSimRequest struct {
-	QueryParams ListSimQueryParams
-	Security    ListSimSecurity
-	ServerURL   *string
 }
 
 type ListSimListSimResponseMeta struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmAdminEventsPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAdminEventsQueryParams struct {
+type GetRealmAdminEventsRequest struct {
 	AuthClient    *string `queryParam:"style=form,explode=true,name=authClient"`
 	AuthIPAddress *string `queryParam:"style=form,explode=true,name=authIpAddress"`
 	AuthRealm     *string `queryParam:"style=form,explode=true,name=authRealm"`
@@ -24,13 +19,10 @@ type GetRealmAdminEventsQueryParams struct {
 	// Maximum results size (defaults to 100)
 	Max            *int     `queryParam:"style=form,explode=true,name=max"`
 	OperationTypes []string `queryParam:"style=form,explode=true,name=operationTypes"`
-	ResourcePath   *string  `queryParam:"style=form,explode=true,name=resourcePath"`
-	ResourceTypes  []string `queryParam:"style=form,explode=true,name=resourceTypes"`
-}
-
-type GetRealmAdminEventsRequest struct {
-	PathParams  GetRealmAdminEventsPathParams
-	QueryParams GetRealmAdminEventsQueryParams
+	// realm name (not id!)
+	Realm         string   `pathParam:"style=simple,explode=false,name=realm"`
+	ResourcePath  *string  `queryParam:"style=form,explode=true,name=resourcePath"`
+	ResourceTypes []string `queryParam:"style=form,explode=true,name=resourceTypes"`
 }
 
 type GetRealmAdminEventsResponse struct {

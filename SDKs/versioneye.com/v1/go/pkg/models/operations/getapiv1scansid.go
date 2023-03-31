@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1ScansIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1ScansIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=apiKey"`
 }
 
 type GetAPIV1ScansIDRequest struct {
-	PathParams GetAPIV1ScansIDPathParams
-	Security   GetAPIV1ScansIDSecurity
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1ScansIDResponse struct {

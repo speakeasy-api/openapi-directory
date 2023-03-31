@@ -8,15 +8,7 @@ import (
 )
 
 type UpdateItemModifierListsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateItemModifierListsRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.UpdateItemModifierListsRequest `request:"mediaType=application/json"`
-	Security UpdateItemModifierListsSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateItemModifierListsResponse struct {

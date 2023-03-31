@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListUsersQueryParams struct {
+type ListUsersRequest struct {
 	// The entityId of the User.
 	EntityID *string `queryParam:"style=form,explode=true,name=entityId"`
 	// Page number. Default is 1.
@@ -25,10 +25,6 @@ type ListUsersQueryParams struct {
 	Status *shared.UserStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// The Type of the User.
 	Type *shared.UserTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListUsersRequest struct {
-	QueryParams ListUsersQueryParams
 }
 
 type ListUsersResponse struct {

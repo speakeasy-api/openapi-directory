@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelKeyDeletionRequest(
-    headers=operations.CancelKeyDeletionHeaders(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="officiis",
-        x_amz_credential="aliquid",
-        x_amz_date="natus",
-        x_amz_security_token="voluptate",
-        x_amz_signature="consectetur",
-        x_amz_signed_headers="tempore",
-        x_amz_target="TrentService.CancelKeyDeletion",
+    cancel_key_deletion_request=shared.CancelKeyDeletionRequest(
+        key_id="corrupti",
     ),
-    request=shared.CancelKeyDeletionRequest(
-        key_id="voluptatibus",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="TrentService.CancelKeyDeletion",
 )
     
 res = s.cancel_key_deletion(req)

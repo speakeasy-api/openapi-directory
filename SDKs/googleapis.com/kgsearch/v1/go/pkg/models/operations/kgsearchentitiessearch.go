@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KgsearchEntitiesSearchQueryParams struct {
+type KgsearchEntitiesSearchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,10 +44,6 @@ type KgsearchEntitiesSearchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type KgsearchEntitiesSearchRequest struct {
-	QueryParams KgsearchEntitiesSearchQueryParams
 }
 
 type KgsearchEntitiesSearchResponse struct {

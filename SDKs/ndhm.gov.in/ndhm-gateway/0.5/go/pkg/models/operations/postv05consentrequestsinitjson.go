@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05ConsentRequestsInitJSONHeaders struct {
+type PostV05ConsentRequestsInitJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization  string                `header:"style=simple,explode=false,name=Authorization"`
+	ConsentRequest shared.ConsentRequest `request:"mediaType=application/json"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05ConsentRequestsInitJSONRequest struct {
-	Headers PostV05ConsentRequestsInitJSONHeaders
-	Request shared.ConsentRequest `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentRequestsInitJSONResponse struct {

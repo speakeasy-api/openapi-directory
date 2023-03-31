@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -35,7 +36,7 @@ func newAnnotation(defaultClient, securityClient HTTPClient, serverURL, language
 // GETAnnotationCountByAccIDAndObjectTypeUsingGET - Returns annotation count for ontology accession ID and object type
 func (s *annotation) GETAnnotationCountByAccIDAndObjectTypeUsingGET(ctx context.Context, request operations.GETAnnotationCountByAccIDAndObjectTypeUsingGETRequest) (*operations.GETAnnotationCountByAccIDAndObjectTypeUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}/{objectType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}/{objectType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +85,7 @@ func (s *annotation) GETAnnotationCountByAccIDAndObjectTypeUsingGET(ctx context.
 // GETAnnotationCountByAccIDAndSpeciesUsingGET - Returns annotation count for ontology accession ID and speicies
 func (s *annotation) GETAnnotationCountByAccIDAndSpeciesUsingGET(ctx context.Context, request operations.GETAnnotationCountByAccIDAndSpeciesUsingGETRequest) (*operations.GETAnnotationCountByAccIDAndSpeciesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +134,7 @@ func (s *annotation) GETAnnotationCountByAccIDAndSpeciesUsingGET(ctx context.Con
 // GETAnnotationCountByAccIDUsingGET - Returns annotation count for ontology accession ID
 func (s *annotation) GETAnnotationCountByAccIDUsingGET(ctx context.Context, request operations.GETAnnotationCountByAccIDUsingGETRequest) (*operations.GETAnnotationCountByAccIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{includeChildren}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/count/{accId}/{includeChildren}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +183,7 @@ func (s *annotation) GETAnnotationCountByAccIDUsingGET(ctx context.Context, requ
 // GETAnnotationsByAccIDAndRgdIDUsingGET - Returns a list of annotations by RGD ID and ontology term accession ID
 func (s *annotation) GETAnnotationsByAccIDAndRgdIDUsingGET(ctx context.Context, request operations.GETAnnotationsByAccIDAndRgdIDUsingGETRequest) (*operations.GETAnnotationsByAccIDAndRgdIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/{accId}/{rgdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/{accId}/{rgdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +232,7 @@ func (s *annotation) GETAnnotationsByAccIDAndRgdIDUsingGET(ctx context.Context, 
 // GETAnnotationsByRgdIDAndOntologyUsingGET - Returns a list of annotations by RGD ID and ontology prefix
 func (s *annotation) GETAnnotationsByRgdIDAndOntologyUsingGET(ctx context.Context, request operations.GETAnnotationsByRgdIDAndOntologyUsingGETRequest) (*operations.GETAnnotationsByRgdIDAndOntologyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/rgdId/{rgdId}/{ontologyPrefix}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/rgdId/{rgdId}/{ontologyPrefix}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +281,7 @@ func (s *annotation) GETAnnotationsByRgdIDAndOntologyUsingGET(ctx context.Contex
 // GETAnnotationsByRgdIDUsingGET - Returns a list of annotations by RGD ID
 func (s *annotation) GETAnnotationsByRgdIDUsingGET(ctx context.Context, request operations.GETAnnotationsByRgdIDUsingGETRequest) (*operations.GETAnnotationsByRgdIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/rgdId/{rgdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/rgdId/{rgdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +330,7 @@ func (s *annotation) GETAnnotationsByRgdIDUsingGET(ctx context.Context, request 
 // GETAnnotationsUsingGET - Returns a list annotations for an ontology term or a term and it's children
 func (s *annotation) GETAnnotationsUsingGET(ctx context.Context, request operations.GETAnnotationsUsingGETRequest) (*operations.GETAnnotationsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/{accId}/{speciesTypeKey}/{includeChildren}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/{accId}/{speciesTypeKey}/{includeChildren}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -376,7 +377,7 @@ func (s *annotation) GETAnnotationsUsingGET(ctx context.Context, request operati
 }
 
 // GetAnnotationsUsingPOST - Return a list of genes annotated to an ontology term
-func (s *annotation) GetAnnotationsUsingPOST(ctx context.Context, request operations.GetAnnotationsUsingPOSTRequest) (*operations.GetAnnotationsUsingPOSTResponse, error) {
+func (s *annotation) GetAnnotationsUsingPOST(ctx context.Context, request shared.AnnotationRequest) (*operations.GetAnnotationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/annotations/"
 
@@ -436,7 +437,7 @@ func (s *annotation) GetAnnotationsUsingPOST(ctx context.Context, request operat
 // GETAnnotsByRefrerenceUsingGET - Returns a list of annotations for a reference
 func (s *annotation) GETAnnotsByRefrerenceUsingGET(ctx context.Context, request operations.GETAnnotsByRefrerenceUsingGETRequest) (*operations.GETAnnotsByRefrerenceUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/reference/{refRgdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/reference/{refRgdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -485,7 +486,7 @@ func (s *annotation) GETAnnotsByRefrerenceUsingGET(ctx context.Context, request 
 // GETTermAccIdsUsingGET - Returns a list ontology term accession IDs annotated to an rgd object
 func (s *annotation) GETTermAccIdsUsingGET(ctx context.Context, request operations.GETTermAccIdsUsingGETRequest) (*operations.GETTermAccIdsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotations/accId/{rgdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotations/accId/{rgdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -36,7 +36,7 @@ func newFinancialProducts(defaultClient, securityClient HTTPClient, serverURL, l
 
 // GetAllFinancialProducts - Get All Financial Products
 // Returns all the financial products setup for the tenant in an array
-func (s *financialProducts) GetAllFinancialProducts(ctx context.Context, request operations.GetAllFinancialProductsRequest) (*operations.GetAllFinancialProductsResponse, error) {
+func (s *financialProducts) GetAllFinancialProducts(ctx context.Context, request operations.GetAllFinancialProductsRequest, security operations.GetAllFinancialProductsSecurity) (*operations.GetAllFinancialProductsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/financial-products/v1"
 
@@ -45,13 +45,13 @@ func (s *financialProducts) GetAllFinancialProducts(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

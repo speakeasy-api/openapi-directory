@@ -33,7 +33,7 @@ func newDefaultSupportedIdps(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // IdentitytoolkitDefaultSupportedIdpsList - List all default supported Idps.
-func (s *defaultSupportedIdps) IdentitytoolkitDefaultSupportedIdpsList(ctx context.Context, request operations.IdentitytoolkitDefaultSupportedIdpsListRequest) (*operations.IdentitytoolkitDefaultSupportedIdpsListResponse, error) {
+func (s *defaultSupportedIdps) IdentitytoolkitDefaultSupportedIdpsList(ctx context.Context, request operations.IdentitytoolkitDefaultSupportedIdpsListRequest, security operations.IdentitytoolkitDefaultSupportedIdpsListSecurity) (*operations.IdentitytoolkitDefaultSupportedIdpsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/defaultSupportedIdps"
 
@@ -42,11 +42,11 @@ func (s *defaultSupportedIdps) IdentitytoolkitDefaultSupportedIdpsList(ctx conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

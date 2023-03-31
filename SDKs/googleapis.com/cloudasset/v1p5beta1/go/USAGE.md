@@ -14,43 +14,35 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudassetAssetsListRequest{
-        Security: operations.CloudassetAssetsListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        AssetTypes: []string{
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
         },
-        PathParams: operations.CloudassetAssetsListPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudassetAssetsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            AssetTypes: []string{
-                "nulla",
-                "corrupti",
-                "illum",
-            },
-            Callback: "vel",
-            ContentType: "ORG_POLICY",
-            Fields: "deserunt",
-            Key: "suscipit",
-            OauthToken: "iure",
-            PageSize: 297534,
-            PageToken: "debitis",
-            PrettyPrint: false,
-            QuotaUser: "ipsa",
-            ReadTime: "delectus",
-            UploadType: "tempora",
-            UploadProtocol: "suscipit",
-        },
+        Callback: "vel",
+        ContentType: "ORG_POLICY",
+        Fields: "deserunt",
+        Key: "suscipit",
+        OauthToken: "iure",
+        PageSize: 297534,
+        PageToken: "debitis",
+        Parent: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        ReadTime: "tempora",
+        UploadType: "suscipit",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Assets.CloudassetAssetsList(ctx, req)
+    res, err := s.Assets.CloudassetAssetsList(ctx, req, operations.CloudassetAssetsListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

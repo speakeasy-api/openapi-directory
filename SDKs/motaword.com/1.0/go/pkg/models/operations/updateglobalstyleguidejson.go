@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGlobalStyleGuideJSONRequest struct {
-	Request *shared.AccountStyleGuideUploadRequest `request:"mediaType=application/json"`
-}
-
 type UpdateGlobalStyleGuideJSONResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall NoFileUploaded MissingCorporateAccount

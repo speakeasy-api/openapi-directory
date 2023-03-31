@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteFilesPathPathParams struct {
+type DeleteFilesPathRequest struct {
 	// Path to operate on.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type DeleteFilesPathQueryParams struct {
 	// If true, will recursively delete folers.  Otherwise, will error on non-empty folders.
 	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
-}
-
-type DeleteFilesPathRequest struct {
-	PathParams  DeleteFilesPathPathParams
-	QueryParams DeleteFilesPathQueryParams
 }
 
 type DeleteFilesPathResponse struct {

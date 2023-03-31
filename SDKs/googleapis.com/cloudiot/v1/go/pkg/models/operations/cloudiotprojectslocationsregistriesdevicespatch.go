@@ -8,13 +8,13 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesDevicesPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesPatchSecurity struct {
@@ -22,14 +22,10 @@ type CloudiotProjectsLocationsRegistriesDevicesPatchSecurity struct {
 	Option2 *CloudiotProjectsLocationsRegistriesDevicesPatchSecurityOption2 `security:"option"`
 }
 
-type CloudiotProjectsLocationsRegistriesDevicesPatchPathParams struct {
-	// The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudiotProjectsLocationsRegistriesDevicesPatchQueryParams struct {
+type CloudiotProjectsLocationsRegistriesDevicesPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Device      *shared.Device    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type CloudiotProjectsLocationsRegistriesDevicesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,13 +50,6 @@ type CloudiotProjectsLocationsRegistriesDevicesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesDevicesPatchRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesDevicesPatchPathParams
-	QueryParams CloudiotProjectsLocationsRegistriesDevicesPatchQueryParams
-	Request     *shared.Device `request:"mediaType=application/json"`
-	Security    CloudiotProjectsLocationsRegistriesDevicesPatchSecurity
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesPatchResponse struct {

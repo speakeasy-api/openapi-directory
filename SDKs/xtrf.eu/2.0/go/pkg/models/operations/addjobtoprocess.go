@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddJobToProcessPathParams struct {
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 type AddJobToProcessRequest struct {
-	PathParams AddJobToProcessPathParams
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type AddJobToProcessResponse struct {

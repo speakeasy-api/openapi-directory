@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountsIDPathParams struct {
+type GetAccountsIDRequest struct {
 	// The unique identifier for the account.
 	//
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAccountsIDRequest struct {
-	PathParams GetAccountsIDPathParams
 }
 
 type GetAccountsIDResponse struct {

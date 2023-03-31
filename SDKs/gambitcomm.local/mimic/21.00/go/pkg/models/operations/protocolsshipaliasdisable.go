@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSSHIpaliasDisablePathParams struct {
+type ProtocolSSHIpaliasDisableRequest struct {
 	// Agent to manipulate SSH IP alias
 	AgentNum  int    `pathParam:"style=simple,explode=false,name=agentNum"`
 	Ipaddress string `pathParam:"style=simple,explode=false,name=ipaddress"`
 	Port      int    `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolSSHIpaliasDisableRequest struct {
-	PathParams ProtocolSSHIpaliasDisablePathParams
 }
 
 type ProtocolSSHIpaliasDisableResponse struct {

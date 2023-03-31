@@ -39,9 +39,9 @@ func newRoomsDevices(defaultClient, securityClient HTTPClient, serverURL, langua
 // * Zoom Rooms software must be installed either on a Mac or a Windows device. This API does not support other devices.
 func (s *roomsDevices) ChangeZoomRoomsAppVersion(ctx context.Context, request operations.ChangeZoomRoomsAppVersionRequest) (*operations.ChangeZoomRoomsAppVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/devices/{deviceId}/app_version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/devices/{deviceId}/app_version", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

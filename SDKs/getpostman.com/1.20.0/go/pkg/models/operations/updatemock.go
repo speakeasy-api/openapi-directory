@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateMockPathParams struct {
-	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
-}
-
 type UpdateMockRequestBodyMock struct {
 	Description *string `json:"description,omitempty"`
 	Environment *string `json:"environment,omitempty"`
@@ -23,8 +19,8 @@ type UpdateMockRequestBody struct {
 }
 
 type UpdateMockRequest struct {
-	PathParams UpdateMockPathParams
-	Request    *UpdateMockRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateMockRequestBody `request:"mediaType=application/json"`
+	MockUID     string                 `pathParam:"style=simple,explode=false,name=mock_uid"`
 }
 
 type UpdateMock200ApplicationJSONMockConfig struct {

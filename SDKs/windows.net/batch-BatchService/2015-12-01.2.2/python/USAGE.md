@@ -4,20 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ApplicationGetRequest(
-    path_params=operations.ApplicationGetPathParams(
-        application_id="enim",
-    ),
-    query_params=operations.ApplicationGetQueryParams(
-        api_version="aliquid",
-        timeout=9196437769981599815,
-    ),
-    headers=operations.ApplicationGetHeaders(
-        client_request_id="praesentium",
-        ocp_date="voluptatem",
-        return_client_request_id=True,
-    ),
+    api_version="corrupti",
+    application_id="provident",
+    client_request_id="distinctio",
+    ocp_date="quibusdam",
+    return_client_request_id=False,
+    timeout=602763,
 )
     
 res = s.applications.application_get(req)

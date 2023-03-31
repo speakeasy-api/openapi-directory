@@ -46,10 +46,6 @@ type PostV2ActivitiesCallsJSONRequestBody struct {
 	UserGUID *string `form:"name=user_guid"`
 }
 
-type PostV2ActivitiesCallsJSONRequest struct {
-	Request PostV2ActivitiesCallsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ActivitiesCallsJSONResponse struct {
 	Body        []byte
 	ContentType string

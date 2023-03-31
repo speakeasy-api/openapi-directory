@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostRealmIdentityProviderImportConfigPathParams struct {
+type PostRealmIdentityProviderImportConfigRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmIdentityProviderImportConfigRequest struct {
-	PathParams PostRealmIdentityProviderImportConfigPathParams
 }
 
 type PostRealmIdentityProviderImportConfigResponse struct {

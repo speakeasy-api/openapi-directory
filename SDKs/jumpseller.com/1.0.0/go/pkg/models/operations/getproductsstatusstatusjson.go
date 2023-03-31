@@ -36,23 +36,15 @@ func (e *GetProductsStatusStatusJSONStatusEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetProductsStatusStatusJSONPathParams struct {
-	// Status of the Product used as filter
-	Status GetProductsStatusStatusJSONStatusEnum `pathParam:"style=simple,explode=false,name=status"`
-}
-
-type GetProductsStatusStatusJSONQueryParams struct {
+type GetProductsStatusStatusJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Locale code of the translation
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetProductsStatusStatusJSONRequest struct {
-	PathParams  GetProductsStatusStatusJSONPathParams
-	QueryParams GetProductsStatusStatusJSONQueryParams
+	// Status of the Product used as filter
+	Status GetProductsStatusStatusJSONStatusEnum `pathParam:"style=simple,explode=false,name=status"`
 }
 
 type GetProductsStatusStatusJSONResponse struct {

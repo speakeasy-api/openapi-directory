@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomersAccountAnnouncementsPathParams struct {
+type GetCustomersAccountAnnouncementsRequest struct {
 	// Account ID of customer
 	Account int64 `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type GetCustomersAccountAnnouncementsRequest struct {
-	PathParams GetCustomersAccountAnnouncementsPathParams
 }
 
 // GetCustomersAccountAnnouncements200ApplicationJSON - OK

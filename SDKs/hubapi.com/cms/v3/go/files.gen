@@ -20,5 +20,4 @@ pkg/models/shared/forwardpaging.go
 pkg/models/shared/nextpage.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
-pkg/models/shared/security.go
 USAGE.md

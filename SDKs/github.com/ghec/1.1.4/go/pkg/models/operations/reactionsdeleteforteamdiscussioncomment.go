@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReactionsDeleteForTeamDiscussionCommentPathParams struct {
+type ReactionsDeleteForTeamDiscussionCommentRequest struct {
 	// The number that identifies the comment.
 	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// The number that identifies the discussion.
@@ -17,10 +17,6 @@ type ReactionsDeleteForTeamDiscussionCommentPathParams struct {
 	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type ReactionsDeleteForTeamDiscussionCommentRequest struct {
-	PathParams ReactionsDeleteForTeamDiscussionCommentPathParams
 }
 
 type ReactionsDeleteForTeamDiscussionCommentResponse struct {

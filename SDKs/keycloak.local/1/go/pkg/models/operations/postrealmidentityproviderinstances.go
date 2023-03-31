@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmIdentityProviderInstancesPathParams struct {
+type PostRealmIdentityProviderInstancesRequest struct {
+	// JSON body
+	IdentityProviderRepresentation shared.IdentityProviderRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmIdentityProviderInstancesRequest struct {
-	PathParams PostRealmIdentityProviderInstancesPathParams
-	// JSON body
-	Request shared.IdentityProviderRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmIdentityProviderInstancesResponse struct {

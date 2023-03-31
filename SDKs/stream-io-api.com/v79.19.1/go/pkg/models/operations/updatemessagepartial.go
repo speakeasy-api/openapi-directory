@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMessagePartialPathParams struct {
+type UpdateMessagePartialRequest struct {
+	UpdateMessagePartialRequest shared.UpdateMessagePartialRequest `request:"mediaType=application/json"`
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateMessagePartialRequest struct {
-	PathParams UpdateMessagePartialPathParams
-	Request    shared.UpdateMessagePartialRequest `request:"mediaType=application/json"`
 }
 
 type UpdateMessagePartialResponse struct {

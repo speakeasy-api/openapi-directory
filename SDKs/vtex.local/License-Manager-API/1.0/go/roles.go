@@ -43,9 +43,9 @@ func (s *roles) GetListRoles(ctx context.Context, request operations.GetListRole
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,14 +87,14 @@ func (s *roles) GetListRoles(ctx context.Context, request operations.GetListRole
 // Gets roles of a particular user or application key.
 func (s *roles) GetRolesbyUser(ctx context.Context, request operations.GetRolesbyUserRequest) (*operations.GetRolesbyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -134,9 +134,9 @@ func (s *roles) GetRolesbyUser(ctx context.Context, request operations.GetRolesb
 // Allows you to add roles to a particular user or application key by specifying the list of roles' IDs on the request's body.
 func (s *roles) PutRolesinUser(ctx context.Context, request operations.PutRolesinUserRequest) (*operations.PutRolesinUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,14 +202,14 @@ func (s *roles) PutRolesinUser(ctx context.Context, request operations.PutRolesi
 // > Note that a successful response returns a `204` response with an empty body. A deletion on a role or user that does not exist will also return a `204`. Thus, this method should not be used to verify the existence of a specific user or role.
 func (s *roles) RemoveRolefromUser(ctx context.Context, request operations.RemoveRolefromUserRequest) (*operations.RemoveRolefromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

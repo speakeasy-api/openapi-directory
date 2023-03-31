@@ -10,13 +10,8 @@ import (
 )
 
 type BooksVolumesAssociatedListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type BooksVolumesAssociatedListPathParams struct {
-	// ID of the source volume.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksVolumesAssociatedListAssociationEnum - Association type.
@@ -76,7 +71,7 @@ func (e *BooksVolumesAssociatedListMaxAllowedMaturityRatingEnum) UnmarshalJSON(d
 	}
 }
 
-type BooksVolumesAssociatedListQueryParams struct {
+type BooksVolumesAssociatedListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -107,12 +102,8 @@ type BooksVolumesAssociatedListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksVolumesAssociatedListRequest struct {
-	PathParams  BooksVolumesAssociatedListPathParams
-	QueryParams BooksVolumesAssociatedListQueryParams
-	Security    BooksVolumesAssociatedListSecurity
+	// ID of the source volume.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 }
 
 type BooksVolumesAssociatedListResponse struct {

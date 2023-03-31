@@ -33,7 +33,7 @@ func (e *ProjectedPlayerGameStatsByPlayerFormatEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ProjectedPlayerGameStatsByPlayerPathParams struct {
+type ProjectedPlayerGameStatsByPlayerRequest struct {
 	// The date of the game(s).
 	// <br>Example: <code>2019-01-20</code>
 	Date string `pathParam:"style=simple,explode=false,name=date"`
@@ -42,10 +42,6 @@ type ProjectedPlayerGameStatsByPlayerPathParams struct {
 	// Unique FantasyData Player ID.
 	// Example:<code>100001500</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type ProjectedPlayerGameStatsByPlayerRequest struct {
-	PathParams ProjectedPlayerGameStatsByPlayerPathParams
 }
 
 type ProjectedPlayerGameStatsByPlayerResponse struct {

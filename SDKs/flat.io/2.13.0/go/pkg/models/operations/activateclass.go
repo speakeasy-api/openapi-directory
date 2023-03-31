@@ -8,17 +8,12 @@ import (
 )
 
 type ActivateClassSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type ActivateClassPathParams struct {
-	// Unique identifier of the class
-	Class string `pathParam:"style=simple,explode=false,name=class"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ActivateClassRequest struct {
-	PathParams ActivateClassPathParams
-	Security   ActivateClassSecurity
+	// Unique identifier of the class
+	Class string `pathParam:"style=simple,explode=false,name=class"`
 }
 
 type ActivateClassResponse struct {

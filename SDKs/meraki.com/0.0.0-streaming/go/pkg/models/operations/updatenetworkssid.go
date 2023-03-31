@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSsidPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkSsidRequestBodyApTagsAndVlanIds struct {
 	// Comma-separated list of AP tags
 	Tags *string `json:"tags,omitempty"`
@@ -353,8 +348,9 @@ type UpdateNetworkSsidRequestBody struct {
 }
 
 type UpdateNetworkSsidRequest struct {
-	PathParams UpdateNetworkSsidPathParams
-	Request    *UpdateNetworkSsidRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSsidRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                        `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                        `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkSsidResponse struct {

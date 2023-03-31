@@ -34,22 +34,22 @@ func newStatements(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetAccountsAccountIDStatements - Get Statements
 // Get Statements by Account ID
-func (s *statements) GetAccountsAccountIDStatements(ctx context.Context, request operations.GetAccountsAccountIDStatementsRequest) (*operations.GetAccountsAccountIDStatementsResponse, error) {
+func (s *statements) GetAccountsAccountIDStatements(ctx context.Context, request operations.GetAccountsAccountIDStatementsRequest, security operations.GetAccountsAccountIDStatementsSecurity) (*operations.GetAccountsAccountIDStatementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,18 +120,18 @@ func (s *statements) GetAccountsAccountIDStatements(ctx context.Context, request
 
 // GetAccountsAccountIDStatementsStatementID - Get Statements
 // Get Statements by Account ID and Statement ID
-func (s *statements) GetAccountsAccountIDStatementsStatementID(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDRequest) (*operations.GetAccountsAccountIDStatementsStatementIDResponse, error) {
+func (s *statements) GetAccountsAccountIDStatementsStatementID(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDRequest, security operations.GetAccountsAccountIDStatementsStatementIDSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -202,18 +202,18 @@ func (s *statements) GetAccountsAccountIDStatementsStatementID(ctx context.Conte
 
 // GetAccountsAccountIDStatementsStatementIDFile - Get Statements
 // Get Statement PDF File by Account ID and Statement ID
-func (s *statements) GetAccountsAccountIDStatementsStatementIDFile(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDFileRequest) (*operations.GetAccountsAccountIDStatementsStatementIDFileResponse, error) {
+func (s *statements) GetAccountsAccountIDStatementsStatementIDFile(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDFileRequest, security operations.GetAccountsAccountIDStatementsStatementIDFileSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

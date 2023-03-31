@@ -12,14 +12,8 @@ var UpdateMessageServerList = []string{
 }
 
 type UpdateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMessagePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the Message resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMessageUpdateMessageRequest struct {
@@ -29,10 +23,11 @@ type UpdateMessageUpdateMessageRequest struct {
 }
 
 type UpdateMessageRequest struct {
-	PathParams UpdateMessagePathParams
-	Request    *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMessageSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to update.
+	AccountSid  string                             `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Message resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMessageResponse struct {

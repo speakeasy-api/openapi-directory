@@ -14,17 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.FacetsRequest{
-        QueryParams: operations.FacetsQueryParams{
-            Count: 548814,
-            EndDate: "2021-07-27",
-            FacetFilters: "quibusdam",
-            SearchTerms: "unde",
-            SortKeys: "updated,,desc",
-            Source: "ADE",
-            Spatial: "illum",
-            StartDate: "2022-05-18",
-            StartIndex: 645894,
-        },
+        Count: 548814,
+        EndDate: "2021-07-27",
+        FacetFilters: "quibusdam",
+        SearchTerms: "unde",
+        SortKeys: "updated,,desc",
+        Source: "ADE",
+        Spatial: "illum",
+        StartDate: "2022-05-18",
+        StartIndex: 645894,
     }
 
     ctx := context.Background()

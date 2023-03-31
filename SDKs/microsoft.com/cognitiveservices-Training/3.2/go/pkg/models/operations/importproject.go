@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportProjectQueryParams struct {
+type ImportProjectRequest struct {
 	// Token generated from the export project call.
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type ImportProjectRequest struct {
-	QueryParams ImportProjectQueryParams
 }
 
 type ImportProjectResponse struct {

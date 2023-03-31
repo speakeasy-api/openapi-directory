@@ -25,93 +25,82 @@ func main() {
     s := sdk.New()
 
     req := operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
-        Security: operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ConnectionProfileID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.ConnectionProfileInput{
-            DisplayName: "magnam",
+        DollarXgafv: "2",
+        ConnectionProfileInput: &shared.ConnectionProfileInput{
+            DisplayName: "provident",
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "unique-baboon.org",
-                Password: "tempora",
-                Port: 383441,
-                PrivateKey: "molestiae",
-                Username: "Paxton.Schulist",
+                Hostname: "salty-stag.name",
+                Password: "nulla",
+                Port: 544883,
+                PrivateKey: "illum",
+                Username: "Henry.Mueller",
             },
             GcsProfile: &shared.GcsProfile{
-                BucketName: "excepturi",
-                RootPath: "nisi",
+                BucketName: "iure",
+                RootPath: "magnam",
             },
             Labels: map[string]string{
-                "temporibus": "ab",
-                "quis": "veritatis",
-                "deserunt": "perferendis",
-                "ipsam": "repellendus",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "well-informed-screamer.com",
-                Password: "at",
-                Port: 870088,
+                Hostname: "lawful-missionary.info",
+                Password: "recusandae",
+                Port: 836079,
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "maiores",
-                    ClientCertificate: "molestiae",
-                    ClientKey: "quod",
+                    CaCertificate: "ab",
+                    ClientCertificate: "quis",
+                    ClientKey: "veritatis",
                 },
-                Username: "Presley_Koepp",
+                Username: "Lydia_Aufderhar",
             },
             NoConnectivity: map[string]interface{}{
-                "dicta": "nam",
-                "officia": "occaecati",
-                "fugit": "deleniti",
+                "quo": "odit",
+                "at": "at",
+                "maiores": "molestiae",
+                "quod": "quod",
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
-                    "optio": "totam",
-                    "beatae": "commodi",
-                    "molestiae": "modi",
-                    "qui": "impedit",
+                    "totam": "porro",
+                    "dolorum": "dicta",
                 },
-                DatabaseService: "cum",
-                Hostname: "jolly-cowboy.name",
-                Password: "aspernatur",
-                Port: 18789,
-                Username: "Enrique61",
+                DatabaseService: "nam",
+                Hostname: "posh-muffin.com",
+                Password: "deleniti",
+                Port: 944669,
+                Username: "Nina41",
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnectionName: "dolor",
+                PrivateConnectionName: "molestiae",
             },
             StaticServiceIPConnectivity: map[string]interface{}{
-                "laboriosam": "hic",
-                "saepe": "fuga",
-                "in": "corporis",
+                "qui": "impedit",
+                "cum": "esse",
             },
         },
+        AccessToken: "ipsum",
+        Alt: "media",
+        Callback: "aspernatur",
+        ConnectionProfileID: "perferendis",
+        Fields: "ad",
+        Key: "natus",
+        OauthToken: "sed",
+        Parent: "iste",
+        PrettyPrint: false,
+        QuotaUser: "dolor",
+        RequestID: "natus",
+        UploadType: "laboriosam",
+        UploadProtocol: "hic",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req)
+    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -124,7 +113,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -151,4 +140,15 @@ func main() {
 * `DatastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

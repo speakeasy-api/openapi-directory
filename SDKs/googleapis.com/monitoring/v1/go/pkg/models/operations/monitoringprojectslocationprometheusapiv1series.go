@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsLocationPrometheusAPIV1SeriesSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1SeriesSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1SeriesSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1SeriesSecurity struct {
@@ -28,16 +28,10 @@ type MonitoringProjectsLocationPrometheusAPIV1SeriesSecurity struct {
 	Option3 *MonitoringProjectsLocationPrometheusAPIV1SeriesSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsLocationPrometheusAPIV1SeriesPathParams struct {
-	// Location of the resource information. Has to be "global" for now.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Required. The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1SeriesQueryParams struct {
+type MonitoringProjectsLocationPrometheusAPIV1SeriesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv        *shared.XgafvEnum          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	QuerySeriesRequest *shared.QuerySeriesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -48,6 +42,10 @@ type MonitoringProjectsLocationPrometheusAPIV1SeriesQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Location of the resource information. Has to be "global" for now.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
+	// Required. The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -58,13 +56,6 @@ type MonitoringProjectsLocationPrometheusAPIV1SeriesQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1SeriesRequest struct {
-	PathParams  MonitoringProjectsLocationPrometheusAPIV1SeriesPathParams
-	QueryParams MonitoringProjectsLocationPrometheusAPIV1SeriesQueryParams
-	Request     *shared.QuerySeriesRequest `request:"mediaType=application/json"`
-	Security    MonitoringProjectsLocationPrometheusAPIV1SeriesSecurity
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1SeriesResponse struct {

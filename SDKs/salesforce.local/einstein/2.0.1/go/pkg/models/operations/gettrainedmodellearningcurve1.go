@@ -8,24 +8,15 @@ import (
 )
 
 type GetTrainedModelLearningCurve1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTrainedModelLearningCurve1PathParams struct {
-	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
-}
-
-type GetTrainedModelLearningCurve1QueryParams struct {
-	// Number of epoch to return. Maximum valid value is 25.
-	Count *string `queryParam:"style=form,explode=true,name=count"`
-	// Index of the epoch from which you want to start paging
-	Offset *string `queryParam:"style=form,explode=true,name=offset"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTrainedModelLearningCurve1Request struct {
-	PathParams  GetTrainedModelLearningCurve1PathParams
-	QueryParams GetTrainedModelLearningCurve1QueryParams
-	Security    GetTrainedModelLearningCurve1Security
+	// Number of epoch to return. Maximum valid value is 25.
+	Count   *string `queryParam:"style=form,explode=true,name=count"`
+	ModelID string  `pathParam:"style=simple,explode=false,name=modelId"`
+	// Index of the epoch from which you want to start paging
+	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 }
 
 type GetTrainedModelLearningCurve1Response struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type SchemaResponseBlocksReadPathParams struct {
+type SchemaResponseBlocksReadRequest struct {
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type SchemaResponseBlocksReadRequest struct {
-	PathParams SchemaResponseBlocksReadPathParams
 }
 
 // SchemaResponseBlocksReadRegistrationSchemaBlockAttributesBlockTypeEnum - A string that represents the type of input that the schema will take and the UI element that appears to the user on the frontend.

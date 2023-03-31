@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListForUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ProjectsListForUserStateEnum - Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
 type ProjectsListForUserStateEnum string
 
@@ -40,18 +36,14 @@ func (e *ProjectsListForUserStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListForUserQueryParams struct {
+type ProjectsListForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
-	State *ProjectsListForUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ProjectsListForUserRequest struct {
-	PathParams  ProjectsListForUserPathParams
-	QueryParams ProjectsListForUserQueryParams
+	State    *ProjectsListForUserStateEnum `queryParam:"style=form,explode=true,name=state"`
+	Username string                        `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // ProjectsListForUser415ApplicationJSON - Preview header missing

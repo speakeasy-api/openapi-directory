@@ -8,15 +8,10 @@ import (
 )
 
 type ListRefundsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListRefundsPathParams struct {
-	// The ID of the location to list refunds for.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type ListRefundsQueryParams struct {
+type ListRefundsRequest struct {
 	// A pagination cursor to retrieve the next set of results for your
 	// original query to the endpoint.
 	BatchToken *string `queryParam:"style=form,explode=true,name=batch_token"`
@@ -26,14 +21,10 @@ type ListRefundsQueryParams struct {
 	EndTime *string `queryParam:"style=form,explode=true,name=end_time"`
 	// The approximate number of refunds to return in a single response. Default: 100. Max: 200. Response may contain more results than the prescribed limit when refunds are made simultaneously to multiple tenders in a payment or when refunds are generated in an exchange to account for the value of returned goods.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// The ID of the location to list refunds for.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order in which payments are listed in the response.
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type ListRefundsRequest struct {
-	PathParams  ListRefundsPathParams
-	QueryParams ListRefundsQueryParams
-	Security    ListRefundsSecurity
 }
 
 type ListRefundsResponse struct {

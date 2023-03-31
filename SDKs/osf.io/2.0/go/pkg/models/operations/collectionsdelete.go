@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CollectionsDeletePathParams struct {
+type CollectionsDeleteRequest struct {
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsDeleteRequest struct {
-	PathParams CollectionsDeletePathParams
 }
 
 type CollectionsDeleteResponse struct {

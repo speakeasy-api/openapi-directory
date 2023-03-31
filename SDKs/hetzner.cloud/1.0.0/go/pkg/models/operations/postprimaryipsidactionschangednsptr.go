@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostPrimaryIpsIDActionsChangeDNSPtrPathParams struct {
-	// ID of the Primary IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP.
 //
 // The target hostname is set by passing `dns_ptr`.
@@ -24,12 +19,13 @@ type PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
 }
 
 type PostPrimaryIpsIDActionsChangeDNSPtrRequest struct {
-	PathParams PostPrimaryIpsIDActionsChangeDNSPtrPathParams
 	// Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP.
 	//
 	// The target hostname is set by passing `dns_ptr`.
 	//
-	Request *PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest `request:"mediaType=application/json"`
+	RequestBody *PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest `request:"mediaType=application/json"`
+	// ID of the Primary IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionError - Error message for the Action if error occurred, otherwise null

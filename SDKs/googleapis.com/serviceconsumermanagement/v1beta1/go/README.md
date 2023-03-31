@@ -25,91 +25,88 @@ func main() {
     s := sdk.New()
 
     req := operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest{
-        Security: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.V1Beta1ImportProducerOverridesRequest{
+        DollarXgafv: "2",
+        V1Beta1ImportProducerOverridesRequest: &shared.V1Beta1ImportProducerOverridesRequest{
             Force: false,
             ForceOnly: []shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnum{
+                "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH",
+                "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH",
                 "LIMIT_DECREASE_BELOW_USAGE",
-                "QUOTA_SAFETY_CHECK_UNSPECIFIED",
             },
             InlineSource: &shared.V1Beta1OverrideInlineSource{
                 Overrides: []shared.V1Beta1QuotaOverride{
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "ipsa",
+                        AdminOverrideAncestor: "corrupti",
                         Dimensions: map[string]string{
-                            "tempora": "suscipit",
-                            "molestiae": "minus",
-                            "placeat": "voluptatum",
-                            "iusto": "excepturi",
+                            "vel": "error",
+                            "deserunt": "suscipit",
+                            "iure": "magnam",
+                            "debitis": "ipsa",
                         },
-                        Metric: "nisi",
-                        Name: "recusandae",
-                        OverrideValue: "temporibus",
-                        Unit: "ab",
+                        Metric: "delectus",
+                        Name: "tempora",
+                        OverrideValue: "suscipit",
+                        Unit: "molestiae",
                     },
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "quis",
+                        AdminOverrideAncestor: "minus",
                         Dimensions: map[string]string{
-                            "deserunt": "perferendis",
+                            "voluptatum": "iusto",
+                            "excepturi": "nisi",
+                            "recusandae": "temporibus",
+                            "ab": "quis",
                         },
-                        Metric: "ipsam",
-                        Name: "repellendus",
-                        OverrideValue: "sapiente",
-                        Unit: "quo",
+                        Metric: "veritatis",
+                        Name: "deserunt",
+                        OverrideValue: "perferendis",
+                        Unit: "ipsam",
                     },
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "odit",
+                        AdminOverrideAncestor: "repellendus",
                         Dimensions: map[string]string{
-                            "at": "maiores",
-                            "molestiae": "quod",
-                            "quod": "esse",
-                            "totam": "porro",
+                            "quo": "odit",
+                            "at": "at",
+                            "maiores": "molestiae",
+                            "quod": "quod",
                         },
-                        Metric: "dolorum",
-                        Name: "dicta",
-                        OverrideValue: "nam",
-                        Unit: "officia",
-                    },
-                    shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "occaecati",
-                        Dimensions: map[string]string{
-                            "deleniti": "hic",
-                        },
-                        Metric: "optio",
+                        Metric: "esse",
                         Name: "totam",
-                        OverrideValue: "beatae",
-                        Unit: "commodi",
+                        OverrideValue: "porro",
+                        Unit: "dolorum",
+                    },
+                    shared.V1Beta1QuotaOverride{
+                        AdminOverrideAncestor: "dicta",
+                        Dimensions: map[string]string{
+                            "officia": "occaecati",
+                            "fugit": "deleniti",
+                            "hic": "optio",
+                        },
+                        Metric: "totam",
+                        Name: "beatae",
+                        OverrideValue: "commodi",
+                        Unit: "molestiae",
                     },
                 },
             },
         },
+        AccessToken: "modi",
+        Alt: "json",
+        Callback: "impedit",
+        Fields: "cum",
+        Key: "esse",
+        OauthToken: "ipsum",
+        Parent: "excepturi",
+        PrettyPrint: false,
+        QuotaUser: "aspernatur",
+        UploadType: "perferendis",
+        UploadProtocol: "ad",
     }
 
     ctx := context.Background()
-    res, err := s.Services.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx, req)
+    res, err := s.Services.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx, req, operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -122,7 +119,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Services
@@ -136,4 +133,15 @@ func main() {
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsList` - Retrieves a summary of all quota information about this consumer that is visible to the service producer, for each quota metric defined by the service. Each metric includes information about all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness, default value), the current effective limit value, and all of the overrides applied to the limit.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

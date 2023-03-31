@@ -37,7 +37,7 @@ func (s *accounts) MybusinessaccountmanagementAccountsCreate(ctx context.Context
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accounts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *accounts) MybusinessaccountmanagementAccountsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,14 +90,14 @@ func (s *accounts) MybusinessaccountmanagementAccountsCreate(ctx context.Context
 // MybusinessaccountmanagementAccountsGet - Gets the specified account. Returns `NOT_FOUND` if the account does not exist or if the caller does not have access rights to it.
 func (s *accounts) MybusinessaccountmanagementAccountsGet(ctx context.Context, request operations.MybusinessaccountmanagementAccountsGetRequest) (*operations.MybusinessaccountmanagementAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,9 +138,9 @@ func (s *accounts) MybusinessaccountmanagementAccountsGet(ctx context.Context, r
 // MybusinessaccountmanagementAccountsInvitationsAccept - Accepts the specified invitation.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsAccept(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsAcceptRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,7 +152,7 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsAccept(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,9 +193,9 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsAccept(ctx cont
 // MybusinessaccountmanagementAccountsInvitationsDecline - Declines the specified invitation.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsDecline(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsDeclineRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decline", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsDecline(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -248,14 +248,14 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsDecline(ctx con
 // MybusinessaccountmanagementAccountsInvitationsList - Lists pending invitations for the specified account.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsList(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsListRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/invitations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,7 +303,7 @@ func (s *accounts) MybusinessaccountmanagementAccountsList(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

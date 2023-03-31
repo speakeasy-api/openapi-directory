@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequisitionCreatedRequest struct {
-	Request shared.RequisitionV2Request `request:"mediaType=application/json"`
-}
-
 type RequisitionCreatedResponse struct {
 	ContentType string
 	// Requisition has been successfully created

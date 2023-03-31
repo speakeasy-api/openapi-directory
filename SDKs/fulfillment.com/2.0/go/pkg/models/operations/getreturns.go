@@ -9,10 +9,10 @@ import (
 )
 
 type GetReturnsSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetReturnsQueryParams struct {
+type GetReturnsRequest struct {
 	// Date-time in ISO 8601 format for selecting orders after, or at, the specified time
 	FromDate string `queryParam:"style=form,explode=true,name=fromDate"`
 	// The numbers of items to return
@@ -21,11 +21,6 @@ type GetReturnsQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Date-time in ISO 8601 format for selecting orders before, or at, the specified time
 	ToDate string `queryParam:"style=form,explode=true,name=toDate"`
-}
-
-type GetReturnsRequest struct {
-	QueryParams GetReturnsQueryParams
-	Security    GetReturnsSecurity
 }
 
 type GetReturnsReturnsArrayV2ReturnV2Order struct {

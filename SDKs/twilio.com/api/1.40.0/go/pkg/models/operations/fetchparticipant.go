@@ -12,22 +12,17 @@ var FetchParticipantServerList = []string{
 }
 
 type FetchParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchParticipantPathParams struct {
+type FetchParticipantRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID or label of the participant to fetch. Non URL safe characters in a label must be percent encoded, for example, a space character is represented as %20.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The SID of the conference with the participant to fetch.
 	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
-}
-
-type FetchParticipantRequest struct {
-	PathParams FetchParticipantPathParams
-	Security   FetchParticipantSecurity
-	ServerURL  *string
 }
 
 type FetchParticipantResponse struct {

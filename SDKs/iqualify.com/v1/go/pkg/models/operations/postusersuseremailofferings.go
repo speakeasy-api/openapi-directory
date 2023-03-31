@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersUserEmailOfferingsPathParams struct {
+type PostUsersUserEmailOfferingsRequest struct {
+	// offering ids
+	RequestBody []string `request:"mediaType=application/json"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PostUsersUserEmailOfferingsRequest struct {
-	PathParams PostUsersUserEmailOfferingsPathParams
-	// offering ids
-	Request []string `request:"mediaType=application/json"`
 }
 
 type PostUsersUserEmailOfferingsResponse struct {

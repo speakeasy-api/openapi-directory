@@ -34,7 +34,7 @@ func newTba(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // GetStatus - Returns API status, and TBA status information.
-func (s *tba) GetStatus(ctx context.Context, request operations.GetStatusRequest) (*operations.GetStatusResponse, error) {
+func (s *tba) GetStatus(ctx context.Context, request operations.GetStatusRequest, security operations.GetStatusSecurity) (*operations.GetStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/status"
 
@@ -43,9 +43,9 @@ func (s *tba) GetStatus(ctx context.Context, request operations.GetStatusRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

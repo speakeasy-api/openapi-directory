@@ -32,20 +32,20 @@ func newObjectAccessControls(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // StorageObjectAccessControlsDelete - Permanently deletes the ACL entry for the specified entity on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsDelete(ctx context.Context, request operations.StorageObjectAccessControlsDeleteRequest) (*operations.StorageObjectAccessControlsDeleteResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsDelete(ctx context.Context, request operations.StorageObjectAccessControlsDeleteRequest, security operations.StorageObjectAccessControlsDeleteSecurity) (*operations.StorageObjectAccessControlsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *objectAccessControls) StorageObjectAccessControlsDelete(ctx context.Con
 }
 
 // StorageObjectAccessControlsGet - Returns the ACL entry for the specified entity on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsGet(ctx context.Context, request operations.StorageObjectAccessControlsGetRequest) (*operations.StorageObjectAccessControlsGetResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsGet(ctx context.Context, request operations.StorageObjectAccessControlsGetRequest, security operations.StorageObjectAccessControlsGetSecurity) (*operations.StorageObjectAccessControlsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsGet(ctx context.Contex
 }
 
 // StorageObjectAccessControlsInsert - Creates a new ACL entry on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsInsert(ctx context.Context, request operations.StorageObjectAccessControlsInsertRequest) (*operations.StorageObjectAccessControlsInsertResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsInsert(ctx context.Context, request operations.StorageObjectAccessControlsInsertRequest, security operations.StorageObjectAccessControlsInsertSecurity) (*operations.StorageObjectAccessControlsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObjectAccessControl", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsInsert(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *objectAccessControls) StorageObjectAccessControlsInsert(ctx context.Con
 }
 
 // StorageObjectAccessControlsList - Retrieves ACL entries on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsList(ctx context.Context, request operations.StorageObjectAccessControlsListRequest) (*operations.StorageObjectAccessControlsListResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsList(ctx context.Context, request operations.StorageObjectAccessControlsListRequest, security operations.StorageObjectAccessControlsListSecurity) (*operations.StorageObjectAccessControlsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsList(ctx context.Conte
 }
 
 // StorageObjectAccessControlsPatch - Patches an ACL entry on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsPatch(ctx context.Context, request operations.StorageObjectAccessControlsPatchRequest) (*operations.StorageObjectAccessControlsPatchResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsPatch(ctx context.Context, request operations.StorageObjectAccessControlsPatchRequest, security operations.StorageObjectAccessControlsPatchSecurity) (*operations.StorageObjectAccessControlsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObjectAccessControl", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsPatch(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsPatch(ctx context.Cont
 }
 
 // StorageObjectAccessControlsUpdate - Updates an ACL entry on the specified object.
-func (s *objectAccessControls) StorageObjectAccessControlsUpdate(ctx context.Context, request operations.StorageObjectAccessControlsUpdateRequest) (*operations.StorageObjectAccessControlsUpdateResponse, error) {
+func (s *objectAccessControls) StorageObjectAccessControlsUpdate(ctx context.Context, request operations.StorageObjectAccessControlsUpdateRequest, security operations.StorageObjectAccessControlsUpdateSecurity) (*operations.StorageObjectAccessControlsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/acl/{entity}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObjectAccessControl", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *objectAccessControls) StorageObjectAccessControlsUpdate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

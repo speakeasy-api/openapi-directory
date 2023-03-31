@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchProductsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 // SearchProductsRequestBodySortOrderEnum - **sort order** in which to return the results that is *one of*:
 //
 //   - `"TOP_SELLERS"`: the top sellers
@@ -104,8 +98,10 @@ type SearchProductsRequestBody struct {
 }
 
 type SearchProductsRequest struct {
-	Headers SearchProductsHeaders
-	Request *SearchProductsRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                     `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *SearchProductsRequestBody `request:"mediaType=application/json"`
 }
 
 type SearchProducts200ApplicationJSONData struct {

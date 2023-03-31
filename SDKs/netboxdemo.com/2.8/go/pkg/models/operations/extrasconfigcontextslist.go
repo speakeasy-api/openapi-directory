@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasConfigContextsListQueryParams struct {
+type ExtrasConfigContextsListRequest struct {
 	ClusterGroup    *string `queryParam:"style=form,explode=true,name=cluster_group"`
 	ClusterGroupN   *string `queryParam:"style=form,explode=true,name=cluster_group__n"`
 	ClusterGroupID  *string `queryParam:"style=form,explode=true,name=cluster_group_id"`
@@ -62,10 +62,6 @@ type ExtrasConfigContextsListQueryParams struct {
 	TenantGroupIDN *string `queryParam:"style=form,explode=true,name=tenant_group_id__n"`
 	TenantID       *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	TenantIDN      *string `queryParam:"style=form,explode=true,name=tenant_id__n"`
-}
-
-type ExtrasConfigContextsListRequest struct {
-	QueryParams ExtrasConfigContextsListQueryParams
 }
 
 type ExtrasConfigContextsList200ApplicationJSON struct {

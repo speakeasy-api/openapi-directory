@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReadOperationResultPathParams struct {
+type GetReadOperationResultRequest struct {
 	// Id of read operation returned in the response of the 'Batch Read File' interface.
 	OperationID string `pathParam:"style=simple,explode=false,name=operationId"`
-}
-
-type GetReadOperationResultRequest struct {
-	PathParams GetReadOperationResultPathParams
 }
 
 type GetReadOperationResultResponse struct {

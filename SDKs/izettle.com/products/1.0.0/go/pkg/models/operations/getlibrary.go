@@ -8,24 +8,15 @@ import (
 )
 
 type GetLibrarySecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetLibraryPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-}
-
-type GetLibraryQueryParams struct {
-	All          *bool   `queryParam:"style=form,explode=true,name=all"`
-	EventLogUUID *string `queryParam:"style=form,explode=true,name=eventLogUuid"`
-	Limit        *int    `queryParam:"style=form,explode=true,name=limit"`
-	Offset       *string `queryParam:"style=form,explode=true,name=offset"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetLibraryRequest struct {
-	PathParams  GetLibraryPathParams
-	QueryParams GetLibraryQueryParams
-	Security    GetLibrarySecurity
+	All              *bool   `queryParam:"style=form,explode=true,name=all"`
+	EventLogUUID     *string `queryParam:"style=form,explode=true,name=eventLogUuid"`
+	Limit            *int    `queryParam:"style=form,explode=true,name=limit"`
+	Offset           *string `queryParam:"style=form,explode=true,name=offset"`
+	OrganizationUUID string  `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetLibraryResponse struct {

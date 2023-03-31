@@ -30,7 +30,6 @@ pkg/models/shared/stackframe.go
 pkg/models/shared/sourcelocation.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/updateactivebreakpointrequest.go
 pkg/models/shared/registerdebuggeeresponse.go
 pkg/models/shared/debuggee.go

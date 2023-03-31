@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkAppliancePrefixesDelegatedStaticPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkAppliancePrefixesDelegatedStaticRequestBodyOriginTypeEnum - Type of the origin
 type CreateNetworkAppliancePrefixesDelegatedStaticRequestBodyOriginTypeEnum string
 
@@ -54,8 +50,8 @@ type CreateNetworkAppliancePrefixesDelegatedStaticRequestBody struct {
 }
 
 type CreateNetworkAppliancePrefixesDelegatedStaticRequest struct {
-	PathParams CreateNetworkAppliancePrefixesDelegatedStaticPathParams
-	Request    CreateNetworkAppliancePrefixesDelegatedStaticRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkAppliancePrefixesDelegatedStaticRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                   `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkAppliancePrefixesDelegatedStaticResponse struct {

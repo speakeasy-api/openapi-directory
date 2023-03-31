@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteUserSecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type DeleteUserPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type DeleteUserRequest struct {
-	PathParams DeleteUserPathParams
-	Security   DeleteUserSecurity
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteUserResponse struct {

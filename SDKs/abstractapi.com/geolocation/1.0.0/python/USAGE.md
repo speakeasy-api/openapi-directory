@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetV1Request(
-    query_params=operations.GetV1QueryParams(
-        api_key="nihil",
-        fields="rerum",
-        ip_address="dicta",
-    ),
+    api_key="corrupti",
+    fields_="country,city,timezone",
+    ip_address="195.154.25.40",
 )
     
 res = s.get_v1_(req)

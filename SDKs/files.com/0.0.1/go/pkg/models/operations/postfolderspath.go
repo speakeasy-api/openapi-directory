@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type PostFoldersPathPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type PostFoldersPathRequestBody struct {
 	// Create parent directories if they do not exist?
 	MkdirParents *bool `multipartForm:"name=mkdir_parents"`
@@ -21,8 +16,9 @@ type PostFoldersPathRequestBody struct {
 }
 
 type PostFoldersPathRequest struct {
-	PathParams PostFoldersPathPathParams
-	Request    *PostFoldersPathRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostFoldersPathRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PostFoldersPathResponse struct {

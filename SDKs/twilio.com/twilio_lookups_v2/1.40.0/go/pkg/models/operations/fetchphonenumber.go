@@ -12,15 +12,11 @@ var FetchPhoneNumberServerList = []string{
 }
 
 type FetchPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchPhoneNumberPathParams struct {
-	// The phone number to lookup in E.164 or national format. Default country code is +1 (North America).
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
-}
-
-type FetchPhoneNumberQueryParams struct {
+type FetchPhoneNumberRequest struct {
 	// User’s country, up to two characters. This query parameter is only used (optionally) for identity_match package requests.
 	AddressCountryCode *string `queryParam:"style=form,explode=true,name=AddressCountryCode"`
 	// User’s first address line. This query parameter is only used (optionally) for identity_match package requests.
@@ -41,17 +37,12 @@ type FetchPhoneNumberQueryParams struct {
 	LastName *string `queryParam:"style=form,explode=true,name=LastName"`
 	// User’s national ID, such as SSN or Passport ID. This query parameter is only used (optionally) for identity_match package requests.
 	NationalID *string `queryParam:"style=form,explode=true,name=NationalId"`
+	// The phone number to lookup in E.164 or national format. Default country code is +1 (North America).
+	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
 	// User’s postal zip code. This query parameter is only used (optionally) for identity_match package requests.
 	PostalCode *string `queryParam:"style=form,explode=true,name=PostalCode"`
 	// User’s country subdivision, such as state, province, or locality. This query parameter is only used (optionally) for identity_match package requests.
 	State *string `queryParam:"style=form,explode=true,name=State"`
-}
-
-type FetchPhoneNumberRequest struct {
-	PathParams  FetchPhoneNumberPathParams
-	QueryParams FetchPhoneNumberQueryParams
-	Security    FetchPhoneNumberSecurity
-	ServerURL   *string
 }
 
 type FetchPhoneNumberResponse struct {

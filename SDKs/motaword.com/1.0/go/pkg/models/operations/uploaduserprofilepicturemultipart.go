@@ -8,18 +8,13 @@ import (
 )
 
 type UploadUserProfilePictureMultipartSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type UploadUserProfilePictureMultipartPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadUserProfilePictureMultipartRequest struct {
-	PathParams UploadUserProfilePictureMultipartPathParams
-	Request    *shared.ProfilePictureUpload1 `request:"mediaType=multipart/form-data"`
-	Security   UploadUserProfilePictureMultipartSecurity
+	ProfilePictureUpload1 *shared.ProfilePictureUpload1 `request:"mediaType=multipart/form-data"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UploadUserProfilePictureMultipartResponse struct {

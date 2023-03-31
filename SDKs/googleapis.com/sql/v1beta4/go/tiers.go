@@ -32,20 +32,20 @@ func newTiers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // SQLTiersList - Lists all available machine types (tiers) for Cloud SQL, for example, `db-custom-1-3840`. For related information, see [Pricing](/sql/pricing).
-func (s *tiers) SQLTiersList(ctx context.Context, request operations.SQLTiersListRequest) (*operations.SQLTiersListResponse, error) {
+func (s *tiers) SQLTiersList(ctx context.Context, request operations.SQLTiersListRequest, security operations.SQLTiersListSecurity) (*operations.SQLTiersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/tiers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/tiers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

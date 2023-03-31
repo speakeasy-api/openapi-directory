@@ -8,10 +8,10 @@ import (
 )
 
 type CreateConsentSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type CreateConsentHeaders struct {
+type CreateConsentRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -145,14 +145,9 @@ type CreateConsentHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type CreateConsentRequest struct {
-	Headers CreateConsentHeaders
 	// Request body for a consents request.
 	//
-	Request  *shared.Consents `request:"mediaType=application/json"`
-	Security CreateConsentSecurity
+	Consents *shared.Consents `request:"mediaType=application/json"`
 }
 
 type CreateConsentResponse struct {

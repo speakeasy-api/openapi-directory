@@ -14,21 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
-        QueryParams: operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams{
-            AggregateHours: "corrupti",
-            AllowAsynch: false,
-            CollectStationContributions: false,
-            ContentType: "provident",
-            EndDateTime: "distinctio",
-            IncludeNormals: false,
-            Key: "quibusdam",
-            Locations: "unde",
-            MaxDistance: "nulla",
-            MaxStations: "corrupti",
-            ShortColumnNames: false,
-            StartDateTime: "illum",
-            UnitGroup: "vel",
-        },
+        AggregateHours: "corrupti",
+        AllowAsynch: false,
+        CollectStationContributions: false,
+        ContentType: "provident",
+        EndDateTime: "distinctio",
+        IncludeNormals: false,
+        Key: "quibusdam",
+        Locations: "unde",
+        MaxDistance: "nulla",
+        MaxStations: "corrupti",
+        ShortColumnNames: false,
+        StartDateTime: "illum",
+        UnitGroup: "vel",
     }
 
     ctx := context.Background()

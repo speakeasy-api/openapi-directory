@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesRequestBodyLogo struct {
@@ -52,12 +51,6 @@ type PostSpacesRequestBody struct {
 	RegistrationNumber *string                       `json:"RegistrationNumber,omitempty"`
 	TemplateSpaceID    *string                       `json:"TemplateSpaceId,omitempty"`
 	Type               PostSpacesRequestBodyTypeEnum `json:"Type"`
-}
-
-type PostSpacesRequest struct {
-	// Space to add (except private)
-	Request  PostSpacesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSecurity
 }
 
 // PostSpaces201ApplicationJSON - Id of space created

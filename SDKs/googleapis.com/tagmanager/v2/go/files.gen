@@ -68,7 +68,6 @@ pkg/models/shared/container.go
 pkg/models/shared/containerfeatures.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/destination.go
 pkg/models/shared/listdestinationsresponse.go
 pkg/models/shared/environment.go

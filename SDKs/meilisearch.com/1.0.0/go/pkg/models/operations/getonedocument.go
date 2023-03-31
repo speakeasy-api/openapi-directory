@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOneDocumentQueryParams struct {
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-}
-
 type GetOneDocumentRequest struct {
-	QueryParams GetOneDocumentQueryParams
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 type GetOneDocumentResponse struct {

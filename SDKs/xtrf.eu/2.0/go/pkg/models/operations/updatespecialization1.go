@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSpecialization1PathParams struct {
+type UpdateSpecialization1Request struct {
+	// Updated specialization for a quote.
+	SpecializationDTO shared.SpecializationDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateSpecialization1Request struct {
-	PathParams UpdateSpecialization1PathParams
-	// Updated specialization for a quote.
-	Request shared.SpecializationDTO `request:"mediaType=application/json"`
 }
 
 type UpdateSpecialization1Response struct {

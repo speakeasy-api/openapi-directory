@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MembershipPostRequest struct {
-	// member object
-	Request shared.MemberDTO `request:"mediaType=application/json"`
-}
-
 type MembershipPostResponse struct {
 	ContentType string
 	// newly created member entity

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetNetworkBluetoothClientPathParams struct {
+type GetNetworkBluetoothClientRequest struct {
 	BluetoothClientID string `pathParam:"style=simple,explode=false,name=bluetoothClientId"`
-	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkBluetoothClientQueryParams struct {
 	// The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
 	ConnectivityHistoryTimespan *int64 `queryParam:"style=form,explode=true,name=connectivityHistoryTimespan"`
 	// Include the connectivity history for this client
-	IncludeConnectivityHistory *bool `queryParam:"style=form,explode=true,name=includeConnectivityHistory"`
-}
-
-type GetNetworkBluetoothClientRequest struct {
-	PathParams  GetNetworkBluetoothClientPathParams
-	QueryParams GetNetworkBluetoothClientQueryParams
+	IncludeConnectivityHistory *bool  `queryParam:"style=form,explode=true,name=includeConnectivityHistory"`
+	NetworkID                  string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkBluetoothClientResponse struct {

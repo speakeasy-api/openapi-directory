@@ -8,16 +8,11 @@ import (
 )
 
 type DatalabelingProjectsDatasetsAnnotatedDatasetsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatalabelingProjectsDatasetsAnnotatedDatasetsListPathParams struct {
-	// Required. Name of the dataset to list annotated datasets, format: projects/{project_id}/datasets/{dataset_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatalabelingProjectsDatasetsAnnotatedDatasetsListQueryParams struct {
+type DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type DatalabelingProjectsDatasetsAnnotatedDatasetsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A token identifying a page of results for the server to return. Typically obtained by ListAnnotatedDatasetsResponse.next_page_token of the previous [DataLabelingService.ListAnnotatedDatasets] call. Return first page if empty.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Name of the dataset to list annotated datasets, format: projects/{project_id}/datasets/{dataset_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DatalabelingProjectsDatasetsAnnotatedDatasetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest struct {
-	PathParams  DatalabelingProjectsDatasetsAnnotatedDatasetsListPathParams
-	QueryParams DatalabelingProjectsDatasetsAnnotatedDatasetsListQueryParams
-	Security    DatalabelingProjectsDatasetsAnnotatedDatasetsListSecurity
 }
 
 type DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse struct {

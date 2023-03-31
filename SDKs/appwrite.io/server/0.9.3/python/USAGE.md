@@ -4,23 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AccountCreateRecoveryRequest(
-    security=operations.AccountCreateRecoverySecurity(
-        jwt=shared.SchemeJwt(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-        project=shared.SchemeProject(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    request=operations.AccountCreateRecoveryRequestBody(
-        email="amet",
-        url="sequi",
-    ),
+
+
+req = operations.AccountCreateRecoveryRequestBody(
+    email="Larue_Rau85@yahoo.com",
+    url="corrupti",
 )
     
-res = s.account.account_create_recovery(req)
+res = s.account.account_create_recovery(req, operations.AccountCreateRecoverySecurity(
+    jwt="YOUR_API_KEY_HERE",
+    project="YOUR_API_KEY_HERE",
+))
 
 if res.token is not None:
     # handle response

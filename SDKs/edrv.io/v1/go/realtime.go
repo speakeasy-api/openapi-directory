@@ -41,7 +41,7 @@ func (s *realtime) GetRealtime(ctx context.Context, request operations.GetRealti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetFloatingIpsIDActionsPathParams struct {
-	// ID of the Floating IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetFloatingIpsIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetFloatingIpsIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetFloatingIpsIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetFloatingIpsIDActionsQueryParams struct {
+type GetFloatingIpsIDActionsRequest struct {
+	// ID of the Floating IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetFloatingIpsIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetFloatingIpsIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetFloatingIpsIDActionsRequest struct {
-	PathParams  GetFloatingIpsIDActionsPathParams
-	QueryParams GetFloatingIpsIDActionsQueryParams
 }
 
 // GetFloatingIpsIDActions200ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null

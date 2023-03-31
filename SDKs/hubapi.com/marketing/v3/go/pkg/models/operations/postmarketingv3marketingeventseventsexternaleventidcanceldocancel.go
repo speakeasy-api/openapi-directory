@@ -8,22 +8,13 @@ import (
 )
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelPathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelRequest struct {
-	PathParams  PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelPathParams
-	QueryParams PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelQueryParams
-	Security    PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelSecurity
+	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID   string `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelResponse struct {

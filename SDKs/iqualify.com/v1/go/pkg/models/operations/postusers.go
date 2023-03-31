@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersRequest struct {
-	// user
-	Request shared.User `request:"mediaType=application/json"`
-}
-
 type PostUsersResponse struct {
 	ContentType string
 	// Bad Request

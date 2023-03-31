@@ -14,31 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest{
-        Security: operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
-            Oauth2Legacy: &shared.SchemeOauth2Legacy{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        Name: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
-        PathParams: operations.GetBusinessUnitsV3BusinessUnitsUserUserIDPathParams{
-            UserID: "corrupti",
+        Properties: []string{
+            "nulla",
+            "corrupti",
+            "illum",
         },
-        QueryParams: operations.GetBusinessUnitsV3BusinessUnitsUserUserIDQueryParams{
-            Name: []string{
-                "distinctio",
-                "quibusdam",
-                "unde",
-            },
-            Properties: []string{
-                "corrupti",
-                "illum",
-                "vel",
-                "error",
-            },
-        },
+        UserID: "vel",
     }
 
     ctx := context.Background()
-    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, req)
+    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, req, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
+        Oauth2Legacy: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHlrRequest struct {
-	Request shared.HLRrequest `request:"mediaType=application/json"`
-}
-
 type GetHlrResponse struct {
 	ContentType string
 	// Dysfonctionnement

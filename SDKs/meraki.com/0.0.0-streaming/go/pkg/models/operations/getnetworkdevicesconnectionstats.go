@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkDevicesConnectionStatsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkDevicesConnectionStatsBandEnum - Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 type GetNetworkDevicesConnectionStatsBandEnum string
 
@@ -36,11 +32,12 @@ func (e *GetNetworkDevicesConnectionStatsBandEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetNetworkDevicesConnectionStatsQueryParams struct {
+type GetNetworkDevicesConnectionStatsRequest struct {
 	// Filter results by AP Tag
 	ApTag *string `queryParam:"style=form,explode=true,name=apTag"`
 	// Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
-	Band *GetNetworkDevicesConnectionStatsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	Band      *GetNetworkDevicesConnectionStatsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	NetworkID string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 	// Filter results by SSID
 	Ssid *int64 `queryParam:"style=form,explode=true,name=ssid"`
 	// The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -51,11 +48,6 @@ type GetNetworkDevicesConnectionStatsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Filter results by VLAN
 	Vlan *int64 `queryParam:"style=form,explode=true,name=vlan"`
-}
-
-type GetNetworkDevicesConnectionStatsRequest struct {
-	PathParams  GetNetworkDevicesConnectionStatsPathParams
-	QueryParams GetNetworkDevicesConnectionStatsQueryParams
 }
 
 type GetNetworkDevicesConnectionStatsResponse struct {

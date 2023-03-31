@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.FetchMessagingCountryRequest{
-        Security: operations.FetchMessagingCountrySecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.FetchMessagingCountryPathParams{
-            IsoCountry: "corrupti",
-        },
+        IsoCountry: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.FetchMessagingCountry(ctx, req)
+    res, err := s.FetchMessagingCountry(ctx, req, operations.FetchMessagingCountrySecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

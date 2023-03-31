@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementWebpropertyUserLinksListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebpropertyUserLinksListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebpropertyUserLinksListSecurity struct {
@@ -22,14 +22,9 @@ type AnalyticsManagementWebpropertyUserLinksListSecurity struct {
 	Option2 *AnalyticsManagementWebpropertyUserLinksListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementWebpropertyUserLinksListPathParams struct {
+type AnalyticsManagementWebpropertyUserLinksListRequest struct {
 	// Account ID which the given web property belongs to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web Property ID for the webProperty-user links to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementWebpropertyUserLinksListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -48,12 +43,8 @@ type AnalyticsManagementWebpropertyUserLinksListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebpropertyUserLinksListRequest struct {
-	PathParams  AnalyticsManagementWebpropertyUserLinksListPathParams
-	QueryParams AnalyticsManagementWebpropertyUserLinksListQueryParams
-	Security    AnalyticsManagementWebpropertyUserLinksListSecurity
+	// Web Property ID for the webProperty-user links to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementWebpropertyUserLinksListResponse struct {

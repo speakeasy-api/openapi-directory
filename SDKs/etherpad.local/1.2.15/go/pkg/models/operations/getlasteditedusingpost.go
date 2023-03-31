@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetLastEditedUsingPOSTQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type GetLastEditedUsingPOSTRequest struct {
-	QueryParams GetLastEditedUsingPOSTQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // GetLastEditedUsingPOST500ApplicationJSON - internal api error (code 2)

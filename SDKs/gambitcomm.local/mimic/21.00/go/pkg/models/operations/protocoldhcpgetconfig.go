@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolDhcpGetConfigPathParams struct {
+type ProtocolDhcpGetConfigRequest struct {
 	// Agent to show the DHCP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolDhcpGetConfigRequest struct {
-	PathParams ProtocolDhcpGetConfigPathParams
 }
 
 type ProtocolDhcpGetConfigResponse struct {

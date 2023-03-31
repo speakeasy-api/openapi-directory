@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserEpisodesQueryParams struct {
+type GetUserEpisodesRequest struct {
 	// Only return episodes from this specific show
 	ShowID *int64 `queryParam:"style=form,explode=true,name=show_id"`
-}
-
-type GetUserEpisodesRequest struct {
-	QueryParams GetUserEpisodesQueryParams
 }
 
 type GetUserEpisodesResponse struct {

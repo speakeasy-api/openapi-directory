@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectsHeaders struct {
+type GetProjectsRequest struct {
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetProjectsRequest struct {
-	Headers GetProjectsHeaders
 }
 
 type GetProjectsResponse struct {

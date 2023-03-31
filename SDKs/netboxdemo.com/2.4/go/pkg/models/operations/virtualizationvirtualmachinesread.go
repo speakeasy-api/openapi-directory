@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationVirtualMachinesReadPathParams struct {
+type VirtualizationVirtualMachinesReadRequest struct {
 	// A unique integer value identifying this virtual machine.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationVirtualMachinesReadRequest struct {
-	PathParams VirtualizationVirtualMachinesReadPathParams
 }
 
 type VirtualizationVirtualMachinesReadResponse struct {

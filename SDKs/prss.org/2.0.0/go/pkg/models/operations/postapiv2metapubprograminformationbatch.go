@@ -10,7 +10,7 @@ import (
 )
 
 type PostAPIV2MetapubProgramInformationBatchSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum - The format of the metadata file defining the create or update actions to be performed on one or more EPG programs. For more information on how RadioDNS EPG maps to ContentDepot <a href="/api/epg-cd-mapping.html">click here </a>
@@ -50,11 +50,6 @@ type PostAPIV2MetapubProgramInformationBatchRequestBody struct {
 	Program *PostAPIV2MetapubProgramInformationBatchRequestBodyProgram `json:"program,omitempty"`
 	// The URI to the metadata file. Currently only the ```cddrive``` scheme is supported.
 	URI string `json:"uri"`
-}
-
-type PostAPIV2MetapubProgramInformationBatchRequest struct {
-	Request  *PostAPIV2MetapubProgramInformationBatchRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV2MetapubProgramInformationBatchSecurity
 }
 
 type PostAPIV2MetapubProgramInformationBatchResponse struct {

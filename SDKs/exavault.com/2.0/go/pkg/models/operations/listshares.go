@@ -87,7 +87,11 @@ func (e *ListSharesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSharesQueryParams struct {
+type ListSharesRequest struct {
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Comma separated list of relationships to include in response. Possible values are **owner**, **resources**, **notifications**, **activity**.
 	Include *string `queryParam:"style=form,explode=true,name=include"`
 	// Limit of records to be returned (for pagination)
@@ -112,18 +116,6 @@ type ListSharesQueryParams struct {
 	Type *ListSharesTypeEnum `queryParam:"style=form,explode=true,name=type"`
 	// When provided, only shares created by the user with that `username` will be included in the list. Does not support wildcard searching.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type ListSharesHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type ListSharesRequest struct {
-	QueryParams ListSharesQueryParams
-	Headers     ListSharesHeaders
 }
 
 type ListSharesResponse struct {

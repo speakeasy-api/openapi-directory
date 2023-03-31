@@ -8,20 +8,15 @@ import (
 )
 
 type UnlinkCustomerFromGiftCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UnlinkCustomerFromGiftCardPathParams struct {
-	GiftCardID string `pathParam:"style=simple,explode=false,name=gift_card_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnlinkCustomerFromGiftCardRequest struct {
-	PathParams UnlinkCustomerFromGiftCardPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UnlinkCustomerFromGiftCardRequest `request:"mediaType=application/json"`
-	Security UnlinkCustomerFromGiftCardSecurity
+	UnlinkCustomerFromGiftCardRequest shared.UnlinkCustomerFromGiftCardRequest `request:"mediaType=application/json"`
+	GiftCardID                        string                                   `pathParam:"style=simple,explode=false,name=gift_card_id"`
 }
 
 type UnlinkCustomerFromGiftCardResponse struct {

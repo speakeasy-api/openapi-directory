@@ -8,13 +8,13 @@ import (
 )
 
 type TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity struct {
@@ -22,12 +22,7 @@ type TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity struct {
 	Option2 *TagmanagerAccountsContainersWorkspacesGtagConfigListSecurityOption2 `security:"option"`
 }
 
-type TagmanagerAccountsContainersWorkspacesGtagConfigListPathParams struct {
-	// Workspace's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type TagmanagerAccountsContainersWorkspacesGtagConfigListQueryParams struct {
+type TagmanagerAccountsContainersWorkspacesGtagConfigListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type TagmanagerAccountsContainersWorkspacesGtagConfigListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Continuation token for fetching the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Workspace's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type TagmanagerAccountsContainersWorkspacesGtagConfigListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersWorkspacesGtagConfigListRequest struct {
-	PathParams  TagmanagerAccountsContainersWorkspacesGtagConfigListPathParams
-	QueryParams TagmanagerAccountsContainersWorkspacesGtagConfigListQueryParams
-	Security    TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity
 }
 
 type TagmanagerAccountsContainersWorkspacesGtagConfigListResponse struct {

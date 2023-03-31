@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListFineGrainedPermissionsPathParams struct {
+type OrgsListFineGrainedPermissionsRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsListFineGrainedPermissionsRequest struct {
-	PathParams OrgsListFineGrainedPermissionsPathParams
 }
 
 type OrgsListFineGrainedPermissionsResponse struct {

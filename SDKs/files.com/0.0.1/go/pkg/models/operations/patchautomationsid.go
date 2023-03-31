@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchAutomationsIDPathParams struct {
-	// Automation ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchAutomationsIDRequestBodyAutomationEnum - Automation type
 type PatchAutomationsIDRequestBodyAutomationEnum string
 
@@ -135,8 +130,9 @@ type PatchAutomationsIDRequestBody struct {
 }
 
 type PatchAutomationsIDRequest struct {
-	PathParams PatchAutomationsIDPathParams
-	Request    *PatchAutomationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchAutomationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Automation ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchAutomationsIDResponse struct {

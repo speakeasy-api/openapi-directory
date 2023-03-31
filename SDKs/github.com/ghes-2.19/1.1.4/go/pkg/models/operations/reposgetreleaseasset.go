@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReleaseAssetPathParams struct {
+type ReposGetReleaseAssetRequest struct {
 	// asset_id parameter
 	AssetID int64  `pathParam:"style=simple,explode=false,name=asset_id"`
 	Owner   string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetReleaseAssetRequest struct {
-	PathParams ReposGetReleaseAssetPathParams
 }
 
 // ReposGetReleaseAsset415ApplicationJSON - Preview header missing

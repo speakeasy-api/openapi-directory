@@ -59,7 +59,7 @@ func (e *GetQuestionsNoAnswersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQuestionsNoAnswersQueryParams struct {
+type GetQuestionsNoAnswersRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -118,10 +118,6 @@ type GetQuestionsNoAnswersQueryParams struct {
 	Tagged *string `queryParam:"style=form,explode=true,name=tagged"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetQuestionsNoAnswersRequest struct {
-	QueryParams GetQuestionsNoAnswersQueryParams
 }
 
 type GetQuestionsNoAnswersResponse struct {

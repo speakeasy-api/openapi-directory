@@ -34,14 +34,14 @@ func newInventory(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns a list of the supply lots of an SKU in a specific warehouse.
 func (s *inventory) GetSupplyLots(ctx context.Context, request operations.GetSupplyLotsRequest) (*operations.GetSupplyLotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -72,14 +72,14 @@ func (s *inventory) GetSupplyLots(ctx context.Context, request operations.GetSup
 // Lists inventory with dispatched reservations. When the number of active reservations is more than 2000 the return is an error with status code 400 (BadRequest) and the message: Too many active reservations.
 func (s *inventory) Getinventorywithdispatchedreservations(ctx context.Context, request operations.GetinventorywithdispatchedreservationsRequest) (*operations.GetinventorywithdispatchedreservationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{itemId}/warehouses/{warehouseId}/dispatched", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{itemId}/warehouses/{warehouseId}/dispatched", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -119,14 +119,14 @@ func (s *inventory) Getinventorywithdispatchedreservations(ctx context.Context, 
 // Lists your store's inventory by SKU ID
 func (s *inventory) InventoryBySku(ctx context.Context, request operations.InventoryBySkuRequest) (*operations.InventoryBySkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/skus/{skuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/skus/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -168,14 +168,14 @@ func (s *inventory) InventoryBySku(ctx context.Context, request operations.Inven
 // Lists inventory information per dock set up in your store.
 func (s *inventory) Inventoryperdock(ctx context.Context, request operations.InventoryperdockRequest) (*operations.InventoryperdockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -215,14 +215,14 @@ func (s *inventory) Inventoryperdock(ctx context.Context, request operations.Inv
 // Lists information of inventory per dock and warehouse.
 func (s *inventory) Inventoryperdockandwarehouse(ctx context.Context, request operations.InventoryperdockandwarehouseRequest) (*operations.InventoryperdockandwarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}/warehouses/{warehouseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}/warehouses/{warehouseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -262,14 +262,14 @@ func (s *inventory) Inventoryperdockandwarehouse(ctx context.Context, request op
 // Lists inventory information per warehouse on your store.
 func (s *inventory) Inventoryperwarehouse(ctx context.Context, request operations.InventoryperwarehouseRequest) (*operations.InventoryperwarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -311,9 +311,9 @@ func (s *inventory) Inventoryperwarehouse(ctx context.Context, request operation
 // Check out our [documentation](https://help.vtex.com/en/tutorial/setting-up-future-inventory--UMSGjooqRfkRbeoh94kS4) about this feature.
 func (s *inventory) SaveSupplyLot(ctx context.Context, request operations.SaveSupplyLotRequest) (*operations.SaveSupplyLotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -328,7 +328,7 @@ func (s *inventory) SaveSupplyLot(ctx context.Context, request operations.SaveSu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -361,14 +361,14 @@ func (s *inventory) SaveSupplyLot(ctx context.Context, request operations.SaveSu
 // Check out how this transfer works in further detail by reading our [documentation](https://help.vtex.com/pt/tutorial/configurar-estoque-futuro--UMSGjooqRfkRbeoh94kS4) about this feature.
 func (s *inventory) TransferSupplyLot(ctx context.Context, request operations.TransferSupplyLotRequest) (*operations.TransferSupplyLotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}/transfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}/transfer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -399,9 +399,9 @@ func (s *inventory) TransferSupplyLot(ctx context.Context, request operations.Tr
 // Updates inventory for a given SKU and warehouse.
 func (s *inventory) UpdateInventoryBySkuandWarehouse(ctx context.Context, request operations.UpdateInventoryBySkuandWarehouseRequest) (*operations.UpdateInventoryBySkuandWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/skus/{skuId}/warehouses/{warehouseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/skus/{skuId}/warehouses/{warehouseId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -416,7 +416,7 @@ func (s *inventory) UpdateInventoryBySkuandWarehouse(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

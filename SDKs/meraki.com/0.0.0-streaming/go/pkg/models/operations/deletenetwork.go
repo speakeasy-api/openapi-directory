@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type DeleteNetworkRequest struct {
-	PathParams DeleteNetworkPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type DeleteNetworkResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFundingAccountsV2QueryParams struct {
+type GetFundingAccountsV2Request struct {
 	// The 2 letter ISO 3166-1 country code (upper case)
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	// The ISO 4217 currency code
@@ -24,10 +24,6 @@ type GetFundingAccountsV2QueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type of funding account.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetFundingAccountsV2Request struct {
-	QueryParams GetFundingAccountsV2QueryParams
 }
 
 type GetFundingAccountsV2Response struct {

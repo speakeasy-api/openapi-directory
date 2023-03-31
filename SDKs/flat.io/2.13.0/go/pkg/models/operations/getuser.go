@@ -8,18 +8,13 @@ import (
 )
 
 type GetUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetUserPathParams struct {
-	// This route parameter is the unique identifier of the user. You can specify an email instead of an unique identifier. If you are executing this request authenticated, you can use `me` as a value instead of the current User unique identifier to work on the current authenticated user.
-	//
-	User string `pathParam:"style=simple,explode=false,name=user"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetUserRequest struct {
-	PathParams GetUserPathParams
-	Security   GetUserSecurity
+	// This route parameter is the unique identifier of the user. You can specify an email instead of an unique identifier. If you are executing this request authenticated, you can use `me` as a value instead of the current User unique identifier to work on the current authenticated user.
+	//
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type GetUserResponse struct {

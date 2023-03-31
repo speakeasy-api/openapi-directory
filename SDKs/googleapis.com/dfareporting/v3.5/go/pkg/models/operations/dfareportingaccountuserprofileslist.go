@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingAccountUserProfilesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingAccountUserProfilesListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingAccountUserProfilesListSortFieldEnum - Field by which to sort the list.
@@ -67,7 +62,7 @@ func (e *DfareportingAccountUserProfilesListSortOrderEnum) UnmarshalJSON(data []
 	}
 }
 
-type DfareportingAccountUserProfilesListQueryParams struct {
+type DfareportingAccountUserProfilesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -92,6 +87,8 @@ type DfareportingAccountUserProfilesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for objects by name, ID or email. Wildcards (*) are allowed. For example, "user profile*2015" will return objects with names like "user profile June 2015", "user profile April 2015", or simply "user profile 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "user profile" will match objects with name "my user profile", "user profile 2015", or simply "user profile".
@@ -108,12 +105,6 @@ type DfareportingAccountUserProfilesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Select only user profiles with the specified user role ID.
 	UserRoleID *string `queryParam:"style=form,explode=true,name=userRoleId"`
-}
-
-type DfareportingAccountUserProfilesListRequest struct {
-	PathParams  DfareportingAccountUserProfilesListPathParams
-	QueryParams DfareportingAccountUserProfilesListQueryParams
-	Security    DfareportingAccountUserProfilesListSecurity
 }
 
 type DfareportingAccountUserProfilesListResponse struct {

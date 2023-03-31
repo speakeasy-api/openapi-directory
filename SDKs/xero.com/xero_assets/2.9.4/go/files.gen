@@ -22,7 +22,6 @@ pkg/models/shared/asset.go
 pkg/models/shared/bookdepreciationsetting.go
 pkg/models/shared/bookdepreciationdetail.go
 pkg/models/shared/assetstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/assettype.go
 pkg/models/shared/setting.go
 pkg/models/shared/assets.go

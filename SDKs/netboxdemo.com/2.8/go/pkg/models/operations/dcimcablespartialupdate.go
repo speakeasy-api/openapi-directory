@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimCablesPartialUpdatePathParams struct {
+type DcimCablesPartialUpdateRequest struct {
+	WritableCableInput shared.WritableCableInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this cable.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimCablesPartialUpdateRequest struct {
-	PathParams DcimCablesPartialUpdatePathParams
-	Request    shared.WritableCableInput `request:"mediaType=application/json"`
 }
 
 type DcimCablesPartialUpdateResponse struct {

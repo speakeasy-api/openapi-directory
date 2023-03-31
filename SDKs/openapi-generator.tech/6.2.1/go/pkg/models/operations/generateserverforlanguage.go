@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateServerForLanguagePathParams struct {
+type GenerateServerForLanguageRequest struct {
+	// parameters
+	GeneratorInput shared.GeneratorInput `request:"mediaType=application/json"`
 	// framework
 	Framework string `pathParam:"style=simple,explode=false,name=framework"`
-}
-
-type GenerateServerForLanguageRequest struct {
-	PathParams GenerateServerForLanguagePathParams
-	// parameters
-	Request shared.GeneratorInput `request:"mediaType=application/json"`
 }
 
 type GenerateServerForLanguageResponse struct {

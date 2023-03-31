@@ -33,22 +33,22 @@ func newReferenceData(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // ReferencesAircraftByAircraftCodeGet - Aircraft
 // List all aircraft types or one specific aircraft type.
-func (s *referenceData) ReferencesAircraftByAircraftCodeGet(ctx context.Context, request operations.ReferencesAircraftByAircraftCodeGetRequest) (*operations.ReferencesAircraftByAircraftCodeGetResponse, error) {
+func (s *referenceData) ReferencesAircraftByAircraftCodeGet(ctx context.Context, request operations.ReferencesAircraftByAircraftCodeGetRequest, security operations.ReferencesAircraftByAircraftCodeGetSecurity) (*operations.ReferencesAircraftByAircraftCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/aircraft/{aircraftCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/aircraft/{aircraftCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,22 +84,22 @@ func (s *referenceData) ReferencesAircraftByAircraftCodeGet(ctx context.Context,
 
 // ReferencesAirlinesByAirlineCodeGet - Airlines
 // List all airlines or one specific airline.
-func (s *referenceData) ReferencesAirlinesByAirlineCodeGet(ctx context.Context, request operations.ReferencesAirlinesByAirlineCodeGetRequest) (*operations.ReferencesAirlinesByAirlineCodeGetResponse, error) {
+func (s *referenceData) ReferencesAirlinesByAirlineCodeGet(ctx context.Context, request operations.ReferencesAirlinesByAirlineCodeGetRequest, security operations.ReferencesAirlinesByAirlineCodeGetSecurity) (*operations.ReferencesAirlinesByAirlineCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airlines/{airlineCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/airlines/{airlineCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,22 +135,22 @@ func (s *referenceData) ReferencesAirlinesByAirlineCodeGet(ctx context.Context, 
 
 // ReferencesAirportsByAirportCodeGet - Airports
 // List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.
-func (s *referenceData) ReferencesAirportsByAirportCodeGet(ctx context.Context, request operations.ReferencesAirportsByAirportCodeGetRequest) (*operations.ReferencesAirportsByAirportCodeGetResponse, error) {
+func (s *referenceData) ReferencesAirportsByAirportCodeGet(ctx context.Context, request operations.ReferencesAirportsByAirportCodeGetRequest, security operations.ReferencesAirportsByAirportCodeGetSecurity) (*operations.ReferencesAirportsByAirportCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airports/{airportCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/airports/{airportCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,22 +186,22 @@ func (s *referenceData) ReferencesAirportsByAirportCodeGet(ctx context.Context, 
 
 // ReferencesAirportsNearestByLatitudeAndLongitudeGet - Nearest Airports
 // List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.
-func (s *referenceData) ReferencesAirportsNearestByLatitudeAndLongitudeGet(ctx context.Context, request operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest) (*operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse, error) {
+func (s *referenceData) ReferencesAirportsNearestByLatitudeAndLongitudeGet(ctx context.Context, request operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest, security operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity) (*operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airports/nearest/{latitude},{longitude}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/airports/nearest/{latitude},{longitude}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,22 +237,22 @@ func (s *referenceData) ReferencesAirportsNearestByLatitudeAndLongitudeGet(ctx c
 
 // ReferencesCitiesByCityCodeGet - Cities
 // List all cities or one specific city. It is possible to request the response in a specific language.
-func (s *referenceData) ReferencesCitiesByCityCodeGet(ctx context.Context, request operations.ReferencesCitiesByCityCodeGetRequest) (*operations.ReferencesCitiesByCityCodeGetResponse, error) {
+func (s *referenceData) ReferencesCitiesByCityCodeGet(ctx context.Context, request operations.ReferencesCitiesByCityCodeGetRequest, security operations.ReferencesCitiesByCityCodeGetSecurity) (*operations.ReferencesCitiesByCityCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/cities/{cityCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/cities/{cityCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -288,22 +288,22 @@ func (s *referenceData) ReferencesCitiesByCityCodeGet(ctx context.Context, reque
 
 // ReferencesCountriesByCountryCodeGet - Countries
 // List all countries or one specific country. It is possible to request the response in a specific language.
-func (s *referenceData) ReferencesCountriesByCountryCodeGet(ctx context.Context, request operations.ReferencesCountriesByCountryCodeGetRequest) (*operations.ReferencesCountriesByCountryCodeGetResponse, error) {
+func (s *referenceData) ReferencesCountriesByCountryCodeGet(ctx context.Context, request operations.ReferencesCountriesByCountryCodeGetRequest, security operations.ReferencesCountriesByCountryCodeGetSecurity) (*operations.ReferencesCountriesByCountryCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/countries/{countryCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/countries/{countryCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

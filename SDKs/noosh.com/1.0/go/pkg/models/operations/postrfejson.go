@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRfeJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostRfeJSONRequest struct {
-	PathParams PostRfeJSONPathParams
-	Request    *shared.RfePO `request:"mediaType=application/json"`
+	RfePO       *shared.RfePO `request:"mediaType=application/json"`
+	ProjectID   string        `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID string        `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostRfeJSONResponse struct {

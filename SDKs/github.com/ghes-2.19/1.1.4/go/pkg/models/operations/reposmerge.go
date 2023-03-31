@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposMergePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposMergeRequestBody struct {
 	// The name of the base branch that the head will be merged into.
 	Base string `json:"base"`
@@ -22,8 +17,9 @@ type ReposMergeRequestBody struct {
 }
 
 type ReposMergeRequest struct {
-	PathParams ReposMergePathParams
-	Request    ReposMergeRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposMergeRequestBody `request:"mediaType=application/json"`
+	Owner       string                `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposMergeResponse struct {

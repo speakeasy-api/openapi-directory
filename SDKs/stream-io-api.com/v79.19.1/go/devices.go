@@ -34,7 +34,7 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateDevice - Create device
 // Adds a new device to a user, if the same device already exists the call will have no effect
-func (s *devices) CreateDevice(ctx context.Context, request operations.CreateDeviceRequest) (*operations.CreateDeviceResponse, error) {
+func (s *devices) CreateDevice(ctx context.Context, request shared.CreateDeviceRequest) (*operations.CreateDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devices"
 
@@ -120,7 +120,7 @@ func (s *devices) DeleteDevice(ctx context.Context, request operations.DeleteDev
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -191,7 +191,7 @@ func (s *devices) ListDevices(ctx context.Context, request operations.ListDevice
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

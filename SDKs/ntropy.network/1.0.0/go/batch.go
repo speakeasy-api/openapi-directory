@@ -34,7 +34,7 @@ func newBatch(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get a batch of consumer transaction classification results.
 func (s *batch) GetABatchOfConsumerTransactionClassificationResults(ctx context.Context, request operations.GetABatchOfConsumerTransactionClassificationResultsRequest) (*operations.GetABatchOfConsumerTransactionClassificationResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classifier/consumer/batch/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classifier/consumer/batch/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

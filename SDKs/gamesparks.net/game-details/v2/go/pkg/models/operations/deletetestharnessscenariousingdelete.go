@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETETestHarnessScenarioUsingDELETEPathParams struct {
+type DELETETestHarnessScenarioUsingDELETERequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// scenarioName
 	ScenarioName string `pathParam:"style=simple,explode=false,name=scenarioName"`
-}
-
-type DELETETestHarnessScenarioUsingDELETERequest struct {
-	PathParams DELETETestHarnessScenarioUsingDELETEPathParams
 }
 
 type DELETETestHarnessScenarioUsingDELETEResponse struct {

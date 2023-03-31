@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelRotateSecretRequest(
-    headers=operations.CancelRotateSecretHeaders(
-        x_amz_algorithm="dolorem",
-        x_amz_content_sha256="magni",
-        x_amz_credential="sequi",
-        x_amz_date="non",
-        x_amz_security_token="a",
-        x_amz_signature="recusandae",
-        x_amz_signed_headers="molestias",
-        x_amz_target="secretsmanager.CancelRotateSecret",
+    cancel_rotate_secret_request=shared.CancelRotateSecretRequest(
+        secret_id="corrupti",
     ),
-    request=shared.CancelRotateSecretRequest(
-        secret_id="dolores",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="secretsmanager.CancelRotateSecret",
 )
     
 res = s.cancel_rotate_secret(req)

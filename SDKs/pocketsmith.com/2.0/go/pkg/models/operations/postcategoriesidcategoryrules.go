@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCategoriesIDCategoryRulesPathParams struct {
-	// The unique identifier of the category.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostCategoriesIDCategoryRulesRequestBody struct {
 	// Apply the created category rule to all transactions.
 	ApplyToAll *bool `json:"apply_to_all,omitempty"`
@@ -22,8 +17,9 @@ type PostCategoriesIDCategoryRulesRequestBody struct {
 }
 
 type PostCategoriesIDCategoryRulesRequest struct {
-	PathParams PostCategoriesIDCategoryRulesPathParams
-	Request    *PostCategoriesIDCategoryRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostCategoriesIDCategoryRulesRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the category.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostCategoriesIDCategoryRulesResponse struct {

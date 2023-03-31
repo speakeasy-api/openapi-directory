@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateSIPPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateSIPPhonePathParams struct {
-	// Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
-	PhoneID string `pathParam:"style=simple,explode=false,name=phoneId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateSIPPhoneApplicationJSONTransportProtocolEnum - Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
@@ -142,9 +136,9 @@ type UpdateSIPPhoneApplicationJSON struct {
 }
 
 type UpdateSIPPhoneRequest struct {
-	PathParams UpdateSIPPhonePathParams
-	Request    *UpdateSIPPhoneApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateSIPPhoneSecurity
+	RequestBody *UpdateSIPPhoneApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
+	PhoneID string `pathParam:"style=simple,explode=false,name=phoneId"`
 }
 
 type UpdateSIPPhoneResponse struct {

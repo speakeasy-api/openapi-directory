@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeletePeriodicPaymentPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeletePeriodicPaymentRequest struct {
-	PathParams DeletePeriodicPaymentPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeletePeriodicPaymentResponse struct {

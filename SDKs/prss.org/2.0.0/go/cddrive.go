@@ -36,16 +36,16 @@ func newCDDrive(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // DeleteAPIV2CddriveFilesFileID - Delete a file.
 // Delete a file from the customer's private CD Drive.
-func (s *cdDrive) DeleteAPIV2CddriveFilesFileID(ctx context.Context, request operations.DeleteAPIV2CddriveFilesFileIDRequest) (*operations.DeleteAPIV2CddriveFilesFileIDResponse, error) {
+func (s *cdDrive) DeleteAPIV2CddriveFilesFileID(ctx context.Context, request operations.DeleteAPIV2CddriveFilesFileIDRequest, security operations.DeleteAPIV2CddriveFilesFileIDSecurity) (*operations.DeleteAPIV2CddriveFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,20 +74,20 @@ func (s *cdDrive) DeleteAPIV2CddriveFilesFileID(ctx context.Context, request ope
 
 // DeleteAPIV2CddriveFoldersFolderID - UNDER DEVELOPMENT - Delete a folder.
 // Delete a file from the customer's private CD Drive.
-func (s *cdDrive) DeleteAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.DeleteAPIV2CddriveFoldersFolderIDRequest) (*operations.DeleteAPIV2CddriveFoldersFolderIDResponse, error) {
+func (s *cdDrive) DeleteAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.DeleteAPIV2CddriveFoldersFolderIDRequest, security operations.DeleteAPIV2CddriveFoldersFolderIDSecurity) (*operations.DeleteAPIV2CddriveFoldersFolderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,16 +116,16 @@ func (s *cdDrive) DeleteAPIV2CddriveFoldersFolderID(ctx context.Context, request
 
 // GetAPIV2CddriveFilesFileID - Get file information.
 // Get the information about a file in the customer's private CD Drive.
-func (s *cdDrive) GetAPIV2CddriveFilesFileID(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDRequest) (*operations.GetAPIV2CddriveFilesFileIDResponse, error) {
+func (s *cdDrive) GetAPIV2CddriveFilesFileID(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDRequest, security operations.GetAPIV2CddriveFilesFileIDSecurity) (*operations.GetAPIV2CddriveFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -162,18 +162,18 @@ func (s *cdDrive) GetAPIV2CddriveFilesFileID(ctx context.Context, request operat
 
 // GetAPIV2CddriveFilesFileIDContent - UNDER DEVELOPMENT - Download a file.
 // Download a file from the customer's private CD Drive.
-func (s *cdDrive) GetAPIV2CddriveFilesFileIDContent(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDContentRequest) (*operations.GetAPIV2CddriveFilesFileIDContentResponse, error) {
+func (s *cdDrive) GetAPIV2CddriveFilesFileIDContent(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDContentRequest, security operations.GetAPIV2CddriveFilesFileIDContentSecurity) (*operations.GetAPIV2CddriveFilesFileIDContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -213,16 +213,16 @@ func (s *cdDrive) GetAPIV2CddriveFilesFileIDContent(ctx context.Context, request
 
 // GetAPIV2CddriveFoldersFolderID - UNDER DEVELOPMENT - Get folder information.
 // Get the information about a folder in the customer's private CD Drive.
-func (s *cdDrive) GetAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDRequest) (*operations.GetAPIV2CddriveFoldersFolderIDResponse, error) {
+func (s *cdDrive) GetAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDRequest, security operations.GetAPIV2CddriveFoldersFolderIDSecurity) (*operations.GetAPIV2CddriveFoldersFolderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,20 +259,20 @@ func (s *cdDrive) GetAPIV2CddriveFoldersFolderID(ctx context.Context, request op
 
 // GetAPIV2CddriveFoldersFolderIDItems - Get the items in the folder.
 // Get the information about a folder in the customer's private CD Drive.
-func (s *cdDrive) GetAPIV2CddriveFoldersFolderIDItems(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDItemsRequest) (*operations.GetAPIV2CddriveFoldersFolderIDItemsResponse, error) {
+func (s *cdDrive) GetAPIV2CddriveFoldersFolderIDItems(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDItemsRequest, security operations.GetAPIV2CddriveFoldersFolderIDItemsSecurity) (*operations.GetAPIV2CddriveFoldersFolderIDItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -309,11 +309,11 @@ func (s *cdDrive) GetAPIV2CddriveFoldersFolderIDItems(ctx context.Context, reque
 
 // PostAPIV2CddriveFilesContent - Upload a file.
 // Upload a file to the customer's private CD Drive.
-func (s *cdDrive) PostAPIV2CddriveFilesContent(ctx context.Context, request operations.PostAPIV2CddriveFilesContentRequest) (*operations.PostAPIV2CddriveFilesContentResponse, error) {
+func (s *cdDrive) PostAPIV2CddriveFilesContent(ctx context.Context, request operations.PostAPIV2CddriveFilesContentRequest, security operations.PostAPIV2CddriveFilesContentSecurity) (*operations.PostAPIV2CddriveFilesContentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/cddrive/files/content"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -325,9 +325,9 @@ func (s *cdDrive) PostAPIV2CddriveFilesContent(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *cdDrive) PostAPIV2CddriveFilesContent(ctx context.Context, request oper
 
 // PostAPIV2CddriveFolders - Create a folder.
 // Create a new folder in the customer's private CD Drive.
-func (s *cdDrive) PostAPIV2CddriveFolders(ctx context.Context, request operations.PostAPIV2CddriveFoldersRequest) (*operations.PostAPIV2CddriveFoldersResponse, error) {
+func (s *cdDrive) PostAPIV2CddriveFolders(ctx context.Context, request operations.PostAPIV2CddriveFoldersRequestBody, security operations.PostAPIV2CddriveFoldersSecurity) (*operations.PostAPIV2CddriveFoldersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/cddrive/folders"
 
@@ -388,7 +388,7 @@ func (s *cdDrive) PostAPIV2CddriveFolders(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

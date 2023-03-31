@@ -8,19 +8,14 @@ import (
 )
 
 type BulkCreateAdsByInventoryReferenceSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkCreateAdsByInventoryReferencePathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkCreateAdsByInventoryReferenceRequest struct {
-	PathParams BulkCreateAdsByInventoryReferencePathParams
 	// The container for the bulk request to create ads for eBay inventory reference IDs. eBay inventory reference IDs are seller-defined IDs used by theInventory API.
-	Request  shared.BulkCreateAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
-	Security BulkCreateAdsByInventoryReferenceSecurity
+	BulkCreateAdsByInventoryReferenceRequest shared.BulkCreateAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type BulkCreateAdsByInventoryReferenceResponse struct {

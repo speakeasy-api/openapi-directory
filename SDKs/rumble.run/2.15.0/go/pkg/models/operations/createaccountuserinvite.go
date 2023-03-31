@@ -8,13 +8,7 @@ import (
 )
 
 type CreateAccountUserInviteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateAccountUserInviteRequest struct {
-	// user invite parameters
-	Request  shared.UserInviteOptions `request:"mediaType=application/json"`
-	Security CreateAccountUserInviteSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateAccountUserInviteResponse struct {

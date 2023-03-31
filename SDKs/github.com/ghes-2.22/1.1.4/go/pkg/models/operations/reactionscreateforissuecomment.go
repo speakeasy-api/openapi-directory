@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForIssueCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForIssueCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types) to add to the issue comment.
 type ReactionsCreateForIssueCommentRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForIssueCommentRequestBody struct {
 }
 
 type ReactionsCreateForIssueCommentRequest struct {
-	PathParams ReactionsCreateForIssueCommentPathParams
-	Request    ReactionsCreateForIssueCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForIssueCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForIssueCommentResponse struct {

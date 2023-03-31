@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETExpressionForTaxonUsingGETPathParams struct {
+type GETExpressionForTaxonUsingGETRequest struct {
 	// The taxon ID for species
 	TaxonID string `pathParam:"style=simple,explode=false,name=taxonId"`
-}
-
-type GETExpressionForTaxonUsingGETRequest struct {
-	PathParams GETExpressionForTaxonUsingGETPathParams
 }
 
 type GETExpressionForTaxonUsingGETResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTodGetStatisticsPathParams struct {
+type ProtocolTodGetStatisticsRequest struct {
 	// Agent to show TOD statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTodGetStatisticsRequest struct {
-	PathParams ProtocolTodGetStatisticsPathParams
 }
 
 type ProtocolTodGetStatisticsResponse struct {

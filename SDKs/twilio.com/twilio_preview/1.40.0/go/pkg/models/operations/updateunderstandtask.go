@@ -12,14 +12,8 @@ var UpdateUnderstandTaskServerList = []string{
 }
 
 type UpdateUnderstandTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandTaskPathParams struct {
-	// The unique ID of the Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandTaskUpdateUnderstandTaskRequest struct {
@@ -34,10 +28,11 @@ type UpdateUnderstandTaskUpdateUnderstandTaskRequest struct {
 }
 
 type UpdateUnderstandTaskRequest struct {
-	PathParams UpdateUnderstandTaskPathParams
-	Request    *UpdateUnderstandTaskUpdateUnderstandTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandTaskSecurity
-	ServerURL  *string
+	// The unique ID of the Assistant.
+	AssistantSid string                                           `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandTaskUpdateUnderstandTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateUnderstandTaskResponse struct {

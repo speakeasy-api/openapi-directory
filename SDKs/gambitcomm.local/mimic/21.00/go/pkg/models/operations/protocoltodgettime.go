@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolTodGettimePathParams struct {
+type ProtocolTodGettimeRequest struct {
 	// Agent to show TOD return
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// numRetries
@@ -19,10 +19,6 @@ type ProtocolTodGettimePathParams struct {
 	ServerAddr string `pathParam:"style=simple,explode=false,name=serverAddr"`
 	// timeSec
 	TimeSec int `pathParam:"style=simple,explode=false,name=timeSec"`
-}
-
-type ProtocolTodGettimeRequest struct {
-	PathParams ProtocolTodGettimePathParams
 }
 
 type ProtocolTodGettimeResponse struct {

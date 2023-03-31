@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRemovebgJSONRequest struct {
-	Request shared.RemoveBgJSON `request:"mediaType=application/json"`
-}
-
 type PostRemovebgJSON400WildcardErrors struct {
 	// Error code
 	Code *string

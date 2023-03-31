@@ -8,17 +8,12 @@ import (
 )
 
 type OriginSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OriginPathParams struct {
-	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type OriginRequest struct {
-	PathParams OriginPathParams
-	Security   OriginSecurity
+	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type OriginResponse struct {

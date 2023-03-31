@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConnectQueryParams struct {
-	JSON *shared.ConnectRequest `queryParam:"serialization=json,name=json"`
-}
-
 type ConnectRequest struct {
-	QueryParams ConnectQueryParams
+	JSON *shared.ConnectRequest `queryParam:"serialization=json,name=json"`
 }
 
 type ConnectResponse struct {

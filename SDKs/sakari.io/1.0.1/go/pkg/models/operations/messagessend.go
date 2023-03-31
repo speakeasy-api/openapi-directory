@@ -8,18 +8,13 @@ import (
 )
 
 type MessagesSendSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type MessagesSendPathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MessagesSendRequest struct {
-	PathParams MessagesSendPathParams
-	Request    *shared.SendMessagesRequest `request:"mediaType=application/json"`
-	Security   MessagesSendSecurity
+	SendMessagesRequest *shared.SendMessagesRequest `request:"mediaType=application/json"`
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type MessagesSendResponse struct {

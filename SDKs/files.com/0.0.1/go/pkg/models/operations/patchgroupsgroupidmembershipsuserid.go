@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchGroupsGroupIDMembershipsUserIDPathParams struct {
-	// Group ID to add user to.
-	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
-	// User ID to add to group.
-	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 type PatchGroupsGroupIDMembershipsUserIDRequestBody struct {
 	// Is the user a group administrator?
 	Admin *bool `multipartForm:"name=admin"`
 }
 
 type PatchGroupsGroupIDMembershipsUserIDRequest struct {
-	PathParams PatchGroupsGroupIDMembershipsUserIDPathParams
-	Request    *PatchGroupsGroupIDMembershipsUserIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchGroupsGroupIDMembershipsUserIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Group ID to add user to.
+	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
+	// User ID to add to group.
+	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type PatchGroupsGroupIDMembershipsUserIDResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetWillqosPathParams struct {
+type ProtocolMqttClientSetWillqosRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Quality of service field
 	Qos string `pathParam:"style=simple,explode=false,name=qos"`
-}
-
-type ProtocolMqttClientSetWillqosRequest struct {
-	PathParams ProtocolMqttClientSetWillqosPathParams
 }
 
 type ProtocolMqttClientSetWillqosResponse struct {

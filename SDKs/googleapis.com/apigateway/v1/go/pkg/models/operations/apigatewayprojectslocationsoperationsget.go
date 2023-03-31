@@ -10,13 +10,8 @@ import (
 )
 
 type ApigatewayProjectsLocationsOperationsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ApigatewayProjectsLocationsOperationsGetPathParams struct {
-	// The name of the operation resource.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ApigatewayProjectsLocationsOperationsGetViewEnum - Specifies which fields of the API Config are returned in the response. Defaults to `BASIC` view.
@@ -46,7 +41,7 @@ func (e *ApigatewayProjectsLocationsOperationsGetViewEnum) UnmarshalJSON(data []
 	}
 }
 
-type ApigatewayProjectsLocationsOperationsGetQueryParams struct {
+type ApigatewayProjectsLocationsOperationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -59,6 +54,8 @@ type ApigatewayProjectsLocationsOperationsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the operation resource.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -71,12 +68,6 @@ type ApigatewayProjectsLocationsOperationsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which fields of the API Config are returned in the response. Defaults to `BASIC` view.
 	View *ApigatewayProjectsLocationsOperationsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ApigatewayProjectsLocationsOperationsGetRequest struct {
-	PathParams  ApigatewayProjectsLocationsOperationsGetPathParams
-	QueryParams ApigatewayProjectsLocationsOperationsGetQueryParams
-	Security    ApigatewayProjectsLocationsOperationsGetSecurity
 }
 
 type ApigatewayProjectsLocationsOperationsGetResponse struct {

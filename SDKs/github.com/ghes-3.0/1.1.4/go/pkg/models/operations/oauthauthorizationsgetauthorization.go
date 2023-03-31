@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsGetAuthorizationPathParams struct {
+type OauthAuthorizationsGetAuthorizationRequest struct {
 	// authorization_id parameter
 	AuthorizationID int64 `pathParam:"style=simple,explode=false,name=authorization_id"`
-}
-
-type OauthAuthorizationsGetAuthorizationRequest struct {
-	PathParams OauthAuthorizationsGetAuthorizationPathParams
 }
 
 type OauthAuthorizationsGetAuthorizationResponse struct {

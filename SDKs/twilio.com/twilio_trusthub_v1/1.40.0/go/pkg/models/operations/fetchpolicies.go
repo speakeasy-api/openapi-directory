@@ -12,18 +12,13 @@ var FetchPoliciesServerList = []string{
 }
 
 type FetchPoliciesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchPoliciesPathParams struct {
-	// The unique string that identifies the Policy resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchPoliciesRequest struct {
-	PathParams FetchPoliciesPathParams
-	Security   FetchPoliciesSecurity
-	ServerURL  *string
+	// The unique string that identifies the Policy resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchPoliciesResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ExtrasReportsRunPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type ExtrasReportsRunRequest struct {
-	PathParams ExtrasReportsRunPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ExtrasReportsRunResponse struct {

@@ -29,11 +29,10 @@ pkg/models/operations/networkconnectivityprojectslocationsspokessetiampolicy.go
 pkg/models/operations/networkconnectivityprojectslocationsspokestestiampermissions.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/hub.go
 pkg/models/shared/routingvpc.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listhubsresponse.go
 pkg/models/shared/internalrange.go
 pkg/models/shared/listinternalrangesresponse.go

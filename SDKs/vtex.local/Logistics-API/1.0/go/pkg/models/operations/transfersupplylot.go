@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type TransferSupplyLotPathParams struct {
+type TransferSupplyLotRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// ID of the SKU.
 	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
 	// ID of the Supply Lot in which the SKU is currently located and from where it will be transfered.
 	SupplyLotID string `pathParam:"style=simple,explode=false,name=supplyLotId"`
 	// ID of the warehouse where the SKU is located.
 	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
-}
-
-type TransferSupplyLotHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type TransferSupplyLotRequest struct {
-	PathParams TransferSupplyLotPathParams
-	Headers    TransferSupplyLotHeaders
 }
 
 type TransferSupplyLotResponse struct {

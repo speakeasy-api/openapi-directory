@@ -8,23 +8,23 @@ import (
 )
 
 type DNSDNSKeysGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSDNSKeysGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSDNSKeysGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSDNSKeysGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSDNSKeysGetSecurity struct {
@@ -34,18 +34,7 @@ type DNSDNSKeysGetSecurity struct {
 	Option4 *DNSDNSKeysGetSecurityOption4 `security:"option"`
 }
 
-type DNSDNSKeysGetPathParams struct {
-	// The identifier of the requested DnsKey.
-	DNSKeyID string `pathParam:"style=simple,explode=false,name=dnsKeyId"`
-	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
-	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DNSDNSKeysGetQueryParams struct {
+type DNSDNSKeysGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,26 +47,28 @@ type DNSDNSKeysGetQueryParams struct {
 	ClientOperationID *string `queryParam:"style=form,explode=true,name=clientOperationId"`
 	// An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed.
 	DigestType *string `queryParam:"style=form,explode=true,name=digestType"`
+	// The identifier of the requested DnsKey.
+	DNSKeyID string `pathParam:"style=simple,explode=false,name=dnsKeyId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
+	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSDNSKeysGetRequest struct {
-	PathParams  DNSDNSKeysGetPathParams
-	QueryParams DNSDNSKeysGetQueryParams
-	Security    DNSDNSKeysGetSecurity
 }
 
 type DNSDNSKeysGetResponse struct {

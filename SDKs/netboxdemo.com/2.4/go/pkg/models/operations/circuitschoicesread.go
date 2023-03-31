@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CircuitsChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type CircuitsChoicesReadRequest struct {
-	PathParams CircuitsChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CircuitsChoicesReadResponse struct {

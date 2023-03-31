@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRirsReadPathParams struct {
+type IpamRirsReadRequest struct {
 	// A unique integer value identifying this RIR.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamRirsReadRequest struct {
-	PathParams IpamRirsReadPathParams
 }
 
 type IpamRirsReadResponse struct {

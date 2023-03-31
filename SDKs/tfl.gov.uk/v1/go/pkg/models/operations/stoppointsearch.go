@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointSearchPathParams struct {
-	// The query string, case-insensitive. Leading and trailing wildcards are applied automatically.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
-type StopPointSearchQueryParams struct {
+type StopPointSearchRequest struct {
 	// True to only return stations in that have Fares data available for single fares to another station.
 	FaresOnly *bool `queryParam:"style=form,explode=true,name=faresOnly"`
 	// If true, returns results including HUBs.
@@ -24,13 +19,10 @@ type StopPointSearchQueryParams struct {
 	MaxResults *int `queryParam:"style=form,explode=true,name=maxResults"`
 	// An optional, parameter separated list of the modes to filter by
 	Modes []string `queryParam:"style=form,explode=true,name=modes"`
+	// The query string, case-insensitive. Leading and trailing wildcards are applied automatically.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 	// If the national-rail mode is included, this flag will filter the national rail stations so that only those operated by TfL are returned
 	TflOperatedNationalRailStationsOnly *bool `queryParam:"style=form,explode=true,name=tflOperatedNationalRailStationsOnly"`
-}
-
-type StopPointSearchRequest struct {
-	PathParams  StopPointSearchPathParams
-	QueryParams StopPointSearchQueryParams
 }
 
 type StopPointSearchResponse struct {

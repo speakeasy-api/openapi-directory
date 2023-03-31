@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPaymentsPathParams struct {
+type GetPaymentsRequest struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type GetPaymentsRequest struct {
-	PathParams GetPaymentsPathParams
 }
 
 type GetPaymentsResponse struct {

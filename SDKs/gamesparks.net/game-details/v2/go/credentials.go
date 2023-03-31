@@ -35,7 +35,7 @@ func newCredentials(defaultClient, securityClient HTTPClient, serverURL, languag
 // UpdateCredentialSecretUsingPOST - Resets the secret of a credential
 func (s *credentials) UpdateCredentialSecretUsingPOST(ctx context.Context, request operations.UpdateCredentialSecretUsingPOSTRequest) (*operations.UpdateCredentialSecretUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/config/~credentials/{credentialName}/resetSecret", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/config/~credentials/{credentialName}/resetSecret", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

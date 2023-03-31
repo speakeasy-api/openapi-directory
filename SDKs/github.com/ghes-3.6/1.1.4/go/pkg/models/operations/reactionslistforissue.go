@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForIssuePathParams struct {
-	// The number that identifies the issue.
-	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsListForIssueContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.6/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
 type ReactionsListForIssueContentEnum string
 
@@ -60,18 +51,19 @@ func (e *ReactionsListForIssueContentEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReactionsListForIssueQueryParams struct {
+type ReactionsListForIssueRequest struct {
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.6/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
 	Content *ReactionsListForIssueContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The number that identifies the issue.
+	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForIssueRequest struct {
-	PathParams  ReactionsListForIssuePathParams
-	QueryParams ReactionsListForIssueQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsListForIssueResponse struct {

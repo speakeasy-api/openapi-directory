@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesListRepositoriesForSecretForAuthenticatedUserPathParams struct {
+type CodespacesListRepositoriesForSecretForAuthenticatedUserRequest struct {
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesListRepositoriesForSecretForAuthenticatedUserRequest struct {
-	PathParams CodespacesListRepositoriesForSecretForAuthenticatedUserPathParams
 }
 
 // CodespacesListRepositoriesForSecretForAuthenticatedUser200ApplicationJSON - Response

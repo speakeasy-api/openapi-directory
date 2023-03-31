@@ -16,10 +16,6 @@ type PostUserPublicKeysRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostUserPublicKeysRequest struct {
-	Request *PostUserPublicKeysRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostUserPublicKeysResponse struct {
 	ContentType string
 	// The PublicKeys object.

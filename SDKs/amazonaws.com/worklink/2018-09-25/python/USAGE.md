@@ -3,31 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateDomainRequest(
-    headers=operations.AssociateDomainHeaders(
-        x_amz_algorithm="nobis",
-        x_amz_content_sha256="possimus",
-        x_amz_credential="voluptate",
-        x_amz_date="illum",
-        x_amz_security_token="iusto",
-        x_amz_signature="sunt",
-        x_amz_signed_headers="saepe",
+    request_body=operations.AssociateDomainRequestBody(
+        acm_certificate_arn="corrupti",
+        display_name="provident",
+        domain_name="distinctio",
+        fleet_arn="quibusdam",
     ),
-    request=operations.AssociateDomainRequestBody(
-        acm_certificate_arn="veniam",
-        display_name="quod",
-        domain_name="ducimus",
-        fleet_arn="esse",
-    ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.associate_domain(req)

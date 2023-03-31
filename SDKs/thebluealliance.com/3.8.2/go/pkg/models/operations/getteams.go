@@ -8,23 +8,14 @@ import (
 )
 
 type GetTeamsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTeamsPathParams struct {
-	// Page number of results to return, zero-indexed
-	PageNum int64 `pathParam:"style=simple,explode=false,name=page_num"`
-}
-
-type GetTeamsHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetTeamsRequest struct {
-	PathParams GetTeamsPathParams
-	Headers    GetTeamsHeaders
-	Security   GetTeamsSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// Page number of results to return, zero-indexed
+	PageNum int64 `pathParam:"style=simple,explode=false,name=page_num"`
 }
 
 type GetTeamsResponse struct {

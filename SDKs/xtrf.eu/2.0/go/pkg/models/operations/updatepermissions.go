@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePermissionsPathParams struct {
+type UpdatePermissionsRequest struct {
+	// Updated view's permissions.
+	PermissionsDTO shared.PermissionsDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdatePermissionsRequest struct {
-	PathParams UpdatePermissionsPathParams
-	// Updated view's permissions.
-	Request shared.PermissionsDTO `request:"mediaType=application/json"`
 }
 
 type UpdatePermissionsResponse struct {

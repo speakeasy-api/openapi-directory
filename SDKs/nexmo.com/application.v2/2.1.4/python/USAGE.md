@@ -3,18 +3,124 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
 )
-    
-req = operations.CreateApplicationRequest(
-    request="voluptatem",
+
+
+req = operations.CreateApplicationRequestBody(
+    capabilities=shared.Capabilities(
+        meetings=shared.MeetingsCapability(
+            webhooks=shared.MeetingsCapabilityWebhooks(
+                recording_changed=shared.MeetingsCapabilityWebhooksRecordingChanged(
+                    address="https://example.com/webhooks/event",
+                    http_method="POST",
+                ),
+                room_changed=shared.MeetingsCapabilityWebhooksRoomChanged(
+                    address="https://example.com/webhooks/event",
+                    http_method="POST",
+                ),
+                session_changed=shared.MeetingsCapabilityWebhooksSessionChanged(
+                    address="https://example.com/webhooks/event",
+                    http_method="POST",
+                ),
+            ),
+        ),
+        messages=shared.MessagesCapability(
+            version="corrupti",
+            webhooks=shared.MessagesCapabilityWebhooks(
+                inbound_url=shared.MessagesCapabilityWebhooksInboundURL(
+                    address="https://example.com/webhooks/inbound",
+                    http_method="POST",
+                ),
+                status_url=shared.MessagesCapabilityWebhooksStatusURL(
+                    address="https://example.com/webhooks/status",
+                    http_method="POST",
+                ),
+            ),
+        ),
+        rtc=shared.RtcCapability(
+            leg_persistence_time=5,
+            signed_callbacks=True,
+            webhooks=shared.RtcCapabilityWebhooks(
+                event_url=shared.RtcCapabilityWebhooksEventURL(
+                    address="https://example.com/webhooks/event",
+                    http_method="POST",
+                ),
+            ),
+        ),
+        vbc={
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
+        },
+        verify=shared.VerifyCapability(
+            version="v2",
+            webhooks=shared.VerifyCapabilityWebhooks(
+                status_url=shared.VerifyCapabilityWebhooksStatusURL(
+                    address="https://example.com/webhooks/event",
+                    http_method="POST",
+                ),
+            ),
+        ),
+        voice=shared.VoiceCapability(
+            conversation_ttl=30,
+            payments=shared.VoiceCapabilityPayments(
+                gateways=[
+                    shared.VoiceCapabilityPaymentsGateways(
+                        credential="26f2a89e-6fcd-11ed-a1eb-0242ac120002",
+                        mode="live",
+                        type="Stripe",
+                    ),
+                    shared.VoiceCapabilityPaymentsGateways(
+                        credential="26f2a89e-6fcd-11ed-a1eb-0242ac120002",
+                        mode="live",
+                        type="Stripe",
+                    ),
+                ],
+            ),
+            signed_callbacks=True,
+            webhooks=shared.VoiceCapabilityWebhooks(
+                answer_url=shared.VoiceCapabilityWebhooksAnswerURL(
+                    address="https://example.com/webhooks/answer",
+                    connection_timeout=500,
+                    http_method="POST",
+                    socket_timeout=3000,
+                ),
+                event_url=shared.VoiceCapabilityWebhooksEventURL(
+                    address="https://example.com/webhooks/event",
+                    connection_timeout=500,
+                    http_method="POST",
+                    socket_timeout=3000,
+                ),
+                fallback_answer_url=shared.VoiceCapabilityWebhooksFallbackAnswerURL(
+                    address="https://fallback.example.com/webhooks/answer",
+                    connection_timeout=500,
+                    http_method="POST",
+                    socket_timeout=3000,
+                ),
+            ),
+        ),
+    ),
+    keys=operations.CreateApplicationRequestBodyKeys(
+        public_key="-----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCA
+    KOxjsU4pf/sMFi9N0jqcSLcjxu33G
+    d/vynKnlw9SENi+UZR44GdjGdmfm1
+    tL1eA7IBh2HNnkYXnAwYzKJoa4eO3
+    0kYWekeIZawIwe/g9faFgkev+1xsO
+    OUNhPx2LhuLmgwWSRS4L5W851Xe3f
+    UQIDAQAB
+    -----END PUBLIC KEY-----
+    ",
+    ),
+    name="Demo Application",
+    privacy=operations.CreateApplicationRequestBodyPrivacy(
+        improve_ai=True,
+    ),
 )
     
 res = s.create_application(req)

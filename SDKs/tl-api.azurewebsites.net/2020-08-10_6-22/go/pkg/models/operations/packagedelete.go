@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageDeleteQueryParams struct {
+type PackageDeleteRequest struct {
 	// primary key of package entity
 	PackageID *int `queryParam:"style=form,explode=true,name=PackageId"`
-}
-
-type PackageDeleteRequest struct {
-	QueryParams PackageDeleteQueryParams
 }
 
 type PackageDeleteResponse struct {

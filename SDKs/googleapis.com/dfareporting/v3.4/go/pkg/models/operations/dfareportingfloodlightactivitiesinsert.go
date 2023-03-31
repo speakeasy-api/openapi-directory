@@ -8,18 +8,14 @@ import (
 )
 
 type DfareportingFloodlightActivitiesInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DfareportingFloodlightActivitiesInsertPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type DfareportingFloodlightActivitiesInsertQueryParams struct {
+type DfareportingFloodlightActivitiesInsertRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv        *shared.XgafvEnum          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	FloodlightActivity *shared.FloodlightActivity `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,19 +30,14 @@ type DfareportingFloodlightActivitiesInsertQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingFloodlightActivitiesInsertRequest struct {
-	PathParams  DfareportingFloodlightActivitiesInsertPathParams
-	QueryParams DfareportingFloodlightActivitiesInsertQueryParams
-	Request     *shared.FloodlightActivity `request:"mediaType=application/json"`
-	Security    DfareportingFloodlightActivitiesInsertSecurity
 }
 
 type DfareportingFloodlightActivitiesInsertResponse struct {

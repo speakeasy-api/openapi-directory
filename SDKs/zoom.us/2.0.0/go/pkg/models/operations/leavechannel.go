@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type LeaveChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type LeaveChannelPathParams struct {
-	// Channel ID: Unique Identifier of a channel.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LeaveChannelRequest struct {
-	PathParams LeaveChannelPathParams
-	Security   LeaveChannelSecurity
+	// Channel ID: Unique Identifier of a channel.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 type LeaveChannelResponse struct {

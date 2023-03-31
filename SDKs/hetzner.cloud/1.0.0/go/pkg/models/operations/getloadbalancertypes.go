@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancerTypesQueryParams struct {
+type GetLoadBalancerTypesRequest struct {
 	// Can be used to filter Load Balancer types by their name. The response will only contain the Load Balancer type matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetLoadBalancerTypesRequest struct {
-	QueryParams GetLoadBalancerTypesQueryParams
 }
 
 // GetLoadBalancerTypes200ApplicationJSONLoadBalancerTypesPricesPriceHourly - Hourly costs for a Resource in this Location

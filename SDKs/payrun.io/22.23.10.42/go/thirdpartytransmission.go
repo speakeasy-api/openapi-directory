@@ -35,14 +35,14 @@ func newThirdPartyTransmission(defaultClient, securityClient HTTPClient, serverU
 // Deletes a third party transaction record from the given resource location
 func (s *thirdPartyTransmission) DeleteThirdPartyTransaction(ctx context.Context, request operations.DeleteThirdPartyTransactionRequest) (*operations.DeleteThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *thirdPartyTransmission) DeleteThirdPartyTransaction(ctx context.Context
 // Get a third party transaction
 func (s *thirdPartyTransmission) GetThirdPartyTransaction(ctx context.Context, request operations.GetThirdPartyTransactionRequest) (*operations.GetThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *thirdPartyTransmission) GetThirdPartyTransaction(ctx context.Context, r
 // Get all third party transaction links
 func (s *thirdPartyTransmission) GetThirdPartyTransactions(ctx context.Context, request operations.GetThirdPartyTransactionsRequest) (*operations.GetThirdPartyTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

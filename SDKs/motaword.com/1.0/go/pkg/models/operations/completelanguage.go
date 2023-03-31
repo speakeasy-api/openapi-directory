@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteLanguagePathParams struct {
+type CompleteLanguageRequest struct {
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Target language that you want to complete
 	TargetLanguage string `pathParam:"style=simple,explode=false,name=targetLanguage"`
-}
-
-type CompleteLanguageRequest struct {
-	PathParams CompleteLanguagePathParams
 }
 
 type CompleteLanguageResponse struct {

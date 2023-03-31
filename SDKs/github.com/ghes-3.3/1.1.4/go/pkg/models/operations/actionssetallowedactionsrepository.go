@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetAllowedActionsRepositoryPathParams struct {
+type ActionsSetAllowedActionsRepositoryRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsSetAllowedActionsRepositoryRequest struct {
-	PathParams ActionsSetAllowedActionsRepositoryPathParams
-	Request    *shared.SelectedActions `request:"mediaType=application/json"`
+	Repo            string                  `pathParam:"style=simple,explode=false,name=repo"`
+	SelectedActions *shared.SelectedActions `request:"mediaType=application/json"`
 }
 
 type ActionsSetAllowedActionsRepositoryResponse struct {

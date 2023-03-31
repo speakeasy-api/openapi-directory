@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetResultFileSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetResultFilePathParams struct {
-	// The ID of the task associated with the file you want to download. This ID was generated when the task was created.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetResultFileRequest struct {
-	PathParams GetResultFilePathParams
-	Security   GetResultFileSecurity
+	// The ID of the task associated with the file you want to download. This ID was generated when the task was created.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetResultFileResponse struct {

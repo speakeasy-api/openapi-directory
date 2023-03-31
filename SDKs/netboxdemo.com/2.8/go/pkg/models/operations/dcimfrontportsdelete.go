@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimFrontPortsDeletePathParams struct {
+type DcimFrontPortsDeleteRequest struct {
 	// A unique integer value identifying this front port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimFrontPortsDeleteRequest struct {
-	PathParams DcimFrontPortsDeletePathParams
 }
 
 type DcimFrontPortsDeleteResponse struct {

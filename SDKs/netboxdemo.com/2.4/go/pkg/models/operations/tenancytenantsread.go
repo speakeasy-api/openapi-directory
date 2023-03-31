@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantsReadPathParams struct {
+type TenancyTenantsReadRequest struct {
 	// A unique integer value identifying this tenant.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TenancyTenantsReadRequest struct {
-	PathParams TenancyTenantsReadPathParams
 }
 
 type TenancyTenantsReadResponse struct {

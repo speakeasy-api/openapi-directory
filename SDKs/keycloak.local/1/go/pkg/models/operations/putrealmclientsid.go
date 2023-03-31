@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmClientsIDPathParams struct {
+type PutRealmClientsIDRequest struct {
+	ClientRepresentation shared.ClientRepresentation `request:"mediaType=application/json"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmClientsIDRequest struct {
-	PathParams PutRealmClientsIDPathParams
-	Request    shared.ClientRepresentation `request:"mediaType=application/json"`
 }
 
 type PutRealmClientsIDResponse struct {

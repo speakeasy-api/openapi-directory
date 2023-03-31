@@ -40,14 +40,14 @@ func newSummaryJournalEntries(defaultClient, securityClient HTTPClient, serverUR
 // A summary journal entry must be canceled before it can be deleted.
 func (s *summaryJournalEntries) DELETESummaryJournalEntry(ctx context.Context, request operations.DELETESummaryJournalEntryRequest) (*operations.DELETESummaryJournalEntryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,16 +90,16 @@ func (s *summaryJournalEntries) DELETESummaryJournalEntry(ctx context.Context, r
 // This REST API reference describes how to retrieve information about all summary journal entries in a journal run.
 func (s *summaryJournalEntries) GETAllSummaryJournalEntries(ctx context.Context, request operations.GETAllSummaryJournalEntriesRequest) (*operations.GETAllSummaryJournalEntriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/journal-runs/{jr-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/journal-runs/{jr-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *summaryJournalEntries) GETAllSummaryJournalEntries(ctx context.Context,
 // This REST API reference describes how to get information about a summary journal entry by its journal entry number.
 func (s *summaryJournalEntries) GETSummaryJournalEntry(ctx context.Context, request operations.GETSummaryJournalEntryRequest) (*operations.GETSummaryJournalEntryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -200,7 +200,7 @@ func (s *summaryJournalEntries) POSTSummaryJournalEntry(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/journal-entries"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTJournalEntryType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -215,7 +215,7 @@ func (s *summaryJournalEntries) POSTSummaryJournalEntry(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -258,9 +258,9 @@ func (s *summaryJournalEntries) POSTSummaryJournalEntry(ctx context.Context, req
 // This REST API reference describes how to update the basic information of a summary journal entry. Request and response field descriptions and sample code are provided.
 func (s *summaryJournalEntries) PUTBasicSummaryJournalEntry(ctx context.Context, request operations.PUTBasicSummaryJournalEntryRequest) (*operations.PUTBasicSummaryJournalEntryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}/basic-information", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}/basic-information", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTBasicSummaryJournalEntryType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -275,7 +275,7 @@ func (s *summaryJournalEntries) PUTBasicSummaryJournalEntry(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -322,14 +322,14 @@ func (s *summaryJournalEntries) PUTBasicSummaryJournalEntry(ctx context.Context,
 // A summary journal entry cannot be canceled if its Transferred to Accounting status is "Yes" or "Processing".
 func (s *summaryJournalEntries) PUTSummaryJournalEntry(ctx context.Context, request operations.PUTSummaryJournalEntryRequest) (*operations.PUTSummaryJournalEntryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/journal-entries/{je-number}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

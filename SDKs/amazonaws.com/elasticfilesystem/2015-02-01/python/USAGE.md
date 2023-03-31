@@ -3,51 +3,53 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAccessPointRequest(
-    headers=operations.CreateAccessPointHeaders(
-        x_amz_algorithm="vero",
-        x_amz_content_sha256="debitis",
-        x_amz_credential="vitae",
-        x_amz_date="illo",
-        x_amz_security_token="dolor",
-        x_amz_signature="aut",
-        x_amz_signed_headers="corrupti",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateAccessPointRequestBody(
-        client_token="iusto",
-        file_system_id="necessitatibus",
+)
+
+
+req = operations.CreateAccessPointRequest(
+    request_body=operations.CreateAccessPointRequestBody(
+        client_token="corrupti",
+        file_system_id="provident",
         posix_user=operations.CreateAccessPointRequestBodyPosixUser(
-            gid=9099396917438780945,
+            gid=715190,
             secondary_gids=[
-                7393415062790344033,
-                5573655011999427817,
+                602763,
+                857946,
+                544883,
+                847252,
             ],
-            uid=3450856630666814463,
+            uid=423655,
         ),
         root_directory=operations.CreateAccessPointRequestBodyRootDirectory(
             creation_info=shared.CreationInfo(
-                owner_gid=2817162217093611776,
-                owner_uid=2020632354827331984,
-                permissions="magni",
+                owner_gid=623564,
+                owner_uid=645894,
+                permissions="suscipit",
             ),
-            path="nostrum",
+            path="iure",
         ),
         tags=[
             shared.Tag(
-                key="tenetur",
-                value="numquam",
+                key="debitis",
+                value="ipsa",
+            ),
+            shared.Tag(
+                key="delectus",
+                value="tempora",
             ),
         ],
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="molestiae",
+    x_amz_credential="minus",
+    x_amz_date="placeat",
+    x_amz_security_token="voluptatum",
+    x_amz_signature="iusto",
+    x_amz_signed_headers="excepturi",
 )
     
 res = s.create_access_point(req)

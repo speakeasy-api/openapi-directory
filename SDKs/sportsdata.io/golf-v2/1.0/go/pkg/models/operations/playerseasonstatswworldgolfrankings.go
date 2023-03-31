@@ -33,16 +33,12 @@ func (e *PlayerSeasonStatsWWorldGolfRankingsFormatEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type PlayerSeasonStatsWWorldGolfRankingsPathParams struct {
+type PlayerSeasonStatsWWorldGolfRankingsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonStatsWWorldGolfRankingsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	// <br>Examples: <code>2016</code>, <code>2017</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type PlayerSeasonStatsWWorldGolfRankingsRequest struct {
-	PathParams PlayerSeasonStatsWWorldGolfRankingsPathParams
 }
 
 type PlayerSeasonStatsWWorldGolfRankingsResponse struct {

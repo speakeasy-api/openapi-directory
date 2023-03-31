@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreateReviewPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsCreateReviewRequestBodyComments struct {
 	// Text of the review comment.
 	Body string `json:"body"`
@@ -70,8 +61,13 @@ type PullsCreateReviewRequestBody struct {
 }
 
 type PullsCreateReviewRequest struct {
-	PathParams PullsCreateReviewPathParams
-	Request    *PullsCreateReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody *PullsCreateReviewRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsCreateReviewResponse struct {

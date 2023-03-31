@@ -34,9 +34,9 @@ func newTrades(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Returns a list of trades for the account starting at the given 'since' date to the current time (now()). Timezone is UTC. Any request with a future since date or going further than one week will result in an HTTP 400 bad request response. Calling /trades without since will return all trades for the past 24 hours.
 func (s *trades) GetAccountsAccountTrades(ctx context.Context, request operations.GetAccountsAccountTradesRequest) (*operations.GetAccountsAccountTradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/trades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/trades", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

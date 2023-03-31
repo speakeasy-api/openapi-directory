@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditGroupCoveragePathParams struct {
+type EditGroupCoverageRequest struct {
+	GroupCoverageEditRequest shared.GroupCoverageEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group coverage in Noyo
 	GroupCoverageID string `pathParam:"style=simple,explode=false,name=group_coverage_id"`
 	// The current version identifier of the group coverage
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditGroupCoverageRequest struct {
-	PathParams EditGroupCoveragePathParams
-	Request    shared.GroupCoverageEditRequest `request:"mediaType=application/json"`
 }
 
 type EditGroupCoverageResponse struct {

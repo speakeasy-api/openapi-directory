@@ -10,13 +10,13 @@ import (
 )
 
 type DirectoryGroupsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryGroupsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryGroupsListSecurity struct {
@@ -69,7 +69,7 @@ func (e *DirectoryGroupsListSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DirectoryGroupsListQueryParams struct {
+type DirectoryGroupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -108,11 +108,6 @@ type DirectoryGroupsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Email or immutable ID of the user if only those groups are to be listed, the given user is a member of. If it's an ID, it should match with the ID of the user object.
 	UserKey *string `queryParam:"style=form,explode=true,name=userKey"`
-}
-
-type DirectoryGroupsListRequest struct {
-	QueryParams DirectoryGroupsListQueryParams
-	Security    DirectoryGroupsListSecurity
 }
 
 type DirectoryGroupsListResponse struct {

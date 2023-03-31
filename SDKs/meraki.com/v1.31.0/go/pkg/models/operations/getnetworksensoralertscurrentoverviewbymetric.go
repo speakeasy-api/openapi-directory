@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSensorAlertsCurrentOverviewByMetricPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSensorAlertsCurrentOverviewByMetricRequest struct {
-	PathParams GetNetworkSensorAlertsCurrentOverviewByMetricPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkSensorAlertsCurrentOverviewByMetric200ApplicationJSONCountsNoise - Object containing the number of sensors that are currently alerting due to noise readings

@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.ChangePasswordRequest{
-        PathParams: operations.ChangePasswordPathParams{
-            ShopperID: "corrupti",
-        },
-        Request: shared.Secret{
+        Secret: shared.Secret{
             Secret: "P@55w0rd+",
         },
+        ShopperID: "corrupti",
     }
 
     ctx := context.Background()

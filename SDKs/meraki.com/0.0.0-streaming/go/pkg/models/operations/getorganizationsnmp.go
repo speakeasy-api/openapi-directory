@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSnmpPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationSnmpRequest struct {
-	PathParams GetOrganizationSnmpPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationSnmpResponse struct {

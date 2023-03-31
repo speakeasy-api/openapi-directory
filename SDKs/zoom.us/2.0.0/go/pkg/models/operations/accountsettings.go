@@ -10,11 +10,6 @@ import (
 	"net/http"
 )
 
-type AccountSettingsPathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountSettingsOptionEnum - `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.<br>`security`: Use this query parameter to view security settings such as password requirements for user login, two factor authentication etc., applied on the account.<br>
 // `meeting_security`: Use this query parameter to view meeting security settings applied on the account.<br>
 type AccountSettingsOptionEnum string
@@ -40,7 +35,9 @@ func (e *AccountSettingsOptionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountSettingsQueryParams struct {
+type AccountSettingsRequest struct {
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
 	// {
 	//     "schedule_meeting": {
@@ -52,11 +49,6 @@ type AccountSettingsQueryParams struct {
 	// `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.<br>`security`: Use this query parameter to view security settings such as password requirements for user login, two factor authentication etc., applied on the account.<br>
 	// `meeting_security`: Use this query parameter to view meeting security settings applied on the account.<br>
 	Option *AccountSettingsOptionEnum `queryParam:"style=form,explode=true,name=option"`
-}
-
-type AccountSettingsRequest struct {
-	PathParams  AccountSettingsPathParams
-	QueryParams AccountSettingsQueryParams
 }
 
 // AccountSettings200ApplicationXMLMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>

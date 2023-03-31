@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateATaxDocumentBeingCreatedRequest struct {
-	Request shared.SimulateATaxDocumentBeingCreatedParameters `request:"mediaType=application/json"`
-}
-
 type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum string
 
 const (

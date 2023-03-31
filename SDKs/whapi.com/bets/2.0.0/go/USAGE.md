@@ -14,18 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.CashinRequest{
-        PathParams: operations.CashinPathParams{
-            BetID: "corrupti",
-        },
-        QueryParams: operations.CashinQueryParams{
-            CashInValue: 5928.45,
-            CashinBetDelayID: "distinctio",
-        },
-        Headers: operations.CashinHeaders{
-            APIKey: "quibusdam",
-            APISecret: "unde",
-            APITicket: "nulla",
-        },
+        APIKey: "corrupti",
+        APISecret: "provident",
+        APITicket: "distinctio",
+        BetID: "quibusdam",
+        CashInValue: 6027.63,
+        CashinBetDelayID: "nulla",
     }
 
     ctx := context.Background()

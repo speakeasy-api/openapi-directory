@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type ReportConversationPathParams struct {
-	// The ID of the conversation to report.
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 type ReportConversationRequestBody struct {
 	// A user provided reason why the conversation is being reported.
 	Reason string `multipartForm:"name=reason"`
 }
 
 type ReportConversationRequest struct {
-	PathParams ReportConversationPathParams
-	Request    ReportConversationRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ReportConversationRequestBody `request:"mediaType=multipart/form-data"`
+	// The ID of the conversation to report.
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 type ReportConversationResponse struct {

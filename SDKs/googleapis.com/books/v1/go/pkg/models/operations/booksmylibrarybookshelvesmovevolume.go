@@ -8,16 +8,11 @@ import (
 )
 
 type BooksMylibraryBookshelvesMoveVolumeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksMylibraryBookshelvesMoveVolumePathParams struct {
-	// ID of bookshelf with the volume.
-	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
-}
-
-type BooksMylibraryBookshelvesMoveVolumeQueryParams struct {
+type BooksMylibraryBookshelvesMoveVolumeRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type BooksMylibraryBookshelvesMoveVolumeQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// ID of bookshelf with the volume.
+	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
 	// String to identify the originator of this request.
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
@@ -46,12 +43,6 @@ type BooksMylibraryBookshelvesMoveVolumeQueryParams struct {
 	VolumeID string `queryParam:"style=form,explode=true,name=volumeId"`
 	// Position on shelf to move the item (0 puts the item before the current first item, 1 puts it between the first and the second and so on.)
 	VolumePosition int64 `queryParam:"style=form,explode=true,name=volumePosition"`
-}
-
-type BooksMylibraryBookshelvesMoveVolumeRequest struct {
-	PathParams  BooksMylibraryBookshelvesMoveVolumePathParams
-	QueryParams BooksMylibraryBookshelvesMoveVolumeQueryParams
-	Security    BooksMylibraryBookshelvesMoveVolumeSecurity
 }
 
 type BooksMylibraryBookshelvesMoveVolumeResponse struct {

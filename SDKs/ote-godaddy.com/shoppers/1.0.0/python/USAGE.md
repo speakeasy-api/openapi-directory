@@ -4,12 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ChangePasswordRequest(
-    path_params=operations.ChangePasswordPathParams(
-        shopper_id="vitae",
+    secret=shared.Secret(
+        secret="P@55w0rd+",
     ),
-    request="ex",
+    shopper_id="corrupti",
 )
     
 res = s.v1.change_password(req)

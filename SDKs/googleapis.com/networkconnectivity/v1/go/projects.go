@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // NetworkconnectivityProjectsLocationsGlobalHubsCreate - Creates a new Network Connectivity Center hub in the specified project.
-func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest) (*operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest, security operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity) (*operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/hubs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/hubs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HubInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx cont
 }
 
 // NetworkconnectivityProjectsLocationsGlobalHubsList - Lists the Network Connectivity Center hubs associated with a given project.
-func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsGlobalHubsListRequest) (*operations.NetworkconnectivityProjectsLocationsGlobalHubsListResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsGlobalHubsListRequest, security operations.NetworkconnectivityProjectsLocationsGlobalHubsListSecurity) (*operations.NetworkconnectivityProjectsLocationsGlobalHubsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/hubs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/hubs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsGlobalHubsList(ctx contex
 }
 
 // NetworkconnectivityProjectsLocationsInternalRangesCreate - Creates a new internal range in a given project and location.
-func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesCreateRequest) (*operations.NetworkconnectivityProjectsLocationsInternalRangesCreateResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesCreateRequest, security operations.NetworkconnectivityProjectsLocationsInternalRangesCreateSecurity) (*operations.NetworkconnectivityProjectsLocationsInternalRangesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/internalRanges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/internalRanges", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InternalRangeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx 
 }
 
 // NetworkconnectivityProjectsLocationsInternalRangesList - Lists internal ranges in a given project and location.
-func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesListRequest) (*operations.NetworkconnectivityProjectsLocationsInternalRangesListResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesListRequest, security operations.NetworkconnectivityProjectsLocationsInternalRangesListSecurity) (*operations.NetworkconnectivityProjectsLocationsInternalRangesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/internalRanges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/internalRanges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsInternalRangesList(ctx co
 }
 
 // NetworkconnectivityProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) NetworkconnectivityProjectsLocationsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsListRequest) (*operations.NetworkconnectivityProjectsLocationsListResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsListRequest, security operations.NetworkconnectivityProjectsLocationsListSecurity) (*operations.NetworkconnectivityProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsList(ctx context.Context,
 }
 
 // NetworkconnectivityProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) NetworkconnectivityProjectsLocationsOperationsCancel(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsOperationsCancelRequest) (*operations.NetworkconnectivityProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsOperationsCancel(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsOperationsCancelRequest, security operations.NetworkconnectivityProjectsLocationsOperationsCancelSecurity) (*operations.NetworkconnectivityProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsOperationsCancel(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsOperationsCancel(ctx cont
 }
 
 // NetworkconnectivityProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) NetworkconnectivityProjectsLocationsOperationsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsOperationsListRequest) (*operations.NetworkconnectivityProjectsLocationsOperationsListResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsOperationsList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsOperationsListRequest, security operations.NetworkconnectivityProjectsLocationsOperationsListSecurity) (*operations.NetworkconnectivityProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsOperationsList(ctx contex
 }
 
 // NetworkconnectivityProjectsLocationsSpokesCreate - Creates a Network Connectivity Center spoke.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesCreateRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesCreateResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesCreateRequest, security operations.NetworkconnectivityProjectsLocationsSpokesCreateSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/spokes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/spokes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpokeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesCreate(ctx context.
 }
 
 // NetworkconnectivityProjectsLocationsSpokesDelete - Deletes a Network Connectivity Center spoke.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesDelete(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesDeleteRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesDeleteResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesDelete(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesDeleteRequest, security operations.NetworkconnectivityProjectsLocationsSpokesDeleteSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,20 +492,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesDelete(ctx context.
 }
 
 // NetworkconnectivityProjectsLocationsSpokesGet - Gets details about a Network Connectivity Center spoke.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesGet(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesGetRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesGetResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesGet(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesGetRequest, security operations.NetworkconnectivityProjectsLocationsSpokesGetSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,20 +540,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesGet(ctx context.Con
 }
 
 // NetworkconnectivityProjectsLocationsSpokesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesGetIamPolicy(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesGetIamPolicyRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesGetIamPolicyResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesGetIamPolicy(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesGetIamPolicyRequest, security operations.NetworkconnectivityProjectsLocationsSpokesGetIamPolicySecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,20 +588,20 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesGetIamPolicy(ctx co
 }
 
 // NetworkconnectivityProjectsLocationsSpokesList - Lists the Network Connectivity Center spokes in a specified project and location.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesListRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesListResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesListRequest, security operations.NetworkconnectivityProjectsLocationsSpokesListSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/spokes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/spokes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -636,11 +636,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesList(ctx context.Co
 }
 
 // NetworkconnectivityProjectsLocationsSpokesPatch - Updates the parameters of a Network Connectivity Center spoke.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesPatch(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesPatchRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesPatchResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesPatch(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesPatchRequest, security operations.NetworkconnectivityProjectsLocationsSpokesPatchSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpokeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,11 +652,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesPatch(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -691,11 +691,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesPatch(ctx context.C
 }
 
 // NetworkconnectivityProjectsLocationsSpokesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesSetIamPolicy(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesSetIamPolicyRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesSetIamPolicyResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesSetIamPolicy(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesSetIamPolicyRequest, security operations.NetworkconnectivityProjectsLocationsSpokesSetIamPolicySecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -707,11 +707,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesSetIamPolicy(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -746,11 +746,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesSetIamPolicy(ctx co
 }
 
 // NetworkconnectivityProjectsLocationsSpokesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) NetworkconnectivityProjectsLocationsSpokesTestIamPermissions(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesTestIamPermissionsRequest) (*operations.NetworkconnectivityProjectsLocationsSpokesTestIamPermissionsResponse, error) {
+func (s *projects) NetworkconnectivityProjectsLocationsSpokesTestIamPermissions(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsSpokesTestIamPermissionsRequest, security operations.NetworkconnectivityProjectsLocationsSpokesTestIamPermissionsSecurity) (*operations.NetworkconnectivityProjectsLocationsSpokesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,11 +762,11 @@ func (s *projects) NetworkconnectivityProjectsLocationsSpokesTestIamPermissions(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

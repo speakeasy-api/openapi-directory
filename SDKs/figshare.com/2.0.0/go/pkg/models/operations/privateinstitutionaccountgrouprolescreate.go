@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateInstitutionAccountGroupRolesCreateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateInstitutionAccountGroupRolesCreatePathParams struct {
-	// Account identifier the user is associated to
-	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateInstitutionAccountGroupRolesCreateRequest struct {
-	PathParams PrivateInstitutionAccountGroupRolesCreatePathParams
 	// Account description
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PrivateInstitutionAccountGroupRolesCreateSecurity
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	// Account identifier the user is associated to
+	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type PrivateInstitutionAccountGroupRolesCreateResponse struct {

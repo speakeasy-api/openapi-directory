@@ -32,7 +32,7 @@ func newTODOSecurity(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // PostAPIV1Accounts - Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
-func (s *todoSecurity) PostAPIV1Accounts(ctx context.Context, request operations.PostAPIV1AccountsRequest) (*operations.PostAPIV1AccountsResponse, error) {
+func (s *todoSecurity) PostAPIV1Accounts(ctx context.Context, request []byte, security operations.PostAPIV1AccountsSecurity) (*operations.PostAPIV1AccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/accounts"
 
@@ -48,7 +48,7 @@ func (s *todoSecurity) PostAPIV1Accounts(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

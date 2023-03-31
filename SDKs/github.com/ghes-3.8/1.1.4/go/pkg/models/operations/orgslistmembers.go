@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListMembersPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsListMembersFilterEnum - Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners.
 type OrgsListMembersFilterEnum string
 
@@ -65,20 +60,17 @@ func (e *OrgsListMembersRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type OrgsListMembersQueryParams struct {
+type OrgsListMembersRequest struct {
 	// Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners.
 	Filter *OrgsListMembersFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Filter members returned by their role.
 	Role *OrgsListMembersRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type OrgsListMembersRequest struct {
-	PathParams  OrgsListMembersPathParams
-	QueryParams OrgsListMembersQueryParams
 }
 
 type OrgsListMembersResponse struct {

@@ -14,35 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.NotebooksProjectsLocationsInstancesGetIamPolicyRequest{
-        Security: operations.NotebooksProjectsLocationsInstancesGetIamPolicySecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NotebooksProjectsLocationsInstancesGetIamPolicyPathParams{
-            Resource: "corrupti",
-        },
-        QueryParams: operations.NotebooksProjectsLocationsInstancesGetIamPolicyQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            OptionsRequestedPolicyVersion: 423655,
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        OptionsRequestedPolicyVersion: 847252,
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        Resource: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NotebooksProjectsLocationsInstancesGetIamPolicy(ctx, req)
+    res, err := s.Projects.NotebooksProjectsLocationsInstancesGetIamPolicy(ctx, req, operations.NotebooksProjectsLocationsInstancesGetIamPolicySecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -30,7 +30,7 @@ func (e *ListDocumentsCategoryInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDocumentsQueryParams struct {
+type ListDocumentsRequest struct {
 	CategoryIn          []ListDocumentsCategoryInEnum `queryParam:"style=form,explode=true,name=category.in"`
 	CreatedAtAfter      *time.Time                    `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time                    `queryParam:"style=form,explode=true,name=created_at.before"`
@@ -39,10 +39,6 @@ type ListDocumentsQueryParams struct {
 	Cursor              *string                       `queryParam:"style=form,explode=true,name=cursor"`
 	EntityID            *string                       `queryParam:"style=form,explode=true,name=entity_id"`
 	Limit               *int64                        `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListDocumentsRequest struct {
-	QueryParams ListDocumentsQueryParams
 }
 
 type ListDocumentsDefaultApplicationJSON13StatusEnum string

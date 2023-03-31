@@ -8,12 +8,7 @@ import (
 	"time"
 )
 
-type GetEventsForSubscriptionByIDPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEventsForSubscriptionByIDQueryParams struct {
+type GetEventsForSubscriptionByIDRequest struct {
 	// Limits on `time_created`, Marks the start of a range, optionally use `before` to set the end. Result output excludes the given timestamp.
 	After *time.Time `queryParam:"style=form,explode=true,name=after"`
 	// Limits directly on `id`. Marks the start of a range, optionally use `before_id` to set the end. Result output excludes the given `id` value. Please note that `id` is in chronological order.
@@ -27,7 +22,9 @@ type GetEventsForSubscriptionByIDQueryParams struct {
 	// Limits on `id`. Marks the start of a range, optionally use `until_id` to set the end. Result output includes the given `id` value. Please note that `id` is in chronological order.
 	FromID *string `queryParam:"style=form,explode=true,name=from_id"`
 	// Unique identifier
-	ID *string `queryParam:"style=form,explode=true,name=id"`
+	IDPathParameter string `pathParam:"style=simple,explode=false,name=id"`
+	// Unique identifier
+	IDQueryParameter *string `queryParam:"style=form,explode=true,name=id"`
 	// Removes `url` fields from output and shows `_id` instead of `_url` in references.
 	IDOnly *bool `queryParam:"style=form,explode=true,name=id_only"`
 	// Sets the maximum number of returned resources. You may increase this number to large values, keep in mind that query times could become large. We advise you to use the pagination feature whenever you can.
@@ -58,11 +55,6 @@ type GetEventsForSubscriptionByIDQueryParams struct {
 	Until *string `queryParam:"style=form,explode=true,name=until"`
 	// Limits on `id`. Marks the end of a range, optionally use `from_id` to set the start. Result output includes the given `id` value. Please note that `id` is in chronological order.
 	UntilID *string `queryParam:"style=form,explode=true,name=until_id"`
-}
-
-type GetEventsForSubscriptionByIDRequest struct {
-	PathParams  GetEventsForSubscriptionByIDPathParams
-	QueryParams GetEventsForSubscriptionByIDQueryParams
 }
 
 // GetEventsForSubscriptionByID200ApplicationJSON - A JSON object containing the events for a specific subscription

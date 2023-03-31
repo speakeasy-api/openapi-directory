@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type UpdateBusinessDaysPathParams struct {
+type UpdateBusinessDaysRequest struct {
+	// Updated Business Days for a quote.
+	RequestBody int `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateBusinessDaysRequest struct {
-	PathParams UpdateBusinessDaysPathParams
-	// Updated Business Days for a quote.
-	Request int `request:"mediaType=application/json"`
 }
 
 type UpdateBusinessDaysResponse struct {

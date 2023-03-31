@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Create3Request struct {
-	// Created user object
-	Request shared.CustomerDTO `request:"mediaType=application/json"`
-}
-
 type Create3Response struct {
 	ContentType string
 	// Success

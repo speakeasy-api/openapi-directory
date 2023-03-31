@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type AccountsBalancesRetrievePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type AccountsBalancesRetrieveRequest struct {
-	PathParams AccountsBalancesRetrievePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AccountsBalancesRetrieveResponse struct {

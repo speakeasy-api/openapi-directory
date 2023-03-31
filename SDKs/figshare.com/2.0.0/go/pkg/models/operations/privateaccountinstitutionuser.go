@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateAccountInstitutionUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateAccountInstitutionUserPathParams struct {
-	// Account identifier the user is associated to
-	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateAccountInstitutionUserRequest struct {
-	PathParams PrivateAccountInstitutionUserPathParams
-	Security   PrivateAccountInstitutionUserSecurity
+	// Account identifier the user is associated to
+	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type PrivateAccountInstitutionUserResponse struct {

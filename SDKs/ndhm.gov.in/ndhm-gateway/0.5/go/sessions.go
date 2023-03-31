@@ -174,7 +174,7 @@ func (s *sessions) GetV05Certs(ctx context.Context) (*operations.GetV05CertsResp
 }
 
 // PostV05SessionsJSON - Get access token
-func (s *sessions) PostV05SessionsJSON(ctx context.Context, request operations.PostV05SessionsJSONRequest) (*operations.PostV05SessionsJSONResponse, error) {
+func (s *sessions) PostV05SessionsJSON(ctx context.Context, request shared.SessionRequest) (*operations.PostV05SessionsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/sessions"
 
@@ -256,7 +256,7 @@ func (s *sessions) PostV05SessionsJSON(ctx context.Context, request operations.P
 }
 
 // PostV05SessionsRaw - Get access token
-func (s *sessions) PostV05SessionsRaw(ctx context.Context, request operations.PostV05SessionsRawRequest) (*operations.PostV05SessionsRawResponse, error) {
+func (s *sessions) PostV05SessionsRaw(ctx context.Context, request []byte) (*operations.PostV05SessionsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/sessions"
 

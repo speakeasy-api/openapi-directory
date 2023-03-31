@@ -14,12 +14,8 @@ var UpdateServiceServerList = []string{
 }
 
 type UpdateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServicePathParams struct {
-	// The SID of the Service resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateServiceUpdateServiceRequestFallbackMethodEnum - The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.
@@ -129,10 +125,9 @@ type UpdateServiceUpdateServiceRequest struct {
 }
 
 type UpdateServiceRequest struct {
-	PathParams UpdateServicePathParams
-	Request    *UpdateServiceUpdateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceSecurity
-	ServerURL  *string
+	RequestBody *UpdateServiceUpdateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateServiceResponse struct {

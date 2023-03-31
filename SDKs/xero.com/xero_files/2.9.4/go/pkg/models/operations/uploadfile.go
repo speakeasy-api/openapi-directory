@@ -8,17 +8,7 @@ import (
 )
 
 type UploadFileSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UploadFileQueryParams struct {
-	// pass an optional folder id to save file to specific folder
-	FolderID *string `queryParam:"style=form,explode=true,name=FolderId"`
-}
-
-type UploadFileHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadFileRequestBody struct {
@@ -30,10 +20,11 @@ type UploadFileRequestBody struct {
 }
 
 type UploadFileRequest struct {
-	QueryParams UploadFileQueryParams
-	Headers     UploadFileHeaders
-	Request     *UploadFileRequestBody `request:"mediaType=multipart/form-data"`
-	Security    UploadFileSecurity
+	// pass an optional folder id to save file to specific folder
+	FolderID    *string                `queryParam:"style=form,explode=true,name=FolderId"`
+	RequestBody *UploadFileRequestBody `request:"mediaType=multipart/form-data"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type UploadFileResponse struct {

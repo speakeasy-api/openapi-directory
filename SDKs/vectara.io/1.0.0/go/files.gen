@@ -41,7 +41,6 @@ pkg/models/shared/adminlistcorporarequest.go
 pkg/models/shared/adminresetcorpusresponse.go
 pkg/models/shared/adminresetcorpusrequest.go
 pkg/models/shared/vectaradeletedocumentrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/vectaraindexdocumentresponse.go
 pkg/models/shared/vectarastoragequota.go
 pkg/models/shared/vectaraindexdocumentrequest.go
@@ -60,4 +59,5 @@ pkg/models/shared/servingperformancemetrics.go
 pkg/models/shared/servingbatchqueryrequest.go
 pkg/models/shared/servingqueryrequest.go
 pkg/models/shared/queryrequestrerankingconfig.go
+pkg/models/shared/security.go
 USAGE.md

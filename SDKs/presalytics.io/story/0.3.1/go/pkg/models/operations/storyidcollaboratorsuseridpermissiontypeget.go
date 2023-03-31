@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDCollaboratorsUseridPermissiontypeGetPathParams struct {
+type StoryIDCollaboratorsUseridPermissiontypeGetRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// the type of permission requested.  can be a permission_type object name (e.g., owner, editor, create, viewer, admin) or a permission type field (e.g., can_edit, can_view, can_add_collaborators, can_delete)
 	Permissiontype string `pathParam:"style=simple,explode=false,name=permissiontype"`
 	// The presalytics userid (NOT the Id of the story_collaborator object)
 	StoryCollaboratorUserid string `pathParam:"style=simple,explode=false,name=story_collaborator_userid"`
-}
-
-type StoryIDCollaboratorsUseridPermissiontypeGetRequest struct {
-	PathParams StoryIDCollaboratorsUseridPermissiontypeGetPathParams
 }
 
 type StoryIDCollaboratorsUseridPermissiontypeGetResponse struct {

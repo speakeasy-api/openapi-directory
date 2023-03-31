@@ -12,12 +12,8 @@ var CreateShortCodeServerList = []string{
 }
 
 type CreateShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateShortCodePathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateShortCodeCreateShortCodeRequest struct {
@@ -26,10 +22,9 @@ type CreateShortCodeCreateShortCodeRequest struct {
 }
 
 type CreateShortCodeRequest struct {
-	PathParams CreateShortCodePathParams
-	Request    *CreateShortCodeCreateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateShortCodeSecurity
-	ServerURL  *string
+	RequestBody *CreateShortCodeCreateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateShortCodeResponse struct {

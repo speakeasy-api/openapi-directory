@@ -12,12 +12,8 @@ var CreateTaskServerList = []string{
 }
 
 type CreateTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTaskPathParams struct {
-	// The SID of the Workspace that the new Task belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTaskCreateTaskRequest struct {
@@ -34,10 +30,9 @@ type CreateTaskCreateTaskRequest struct {
 }
 
 type CreateTaskRequest struct {
-	PathParams CreateTaskPathParams
-	Request    *CreateTaskCreateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTaskSecurity
-	ServerURL  *string
+	RequestBody *CreateTaskCreateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new Task belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateTaskResponse struct {

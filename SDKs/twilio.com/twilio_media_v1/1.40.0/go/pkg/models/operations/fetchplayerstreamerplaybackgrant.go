@@ -12,18 +12,13 @@ var FetchPlayerStreamerPlaybackGrantServerList = []string{
 }
 
 type FetchPlayerStreamerPlaybackGrantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchPlayerStreamerPlaybackGrantPathParams struct {
-	// The SID of the PlayerStreamer resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchPlayerStreamerPlaybackGrantRequest struct {
-	PathParams FetchPlayerStreamerPlaybackGrantPathParams
-	Security   FetchPlayerStreamerPlaybackGrantSecurity
-	ServerURL  *string
+	// The SID of the PlayerStreamer resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchPlayerStreamerPlaybackGrantResponse struct {

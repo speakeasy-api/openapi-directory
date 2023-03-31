@@ -12,12 +12,8 @@ var CreateEngagementServerList = []string{
 }
 
 type CreateEngagementSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateEngagementPathParams struct {
-	// The SID of the Flow.
-	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEngagementCreateEngagementRequest struct {
@@ -30,10 +26,9 @@ type CreateEngagementCreateEngagementRequest struct {
 }
 
 type CreateEngagementRequest struct {
-	PathParams CreateEngagementPathParams
-	Request    *CreateEngagementCreateEngagementRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateEngagementSecurity
-	ServerURL  *string
+	// The SID of the Flow.
+	FlowSid     string                                   `pathParam:"style=simple,explode=false,name=FlowSid"`
+	RequestBody *CreateEngagementCreateEngagementRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateEngagementResponse struct {

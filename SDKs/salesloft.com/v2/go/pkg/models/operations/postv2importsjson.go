@@ -13,10 +13,6 @@ type PostV2ImportsJSONRequestBody struct {
 	UserID *int64 `form:"name=user_id"`
 }
 
-type PostV2ImportsJSONRequest struct {
-	Request *PostV2ImportsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ImportsJSONResponse struct {
 	Body        []byte
 	ContentType string

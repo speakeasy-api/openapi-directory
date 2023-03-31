@@ -8,17 +8,12 @@ import (
 )
 
 type PostLikesTracksTrackIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostLikesTracksTrackIDPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PostLikesTracksTrackIDRequest struct {
-	PathParams PostLikesTracksTrackIDPathParams
-	Security   PostLikesTracksTrackIDSecurity
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type PostLikesTracksTrackIDResponse struct {

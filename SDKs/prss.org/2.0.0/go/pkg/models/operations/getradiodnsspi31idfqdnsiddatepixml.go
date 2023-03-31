@@ -13,24 +13,15 @@ var GetRadiodnsSpi31IDFqdnSidDatePIXMLServerList = []string{
 	"https://radiodnsdev.mgmt.prss.org",
 }
 
-type GetRadiodnsSpi31IDFqdnSidDatePIXMLPathParams struct {
+type GetRadiodnsSpi31IDFqdnSidDatePIXMLRequest struct {
 	// The PI schedule date to retrieve in format yyyymmdd.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// The fully qualified domain name for the environment where the service is running. The fqdn is defined in the `radiodns` element in the SI document in each Content Depot environment.
 	Fqdn string `pathParam:"style=simple,explode=false,name=fqdn"`
 	// One of the valid service IDs defined in the SI document. For example, "files" or "streams".
 	Sid string `pathParam:"style=simple,explode=false,name=sid"`
-}
-
-type GetRadiodnsSpi31IDFqdnSidDatePIXMLHeaders struct {
 	// The API client Id you received. This is required for National PI documents, but not Station PI documents. Contact help desk if you need one.
 	XRadiodnsspiAPIKey *string `header:"style=simple,explode=false,name=x-radiodnsspi-api-key"`
-}
-
-type GetRadiodnsSpi31IDFqdnSidDatePIXMLRequest struct {
-	PathParams GetRadiodnsSpi31IDFqdnSidDatePIXMLPathParams
-	Headers    GetRadiodnsSpi31IDFqdnSidDatePIXMLHeaders
-	ServerURL  *string
 }
 
 type GetRadiodnsSpi31IDFqdnSidDatePIXMLResponse struct {

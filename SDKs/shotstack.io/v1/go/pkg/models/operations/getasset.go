@@ -8,17 +8,12 @@ import (
 )
 
 type GetAssetSecurity struct {
-	DeveloperKey shared.SchemeDeveloperKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAssetPathParams struct {
-	// The id of the asset in UUID format
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	DeveloperKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetAssetRequest struct {
-	PathParams GetAssetPathParams
-	Security   GetAssetSecurity
+	// The id of the asset in UUID format
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAssetResponse struct {

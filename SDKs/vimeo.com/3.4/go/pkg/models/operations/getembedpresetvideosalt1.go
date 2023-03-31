@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmbedPresetVideosAlt1PathParams struct {
-	// The ID of the preset.
-	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
-}
-
-type GetEmbedPresetVideosAlt1QueryParams struct {
+type GetEmbedPresetVideosAlt1Request struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetEmbedPresetVideosAlt1Request struct {
-	PathParams  GetEmbedPresetVideosAlt1PathParams
-	QueryParams GetEmbedPresetVideosAlt1QueryParams
+	// The ID of the preset.
+	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
 }
 
 type GetEmbedPresetVideosAlt1Response struct {

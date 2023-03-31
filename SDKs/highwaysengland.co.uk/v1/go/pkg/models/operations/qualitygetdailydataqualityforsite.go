@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QualityGetDailyDataQualityForSitePathParams struct {
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type QualityGetDailyDataQualityForSiteQueryParams struct {
+type QualityGetDailyDataQualityForSiteRequest struct {
 	// The end date of the report in the format ddmmyyyy (i.e 31012016)
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
 	SiteID  string `queryParam:"style=form,explode=true,name=siteId"`
 	// The start date of the report in the format ddmmyyyy (i.e 31012016)
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type QualityGetDailyDataQualityForSiteRequest struct {
-	PathParams  QualityGetDailyDataQualityForSitePathParams
-	QueryParams QualityGetDailyDataQualityForSiteQueryParams
+	Version   string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type QualityGetDailyDataQualityForSiteResponse struct {

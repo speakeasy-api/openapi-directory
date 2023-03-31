@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type DeleteCustomObjectDefinitionByTypePathParams struct {
-	// Specifies the custom object's API name as object. It is case-sensitive.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type DeleteCustomObjectDefinitionByTypeHeaders struct {
+type DeleteCustomObjectDefinitionByTypeRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -26,11 +21,8 @@ type DeleteCustomObjectDefinitionByTypeHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type DeleteCustomObjectDefinitionByTypeRequest struct {
-	PathParams DeleteCustomObjectDefinitionByTypePathParams
-	Headers    DeleteCustomObjectDefinitionByTypeHeaders
+	// Specifies the custom object's API name as object. It is case-sensitive.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 type DeleteCustomObjectDefinitionByTypeResponse struct {

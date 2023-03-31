@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTransactionPathParams struct {
+type GetTransactionRequest struct {
 	// The transaction id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTransactionQueryParams struct {
 	// Populate chargestation
 	IncludeChargestation *bool `queryParam:"style=form,explode=true,name=include_chargestation"`
 	// Populate connector
@@ -28,11 +25,6 @@ type GetTransactionQueryParams struct {
 	IncludeReservation *bool `queryParam:"style=form,explode=true,name=include_reservation"`
 	// Populate token
 	IncludeToken *bool `queryParam:"style=form,explode=true,name=include_token"`
-}
-
-type GetTransactionRequest struct {
-	PathParams  GetTransactionPathParams
-	QueryParams GetTransactionQueryParams
 }
 
 type GetTransactionResponse struct {

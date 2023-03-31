@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawPathParams struct {
+type PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawRequest struct {
-	PathParams PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawResponse struct {

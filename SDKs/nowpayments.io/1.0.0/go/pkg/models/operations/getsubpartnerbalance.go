@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSubPartnerBalancePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSubPartnerBalanceHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type GetSubPartnerBalanceRequest struct {
-	PathParams GetSubPartnerBalancePathParams
-	Headers    GetSubPartnerBalanceHeaders
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type GetSubPartnerBalance200ApplicationJSONResultBalancesUsddtrc20 struct {

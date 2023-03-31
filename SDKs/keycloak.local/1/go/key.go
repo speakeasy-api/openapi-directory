@@ -33,7 +33,7 @@ func newKey(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 
 func (s *key) GetRealmKeys(ctx context.Context, request operations.GetRealmKeysRequest) (*operations.GetRealmKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

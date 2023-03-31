@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelthetransactionPathParams struct {
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type CancelthetransactionHeaders struct {
+type CancelthetransactionRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Accept                      string                             `header:"style=simple,explode=false,name=Accept"`
+	CancelthetransactionRequest shared.CancelthetransactionRequest `request:"mediaType=application/json"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// The AppKey configured by the merchant (optional configuration)
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type CancelthetransactionRequest struct {
-	PathParams CancelthetransactionPathParams
-	Headers    CancelthetransactionHeaders
-	Request    shared.CancelthetransactionRequest `request:"mediaType=application/json"`
+	TransactionID        string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 type CancelthetransactionResponse struct {

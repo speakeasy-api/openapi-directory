@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CreateSessionUsingPOSTQueryParams struct {
+type CreateSessionUsingPOSTRequest struct {
 	AuthorID   *string `queryParam:"style=form,explode=true,name=authorID"`
 	GroupID    *string `queryParam:"style=form,explode=true,name=groupID"`
 	ValidUntil *string `queryParam:"style=form,explode=true,name=validUntil"`
-}
-
-type CreateSessionUsingPOSTRequest struct {
-	QueryParams CreateSessionUsingPOSTQueryParams
 }
 
 // CreateSessionUsingPOST500ApplicationJSON - internal api error (code 2)

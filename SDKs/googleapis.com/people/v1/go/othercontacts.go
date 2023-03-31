@@ -33,11 +33,11 @@ func newOtherContacts(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // PeopleOtherContactsCopyOtherContactToMyContactsGroup - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-func (s *otherContacts) PeopleOtherContactsCopyOtherContactToMyContactsGroup(ctx context.Context, request operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupRequest) (*operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse, error) {
+func (s *otherContacts) PeopleOtherContactsCopyOtherContactToMyContactsGroup(ctx context.Context, request operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupRequest, security operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupSecurity) (*operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:copyOtherContactToMyContactsGroup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:copyOtherContactToMyContactsGroup", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyOtherContactToMyContactsGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *otherContacts) PeopleOtherContactsCopyOtherContactToMyContactsGroup(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *otherContacts) PeopleOtherContactsCopyOtherContactToMyContactsGroup(ctx
 }
 
 // PeopleOtherContactsList - List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's other contacts that have changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
-func (s *otherContacts) PeopleOtherContactsList(ctx context.Context, request operations.PeopleOtherContactsListRequest) (*operations.PeopleOtherContactsListResponse, error) {
+func (s *otherContacts) PeopleOtherContactsList(ctx context.Context, request operations.PeopleOtherContactsListRequest, security operations.PeopleOtherContactsListSecurity) (*operations.PeopleOtherContactsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/otherContacts"
 
@@ -97,11 +97,11 @@ func (s *otherContacts) PeopleOtherContactsList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *otherContacts) PeopleOtherContactsList(ctx context.Context, request ope
 }
 
 // PeopleOtherContactsSearch - Provides a list of contacts in the authenticated user's other contacts that matches the search query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that are from the OTHER_CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/other-contacts#search_the_users_other_contacts
-func (s *otherContacts) PeopleOtherContactsSearch(ctx context.Context, request operations.PeopleOtherContactsSearchRequest) (*operations.PeopleOtherContactsSearchResponse, error) {
+func (s *otherContacts) PeopleOtherContactsSearch(ctx context.Context, request operations.PeopleOtherContactsSearchRequest, security operations.PeopleOtherContactsSearchSecurity) (*operations.PeopleOtherContactsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/otherContacts:search"
 
@@ -145,11 +145,11 @@ func (s *otherContacts) PeopleOtherContactsSearch(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

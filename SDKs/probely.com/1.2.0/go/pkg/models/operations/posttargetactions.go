@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetActionsRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type PostTargetActionsResponse struct {
 	// Available actions for targets
 	Actions     []shared.Actions

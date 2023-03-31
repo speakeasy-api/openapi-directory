@@ -37,11 +37,10 @@ pkg/models/operations/metastoreprojectslocationsservicesremoveiampolicy.go
 pkg/models/operations/metastoreprojectslocationsservicesrestore.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/federation.go
 pkg/models/shared/backendmetastore.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listfederationsresponse.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVariantsVariantPathParams struct {
-	Variant string `pathParam:"style=simple,explode=false,name=variant"`
-}
-
 type GetVariantsVariantRequest struct {
-	PathParams GetVariantsVariantPathParams
+	Variant string `pathParam:"style=simple,explode=false,name=variant"`
 }
 
 type GetVariantsVariantResponse struct {

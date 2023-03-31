@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchRoutingStaticRoutesPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceSwitchRoutingStaticRoutesRequest struct {
-	PathParams GetDeviceSwitchRoutingStaticRoutesPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceSwitchRoutingStaticRoutesResponse struct {

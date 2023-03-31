@@ -7,7 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETWorkflowsTasksQueryParams struct {
+type GETWorkflowsTasksRequest struct {
+	// `Bearer {token}` for a valid OAuth token.
+	//
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	//
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// If specified, the operation retrieves tasks that is the specified type.
 	//
 	ActionType *string `queryParam:"style=form,explode=true,name=action_type"`
@@ -41,25 +52,6 @@ type GETWorkflowsTasksQueryParams struct {
 	// If specified, the operation retrieves tasks that for the specified workflow id.
 	//
 	WorkflowID *string `queryParam:"style=form,explode=true,name=workflow_id"`
-}
-
-type GETWorkflowsTasksHeaders struct {
-	// `Bearer {token}` for a valid OAuth token.
-	//
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
-	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETWorkflowsTasksRequest struct {
-	QueryParams GETWorkflowsTasksQueryParams
-	Headers     GETWorkflowsTasksHeaders
 }
 
 type GETWorkflowsTasksResponse struct {

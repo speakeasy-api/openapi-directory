@@ -14,28 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.StsTokenRequest{
-        QueryParams: operations.StsTokenQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
+        DollarXgafv: "2",
+        GoogleIdentityStsV1betaExchangeTokenRequest: &shared.GoogleIdentityStsV1betaExchangeTokenRequest{
+            Audience: "provident",
+            GrantType: "distinctio",
+            Options: "quibusdam",
+            RequestedTokenType: "unde",
+            Scope: "nulla",
+            SubjectToken: "corrupti",
+            SubjectTokenType: "illum",
         },
-        Request: &shared.GoogleIdentityStsV1betaExchangeTokenRequest{
-            Audience: "deserunt",
-            GrantType: "suscipit",
-            Options: "iure",
-            RequestedTokenType: "magnam",
-            Scope: "debitis",
-            SubjectToken: "ipsa",
-            SubjectTokenType: "delectus",
-        },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()

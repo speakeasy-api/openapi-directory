@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateRoomProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateRoomProfilePathParams struct {
-	// Unique Identifier of a Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateRoomProfileApplicationJSONBasic struct {
@@ -38,9 +32,9 @@ type UpdateRoomProfileApplicationJSON struct {
 }
 
 type UpdateRoomProfileRequest struct {
-	PathParams UpdateRoomProfilePathParams
-	Request    *UpdateRoomProfileApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateRoomProfileSecurity
+	RequestBody *UpdateRoomProfileApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of a Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 type UpdateRoomProfileResponse struct {

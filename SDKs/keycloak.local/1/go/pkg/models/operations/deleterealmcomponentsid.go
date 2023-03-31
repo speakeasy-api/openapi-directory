@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type DeleteRealmComponentsIDPathParams struct {
+type DeleteRealmComponentsIDRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmComponentsIDRequest struct {
-	PathParams DeleteRealmComponentsIDPathParams
 }
 
 type DeleteRealmComponentsIDResponse struct {

@@ -4,66 +4,64 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FirebasemlProjectsModelsCreateRequest(
-    security=operations.FirebasemlProjectsModelsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.FirebasemlProjectsModelsCreatePathParams(
-        parent="laudantium",
-    ),
-    query_params=operations.FirebasemlProjectsModelsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="a",
-        alt="media",
-        callback="dolor",
-        fields="et",
-        key="amet",
-        oauth_token="exercitationem",
-        pretty_print=False,
-        quota_user="aut",
-        upload_type="corrupti",
-        upload_protocol="consequuntur",
-    ),
-    request=shared.ModelInput(
-        display_name="repellat",
-        name="consequatur",
+    dollar_xgafv="2",
+    model_input=shared.ModelInput(
+        display_name="provident",
+        name="distinctio",
         state=shared.ModelState(
-            published=True,
+            published=False,
             validation_error=shared.Status(
-                code=6350045115577120987,
+                code=844266,
                 details=[
                     {
-                        "accusantium": "quibusdam",
-                        "et": "recusandae",
-                        "voluptatibus": "consequatur",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
                     },
                     {
-                        "consequatur": "sit",
-                        "amet": "quia",
-                        "sed": "ut",
+                        "ipsa": "delectus",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
+                    },
+                    {
+                        "excepturi": "nisi",
+                        "recusandae": "temporibus",
                     },
                 ],
-                message="dolorem",
+                message="ab",
             ),
         ),
         tags=[
-            "tempore",
-            "et",
+            "veritatis",
+            "deserunt",
         ],
         tflite_model=shared.TfLiteModelInput(
-            automl_model="aut",
-            gcs_tflite_uri="iure",
+            automl_model="perferendis",
+            gcs_tflite_uri="ipsam",
         ),
     ),
+    access_token="repellendus",
+    alt="proto",
+    callback="quo",
+    fields_="odit",
+    key="at",
+    oauth_token="at",
+    parent="maiores",
+    pretty_print=False,
+    quota_user="molestiae",
+    upload_type="quod",
+    upload_protocol="quod",
 )
     
-res = s.projects.firebaseml_projects_models_create(req)
+res = s.projects.firebaseml_projects_models_create(req, operations.FirebasemlProjectsModelsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

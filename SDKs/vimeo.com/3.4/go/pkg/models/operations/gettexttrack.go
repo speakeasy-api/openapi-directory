@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTextTrackPathParams struct {
+type GetTextTrackRequest struct {
 	// The ID of the text track.
 	TexttrackID float64 `pathParam:"style=simple,explode=false,name=texttrack_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetTextTrackRequest struct {
-	PathParams GetTextTrackPathParams
 }
 
 type GetTextTrackResponse struct {

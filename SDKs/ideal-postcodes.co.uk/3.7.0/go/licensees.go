@@ -40,9 +40,9 @@ func newLicensees(defaultClient, securityClient HTTPClient, serverURL, language,
 // Create a licensee for the specified API Key.
 func (s *licensees) CreateLicensee(ctx context.Context, request operations.CreateLicenseeRequest) (*operations.CreateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseeEditable", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -57,7 +57,7 @@ func (s *licensees) CreateLicensee(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -109,14 +109,14 @@ func (s *licensees) CreateLicensee(ctx context.Context, request operations.Creat
 // Cancels a licensee key. This renders a licensee unusable. This action can be reversed if you get in contact with us.
 func (s *licensees) DeleteLicensee(ctx context.Context, request operations.DeleteLicenseeRequest) (*operations.DeleteLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -168,14 +168,14 @@ func (s *licensees) DeleteLicensee(ctx context.Context, request operations.Delet
 // Returns a list of licensees for a key.
 func (s *licensees) ListLicensees(ctx context.Context, request operations.ListLicenseesRequest) (*operations.ListLicenseesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,14 +227,14 @@ func (s *licensees) ListLicensees(ctx context.Context, request operations.ListLi
 // Returns licensee information as identified by the licensee key.
 func (s *licensees) RetrieveLicensee(ctx context.Context, request operations.RetrieveLicenseeRequest) (*operations.RetrieveLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -286,9 +286,9 @@ func (s *licensees) RetrieveLicensee(ctx context.Context, request operations.Ret
 // Update Licensee
 func (s *licensees) UpdateLicensee(ctx context.Context, request operations.UpdateLicenseeRequest) (*operations.UpdateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/licensees/{licensee}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseeEditable", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *licensees) UpdateLicensee(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

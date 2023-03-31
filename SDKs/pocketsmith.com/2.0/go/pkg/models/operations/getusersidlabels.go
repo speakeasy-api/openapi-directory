@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDLabelsPathParams struct {
+type GetUsersIDLabelsRequest struct {
 	// The unique identifier of the user.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDLabelsRequest struct {
-	PathParams GetUsersIDLabelsPathParams
 }
 
 type GetUsersIDLabelsResponse struct {

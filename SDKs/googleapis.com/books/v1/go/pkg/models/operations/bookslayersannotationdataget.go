@@ -8,20 +8,11 @@ import (
 )
 
 type BooksLayersAnnotationDataGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksLayersAnnotationDataGetPathParams struct {
-	// The ID of the annotation data to retrieve.
-	AnnotationDataID string `pathParam:"style=simple,explode=false,name=annotationDataId"`
-	// The ID for the layer to get the annotations.
-	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
-	// The volume to retrieve annotations for.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
-}
-
-type BooksLayersAnnotationDataGetQueryParams struct {
+type BooksLayersAnnotationDataGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +21,8 @@ type BooksLayersAnnotationDataGetQueryParams struct {
 	AllowWebDefinitions *bool `queryParam:"style=form,explode=true,name=allowWebDefinitions"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the annotation data to retrieve.
+	AnnotationDataID string `pathParam:"style=simple,explode=false,name=annotationDataId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The content version for the volume you are trying to retrieve.
@@ -40,6 +33,8 @@ type BooksLayersAnnotationDataGetQueryParams struct {
 	H *int64 `queryParam:"style=form,explode=true,name=h"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID for the layer to get the annotations.
+	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
 	// The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// OAuth 2.0 token for the current user.
@@ -56,14 +51,10 @@ type BooksLayersAnnotationDataGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
+	// The volume to retrieve annotations for.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 	// The requested pixel width for any images. If width is provided height must also be provided.
 	W *int64 `queryParam:"style=form,explode=true,name=w"`
-}
-
-type BooksLayersAnnotationDataGetRequest struct {
-	PathParams  BooksLayersAnnotationDataGetPathParams
-	QueryParams BooksLayersAnnotationDataGetQueryParams
-	Security    BooksLayersAnnotationDataGetSecurity
 }
 
 type BooksLayersAnnotationDataGetResponse struct {

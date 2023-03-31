@@ -77,7 +77,7 @@ func (e *GetCertificatesTypeParameterTypeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetCertificatesQueryParams struct {
+type GetCertificatesRequest struct {
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter resources by their name. The response will only contain the resources matching the specified name
@@ -86,10 +86,6 @@ type GetCertificatesQueryParams struct {
 	Sort *GetCertificatesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times. The response will only contain Certificates matching the type.
 	Type *GetCertificatesTypeParameterTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetCertificatesRequest struct {
-	QueryParams GetCertificatesQueryParams
 }
 
 // GetCertificatesCertificatesResponseCertificateStatusError - If issuance or renewal reports `failed`, this property contains information about what happened

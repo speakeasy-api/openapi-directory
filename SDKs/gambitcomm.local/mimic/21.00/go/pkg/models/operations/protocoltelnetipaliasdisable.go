@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetIpaliasDisablePathParams struct {
+type ProtocolTelnetIpaliasDisableRequest struct {
 	// Agent to manipulate TELNET IP alias
 	AgentNum  int    `pathParam:"style=simple,explode=false,name=agentNum"`
 	Ipaddress string `pathParam:"style=simple,explode=false,name=ipaddress"`
 	Port      int    `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type ProtocolTelnetIpaliasDisableRequest struct {
-	PathParams ProtocolTelnetIpaliasDisablePathParams
 }
 
 type ProtocolTelnetIpaliasDisableResponse struct {

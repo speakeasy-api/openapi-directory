@@ -179,10 +179,9 @@ pkg/models/operations/displayvideouserslist.go
 pkg/models/operations/displayvideouserspatch.go
 pkg/models/shared/createassetresponse.go
 pkg/models/shared/asset.go
-pkg/models/shared/createassetrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/createassetrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/auditadvertiserresponse.go
 pkg/models/shared/campaign.go
 pkg/models/shared/frequencycap.go

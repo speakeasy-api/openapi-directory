@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetsubscriptionstocustomerQueryParams struct {
-	// Customer ID.
-	CustomerID string `queryParam:"style=form,explode=true,name=customerId"`
-}
-
-type GetsubscriptionstocustomerHeaders struct {
+type GetsubscriptionstocustomerRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetsubscriptionstocustomerRequest struct {
-	QueryParams GetsubscriptionstocustomerQueryParams
-	Headers     GetsubscriptionstocustomerHeaders
+	// Customer ID.
+	CustomerID string `queryParam:"style=form,explode=true,name=customerId"`
 }
 
 type GetsubscriptionstocustomerResponse struct {

@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateByocTrunk(ctx context.Context, request operations.CreateByocTrunkRequest) (*operations.CreateByocTrunkResponse, error) {
+func (s *SDK) CreateByocTrunk(ctx context.Context, request operations.CreateByocTrunkCreateByocTrunkRequest, security operations.CreateByocTrunkSecurity, opts ...operations.Option) (*operations.CreateByocTrunkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateByocTrunkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ByocTrunks"
@@ -112,7 +122,7 @@ func (s *SDK) CreateByocTrunk(ctx context.Context, request operations.CreateByoc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,10 +155,20 @@ func (s *SDK) CreateByocTrunk(ctx context.Context, request operations.CreateByoc
 
 	return res, nil
 }
-func (s *SDK) CreateConnectionPolicy(ctx context.Context, request operations.CreateConnectionPolicyRequest) (*operations.CreateConnectionPolicyResponse, error) {
+func (s *SDK) CreateConnectionPolicy(ctx context.Context, request operations.CreateConnectionPolicyCreateConnectionPolicyRequest, security operations.CreateConnectionPolicySecurity, opts ...operations.Option) (*operations.CreateConnectionPolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateConnectionPolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ConnectionPolicies"
@@ -165,7 +185,7 @@ func (s *SDK) CreateConnectionPolicy(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,15 +218,25 @@ func (s *SDK) CreateConnectionPolicy(ctx context.Context, request operations.Cre
 
 	return res, nil
 }
-func (s *SDK) CreateConnectionPolicyTarget(ctx context.Context, request operations.CreateConnectionPolicyTargetRequest) (*operations.CreateConnectionPolicyTargetResponse, error) {
-	baseURL := operations.CreateConnectionPolicyTargetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateConnectionPolicyTarget(ctx context.Context, request operations.CreateConnectionPolicyTargetRequest, security operations.CreateConnectionPolicyTargetSecurity, opts ...operations.Option) (*operations.CreateConnectionPolicyTargetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateConnectionPolicyTargetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +248,7 @@ func (s *SDK) CreateConnectionPolicyTarget(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,10 +283,20 @@ func (s *SDK) CreateConnectionPolicyTarget(ctx context.Context, request operatio
 }
 
 // CreateDialingPermissionsCountryBulkUpdate - Create a bulk update request to change voice dialing country permissions of one or more countries identified by the corresponding [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
-func (s *SDK) CreateDialingPermissionsCountryBulkUpdate(ctx context.Context, request operations.CreateDialingPermissionsCountryBulkUpdateRequest) (*operations.CreateDialingPermissionsCountryBulkUpdateResponse, error) {
+func (s *SDK) CreateDialingPermissionsCountryBulkUpdate(ctx context.Context, request operations.CreateDialingPermissionsCountryBulkUpdateCreateDialingPermissionsCountryBulkUpdateRequest, security operations.CreateDialingPermissionsCountryBulkUpdateSecurity, opts ...operations.Option) (*operations.CreateDialingPermissionsCountryBulkUpdateResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateDialingPermissionsCountryBulkUpdateServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/DialingPermissions/BulkCountryUpdates"
@@ -273,7 +313,7 @@ func (s *SDK) CreateDialingPermissionsCountryBulkUpdate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,10 +346,20 @@ func (s *SDK) CreateDialingPermissionsCountryBulkUpdate(ctx context.Context, req
 
 	return res, nil
 }
-func (s *SDK) CreateIPRecord(ctx context.Context, request operations.CreateIPRecordRequest) (*operations.CreateIPRecordResponse, error) {
+func (s *SDK) CreateIPRecord(ctx context.Context, request operations.CreateIPRecordCreateIPRecordRequest, security operations.CreateIPRecordSecurity, opts ...operations.Option) (*operations.CreateIPRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateIPRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/IpRecords"
@@ -326,7 +376,7 @@ func (s *SDK) CreateIPRecord(ctx context.Context, request operations.CreateIPRec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,10 +409,20 @@ func (s *SDK) CreateIPRecord(ctx context.Context, request operations.CreateIPRec
 
 	return res, nil
 }
-func (s *SDK) CreateSourceIPMapping(ctx context.Context, request operations.CreateSourceIPMappingRequest) (*operations.CreateSourceIPMappingResponse, error) {
+func (s *SDK) CreateSourceIPMapping(ctx context.Context, request operations.CreateSourceIPMappingCreateSourceIPMappingRequest, security operations.CreateSourceIPMappingSecurity, opts ...operations.Option) (*operations.CreateSourceIPMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSourceIPMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SourceIpMappings"
@@ -379,7 +439,7 @@ func (s *SDK) CreateSourceIPMapping(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -414,20 +474,30 @@ func (s *SDK) CreateSourceIPMapping(ctx context.Context, request operations.Crea
 }
 
 // DeleteArchivedCall - Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.
-func (s *SDK) DeleteArchivedCall(ctx context.Context, request operations.DeleteArchivedCallRequest) (*operations.DeleteArchivedCallResponse, error) {
-	baseURL := operations.DeleteArchivedCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteArchivedCall(ctx context.Context, request operations.DeleteArchivedCallRequest, security operations.DeleteArchivedCallSecurity, opts ...operations.Option) (*operations.DeleteArchivedCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Archives/{Date}/Calls/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteArchivedCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Archives/{Date}/Calls/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +521,30 @@ func (s *SDK) DeleteArchivedCall(ctx context.Context, request operations.DeleteA
 
 	return res, nil
 }
-func (s *SDK) DeleteByocTrunk(ctx context.Context, request operations.DeleteByocTrunkRequest) (*operations.DeleteByocTrunkResponse, error) {
-	baseURL := operations.DeleteByocTrunkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteByocTrunk(ctx context.Context, request operations.DeleteByocTrunkRequest, security operations.DeleteByocTrunkSecurity, opts ...operations.Option) (*operations.DeleteByocTrunkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteByocTrunkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,20 +568,30 @@ func (s *SDK) DeleteByocTrunk(ctx context.Context, request operations.DeleteByoc
 
 	return res, nil
 }
-func (s *SDK) DeleteConnectionPolicy(ctx context.Context, request operations.DeleteConnectionPolicyRequest) (*operations.DeleteConnectionPolicyResponse, error) {
-	baseURL := operations.DeleteConnectionPolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConnectionPolicy(ctx context.Context, request operations.DeleteConnectionPolicyRequest, security operations.DeleteConnectionPolicySecurity, opts ...operations.Option) (*operations.DeleteConnectionPolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConnectionPolicyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -525,20 +615,30 @@ func (s *SDK) DeleteConnectionPolicy(ctx context.Context, request operations.Del
 
 	return res, nil
 }
-func (s *SDK) DeleteConnectionPolicyTarget(ctx context.Context, request operations.DeleteConnectionPolicyTargetRequest) (*operations.DeleteConnectionPolicyTargetResponse, error) {
-	baseURL := operations.DeleteConnectionPolicyTargetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConnectionPolicyTarget(ctx context.Context, request operations.DeleteConnectionPolicyTargetRequest, security operations.DeleteConnectionPolicyTargetSecurity, opts ...operations.Option) (*operations.DeleteConnectionPolicyTargetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConnectionPolicyTargetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,20 +662,30 @@ func (s *SDK) DeleteConnectionPolicyTarget(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *SDK) DeleteIPRecord(ctx context.Context, request operations.DeleteIPRecordRequest) (*operations.DeleteIPRecordResponse, error) {
-	baseURL := operations.DeleteIPRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteIPRecord(ctx context.Context, request operations.DeleteIPRecordRequest, security operations.DeleteIPRecordSecurity, opts ...operations.Option) (*operations.DeleteIPRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteIPRecordServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -599,20 +709,30 @@ func (s *SDK) DeleteIPRecord(ctx context.Context, request operations.DeleteIPRec
 
 	return res, nil
 }
-func (s *SDK) DeleteSourceIPMapping(ctx context.Context, request operations.DeleteSourceIPMappingRequest) (*operations.DeleteSourceIPMappingResponse, error) {
-	baseURL := operations.DeleteSourceIPMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSourceIPMapping(ctx context.Context, request operations.DeleteSourceIPMappingRequest, security operations.DeleteSourceIPMappingSecurity, opts ...operations.Option) (*operations.DeleteSourceIPMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSourceIPMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -636,20 +756,30 @@ func (s *SDK) DeleteSourceIPMapping(ctx context.Context, request operations.Dele
 
 	return res, nil
 }
-func (s *SDK) FetchByocTrunk(ctx context.Context, request operations.FetchByocTrunkRequest) (*operations.FetchByocTrunkResponse, error) {
-	baseURL := operations.FetchByocTrunkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchByocTrunk(ctx context.Context, request operations.FetchByocTrunkRequest, security operations.FetchByocTrunkSecurity, opts ...operations.Option) (*operations.FetchByocTrunkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchByocTrunkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -682,20 +812,30 @@ func (s *SDK) FetchByocTrunk(ctx context.Context, request operations.FetchByocTr
 
 	return res, nil
 }
-func (s *SDK) FetchConnectionPolicy(ctx context.Context, request operations.FetchConnectionPolicyRequest) (*operations.FetchConnectionPolicyResponse, error) {
-	baseURL := operations.FetchConnectionPolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConnectionPolicy(ctx context.Context, request operations.FetchConnectionPolicyRequest, security operations.FetchConnectionPolicySecurity, opts ...operations.Option) (*operations.FetchConnectionPolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConnectionPolicyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -728,20 +868,30 @@ func (s *SDK) FetchConnectionPolicy(ctx context.Context, request operations.Fetc
 
 	return res, nil
 }
-func (s *SDK) FetchConnectionPolicyTarget(ctx context.Context, request operations.FetchConnectionPolicyTargetRequest) (*operations.FetchConnectionPolicyTargetResponse, error) {
-	baseURL := operations.FetchConnectionPolicyTargetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConnectionPolicyTarget(ctx context.Context, request operations.FetchConnectionPolicyTargetRequest, security operations.FetchConnectionPolicyTargetSecurity, opts ...operations.Option) (*operations.FetchConnectionPolicyTargetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConnectionPolicyTargetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -776,20 +926,30 @@ func (s *SDK) FetchConnectionPolicyTarget(ctx context.Context, request operation
 }
 
 // FetchDialingPermissionsCountry - Retrieve voice dialing country permissions identified by the given ISO country code
-func (s *SDK) FetchDialingPermissionsCountry(ctx context.Context, request operations.FetchDialingPermissionsCountryRequest) (*operations.FetchDialingPermissionsCountryResponse, error) {
-	baseURL := operations.FetchDialingPermissionsCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDialingPermissionsCountry(ctx context.Context, request operations.FetchDialingPermissionsCountryRequest, security operations.FetchDialingPermissionsCountrySecurity, opts ...operations.Option) (*operations.FetchDialingPermissionsCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/DialingPermissions/Countries/{IsoCode}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDialingPermissionsCountryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/DialingPermissions/Countries/{IsoCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -824,10 +984,20 @@ func (s *SDK) FetchDialingPermissionsCountry(ctx context.Context, request operat
 }
 
 // FetchDialingPermissionsSettings - Retrieve voice dialing permissions inheritance for the sub-account
-func (s *SDK) FetchDialingPermissionsSettings(ctx context.Context, request operations.FetchDialingPermissionsSettingsRequest) (*operations.FetchDialingPermissionsSettingsResponse, error) {
+func (s *SDK) FetchDialingPermissionsSettings(ctx context.Context, opts ...operations.Option) (*operations.FetchDialingPermissionsSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchDialingPermissionsSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Settings"
@@ -837,7 +1007,7 @@ func (s *SDK) FetchDialingPermissionsSettings(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,20 +1040,30 @@ func (s *SDK) FetchDialingPermissionsSettings(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) FetchIPRecord(ctx context.Context, request operations.FetchIPRecordRequest) (*operations.FetchIPRecordResponse, error) {
-	baseURL := operations.FetchIPRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchIPRecord(ctx context.Context, request operations.FetchIPRecordRequest, security operations.FetchIPRecordSecurity, opts ...operations.Option) (*operations.FetchIPRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchIPRecordServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -916,20 +1096,30 @@ func (s *SDK) FetchIPRecord(ctx context.Context, request operations.FetchIPRecor
 
 	return res, nil
 }
-func (s *SDK) FetchSourceIPMapping(ctx context.Context, request operations.FetchSourceIPMappingRequest) (*operations.FetchSourceIPMappingResponse, error) {
-	baseURL := operations.FetchSourceIPMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSourceIPMapping(ctx context.Context, request operations.FetchSourceIPMappingRequest, security operations.FetchSourceIPMappingSecurity, opts ...operations.Option) (*operations.FetchSourceIPMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSourceIPMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -962,10 +1152,20 @@ func (s *SDK) FetchSourceIPMapping(ctx context.Context, request operations.Fetch
 
 	return res, nil
 }
-func (s *SDK) ListByocTrunk(ctx context.Context, request operations.ListByocTrunkRequest) (*operations.ListByocTrunkResponse, error) {
+func (s *SDK) ListByocTrunk(ctx context.Context, request operations.ListByocTrunkRequest, security operations.ListByocTrunkSecurity, opts ...operations.Option) (*operations.ListByocTrunkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListByocTrunkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ByocTrunks"
@@ -975,11 +1175,11 @@ func (s *SDK) ListByocTrunk(ctx context.Context, request operations.ListByocTrun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1012,10 +1212,20 @@ func (s *SDK) ListByocTrunk(ctx context.Context, request operations.ListByocTrun
 
 	return res, nil
 }
-func (s *SDK) ListConnectionPolicy(ctx context.Context, request operations.ListConnectionPolicyRequest) (*operations.ListConnectionPolicyResponse, error) {
+func (s *SDK) ListConnectionPolicy(ctx context.Context, request operations.ListConnectionPolicyRequest, security operations.ListConnectionPolicySecurity, opts ...operations.Option) (*operations.ListConnectionPolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListConnectionPolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ConnectionPolicies"
@@ -1025,11 +1235,11 @@ func (s *SDK) ListConnectionPolicy(ctx context.Context, request operations.ListC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1062,24 +1272,34 @@ func (s *SDK) ListConnectionPolicy(ctx context.Context, request operations.ListC
 
 	return res, nil
 }
-func (s *SDK) ListConnectionPolicyTarget(ctx context.Context, request operations.ListConnectionPolicyTargetRequest) (*operations.ListConnectionPolicyTargetResponse, error) {
-	baseURL := operations.ListConnectionPolicyTargetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConnectionPolicyTarget(ctx context.Context, request operations.ListConnectionPolicyTargetRequest, security operations.ListConnectionPolicyTargetSecurity, opts ...operations.Option) (*operations.ListConnectionPolicyTargetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConnectionPolicyTargetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1114,10 +1334,20 @@ func (s *SDK) ListConnectionPolicyTarget(ctx context.Context, request operations
 }
 
 // ListDialingPermissionsCountry - Retrieve all voice dialing country permissions for this account
-func (s *SDK) ListDialingPermissionsCountry(ctx context.Context, request operations.ListDialingPermissionsCountryRequest) (*operations.ListDialingPermissionsCountryResponse, error) {
+func (s *SDK) ListDialingPermissionsCountry(ctx context.Context, request operations.ListDialingPermissionsCountryRequest, security operations.ListDialingPermissionsCountrySecurity, opts ...operations.Option) (*operations.ListDialingPermissionsCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListDialingPermissionsCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/DialingPermissions/Countries"
@@ -1127,11 +1357,11 @@ func (s *SDK) ListDialingPermissionsCountry(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1166,24 +1396,34 @@ func (s *SDK) ListDialingPermissionsCountry(ctx context.Context, request operati
 }
 
 // ListDialingPermissionsHrsPrefixes - Fetch the high-risk special services prefixes from the country resource corresponding to the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
-func (s *SDK) ListDialingPermissionsHrsPrefixes(ctx context.Context, request operations.ListDialingPermissionsHrsPrefixesRequest) (*operations.ListDialingPermissionsHrsPrefixesResponse, error) {
-	baseURL := operations.ListDialingPermissionsHrsPrefixesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDialingPermissionsHrsPrefixes(ctx context.Context, request operations.ListDialingPermissionsHrsPrefixesRequest, security operations.ListDialingPermissionsHrsPrefixesSecurity, opts ...operations.Option) (*operations.ListDialingPermissionsHrsPrefixesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/DialingPermissions/Countries/{IsoCode}/HighRiskSpecialPrefixes", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDialingPermissionsHrsPrefixesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/DialingPermissions/Countries/{IsoCode}/HighRiskSpecialPrefixes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1216,10 +1456,20 @@ func (s *SDK) ListDialingPermissionsHrsPrefixes(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *SDK) ListIPRecord(ctx context.Context, request operations.ListIPRecordRequest) (*operations.ListIPRecordResponse, error) {
+func (s *SDK) ListIPRecord(ctx context.Context, request operations.ListIPRecordRequest, security operations.ListIPRecordSecurity, opts ...operations.Option) (*operations.ListIPRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListIPRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/IpRecords"
@@ -1229,11 +1479,11 @@ func (s *SDK) ListIPRecord(ctx context.Context, request operations.ListIPRecordR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1266,10 +1516,20 @@ func (s *SDK) ListIPRecord(ctx context.Context, request operations.ListIPRecordR
 
 	return res, nil
 }
-func (s *SDK) ListSourceIPMapping(ctx context.Context, request operations.ListSourceIPMappingRequest) (*operations.ListSourceIPMappingResponse, error) {
+func (s *SDK) ListSourceIPMapping(ctx context.Context, request operations.ListSourceIPMappingRequest, security operations.ListSourceIPMappingSecurity, opts ...operations.Option) (*operations.ListSourceIPMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSourceIPMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SourceIpMappings"
@@ -1279,11 +1539,11 @@ func (s *SDK) ListSourceIPMapping(ctx context.Context, request operations.ListSo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1316,15 +1576,25 @@ func (s *SDK) ListSourceIPMapping(ctx context.Context, request operations.ListSo
 
 	return res, nil
 }
-func (s *SDK) UpdateByocTrunk(ctx context.Context, request operations.UpdateByocTrunkRequest) (*operations.UpdateByocTrunkResponse, error) {
-	baseURL := operations.UpdateByocTrunkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateByocTrunk(ctx context.Context, request operations.UpdateByocTrunkRequest, security operations.UpdateByocTrunkSecurity, opts ...operations.Option) (*operations.UpdateByocTrunkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateByocTrunkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ByocTrunks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1336,7 +1606,7 @@ func (s *SDK) UpdateByocTrunk(ctx context.Context, request operations.UpdateByoc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1369,15 +1639,25 @@ func (s *SDK) UpdateByocTrunk(ctx context.Context, request operations.UpdateByoc
 
 	return res, nil
 }
-func (s *SDK) UpdateConnectionPolicy(ctx context.Context, request operations.UpdateConnectionPolicyRequest) (*operations.UpdateConnectionPolicyResponse, error) {
-	baseURL := operations.UpdateConnectionPolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConnectionPolicy(ctx context.Context, request operations.UpdateConnectionPolicyRequest, security operations.UpdateConnectionPolicySecurity, opts ...operations.Option) (*operations.UpdateConnectionPolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConnectionPolicyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1389,7 +1669,7 @@ func (s *SDK) UpdateConnectionPolicy(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1422,15 +1702,25 @@ func (s *SDK) UpdateConnectionPolicy(ctx context.Context, request operations.Upd
 
 	return res, nil
 }
-func (s *SDK) UpdateConnectionPolicyTarget(ctx context.Context, request operations.UpdateConnectionPolicyTargetRequest) (*operations.UpdateConnectionPolicyTargetResponse, error) {
-	baseURL := operations.UpdateConnectionPolicyTargetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConnectionPolicyTarget(ctx context.Context, request operations.UpdateConnectionPolicyTargetRequest, security operations.UpdateConnectionPolicyTargetSecurity, opts ...operations.Option) (*operations.UpdateConnectionPolicyTargetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConnectionPolicyTargetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1442,7 +1732,7 @@ func (s *SDK) UpdateConnectionPolicyTarget(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1477,10 +1767,20 @@ func (s *SDK) UpdateConnectionPolicyTarget(ctx context.Context, request operatio
 }
 
 // UpdateDialingPermissionsSettings - Update voice dialing permissions inheritance for the sub-account
-func (s *SDK) UpdateDialingPermissionsSettings(ctx context.Context, request operations.UpdateDialingPermissionsSettingsRequest) (*operations.UpdateDialingPermissionsSettingsResponse, error) {
+func (s *SDK) UpdateDialingPermissionsSettings(ctx context.Context, request operations.UpdateDialingPermissionsSettingsUpdateDialingPermissionsSettingsRequest, security operations.UpdateDialingPermissionsSettingsSecurity, opts ...operations.Option) (*operations.UpdateDialingPermissionsSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UpdateDialingPermissionsSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Settings"
@@ -1497,7 +1797,7 @@ func (s *SDK) UpdateDialingPermissionsSettings(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1530,15 +1830,25 @@ func (s *SDK) UpdateDialingPermissionsSettings(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) UpdateIPRecord(ctx context.Context, request operations.UpdateIPRecordRequest) (*operations.UpdateIPRecordResponse, error) {
-	baseURL := operations.UpdateIPRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateIPRecord(ctx context.Context, request operations.UpdateIPRecordRequest, security operations.UpdateIPRecordSecurity, opts ...operations.Option) (*operations.UpdateIPRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateIPRecordServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/IpRecords/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1550,7 +1860,7 @@ func (s *SDK) UpdateIPRecord(ctx context.Context, request operations.UpdateIPRec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1583,15 +1893,25 @@ func (s *SDK) UpdateIPRecord(ctx context.Context, request operations.UpdateIPRec
 
 	return res, nil
 }
-func (s *SDK) UpdateSourceIPMapping(ctx context.Context, request operations.UpdateSourceIPMappingRequest) (*operations.UpdateSourceIPMappingResponse, error) {
-	baseURL := operations.UpdateSourceIPMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSourceIPMapping(ctx context.Context, request operations.UpdateSourceIPMappingRequest, security operations.UpdateSourceIPMappingSecurity, opts ...operations.Option) (*operations.UpdateSourceIPMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSourceIPMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SourceIpMappings/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1603,7 +1923,7 @@ func (s *SDK) UpdateSourceIPMapping(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

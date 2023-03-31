@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteTargetsIDPathParams struct {
+type DeleteTargetsIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteTargetsIDRequest struct {
-	PathParams DeleteTargetsIDPathParams
 }
 
 // DeleteTargetsID404ApplicationJSON - Not found

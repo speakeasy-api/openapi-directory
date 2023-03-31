@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleMockPathParams struct {
-	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
-}
-
 type SingleMockRequest struct {
-	PathParams SingleMockPathParams
+	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
 }
 
 type SingleMock200ApplicationJSONMock struct {

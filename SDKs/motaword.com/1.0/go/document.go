@@ -81,7 +81,7 @@ func (s *document) GetAllDocumentSubjects(ctx context.Context) (*operations.GetA
 // View a single document from your MotaWord account with its translation info.
 func (s *document) GetDocument(ctx context.Context, request operations.GetDocumentRequest) (*operations.GetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *document) GetDocument(ctx context.Context, request operations.GetDocume
 // View the translation or proofreading progress of a document in your account. You can also track the progress of a document under the project that it was ordered with.
 func (s *document) GetDocumentProgress(ctx context.Context, request operations.GetDocumentProgressRequest) (*operations.GetDocumentProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *document) GetDocuments(ctx context.Context, request operations.GetDocum
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -230,14 +230,14 @@ func (s *document) GetDocuments(ctx context.Context, request operations.GetDocum
 // Find documents similar to this document. Optionally, include translation information.
 func (s *document) GetSimilarDocuments(ctx context.Context, request operations.GetSimilarDocumentsRequest) (*operations.GetSimilarDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/similars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/similars", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,14 +279,14 @@ func (s *document) GetSimilarDocuments(ctx context.Context, request operations.G
 // Get a list of your documents
 func (s *document) GetUserDocuments(ctx context.Context, request operations.GetUserDocumentsRequest) (*operations.GetUserDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{userId}/documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -328,7 +328,7 @@ func (s *document) GetUserDocuments(ctx context.Context, request operations.GetU
 // Regenerate preview and return preview URL for given file
 func (s *document) RegeneratePreview(ctx context.Context, request operations.RegeneratePreviewRequest) (*operations.RegeneratePreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/regenerate_preview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/regenerate_preview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -373,9 +373,9 @@ func (s *document) RegeneratePreview(ctx context.Context, request operations.Reg
 // Use the translation of given source manual document as manual draft source for the given target document.
 func (s *document) UseAsDraft(ctx context.Context, request operations.UseAsDraftRequest) (*operations.UseAsDraftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/use_as_draft", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/use_as_draft", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UseAsDraftPayload", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,9 +425,9 @@ func (s *document) UseAsDraft(ctx context.Context, request operations.UseAsDraft
 // Use the translation of the given manual document as a regular file.
 func (s *document) UseAsRegular(ctx context.Context, request operations.UseAsRegularRequest) (*operations.UseAsRegularResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/use_as_regular", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{documentId}/use_as_regular", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UseAsRegularPayload", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -34,11 +34,11 @@ func newWithdrawal(defaultClient, securityClient HTTPClient, serverURL, language
 
 // CreateWithdrawal - Create Withdrawal
 // This endpoint supports the creation of a single withdrawal from an investor's pot. A sucessful withdrawal creation will result in the creation of a withdrawal transaction and updates to holdings. The system will return the `transaction_id`, `transaction_value`, `pot_id`, `sub_transaction_type` and `transaction_status` of the withdrawal transaction.
-func (s *withdrawal) CreateWithdrawal(ctx context.Context, request operations.CreateWithdrawalRequest) (*operations.CreateWithdrawalResponse, error) {
+func (s *withdrawal) CreateWithdrawal(ctx context.Context, request operations.CreateWithdrawalRequest, security operations.CreateWithdrawalSecurity) (*operations.CreateWithdrawalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/create/Withdrawal"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *withdrawal) CreateWithdrawal(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

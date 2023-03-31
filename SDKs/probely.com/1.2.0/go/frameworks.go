@@ -45,7 +45,7 @@ func (s *frameworks) GetFrameworks(ctx context.Context, request operations.GetFr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,7 +96,7 @@ func (s *frameworks) GetFrameworks(ctx context.Context, request operations.GetFr
 // GetFrameworksID - Retrieve framework
 func (s *frameworks) GetFrameworksID(ctx context.Context, request operations.GetFrameworksIDRequest) (*operations.GetFrameworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/frameworks/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/frameworks/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

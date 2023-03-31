@@ -4,22 +4,21 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebfontsWebfontsListRequest(
-    query_params=operations.WebfontsWebfontsListQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="json",
-        callback="at",
-        fields="omnis",
-        key="dolores",
-        oauth_token="perferendis",
-        pretty_print=False,
-        quota_user="debitis",
-        sort="STYLE",
-        upload_type="doloribus",
-        upload_protocol="fugiat",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    pretty_print=False,
+    quota_user="illum",
+    sort="DATE",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
 res = s.webfonts.webfonts_webfonts_list(req)

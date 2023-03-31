@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVideoPrivacyDomainSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVideoPrivacyDomainPathParams struct {
+type DeleteVideoPrivacyDomainRequest struct {
 	// The domain name.
 	Domain string `pathParam:"style=simple,explode=false,name=domain"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteVideoPrivacyDomainRequest struct {
-	PathParams DeleteVideoPrivacyDomainPathParams
-	Security   DeleteVideoPrivacyDomainSecurity
 }
 
 type DeleteVideoPrivacyDomainResponse struct {

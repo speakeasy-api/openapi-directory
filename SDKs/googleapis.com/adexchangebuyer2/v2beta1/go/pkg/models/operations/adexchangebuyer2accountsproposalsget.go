@@ -8,22 +8,17 @@ import (
 )
 
 type Adexchangebuyer2AccountsProposalsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsProposalsGetPathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The unique ID of the proposal
-	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
-}
-
-type Adexchangebuyer2AccountsProposalsGetQueryParams struct {
+type Adexchangebuyer2AccountsProposalsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -36,18 +31,14 @@ type Adexchangebuyer2AccountsProposalsGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The unique ID of the proposal
+	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsProposalsGetRequest struct {
-	PathParams  Adexchangebuyer2AccountsProposalsGetPathParams
-	QueryParams Adexchangebuyer2AccountsProposalsGetQueryParams
-	Security    Adexchangebuyer2AccountsProposalsGetSecurity
 }
 
 type Adexchangebuyer2AccountsProposalsGetResponse struct {

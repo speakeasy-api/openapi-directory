@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/ndhm.gov.in/ndhm-hip/0.5/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,6 +15,7 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
+
     
 res = s.gateway.get_v0_5_well_known_openid_configuration()
 
@@ -24,68 +25,106 @@ if res.open_id_configuration is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Gateway
+
+### gateway
 
 * `get_v0_5_well_known_openid_configuration` - Get openid configuration
 * `get_v0_5_certs` - Get certs for JWT verification
-* `post_v0_5_care_contexts_on_discover` - Response to patient's account discovery request
-* `post_v0_5_consents_hip_on_notify` - Consent notification
-* `post_v0_5_health_information_hip_on_request` - Health information data request
-* `post_v0_5_health_information_notify` - Notifications corresponding to events during data flow
-* `post_v0_5_links_link_add_contexts` - API for HIP initiated care-context linking for patient
-* `post_v0_5_links_link_on_confirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `post_v0_5_links_link_on_init` - Response to patient's care context link request
-* `post_v0_5_patients_profile_on_share` - Response to patient's share profile request
-* `post_v0_5_patients_sms_notify` - API for HIP to send SMS notifications to patients
-* `post_v0_5_sessions` - Get access token
-* `post_v0_5_users_auth_confirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `post_v0_5_users_auth_fetch_modes` - Get a patient's authentication modes relevant to specified purpose
-* `post_v0_5_users_auth_init` - Initialize authentication from HIP
-* `post_v0_5_users_auth_on_notify` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `post_v0_5_care_contexts_on_discover_json` - Response to patient's account discovery request
+* `post_v0_5_care_contexts_on_discover_raw` - Response to patient's account discovery request
+* `post_v0_5_consents_hip_on_notify_json` - Consent notification
+* `post_v0_5_consents_hip_on_notify_raw` - Consent notification
+* `post_v0_5_health_information_hip_on_request_json` - Health information data request
+* `post_v0_5_health_information_hip_on_request_raw` - Health information data request
+* `post_v0_5_health_information_notify_json` - Notifications corresponding to events during data flow
+* `post_v0_5_health_information_notify_raw` - Notifications corresponding to events during data flow
+* `post_v0_5_links_link_add_contexts_json` - API for HIP initiated care-context linking for patient
+* `post_v0_5_links_link_add_contexts_raw` - API for HIP initiated care-context linking for patient
+* `post_v0_5_links_link_on_confirm_json` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `post_v0_5_links_link_on_confirm_raw` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `post_v0_5_links_link_on_init_json` - Response to patient's care context link request
+* `post_v0_5_links_link_on_init_raw` - Response to patient's care context link request
+* `post_v0_5_patients_profile_on_share_json` - Response to patient's share profile request
+* `post_v0_5_patients_profile_on_share_raw` - Response to patient's share profile request
+* `post_v0_5_patients_sms_notify_json` - API for HIP to send SMS notifications to patients
+* `post_v0_5_patients_sms_notify_raw` - API for HIP to send SMS notifications to patients
+* `post_v0_5_sessions_json` - Get access token
+* `post_v0_5_sessions_raw` - Get access token
+* `post_v0_5_users_auth_confirm_json` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_confirm_raw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_fetch_modes_json` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_fetch_modes_raw` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_init_json` - Initialize authentication from HIP
+* `post_v0_5_users_auth_init_raw` - Initialize authentication from HIP
+* `post_v0_5_users_auth_on_notify_json` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `post_v0_5_users_auth_on_notify_raw` - callback API by HIU/HIPs as acknowledgement of auth notification
 
-### consent flow
+### consent_flow
 
-* `post_v0_5_consents_hip_notify` - Consent notification
+* `post_v0_5_consents_hip_notify_json` - Consent notification
+* `post_v0_5_consents_hip_notify_raw` - Consent notification
 
-### data flow
+### data_flow
 
-* `post_v0_5_health_information_hip_request` - Health information data request
+* `post_v0_5_health_information_hip_request_json` - Health information data request
+* `post_v0_5_health_information_hip_request_raw` - Health information data request
 
-### data transfer
+### data_transfer
 
-* `post_v0_5_health_information_transfer` - health information transfer API
+* `post_v0_5_health_information_transfer_json` - health information transfer API
+* `post_v0_5_health_information_transfer_raw` - health information transfer API
 
 ### discovery
 
-* `post_v0_5_care_contexts_discover` - Discover patient's accounts
+* `post_v0_5_care_contexts_discover_json` - Discover patient's accounts
+* `post_v0_5_care_contexts_discover_raw` - Discover patient's accounts
 
 ### link
 
-* `post_v0_5_links_link_confirm` - Token submission by Consent Manager for link confirmation
-* `post_v0_5_links_link_init` - Link patient's care contexts
-* `post_v0_5_links_link_on_add_contexts` - callback API for HIP initiated patient linking /link/add-context
+* `post_v0_5_links_link_confirm_json` - Token submission by Consent Manager for link confirmation
+* `post_v0_5_links_link_confirm_raw` - Token submission by Consent Manager for link confirmation
+* `post_v0_5_links_link_init_json` - Link patient's care contexts
+* `post_v0_5_links_link_init_raw` - Link patient's care contexts
+* `post_v0_5_links_link_on_add_contexts_json` - callback API for HIP initiated patient linking /link/add-context
+* `post_v0_5_links_link_on_add_contexts_raw` - callback API for HIP initiated patient linking /link/add-context
 
 ### monitoring
 
 * `get_v0_5_heartbeat` - Get consent request status
 
-### patient notification
+### patient_notification
 
-* `post_v0_5_patients_sms_on_notify` - Acknowledgment response for SMS notification sent to patient by HIP
+* `post_v0_5_patients_sms_on_notify_json` - Acknowledgment response for SMS notification sent to patient by HIP
+* `post_v0_5_patients_sms_on_notify_raw` - Acknowledgment response for SMS notification sent to patient by HIP
 
 ### profile
 
-* `post_v0_5_patients_profile_share` - Share patient profile details
+* `post_v0_5_patients_profile_share_json` - Share patient profile details
+* `post_v0_5_patients_profile_share_raw` - Share patient profile details
 
-### user auth
+### user_auth
 
-* `post_v0_5_users_auth_notify` - notification API in case of DIRECT mode of authentication by the CM
-* `post_v0_5_users_auth_on_confirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-* `post_v0_5_users_auth_on_fetch_modes` - Identification result for a consent-manager user-id
-* `post_v0_5_users_auth_on_init` - Response to user authentication initialization from HIP
-
+* `post_v0_5_users_auth_notify_json` - notification API in case of DIRECT mode of authentication by the CM
+* `post_v0_5_users_auth_notify_raw` - notification API in case of DIRECT mode of authentication by the CM
+* `post_v0_5_users_auth_on_confirm_json` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `post_v0_5_users_auth_on_confirm_raw` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `post_v0_5_users_auth_on_fetch_modes_json` - Identification result for a consent-manager user-id
+* `post_v0_5_users_auth_on_fetch_modes_raw` - Identification result for a consent-manager user-id
+* `post_v0_5_users_auth_on_init_json` - Response to user authentication initialization from HIP
+* `post_v0_5_users_auth_on_init_raw` - Response to user authentication initialization from HIP
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ToolresultsProjectsGetSettingsRequest(
-    security=operations.ToolresultsProjectsGetSettingsSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ToolresultsProjectsGetSettingsPathParams(
-        project_id="est",
-    ),
-    query_params=operations.ToolresultsProjectsGetSettingsQueryParams(
-        dollar_xgafv="2",
-        access_token="molestiae",
-        alt="media",
-        callback="est",
-        fields="blanditiis",
-        key="quisquam",
-        oauth_token="doloremque",
-        pretty_print=False,
-        quota_user="est",
-        upload_type="quas",
-        upload_protocol="rerum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    pretty_print=False,
+    project_id="illum",
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.projects.toolresults_projects_get_settings(req)
+res = s.projects.toolresults_projects_get_settings(req, operations.ToolresultsProjectsGetSettingsSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.project_settings is not None:
     # handle response

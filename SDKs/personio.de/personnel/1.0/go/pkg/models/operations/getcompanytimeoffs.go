@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetCompanyTimeOffsQueryParams struct {
+type GetCompanyTimeOffsRequest struct {
 	// A list of Personio employee identifiers to filter the results. Only those employees specified here will be returned.
 	Employees []int64 `queryParam:"style=form,explode=true,name=employees"`
 	// Last day of the period to be queried. It is inclusive, so the day specified as end_date will also be considered on the results.
@@ -23,10 +23,6 @@ type GetCompanyTimeOffsQueryParams struct {
 	UpdatedFrom *string `queryParam:"style=form,explode=true,name=updated_from"`
 	// Datetime until when the queried periods have been updated. It is inclusive, so the day specified as updated_to will also be considered on the results.
 	UpdatedTo *string `queryParam:"style=form,explode=true,name=updated_to"`
-}
-
-type GetCompanyTimeOffsRequest struct {
-	QueryParams GetCompanyTimeOffsQueryParams
 }
 
 type GetCompanyTimeOffsResponse struct {

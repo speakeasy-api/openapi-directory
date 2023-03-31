@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetSubscriptionPlanForAccountStubbedPathParams struct {
+type AppsGetSubscriptionPlanForAccountStubbedRequest struct {
 	// account_id parameter
 	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
-type AppsGetSubscriptionPlanForAccountStubbedRequest struct {
-	PathParams AppsGetSubscriptionPlanForAccountStubbedPathParams
 }
 
 type AppsGetSubscriptionPlanForAccountStubbedResponse struct {

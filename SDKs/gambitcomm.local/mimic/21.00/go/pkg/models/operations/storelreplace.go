@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type StoreLreplacePathParams struct {
+type StoreLreplaceRequest struct {
+	// Value
+	RequestBody *string `request:"mediaType=application/json"`
 	// Index
 	Index int `pathParam:"style=simple,explode=false,name=index"`
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type StoreLreplaceRequest struct {
-	PathParams StoreLreplacePathParams
-	// Value
-	Request *string `request:"mediaType=application/json"`
 }
 
 type StoreLreplaceResponse struct {

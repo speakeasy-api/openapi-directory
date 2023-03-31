@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditLocationPathParams struct {
+type EditLocationRequest struct {
+	LocationEditRequest shared.LocationEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 	// The unique identifier of the location in Noyo
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The current version identifier of the location
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditLocationRequest struct {
-	PathParams EditLocationPathParams
-	Request    shared.LocationEditRequest `request:"mediaType=application/json"`
 }
 
 type EditLocationResponse struct {

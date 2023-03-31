@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServicePlansQueryParams struct {
+type ListServicePlansRequest struct {
 	// Filter for querying collections.
 	Filter map[string]interface{} `queryParam:"style=deepObject,explode=true,name=filter"`
 	// The numbers of items to return per page.
@@ -16,10 +16,6 @@ type ListServicePlansQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The list of attribute and order to sort the result set by.
 	SortBy map[string]interface{} `queryParam:"style=deepObject,explode=true,name=sort_by"`
-}
-
-type ListServicePlansRequest struct {
-	QueryParams ListServicePlansQueryParams
 }
 
 type ListServicePlansResponse struct {

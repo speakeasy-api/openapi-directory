@@ -12,19 +12,14 @@ var FetchUserBindingServerList = []string{
 }
 
 type FetchUserBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUserBindingPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
-	UserSid    string `pathParam:"style=simple,explode=false,name=UserSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUserBindingRequest struct {
-	PathParams FetchUserBindingPathParams
-	Security   FetchUserBindingSecurity
-	ServerURL  *string
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	UserSid    string `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type FetchUserBindingResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type StartDTMFSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StartDTMFPathParams struct {
-	// UUID of the Call Leg
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StartDTMFRequest struct {
-	PathParams StartDTMFPathParams
 	// action to perform
-	Request  shared.DTMFRequest `request:"mediaType=application/json"`
-	Security StartDTMFSecurity
+	DTMFRequest shared.DTMFRequest `request:"mediaType=application/json"`
+	// UUID of the Call Leg
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type StartDTMFResponse struct {

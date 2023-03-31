@@ -8,10 +8,10 @@ import (
 )
 
 type GetInventoryTasksSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetInventoryTasksQueryParams struct {
+type GetInventoryTasksRequest struct {
 	// Specifies the range of task creation dates used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. <p> <span class="tablenote"><strong>Note:</strong> Maximum date range window size is 90 days.</span></p><br /><b>Valid Format (UTC): </b><code>yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ</code><br /><br />For example: Tasks created on March 31, 2021<br /> <code>2021-03-31T00:00:00.000Z..2021-03-31T00:00:00.000Z</code><br /><br />
 	DateRange *string `queryParam:"style=form,explode=true,name=date_range"`
 	// The feed type associated with the inventory task. Either <strong>feed_type</strong> or <strong>schedule_id</strong> is required. Do not use with the <strong>schedule_id</strong> parameter. Presently, only one feed type is available:<ul><li><code>LMS_ACTIVE_INVENTORY_REPORT</code></li></ul>
@@ -24,11 +24,6 @@ type GetInventoryTasksQueryParams struct {
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method. Schedules apply to downloaded reports (<code>LMS_ACTIVE_INVENTORY_REPORT</code>). Either <strong>schedule_id</strong> or <strong>feed_type</strong> is  required. Do not use with the <strong>feed_type</strong> parameter.
 	ScheduleID *string `queryParam:"style=form,explode=true,name=schedule_id"`
-}
-
-type GetInventoryTasksRequest struct {
-	QueryParams GetInventoryTasksQueryParams
-	Security    GetInventoryTasksSecurity
 }
 
 type GetInventoryTasksResponse struct {

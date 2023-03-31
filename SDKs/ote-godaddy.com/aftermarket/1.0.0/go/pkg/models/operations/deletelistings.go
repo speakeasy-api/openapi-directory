@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteListingsQueryParams struct {
+type DeleteListingsRequest struct {
 	// A comma separated list of domain names
 	Domains []string `queryParam:"style=form,explode=false,name=domains"`
-}
-
-type DeleteListingsRequest struct {
-	QueryParams DeleteListingsQueryParams
 }
 
 type DeleteListingsResponse struct {

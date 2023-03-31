@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayeesInvitationStatusV4PathParams struct {
-	// The account owner Payor ID
-	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type GetPayeesInvitationStatusV4QueryParams struct {
+type GetPayeesInvitationStatusV4Request struct {
 	// The invitation status of the payees.
 	InvitationStatus *string `queryParam:"style=form,explode=true,name=invitationStatus"`
 	// Page number. Default is 1.
@@ -21,11 +16,8 @@ type GetPayeesInvitationStatusV4QueryParams struct {
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The UUID of the payee.
 	PayeeID *string `queryParam:"style=form,explode=true,name=payeeId"`
-}
-
-type GetPayeesInvitationStatusV4Request struct {
-	PathParams  GetPayeesInvitationStatusV4PathParams
-	QueryParams GetPayeesInvitationStatusV4QueryParams
+	// The account owner Payor ID
+	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
 }
 
 type GetPayeesInvitationStatusV4Response struct {

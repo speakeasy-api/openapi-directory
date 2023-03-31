@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RegistrationsPartialUpdatePathParams struct {
+type RegistrationsPartialUpdateRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsPartialUpdateRequest struct {
-	PathParams RegistrationsPartialUpdatePathParams
 }
 
 type RegistrationsPartialUpdateResponse struct {

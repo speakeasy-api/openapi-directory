@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationSamlIdpPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationSamlIdpRequestBody struct {
 	// Dashboard will redirect users to this URL when they sign out.
 	SloLogoutURL *string `json:"sloLogoutUrl,omitempty"`
@@ -18,8 +14,8 @@ type CreateOrganizationSamlIdpRequestBody struct {
 }
 
 type CreateOrganizationSamlIdpRequest struct {
-	PathParams CreateOrganizationSamlIdpPathParams
-	Request    CreateOrganizationSamlIdpRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationSamlIdpRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                               `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationSamlIdp201ApplicationJSON struct {

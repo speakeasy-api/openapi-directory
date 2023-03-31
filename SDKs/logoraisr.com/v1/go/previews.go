@@ -35,7 +35,7 @@ func newPreviews(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This GET-Method returns the URL where the preview image of uploaded file can downloaded from.
 func (s *previews) PreviewsRead(ctx context.Context, request operations.PreviewsReadRequest) (*operations.PreviewsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/previews/{file_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/previews/{file_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

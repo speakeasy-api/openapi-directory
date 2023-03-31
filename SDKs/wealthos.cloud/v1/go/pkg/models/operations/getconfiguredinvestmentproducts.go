@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetConfiguredInvestmentProductsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // GetConfiguredInvestmentProductsStatusEnum - status of investment product. If empty will return all investment products.
@@ -38,24 +37,15 @@ func (e *GetConfiguredInvestmentProductsStatusEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetConfiguredInvestmentProductsQueryParams struct {
+type GetConfiguredInvestmentProductsRequest struct {
 	// Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
 	// Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageSize *string `queryParam:"style=form,explode=true,name=page_size"`
 	// status of investment product. If empty will return all investment products.
 	Status *GetConfiguredInvestmentProductsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetConfiguredInvestmentProductsHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetConfiguredInvestmentProductsRequest struct {
-	QueryParams GetConfiguredInvestmentProductsQueryParams
-	Headers     GetConfiguredInvestmentProductsHeaders
-	Security    GetConfiguredInvestmentProductsSecurity
 }
 
 // GetConfiguredInvestmentProducts500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

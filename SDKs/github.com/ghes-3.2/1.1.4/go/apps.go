@@ -40,7 +40,7 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#add-a-repository-to-an-app-installation - API method documentation
 func (s *apps) AppsAddRepoToInstallationForAuthenticatedUser(ctx context.Context, request operations.AppsAddRepoToInstallationForAuthenticatedUserRequest) (*operations.AppsAddRepoToInstallationForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *apps) AppsAddRepoToInstallationForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#check-an-authorization - API method documentation
 func (s *apps) AppsCheckAuthorization(ctx context.Context, request operations.AppsCheckAuthorizationRequest) (*operations.AppsCheckAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,9 +149,9 @@ func (s *apps) AppsCheckAuthorization(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#check-a-token - API method documentation
 func (s *apps) AppsCheckToken(ctx context.Context, request operations.AppsCheckTokenRequest) (*operations.AppsCheckTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -229,9 +229,9 @@ func (s *apps) AppsCheckToken(ctx context.Context, request operations.AppsCheckT
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#create-a-content-attachment - API method documentation
 func (s *apps) AppsCreateContentAttachment(ctx context.Context, request operations.AppsCreateContentAttachmentRequest) (*operations.AppsCreateContentAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -320,7 +320,7 @@ func (s *apps) AppsCreateContentAttachment(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#create-a-github-app-from-a-manifest - API method documentation
 func (s *apps) AppsCreateFromManifest(ctx context.Context, request operations.AppsCreateFromManifestRequest) (*operations.AppsCreateFromManifestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app-manifests/{code}/conversions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app-manifests/{code}/conversions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -388,9 +388,9 @@ func (s *apps) AppsCreateFromManifest(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps/#create-an-installation-access-token-for-an-app - API method documentation
 func (s *apps) AppsCreateInstallationAccessToken(ctx context.Context, request operations.AppsCreateInstallationAccessTokenRequest) (*operations.AppsCreateInstallationAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/access_tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/access_tokens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -466,9 +466,9 @@ func (s *apps) AppsCreateInstallationAccessToken(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#delete-an-app-authorization - API method documentation
 func (s *apps) AppsDeleteAuthorization(ctx context.Context, request operations.AppsDeleteAuthorizationRequest) (*operations.AppsDeleteAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grant", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grant", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -525,7 +525,7 @@ func (s *apps) AppsDeleteAuthorization(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#delete-an-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsDeleteInstallation(ctx context.Context, request operations.AppsDeleteInstallationRequest) (*operations.AppsDeleteInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -572,9 +572,9 @@ func (s *apps) AppsDeleteInstallation(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#delete-an-app-token - API method documentation
 func (s *apps) AppsDeleteToken(ctx context.Context, request operations.AppsDeleteTokenRequest) (*operations.AppsDeleteTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -679,7 +679,7 @@ func (s *apps) AppsGetAuthenticated(ctx context.Context) (*operations.AppsGetAut
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps/#get-an-app - API method documentation
 func (s *apps) AppsGetBySlug(ctx context.Context, request operations.AppsGetBySlugRequest) (*operations.AppsGetBySlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{app_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/{app_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -739,7 +739,7 @@ func (s *apps) AppsGetBySlug(ctx context.Context, request operations.AppsGetBySl
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#get-an-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetInstallation(ctx context.Context, request operations.AppsGetInstallationRequest) (*operations.AppsGetInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -797,7 +797,7 @@ func (s *apps) AppsGetInstallation(ctx context.Context, request operations.AppsG
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#get-an-organization-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetOrgInstallation(ctx context.Context, request operations.AppsGetOrgInstallationRequest) (*operations.AppsGetOrgInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -845,7 +845,7 @@ func (s *apps) AppsGetOrgInstallation(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#get-a-repository-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetRepoInstallation(ctx context.Context, request operations.AppsGetRepoInstallationRequest) (*operations.AppsGetRepoInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/installation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/installation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -905,7 +905,7 @@ func (s *apps) AppsGetRepoInstallation(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#get-a-user-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetUserInstallation(ctx context.Context, request operations.AppsGetUserInstallationRequest) (*operations.AppsGetUserInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/installation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/installation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1001,7 +1001,7 @@ func (s *apps) AppsGetWebhookConfigForApp(ctx context.Context) (*operations.Apps
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#get-a-delivery-for-an-app-webhook - API method documentation
 func (s *apps) AppsGetWebhookDelivery(ctx context.Context, request operations.AppsGetWebhookDeliveryRequest) (*operations.AppsGetWebhookDeliveryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/hook/deliveries/{delivery_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/hook/deliveries/{delivery_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1080,14 +1080,14 @@ func (s *apps) AppsGetWebhookDelivery(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#list-repositories-accessible-to-the-user-access-token - API method documentation
 func (s *apps) AppsListInstallationReposForAuthenticatedUser(ctx context.Context, request operations.AppsListInstallationReposForAuthenticatedUserRequest) (*operations.AppsListInstallationReposForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1154,7 +1154,7 @@ func (s *apps) AppsListInstallations(ctx context.Context, request operations.App
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1212,7 +1212,7 @@ func (s *apps) AppsListInstallationsForAuthenticatedUser(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1279,7 +1279,7 @@ func (s *apps) AppsListReposAccessibleToInstallation(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1346,7 +1346,7 @@ func (s *apps) AppsListWebhookDeliveries(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1418,7 +1418,7 @@ func (s *apps) AppsListWebhookDeliveries(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#redeliver-a-delivery-for-an-app-webhook - API method documentation
 func (s *apps) AppsRedeliverWebhookDelivery(ctx context.Context, request operations.AppsRedeliverWebhookDeliveryRequest) (*operations.AppsRedeliverWebhookDeliveryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/hook/deliveries/{delivery_id}/attempts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/hook/deliveries/{delivery_id}/attempts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1493,7 +1493,7 @@ func (s *apps) AppsRedeliverWebhookDelivery(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#remove-a-repository-from-an-app-installation - API method documentation
 func (s *apps) AppsRemoveRepoFromInstallationForAuthenticatedUser(ctx context.Context, request operations.AppsRemoveRepoFromInstallationForAuthenticatedUserRequest) (*operations.AppsRemoveRepoFromInstallationForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1546,7 +1546,7 @@ func (s *apps) AppsRemoveRepoFromInstallationForAuthenticatedUser(ctx context.Co
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#reset-an-authorization - API method documentation
 func (s *apps) AppsResetAuthorization(ctx context.Context, request operations.AppsResetAuthorizationRequest) (*operations.AppsResetAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1592,9 +1592,9 @@ func (s *apps) AppsResetAuthorization(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#reset-a-token - API method documentation
 func (s *apps) AppsResetToken(ctx context.Context, request operations.AppsResetTokenRequest) (*operations.AppsResetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1660,7 +1660,7 @@ func (s *apps) AppsResetToken(ctx context.Context, request operations.AppsResetT
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#revoke-an-authorization-for-an-application - API method documentation
 func (s *apps) AppsRevokeAuthorizationForApplication(ctx context.Context, request operations.AppsRevokeAuthorizationForApplicationRequest) (*operations.AppsRevokeAuthorizationForApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1701,7 +1701,7 @@ func (s *apps) AppsRevokeAuthorizationForApplication(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#revoke-a-grant-for-an-application - API method documentation
 func (s *apps) AppsRevokeGrantForApplication(ctx context.Context, request operations.AppsRevokeGrantForApplicationRequest) (*operations.AppsRevokeGrantForApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grants/{access_token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grants/{access_token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1779,9 +1779,9 @@ func (s *apps) AppsRevokeInstallationAccessToken(ctx context.Context) (*operatio
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#create-a-scoped-access-token - API method documentation
 func (s *apps) AppsScopeToken(ctx context.Context, request operations.AppsScopeTokenRequest) (*operations.AppsScopeTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token/scoped", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/token/scoped", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1861,7 +1861,7 @@ func (s *apps) AppsScopeToken(ctx context.Context, request operations.AppsScopeT
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#suspend-an-app-installation - API method documentation
 func (s *apps) AppsSuspendInstallation(ctx context.Context, request operations.AppsSuspendInstallationRequest) (*operations.AppsSuspendInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/suspended", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/suspended", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1910,7 +1910,7 @@ func (s *apps) AppsSuspendInstallation(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#unsuspend-an-app-installation - API method documentation
 func (s *apps) AppsUnsuspendInstallation(ctx context.Context, request operations.AppsUnsuspendInstallationRequest) (*operations.AppsUnsuspendInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/suspended", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/suspended", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1957,7 +1957,7 @@ func (s *apps) AppsUnsuspendInstallation(ctx context.Context, request operations
 //
 // You must use a [JWT](https://docs.github.com/enterprise-server@3.2/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 // https://docs.github.com/enterprise-server@3.2/rest/reference/apps#update-a-webhook-configuration-for-an-app - API method documentation
-func (s *apps) AppsUpdateWebhookConfigForApp(ctx context.Context, request operations.AppsUpdateWebhookConfigForAppRequest) (*operations.AppsUpdateWebhookConfigForAppResponse, error) {
+func (s *apps) AppsUpdateWebhookConfigForApp(ctx context.Context, request operations.AppsUpdateWebhookConfigForAppRequestBody) (*operations.AppsUpdateWebhookConfigForAppResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/app/hook/config"
 

@@ -12,14 +12,8 @@ var UpdateOriginationURLServerList = []string{
 }
 
 type UpdateOriginationURLSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateOriginationURLPathParams struct {
-	// The unique string that we created to identify the OriginationUrl resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Trunk from which to update the OriginationUrl.
-	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateOriginationURLUpdateOriginationURLRequest struct {
@@ -36,10 +30,11 @@ type UpdateOriginationURLUpdateOriginationURLRequest struct {
 }
 
 type UpdateOriginationURLRequest struct {
-	PathParams UpdateOriginationURLPathParams
-	Request    *UpdateOriginationURLUpdateOriginationURLRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateOriginationURLSecurity
-	ServerURL  *string
+	RequestBody *UpdateOriginationURLUpdateOriginationURLRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the OriginationUrl resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Trunk from which to update the OriginationUrl.
+	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
 }
 
 type UpdateOriginationURLResponse struct {

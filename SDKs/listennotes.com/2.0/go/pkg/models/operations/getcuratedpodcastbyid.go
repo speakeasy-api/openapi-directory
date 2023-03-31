@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCuratedPodcastByIDPathParams struct {
+type GetCuratedPodcastByIDRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// id for a specific curated list of podcasts. You can get the id from the response of `GET /search?type=curated` or `GET /curated_podcasts`.
 	//
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCuratedPodcastByIDHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetCuratedPodcastByIDRequest struct {
-	PathParams GetCuratedPodcastByIDPathParams
-	Headers    GetCuratedPodcastByIDHeaders
 }
 
 type GetCuratedPodcastByIDResponse struct {

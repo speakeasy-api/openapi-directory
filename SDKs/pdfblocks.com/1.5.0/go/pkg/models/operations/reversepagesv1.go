@@ -16,10 +16,6 @@ type ReversePagesV1RequestBody struct {
 	File ReversePagesV1RequestBodyFile `multipartForm:"file"`
 }
 
-type ReversePagesV1Request struct {
-	Request ReversePagesV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // ReversePagesV14XXApplicationProblemPlusJSON - Error
 type ReversePagesV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

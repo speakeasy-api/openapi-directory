@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenresReadPathParams struct {
+type GenresReadRequest struct {
 	// A unique integer value identifying this Genre.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GenresReadRequest struct {
-	PathParams GenresReadPathParams
 }
 
 type GenresReadResponse struct {

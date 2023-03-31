@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LaunchProjectPathParams struct {
+type LaunchProjectRequest struct {
+	ProjectPayment *shared.ProjectPayment `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type LaunchProjectRequest struct {
-	PathParams LaunchProjectPathParams
-	Request    *shared.ProjectPayment `request:"mediaType=application/json"`
 }
 
 type LaunchProjectResponse struct {

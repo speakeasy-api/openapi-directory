@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIVirtualTariffIDPathParams struct {
+type GetAPIVirtualTariffIDRequest struct {
 	// The ID of the Folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIVirtualTariffIDRequest struct {
-	PathParams GetAPIVirtualTariffIDPathParams
 }
 
 type GetAPIVirtualTariffIDResponse struct {

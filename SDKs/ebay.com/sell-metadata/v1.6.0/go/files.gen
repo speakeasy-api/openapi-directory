@@ -23,7 +23,6 @@ pkg/models/operations/getnegotiatedpricepolicies.go
 pkg/models/operations/getreturnpolicies.go
 pkg/models/shared/salestaxjurisdictions.go
 pkg/models/shared/salestaxjurisdiction.go
-pkg/models/shared/security.go
 pkg/models/shared/automotivepartscompatibilitypolicyresponse.go
 pkg/models/shared/error.go
 pkg/models/shared/errorparameter.go

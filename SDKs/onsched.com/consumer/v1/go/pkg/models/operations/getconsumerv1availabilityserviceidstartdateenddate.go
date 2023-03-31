@@ -8,16 +8,7 @@ import (
 	"time"
 )
 
-type GetConsumerV1AvailabilityServiceIDStartDateEndDatePathParams struct {
-	// Format YYYY-MM-DD: End Date for availability search
-	EndDate time.Time `pathParam:"style=simple,explode=false,name=endDate"`
-	// Service Id for availability search
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-	// Format YYYY-MM-DD: Start Date for availability search
-	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateQueryParams struct {
+type GetConsumerV1AvailabilityServiceIDStartDateEndDateRequest struct {
 	// Number of days of day availability to return
 	DayAvailability *int `queryParam:"style=form,explode=true,name=dayAvailability"`
 	// Format YYYY-DD-YY: Start date for day availability, defaults to startDate
@@ -26,6 +17,8 @@ type GetConsumerV1AvailabilityServiceIDStartDateEndDateQueryParams struct {
 	Destination *string `queryParam:"style=form,explode=true,name=destination"`
 	// Duration of the service if different from default
 	Duration *int `queryParam:"style=form,explode=true,name=duration"`
+	// Format YYYY-MM-DD: End Date for availability search
+	EndDate time.Time `pathParam:"style=simple,explode=false,name=endDate"`
 	// Format Military Time. End Time for availability search. Defaults to Business Hours End
 	EndTime *int `queryParam:"style=form,explode=true,name=endTime"`
 	// Return available times for the first available day
@@ -42,17 +35,16 @@ type GetConsumerV1AvailabilityServiceIDStartDateEndDateQueryParams struct {
 	ResourceIds *string `queryParam:"style=form,explode=true,name=resourceIds"`
 	// Round robin choice 0=none, 1=random, 2=balanced
 	RoundRobin *string `queryParam:"style=form,explode=true,name=roundRobin"`
+	// Service Id for availability search
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	// Format YYYY-MM-DD: Start Date for availability search
+	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
 	// Format Military Time Start Time for availability search. Defaults to Business Hours Start
 	StartTime *int `queryParam:"style=form,explode=true,name=startTime"`
 	// Requested IANA timezone Id to view availability
 	TimezoneName *string `queryParam:"style=form,explode=true,name=timezoneName"`
 	// Request timezone offset to view availability
 	TzOffset *int `queryParam:"style=form,explode=true,name=tzOffset"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateRequest struct {
-	PathParams  GetConsumerV1AvailabilityServiceIDStartDateEndDatePathParams
-	QueryParams GetConsumerV1AvailabilityServiceIDStartDateEndDateQueryParams
 }
 
 type GetConsumerV1AvailabilityServiceIDStartDateEndDateResponse struct {

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/amplify/2017-07-25/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,77 +14,92 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAppRequest(
-    headers=operations.CreateAppHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="id",
-        x_amz_credential="ipsum",
-        x_amz_date="aut",
-        x_amz_security_token="perspiciatis",
-        x_amz_signature="et",
-        x_amz_signed_headers="vero",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateAppRequestBody(
-        access_token="voluptatem",
+)
+
+
+req = operations.CreateAppRequest(
+    request_body=operations.CreateAppRequestBody(
+        access_token="corrupti",
         auto_branch_creation_config=operations.CreateAppRequestBodyAutoBranchCreationConfig(
-            basic_auth_credentials="ex",
-            build_spec="magni",
-            enable_auto_build=True,
-            enable_basic_auth=True,
+            basic_auth_credentials="provident",
+            build_spec="distinctio",
+            enable_auto_build=False,
+            enable_basic_auth=False,
             enable_performance_mode=False,
             enable_pull_request_preview=False,
             environment_variables={
-                "non": "nam",
-                "beatae": "quae",
-                "qui": "magni",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
-            framework="minus",
-            pull_request_environment_name="sit",
-            stage="BETA",
+            framework="iure",
+            pull_request_environment_name="magnam",
+            stage="PULL_REQUEST",
         ),
         auto_branch_creation_patterns=[
-            "iusto",
+            "delectus",
         ],
-        basic_auth_credentials="quia",
-        build_spec="repudiandae",
-        custom_headers="debitis",
+        basic_auth_credentials="tempora",
+        build_spec="suscipit",
+        custom_headers="molestiae",
         custom_rules=[
             shared.CustomRule(
-                condition="odit",
-                source="enim",
-                status="ut",
-                target="non",
+                condition="placeat",
+                source="voluptatum",
+                status="iusto",
+                target="excepturi",
+            ),
+            shared.CustomRule(
+                condition="nisi",
+                source="recusandae",
+                status="temporibus",
+                target="ab",
+            ),
+            shared.CustomRule(
+                condition="quis",
+                source="veritatis",
+                status="deserunt",
+                target="perferendis",
+            ),
+            shared.CustomRule(
+                condition="ipsam",
+                source="repellendus",
+                status="sapiente",
+                target="quo",
             ),
         ],
-        description="nihil",
+        description="odit",
         enable_auto_branch_creation=False,
-        enable_basic_auth=True,
-        enable_branch_auto_build=True,
+        enable_basic_auth=False,
+        enable_branch_auto_build=False,
         enable_branch_auto_deletion=False,
         environment_variables={
-            "perferendis": "id",
-            "autem": "hic",
-            "voluptatem": "omnis",
+            "at": "maiores",
+            "molestiae": "quod",
+            "quod": "esse",
+            "totam": "porro",
         },
-        iam_service_role_arn="libero",
-        name="qui",
-        oauth_token="omnis",
-        platform="WEB",
-        repository="nostrum",
+        iam_service_role_arn="dolorum",
+        name="dicta",
+        oauth_token="nam",
+        platform="WEB_DYNAMIC",
+        repository="occaecati",
         tags={
-            "sit": "repellat",
-            "quo": "dolorum",
+            "deleniti": "hic",
         },
     ),
+    x_amz_algorithm="optio",
+    x_amz_content_sha256="totam",
+    x_amz_credential="beatae",
+    x_amz_date="commodi",
+    x_amz_security_token="molestiae",
+    x_amz_signature="modi",
+    x_amz_signed_headers="qui",
 )
     
 res = s.create_app(req)
@@ -95,7 +110,7 @@ if res.create_app_result is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -136,7 +151,17 @@ if res.create_app_result is not None:
 * `update_branch` -  Updates a branch for an Amplify app. 
 * `update_domain_association` -  Creates a new domain association for an Amplify app.
 * `update_webhook` -  Updates a webhook. 
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

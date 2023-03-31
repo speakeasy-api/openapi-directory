@@ -22,10 +22,6 @@ type OauthAuthorizationsCreateAuthorizationRequestBody struct {
 	Scopes []string `json:"scopes,omitempty"`
 }
 
-type OauthAuthorizationsCreateAuthorizationRequest struct {
-	Request *OauthAuthorizationsCreateAuthorizationRequestBody `request:"mediaType=application/json"`
-}
-
 type OauthAuthorizationsCreateAuthorizationResponse struct {
 	ContentType string
 	Headers     map[string][]string

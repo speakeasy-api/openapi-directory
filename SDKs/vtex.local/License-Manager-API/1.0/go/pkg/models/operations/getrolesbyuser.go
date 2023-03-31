@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRolesbyUserPathParams struct {
-	// ID corresponding to the user
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetRolesbyUserHeaders struct {
+type GetRolesbyUserRequest struct {
 	// The media type of the body of the request. Default value for license manager protocol is application/json
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetRolesbyUserRequest struct {
-	PathParams GetRolesbyUserPathParams
-	Headers    GetRolesbyUserHeaders
+	// ID corresponding to the user
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetRolesbyUser200ApplicationJSON struct {

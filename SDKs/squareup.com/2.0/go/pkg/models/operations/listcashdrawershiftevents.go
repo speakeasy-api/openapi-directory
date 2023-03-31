@@ -8,15 +8,10 @@ import (
 )
 
 type ListCashDrawerShiftEventsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCashDrawerShiftEventsPathParams struct {
-	// The shift ID.
-	ShiftID string `pathParam:"style=simple,explode=false,name=shift_id"`
-}
-
-type ListCashDrawerShiftEventsQueryParams struct {
+type ListCashDrawerShiftEventsRequest struct {
 	// Opaque cursor for fetching the next page of results.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Number of resources to be returned in a page of results (200 by
@@ -24,12 +19,8 @@ type ListCashDrawerShiftEventsQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The ID of the location to list cash drawer shifts for.
 	LocationID string `queryParam:"style=form,explode=true,name=location_id"`
-}
-
-type ListCashDrawerShiftEventsRequest struct {
-	PathParams  ListCashDrawerShiftEventsPathParams
-	QueryParams ListCashDrawerShiftEventsQueryParams
-	Security    ListCashDrawerShiftEventsSecurity
+	// The shift ID.
+	ShiftID string `pathParam:"style=simple,explode=false,name=shift_id"`
 }
 
 type ListCashDrawerShiftEventsResponse struct {

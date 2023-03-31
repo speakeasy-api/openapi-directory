@@ -35,9 +35,9 @@ func newAgreements(defaultClient, securityClient HTTPClient, serverURL, language
 // AcceptEUA - Accept an end-user agreement via the API
 func (s *agreements) AcceptEUA(ctx context.Context, request operations.AcceptEUARequest) (*operations.AcceptEUAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/accept/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/accept/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnduserAcceptanceDetailsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +137,7 @@ func (s *agreements) AcceptEUA(ctx context.Context, request operations.AcceptEUA
 }
 
 // CreateEUAV2 - Create an end user agreement
-func (s *agreements) CreateEUAV2(ctx context.Context, request operations.CreateEUAV2Request) (*operations.CreateEUAV2Response, error) {
+func (s *agreements) CreateEUAV2(ctx context.Context, request shared.EndUserAgreementRequest) (*operations.CreateEUAV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/agreements/enduser/"
 
@@ -223,7 +223,7 @@ func (s *agreements) CreateEUAV2(ctx context.Context, request operations.CreateE
 // DeleteEUAByIDV2 - Delete an end user agreement
 func (s *agreements) DeleteEUAByIDV2(ctx context.Context, request operations.DeleteEUAByIDV2Request) (*operations.DeleteEUAByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -297,7 +297,7 @@ func (s *agreements) DeleteEUAByIDV2(ctx context.Context, request operations.Del
 // RetrieveEUAByIDV2 - Retrieve end user agreement by ID
 func (s *agreements) RetrieveEUAByIDV2(ctx context.Context, request operations.RetrieveEUAByIDV2Request) (*operations.RetrieveEUAByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,7 +388,7 @@ func (s *agreements) RetrieveAllEUAsForAnEndUserV2(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

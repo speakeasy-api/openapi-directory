@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteVariantSetItemPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteVariantSetItemRequest struct {
-	PathParams DeleteVariantSetItemPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteVariantSetItemResponse struct {

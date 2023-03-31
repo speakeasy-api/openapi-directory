@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsAddMemberPathParams struct {
+type GroupsAddMemberRequest struct {
+	// The URL of the member object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the group to which to add the member.
 	GroupObjectID string `pathParam:"style=simple,explode=false,name=groupObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsAddMemberQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsAddMemberRequest struct {
-	PathParams  GroupsAddMemberPathParams
-	QueryParams GroupsAddMemberQueryParams
-	// The URL of the member object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GroupsAddMemberResponse struct {

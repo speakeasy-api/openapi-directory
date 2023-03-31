@@ -38,15 +38,25 @@ func newConsentFlow(defaultClient, securityClient HTTPClient, serverURL, languag
 //
 //	Reasons for error may be
 //	* Invalid references (e.g patient id, hiu id), purpose, hiTypes, ranges, persmission
-func (s *consentFlow) PostV05ConsentRequestsOnInitJSON(ctx context.Context, request operations.PostV05ConsentRequestsOnInitJSONRequest) (*operations.PostV05ConsentRequestsOnInitJSONResponse, error) {
+func (s *consentFlow) PostV05ConsentRequestsOnInitJSON(ctx context.Context, request operations.PostV05ConsentRequestsOnInitJSONRequest, opts ...operations.Option) (*operations.PostV05ConsentRequestsOnInitJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentRequestsOnInitJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/on-init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsentRequestInitResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -61,7 +71,7 @@ func (s *consentFlow) PostV05ConsentRequestsOnInitJSON(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -114,15 +124,25 @@ func (s *consentFlow) PostV05ConsentRequestsOnInitJSON(ctx context.Context, requ
 //
 //	Reasons for error may be
 //	* Invalid references (e.g patient id, hiu id), purpose, hiTypes, ranges, persmission
-func (s *consentFlow) PostV05ConsentRequestsOnInitRaw(ctx context.Context, request operations.PostV05ConsentRequestsOnInitRawRequest) (*operations.PostV05ConsentRequestsOnInitRawResponse, error) {
+func (s *consentFlow) PostV05ConsentRequestsOnInitRaw(ctx context.Context, request operations.PostV05ConsentRequestsOnInitRawRequest, opts ...operations.Option) (*operations.PostV05ConsentRequestsOnInitRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentRequestsOnInitRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/on-init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +157,7 @@ func (s *consentFlow) PostV05ConsentRequestsOnInitRaw(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -187,15 +207,25 @@ func (s *consentFlow) PostV05ConsentRequestsOnInitRaw(ctx context.Context, reque
 
 // PostV05ConsentRequestsOnStatusJSON - Result of consent request status
 // Result of consent request done previously. Status of request can be GRANTED,  DENIED, EXPIRED. If the request was GRANTED, then
-func (s *consentFlow) PostV05ConsentRequestsOnStatusJSON(ctx context.Context, request operations.PostV05ConsentRequestsOnStatusJSONRequest) (*operations.PostV05ConsentRequestsOnStatusJSONResponse, error) {
+func (s *consentFlow) PostV05ConsentRequestsOnStatusJSON(ctx context.Context, request operations.PostV05ConsentRequestsOnStatusJSONRequest, opts ...operations.Option) (*operations.PostV05ConsentRequestsOnStatusJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentRequestsOnStatusJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/on-status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUConsentRequestStatus", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -210,7 +240,7 @@ func (s *consentFlow) PostV05ConsentRequestsOnStatusJSON(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -260,15 +290,25 @@ func (s *consentFlow) PostV05ConsentRequestsOnStatusJSON(ctx context.Context, re
 
 // PostV05ConsentRequestsOnStatusRaw - Result of consent request status
 // Result of consent request done previously. Status of request can be GRANTED,  DENIED, EXPIRED. If the request was GRANTED, then
-func (s *consentFlow) PostV05ConsentRequestsOnStatusRaw(ctx context.Context, request operations.PostV05ConsentRequestsOnStatusRawRequest) (*operations.PostV05ConsentRequestsOnStatusRawResponse, error) {
+func (s *consentFlow) PostV05ConsentRequestsOnStatusRaw(ctx context.Context, request operations.PostV05ConsentRequestsOnStatusRawRequest, opts ...operations.Option) (*operations.PostV05ConsentRequestsOnStatusRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentRequestsOnStatusRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/on-status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +323,7 @@ func (s *consentFlow) PostV05ConsentRequestsOnStatusRaw(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -337,15 +377,25 @@ func (s *consentFlow) PostV05ConsentRequestsOnStatusRaw(ctx context.Context, req
 // 2. For consent request expiry, status=EXPIRED, consentRequestId=<consent-request-id>
 // 3. For consent request denied, status=DENIED, consentRequestId=<consent-request-id>
 // 4. For consent revocation, status=REVOKED, consentArtefacts is an array of revoked consent artefact ids
-func (s *consentFlow) PostV05ConsentsHiuNotify(ctx context.Context, request operations.PostV05ConsentsHiuNotifyRequest) (*operations.PostV05ConsentsHiuNotifyResponse, error) {
+func (s *consentFlow) PostV05ConsentsHiuNotify(ctx context.Context, request operations.PostV05ConsentsHiuNotifyRequest, opts ...operations.Option) (*operations.PostV05ConsentsHiuNotifyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentsHiuNotifyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/hiu/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUConsentNotificationEvent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,7 +410,7 @@ func (s *consentFlow) PostV05ConsentsHiuNotify(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -409,15 +459,25 @@ func (s *consentFlow) PostV05ConsentsHiuNotify(ctx context.Context, request oper
 // PostV05ConsentsOnFetchJSON - Result of fetch request for a consent artefact
 // Must contain either consent or error. Possible reason of errors are
 // 1. consentId passed through /fetch is invalid
-func (s *consentFlow) PostV05ConsentsOnFetchJSON(ctx context.Context, request operations.PostV05ConsentsOnFetchJSONRequest) (*operations.PostV05ConsentsOnFetchJSONResponse, error) {
+func (s *consentFlow) PostV05ConsentsOnFetchJSON(ctx context.Context, request operations.PostV05ConsentsOnFetchJSONRequest, opts ...operations.Option) (*operations.PostV05ConsentsOnFetchJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentsOnFetchJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/on-fetch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsentArtefactResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -432,7 +492,7 @@ func (s *consentFlow) PostV05ConsentsOnFetchJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -483,15 +543,25 @@ func (s *consentFlow) PostV05ConsentsOnFetchJSON(ctx context.Context, request op
 // PostV05ConsentsOnFetchRaw - Result of fetch request for a consent artefact
 // Must contain either consent or error. Possible reason of errors are
 // 1. consentId passed through /fetch is invalid
-func (s *consentFlow) PostV05ConsentsOnFetchRaw(ctx context.Context, request operations.PostV05ConsentsOnFetchRawRequest) (*operations.PostV05ConsentsOnFetchRawResponse, error) {
+func (s *consentFlow) PostV05ConsentsOnFetchRaw(ctx context.Context, request operations.PostV05ConsentsOnFetchRawRequest, opts ...operations.Option) (*operations.PostV05ConsentsOnFetchRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05ConsentsOnFetchRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/on-fetch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -506,7 +576,7 @@ func (s *consentFlow) PostV05ConsentsOnFetchRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

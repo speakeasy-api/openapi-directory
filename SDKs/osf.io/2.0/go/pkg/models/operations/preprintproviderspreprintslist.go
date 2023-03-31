@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type PreprintProvidersPreprintsListPathParams struct {
+type PreprintProvidersPreprintsListRequest struct {
 	// The unique identifier of the preprint provider.
 	PreprintProviderID string `pathParam:"style=simple,explode=false,name=preprint_provider_id"`
-}
-
-type PreprintProvidersPreprintsListRequest struct {
-	PathParams PreprintProvidersPreprintsListPathParams
 }
 
 // PreprintProvidersPreprintsListPreprintAttributes - The properties of the preprint entity.

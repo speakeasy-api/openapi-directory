@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GlobalpageloadRequest(
-    query_params=operations.GlobalpageloadQueryParams(
-        license="iure",
-        origin="vero",
-        url="quidem",
-    ),
+    license="corrupti",
+    origin="provident",
+    url="distinctio",
 )
     
 res = s.page_load_performance_time.globalpageload(req)

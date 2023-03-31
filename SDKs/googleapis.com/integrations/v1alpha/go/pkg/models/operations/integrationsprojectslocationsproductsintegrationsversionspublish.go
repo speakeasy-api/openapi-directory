@@ -8,18 +8,14 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishPathParams struct {
-	// Required. The version to publish. Format: projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishQueryParams
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The version to publish. Format: projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishQueryParams
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishPathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse struct {

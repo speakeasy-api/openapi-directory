@@ -14,14 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.GetEventsRequest{
-        QueryParams: operations.GetEventsQueryParams{
-            Company: "Medhurst - Rau",
-            Deal: "quibusdam",
-            Nexttoken: "unde",
-            Queryexecutionid: "nulla",
-            Site: "corrupti",
-            Type: "contacts",
-        },
+        Company: "Medhurst - Rau",
+        Deal: "quibusdam",
+        Nexttoken: "unde",
+        Queryexecutionid: "nulla",
+        Site: "corrupti",
+        Type: "contacts",
     }
 
     ctx := context.Background()

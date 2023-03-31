@@ -299,10 +299,6 @@ type PostAdminRecordingsSnapshotRequestBody struct {
 	Transformers []string `json:"transformers,omitempty"`
 }
 
-type PostAdminRecordingsSnapshotRequest struct {
-	Request PostAdminRecordingsSnapshotRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAdminRecordingsSnapshot200ApplicationJSONMappingsRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against
 type PostAdminRecordingsSnapshot200ApplicationJSONMappingsRequestBasicAuthCredentials struct {
 	Password string `json:"password"`

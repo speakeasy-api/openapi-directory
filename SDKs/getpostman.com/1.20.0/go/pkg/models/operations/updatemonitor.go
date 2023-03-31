@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateMonitorPathParams struct {
-	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
-}
-
 type UpdateMonitorRequestBodyMonitorSchedule struct {
 	Cron     *string `json:"cron,omitempty"`
 	Timezone *string `json:"timezone,omitempty"`
@@ -25,8 +21,8 @@ type UpdateMonitorRequestBody struct {
 }
 
 type UpdateMonitorRequest struct {
-	PathParams UpdateMonitorPathParams
-	Request    *UpdateMonitorRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateMonitorRequestBody `request:"mediaType=application/json"`
+	MonitorUID  string                    `pathParam:"style=simple,explode=false,name=monitor_uid"`
 }
 
 type UpdateMonitor200ApplicationJSONMonitor struct {

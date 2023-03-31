@@ -8,16 +8,11 @@ import (
 )
 
 type RunProjectsLocationsJobsExecutionsTasksListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsJobsExecutionsTasksListPathParams struct {
-	// Required. The Execution from which the Tasks should be listed. To list all Tasks across Executions of a Job, use "-" instead of Execution name. To list all Tasks across Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunProjectsLocationsJobsExecutionsTasksListQueryParams struct {
+type RunProjectsLocationsJobsExecutionsTasksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RunProjectsLocationsJobsExecutionsTasksListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token received from a previous call to ListTasks. All other parameters must match.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The Execution from which the Tasks should be listed. To list all Tasks across Executions of a Job, use "-" instead of Execution name. To list all Tasks across Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type RunProjectsLocationsJobsExecutionsTasksListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunProjectsLocationsJobsExecutionsTasksListRequest struct {
-	PathParams  RunProjectsLocationsJobsExecutionsTasksListPathParams
-	QueryParams RunProjectsLocationsJobsExecutionsTasksListQueryParams
-	Security    RunProjectsLocationsJobsExecutionsTasksListSecurity
 }
 
 type RunProjectsLocationsJobsExecutionsTasksListResponse struct {

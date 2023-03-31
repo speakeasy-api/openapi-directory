@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetuserSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
-}
-
-type GetuserRequest struct {
-	Security GetuserSecurity
-}
-
 type GetuserResponse struct {
 	ContentType string
 	// Successful response

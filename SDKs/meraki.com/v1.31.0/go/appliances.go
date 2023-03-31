@@ -34,14 +34,14 @@ func newAppliances(defaultClient, securityClient HTTPClient, serverURL, language
 // Return the top 10 appliances sorted by utilization over given time range.
 func (s *appliances) GetOrganizationSummaryTopAppliancesByUtilization(ctx context.Context, request operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest) (*operations.GetOrganizationSummaryTopAppliancesByUtilizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

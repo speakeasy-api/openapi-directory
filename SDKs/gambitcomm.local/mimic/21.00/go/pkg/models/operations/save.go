@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SavePathParams struct {
+type SaveRequest struct {
 	// Agent to save
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type SaveRequest struct {
-	PathParams SavePathParams
 }
 
 type SaveResponse struct {

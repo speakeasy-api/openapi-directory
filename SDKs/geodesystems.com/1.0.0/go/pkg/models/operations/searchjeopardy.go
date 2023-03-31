@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchJeopardyQueryParams struct {
+type SearchJeopardyRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -52,10 +52,6 @@ type SearchJeopardyQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchJeopardyRequest struct {
-	QueryParams SearchJeopardyQueryParams
 }
 
 type SearchJeopardyResponse struct {

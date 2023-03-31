@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryconnectionProjectsLocationsConnectionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryconnectionProjectsLocationsConnectionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryconnectionProjectsLocationsConnectionsListSecurity struct {
@@ -22,12 +22,7 @@ type BigqueryconnectionProjectsLocationsConnectionsListSecurity struct {
 	Option2 *BigqueryconnectionProjectsLocationsConnectionsListSecurityOption2 `security:"option"`
 }
 
-type BigqueryconnectionProjectsLocationsConnectionsListPathParams struct {
-	// Required. Parent resource name. Must be in the form: `projects/{project_id}/locations/{location_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigqueryconnectionProjectsLocationsConnectionsListQueryParams struct {
+type BigqueryconnectionProjectsLocationsConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type BigqueryconnectionProjectsLocationsConnectionsListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent resource name. Must be in the form: `projects/{project_id}/locations/{location_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type BigqueryconnectionProjectsLocationsConnectionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigqueryconnectionProjectsLocationsConnectionsListRequest struct {
-	PathParams  BigqueryconnectionProjectsLocationsConnectionsListPathParams
-	QueryParams BigqueryconnectionProjectsLocationsConnectionsListQueryParams
-	Security    BigqueryconnectionProjectsLocationsConnectionsListSecurity
 }
 
 type BigqueryconnectionProjectsLocationsConnectionsListResponse struct {

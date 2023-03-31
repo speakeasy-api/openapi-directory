@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchRoutingOspfPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSwitchRoutingOspfRequestBodyAreasAreaTypeEnum - Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
 type UpdateNetworkSwitchRoutingOspfRequestBodyAreasAreaTypeEnum string
 
@@ -122,8 +118,8 @@ type UpdateNetworkSwitchRoutingOspfRequestBody struct {
 }
 
 type UpdateNetworkSwitchRoutingOspfRequest struct {
-	PathParams UpdateNetworkSwitchRoutingOspfPathParams
-	Request    *UpdateNetworkSwitchRoutingOspfRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchRoutingOspfRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchRoutingOspfResponse struct {

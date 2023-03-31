@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlmawsV1TaskListsPrintoutsPrintoutIDPathParams struct {
+type GetAlmawsV1TaskListsPrintoutsPrintoutIDRequest struct {
 	// The Printout ID
 	PrintoutID string `pathParam:"style=simple,explode=false,name=printout_id"`
-}
-
-type GetAlmawsV1TaskListsPrintoutsPrintoutIDRequest struct {
-	PathParams GetAlmawsV1TaskListsPrintoutsPrintoutIDPathParams
 }
 
 type GetAlmawsV1TaskListsPrintoutsPrintoutIDResponse struct {

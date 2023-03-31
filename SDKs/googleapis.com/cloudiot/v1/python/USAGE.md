@@ -4,41 +4,33 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest(
-    security=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity(
-        option1=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
+    dollar_xgafv="2",
+    bind_device_to_gateway_request=shared.BindDeviceToGatewayRequest(
+        device_id="provident",
+        gateway_id="distinctio",
     ),
-    path_params=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams(
-        parent="sed",
-    ),
-    query_params=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="proto",
-        callback="quasi",
-        fields="pariatur",
-        key="eius",
-        oauth_token="soluta",
-        pretty_print=True,
-        quota_user="ex",
-        upload_type="eos",
-        upload_protocol="ratione",
-    ),
-    request=shared.BindDeviceToGatewayRequest(
-        device_id="amet",
-        gateway_id="ipsam",
-    ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    parent="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.projects.cloudiot_projects_locations_registries_bind_device_to_gateway(req)
+res = s.projects.cloudiot_projects_locations_registries_bind_device_to_gateway(req, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity(
+    option1=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.bind_device_to_gateway_response is not None:
     # handle response

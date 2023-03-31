@@ -8,19 +8,14 @@ import (
 )
 
 type AddToCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type AddToCollectionPathParams struct {
-	// The ID of the collection to add assets to
-	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddToCollectionRequest struct {
-	PathParams AddToCollectionPathParams
 	// Collection item attributes to add to collection
-	Request  shared.CreateCatalogCollectionItems `request:"mediaType=application/json"`
-	Security AddToCollectionSecurity
+	CreateCatalogCollectionItems shared.CreateCatalogCollectionItems `request:"mediaType=application/json"`
+	// The ID of the collection to add assets to
+	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type AddToCollectionResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type GetWebhooksV3AppIDSettingsGetAllSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetWebhooksV3AppIDSettingsGetAllPathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetWebhooksV3AppIDSettingsGetAllRequest struct {
-	PathParams GetWebhooksV3AppIDSettingsGetAllPathParams
-	Security   GetWebhooksV3AppIDSettingsGetAllSecurity
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type GetWebhooksV3AppIDSettingsGetAllResponse struct {

@@ -34,16 +34,16 @@ func newSandbox(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // DeleteSandboxSandboxID - Delete Sandbox
 // Delete Sandbox
-func (s *sandbox) DeleteSandboxSandboxID(ctx context.Context, request operations.DeleteSandboxSandboxIDRequest) (*operations.DeleteSandboxSandboxIDResponse, error) {
+func (s *sandbox) DeleteSandboxSandboxID(ctx context.Context, request operations.DeleteSandboxSandboxIDRequest, security operations.DeleteSandboxSandboxIDSecurity) (*operations.DeleteSandboxSandboxIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,16 +99,16 @@ func (s *sandbox) DeleteSandboxSandboxID(ctx context.Context, request operations
 
 // GetSandboxSandboxID - Export Sandbox
 // Export Sandbox
-func (s *sandbox) GetSandboxSandboxID(ctx context.Context, request operations.GetSandboxSandboxIDRequest) (*operations.GetSandboxSandboxIDResponse, error) {
+func (s *sandbox) GetSandboxSandboxID(ctx context.Context, request operations.GetSandboxSandboxIDRequest, security operations.GetSandboxSandboxIDSecurity) (*operations.GetSandboxSandboxIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,7 +179,7 @@ func (s *sandbox) GetSandboxSandboxID(ctx context.Context, request operations.Ge
 
 // PostSandbox - Create Sandbox
 // Create Sandbox
-func (s *sandbox) PostSandbox(ctx context.Context, request operations.PostSandboxRequest) (*operations.PostSandboxResponse, error) {
+func (s *sandbox) PostSandbox(ctx context.Context, request shared.SandboxRequest, security operations.PostSandboxSecurity) (*operations.PostSandboxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox"
 
@@ -195,7 +195,7 @@ func (s *sandbox) PostSandbox(ctx context.Context, request operations.PostSandbo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -268,7 +268,7 @@ func (s *sandbox) PostSandbox(ctx context.Context, request operations.PostSandbo
 
 // PutSandbox - Import Sandbox
 // Import Sandbox
-func (s *sandbox) PutSandbox(ctx context.Context, request operations.PutSandboxRequest) (*operations.PutSandboxResponse, error) {
+func (s *sandbox) PutSandbox(ctx context.Context, request shared.Sandbox, security operations.PutSandboxSecurity) (*operations.PutSandboxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox"
 
@@ -284,7 +284,7 @@ func (s *sandbox) PutSandbox(ctx context.Context, request operations.PutSandboxR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

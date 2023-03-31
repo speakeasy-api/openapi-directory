@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetClonesPathParams struct {
+type ReposGetClonesRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetClonesQueryParams struct {
 	// The time frame to display results for.
 	Per *shared.PerEnum `queryParam:"style=form,explode=true,name=per"`
-}
-
-type ReposGetClonesRequest struct {
-	PathParams  ReposGetClonesPathParams
-	QueryParams ReposGetClonesQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGetClonesResponse struct {

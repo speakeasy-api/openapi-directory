@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolWebGetConfigPathParams struct {
+type ProtocolWebGetConfigRequest struct {
 	// Agent to show the WEB configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolWebGetConfigRequest struct {
-	PathParams ProtocolWebGetConfigPathParams
 }
 
 type ProtocolWebGetConfigResponse struct {

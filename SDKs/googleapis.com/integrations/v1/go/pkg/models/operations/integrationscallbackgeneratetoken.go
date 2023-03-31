@@ -10,8 +10,8 @@ import (
 )
 
 type IntegrationsCallbackGenerateTokenSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // IntegrationsCallbackGenerateTokenProductEnum - Which product sends the request
@@ -44,7 +44,7 @@ func (e *IntegrationsCallbackGenerateTokenProductEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type IntegrationsCallbackGenerateTokenQueryParams struct {
+type IntegrationsCallbackGenerateTokenRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -77,11 +77,6 @@ type IntegrationsCallbackGenerateTokenQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsCallbackGenerateTokenRequest struct {
-	QueryParams IntegrationsCallbackGenerateTokenQueryParams
-	Security    IntegrationsCallbackGenerateTokenSecurity
 }
 
 type IntegrationsCallbackGenerateTokenResponse struct {

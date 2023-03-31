@@ -8,22 +8,13 @@ import (
 )
 
 type GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDPathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-}
-
-type GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDRequest struct {
-	PathParams  GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDPathParams
-	QueryParams GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDQueryParams
-	Security    GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDSecurity
+	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID   string `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDResponse struct {

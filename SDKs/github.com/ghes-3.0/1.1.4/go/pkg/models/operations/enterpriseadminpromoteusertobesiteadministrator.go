@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminPromoteUserToBeSiteAdministratorRequest struct {
-	PathParams EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminPromoteUserToBeSiteAdministratorResponse struct {

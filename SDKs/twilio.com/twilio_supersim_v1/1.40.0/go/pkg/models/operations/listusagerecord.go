@@ -13,10 +13,11 @@ var ListUsageRecordServerList = []string{
 }
 
 type ListUsageRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUsageRecordQueryParams struct {
+type ListUsageRecordRequest struct {
 	// Only include usage that occurred before this time (exclusive), specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Default is the current time.
 	EndTime *time.Time `queryParam:"style=form,explode=true,name=EndTime"`
 	// SID or unique name of a Fleet resource. Only show UsageRecords representing usage for Super SIMs belonging to this Fleet resource at the time the usage occurred.
@@ -39,12 +40,6 @@ type ListUsageRecordQueryParams struct {
 	Sim *string `queryParam:"style=form,explode=true,name=Sim"`
 	// Only include usage that occurred at or after this time, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Default is one month before the `end_time`.
 	StartTime *time.Time `queryParam:"style=form,explode=true,name=StartTime"`
-}
-
-type ListUsageRecordRequest struct {
-	QueryParams ListUsageRecordQueryParams
-	Security    ListUsageRecordSecurity
-	ServerURL   *string
 }
 
 type ListUsageRecordListUsageRecordResponseMeta struct {

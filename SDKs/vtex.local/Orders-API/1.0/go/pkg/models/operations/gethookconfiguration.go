@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type GetHookConfigurationQueryParams struct {
+type GetHookConfigurationRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Customer email.
 	ClientEmail *string `queryParam:"style=form,explode=true,name=clientEmail"`
 	// Page number for result pagination.
 	Page *string `queryParam:"style=form,explode=true,name=page"`
 	// Page quantity for result pagination.
 	PerPage *string `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetHookConfigurationHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetHookConfigurationRequest struct {
-	QueryParams GetHookConfigurationQueryParams
-	Headers     GetHookConfigurationHeaders
 }
 
 type GetHookConfigurationResponse struct {

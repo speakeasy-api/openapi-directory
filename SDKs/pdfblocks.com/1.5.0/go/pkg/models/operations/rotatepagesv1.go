@@ -63,10 +63,6 @@ type RotatePagesV1RequestBody struct {
 	LastPage *int `multipartForm:"name=last_page"`
 }
 
-type RotatePagesV1Request struct {
-	Request RotatePagesV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // RotatePagesV14XXApplicationProblemPlusJSON - Error
 type RotatePagesV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

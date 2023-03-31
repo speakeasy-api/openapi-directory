@@ -8,18 +8,18 @@ import (
 )
 
 type StorageObjectsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsDeleteSecurity struct {
@@ -28,16 +28,11 @@ type StorageObjectsDeleteSecurity struct {
 	Option3 *StorageObjectsDeleteSecurityOption3 `security:"option"`
 }
 
-type StorageObjectsDeletePathParams struct {
-	// Name of the bucket in which the object resides.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type StorageObjectsDeleteQueryParams struct {
+type StorageObjectsDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which the object resides.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, permanently deletes a specific revision of this object (as opposed to the latest version, the default).
@@ -54,6 +49,8 @@ type StorageObjectsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -64,12 +61,6 @@ type StorageObjectsDeleteQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsDeleteRequest struct {
-	PathParams  StorageObjectsDeletePathParams
-	QueryParams StorageObjectsDeleteQueryParams
-	Security    StorageObjectsDeleteSecurity
 }
 
 type StorageObjectsDeleteResponse struct {

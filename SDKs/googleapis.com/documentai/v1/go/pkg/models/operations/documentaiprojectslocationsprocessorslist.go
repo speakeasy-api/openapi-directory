@@ -8,16 +8,11 @@ import (
 )
 
 type DocumentaiProjectsLocationsProcessorsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DocumentaiProjectsLocationsProcessorsListPathParams struct {
-	// Required. The parent (project and location) which owns this collection of Processors. Format: `projects/{project}/locations/{location}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DocumentaiProjectsLocationsProcessorsListQueryParams struct {
+type DocumentaiProjectsLocationsProcessorsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DocumentaiProjectsLocationsProcessorsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// We will return the processors sorted by creation time. The page token will point to the next processor.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent (project and location) which owns this collection of Processors. Format: `projects/{project}/locations/{location}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DocumentaiProjectsLocationsProcessorsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocumentaiProjectsLocationsProcessorsListRequest struct {
-	PathParams  DocumentaiProjectsLocationsProcessorsListPathParams
-	QueryParams DocumentaiProjectsLocationsProcessorsListQueryParams
-	Security    DocumentaiProjectsLocationsProcessorsListSecurity
 }
 
 type DocumentaiProjectsLocationsProcessorsListResponse struct {

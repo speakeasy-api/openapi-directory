@@ -36,7 +36,7 @@ func newCadenceImports(defaultClient, securityClient HTTPClient, serverURL, lang
 // PostV2CadenceImportsJSON - Import cadences from JSON
 // New cadences can be created or steps can be imported onto existing cadences which do not have steps.
 // <a href="/cadence-imports.html" target="_blank" rel="noopener noreferrer">Visit here for more details</a>.
-func (s *cadenceImports) PostV2CadenceImportsJSON(ctx context.Context, request operations.PostV2CadenceImportsJSONRequest) (*operations.PostV2CadenceImportsJSONResponse, error) {
+func (s *cadenceImports) PostV2CadenceImportsJSON(ctx context.Context, request operations.PostV2CadenceImportsJSONRequestBody) (*operations.PostV2CadenceImportsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cadence_imports.json"
 

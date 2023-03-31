@@ -18,11 +18,10 @@ pkg/models/operations/iaptestiampermissions.go
 pkg/models/shared/policy.go
 pkg/models/shared/binding.go
 pkg/models/shared/expr.go
+pkg/models/shared/altenum.go
 pkg/models/shared/getiampolicyrequest.go
 pkg/models/shared/getpolicyoptions.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/setiampolicyrequest.go
 pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CrawlPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type CrawlRequest struct {
-	PathParams CrawlPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 // Crawl200ApplicationJSON - Successful Response

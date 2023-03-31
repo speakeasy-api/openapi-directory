@@ -64,7 +64,7 @@ func newSchemaResponseActions(defaultClient, securityClient HTTPClient, serverUR
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponseActions) GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionID(ctx context.Context, request operations.GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDRequest) (*operations.GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/{schema_response_action_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/{schema_response_action_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -113,7 +113,7 @@ func (s *schemaResponseActions) GetSchemaResponsesSchemaResponseIDActionsSchemaR
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponseActions) PostSchemaResponsesSchemaResponseIDActions(ctx context.Context, request operations.PostSchemaResponsesSchemaResponseIDActionsRequest) (*operations.PostSchemaResponsesSchemaResponseIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -153,7 +153,7 @@ func (s *schemaResponseActions) PostSchemaResponsesSchemaResponseIDActions(ctx c
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponseActions) SchemaResponseActionRead(ctx context.Context, request operations.SchemaResponseActionReadRequest) (*operations.SchemaResponseActionReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/actions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

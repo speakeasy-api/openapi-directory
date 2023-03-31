@@ -8,16 +8,11 @@ import (
 )
 
 type DataprocProjectsLocationsBatchesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsLocationsBatchesListPathParams struct {
-	// Required. The parent, which owns this collection of batches.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataprocProjectsLocationsBatchesListQueryParams struct {
+type DataprocProjectsLocationsBatchesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type DataprocProjectsLocationsBatchesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token received from a previous ListBatches call. Provide this token to retrieve the subsequent page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent, which owns this collection of batches.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type DataprocProjectsLocationsBatchesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsLocationsBatchesListRequest struct {
-	PathParams  DataprocProjectsLocationsBatchesListPathParams
-	QueryParams DataprocProjectsLocationsBatchesListQueryParams
-	Security    DataprocProjectsLocationsBatchesListSecurity
 }
 
 type DataprocProjectsLocationsBatchesListResponse struct {

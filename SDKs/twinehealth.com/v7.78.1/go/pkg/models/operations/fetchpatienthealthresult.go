@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchPatientHealthResultPathParams struct {
+type FetchPatientHealthResultRequest struct {
 	// Patient health result identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchPatientHealthResultRequest struct {
-	PathParams FetchPatientHealthResultPathParams
 }
 
 type FetchPatientHealthResultResponse struct {

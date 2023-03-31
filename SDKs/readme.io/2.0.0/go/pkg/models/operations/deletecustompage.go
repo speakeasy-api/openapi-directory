@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteCustomPageSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCustomPagePathParams struct {
-	// Slug of custom page
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCustomPageRequest struct {
-	PathParams DeleteCustomPagePathParams
-	Security   DeleteCustomPageSecurity
+	// Slug of custom page
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type DeleteCustomPageResponse struct {

@@ -6,20 +6,16 @@ import (
 	"net/http"
 )
 
-type ActionsSetSelectedReposForOrgSecretPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// secret_name parameter
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type ActionsSetSelectedReposForOrgSecretRequestBody struct {
 	// An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.0/rest/reference/actions#set-selected-repositories-for-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.0/rest/reference/actions#remove-selected-repository-from-an-organization-secret) endpoints.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type ActionsSetSelectedReposForOrgSecretRequest struct {
-	PathParams ActionsSetSelectedReposForOrgSecretPathParams
-	Request    ActionsSetSelectedReposForOrgSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetSelectedReposForOrgSecretRequestBody `request:"mediaType=application/json"`
+	Org         string                                         `pathParam:"style=simple,explode=false,name=org"`
+	// secret_name parameter
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type ActionsSetSelectedReposForOrgSecretResponse struct {

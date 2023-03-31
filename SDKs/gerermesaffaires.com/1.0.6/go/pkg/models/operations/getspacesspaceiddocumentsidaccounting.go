@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsIDAccountingPathParams struct {
+type GetSpacesSpaceIDDocumentsIDAccountingRequest struct {
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsIDAccountingRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsIDAccountingPathParams
 }
 
 type GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum string

@@ -10,27 +10,18 @@ var GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateServ
 	"https://weather.visualcrossing.com",
 }
 
-type GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddatePathParams struct {
-	Enddate   string `pathParam:"style=simple,explode=false,name=enddate"`
-	Location  string `pathParam:"style=simple,explode=false,name=location"`
-	Startdate string `pathParam:"style=simple,explode=false,name=startdate"`
-}
-
-type GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateQueryParams struct {
+type GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest struct {
 	// data format of the output either json or CSV
 	ContentType *string `queryParam:"style=form,explode=true,name=contentType"`
+	Enddate     string  `pathParam:"style=simple,explode=false,name=enddate"`
 	// data to include in the output (required for CSV format - days,hours,alerts,current,events )
 	Include *string `queryParam:"style=form,explode=true,name=include"`
 	Key     string  `queryParam:"style=form,explode=true,name=key"`
 	// Language to use for weather descriptions
 	Lang      *string `queryParam:"style=form,explode=true,name=lang"`
+	Location  string  `pathParam:"style=simple,explode=false,name=location"`
+	Startdate string  `pathParam:"style=simple,explode=false,name=startdate"`
 	UnitGroup *string `queryParam:"style=form,explode=true,name=unitGroup"`
-}
-
-type GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest struct {
-	PathParams  GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddatePathParams
-	QueryParams GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateQueryParams
-	ServerURL   *string
 }
 
 type GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateResponse struct {

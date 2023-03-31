@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FolderSettingsPostFormPathParams struct {
+type FolderSettingsPostFormRequest struct {
+	// The folder or meter data
+	FolderSettings shared.FolderSettings `request:"mediaType=application/x-www-form-urlencoded"`
 	// The ID of the folder or meter to edit. Use and empty ID to add a new folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FolderSettingsPostFormRequest struct {
-	PathParams FolderSettingsPostFormPathParams
-	// The folder or meter data
-	Request shared.FolderSettings `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type FolderSettingsPostFormResponse struct {

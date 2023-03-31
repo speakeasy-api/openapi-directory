@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetPlaylistsQueryParams struct {
+type GetPlaylistsRequest struct {
 	// Amount of items to return
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// The ending datetime. Maximum 1 hour in future.
@@ -27,10 +27,6 @@ type GetPlaylistsQueryParams struct {
 	// The datetime starting from items must be returned. Maximum 1 hour in future.
 	//
 	Start *time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetPlaylistsRequest struct {
-	QueryParams GetPlaylistsQueryParams
 }
 
 type GetPlaylists200ApplicationXMLLinks struct {

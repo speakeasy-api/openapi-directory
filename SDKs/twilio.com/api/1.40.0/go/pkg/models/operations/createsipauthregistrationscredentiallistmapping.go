@@ -12,14 +12,8 @@ var CreateSipAuthRegistrationsCredentialListMappingServerList = []string{
 }
 
 type CreateSipAuthRegistrationsCredentialListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipAuthRegistrationsCredentialListMappingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the SIP domain that will contain the new resource.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipAuthRegistrationsCredentialListMappingCreateSipAuthRegistrationsCredentialListMappingRequest struct {
@@ -28,10 +22,11 @@ type CreateSipAuthRegistrationsCredentialListMappingCreateSipAuthRegistrationsCr
 }
 
 type CreateSipAuthRegistrationsCredentialListMappingRequest struct {
-	PathParams CreateSipAuthRegistrationsCredentialListMappingPathParams
-	Request    *CreateSipAuthRegistrationsCredentialListMappingCreateSipAuthRegistrationsCredentialListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipAuthRegistrationsCredentialListMappingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the SIP domain that will contain the new resource.
+	DomainSid   string                                                                                                 `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *CreateSipAuthRegistrationsCredentialListMappingCreateSipAuthRegistrationsCredentialListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipAuthRegistrationsCredentialListMappingResponse struct {

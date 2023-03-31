@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingsOfferingIDLearnersPendingSubmissionPathParams struct {
-	// offering's id
-	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type GetOfferingsOfferingIDLearnersPendingSubmissionQueryParams struct {
+type GetOfferingsOfferingIDLearnersPendingSubmissionRequest struct {
 	// days to assessment due date. Default is 3 days
 	Days *string `queryParam:"style=form,explode=true,name=days"`
-}
-
-type GetOfferingsOfferingIDLearnersPendingSubmissionRequest struct {
-	PathParams  GetOfferingsOfferingIDLearnersPendingSubmissionPathParams
-	QueryParams GetOfferingsOfferingIDLearnersPendingSubmissionQueryParams
+	// offering's id
+	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 }
 
 type GetOfferingsOfferingIDLearnersPendingSubmissionResponse struct {

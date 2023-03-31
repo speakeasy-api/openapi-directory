@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2SuccessesJSONQueryParams struct {
+type GetV2SuccessesJSONRequest struct {
 	// IDs of successes to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -29,10 +29,6 @@ type GetV2SuccessesJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2SuccessesJSONRequest struct {
-	QueryParams GetV2SuccessesJSONQueryParams
 }
 
 type GetV2SuccessesJSONResponse struct {

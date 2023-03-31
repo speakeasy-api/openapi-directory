@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETRevisionChangesetUsingGETQueryParams struct {
+type GETRevisionChangesetUsingGETRequest struct {
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 	Rev   *string `queryParam:"style=form,explode=true,name=rev"`
-}
-
-type GETRevisionChangesetUsingGETRequest struct {
-	QueryParams GETRevisionChangesetUsingGETQueryParams
 }
 
 // GETRevisionChangesetUsingGET500ApplicationJSON - internal api error (code 2)

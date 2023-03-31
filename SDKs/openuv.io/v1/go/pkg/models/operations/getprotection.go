@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProtectionQueryParams struct {
+type GetProtectionRequest struct {
 	// Altitude in meters, from 0 to 10000m, 0m by default. If provided the altitude correction factor will be applied to clear sky sea level UV Index value.
 	Alt *float64 `queryParam:"style=form,explode=true,name=alt"`
 	// UV Index from value for protection datetime lookup. From 0 to 40.
@@ -20,16 +20,8 @@ type GetProtectionQueryParams struct {
 	Ozone *float64 `queryParam:"style=form,explode=true,name=ozone"`
 	// UV Index to value for protection datetime lookup. From 0 to 40.
 	To float64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetProtectionHeaders struct {
 	// This header is used to send data that contains your OpenUV API key
 	XAccessToken string `header:"style=simple,explode=false,name=x-access-token"`
-}
-
-type GetProtectionRequest struct {
-	QueryParams GetProtectionQueryParams
-	Headers     GetProtectionHeaders
 }
 
 type GetProtectionResponse struct {

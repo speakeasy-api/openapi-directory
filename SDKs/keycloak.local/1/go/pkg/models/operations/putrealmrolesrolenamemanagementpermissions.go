@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmRolesRoleNameManagementPermissionsPathParams struct {
+type PutRealmRolesRoleNameManagementPermissionsRequest struct {
+	ManagementPermissionReference shared.ManagementPermissionReference `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm    string `pathParam:"style=simple,explode=false,name=realm"`
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type PutRealmRolesRoleNameManagementPermissionsRequest struct {
-	PathParams PutRealmRolesRoleNameManagementPermissionsPathParams
-	Request    shared.ManagementPermissionReference `request:"mediaType=application/json"`
 }
 
 type PutRealmRolesRoleNameManagementPermissionsResponse struct {

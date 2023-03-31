@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetMaskPathParams struct {
+type GetMaskRequest struct {
 	// Agent to return the primary interface
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetMaskRequest struct {
-	PathParams GetMaskPathParams
 }
 
 type GetMaskResponse struct {

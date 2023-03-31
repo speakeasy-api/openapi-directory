@@ -126,7 +126,7 @@ func (e *ReposListForAuthenticatedUserVisibilityEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ReposListForAuthenticatedUserQueryParams struct {
+type ReposListForAuthenticatedUserRequest struct {
 	// Comma-separated list of values. Can include:
 	// \* `owner`: Repositories that are owned by the authenticated user.
 	// \* `collaborator`: Repositories that the user has been added to as a collaborator.
@@ -150,10 +150,6 @@ type ReposListForAuthenticatedUserQueryParams struct {
 	Type *ReposListForAuthenticatedUserTypeEnum `queryParam:"style=form,explode=true,name=type"`
 	// Can be one of `all`, `public`, or `private`. Note: For GitHub AE, can be one of `all`, `internal`, or `private`.
 	Visibility *ReposListForAuthenticatedUserVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type ReposListForAuthenticatedUserRequest struct {
-	QueryParams ReposListForAuthenticatedUserQueryParams
 }
 
 type ReposListForAuthenticatedUserResponse struct {

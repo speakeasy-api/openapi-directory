@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type IncomeVerificationTaxformsGetRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type IncomeVerificationTaxformsGetResponse struct {
 	ContentType string
 	// OK

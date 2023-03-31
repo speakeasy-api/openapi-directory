@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserIsFollowingPathParams struct {
+type CheckIfUserIsFollowingRequest struct {
 	// The ID of the following user.
 	FollowUserID float64 `pathParam:"style=simple,explode=false,name=follow_user_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type CheckIfUserIsFollowingRequest struct {
-	PathParams CheckIfUserIsFollowingPathParams
 }
 
 type CheckIfUserIsFollowingResponse struct {

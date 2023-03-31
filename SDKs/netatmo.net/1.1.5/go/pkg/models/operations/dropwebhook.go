@@ -8,18 +8,13 @@ import (
 )
 
 type DropwebhookSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
-}
-
-type DropwebhookQueryParams struct {
-	// For Welcome, use app_camera
-	AppType string `queryParam:"style=form,explode=true,name=app_type"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DropwebhookRequest struct {
-	QueryParams DropwebhookQueryParams
-	Security    DropwebhookSecurity
+	// For Welcome, use app_camera
+	AppType string `queryParam:"style=form,explode=true,name=app_type"`
 }
 
 type DropwebhookResponse struct {

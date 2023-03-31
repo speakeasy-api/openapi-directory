@@ -13,22 +13,13 @@ var CancelBookingServerList = []string{
 	"https://api.sandbox.viator.com/partner",
 }
 
-type CancelBookingPathParams struct {
-	// The ID of the booking
-	BookingReference string `pathParam:"style=simple,explode=false,name=booking-reference"`
-}
-
-type CancelBookingHeaders struct {
+type CancelBookingRequest struct {
 	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
 	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type CancelBookingRequest struct {
-	PathParams CancelBookingPathParams
-	Headers    CancelBookingHeaders
-	Request    *shared.CancellationRequest `request:"mediaType=application/json"`
-	ServerURL  *string
+	AcceptLanguage      string                      `header:"style=simple,explode=false,name=Accept-Language"`
+	CancellationRequest *shared.CancellationRequest `request:"mediaType=application/json"`
+	// The ID of the booking
+	BookingReference string `pathParam:"style=simple,explode=false,name=booking-reference"`
 }
 
 type CancelBooking404ApplicationJSONCodeEnum string

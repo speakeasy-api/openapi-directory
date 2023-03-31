@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeschedulePayoutPathParams struct {
+type DeschedulePayoutRequest struct {
 	// Id of the payout
 	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
-type DeschedulePayoutRequest struct {
-	PathParams DeschedulePayoutPathParams
 }
 
 type DeschedulePayoutResponse struct {

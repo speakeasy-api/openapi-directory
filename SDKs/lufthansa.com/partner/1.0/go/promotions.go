@@ -33,20 +33,20 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 
 // PriceOffers - Price Offers
 // Retrieve a best price offer given an origin and destination.
-func (s *promotions) PriceOffers(ctx context.Context, request operations.PriceOffersRequest) (*operations.PriceOffersResponse, error) {
+func (s *promotions) PriceOffers(ctx context.Context, request operations.PriceOffersRequest, security operations.PriceOffersSecurity) (*operations.PriceOffersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

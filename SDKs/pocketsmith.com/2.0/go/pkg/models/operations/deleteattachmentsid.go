@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAttachmentsIDPathParams struct {
+type DeleteAttachmentsIDRequest struct {
 	// The unique identifier of the attachment.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAttachmentsIDRequest struct {
-	PathParams DeleteAttachmentsIDPathParams
 }
 
 type DeleteAttachmentsIDResponse struct {

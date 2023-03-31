@@ -8,15 +8,12 @@ import (
 )
 
 type ExportAdvisorySystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type ExportAdvisorySystemsPathParams struct {
+type ExportAdvisorySystemsRequest struct {
 	// Advisory ID
 	AdvisoryID string `pathParam:"style=simple,explode=false,name=advisory_id"`
-}
-
-type ExportAdvisorySystemsQueryParams struct {
 	// Filter
 	FilterDisplayName *string `queryParam:"style=form,explode=true,name=filter[display_name]"`
 	// Filter
@@ -47,12 +44,6 @@ type ExportAdvisorySystemsQueryParams struct {
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ExportAdvisorySystemsRequest struct {
-	PathParams  ExportAdvisorySystemsPathParams
-	QueryParams ExportAdvisorySystemsQueryParams
-	Security    ExportAdvisorySystemsSecurity
 }
 
 type ExportAdvisorySystemsResponse struct {

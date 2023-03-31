@@ -33,7 +33,7 @@ func (e *ProjectedPlayerGameStatsByPlayerWDfsSalariesFormatEnum) UnmarshalJSON(d
 	}
 }
 
-type ProjectedPlayerGameStatsByPlayerWDfsSalariesPathParams struct {
+type ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2017-02-27</code>, <code>2017-09-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
@@ -42,10 +42,6 @@ type ProjectedPlayerGameStatsByPlayerWDfsSalariesPathParams struct {
 	// Unique FantasyData Player ID.
 	// Example:<code>90026231</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest struct {
-	PathParams ProjectedPlayerGameStatsByPlayerWDfsSalariesPathParams
 }
 
 type ProjectedPlayerGameStatsByPlayerWDfsSalariesResponse struct {

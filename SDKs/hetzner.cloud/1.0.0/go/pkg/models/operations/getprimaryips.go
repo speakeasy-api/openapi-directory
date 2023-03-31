@@ -44,7 +44,7 @@ func (e *GetPrimaryIpsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPrimaryIpsQueryParams struct {
+type GetPrimaryIpsRequest struct {
 	// Can be used to filter resources by their ip. The response will only contain the resources matching the specified ip.
 	IP *string `queryParam:"style=form,explode=true,name=ip"`
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
@@ -53,10 +53,6 @@ type GetPrimaryIpsQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Can be used multiple times. Choices id id:asc id:desc created created:asc created:desc
 	Sort *GetPrimaryIpsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPrimaryIpsRequest struct {
-	QueryParams GetPrimaryIpsQueryParams
 }
 
 type GetPrimaryIpsPrimaryIPsResponseMetaPagination struct {

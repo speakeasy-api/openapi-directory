@@ -108,7 +108,7 @@ func New(opts ...SDKOption) *SDK {
 // GetMappingValuesKey - Get values for enum-like fields.
 func (s *SDK) GetMappingValuesKey(ctx context.Context, request operations.GetMappingValuesKeyRequest) (*operations.GetMappingValuesKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mapping/values/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mapping/values/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *SDK) GetMappingValuesKey(ctx context.Context, request operations.GetMap
 }
 
 // PostMapping - Allows mapping from third-party identifiers to FIGIs.
-func (s *SDK) PostMapping(ctx context.Context, request operations.PostMappingRequest) (*operations.PostMappingResponse, error) {
+func (s *SDK) PostMapping(ctx context.Context, request []shared.MappingJob) (*operations.PostMappingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mapping"
 

@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersRandomSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
-type GetNumbersRandomQueryParams struct {
+type GetNumbersRandomRequest struct {
 	// Maximum Number value
 	Max *int64 `queryParam:"style=form,explode=true,name=max"`
 	// Minimum Number value in the range
 	Min *int64 `queryParam:"style=form,explode=true,name=min"`
 	// Total number of random numbers to generate. Defaults to 1
 	Total *int64 `queryParam:"style=form,explode=true,name=total"`
-}
-
-type GetNumbersRandomRequest struct {
-	QueryParams GetNumbersRandomQueryParams
-	Security    GetNumbersRandomSecurity
 }
 
 type GetNumbersRandomResponse struct {

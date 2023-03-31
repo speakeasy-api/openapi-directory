@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualBillingMeterActivePostJSONRequest struct {
-	// The Meter to activate
-	Request shared.VMeterToActivate `request:"mediaType=application/json"`
-}
-
 type VirtualBillingMeterActivePostJSONResponse struct {
 	Body        []byte
 	ContentType string

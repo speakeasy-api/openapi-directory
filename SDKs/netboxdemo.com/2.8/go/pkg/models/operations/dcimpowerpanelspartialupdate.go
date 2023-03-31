@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPanelsPartialUpdatePathParams struct {
+type DcimPowerPanelsPartialUpdateRequest struct {
+	WritablePowerPanelInput shared.WritablePowerPanelInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this power panel.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPanelsPartialUpdateRequest struct {
-	PathParams DcimPowerPanelsPartialUpdatePathParams
-	Request    shared.WritablePowerPanelInput `request:"mediaType=application/json"`
 }
 
 type DcimPowerPanelsPartialUpdateResponse struct {

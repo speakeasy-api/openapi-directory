@@ -32,20 +32,20 @@ func newMobileApps(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // DfareportingMobileAppsGet - Gets one mobile app by ID.
-func (s *mobileApps) DfareportingMobileAppsGet(ctx context.Context, request operations.DfareportingMobileAppsGetRequest) (*operations.DfareportingMobileAppsGetResponse, error) {
+func (s *mobileApps) DfareportingMobileAppsGet(ctx context.Context, request operations.DfareportingMobileAppsGetRequest, security operations.DfareportingMobileAppsGetSecurity) (*operations.DfareportingMobileAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *mobileApps) DfareportingMobileAppsGet(ctx context.Context, request oper
 }
 
 // DfareportingMobileAppsList - Retrieves list of available mobile apps.
-func (s *mobileApps) DfareportingMobileAppsList(ctx context.Context, request operations.DfareportingMobileAppsListRequest) (*operations.DfareportingMobileAppsListResponse, error) {
+func (s *mobileApps) DfareportingMobileAppsList(ctx context.Context, request operations.DfareportingMobileAppsListRequest, security operations.DfareportingMobileAppsListSecurity) (*operations.DfareportingMobileAppsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

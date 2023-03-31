@@ -4,41 +4,39 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest(
-    security=operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity(
-        oauth2_legacy=shared.SchemeOauth2Legacy(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+
+
+req = shared.BatchInputCallbackCompletionBatchRequest(
+    inputs=[
+        shared.CallbackCompletionBatchRequest(
+            callback_id="provident",
+            output_fields={
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
+            },
         ),
-    ),
-    request=shared.BatchInputCallbackCompletionBatchRequest(
-        inputs=[
-            shared.CallbackCompletionBatchRequest(
-                callback_id="quo",
-                output_fields={
-                    "dolorem": "eveniet",
-                },
-            ),
-            shared.CallbackCompletionBatchRequest(
-                callback_id="sit",
-                output_fields={
-                    "sequi": "facilis",
-                    "fugit": "eum",
-                },
-            ),
-            shared.CallbackCompletionBatchRequest(
-                callback_id="laborum",
-                output_fields={
-                    "velit": "quos",
-                    "nihil": "quisquam",
-                    "blanditiis": "ducimus",
-                },
-            ),
-        ],
-    ),
+        shared.CallbackCompletionBatchRequest(
+            callback_id="error",
+            output_fields={
+                "suscipit": "iure",
+                "magnam": "debitis",
+                "ipsa": "delectus",
+            },
+        ),
+        shared.CallbackCompletionBatchRequest(
+            callback_id="tempora",
+            output_fields={
+                "molestiae": "minus",
+                "placeat": "voluptatum",
+            },
+        ),
+    ],
 )
     
-res = s.callbacks.post_automation_v4_actions_callbacks_complete_complete_batch(req)
+res = s.callbacks.post_automation_v4_actions_callbacks_complete_complete_batch(req, operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity(
+    hapikey="YOUR_API_KEY_HERE",
+))
 
 if res.status_code == 200:
     # handle response

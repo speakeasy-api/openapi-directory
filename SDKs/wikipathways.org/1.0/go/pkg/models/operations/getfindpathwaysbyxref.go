@@ -44,16 +44,12 @@ func (e *GetFindPathwaysByXrefFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFindPathwaysByXrefQueryParams struct {
+type GetFindPathwaysByXrefRequest struct {
 	// string
 	Codes  []interface{}                    `queryParam:"style=form,explode=false,name=codes"`
 	Format *GetFindPathwaysByXrefFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// string
 	Ids []interface{} `queryParam:"style=form,explode=false,name=ids"`
-}
-
-type GetFindPathwaysByXrefRequest struct {
-	QueryParams GetFindPathwaysByXrefQueryParams
 }
 
 type GetFindPathwaysByXrefResponse struct {

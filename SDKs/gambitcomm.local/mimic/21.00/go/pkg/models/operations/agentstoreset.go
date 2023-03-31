@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type AgentStoreSetPathParams struct {
+type AgentStoreSetRequest struct {
+	// Value
+	RequestBody *string `request:"mediaType=application/json"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Persistent setting
 	Persist int `pathParam:"style=simple,explode=false,name=persist"`
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type AgentStoreSetRequest struct {
-	PathParams AgentStoreSetPathParams
-	// Value
-	Request *string `request:"mediaType=application/json"`
 }
 
 type AgentStoreSetResponse struct {

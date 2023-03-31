@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetstateabbreviationRequest{
-        QueryParams: operations.GetstateabbreviationQueryParams{
-            License: "corrupti",
-            State: "provident",
-        },
+        License: "corrupti",
+        State: "provident",
     }
 
     ctx := context.Background()

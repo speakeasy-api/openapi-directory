@@ -8,16 +8,11 @@ import (
 )
 
 type KmsinventoryOrganizationsProtectedResourcesSearchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type KmsinventoryOrganizationsProtectedResourcesSearchPathParams struct {
-	// Required. Resource name of the organization. Example: organizations/123
-	Scope string `pathParam:"style=simple,explode=false,name=scope"`
-}
-
-type KmsinventoryOrganizationsProtectedResourcesSearchQueryParams struct {
+type KmsinventoryOrganizationsProtectedResourcesSearchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,16 +37,12 @@ type KmsinventoryOrganizationsProtectedResourcesSearchQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Resource name of the organization. Example: organizations/123
+	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type KmsinventoryOrganizationsProtectedResourcesSearchRequest struct {
-	PathParams  KmsinventoryOrganizationsProtectedResourcesSearchPathParams
-	QueryParams KmsinventoryOrganizationsProtectedResourcesSearchQueryParams
-	Security    KmsinventoryOrganizationsProtectedResourcesSearchSecurity
 }
 
 type KmsinventoryOrganizationsProtectedResourcesSearchResponse struct {

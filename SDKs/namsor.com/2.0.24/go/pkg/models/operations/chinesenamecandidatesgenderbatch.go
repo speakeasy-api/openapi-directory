@@ -8,13 +8,7 @@ import (
 )
 
 type ChineseNameCandidatesGenderBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ChineseNameCandidatesGenderBatchRequest struct {
-	// A list of personal Chinese names in LATIN, firstName = chineseGivenName; lastName=chineseSurname
-	Request  *shared.BatchFirstLastNameGenderIn `request:"mediaType=application/json"`
-	Security ChineseNameCandidatesGenderBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ChineseNameCandidatesGenderBatchResponse struct {

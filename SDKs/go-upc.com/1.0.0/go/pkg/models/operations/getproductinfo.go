@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProductInfoPathParams struct {
-	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
 type GetProductInfoRequest struct {
-	PathParams GetProductInfoPathParams
+	Code string `pathParam:"style=simple,explode=false,name=code"`
 }
 
 // GetProductInfo200ApplicationJSONCodeTypeEnum - The type of product code (UPC/EAN/ISBN).

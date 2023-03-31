@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeleteImpersonationOAuthTokenPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminDeleteImpersonationOAuthTokenRequest struct {
-	PathParams EnterpriseAdminDeleteImpersonationOAuthTokenPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminDeleteImpersonationOAuthTokenResponse struct {

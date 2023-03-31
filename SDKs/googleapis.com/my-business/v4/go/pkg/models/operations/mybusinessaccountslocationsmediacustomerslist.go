@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsMediaCustomersListPathParams struct {
-	// The name of the location whose customer media items will be listed.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsMediaCustomersListQueryParams struct {
+type MybusinessAccountsLocationsMediaCustomersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type MybusinessAccountsLocationsMediaCustomersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If specified, returns the next page of media items.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The name of the location whose customer media items will be listed.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type MybusinessAccountsLocationsMediaCustomersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsMediaCustomersListRequest struct {
-	PathParams  MybusinessAccountsLocationsMediaCustomersListPathParams
-	QueryParams MybusinessAccountsLocationsMediaCustomersListQueryParams
 }
 
 type MybusinessAccountsLocationsMediaCustomersListResponse struct {

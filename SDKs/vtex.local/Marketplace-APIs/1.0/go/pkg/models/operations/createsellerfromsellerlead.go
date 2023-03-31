@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type CreateSellerFromSellerLeadPathParams struct {
-	// ID of the Seller Lead invited to the marketplace.
-	SellerLeadID string `pathParam:"style=simple,explode=false,name=sellerLeadId"`
-}
-
-type CreateSellerFromSellerLeadQueryParams struct {
+type CreateSellerFromSellerLeadRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Marketplace's account name, the same one inputted on the endpoint's path.
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
 	Environment string `queryParam:"style=form,explode=true,name=environment"`
 	// Whether the Seller Lead is `active` or not in Seller Portal. This request only supports the value `false` in this field. If that´s not the case, the request will respond with an internal error.
 	IsActive bool `queryParam:"style=form,explode=true,name=isActive"`
-}
-
-type CreateSellerFromSellerLeadHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreateSellerFromSellerLeadRequest struct {
-	PathParams  CreateSellerFromSellerLeadPathParams
-	QueryParams CreateSellerFromSellerLeadQueryParams
-	Headers     CreateSellerFromSellerLeadHeaders
+	// ID of the Seller Lead invited to the marketplace.
+	SellerLeadID string `pathParam:"style=simple,explode=false,name=sellerLeadId"`
 }
 
 type CreateSellerFromSellerLeadResponse struct {

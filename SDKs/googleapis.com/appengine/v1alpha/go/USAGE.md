@@ -14,57 +14,49 @@ func main() {
     s := sdk.New()
 
     req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
-        Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "corrupti",
-        },
-        QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AuthorizedCertificate{
+        DollarXgafv: "2",
+        AuthorizedCertificate: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "suscipit",
-                PublicCertificate: "iure",
+                PrivateKey: "provident",
+                PublicCertificate: "distinctio",
             },
-            DisplayName: "magnam",
-            DomainMappingsCount: 891773,
+            DisplayName: "quibusdam",
+            DomainMappingsCount: 602763,
             DomainNames: []string{
-                "delectus",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             },
-            ExpireTime: "tempora",
+            ExpireTime: "deserunt",
             ID: "suscipit",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "molestiae",
-                Status: "FAILED_RETRYING_CAA_FORBIDDEN",
+                LastRenewalTime: "iure",
+                Status: "PENDING",
             },
-            Name: "placeat",
+            Name: "debitis",
             VisibleDomainMappings: []string{
-                "iusto",
-                "excepturi",
-                "nisi",
+                "delectus",
             },
         },
+        AccessToken: "tempora",
+        Alt: "media",
+        AppsID: "molestiae",
+        Callback: "minus",
+        Fields: "placeat",
+        Key: "voluptatum",
+        OauthToken: "iusto",
+        PrettyPrint: false,
+        QuotaUser: "excepturi",
+        UploadType: "nisi",
+        UploadProtocol: "recusandae",
     }
 
     ctx := context.Background()
-    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req)
+    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req, operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

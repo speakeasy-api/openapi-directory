@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteEnvironmentVariablePathParams struct {
+type ActionsDeleteEnvironmentVariableRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
 	// The name of the variable.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The unique identifier of the repository.
 	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type ActionsDeleteEnvironmentVariableRequest struct {
-	PathParams ActionsDeleteEnvironmentVariablePathParams
 }
 
 type ActionsDeleteEnvironmentVariableResponse struct {

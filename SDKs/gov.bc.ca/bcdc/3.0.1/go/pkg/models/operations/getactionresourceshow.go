@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionResourceShowQueryParams struct {
+type GetActionResourceShowRequest struct {
 	// The id of the resource
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// Add tracking information to dataset
 	IncludeTracking *bool `queryParam:"style=form,explode=true,name=include_tracking"`
-}
-
-type GetActionResourceShowRequest struct {
-	QueryParams GetActionResourceShowQueryParams
 }
 
 type GetActionResourceShowResponse struct {

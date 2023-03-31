@@ -33,11 +33,11 @@ func newShippingsettings(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // ContentShippingsettingsCustombatch - Retrieves and updates the shipping settings of multiple accounts in a single request.
-func (s *shippingsettings) ContentShippingsettingsCustombatch(ctx context.Context, request operations.ContentShippingsettingsCustombatchRequest) (*operations.ContentShippingsettingsCustombatchResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsCustombatch(ctx context.Context, request operations.ContentShippingsettingsCustombatchRequest, security operations.ContentShippingsettingsCustombatchSecurity) (*operations.ContentShippingsettingsCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shippingsettings/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingsettingsCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *shippingsettings) ContentShippingsettingsCustombatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *shippingsettings) ContentShippingsettingsCustombatch(ctx context.Contex
 }
 
 // ContentShippingsettingsGet - Retrieves the shipping settings of the account.
-func (s *shippingsettings) ContentShippingsettingsGet(ctx context.Context, request operations.ContentShippingsettingsGetRequest) (*operations.ContentShippingsettingsGetResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsGet(ctx context.Context, request operations.ContentShippingsettingsGetRequest, security operations.ContentShippingsettingsGetSecurity) (*operations.ContentShippingsettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *shippingsettings) ContentShippingsettingsGet(ctx context.Context, reque
 }
 
 // ContentShippingsettingsGetsupportedcarriers - Retrieves supported carriers and carrier services for an account.
-func (s *shippingsettings) ContentShippingsettingsGetsupportedcarriers(ctx context.Context, request operations.ContentShippingsettingsGetsupportedcarriersRequest) (*operations.ContentShippingsettingsGetsupportedcarriersResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsGetsupportedcarriers(ctx context.Context, request operations.ContentShippingsettingsGetsupportedcarriersRequest, security operations.ContentShippingsettingsGetsupportedcarriersSecurity) (*operations.ContentShippingsettingsGetsupportedcarriersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedCarriers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedCarriers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedcarriers(ctx conte
 }
 
 // ContentShippingsettingsGetsupportedholidays - Retrieves supported holidays for an account.
-func (s *shippingsettings) ContentShippingsettingsGetsupportedholidays(ctx context.Context, request operations.ContentShippingsettingsGetsupportedholidaysRequest) (*operations.ContentShippingsettingsGetsupportedholidaysResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsGetsupportedholidays(ctx context.Context, request operations.ContentShippingsettingsGetsupportedholidaysRequest, security operations.ContentShippingsettingsGetsupportedholidaysSecurity) (*operations.ContentShippingsettingsGetsupportedholidaysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedHolidays", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedHolidays", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,20 +232,20 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedholidays(ctx conte
 }
 
 // ContentShippingsettingsGetsupportedpickupservices - Retrieves supported pickup services for an account.
-func (s *shippingsettings) ContentShippingsettingsGetsupportedpickupservices(ctx context.Context, request operations.ContentShippingsettingsGetsupportedpickupservicesRequest) (*operations.ContentShippingsettingsGetsupportedpickupservicesResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsGetsupportedpickupservices(ctx context.Context, request operations.ContentShippingsettingsGetsupportedpickupservicesRequest, security operations.ContentShippingsettingsGetsupportedpickupservicesSecurity) (*operations.ContentShippingsettingsGetsupportedpickupservicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedPickupServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedPickupServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,20 +280,20 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedpickupservices(ctx
 }
 
 // ContentShippingsettingsList - Lists the shipping settings of the sub-accounts in your Merchant Center account.
-func (s *shippingsettings) ContentShippingsettingsList(ctx context.Context, request operations.ContentShippingsettingsListRequest) (*operations.ContentShippingsettingsListResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsList(ctx context.Context, request operations.ContentShippingsettingsListRequest, security operations.ContentShippingsettingsListSecurity) (*operations.ContentShippingsettingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -328,11 +328,11 @@ func (s *shippingsettings) ContentShippingsettingsList(ctx context.Context, requ
 }
 
 // ContentShippingsettingsUpdate - Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
-func (s *shippingsettings) ContentShippingsettingsUpdate(ctx context.Context, request operations.ContentShippingsettingsUpdateRequest) (*operations.ContentShippingsettingsUpdateResponse, error) {
+func (s *shippingsettings) ContentShippingsettingsUpdate(ctx context.Context, request operations.ContentShippingsettingsUpdateRequest, security operations.ContentShippingsettingsUpdateSecurity) (*operations.ContentShippingsettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -344,11 +344,11 @@ func (s *shippingsettings) ContentShippingsettingsUpdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

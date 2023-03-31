@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type ListDigitalWalletTokensQueryParams struct {
+type ListDigitalWalletTokensRequest struct {
 	CardID              *string    `queryParam:"style=form,explode=true,name=card_id"`
 	CreatedAtAfter      *time.Time `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time `queryParam:"style=form,explode=true,name=created_at.before"`
@@ -18,10 +18,6 @@ type ListDigitalWalletTokensQueryParams struct {
 	CreatedAtOnOrBefore *time.Time `queryParam:"style=form,explode=true,name=created_at.on_or_before"`
 	Cursor              *string    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListDigitalWalletTokensRequest struct {
-	QueryParams ListDigitalWalletTokensQueryParams
 }
 
 type ListDigitalWalletTokensDefaultApplicationJSON13StatusEnum string

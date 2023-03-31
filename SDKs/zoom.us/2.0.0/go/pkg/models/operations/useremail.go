@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserEmailSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserEmailQueryParams struct {
-	// The email address to be verified.
-	Email string `queryParam:"style=form,explode=true,name=email"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UserEmailRequest struct {
-	QueryParams UserEmailQueryParams
-	Security    UserEmailSecurity
+	// The email address to be verified.
+	Email string `queryParam:"style=form,explode=true,name=email"`
 }
 
 // UserEmail200ApplicationXML - **HTTP Status Code:** `200`<br>

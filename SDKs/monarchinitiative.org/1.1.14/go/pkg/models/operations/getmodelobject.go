@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetModelObjectPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetModelObjectRequest struct {
-	PathParams GetModelObjectPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetModelObjectResponse struct {

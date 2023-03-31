@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFilesFileIDPathParams struct {
+type GetFilesFileIDRequest struct {
 	// `id` for a specific file
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type GetFilesFileIDRequest struct {
-	PathParams GetFilesFileIDPathParams
 }
 
 // GetFilesFileID404ApplicationJSON - Not Found

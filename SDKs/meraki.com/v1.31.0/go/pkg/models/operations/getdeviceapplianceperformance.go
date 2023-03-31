@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceAppliancePerformancePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceAppliancePerformanceRequest struct {
-	PathParams GetDeviceAppliancePerformancePathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceAppliancePerformanceResponse struct {

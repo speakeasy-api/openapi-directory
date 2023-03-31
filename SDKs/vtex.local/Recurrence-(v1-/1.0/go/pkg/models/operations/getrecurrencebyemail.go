@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetRecurrencebyemailQueryParams struct {
-	// If you wish to list tasks by Subscriptions with failures on the last execution cycle, insert the desired cycleStatus.
-	CycleStatus *string `queryParam:"style=form,explode=true,name=cycleStatus"`
-	// If you wish to list tasks by email, insert the desired user's email.
-	Email *string `queryParam:"style=form,explode=true,name=email"`
-}
-
-type GetRecurrencebyemailHeaders struct {
+type GetRecurrencebyemailRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetRecurrencebyemailRequest struct {
-	QueryParams GetRecurrencebyemailQueryParams
-	Headers     GetRecurrencebyemailHeaders
+	// If you wish to list tasks by Subscriptions with failures on the last execution cycle, insert the desired cycleStatus.
+	CycleStatus *string `queryParam:"style=form,explode=true,name=cycleStatus"`
+	// If you wish to list tasks by email, insert the desired user's email.
+	Email *string `queryParam:"style=form,explode=true,name=email"`
 }
 
 type GetRecurrencebyemailResponse struct {

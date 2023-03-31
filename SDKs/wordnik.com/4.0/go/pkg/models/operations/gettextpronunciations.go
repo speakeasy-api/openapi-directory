@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetTextPronunciationsPathParams struct {
-	// Word to get pronunciations for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetTextPronunciationsSourceDictionaryEnum - Get from a single dictionary
 type GetTextPronunciationsSourceDictionaryEnum string
 
@@ -106,7 +101,7 @@ func (e *GetTextPronunciationsUseCanonicalEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetTextPronunciationsQueryParams struct {
+type GetTextPronunciationsRequest struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Get from a single dictionary
@@ -115,11 +110,8 @@ type GetTextPronunciationsQueryParams struct {
 	TypeFormat *GetTextPronunciationsTypeFormatEnum `queryParam:"style=form,explode=true,name=typeFormat"`
 	// If true will try to return a correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetTextPronunciationsUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetTextPronunciationsRequest struct {
-	PathParams  GetTextPronunciationsPathParams
-	QueryParams GetTextPronunciationsQueryParams
+	// Word to get pronunciations for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetTextPronunciationsResponse struct {

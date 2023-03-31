@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2TasksIDJSONPathParams struct {
-	// Task ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2TasksIDJSONRequestBody struct {
 	// Current state of the task, valid options are: completed
 	CurrentState *string `form:"name=current_state"`
@@ -27,8 +22,9 @@ type PutV2TasksIDJSONRequestBody struct {
 }
 
 type PutV2TasksIDJSONRequest struct {
-	PathParams PutV2TasksIDJSONPathParams
-	Request    *PutV2TasksIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2TasksIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Task ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2TasksIDJSONResponse struct {

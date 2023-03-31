@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersBaseSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
-type GetNumbersBaseQueryParams struct {
+type GetNumbersBaseRequest struct {
 	// Base of the supplied number (Optional base 10 assumed by default)
 	From *int64 `queryParam:"style=form,explode=true,name=from"`
 	// Number to convert to the target base
 	Number int64 `queryParam:"style=form,explode=true,name=number"`
 	// Target base to convert to
 	To int64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetNumbersBaseRequest struct {
-	QueryParams GetNumbersBaseQueryParams
-	Security    GetNumbersBaseSecurity
 }
 
 type GetNumbersBaseResponse struct {

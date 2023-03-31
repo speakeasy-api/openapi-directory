@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMessageCommentReactionsQueryParams struct {
+type GetMessageCommentReactionsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Message comment to return reactions for.
@@ -16,10 +16,6 @@ type GetMessageCommentReactionsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// User ID.  Provide a value of `0` to operate the current session's user.
 	UserID *int `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type GetMessageCommentReactionsRequest struct {
-	QueryParams GetMessageCommentReactionsQueryParams
 }
 
 type GetMessageCommentReactionsResponse struct {

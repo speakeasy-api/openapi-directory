@@ -4,15 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PostV1OrderFeedbackRequest(
-    query_params=operations.PostV1OrderFeedbackQueryParams(
-        action="REJECT_BLACKLIST",
-        format="xml",
-        id="blanditiis",
-        key="voluptatem",
-        notes="consequuntur",
-    ),
+    action="REJECT",
+    format="xml",
+    id="distinctio",
+    key="quibusdam",
+    notes="unde",
 )
     
 res = s.post_v1_order_feedback(req)

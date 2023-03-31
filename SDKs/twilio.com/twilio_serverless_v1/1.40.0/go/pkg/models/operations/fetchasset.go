@@ -12,20 +12,15 @@ var FetchAssetServerList = []string{
 }
 
 type FetchAssetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAssetPathParams struct {
+type FetchAssetRequest struct {
 	// The SID of the Service to fetch the Asset resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID that identifies the Asset resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchAssetRequest struct {
-	PathParams FetchAssetPathParams
-	Security   FetchAssetSecurity
-	ServerURL  *string
 }
 
 type FetchAssetResponse struct {

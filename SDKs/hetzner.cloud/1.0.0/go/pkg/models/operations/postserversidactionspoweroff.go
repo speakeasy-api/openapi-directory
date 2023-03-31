@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsPoweroffPathParams struct {
+type PostServersIDActionsPoweroffRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsPoweroffRequest struct {
-	PathParams PostServersIDActionsPoweroffPathParams
 }
 
 // PostServersIDActionsPoweroffActionResponseActionError - Error message for the Action if error occurred, otherwise null

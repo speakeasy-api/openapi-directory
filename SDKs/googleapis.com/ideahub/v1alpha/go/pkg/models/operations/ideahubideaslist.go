@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IdeahubIdeasListQueryParams struct {
+type IdeahubIdeasListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,10 +40,6 @@ type IdeahubIdeasListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdeahubIdeasListRequest struct {
-	QueryParams IdeahubIdeasListQueryParams
 }
 
 type IdeahubIdeasListResponse struct {

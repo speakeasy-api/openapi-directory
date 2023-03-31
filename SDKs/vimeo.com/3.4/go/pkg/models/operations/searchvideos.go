@@ -132,7 +132,7 @@ func (e *SearchVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchVideosQueryParams struct {
+type SearchVideosRequest struct {
 	// The sort direction of the results.
 	Direction *SearchVideosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page.
@@ -149,10 +149,6 @@ type SearchVideosQueryParams struct {
 	Sort *SearchVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// The comma-separated list of videos to find.
 	Uris *string `queryParam:"style=form,explode=true,name=uris"`
-}
-
-type SearchVideosRequest struct {
-	QueryParams SearchVideosQueryParams
 }
 
 type SearchVideosResponse struct {

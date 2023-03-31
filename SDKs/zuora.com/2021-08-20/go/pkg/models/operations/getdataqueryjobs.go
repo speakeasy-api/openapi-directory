@@ -42,16 +42,7 @@ func (e *GETDataQueryJobsQueryStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDataQueryJobsQueryParams struct {
-	// Specifies the maximum number of query jobs to return.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// Filters the list of query jobs by status.
-	//
-	QueryStatus *GETDataQueryJobsQueryStatusEnum `queryParam:"style=form,explode=true,name=queryStatus"`
-}
-
-type GETDataQueryJobsHeaders struct {
+type GETDataQueryJobsRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -63,11 +54,12 @@ type GETDataQueryJobsHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETDataQueryJobsRequest struct {
-	QueryParams GETDataQueryJobsQueryParams
-	Headers     GETDataQueryJobsHeaders
+	// Specifies the maximum number of query jobs to return.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// Filters the list of query jobs by status.
+	//
+	QueryStatus *GETDataQueryJobsQueryStatusEnum `queryParam:"style=form,explode=true,name=queryStatus"`
 }
 
 type GETDataQueryJobsResponse struct {

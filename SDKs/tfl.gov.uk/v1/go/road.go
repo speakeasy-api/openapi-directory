@@ -43,7 +43,7 @@ func (s *road) RoadDisruptedStreets(ctx context.Context, request operations.Road
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,14 +105,14 @@ func (s *road) RoadDisruptedStreets(ctx context.Context, request operations.Road
 // RoadDisruption - Get active disruptions, filtered by road ids
 func (s *road) RoadDisruption(ctx context.Context, request operations.RoadDisruptionRequest) (*operations.RoadDisruptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}/Disruption", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}/Disruption", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,14 +181,14 @@ func (s *road) RoadDisruption(ctx context.Context, request operations.RoadDisrup
 // RoadDisruptionByID - Gets a list of active disruptions filtered by disruption Ids.
 func (s *road) RoadDisruptionByID(ctx context.Context, request operations.RoadDisruptionByIDRequest) (*operations.RoadDisruptionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Road/all/Disruption/{disruptionIds}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Road/all/Disruption/{disruptionIds}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -452,14 +452,14 @@ func (s *road) RoadMetaSeverities(ctx context.Context) (*operations.RoadMetaSeve
 // RoadStatus - Gets the specified roads with the status aggregated over the date range specified, or now until the end of today if no dates are passed.
 func (s *road) RoadStatus(ctx context.Context, request operations.RoadStatusRequest) (*operations.RoadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -521,7 +521,7 @@ func (s *road) RoadStatus(ctx context.Context, request operations.RoadStatusRequ
 // GetRoadIds - Gets the road with the specified id (e.g. A1)
 func (s *road) GetRoadIds(ctx context.Context, request operations.GetRoadIdsRequest) (*operations.GetRoadIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Road/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

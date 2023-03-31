@@ -35,14 +35,14 @@ func newGroupOwners(defaultClient, securityClient HTTPClient, serverURL, languag
 // The owners are a set of non-admin users who are allowed to modify this object.
 func (s *groupOwners) GroupsListOwners(ctx context.Context, request operations.GroupsListOwnersRequest) (*operations.GroupsListOwnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/owners", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/groups/{objectId}/owners", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

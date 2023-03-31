@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsUpdateImportPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // MigrationsUpdateImportRequestBodyVcsEnum - The type of version control system you are migrating from.
 type MigrationsUpdateImportRequestBodyVcsEnum string
 
@@ -58,8 +51,11 @@ type MigrationsUpdateImportRequestBody struct {
 }
 
 type MigrationsUpdateImportRequest struct {
-	PathParams MigrationsUpdateImportPathParams
-	Request    *MigrationsUpdateImportRequestBody `request:"mediaType=application/json"`
+	RequestBody *MigrationsUpdateImportRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type MigrationsUpdateImportResponse struct {

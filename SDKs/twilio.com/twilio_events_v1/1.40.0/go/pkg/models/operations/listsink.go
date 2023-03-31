@@ -12,10 +12,11 @@ var ListSinkServerList = []string{
 }
 
 type ListSinkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSinkQueryParams struct {
+type ListSinkRequest struct {
 	// A boolean query parameter filtering the results to return sinks used/not used by a subscription.
 	InUse *bool `queryParam:"style=form,explode=true,name=InUse"`
 	// The page index. This value is simply for client state.
@@ -26,12 +27,6 @@ type ListSinkQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// A String query parameter filtering the results by status `initialized`, `validating`, `active` or `failed`.
 	Status *string `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListSinkRequest struct {
-	QueryParams ListSinkQueryParams
-	Security    ListSinkSecurity
-	ServerURL   *string
 }
 
 type ListSinkListSinkResponseMeta struct {

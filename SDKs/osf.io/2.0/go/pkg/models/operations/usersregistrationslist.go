@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UsersRegistrationsListPathParams struct {
+type UsersRegistrationsListRequest struct {
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersRegistrationsListRequest struct {
-	PathParams UsersRegistrationsListPathParams
 }
 
 type UsersRegistrationsListResponse struct {

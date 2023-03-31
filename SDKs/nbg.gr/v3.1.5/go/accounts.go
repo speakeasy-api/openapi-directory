@@ -34,7 +34,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetAccounts - Get Accounts
 // Get Accounts
-func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccountsRequest) (*operations.GetAccountsResponse, error) {
+func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccountsRequest, security operations.GetAccountsSecurity) (*operations.GetAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -43,9 +43,9 @@ func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccoun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,18 +116,18 @@ func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccoun
 
 // GetAccountsAccountID - Get Accounts
 // Get Accounts by Account ID
-func (s *accounts) GetAccountsAccountID(ctx context.Context, request operations.GetAccountsAccountIDRequest) (*operations.GetAccountsAccountIDResponse, error) {
+func (s *accounts) GetAccountsAccountID(ctx context.Context, request operations.GetAccountsAccountIDRequest, security operations.GetAccountsAccountIDSecurity) (*operations.GetAccountsAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2ActionsJSONQueryParams struct {
+type GetV2ActionsJSONRequest struct {
 	// Filters actions by cadence_id. Multiple cadence ids can be applied
 	CadenceID []int64 `queryParam:"style=form,explode=false,name=cadence_id"`
 	// Equality filters that are applied to the due_on field. A single filter can be used by itself or combined with other filters to create a range.
@@ -45,10 +45,6 @@ type GetV2ActionsJSONQueryParams struct {
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
 	// Filters actions by the user's guid. Multiple user guids can be applied. The user must be a team admin to filter other users' actions
 	UserGUID []string `queryParam:"style=form,explode=false,name=user_guid"`
-}
-
-type GetV2ActionsJSONRequest struct {
-	QueryParams GetV2ActionsJSONQueryParams
 }
 
 type GetV2ActionsJSONResponse struct {

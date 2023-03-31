@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type FolderMenuPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type FolderMenuPostRawResponse struct {
 	ContentType string
 	StatusCode  int

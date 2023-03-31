@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsAddSelectedRepoToRequiredWorkflowPathParams struct {
+type ActionsAddSelectedRepoToRequiredWorkflowRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the repository.
 	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
 	// The unique identifier of the required workflow.
 	RequiredWorkflowID int64 `pathParam:"style=simple,explode=false,name=required_workflow_id"`
-}
-
-type ActionsAddSelectedRepoToRequiredWorkflowRequest struct {
-	PathParams ActionsAddSelectedRepoToRequiredWorkflowPathParams
 }
 
 type ActionsAddSelectedRepoToRequiredWorkflowResponse struct {

@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetUserContactsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetUserContactsQueryParams struct {
+type GetUserContactsRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned with a single API call.
@@ -20,11 +19,6 @@ type GetUserContactsQueryParams struct {
 	// `company`: Contacts from the user's organization.
 	// `external`: External contacts.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetUserContactsRequest struct {
-	QueryParams GetUserContactsQueryParams
-	Security    GetUserContactsSecurity
 }
 
 type GetUserContacts200ApplicationXMLContacts struct {

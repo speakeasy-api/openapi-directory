@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutAccountsAccountOrdersCustomerOrderIDPathParams struct {
-	// Customer Order ID
-	CustomerOrderID string `pathParam:"style=simple,explode=false,name=CustomerOrderId"`
-	// Account Number
-	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
 // PutAccountsAccountOrdersCustomerOrderIDRequestBodySideEnum - Buy = '1', Sell = '2'
 type PutAccountsAccountOrdersCustomerOrderIDRequestBodySideEnum string
 
@@ -83,9 +76,12 @@ type PutAccountsAccountOrdersCustomerOrderIDRequestBody struct {
 }
 
 type PutAccountsAccountOrdersCustomerOrderIDRequest struct {
-	PathParams PutAccountsAccountOrdersCustomerOrderIDPathParams
+	// Customer Order ID
+	CustomerOrderID string `pathParam:"style=simple,explode=false,name=CustomerOrderId"`
 	// Order Parameters
-	Request PutAccountsAccountOrdersCustomerOrderIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PutAccountsAccountOrdersCustomerOrderIDRequestBody `request:"mediaType=application/json"`
+	// Account Number
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 }
 
 type PutAccountsAccountOrdersCustomerOrderID200ApplicationJSONSideEnum string

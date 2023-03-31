@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDCommonFoldersPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDCommonFoldersQueryParams struct {
+type GetSpacesSpaceIDFoldersIDCommonFoldersRequest struct {
 	// keywords attached to the folder
 	Keywords *string `queryParam:"style=form,explode=true,name=Keywords"`
 	// Name of the folder
 	Name *string `queryParam:"style=form,explode=true,name=Name"`
-}
-
-type GetSpacesSpaceIDFoldersIDCommonFoldersRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDCommonFoldersPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDCommonFoldersQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDCommonFoldersResponse struct {

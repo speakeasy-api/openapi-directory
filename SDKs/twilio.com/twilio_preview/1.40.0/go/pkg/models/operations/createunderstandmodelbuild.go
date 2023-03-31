@@ -12,11 +12,8 @@ var CreateUnderstandModelBuildServerList = []string{
 }
 
 type CreateUnderstandModelBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandModelBuildPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandModelBuildCreateUnderstandModelBuildRequest struct {
@@ -26,10 +23,8 @@ type CreateUnderstandModelBuildCreateUnderstandModelBuildRequest struct {
 }
 
 type CreateUnderstandModelBuildRequest struct {
-	PathParams CreateUnderstandModelBuildPathParams
-	Request    *CreateUnderstandModelBuildCreateUnderstandModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandModelBuildSecurity
-	ServerURL  *string
+	AssistantSid string                                                       `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandModelBuildCreateUnderstandModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUnderstandModelBuildResponse struct {

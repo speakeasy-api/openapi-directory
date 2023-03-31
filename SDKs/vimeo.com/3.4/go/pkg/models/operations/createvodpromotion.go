@@ -10,12 +10,7 @@ import (
 )
 
 type CreateVodPromotionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateVodPromotionPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateVodPromotionRequestBodyAccessTypeEnum - The promotion access type, which is a purchase option that isn't available on the container. VIP promotions always make the content free of charge. If you use this type, you must further define the promotion with the `download` or `stream_period` fields.
@@ -223,9 +218,9 @@ type CreateVodPromotionRequestBody struct {
 }
 
 type CreateVodPromotionRequest struct {
-	PathParams CreateVodPromotionPathParams
-	Request    CreateVodPromotionRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.promotion+json"`
-	Security   CreateVodPromotionSecurity
+	RequestBody CreateVodPromotionRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.promotion+json"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 }
 
 type CreateVodPromotionResponse struct {

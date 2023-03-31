@@ -35,14 +35,14 @@ func newInvoiceAdjustments(defaultClient, securityClient HTTPClient, serverURL, 
 // ObjectDELETEInvoiceAdjustment - CRUD: Delete an invoice adjustment
 func (s *invoiceAdjustments) ObjectDELETEInvoiceAdjustment(ctx context.Context, request operations.ObjectDELETEInvoiceAdjustmentRequest) (*operations.ObjectDELETEInvoiceAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -95,16 +95,16 @@ func (s *invoiceAdjustments) ObjectDELETEInvoiceAdjustment(ctx context.Context, 
 // ObjectGETInvoiceAdjustment - CRUD: Retrieve an invoice adjustment
 func (s *invoiceAdjustments) ObjectGETInvoiceAdjustment(ctx context.Context, request operations.ObjectGETInvoiceAdjustmentRequest) (*operations.ObjectGETInvoiceAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,7 +173,7 @@ func (s *invoiceAdjustments) ObjectPOSTInvoiceAdjustment(ctx context.Context, re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/invoice-adjustment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateInvoiceAdjustment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -188,9 +188,9 @@ func (s *invoiceAdjustments) ObjectPOSTInvoiceAdjustment(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -257,9 +257,9 @@ func (s *invoiceAdjustments) ObjectPOSTInvoiceAdjustment(ctx context.Context, re
 // ObjectPUTInvoiceAdjustment - CRUD: Update an invoice adjustment
 func (s *invoiceAdjustments) ObjectPUTInvoiceAdjustment(ctx context.Context, request operations.ObjectPUTInvoiceAdjustmentRequest) (*operations.ObjectPUTInvoiceAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-adjustment/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyInvoiceAdjustment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,9 +274,9 @@ func (s *invoiceAdjustments) ObjectPUTInvoiceAdjustment(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

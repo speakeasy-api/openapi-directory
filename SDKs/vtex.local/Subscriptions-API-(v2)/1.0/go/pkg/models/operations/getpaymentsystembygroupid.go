@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetpaymentSystembygroupIDPathParams struct {
-	// Group ID.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetpaymentSystembygroupIDHeaders struct {
+type GetpaymentSystembygroupIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetpaymentSystembygroupIDRequest struct {
-	PathParams GetpaymentSystembygroupIDPathParams
-	Headers    GetpaymentSystembygroupIDHeaders
+	// Group ID.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type GetpaymentSystembygroupIDResponse struct {

@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            DeveloperKey: shared.SchemeDeveloperKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            DeveloperKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteAccountsIDRequest{
-        PathParams: operations.DeleteAccountsIDPathParams{
-            ID: 548814,
-        },
+        ID: 548814,
     }
 
     ctx := context.Background()

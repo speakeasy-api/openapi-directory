@@ -279,10 +279,6 @@ type PostGeomarksNewRequestBody struct {
 	Srid *PostGeomarksNewRequestBodySridEnum `form:"name=srid"`
 }
 
-type PostGeomarksNewRequest struct {
-	Request *PostGeomarksNewRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostGeomarksNewResponse struct {
 	ContentType string
 	StatusCode  int

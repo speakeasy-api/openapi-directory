@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/asana.com/1.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,66 +14,66 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        personal_access_token=shared.SchemePersonalAccessToken(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAttachmentForTaskRequest(
-    path_params=operations.CreateAttachmentForTaskPathParams(
-        task_gid="delectus",
-    ),
-    query_params=operations.CreateAttachmentForTaskQueryParams(
-        limit=4628205130743140522,
-        offset="eveniet",
-        opt_fields=[
-            "sit",
-            "est",
-        ],
-        opt_pretty=True,
-    ),
-    request=shared.AttachmentRequest(
-        file=shared.AttachmentRequestFile(
-            content="ipsa".encode(),
-            file="assumenda",
-        ),
-        name="id",
-        resource_subtype="asana_file_attachments",
-        url="ipsam",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
 )
-    
-res = s.attachments.create_attachment_for_task(req)
 
-if res.create_attachment_for_task_200_application_json_object is not None:
+
+req = operations.CreateAttachmentForObjectRequest(
+    attachment_request=shared.AttachmentRequest(
+        connect_to_app=False,
+        file=shared.AttachmentRequestFile(
+            content="corrupti".encode(),
+            file="provident",
+        ),
+        name="distinctio",
+        parent="quibusdam",
+        resource_subtype="external",
+        url="unde",
+    ),
+    opt_fields=[
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+    ],
+    opt_pretty=False,
+)
+    
+res = s.attachments.create_attachment_for_object(req)
+
+if res.create_attachment_for_object_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Attachments
 
-* `create_attachment_for_task` - Upload an attachment
+### attachments
+
+* `create_attachment_for_object` - Upload an attachment
 * `delete_attachment` - Delete an attachment
 * `get_attachment` - Get an attachment
-* `get_attachments_for_task` - Get attachments for a task
+* `get_attachments_for_object` - Get attachments from an object
 
-### Batch API
+### audit_log_api
+
+* `get_audit_log_events` - Get audit log events
+
+### batch_api
 
 * `create_batch_request` - Submit parallel requests
 
-### Custom Field Settings
+### custom_field_settings
 
 * `get_custom_field_settings_for_portfolio` - Get a portfolio's custom fields
 * `get_custom_field_settings_for_project` - Get a project's custom fields
 
-### Custom Fields
+### custom_fields
 
 * `create_custom_field` - Create a custom field
 * `create_enum_option_for_custom_field` - Create an enum option
@@ -84,45 +84,47 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `update_custom_field` - Update a custom field
 * `update_enum_option` - Update an enum option
 
-### Events
+### events
 
 * `get_events` - Get events on a resource
 
-### Goals
+### goal_relationships
+
+* `add_supporting_relationship` - Add a supporting goal relationship
+* `get_goal_relationship` - Get a goal relationship
+* `get_goal_relationships` - Get goal relationships
+* `remove_supporting_relationship` - Removes a supporting goal relationship
+* `update_goal_relationship` - Update a goal relationship
+
+### goals
 
 * `add_followers` - Add a collaborator to a goal
-* `add_subgoal` - Add a subgoal to a parent goal
-* `add_supporting_work_for_goal` - Add a project/portfolio as supporting work for a goal.
 * `create_goal` - Create a goal
 * `create_goal_metric` - Create a goal metric
 * `delete_goal` - Delete a goal
 * `get_goal` - Get a goal
 * `get_goals` - Get goals
 * `get_parent_goals_for_goal` - Get parent goals from a goal
-* `get_subgoals_for_goal` - Get subgoals from a goal
 * `remove_followers` - Remove a collaborator from a goal
-* `remove_subgoal` - Remove a subgoal from a goal
-* `remove_supporting_work_for_goal` - Remove a project/portfolio as supporting work for a goal.
-* `supporting_work` - Get supporting work from a goal
 * `update_goal` - Update a goal
 * `update_goal_metric` - Update a goal metric
 
-### Jobs
+### jobs
 
 * `get_job` - Get a job by id
 
-### Organization Exports
+### organization_exports
 
 * `create_organization_export` - Create an organization export request
 * `get_organization_export` - Get details on an org export request
 
-### Portfolio Memberships
+### portfolio_memberships
 
 * `get_portfolio_membership` - Get a portfolio membership
 * `get_portfolio_memberships` - Get multiple portfolio memberships
 * `get_portfolio_memberships_for_portfolio` - Get memberships from a portfolio
 
-### Portfolios
+### portfolios
 
 * `add_custom_field_setting_for_portfolio` - Add a custom field to a portfolio
 * `add_item_for_portfolio` - Add a portfolio item
@@ -137,19 +139,33 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `remove_members_for_portfolio` - Remove users from a portfolio
 * `update_portfolio` - Update a portfolio
 
-### Project Memberships
+### project_briefs
+
+* `create_project_brief` - Create a project brief
+* `delete_project_brief` - Delete a project brief
+* `get_project_brief` - Get a project brief
+* `update_project_brief` - Update a project brief
+
+### project_memberships
 
 * `get_project_membership` - Get a project membership
 * `get_project_memberships_for_project` - Get memberships from a project
 
-### Project Statuses
+### project_statuses
 
 * `create_project_status_for_project` - Create a project status
 * `delete_project_status` - Delete a project status
 * `get_project_status` - Get a project status
 * `get_project_statuses_for_project` - Get statuses from a project
 
-### Projects
+### project_templates
+
+* `get_project_template` - Get a project template
+* `get_project_templates` - Get multiple project templates
+* `get_project_templates_for_team` - Get a team's project templates
+* `instantiate_project` - Instantiate a project from a project template
+
+### projects
 
 * `add_custom_field_setting_for_project` - Add a custom field to a project
 * `add_followers_for_project` - Add followers to a project
@@ -165,12 +181,13 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `get_projects_for_team` - Get a team's projects
 * `get_projects_for_workspace` - Get all projects in a workspace
 * `get_task_counts_for_project` - Get task count of a project
+* `project_save_as_template` - Create a project template from a project
 * `remove_custom_field_setting_for_project` - Remove a custom field from a project
 * `remove_followers_for_project` - Remove followers from a project
 * `remove_members_for_project` - Remove users from a project
 * `update_project` - Update a project
 
-### Sections
+### sections
 
 * `add_task_for_section` - Add task to section
 * `create_section_for_project` - Create a section in a project
@@ -180,7 +197,14 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `insert_section_for_project` - Move or Insert sections
 * `update_section` - Update a section
 
-### Stories
+### status_updates
+
+* `create_status_for_object` - Create a status update
+* `delete_status` - Delete a status update
+* `get_status` - Get a status update
+* `get_statuses_for_object` - Get status updates from an object
+
+### stories
 
 * `create_story_for_task` - Create a story on a task
 * `delete_story` - Delete a story
@@ -188,7 +212,7 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `get_story` - Get a story
 * `update_story` - Update a story
 
-### Tags
+### tags
 
 * `create_tag` - Create a tag
 * `create_tag_for_workspace` - Create a tag in a workspace
@@ -199,7 +223,7 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `get_tags_for_workspace` - Get tags in a workspace
 * `update_tag` - Update a tag
 
-### Tasks
+### tasks
 
 * `add_dependencies_for_task` - Set dependencies for a task
 * `add_dependents_for_task` - Set dependents for a task
@@ -228,37 +252,38 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `set_parent_for_task` - Set the parent of a task
 * `update_task` - Update a task
 
-### Team Memberships
+### team_memberships
 
 * `get_team_membership` - Get a team membership
 * `get_team_memberships` - Get team memberships
 * `get_team_memberships_for_team` - Get memberships from a team
 * `get_team_memberships_for_user` - Get memberships from a user
 
-### Teams
+### teams
 
 * `add_user_for_team` - Add a user to a team
 * `create_team` - Create a team
 * `get_team` - Get a team
-* `get_teams_for_organization` - Get teams in an organization
 * `get_teams_for_user` - Get teams for a user
+* `get_teams_for_workspace` - Get teams in a workspace
 * `remove_user_for_team` - Remove a user from a team
+* `update_team` - Update a team
 
-### Time Periods
+### time_periods
 
 * `get_time_period` - Get a time period
 * `get_time_periods` - Get time periods
 
-### Typeahead
+### typeahead
 
 * `typeahead_for_workspace` - Get objects via typeahead
 
-### User Task Lists
+### user_task_lists
 
 * `get_user_task_list` - Get a user task list
 * `get_user_task_list_for_user` - Get a user's task list
 
-### Users
+### users
 
 * `get_favorites_for_user` - Get a user's favorites
 * `get_user` - Get a user
@@ -266,27 +291,38 @@ if res.create_attachment_for_task_200_application_json_object is not None:
 * `get_users_for_team` - Get users in a team
 * `get_users_for_workspace` - Get users in a workspace or organization
 
-### Webhooks
+### webhooks
 
 * `create_webhook` - Establish a webhook
 * `delete_webhook` - Delete a webhook
 * `get_webhook` - Get a webhook
 * `get_webhooks` - Get multiple webhooks
+* `update_webhook` - Update a webhook
 
-### Workspace Memberships
+### workspace_memberships
 
 * `get_workspace_membership` - Get a workspace membership
 * `get_workspace_memberships_for_user` - Get workspace memberships for a user
 * `get_workspace_memberships_for_workspace` - Get the workspace memberships for a workspace
 
-### Workspaces
+### workspaces
 
 * `add_user_for_workspace` - Add a user to a workspace or organization
 * `get_workspace` - Get a workspace
 * `get_workspaces` - Get multiple workspaces
 * `remove_user_for_workspace` - Remove a user from a workspace or organization
 * `update_workspace` - Update a workspace
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByID7PathParams struct {
-	// project's internal identifier
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetByID7QueryParams struct {
+type GetByID7Request struct {
 	// list of additional fields which should be embedded in the response (available options: tasks)
 	Embed *string `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetByID7Request struct {
-	PathParams  GetByID7PathParams
-	QueryParams GetByID7QueryParams
+	// project's internal identifier
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetByID7Response struct {

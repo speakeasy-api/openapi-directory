@@ -4,30 +4,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DriveAboutGetRequest(
-    security=operations.DriveAboutGetSecurity(
-        option1=operations.DriveAboutGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.DriveAboutGetQueryParams(
-        alt="json",
-        fields="dolores",
-        key="voluptates",
-        oauth_token="illo",
-        pretty_print=True,
-        quota_user="eveniet",
-        user_ip="molestiae",
-    ),
+    alt="json",
+    fields_="corrupti",
+    key="provident",
+    oauth_token="distinctio",
+    pretty_print=False,
+    quota_user="quibusdam",
+    user_ip="unde",
 )
     
-res = s.about.drive_about_get(req)
+res = s.about.drive_about_get(req, operations.DriveAboutGetSecurity(
+    option1=operations.DriveAboutGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.about is not None:
     # handle response

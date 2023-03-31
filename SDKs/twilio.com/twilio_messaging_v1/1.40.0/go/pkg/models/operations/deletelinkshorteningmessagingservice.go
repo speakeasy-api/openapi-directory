@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteLinkshorteningMessagingServiceServerList = []string{
@@ -12,20 +11,15 @@ var DeleteLinkshorteningMessagingServiceServerList = []string{
 }
 
 type DeleteLinkshorteningMessagingServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteLinkshorteningMessagingServicePathParams struct {
+type DeleteLinkshorteningMessagingServiceRequest struct {
 	// The domain SID to dissociate from a messaging service. With URL shortening enabled, links in messages sent with the associated messaging service will be shortened to the provided domain
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A messaging service SID to dissociate from a domain. With URL shortening enabled, links in messages sent with the provided messaging service will be shortened to the associated domain
 	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
-}
-
-type DeleteLinkshorteningMessagingServiceRequest struct {
-	PathParams DeleteLinkshorteningMessagingServicePathParams
-	Security   DeleteLinkshorteningMessagingServiceSecurity
-	ServerURL  *string
 }
 
 type DeleteLinkshorteningMessagingServiceResponse struct {

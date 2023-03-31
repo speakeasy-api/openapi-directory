@@ -33,7 +33,7 @@ func newCallback(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // IntegrationsCallbackGenerateToken - Receives the auth code and auth config id to combine that with the client id and secret to retrieve access tokens from the token endpoint. Returns either a success or error message when it's done.
-func (s *callback) IntegrationsCallbackGenerateToken(ctx context.Context, request operations.IntegrationsCallbackGenerateTokenRequest) (*operations.IntegrationsCallbackGenerateTokenResponse, error) {
+func (s *callback) IntegrationsCallbackGenerateToken(ctx context.Context, request operations.IntegrationsCallbackGenerateTokenRequest, security operations.IntegrationsCallbackGenerateTokenSecurity) (*operations.IntegrationsCallbackGenerateTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/callback:generateToken"
 
@@ -42,11 +42,11 @@ func (s *callback) IntegrationsCallbackGenerateToken(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

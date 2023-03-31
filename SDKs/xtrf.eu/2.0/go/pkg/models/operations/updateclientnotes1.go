@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateClientNotes1PathParams struct {
+type UpdateClientNotes1Request struct {
+	// Updated Client Notes for a quote.
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateClientNotes1Request struct {
-	PathParams UpdateClientNotes1PathParams
-	// Updated Client Notes for a quote.
-	Request shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateClientNotes1Response struct {

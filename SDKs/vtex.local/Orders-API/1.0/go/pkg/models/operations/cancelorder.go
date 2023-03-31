@@ -6,27 +6,19 @@ import (
 	"net/http"
 )
 
-type CancelOrderPathParams struct {
-	// ID that identifies the order in the seller.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type CancelOrderHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CancelOrderRequestBody struct {
 	// Reason for cancelling the order.
 	Reason *string `json:"reason,omitempty"`
 }
 
 type CancelOrderRequest struct {
-	PathParams CancelOrderPathParams
-	Headers    CancelOrderHeaders
-	Request    *CancelOrderRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                  `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *CancelOrderRequestBody `request:"mediaType=application/json"`
+	// ID that identifies the order in the seller.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // CancelOrder200ApplicationJSON - OK

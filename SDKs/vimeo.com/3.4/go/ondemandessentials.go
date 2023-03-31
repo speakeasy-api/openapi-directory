@@ -35,9 +35,9 @@ func newOnDemandEssentials(defaultClient, securityClient HTTPClient, serverURL, 
 // CreateVod - Create an On Demand page
 func (s *onDemandEssentials) CreateVod(ctx context.Context, request operations.CreateVodRequest) (*operations.CreateVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/pages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/pages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -87,7 +87,7 @@ func (s *onDemandEssentials) CreateVod(ctx context.Context, request operations.C
 }
 
 // CreateVodAlt1 - Create an On Demand page
-func (s *onDemandEssentials) CreateVodAlt1(ctx context.Context, request operations.CreateVodAlt1Request) (*operations.CreateVodAlt1Response, error) {
+func (s *onDemandEssentials) CreateVodAlt1(ctx context.Context, request operations.CreateVodAlt1RequestBody) (*operations.CreateVodAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/ondemand/pages"
 
@@ -141,16 +141,16 @@ func (s *onDemandEssentials) CreateVodAlt1(ctx context.Context, request operatio
 }
 
 // DeleteVodDraft - Delete a draft of an On Demand page
-func (s *onDemandEssentials) DeleteVodDraft(ctx context.Context, request operations.DeleteVodDraftRequest) (*operations.DeleteVodDraftResponse, error) {
+func (s *onDemandEssentials) DeleteVodDraft(ctx context.Context, request operations.DeleteVodDraftRequest, security operations.DeleteVodDraftSecurity) (*operations.DeleteVodDraftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -189,11 +189,11 @@ func (s *onDemandEssentials) DeleteVodDraft(ctx context.Context, request operati
 
 // EditVod - Edit an On Demand page
 // Enable preorders or publish the page.
-func (s *onDemandEssentials) EditVod(ctx context.Context, request operations.EditVodRequest) (*operations.EditVodResponse, error) {
+func (s *onDemandEssentials) EditVod(ctx context.Context, request operations.EditVodRequest, security operations.EditVodSecurity) (*operations.EditVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -205,7 +205,7 @@ func (s *onDemandEssentials) EditVod(ctx context.Context, request operations.Edi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,14 +254,14 @@ func (s *onDemandEssentials) EditVod(ctx context.Context, request operations.Edi
 // GetUserVods - Get all the On Demand pages of a user
 func (s *onDemandEssentials) GetUserVods(ctx context.Context, request operations.GetUserVodsRequest) (*operations.GetUserVodsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/pages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/pages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -319,7 +319,7 @@ func (s *onDemandEssentials) GetUserVodsAlt1(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -370,7 +370,7 @@ func (s *onDemandEssentials) GetUserVodsAlt1(ctx context.Context, request operat
 // GetVod - Get a specific On Demand page
 func (s *onDemandEssentials) GetVod(ctx context.Context, request operations.GetVodRequest) (*operations.GetVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -101,7 +101,7 @@ func (e *GetFilingsOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFilingsQueryParams struct {
+type GetFilingsRequest struct {
 	// Amendent types:
 	//     -N   new
 	//     -A   amendment
@@ -317,10 +317,6 @@ type GetFilingsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory where a candidate runs for office
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetFilingsRequest struct {
-	QueryParams GetFilingsQueryParams
 }
 
 type GetFilingsResponse struct {

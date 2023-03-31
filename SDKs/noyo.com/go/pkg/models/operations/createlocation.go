@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLocationPathParams struct {
+type CreateLocationRequest struct {
+	LocationCreateRequest shared.LocationCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type CreateLocationRequest struct {
-	PathParams CreateLocationPathParams
-	Request    shared.LocationCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateLocationResponse struct {

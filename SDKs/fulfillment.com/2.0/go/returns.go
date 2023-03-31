@@ -34,7 +34,7 @@ func newReturns(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetReturns - List Returns
 // Retrieves summary return activity during the queried timespan. Although return knowledge can be learned from `GET /orders/{id}` it can take an unknown amount of time for an order that is refused or undeliverable to return to an FDC facility. Instead we recommend regularly querying this API.
-func (s *returns) GetReturns(ctx context.Context, request operations.GetReturnsRequest) (*operations.GetReturnsResponse, error) {
+func (s *returns) GetReturns(ctx context.Context, request operations.GetReturnsRequest, security operations.GetReturnsSecurity) (*operations.GetReturnsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/returns"
 
@@ -43,11 +43,11 @@ func (s *returns) GetReturns(ctx context.Context, request operations.GetReturnsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *returns) GetReturns(ctx context.Context, request operations.GetReturnsR
 
 // PutReturns - Inform us of an RMA
 // Inform FDC of an expected return.
-func (s *returns) PutReturns(ctx context.Context, request operations.PutReturnsRequest) (*operations.PutReturnsResponse, error) {
+func (s *returns) PutReturns(ctx context.Context, request operations.PutReturnsRmaRequestV2, security operations.PutReturnsSecurity) (*operations.PutReturnsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/returns"
 
@@ -102,7 +102,7 @@ func (s *returns) PutReturns(ctx context.Context, request operations.PutReturnsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

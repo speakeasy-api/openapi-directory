@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListSelectedRepositoriesRequiredWorkflowPathParams struct {
+type ActionsListSelectedRepositoriesRequiredWorkflowRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the required workflow.
 	RequiredWorkflowID int64 `pathParam:"style=simple,explode=false,name=required_workflow_id"`
-}
-
-type ActionsListSelectedRepositoriesRequiredWorkflowRequest struct {
-	PathParams ActionsListSelectedRepositoriesRequiredWorkflowPathParams
 }
 
 // ActionsListSelectedRepositoriesRequiredWorkflow200ApplicationJSON - Success

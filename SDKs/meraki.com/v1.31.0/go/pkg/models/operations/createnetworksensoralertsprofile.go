@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSensorAlertsProfilePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkSensorAlertsProfileRequestBodyConditionsDirectionEnum - If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature and humidity thresholds.
 type CreateNetworkSensorAlertsProfileRequestBodyConditionsDirectionEnum string
 
@@ -393,8 +389,8 @@ type CreateNetworkSensorAlertsProfileRequestBody struct {
 }
 
 type CreateNetworkSensorAlertsProfileRequest struct {
-	PathParams CreateNetworkSensorAlertsProfilePathParams
-	Request    CreateNetworkSensorAlertsProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSensorAlertsProfileRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkSensorAlertsProfile200ApplicationJSONConditionsDirectionEnum - If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature and humidity thresholds.

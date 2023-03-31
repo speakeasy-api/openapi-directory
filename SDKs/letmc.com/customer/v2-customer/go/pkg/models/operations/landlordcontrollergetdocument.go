@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type LandlordControllerGetDocumentPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetDocumentQueryParams struct {
+type LandlordControllerGetDocumentRequest struct {
 	// The Document ID
 	ID string `queryParam:"style=form,explode=true,name=ID"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerGetDocumentRequest struct {
-	PathParams  LandlordControllerGetDocumentPathParams
-	QueryParams LandlordControllerGetDocumentQueryParams
 }
 
 type LandlordControllerGetDocumentResponse struct {

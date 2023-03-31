@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetSpacesSpaceIDDocumentsDocumentIDMailingpriceSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSpacesSpaceIDDocumentsDocumentIDMailingpricePathParams struct {
+type GetSpacesSpaceIDDocumentsDocumentIDMailingpriceRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsDocumentIDMailingpriceRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsDocumentIDMailingpricePathParams
-	Security   GetSpacesSpaceIDDocumentsDocumentIDMailingpriceSecurity
 }
 
 // GetSpacesSpaceIDDocumentsDocumentIDMailingprice200ApplicationJSON - A list of documents of the folder

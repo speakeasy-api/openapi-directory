@@ -36,7 +36,7 @@ func newMonths(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Returns a single budget month
 func (s *months) GetBudgetMonth(ctx context.Context, request operations.GetBudgetMonthRequest) (*operations.GetBudgetMonthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,14 +93,14 @@ func (s *months) GetBudgetMonth(ctx context.Context, request operations.GetBudge
 // Returns all budget months
 func (s *months) GetBudgetMonths(ctx context.Context, request operations.GetBudgetMonthsRequest) (*operations.GetBudgetMonthsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

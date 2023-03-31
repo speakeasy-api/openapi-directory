@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate - Creates a new CertificateIssuanceConfig in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest) (*operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest, security operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateIssuanceConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateIssuanceConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateIssuanceConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigs
 }
 
 // CertificatemanagerProjectsLocationsCertificateIssuanceConfigsList - Lists CertificateIssuanceConfigs in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest) (*operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest, security operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateIssuanceConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateIssuanceConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateIssuanceConfigs
 }
 
 // CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreate - Creates a new CertificateMapEntry in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest, security operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMapEntries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMapEntries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateMapEntryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificate
 }
 
 // CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesList - Lists CertificateMapEntries in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest, security operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMapEntries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMapEntries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCertificate
 }
 
 // CertificatemanagerProjectsLocationsCertificateMapsCreate - Creates a new CertificateMap in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest, security operations.CertificatemanagerProjectsLocationsCertificateMapsCreateSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMaps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMaps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateMapInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCreate(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsCreate(ctx 
 }
 
 // CertificatemanagerProjectsLocationsCertificateMapsList - Lists CertificateMaps in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest) (*operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest, security operations.CertificatemanagerProjectsLocationsCertificateMapsListSecurity) (*operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMaps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateMaps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificateMapsList(ctx co
 }
 
 // CertificatemanagerProjectsLocationsCertificatesCreate - Creates a new Certificate in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificatesCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest) (*operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificatesCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest, security operations.CertificatemanagerProjectsLocationsCertificatesCreateSecurity) (*operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificatesCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificatesCreate(ctx con
 }
 
 // CertificatemanagerProjectsLocationsCertificatesList - Lists Certificates in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsCertificatesList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificatesListRequest) (*operations.CertificatemanagerProjectsLocationsCertificatesListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsCertificatesList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsCertificatesListRequest, security operations.CertificatemanagerProjectsLocationsCertificatesListSecurity) (*operations.CertificatemanagerProjectsLocationsCertificatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) CertificatemanagerProjectsLocationsCertificatesList(ctx conte
 }
 
 // CertificatemanagerProjectsLocationsDNSAuthorizationsCreate - Creates a new DnsAuthorization in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsCreateRequest) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsCreateResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsCreate(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsCreateRequest, security operations.CertificatemanagerProjectsLocationsDNSAuthorizationsCreateSecurity) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsAuthorizations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsAuthorizations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSAuthorizationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsCreate(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,20 +499,20 @@ func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsCreate(ct
 }
 
 // CertificatemanagerProjectsLocationsDNSAuthorizationsList - Lists DnsAuthorizations in a given project and location.
-func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsListRequest) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsListRequest, security operations.CertificatemanagerProjectsLocationsDNSAuthorizationsListSecurity) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsAuthorizations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsAuthorizations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,11 +547,11 @@ func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsList(ctx 
 }
 
 // CertificatemanagerProjectsLocationsDNSAuthorizationsPatch - Updates a DnsAuthorization.
-func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsPatch(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsPatchRequest) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsPatchResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsPatch(ctx context.Context, request operations.CertificatemanagerProjectsLocationsDNSAuthorizationsPatchRequest, security operations.CertificatemanagerProjectsLocationsDNSAuthorizationsPatchSecurity) (*operations.CertificatemanagerProjectsLocationsDNSAuthorizationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSAuthorizationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -563,11 +563,11 @@ func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsPatch(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *projects) CertificatemanagerProjectsLocationsDNSAuthorizationsPatch(ctx
 }
 
 // CertificatemanagerProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) CertificatemanagerProjectsLocationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsListRequest) (*operations.CertificatemanagerProjectsLocationsListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsListRequest, security operations.CertificatemanagerProjectsLocationsListSecurity) (*operations.CertificatemanagerProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) CertificatemanagerProjectsLocationsList(ctx context.Context, 
 }
 
 // CertificatemanagerProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) CertificatemanagerProjectsLocationsOperationsCancel(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsCancelRequest) (*operations.CertificatemanagerProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsOperationsCancel(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsCancelRequest, security operations.CertificatemanagerProjectsLocationsOperationsCancelSecurity) (*operations.CertificatemanagerProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) CertificatemanagerProjectsLocationsOperationsCancel(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) CertificatemanagerProjectsLocationsOperationsCancel(ctx conte
 }
 
 // CertificatemanagerProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) CertificatemanagerProjectsLocationsOperationsDelete(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest) (*operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsOperationsDelete(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest, security operations.CertificatemanagerProjectsLocationsOperationsDeleteSecurity) (*operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,20 +753,20 @@ func (s *projects) CertificatemanagerProjectsLocationsOperationsDelete(ctx conte
 }
 
 // CertificatemanagerProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) CertificatemanagerProjectsLocationsOperationsGet(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsGetRequest) (*operations.CertificatemanagerProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsOperationsGet(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsGetRequest, security operations.CertificatemanagerProjectsLocationsOperationsGetSecurity) (*operations.CertificatemanagerProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -801,20 +801,20 @@ func (s *projects) CertificatemanagerProjectsLocationsOperationsGet(ctx context.
 }
 
 // CertificatemanagerProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) CertificatemanagerProjectsLocationsOperationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsListRequest) (*operations.CertificatemanagerProjectsLocationsOperationsListResponse, error) {
+func (s *projects) CertificatemanagerProjectsLocationsOperationsList(ctx context.Context, request operations.CertificatemanagerProjectsLocationsOperationsListRequest, security operations.CertificatemanagerProjectsLocationsOperationsListSecurity) (*operations.CertificatemanagerProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,23 +8,14 @@ import (
 )
 
 type GetDistributedVirtualPortgroupSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetDistributedVirtualPortgroupPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDistributedVirtualPortgroupQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetDistributedVirtualPortgroupRequest struct {
-	PathParams  GetDistributedVirtualPortgroupPathParams
-	QueryParams GetDistributedVirtualPortgroupQueryParams
-	Security    GetDistributedVirtualPortgroupSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetDistributedVirtualPortgroupResponse struct {

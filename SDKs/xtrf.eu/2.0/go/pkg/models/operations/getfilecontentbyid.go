@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetFileContentByIDPathParams struct {
+type GetFileContentByIDRequest struct {
 	// file's internal identifier
 	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// file's name
 	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
-}
-
-type GetFileContentByIDRequest struct {
-	PathParams GetFileContentByIDPathParams
 }
 
 type GetFileContentByIDResponse struct {

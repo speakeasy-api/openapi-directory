@@ -36,7 +36,7 @@ func newFileMigrations(defaultClient, securityClient HTTPClient, serverURL, lang
 // Show File Migration
 func (s *fileMigrations) GetFileMigrationsID(ctx context.Context, request operations.GetFileMigrationsIDRequest) (*operations.GetFileMigrationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_migrations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file_migrations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

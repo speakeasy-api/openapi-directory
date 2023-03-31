@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRealmAuthenticationAuthenticatorProvidersPathParams struct {
+type GetRealmAuthenticationAuthenticatorProvidersRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationAuthenticatorProvidersRequest struct {
-	PathParams GetRealmAuthenticationAuthenticatorProvidersPathParams
 }
 
 type GetRealmAuthenticationAuthenticatorProvidersResponse struct {

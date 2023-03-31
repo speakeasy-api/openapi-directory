@@ -33,7 +33,7 @@ func (e *IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum)
 	}
 }
 
-type IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams struct {
+type IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -44,10 +44,6 @@ type IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams stru
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest struct {
-	PathParams IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams
 }
 
 type IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse struct {

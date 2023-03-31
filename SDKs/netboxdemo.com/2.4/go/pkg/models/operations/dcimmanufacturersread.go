@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimManufacturersReadPathParams struct {
+type DcimManufacturersReadRequest struct {
 	// A unique integer value identifying this manufacturer.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimManufacturersReadRequest struct {
-	PathParams DcimManufacturersReadPathParams
 }
 
 type DcimManufacturersReadResponse struct {

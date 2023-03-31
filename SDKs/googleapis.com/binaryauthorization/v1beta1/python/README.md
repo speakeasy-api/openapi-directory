@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/binaryauthorization/v1beta1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,73 +15,74 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BinaryauthorizationProjectsAttestorsCreateRequest(
-    security=operations.BinaryauthorizationProjectsAttestorsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.BinaryauthorizationProjectsAttestorsCreatePathParams(
-        parent="molestias",
-    ),
-    query_params=operations.BinaryauthorizationProjectsAttestorsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="quia",
-        alt="media",
-        attestor_id="non",
-        callback="porro",
-        fields="ut",
-        key="eum",
-        oauth_token="est",
-        pretty_print=True,
-        quota_user="rerum",
-        upload_type="consequatur",
-        upload_protocol="provident",
-    ),
-    request=shared.AttestorInput(
-        description="quia",
-        etag="culpa",
-        name="rerum",
+    dollar_xgafv="2",
+    attestor_input=shared.AttestorInput(
+        description="provident",
+        etag="distinctio",
+        name="quibusdam",
         user_owned_drydock_note=shared.UserOwnedDrydockNoteInput(
-            note_reference="dolorum",
+            note_reference="unde",
             public_keys=[
                 shared.AttestorPublicKey(
-                    ascii_armored_pgp_public_key="perspiciatis",
-                    comment="repudiandae",
-                    id="non",
+                    ascii_armored_pgp_public_key="corrupti",
+                    comment="illum",
+                    id="vel",
                     pkix_public_key=shared.PkixPublicKey(
-                        public_key_pem="veniam",
-                        signature_algorithm="EC_SIGN_P256_SHA256",
+                        public_key_pem="error",
+                        signature_algorithm="RSA_SIGN_PKCS1_4096_SHA512",
                     ),
                 ),
                 shared.AttestorPublicKey(
-                    ascii_armored_pgp_public_key="quia",
-                    comment="non",
-                    id="quisquam",
+                    ascii_armored_pgp_public_key="suscipit",
+                    comment="iure",
+                    id="magnam",
                     pkix_public_key=shared.PkixPublicKey(
-                        public_key_pem="aspernatur",
-                        signature_algorithm="EC_SIGN_P521_SHA512",
+                        public_key_pem="debitis",
+                        signature_algorithm="RSA_PSS_2048_SHA256",
                     ),
                 ),
                 shared.AttestorPublicKey(
-                    ascii_armored_pgp_public_key="atque",
-                    comment="pariatur",
-                    id="qui",
+                    ascii_armored_pgp_public_key="delectus",
+                    comment="tempora",
+                    id="suscipit",
                     pkix_public_key=shared.PkixPublicKey(
-                        public_key_pem="ipsum",
-                        signature_algorithm="EC_SIGN_P521_SHA512",
+                        public_key_pem="molestiae",
+                        signature_algorithm="ECDSA_P384_SHA384",
+                    ),
+                ),
+                shared.AttestorPublicKey(
+                    ascii_armored_pgp_public_key="placeat",
+                    comment="voluptatum",
+                    id="iusto",
+                    pkix_public_key=shared.PkixPublicKey(
+                        public_key_pem="excepturi",
+                        signature_algorithm="RSA_PSS_4096_SHA512",
                     ),
                 ),
             ],
         ),
     ),
+    access_token="recusandae",
+    alt="proto",
+    attestor_id="ab",
+    callback="quis",
+    fields_="veritatis",
+    key="deserunt",
+    oauth_token="perferendis",
+    parent="ipsam",
+    pretty_print=False,
+    quota_user="repellendus",
+    upload_type="sapiente",
+    upload_protocol="quo",
 )
     
-res = s.projects.binaryauthorization_projects_attestors_create(req)
+res = s.projects.binaryauthorization_projects_attestors_create(req, operations.BinaryauthorizationProjectsAttestorsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.attestor is not None:
     # handle response
@@ -89,7 +90,8 @@ if res.attestor is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -105,7 +107,17 @@ if res.attestor is not None:
 ### systempolicy
 
 * `binaryauthorization_systempolicy_get_policy` - Gets the current system policy in the specified location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

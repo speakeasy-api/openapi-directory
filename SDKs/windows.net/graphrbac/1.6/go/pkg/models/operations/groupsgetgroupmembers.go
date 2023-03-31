@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetGroupMembersPathParams struct {
+type GroupsGetGroupMembersRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the group whose members should be retrieved.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsGetGroupMembersQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsGetGroupMembersRequest struct {
-	PathParams  GroupsGetGroupMembersPathParams
-	QueryParams GroupsGetGroupMembersQueryParams
 }
 
 type GroupsGetGroupMembersResponse struct {

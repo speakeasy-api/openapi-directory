@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCisTransactionFromEmployerPathParams struct {
-	// The CIS transaction unique identifier. E.g. CISTRAN001
-	CisTransactionID string `pathParam:"style=simple,explode=false,name=CisTransactionId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type GetCisTransactionFromEmployerHeaders struct {
+type GetCisTransactionFromEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetCisTransactionFromEmployerRequest struct {
-	PathParams GetCisTransactionFromEmployerPathParams
-	Headers    GetCisTransactionFromEmployerHeaders
+	// The CIS transaction unique identifier. E.g. CISTRAN001
+	CisTransactionID string `pathParam:"style=simple,explode=false,name=CisTransactionId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type GetCisTransactionFromEmployerResponse struct {

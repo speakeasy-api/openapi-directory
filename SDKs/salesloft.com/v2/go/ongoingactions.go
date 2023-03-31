@@ -40,7 +40,7 @@ func newOngoingActions(defaultClient, securityClient HTTPClient, serverURL, lang
 // by creating an activity.
 //
 // Ongoing actions are marked as status=pending_activity.
-func (s *ongoingActions) PostV2OngoingActionsJSON(ctx context.Context, request operations.PostV2OngoingActionsJSONRequest) (*operations.PostV2OngoingActionsJSONResponse, error) {
+func (s *ongoingActions) PostV2OngoingActionsJSON(ctx context.Context, request operations.PostV2OngoingActionsJSONRequestBody) (*operations.PostV2OngoingActionsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/ongoing_actions.json"
 

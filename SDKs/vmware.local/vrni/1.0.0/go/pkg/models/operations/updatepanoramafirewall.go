@@ -8,18 +8,13 @@ import (
 )
 
 type UpdatePanoramaFirewallSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdatePanoramaFirewallPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdatePanoramaFirewallRequest struct {
-	PathParams UpdatePanoramaFirewallPathParams
-	Request    *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security   UpdatePanoramaFirewallSecurity
+	SwitchDataSource *shared.SwitchDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdatePanoramaFirewallResponse struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type GetSfxDetailsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetSfxDetailsPathParams struct {
-	// Audio track ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetSfxDetailsLibraryEnum - Which library to fetch from
@@ -70,7 +65,9 @@ func (e *GetSfxDetailsViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSfxDetailsQueryParams struct {
+type GetSfxDetailsRequest struct {
+	// Audio track ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Language for the keywords and categories in the response
 	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Which library to fetch from
@@ -79,12 +76,6 @@ type GetSfxDetailsQueryParams struct {
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// Amount of detail to render in the response
 	View *GetSfxDetailsViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSfxDetailsRequest struct {
-	PathParams  GetSfxDetailsPathParams
-	QueryParams GetSfxDetailsQueryParams
-	Security    GetSfxDetailsSecurity
 }
 
 type GetSfxDetailsResponse struct {

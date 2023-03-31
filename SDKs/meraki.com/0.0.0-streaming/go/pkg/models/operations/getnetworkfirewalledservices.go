@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkFirewalledServicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkFirewalledServicesRequest struct {
-	PathParams GetNetworkFirewalledServicesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkFirewalledServicesResponse struct {

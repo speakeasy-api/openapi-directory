@@ -12,12 +12,8 @@ var CreateTrustProductEntityAssignmentServerList = []string{
 }
 
 type CreateTrustProductEntityAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTrustProductEntityAssignmentPathParams struct {
-	// The unique string that we created to identify the TrustProduct resource.
-	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTrustProductEntityAssignmentCreateTrustProductEntityAssignmentRequest struct {
@@ -26,10 +22,9 @@ type CreateTrustProductEntityAssignmentCreateTrustProductEntityAssignmentRequest
 }
 
 type CreateTrustProductEntityAssignmentRequest struct {
-	PathParams CreateTrustProductEntityAssignmentPathParams
-	Request    *CreateTrustProductEntityAssignmentCreateTrustProductEntityAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTrustProductEntityAssignmentSecurity
-	ServerURL  *string
+	RequestBody *CreateTrustProductEntityAssignmentCreateTrustProductEntityAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the TrustProduct resource.
+	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
 }
 
 type CreateTrustProductEntityAssignmentResponse struct {

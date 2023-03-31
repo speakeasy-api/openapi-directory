@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSnippetUsingPUTPathParams struct {
+type UpdateSnippetUsingPUTRequest struct {
+	// snippet
+	ManageSnippet shared.ManageSnippet `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// shortCode
 	ShortCode string `pathParam:"style=simple,explode=false,name=shortCode"`
-}
-
-type UpdateSnippetUsingPUTRequest struct {
-	PathParams UpdateSnippetUsingPUTPathParams
-	// snippet
-	Request shared.ManageSnippet `request:"mediaType=application/json"`
 }
 
 type UpdateSnippetUsingPUTResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type FindUserQueryParams struct {
-	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
 type FindUserRequest struct {
-	QueryParams FindUserQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
+	RequestBody []byte  `request:"mediaType=application/octet-stream"`
+	Q           *string `queryParam:"style=form,explode=true,name=q"`
 }
 
 type FindUserResponse struct {

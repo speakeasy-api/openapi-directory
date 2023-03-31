@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ResourcesQueryParams struct {
+type GetConsumerV1ResourcesRequest struct {
 	// Filter by email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Page limit default 20, max 100
@@ -22,10 +22,6 @@ type GetConsumerV1ResourcesQueryParams struct {
 	ResourceGroupID *int `queryParam:"style=form,explode=true,name=resourceGroupId"`
 	// Specify sort order of response
 	SortOrder *string `queryParam:"style=form,explode=true,name=sortOrder"`
-}
-
-type GetConsumerV1ResourcesRequest struct {
-	QueryParams GetConsumerV1ResourcesQueryParams
 }
 
 type GetConsumerV1ResourcesResponse struct {

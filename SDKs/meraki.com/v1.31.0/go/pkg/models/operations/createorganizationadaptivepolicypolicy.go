@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationAdaptivePolicyPolicyPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationAdaptivePolicyPolicyRequestBodyAcls struct {
 	// The ID of the adaptive policy ACL
 	ID *string `json:"id,omitempty"`
@@ -82,8 +78,8 @@ type CreateOrganizationAdaptivePolicyPolicyRequestBody struct {
 }
 
 type CreateOrganizationAdaptivePolicyPolicyRequest struct {
-	PathParams CreateOrganizationAdaptivePolicyPolicyPathParams
-	Request    CreateOrganizationAdaptivePolicyPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationAdaptivePolicyPolicyRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                            `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationAdaptivePolicyPolicyResponse struct {

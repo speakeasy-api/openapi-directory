@@ -36,14 +36,14 @@ func newCustomFields(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteCustomFieldsIDJSON - Delete an existing CustomField.
 func (s *customFields) DeleteCustomFieldsIDJSON(ctx context.Context, request operations.DeleteCustomFieldsIDJSONRequest) (*operations.DeleteCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *customFields) DeleteCustomFieldsIDJSON(ctx context.Context, request ope
 // DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON - Delete an existing CustomFieldSelectOption.
 func (s *customFields) DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON(ctx context.Context, request operations.DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest) (*operations.DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *customFields) GetCustomFieldsJSON(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -202,14 +202,14 @@ func (s *customFields) GetCustomFieldsJSON(ctx context.Context, request operatio
 // GetCustomFieldsIDJSON - Retrieve a single CustomField.
 func (s *customFields) GetCustomFieldsIDJSON(ctx context.Context, request operations.GetCustomFieldsIDJSONRequest) (*operations.GetCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -262,7 +262,7 @@ func (s *customFields) PostCustomFieldsJSON(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custom_fields.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -277,7 +277,7 @@ func (s *customFields) PostCustomFieldsJSON(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -318,9 +318,9 @@ func (s *customFields) PostCustomFieldsJSON(ctx context.Context, request operati
 // PutCustomFieldsIDJSON - Update a CustomField.
 func (s *customFields) PutCustomFieldsIDJSON(ctx context.Context, request operations.PutCustomFieldsIDJSONRequest) (*operations.PutCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -335,7 +335,7 @@ func (s *customFields) PutCustomFieldsIDJSON(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

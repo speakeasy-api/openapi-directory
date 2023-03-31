@@ -13,19 +13,8 @@ var UpdateChannelServerList = []string{
 }
 
 type UpdateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChannelPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Channel resource in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Channel resource to update. This value can be either the `sid` or the `unique_name` of the Channel resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateChannelHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChannelUpdateChannelRequest struct {
@@ -44,11 +33,13 @@ type UpdateChannelUpdateChannelRequest struct {
 }
 
 type UpdateChannelRequest struct {
-	PathParams UpdateChannelPathParams
-	Headers    UpdateChannelHeaders
-	Request    *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateChannelSecurity
-	ServerURL  *string
+	RequestBody *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Channel resource in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Channel resource to update. This value can be either the `sid` or the `unique_name` of the Channel resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateChannelResponse struct {

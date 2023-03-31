@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddAnumberToBlockedListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AddAnumberToBlockedListApplicationJSONBlockTypeEnum - State whether you want the block type to be inbound or outbound.<br>
@@ -108,11 +107,6 @@ type AddAnumberToBlockedListApplicationJSON struct {
 	// `active`: Keep the blocking active.<br>
 	// `inactive`: Disable the blocking.
 	Status *AddAnumberToBlockedListApplicationJSONStatusEnum `json:"status,omitempty"`
-}
-
-type AddAnumberToBlockedListRequest struct {
-	Request  *AddAnumberToBlockedListApplicationJSON `request:"mediaType=application/json"`
-	Security AddAnumberToBlockedListSecurity
 }
 
 // AddAnumberToBlockedList201ApplicationXML - **HTTP Status Code:** `201` **Created**<br>

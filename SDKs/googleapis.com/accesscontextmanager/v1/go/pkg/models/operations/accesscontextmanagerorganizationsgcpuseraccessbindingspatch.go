@@ -8,18 +8,14 @@ import (
 )
 
 type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchPathParams struct {
-	// Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams struct {
+type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GcpUserAccessBinding *shared.GcpUserAccessBinding `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams stru
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams stru
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest struct {
-	PathParams  AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchPathParams
-	QueryParams AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams
-	Request     *shared.GcpUserAccessBinding `request:"mediaType=application/json"`
-	Security    AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity
 }
 
 type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse struct {

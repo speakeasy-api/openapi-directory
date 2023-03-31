@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VerifyRequestWithPsd2PathParams struct {
-	// The response format.
-	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
 type VerifyRequestWithPsd2Request struct {
-	PathParams VerifyRequestWithPsd2PathParams
-	Request    shared.Psd2Request `request:"mediaType=application/x-www-form-urlencoded"`
+	// The response format.
+	Format      shared.FormatEnum  `pathParam:"style=simple,explode=false,name=format"`
+	Psd2Request shared.Psd2Request `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type VerifyRequestWithPsd2200ApplicationJSONType string

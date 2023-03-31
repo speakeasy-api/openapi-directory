@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CategoriesGetRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type CategoriesGetResponse struct {
 	// success
 	CategoriesGetResponse map[string]interface{}

@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreateReviewPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsCreateReviewRequestBodyComments struct {
 	// Text of the review comment.
 	Body string `json:"body"`
@@ -67,8 +61,10 @@ type PullsCreateReviewRequestBody struct {
 }
 
 type PullsCreateReviewRequest struct {
-	PathParams PullsCreateReviewPathParams
-	Request    *PullsCreateReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody *PullsCreateReviewRequestBody `request:"mediaType=application/json"`
+	Owner       string                        `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                         `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                        `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsCreateReviewResponse struct {

@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.PlayintegrityDecodeIntegrityTokenRequest{
-        Security: operations.PlayintegrityDecodeIntegrityTokenSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        DecodeIntegrityTokenRequest: &shared.DecodeIntegrityTokenRequest{
+            IntegrityToken: "provident",
         },
-        PathParams: operations.PlayintegrityDecodeIntegrityTokenPathParams{
-            PackageName: "corrupti",
-        },
-        QueryParams: operations.PlayintegrityDecodeIntegrityTokenQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.DecodeIntegrityTokenRequest{
-            IntegrityToken: "suscipit",
-        },
+        AccessToken: "distinctio",
+        Alt: "proto",
+        Callback: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PackageName: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.V1.PlayintegrityDecodeIntegrityToken(ctx, req)
+    res, err := s.V1.PlayintegrityDecodeIntegrityToken(ctx, req, operations.PlayintegrityDecodeIntegrityTokenSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

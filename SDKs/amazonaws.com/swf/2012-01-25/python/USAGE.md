@@ -3,50 +3,46 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CountClosedWorkflowExecutionsRequest(
-    headers=operations.CountClosedWorkflowExecutionsHeaders(
-        x_amz_algorithm="illo",
-        x_amz_content_sha256="aut",
-        x_amz_credential="omnis",
-        x_amz_date="eos",
-        x_amz_security_token="dolore",
-        x_amz_signature="aut",
-        x_amz_signed_headers="dolor",
-        x_amz_target="SimpleWorkflowService.CountClosedWorkflowExecutions",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CountClosedWorkflowExecutionsInput(
+)
+
+
+req = operations.CountClosedWorkflowExecutionsRequest(
+    count_closed_workflow_executions_input=shared.CountClosedWorkflowExecutionsInput(
         close_status_filter=shared.CloseStatusFilter(
-            status="COMPLETED",
+            status="TERMINATED",
         ),
         close_time_filter=shared.ExecutionTimeFilter(
-            latest_date="1983-08-05T17:33:17Z",
-            oldest_date="1997-05-27T09:53:03Z",
+            latest_date="2021-07-27T21:52:56.087Z",
+            oldest_date="2021-03-11T23:22:42.658Z",
         ),
-        domain="iste",
+        domain="nulla",
         execution_filter=shared.WorkflowExecutionFilter(
-            workflow_id="voluptatibus",
+            workflow_id="corrupti",
         ),
         start_time_filter=shared.ExecutionTimeFilter(
-            latest_date="1980-03-26T04:47:11Z",
-            oldest_date="1983-07-03T09:45:43Z",
+            latest_date="2021-09-24T02:21:06.409Z",
+            oldest_date="2021-09-16T11:56:06.019Z",
         ),
         tag_filter=shared.TagFilter(
-            tag="debitis",
+            tag="suscipit",
         ),
         type_filter=shared.WorkflowTypeFilter(
-            name="quam",
-            version="excepturi",
+            name="iure",
+            version="magnam",
         ),
     ),
+    x_amz_algorithm="debitis",
+    x_amz_content_sha256="ipsa",
+    x_amz_credential="delectus",
+    x_amz_date="tempora",
+    x_amz_security_token="suscipit",
+    x_amz_signature="molestiae",
+    x_amz_signed_headers="minus",
+    x_amz_target="SimpleWorkflowService.CountClosedWorkflowExecutions",
 )
     
 res = s.count_closed_workflow_executions(req)

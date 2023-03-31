@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetViewsBriefPathParams struct {
+type GetViewsBriefRequest struct {
 	// views' class name
 	ClassName string `pathParam:"style=simple,explode=false,name=className"`
-}
-
-type GetViewsBriefQueryParams struct {
 	// place name (denotes specific place in system with the table)
 	PlaceName *string `queryParam:"style=form,explode=true,name=placeName"`
-}
-
-type GetViewsBriefRequest struct {
-	PathParams  GetViewsBriefPathParams
-	QueryParams GetViewsBriefQueryParams
 }
 
 type GetViewsBriefResponse struct {

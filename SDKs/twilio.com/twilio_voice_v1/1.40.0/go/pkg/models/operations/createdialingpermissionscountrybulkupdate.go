@@ -12,18 +12,13 @@ var CreateDialingPermissionsCountryBulkUpdateServerList = []string{
 }
 
 type CreateDialingPermissionsCountryBulkUpdateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDialingPermissionsCountryBulkUpdateCreateDialingPermissionsCountryBulkUpdateRequest struct {
 	// URL encoded JSON array of update objects. example : `[ { "iso_code": "GB", "low_risk_numbers_enabled": "true", "high_risk_special_numbers_enabled":"true", "high_risk_tollfraud_numbers_enabled": "false" } ]`
 	UpdateRequest string `form:"name=UpdateRequest"`
-}
-
-type CreateDialingPermissionsCountryBulkUpdateRequest struct {
-	Request   *CreateDialingPermissionsCountryBulkUpdateCreateDialingPermissionsCountryBulkUpdateRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateDialingPermissionsCountryBulkUpdateSecurity
-	ServerURL *string
 }
 
 type CreateDialingPermissionsCountryBulkUpdateResponse struct {

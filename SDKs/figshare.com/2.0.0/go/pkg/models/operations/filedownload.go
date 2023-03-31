@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type FileDownloadPathParams struct {
-	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
 type FileDownloadRequest struct {
-	PathParams FileDownloadPathParams
+	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
 }
 
 type FileDownloadResponse struct {

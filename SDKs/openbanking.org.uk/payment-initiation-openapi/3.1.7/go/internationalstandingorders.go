@@ -34,11 +34,11 @@ func newInternationalStandingOrders(defaultClient, securityClient HTTPClient, se
 }
 
 // CreateInternationalStandingOrderConsentsJSON - Create International Standing Order Consents
-func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsJSON(ctx context.Context, request operations.CreateInternationalStandingOrderConsentsJSONRequest) (*operations.CreateInternationalStandingOrderConsentsJSONResponse, error) {
+func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsJSON(ctx context.Context, request operations.CreateInternationalStandingOrderConsentsJSONRequest, security operations.CreateInternationalStandingOrderConsentsJSONSecurity) (*operations.CreateInternationalStandingOrderConsentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-standing-order-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteInternationalStandingOrderConsent6", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsJS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsJS
 }
 
 // CreateInternationalStandingOrderConsentsRaw - Create International Standing Order Consents
-func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsRaw(ctx context.Context, request operations.CreateInternationalStandingOrderConsentsRawRequest) (*operations.CreateInternationalStandingOrderConsentsRawResponse, error) {
+func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsRaw(ctx context.Context, request operations.CreateInternationalStandingOrderConsentsRawRequest, security operations.CreateInternationalStandingOrderConsentsRawSecurity) (*operations.CreateInternationalStandingOrderConsentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-standing-order-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,9 +162,9 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsRa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrderConsentsRa
 }
 
 // CreateInternationalStandingOrdersJSON - Create International Standing Orders
-func (s *internationalStandingOrders) CreateInternationalStandingOrdersJSON(ctx context.Context, request operations.CreateInternationalStandingOrdersJSONRequest) (*operations.CreateInternationalStandingOrdersJSONResponse, error) {
+func (s *internationalStandingOrders) CreateInternationalStandingOrdersJSON(ctx context.Context, request operations.CreateInternationalStandingOrdersJSONRequest, security operations.CreateInternationalStandingOrdersJSONSecurity) (*operations.CreateInternationalStandingOrdersJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-standing-orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteInternationalStandingOrder4", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,9 +271,9 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrdersJSON(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,11 +361,11 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrdersJSON(ctx 
 }
 
 // CreateInternationalStandingOrdersRaw - Create International Standing Orders
-func (s *internationalStandingOrders) CreateInternationalStandingOrdersRaw(ctx context.Context, request operations.CreateInternationalStandingOrdersRawRequest) (*operations.CreateInternationalStandingOrdersRawResponse, error) {
+func (s *internationalStandingOrders) CreateInternationalStandingOrdersRaw(ctx context.Context, request operations.CreateInternationalStandingOrdersRawRequest, security operations.CreateInternationalStandingOrdersRawSecurity) (*operations.CreateInternationalStandingOrdersRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/international-standing-orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,9 +380,9 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrdersRaw(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -470,18 +470,18 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrdersRaw(ctx c
 }
 
 // GetInternationalStandingOrderConsentsConsentID - Get International Standing Order Consents
-func (s *internationalStandingOrders) GetInternationalStandingOrderConsentsConsentID(ctx context.Context, request operations.GetInternationalStandingOrderConsentsConsentIDRequest) (*operations.GetInternationalStandingOrderConsentsConsentIDResponse, error) {
+func (s *internationalStandingOrders) GetInternationalStandingOrderConsentsConsentID(ctx context.Context, request operations.GetInternationalStandingOrderConsentsConsentIDRequest, security operations.GetInternationalStandingOrderConsentsConsentIDSecurity) (*operations.GetInternationalStandingOrderConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-standing-order-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/international-standing-order-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,18 +567,18 @@ func (s *internationalStandingOrders) GetInternationalStandingOrderConsentsConse
 }
 
 // GetInternationalStandingOrdersInternationalStandingOrderPaymentID - Get International Standing Orders
-func (s *internationalStandingOrders) GetInternationalStandingOrdersInternationalStandingOrderPaymentID(ctx context.Context, request operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDRequest) (*operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDResponse, error) {
+func (s *internationalStandingOrders) GetInternationalStandingOrdersInternationalStandingOrderPaymentID(ctx context.Context, request operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDRequest, security operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDSecurity) (*operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

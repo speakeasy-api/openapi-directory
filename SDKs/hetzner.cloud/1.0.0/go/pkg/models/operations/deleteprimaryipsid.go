@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePrimaryIpsIDPathParams struct {
+type DeletePrimaryIpsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePrimaryIpsIDRequest struct {
-	PathParams DeletePrimaryIpsIDPathParams
 }
 
 type DeletePrimaryIpsIDResponse struct {

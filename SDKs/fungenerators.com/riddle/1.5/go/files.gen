@@ -19,5 +19,4 @@ pkg/models/operations/postriddle.go
 pkg/models/operations/putriddle.go
 pkg/models/operations/getriddlerandom.go
 pkg/models/operations/getriddlesearch.go
-pkg/models/shared/security.go
 USAGE.md

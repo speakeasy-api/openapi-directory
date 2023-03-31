@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TokensGetEphemeralTokenQueryParams struct {
+type TokensGetEphemeralTokenRequest struct {
 	// Include a redirect url to the application formatted with the ephemeral token.
 	Redirect *shared.RedirectEnum `queryParam:"style=form,explode=true,name=redirect"`
-}
-
-type TokensGetEphemeralTokenRequest struct {
-	QueryParams TokensGetEphemeralTokenQueryParams
 }
 
 type TokensGetEphemeralTokenResponse struct {

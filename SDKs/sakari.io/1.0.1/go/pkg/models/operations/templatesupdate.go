@@ -8,19 +8,14 @@ import (
 )
 
 type TemplatesUpdateSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TemplatesUpdatePathParams struct {
+type TemplatesUpdateRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of template
 	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type TemplatesUpdateRequest struct {
-	PathParams TemplatesUpdatePathParams
-	Security   TemplatesUpdateSecurity
 }
 
 type TemplatesUpdateResponse struct {

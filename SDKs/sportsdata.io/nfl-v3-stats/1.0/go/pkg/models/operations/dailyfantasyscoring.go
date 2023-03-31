@@ -33,17 +33,13 @@ func (e *DailyFantasyScoringFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DailyFantasyScoringPathParams struct {
+type DailyFantasyScoringRequest struct {
 	// The date of the contest for which you're pulling players
 	//           <code>2014-SEP-21</code>,
 	//           <code>2014-NOV-15</code>, etc
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DailyFantasyScoringFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type DailyFantasyScoringRequest struct {
-	PathParams DailyFantasyScoringPathParams
 }
 
 type DailyFantasyScoringResponse struct {

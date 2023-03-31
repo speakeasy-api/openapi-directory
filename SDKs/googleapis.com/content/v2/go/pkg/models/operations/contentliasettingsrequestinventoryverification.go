@@ -8,32 +8,29 @@ import (
 )
 
 type ContentLiasettingsRequestinventoryverificationSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentLiasettingsRequestinventoryverificationPathParams struct {
-	// The ID of the account that manages the order. This cannot be a multi-client account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The country for which inventory validation is requested.
-	Country string `pathParam:"style=simple,explode=false,name=country"`
-	// The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentLiasettingsRequestinventoryverificationQueryParams struct {
+type ContentLiasettingsRequestinventoryverificationRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the account that manages the order. This cannot be a multi-client account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The country for which inventory validation is requested.
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -44,12 +41,6 @@ type ContentLiasettingsRequestinventoryverificationQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentLiasettingsRequestinventoryverificationRequest struct {
-	PathParams  ContentLiasettingsRequestinventoryverificationPathParams
-	QueryParams ContentLiasettingsRequestinventoryverificationQueryParams
-	Security    ContentLiasettingsRequestinventoryverificationSecurity
 }
 
 type ContentLiasettingsRequestinventoryverificationResponse struct {

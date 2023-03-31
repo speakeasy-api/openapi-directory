@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetWorkflowRunPathParams struct {
+type ActionsGetWorkflowRunRequest struct {
+	// If `true` pull requests are omitted from the response (empty array).
+	ExcludePullRequests *bool `queryParam:"style=form,explode=true,name=exclude_pull_requests"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsGetWorkflowRunQueryParams struct {
-	// If `true` pull requests are omitted from the response (empty array).
-	ExcludePullRequests *bool `queryParam:"style=form,explode=true,name=exclude_pull_requests"`
-}
-
-type ActionsGetWorkflowRunRequest struct {
-	PathParams  ActionsGetWorkflowRunPathParams
-	QueryParams ActionsGetWorkflowRunQueryParams
 }
 
 type ActionsGetWorkflowRunResponse struct {

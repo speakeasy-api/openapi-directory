@@ -34,7 +34,7 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CreateLocation - CreateLocation
 // Creates a location.
-func (s *locations) CreateLocation(ctx context.Context, request operations.CreateLocationRequest) (*operations.CreateLocationResponse, error) {
+func (s *locations) CreateLocation(ctx context.Context, request shared.CreateLocationRequest, security operations.CreateLocationSecurity) (*operations.CreateLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/locations"
 
@@ -53,7 +53,7 @@ func (s *locations) CreateLocation(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *locations) CreateLocation(ctx context.Context, request operations.Creat
 // Many Square API endpoints require a `location_id` parameter.
 // The `id` field of the [`Location`](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) objects returned by this
 // endpoint correspond to that `location_id` parameter.
-func (s *locations) ListLocations(ctx context.Context, request operations.ListLocationsRequest) (*operations.ListLocationsResponse, error) {
+func (s *locations) ListLocations(ctx context.Context) (*operations.ListLocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/locations"
 
@@ -102,7 +102,7 @@ func (s *locations) ListLocations(ctx context.Context, request operations.ListLo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,16 +140,16 @@ func (s *locations) ListLocations(ctx context.Context, request operations.ListLo
 // Retrieves details of a location. You can specify "main"
 // as the location ID to retrieve details of the
 // main location.
-func (s *locations) RetrieveLocation(ctx context.Context, request operations.RetrieveLocationRequest) (*operations.RetrieveLocationResponse, error) {
+func (s *locations) RetrieveLocation(ctx context.Context, request operations.RetrieveLocationRequest, security operations.RetrieveLocationSecurity) (*operations.RetrieveLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,11 +185,11 @@ func (s *locations) RetrieveLocation(ctx context.Context, request operations.Ret
 
 // UpdateLocation - UpdateLocation
 // Updates a location.
-func (s *locations) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequest) (*operations.UpdateLocationResponse, error) {
+func (s *locations) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequest, security operations.UpdateLocationSecurity) (*operations.UpdateLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateLocationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -204,7 +204,7 @@ func (s *locations) UpdateLocation(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -12,18 +12,13 @@ var FetchAppManifestServerList = []string{
 }
 
 type FetchAppManifestSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAppManifestPathParams struct {
-	// A 34-character string that uniquely identifies this App.
-	AppSid string `pathParam:"style=simple,explode=false,name=AppSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAppManifestRequest struct {
-	PathParams FetchAppManifestPathParams
-	Security   FetchAppManifestSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies this App.
+	AppSid string `pathParam:"style=simple,explode=false,name=AppSid"`
 }
 
 type FetchAppManifestResponse struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BigtableadminProjectsInstancesAppProfilesCreate - Creates an app profile within an instance.
-func (s *projects) BigtableadminProjectsInstancesAppProfilesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesAppProfilesCreateRequest) (*operations.BigtableadminProjectsInstancesAppProfilesCreateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesAppProfilesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesAppProfilesCreateRequest, security operations.BigtableadminProjectsInstancesAppProfilesCreateSecurity) (*operations.BigtableadminProjectsInstancesAppProfilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/appProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/appProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppProfile", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) BigtableadminProjectsInstancesAppProfilesCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) BigtableadminProjectsInstancesAppProfilesCreate(ctx context.C
 }
 
 // BigtableadminProjectsInstancesAppProfilesList - Lists information about app profiles in an instance.
-func (s *projects) BigtableadminProjectsInstancesAppProfilesList(ctx context.Context, request operations.BigtableadminProjectsInstancesAppProfilesListRequest) (*operations.BigtableadminProjectsInstancesAppProfilesListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesAppProfilesList(ctx context.Context, request operations.BigtableadminProjectsInstancesAppProfilesListRequest, security operations.BigtableadminProjectsInstancesAppProfilesListSecurity) (*operations.BigtableadminProjectsInstancesAppProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/appProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/appProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) BigtableadminProjectsInstancesAppProfilesList(ctx context.Con
 }
 
 // BigtableadminProjectsInstancesClustersBackupsCopy - Copy a Cloud Bigtable backup to a new backup in the destination cluster located in the destination instance and project.
-func (s *projects) BigtableadminProjectsInstancesClustersBackupsCopy(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest) (*operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersBackupsCopy(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest, security operations.BigtableadminProjectsInstancesClustersBackupsCopySecurity) (*operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups:copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups:copy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyBackupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersBackupsCopy(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersBackupsCopy(ctx context
 }
 
 // BigtableadminProjectsInstancesClustersBackupsCreate - Starts creating a new Cloud Bigtable Backup. The returned backup long-running operation can be used to track creation of the backup. The metadata field type is CreateBackupMetadata. The response field type is Backup, if successful. Cancelling the returned operation will stop the creation and delete the backup.
-func (s *projects) BigtableadminProjectsInstancesClustersBackupsCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest) (*operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersBackupsCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest, security operations.BigtableadminProjectsInstancesClustersBackupsCreateSecurity) (*operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersBackupsCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) BigtableadminProjectsInstancesClustersBackupsCreate(ctx conte
 }
 
 // BigtableadminProjectsInstancesClustersBackupsList - Lists Cloud Bigtable backups. Returns both completed and pending backups.
-func (s *projects) BigtableadminProjectsInstancesClustersBackupsList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsListRequest) (*operations.BigtableadminProjectsInstancesClustersBackupsListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersBackupsList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersBackupsListRequest, security operations.BigtableadminProjectsInstancesClustersBackupsListSecurity) (*operations.BigtableadminProjectsInstancesClustersBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/backups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersBackupsList(ctx context
 }
 
 // BigtableadminProjectsInstancesClustersCreate - Creates a cluster within an instance. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
-func (s *projects) BigtableadminProjectsInstancesClustersCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersCreateRequest) (*operations.BigtableadminProjectsInstancesClustersCreateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersCreateRequest, security operations.BigtableadminProjectsInstancesClustersCreateSecurity) (*operations.BigtableadminProjectsInstancesClustersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/clusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) BigtableadminProjectsInstancesClustersCreate(ctx context.Cont
 }
 
 // BigtableadminProjectsInstancesClustersHotTabletsList - Lists hot tablets in a cluster, within the time range provided. Hot tablets are ordered based on CPU usage.
-func (s *projects) BigtableadminProjectsInstancesClustersHotTabletsList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest) (*operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersHotTabletsList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest, security operations.BigtableadminProjectsInstancesClustersHotTabletsListSecurity) (*operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/hotTablets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/hotTablets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) BigtableadminProjectsInstancesClustersHotTabletsList(ctx cont
 }
 
 // BigtableadminProjectsInstancesClustersList - Lists information about clusters in an instance.
-func (s *projects) BigtableadminProjectsInstancesClustersList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersListRequest) (*operations.BigtableadminProjectsInstancesClustersListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersList(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersListRequest, security operations.BigtableadminProjectsInstancesClustersListSecurity) (*operations.BigtableadminProjectsInstancesClustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/clusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersList(ctx context.Contex
 }
 
 // BigtableadminProjectsInstancesClustersUpdate - Updates a cluster within an instance. Note that UpdateCluster does not support updating cluster_config.cluster_autoscaling_config. In order to update it, you must use PartialUpdateCluster.
-func (s *projects) BigtableadminProjectsInstancesClustersUpdate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersUpdateRequest) (*operations.BigtableadminProjectsInstancesClustersUpdateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesClustersUpdate(ctx context.Context, request operations.BigtableadminProjectsInstancesClustersUpdateRequest, security operations.BigtableadminProjectsInstancesClustersUpdateSecurity) (*operations.BigtableadminProjectsInstancesClustersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersUpdate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) BigtableadminProjectsInstancesClustersUpdate(ctx context.Cont
 }
 
 // BigtableadminProjectsInstancesCreate - Create an instance within a project. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
-func (s *projects) BigtableadminProjectsInstancesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesCreateRequest) (*operations.BigtableadminProjectsInstancesCreateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesCreateRequest, security operations.BigtableadminProjectsInstancesCreateSecurity) (*operations.BigtableadminProjectsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateInstanceRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) BigtableadminProjectsInstancesCreate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) BigtableadminProjectsInstancesCreate(ctx context.Context, req
 }
 
 // BigtableadminProjectsInstancesList - Lists information about instances in a project.
-func (s *projects) BigtableadminProjectsInstancesList(ctx context.Context, request operations.BigtableadminProjectsInstancesListRequest) (*operations.BigtableadminProjectsInstancesListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesList(ctx context.Context, request operations.BigtableadminProjectsInstancesListRequest, security operations.BigtableadminProjectsInstancesListSecurity) (*operations.BigtableadminProjectsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) BigtableadminProjectsInstancesList(ctx context.Context, reque
 }
 
 // BigtableadminProjectsInstancesTablesCheckConsistency - Checks replication consistency based on a consistency token, that is, if replication has caught up based on the conditions specified in the token and the check request.
-func (s *projects) BigtableadminProjectsInstancesTablesCheckConsistency(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest) (*operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesCheckConsistency(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest, security operations.BigtableadminProjectsInstancesTablesCheckConsistencySecurity) (*operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:checkConsistency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:checkConsistency", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckConsistencyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesCheckConsistency(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesCheckConsistency(ctx cont
 }
 
 // BigtableadminProjectsInstancesTablesCreate - Creates a new table in the specified instance. The table can be created with a full set of initial column families, specified in the request.
-func (s *projects) BigtableadminProjectsInstancesTablesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesCreateRequest) (*operations.BigtableadminProjectsInstancesTablesCreateResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesCreate(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesCreateRequest, security operations.BigtableadminProjectsInstancesTablesCreateSecurity) (*operations.BigtableadminProjectsInstancesTablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateTableRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,20 +712,20 @@ func (s *projects) BigtableadminProjectsInstancesTablesCreate(ctx context.Contex
 }
 
 // BigtableadminProjectsInstancesTablesDelete - Permanently deletes a specified table and all of its data.
-func (s *projects) BigtableadminProjectsInstancesTablesDelete(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesDeleteRequest) (*operations.BigtableadminProjectsInstancesTablesDeleteResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesDelete(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesDeleteRequest, security operations.BigtableadminProjectsInstancesTablesDeleteSecurity) (*operations.BigtableadminProjectsInstancesTablesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,11 +760,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesDelete(ctx context.Contex
 }
 
 // BigtableadminProjectsInstancesTablesDropRowRange - Permanently drop/delete a row range from a specified table. The request can specify whether to delete all rows in a table, or only those that match a particular prefix.
-func (s *projects) BigtableadminProjectsInstancesTablesDropRowRange(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest) (*operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesDropRowRange(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest, security operations.BigtableadminProjectsInstancesTablesDropRowRangeSecurity) (*operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:dropRowRange", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:dropRowRange", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DropRowRangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -776,11 +776,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesDropRowRange(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,11 +815,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesDropRowRange(ctx context.
 }
 
 // BigtableadminProjectsInstancesTablesGenerateConsistencyToken - Generates a consistency token for a Table, which can be used in CheckConsistency to check whether mutations to the table that finished before this call started have been replicated. The tokens will be available for 90 days.
-func (s *projects) BigtableadminProjectsInstancesTablesGenerateConsistencyToken(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest) (*operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesGenerateConsistencyToken(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest, security operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity) (*operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:generateConsistencyToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:generateConsistencyToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -831,11 +831,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesGenerateConsistencyToken(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,11 +870,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesGenerateConsistencyToken(
 }
 
 // BigtableadminProjectsInstancesTablesGetIamPolicy - Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
-func (s *projects) BigtableadminProjectsInstancesTablesGetIamPolicy(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest) (*operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesGetIamPolicy(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest, security operations.BigtableadminProjectsInstancesTablesGetIamPolicySecurity) (*operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -886,11 +886,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesGetIamPolicy(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -925,20 +925,20 @@ func (s *projects) BigtableadminProjectsInstancesTablesGetIamPolicy(ctx context.
 }
 
 // BigtableadminProjectsInstancesTablesList - Lists all tables served from a specified instance.
-func (s *projects) BigtableadminProjectsInstancesTablesList(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesListRequest) (*operations.BigtableadminProjectsInstancesTablesListResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesList(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesListRequest, security operations.BigtableadminProjectsInstancesTablesListSecurity) (*operations.BigtableadminProjectsInstancesTablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -973,11 +973,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesList(ctx context.Context,
 }
 
 // BigtableadminProjectsInstancesTablesModifyColumnFamilies - Performs a series of column family modifications on the specified table. Either all or none of the modifications will occur before this method returns, but data requests received prior to that point may see a table where only some modifications have taken effect.
-func (s *projects) BigtableadminProjectsInstancesTablesModifyColumnFamilies(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest) (*operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesModifyColumnFamilies(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest, security operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity) (*operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:modifyColumnFamilies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:modifyColumnFamilies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyColumnFamiliesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -989,11 +989,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesModifyColumnFamilies(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1028,11 +1028,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesModifyColumnFamilies(ctx 
 }
 
 // BigtableadminProjectsInstancesTablesPatch - Updates a specified table.
-func (s *projects) BigtableadminProjectsInstancesTablesPatch(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesPatchRequest) (*operations.BigtableadminProjectsInstancesTablesPatchResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesPatch(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesPatchRequest, security operations.BigtableadminProjectsInstancesTablesPatchSecurity) (*operations.BigtableadminProjectsInstancesTablesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TableInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1044,11 +1044,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1083,11 +1083,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesPatch(ctx context.Context
 }
 
 // BigtableadminProjectsInstancesTablesRestore - Create a new table by restoring from a completed backup. The returned table long-running operation can be used to track the progress of the operation, and to cancel it. The metadata field type is RestoreTableMetadata. The response type is Table, if successful.
-func (s *projects) BigtableadminProjectsInstancesTablesRestore(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesRestoreRequest) (*operations.BigtableadminProjectsInstancesTablesRestoreResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesRestore(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesRestoreRequest, security operations.BigtableadminProjectsInstancesTablesRestoreSecurity) (*operations.BigtableadminProjectsInstancesTablesRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables:restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tables:restore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreTableRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1099,11 +1099,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesRestore(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1138,11 +1138,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesRestore(ctx context.Conte
 }
 
 // BigtableadminProjectsInstancesTablesSetIamPolicy - Sets the access control policy on a Table resource. Replaces any existing policy.
-func (s *projects) BigtableadminProjectsInstancesTablesSetIamPolicy(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest) (*operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesSetIamPolicy(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest, security operations.BigtableadminProjectsInstancesTablesSetIamPolicySecurity) (*operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1154,11 +1154,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesSetIamPolicy(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1193,11 +1193,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesSetIamPolicy(ctx context.
 }
 
 // BigtableadminProjectsInstancesTablesTestIamPermissions - Returns permissions that the caller has on the specified table resource.
-func (s *projects) BigtableadminProjectsInstancesTablesTestIamPermissions(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest) (*operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesTestIamPermissions(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest, security operations.BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity) (*operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1209,11 +1209,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesTestIamPermissions(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1248,11 +1248,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesTestIamPermissions(ctx co
 }
 
 // BigtableadminProjectsInstancesTablesUndelete - Restores a specified table which was accidentally deleted.
-func (s *projects) BigtableadminProjectsInstancesTablesUndelete(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesUndeleteRequest) (*operations.BigtableadminProjectsInstancesTablesUndeleteResponse, error) {
+func (s *projects) BigtableadminProjectsInstancesTablesUndelete(ctx context.Context, request operations.BigtableadminProjectsInstancesTablesUndeleteRequest, security operations.BigtableadminProjectsInstancesTablesUndeleteSecurity) (*operations.BigtableadminProjectsInstancesTablesUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1264,11 +1264,11 @@ func (s *projects) BigtableadminProjectsInstancesTablesUndelete(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1303,20 +1303,20 @@ func (s *projects) BigtableadminProjectsInstancesTablesUndelete(ctx context.Cont
 }
 
 // BigtableadminProjectsLocationsGet - Gets information about a location.
-func (s *projects) BigtableadminProjectsLocationsGet(ctx context.Context, request operations.BigtableadminProjectsLocationsGetRequest) (*operations.BigtableadminProjectsLocationsGetResponse, error) {
+func (s *projects) BigtableadminProjectsLocationsGet(ctx context.Context, request operations.BigtableadminProjectsLocationsGetRequest, security operations.BigtableadminProjectsLocationsGetSecurity) (*operations.BigtableadminProjectsLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1351,20 +1351,20 @@ func (s *projects) BigtableadminProjectsLocationsGet(ctx context.Context, reques
 }
 
 // BigtableadminProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) BigtableadminProjectsLocationsList(ctx context.Context, request operations.BigtableadminProjectsLocationsListRequest) (*operations.BigtableadminProjectsLocationsListResponse, error) {
+func (s *projects) BigtableadminProjectsLocationsList(ctx context.Context, request operations.BigtableadminProjectsLocationsListRequest, security operations.BigtableadminProjectsLocationsListSecurity) (*operations.BigtableadminProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

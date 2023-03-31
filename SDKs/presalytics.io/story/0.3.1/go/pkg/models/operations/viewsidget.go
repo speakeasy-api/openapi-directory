@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ViewsIDGetPathParams struct {
+type ViewsIDGetRequest struct {
 	// The primary key for a page view within a session
 	ViewID string `pathParam:"style=simple,explode=false,name=view_id"`
-}
-
-type ViewsIDGetRequest struct {
-	PathParams ViewsIDGetPathParams
 }
 
 type ViewsIDGetResponse struct {

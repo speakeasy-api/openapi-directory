@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetStarttimePathParams struct {
+type SetStarttimeRequest struct {
 	// Agent to return the relative start time
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Relative start time of the agent
 	Start int `pathParam:"style=simple,explode=false,name=start"`
-}
-
-type SetStarttimeRequest struct {
-	PathParams SetStarttimePathParams
 }
 
 type SetStarttimeResponse struct {

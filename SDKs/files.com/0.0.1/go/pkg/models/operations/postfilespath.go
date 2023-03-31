@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type PostFilesPathPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type PostFilesPathRequestBody struct {
 	// The action to perform.  Can be `append`, `attachment`, `end`, `upload`, `put`, or may not exist
 	Action *string `multipartForm:"name=action"`
@@ -42,8 +37,9 @@ type PostFilesPathRequestBody struct {
 }
 
 type PostFilesPathRequest struct {
-	PathParams PostFilesPathPathParams
-	Request    *PostFilesPathRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostFilesPathRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PostFilesPathResponse struct {

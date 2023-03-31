@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListCardsPathParams struct {
-	// column_id parameter
-	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
 // ProjectsListCardsArchivedStateEnum - Filters the project cards that are returned by the card's state. Can be one of `all`,`archived`, or `not_archived`.
 type ProjectsListCardsArchivedStateEnum string
 
@@ -41,18 +36,15 @@ func (e *ProjectsListCardsArchivedStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListCardsQueryParams struct {
+type ProjectsListCardsRequest struct {
 	// Filters the project cards that are returned by the card's state. Can be one of `all`,`archived`, or `not_archived`.
 	ArchivedState *ProjectsListCardsArchivedStateEnum `queryParam:"style=form,explode=true,name=archived_state"`
+	// column_id parameter
+	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ProjectsListCardsRequest struct {
-	PathParams  ProjectsListCardsPathParams
-	QueryParams ProjectsListCardsQueryParams
 }
 
 type ProjectsListCardsResponse struct {

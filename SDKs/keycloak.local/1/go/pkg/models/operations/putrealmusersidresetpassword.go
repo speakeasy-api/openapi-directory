@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmUsersIDResetPasswordPathParams struct {
+type PutRealmUsersIDResetPasswordRequest struct {
+	// The representation must contain a rawPassword with the plain-text password
+	CredentialRepresentation shared.CredentialRepresentation `request:"mediaType=application/json"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDResetPasswordRequest struct {
-	PathParams PutRealmUsersIDResetPasswordPathParams
-	// The representation must contain a rawPassword with the plain-text password
-	Request shared.CredentialRepresentation `request:"mediaType=application/json"`
 }
 
 type PutRealmUsersIDResetPasswordResponse struct {

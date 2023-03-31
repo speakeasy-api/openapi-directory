@@ -7,17 +7,13 @@ import (
 	"time"
 )
 
-type RegistrationsFilesReadPathParams struct {
+type RegistrationsFilesReadRequest struct {
 	// The unique identifier of the file path.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// The unique identifier of the storage provider.
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsFilesReadRequest struct {
-	PathParams RegistrationsFilesReadPathParams
 }
 
 // RegistrationsFilesReadFileAttributes - The properties of the file entity.

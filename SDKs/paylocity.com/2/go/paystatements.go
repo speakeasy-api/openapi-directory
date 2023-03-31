@@ -33,20 +33,20 @@ func newPayStatements(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear - Get employee pay statement details data for the specified year.
 // Get pay statement details API will return employee pay statement details data currently available in Web Pay for the specified year.
-func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse, error) {
+func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest, security operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearSecurity) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,20 +99,20 @@ func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYea
 
 // GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate - Get employee pay statement details data for the specified year and check date.
 // Get pay statement details API will return employee pay statement detail data currently available in Web Pay for the specified year and check date.
-func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
+func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest, security operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateSecurity) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,20 +165,20 @@ func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYea
 
 // GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear - Get employee pay statement summary data for the specified year.
 // Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year.
-func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse, error) {
+func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest, security operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYe
 
 // GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate - Get employee pay statement summary data for the specified year and check date.
 // Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year and check date.
-func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
+func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest, security operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateSecurity) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

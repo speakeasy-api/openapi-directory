@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDEventsPostPathParams struct {
+type StoryIDEventsPostRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDEventsPostRequest struct {
-	PathParams StoryIDEventsPostPathParams
 	// Collaborator user id and permission type
-	Request shared.ManageEvent `request:"mediaType=application/json"`
+	ManageEvent shared.ManageEvent `request:"mediaType=application/json"`
 }
 
 type StoryIDEventsPostResponse struct {

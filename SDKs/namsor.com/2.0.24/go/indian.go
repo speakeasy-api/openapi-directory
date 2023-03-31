@@ -34,16 +34,16 @@ func newIndian(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CastegroupIndianFull - [USES 10 UNITS PER NAME] Infer the likely Indian name castegroup of a personal full name.
-func (s *indian) CastegroupIndianFull(ctx context.Context, request operations.CastegroupIndianFullRequest) (*operations.CastegroupIndianFullResponse, error) {
+func (s *indian) CastegroupIndianFull(ctx context.Context, request operations.CastegroupIndianFullRequest, security operations.CastegroupIndianFullSecurity) (*operations.CastegroupIndianFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *indian) CastegroupIndianFull(ctx context.Context, request operations.Ca
 }
 
 // CastegroupIndianFullBatch - [USES 10 UNITS PER NAME] Infer the likely Indian name castegroup of up to 100 personal full names.
-func (s *indian) CastegroupIndianFullBatch(ctx context.Context, request operations.CastegroupIndianFullBatchRequest) (*operations.CastegroupIndianFullBatchResponse, error) {
+func (s *indian) CastegroupIndianFullBatch(ctx context.Context, request shared.BatchPersonalNameSubdivisionIn, security operations.CastegroupIndianFullBatchSecurity) (*operations.CastegroupIndianFullBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/castegroupIndianFullBatch"
 
@@ -97,7 +97,7 @@ func (s *indian) CastegroupIndianFullBatch(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,16 +137,16 @@ func (s *indian) CastegroupIndianFullBatch(ctx context.Context, request operatio
 }
 
 // Religion - [USES 10 UNITS PER NAME] Infer the likely religion of a personal Indian full name, provided the Indian state or Union territory (NB/ this can be inferred using the subclassification endpoint).
-func (s *indian) Religion(ctx context.Context, request operations.ReligionRequest) (*operations.ReligionResponse, error) {
+func (s *indian) Religion(ctx context.Context, request operations.ReligionRequest, security operations.ReligionSecurity) (*operations.ReligionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *indian) Religion(ctx context.Context, request operations.ReligionReques
 }
 
 // ReligionIndianFullBatch - [USES 10 UNITS PER NAME] Infer the likely religion of up to 100 personal full Indian names, provided the subclassification at State or Union territory level (NB/ can be inferred using the subclassification endpoint).
-func (s *indian) ReligionIndianFullBatch(ctx context.Context, request operations.ReligionIndianFullBatchRequest) (*operations.ReligionIndianFullBatchResponse, error) {
+func (s *indian) ReligionIndianFullBatch(ctx context.Context, request shared.BatchPersonalNameSubdivisionIn, security operations.ReligionIndianFullBatchSecurity) (*operations.ReligionIndianFullBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/religionIndianFullBatch"
 
@@ -200,7 +200,7 @@ func (s *indian) ReligionIndianFullBatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *indian) ReligionIndianFullBatch(ctx context.Context, request operations
 }
 
 // SubclassificationIndian - [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
-func (s *indian) SubclassificationIndian(ctx context.Context, request operations.SubclassificationIndianRequest) (*operations.SubclassificationIndianResponse, error) {
+func (s *indian) SubclassificationIndian(ctx context.Context, request operations.SubclassificationIndianRequest, security operations.SubclassificationIndianSecurity) (*operations.SubclassificationIndianResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,7 +287,7 @@ func (s *indian) SubclassificationIndian(ctx context.Context, request operations
 }
 
 // SubclassificationIndianBatch - [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on a list of up to 100 names.
-func (s *indian) SubclassificationIndianBatch(ctx context.Context, request operations.SubclassificationIndianBatchRequest) (*operations.SubclassificationIndianBatchResponse, error) {
+func (s *indian) SubclassificationIndianBatch(ctx context.Context, request shared.BatchFirstLastNameGeoIn, security operations.SubclassificationIndianBatchSecurity) (*operations.SubclassificationIndianBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/subclassificationIndianBatch"
 
@@ -303,7 +303,7 @@ func (s *indian) SubclassificationIndianBatch(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

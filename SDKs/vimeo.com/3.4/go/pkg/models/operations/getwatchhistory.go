@@ -8,19 +8,14 @@ import (
 )
 
 type GetWatchHistorySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetWatchHistoryQueryParams struct {
+type GetWatchHistoryRequest struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetWatchHistoryRequest struct {
-	QueryParams GetWatchHistoryQueryParams
-	Security    GetWatchHistorySecurity
 }
 
 type GetWatchHistoryResponse struct {

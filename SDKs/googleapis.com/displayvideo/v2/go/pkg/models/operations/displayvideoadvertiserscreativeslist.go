@@ -8,20 +8,17 @@ import (
 )
 
 type DisplayvideoAdvertisersCreativesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersCreativesListPathParams struct {
-	// Required. The ID of the advertiser to list creatives for.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-}
-
-type DisplayvideoAdvertisersCreativesListQueryParams struct {
+type DisplayvideoAdvertisersCreativesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser to list creatives for.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -48,12 +45,6 @@ type DisplayvideoAdvertisersCreativesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersCreativesListRequest struct {
-	PathParams  DisplayvideoAdvertisersCreativesListPathParams
-	QueryParams DisplayvideoAdvertisersCreativesListQueryParams
-	Security    DisplayvideoAdvertisersCreativesListSecurity
 }
 
 type DisplayvideoAdvertisersCreativesListResponse struct {

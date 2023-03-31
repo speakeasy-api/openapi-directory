@@ -44,7 +44,6 @@ pkg/models/operations/updateshortcode.go
 pkg/models/shared/proxyv1servicesessionparticipantmessageinteraction.go
 pkg/models/shared/messageinteractionenumtypeenum.go
 pkg/models/shared/messageinteractionenumresourcestatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/proxyv1servicesessionparticipant.go
 pkg/models/shared/proxyv1servicephonenumber.go
 pkg/models/shared/proxyv1service.go
@@ -58,3 +57,4 @@ pkg/models/shared/proxyv1servicesessioninteraction.go
 pkg/models/shared/interactionenumtypeenum.go
 pkg/models/shared/interactionenumresourcestatusenum.go
 USAGE.md
+pkg/models/operations/options.go

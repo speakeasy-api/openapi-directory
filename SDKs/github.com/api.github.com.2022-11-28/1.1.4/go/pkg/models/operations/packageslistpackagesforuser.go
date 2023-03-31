@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagesListPackagesForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // PackagesListPackagesForUserPackageTypeEnum - The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
 type PackagesListPackagesForUserPackageTypeEnum string
 
@@ -50,19 +45,16 @@ func (e *PackagesListPackagesForUserPackageTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type PackagesListPackagesForUserQueryParams struct {
+type PackagesListPackagesForUserRequest struct {
 	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
 	PackageType PackagesListPackagesForUserPackageTypeEnum `queryParam:"style=form,explode=true,name=package_type"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 	// The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
 	//
 	// The `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.
 	// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
 	Visibility *shared.PackageVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type PackagesListPackagesForUserRequest struct {
-	PathParams  PackagesListPackagesForUserPathParams
-	QueryParams PackagesListPackagesForUserQueryParams
 }
 
 type PackagesListPackagesForUserResponse struct {

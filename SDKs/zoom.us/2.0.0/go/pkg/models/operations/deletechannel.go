@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type DeleteChannelPathParams struct {
+type DeleteChannelRequest struct {
 	// Channel ID: Unique Identifier of a channel.
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	UserID    string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteChannelRequest struct {
-	PathParams DeleteChannelPathParams
 }
 
 type DeleteChannelResponse struct {

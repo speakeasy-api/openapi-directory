@@ -35,7 +35,7 @@ func newFollowedPeople(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteUserFollowsPeoplePersonID - Unfollow a person
 func (s *followedPeople) DeleteUserFollowsPeoplePersonID(ctx context.Context, request operations.DeleteUserFollowsPeoplePersonIDRequest) (*operations.DeleteUserFollowsPeoplePersonIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *followedPeople) GetUserFollowsPeople(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -120,7 +120,7 @@ func (s *followedPeople) GetUserFollowsPeople(ctx context.Context, request opera
 // GetUserFollowsPeoplePersonID - Check if a person is followed
 func (s *followedPeople) GetUserFollowsPeoplePersonID(ctx context.Context, request operations.GetUserFollowsPeoplePersonIDRequest) (*operations.GetUserFollowsPeoplePersonIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *followedPeople) GetUserFollowsPeoplePersonID(ctx context.Context, reque
 // PutUserFollowsPeoplePersonID - Follow a person
 func (s *followedPeople) PutUserFollowsPeoplePersonID(ctx context.Context, request operations.PutUserFollowsPeoplePersonIDRequest) (*operations.PutUserFollowsPeoplePersonIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/people/{person_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -14,10 +14,6 @@ type EnterpriseAdminCreatePreReceiveEnvironmentRequestBody struct {
 	Name string `json:"name"`
 }
 
-type EnterpriseAdminCreatePreReceiveEnvironmentRequest struct {
-	Request EnterpriseAdminCreatePreReceiveEnvironmentRequestBody `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminCreatePreReceiveEnvironmentResponse struct {
 	ContentType string
 	StatusCode  int

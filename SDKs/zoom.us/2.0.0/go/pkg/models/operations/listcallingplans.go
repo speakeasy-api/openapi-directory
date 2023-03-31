@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ListCallingPlansSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ListCallingPlansRequest struct {
-	Security ListCallingPlansSecurity
-}
 
 type ListCallingPlans200ApplicationXMLCallingPlans struct {
 	// Total number of plan used.

@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementProfileUserLinksListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementProfileUserLinksListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementProfileUserLinksListSecurity struct {
@@ -22,16 +22,9 @@ type AnalyticsManagementProfileUserLinksListSecurity struct {
 	Option2 *AnalyticsManagementProfileUserLinksListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementProfileUserLinksListPathParams struct {
+type AnalyticsManagementProfileUserLinksListRequest struct {
 	// Account ID which the given view (profile) belongs to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// View (Profile) ID to retrieve the profile-user links for. Can either be a specific profile ID or '~all', which refers to all the profiles that user has access to.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web Property ID which the given view (profile) belongs to. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementProfileUserLinksListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,18 +37,16 @@ type AnalyticsManagementProfileUserLinksListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to retrieve the profile-user links for. Can either be a specific profile ID or '~all', which refers to all the profiles that user has access to.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// An index of the first profile-user link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementProfileUserLinksListRequest struct {
-	PathParams  AnalyticsManagementProfileUserLinksListPathParams
-	QueryParams AnalyticsManagementProfileUserLinksListQueryParams
-	Security    AnalyticsManagementProfileUserLinksListSecurity
+	// Web Property ID which the given view (profile) belongs to. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementProfileUserLinksListResponse struct {

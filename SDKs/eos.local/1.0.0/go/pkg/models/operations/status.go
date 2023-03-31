@@ -11,10 +11,6 @@ type StatusRequestBody struct {
 	Endpoint string `json:"endpoint"`
 }
 
-type StatusRequest struct {
-	Request *StatusRequestBody `request:"mediaType=application/json"`
-}
-
 // Status200ApplicationJSONLastHandshake - Structure holding detailed information about the connection
 type Status200ApplicationJSONLastHandshake struct {
 	// Agent name

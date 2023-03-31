@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolCoapGetConfigPathParams struct {
+type ProtocolCoapGetConfigRequest struct {
 	// Agent to show the COAP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolCoapGetConfigRequest struct {
-	PathParams ProtocolCoapGetConfigPathParams
 }
 
 type ProtocolCoapGetConfigResponse struct {

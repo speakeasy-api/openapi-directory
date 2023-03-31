@@ -22,7 +22,6 @@ pkg/models/operations/adexchangebuyercreativesinsert.go
 pkg/models/operations/adexchangebuyercreativeslist.go
 pkg/models/shared/account.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountslist.go
 pkg/models/shared/creative.go
 pkg/models/shared/creativeslist.go

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersDeletePathParams struct {
+type UsersDeleteRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 	// The object ID or principal name of the user to delete.
 	UpnOrObjectID string `pathParam:"style=simple,explode=false,name=upnOrObjectId"`
-}
-
-type UsersDeleteQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type UsersDeleteRequest struct {
-	PathParams  UsersDeletePathParams
-	QueryParams UsersDeleteQueryParams
 }
 
 type UsersDeleteResponse struct {

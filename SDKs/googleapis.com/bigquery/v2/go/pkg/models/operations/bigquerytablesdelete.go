@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryTablesDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTablesDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTablesDeleteSecurity struct {
@@ -22,18 +22,11 @@ type BigqueryTablesDeleteSecurity struct {
 	Option2 *BigqueryTablesDeleteSecurityOption2 `security:"option"`
 }
 
-type BigqueryTablesDeletePathParams struct {
-	// Dataset ID of the table to delete
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Project ID of the table to delete
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Table ID of the table to delete
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-}
-
-type BigqueryTablesDeleteQueryParams struct {
+type BigqueryTablesDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Dataset ID of the table to delete
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,16 +35,14 @@ type BigqueryTablesDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the table to delete
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Table ID of the table to delete
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryTablesDeleteRequest struct {
-	PathParams  BigqueryTablesDeletePathParams
-	QueryParams BigqueryTablesDeleteQueryParams
-	Security    BigqueryTablesDeleteSecurity
 }
 
 type BigqueryTablesDeleteResponse struct {

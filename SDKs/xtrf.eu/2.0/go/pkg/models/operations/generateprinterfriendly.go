@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeneratePrinterFriendlyPathParams struct {
+type GeneratePrinterFriendlyRequest struct {
 	// report's internal identifier
 	ReportID int64 `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type GeneratePrinterFriendlyRequest struct {
-	PathParams GeneratePrinterFriendlyPathParams
 }
 
 type GeneratePrinterFriendlyResponse struct {

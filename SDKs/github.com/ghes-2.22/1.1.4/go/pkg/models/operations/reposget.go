@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetPathParams struct {
+type ReposGetRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetRequest struct {
-	PathParams ReposGetPathParams
 }
 
 type ReposGetResponse struct {

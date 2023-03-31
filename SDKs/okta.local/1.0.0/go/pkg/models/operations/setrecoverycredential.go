@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type SetRecoveryCredentialPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion struct {
 	Answer   *string `json:"answer,omitempty"`
 	Question *string `json:"question,omitempty"`
@@ -24,8 +20,8 @@ type SetRecoveryCredentialRequestBody struct {
 }
 
 type SetRecoveryCredentialRequest struct {
-	PathParams SetRecoveryCredentialPathParams
-	Request    *SetRecoveryCredentialRequestBody `request:"mediaType=application/json"`
+	RequestBody *SetRecoveryCredentialRequestBody `request:"mediaType=application/json"`
+	UserID      string                            `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SetRecoveryCredentialResponse struct {

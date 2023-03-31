@@ -32,7 +32,6 @@ pkg/models/shared/searchcaseclassificationsresponse.go
 pkg/models/shared/caseclassification.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/searchcasesresponse.go
 pkg/models/shared/case.go
 pkg/models/shared/actor.go

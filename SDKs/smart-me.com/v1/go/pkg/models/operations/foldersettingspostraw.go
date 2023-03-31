@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FolderSettingsPostRawPathParams struct {
+type FolderSettingsPostRawRequest struct {
+	// The folder or meter data
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The ID of the folder or meter to edit. Use and empty ID to add a new folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FolderSettingsPostRawRequest struct {
-	PathParams FolderSettingsPostRawPathParams
-	// The folder or meter data
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type FolderSettingsPostRawResponse struct {

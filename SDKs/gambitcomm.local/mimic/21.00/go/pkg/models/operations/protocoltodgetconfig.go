@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTodGetConfigPathParams struct {
+type ProtocolTodGetConfigRequest struct {
 	// Agent to show the TOD configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTodGetConfigRequest struct {
-	PathParams ProtocolTodGetConfigPathParams
 }
 
 type ProtocolTodGetConfigResponse struct {

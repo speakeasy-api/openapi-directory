@@ -8,19 +8,14 @@ import (
 )
 
 type GetSalesTaxSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSalesTaxPathParams struct {
+type GetSalesTaxRequest struct {
 	// This path parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> code for the country whose sales tax table you want to retrieve.
 	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
 	// This path parameter specifies the ID of the sales tax jurisdiction for the tax table entry you want to retrieve. Retrieve valid jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.
 	JurisdictionID string `pathParam:"style=simple,explode=false,name=jurisdictionId"`
-}
-
-type GetSalesTaxRequest struct {
-	PathParams GetSalesTaxPathParams
-	Security   GetSalesTaxSecurity
 }
 
 type GetSalesTaxResponse struct {

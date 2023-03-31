@@ -14,36 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.VerifiedaccessChallengeCreateRequest{
-        Security: operations.VerifiedaccessChallengeCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        RequestBody: map[string]interface{}{
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        QueryParams: operations.VerifiedaccessChallengeCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: map[string]interface{}{
-            "suscipit": "iure",
-            "magnam": "debitis",
-            "ipsa": "delectus",
-        },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.Challenge.VerifiedaccessChallengeCreate(ctx, req)
+    res, err := s.Challenge.VerifiedaccessChallengeCreate(ctx, req, operations.VerifiedaccessChallengeCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

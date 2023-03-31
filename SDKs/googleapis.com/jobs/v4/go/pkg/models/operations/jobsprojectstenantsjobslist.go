@@ -10,23 +10,18 @@ import (
 )
 
 type JobsProjectsTenantsJobsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsJobsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsJobsListSecurity struct {
 	Option1 *JobsProjectsTenantsJobsListSecurityOption1 `security:"option"`
 	Option2 *JobsProjectsTenantsJobsListSecurityOption2 `security:"option"`
-}
-
-type JobsProjectsTenantsJobsListPathParams struct {
-	// Required. The resource name of the tenant under which the job is created. The format is "projects/{project_id}/tenants/{tenant_id}". For example, "projects/foo/tenants/bar".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // JobsProjectsTenantsJobsListJobViewEnum - The desired job attributes returned for jobs in the search response. Defaults to JobView.JOB_VIEW_FULL if no value is specified.
@@ -62,7 +57,7 @@ func (e *JobsProjectsTenantsJobsListJobViewEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type JobsProjectsTenantsJobsListQueryParams struct {
+type JobsProjectsTenantsJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -85,6 +80,8 @@ type JobsProjectsTenantsJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The starting point of a query result.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the tenant under which the job is created. The format is "projects/{project_id}/tenants/{tenant_id}". For example, "projects/foo/tenants/bar".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -93,12 +90,6 @@ type JobsProjectsTenantsJobsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsTenantsJobsListRequest struct {
-	PathParams  JobsProjectsTenantsJobsListPathParams
-	QueryParams JobsProjectsTenantsJobsListQueryParams
-	Security    JobsProjectsTenantsJobsListSecurity
 }
 
 type JobsProjectsTenantsJobsListResponse struct {

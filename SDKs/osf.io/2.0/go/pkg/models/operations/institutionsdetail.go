@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type InstitutionsDetailPathParams struct {
+type InstitutionsDetailRequest struct {
 	// The unique identifier of the institution you wish to retrieve.
 	InstitutionID string `pathParam:"style=simple,explode=false,name=institution_id"`
-}
-
-type InstitutionsDetailRequest struct {
-	PathParams InstitutionsDetailPathParams
 }
 
 // InstitutionsDetailInstitutionAttributes - The properties of the institution entity.

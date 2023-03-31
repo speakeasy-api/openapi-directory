@@ -35,9 +35,9 @@ func newEmployees(defaultClient, securityClient HTTPClient, serverURL, language,
 // When you add employees to your group, you’ll pass information like their hire date, employment status, and basic demographic information (address, DOB, SSN, etc.).
 func (s *employees) CreateEmployee(ctx context.Context, request operations.CreateEmployeeRequest) (*operations.CreateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/employees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmployeeCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *employees) CreateEmployee(ctx context.Context, request operations.Creat
 // Edit an employee based on the ID provided. The version parameter must match the latest employee version.
 func (s *employees) EditEmployee(ctx context.Context, request operations.EditEmployeeRequest) (*operations.EditEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmployeeEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *employees) EditEmployee(ctx context.Context, request operations.EditEmp
 // Returns the latest version of a single employee based on the ID provided.
 func (s *employees) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest) (*operations.GetEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,14 +190,14 @@ func (s *employees) GetEmployee(ctx context.Context, request operations.GetEmplo
 // Returns a list of all employees for a given group
 func (s *employees) GetGroupEmployeesList(ctx context.Context, request operations.GetGroupEmployeesListRequest) (*operations.GetGroupEmployeesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/employees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

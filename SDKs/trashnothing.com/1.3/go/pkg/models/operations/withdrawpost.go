@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WithdrawPostPathParams struct {
+type WithdrawPostRequest struct {
 	// The ID of the post to withdraw.
 	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
-type WithdrawPostRequest struct {
-	PathParams WithdrawPostPathParams
 }
 
 type WithdrawPostResponse struct {

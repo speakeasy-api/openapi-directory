@@ -34,7 +34,7 @@ func newEmailValidation(defaultClient, securityClient HTTPClient, serverURL, lan
 // Email Validation
 func (s *emailValidation) EmailValidation(ctx context.Context, request operations.EmailValidationRequest) (*operations.EmailValidationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/json/email/{YOUR_API_KEY_HERE}/{USER_EMAIL_HERE}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/json/email/{YOUR_API_KEY_HERE}/{USER_EMAIL_HERE}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetVehicleBatteryPathParams struct {
+type GetVehicleBatteryRequest struct {
 	// The vehicle id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVehicleBatteryRequest struct {
-	PathParams GetVehicleBatteryPathParams
 }
 
 type GetVehicleBatteryResponse struct {

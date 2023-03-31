@@ -3,96 +3,141 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddLfTagsToResourceRequest(
-    headers=operations.AddLfTagsToResourceHeaders(
-        x_amz_algorithm="velit",
-        x_amz_content_sha256="maiores",
-        x_amz_credential="sunt",
-        x_amz_date="et",
-        x_amz_security_token="est",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="totam",
-        x_amz_target="AWSLakeFormation.AddLFTagsToResource",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddLfTagsToResourceRequest(
-        catalog_id="voluptas",
+)
+
+
+req = operations.AddLFTagsToResourceRequest(
+    request_body=operations.AddLFTagsToResourceRequestBody(
+        catalog_id="corrupti",
         lf_tags=[
-            shared.LfTagPair(
-                catalog_id="consequatur",
-                tag_key="veritatis",
+            shared.LFTagPair(
+                catalog_id="distinctio",
+                tag_key="quibusdam",
                 tag_values=[
-                    "et",
-                    "nisi",
-                    "cupiditate",
+                    "nulla",
+                    "corrupti",
+                    "illum",
+                ],
+            ),
+            shared.LFTagPair(
+                catalog_id="vel",
+                tag_key="error",
+                tag_values=[
+                    "suscipit",
+                    "iure",
+                    "magnam",
+                ],
+            ),
+            shared.LFTagPair(
+                catalog_id="debitis",
+                tag_key="ipsa",
+                tag_values=[
+                    "tempora",
+                    "suscipit",
+                    "molestiae",
+                    "minus",
                 ],
             ),
         ],
-        resource=shared.Resource(
+        resource=operations.AddLFTagsToResourceRequestBodyResource(
             catalog={
-                "quos": "et",
+                "voluptatum": "iusto",
+                "excepturi": "nisi",
+                "recusandae": "temporibus",
+                "ab": "quis",
             },
+            data_cells_filter=shared.DataCellsFilterResource(
+                database_name="veritatis",
+                name="deserunt",
+                table_catalog_id="perferendis",
+                table_name="ipsam",
+            ),
             data_location=shared.DataLocationResource(
-                catalog_id="perspiciatis",
-                resource_arn="quo",
+                catalog_id="repellendus",
+                resource_arn="sapiente",
             ),
             database=shared.DatabaseResource(
-                catalog_id="nulla",
-                name="modi",
+                catalog_id="quo",
+                name="odit",
             ),
-            lf_tag=shared.LfTagKeyResource(
-                catalog_id="est",
-                tag_key="impedit",
+            lf_tag=shared.LFTagKeyResource(
+                catalog_id="at",
+                tag_key="at",
                 tag_values=[
-                    "qui",
-                    "ut",
+                    "molestiae",
+                    "quod",
+                    "quod",
+                    "esse",
                 ],
             ),
-            lf_tag_policy=shared.LfTagPolicyResource(
-                catalog_id="possimus",
+            lf_tag_policy=shared.LFTagPolicyResource(
+                catalog_id="totam",
                 expression=[
-                    shared.LfTag(
-                        tag_key="iusto",
+                    shared.LFTag(
+                        tag_key="dolorum",
                         tag_values=[
-                            "qui",
+                            "nam",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="officia",
+                        tag_values=[
+                            "fugit",
+                            "deleniti",
+                            "hic",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="optio",
+                        tag_values=[
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="modi",
+                        tag_values=[
+                            "impedit",
                         ],
                     ),
                 ],
                 resource_type="TABLE",
             ),
             table=shared.TableResource(
-                catalog_id="totam",
-                database_name="at",
-                name="aliquam",
+                catalog_id="esse",
+                database_name="ipsum",
+                name="excepturi",
                 table_wildcard={
-                    "inventore": "esse",
-                    "consectetur": "cumque",
-                    "fugit": "qui",
+                    "perferendis": "ad",
                 },
             ),
             table_with_columns=shared.TableWithColumnsResource(
-                catalog_id="quia",
+                catalog_id="natus",
                 column_names=[
-                    "incidunt",
+                    "iste",
                 ],
                 column_wildcard=shared.ColumnWildcard(
                     excluded_column_names=[
-                        "neque",
+                        "natus",
                     ],
                 ),
-                database_name="alias",
-                name="tempore",
+                database_name="laboriosam",
+                name="hic",
             ),
         ),
     ),
+    x_amz_algorithm="saepe",
+    x_amz_content_sha256="fuga",
+    x_amz_credential="in",
+    x_amz_date="corporis",
+    x_amz_security_token="iste",
+    x_amz_signature="iure",
+    x_amz_signed_headers="saepe",
 )
     
 res = s.add_lf_tags_to_resource(req)

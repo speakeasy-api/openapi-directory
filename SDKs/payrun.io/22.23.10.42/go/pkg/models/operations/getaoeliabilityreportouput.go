@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAoeLiabilityReportOuputQueryParams struct {
+type GetAoeLiabilityReportOuputRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employer unique key. E.g. ER001
 	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 	// The pay schedule unique key. E.g. SCH001
@@ -18,18 +22,6 @@ type GetAoeLiabilityReportOuputQueryParams struct {
 	TaxYear string `queryParam:"style=form,explode=true,name=TaxYear"`
 	// The transform definition unique key. E.g. P45-Pdf
 	TransformDefinitionKey *string `queryParam:"style=form,explode=true,name=TransformDefinitionKey"`
-}
-
-type GetAoeLiabilityReportOuputHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetAoeLiabilityReportOuputRequest struct {
-	QueryParams GetAoeLiabilityReportOuputQueryParams
-	Headers     GetAoeLiabilityReportOuputHeaders
 }
 
 type GetAoeLiabilityReportOuputResponse struct {

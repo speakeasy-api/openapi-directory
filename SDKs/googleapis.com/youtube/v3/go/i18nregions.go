@@ -33,7 +33,7 @@ func newI18nRegions(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // YoutubeI18nRegionsList - Retrieves a list of resources, possibly filtered.
-func (s *i18nRegions) YoutubeI18nRegionsList(ctx context.Context, request operations.YoutubeI18nRegionsListRequest) (*operations.YoutubeI18nRegionsListResponse, error) {
+func (s *i18nRegions) YoutubeI18nRegionsList(ctx context.Context, request operations.YoutubeI18nRegionsListRequest, security operations.YoutubeI18nRegionsListSecurity) (*operations.YoutubeI18nRegionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/i18nRegions"
 
@@ -42,11 +42,11 @@ func (s *i18nRegions) YoutubeI18nRegionsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

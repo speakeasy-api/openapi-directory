@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type TeamsRemoveProjectInOrgPathParams struct {
+type TeamsRemoveProjectInOrgRequest struct {
 	Org       string `pathParam:"style=simple,explode=false,name=org"`
 	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
 	// team_slug parameter
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsRemoveProjectInOrgRequest struct {
-	PathParams TeamsRemoveProjectInOrgPathParams
 }
 
 type TeamsRemoveProjectInOrgResponse struct {

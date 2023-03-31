@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreditAuditCopyTokenCreateRequest struct {
-	Request shared.CreditAuditCopyTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type CreditAuditCopyTokenCreateResponse struct {
 	ContentType string

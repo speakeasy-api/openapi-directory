@@ -34,7 +34,7 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetPlaylists - Performs a playlist search based on a query
-func (s *search) GetPlaylists(ctx context.Context, request operations.GetPlaylistsRequest) (*operations.GetPlaylistsResponse, error) {
+func (s *search) GetPlaylists(ctx context.Context, request operations.GetPlaylistsRequest, security operations.GetPlaylistsSecurity) (*operations.GetPlaylistsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/playlists"
 
@@ -43,11 +43,11 @@ func (s *search) GetPlaylists(ctx context.Context, request operations.GetPlaylis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *search) GetPlaylists(ctx context.Context, request operations.GetPlaylis
 }
 
 // GetTracks - Performs a track search based on a query
-func (s *search) GetTracks(ctx context.Context, request operations.GetTracksRequest) (*operations.GetTracksResponse, error) {
+func (s *search) GetTracks(ctx context.Context, request operations.GetTracksRequest, security operations.GetTracksSecurity) (*operations.GetTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tracks"
 
@@ -103,11 +103,11 @@ func (s *search) GetTracks(ctx context.Context, request operations.GetTracksRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *search) GetTracks(ctx context.Context, request operations.GetTracksRequ
 }
 
 // GetUsers - Performs a user search based on a query
-func (s *search) GetUsers(ctx context.Context, request operations.GetUsersRequest) (*operations.GetUsersResponse, error) {
+func (s *search) GetUsers(ctx context.Context, request operations.GetUsersRequest, security operations.GetUsersSecurity) (*operations.GetUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -164,11 +164,11 @@ func (s *search) GetUsers(ctx context.Context, request operations.GetUsersReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ReposDeleteDeployKeyPathParams struct {
+type ReposDeleteDeployKeyRequest struct {
 	// key_id parameter
 	KeyID int64  `pathParam:"style=simple,explode=false,name=key_id"`
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteDeployKeyRequest struct {
-	PathParams ReposDeleteDeployKeyPathParams
 }
 
 type ReposDeleteDeployKeyResponse struct {

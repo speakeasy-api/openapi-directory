@@ -8,13 +8,13 @@ import (
 )
 
 type DatatransferTransfersGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatatransferTransfersGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatatransferTransfersGetSecurity struct {
@@ -22,12 +22,7 @@ type DatatransferTransfersGetSecurity struct {
 	Option2 *DatatransferTransfersGetSecurityOption2 `security:"option"`
 }
 
-type DatatransferTransfersGetPathParams struct {
-	// ID of the resource to be retrieved. This is returned in the response from the insert method.
-	DataTransferID string `pathParam:"style=simple,explode=false,name=dataTransferId"`
-}
-
-type DatatransferTransfersGetQueryParams struct {
+type DatatransferTransfersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DatatransferTransfersGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// ID of the resource to be retrieved. This is returned in the response from the insert method.
+	DataTransferID string `pathParam:"style=simple,explode=false,name=dataTransferId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -50,12 +47,6 @@ type DatatransferTransfersGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatatransferTransfersGetRequest struct {
-	PathParams  DatatransferTransfersGetPathParams
-	QueryParams DatatransferTransfersGetQueryParams
-	Security    DatatransferTransfersGetSecurity
 }
 
 type DatatransferTransfersGetResponse struct {

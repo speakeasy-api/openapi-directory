@@ -8,20 +8,18 @@ import (
 )
 
 type CloudchannelAccountsRegisterSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudchannelAccountsRegisterPathParams struct {
-	// Required. Resource name of the account.
-	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type CloudchannelAccountsRegisterQueryParams struct {
+type CloudchannelAccountsRegisterRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                   *shared.XgafvEnum                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudChannelV1RegisterSubscriberRequest *shared.GoogleCloudChannelV1RegisterSubscriberRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. Resource name of the account.
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type CloudchannelAccountsRegisterQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsRegisterRequest struct {
-	PathParams  CloudchannelAccountsRegisterPathParams
-	QueryParams CloudchannelAccountsRegisterQueryParams
-	Request     *shared.GoogleCloudChannelV1RegisterSubscriberRequest `request:"mediaType=application/json"`
-	Security    CloudchannelAccountsRegisterSecurity
 }
 
 type CloudchannelAccountsRegisterResponse struct {

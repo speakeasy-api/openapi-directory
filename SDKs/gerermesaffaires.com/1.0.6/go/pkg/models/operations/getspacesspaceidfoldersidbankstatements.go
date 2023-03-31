@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDBankStatementsPathParams struct {
-	// Id of the folder bank
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDBankStatementsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDBankStatementsRequest struct {
 	// range date of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// Number of the bank statement
 	Number *string `queryParam:"style=form,explode=true,name=Number"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesSpaceIDFoldersIDBankStatementsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDBankStatementsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDBankStatementsQueryParams
+	// Id of the folder bank
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDBankStatementsResponse struct {

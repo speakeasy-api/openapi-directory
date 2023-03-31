@@ -8,10 +8,10 @@ import (
 )
 
 type ListDeviceCodesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListDeviceCodesQueryParams struct {
+type ListDeviceCodesRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this to retrieve the next set of results for your original query.
 	//
@@ -26,11 +26,6 @@ type ListDeviceCodesQueryParams struct {
 	// If specified, returns DeviceCodes with the specified statuses.
 	// Returns DeviceCodes of status `PAIRED` and `UNPAIRED` if empty.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListDeviceCodesRequest struct {
-	QueryParams ListDeviceCodesQueryParams
-	Security    ListDeviceCodesSecurity
 }
 
 type ListDeviceCodesResponse struct {

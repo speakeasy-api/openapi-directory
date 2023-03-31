@@ -8,10 +8,10 @@ import (
 )
 
 type CreateSigningBasketSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type CreateSigningBasketHeaders struct {
+type CreateSigningBasketRequest struct {
 	// This data element may be contained, if the payment initiation transaction is part of a session, i.e. combined AIS/PIS service.
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
@@ -144,14 +144,9 @@ type CreateSigningBasketHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type CreateSigningBasketRequest struct {
-	Headers CreateSigningBasketHeaders
 	// Request body for a confirmation of an establishing signing basket request.
 	//
-	Request  *shared.SigningBasket `request:"mediaType=application/json"`
-	Security CreateSigningBasketSecurity
+	SigningBasket *shared.SigningBasket `request:"mediaType=application/json"`
 }
 
 type CreateSigningBasketResponse struct {

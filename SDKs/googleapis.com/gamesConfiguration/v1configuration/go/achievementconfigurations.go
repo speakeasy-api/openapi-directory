@@ -32,20 +32,20 @@ func newAchievementConfigurations(defaultClient, securityClient HTTPClient, serv
 }
 
 // GamesConfigurationAchievementConfigurationsDelete - Delete the achievement configuration with the given ID.
-func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsDeleteRequest) (*operations.GamesConfigurationAchievementConfigurationsDeleteResponse, error) {
+func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsDeleteRequest, security operations.GamesConfigurationAchievementConfigurationsDeleteSecurity) (*operations.GamesConfigurationAchievementConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsD
 }
 
 // GamesConfigurationAchievementConfigurationsGet - Retrieves the metadata of the achievement configuration with the given ID.
-func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsGet(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsGetRequest) (*operations.GamesConfigurationAchievementConfigurationsGetResponse, error) {
+func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsGet(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsGetRequest, security operations.GamesConfigurationAchievementConfigurationsGetSecurity) (*operations.GamesConfigurationAchievementConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsG
 }
 
 // GamesConfigurationAchievementConfigurationsInsert - Insert a new achievement configuration in this application.
-func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsInsertRequest) (*operations.GamesConfigurationAchievementConfigurationsInsertResponse, error) {
+func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsInsertRequest, security operations.GamesConfigurationAchievementConfigurationsInsertSecurity) (*operations.GamesConfigurationAchievementConfigurationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsI
 }
 
 // GamesConfigurationAchievementConfigurationsList - Returns a list of the achievement configurations in this application.
-func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsList(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsListRequest) (*operations.GamesConfigurationAchievementConfigurationsListResponse, error) {
+func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsList(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsListRequest, security operations.GamesConfigurationAchievementConfigurationsListSecurity) (*operations.GamesConfigurationAchievementConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsL
 }
 
 // GamesConfigurationAchievementConfigurationsUpdate - Update the metadata of the achievement configuration with the given ID.
-func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsUpdateRequest) (*operations.GamesConfigurationAchievementConfigurationsUpdateResponse, error) {
+func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsUpdateRequest, security operations.GamesConfigurationAchievementConfigurationsUpdateSecurity) (*operations.GamesConfigurationAchievementConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

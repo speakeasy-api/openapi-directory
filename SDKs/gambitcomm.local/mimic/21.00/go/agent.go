@@ -36,7 +36,7 @@ func newAgent(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // port defaults to 161 if not specified. mask defaults to the class-based network mask for the address. interface defaults to the default network interface.  If port is set to 0, the system will automatically select a port number. This is useful for client-mode protocols, such as TFTP or TOD. Upon start of an IP alias with a 0 (auto-assigned) port number, its port will change to contain the value of the selected system port.
 func (s *agent) AddIpalias(ctx context.Context, request operations.AddIpaliasRequest) (*operations.AddIpaliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/add/{IP}/{port}/{mask}/{interface}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/add/{IP}/{port}/{mask}/{interface}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *agent) AddIpalias(ctx context.Context, request operations.AddIpaliasReq
 // Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 func (s *agent) AddTimerScript(ctx context.Context, request operations.AddTimerScriptRequest) (*operations.AddTimerScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/add/{script}/{interval}/{arg}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/add/{script}/{interval}/{arg}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (s *agent) AddTimerScript(ctx context.Context, request operations.AddTimerS
 // For speed, this operation will complete asynchronously. The same synchronization considerations apply as in /mimic/agent/start.
 func (s *agent) AgentRemove(ctx context.Context, request operations.AgentRemoveRequest) (*operations.AgentRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/remove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *agent) AgentRemove(ctx context.Context, request operations.AgentRemoveR
 // This command copies the variable store from the other agent to this agent.
 func (s *agent) AgentStoreCopy(ctx context.Context, request operations.AgentStoreCopyRequest) (*operations.AgentStoreCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/copy/{otherAgent}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/copy/{otherAgent}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *agent) AgentStoreCopy(ctx context.Context, request operations.AgentStor
 // It returns "1" if the variable exists, else "0".
 func (s *agent) AgentStoreExists(ctx context.Context, request operations.AgentStoreExistsRequest) (*operations.AgentStoreExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/exists/{var}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/exists/{var}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *agent) AgentStoreExists(ctx context.Context, request operations.AgentSt
 // The value will be returned as a string (like all Tcl values).
 func (s *agent) AgentStoreGet(ctx context.Context, request operations.AgentStoreGetRequest) (*operations.AgentStoreGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/get/{var}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/get/{var}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +318,7 @@ func (s *agent) AgentStoreGet(ctx context.Context, request operations.AgentStore
 // The list will be a Tcl format list with curly braces "{}" around each list element. These elements in turn are space separated.
 func (s *agent) AgentStoreList(ctx context.Context, request operations.AgentStoreListRequest) (*operations.AgentStoreListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -364,9 +364,9 @@ func (s *agent) AgentStoreList(ctx context.Context, request operations.AgentStor
 // These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
 func (s *agent) AgentStoreLreplace(ctx context.Context, request operations.AgentStoreLreplaceRequest) (*operations.AgentStoreLreplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/lreplace/{var}/{index}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/lreplace/{var}/{index}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -418,7 +418,7 @@ func (s *agent) AgentStoreLreplace(ctx context.Context, request operations.Agent
 // It returns "1" if the variable is persistent, else "0".
 func (s *agent) AgentStorePersists(ctx context.Context, request operations.AgentStorePersistsRequest) (*operations.AgentStorePersistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/persists/{var}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/persists/{var}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -465,9 +465,9 @@ func (s *agent) AgentStorePersists(ctx context.Context, request operations.Agent
 // The append sub-command will append the value to an existing variable, or create a new one. The set sub-command will overwrite an existing variable, or create a new one. The optional persist flag can be used to indicate if the variable is to be persistent as described above. By default a value of '0' will be implied for the persist flag. To avoid mistakes, for existing variables the persist flag can only be set. If you want to reset it, you first need to unset the variable.
 func (s *agent) AgentStoreSet(ctx context.Context, request operations.AgentStoreSetRequest) (*operations.AgentStoreSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/set/{var}/{persist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/set/{var}/{persist}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -519,7 +519,7 @@ func (s *agent) AgentStoreSet(ctx context.Context, request operations.AgentStore
 // This will cleanup persistent variables if needed
 func (s *agent) AgentStoreUnset(ctx context.Context, request operations.AgentStoreUnsetRequest) (*operations.AgentStoreUnsetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/unset/{var}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/store/unset/{var}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -566,7 +566,7 @@ func (s *agent) AgentStoreUnset(ctx context.Context, request operations.AgentSto
 // port defaults to 161 if not specified.
 func (s *agent) DelIpalias(ctx context.Context, request operations.DelIpaliasRequest) (*operations.DelIpaliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/delete/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/delete/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -613,7 +613,7 @@ func (s *agent) DelIpalias(ctx context.Context, request operations.DelIpaliasReq
 // The first scheduled script that matches the script name, and optionally the interval and argument will be deleted.
 func (s *agent) DelTimerScript(ctx context.Context, request operations.DelTimerScriptRequest) (*operations.DelTimerScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/delete/{script}/{interval}/{arg}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/delete/{script}/{interval}/{arg}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -660,7 +660,7 @@ func (s *agent) DelTimerScript(ctx context.Context, request operations.DelTimerS
 // An empty ipaddress or 0.0.0.0 both imply any address. Similarly an empty port or 0 both imply any port. For agents with source-address-indexing enabled, messages which do not match any source address will be discarded with an ERROR message, similar to community string mismatches.
 func (s *agent) FromAdd(ctx context.Context, request operations.FromAddRequest) (*operations.FromAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/add/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/add/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -707,7 +707,7 @@ func (s *agent) FromAdd(ctx context.Context, request operations.FromAddRequest) 
 // An empty ipaddress or 0.0.0.0 both imply any address. Similarly an empty port or 0 both imply any port. For agents with source-address-indexing enabled, messages which do not match any source address will be discarded with an ERROR message, similar to community string mismatches.
 func (s *agent) FromDel(ctx context.Context, request operations.FromDelRequest) (*operations.FromDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/delete/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/delete/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -754,7 +754,7 @@ func (s *agent) FromDel(ctx context.Context, request operations.FromDelRequest) 
 // This in effect implements source-address-indexing, where 2 agents with the same address can be configured, each accepting messages from different management stations.
 func (s *agent) FromList(ctx context.Context, request operations.FromListRequest) (*operations.FromListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/from/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -800,7 +800,7 @@ func (s *agent) FromList(ctx context.Context, request operations.FromListRequest
 // 0-Unknown 1-Running 2-Stopped 3-Halted 4-Paused 5-Deleted 6-Stopping
 func (s *agent) GetAgentState(ctx context.Context, request operations.GetAgentStateRequest) (*operations.GetAgentStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/state", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -846,7 +846,7 @@ func (s *agent) GetAgentState(ctx context.Context, request operations.GetAgentSt
 // has the agent value space changed?
 func (s *agent) GetChanged(ctx context.Context, request operations.GetChangedRequest) (*operations.GetChangedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/changed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/changed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -892,7 +892,7 @@ func (s *agent) GetChanged(ctx context.Context, request operations.GetChangedReq
 // has the lab configuration changed?
 func (s *agent) GetConfigChanged(ctx context.Context, request operations.GetConfigChangedRequest) (*operations.GetConfigChangedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/config_changed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/config_changed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -938,7 +938,7 @@ func (s *agent) GetConfigChanged(ctx context.Context, request operations.GetConf
 // The minimum granularity is 10 msec.
 func (s *agent) GetDelay(ctx context.Context, request operations.GetDelayRequest) (*operations.GetDelayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/delay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/delay", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -984,7 +984,7 @@ func (s *agent) GetDelay(ctx context.Context, request operations.GetDelayRequest
 // drop rate (every N-th PDU). 0 means no drops.
 func (s *agent) GetDrops(ctx context.Context, request operations.GetDropsRequest) (*operations.GetDropsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/drops", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/drops", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1030,7 +1030,7 @@ func (s *agent) GetDrops(ctx context.Context, request operations.GetDropsRequest
 // Currently, only IPv4 addresses are allowed as the main address of the agent, but both IPv4 and IPv6 addresses are allowed as IP aliases for the agent.
 func (s *agent) GetHost(ctx context.Context, request operations.GetHostRequest) (*operations.GetHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/host", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/host", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1077,7 +1077,7 @@ func (s *agent) GetHost(ctx context.Context, request operations.GetHostRequest) 
 // The agent will retransmit INFORM PDUs at this interval until it has received a reply from the manager.
 func (s *agent) GetInformTimeout(ctx context.Context, request operations.GetInformTimeoutRequest) (*operations.GetInformTimeoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/inform_timeout", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/inform_timeout", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1123,7 +1123,7 @@ func (s *agent) GetInformTimeout(ctx context.Context, request operations.GetInfo
 // network interface card for the agent.
 func (s *agent) GetInterface(ctx context.Context, request operations.GetInterfaceRequest) (*operations.GetInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/interface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/interface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1170,7 +1170,7 @@ func (s *agent) GetInterface(ctx context.Context, request operations.GetInterfac
 // subnet mask of the agent.
 func (s *agent) GetMask(ctx context.Context, request operations.GetMaskRequest) (*operations.GetMaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/mask", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/mask", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1217,7 +1217,7 @@ func (s *agent) GetMask(ctx context.Context, request operations.GetMaskRequest) 
 // set of MIBs, simulations and scenarios
 func (s *agent) GetMibs(ctx context.Context, request operations.GetMibsRequest) (*operations.GetMibsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/mibs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/mibs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1263,7 +1263,7 @@ func (s *agent) GetMibs(ctx context.Context, request operations.GetMibsRequest) 
 // This count is incremented each time an agent starts. It affects the SNMPv3 EngineBoots parameter.
 func (s *agent) GetNumberStarts(ctx context.Context, request operations.GetNumberStartsRequest) (*operations.GetNumberStartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/num_starts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/num_starts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1309,7 +1309,7 @@ func (s *agent) GetNumberStarts(ctx context.Context, request operations.GetNumbe
 // MIB directory of the agent.
 func (s *agent) GetOiddir(ctx context.Context, request operations.GetOiddirRequest) (*operations.GetOiddirResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/oiddir", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/oiddir", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1356,7 +1356,7 @@ func (s *agent) GetOiddir(ctx context.Context, request operations.GetOiddirReque
 // owner of the agent.
 func (s *agent) GetOwner(ctx context.Context, request operations.GetOwnerRequest) (*operations.GetOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/owner", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/owner", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1403,7 +1403,7 @@ func (s *agent) GetOwner(ctx context.Context, request operations.GetOwnerRequest
 // The limit for this configurable is 65536.
 func (s *agent) GetPdusize(ctx context.Context, request operations.GetPdusizeRequest) (*operations.GetPdusizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/pdusize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/pdusize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1449,7 +1449,7 @@ func (s *agent) GetPdusize(ctx context.Context, request operations.GetPdusizeReq
 // port number
 func (s *agent) GetPort(ctx context.Context, request operations.GetPortRequest) (*operations.GetPortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/port", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/port", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1496,7 +1496,7 @@ func (s *agent) GetPort(ctx context.Context, request operations.GetPortRequest) 
 // private directory of the agent.
 func (s *agent) GetPrivdir(ctx context.Context, request operations.GetPrivdirRequest) (*operations.GetPrivdirResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/privdir", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/privdir", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1543,7 +1543,7 @@ func (s *agent) GetPrivdir(ctx context.Context, request operations.GetPrivdirReq
 // protocols supported by agent as an array of strings
 func (s *agent) GetProtocols(ctx context.Context, request operations.GetProtocolsRequest) (*operations.GetProtocolsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/protocol", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/protocol", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1589,7 +1589,7 @@ func (s *agent) GetProtocols(ctx context.Context, request operations.GetProtocol
 // read community string
 func (s *agent) GetReadCommunity(ctx context.Context, request operations.GetReadCommunityRequest) (*operations.GetReadCommunityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/read", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/read", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1636,7 +1636,7 @@ func (s *agent) GetReadCommunity(ctx context.Context, request operations.GetRead
 // first scenario name
 func (s *agent) GetScen(ctx context.Context, request operations.GetScenRequest) (*operations.GetScenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/scen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/scen", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1682,7 +1682,7 @@ func (s *agent) GetScen(ctx context.Context, request operations.GetScenRequest) 
 // first simulation name
 func (s *agent) GetSim(ctx context.Context, request operations.GetSimRequest) (*operations.GetSimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/sim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/sim", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1729,7 +1729,7 @@ func (s *agent) GetSim(ctx context.Context, request operations.GetSimRequest) (*
 // relative start time
 func (s *agent) GetStarttime(ctx context.Context, request operations.GetStarttimeRequest) (*operations.GetStarttimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1776,7 +1776,7 @@ func (s *agent) GetStarttime(ctx context.Context, request operations.GetStarttim
 // has the agent state changed?
 func (s *agent) GetStateChanged(ctx context.Context, request operations.GetStateChangedRequest) (*operations.GetStateChangedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/state_changed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/state_changed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1822,7 +1822,7 @@ func (s *agent) GetStateChanged(ctx context.Context, request operations.GetState
 // The statistics are returned as 64-bit decimal numbers for the following statistics, total, discarded, error, GET, GETNEXT, SET, GETBULK, trap, GET variables, GETNEXT variables, SET variables, GETBULK variables, INFORM sent, INFORM re-sent, INFORM timed out, INFORM acked, INFORM REPORT
 func (s *agent) GetStatistics(ctx context.Context, request operations.GetStatisticsRequest) (*operations.GetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1868,7 +1868,7 @@ func (s *agent) GetStatistics(ctx context.Context, request operations.GetStatist
 // SNMP PDU tracing
 func (s *agent) GetTrace(ctx context.Context, request operations.GetTraceRequest) (*operations.GetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1914,7 +1914,7 @@ func (s *agent) GetTrace(ctx context.Context, request operations.GetTraceRequest
 // Is a bitmask in which with the following bits (from LSB) check for type, length, range, access
 func (s *agent) GetValidate(ctx context.Context, request operations.GetValidateRequest) (*operations.GetValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/validate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1960,7 +1960,7 @@ func (s *agent) GetValidate(ctx context.Context, request operations.GetValidateR
 // write community string
 func (s *agent) GetWriteCommunity(ctx context.Context, request operations.GetWriteCommunityRequest) (*operations.GetWriteCommunityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/write", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/get/write", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2007,7 +2007,7 @@ func (s *agent) GetWriteCommunity(ctx context.Context, request operations.GetWri
 // Halt the current agent.
 func (s *agent) Halt(ctx context.Context, request operations.HaltRequest) (*operations.HaltResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/halt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/halt", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2054,7 +2054,7 @@ func (s *agent) Halt(ctx context.Context, request operations.HaltRequest) (*oper
 // The agent host address (set with mimic agent set host) is not in this list, since it is already accessible separately with mimic agent get host.
 func (s *agent) ListIpaliases(ctx context.Context, request operations.ListIpaliasesRequest) (*operations.ListIpaliasesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2100,7 +2100,7 @@ func (s *agent) ListIpaliases(ctx context.Context, request operations.ListIpalia
 // The command mimic timer script list lists global timer scripts, the command /mimic/timer/script/{agentNum}/list is the per-agent equivalent NOTE Global timer scripts run globally but within them you can address individual agents using {agentNum}. To schedule timerscripts for an individual agent, use /mimic/timer/script/{agentNum}.
 func (s *agent) ListTimerScripts(ctx context.Context, request operations.ListTimerScriptsRequest) (*operations.ListTimerScriptsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/timer/script/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2146,9 +2146,9 @@ func (s *agent) ListTimerScripts(ctx context.Context, request operations.ListTim
 // Add an agent.
 func (s *agent) New(ctx context.Context, request operations.NewRequest) (*operations.NewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/add/{IP}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/add/{IP}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2203,7 +2203,7 @@ func (s *agent) New(ctx context.Context, request operations.NewRequest) (*operat
 // Pause the current agent.
 func (s *agent) PauseNow(ctx context.Context, request operations.PauseNowRequest) (*operations.PauseNowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/pause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2250,7 +2250,7 @@ func (s *agent) PauseNow(ctx context.Context, request operations.PauseNowRequest
 // Returns the protocol's configuration.
 func (s *agent) ProtocolGetConfig(ctx context.Context, request operations.ProtocolGetConfigRequest) (*operations.ProtocolGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/{prot}/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/{prot}/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2296,7 +2296,7 @@ func (s *agent) ProtocolGetConfig(ctx context.Context, request operations.Protoc
 // This only works for halted agents. The net effect is the same as restarting an agent (ie. stop, start, halt), but without disconnecting the network (and thus existing connections).
 func (s *agent) Reload(ctx context.Context, request operations.ReloadRequest) (*operations.ReloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/reload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/reload", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2343,7 +2343,7 @@ func (s *agent) Reload(ctx context.Context, request operations.ReloadRequest) (*
 // Resume the current agent.
 func (s *agent) Resume(ctx context.Context, request operations.ResumeRequest) (*operations.ResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2390,7 +2390,7 @@ func (s *agent) Resume(ctx context.Context, request operations.ResumeRequest) (*
 // Save agent MIB values.
 func (s *agent) Save(ctx context.Context, request operations.SaveRequest) (*operations.SaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/save", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/save", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2437,7 +2437,7 @@ func (s *agent) Save(ctx context.Context, request operations.SaveRequest) (*oper
 // The minimum granularity is 10 msec.
 func (s *agent) SetDelay(ctx context.Context, request operations.SetDelayRequest) (*operations.SetDelayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/delay/{delay}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/delay/{delay}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2483,7 +2483,7 @@ func (s *agent) SetDelay(ctx context.Context, request operations.SetDelayRequest
 // 0 means no drops
 func (s *agent) SetDrops(ctx context.Context, request operations.SetDropsRequest) (*operations.SetDropsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/drops/{drops}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/drops/{drops}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2529,7 +2529,7 @@ func (s *agent) SetDrops(ctx context.Context, request operations.SetDropsRequest
 // Currently, only IPv4 addresses are allowed as the main address of the agent, but both IPv4 and IPv6 addresses are allowed as IP aliases for the agent.
 func (s *agent) SetHost(ctx context.Context, request operations.SetHostRequest) (*operations.SetHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/host/{host}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/host/{host}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2576,7 +2576,7 @@ func (s *agent) SetHost(ctx context.Context, request operations.SetHostRequest) 
 // The agent will retransmit INFORM PDUs at this interval until it has received a reply from the manager.
 func (s *agent) SetInformTimeout(ctx context.Context, request operations.SetInformTimeoutRequest) (*operations.SetInformTimeoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/inform_timeout/{inform_timeout}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/inform_timeout/{inform_timeout}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2622,7 +2622,7 @@ func (s *agent) SetInformTimeout(ctx context.Context, request operations.SetInfo
 // network interface card for the agent
 func (s *agent) SetInterface(ctx context.Context, request operations.SetInterfaceRequest) (*operations.SetInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/interface/{interface}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/interface/{interface}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2669,7 +2669,7 @@ func (s *agent) SetInterface(ctx context.Context, request operations.SetInterfac
 // subnet mask of the agent.
 func (s *agent) SetMask(ctx context.Context, request operations.SetMaskRequest) (*operations.SetMaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/mask/{mask}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/mask/{mask}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2716,9 +2716,9 @@ func (s *agent) SetMask(ctx context.Context, request operations.SetMaskRequest) 
 // set of MIBs, simulations and scenarios
 func (s *agent) SetMibs(ctx context.Context, request operations.SetMibsRequest) (*operations.SetMibsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/mibs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/mibs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2773,7 +2773,7 @@ func (s *agent) SetMibs(ctx context.Context, request operations.SetMibsRequest) 
 // MIB directory of the agent.
 func (s *agent) SetOiddir(ctx context.Context, request operations.SetOiddirRequest) (*operations.SetOiddirResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/oiddir/{oiddir}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/oiddir/{oiddir}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2820,7 +2820,7 @@ func (s *agent) SetOiddir(ctx context.Context, request operations.SetOiddirReque
 // owner of the agent
 func (s *agent) SetOwner(ctx context.Context, request operations.SetOwnerRequest) (*operations.SetOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/owner/{owner}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/owner/{owner}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2867,7 +2867,7 @@ func (s *agent) SetOwner(ctx context.Context, request operations.SetOwnerRequest
 // The limit for this configurable is 65536
 func (s *agent) SetPdusize(ctx context.Context, request operations.SetPdusizeRequest) (*operations.SetPdusizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/pdusize/{pdusize}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/pdusize/{pdusize}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2913,7 +2913,7 @@ func (s *agent) SetPdusize(ctx context.Context, request operations.SetPdusizeReq
 // port number
 func (s *agent) SetPort(ctx context.Context, request operations.SetPortRequest) (*operations.SetPortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/port/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/port/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2960,7 +2960,7 @@ func (s *agent) SetPort(ctx context.Context, request operations.SetPortRequest) 
 // private directory of the agent.
 func (s *agent) SetPrivdir(ctx context.Context, request operations.SetPrivdirRequest) (*operations.SetPrivdirResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/privdir/{privdir}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/privdir/{privdir}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3007,9 +3007,9 @@ func (s *agent) SetPrivdir(ctx context.Context, request operations.SetPrivdirReq
 // protocols supported by agent as a comma-separated list
 func (s *agent) SetProtocols(ctx context.Context, request operations.SetProtocolsRequest) (*operations.SetProtocolsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/protocol", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/protocol", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3063,7 +3063,7 @@ func (s *agent) SetProtocols(ctx context.Context, request operations.SetProtocol
 // read community string
 func (s *agent) SetReadCommunity(ctx context.Context, request operations.SetReadCommunityRequest) (*operations.SetReadCommunityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/read/{read}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/read/{read}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3110,7 +3110,7 @@ func (s *agent) SetReadCommunity(ctx context.Context, request operations.SetRead
 // relative start time
 func (s *agent) SetStarttime(ctx context.Context, request operations.SetStarttimeRequest) (*operations.SetStarttimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/start/{start}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/start/{start}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3157,7 +3157,7 @@ func (s *agent) SetStarttime(ctx context.Context, request operations.SetStarttim
 // SNMP PDU tracing
 func (s *agent) SetTrace(ctx context.Context, request operations.SetTraceRequest) (*operations.SetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/trace/{trace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/trace/{trace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3203,7 +3203,7 @@ func (s *agent) SetTrace(ctx context.Context, request operations.SetTraceRequest
 // Is a bitmask in which with the following bits (from LSB) check for type, length, range, access. A default value of 65535 does all validation checking.
 func (s *agent) SetValidate(ctx context.Context, request operations.SetValidateRequest) (*operations.SetValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/validate/{validate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/validate/{validate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3249,7 +3249,7 @@ func (s *agent) SetValidate(ctx context.Context, request operations.SetValidateR
 // write community string
 func (s *agent) SetWriteCommunity(ctx context.Context, request operations.SetWriteCommunityRequest) (*operations.SetWriteCommunityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/write/{write}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/set/write/{write}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3296,7 +3296,7 @@ func (s *agent) SetWriteCommunity(ctx context.Context, request operations.SetWri
 // For speed, this operation will complete asynchronously. A successful return from this command means the starting of the agent is in progress. If you need to rely on the agent to have completed startup, you should wait for it's state to become RUNNING.
 func (s *agent) Start(ctx context.Context, request operations.StartRequest) (*operations.StartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3343,7 +3343,7 @@ func (s *agent) Start(ctx context.Context, request operations.StartRequest) (*op
 // port defaults to 161 if not specified.
 func (s *agent) StartIpalias(ctx context.Context, request operations.StartIpaliasRequest) (*operations.StartIpaliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/start/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/start/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3390,7 +3390,7 @@ func (s *agent) StartIpalias(ctx context.Context, request operations.StartIpalia
 // port defaults to 161 if not specified.
 func (s *agent) StatusIpalias(ctx context.Context, request operations.StatusIpaliasRequest) (*operations.StatusIpaliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/status/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/status/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3437,7 +3437,7 @@ func (s *agent) StatusIpalias(ctx context.Context, request operations.StatusIpal
 // Agent primary IP address
 func (s *agent) Stop(ctx context.Context, request operations.StopRequest) (*operations.StopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3484,7 +3484,7 @@ func (s *agent) Stop(ctx context.Context, request operations.StopRequest) (*oper
 // port defaults to 161 if not specified.
 func (s *agent) StopIpalias(ctx context.Context, request operations.StopIpaliasRequest) (*operations.StopIpaliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/stop/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/ipalias/stop/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3531,7 +3531,7 @@ func (s *agent) StopIpalias(ctx context.Context, request operations.StopIpaliasR
 // Add a trap destination to the set of destinations.
 func (s *agent) TrapConfigAdd(ctx context.Context, request operations.TrapConfigAddRequest) (*operations.TrapConfigAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/add/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/add/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3578,7 +3578,7 @@ func (s *agent) TrapConfigAdd(ctx context.Context, request operations.TrapConfig
 // Remove a trap destination from the set of destinations.
 func (s *agent) TrapConfigDel(ctx context.Context, request operations.TrapConfigDelRequest) (*operations.TrapConfigDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/delete/{IP}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/delete/{IP}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3625,7 +3625,7 @@ func (s *agent) TrapConfigDel(ctx context.Context, request operations.TrapConfig
 // Each trap destination is identified with an IP address and a port number. The default port number is the standard SNMP trap port 162.
 func (s *agent) TrapConfigList(ctx context.Context, request operations.TrapConfigListRequest) (*operations.TrapConfigListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/config/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3671,7 +3671,7 @@ func (s *agent) TrapConfigList(ctx context.Context, request operations.TrapConfi
 // List the outstanding asynchronous traps for this agent instance.
 func (s *agent) TrapList(ctx context.Context, request operations.TrapListRequest) (*operations.TrapListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/trap/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGlobalGlossaryMultipartRequest struct {
-	Request *shared.AccountGlossaryUploadRequest1 `request:"mediaType=multipart/form-data"`
-}
-
 type UpdateGlobalGlossaryMultipartResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall NoFileUploaded

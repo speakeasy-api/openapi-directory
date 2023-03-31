@@ -34,9 +34,9 @@ func newMonitoredMediaServers(defaultClient, securityClient HTTPClient, serverUR
 // Add a media server to be monitored for this organization. Only valid for organizations with Meraki Insight.
 func (s *monitoredMediaServers) CreateOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.CreateOrganizationInsightMonitoredMediaServerRequest) (*operations.CreateOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *monitoredMediaServers) CreateOrganizationInsightMonitoredMediaServer(ct
 // Delete a monitored media server from this organization. Only valid for organizations with Meraki Insight.
 func (s *monitoredMediaServers) DeleteOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.DeleteOrganizationInsightMonitoredMediaServerRequest) (*operations.DeleteOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *monitoredMediaServers) DeleteOrganizationInsightMonitoredMediaServer(ct
 // Return a monitored media server for this organization. Only valid for organizations with Meraki Insight.
 func (s *monitoredMediaServers) GetOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.GetOrganizationInsightMonitoredMediaServerRequest) (*operations.GetOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *monitoredMediaServers) GetOrganizationInsightMonitoredMediaServer(ctx c
 // List the monitored media servers for this organization. Only valid for organizations with Meraki Insight.
 func (s *monitoredMediaServers) GetOrganizationInsightMonitoredMediaServers(ctx context.Context, request operations.GetOrganizationInsightMonitoredMediaServersRequest) (*operations.GetOrganizationInsightMonitoredMediaServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *monitoredMediaServers) GetOrganizationInsightMonitoredMediaServers(ctx 
 // Update a monitored media server for this organization. Only valid for organizations with Meraki Insight.
 func (s *monitoredMediaServers) UpdateOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.UpdateOrganizationInsightMonitoredMediaServerRequest) (*operations.UpdateOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

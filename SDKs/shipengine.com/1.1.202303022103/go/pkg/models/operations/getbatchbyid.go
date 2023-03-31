@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBatchByIDPathParams struct {
+type GetBatchByIDRequest struct {
 	// Batch ID
 	BatchID string `pathParam:"style=simple,explode=false,name=batch_id"`
-}
-
-type GetBatchByIDRequest struct {
-	PathParams GetBatchByIDPathParams
 }
 
 type GetBatchByIDResponse struct {

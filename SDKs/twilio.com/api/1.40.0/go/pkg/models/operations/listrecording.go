@@ -13,15 +13,13 @@ var ListRecordingServerList = []string{
 }
 
 type ListRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRecordingPathParams struct {
+type ListRecordingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListRecordingQueryParams struct {
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resources to read.
 	CallSid *string `queryParam:"style=form,explode=true,name=CallSid"`
 	// The Conference SID that identifies the conference associated with the recording to read.
@@ -40,13 +38,6 @@ type ListRecordingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListRecordingRequest struct {
-	PathParams  ListRecordingPathParams
-	QueryParams ListRecordingQueryParams
-	Security    ListRecordingSecurity
-	ServerURL   *string
 }
 
 // ListRecordingListRecordingResponse - OK

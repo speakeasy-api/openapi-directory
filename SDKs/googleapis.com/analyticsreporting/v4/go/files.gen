@@ -27,6 +27,7 @@ pkg/models/shared/metricheader.go
 pkg/models/shared/pivotheader.go
 pkg/models/shared/pivotheaderentry.go
 pkg/models/shared/metricheaderentry.go
+pkg/models/shared/altenum.go
 pkg/models/shared/getreportsrequest.go
 pkg/models/shared/reportrequest.go
 pkg/models/shared/segment.go
@@ -51,9 +52,7 @@ pkg/models/shared/metricfilter.go
 pkg/models/shared/daterange.go
 pkg/models/shared/cohortgroup.go
 pkg/models/shared/cohort.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/searchuseractivityresponse.go
 pkg/models/shared/useractivitysession.go
 pkg/models/shared/activity.go

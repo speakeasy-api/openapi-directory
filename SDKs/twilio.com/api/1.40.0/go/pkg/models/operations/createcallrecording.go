@@ -14,14 +14,8 @@ var CreateCallRecordingServerList = []string{
 }
 
 type CreateCallRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCallRecordingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) to associate the resource with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCallRecordingCreateCallRecordingRequestRecordingStatusCallbackMethodEnum - The HTTP method we should use to call `recording_status_callback`. Can be: `GET` or `POST` and the default is `POST`.
@@ -76,10 +70,11 @@ type CreateCallRecordingCreateCallRecordingRequest struct {
 }
 
 type CreateCallRecordingRequest struct {
-	PathParams CreateCallRecordingPathParams
-	Request    *CreateCallRecordingCreateCallRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCallRecordingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) to associate the resource with.
+	CallSid     string                                         `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreateCallRecordingCreateCallRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateCallRecordingResponse struct {

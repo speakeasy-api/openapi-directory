@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditDependentPathParams struct {
+type EditDependentRequest struct {
+	DependentEditRequest shared.DependentEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the employee in Noyo
 	DependentID string `pathParam:"style=simple,explode=false,name=dependent_id"`
 	// The current version identifier of the dependent
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditDependentRequest struct {
-	PathParams EditDependentPathParams
-	Request    shared.DependentEditRequest `request:"mediaType=application/json"`
 }
 
 type EditDependentResponse struct {

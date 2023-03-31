@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type DeleteInstallationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteInstallationRequest struct {
-	Security DeleteInstallationSecurity
-}
 
 // DeleteInstallation200ApplicationJSONUsageCharge - （従量課金の場合）従量課金アンインストール情報
 type DeleteInstallation200ApplicationJSONUsageCharge struct {

@@ -84,7 +84,7 @@ func (e *GetChannelSubscriptionsAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelSubscriptionsAlt1QueryParams struct {
+type GetChannelSubscriptionsAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetChannelSubscriptionsAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -97,10 +97,6 @@ type GetChannelSubscriptionsAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetChannelSubscriptionsAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetChannelSubscriptionsAlt1Request struct {
-	QueryParams GetChannelSubscriptionsAlt1QueryParams
 }
 
 type GetChannelSubscriptionsAlt1Response struct {

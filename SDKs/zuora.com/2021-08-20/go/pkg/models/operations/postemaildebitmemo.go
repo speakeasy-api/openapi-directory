@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTEmailDebitMemoPathParams struct {
-	// The ID of a posted debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e.
-	//
-	DebitMemoID string `pathParam:"style=simple,explode=false,name=debitMemoId"`
-}
-
-type POSTEmailDebitMemoHeaders struct {
+type POSTEmailDebitMemoRequest struct {
+	PostDebitMemoEmailType shared.PostDebitMemoEmailType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,12 +17,9 @@ type POSTEmailDebitMemoHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTEmailDebitMemoRequest struct {
-	PathParams POSTEmailDebitMemoPathParams
-	Headers    POSTEmailDebitMemoHeaders
-	Request    shared.PostDebitMemoEmailType `request:"mediaType=application/json"`
+	// The ID of a posted debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e.
+	//
+	DebitMemoID string `pathParam:"style=simple,explode=false,name=debitMemoId"`
 }
 
 type POSTEmailDebitMemoResponse struct {

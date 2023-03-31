@@ -8,18 +8,11 @@ import (
 )
 
 type BooksLayersVolumeAnnotationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksLayersVolumeAnnotationsListPathParams struct {
-	// The ID for the layer to get the annotations.
-	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
-	// The volume to retrieve annotations for.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
-}
-
-type BooksLayersVolumeAnnotationsListQueryParams struct {
+type BooksLayersVolumeAnnotationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +31,8 @@ type BooksLayersVolumeAnnotationsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID for the layer to get the annotations.
+	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
 	// The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// Maximum number of results to return
@@ -68,12 +63,8 @@ type BooksLayersVolumeAnnotationsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The version of the volume annotations that you are requesting.
 	VolumeAnnotationsVersion *string `queryParam:"style=form,explode=true,name=volumeAnnotationsVersion"`
-}
-
-type BooksLayersVolumeAnnotationsListRequest struct {
-	PathParams  BooksLayersVolumeAnnotationsListPathParams
-	QueryParams BooksLayersVolumeAnnotationsListQueryParams
-	Security    BooksLayersVolumeAnnotationsListSecurity
+	// The volume to retrieve annotations for.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 }
 
 type BooksLayersVolumeAnnotationsListResponse struct {

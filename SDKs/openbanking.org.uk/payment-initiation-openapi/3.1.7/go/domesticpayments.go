@@ -34,11 +34,11 @@ func newDomesticPayments(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // CreateDomesticPaymentConsentsJSON - Create Domestic Payment Consents
-func (s *domesticPayments) CreateDomesticPaymentConsentsJSON(ctx context.Context, request operations.CreateDomesticPaymentConsentsJSONRequest) (*operations.CreateDomesticPaymentConsentsJSONResponse, error) {
+func (s *domesticPayments) CreateDomesticPaymentConsentsJSON(ctx context.Context, request operations.CreateDomesticPaymentConsentsJSONRequest, security operations.CreateDomesticPaymentConsentsJSONSecurity) (*operations.CreateDomesticPaymentConsentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteDomesticConsent4", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *domesticPayments) CreateDomesticPaymentConsentsJSON(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,11 +141,11 @@ func (s *domesticPayments) CreateDomesticPaymentConsentsJSON(ctx context.Context
 }
 
 // CreateDomesticPaymentConsentsRaw - Create Domestic Payment Consents
-func (s *domesticPayments) CreateDomesticPaymentConsentsRaw(ctx context.Context, request operations.CreateDomesticPaymentConsentsRawRequest) (*operations.CreateDomesticPaymentConsentsRawResponse, error) {
+func (s *domesticPayments) CreateDomesticPaymentConsentsRaw(ctx context.Context, request operations.CreateDomesticPaymentConsentsRawRequest, security operations.CreateDomesticPaymentConsentsRawSecurity) (*operations.CreateDomesticPaymentConsentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-payment-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -160,9 +160,9 @@ func (s *domesticPayments) CreateDomesticPaymentConsentsRaw(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,11 +248,11 @@ func (s *domesticPayments) CreateDomesticPaymentConsentsRaw(ctx context.Context,
 }
 
 // CreateDomesticPaymentsJSON - Create Domestic Payments
-func (s *domesticPayments) CreateDomesticPaymentsJSON(ctx context.Context, request operations.CreateDomesticPaymentsJSONRequest) (*operations.CreateDomesticPaymentsJSONResponse, error) {
+func (s *domesticPayments) CreateDomesticPaymentsJSON(ctx context.Context, request operations.CreateDomesticPaymentsJSONRequest, security operations.CreateDomesticPaymentsJSONSecurity) (*operations.CreateDomesticPaymentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteDomestic2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,9 +267,9 @@ func (s *domesticPayments) CreateDomesticPaymentsJSON(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,11 +355,11 @@ func (s *domesticPayments) CreateDomesticPaymentsJSON(ctx context.Context, reque
 }
 
 // CreateDomesticPaymentsRaw - Create Domestic Payments
-func (s *domesticPayments) CreateDomesticPaymentsRaw(ctx context.Context, request operations.CreateDomesticPaymentsRawRequest) (*operations.CreateDomesticPaymentsRawResponse, error) {
+func (s *domesticPayments) CreateDomesticPaymentsRaw(ctx context.Context, request operations.CreateDomesticPaymentsRawRequest, security operations.CreateDomesticPaymentsRawSecurity) (*operations.CreateDomesticPaymentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -374,9 +374,9 @@ func (s *domesticPayments) CreateDomesticPaymentsRaw(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,18 +462,18 @@ func (s *domesticPayments) CreateDomesticPaymentsRaw(ctx context.Context, reques
 }
 
 // GetDomesticPaymentConsentsConsentID - Get Domestic Payment Consents
-func (s *domesticPayments) GetDomesticPaymentConsentsConsentID(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDRequest) (*operations.GetDomesticPaymentConsentsConsentIDResponse, error) {
+func (s *domesticPayments) GetDomesticPaymentConsentsConsentID(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDRequest, security operations.GetDomesticPaymentConsentsConsentIDSecurity) (*operations.GetDomesticPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -557,18 +557,18 @@ func (s *domesticPayments) GetDomesticPaymentConsentsConsentID(ctx context.Conte
 }
 
 // GetDomesticPaymentConsentsConsentIDFundsConfirmation - Get Domestic Payment Consents Funds Confirmation
-func (s *domesticPayments) GetDomesticPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationRequest) (*operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationResponse, error) {
+func (s *domesticPayments) GetDomesticPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationRequest, security operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationSecurity) (*operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,18 +652,18 @@ func (s *domesticPayments) GetDomesticPaymentConsentsConsentIDFundsConfirmation(
 }
 
 // GetDomesticPaymentsDomesticPaymentID - Get Domestic Payments
-func (s *domesticPayments) GetDomesticPaymentsDomesticPaymentID(ctx context.Context, request operations.GetDomesticPaymentsDomesticPaymentIDRequest) (*operations.GetDomesticPaymentsDomesticPaymentIDResponse, error) {
+func (s *domesticPayments) GetDomesticPaymentsDomesticPaymentID(ctx context.Context, request operations.GetDomesticPaymentsDomesticPaymentIDRequest, security operations.GetDomesticPaymentsDomesticPaymentIDSecurity) (*operations.GetDomesticPaymentsDomesticPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

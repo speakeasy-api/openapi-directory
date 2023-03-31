@@ -12,18 +12,13 @@ var FetchServiceConfigurationServerList = []string{
 }
 
 type FetchServiceConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchServiceConfigurationPathParams struct {
-	// The SID of the Service configuration resource to fetch.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchServiceConfigurationRequest struct {
-	PathParams FetchServiceConfigurationPathParams
-	Security   FetchServiceConfigurationSecurity
-	ServerURL  *string
+	// The SID of the Service configuration resource to fetch.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 }
 
 type FetchServiceConfigurationResponse struct {

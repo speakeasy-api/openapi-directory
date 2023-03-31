@@ -12,10 +12,11 @@ var ListWirelessSimServerList = []string{
 }
 
 type ListWirelessSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListWirelessSimQueryParams struct {
+type ListWirelessSimRequest struct {
 	EID   *string `queryParam:"style=form,explode=true,name=EId"`
 	Iccid *string `queryParam:"style=form,explode=true,name=Iccid"`
 	// The page index. This value is simply for client state.
@@ -27,12 +28,6 @@ type ListWirelessSimQueryParams struct {
 	RatePlan            *string `queryParam:"style=form,explode=true,name=RatePlan"`
 	SimRegistrationCode *string `queryParam:"style=form,explode=true,name=SimRegistrationCode"`
 	Status              *string `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListWirelessSimRequest struct {
-	QueryParams ListWirelessSimQueryParams
-	Security    ListWirelessSimSecurity
-	ServerURL   *string
 }
 
 type ListWirelessSimListWirelessSimResponseMeta struct {

@@ -6,22 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UpdateInvestorSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateInvestorPathParams struct {
-	// Investor Id
-	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
-}
-
-type UpdateInvestorHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type UpdateInvestorUpdateRequestBodyForInvestorAddress struct {
@@ -301,10 +290,11 @@ type UpdateInvestorUpdateRequestBodyForInvestorInput struct {
 }
 
 type UpdateInvestorRequest struct {
-	PathParams UpdateInvestorPathParams
-	Headers    UpdateInvestorHeaders
-	Request    UpdateInvestorUpdateRequestBodyForInvestorInput `request:"mediaType=application/json"`
-	Security   UpdateInvestorSecurity
+	RequestBody UpdateInvestorUpdateRequestBodyForInvestorInput `request:"mediaType=application/json"`
+	// Investor Id
+	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // UpdateInvestor500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

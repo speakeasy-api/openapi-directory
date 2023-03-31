@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetAddressPathParams struct {
-	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
 type GetAddressRequest struct {
-	PathParams GetAddressPathParams
+	Address string `pathParam:"style=simple,explode=false,name=address"`
 }
 
 // GetAddress200ApplicationJSON - OK

@@ -34,7 +34,7 @@ func newThirdPartyVPNPeers(defaultClient, securityClient HTTPClient, serverURL, 
 // Return the third party VPN peers for an organization
 func (s *thirdPartyVPNPeers) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *thirdPartyVPNPeers) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx c
 // Update the third party VPN peers for an organization
 func (s *thirdPartyVPNPeers) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

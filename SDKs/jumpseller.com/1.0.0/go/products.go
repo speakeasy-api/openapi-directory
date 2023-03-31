@@ -36,14 +36,14 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteProductsIDJSON - Delete an existing Product.
 func (s *products) DeleteProductsIDJSON(ctx context.Context, request operations.DeleteProductsIDJSONRequest) (*operations.DeleteProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *products) GetProductsJSON(ctx context.Context, request operations.GetPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *products) GetProductsJSON(ctx context.Context, request operations.GetPr
 // GetProductsAfterIDJSON - Retrieves Products after the given id.
 func (s *products) GetProductsAfterIDJSON(ctx context.Context, request operations.GetProductsAfterIDJSONRequest) (*operations.GetProductsAfterIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/after/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/after/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -201,14 +201,14 @@ func (s *products) GetProductsAfterIDJSON(ctx context.Context, request operation
 // GetProductsCategoryCategoryIDJSON - Retrieve Products filtered by category.
 func (s *products) GetProductsCategoryCategoryIDJSON(ctx context.Context, request operations.GetProductsCategoryCategoryIDJSONRequest) (*operations.GetProductsCategoryCategoryIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -259,14 +259,14 @@ func (s *products) GetProductsCategoryCategoryIDJSON(ctx context.Context, reques
 // GetProductsCategoryCategoryIDCountJSON - Count Products filtered by category.
 func (s *products) GetProductsCategoryCategoryIDCountJSON(ctx context.Context, request operations.GetProductsCategoryCategoryIDCountJSONRequest) (*operations.GetProductsCategoryCategoryIDCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}/count.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}/count.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,7 +324,7 @@ func (s *products) GetProductsCountJSON(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -377,7 +377,7 @@ func (s *products) GetProductsSearchJSON(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -428,14 +428,14 @@ func (s *products) GetProductsSearchJSON(ctx context.Context, request operations
 // GetProductsStatusStatusJSON - Retrieve Products filtered by status.
 func (s *products) GetProductsStatusStatusJSON(ctx context.Context, request operations.GetProductsStatusStatusJSONRequest) (*operations.GetProductsStatusStatusJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -486,14 +486,14 @@ func (s *products) GetProductsStatusStatusJSON(ctx context.Context, request oper
 // GetProductsStatusStatusCountJSON - Count Products filtered by status.
 func (s *products) GetProductsStatusStatusCountJSON(ctx context.Context, request operations.GetProductsStatusStatusCountJSONRequest) (*operations.GetProductsStatusStatusCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}/count.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}/count.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -544,14 +544,14 @@ func (s *products) GetProductsStatusStatusCountJSON(ctx context.Context, request
 // GetProductsIDJSON - Retrieve a single Product.
 func (s *products) GetProductsIDJSON(ctx context.Context, request operations.GetProductsIDJSONRequest) (*operations.GetProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -604,7 +604,7 @@ func (s *products) PostProductsJSON(ctx context.Context, request operations.Post
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/products.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -619,7 +619,7 @@ func (s *products) PostProductsJSON(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -660,9 +660,9 @@ func (s *products) PostProductsJSON(ctx context.Context, request operations.Post
 // PutProductsIDJSON - Modify an existing Product.
 func (s *products) PutProductsIDJSON(ctx context.Context, request operations.PutProductsIDJSONRequest) (*operations.PutProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -677,7 +677,7 @@ func (s *products) PutProductsIDJSON(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

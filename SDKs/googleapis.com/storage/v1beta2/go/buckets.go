@@ -33,20 +33,20 @@ func newBuckets(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // StorageBucketsDelete - Permanently deletes an empty bucket.
-func (s *buckets) StorageBucketsDelete(ctx context.Context, request operations.StorageBucketsDeleteRequest) (*operations.StorageBucketsDeleteResponse, error) {
+func (s *buckets) StorageBucketsDelete(ctx context.Context, request operations.StorageBucketsDeleteRequest, security operations.StorageBucketsDeleteSecurity) (*operations.StorageBucketsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *buckets) StorageBucketsDelete(ctx context.Context, request operations.S
 }
 
 // StorageBucketsGet - Returns metadata for the specified bucket.
-func (s *buckets) StorageBucketsGet(ctx context.Context, request operations.StorageBucketsGetRequest) (*operations.StorageBucketsGetResponse, error) {
+func (s *buckets) StorageBucketsGet(ctx context.Context, request operations.StorageBucketsGetRequest, security operations.StorageBucketsGetSecurity) (*operations.StorageBucketsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *buckets) StorageBucketsGet(ctx context.Context, request operations.Stor
 }
 
 // StorageBucketsInsert - Creates a new bucket.
-func (s *buckets) StorageBucketsInsert(ctx context.Context, request operations.StorageBucketsInsertRequest) (*operations.StorageBucketsInsertResponse, error) {
+func (s *buckets) StorageBucketsInsert(ctx context.Context, request operations.StorageBucketsInsertRequest, security operations.StorageBucketsInsertSecurity) (*operations.StorageBucketsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/b"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Bucket", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *buckets) StorageBucketsInsert(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *buckets) StorageBucketsInsert(ctx context.Context, request operations.S
 }
 
 // StorageBucketsList - Retrieves a list of buckets for a given project.
-func (s *buckets) StorageBucketsList(ctx context.Context, request operations.StorageBucketsListRequest) (*operations.StorageBucketsListResponse, error) {
+func (s *buckets) StorageBucketsList(ctx context.Context, request operations.StorageBucketsListRequest, security operations.StorageBucketsListSecurity) (*operations.StorageBucketsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/b"
 
@@ -184,11 +184,11 @@ func (s *buckets) StorageBucketsList(ctx context.Context, request operations.Sto
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *buckets) StorageBucketsList(ctx context.Context, request operations.Sto
 }
 
 // StorageBucketsPatch - Updates a bucket. This method supports patch semantics.
-func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.StorageBucketsPatchRequest) (*operations.StorageBucketsPatchResponse, error) {
+func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.StorageBucketsPatchRequest, security operations.StorageBucketsPatchSecurity) (*operations.StorageBucketsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Bucket1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,11 +278,11 @@ func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.St
 }
 
 // StorageBucketsUpdate - Updates a bucket.
-func (s *buckets) StorageBucketsUpdate(ctx context.Context, request operations.StorageBucketsUpdateRequest) (*operations.StorageBucketsUpdateResponse, error) {
+func (s *buckets) StorageBucketsUpdate(ctx context.Context, request operations.StorageBucketsUpdateRequest, security operations.StorageBucketsUpdateSecurity) (*operations.StorageBucketsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Bucket1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,11 +294,11 @@ func (s *buckets) StorageBucketsUpdate(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

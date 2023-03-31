@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetTransferPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetTransferRequest struct {
-	PathParams GetTransferPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTransfer200ApplicationJSONResult struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetAuthenticatedUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAuthenticatedUserQueryParams struct {
-	// Only return the user id
-	OnlyID *bool `queryParam:"style=form,explode=true,name=onlyId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAuthenticatedUserRequest struct {
-	QueryParams GetAuthenticatedUserQueryParams
-	Security    GetAuthenticatedUserSecurity
+	// Only return the user id
+	OnlyID *bool `queryParam:"style=form,explode=true,name=onlyId"`
 }
 
 type GetAuthenticatedUserResponse struct {

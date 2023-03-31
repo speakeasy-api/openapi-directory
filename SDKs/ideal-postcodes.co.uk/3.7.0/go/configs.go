@@ -38,9 +38,9 @@ func newConfigs(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Create a config
 func (s *configs) CreateConfig(ctx context.Context, request operations.CreateConfigRequest) (*operations.CreateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigNewParam", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -55,7 +55,7 @@ func (s *configs) CreateConfig(ctx context.Context, request operations.CreateCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -117,14 +117,14 @@ func (s *configs) CreateConfig(ctx context.Context, request operations.CreateCon
 // Permanently deletes a configuration object.
 func (s *configs) DeleteConfig(ctx context.Context, request operations.DeleteConfigRequest) (*operations.DeleteConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -196,14 +196,14 @@ func (s *configs) DeleteConfig(ctx context.Context, request operations.DeleteCon
 // Lists configurations associated with a key
 func (s *configs) ListConfigs(ctx context.Context, request operations.ListConfigsRequest) (*operations.ListConfigsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -265,7 +265,7 @@ func (s *configs) ListConfigs(ctx context.Context, request operations.ListConfig
 // Retrieve config object by name
 func (s *configs) RetrieveConfig(ctx context.Context, request operations.RetrieveConfigRequest) (*operations.RetrieveConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -330,9 +330,9 @@ func (s *configs) RetrieveConfig(ctx context.Context, request operations.Retriev
 // Updates configuration object
 func (s *configs) UpdateConfig(ctx context.Context, request operations.UpdateConfigRequest) (*operations.UpdateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/configs/{config}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigUpdateParam", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -347,7 +347,7 @@ func (s *configs) UpdateConfig(ctx context.Context, request operations.UpdateCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

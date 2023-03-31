@@ -8,22 +8,14 @@ import (
 )
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerProjectsBrokersV2ServiceInstancesCreatePathParams struct {
-	// The id of the service instance. Must be unique within GCP project.
-	// Maximum length is 64, GUID recommended.
-	// Required.
-	InstanceID string `pathParam:"style=simple,explode=false,name=instance_id"`
-	// Parent must match `projects/[PROJECT_ID]/brokers/[BROKER_ID]`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesCreateQueryParams struct {
+type ServicebrokerProjectsBrokersV2ServiceInstancesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                    *shared.XgafvEnum                                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudServicebrokerV1beta1ServiceInstance *shared.GoogleCloudServicebrokerV1beta1ServiceInstance `request:"mediaType=application/json"`
 	// Value indicating that API client supports asynchronous operations. If
 	// Broker cannot execute the request synchronously HTTP 422 code will be
 	// returned to HTTP clients along with FAILED_PRECONDITION error.
@@ -40,10 +32,16 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesCreateQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The id of the service instance. Must be unique within GCP project.
+	// Maximum length is 64, GUID recommended.
+	// Required.
+	InstanceID string `pathParam:"style=simple,explode=false,name=instance_id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Parent must match `projects/[PROJECT_ID]/brokers/[BROKER_ID]`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesCreateRequest struct {
-	PathParams  ServicebrokerProjectsBrokersV2ServiceInstancesCreatePathParams
-	QueryParams ServicebrokerProjectsBrokersV2ServiceInstancesCreateQueryParams
-	Request     *shared.GoogleCloudServicebrokerV1beta1ServiceInstance `request:"mediaType=application/json"`
-	Security    ServicebrokerProjectsBrokersV2ServiceInstancesCreateSecurity
 }
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDSpacesInvoicingsPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDSpacesInvoicingsQueryParams struct {
+type GetSpacesSpaceIDSpacesInvoicingsRequest struct {
 	// date range of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
-}
-
-type GetSpacesSpaceIDSpacesInvoicingsRequest struct {
-	PathParams  GetSpacesSpaceIDSpacesInvoicingsPathParams
-	QueryParams GetSpacesSpaceIDSpacesInvoicingsQueryParams
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDSpacesInvoicingsResponse struct {

@@ -24,10 +24,6 @@ type PostV2ThirdPartyLiveFeedItemsRequestBody struct {
 	UserGUID string `form:"name=user_guid"`
 }
 
-type PostV2ThirdPartyLiveFeedItemsRequest struct {
-	Request PostV2ThirdPartyLiveFeedItemsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ThirdPartyLiveFeedItemsResponse struct {
 	Body        []byte
 	ContentType string

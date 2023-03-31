@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRuleByIDPathParams struct {
-	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
-}
-
-type PutRuleByIDHeaders struct {
+type PutRuleByIDRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	ContentType     string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RuleByIDRequest shared.RuleByIDRequest `request:"mediaType=application/json"`
 	// The AppKey configured by the merchant (optional configuration)
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type PutRuleByIDRequest struct {
-	PathParams PutRuleByIDPathParams
-	Headers    PutRuleByIDHeaders
-	Request    shared.RuleByIDRequest `request:"mediaType=application/json"`
+	RuleID               string `pathParam:"style=simple,explode=false,name=ruleId"`
 }
 
 type PutRuleByIDResponse struct {

@@ -33,7 +33,7 @@ func newPerformanceReport(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // AdexchangebuyerPerformanceReportList - Retrieves the authenticated user's list of performance metrics.
-func (s *performanceReport) AdexchangebuyerPerformanceReportList(ctx context.Context, request operations.AdexchangebuyerPerformanceReportListRequest) (*operations.AdexchangebuyerPerformanceReportListResponse, error) {
+func (s *performanceReport) AdexchangebuyerPerformanceReportList(ctx context.Context, request operations.AdexchangebuyerPerformanceReportListRequest, security operations.AdexchangebuyerPerformanceReportListSecurity) (*operations.AdexchangebuyerPerformanceReportListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/performancereport"
 
@@ -42,11 +42,11 @@ func (s *performanceReport) AdexchangebuyerPerformanceReportList(ctx context.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

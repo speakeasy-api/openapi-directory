@@ -12,28 +12,19 @@ var ListEnvironmentServerList = []string{
 }
 
 type ListEnvironmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEnvironmentPathParams struct {
-	// The SID of the Service to read the Environment resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListEnvironmentQueryParams struct {
+type ListEnvironmentRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListEnvironmentRequest struct {
-	PathParams  ListEnvironmentPathParams
-	QueryParams ListEnvironmentQueryParams
-	Security    ListEnvironmentSecurity
-	ServerURL   *string
+	// The SID of the Service to read the Environment resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListEnvironmentListEnvironmentResponseMeta struct {

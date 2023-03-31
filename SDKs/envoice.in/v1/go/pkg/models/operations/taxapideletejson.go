@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TaxAPIDeleteJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type TaxAPIDeleteJSONRequest struct {
-	Headers TaxAPIDeleteJSONHeaders
-	Request shared.TaxDeleteAPIModel `request:"mediaType=application/json"`
+	TaxDeleteAPIModel shared.TaxDeleteAPIModel `request:"mediaType=application/json"`
+	XAuthKey          string                   `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret       string                   `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type TaxAPIDeleteJSONResponse struct {

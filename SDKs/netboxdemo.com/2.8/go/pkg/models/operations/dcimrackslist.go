@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRacksListQueryParams struct {
+type DcimRacksListRequest struct {
 	AssetTag       *string `queryParam:"style=form,explode=true,name=asset_tag"`
 	AssetTagIc     *string `queryParam:"style=form,explode=true,name=asset_tag__ic"`
 	AssetTagIe     *string `queryParam:"style=form,explode=true,name=asset_tag__ie"`
@@ -109,10 +109,6 @@ type DcimRacksListQueryParams struct {
 	UHeightN       *string `queryParam:"style=form,explode=true,name=u_height__n"`
 	Width          *string `queryParam:"style=form,explode=true,name=width"`
 	WidthN         *string `queryParam:"style=form,explode=true,name=width__n"`
-}
-
-type DcimRacksListRequest struct {
-	QueryParams DcimRacksListQueryParams
 }
 
 type DcimRacksList200ApplicationJSON struct {

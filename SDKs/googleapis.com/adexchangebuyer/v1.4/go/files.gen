@@ -63,7 +63,6 @@ pkg/models/operations/adexchangebuyerproposalsupdate.go
 pkg/models/operations/adexchangebuyerpubprofileslist.go
 pkg/models/shared/account.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountslist.go
 pkg/models/shared/billinginfo.go
 pkg/models/shared/billinginfolist.go

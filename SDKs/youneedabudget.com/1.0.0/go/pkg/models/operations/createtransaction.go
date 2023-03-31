@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTransactionPathParams struct {
+type CreateTransactionRequest struct {
+	// The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects.
+	PostTransactionsWrapper shared.PostTransactionsWrapper `request:"mediaType=application/json"`
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
-type CreateTransactionRequest struct {
-	PathParams CreateTransactionPathParams
-	// The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects.
-	Request shared.PostTransactionsWrapper `request:"mediaType=application/json"`
 }
 
 type CreateTransactionResponse struct {

@@ -12,12 +12,8 @@ var CreateFunctionServerList = []string{
 }
 
 type CreateFunctionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateFunctionPathParams struct {
-	// The SID of the Service to create the Function resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateFunctionCreateFunctionRequest struct {
@@ -26,10 +22,9 @@ type CreateFunctionCreateFunctionRequest struct {
 }
 
 type CreateFunctionRequest struct {
-	PathParams CreateFunctionPathParams
-	Request    *CreateFunctionCreateFunctionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateFunctionSecurity
-	ServerURL  *string
+	RequestBody *CreateFunctionCreateFunctionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Function resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateFunctionResponse struct {

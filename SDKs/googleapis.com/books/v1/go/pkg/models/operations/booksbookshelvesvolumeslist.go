@@ -8,18 +8,11 @@ import (
 )
 
 type BooksBookshelvesVolumesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksBookshelvesVolumesListPathParams struct {
-	// ID of bookshelf to retrieve volumes.
-	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
-	// ID of user for whom to retrieve bookshelf volumes.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type BooksBookshelvesVolumesListQueryParams struct {
+type BooksBookshelvesVolumesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +33,8 @@ type BooksBookshelvesVolumesListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// ID of bookshelf to retrieve volumes.
+	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
 	// Set to true to show pre-ordered books. Defaults to false.
 	ShowPreorders *bool `queryParam:"style=form,explode=true,name=showPreorders"`
 	// String to identify the originator of this request.
@@ -50,12 +45,8 @@ type BooksBookshelvesVolumesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksBookshelvesVolumesListRequest struct {
-	PathParams  BooksBookshelvesVolumesListPathParams
-	QueryParams BooksBookshelvesVolumesListQueryParams
-	Security    BooksBookshelvesVolumesListSecurity
+	// ID of user for whom to retrieve bookshelf volumes.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type BooksBookshelvesVolumesListResponse struct {

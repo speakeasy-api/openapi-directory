@@ -8,20 +8,17 @@ import (
 )
 
 type GamesAchievementsRevealSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GamesAchievementsRevealPathParams struct {
-	// The ID of the achievement used by this method.
-	AchievementID string `pathParam:"style=simple,explode=false,name=achievementId"`
-}
-
-type GamesAchievementsRevealQueryParams struct {
+type GamesAchievementsRevealRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the achievement used by this method.
+	AchievementID string `pathParam:"style=simple,explode=false,name=achievementId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,12 +37,6 @@ type GamesAchievementsRevealQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesAchievementsRevealRequest struct {
-	PathParams  GamesAchievementsRevealPathParams
-	QueryParams GamesAchievementsRevealQueryParams
-	Security    GamesAchievementsRevealSecurity
 }
 
 type GamesAchievementsRevealResponse struct {

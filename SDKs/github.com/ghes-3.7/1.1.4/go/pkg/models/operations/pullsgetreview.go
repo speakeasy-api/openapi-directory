@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsGetReviewPathParams struct {
+type PullsGetReviewRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The number that identifies the pull request.
@@ -16,10 +16,6 @@ type PullsGetReviewPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the review.
 	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
-type PullsGetReviewRequest struct {
-	PathParams PullsGetReviewPathParams
 }
 
 type PullsGetReviewResponse struct {

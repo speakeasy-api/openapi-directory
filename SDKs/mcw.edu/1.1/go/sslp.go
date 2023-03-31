@@ -35,7 +35,7 @@ func newSslp(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // GETMappedSSLPByPositionUsingGET - Returns a list SSLP for given position and assembly map
 func (s *sslp) GETMappedSSLPByPositionUsingGET(ctx context.Context, request operations.GETMappedSSLPByPositionUsingGETRequest) (*operations.GETMappedSSLPByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslps/mapped/{chr}/{start}/{stop}/{mapKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sslps/mapped/{chr}/{start}/{stop}/{mapKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

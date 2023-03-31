@@ -8,20 +8,17 @@ import (
 )
 
 type HomegraphAgentUsersDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type HomegraphAgentUsersDeletePathParams struct {
-	// Required. Third-party user ID.
-	AgentUserID string `pathParam:"style=simple,explode=false,name=agentUserId"`
-}
-
-type HomegraphAgentUsersDeleteQueryParams struct {
+type HomegraphAgentUsersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. Third-party user ID.
+	AgentUserID string `pathParam:"style=simple,explode=false,name=agentUserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -42,12 +39,6 @@ type HomegraphAgentUsersDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type HomegraphAgentUsersDeleteRequest struct {
-	PathParams  HomegraphAgentUsersDeletePathParams
-	QueryParams HomegraphAgentUsersDeleteQueryParams
-	Security    HomegraphAgentUsersDeleteSecurity
 }
 
 type HomegraphAgentUsersDeleteResponse struct {

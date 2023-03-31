@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationInterfacesReadPathParams struct {
+type VirtualizationInterfacesReadRequest struct {
 	// A unique integer value identifying this interface.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationInterfacesReadRequest struct {
-	PathParams VirtualizationInterfacesReadPathParams
 }
 
 type VirtualizationInterfacesReadResponse struct {

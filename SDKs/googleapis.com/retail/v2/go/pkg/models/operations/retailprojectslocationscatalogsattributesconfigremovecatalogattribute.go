@@ -8,22 +8,20 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributePathParams struct {
-	// Required. Full AttributesConfig resource name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
-	AttributesConfig string `pathParam:"style=simple,explode=false,name=attributesConfig"`
-}
-
-type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeQueryParams struct {
+type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                      *shared.XgafvEnum                                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRetailV2RemoveCatalogAttributeRequest *shared.GoogleCloudRetailV2RemoveCatalogAttributeRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Full AttributesConfig resource name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+	AttributesConfig string `pathParam:"style=simple,explode=false,name=attributesConfig"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,13 +38,6 @@ type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributePathParams
-	QueryParams RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeQueryParams
-	Request     *shared.GoogleCloudRetailV2RemoveCatalogAttributeRequest `request:"mediaType=application/json"`
-	Security    RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeSecurity
 }
 
 type RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse struct {

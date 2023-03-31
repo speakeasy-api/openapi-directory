@@ -33,11 +33,11 @@ func newSensitiveData(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // AddOrUpdateSensitiveData - Add/update sensitive data
 // Sends new or updated employee sensitive data information directly to Web Pay.
-func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request operations.AddOrUpdateSensitiveDataRequest) (*operations.AddOrUpdateSensitiveDataResponse, error) {
+func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request operations.AddOrUpdateSensitiveDataRequest, security operations.AddOrUpdateSensitiveDataSecurity) (*operations.AddOrUpdateSensitiveDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SensitiveData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request op
 
 // GetSensitiveData - Get sensitive data
 // Gets employee sensitive data information directly from Web Pay.
-func (s *sensitiveData) GetSensitiveData(ctx context.Context, request operations.GetSensitiveDataRequest) (*operations.GetSensitiveDataResponse, error) {
+func (s *sensitiveData) GetSensitiveData(ctx context.Context, request operations.GetSensitiveDataRequest, security operations.GetSensitiveDataSecurity) (*operations.GetSensitiveDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

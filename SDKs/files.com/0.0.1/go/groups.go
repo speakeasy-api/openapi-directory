@@ -37,7 +37,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Delete Group User
 func (s *groups) DeleteGroupsGroupIDMembershipsUserID(ctx context.Context, request operations.DeleteGroupsGroupIDMembershipsUserIDRequest) (*operations.DeleteGroupsGroupIDMembershipsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/memberships/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/memberships/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *groups) DeleteGroupsGroupIDMembershipsUserID(ctx context.Context, reque
 // Delete Group
 func (s *groups) DeleteGroupsID(ctx context.Context, request operations.DeleteGroupsIDRequest) (*operations.DeleteGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -217,14 +217,14 @@ func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequ
 // List Permissions
 func (s *groups) GetGroupsGroupIDPermissions(ctx context.Context, request operations.GetGroupsGroupIDPermissionsRequest) (*operations.GetGroupsGroupIDPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -285,14 +285,14 @@ func (s *groups) GetGroupsGroupIDPermissions(ctx context.Context, request operat
 // List Group Users
 func (s *groups) GetGroupsGroupIDUsers(ctx context.Context, request operations.GetGroupsGroupIDUsersRequest) (*operations.GetGroupsGroupIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -353,7 +353,7 @@ func (s *groups) GetGroupsGroupIDUsers(ctx context.Context, request operations.G
 // Show Group
 func (s *groups) GetGroupsID(ctx context.Context, request operations.GetGroupsIDRequest) (*operations.GetGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -417,9 +417,9 @@ func (s *groups) GetGroupsID(ctx context.Context, request operations.GetGroupsID
 // Update Group User
 func (s *groups) PatchGroupsGroupIDMembershipsUserID(ctx context.Context, request operations.PatchGroupsGroupIDMembershipsUserIDRequest) (*operations.PatchGroupsGroupIDMembershipsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/memberships/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/memberships/{user_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -488,9 +488,9 @@ func (s *groups) PatchGroupsGroupIDMembershipsUserID(ctx context.Context, reques
 // Update Group
 func (s *groups) PatchGroupsID(ctx context.Context, request operations.PatchGroupsIDRequest) (*operations.PatchGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -557,7 +557,7 @@ func (s *groups) PatchGroupsID(ctx context.Context, request operations.PatchGrou
 
 // PostGroups - Create Group
 // Create Group
-func (s *groups) PostGroups(ctx context.Context, request operations.PostGroupsRequest) (*operations.PostGroupsResponse, error) {
+func (s *groups) PostGroups(ctx context.Context, request operations.PostGroupsRequestBody) (*operations.PostGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -630,9 +630,9 @@ func (s *groups) PostGroups(ctx context.Context, request operations.PostGroupsRe
 // Create User
 func (s *groups) PostGroupsGroupIDUsers(ctx context.Context, request operations.PostGroupsGroupIDUsersRequest) (*operations.PostGroupsGroupIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

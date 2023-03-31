@@ -12,14 +12,8 @@ var UpdateQueryServerList = []string{
 }
 
 type UpdateQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateQueryPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The Twilio-provided string that uniquely identifies the Query resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateQueryUpdateQueryRequest struct {
@@ -30,10 +24,11 @@ type UpdateQueryUpdateQueryRequest struct {
 }
 
 type UpdateQueryRequest struct {
-	PathParams UpdateQueryPathParams
-	Request    *UpdateQueryUpdateQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateQuerySecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+	AssistantSid string                         `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateQueryUpdateQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Query resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateQueryResponse struct {

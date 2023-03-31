@@ -264,7 +264,7 @@ func (e *SearchCseSiterestrictListSiteSearchFilterEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type SearchCseSiterestrictListQueryParams struct {
+type SearchCseSiterestrictListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -349,10 +349,6 @@ type SearchCseSiterestrictListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SearchCseSiterestrictListRequest struct {
-	QueryParams SearchCseSiterestrictListQueryParams
 }
 
 type SearchCseSiterestrictListResponse struct {

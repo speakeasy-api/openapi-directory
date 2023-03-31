@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppkeyPostQueryParams struct {
+type AppkeyPostRequest struct {
 	// Password assigned to your app
 	Password string `queryParam:"style=form,explode=true,name=password"`
 	// App supports YubiKey OTP
 	SupportsYubikey bool `queryParam:"style=form,explode=true,name=supportsYubikey"`
 	// Username assigned to your app
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type AppkeyPostRequest struct {
-	QueryParams AppkeyPostQueryParams
 }
 
 type AppkeyPostResponse struct {

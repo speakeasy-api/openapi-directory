@@ -13,17 +13,11 @@ var FetchWorkflowCumulativeStatisticsServerList = []string{
 }
 
 type FetchWorkflowCumulativeStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchWorkflowCumulativeStatisticsPathParams struct {
-	// Returns the list of Tasks that are being controlled by the Workflow with the specified Sid value.
-	WorkflowSid string `pathParam:"style=simple,explode=false,name=WorkflowSid"`
-	// The SID of the Workspace with the resource to fetch.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchWorkflowCumulativeStatisticsQueryParams struct {
+type FetchWorkflowCumulativeStatisticsRequest struct {
 	// Only include usage that occurred on or before this date, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// Only calculate statistics since this many minutes in the past. The default 15 minutes. This is helpful for displaying statistics for the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see trends.
@@ -34,13 +28,10 @@ type FetchWorkflowCumulativeStatisticsQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
 	// Only calculate cumulative statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
 	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
-}
-
-type FetchWorkflowCumulativeStatisticsRequest struct {
-	PathParams  FetchWorkflowCumulativeStatisticsPathParams
-	QueryParams FetchWorkflowCumulativeStatisticsQueryParams
-	Security    FetchWorkflowCumulativeStatisticsSecurity
-	ServerURL   *string
+	// Returns the list of Tasks that are being controlled by the Workflow with the specified Sid value.
+	WorkflowSid string `pathParam:"style=simple,explode=false,name=WorkflowSid"`
+	// The SID of the Workspace with the resource to fetch.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type FetchWorkflowCumulativeStatisticsResponse struct {

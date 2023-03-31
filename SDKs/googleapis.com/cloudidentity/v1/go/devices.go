@@ -33,11 +33,11 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CloudidentityDevicesCreate - Creates a device. Only company-owned device may be created. **Note**: This method is available only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for Education, and Cloud Identity Premium
-func (s *devices) CloudidentityDevicesCreate(ctx context.Context, request operations.CloudidentityDevicesCreateRequest) (*operations.CloudidentityDevicesCreateResponse, error) {
+func (s *devices) CloudidentityDevicesCreate(ctx context.Context, request operations.CloudidentityDevicesCreateRequest, security operations.CloudidentityDevicesCreateSecurity) (*operations.CloudidentityDevicesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1DeviceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *devices) CloudidentityDevicesCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *devices) CloudidentityDevicesCreate(ctx context.Context, request operat
 }
 
 // CloudidentityDevicesDeviceUsersApprove - Approves device to access user data.
-func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersApproveRequest) (*operations.CloudidentityDevicesDeviceUsersApproveResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersApproveRequest, security operations.CloudidentityDevicesDeviceUsersApproveSecurity) (*operations.CloudidentityDevicesDeviceUsersApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, re
 }
 
 // CloudidentityDevicesDeviceUsersBlock - Blocks device from accessing user data
-func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersBlockRequest) (*operations.CloudidentityDevicesDeviceUsersBlockResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersBlockRequest, security operations.CloudidentityDevicesDeviceUsersBlockSecurity) (*operations.CloudidentityDevicesDeviceUsersBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:block", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:block", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, requ
 }
 
 // CloudidentityDevicesDeviceUsersCancelWipe - Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in the gap between the wipe operation returning success and the device being wiped.
-func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersCancelWipeRequest) (*operations.CloudidentityDevicesDeviceUsersCancelWipeResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersCancelWipeRequest, security operations.CloudidentityDevicesDeviceUsersCancelWipeSecurity) (*operations.CloudidentityDevicesDeviceUsersCancelWipeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancelWipe", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancelWipe", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,20 +253,20 @@ func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context,
 }
 
 // CloudidentityDevicesDeviceUsersClientStatesList - Lists the client states for the given search query.
-func (s *devices) CloudidentityDevicesDeviceUsersClientStatesList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersClientStatesListRequest) (*operations.CloudidentityDevicesDeviceUsersClientStatesListResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersClientStatesList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersClientStatesListRequest, security operations.CloudidentityDevicesDeviceUsersClientStatesListSecurity) (*operations.CloudidentityDevicesDeviceUsersClientStatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientStates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientStates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,20 +301,20 @@ func (s *devices) CloudidentityDevicesDeviceUsersClientStatesList(ctx context.Co
 }
 
 // CloudidentityDevicesDeviceUsersList - Lists/Searches DeviceUsers.
-func (s *devices) CloudidentityDevicesDeviceUsersList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersListRequest) (*operations.CloudidentityDevicesDeviceUsersListResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersListRequest, security operations.CloudidentityDevicesDeviceUsersListSecurity) (*operations.CloudidentityDevicesDeviceUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deviceUsers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deviceUsers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,20 +349,20 @@ func (s *devices) CloudidentityDevicesDeviceUsersList(ctx context.Context, reque
 }
 
 // CloudidentityDevicesDeviceUsersLookup - Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as the properties provided in the request. This method must be called with end-user credentials with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties are provided, only DeviceUsers having all of these properties are considered as matches - i.e. the query behaves like an AND. Different platforms require different amounts of information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required.
-func (s *devices) CloudidentityDevicesDeviceUsersLookup(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersLookupRequest) (*operations.CloudidentityDevicesDeviceUsersLookupResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersLookup(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersLookupRequest, security operations.CloudidentityDevicesDeviceUsersLookupSecurity) (*operations.CloudidentityDevicesDeviceUsersLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:lookup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:lookup", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -397,11 +397,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersLookup(ctx context.Context, req
 }
 
 // CloudidentityDevicesDeviceUsersWipe - Wipes the user's account on a device. Other data on the device that is not associated with the user's work account is not affected. For example, if a Gmail app is installed on a device that is used for personal and work purposes, and the user is logged in to the Gmail app with their personal account as well as their work account, wiping the "deviceUser" by their work administrator will not affect their personal account within Gmail or other apps such as Photos.
-func (s *devices) CloudidentityDevicesDeviceUsersWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersWipeRequest) (*operations.CloudidentityDevicesDeviceUsersWipeResponse, error) {
+func (s *devices) CloudidentityDevicesDeviceUsersWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersWipeRequest, security operations.CloudidentityDevicesDeviceUsersWipeSecurity) (*operations.CloudidentityDevicesDeviceUsersWipeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wipe", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wipe", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,11 +413,11 @@ func (s *devices) CloudidentityDevicesDeviceUsersWipe(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,7 +452,7 @@ func (s *devices) CloudidentityDevicesDeviceUsersWipe(ctx context.Context, reque
 }
 
 // CloudidentityDevicesList - Lists/Searches devices.
-func (s *devices) CloudidentityDevicesList(ctx context.Context, request operations.CloudidentityDevicesListRequest) (*operations.CloudidentityDevicesListResponse, error) {
+func (s *devices) CloudidentityDevicesList(ctx context.Context, request operations.CloudidentityDevicesListRequest, security operations.CloudidentityDevicesListSecurity) (*operations.CloudidentityDevicesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices"
 
@@ -461,11 +461,11 @@ func (s *devices) CloudidentityDevicesList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

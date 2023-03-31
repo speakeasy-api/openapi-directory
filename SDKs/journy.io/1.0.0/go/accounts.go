@@ -34,7 +34,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AddUserToAccount - Add users to an account
 // You can add up to 100 users to an account.
-func (s *accounts) AddUserToAccount(ctx context.Context, request operations.AddUserToAccountRequest) (*operations.AddUserToAccountResponse, error) {
+func (s *accounts) AddUserToAccount(ctx context.Context, request operations.AddUserToAccountRequestBody) (*operations.AddUserToAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/users/add"
 
@@ -139,7 +139,7 @@ func (s *accounts) AddUserToAccount(ctx context.Context, request operations.AddU
 
 // DeleteAccount - Delete account
 // Endpoint used to delete an account.
-func (s *accounts) DeleteAccount(ctx context.Context, request operations.DeleteAccountRequest) (*operations.DeleteAccountResponse, error) {
+func (s *accounts) DeleteAccount(ctx context.Context, request operations.DeleteAccountRequestBody) (*operations.DeleteAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -258,7 +258,7 @@ func (s *accounts) DeleteAccount(ctx context.Context, request operations.DeleteA
 // You can remove up to 100 users from an account.
 //
 // When removing a user, the user will still be stored in journy.io, but marked as "removed".
-func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations.RemoveUserFromAccountRequest) (*operations.RemoveUserFromAccountResponse, error) {
+func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations.RemoveUserFromAccountRequestBody) (*operations.RemoveUserFromAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/users/remove"
 
@@ -363,7 +363,7 @@ func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations
 
 // UpsertAccount - Create or update account
 // Endpoint used to create or update an account.
-func (s *accounts) UpsertAccount(ctx context.Context, request operations.UpsertAccountRequest) (*operations.UpsertAccountResponse, error) {
+func (s *accounts) UpsertAccount(ctx context.Context, request operations.UpsertAccountRequestBody) (*operations.UpsertAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/upsert"
 

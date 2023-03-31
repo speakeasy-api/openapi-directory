@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type SessionControllerLoginPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerLoginQueryParams struct {
+type SessionControllerLoginRequest struct {
 	// The user's password.
 	Password string `queryParam:"style=form,explode=true,name=password"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The user's username.
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type SessionControllerLoginRequest struct {
-	PathParams  SessionControllerLoginPathParams
-	QueryParams SessionControllerLoginQueryParams
 }
 
 type SessionControllerLoginResponse struct {

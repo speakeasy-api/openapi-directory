@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type NodesContributorsPartialUpdatePathParams struct {
-	// The unique identifier of the node.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-	// The unique identifier of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // NodesContributorsPartialUpdateContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.
 type NodesContributorsPartialUpdateContributorAttributesPermissionEnum string
 
@@ -66,8 +59,11 @@ type NodesContributorsPartialUpdateContributorInput struct {
 }
 
 type NodesContributorsPartialUpdateRequest struct {
-	PathParams NodesContributorsPartialUpdatePathParams
-	Request    NodesContributorsPartialUpdateContributorInput `request:"mediaType=application/json"`
+	RequestBody NodesContributorsPartialUpdateContributorInput `request:"mediaType=application/json"`
+	// The unique identifier of the node.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
+	// The unique identifier of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type NodesContributorsPartialUpdateResponse struct {

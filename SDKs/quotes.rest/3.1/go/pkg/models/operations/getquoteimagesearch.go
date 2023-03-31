@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteImageSearchSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteImageSearchQueryParams struct {
+type GetQuoteImageSearchRequest struct {
 	// Quote Author
 	Author *string `queryParam:"style=form,explode=true,name=author"`
 	// Quote Category
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Should search private collection. Default searches public image collection.
 	Private *bool `queryParam:"style=form,explode=true,name=private"`
-}
-
-type GetQuoteImageSearchRequest struct {
-	QueryParams GetQuoteImageSearchQueryParams
-	Security    GetQuoteImageSearchSecurity
 }
 
 type GetQuoteImageSearchResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type NodesDraftRegistrationsSubjectsPathParams struct {
+type NodesDraftRegistrationsSubjectsRequest struct {
 	// The unique identifier of the draft registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type NodesDraftRegistrationsSubjectsRequest struct {
-	PathParams NodesDraftRegistrationsSubjectsPathParams
 }
 
 // NodesDraftRegistrationsSubjectsSubjectAttributes - The attributes of the Subject.

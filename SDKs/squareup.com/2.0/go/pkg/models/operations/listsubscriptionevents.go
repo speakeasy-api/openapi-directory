@@ -8,15 +8,10 @@ import (
 )
 
 type ListSubscriptionEventsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListSubscriptionEventsPathParams struct {
-	// The ID of the subscription to retrieve the events for.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
-}
-
-type ListSubscriptionEventsQueryParams struct {
+type ListSubscriptionEventsRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this to retrieve the next set of results for the original query.
 	//
@@ -27,12 +22,8 @@ type ListSubscriptionEventsQueryParams struct {
 	//
 	// Default: `200`
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListSubscriptionEventsRequest struct {
-	PathParams  ListSubscriptionEventsPathParams
-	QueryParams ListSubscriptionEventsQueryParams
-	Security    ListSubscriptionEventsSecurity
+	// The ID of the subscription to retrieve the events for.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
 }
 
 type ListSubscriptionEventsResponse struct {

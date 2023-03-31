@@ -12,20 +12,15 @@ var FetchShortCodeServerList = []string{
 }
 
 type FetchShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchShortCodePathParams struct {
+type FetchShortCodeRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the ShortCode resource to fetch
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchShortCodeRequest struct {
-	PathParams FetchShortCodePathParams
-	Security   FetchShortCodeSecurity
-	ServerURL  *string
 }
 
 type FetchShortCodeResponse struct {

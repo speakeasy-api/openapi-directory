@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05ConsentRequestsOnInitJSONHeaders struct {
+type PostV05ConsentRequestsOnInitJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization              string                            `header:"style=simple,explode=false,name=Authorization"`
+	ConsentRequestInitResponse shared.ConsentRequestInitResponse `request:"mediaType=application/json"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05ConsentRequestsOnInitJSONRequest struct {
-	Headers PostV05ConsentRequestsOnInitJSONHeaders
-	Request shared.ConsentRequestInitResponse `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentRequestsOnInitJSONResponse struct {

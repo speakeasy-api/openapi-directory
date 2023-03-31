@@ -33,7 +33,7 @@ func newIndexes(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateIndexWithPrimaryKey - Create index with primary key
 // Create index with primary key
-func (s *indexes) CreateIndexWithPrimaryKey(ctx context.Context, request operations.CreateIndexWithPrimaryKeyRequest) (*operations.CreateIndexWithPrimaryKeyResponse, error) {
+func (s *indexes) CreateIndexWithPrimaryKey(ctx context.Context, request operations.CreateIndexWithPrimaryKeyRequestBody) (*operations.CreateIndexWithPrimaryKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes"
 
@@ -121,7 +121,7 @@ func (s *indexes) GetIndexes(ctx context.Context, request operations.GetIndexesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -188,7 +188,7 @@ func (s *indexes) ShowIndex(ctx context.Context) (*operations.ShowIndexResponse,
 
 // SwapIndexes - Swap indexes
 // Swap indexes
-func (s *indexes) SwapIndexes(ctx context.Context, request operations.SwapIndexesRequest) (*operations.SwapIndexesResponse, error) {
+func (s *indexes) SwapIndexes(ctx context.Context, request []operations.SwapIndexesRequestBody) (*operations.SwapIndexesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/swap-indexes"
 
@@ -231,7 +231,7 @@ func (s *indexes) SwapIndexes(ctx context.Context, request operations.SwapIndexe
 
 // UdpateIndex - Udpate index
 // Can only change the document identifier if it has not already been added before.
-func (s *indexes) UdpateIndex(ctx context.Context, request operations.UdpateIndexRequest) (*operations.UdpateIndexResponse, error) {
+func (s *indexes) UdpateIndex(ctx context.Context, request operations.UdpateIndexRequestBody) (*operations.UdpateIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books"
 

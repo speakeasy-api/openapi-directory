@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageEditRequest struct {
-	Request shared.CreateImageEditRequest `request:"mediaType=multipart/form-data"`
-}
-
 type CreateImageEditResponse struct {
 	ContentType string
 	// OK

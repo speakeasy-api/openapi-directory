@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETChartInfoUsingGET1PathParams struct {
+type GETChartInfoUsingGET1Request struct {
 	// Species Type Key - 3=rat 4=chinchilla
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
 	// List of term accession IDs
 	TermString string `pathParam:"style=simple,explode=false,name=termString"`
-}
-
-type GETChartInfoUsingGET1Request struct {
-	PathParams GETChartInfoUsingGET1PathParams
 }
 
 type GETChartInfoUsingGET1Response struct {

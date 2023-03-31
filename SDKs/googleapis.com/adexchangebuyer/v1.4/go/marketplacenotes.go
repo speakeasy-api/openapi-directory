@@ -32,11 +32,11 @@ func newMarketplacenotes(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // AdexchangebuyerMarketplacenotesInsert - Add notes to the proposal
-func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesInsertRequest) (*operations.AdexchangebuyerMarketplacenotesInsertResponse, error) {
+func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesInsertRequest, security operations.AdexchangebuyerMarketplacenotesInsertSecurity) (*operations.AdexchangebuyerMarketplacenotesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes/insert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes/insert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrderNotesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Con
 }
 
 // AdexchangebuyerMarketplacenotesList - Get all the notes associated with a proposal
-func (s *marketplacenotes) AdexchangebuyerMarketplacenotesList(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesListRequest) (*operations.AdexchangebuyerMarketplacenotesListResponse, error) {
+func (s *marketplacenotes) AdexchangebuyerMarketplacenotesList(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesListRequest, security operations.AdexchangebuyerMarketplacenotesListSecurity) (*operations.AdexchangebuyerMarketplacenotesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

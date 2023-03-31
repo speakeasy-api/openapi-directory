@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventsPathParams struct {
+type GetEventsRequest struct {
 	// The ID of the conversation
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type GetEventsQueryParams struct {
 	// The cursor to start returning results from.
 	//
 	// You are not expected to provide this manually, but to follow the url provided in `_links.next.href` in the response which contains a `cursor` value
@@ -28,11 +25,6 @@ type GetEventsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The ID to start returning events at
 	StartID *string `queryParam:"style=form,explode=true,name=start_id"`
-}
-
-type GetEventsRequest struct {
-	PathParams  GetEventsPathParams
-	QueryParams GetEventsQueryParams
 }
 
 type GetEvents200ApplicationJSONEmbeddedData struct {

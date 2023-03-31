@@ -12,19 +12,8 @@ var UpdateTaskServerList = []string{
 }
 
 type UpdateTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskPathParams struct {
-	// The SID of the Task resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Workspace with the Task to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type UpdateTaskHeaders struct {
-	// If provided, applies this mutation if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header of the Task matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTaskUpdateTaskRequest struct {
@@ -40,11 +29,13 @@ type UpdateTaskUpdateTaskRequest struct {
 }
 
 type UpdateTaskRequest struct {
-	PathParams UpdateTaskPathParams
-	Headers    UpdateTaskHeaders
-	Request    *UpdateTaskUpdateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskSecurity
-	ServerURL  *string
+	// If provided, applies this mutation if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header of the Task matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+	IfMatch     *string                      `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateTaskUpdateTaskRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Task resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Workspace with the Task to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateTaskResponse struct {

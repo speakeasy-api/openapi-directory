@@ -34,14 +34,14 @@ func newAddresses(defaultClient, securityClient HTTPClient, serverURL, language,
 // List the current uplink addresses for devices in an organization.
 func (s *addresses) GetOrganizationDevicesUplinksAddressesByDevice(ctx context.Context, request operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest) (*operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

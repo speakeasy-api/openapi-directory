@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteWorkflowRunPathParams struct {
+type ActionsDeleteWorkflowRunRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsDeleteWorkflowRunRequest struct {
-	PathParams ActionsDeleteWorkflowRunPathParams
 }
 
 type ActionsDeleteWorkflowRunResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCorpusHeaders struct {
+type DeleteCorpusRequest struct {
+	AdminDeleteCorpusRequest shared.AdminDeleteCorpusRequest `request:"mediaType=application/json"`
 	// The Customer ID to use for the request.
 	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
-}
-
-type DeleteCorpusRequest struct {
-	Headers DeleteCorpusHeaders
-	Request shared.AdminDeleteCorpusRequest `request:"mediaType=application/json"`
 }
 
 type DeleteCorpusResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	OAuth      *shared.SchemeOAuth      `security:"scheme,type=oauth2"`
-}
-
-type DeleteHeaders struct {
-	// The Customer ID to use for the request.
-	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
+	APIKeyAuth *string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
+	OAuth      *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteRequest struct {
-	Headers  DeleteHeaders
-	Request  shared.VectaraDeleteDocumentRequest `request:"mediaType=application/json"`
-	Security DeleteSecurity
+	// The Customer ID to use for the request.
+	CustomerID                   int64                               `header:"style=simple,explode=false,name=customer-id"`
+	VectaraDeleteDocumentRequest shared.VectaraDeleteDocumentRequest `request:"mediaType=application/json"`
 }
 
 type DeleteResponse struct {

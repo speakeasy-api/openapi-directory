@@ -34,9 +34,9 @@ func newLifecycleOperations(defaultClient, securityClient HTTPClient, serverURL,
 // Activate User
 func (s *lifecycleOperations) ActivateUser(ctx context.Context, request operations.ActivateUserRequest) (*operations.ActivateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/activate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *lifecycleOperations) ActivateUser(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -81,9 +81,9 @@ func (s *lifecycleOperations) ActivateUser(ctx context.Context, request operatio
 // Deactivate User
 func (s *lifecycleOperations) DeactivateUser(ctx context.Context, request operations.DeactivateUserRequest) (*operations.DeactivateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/deactivate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/deactivate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,9 +124,9 @@ func (s *lifecycleOperations) DeactivateUser(ctx context.Context, request operat
 // Reset Password
 func (s *lifecycleOperations) ResetPassword(ctx context.Context, request operations.ResetPasswordRequest) (*operations.ResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -138,7 +138,7 @@ func (s *lifecycleOperations) ResetPassword(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,9 +171,9 @@ func (s *lifecycleOperations) ResetPassword(ctx context.Context, request operati
 // Set Temp Password
 func (s *lifecycleOperations) SetTempPassword(ctx context.Context, request operations.SetTempPasswordRequest) (*operations.SetTempPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/expire_password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/expire_password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -185,7 +185,7 @@ func (s *lifecycleOperations) SetTempPassword(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -218,9 +218,9 @@ func (s *lifecycleOperations) SetTempPassword(ctx context.Context, request opera
 // Suspend User
 func (s *lifecycleOperations) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/suspend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,9 +261,9 @@ func (s *lifecycleOperations) SuspendUser(ctx context.Context, request operation
 // Unlock User
 func (s *lifecycleOperations) UnlockUser(ctx context.Context, request operations.UnlockUserRequest) (*operations.UnlockUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unlock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unlock", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -304,9 +304,9 @@ func (s *lifecycleOperations) UnlockUser(ctx context.Context, request operations
 // Unsuspend User
 func (s *lifecycleOperations) UnsuspendUser(ctx context.Context, request operations.UnsuspendUserRequest) (*operations.UnsuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unsuspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unsuspend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

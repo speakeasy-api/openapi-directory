@@ -11,8 +11,8 @@ import (
 )
 
 type GetUpdatedImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetUpdatedImagesSortEnum - Sort order
@@ -65,7 +65,7 @@ func (e *GetUpdatedImagesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUpdatedImagesQueryParams struct {
+type GetUpdatedImagesRequest struct {
 	// Show images updated before the specified date
 	EndDate *types.Date `queryParam:"style=form,explode=true,name=end_date"`
 	// Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request
@@ -80,11 +80,6 @@ type GetUpdatedImagesQueryParams struct {
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=start_date"`
 	// Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
 	Type []GetUpdatedImagesTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetUpdatedImagesRequest struct {
-	QueryParams GetUpdatedImagesQueryParams
-	Security    GetUpdatedImagesSecurity
 }
 
 type GetUpdatedImagesResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PostWorkspaceSlugWebhooksSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostWorkspaceSlugWebhooksPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostWorkspaceSlugWebhooksRequest struct {
-	PathParams PostWorkspaceSlugWebhooksPathParams
-	Request    *shared.WebhookSubscription `request:"mediaType=application/json"`
-	Security   PostWorkspaceSlugWebhooksSecurity
+	WebhookSubscription *shared.WebhookSubscription `request:"mediaType=application/json"`
+	WorkspaceSlug       string                      `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type PostWorkspaceSlugWebhooksResponse struct {

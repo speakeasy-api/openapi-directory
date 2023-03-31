@@ -35,9 +35,9 @@ func newImagePredictionAPI(defaultClient, securityClient HTTPClient, serverURL, 
 // PredictImage - Predict an image and saves the result
 func (s *imagePredictionAPI) PredictImage(ctx context.Context, request operations.PredictImageRequest) (*operations.PredictImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *imagePredictionAPI) PredictImage(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,9 +116,9 @@ func (s *imagePredictionAPI) PredictImage(ctx context.Context, request operation
 // PredictImageURLWithNoStoreForm - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreForm(ctx context.Context, request operations.PredictImageURLWithNoStoreFormRequest) (*operations.PredictImageURLWithNoStoreFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -133,9 +133,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreForm(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -197,9 +197,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreForm(ctx context.Context,
 // PredictImageURLWithNoStoreJSON - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreJSON(ctx context.Context, request operations.PredictImageURLWithNoStoreJSONRequest) (*operations.PredictImageURLWithNoStoreJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,9 +214,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,9 +278,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreJSON(ctx context.Context,
 // PredictImageURLWithNoStoreRaw - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreRaw(ctx context.Context, request operations.PredictImageURLWithNoStoreRawRequest) (*operations.PredictImageURLWithNoStoreRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,9 +295,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreRaw(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -359,9 +359,9 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreRaw(ctx context.Context, 
 // PredictImageURLForm - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLForm(ctx context.Context, request operations.PredictImageURLFormRequest) (*operations.PredictImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -376,9 +376,9 @@ func (s *imagePredictionAPI) PredictImageURLForm(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -440,9 +440,9 @@ func (s *imagePredictionAPI) PredictImageURLForm(ctx context.Context, request op
 // PredictImageURLJSON - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLJSON(ctx context.Context, request operations.PredictImageURLJSONRequest) (*operations.PredictImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -457,9 +457,9 @@ func (s *imagePredictionAPI) PredictImageURLJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -521,9 +521,9 @@ func (s *imagePredictionAPI) PredictImageURLJSON(ctx context.Context, request op
 // PredictImageURLRaw - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLRaw(ctx context.Context, request operations.PredictImageURLRawRequest) (*operations.PredictImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -538,9 +538,9 @@ func (s *imagePredictionAPI) PredictImageURLRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -602,9 +602,9 @@ func (s *imagePredictionAPI) PredictImageURLRaw(ctx context.Context, request ope
 // PredictImageWithNoStore - Predict an image without saving the result
 func (s *imagePredictionAPI) PredictImageWithNoStore(ctx context.Context, request operations.PredictImageWithNoStoreRequest) (*operations.PredictImageWithNoStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image/nostore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image/nostore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -619,9 +619,9 @@ func (s *imagePredictionAPI) PredictImageWithNoStore(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

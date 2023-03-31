@@ -32,20 +32,20 @@ func newLanguages(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingLanguagesList - Retrieves a list of languages.
-func (s *languages) DfareportingLanguagesList(ctx context.Context, request operations.DfareportingLanguagesListRequest) (*operations.DfareportingLanguagesListResponse, error) {
+func (s *languages) DfareportingLanguagesList(ctx context.Context, request operations.DfareportingLanguagesListRequest, security operations.DfareportingLanguagesListSecurity) (*operations.DfareportingLanguagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/languages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/languages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

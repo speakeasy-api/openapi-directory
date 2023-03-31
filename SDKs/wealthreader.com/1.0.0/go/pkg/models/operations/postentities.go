@@ -61,10 +61,6 @@ type PostEntitiesRequestBody struct {
 	User *string `form:"name=user"`
 }
 
-type PostEntitiesRequest struct {
-	Request *PostEntitiesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostEntities200ApplicationJSON4Payload struct {
 	// Cuentas bancarias. En cuentas europeas, solamente activado cuando el cliente de Wealth Reader cuenta con licencia PSD2
 	Accounts []map[string]interface{} `json:"accounts,omitempty"`

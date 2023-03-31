@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicesIDCalendarPathParams struct {
+type GetSetupV1ServicesIDCalendarRequest struct {
 	// id of service object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ServicesIDCalendarQueryParams struct {
 	// id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
-}
-
-type GetSetupV1ServicesIDCalendarRequest struct {
-	PathParams  GetSetupV1ServicesIDCalendarPathParams
-	QueryParams GetSetupV1ServicesIDCalendarQueryParams
 }
 
 type GetSetupV1ServicesIDCalendarResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreatePagesSitePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreatePagesSiteRequestBody2BuildTypeEnum - The process in which the Page will be built. Possible values are `"legacy"` and `"workflow"`.
 type ReposCreatePagesSiteRequestBody2BuildTypeEnum string
 
@@ -145,8 +138,11 @@ type ReposCreatePagesSiteRequestBody1 struct {
 }
 
 type ReposCreatePagesSiteRequest struct {
-	PathParams ReposCreatePagesSitePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreatePagesSiteResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1AccountsIDUnfollowSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AccountsIDUnfollowPathParams struct {
-	// The id of the account in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AccountsIDUnfollowRequest struct {
-	PathParams PostAPIV1AccountsIDUnfollowPathParams
-	Security   PostAPIV1AccountsIDUnfollowSecurity
+	// The id of the account in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AccountsIDUnfollowResponse struct {

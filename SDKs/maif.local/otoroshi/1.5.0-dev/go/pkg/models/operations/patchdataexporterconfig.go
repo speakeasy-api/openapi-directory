@@ -8,18 +8,14 @@ import (
 )
 
 type PatchDataExporterConfigSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchDataExporterConfigPathParams struct {
-	// The data exporter config id
-	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PatchDataExporterConfigRequest struct {
-	PathParams PatchDataExporterConfigPathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchDataExporterConfigSecurity
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
+	// The data exporter config id
+	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
 }
 
 type PatchDataExporterConfigResponse struct {

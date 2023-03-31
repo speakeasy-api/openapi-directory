@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScimProvisionAndInviteUserPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ScimProvisionAndInviteUserRequestBodyEmails struct {
 	Primary *bool   `json:"primary,omitempty"`
 	Type    *string `json:"type,omitempty"`
@@ -39,8 +34,9 @@ type ScimProvisionAndInviteUserRequestBody struct {
 }
 
 type ScimProvisionAndInviteUserRequest struct {
-	PathParams ScimProvisionAndInviteUserPathParams
-	Request    ScimProvisionAndInviteUserRequestBody `request:"mediaType=application/json"`
+	RequestBody ScimProvisionAndInviteUserRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ScimProvisionAndInviteUserResponse struct {

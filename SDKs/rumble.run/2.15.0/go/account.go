@@ -34,7 +34,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CreateAccountCredential - Create a new credential
-func (s *account) CreateAccountCredential(ctx context.Context, request operations.CreateAccountCredentialRequest) (*operations.CreateAccountCredentialResponse, error) {
+func (s *account) CreateAccountCredential(ctx context.Context, request shared.CredentialOptions, security operations.CreateAccountCredentialSecurity) (*operations.CreateAccountCredentialResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/credentials"
 
@@ -53,7 +53,7 @@ func (s *account) CreateAccountCredential(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *account) CreateAccountCredential(ctx context.Context, request operation
 }
 
 // CreateAccountGroup - Create a new group
-func (s *account) CreateAccountGroup(ctx context.Context, request operations.CreateAccountGroupRequest) (*operations.CreateAccountGroupResponse, error) {
+func (s *account) CreateAccountGroup(ctx context.Context, request shared.GroupPost, security operations.CreateAccountGroupSecurity) (*operations.CreateAccountGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/groups"
 
@@ -110,7 +110,7 @@ func (s *account) CreateAccountGroup(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *account) CreateAccountGroup(ctx context.Context, request operations.Cre
 }
 
 // CreateAccountGroupMapping - Create a new SSO group mapping
-func (s *account) CreateAccountGroupMapping(ctx context.Context, request operations.CreateAccountGroupMappingRequest) (*operations.CreateAccountGroupMappingResponse, error) {
+func (s *account) CreateAccountGroupMapping(ctx context.Context, request shared.GroupMapping, security operations.CreateAccountGroupMappingSecurity) (*operations.CreateAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sso/groups"
 
@@ -165,7 +165,7 @@ func (s *account) CreateAccountGroupMapping(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,7 +201,7 @@ func (s *account) CreateAccountGroupMapping(ctx context.Context, request operati
 }
 
 // CreateAccountKey - Create a new key
-func (s *account) CreateAccountKey(ctx context.Context, request operations.CreateAccountKeyRequest) (*operations.CreateAccountKeyResponse, error) {
+func (s *account) CreateAccountKey(ctx context.Context, request shared.APIKeyOptions, security operations.CreateAccountKeySecurity) (*operations.CreateAccountKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/keys"
 
@@ -220,7 +220,7 @@ func (s *account) CreateAccountKey(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,7 +258,7 @@ func (s *account) CreateAccountKey(ctx context.Context, request operations.Creat
 }
 
 // CreateAccountOrganization - Create a new organization
-func (s *account) CreateAccountOrganization(ctx context.Context, request operations.CreateAccountOrganizationRequest) (*operations.CreateAccountOrganizationResponse, error) {
+func (s *account) CreateAccountOrganization(ctx context.Context, request shared.OrgOptions, security operations.CreateAccountOrganizationSecurity) (*operations.CreateAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/orgs"
 
@@ -277,7 +277,7 @@ func (s *account) CreateAccountOrganization(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -315,7 +315,7 @@ func (s *account) CreateAccountOrganization(ctx context.Context, request operati
 }
 
 // CreateAccountScanTemplate - Create a new scan template
-func (s *account) CreateAccountScanTemplate(ctx context.Context, request operations.CreateAccountScanTemplateRequest) (*operations.CreateAccountScanTemplateResponse, error) {
+func (s *account) CreateAccountScanTemplate(ctx context.Context, request shared.ScanTemplateOptions, security operations.CreateAccountScanTemplateSecurity) (*operations.CreateAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/tasks/templates"
 
@@ -334,7 +334,7 @@ func (s *account) CreateAccountScanTemplate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,7 +374,7 @@ func (s *account) CreateAccountScanTemplate(ctx context.Context, request operati
 }
 
 // CreateAccountUser - Create a new user account
-func (s *account) CreateAccountUser(ctx context.Context, request operations.CreateAccountUserRequest) (*operations.CreateAccountUserResponse, error) {
+func (s *account) CreateAccountUser(ctx context.Context, request shared.UserOptions, security operations.CreateAccountUserSecurity) (*operations.CreateAccountUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/users"
 
@@ -393,7 +393,7 @@ func (s *account) CreateAccountUser(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,7 +431,7 @@ func (s *account) CreateAccountUser(ctx context.Context, request operations.Crea
 }
 
 // CreateAccountUserInvite - Create a new user account and send an email invite
-func (s *account) CreateAccountUserInvite(ctx context.Context, request operations.CreateAccountUserInviteRequest) (*operations.CreateAccountUserInviteResponse, error) {
+func (s *account) CreateAccountUserInvite(ctx context.Context, request shared.UserInviteOptions, security operations.CreateAccountUserInviteSecurity) (*operations.CreateAccountUserInviteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/users/invite"
 
@@ -450,7 +450,7 @@ func (s *account) CreateAccountUserInvite(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,16 +488,16 @@ func (s *account) CreateAccountUserInvite(ctx context.Context, request operation
 }
 
 // DeleteAccountOrganizationExportToken - Removes the export token from the specified organization
-func (s *account) DeleteAccountOrganizationExportToken(ctx context.Context, request operations.DeleteAccountOrganizationExportTokenRequest) (*operations.DeleteAccountOrganizationExportTokenResponse, error) {
+func (s *account) DeleteAccountOrganizationExportToken(ctx context.Context, request operations.DeleteAccountOrganizationExportTokenRequest, security operations.DeleteAccountOrganizationExportTokenSecurity) (*operations.DeleteAccountOrganizationExportTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -525,7 +525,7 @@ func (s *account) DeleteAccountOrganizationExportToken(ctx context.Context, requ
 }
 
 // ExportEventsJSON - System event log as JSON
-func (s *account) ExportEventsJSON(ctx context.Context, request operations.ExportEventsJSONRequest) (*operations.ExportEventsJSONResponse, error) {
+func (s *account) ExportEventsJSON(ctx context.Context, request operations.ExportEventsJSONRequest, security operations.ExportEventsJSONSecurity) (*operations.ExportEventsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/events.json"
 
@@ -534,11 +534,11 @@ func (s *account) ExportEventsJSON(ctx context.Context, request operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -574,7 +574,7 @@ func (s *account) ExportEventsJSON(ctx context.Context, request operations.Expor
 }
 
 // ExportEventsJSONL - System event log as JSON line-delimited
-func (s *account) ExportEventsJSONL(ctx context.Context, request operations.ExportEventsJSONLRequest) (*operations.ExportEventsJSONLResponse, error) {
+func (s *account) ExportEventsJSONL(ctx context.Context, request operations.ExportEventsJSONLRequest, security operations.ExportEventsJSONLSecurity) (*operations.ExportEventsJSONLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/events.jsonl"
 
@@ -583,11 +583,11 @@ func (s *account) ExportEventsJSONL(ctx context.Context, request operations.Expo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -623,7 +623,7 @@ func (s *account) ExportEventsJSONL(ctx context.Context, request operations.Expo
 }
 
 // GetAccountAgents - Get all agents across all organizations
-func (s *account) GetAccountAgents(ctx context.Context, request operations.GetAccountAgentsRequest) (*operations.GetAccountAgentsResponse, error) {
+func (s *account) GetAccountAgents(ctx context.Context, request operations.GetAccountAgentsRequest, security operations.GetAccountAgentsSecurity) (*operations.GetAccountAgentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/agents"
 
@@ -632,11 +632,11 @@ func (s *account) GetAccountAgents(ctx context.Context, request operations.GetAc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,16 +672,16 @@ func (s *account) GetAccountAgents(ctx context.Context, request operations.GetAc
 }
 
 // GetAccountCredential - Get credential details
-func (s *account) GetAccountCredential(ctx context.Context, request operations.GetAccountCredentialRequest) (*operations.GetAccountCredentialResponse, error) {
+func (s *account) GetAccountCredential(ctx context.Context, request operations.GetAccountCredentialRequest, security operations.GetAccountCredentialSecurity) (*operations.GetAccountCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,7 +719,7 @@ func (s *account) GetAccountCredential(ctx context.Context, request operations.G
 }
 
 // GetAccountCredentials - Get all account credentials
-func (s *account) GetAccountCredentials(ctx context.Context, request operations.GetAccountCredentialsRequest) (*operations.GetAccountCredentialsResponse, error) {
+func (s *account) GetAccountCredentials(ctx context.Context, request operations.GetAccountCredentialsRequest, security operations.GetAccountCredentialsSecurity) (*operations.GetAccountCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/credentials"
 
@@ -728,11 +728,11 @@ func (s *account) GetAccountCredentials(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -768,16 +768,16 @@ func (s *account) GetAccountCredentials(ctx context.Context, request operations.
 }
 
 // GetAccountGroup - Get group details
-func (s *account) GetAccountGroup(ctx context.Context, request operations.GetAccountGroupRequest) (*operations.GetAccountGroupResponse, error) {
+func (s *account) GetAccountGroup(ctx context.Context, request operations.GetAccountGroupRequest, security operations.GetAccountGroupSecurity) (*operations.GetAccountGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,16 +815,16 @@ func (s *account) GetAccountGroup(ctx context.Context, request operations.GetAcc
 }
 
 // GetAccountGroupMapping - Get SSO group mapping details
-func (s *account) GetAccountGroupMapping(ctx context.Context, request operations.GetAccountGroupMappingRequest) (*operations.GetAccountGroupMappingResponse, error) {
+func (s *account) GetAccountGroupMapping(ctx context.Context, request operations.GetAccountGroupMappingRequest, security operations.GetAccountGroupMappingSecurity) (*operations.GetAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -862,7 +862,7 @@ func (s *account) GetAccountGroupMapping(ctx context.Context, request operations
 }
 
 // GetAccountGroupMappings - Get all SSO group mappings
-func (s *account) GetAccountGroupMappings(ctx context.Context, request operations.GetAccountGroupMappingsRequest) (*operations.GetAccountGroupMappingsResponse, error) {
+func (s *account) GetAccountGroupMappings(ctx context.Context) (*operations.GetAccountGroupMappingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sso/groups"
 
@@ -871,7 +871,7 @@ func (s *account) GetAccountGroupMappings(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -907,7 +907,7 @@ func (s *account) GetAccountGroupMappings(ctx context.Context, request operation
 }
 
 // GetAccountGroups - Get all groups
-func (s *account) GetAccountGroups(ctx context.Context, request operations.GetAccountGroupsRequest) (*operations.GetAccountGroupsResponse, error) {
+func (s *account) GetAccountGroups(ctx context.Context) (*operations.GetAccountGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/groups"
 
@@ -916,7 +916,7 @@ func (s *account) GetAccountGroups(ctx context.Context, request operations.GetAc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -952,16 +952,16 @@ func (s *account) GetAccountGroups(ctx context.Context, request operations.GetAc
 }
 
 // GetAccountKey - Get key details
-func (s *account) GetAccountKey(ctx context.Context, request operations.GetAccountKeyRequest) (*operations.GetAccountKeyResponse, error) {
+func (s *account) GetAccountKey(ctx context.Context, request operations.GetAccountKeyRequest, security operations.GetAccountKeySecurity) (*operations.GetAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -997,7 +997,7 @@ func (s *account) GetAccountKey(ctx context.Context, request operations.GetAccou
 }
 
 // GetAccountKeys - Get all active API keys
-func (s *account) GetAccountKeys(ctx context.Context, request operations.GetAccountKeysRequest) (*operations.GetAccountKeysResponse, error) {
+func (s *account) GetAccountKeys(ctx context.Context) (*operations.GetAccountKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/keys"
 
@@ -1006,7 +1006,7 @@ func (s *account) GetAccountKeys(ctx context.Context, request operations.GetAcco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,7 +1042,7 @@ func (s *account) GetAccountKeys(ctx context.Context, request operations.GetAcco
 }
 
 // GetAccountLicense - Get license details
-func (s *account) GetAccountLicense(ctx context.Context, request operations.GetAccountLicenseRequest) (*operations.GetAccountLicenseResponse, error) {
+func (s *account) GetAccountLicense(ctx context.Context) (*operations.GetAccountLicenseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/license"
 
@@ -1051,7 +1051,7 @@ func (s *account) GetAccountLicense(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1087,16 +1087,16 @@ func (s *account) GetAccountLicense(ctx context.Context, request operations.GetA
 }
 
 // GetAccountOrganization - Get organization details
-func (s *account) GetAccountOrganization(ctx context.Context, request operations.GetAccountOrganizationRequest) (*operations.GetAccountOrganizationResponse, error) {
+func (s *account) GetAccountOrganization(ctx context.Context, request operations.GetAccountOrganizationRequest, security operations.GetAccountOrganizationSecurity) (*operations.GetAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1132,7 +1132,7 @@ func (s *account) GetAccountOrganization(ctx context.Context, request operations
 }
 
 // GetAccountOrganizations - Get all organization details
-func (s *account) GetAccountOrganizations(ctx context.Context, request operations.GetAccountOrganizationsRequest) (*operations.GetAccountOrganizationsResponse, error) {
+func (s *account) GetAccountOrganizations(ctx context.Context, request operations.GetAccountOrganizationsRequest, security operations.GetAccountOrganizationsSecurity) (*operations.GetAccountOrganizationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/orgs"
 
@@ -1141,11 +1141,11 @@ func (s *account) GetAccountOrganizations(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1181,16 +1181,16 @@ func (s *account) GetAccountOrganizations(ctx context.Context, request operation
 }
 
 // GetAccountScanTemplate - Get scan template details
-func (s *account) GetAccountScanTemplate(ctx context.Context, request operations.GetAccountScanTemplateRequest) (*operations.GetAccountScanTemplateResponse, error) {
+func (s *account) GetAccountScanTemplate(ctx context.Context, request operations.GetAccountScanTemplateRequest, security operations.GetAccountScanTemplateSecurity) (*operations.GetAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1230,7 +1230,7 @@ func (s *account) GetAccountScanTemplate(ctx context.Context, request operations
 }
 
 // GetAccountScanTemplates - Get all scan templates across all organizations (up to 1000)
-func (s *account) GetAccountScanTemplates(ctx context.Context, request operations.GetAccountScanTemplatesRequest) (*operations.GetAccountScanTemplatesResponse, error) {
+func (s *account) GetAccountScanTemplates(ctx context.Context, request operations.GetAccountScanTemplatesRequest, security operations.GetAccountScanTemplatesSecurity) (*operations.GetAccountScanTemplatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/tasks/templates"
 
@@ -1239,11 +1239,11 @@ func (s *account) GetAccountScanTemplates(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1281,7 +1281,7 @@ func (s *account) GetAccountScanTemplates(ctx context.Context, request operation
 }
 
 // GetAccountSites - Get all sites details across all organizations
-func (s *account) GetAccountSites(ctx context.Context, request operations.GetAccountSitesRequest) (*operations.GetAccountSitesResponse, error) {
+func (s *account) GetAccountSites(ctx context.Context, request operations.GetAccountSitesRequest, security operations.GetAccountSitesSecurity) (*operations.GetAccountSitesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sites"
 
@@ -1290,11 +1290,11 @@ func (s *account) GetAccountSites(ctx context.Context, request operations.GetAcc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1330,7 +1330,7 @@ func (s *account) GetAccountSites(ctx context.Context, request operations.GetAcc
 }
 
 // GetAccountTasks - Get all task details across all organizations (up to 1000)
-func (s *account) GetAccountTasks(ctx context.Context, request operations.GetAccountTasksRequest) (*operations.GetAccountTasksResponse, error) {
+func (s *account) GetAccountTasks(ctx context.Context, request operations.GetAccountTasksRequest, security operations.GetAccountTasksSecurity) (*operations.GetAccountTasksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/tasks"
 
@@ -1339,11 +1339,11 @@ func (s *account) GetAccountTasks(ctx context.Context, request operations.GetAcc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1379,16 +1379,16 @@ func (s *account) GetAccountTasks(ctx context.Context, request operations.GetAcc
 }
 
 // GetAccountUser - Get user details
-func (s *account) GetAccountUser(ctx context.Context, request operations.GetAccountUserRequest) (*operations.GetAccountUserResponse, error) {
+func (s *account) GetAccountUser(ctx context.Context, request operations.GetAccountUserRequest, security operations.GetAccountUserSecurity) (*operations.GetAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1424,7 +1424,7 @@ func (s *account) GetAccountUser(ctx context.Context, request operations.GetAcco
 }
 
 // GetAccountUsers - Get all users
-func (s *account) GetAccountUsers(ctx context.Context, request operations.GetAccountUsersRequest) (*operations.GetAccountUsersResponse, error) {
+func (s *account) GetAccountUsers(ctx context.Context) (*operations.GetAccountUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/users"
 
@@ -1433,7 +1433,7 @@ func (s *account) GetAccountUsers(ctx context.Context, request operations.GetAcc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1469,16 +1469,16 @@ func (s *account) GetAccountUsers(ctx context.Context, request operations.GetAcc
 }
 
 // RemoveAccountCredential - Remove this credential
-func (s *account) RemoveAccountCredential(ctx context.Context, request operations.RemoveAccountCredentialRequest) (*operations.RemoveAccountCredentialResponse, error) {
+func (s *account) RemoveAccountCredential(ctx context.Context, request operations.RemoveAccountCredentialRequest, security operations.RemoveAccountCredentialSecurity) (*operations.RemoveAccountCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1508,16 +1508,16 @@ func (s *account) RemoveAccountCredential(ctx context.Context, request operation
 }
 
 // RemoveAccountGroup - Remove this group
-func (s *account) RemoveAccountGroup(ctx context.Context, request operations.RemoveAccountGroupRequest) (*operations.RemoveAccountGroupResponse, error) {
+func (s *account) RemoveAccountGroup(ctx context.Context, request operations.RemoveAccountGroupRequest, security operations.RemoveAccountGroupSecurity) (*operations.RemoveAccountGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1545,16 +1545,16 @@ func (s *account) RemoveAccountGroup(ctx context.Context, request operations.Rem
 }
 
 // RemoveAccountGroupMapping - Remove this SSO group mapping
-func (s *account) RemoveAccountGroupMapping(ctx context.Context, request operations.RemoveAccountGroupMappingRequest) (*operations.RemoveAccountGroupMappingResponse, error) {
+func (s *account) RemoveAccountGroupMapping(ctx context.Context, request operations.RemoveAccountGroupMappingRequest, security operations.RemoveAccountGroupMappingSecurity) (*operations.RemoveAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1582,16 +1582,16 @@ func (s *account) RemoveAccountGroupMapping(ctx context.Context, request operati
 }
 
 // RemoveAccountKey - Remove this key
-func (s *account) RemoveAccountKey(ctx context.Context, request operations.RemoveAccountKeyRequest) (*operations.RemoveAccountKeyResponse, error) {
+func (s *account) RemoveAccountKey(ctx context.Context, request operations.RemoveAccountKeyRequest, security operations.RemoveAccountKeySecurity) (*operations.RemoveAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1619,16 +1619,16 @@ func (s *account) RemoveAccountKey(ctx context.Context, request operations.Remov
 }
 
 // RemoveAccountOrganization - Remove this organization
-func (s *account) RemoveAccountOrganization(ctx context.Context, request operations.RemoveAccountOrganizationRequest) (*operations.RemoveAccountOrganizationResponse, error) {
+func (s *account) RemoveAccountOrganization(ctx context.Context, request operations.RemoveAccountOrganizationRequest, security operations.RemoveAccountOrganizationSecurity) (*operations.RemoveAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1656,16 +1656,16 @@ func (s *account) RemoveAccountOrganization(ctx context.Context, request operati
 }
 
 // RemoveAccountScanTemplate - Remove scan template
-func (s *account) RemoveAccountScanTemplate(ctx context.Context, request operations.RemoveAccountScanTemplateRequest) (*operations.RemoveAccountScanTemplateResponse, error) {
+func (s *account) RemoveAccountScanTemplate(ctx context.Context, request operations.RemoveAccountScanTemplateRequest, security operations.RemoveAccountScanTemplateSecurity) (*operations.RemoveAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1705,16 +1705,16 @@ func (s *account) RemoveAccountScanTemplate(ctx context.Context, request operati
 }
 
 // RemoveAccountUser - Remove this user
-func (s *account) RemoveAccountUser(ctx context.Context, request operations.RemoveAccountUserRequest) (*operations.RemoveAccountUserResponse, error) {
+func (s *account) RemoveAccountUser(ctx context.Context, request operations.RemoveAccountUserRequest, security operations.RemoveAccountUserSecurity) (*operations.RemoveAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1742,16 +1742,16 @@ func (s *account) RemoveAccountUser(ctx context.Context, request operations.Remo
 }
 
 // ResetAccountUserLockout - Resets the user's lockout status
-func (s *account) ResetAccountUserLockout(ctx context.Context, request operations.ResetAccountUserLockoutRequest) (*operations.ResetAccountUserLockoutResponse, error) {
+func (s *account) ResetAccountUserLockout(ctx context.Context, request operations.ResetAccountUserLockoutRequest, security operations.ResetAccountUserLockoutSecurity) (*operations.ResetAccountUserLockoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetLockout", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetLockout", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1787,16 +1787,16 @@ func (s *account) ResetAccountUserLockout(ctx context.Context, request operation
 }
 
 // ResetAccountUserMFA - Resets the user's MFA tokens
-func (s *account) ResetAccountUserMFA(ctx context.Context, request operations.ResetAccountUserMFARequest) (*operations.ResetAccountUserMFAResponse, error) {
+func (s *account) ResetAccountUserMFA(ctx context.Context, request operations.ResetAccountUserMFARequest, security operations.ResetAccountUserMFASecurity) (*operations.ResetAccountUserMFAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetMFA", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetMFA", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1832,16 +1832,16 @@ func (s *account) ResetAccountUserMFA(ctx context.Context, request operations.Re
 }
 
 // ResetAccountUserPassword - Sends the user a password reset email
-func (s *account) ResetAccountUserPassword(ctx context.Context, request operations.ResetAccountUserPasswordRequest) (*operations.ResetAccountUserPasswordResponse, error) {
+func (s *account) ResetAccountUserPassword(ctx context.Context, request operations.ResetAccountUserPasswordRequest, security operations.ResetAccountUserPasswordSecurity) (*operations.ResetAccountUserPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetPassword", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetPassword", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1877,16 +1877,16 @@ func (s *account) ResetAccountUserPassword(ctx context.Context, request operatio
 }
 
 // RotateAccountKey - Rotates the key secret
-func (s *account) RotateAccountKey(ctx context.Context, request operations.RotateAccountKeyRequest) (*operations.RotateAccountKeyResponse, error) {
+func (s *account) RotateAccountKey(ctx context.Context, request operations.RotateAccountKeyRequest, security operations.RotateAccountKeySecurity) (*operations.RotateAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}/rotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}/rotate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1922,16 +1922,16 @@ func (s *account) RotateAccountKey(ctx context.Context, request operations.Rotat
 }
 
 // RotateAccountOrganizationExportToken - Rotates the organization export token and returns the updated organization
-func (s *account) RotateAccountOrganizationExportToken(ctx context.Context, request operations.RotateAccountOrganizationExportTokenRequest) (*operations.RotateAccountOrganizationExportTokenResponse, error) {
+func (s *account) RotateAccountOrganizationExportToken(ctx context.Context, request operations.RotateAccountOrganizationExportTokenRequest, security operations.RotateAccountOrganizationExportTokenSecurity) (*operations.RotateAccountOrganizationExportTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken/rotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken/rotate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1967,7 +1967,7 @@ func (s *account) RotateAccountOrganizationExportToken(ctx context.Context, requ
 }
 
 // UpdateAccountGroup - Update an existing group
-func (s *account) UpdateAccountGroup(ctx context.Context, request operations.UpdateAccountGroupRequest) (*operations.UpdateAccountGroupResponse, error) {
+func (s *account) UpdateAccountGroup(ctx context.Context, request shared.GroupPut, security operations.UpdateAccountGroupSecurity) (*operations.UpdateAccountGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/groups"
 
@@ -1986,7 +1986,7 @@ func (s *account) UpdateAccountGroup(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2022,7 +2022,7 @@ func (s *account) UpdateAccountGroup(ctx context.Context, request operations.Upd
 }
 
 // UpdateAccountGroupMapping - Update an existing SSO group mapping
-func (s *account) UpdateAccountGroupMapping(ctx context.Context, request operations.UpdateAccountGroupMappingRequest) (*operations.UpdateAccountGroupMappingResponse, error) {
+func (s *account) UpdateAccountGroupMapping(ctx context.Context, request shared.GroupMapping, security operations.UpdateAccountGroupMappingSecurity) (*operations.UpdateAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sso/groups"
 
@@ -2041,7 +2041,7 @@ func (s *account) UpdateAccountGroupMapping(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2077,11 +2077,11 @@ func (s *account) UpdateAccountGroupMapping(ctx context.Context, request operati
 }
 
 // UpdateAccountOrganization - Update organization details
-func (s *account) UpdateAccountOrganization(ctx context.Context, request operations.UpdateAccountOrganizationRequest) (*operations.UpdateAccountOrganizationResponse, error) {
+func (s *account) UpdateAccountOrganization(ctx context.Context, request operations.UpdateAccountOrganizationRequest, security operations.UpdateAccountOrganizationSecurity) (*operations.UpdateAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrgOptions", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2096,7 +2096,7 @@ func (s *account) UpdateAccountOrganization(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2132,7 +2132,7 @@ func (s *account) UpdateAccountOrganization(ctx context.Context, request operati
 }
 
 // UpdateAccountScanTemplate - Update scan template
-func (s *account) UpdateAccountScanTemplate(ctx context.Context, request operations.UpdateAccountScanTemplateRequest) (*operations.UpdateAccountScanTemplateResponse, error) {
+func (s *account) UpdateAccountScanTemplate(ctx context.Context, request shared.ScanTemplate, security operations.UpdateAccountScanTemplateSecurity) (*operations.UpdateAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/tasks/templates"
 
@@ -2151,7 +2151,7 @@ func (s *account) UpdateAccountScanTemplate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2193,11 +2193,11 @@ func (s *account) UpdateAccountScanTemplate(ctx context.Context, request operati
 }
 
 // UpdateAccountUser - Update a user's details
-func (s *account) UpdateAccountUser(ctx context.Context, request operations.UpdateAccountUserRequest) (*operations.UpdateAccountUserResponse, error) {
+func (s *account) UpdateAccountUser(ctx context.Context, request operations.UpdateAccountUserRequest, security operations.UpdateAccountUserSecurity) (*operations.UpdateAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserOptions", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2212,7 +2212,7 @@ func (s *account) UpdateAccountUser(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

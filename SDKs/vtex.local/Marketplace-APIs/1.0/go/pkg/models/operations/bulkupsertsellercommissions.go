@@ -7,30 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BulkUpsertSellerCommissionsPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type BulkUpsertSellerCommissionsQueryParams struct {
+type BulkUpsertSellerCommissionsRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                                      `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []shared.BulkUpsertSellerCommissionsRequest `request:"mediaType=application/json"`
 	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
 	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type BulkUpsertSellerCommissionsHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type BulkUpsertSellerCommissionsRequest struct {
-	PathParams  BulkUpsertSellerCommissionsPathParams
-	QueryParams BulkUpsertSellerCommissionsQueryParams
-	Headers     BulkUpsertSellerCommissionsHeaders
-	Request     []shared.BulkUpsertSellerCommissionsRequest `request:"mediaType=application/json"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 }
 
 type BulkUpsertSellerCommissionsResponse struct {

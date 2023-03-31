@@ -32,20 +32,20 @@ func newCustomerServiceMetric(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // GetCustomerServiceMetric - Use this method to retrieve a seller's performance and rating for the customer service metric. Control the response from the getCustomerServiceMetric method using the following path and query parameters: customer_service_metric_type controls the type of customer service transactions evaluated for the metric rating. evaluation_type controls the period you want to review. evaluation_marketplace_id specifies the target marketplace for the evaluation. Currently, metric data is returned for only peer benchmarking. For more detail on the workings of peer benchmarking, see Service metrics policy.
-func (s *customerServiceMetric) GetCustomerServiceMetric(ctx context.Context, request operations.GetCustomerServiceMetricRequest) (*operations.GetCustomerServiceMetricResponse, error) {
+func (s *customerServiceMetric) GetCustomerServiceMetric(ctx context.Context, request operations.GetCustomerServiceMetricRequest, security operations.GetCustomerServiceMetricSecurity) (*operations.GetCustomerServiceMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_service_metric/{customer_service_metric_type}/{evaluation_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customer_service_metric/{customer_service_metric_type}/{evaluation_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

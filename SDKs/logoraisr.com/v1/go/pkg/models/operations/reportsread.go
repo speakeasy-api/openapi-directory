@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReportsReadPathParams struct {
-	ReportNumber string `pathParam:"style=simple,explode=false,name=report_number"`
-}
-
 type ReportsReadRequest struct {
-	PathParams ReportsReadPathParams
+	ReportNumber string `pathParam:"style=simple,explode=false,name=report_number"`
 }
 
 type ReportsReadResponse struct {

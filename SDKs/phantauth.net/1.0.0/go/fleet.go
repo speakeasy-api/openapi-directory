@@ -37,7 +37,7 @@ func newFleet(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // In lack of a fleet name, all calls generate a different fleet object to the randomly generated fleet name.
 func (s *fleet) GetFleetFleetname(ctx context.Context, request operations.GetFleetFleetnameRequest) (*operations.GetFleetFleetnameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fleet/{fleetname}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fleet/{fleetname}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

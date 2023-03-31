@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveTeamMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveTeamMemberPathParams struct {
-	// The ID of the team member to retrieve.
-	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveTeamMemberRequest struct {
-	PathParams RetrieveTeamMemberPathParams
-	Security   RetrieveTeamMemberSecurity
+	// The ID of the team member to retrieve.
+	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
 }
 
 type RetrieveTeamMemberResponse struct {

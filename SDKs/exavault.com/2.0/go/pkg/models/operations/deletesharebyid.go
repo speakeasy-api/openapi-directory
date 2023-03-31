@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteShareByIDPathParams struct {
-	// ID of the share entry
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteShareByIDHeaders struct {
+type DeleteShareByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteShareByIDRequest struct {
-	PathParams DeleteShareByIDPathParams
-	Headers    DeleteShareByIDHeaders
+	// ID of the share entry
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteShareByIDResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListSamlSsoAuthorizationsPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsListSamlSsoAuthorizationsQueryParams struct {
+type OrgsListSamlSsoAuthorizationsRequest struct {
 	// Limits the list of credentials authorizations for an organization to a specific login
 	Login *string `queryParam:"style=form,explode=true,name=login"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page token
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type OrgsListSamlSsoAuthorizationsRequest struct {
-	PathParams  OrgsListSamlSsoAuthorizationsPathParams
-	QueryParams OrgsListSamlSsoAuthorizationsQueryParams
 }
 
 type OrgsListSamlSsoAuthorizationsResponse struct {

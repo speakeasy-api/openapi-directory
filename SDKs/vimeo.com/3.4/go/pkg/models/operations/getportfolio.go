@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfolioPathParams struct {
+type GetPortfolioRequest struct {
 	// The ID of the portfolio.
 	PortfolioID float64 `pathParam:"style=simple,explode=false,name=portfolio_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetPortfolioRequest struct {
-	PathParams GetPortfolioPathParams
 }
 
 type GetPortfolioResponse struct {

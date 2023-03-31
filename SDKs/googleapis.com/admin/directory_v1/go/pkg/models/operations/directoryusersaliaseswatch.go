@@ -10,23 +10,23 @@ import (
 )
 
 type DirectoryUsersAliasesWatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesWatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesWatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesWatchSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesWatchSecurity struct {
@@ -34,11 +34,6 @@ type DirectoryUsersAliasesWatchSecurity struct {
 	Option2 *DirectoryUsersAliasesWatchSecurityOption2 `security:"option"`
 	Option3 *DirectoryUsersAliasesWatchSecurityOption3 `security:"option"`
 	Option4 *DirectoryUsersAliasesWatchSecurityOption4 `security:"option"`
-}
-
-type DirectoryUsersAliasesWatchPathParams struct {
-	// Email or immutable ID of the user
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 // DirectoryUsersAliasesWatchEventEnum - Events to watch for.
@@ -65,9 +60,10 @@ func (e *DirectoryUsersAliasesWatchEventEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DirectoryUsersAliasesWatchQueryParams struct {
+type DirectoryUsersAliasesWatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Channel     *shared.Channel   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -90,13 +86,8 @@ type DirectoryUsersAliasesWatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersAliasesWatchRequest struct {
-	PathParams  DirectoryUsersAliasesWatchPathParams
-	QueryParams DirectoryUsersAliasesWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    DirectoryUsersAliasesWatchSecurity
+	// Email or immutable ID of the user
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersAliasesWatchResponse struct {

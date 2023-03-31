@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchLocationPathParams struct {
-	// ID of location that needs to be updated
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchLocationRequestBodyAddress struct {
 	City            *string `json:"city,omitempty"`
 	Country         *string `json:"country,omitempty"`
@@ -81,9 +76,10 @@ type PatchLocationRequestBody struct {
 }
 
 type PatchLocationRequest struct {
-	PathParams PatchLocationPathParams
 	// Include location properties to create here
-	Request PatchLocationRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchLocationRequestBody `request:"mediaType=application/json"`
+	// ID of location that needs to be updated
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PatchLocation200ApplicationJSON - Returns the updated location object

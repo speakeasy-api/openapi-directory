@@ -8,13 +8,7 @@ import (
 )
 
 type CreateCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type CreateCollectionRequest struct {
-	// Create a catalog collection and, optionally, add items.
-	Request  shared.CreateCatalogCollection `request:"mediaType=application/json"`
-	Security CreateCollectionSecurity
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCollectionResponse struct {

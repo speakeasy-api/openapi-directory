@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolWebGetTracePathParams struct {
+type ProtocolWebGetTraceRequest struct {
 	// Agent to show whether WEB tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolWebGetTraceRequest struct {
-	PathParams ProtocolWebGetTracePathParams
 }
 
 type ProtocolWebGetTraceResponse struct {

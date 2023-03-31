@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostRequest struct {
-	Headers ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostHeaders
-	Request shared.ObstaclesByDistance `request:"mediaType=application/json"`
+	ObstaclesByDistance shared.ObstaclesByDistance `request:"mediaType=application/json"`
+	XAPIKey             *string                    `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse struct {

@@ -31,13 +31,7 @@ func (e *GETAllCustomObjectDefinitionsInNamespaceSelectEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETAllCustomObjectDefinitionsInNamespaceQueryParams struct {
-	// If you set `select` to `type`, the response will only contain the `type` of each custom object.
-	//
-	Select *GETAllCustomObjectDefinitionsInNamespaceSelectEnum `queryParam:"style=form,explode=true,name=select"`
-}
-
-type GETAllCustomObjectDefinitionsInNamespaceHeaders struct {
+type GETAllCustomObjectDefinitionsInNamespaceRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -51,11 +45,9 @@ type GETAllCustomObjectDefinitionsInNamespaceHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type GETAllCustomObjectDefinitionsInNamespaceRequest struct {
-	QueryParams GETAllCustomObjectDefinitionsInNamespaceQueryParams
-	Headers     GETAllCustomObjectDefinitionsInNamespaceHeaders
+	// If you set `select` to `type`, the response will only contain the `type` of each custom object.
+	//
+	Select *GETAllCustomObjectDefinitionsInNamespaceSelectEnum `queryParam:"style=form,explode=true,name=select"`
 }
 
 type GETAllCustomObjectDefinitionsInNamespaceResponse struct {

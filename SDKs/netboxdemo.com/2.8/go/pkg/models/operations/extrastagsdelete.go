@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasTagsDeletePathParams struct {
+type ExtrasTagsDeleteRequest struct {
 	// A unique integer value identifying this tag.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTagsDeleteRequest struct {
-	PathParams ExtrasTagsDeletePathParams
 }
 
 type ExtrasTagsDeleteResponse struct {

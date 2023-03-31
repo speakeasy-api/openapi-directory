@@ -8,21 +8,16 @@ import (
 )
 
 type AccumulateLoyaltyPointsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AccumulateLoyaltyPointsPathParams struct {
-	// The [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) ID to which to add the points.
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AccumulateLoyaltyPointsRequest struct {
-	PathParams AccumulateLoyaltyPointsPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.AccumulateLoyaltyPointsRequest `request:"mediaType=application/json"`
-	Security AccumulateLoyaltyPointsSecurity
+	AccumulateLoyaltyPointsRequest shared.AccumulateLoyaltyPointsRequest `request:"mediaType=application/json"`
+	// The [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) ID to which to add the points.
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type AccumulateLoyaltyPointsResponse struct {

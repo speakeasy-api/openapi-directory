@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SetEqualizerValuesRequest struct {
-	Request shared.SetEqualizerValuesRequest `request:"mediaType=application/json"`
-}
 
 type SetEqualizerValuesResponse struct {
 	ContentType                          string

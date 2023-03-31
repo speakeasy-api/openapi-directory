@@ -8,13 +8,7 @@ import (
 )
 
 type AddHpvcManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddHpvcManagerRequest struct {
-	// Add a switch as datasource
-	Request  *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security AddHpvcManagerSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddHpvcManagerResponse struct {

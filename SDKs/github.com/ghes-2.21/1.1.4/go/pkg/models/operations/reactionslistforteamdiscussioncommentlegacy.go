@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionCommentLegacyPathParams struct {
-	CommentNumber    int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsListForTeamDiscussionCommentLegacyContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 type ReactionsListForTeamDiscussionCommentLegacyContentEnum string
 
@@ -57,18 +51,16 @@ func (e *ReactionsListForTeamDiscussionCommentLegacyContentEnum) UnmarshalJSON(d
 	}
 }
 
-type ReactionsListForTeamDiscussionCommentLegacyQueryParams struct {
+type ReactionsListForTeamDiscussionCommentLegacyRequest struct {
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
-	Content *ReactionsListForTeamDiscussionCommentLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
+	Content          *ReactionsListForTeamDiscussionCommentLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
+	DiscussionNumber int64                                                   `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionCommentLegacyRequest struct {
-	PathParams  ReactionsListForTeamDiscussionCommentLegacyPathParams
-	QueryParams ReactionsListForTeamDiscussionCommentLegacyQueryParams
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsListForTeamDiscussionCommentLegacyResponse struct {

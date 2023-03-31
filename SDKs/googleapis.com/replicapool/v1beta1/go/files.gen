@@ -23,9 +23,8 @@ pkg/models/operations/replicapoolreplicasdelete.go
 pkg/models/operations/replicapoolreplicasget.go
 pkg/models/operations/replicapoolreplicaslist.go
 pkg/models/operations/replicapoolreplicasrestart.go
-pkg/models/shared/poolsdeleterequest.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
+pkg/models/shared/poolsdeleterequest.go
 pkg/models/shared/pool.go
 pkg/models/shared/template.go
 pkg/models/shared/vmparams.go

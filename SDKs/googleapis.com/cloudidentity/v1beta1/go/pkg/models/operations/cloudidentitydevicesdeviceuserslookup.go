@@ -8,16 +8,11 @@ import (
 )
 
 type CloudidentityDevicesDeviceUsersLookupSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudidentityDevicesDeviceUsersLookupPathParams struct {
-	// Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the user.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityDevicesDeviceUsersLookupQueryParams struct {
+type CloudidentityDevicesDeviceUsersLookupRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type CloudidentityDevicesDeviceUsersLookupQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `LookupDeviceUsers` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `LookupDeviceUsers` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the user.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type CloudidentityDevicesDeviceUsersLookupQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The user whose DeviceUser's resource name will be fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the calling user.
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type CloudidentityDevicesDeviceUsersLookupRequest struct {
-	PathParams  CloudidentityDevicesDeviceUsersLookupPathParams
-	QueryParams CloudidentityDevicesDeviceUsersLookupQueryParams
-	Security    CloudidentityDevicesDeviceUsersLookupSecurity
 }
 
 type CloudidentityDevicesDeviceUsersLookupResponse struct {

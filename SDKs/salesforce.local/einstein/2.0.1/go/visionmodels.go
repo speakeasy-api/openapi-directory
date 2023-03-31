@@ -34,16 +34,16 @@ func newVisionModels(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // DeleteModel1 - Delete a Model
 // Deletes the specified model.
-func (s *visionModels) DeleteModel1(ctx context.Context, request operations.DeleteModel1Request) (*operations.DeleteModel1Response, error) {
+func (s *visionModels) DeleteModel1(ctx context.Context, request operations.DeleteModel1Request, security operations.DeleteModel1Security) (*operations.DeleteModel1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,20 +79,20 @@ func (s *visionModels) DeleteModel1(ctx context.Context, request operations.Dele
 
 // GetTrainedModelLearningCurve1 - Get Model Learning Curve
 // Returns the metrics for each epoch in a model.
-func (s *visionModels) GetTrainedModelLearningCurve1(ctx context.Context, request operations.GetTrainedModelLearningCurve1Request) (*operations.GetTrainedModelLearningCurve1Response, error) {
+func (s *visionModels) GetTrainedModelLearningCurve1(ctx context.Context, request operations.GetTrainedModelLearningCurve1Request, security operations.GetTrainedModelLearningCurve1Security) (*operations.GetTrainedModelLearningCurve1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}/lc", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}/lc", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,16 +128,16 @@ func (s *visionModels) GetTrainedModelLearningCurve1(ctx context.Context, reques
 
 // GetTrainedModelMetrics1 - Get Model Metrics
 // Returns the metrics for a model
-func (s *visionModels) GetTrainedModelMetrics1(ctx context.Context, request operations.GetTrainedModelMetrics1Request) (*operations.GetTrainedModelMetrics1Response, error) {
+func (s *visionModels) GetTrainedModelMetrics1(ctx context.Context, request operations.GetTrainedModelMetrics1Request, security operations.GetTrainedModelMetrics1Security) (*operations.GetTrainedModelMetrics1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,20 +173,20 @@ func (s *visionModels) GetTrainedModelMetrics1(ctx context.Context, request oper
 
 // GetTrainedModels1 - Get All Models
 // Returns all models for the specified dataset.
-func (s *visionModels) GetTrainedModels1(ctx context.Context, request operations.GetTrainedModels1Request) (*operations.GetTrainedModels1Response, error) {
+func (s *visionModels) GetTrainedModels1(ctx context.Context, request operations.GetTrainedModels1Request, security operations.GetTrainedModels1Security) (*operations.GetTrainedModels1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CabwiseGetQueryParams struct {
+type CabwiseGetRequest struct {
 	// Force Xml
 	ForceXML *bool `queryParam:"style=form,explode=true,name=forceXml"`
 	// Latitude
@@ -27,10 +27,6 @@ type CabwiseGetQueryParams struct {
 	TwentyFourSevenOnly *bool `queryParam:"style=form,explode=true,name=twentyFourSevenOnly"`
 	// Wheelchair accessible
 	Wc *string `queryParam:"style=form,explode=true,name=wc"`
-}
-
-type CabwiseGetRequest struct {
-	QueryParams CabwiseGetQueryParams
 }
 
 type CabwiseGetResponse struct {

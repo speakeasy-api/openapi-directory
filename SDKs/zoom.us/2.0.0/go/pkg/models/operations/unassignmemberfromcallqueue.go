@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignMemberFromCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UnassignMemberFromCallQueuePathParams struct {
+type UnassignMemberFromCallQueueRequest struct {
 	// Unique Identifier of the Call Queue from which the member needs to be unassigned.
 	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 	// Unique Identifier of the member who needs to be unassigned.
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
-type UnassignMemberFromCallQueueRequest struct {
-	PathParams UnassignMemberFromCallQueuePathParams
-	Security   UnassignMemberFromCallQueueSecurity
 }
 
 type UnassignMemberFromCallQueueResponse struct {

@@ -8,17 +8,11 @@ import (
 )
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams struct {
-	// Name must match
-	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]/service_binding/[BINDING_ID]`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams struct {
+type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +25,9 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperati
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name must match
+	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]/service_binding/[BINDING_ID]`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// If `operation` was returned during mutation operation, this field must be
@@ -48,12 +45,6 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperati
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest struct {
-	PathParams  ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams
-	QueryParams ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams
-	Security    ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity
 }
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse struct {

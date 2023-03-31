@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnfollowUserAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UnfollowUserAlt1PathParams struct {
-	// The ID of the following user.
-	FollowUserID float64 `pathParam:"style=simple,explode=false,name=follow_user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnfollowUserAlt1Request struct {
-	PathParams UnfollowUserAlt1PathParams
-	Security   UnfollowUserAlt1Security
+	// The ID of the following user.
+	FollowUserID float64 `pathParam:"style=simple,explode=false,name=follow_user_id"`
 }
 
 type UnfollowUserAlt1Response struct {

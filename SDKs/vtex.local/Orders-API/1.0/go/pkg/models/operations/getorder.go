@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderPathParams struct {
-	// Order ID is a unique code that identifies an order. Instead of using `orderId`, you can also make the request using the sequence, a six-digit string that follows the order ID. For example, in order 1268540501456-01 (501456), the sequence is 501456. To use this parameter, replace the value between `{ }` keys in `seq{sequence-number}` with the sequence. For example: `seq501456`.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type GetOrderHeaders struct {
+type GetOrderRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetOrderRequest struct {
-	PathParams GetOrderPathParams
-	Headers    GetOrderHeaders
+	// Order ID is a unique code that identifies an order. Instead of using `orderId`, you can also make the request using the sequence, a six-digit string that follows the order ID. For example, in order 1268540501456-01 (501456), the sequence is 501456. To use this parameter, replace the value between `{ }` keys in `seq{sequence-number}` with the sequence. For example: `seq501456`.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // GetOrder200ApplicationJSONItemsAdditionalInfoDimension - Dimension of the item.

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteConnectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteConnectionPathParams struct {
-	// Unique identifier for retrieving single object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteConnectionRequest struct {
-	PathParams DeleteConnectionPathParams
-	Security   DeleteConnectionSecurity
+	// Unique identifier for retrieving single object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteConnectionResponse struct {

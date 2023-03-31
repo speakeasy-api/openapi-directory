@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesIDCompanyEntitiesCompanyIDPathParams struct {
+type GetSpacesIDCompanyEntitiesCompanyIDRequest struct {
 	// Id of the company entity
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDCompanyEntitiesCompanyIDRequest struct {
-	PathParams GetSpacesIDCompanyEntitiesCompanyIDPathParams
 }
 
 type GetSpacesIDCompanyEntitiesCompanyIDResponse struct {

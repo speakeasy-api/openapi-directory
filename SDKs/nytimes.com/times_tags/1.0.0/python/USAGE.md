@@ -3,21 +3,17 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetTimestagsRequest(
-    query_params=operations.GetTimestagsQueryParams(
-        filter="Des",
-        max=629466435034479331,
-        query="reprehenderit",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetTimestagsRequest(
+    filter="Org",
+    max=592845,
+    query="distinctio",
 )
     
 res = s.get_timestags(req)

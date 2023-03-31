@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasExportTemplatesListQueryParams struct {
+type ExtrasExportTemplatesListRequest struct {
 	ContentType  *string `queryParam:"style=form,explode=true,name=content_type"`
 	ContentTypeN *string `queryParam:"style=form,explode=true,name=content_type__n"`
 	ID           *string `queryParam:"style=form,explode=true,name=id"`
@@ -32,10 +32,6 @@ type ExtrasExportTemplatesListQueryParams struct {
 	Offset            *int64  `queryParam:"style=form,explode=true,name=offset"`
 	TemplateLanguage  *string `queryParam:"style=form,explode=true,name=template_language"`
 	TemplateLanguageN *string `queryParam:"style=form,explode=true,name=template_language__n"`
-}
-
-type ExtrasExportTemplatesListRequest struct {
-	QueryParams ExtrasExportTemplatesListQueryParams
 }
 
 type ExtrasExportTemplatesList200ApplicationJSON struct {

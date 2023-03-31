@@ -63,7 +63,7 @@ func (e *MeasurementsGetV2MeasurementsGetSortSortEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type MeasurementsGetV2MeasurementsGetQueryParams struct {
+type MeasurementsGetV2MeasurementsGetRequest struct {
 	//         Limit results by a certain city or cities.
 	//         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
 	//
@@ -106,10 +106,6 @@ type MeasurementsGetV2MeasurementsGetQueryParams struct {
 	Unit      []string                                      `queryParam:"style=form,explode=true,name=unit"`
 	ValueFrom *float64                                      `queryParam:"style=form,explode=true,name=value_from"`
 	ValueTo   *float64                                      `queryParam:"style=form,explode=true,name=value_to"`
-}
-
-type MeasurementsGetV2MeasurementsGetRequest struct {
-	QueryParams MeasurementsGetV2MeasurementsGetQueryParams
 }
 
 type MeasurementsGetV2MeasurementsGetResponse struct {

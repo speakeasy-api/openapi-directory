@@ -8,18 +8,13 @@ import (
 )
 
 type DiasporaSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DiasporaPathParams struct {
-	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
-	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type DiasporaRequest struct {
-	PathParams DiasporaPathParams
-	Security   DiasporaSecurity
+	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
+	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type DiasporaResponse struct {

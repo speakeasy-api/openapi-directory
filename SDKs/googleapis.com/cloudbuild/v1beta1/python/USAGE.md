@@ -4,39 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudbuildProjectsLocationsOperationsCancelRequest(
-    security=operations.CloudbuildProjectsLocationsOperationsCancelSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudbuildProjectsLocationsOperationsCancelPathParams(
-        name="velit",
-    ),
-    query_params=operations.CloudbuildProjectsLocationsOperationsCancelQueryParams(
-        dollar_xgafv="1",
-        access_token="officia",
-        alt="proto",
-        callback="est",
-        fields="cum",
-        key="et",
-        oauth_token="ea",
-        pretty_print=True,
-        quota_user="molestias",
-        upload_type="repellendus",
-        upload_protocol="in",
-    ),
-    request={
-        "quidem": "nihil",
-        "corporis": "odio",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.projects.cloudbuild_projects_locations_operations_cancel(req)
+res = s.projects.cloudbuild_projects_locations_operations_cancel(req, operations.CloudbuildProjectsLocationsOperationsCancelSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.empty is not None:
     # handle response

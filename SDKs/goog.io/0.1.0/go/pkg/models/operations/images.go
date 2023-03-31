@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImagesPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type ImagesRequest struct {
-	PathParams ImagesPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 type Images200ApplicationJSONImageResultsImage struct {

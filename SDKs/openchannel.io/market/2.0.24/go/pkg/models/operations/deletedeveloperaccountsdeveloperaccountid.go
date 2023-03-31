@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDeveloperAccountsDeveloperAccountIDPathParams struct {
+type DeleteDeveloperAccountsDeveloperAccountIDRequest struct {
 	// The id of the developer account to be updated
 	DeveloperAccountID string `pathParam:"style=simple,explode=false,name=developerAccountId"`
-}
-
-type DeleteDeveloperAccountsDeveloperAccountIDRequest struct {
-	PathParams DeleteDeveloperAccountsDeveloperAccountIDPathParams
 }
 
 type DeleteDeveloperAccountsDeveloperAccountIDResponse struct {

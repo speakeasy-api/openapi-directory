@@ -12,16 +12,8 @@ var UpdateSyncMapPermissionServerList = []string{
 }
 
 type UpdateSyncMapPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncMapPermissionPathParams struct {
-	// The application-defined string that uniquely identifies the User's Sync Map Permission resource to update.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// The SID of the Sync Map with the Sync Map Permission resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
-	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to update. Can be the Service's `sid` value or `default`.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncMapPermissionUpdateSyncMapPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateSyncMapPermissionUpdateSyncMapPermissionRequest struct {
 }
 
 type UpdateSyncMapPermissionRequest struct {
-	PathParams UpdateSyncMapPermissionPathParams
-	Request    *UpdateSyncMapPermissionUpdateSyncMapPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncMapPermissionSecurity
-	ServerURL  *string
+	// The application-defined string that uniquely identifies the User's Sync Map Permission resource to update.
+	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
+	// The SID of the Sync Map with the Sync Map Permission resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
+	MapSid      string                                                 `pathParam:"style=simple,explode=false,name=MapSid"`
+	RequestBody *UpdateSyncMapPermissionUpdateSyncMapPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to update. Can be the Service's `sid` value or `default`.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncMapPermissionResponse struct {

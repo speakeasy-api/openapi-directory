@@ -36,11 +36,11 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateFileAssociation - Creates a new file association
 // By passing in the appropriate options, you can create a new folder
-func (s *files) CreateFileAssociation(ctx context.Context, request operations.CreateFileAssociationRequest) (*operations.CreateFileAssociationResponse, error) {
+func (s *files) CreateFileAssociation(ctx context.Context, request operations.CreateFileAssociationRequest, security operations.CreateFileAssociationSecurity) (*operations.CreateFileAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Association", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *files) CreateFileAssociation(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +91,11 @@ func (s *files) CreateFileAssociation(ctx context.Context, request operations.Cr
 
 // CreateFolder - Creates a new folder
 // By passing in the appropriate properties, you can create a new folder
-func (s *files) CreateFolder(ctx context.Context, request operations.CreateFolderRequest) (*operations.CreateFolderResponse, error) {
+func (s *files) CreateFolder(ctx context.Context, request operations.CreateFolderRequest, security operations.CreateFolderSecurity) (*operations.CreateFolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Folders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,9 +107,9 @@ func (s *files) CreateFolder(ctx context.Context, request operations.CreateFolde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,18 +146,18 @@ func (s *files) CreateFolder(ctx context.Context, request operations.CreateFolde
 
 // DeleteFile - Deletes a specific file
 // Delete a specific file
-func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileRequest) (*operations.DeleteFileResponse, error) {
+func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileRequest, security operations.DeleteFileSecurity) (*operations.DeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,18 +184,18 @@ func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileReq
 
 // DeleteFileAssociation - Deletes an existing file association
 // By passing in the appropriate options, you can create a new folder
-func (s *files) DeleteFileAssociation(ctx context.Context, request operations.DeleteFileAssociationRequest) (*operations.DeleteFileAssociationResponse, error) {
+func (s *files) DeleteFileAssociation(ctx context.Context, request operations.DeleteFileAssociationRequest, security operations.DeleteFileAssociationSecurity) (*operations.DeleteFileAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations/{ObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations/{ObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,18 +222,18 @@ func (s *files) DeleteFileAssociation(ctx context.Context, request operations.De
 
 // DeleteFolder - Deletes a folder
 // By passing in the appropriate ID, you can delete a folder
-func (s *files) DeleteFolder(ctx context.Context, request operations.DeleteFolderRequest) (*operations.DeleteFolderResponse, error) {
+func (s *files) DeleteFolder(ctx context.Context, request operations.DeleteFolderRequest, security operations.DeleteFolderSecurity) (*operations.DeleteFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,18 +260,18 @@ func (s *files) DeleteFolder(ctx context.Context, request operations.DeleteFolde
 
 // GetAssociationsByObject - Retrieves an association object using a unique object ID
 // By passing in the appropriate options,
-func (s *files) GetAssociationsByObject(ctx context.Context, request operations.GetAssociationsByObjectRequest) (*operations.GetAssociationsByObjectResponse, error) {
+func (s *files) GetAssociationsByObject(ctx context.Context, request operations.GetAssociationsByObjectRequest, security operations.GetAssociationsByObjectSecurity) (*operations.GetAssociationsByObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Associations/{ObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Associations/{ObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,18 +306,18 @@ func (s *files) GetAssociationsByObject(ctx context.Context, request operations.
 }
 
 // GetFile - Retrieves a file by a unique file ID
-func (s *files) GetFile(ctx context.Context, request operations.GetFileRequest) (*operations.GetFileResponse, error) {
+func (s *files) GetFile(ctx context.Context, request operations.GetFileRequest, security operations.GetFileSecurity) (*operations.GetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -353,18 +353,18 @@ func (s *files) GetFile(ctx context.Context, request operations.GetFileRequest) 
 
 // GetFileAssociations - Retrieves a specific file associations
 // By passing in the appropriate options,
-func (s *files) GetFileAssociations(ctx context.Context, request operations.GetFileAssociationsRequest) (*operations.GetFileAssociationsResponse, error) {
+func (s *files) GetFileAssociations(ctx context.Context, request operations.GetFileAssociationsRequest, security operations.GetFileAssociationsSecurity) (*operations.GetFileAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,18 +400,18 @@ func (s *files) GetFileAssociations(ctx context.Context, request operations.GetF
 
 // GetFileContent - Retrieves the content of a specific file
 // By passing in the appropriate options, retrieve data for specific file
-func (s *files) GetFileContent(ctx context.Context, request operations.GetFileContentRequest) (*operations.GetFileContentResponse, error) {
+func (s *files) GetFileContent(ctx context.Context, request operations.GetFileContentRequest, security operations.GetFileContentSecurity) (*operations.GetFileContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -446,7 +446,7 @@ func (s *files) GetFileContent(ctx context.Context, request operations.GetFileCo
 }
 
 // GetFiles - Retrieves files
-func (s *files) GetFiles(ctx context.Context, request operations.GetFilesRequest) (*operations.GetFilesResponse, error) {
+func (s *files) GetFiles(ctx context.Context, request operations.GetFilesRequest, security operations.GetFilesSecurity) (*operations.GetFilesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Files"
 
@@ -455,13 +455,13 @@ func (s *files) GetFiles(ctx context.Context, request operations.GetFilesRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -497,18 +497,18 @@ func (s *files) GetFiles(ctx context.Context, request operations.GetFilesRequest
 
 // GetFolder - Retrieves specific folder by using a unique folder ID
 // By passing in the appropriate ID, you can search for specific folder
-func (s *files) GetFolder(ctx context.Context, request operations.GetFolderRequest) (*operations.GetFolderResponse, error) {
+func (s *files) GetFolder(ctx context.Context, request operations.GetFolderRequest, security operations.GetFolderSecurity) (*operations.GetFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -544,7 +544,7 @@ func (s *files) GetFolder(ctx context.Context, request operations.GetFolderReque
 
 // GetFolders - Retrieves folders
 // By passing in the appropriate options, you can search for available folders
-func (s *files) GetFolders(ctx context.Context, request operations.GetFoldersRequest) (*operations.GetFoldersResponse, error) {
+func (s *files) GetFolders(ctx context.Context, request operations.GetFoldersRequest, security operations.GetFoldersSecurity) (*operations.GetFoldersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Folders"
 
@@ -553,13 +553,13 @@ func (s *files) GetFolders(ctx context.Context, request operations.GetFoldersReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,7 +595,7 @@ func (s *files) GetFolders(ctx context.Context, request operations.GetFoldersReq
 
 // GetInbox - Retrieves inbox folder
 // Search for the user inbox
-func (s *files) GetInbox(ctx context.Context, request operations.GetInboxRequest) (*operations.GetInboxResponse, error) {
+func (s *files) GetInbox(ctx context.Context, request operations.GetInboxRequest, security operations.GetInboxSecurity) (*operations.GetInboxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Inbox"
 
@@ -604,9 +604,9 @@ func (s *files) GetInbox(ctx context.Context, request operations.GetInboxRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -642,11 +642,11 @@ func (s *files) GetInbox(ctx context.Context, request operations.GetInboxRequest
 
 // UpdateFile - Update a file
 // Updates file properties of a single file
-func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileRequest) (*operations.UpdateFileResponse, error) {
+func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileRequest, security operations.UpdateFileSecurity) (*operations.UpdateFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileObject", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -658,9 +658,9 @@ func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -697,11 +697,11 @@ func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileReq
 
 // UpdateFolder - Updates an existing folder
 // By passing in the appropriate ID and properties, you can update a folder
-func (s *files) UpdateFolder(ctx context.Context, request operations.UpdateFolderRequest) (*operations.UpdateFolderResponse, error) {
+func (s *files) UpdateFolder(ctx context.Context, request operations.UpdateFolderRequest, security operations.UpdateFolderSecurity) (*operations.UpdateFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -716,9 +716,9 @@ func (s *files) UpdateFolder(ctx context.Context, request operations.UpdateFolde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -754,11 +754,11 @@ func (s *files) UpdateFolder(ctx context.Context, request operations.UpdateFolde
 }
 
 // UploadFile - Uploads a File
-func (s *files) UploadFile(ctx context.Context, request operations.UploadFileRequest) (*operations.UploadFileResponse, error) {
+func (s *files) UploadFile(ctx context.Context, request operations.UploadFileRequest, security operations.UploadFileSecurity) (*operations.UploadFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Files"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -770,13 +770,13 @@ func (s *files) UploadFile(ctx context.Context, request operations.UploadFileReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

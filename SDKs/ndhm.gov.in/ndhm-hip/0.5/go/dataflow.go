@@ -35,15 +35,25 @@ func newDataFlow(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PostV05HealthInformationHipRequestJSON - Health information data request
 // API called by CM to request Health information from HIP against a validated consent artefact. The transactionId is the correlation id that HIP should use use when pushing data to the **dataPushUrl**.
-func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, request operations.PostV05HealthInformationHipRequestJSONRequest) (*operations.PostV05HealthInformationHipRequestJSONResponse, error) {
+func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, request operations.PostV05HealthInformationHipRequestJSONRequest, opts ...operations.Option) (*operations.PostV05HealthInformationHipRequestJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationHipRequestJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIPHealthInformationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +68,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -108,15 +118,25 @@ func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, r
 
 // PostV05HealthInformationHipRequestRaw - Health information data request
 // API called by CM to request Health information from HIP against a validated consent artefact. The transactionId is the correlation id that HIP should use use when pushing data to the **dataPushUrl**.
-func (s *dataFlow) PostV05HealthInformationHipRequestRaw(ctx context.Context, request operations.PostV05HealthInformationHipRequestRawRequest) (*operations.PostV05HealthInformationHipRequestRawResponse, error) {
+func (s *dataFlow) PostV05HealthInformationHipRequestRaw(ctx context.Context, request operations.PostV05HealthInformationHipRequestRawRequest, opts ...operations.Option) (*operations.PostV05HealthInformationHipRequestRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationHipRequestRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +151,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestRaw(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

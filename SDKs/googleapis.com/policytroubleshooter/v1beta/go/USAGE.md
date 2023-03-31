@@ -14,38 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.PolicytroubleshooterIamTroubleshootRequest{
-        Security: operations.PolicytroubleshooterIamTroubleshootSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.PolicytroubleshooterIamTroubleshootQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest{
+        DollarXgafv: "2",
+        GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest: &shared.GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest{
             AccessTuple: &shared.GoogleCloudPolicytroubleshooterV1betaAccessTuple{
-                FullResourceName: "deserunt",
-                Permission: "suscipit",
-                Principal: "iure",
+                FullResourceName: "provident",
+                Permission: "distinctio",
+                Principal: "quibusdam",
             },
         },
+        AccessToken: "unde",
+        Alt: "proto",
+        Callback: "corrupti",
+        Fields: "illum",
+        Key: "vel",
+        OauthToken: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Iam.PolicytroubleshooterIamTroubleshoot(ctx, req)
+    res, err := s.Iam.PolicytroubleshooterIamTroubleshoot(ctx, req, operations.PolicytroubleshooterIamTroubleshootSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

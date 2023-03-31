@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.AreasGetRequest{
-        PathParams: operations.AreasGetPathParams{
-            Version: "corrupti",
-        },
+        Version: "corrupti",
     }
 
     ctx := context.Background()

@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutversionPathParams struct {
+type PutversionRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Two letter word that identifies the data structure
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the version to update
 	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
-}
-
-type PutversionHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PutversionRequest struct {
-	PathParams PutversionPathParams
-	Headers    PutversionHeaders
 }
 
 type PutversionResponse struct {

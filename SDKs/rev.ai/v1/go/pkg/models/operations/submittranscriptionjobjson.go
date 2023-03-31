@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitTranscriptionJobJSONRequest struct {
-	// Transcription Job Options
-	Request shared.SubmitJobMediaURLOptions `request:"mediaType=application/json"`
-}
-
 // SubmitTranscriptionJobJSON413ApplicationProblemPlusJSON - Payload Too Large
 // ***
 // Only returned when job is submitted using a local file as part of `multipart/form-data`. Use a `media_url`

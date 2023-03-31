@@ -8,13 +8,13 @@ import (
 )
 
 type VaultMattersSavedQueriesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersSavedQueriesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersSavedQueriesGetSecurity struct {
@@ -22,14 +22,7 @@ type VaultMattersSavedQueriesGetSecurity struct {
 	Option2 *VaultMattersSavedQueriesGetSecurityOption2 `security:"option"`
 }
 
-type VaultMattersSavedQueriesGetPathParams struct {
-	// The ID of the matter to get the saved query from.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
-	// ID of the saved query to retrieve.
-	SavedQueryID string `pathParam:"style=simple,explode=false,name=savedQueryId"`
-}
-
-type VaultMattersSavedQueriesGetQueryParams struct {
+type VaultMattersSavedQueriesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,22 +35,20 @@ type VaultMattersSavedQueriesGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID of the matter to get the saved query from.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// ID of the saved query to retrieve.
+	SavedQueryID string `pathParam:"style=simple,explode=false,name=savedQueryId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VaultMattersSavedQueriesGetRequest struct {
-	PathParams  VaultMattersSavedQueriesGetPathParams
-	QueryParams VaultMattersSavedQueriesGetQueryParams
-	Security    VaultMattersSavedQueriesGetSecurity
 }
 
 type VaultMattersSavedQueriesGetResponse struct {

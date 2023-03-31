@@ -33,7 +33,7 @@ func newNotification(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // BooksNotificationGet - Returns notification details for a given notification id.
-func (s *notification) BooksNotificationGet(ctx context.Context, request operations.BooksNotificationGetRequest) (*operations.BooksNotificationGetResponse, error) {
+func (s *notification) BooksNotificationGet(ctx context.Context, request operations.BooksNotificationGetRequest, security operations.BooksNotificationGetSecurity) (*operations.BooksNotificationGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/notification/get"
 
@@ -42,11 +42,11 @@ func (s *notification) BooksNotificationGet(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

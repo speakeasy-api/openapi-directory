@@ -8,18 +8,18 @@ import (
 )
 
 type ClassroomCoursesStudentsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesStudentsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesStudentsCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesStudentsCreateSecurity struct {
@@ -28,20 +28,18 @@ type ClassroomCoursesStudentsCreateSecurity struct {
 	Option3 *ClassroomCoursesStudentsCreateSecurityOption3 `security:"option"`
 }
 
-type ClassroomCoursesStudentsCreatePathParams struct {
-	// Identifier of the course to create the student in. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
-}
-
-type ClassroomCoursesStudentsCreateQueryParams struct {
+type ClassroomCoursesStudentsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Student     *shared.Student   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course to create the student in. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 	// Enrollment code of the course to create the student in. This code is required if userId corresponds to the requesting user; it may be omitted if the requesting user has administrative permissions to create students for any user.
 	EnrollmentCode *string `queryParam:"style=form,explode=true,name=enrollmentCode"`
 	// Selector specifying which fields to include in a partial response.
@@ -58,13 +56,6 @@ type ClassroomCoursesStudentsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesStudentsCreateRequest struct {
-	PathParams  ClassroomCoursesStudentsCreatePathParams
-	QueryParams ClassroomCoursesStudentsCreateQueryParams
-	Request     *shared.Student `request:"mediaType=application/json"`
-	Security    ClassroomCoursesStudentsCreateSecurity
 }
 
 type ClassroomCoursesStudentsCreateResponse struct {

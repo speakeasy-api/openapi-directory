@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFrameworksQueryParams struct {
+type GetFrameworksRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -17,10 +17,6 @@ type GetFrameworksQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Search term
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetFrameworksRequest struct {
-	QueryParams GetFrameworksQueryParams
 }
 
 // GetFrameworks401ApplicationJSON - Access token is missing or invalid

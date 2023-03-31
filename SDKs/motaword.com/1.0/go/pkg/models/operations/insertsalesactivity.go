@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InsertSalesActivityPathParams struct {
+type InsertSalesActivityRequest struct {
+	NewSalesActivity *shared.NewSalesActivity `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type InsertSalesActivityRequest struct {
-	PathParams InsertSalesActivityPathParams
-	Request    *shared.NewSalesActivity `request:"mediaType=application/json"`
 }
 
 type InsertSalesActivityResponse struct {

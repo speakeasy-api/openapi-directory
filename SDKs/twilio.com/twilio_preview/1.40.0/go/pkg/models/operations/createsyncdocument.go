@@ -12,11 +12,8 @@ var CreateSyncDocumentServerList = []string{
 }
 
 type CreateSyncDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncDocumentPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncDocumentCreateSyncDocumentRequest struct {
@@ -25,10 +22,8 @@ type CreateSyncDocumentCreateSyncDocumentRequest struct {
 }
 
 type CreateSyncDocumentRequest struct {
-	PathParams CreateSyncDocumentPathParams
-	Request    *CreateSyncDocumentCreateSyncDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncDocumentSecurity
-	ServerURL  *string
+	RequestBody *CreateSyncDocumentCreateSyncDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                       `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncDocumentResponse struct {

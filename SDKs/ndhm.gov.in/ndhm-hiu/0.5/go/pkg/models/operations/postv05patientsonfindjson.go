@@ -11,15 +11,10 @@ var PostV05PatientsOnFindJSONServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type PostV05PatientsOnFindJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05PatientsOnFindJSONRequest struct {
-	Headers   PostV05PatientsOnFindJSONHeaders
-	Request   shared.PatientIdentificationResponse `request:"mediaType=application/json"`
-	ServerURL *string
+	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+	Authorization                 string                               `header:"style=simple,explode=false,name=Authorization"`
+	PatientIdentificationResponse shared.PatientIdentificationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05PatientsOnFindJSONResponse struct {

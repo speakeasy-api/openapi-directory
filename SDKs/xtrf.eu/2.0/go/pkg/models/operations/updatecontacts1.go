@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContacts1PathParams struct {
+type UpdateContacts1Request struct {
+	// Updated contacts of given task.
+	ContactsDTO shared.ContactsDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateContacts1Request struct {
-	PathParams UpdateContacts1PathParams
-	// Updated contacts of given task.
-	Request shared.ContactsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateContacts1Response struct {

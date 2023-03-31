@@ -11,8 +11,8 @@ import (
 )
 
 type BulkSearchImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkSearchImagesImageTypeEnum string
@@ -324,7 +324,9 @@ func (e *BulkSearchImagesViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BulkSearchImagesQueryParams struct {
+type BulkSearchImagesRequest struct {
+	// List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
+	RequestBody []shared.SearchImage `request:"mediaType=application/json"`
 	// Show images added on the specified date
 	AddedDate *types.Date `queryParam:"style=form,explode=true,name=added_date"`
 	// Show images added before the specified date
@@ -395,13 +397,6 @@ type BulkSearchImagesQueryParams struct {
 	WidthFrom *int64 `queryParam:"style=form,explode=true,name=width_from"`
 	// Show images with the specified width or smaller, in pixels
 	WidthTo *int64 `queryParam:"style=form,explode=true,name=width_to"`
-}
-
-type BulkSearchImagesRequest struct {
-	QueryParams BulkSearchImagesQueryParams
-	// List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
-	Request  []shared.SearchImage `request:"mediaType=application/json"`
-	Security BulkSearchImagesSecurity
 }
 
 type BulkSearchImagesResponse struct {

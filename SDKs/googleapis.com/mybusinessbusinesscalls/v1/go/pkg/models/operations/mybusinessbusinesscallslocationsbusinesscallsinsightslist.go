@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams struct {
-	// Required. The parent location to fetch calls insights for. Format: locations/{location_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams struct {
+type MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -33,6 +28,8 @@ type MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListBusinessCallsInsights` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListBusinessCallsInsights` must match the call that provided the page token. Some of the metric_types (e.g, AGGREGATE_COUNT) returns a single page. For these metrics, the pake_token is ignored.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent location to fetch calls insights for. Format: locations/{location_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -41,11 +38,6 @@ type MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest struct {
-	PathParams  MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams
-	QueryParams MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams
 }
 
 type MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse struct {

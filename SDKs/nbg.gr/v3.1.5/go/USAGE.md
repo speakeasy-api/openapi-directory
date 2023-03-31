@@ -14,28 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAccountAccessConsentsConsentIDRequest{
-        Security: operations.DeleteAccountAccessConsentsConsentIDSecurity{
-            ClientCredentialsToken: shared.SchemeClientCredentialsToken{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            ClientID: shared.SchemeClientID{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteAccountAccessConsentsConsentIDPathParams{
-            ConsentID: "corrupti",
-        },
-        Headers: operations.DeleteAccountAccessConsentsConsentIDHeaders{
-            SandboxID: "provident",
-            XCustomerUserAgent: "distinctio",
-            XFapiAuthDate: "quibusdam",
-            XFapiCustomerIPAddress: "unde",
-            XFapiInteractionID: "nulla",
-        },
+        ConsentID: "corrupti",
+        SandboxID: "provident",
+        XCustomerUserAgent: "distinctio",
+        XFapiAuthDate: "quibusdam",
+        XFapiCustomerIPAddress: "unde",
+        XFapiInteractionID: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, req)
+    res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, req, operations.DeleteAccountAccessConsentsConsentIDSecurity{
+        ClientCredentialsToken: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        ClientID: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

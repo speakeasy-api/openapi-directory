@@ -53,14 +53,14 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // **Note:** The maximum file size is 2,047 MB. If you have a data request that exceeds this limit, Zuora returns the following 403 response: `<security:max-object-size>2047MB</security:max-object-size>`. Submit a request at <a href="http://support.zuora.com/" target="_blank">Zuora Global Support</a> to determine if large file optimization is an option for you.
 func (s *files) GETFiles(ctx context.Context, request operations.GETFilesRequest) (*operations.GETFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/files/{file-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/files/{file-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

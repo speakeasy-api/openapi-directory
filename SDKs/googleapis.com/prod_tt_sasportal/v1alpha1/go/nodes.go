@@ -32,11 +32,11 @@ func newNodes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // ProdTtSasportalNodesDevicesSignDevice - Signs a device.
-func (s *nodes) ProdTtSasportalNodesDevicesSignDevice(ctx context.Context, request operations.ProdTtSasportalNodesDevicesSignDeviceRequest) (*operations.ProdTtSasportalNodesDevicesSignDeviceResponse, error) {
+func (s *nodes) ProdTtSasportalNodesDevicesSignDevice(ctx context.Context, request operations.ProdTtSasportalNodesDevicesSignDeviceRequest, security operations.ProdTtSasportalNodesDevicesSignDeviceSecurity) (*operations.ProdTtSasportalNodesDevicesSignDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:signDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:signDevice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalSignDeviceRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *nodes) ProdTtSasportalNodesDevicesSignDevice(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *nodes) ProdTtSasportalNodesDevicesSignDevice(ctx context.Context, reque
 }
 
 // ProdTtSasportalNodesDevicesUpdateSigned - Updates a signed device.
-func (s *nodes) ProdTtSasportalNodesDevicesUpdateSigned(ctx context.Context, request operations.ProdTtSasportalNodesDevicesUpdateSignedRequest) (*operations.ProdTtSasportalNodesDevicesUpdateSignedResponse, error) {
+func (s *nodes) ProdTtSasportalNodesDevicesUpdateSigned(ctx context.Context, request operations.ProdTtSasportalNodesDevicesUpdateSignedRequest, security operations.ProdTtSasportalNodesDevicesUpdateSignedSecurity) (*operations.ProdTtSasportalNodesDevicesUpdateSignedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:updateSigned", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:updateSigned", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalUpdateSignedDeviceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *nodes) ProdTtSasportalNodesDevicesUpdateSigned(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *nodes) ProdTtSasportalNodesDevicesUpdateSigned(ctx context.Context, req
 }
 
 // ProdTtSasportalNodesNodesDelete - Deletes a node.
-func (s *nodes) ProdTtSasportalNodesNodesDelete(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeleteRequest) (*operations.ProdTtSasportalNodesNodesDeleteResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDelete(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeleteRequest, security operations.ProdTtSasportalNodesNodesDeleteSecurity) (*operations.ProdTtSasportalNodesNodesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDelete(ctx context.Context, request ope
 }
 
 // ProdTtSasportalNodesNodesDeploymentsCreate - Creates a new deployment.
-func (s *nodes) ProdTtSasportalNodesNodesDeploymentsCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest) (*operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDeploymentsCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest, security operations.ProdTtSasportalNodesNodesDeploymentsCreateSecurity) (*operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/deployments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalDeploymentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDeploymentsCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *nodes) ProdTtSasportalNodesNodesDeploymentsCreate(ctx context.Context, 
 }
 
 // ProdTtSasportalNodesNodesDeploymentsList - Lists deployments.
-func (s *nodes) ProdTtSasportalNodesNodesDeploymentsList(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeploymentsListRequest) (*operations.ProdTtSasportalNodesNodesDeploymentsListResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDeploymentsList(ctx context.Context, request operations.ProdTtSasportalNodesNodesDeploymentsListRequest, security operations.ProdTtSasportalNodesNodesDeploymentsListSecurity) (*operations.ProdTtSasportalNodesNodesDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/deployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDeploymentsList(ctx context.Context, re
 }
 
 // ProdTtSasportalNodesNodesDevicesCreate - Creates a device under a node or customer.
-func (s *nodes) ProdTtSasportalNodesNodesDevicesCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesCreateRequest) (*operations.ProdTtSasportalNodesNodesDevicesCreateResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDevicesCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesCreateRequest, security operations.ProdTtSasportalNodesNodesDevicesCreateSecurity) (*operations.ProdTtSasportalNodesNodesDevicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalDeviceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDevicesCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,11 +348,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDevicesCreate(ctx context.Context, requ
 }
 
 // ProdTtSasportalNodesNodesDevicesCreateSigned - Creates a signed device under a node or customer.
-func (s *nodes) ProdTtSasportalNodesNodesDevicesCreateSigned(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest) (*operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDevicesCreateSigned(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest, security operations.ProdTtSasportalNodesNodesDevicesCreateSignedSecurity) (*operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices:createSigned", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices:createSigned", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalCreateSignedDeviceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,11 +364,11 @@ func (s *nodes) ProdTtSasportalNodesNodesDevicesCreateSigned(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,20 +403,20 @@ func (s *nodes) ProdTtSasportalNodesNodesDevicesCreateSigned(ctx context.Context
 }
 
 // ProdTtSasportalNodesNodesDevicesList - Lists devices under a node or customer.
-func (s *nodes) ProdTtSasportalNodesNodesDevicesList(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesListRequest) (*operations.ProdTtSasportalNodesNodesDevicesListResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesDevicesList(ctx context.Context, request operations.ProdTtSasportalNodesNodesDevicesListRequest, security operations.ProdTtSasportalNodesNodesDevicesListSecurity) (*operations.ProdTtSasportalNodesNodesDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *nodes) ProdTtSasportalNodesNodesDevicesList(ctx context.Context, reques
 }
 
 // ProdTtSasportalNodesNodesGet - Returns a requested node.
-func (s *nodes) ProdTtSasportalNodesNodesGet(ctx context.Context, request operations.ProdTtSasportalNodesNodesGetRequest) (*operations.ProdTtSasportalNodesNodesGetResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesGet(ctx context.Context, request operations.ProdTtSasportalNodesNodesGetRequest, security operations.ProdTtSasportalNodesNodesGetSecurity) (*operations.ProdTtSasportalNodesNodesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *nodes) ProdTtSasportalNodesNodesGet(ctx context.Context, request operat
 }
 
 // ProdTtSasportalNodesNodesMove - Moves a node under another node or customer.
-func (s *nodes) ProdTtSasportalNodesNodesMove(ctx context.Context, request operations.ProdTtSasportalNodesNodesMoveRequest) (*operations.ProdTtSasportalNodesNodesMoveResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesMove(ctx context.Context, request operations.ProdTtSasportalNodesNodesMoveRequest, security operations.ProdTtSasportalNodesNodesMoveSecurity) (*operations.ProdTtSasportalNodesNodesMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalMoveNodeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *nodes) ProdTtSasportalNodesNodesMove(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *nodes) ProdTtSasportalNodesNodesMove(ctx context.Context, request opera
 }
 
 // ProdTtSasportalNodesNodesNodesCreate - Creates a new node.
-func (s *nodes) ProdTtSasportalNodesNodesNodesCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesNodesCreateRequest) (*operations.ProdTtSasportalNodesNodesNodesCreateResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesNodesCreate(ctx context.Context, request operations.ProdTtSasportalNodesNodesNodesCreateRequest, security operations.ProdTtSasportalNodesNodesNodesCreateSecurity) (*operations.ProdTtSasportalNodesNodesNodesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/nodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalNode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *nodes) ProdTtSasportalNodesNodesNodesCreate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *nodes) ProdTtSasportalNodesNodesNodesCreate(ctx context.Context, reques
 }
 
 // ProdTtSasportalNodesNodesNodesList - Lists nodes.
-func (s *nodes) ProdTtSasportalNodesNodesNodesList(ctx context.Context, request operations.ProdTtSasportalNodesNodesNodesListRequest) (*operations.ProdTtSasportalNodesNodesNodesListResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesNodesList(ctx context.Context, request operations.ProdTtSasportalNodesNodesNodesListRequest, security operations.ProdTtSasportalNodesNodesNodesListSecurity) (*operations.ProdTtSasportalNodesNodesNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *nodes) ProdTtSasportalNodesNodesNodesList(ctx context.Context, request 
 }
 
 // ProdTtSasportalNodesNodesPatch - Updates an existing node.
-func (s *nodes) ProdTtSasportalNodesNodesPatch(ctx context.Context, request operations.ProdTtSasportalNodesNodesPatchRequest) (*operations.ProdTtSasportalNodesNodesPatchResponse, error) {
+func (s *nodes) ProdTtSasportalNodesNodesPatch(ctx context.Context, request operations.ProdTtSasportalNodesNodesPatchRequest, security operations.ProdTtSasportalNodesNodesPatchSecurity) (*operations.ProdTtSasportalNodesNodesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalNode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *nodes) ProdTtSasportalNodesNodesPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

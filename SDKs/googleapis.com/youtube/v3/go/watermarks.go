@@ -32,11 +32,11 @@ func newWatermarks(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // YoutubeWatermarksSet - Allows upload of watermark image and setting it for a channel.
-func (s *watermarks) YoutubeWatermarksSet(ctx context.Context, request operations.YoutubeWatermarksSetRequest) (*operations.YoutubeWatermarksSetResponse, error) {
+func (s *watermarks) YoutubeWatermarksSet(ctx context.Context, request operations.YoutubeWatermarksSetRequest, security operations.YoutubeWatermarksSetSecurity) (*operations.YoutubeWatermarksSetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/watermarks/set"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *watermarks) YoutubeWatermarksSet(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *watermarks) YoutubeWatermarksSet(ctx context.Context, request operation
 }
 
 // YoutubeWatermarksUnset - Allows removal of channel watermark.
-func (s *watermarks) YoutubeWatermarksUnset(ctx context.Context, request operations.YoutubeWatermarksUnsetRequest) (*operations.YoutubeWatermarksUnsetResponse, error) {
+func (s *watermarks) YoutubeWatermarksUnset(ctx context.Context, request operations.YoutubeWatermarksUnsetRequest, security operations.YoutubeWatermarksUnsetSecurity) (*operations.YoutubeWatermarksUnsetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/watermarks/unset"
 
@@ -87,11 +87,11 @@ func (s *watermarks) YoutubeWatermarksUnset(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

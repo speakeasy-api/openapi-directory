@@ -33,7 +33,7 @@ func newAdReportMetadata(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // GetReportMetadata - This call retrieves information that details the fields used in each of the Promoted Listings reports. Use the returned information to configure the different types of Promoted Listings reports.</br></br>The request for this method does not use a payload or any URI parameters.<br/><br/><span class="tablenote"><b>Note:</b> The reporting of some data related to sales and ad-fees may require a 72-hour (<b>maximum</b>) adjustment period which is often referred to as the <i>Reconciliation Period</i>. Such adjustment periods should, on average, be minimal. However, at any given time, the <b>payments</b> tab may be used to view those amounts that have actually been charged.</span>
-func (s *adReportMetadata) GetReportMetadata(ctx context.Context, request operations.GetReportMetadataRequest) (*operations.GetReportMetadataResponse, error) {
+func (s *adReportMetadata) GetReportMetadata(ctx context.Context) (*operations.GetReportMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ad_report_metadata"
 
@@ -42,7 +42,7 @@ func (s *adReportMetadata) GetReportMetadata(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,16 +78,16 @@ func (s *adReportMetadata) GetReportMetadata(ctx context.Context, request operat
 }
 
 // GetReportMetadataForReportType - This call retrieves metadata that details the fields used by a specific Promoted Listings report type. Use the <b>report_type</b> path parameter to indicate metadata to retrieve.<br/><br/>This method does not use a request payload.<br/><br/><span class="tablenote"><b>Note:</b> The reporting of some data related to sales and ad-fees may require a 72-hour (<b>maximum</b>) adjustment period which is often referred to as the <i>Reconciliation Period</i>. Such adjustment periods should, on average, be minimal. However, at any given time, the <b>payments</b> tab may be used to view those amounts that have actually been charged.</span>
-func (s *adReportMetadata) GetReportMetadataForReportType(ctx context.Context, request operations.GetReportMetadataForReportTypeRequest) (*operations.GetReportMetadataForReportTypeResponse, error) {
+func (s *adReportMetadata) GetReportMetadataForReportType(ctx context.Context, request operations.GetReportMetadataForReportTypeRequest, security operations.GetReportMetadataForReportTypeSecurity) (*operations.GetReportMetadataForReportTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_report_metadata/{report_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_report_metadata/{report_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

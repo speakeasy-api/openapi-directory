@@ -8,17 +8,12 @@ import (
 )
 
 type DisableCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DisableCardPathParams struct {
-	// Unique ID for the desired Card.
-	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DisableCardRequest struct {
-	PathParams DisableCardPathParams
-	Security   DisableCardSecurity
+	// Unique ID for the desired Card.
+	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
 type DisableCardResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDFileOoxmlautomationidDeletePathParams struct {
+type StoryIDFileOoxmlautomationidDeleteRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// the id of the ooxml_automation object
 	OoxmlAutomationID string `pathParam:"style=simple,explode=false,name=ooxml_automation_id"`
-}
-
-type StoryIDFileOoxmlautomationidDeleteRequest struct {
-	PathParams StoryIDFileOoxmlautomationidDeletePathParams
 }
 
 type StoryIDFileOoxmlautomationidDeleteResponse struct {

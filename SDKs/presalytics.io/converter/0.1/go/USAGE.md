@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.SvgconvertRequest{
-        Request: operations.SvgconvertFileToConvert{
-            File: &operations.SvgconvertFileToConvertFile{
-                Content: []byte("corrupti"),
-                File: "provident",
-            },
+    req := operations.SvgconvertFileToConvert{
+        File: &operations.SvgconvertFileToConvertFile{
+            Content: []byte("corrupti"),
+            File: "provident",
         },
     }
 

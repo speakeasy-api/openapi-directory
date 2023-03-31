@@ -4,39 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SQLBackupRunsDeleteRequest(
-    security=operations.SQLBackupRunsDeleteSecurity(
-        option1=operations.SQLBackupRunsDeleteSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.SQLBackupRunsDeletePathParams(
-        id="id",
-        instance="ipsam",
-        project="laudantium",
-    ),
-    query_params=operations.SQLBackupRunsDeleteQueryParams(
-        dollar_xgafv="1",
-        access_token="a",
-        alt="json",
-        callback="quis",
-        fields="et",
-        key="rerum",
-        oauth_token="cum",
-        pretty_print=False,
-        quota_user="voluptatem",
-        upload_type="quis",
-        upload_protocol="voluptates",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    id="nulla",
+    instance="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    project="error",
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.backup_runs.sql_backup_runs_delete(req)
+res = s.backup_runs.sql_backup_runs_delete(req, operations.SQLBackupRunsDeleteSecurity(
+    option1=operations.SQLBackupRunsDeleteSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.operation is not None:
     # handle response

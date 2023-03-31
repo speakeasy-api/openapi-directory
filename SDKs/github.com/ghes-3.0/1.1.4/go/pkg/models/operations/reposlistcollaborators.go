@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListCollaboratorsPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposListCollaboratorsAffiliationEnum - Filter collaborators returned by their affiliation. Can be one of:
 // \* `outside`: All outside collaborators of an organization-owned repository.
 // \* `direct`: All collaborators with permissions to an organization-owned repository, regardless of organization membership status.
@@ -44,21 +39,18 @@ func (e *ReposListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ReposListCollaboratorsQueryParams struct {
+type ReposListCollaboratorsRequest struct {
 	// Filter collaborators returned by their affiliation. Can be one of:
 	// \* `outside`: All outside collaborators of an organization-owned repository.
 	// \* `direct`: All collaborators with permissions to an organization-owned repository, regardless of organization membership status.
 	// \* `all`: All collaborators the authenticated user can see.
 	Affiliation *ReposListCollaboratorsAffiliationEnum `queryParam:"style=form,explode=true,name=affiliation"`
+	Owner       string                                 `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListCollaboratorsRequest struct {
-	PathParams  ReposListCollaboratorsPathParams
-	QueryParams ReposListCollaboratorsQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListCollaboratorsResponse struct {

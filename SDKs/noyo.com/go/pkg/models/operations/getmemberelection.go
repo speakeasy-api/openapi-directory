@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMemberElectionPathParams struct {
+type GetMemberElectionRequest struct {
 	// The unique identifier of the member election
 	MemberElectionID string `pathParam:"style=simple,explode=false,name=member_election_id"`
-}
-
-type GetMemberElectionRequest struct {
-	PathParams GetMemberElectionPathParams
 }
 
 type GetMemberElectionResponse struct {

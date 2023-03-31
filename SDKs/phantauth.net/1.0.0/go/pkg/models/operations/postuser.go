@@ -75,10 +75,6 @@ type PostUserRequestBody struct {
 	Zoneinfo *string `json:"zoneinfo,omitempty"`
 }
 
-type PostUserRequest struct {
-	Request *PostUserRequestBody `request:"mediaType=application/json"`
-}
-
 type PostUserResponse struct {
 	ContentType string
 	StatusCode  int

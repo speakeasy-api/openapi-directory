@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete12PathParams struct {
+type Delete12Request struct {
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type Delete12Request struct {
-	PathParams Delete12PathParams
 }
 
 type Delete12Response struct {

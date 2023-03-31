@@ -4,16 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetEventsRequest(
-    query_params=operations.GetEventsQueryParams(
-        company="praesentium",
-        deal="totam",
-        nexttoken="asperiores",
-        queryexecutionid="deserunt",
-        site="ex",
-        type="clicks",
-    ),
+    company="Medhurst - Rau",
+    deal="quibusdam",
+    nexttoken="unde",
+    queryexecutionid="nulla",
+    site="corrupti",
+    type="contacts",
 )
     
 res = s.developers.get_events(req)

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteStripeGatewayUserUserIDCardsCardIDPathParams struct {
+type DeleteStripeGatewayUserUserIDCardsCardIDRequest struct {
 	// The id of the credit card to remove
 	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
 	// The id of the user removing their credit card
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteStripeGatewayUserUserIDCardsCardIDRequest struct {
-	PathParams DeleteStripeGatewayUserUserIDCardsCardIDPathParams
 }
 
 type DeleteStripeGatewayUserUserIDCardsCardIDResponse struct {

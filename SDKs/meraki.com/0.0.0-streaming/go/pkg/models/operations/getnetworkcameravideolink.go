@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetNetworkCameraVideoLinkPathParams struct {
+type GetNetworkCameraVideoLinkRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetNetworkCameraVideoLinkQueryParams struct {
 	// [optional] The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). If no timestamp is specified, we will assume current time.
 	Timestamp *string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type GetNetworkCameraVideoLinkRequest struct {
-	PathParams  GetNetworkCameraVideoLinkPathParams
-	QueryParams GetNetworkCameraVideoLinkQueryParams
 }
 
 type GetNetworkCameraVideoLinkResponse struct {

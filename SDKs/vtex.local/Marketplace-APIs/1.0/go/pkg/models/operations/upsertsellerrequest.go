@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpsertSellerRequestQueryParams struct {
+type UpsertSellerRequestRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType         string                     `header:"style=simple,explode=false,name=Content-Type"`
+	UpsertSellerRequest shared.UpsertSellerRequest `request:"mediaType=application/json"`
 	// Marketplace's account name, the same one inputted on the endpoint's path.
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
 	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type UpsertSellerRequestHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpsertSellerRequestRequest struct {
-	QueryParams UpsertSellerRequestQueryParams
-	Headers     UpsertSellerRequestHeaders
-	Request     shared.UpsertSellerRequest `request:"mediaType=application/json"`
 }
 
 type UpsertSellerRequestResponse struct {

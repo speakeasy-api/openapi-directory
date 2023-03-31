@@ -3,56 +3,50 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        api_key_auth="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetRecordsFormatRequest(
-    path_params=operations.GetRecordsFormatPathParams(
-        format="xml",
-    ),
-    query_params=operations.GetRecordsFormatQueryParams(
-        and_category_="Audio",
-        and_century_="praesentium",
-        and_collection_="sint",
-        and_content_partner_="qui",
-        and_creator_="atque",
-        and_date_="iusto",
-        and_dc_type_="rem",
-        and_decade_="dolorum",
-        and_format_="ut",
-        and_has_large_thumbnail_url_="Y",
-        and_has_lat_lng_=False,
-        and_is_commercial_use_=True,
-        and_or_filter_field_="maiores",
-        and_placename_="ab",
-        and_primary_collection_="amet",
-        and_subject_="fugiat",
-        and_title_="est",
-        and_usage_="Share",
-        and_year_="consequatur",
-        api_key="quia",
-        direction="asc",
-        exclude_filters_from_facets=False,
-        facets=[
-            "creator",
-            "century",
-        ],
-        facets_page=7749255547755295069,
-        facets_per_page=2063540456602819,
-        fields="corporis",
-        geo_bbox="quaerat",
-        page=693839712308138010,
-        per_page=5270800729784320551,
-        sort="syndication_date",
-        text="quam",
-        without_filter_field_="autem",
-    ),
+    authentication_token="corrupti",
+    and_category="Research papers",
+    and_century="distinctio",
+    and_collection="quibusdam",
+    and_content_partner="unde",
+    and_creator="nulla",
+    and_date="corrupti",
+    and_dc_type="illum",
+    and_decade="vel",
+    and_format="error",
+    and_has_large_thumbnail_url="Y",
+    and_has_lat_lng="false",
+    and_is_commercial_use=False,
+    and_or_filter_field="suscipit",
+    and_placename="iure",
+    and_primary_collection="magnam",
+    and_subject="debitis",
+    and_title="ipsa",
+    and_usage="Unknown",
+    and_year="tempora",
+    direction="asc",
+    exclude_filters_from_facets=False,
+    facets=[
+        "copyright",
+        "copyright",
+    ],
+    facets_page=528895,
+    facets_per_page=479977,
+    fields_="excepturi",
+    format="json",
+    geo_bbox="recusandae",
+    page=836079,
+    per_page=71036,
+    sort="syndication_date",
+    text="veritatis",
+    without_filter_field="deserunt",
 )
     
 res = s.api_calls.get_records_format_(req)

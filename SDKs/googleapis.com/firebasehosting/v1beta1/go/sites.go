@@ -32,11 +32,11 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // FirebasehostingSitesChannelsCreate - Creates a new channel in the specified site.
-func (s *sites) FirebasehostingSitesChannelsCreate(ctx context.Context, request operations.FirebasehostingSitesChannelsCreateRequest) (*operations.FirebasehostingSitesChannelsCreateResponse, error) {
+func (s *sites) FirebasehostingSitesChannelsCreate(ctx context.Context, request operations.FirebasehostingSitesChannelsCreateRequest, security operations.FirebasehostingSitesChannelsCreateSecurity) (*operations.FirebasehostingSitesChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/channels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *sites) FirebasehostingSitesChannelsCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *sites) FirebasehostingSitesChannelsCreate(ctx context.Context, request 
 }
 
 // FirebasehostingSitesChannelsList - Lists the channels for the specified site. All sites have a default `live` channel.
-func (s *sites) FirebasehostingSitesChannelsList(ctx context.Context, request operations.FirebasehostingSitesChannelsListRequest) (*operations.FirebasehostingSitesChannelsListResponse, error) {
+func (s *sites) FirebasehostingSitesChannelsList(ctx context.Context, request operations.FirebasehostingSitesChannelsListRequest, security operations.FirebasehostingSitesChannelsListSecurity) (*operations.FirebasehostingSitesChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *sites) FirebasehostingSitesChannelsList(ctx context.Context, request op
 }
 
 // FirebasehostingSitesDomainsCreate - Creates a domain mapping on the specified site.
-func (s *sites) FirebasehostingSitesDomainsCreate(ctx context.Context, request operations.FirebasehostingSitesDomainsCreateRequest) (*operations.FirebasehostingSitesDomainsCreateResponse, error) {
+func (s *sites) FirebasehostingSitesDomainsCreate(ctx context.Context, request operations.FirebasehostingSitesDomainsCreateRequest, security operations.FirebasehostingSitesDomainsCreateSecurity) (*operations.FirebasehostingSitesDomainsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Domain", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *sites) FirebasehostingSitesDomainsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *sites) FirebasehostingSitesDomainsCreate(ctx context.Context, request o
 }
 
 // FirebasehostingSitesDomainsList - Lists the domains for the specified site.
-func (s *sites) FirebasehostingSitesDomainsList(ctx context.Context, request operations.FirebasehostingSitesDomainsListRequest) (*operations.FirebasehostingSitesDomainsListResponse, error) {
+func (s *sites) FirebasehostingSitesDomainsList(ctx context.Context, request operations.FirebasehostingSitesDomainsListRequest, security operations.FirebasehostingSitesDomainsListSecurity) (*operations.FirebasehostingSitesDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *sites) FirebasehostingSitesDomainsList(ctx context.Context, request ope
 }
 
 // FirebasehostingSitesDomainsUpdate - Updates the specified domain mapping, creating the mapping as if it does not exist.
-func (s *sites) FirebasehostingSitesDomainsUpdate(ctx context.Context, request operations.FirebasehostingSitesDomainsUpdateRequest) (*operations.FirebasehostingSitesDomainsUpdateResponse, error) {
+func (s *sites) FirebasehostingSitesDomainsUpdate(ctx context.Context, request operations.FirebasehostingSitesDomainsUpdateRequest, security operations.FirebasehostingSitesDomainsUpdateSecurity) (*operations.FirebasehostingSitesDomainsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Domain", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *sites) FirebasehostingSitesDomainsUpdate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *sites) FirebasehostingSitesDomainsUpdate(ctx context.Context, request o
 }
 
 // FirebasehostingSitesReleasesCreate - Creates a new release, which makes the content of the specified version actively display on the appropriate URL(s).
-func (s *sites) FirebasehostingSitesReleasesCreate(ctx context.Context, request operations.FirebasehostingSitesReleasesCreateRequest) (*operations.FirebasehostingSitesReleasesCreateResponse, error) {
+func (s *sites) FirebasehostingSitesReleasesCreate(ctx context.Context, request operations.FirebasehostingSitesReleasesCreateRequest, security operations.FirebasehostingSitesReleasesCreateSecurity) (*operations.FirebasehostingSitesReleasesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/releases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Release", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *sites) FirebasehostingSitesReleasesCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *sites) FirebasehostingSitesReleasesCreate(ctx context.Context, request 
 }
 
 // FirebasehostingSitesReleasesList - Lists the releases that have been created for the specified site or channel. When used to list releases for a site, this list includes releases for both the default `live` channel and any active preview channels for the specified site.
-func (s *sites) FirebasehostingSitesReleasesList(ctx context.Context, request operations.FirebasehostingSitesReleasesListRequest) (*operations.FirebasehostingSitesReleasesListResponse, error) {
+func (s *sites) FirebasehostingSitesReleasesList(ctx context.Context, request operations.FirebasehostingSitesReleasesListRequest, security operations.FirebasehostingSitesReleasesListSecurity) (*operations.FirebasehostingSitesReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *sites) FirebasehostingSitesReleasesList(ctx context.Context, request op
 }
 
 // FirebasehostingSitesVersionsClone - Creates a new version on the specified target site using the content of the specified version.
-func (s *sites) FirebasehostingSitesVersionsClone(ctx context.Context, request operations.FirebasehostingSitesVersionsCloneRequest) (*operations.FirebasehostingSitesVersionsCloneResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsClone(ctx context.Context, request operations.FirebasehostingSitesVersionsCloneRequest, security operations.FirebasehostingSitesVersionsCloneSecurity) (*operations.FirebasehostingSitesVersionsCloneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions:clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions:clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CloneVersionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *sites) FirebasehostingSitesVersionsClone(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *sites) FirebasehostingSitesVersionsClone(ctx context.Context, request o
 }
 
 // FirebasehostingSitesVersionsCreate - Creates a new version for the specified site.
-func (s *sites) FirebasehostingSitesVersionsCreate(ctx context.Context, request operations.FirebasehostingSitesVersionsCreateRequest) (*operations.FirebasehostingSitesVersionsCreateResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsCreate(ctx context.Context, request operations.FirebasehostingSitesVersionsCreateRequest, security operations.FirebasehostingSitesVersionsCreateSecurity) (*operations.FirebasehostingSitesVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *sites) FirebasehostingSitesVersionsCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *sites) FirebasehostingSitesVersionsCreate(ctx context.Context, request 
 }
 
 // FirebasehostingSitesVersionsDelete - Deletes the specified version.
-func (s *sites) FirebasehostingSitesVersionsDelete(ctx context.Context, request operations.FirebasehostingSitesVersionsDeleteRequest) (*operations.FirebasehostingSitesVersionsDeleteResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsDelete(ctx context.Context, request operations.FirebasehostingSitesVersionsDeleteRequest, security operations.FirebasehostingSitesVersionsDeleteSecurity) (*operations.FirebasehostingSitesVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *sites) FirebasehostingSitesVersionsDelete(ctx context.Context, request 
 }
 
 // FirebasehostingSitesVersionsFilesList - Lists the remaining files to be uploaded for the specified version.
-func (s *sites) FirebasehostingSitesVersionsFilesList(ctx context.Context, request operations.FirebasehostingSitesVersionsFilesListRequest) (*operations.FirebasehostingSitesVersionsFilesListResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsFilesList(ctx context.Context, request operations.FirebasehostingSitesVersionsFilesListRequest, security operations.FirebasehostingSitesVersionsFilesListSecurity) (*operations.FirebasehostingSitesVersionsFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *sites) FirebasehostingSitesVersionsFilesList(ctx context.Context, reque
 }
 
 // FirebasehostingSitesVersionsGet - Get the specified version that has been created for the specified site. This can include versions that were created for the default `live` channel or for any active preview channels for the specified site.
-func (s *sites) FirebasehostingSitesVersionsGet(ctx context.Context, request operations.FirebasehostingSitesVersionsGetRequest) (*operations.FirebasehostingSitesVersionsGetResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsGet(ctx context.Context, request operations.FirebasehostingSitesVersionsGetRequest, security operations.FirebasehostingSitesVersionsGetSecurity) (*operations.FirebasehostingSitesVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,20 +650,20 @@ func (s *sites) FirebasehostingSitesVersionsGet(ctx context.Context, request ope
 }
 
 // FirebasehostingSitesVersionsList - Lists the versions that have been created for the specified site. This list includes versions for both the default `live` channel and any active preview channels for the specified site.
-func (s *sites) FirebasehostingSitesVersionsList(ctx context.Context, request operations.FirebasehostingSitesVersionsListRequest) (*operations.FirebasehostingSitesVersionsListResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsList(ctx context.Context, request operations.FirebasehostingSitesVersionsListRequest, security operations.FirebasehostingSitesVersionsListSecurity) (*operations.FirebasehostingSitesVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -698,11 +698,11 @@ func (s *sites) FirebasehostingSitesVersionsList(ctx context.Context, request op
 }
 
 // FirebasehostingSitesVersionsPatch -  Updates the specified metadata for the specified version. This method will fail with `FAILED_PRECONDITION` in the event of an invalid state transition. The supported [state](../sites.versions#versionstatus) transitions for a version are from `CREATED` to `FINALIZED`. Use [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
-func (s *sites) FirebasehostingSitesVersionsPatch(ctx context.Context, request operations.FirebasehostingSitesVersionsPatchRequest) (*operations.FirebasehostingSitesVersionsPatchResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsPatch(ctx context.Context, request operations.FirebasehostingSitesVersionsPatchRequest, security operations.FirebasehostingSitesVersionsPatchSecurity) (*operations.FirebasehostingSitesVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -714,11 +714,11 @@ func (s *sites) FirebasehostingSitesVersionsPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,11 +753,11 @@ func (s *sites) FirebasehostingSitesVersionsPatch(ctx context.Context, request o
 }
 
 // FirebasehostingSitesVersionsPopulateFiles -  Adds content files to the specified version. Each file must be under 2 GB.
-func (s *sites) FirebasehostingSitesVersionsPopulateFiles(ctx context.Context, request operations.FirebasehostingSitesVersionsPopulateFilesRequest) (*operations.FirebasehostingSitesVersionsPopulateFilesResponse, error) {
+func (s *sites) FirebasehostingSitesVersionsPopulateFiles(ctx context.Context, request operations.FirebasehostingSitesVersionsPopulateFilesRequest, security operations.FirebasehostingSitesVersionsPopulateFilesSecurity) (*operations.FirebasehostingSitesVersionsPopulateFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:populateFiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:populateFiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PopulateVersionFilesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,11 +769,11 @@ func (s *sites) FirebasehostingSitesVersionsPopulateFiles(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

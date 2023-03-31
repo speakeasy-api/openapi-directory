@@ -38,7 +38,7 @@ func newMigrations(defaultClient, securityClient HTTPClient, serverURL, language
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#cancel-an-import - API method documentation
 func (s *migrations) MigrationsCancelImport(ctx context.Context, request operations.MigrationsCancelImportRequest) (*operations.MigrationsCancelImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *migrations) MigrationsCancelImport(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#delete-a-user-migration-archive - API method documentation
 func (s *migrations) MigrationsDeleteArchiveForAuthenticatedUser(ctx context.Context, request operations.MigrationsDeleteArchiveForAuthenticatedUserRequest) (*operations.MigrationsDeleteArchiveForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *migrations) MigrationsDeleteArchiveForAuthenticatedUser(ctx context.Con
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#delete-an-organization-migration-archive - API method documentation
 func (s *migrations) MigrationsDeleteArchiveForOrg(ctx context.Context, request operations.MigrationsDeleteArchiveForOrgRequest) (*operations.MigrationsDeleteArchiveForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *migrations) MigrationsDeleteArchiveForOrg(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#download-an-organization-migration-archive - API method documentation
 func (s *migrations) MigrationsDownloadArchiveForOrg(ctx context.Context, request operations.MigrationsDownloadArchiveForOrgRequest) (*operations.MigrationsDownloadArchiveForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -252,7 +252,7 @@ func (s *migrations) MigrationsDownloadArchiveForOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#download-a-user-migration-archive - API method documentation
 func (s *migrations) MigrationsGetArchiveForAuthenticatedUser(ctx context.Context, request operations.MigrationsGetArchiveForAuthenticatedUserRequest) (*operations.MigrationsGetArchiveForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -305,14 +305,14 @@ func (s *migrations) MigrationsGetArchiveForAuthenticatedUser(ctx context.Contex
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#get-commit-authors - API method documentation
 func (s *migrations) MigrationsGetCommitAuthors(ctx context.Context, request operations.MigrationsGetCommitAuthorsRequest) (*operations.MigrationsGetCommitAuthorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/authors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -400,7 +400,7 @@ func (s *migrations) MigrationsGetCommitAuthors(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#get-an-import-status - API method documentation
 func (s *migrations) MigrationsGetImportStatus(ctx context.Context, request operations.MigrationsGetImportStatusRequest) (*operations.MigrationsGetImportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -458,7 +458,7 @@ func (s *migrations) MigrationsGetImportStatus(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#get-large-files - API method documentation
 func (s *migrations) MigrationsGetLargeFiles(ctx context.Context, request operations.MigrationsGetLargeFilesRequest) (*operations.MigrationsGetLargeFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/large_files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/large_files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -521,14 +521,14 @@ func (s *migrations) MigrationsGetLargeFiles(ctx context.Context, request operat
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#get-a-user-migration-status - API method documentation
 func (s *migrations) MigrationsGetStatusForAuthenticatedUser(ctx context.Context, request operations.MigrationsGetStatusForAuthenticatedUserRequest) (*operations.MigrationsGetStatusForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -593,14 +593,14 @@ func (s *migrations) MigrationsGetStatusForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#get-an-organization-migration-status - API method documentation
 func (s *migrations) MigrationsGetStatusForOrg(ctx context.Context, request operations.MigrationsGetStatusForOrgRequest) (*operations.MigrationsGetStatusForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -660,7 +660,7 @@ func (s *migrations) MigrationsListForAuthenticatedUser(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -720,14 +720,14 @@ func (s *migrations) MigrationsListForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#list-organization-migrations - API method documentation
 func (s *migrations) MigrationsListForOrg(ctx context.Context, request operations.MigrationsListForOrgRequest) (*operations.MigrationsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -772,14 +772,14 @@ func (s *migrations) MigrationsListForOrg(ctx context.Context, request operation
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#list-repositories-for-a-user-migration - API method documentation
 func (s *migrations) MigrationsListReposForAuthenticatedUser(ctx context.Context, request operations.MigrationsListReposForAuthenticatedUserRequest) (*operations.MigrationsListReposForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repositories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -834,14 +834,14 @@ func (s *migrations) MigrationsListReposForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#list-repositories-in-an-organization-migration - API method documentation
 func (s *migrations) MigrationsListReposForOrg(ctx context.Context, request operations.MigrationsListReposForOrgRequest) (*operations.MigrationsListReposForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repositories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -896,9 +896,9 @@ func (s *migrations) MigrationsListReposForOrg(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#map-a-commit-author - API method documentation
 func (s *migrations) MigrationsMapCommitAuthor(ctx context.Context, request operations.MigrationsMapCommitAuthorRequest) (*operations.MigrationsMapCommitAuthorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/authors/{author_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/authors/{author_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -971,9 +971,9 @@ func (s *migrations) MigrationsMapCommitAuthor(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#update-git-lfs-preference - API method documentation
 func (s *migrations) MigrationsSetLfsPreference(ctx context.Context, request operations.MigrationsSetLfsPreferenceRequest) (*operations.MigrationsSetLfsPreferenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/lfs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import/lfs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1045,7 +1045,7 @@ func (s *migrations) MigrationsSetLfsPreference(ctx context.Context, request ope
 // MigrationsStartForAuthenticatedUser - Start a user migration
 // Initiates the generation of a user migration archive.
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#start-a-user-migration - API method documentation
-func (s *migrations) MigrationsStartForAuthenticatedUser(ctx context.Context, request operations.MigrationsStartForAuthenticatedUserRequest) (*operations.MigrationsStartForAuthenticatedUserResponse, error) {
+func (s *migrations) MigrationsStartForAuthenticatedUser(ctx context.Context, request operations.MigrationsStartForAuthenticatedUserRequestBody) (*operations.MigrationsStartForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/migrations"
 
@@ -1126,9 +1126,9 @@ func (s *migrations) MigrationsStartForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#start-an-organization-migration - API method documentation
 func (s *migrations) MigrationsStartForOrg(ctx context.Context, request operations.MigrationsStartForOrgRequest) (*operations.MigrationsStartForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1202,9 +1202,9 @@ func (s *migrations) MigrationsStartForOrg(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#start-an-import - API method documentation
 func (s *migrations) MigrationsStartImport(ctx context.Context, request operations.MigrationsStartImportRequest) (*operations.MigrationsStartImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1282,7 +1282,7 @@ func (s *migrations) MigrationsStartImport(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/users#unlock-a-user-repository - API method documentation
 func (s *migrations) MigrationsUnlockRepoForAuthenticatedUser(ctx context.Context, request operations.MigrationsUnlockRepoForAuthenticatedUserRequest) (*operations.MigrationsUnlockRepoForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repos/{repo_name}/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repos/{repo_name}/lock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1335,7 +1335,7 @@ func (s *migrations) MigrationsUnlockRepoForAuthenticatedUser(ctx context.Contex
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/orgs#unlock-an-organization-repository - API method documentation
 func (s *migrations) MigrationsUnlockRepoForOrg(ctx context.Context, request operations.MigrationsUnlockRepoForOrgRequest) (*operations.MigrationsUnlockRepoForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1387,9 +1387,9 @@ func (s *migrations) MigrationsUnlockRepoForOrg(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/migrations/source-imports#update-an-import - API method documentation
 func (s *migrations) MigrationsUpdateImport(ctx context.Context, request operations.MigrationsUpdateImportRequest) (*operations.MigrationsUpdateImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

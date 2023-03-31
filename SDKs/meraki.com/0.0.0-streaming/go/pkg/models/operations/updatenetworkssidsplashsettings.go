@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSsidSplashSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkSsidSplashSettingsRequestBody struct {
 	// [optional] The custom splash URL of the click-through splash page. Note that the URL can be configured without necessarily being used. In order to enable the custom URL, see 'useSplashUrl'
 	SplashURL *string `json:"splashUrl,omitempty"`
@@ -19,8 +14,9 @@ type UpdateNetworkSsidSplashSettingsRequestBody struct {
 }
 
 type UpdateNetworkSsidSplashSettingsRequest struct {
-	PathParams UpdateNetworkSsidSplashSettingsPathParams
-	Request    *UpdateNetworkSsidSplashSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSsidSplashSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                      `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkSsidSplashSettingsResponse struct {

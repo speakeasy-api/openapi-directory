@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type IssuesListForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesListForRepoSortEnum - What to sort results by. Can be either `created`, `updated`, `comments`.
 type IssuesListForRepoSortEnum string
 
@@ -69,7 +64,7 @@ func (e *IssuesListForRepoStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IssuesListForRepoQueryParams struct {
+type IssuesListForRepoRequest struct {
 	// Can be the name of a user. Pass in `none` for issues with no assigned user, and `*` for issues assigned to any user.
 	Assignee *string `queryParam:"style=form,explode=true,name=assignee"`
 	// The user that created the issue.
@@ -82,21 +77,18 @@ type IssuesListForRepoQueryParams struct {
 	Mentioned *string `queryParam:"style=form,explode=true,name=mentioned"`
 	// If an `integer` is passed, it should refer to a milestone by its `number` field. If the string `*` is passed, issues with any milestone are accepted. If the string `none` is passed, issues without milestones are returned.
 	Milestone *string `queryParam:"style=form,explode=true,name=milestone"`
+	Owner     string  `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// What to sort results by. Can be either `created`, `updated`, `comments`.
 	Sort *IssuesListForRepoSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
 	State *IssuesListForRepoStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListForRepoRequest struct {
-	PathParams  IssuesListForRepoPathParams
-	QueryParams IssuesListForRepoQueryParams
 }
 
 type IssuesListForRepoResponse struct {

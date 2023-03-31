@@ -11,10 +11,6 @@ var EnterpriseAdminGetSettingsServerList = []string{
 	"https://{protocol}://{hostname}",
 }
 
-type EnterpriseAdminGetSettingsRequest struct {
-	ServerURL *string
-}
-
 type EnterpriseAdminGetSettingsResponse struct {
 	ContentType string
 	StatusCode  int

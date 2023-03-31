@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteColumnPathParams struct {
+type DeleteColumnRequest struct {
 	// column's name
 	ColumnName string `pathParam:"style=simple,explode=false,name=columnName"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type DeleteColumnRequest struct {
-	PathParams DeleteColumnPathParams
 }
 
 type DeleteColumnResponse struct {

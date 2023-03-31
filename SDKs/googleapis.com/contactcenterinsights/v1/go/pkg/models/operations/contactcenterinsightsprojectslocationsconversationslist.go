@@ -10,13 +10,8 @@ import (
 )
 
 type ContactcenterinsightsProjectsLocationsConversationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ContactcenterinsightsProjectsLocationsConversationsListPathParams struct {
-	// Required. The parent resource of the conversation.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ContactcenterinsightsProjectsLocationsConversationsListViewEnum - The level of details of the conversation. Default is `BASIC`.
@@ -46,7 +41,7 @@ func (e *ContactcenterinsightsProjectsLocationsConversationsListViewEnum) Unmars
 	}
 }
 
-type ContactcenterinsightsProjectsLocationsConversationsListQueryParams struct {
+type ContactcenterinsightsProjectsLocationsConversationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,6 +62,8 @@ type ContactcenterinsightsProjectsLocationsConversationsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListConversationsResponse`. This value indicates that this is a continuation of a prior `ListConversations` call and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource of the conversation.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -77,12 +74,6 @@ type ContactcenterinsightsProjectsLocationsConversationsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The level of details of the conversation. Default is `BASIC`.
 	View *ContactcenterinsightsProjectsLocationsConversationsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ContactcenterinsightsProjectsLocationsConversationsListRequest struct {
-	PathParams  ContactcenterinsightsProjectsLocationsConversationsListPathParams
-	QueryParams ContactcenterinsightsProjectsLocationsConversationsListQueryParams
-	Security    ContactcenterinsightsProjectsLocationsConversationsListSecurity
 }
 
 type ContactcenterinsightsProjectsLocationsConversationsListResponse struct {

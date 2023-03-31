@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetFeaturesFeatureIDRequest{
-        PathParams: operations.GetFeaturesFeatureIDPathParams{
-            FeatureID: 548814,
-        },
+        FeatureID: 548814,
     }
 
     ctx := context.Background()

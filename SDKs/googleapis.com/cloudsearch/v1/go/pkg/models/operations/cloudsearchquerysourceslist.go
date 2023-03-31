@@ -8,13 +8,13 @@ import (
 )
 
 type CloudsearchQuerySourcesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchQuerySourcesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchQuerySourcesListSecurity struct {
@@ -22,7 +22,7 @@ type CloudsearchQuerySourcesListSecurity struct {
 	Option2 *CloudsearchQuerySourcesListSecurityOption2 `security:"option"`
 }
 
-type CloudsearchQuerySourcesListQueryParams struct {
+type CloudsearchQuerySourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -55,11 +55,6 @@ type CloudsearchQuerySourcesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchQuerySourcesListRequest struct {
-	QueryParams CloudsearchQuerySourcesListQueryParams
-	Security    CloudsearchQuerySourcesListSecurity
 }
 
 type CloudsearchQuerySourcesListResponse struct {

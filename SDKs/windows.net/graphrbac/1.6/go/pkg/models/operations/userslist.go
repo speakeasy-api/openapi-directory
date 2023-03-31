@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersListPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type UsersListQueryParams struct {
+type UsersListRequest struct {
 	// The expand value for the operation result.
 	DollarExpand *string `queryParam:"style=form,explode=true,name=$expand"`
 	// The filter to apply to the operation.
@@ -21,11 +16,8 @@ type UsersListQueryParams struct {
 	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type UsersListRequest struct {
-	PathParams  UsersListPathParams
-	QueryParams UsersListQueryParams
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type UsersListResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Update3PathParams struct {
+type Update3Request struct {
+	// Updated existing user.
+	UserDTO shared.UserDTO `request:"mediaType=application/json"`
 	// user's internal identifier
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type Update3Request struct {
-	PathParams Update3PathParams
-	// Updated existing user.
-	Request shared.UserDTO `request:"mediaType=application/json"`
 }
 
 type Update3Response struct {

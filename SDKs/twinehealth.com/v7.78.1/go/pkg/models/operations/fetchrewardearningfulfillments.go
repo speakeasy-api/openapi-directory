@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardEarningFulfillmentsQueryParams struct {
+type FetchRewardEarningFulfillmentsRequest struct {
 	// Patient identifier
 	FilterPatient string `queryParam:"style=form,explode=true,name=filter[patient]"`
-}
-
-type FetchRewardEarningFulfillmentsRequest struct {
-	QueryParams FetchRewardEarningFulfillmentsQueryParams
 }
 
 type FetchRewardEarningFulfillmentsResponse struct {

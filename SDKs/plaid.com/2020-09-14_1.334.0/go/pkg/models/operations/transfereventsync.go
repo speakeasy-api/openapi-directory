@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferEventSyncRequest struct {
-	Request shared.TransferEventSyncRequest `request:"mediaType=application/json"`
-}
 
 type TransferEventSyncResponse struct {
 	ContentType string

@@ -40,14 +40,14 @@ func newAccountingCodes(defaultClient, securityClient HTTPClient, serverURL, lan
 // You can only delete accounting codes that have never been associated with any transactions. An accounting code must be deactivated before you can delete it.
 func (s *accountingCodes) DELETEAccountingCode(ctx context.Context, request operations.DELETEAccountingCodeRequest) (*operations.DELETEAccountingCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *accountingCodes) DELETEAccountingCode(ctx context.Context, request oper
 // This reference describes how to query an accounting code through the REST API.
 func (s *accountingCodes) GETAccountingCode(ctx context.Context, request operations.GETAccountingCodeRequest) (*operations.GETAccountingCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -145,9 +145,9 @@ func (s *accountingCodes) GETAllAccountingCodes(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -198,7 +198,7 @@ func (s *accountingCodes) POSTAccountingCode(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accounting-codes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTAccountingCodeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,7 +213,7 @@ func (s *accountingCodes) POSTAccountingCode(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -261,9 +261,9 @@ func (s *accountingCodes) POSTAccountingCode(ctx context.Context, request operat
 // You can only update accounting codes that are not already associated with any transactions.
 func (s *accountingCodes) PUTAccountingCode(ctx context.Context, request operations.PUTAccountingCodeRequest) (*operations.PUTAccountingCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTAccountingCodeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,7 +278,7 @@ func (s *accountingCodes) PUTAccountingCode(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -324,14 +324,14 @@ func (s *accountingCodes) PUTAccountingCode(ctx context.Context, request operati
 // If you have Zuora Finance enabled on your tenant, you must have the Manage Accounting Code permission.
 func (s *accountingCodes) PUTActivateAccountingCode(ctx context.Context, request operations.PUTActivateAccountingCodeRequest) (*operations.PUTActivateAccountingCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}/activate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -379,14 +379,14 @@ func (s *accountingCodes) PUTActivateAccountingCode(ctx context.Context, request
 // You cannot disable accounting codes of type AccountsReceivable.
 func (s *accountingCodes) PUTDeactivateAccountingCode(ctx context.Context, request operations.PUTDeactivateAccountingCodeRequest) (*operations.PUTDeactivateAccountingCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}/deactivate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-codes/{ac-id}/deactivate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

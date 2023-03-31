@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetArtifactPathParams struct {
+type ActionsGetArtifactRequest struct {
 	// artifact_id parameter
 	ArtifactID int64  `pathParam:"style=simple,explode=false,name=artifact_id"`
 	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsGetArtifactRequest struct {
-	PathParams ActionsGetArtifactPathParams
 }
 
 type ActionsGetArtifactResponse struct {

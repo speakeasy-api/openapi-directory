@@ -4,392 +4,61 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DrivelabelsLabelsCreateRequest(
-    query_params=operations.DrivelabelsLabelsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="dolorem",
-        alt="json",
-        callback="at",
-        fields="et",
-        key="vitae",
-        language_code="corrupti",
-        oauth_token="ut",
-        pretty_print=False,
-        quota_user="sit",
-        upload_type="corporis",
-        upload_protocol="non",
-        use_admin_access=True,
-    ),
-    request=shared.GoogleAppsDriveLabelsV2betaLabelInput(
+    dollar_xgafv="2",
+    google_apps_drive_labels_v2beta_label_input=shared.GoogleAppsDriveLabelsV2betaLabelInput(
         applied_capabilities=shared.GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities(
-            can_apply=True,
-            can_read=True,
-            can_remove=True,
+            can_apply=False,
+            can_read=False,
+            can_remove=False,
         ),
         applied_label_policy=shared.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy(
             copy_mode="ALWAYS_COPY",
         ),
         creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-            person="officia",
+            person="distinctio",
         ),
         disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-            person="quia",
+            person="quibusdam",
         ),
         display_hints=shared.GoogleAppsDriveLabelsV2betaLabelDisplayHints(
             disabled=False,
-            hidden_in_search=True,
-            priority="aut",
+            hidden_in_search=False,
+            priority="unde",
             shown_in_apply=False,
         ),
-        fields=[
+        fields_=[
             shared.GoogleAppsDriveLabelsV2betaFieldInput(
                 applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
                     can_read=False,
-                    can_search=True,
+                    can_search=False,
                     can_write=False,
                 ),
                 creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="odit",
+                    person="corrupti",
                 ),
                 date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
                     date_format_type="SHORT_DATE",
                     max_value=shared.GoogleTypeDate(
-                        day=6976668614915263925,
-                        month=2768172330756267761,
-                        year=1382216312866809937,
+                        day=423655,
+                        month=623564,
+                        year=645894,
                     ),
                     min_value=shared.GoogleTypeDate(
-                        day=3509369534544191778,
-                        month=5954847658887122489,
-                        year=256780084920837380,
+                        day=384382,
+                        month=437587,
+                        year=297534,
                     ),
                 ),
                 disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="et",
+                    person="debitis",
                 ),
                 display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
                     disabled=False,
-                    hidden_in_search=True,
+                    hidden_in_search=False,
                     required=False,
-                    shown_in_apply=True,
-                ),
-                lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
-                    disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                        hide_in_search=True,
-                        show_in_apply=False,
-                    ),
-                ),
-                properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
-                    display_name="assumenda",
-                    insert_before_field="dolor",
-                    required=True,
-                ),
-                publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="ad",
-                ),
-                schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
-                    can_delete=True,
-                    can_disable=False,
-                    can_enable=True,
-                    can_update=False,
-                ),
-                selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
-                    choices=[
-                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
-                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
-                                can_read=False,
-                                can_search=True,
-                                can_select=True,
-                            ),
-                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="consequatur",
-                            ),
-                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="sapiente",
-                            ),
-                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
-                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
-                                    background_color=shared.GoogleTypeColor(
-                                        alpha=43.099998,
-                                        blue=74.099998,
-                                        green=52.200001,
-                                        red=22.100000,
-                                    ),
-                                    foreground_color=shared.GoogleTypeColor(
-                                        alpha=42.099998,
-                                        blue=49.200001,
-                                        green=47.200001,
-                                        red=2.200000,
-                                    ),
-                                    solo_color=shared.GoogleTypeColor(
-                                        alpha=62.200001,
-                                        blue=41.099998,
-                                        green=39.099998,
-                                        red=76.099998,
-                                    ),
-                                ),
-                                badge_priority="velit",
-                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
-                                    background_color=shared.GoogleTypeColor(
-                                        alpha=63.099998,
-                                        blue=74.199997,
-                                        green=79.099998,
-                                        red=13.200000,
-                                    ),
-                                    foreground_color=shared.GoogleTypeColor(
-                                        alpha=28.200001,
-                                        blue=15.200000,
-                                        green=73.199997,
-                                        red=94.099998,
-                                    ),
-                                    solo_color=shared.GoogleTypeColor(
-                                        alpha=9.200000,
-                                        blue=75.199997,
-                                        green=67.099998,
-                                        red=96.099998,
-                                    ),
-                                ),
-                                disabled=False,
-                                hidden_in_search=True,
-                                shown_in_apply=False,
-                            ),
-                            id="et",
-                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
-                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                                    hide_in_search=True,
-                                    show_in_apply=False,
-                                ),
-                            ),
-                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
-                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
-                                    color=shared.GoogleTypeColor(
-                                        alpha=97.099998,
-                                        blue=87.199997,
-                                        green=96.199997,
-                                        red=55.200001,
-                                    ),
-                                    priority_override="rerum",
-                                ),
-                                description="omnis",
-                                display_name="non",
-                                insert_before_choice="eaque",
-                            ),
-                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="dicta",
-                            ),
-                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
-                                can_delete=False,
-                                can_disable=True,
-                                can_enable=True,
-                                can_update=False,
-                            ),
-                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="quia",
-                            ),
-                        ),
-                    ],
-                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=410411577571775176,
-                    ),
-                ),
-                updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="est",
-                ),
-                user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
-                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=1639429500697491833,
-                    ),
-                ),
-            ),
-            shared.GoogleAppsDriveLabelsV2betaFieldInput(
-                applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
-                    can_read=True,
-                    can_search=False,
-                    can_write=True,
-                ),
-                creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="deleniti",
-                ),
-                date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
-                    date_format_type="DATE_FORMAT_UNSPECIFIED",
-                    max_value=shared.GoogleTypeDate(
-                        day=3075270192667150265,
-                        month=7633785568759869260,
-                        year=8068484612203427496,
-                    ),
-                    min_value=shared.GoogleTypeDate(
-                        day=8763788367249408697,
-                        month=3402851460701826373,
-                        year=453486548603645468,
-                    ),
-                ),
-                disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="ea",
-                ),
-                display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
-                    disabled=False,
-                    hidden_in_search=True,
-                    required=True,
-                    shown_in_apply=False,
-                ),
-                lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
-                    disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                        hide_in_search=True,
-                        show_in_apply=True,
-                    ),
-                ),
-                properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
-                    display_name="aspernatur",
-                    insert_before_field="officiis",
-                    required=True,
-                ),
-                publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="possimus",
-                ),
-                schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
-                    can_delete=False,
-                    can_disable=True,
-                    can_enable=True,
-                    can_update=False,
-                ),
-                selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
-                    choices=[
-                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
-                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
-                                can_read=True,
-                                can_search=True,
-                                can_select=True,
-                            ),
-                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="id",
-                            ),
-                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="asperiores",
-                            ),
-                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
-                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
-                                    background_color=shared.GoogleTypeColor(
-                                        alpha=54.099998,
-                                        blue=59.099998,
-                                        green=76.199997,
-                                        red=42.200001,
-                                    ),
-                                    foreground_color=shared.GoogleTypeColor(
-                                        alpha=72.199997,
-                                        blue=48.200001,
-                                        green=35.200001,
-                                        red=98.199997,
-                                    ),
-                                    solo_color=shared.GoogleTypeColor(
-                                        alpha=40.099998,
-                                        blue=26.100000,
-                                        green=77.199997,
-                                        red=70.199997,
-                                    ),
-                                ),
-                                badge_priority="est",
-                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
-                                    background_color=shared.GoogleTypeColor(
-                                        alpha=99.099998,
-                                        blue=75.099998,
-                                        green=32.200001,
-                                        red=79.199997,
-                                    ),
-                                    foreground_color=shared.GoogleTypeColor(
-                                        alpha=35.099998,
-                                        blue=35.200001,
-                                        green=79.199997,
-                                        red=69.199997,
-                                    ),
-                                    solo_color=shared.GoogleTypeColor(
-                                        alpha=80.199997,
-                                        blue=75.099998,
-                                        green=47.099998,
-                                        red=76.099998,
-                                    ),
-                                ),
-                                disabled=False,
-                                hidden_in_search=True,
-                                shown_in_apply=True,
-                            ),
-                            id="eius",
-                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
-                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                                    hide_in_search=True,
-                                    show_in_apply=False,
-                                ),
-                            ),
-                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
-                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
-                                    color=shared.GoogleTypeColor(
-                                        alpha=18.100000,
-                                        blue=57.200001,
-                                        green=54.099998,
-                                        red=41.099998,
-                                    ),
-                                    priority_override="harum",
-                                ),
-                                description="id",
-                                display_name="iste",
-                                insert_before_choice="tempore",
-                            ),
-                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="ex",
-                            ),
-                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
-                                can_delete=False,
-                                can_disable=False,
-                                can_enable=False,
-                                can_update=True,
-                            ),
-                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="laboriosam",
-                            ),
-                        ),
-                    ],
-                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=5052716206277838629,
-                    ),
-                ),
-                updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="placeat",
-                ),
-                user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
-                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=6484544173372429232,
-                    ),
-                ),
-            ),
-            shared.GoogleAppsDriveLabelsV2betaFieldInput(
-                applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
-                    can_read=False,
-                    can_search=False,
-                    can_write=True,
-                ),
-                creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="quas",
-                ),
-                date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
-                    date_format_type="SHORT_DATE",
-                    max_value=shared.GoogleTypeDate(
-                        day=3860580251742400759,
-                        month=5573665413929073458,
-                        year=4004476788825385146,
-                    ),
-                    min_value=shared.GoogleTypeDate(
-                        day=3458650668677730175,
-                        month=4948513660969813682,
-                        year=1010701554713842575,
-                    ),
-                ),
-                disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="perferendis",
-                ),
-                display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
-                    disabled=True,
-                    hidden_in_search=True,
-                    required=True,
                     shown_in_apply=False,
                 ),
                 lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
@@ -399,17 +68,17 @@ req = operations.DrivelabelsLabelsCreateRequest(
                     ),
                 ),
                 properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
-                    display_name="dicta",
-                    insert_before_field="placeat",
+                    display_name="ipsa",
+                    insert_before_field="delectus",
                     required=False,
                 ),
                 publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="et",
+                    person="tempora",
                 ),
                 schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
                     can_delete=False,
                     can_disable=False,
-                    can_enable=True,
+                    can_enable=False,
                     can_update=False,
                 ),
                 selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
@@ -417,93 +86,754 @@ req = operations.DrivelabelsLabelsCreateRequest(
                         shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
                             applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
                                 can_read=False,
-                                can_search=True,
-                                can_select=True,
+                                can_search=False,
+                                can_select=False,
                             ),
                             creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="tempora",
+                                person="molestiae",
                             ),
                             disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="ut",
+                                person="minus",
                             ),
                             display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
                                 badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=26.200001,
-                                        blue=93.199997,
-                                        green=35.200001,
-                                        red=38.099998,
+                                        alpha=8121.69,
+                                        blue=5288.95,
+                                        green=4799.77,
+                                        red=5680.45,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=15.100000,
-                                        blue=88.099998,
-                                        green=98.099998,
-                                        red=74.099998,
+                                        alpha=3927.85,
+                                        blue=9255.97,
+                                        green=8360.79,
+                                        red=710.36,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=43.099998,
-                                        blue=44.200001,
-                                        green=97.199997,
-                                        red=76.199997,
+                                        alpha=3373.96,
+                                        blue=871.29,
+                                        green=6481.72,
+                                        red=202.18,
                                     ),
                                 ),
-                                badge_priority="reiciendis",
+                                badge_priority="ipsam",
                                 dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=54.200001,
-                                        blue=37.200001,
-                                        green=39.099998,
-                                        red=99.199997,
+                                        alpha=8326.2,
+                                        blue=9571.56,
+                                        green=7781.57,
+                                        red=1403.5,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=69.099998,
-                                        blue=75.199997,
-                                        green=37.099998,
-                                        red=66.199997,
+                                        alpha=8700.13,
+                                        blue=8700.88,
+                                        green=9786.19,
+                                        red=4736.08,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=95.099998,
-                                        blue=8.200000,
-                                        green=25.200001,
-                                        red=10.100000,
+                                        alpha=7991.59,
+                                        blue=8009.11,
+                                        green=4614.79,
+                                        red=5204.78,
                                     ),
                                 ),
-                                disabled=True,
+                                disabled=False,
                                 hidden_in_search=False,
                                 shown_in_apply=False,
                             ),
-                            id="dolorem",
+                            id="porro",
                             lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
                                 disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
                                     hide_in_search=False,
-                                    show_in_apply=True,
+                                    show_in_apply=False,
                                 ),
                             ),
                             properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
                                 badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
                                     color=shared.GoogleTypeColor(
-                                        alpha=0.100000,
-                                        blue=39.099998,
-                                        green=99.099998,
-                                        red=52.200001,
+                                        alpha=6788.8,
+                                        blue=1182.74,
+                                        green=7206.33,
+                                        red=6399.21,
                                     ),
-                                    priority_override="omnis",
+                                    priority_override="occaecati",
                                 ),
-                                description="debitis",
-                                display_name="reprehenderit",
-                                insert_before_choice="corrupti",
+                                description="fugit",
+                                display_name="deleniti",
+                                insert_before_choice="hic",
                             ),
                             publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="et",
+                                person="optio",
                             ),
                             schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
                                 can_delete=False,
-                                can_disable=True,
+                                can_disable=False,
                                 can_enable=False,
-                                can_update=True,
+                                can_update=False,
                             ),
                             updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="debitis",
+                                person="totam",
+                            ),
+                        ),
+                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
+                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
+                                can_read=False,
+                                can_search=False,
+                                can_select=False,
+                            ),
+                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="beatae",
+                            ),
+                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="commodi",
+                            ),
+                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
+                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=4736,
+                                        blue=2645.55,
+                                        green=1863.32,
+                                        red=7742.34,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=7369.18,
+                                        blue=4561.5,
+                                        green=2165.5,
+                                        red=5684.34,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=1352.18,
+                                        blue=187.89,
+                                        green=3241.41,
+                                        red=6176.36,
+                                    ),
+                                ),
+                                badge_priority="sed",
+                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=6120.96,
+                                        blue=2223.21,
+                                        green=6169.34,
+                                        red=3864.89,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=9437.49,
+                                        blue=9025.99,
+                                        green=6818.2,
+                                        red=4499.5,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=3595.08,
+                                        blue=6130.64,
+                                        green=4370.32,
+                                        red=9023.49,
+                                    ),
+                                ),
+                                disabled=False,
+                                hidden_in_search=False,
+                                shown_in_apply=False,
+                            ),
+                            id="quidem",
+                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                                    hide_in_search=False,
+                                    show_in_apply=False,
+                                ),
+                            ),
+                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
+                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
+                                    color=shared.GoogleTypeColor(
+                                        alpha=992.8,
+                                        blue=602.25,
+                                        green=9698.1,
+                                        red=6667.67,
+                                    ),
+                                    priority_override="mollitia",
+                                ),
+                                description="laborum",
+                                display_name="dolores",
+                                insert_before_choice="dolorem",
+                            ),
+                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="corporis",
+                            ),
+                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
+                            ),
+                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="explicabo",
+                            ),
+                        ),
+                    ],
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=750686,
+                    ),
+                ),
+                updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="enim",
+                ),
+                user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=607831,
+                    ),
+                ),
+            ),
+            shared.GoogleAppsDriveLabelsV2betaFieldInput(
+                applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
+                    can_read=False,
+                    can_search=False,
+                    can_write=False,
+                ),
+                creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="nemo",
+                ),
+                date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
+                    date_format_type="DATE_FORMAT_UNSPECIFIED",
+                    max_value=shared.GoogleTypeDate(
+                        day=570197,
+                        month=38425,
+                        year=438601,
+                    ),
+                    min_value=shared.GoogleTypeDate(
+                        day=634274,
+                        month=988374,
+                        year=958950,
+                    ),
+                ),
+                disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="architecto",
+                ),
+                display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
+                    disabled=False,
+                    hidden_in_search=False,
+                    required=False,
+                    shown_in_apply=False,
+                ),
+                lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                    disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                        hide_in_search=False,
+                        show_in_apply=False,
+                    ),
+                ),
+                properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
+                    display_name="mollitia",
+                    insert_before_field="dolorem",
+                    required=False,
+                ),
+                publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="culpa",
+                ),
+                schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
+                    can_delete=False,
+                    can_disable=False,
+                    can_enable=False,
+                    can_update=False,
+                ),
+                selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
+                    choices=[
+                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
+                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
+                                can_read=False,
+                                can_search=False,
+                                can_select=False,
+                            ),
+                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="repellat",
+                            ),
+                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="mollitia",
+                            ),
+                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
+                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=5818.5,
+                                        blue=2532.91,
+                                        green=4143.69,
+                                        red=4663.11,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=4746.97,
+                                        blue=2444.25,
+                                        green=6235.1,
+                                        red=1589.69,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=3380.07,
+                                        blue=1103.75,
+                                        green=6747.52,
+                                        red=6563.3,
+                                    ),
+                                ),
+                                badge_priority="enim",
+                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=1381.83,
+                                        blue=7783.46,
+                                        green=1965.82,
+                                        red=9495.72,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=3687.25,
+                                        blue=6625.27,
+                                        green=8209.94,
+                                        red=135.71,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=971.01,
+                                        blue=6228.46,
+                                        green=8379.45,
+                                        red=6736.6,
+                                    ),
+                                ),
+                                disabled=False,
+                                hidden_in_search=False,
+                                shown_in_apply=False,
+                            ),
+                            id="quasi",
+                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                                    hide_in_search=False,
+                                    show_in_apply=False,
+                                ),
+                            ),
+                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
+                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
+                                    color=shared.GoogleTypeColor(
+                                        alpha=9719.45,
+                                        blue=9764.6,
+                                        green=8781.94,
+                                        red=4686.51,
+                                    ),
+                                    priority_override="praesentium",
+                                ),
+                                description="voluptatibus",
+                                display_name="ipsa",
+                                insert_before_choice="omnis",
+                            ),
+                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="voluptate",
+                            ),
+                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
+                            ),
+                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="cum",
+                            ),
+                        ),
+                    ],
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=19987,
+                    ),
+                ),
+                updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="doloremque",
+                ),
+                user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=441711,
+                    ),
+                ),
+            ),
+            shared.GoogleAppsDriveLabelsV2betaFieldInput(
+                applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
+                    can_read=False,
+                    can_search=False,
+                    can_write=False,
+                ),
+                creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="ut",
+                ),
+                date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
+                    date_format_type="SHORT_DATE",
+                    max_value=shared.GoogleTypeDate(
+                        day=120196,
+                        month=359444,
+                        year=296140,
+                    ),
+                    min_value=shared.GoogleTypeDate(
+                        day=480894,
+                        month=118727,
+                        year=688661,
+                    ),
+                ),
+                disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="enim",
+                ),
+                display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
+                    disabled=False,
+                    hidden_in_search=False,
+                    required=False,
+                    shown_in_apply=False,
+                ),
+                lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                    disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                        hide_in_search=False,
+                        show_in_apply=False,
+                    ),
+                ),
+                properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
+                    display_name="accusamus",
+                    insert_before_field="commodi",
+                    required=False,
+                ),
+                publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="repudiandae",
+                ),
+                schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
+                    can_delete=False,
+                    can_disable=False,
+                    can_enable=False,
+                    can_update=False,
+                ),
+                selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
+                    choices=[
+                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
+                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
+                                can_read=False,
+                                can_search=False,
+                                can_select=False,
+                            ),
+                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="ipsum",
+                            ),
+                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="quidem",
+                            ),
+                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
+                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=5651.89,
+                                        blue=5666.02,
+                                        green=8651.03,
+                                        red=2653.89,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=5089.69,
+                                        blue=5232.48,
+                                        green=9167.23,
+                                        red=939.4,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=9211.58,
+                                        blue=5759.47,
+                                        green=831.12,
+                                        red=9292.97,
+                                    ),
+                                ),
+                                badge_priority="incidunt",
+                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=3185.69,
+                                        blue=93.56,
+                                        green=6674.11,
+                                        red=8423.42,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=1317.97,
+                                        blue=6471.74,
+                                        green=7163.27,
+                                        red=8413.86,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=2894.06,
+                                        blue=2647.3,
+                                        green=1831.91,
+                                        red=3978.21,
+                                    ),
+                                ),
+                                disabled=False,
+                                hidden_in_search=False,
+                                shown_in_apply=False,
+                            ),
+                            id="cupiditate",
+                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                                    hide_in_search=False,
+                                    show_in_apply=False,
+                                ),
+                            ),
+                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
+                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
+                                    color=shared.GoogleTypeColor(
+                                        alpha=5528.22,
+                                        blue=201.07,
+                                        green=1649.4,
+                                        red=8289.4,
+                                    ),
+                                    priority_override="ipsam",
+                                ),
+                                description="alias",
+                                display_name="fugit",
+                                insert_before_choice="dolorum",
+                            ),
+                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="excepturi",
+                            ),
+                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
+                            ),
+                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="tempora",
+                            ),
+                        ),
+                    ],
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=703737,
+                    ),
+                ),
+                updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="tempore",
+                ),
+                user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
+                    list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
+                        max_entries=288476,
+                    ),
+                ),
+            ),
+            shared.GoogleAppsDriveLabelsV2betaFieldInput(
+                applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(
+                    can_read=False,
+                    can_search=False,
+                    can_write=False,
+                ),
+                creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="delectus",
+                ),
+                date_options=shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput(
+                    date_format_type="LONG_DATE",
+                    max_value=shared.GoogleTypeDate(
+                        day=248753,
+                        month=756107,
+                        year=576157,
+                    ),
+                    min_value=shared.GoogleTypeDate(
+                        day=396098,
+                        month=592042,
+                        year=896039,
+                    ),
+                ),
+                disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="sint",
+                ),
+                display_hints=shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints(
+                    disabled=False,
+                    hidden_in_search=False,
+                    required=False,
+                    shown_in_apply=False,
+                ),
+                lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                    disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                        hide_in_search=False,
+                        show_in_apply=False,
+                    ),
+                ),
+                properties=shared.GoogleAppsDriveLabelsV2betaFieldProperties(
+                    display_name="officia",
+                    insert_before_field="dolor",
+                    required=False,
+                ),
+                publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                    person="debitis",
+                ),
+                schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities(
+                    can_delete=False,
+                    can_disable=False,
+                    can_enable=False,
+                    can_update=False,
+                ),
+                selection_options=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput(
+                    choices=[
+                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
+                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
+                                can_read=False,
+                                can_search=False,
+                                can_select=False,
+                            ),
+                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="dolorum",
+                            ),
+                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="in",
+                            ),
+                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
+                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=4491.98,
+                                        blue=8464.09,
+                                        green=9785.71,
+                                        red=6994.79,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=1162.02,
+                                        blue=2974.37,
+                                        green=7670.24,
+                                        red=8137.98,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=4118.2,
+                                        blue=3965.06,
+                                        green=6754.39,
+                                        red=8811.04,
+                                    ),
+                                ),
+                                badge_priority="non",
+                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=5812.73,
+                                        blue=3132.18,
+                                        green=8817.36,
+                                        red=9654.17,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=6925.32,
+                                        blue=5884.65,
+                                        green=7252.55,
+                                        red=6596.69,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=5013.24,
+                                        blue=5332.06,
+                                        green=9560.84,
+                                        red=2305.33,
+                                    ),
+                                ),
+                                disabled=False,
+                                hidden_in_search=False,
+                                shown_in_apply=False,
+                            ),
+                            id="deserunt",
+                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                                    hide_in_search=False,
+                                    show_in_apply=False,
+                                ),
+                            ),
+                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
+                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
+                                    color=shared.GoogleTypeColor(
+                                        alpha=3948.69,
+                                        blue=4238.55,
+                                        green=6188.09,
+                                        red=6063.93,
+                                    ),
+                                    priority_override="molestiae",
+                                ),
+                                description="perferendis",
+                                display_name="nihil",
+                                insert_before_choice="magnam",
+                            ),
+                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="distinctio",
+                            ),
+                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
+                            ),
+                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="id",
+                            ),
+                        ),
+                        shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
+                            applied_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities(
+                                can_read=False,
+                                can_search=False,
+                                can_select=False,
+                            ),
+                            creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="labore",
+                            ),
+                            disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="labore",
+                            ),
+                            display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
+                                badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=3834.62,
+                                        blue=6180.16,
+                                        green=7491.7,
+                                        red=4287.69,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=8784.53,
+                                        blue=1354.74,
+                                        green=1028.63,
+                                        red=2982.82,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=923.73,
+                                        blue=5699.65,
+                                        green=3540.47,
+                                        red=5908.73,
+                                    ),
+                                ),
+                                badge_priority="quos",
+                                dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
+                                    background_color=shared.GoogleTypeColor(
+                                        alpha=5743.25,
+                                        blue=336.25,
+                                        green=6532.01,
+                                        red=9689.62,
+                                    ),
+                                    foreground_color=shared.GoogleTypeColor(
+                                        alpha=6521.03,
+                                        blue=3209.97,
+                                        green=4314.18,
+                                        red=2212.62,
+                                    ),
+                                    solo_color=shared.GoogleTypeColor(
+                                        alpha=8965.47,
+                                        blue=1412.64,
+                                        green=3675.62,
+                                        red=972.6,
+                                    ),
+                                ),
+                                disabled=False,
+                                hidden_in_search=False,
+                                shown_in_apply=False,
+                            ),
+                            id="iure",
+                            lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
+                                disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
+                                    hide_in_search=False,
+                                    show_in_apply=False,
+                                ),
+                            ),
+                            properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
+                                badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
+                                    color=shared.GoogleTypeColor(
+                                        alpha=9840.43,
+                                        blue=8919.24,
+                                        green=2603.41,
+                                        red=8061.94,
+                                    ),
+                                    priority_override="deleniti",
+                                ),
+                                description="facilis",
+                                display_name="in",
+                                insert_before_choice="architecto",
+                            ),
+                            publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="architecto",
+                            ),
+                            schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
+                            ),
+                            updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
+                                person="repudiandae",
                             ),
                         ),
                         shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
@@ -516,86 +846,86 @@ req = operations.DrivelabelsLabelsCreateRequest(
                                 person="ullam",
                             ),
                             disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="quia",
+                                person="expedita",
                             ),
                             display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
                                 badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=75.099998,
-                                        blue=51.200001,
-                                        green=68.199997,
-                                        red=5.200000,
+                                        alpha=4692.49,
+                                        blue=9988.48,
+                                        green=8411.4,
+                                        red=1494.48,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=68.199997,
-                                        blue=27.200001,
-                                        green=12.200000,
-                                        red=24.200001,
+                                        alpha=9046.48,
+                                        blue=8681.26,
+                                        green=375.59,
+                                        red=1624.93,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=28.200001,
-                                        blue=47.200001,
-                                        green=76.099998,
-                                        red=57.200001,
+                                        alpha=5083.15,
+                                        blue=6155.6,
+                                        green=1668.47,
+                                        red=1238.2,
                                     ),
                                 ),
-                                badge_priority="voluptatem",
+                                badge_priority="quo",
                                 dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=55.200001,
-                                        blue=90.199997,
-                                        green=97.199997,
-                                        red=15.100000,
+                                        alpha=8480.09,
+                                        blue=8649.34,
+                                        green=8073.19,
+                                        red=4113.97,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=48.099998,
-                                        blue=6.200000,
-                                        green=73.199997,
-                                        red=99.199997,
+                                        alpha=5691.01,
+                                        blue=1399.72,
+                                        green=4071.83,
+                                        red=332.22,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=96.199997,
-                                        blue=92.099998,
-                                        green=39.200001,
-                                        red=59.200001,
+                                        alpha=691.67,
+                                        blue=9825.75,
+                                        green=6974.29,
+                                        red=3732.91,
                                     ),
                                 ),
                                 disabled=False,
                                 hidden_in_search=False,
-                                shown_in_apply=True,
+                                shown_in_apply=False,
                             ),
-                            id="at",
+                            id="voluptate",
                             lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
                                 disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
                                     hide_in_search=False,
-                                    show_in_apply=True,
+                                    show_in_apply=False,
                                 ),
                             ),
                             properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
                                 badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
                                     color=shared.GoogleTypeColor(
-                                        alpha=33.099998,
-                                        blue=72.199997,
-                                        green=79.099998,
-                                        red=2.200000,
+                                        alpha=4200.75,
+                                        blue=7220.56,
+                                        green=505.88,
+                                        red=8663.83,
                                     ),
-                                    priority_override="qui",
+                                    priority_override="nemo",
                                 ),
-                                description="rerum",
-                                display_name="voluptas",
-                                insert_before_choice="recusandae",
+                                description="voluptatibus",
+                                display_name="perferendis",
+                                insert_before_choice="fugiat",
                             ),
                             publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="ut",
+                                person="amet",
                             ),
                             schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
-                                can_delete=True,
-                                can_disable=True,
-                                can_enable=True,
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
                                 can_update=False,
                             ),
                             updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="iste",
+                                person="aut",
                             ),
                         ),
                         shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput(
@@ -605,131 +935,143 @@ req = operations.DrivelabelsLabelsCreateRequest(
                                 can_select=False,
                             ),
                             creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="sed",
+                                person="cumque",
                             ),
                             disabler=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="nobis",
+                                person="corporis",
                             ),
                             display_hints=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints(
                                 badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=50.099998,
-                                        blue=58.200001,
-                                        green=1.100000,
-                                        red=85.199997,
+                                        alpha=9441.24,
+                                        blue=7299.91,
+                                        green=7499.99,
+                                        red=1716.29,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=54.200001,
-                                        blue=48.200001,
-                                        green=57.099998,
-                                        red=18.200001,
+                                        alpha=3394.04,
+                                        blue=5210.37,
+                                        green=4895.49,
+                                        red=543.38,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=78.099998,
-                                        blue=16.200001,
-                                        green=4.200000,
-                                        red=5.200000,
+                                        alpha=3389.85,
+                                        blue=1999.96,
+                                        green=1794.9,
+                                        red=185.21,
                                     ),
                                 ),
-                                badge_priority="sed",
+                                badge_priority="dolores",
                                 dark_badge_colors=shared.GoogleAppsDriveLabelsV2betaBadgeColors(
                                     background_color=shared.GoogleTypeColor(
-                                        alpha=34.099998,
-                                        blue=41.200001,
-                                        green=44.099998,
-                                        red=77.199997,
+                                        alpha=7936.98,
+                                        blue=4634.51,
+                                        green=2239.24,
+                                        red=8745.73,
                                     ),
                                     foreground_color=shared.GoogleTypeColor(
-                                        alpha=48.200001,
-                                        blue=72.199997,
-                                        green=34.200001,
-                                        red=96.199997,
+                                        alpha=3453.52,
+                                        blue=9441.2,
+                                        green=9280.82,
+                                        red=6082.53,
                                     ),
                                     solo_color=shared.GoogleTypeColor(
-                                        alpha=50.099998,
-                                        blue=91.099998,
-                                        green=32.200001,
-                                        red=99.199997,
+                                        alpha=7044.15,
+                                        blue=5966.56,
+                                        green=318.38,
+                                        red=7836.45,
                                     ),
                                 ),
-                                disabled=True,
+                                disabled=False,
                                 hidden_in_search=False,
-                                shown_in_apply=True,
+                                shown_in_apply=False,
                             ),
-                            id="velit",
+                            id="consequuntur",
                             lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
                                 disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                                    hide_in_search=True,
+                                    hide_in_search=False,
                                     show_in_apply=False,
                                 ),
                             ),
                             properties=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties(
                                 badge_config=shared.GoogleAppsDriveLabelsV2betaBadgeConfig(
                                     color=shared.GoogleTypeColor(
-                                        alpha=72.199997,
-                                        blue=34.099998,
-                                        green=50.099998,
-                                        red=3.100000,
+                                        alpha=5000.26,
+                                        blue=6214.79,
+                                        green=503.7,
+                                        red=5772.29,
                                     ),
-                                    priority_override="qui",
+                                    priority_override="rerum",
                                 ),
-                                description="suscipit",
-                                display_name="neque",
-                                insert_before_choice="cupiditate",
+                                description="adipisci",
+                                display_name="asperiores",
+                                insert_before_choice="earum",
                             ),
                             publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="eius",
+                                person="modi",
                             ),
                             schema_capabilities=shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities(
-                                can_delete=True,
-                                can_disable=True,
-                                can_enable=True,
-                                can_update=True,
+                                can_delete=False,
+                                can_disable=False,
+                                can_enable=False,
+                                can_update=False,
                             ),
                             updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                                person="laborum",
+                                person="iste",
                             ),
                         ),
                     ],
                     list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=5892390926459788196,
+                        max_entries=679091,
                     ),
                 ),
                 updater=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-                    person="voluptas",
+                    person="deleniti",
                 ),
                 user_options=shared.GoogleAppsDriveLabelsV2betaFieldUserOptions(
                     list_options=shared.GoogleAppsDriveLabelsV2betaFieldListOptions(
-                        max_entries=7517216725397715132,
+                        max_entries=864282,
                     ),
                 ),
             ),
         ],
-        label_type="LABEL_TYPE_UNSPECIFIED",
-        learn_more_uri="qui",
+        label_type="SHARED",
+        learn_more_uri="nobis",
         lifecycle=shared.GoogleAppsDriveLabelsV2betaLifecycleInput(
             disabled_policy=shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy(
-                hide_in_search=True,
-                show_in_apply=True,
+                hide_in_search=False,
+                show_in_apply=False,
             ),
         ),
         properties=shared.GoogleAppsDriveLabelsV2betaLabelProperties(
-            description="est",
-            title="aut",
+            description="libero",
+            title="Dr.",
         ),
         publisher=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-            person="quos",
+            person="quaerat",
         ),
         revision_creator=shared.GoogleAppsDriveLabelsV2betaUserInfo(
-            person="accusamus",
+            person="quos",
         ),
         schema_capabilities=shared.GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities(
             can_delete=False,
-            can_disable=True,
-            can_enable=True,
-            can_update=True,
+            can_disable=False,
+            can_enable=False,
+            can_update=False,
         ),
     ),
+    access_token="aliquid",
+    alt="json",
+    callback="dolorem",
+    fields_="dolor",
+    key="qui",
+    language_code="ipsum",
+    oauth_token="hic",
+    pretty_print=False,
+    quota_user="excepturi",
+    upload_type="cum",
+    upload_protocol="voluptate",
+    use_admin_access=False,
 )
     
 res = s.labels.drivelabels_labels_create(req)

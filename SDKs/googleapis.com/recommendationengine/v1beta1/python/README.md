@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/recommendationengine/v1beta1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,107 +15,147 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest(
-    security=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams(
-        parent="enim",
-    ),
-    query_params=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="voluptas",
-        alt="json",
-        callback="et",
-        fields="id",
-        key="dolorem",
-        oauth_token="sit",
-        pretty_print=True,
-        quota_user="a",
-        upload_type="nulla",
-        upload_protocol="blanditiis",
-    ),
-    request=shared.GoogleCloudRecommendationengineV1beta1CatalogItem(
+    dollar_xgafv="2",
+    google_cloud_recommendationengine_v1beta1_catalog_item=shared.GoogleCloudRecommendationengineV1beta1CatalogItem(
         category_hierarchies=[
             shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(
                 categories=[
-                    "corporis",
-                    "recusandae",
+                    "quibusdam",
+                    "unde",
+                    "nulla",
+                ],
+            ),
+            shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(
+                categories=[
+                    "illum",
+                    "vel",
+                    "error",
+                ],
+            ),
+            shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(
+                categories=[
+                    "suscipit",
+                    "iure",
+                    "magnam",
                 ],
             ),
         ],
-        description="delectus",
-        id="eos",
+        description="debitis",
+        id="ipsa",
         item_attributes=shared.GoogleCloudRecommendationengineV1beta1FeatureMap(
             categorical_features={
-                "culpa": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
+                "tempora": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
                     value=[
-                        "aut",
-                        "consequatur",
+                        "molestiae",
+                        "minus",
+                    ],
+                ),
+                "placeat": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
+                    value=[
+                        "iusto",
+                        "excepturi",
+                        "nisi",
+                    ],
+                ),
+                "recusandae": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
+                    value=[
+                        "ab",
+                        "quis",
+                        "veritatis",
+                        "deserunt",
+                    ],
+                ),
+                "perferendis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
+                    value=[
+                        "repellendus",
+                        "sapiente",
                     ],
                 ),
             },
             numerical_features={
-                "odio": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
+                "odit": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
                     value=[
-                        34.200001,
-                        40.200001,
+                        8700.88,
+                        9786.19,
+                        4736.08,
+                        7991.59,
+                    ],
+                ),
+                "quod": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
+                    value=[
+                        5204.78,
+                        7805.29,
+                    ],
+                ),
+                "dolorum": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
+                    value=[
+                        7206.33,
+                    ],
+                ),
+                "officia": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
+                    value=[
+                        1433.53,
+                        5373.73,
+                        9446.69,
                     ],
                 ),
             },
         ),
-        item_group_id="iste",
-        language_code="et",
+        item_group_id="optio",
+        language_code="totam",
         product_metadata=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem(
-            available_quantity="et",
-            canonical_product_uri="laudantium",
+            available_quantity="beatae",
+            canonical_product_uri="commodi",
             costs={
-                "similique": 77.199997,
+                "modi": 1863.32,
+                "impedit": 7369.18,
             },
-            currency_code="incidunt",
+            currency_code="esse",
             exact_price=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice(
-                display_price=27.200001,
-                original_price=64.099998,
+                display_price=2165.5,
+                original_price=5684.34,
             ),
             images=[
                 shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=8942292800023669852,
-                    uri="autem",
-                    width=5883357621257773236,
-                ),
-                shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=478099075473941033,
-                    uri="dolore",
-                    width=7587515172654034190,
-                ),
-                shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=8043303013086071262,
-                    uri="ipsa",
-                    width=1654514952870731982,
+                    height=18789,
+                    uri="http://perky-charset.name",
+                    width=222321,
                 ),
             ],
             price_range=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange(
-                max=75.199997,
-                min=32.099998,
+                max=6169.34,
+                min=3864.89,
             ),
-            stock_state="IN_STOCK",
+            stock_state="BACKORDER",
         ),
         tags=[
-            "aut",
-            "reprehenderit",
-            "ea",
+            "fuga",
+            "in",
+            "corporis",
+            "iste",
         ],
-        title="dolorem",
+        title="Ms.",
     ),
+    access_token="saepe",
+    alt="proto",
+    callback="architecto",
+    fields_="ipsa",
+    key="reiciendis",
+    oauth_token="est",
+    parent="mollitia",
+    pretty_print=False,
+    quota_user="laborum",
+    upload_type="dolores",
+    upload_protocol="dolorem",
 )
     
-res = s.projects.recommendationengine_projects_locations_catalogs_catalog_items_create(req)
+res = s.projects.recommendationengine_projects_locations_catalogs_catalog_items_create(req, operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_recommendationengine_v1beta1_catalog_item is not None:
     # handle response
@@ -123,7 +163,8 @@ if res.google_cloud_recommendationengine_v1beta1_catalog_item is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -143,8 +184,18 @@ if res.google_cloud_recommendationengine_v1beta1_catalog_item is not None:
 * `recommendationengine_projects_locations_catalogs_event_stores_user_events_write` - Writes a single user event.
 * `recommendationengine_projects_locations_catalogs_list` - Lists all the catalog configurations associated with the project.
 * `recommendationengine_projects_locations_catalogs_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `recommendationengine_projects_locations_catalogs_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `recommendationengine_projects_locations_catalogs_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

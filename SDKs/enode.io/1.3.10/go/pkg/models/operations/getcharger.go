@@ -9,27 +9,18 @@ import (
 )
 
 type GetChargerSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken2 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken2 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetChargerPathParams struct {
+type GetChargerRequest struct {
 	// ID of the Charger
 	ChargerID string `pathParam:"style=simple,explode=false,name=chargerId"`
-}
-
-type GetChargerQueryParams struct {
 	// An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState`
 	//
 	// By default, no optional fields are included and only the Charger ID will be returned. Response time will generally be slower the more fields you request.
 	Field []shared.OnechargersGetParameters0Enum `queryParam:"style=form,explode=true,name=field[]"`
-}
-
-type GetChargerRequest struct {
-	PathParams  GetChargerPathParams
-	QueryParams GetChargerQueryParams
-	Security    GetChargerSecurity
 }
 
 type GetCharger200ApplicationJSONChargeState struct {

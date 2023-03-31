@@ -10,25 +10,18 @@ import (
 )
 
 type StorageObjectsUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsUpdateSecurity struct {
 	Option1 *StorageObjectsUpdateSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsUpdateSecurityOption2 `security:"option"`
-}
-
-type StorageObjectsUpdatePathParams struct {
-	// Name of the bucket in which the object resides.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 // StorageObjectsUpdatePredefinedACLEnum - Apply a predefined set of access controls to this object.
@@ -91,9 +84,12 @@ func (e *StorageObjectsUpdateProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsUpdateQueryParams struct {
+type StorageObjectsUpdateRequest struct {
+	Object1 *shared.Object `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which the object resides.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -110,6 +106,8 @@ type StorageObjectsUpdateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	ObjectPathParameter string `pathParam:"style=simple,explode=false,name=object"`
 	// Apply a predefined set of access controls to this object.
 	PredefinedACL *StorageObjectsUpdatePredefinedACLEnum `queryParam:"style=form,explode=true,name=predefinedAcl"`
 	// Returns response with indentations and line breaks.
@@ -124,13 +122,6 @@ type StorageObjectsUpdateQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsUpdateRequest struct {
-	PathParams  StorageObjectsUpdatePathParams
-	QueryParams StorageObjectsUpdateQueryParams
-	Request     *shared.Object `request:"mediaType=application/json"`
-	Security    StorageObjectsUpdateSecurity
 }
 
 type StorageObjectsUpdateResponse struct {

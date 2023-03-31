@@ -8,23 +8,14 @@ import (
 )
 
 type GetMatchZebraSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMatchZebraPathParams struct {
-	// TBA Match Key, eg `2016nytr_qm1`
-	MatchKey string `pathParam:"style=simple,explode=false,name=match_key"`
-}
-
-type GetMatchZebraHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetMatchZebraRequest struct {
-	PathParams GetMatchZebraPathParams
-	Headers    GetMatchZebraHeaders
-	Security   GetMatchZebraSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// TBA Match Key, eg `2016nytr_qm1`
+	MatchKey string `pathParam:"style=simple,explode=false,name=match_key"`
 }
 
 type GetMatchZebraResponse struct {

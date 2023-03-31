@@ -32,20 +32,20 @@ func newBackupRuns(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // SQLBackupRunsDelete - Deletes the backup taken by a backup run.
-func (s *backupRuns) SQLBackupRunsDelete(ctx context.Context, request operations.SQLBackupRunsDeleteRequest) (*operations.SQLBackupRunsDeleteResponse, error) {
+func (s *backupRuns) SQLBackupRunsDelete(ctx context.Context, request operations.SQLBackupRunsDeleteRequest, security operations.SQLBackupRunsDeleteSecurity) (*operations.SQLBackupRunsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *backupRuns) SQLBackupRunsDelete(ctx context.Context, request operations
 }
 
 // SQLBackupRunsGet - Retrieves a resource containing information about a backup run.
-func (s *backupRuns) SQLBackupRunsGet(ctx context.Context, request operations.SQLBackupRunsGetRequest) (*operations.SQLBackupRunsGetResponse, error) {
+func (s *backupRuns) SQLBackupRunsGet(ctx context.Context, request operations.SQLBackupRunsGetRequest, security operations.SQLBackupRunsGetSecurity) (*operations.SQLBackupRunsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *backupRuns) SQLBackupRunsGet(ctx context.Context, request operations.SQ
 }
 
 // SQLBackupRunsInsert - Creates a new backup run on demand.
-func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations.SQLBackupRunsInsertRequest) (*operations.SQLBackupRunsInsertResponse, error) {
+func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations.SQLBackupRunsInsertRequest, security operations.SQLBackupRunsInsertSecurity) (*operations.SQLBackupRunsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupRun", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations
 }
 
 // SQLBackupRunsList - Lists all backup runs associated with the project or a given instance and configuration in the reverse chronological order of the backup initiation time.
-func (s *backupRuns) SQLBackupRunsList(ctx context.Context, request operations.SQLBackupRunsListRequest) (*operations.SQLBackupRunsListResponse, error) {
+func (s *backupRuns) SQLBackupRunsList(ctx context.Context, request operations.SQLBackupRunsListRequest, security operations.SQLBackupRunsListSecurity) (*operations.SQLBackupRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/backupRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

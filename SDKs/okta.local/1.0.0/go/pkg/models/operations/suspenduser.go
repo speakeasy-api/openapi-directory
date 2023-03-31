@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SuspendUserPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type SuspendUserRequest struct {
-	PathParams SuspendUserPathParams
-	Request    []byte `request:"mediaType=text/plain"`
+	RequestBody []byte `request:"mediaType=text/plain"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SuspendUserResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationInsightMonitoredMediaServerPathParams struct {
+type GetOrganizationInsightMonitoredMediaServerRequest struct {
 	MonitoredMediaServerID string `pathParam:"style=simple,explode=false,name=monitoredMediaServerId"`
 	OrganizationID         string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationInsightMonitoredMediaServerRequest struct {
-	PathParams GetOrganizationInsightMonitoredMediaServerPathParams
 }
 
 type GetOrganizationInsightMonitoredMediaServerResponse struct {

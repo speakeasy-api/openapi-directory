@@ -33,7 +33,7 @@ func (e *BoxScoresDeltaByDateByCompetitionFormatEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type BoxScoresDeltaByDateByCompetitionPathParams struct {
+type BoxScoresDeltaByDateByCompetitionRequest struct {
 	// An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: <code>EPL</code>, <code>1</code>, <code>MLS</code>, <code>8</code>, etc.
 	Competition string `pathParam:"style=simple,explode=false,name=competition"`
 	// The date of the game(s).
@@ -44,10 +44,6 @@ type BoxScoresDeltaByDateByCompetitionPathParams struct {
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back. Valid entries are:
 	// <code>1</code>, <code>2</code> ... <code>all</code>.
 	Minutes string `pathParam:"style=simple,explode=false,name=minutes"`
-}
-
-type BoxScoresDeltaByDateByCompetitionRequest struct {
-	PathParams BoxScoresDeltaByDateByCompetitionPathParams
 }
 
 type BoxScoresDeltaByDateByCompetitionResponse struct {

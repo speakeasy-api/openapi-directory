@@ -27,7 +27,6 @@ pkg/models/shared/activity.go
 pkg/models/shared/nestedparameter.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/channel.go
 pkg/models/shared/usagereports.go
 pkg/models/shared/usagereport.go

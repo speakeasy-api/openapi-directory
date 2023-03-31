@@ -8,16 +8,11 @@ import (
 )
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListPathParams struct {
-	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListQueryParams struct {
+type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token identifying which result to start with; returned by a previous list call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListRequest struct {
-	PathParams  ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListPathParams
-	QueryParams ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListQueryParams
-	Security    ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListSecurity
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse struct {

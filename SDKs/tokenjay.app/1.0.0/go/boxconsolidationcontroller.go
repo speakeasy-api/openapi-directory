@@ -34,7 +34,7 @@ func newBoxConsolidationController(defaultClient, securityClient HTTPClient, ser
 
 func (s *boxConsolidationController) EpConsolidate(ctx context.Context, request operations.EpConsolidateRequest) (*operations.EpConsolidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

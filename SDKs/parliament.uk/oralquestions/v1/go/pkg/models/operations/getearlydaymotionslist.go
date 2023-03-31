@@ -69,7 +69,7 @@ func (e *GetEarlyDayMotionsListParametersStatusesEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetEarlyDayMotionsListQueryParams struct {
+type GetEarlyDayMotionsListRequest struct {
 	// Early Day Motions where the current status has been set on or before the date provided. Date format YYYY-MM-DD.
 	ParametersCurrentStatusDateEnd *time.Time `queryParam:"style=form,explode=true,name=parameters.currentStatusDateEnd"`
 	// Early Day Motions where the current status has been set on or after the date provided. Date format YYYY-MM-DD.
@@ -98,10 +98,6 @@ type GetEarlyDayMotionsListQueryParams struct {
 	ParametersTake *int `queryParam:"style=form,explode=true,name=parameters.take"`
 	// Early Day Motions with an UINWithAmendmentSuffix provided.
 	ParametersUINWithAmendmentSuffix *string `queryParam:"style=form,explode=true,name=parameters.uINWithAmendmentSuffix"`
-}
-
-type GetEarlyDayMotionsListRequest struct {
-	QueryParams GetEarlyDayMotionsListQueryParams
 }
 
 type GetEarlyDayMotionsListResponse struct {

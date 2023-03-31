@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type ListAchTransfersQueryParams struct {
+type ListAchTransfersRequest struct {
 	AccountID           *string    `queryParam:"style=form,explode=true,name=account_id"`
 	CreatedAtAfter      *time.Time `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time `queryParam:"style=form,explode=true,name=created_at.before"`
@@ -19,10 +19,6 @@ type ListAchTransfersQueryParams struct {
 	Cursor              *string    `queryParam:"style=form,explode=true,name=cursor"`
 	ExternalAccountID   *string    `queryParam:"style=form,explode=true,name=external_account_id"`
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListAchTransfersRequest struct {
-	QueryParams ListAchTransfersQueryParams
 }
 
 type ListAchTransfersDefaultApplicationJSON13StatusEnum string

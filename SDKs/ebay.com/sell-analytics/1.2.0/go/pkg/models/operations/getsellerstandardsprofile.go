@@ -8,19 +8,14 @@ import (
 )
 
 type GetSellerStandardsProfileSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSellerStandardsProfilePathParams struct {
+type GetSellerStandardsProfileRequest struct {
 	// The period covered by the returned standards profile evaluation. Supply one of two values, CURRENT means the response reflects eBay's most recent monthly standards evaluation and PROJECTED means the response reflect the seller's projected monthly evaluation, as calculated at the time of the request.
 	Cycle string `pathParam:"style=simple,explode=false,name=cycle"`
 	// This input value specifies the region used to determine the seller's standards profile. Supply one of the four following values, PROGRAM_DE, PROGRAM_UK, PROGRAM_US, or PROGRAM_GLOBAL.
 	Program string `pathParam:"style=simple,explode=false,name=program"`
-}
-
-type GetSellerStandardsProfileRequest struct {
-	PathParams GetSellerStandardsProfilePathParams
-	Security   GetSellerStandardsProfileSecurity
 }
 
 type GetSellerStandardsProfileResponse struct {

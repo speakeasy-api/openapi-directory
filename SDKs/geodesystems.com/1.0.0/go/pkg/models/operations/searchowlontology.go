@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchOwlOntologyQueryParams struct {
+type SearchOwlOntologyRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchOwlOntologyQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchOwlOntologyRequest struct {
-	QueryParams SearchOwlOntologyQueryParams
 }
 
 type SearchOwlOntologyResponse struct {

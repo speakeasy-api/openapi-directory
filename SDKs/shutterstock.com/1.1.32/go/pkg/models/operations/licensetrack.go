@@ -10,7 +10,7 @@ import (
 )
 
 type LicenseTrackSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // LicenseTrackLicenseEnum - License type
@@ -49,18 +49,13 @@ func (e *LicenseTrackLicenseEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LicenseTrackQueryParams struct {
+type LicenseTrackRequest struct {
+	// Tracks to license
+	LicenseAudioRequest shared.LicenseAudioRequest `request:"mediaType=application/json"`
 	// License type
 	License *LicenseTrackLicenseEnum `queryParam:"style=form,explode=true,name=license"`
 	// The ID of the search that led to licensing this track
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
-}
-
-type LicenseTrackRequest struct {
-	QueryParams LicenseTrackQueryParams
-	// Tracks to license
-	Request  shared.LicenseAudioRequest `request:"mediaType=application/json"`
-	Security LicenseTrackSecurity
 }
 
 type LicenseTrackResponse struct {

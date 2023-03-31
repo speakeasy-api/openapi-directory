@@ -25,11 +25,6 @@ type PostOauthLiveSessionTokenRequestBody struct {
 	OauthToken *string `json:"oauth_token,omitempty"`
 }
 
-type PostOauthLiveSessionTokenRequest struct {
-	// OAuth Parameters
-	Request PostOauthLiveSessionTokenRequestBody `request:"mediaType=application/json"`
-}
-
 // PostOauthLiveSessionToken200ApplicationJSON - DH response
 type PostOauthLiveSessionToken200ApplicationJSON struct {
 	DiffieHellmanResponse     *string `json:"diffie_hellman_response,omitempty"`

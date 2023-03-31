@@ -33,7 +33,7 @@ func newMetadata(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdsenseMetadataDimensionsList - List the metadata for the dimensions available to this AdSense account.
-func (s *metadata) AdsenseMetadataDimensionsList(ctx context.Context, request operations.AdsenseMetadataDimensionsListRequest) (*operations.AdsenseMetadataDimensionsListResponse, error) {
+func (s *metadata) AdsenseMetadataDimensionsList(ctx context.Context, request operations.AdsenseMetadataDimensionsListRequest, security operations.AdsenseMetadataDimensionsListSecurity) (*operations.AdsenseMetadataDimensionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metadata/dimensions"
 
@@ -42,11 +42,11 @@ func (s *metadata) AdsenseMetadataDimensionsList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *metadata) AdsenseMetadataDimensionsList(ctx context.Context, request op
 }
 
 // AdsenseMetadataMetricsList - List the metadata for the metrics available to this AdSense account.
-func (s *metadata) AdsenseMetadataMetricsList(ctx context.Context, request operations.AdsenseMetadataMetricsListRequest) (*operations.AdsenseMetadataMetricsListResponse, error) {
+func (s *metadata) AdsenseMetadataMetricsList(ctx context.Context, request operations.AdsenseMetadataMetricsListRequest, security operations.AdsenseMetadataMetricsListSecurity) (*operations.AdsenseMetadataMetricsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metadata/metrics"
 
@@ -90,11 +90,11 @@ func (s *metadata) AdsenseMetadataMetricsList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

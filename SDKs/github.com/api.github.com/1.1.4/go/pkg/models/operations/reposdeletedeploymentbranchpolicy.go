@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReposDeleteDeploymentBranchPolicyPathParams struct {
+type ReposDeleteDeploymentBranchPolicyRequest struct {
 	// The unique identifier of the branch policy.
 	BranchPolicyID int64 `pathParam:"style=simple,explode=false,name=branch_policy_id"`
 	// The name of the environment.
@@ -15,10 +15,6 @@ type ReposDeleteDeploymentBranchPolicyPathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteDeploymentBranchPolicyRequest struct {
-	PathParams ReposDeleteDeploymentBranchPolicyPathParams
 }
 
 type ReposDeleteDeploymentBranchPolicyResponse struct {

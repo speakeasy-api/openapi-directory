@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest{
-        PathParams: operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams{
-            Owner: "corrupti",
-            Repo: "provident",
-        },
+        Owner: "corrupti",
+        Repo: "provident",
     }
 
     ctx := context.Background()

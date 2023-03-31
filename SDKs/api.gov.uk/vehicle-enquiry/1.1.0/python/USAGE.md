@@ -4,15 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetVehicleDetailsByRegistrationNumberRequest(
-    headers=operations.GetVehicleDetailsByRegistrationNumberHeaders(
-        x_correlation_id="ducimus",
-        x_api_key="repellendus",
+    vehicle_request=shared.VehicleRequest(
+        registration_number="corrupti",
     ),
-    request=shared.VehicleRequest(
-        registration_number="officia",
-    ),
+    x_correlation_id="provident",
+    x_api_key="distinctio",
 )
     
 res = s.vehicle.get_vehicle_details_by_registration_number(req)

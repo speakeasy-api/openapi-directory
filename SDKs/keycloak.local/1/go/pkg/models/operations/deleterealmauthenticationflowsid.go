@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteRealmAuthenticationFlowsIDPathParams struct {
+type DeleteRealmAuthenticationFlowsIDRequest struct {
 	// Flow id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmAuthenticationFlowsIDRequest struct {
-	PathParams DeleteRealmAuthenticationFlowsIDPathParams
 }
 
 type DeleteRealmAuthenticationFlowsIDResponse struct {

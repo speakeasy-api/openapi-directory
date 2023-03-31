@@ -11,15 +11,6 @@ var FetchConfigurationServerList = []string{
 	"https://conversations.twilio.com",
 }
 
-type FetchConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConfigurationRequest struct {
-	Security  FetchConfigurationSecurity
-	ServerURL *string
-}
-
 type FetchConfigurationResponse struct {
 	ContentType string
 	StatusCode  int

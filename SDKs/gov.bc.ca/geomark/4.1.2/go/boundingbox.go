@@ -34,14 +34,14 @@ func newBoundingBox(defaultClient, securityClient HTTPClient, serverURL, languag
 // The source geomarks can be specified by with the geomarkUrl parameter.  Repeat the parameter if sourcing from multiple geomarks
 func (s *boundingBox) GetGeomarksGeomarkIDBoundingBoxFileFormatExtension(ctx context.Context, request operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest) (*operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}/boundingBox.{fileFormatExtension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}/boundingBox.{fileFormatExtension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

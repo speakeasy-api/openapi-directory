@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPaymentStatusPathParams struct {
-	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
-}
-
-type GetPaymentStatusHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type GetPaymentStatusRequest struct {
-	PathParams GetPaymentStatusPathParams
-	Headers    GetPaymentStatusHeaders
+	PaymentID string  `pathParam:"style=simple,explode=false,name=payment_id"`
+	XAPIKey   *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPaymentStatus200ApplicationJSON - 200

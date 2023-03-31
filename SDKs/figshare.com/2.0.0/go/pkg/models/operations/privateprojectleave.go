@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateProjectLeaveSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectLeavePathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectLeaveRequest struct {
-	PathParams PrivateProjectLeavePathParams
-	Security   PrivateProjectLeaveSecurity
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectLeaveResponse struct {

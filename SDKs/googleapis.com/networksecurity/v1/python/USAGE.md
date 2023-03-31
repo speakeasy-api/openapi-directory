@@ -4,93 +4,128 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest(
-    security=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams(
-        parent="et",
-    ),
-    query_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="minima",
-        alt="media",
-        authorization_policy_id="dolor",
-        callback="explicabo",
-        fields="voluptates",
-        key="dolor",
-        oauth_token="iure",
-        pretty_print=False,
-        quota_user="at",
-        upload_type="nostrum",
-        upload_protocol="quo",
-    ),
-    request=shared.AuthorizationPolicyInput(
+    dollar_xgafv="2",
+    authorization_policy_input=shared.AuthorizationPolicyInput(
         action="ALLOW",
-        description="qui",
+        description="distinctio",
         labels={
-            "odio": "beatae",
-            "nobis": "totam",
-            "sunt": "adipisci",
+            "unde": "nulla",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
         },
-        name="ullam",
+        name="iure",
         rules=[
             shared.Rule(
                 destinations=[
                     shared.Destination(
                         hosts=[
-                            "eum",
-                            "sed",
+                            "delectus",
                         ],
                         http_header_match=shared.HTTPHeaderMatch(
-                            header_name="eveniet",
-                            regex_match="est",
+                            header_name="tempora",
+                            regex_match="suscipit",
                         ),
                         methods=[
-                            "et",
-                            "ipsa",
-                            "assumenda",
+                            "minus",
+                            "placeat",
                         ],
                         ports=[
-                            4943689285477287669,
-                            3160307118056465289,
+                            479977,
+                            568045,
+                            392785,
                         ],
                     ),
                     shared.Destination(
                         hosts=[
-                            "id",
+                            "temporibus",
+                            "ab",
+                            "quis",
+                            "veritatis",
                         ],
                         http_header_match=shared.HTTPHeaderMatch(
-                            header_name="cupiditate",
-                            regex_match="dolorem",
+                            header_name="deserunt",
+                            regex_match="perferendis",
                         ),
                         methods=[
-                            "esse",
-                            "ratione",
-                            "soluta",
+                            "repellendus",
+                            "sapiente",
                         ],
                         ports=[
-                            3231685339067003690,
-                            5512569230175251860,
-                            8584494059737821751,
+                            140350,
+                            870013,
+                            870088,
+                            978619,
+                        ],
+                    ),
+                    shared.Destination(
+                        hosts=[
+                            "quod",
+                            "quod",
+                        ],
+                        http_header_match=shared.HTTPHeaderMatch(
+                            header_name="esse",
+                            regex_match="totam",
+                        ),
+                        methods=[
+                            "dolorum",
+                            "dicta",
+                            "nam",
+                            "officia",
+                        ],
+                        ports=[
+                            143353,
+                            537373,
+                            944669,
+                        ],
+                    ),
+                    shared.Destination(
+                        hosts=[
+                            "totam",
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        ],
+                        http_header_match=shared.HTTPHeaderMatch(
+                            header_name="modi",
+                            regex_match="qui",
+                        ),
+                        methods=[
+                            "cum",
+                            "esse",
+                            "ipsum",
+                            "excepturi",
+                        ],
+                        ports=[
+                            18789,
                         ],
                     ),
                 ],
                 sources=[
                     shared.Source(
                         ip_blocks=[
-                            "omnis",
+                            "sed",
+                            "iste",
+                            "dolor",
                         ],
                         principals=[
-                            "accusamus",
-                            "atque",
-                            "et",
+                            "laboriosam",
+                            "hic",
+                            "saepe",
+                        ],
+                    ),
+                    shared.Source(
+                        ip_blocks=[
+                            "in",
+                            "corporis",
+                            "iste",
+                        ],
+                        principals=[
+                            "saepe",
+                            "quidem",
                         ],
                     ),
                 ],
@@ -99,50 +134,67 @@ req = operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequ
                 destinations=[
                     shared.Destination(
                         hosts=[
-                            "ratione",
-                            "occaecati",
+                            "reiciendis",
                         ],
                         http_header_match=shared.HTTPHeaderMatch(
-                            header_name="et",
-                            regex_match="neque",
+                            header_name="est",
+                            regex_match="mollitia",
                         ),
                         methods=[
-                            "ea",
+                            "dolores",
+                            "dolorem",
+                            "corporis",
                         ],
                         ports=[
-                            4607326647308611294,
-                            6100199300792176061,
-                            3576388956540400177,
+                            750686,
                         ],
                     ),
                 ],
                 sources=[
                     shared.Source(
                         ip_blocks=[
-                            "asperiores",
-                            "non",
+                            "nemo",
+                            "minima",
+                            "excepturi",
                         ],
                         principals=[
-                            "ab",
+                            "iure",
                         ],
                     ),
                     shared.Source(
                         ip_blocks=[
-                            "aut",
-                            "unde",
+                            "doloribus",
+                            "sapiente",
+                            "architecto",
                         ],
                         principals=[
-                            "repellat",
-                            "sed",
+                            "dolorem",
+                            "culpa",
+                            "consequuntur",
                         ],
                     ),
                 ],
             ),
         ],
     ),
+    access_token="repellat",
+    alt="media",
+    authorization_policy_id="occaecati",
+    callback="numquam",
+    fields_="commodi",
+    key="quam",
+    oauth_token="molestiae",
+    parent="velit",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="quia",
+    upload_protocol="quis",
 )
     
-res = s.projects.networksecurity_projects_locations_authorization_policies_create(req)
+res = s.projects.networksecurity_projects_locations_authorization_policies_create(req, operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

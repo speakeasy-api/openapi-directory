@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type ListAccountStatementsQueryParams struct {
+type ListAccountStatementsRequest struct {
 	AccountID                      *string    `queryParam:"style=form,explode=true,name=account_id"`
 	Cursor                         *string    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit                          *int64     `queryParam:"style=form,explode=true,name=limit"`
@@ -18,10 +18,6 @@ type ListAccountStatementsQueryParams struct {
 	StatementPeriodStartBefore     *time.Time `queryParam:"style=form,explode=true,name=statement_period_start.before"`
 	StatementPeriodStartOnOrAfter  *time.Time `queryParam:"style=form,explode=true,name=statement_period_start.on_or_after"`
 	StatementPeriodStartOnOrBefore *time.Time `queryParam:"style=form,explode=true,name=statement_period_start.on_or_before"`
-}
-
-type ListAccountStatementsRequest struct {
-	QueryParams ListAccountStatementsQueryParams
 }
 
 type ListAccountStatementsDefaultApplicationJSON13StatusEnum string

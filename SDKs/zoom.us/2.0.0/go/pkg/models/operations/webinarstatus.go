@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarStatusSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarStatusPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebinarStatusApplicationJSONActionEnum string
@@ -43,9 +37,9 @@ type WebinarStatusApplicationJSON struct {
 }
 
 type WebinarStatusRequest struct {
-	PathParams WebinarStatusPathParams
-	Request    WebinarStatusApplicationJSON `request:"mediaType=application/json"`
-	Security   WebinarStatusSecurity
+	RequestBody WebinarStatusApplicationJSON `request:"mediaType=application/json"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type WebinarStatusResponse struct {

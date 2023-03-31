@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageTagsFormPathParams struct {
+type CreateImageTagsFormRequest struct {
+	// Batch of image tags. Limited to 128 tags per batch.
+	ImageTagCreateBatch shared.ImageTagCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImageTagsFormRequest struct {
-	PathParams CreateImageTagsFormPathParams
-	// Batch of image tags. Limited to 128 tags per batch.
-	Request shared.ImageTagCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateImageTagsFormResponse struct {

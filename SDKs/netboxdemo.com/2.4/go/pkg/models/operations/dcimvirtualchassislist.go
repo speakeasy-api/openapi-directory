@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimVirtualChassisListQueryParams struct {
+type DcimVirtualChassisListRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type DcimVirtualChassisListRequest struct {
-	QueryParams DcimVirtualChassisListQueryParams
 }
 
 type DcimVirtualChassisList200ApplicationJSON struct {

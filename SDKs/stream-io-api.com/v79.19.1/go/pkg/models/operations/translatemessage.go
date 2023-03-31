@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TranslateMessagePathParams struct {
+type TranslateMessageRequest struct {
+	TranslateMessageRequest shared.TranslateMessageRequest `request:"mediaType=application/json"`
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TranslateMessageRequest struct {
-	PathParams TranslateMessagePathParams
-	Request    shared.TranslateMessageRequest `request:"mediaType=application/json"`
 }
 
 type TranslateMessageResponse struct {

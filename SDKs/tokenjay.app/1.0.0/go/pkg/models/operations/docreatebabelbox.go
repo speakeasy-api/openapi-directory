@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type DoCreateBabelBoxRequest struct {
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type DoCreateBabelBoxResponse struct {
 	Body        []byte
 	ContentType string

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignAPhoneNumCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UnassignAPhoneNumCallQueuePathParams struct {
-	// Unique Identifier of the Call Queue. This can be retrieved from List Call Queues API.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnassignAPhoneNumCallQueueRequest struct {
-	PathParams UnassignAPhoneNumCallQueuePathParams
-	Security   UnassignAPhoneNumCallQueueSecurity
+	// Unique Identifier of the Call Queue. This can be retrieved from List Call Queues API.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type UnassignAPhoneNumCallQueueResponse struct {

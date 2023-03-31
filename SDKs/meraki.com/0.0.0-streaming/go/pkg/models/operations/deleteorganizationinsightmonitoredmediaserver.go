@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationInsightMonitoredMediaServerPathParams struct {
+type DeleteOrganizationInsightMonitoredMediaServerRequest struct {
 	MonitoredMediaServerID string `pathParam:"style=simple,explode=false,name=monitoredMediaServerId"`
 	OrganizationID         string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type DeleteOrganizationInsightMonitoredMediaServerRequest struct {
-	PathParams DeleteOrganizationInsightMonitoredMediaServerPathParams
 }
 
 type DeleteOrganizationInsightMonitoredMediaServerResponse struct {

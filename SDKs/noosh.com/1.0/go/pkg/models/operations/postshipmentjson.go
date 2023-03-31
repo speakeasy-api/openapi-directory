@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostShipmentJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostShipmentJSONRequest struct {
-	PathParams PostShipmentJSONPathParams
-	Request    *shared.ShipmentLocationPostPersistVO `request:"mediaType=application/json"`
+	ShipmentLocationPostPersistVO *shared.ShipmentLocationPostPersistVO `request:"mediaType=application/json"`
+	ProjectID                     string                                `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID                   string                                `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostShipmentJSONResponse struct {

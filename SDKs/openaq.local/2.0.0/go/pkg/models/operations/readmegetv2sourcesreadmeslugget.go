@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReadmeGetV2SourcesReadmeSlugGetPathParams struct {
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
-}
-
 type ReadmeGetV2SourcesReadmeSlugGetRequest struct {
-	PathParams ReadmeGetV2SourcesReadmeSlugGetPathParams
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type ReadmeGetV2SourcesReadmeSlugGetResponse struct {

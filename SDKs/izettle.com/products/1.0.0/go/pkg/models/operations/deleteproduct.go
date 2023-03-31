@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteProductSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type DeleteProductPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-	ProductUUID      string `pathParam:"style=simple,explode=false,name=productUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteProductRequest struct {
-	PathParams DeleteProductPathParams
-	Security   DeleteProductSecurity
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ProductUUID      string `pathParam:"style=simple,explode=false,name=productUuid"`
 }
 
 type DeleteProductResponse struct {

@@ -14,16 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateEngagementRequest{
-        Security: operations.CreateEngagementSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateEngagementPathParams{
-            FlowSid: "corrupti",
-        },
-        Request: &operations.CreateEngagementCreateEngagementRequest{
+        FlowSid: "corrupti",
+        RequestBody: &operations.CreateEngagementCreateEngagementRequest{
             From: "provident",
             Parameters: "distinctio",
             To: "quibusdam",
@@ -31,7 +23,10 @@ func main() {
     }
 
     ctx := context.Background()
-    res, err := s.CreateEngagement(ctx, req)
+    res, err := s.CreateEngagement(ctx, req, operations.CreateEngagementSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

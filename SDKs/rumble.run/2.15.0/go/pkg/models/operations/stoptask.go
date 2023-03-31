@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StopTaskSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StopTaskPathParams struct {
-	// UUID of the task to stop
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StopTaskRequest struct {
-	PathParams StopTaskPathParams
-	Security   StopTaskSecurity
+	// UUID of the task to stop
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type StopTaskResponse struct {

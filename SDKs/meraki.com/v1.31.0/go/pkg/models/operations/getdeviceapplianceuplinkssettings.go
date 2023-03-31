@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceApplianceUplinksSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceApplianceUplinksSettingsRequest struct {
-	PathParams GetDeviceApplianceUplinksSettingsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // GetDeviceApplianceUplinksSettings200ApplicationJSONInterfacesWan1PppoeAuthentication - Settings for PPPoE Authentication.

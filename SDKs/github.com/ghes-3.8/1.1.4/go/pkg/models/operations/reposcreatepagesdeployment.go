@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreatePagesDeploymentPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreatePagesDeploymentRequestBody - The object used to create GitHub Pages deployment
 type ReposCreatePagesDeploymentRequestBody struct {
 	// The URL of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository.
@@ -27,8 +20,11 @@ type ReposCreatePagesDeploymentRequestBody struct {
 }
 
 type ReposCreatePagesDeploymentRequest struct {
-	PathParams ReposCreatePagesDeploymentPathParams
-	Request    ReposCreatePagesDeploymentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreatePagesDeploymentRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreatePagesDeploymentResponse struct {

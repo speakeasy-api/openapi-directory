@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type GetAlmawsV1TaskListsPrintoutsQueryParams struct {
+type GetAlmawsV1TaskListsPrintoutsRequest struct {
 	// Printout Name. Optional.
 	Letter *string `queryParam:"style=form,explode=true,name=letter"`
 	// Limits the number of results. Optional. Valid values are 0-100. Default value: 10.
@@ -20,10 +20,6 @@ type GetAlmawsV1TaskListsPrintoutsQueryParams struct {
 	PrintoutID *string `queryParam:"style=form,explode=true,name=printout_id"`
 	// Printout status. Optional. Valid values are: Printed, Pending, Canceled.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetAlmawsV1TaskListsPrintoutsRequest struct {
-	QueryParams GetAlmawsV1TaskListsPrintoutsQueryParams
 }
 
 // GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintoutPrinter - The printer.

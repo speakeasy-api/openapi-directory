@@ -8,13 +8,7 @@ import (
 )
 
 type CorridorBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CorridorBatchRequest struct {
-	// A list of name pairs, with country code (nameFrom -> nameTo).
-	Request  *shared.BatchCorridorIn `request:"mediaType=application/json"`
-	Security CorridorBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type CorridorBatchResponse struct {

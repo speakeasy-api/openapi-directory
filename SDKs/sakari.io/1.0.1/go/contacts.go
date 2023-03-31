@@ -33,11 +33,11 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ContactsCreateJSON - Create contact
-func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.ContactsCreateJSONRequest) (*operations.ContactsCreateJSONResponse, error) {
+func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.ContactsCreateJSONRequest, security operations.ContactsCreateJSONSecurity) (*operations.ContactsCreateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.Co
 }
 
 // ContactsCreateString - Create contact
-func (s *contacts) ContactsCreateString(ctx context.Context, request operations.ContactsCreateStringRequest) (*operations.ContactsCreateStringResponse, error) {
+func (s *contacts) ContactsCreateString(ctx context.Context, request operations.ContactsCreateStringRequest, security operations.ContactsCreateStringSecurity) (*operations.ContactsCreateStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *contacts) ContactsCreateString(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,16 +143,16 @@ func (s *contacts) ContactsCreateString(ctx context.Context, request operations.
 }
 
 // ContactsFetch - Fetch contact by ID
-func (s *contacts) ContactsFetch(ctx context.Context, request operations.ContactsFetchRequest) (*operations.ContactsFetchResponse, error) {
+func (s *contacts) ContactsFetch(ctx context.Context, request operations.ContactsFetchRequest, security operations.ContactsFetchSecurity) (*operations.ContactsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -187,20 +187,20 @@ func (s *contacts) ContactsFetch(ctx context.Context, request operations.Contact
 }
 
 // ContactsFetchAll - Fetch contacts
-func (s *contacts) ContactsFetchAll(ctx context.Context, request operations.ContactsFetchAllRequest) (*operations.ContactsFetchAllResponse, error) {
+func (s *contacts) ContactsFetchAll(ctx context.Context, request operations.ContactsFetchAllRequest, security operations.ContactsFetchAllSecurity) (*operations.ContactsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -247,16 +247,16 @@ func (s *contacts) ContactsFetchAll(ctx context.Context, request operations.Cont
 }
 
 // ContactsRemove - Deletes a contact
-func (s *contacts) ContactsRemove(ctx context.Context, request operations.ContactsRemoveRequest) (*operations.ContactsRemoveResponse, error) {
+func (s *contacts) ContactsRemove(ctx context.Context, request operations.ContactsRemoveRequest, security operations.ContactsRemoveSecurity) (*operations.ContactsRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -291,16 +291,16 @@ func (s *contacts) ContactsRemove(ctx context.Context, request operations.Contac
 }
 
 // ContactsUpdate - Updates a contact
-func (s *contacts) ContactsUpdate(ctx context.Context, request operations.ContactsUpdateRequest) (*operations.ContactsUpdateResponse, error) {
+func (s *contacts) ContactsUpdate(ctx context.Context, request operations.ContactsUpdateRequest, security operations.ContactsUpdateSecurity) (*operations.ContactsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

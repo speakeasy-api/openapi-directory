@@ -8,21 +8,16 @@ import (
 )
 
 type CancelBookingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelBookingPathParams struct {
-	// The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-cancelled booking.
-	BookingID string `pathParam:"style=simple,explode=false,name=booking_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelBookingRequest struct {
-	PathParams CancelBookingPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.CancelBookingRequest `request:"mediaType=application/json"`
-	Security CancelBookingSecurity
+	CancelBookingRequest shared.CancelBookingRequest `request:"mediaType=application/json"`
+	// The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-cancelled booking.
+	BookingID string `pathParam:"style=simple,explode=false,name=booking_id"`
 }
 
 type CancelBookingResponse struct {

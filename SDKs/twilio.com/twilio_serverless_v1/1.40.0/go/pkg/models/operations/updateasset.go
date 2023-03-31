@@ -12,14 +12,8 @@ var UpdateAssetServerList = []string{
 }
 
 type UpdateAssetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAssetPathParams struct {
-	// The SID of the Service to update the Asset resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID that identifies the Asset resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAssetUpdateAssetRequest struct {
@@ -28,10 +22,11 @@ type UpdateAssetUpdateAssetRequest struct {
 }
 
 type UpdateAssetRequest struct {
-	PathParams UpdateAssetPathParams
-	Request    *UpdateAssetUpdateAssetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAssetSecurity
-	ServerURL  *string
+	RequestBody *UpdateAssetUpdateAssetRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to update the Asset resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID that identifies the Asset resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateAssetResponse struct {

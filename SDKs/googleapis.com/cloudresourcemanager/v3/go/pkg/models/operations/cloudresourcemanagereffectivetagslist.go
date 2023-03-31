@@ -8,13 +8,13 @@ import (
 )
 
 type CloudresourcemanagerEffectiveTagsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerEffectiveTagsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerEffectiveTagsListSecurity struct {
@@ -22,7 +22,7 @@ type CloudresourcemanagerEffectiveTagsListSecurity struct {
 	Option2 *CloudresourcemanagerEffectiveTagsListSecurityOption2 `security:"option"`
 }
 
-type CloudresourcemanagerEffectiveTagsListQueryParams struct {
+type CloudresourcemanagerEffectiveTagsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -51,11 +51,6 @@ type CloudresourcemanagerEffectiveTagsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudresourcemanagerEffectiveTagsListRequest struct {
-	QueryParams CloudresourcemanagerEffectiveTagsListQueryParams
-	Security    CloudresourcemanagerEffectiveTagsListSecurity
 }
 
 type CloudresourcemanagerEffectiveTagsListResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetSSHSigningKeyForAuthenticatedUserPathParams struct {
+type UsersGetSSHSigningKeyForAuthenticatedUserRequest struct {
 	// The unique identifier of the SSH signing key.
 	SSHSigningKeyID int64 `pathParam:"style=simple,explode=false,name=ssh_signing_key_id"`
-}
-
-type UsersGetSSHSigningKeyForAuthenticatedUserRequest struct {
-	PathParams UsersGetSSHSigningKeyForAuthenticatedUserPathParams
 }
 
 type UsersGetSSHSigningKeyForAuthenticatedUserResponse struct {

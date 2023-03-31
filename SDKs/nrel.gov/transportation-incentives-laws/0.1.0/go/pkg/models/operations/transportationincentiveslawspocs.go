@@ -32,21 +32,13 @@ func (e *TransportationIncentivesLawsPocsOutputFormatEnum) UnmarshalJSON(data []
 	}
 }
 
-type TransportationIncentivesLawsPocsPathParams struct {
-	// Response format
-	OutputFormat TransportationIncentivesLawsPocsOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
-}
-
-type TransportationIncentivesLawsPocsQueryParams struct {
+type TransportationIncentivesLawsPocsRequest struct {
 	// API Key
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Return the points of contact for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C.
 	Jurisdiction string `queryParam:"style=form,explode=true,name=jurisdiction"`
-}
-
-type TransportationIncentivesLawsPocsRequest struct {
-	PathParams  TransportationIncentivesLawsPocsPathParams
-	QueryParams TransportationIncentivesLawsPocsQueryParams
+	// Response format
+	OutputFormat TransportationIncentivesLawsPocsOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
 }
 
 type TransportationIncentivesLawsPocsResponse struct {

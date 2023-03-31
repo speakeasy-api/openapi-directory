@@ -8,16 +8,11 @@ import (
 )
 
 type GamesScoresSubmitSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GamesScoresSubmitPathParams struct {
-	// The ID of the leaderboard.
-	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
-}
-
-type GamesScoresSubmitQueryParams struct {
+type GamesScoresSubmitRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type GamesScoresSubmitQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The preferred language to use for strings returned by this method.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
+	// The ID of the leaderboard.
+	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -46,12 +43,6 @@ type GamesScoresSubmitQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesScoresSubmitRequest struct {
-	PathParams  GamesScoresSubmitPathParams
-	QueryParams GamesScoresSubmitQueryParams
-	Security    GamesScoresSubmitSecurity
 }
 
 type GamesScoresSubmitResponse struct {

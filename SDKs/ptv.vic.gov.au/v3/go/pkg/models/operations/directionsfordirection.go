@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DirectionsForDirectionPathParams struct {
-	// Identifier of direction of travel; values returned by Directions API - /v3/directions/route/{route_id}
-	DirectionID int `pathParam:"style=simple,explode=false,name=direction_id"`
-}
-
-type DirectionsForDirectionQueryParams struct {
+type DirectionsForDirectionRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
+	// Identifier of direction of travel; values returned by Directions API - /v3/directions/route/{route_id}
+	DirectionID int `pathParam:"style=simple,explode=false,name=direction_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DirectionsForDirectionRequest struct {
-	PathParams  DirectionsForDirectionPathParams
-	QueryParams DirectionsForDirectionQueryParams
 }
 
 type DirectionsForDirectionResponse struct {

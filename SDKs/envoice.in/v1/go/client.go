@@ -43,7 +43,7 @@ func (s *client) ClientAPIAll(ctx context.Context, request operations.ClientAPIA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -117,9 +117,9 @@ func (s *client) ClientAPICanDelete(ctx context.Context, request operations.Clie
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -190,7 +190,7 @@ func (s *client) ClientAPIDeleteForm(ctx context.Context, request operations.Cli
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientDeleteAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -205,7 +205,7 @@ func (s *client) ClientAPIDeleteForm(ctx context.Context, request operations.Cli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -274,7 +274,7 @@ func (s *client) ClientAPIDeleteJSON(ctx context.Context, request operations.Cli
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientDeleteAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -289,7 +289,7 @@ func (s *client) ClientAPIDeleteJSON(ctx context.Context, request operations.Cli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -358,7 +358,7 @@ func (s *client) ClientAPIDeleteRaw(ctx context.Context, request operations.Clie
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,7 +373,7 @@ func (s *client) ClientAPIDeleteRaw(ctx context.Context, request operations.Clie
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -447,9 +447,9 @@ func (s *client) ClientAPIDetails(ctx context.Context, request operations.Client
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -520,7 +520,7 @@ func (s *client) ClientAPINewForm(ctx context.Context, request operations.Client
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientCreateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -535,7 +535,7 @@ func (s *client) ClientAPINewForm(ctx context.Context, request operations.Client
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -604,7 +604,7 @@ func (s *client) ClientAPINewJSON(ctx context.Context, request operations.Client
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientCreateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -619,7 +619,7 @@ func (s *client) ClientAPINewJSON(ctx context.Context, request operations.Client
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -688,7 +688,7 @@ func (s *client) ClientAPINewRaw(ctx context.Context, request operations.ClientA
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -703,7 +703,7 @@ func (s *client) ClientAPINewRaw(ctx context.Context, request operations.ClientA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -772,7 +772,7 @@ func (s *client) ClientAPIUpdateForm(ctx context.Context, request operations.Cli
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientUpdateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -787,7 +787,7 @@ func (s *client) ClientAPIUpdateForm(ctx context.Context, request operations.Cli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -819,7 +819,7 @@ func (s *client) ClientAPIUpdateJSON(ctx context.Context, request operations.Cli
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientUpdateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -834,7 +834,7 @@ func (s *client) ClientAPIUpdateJSON(ctx context.Context, request operations.Cli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -866,7 +866,7 @@ func (s *client) ClientAPIUpdateRaw(ctx context.Context, request operations.Clie
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -881,7 +881,7 @@ func (s *client) ClientAPIUpdateRaw(ctx context.Context, request operations.Clie
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

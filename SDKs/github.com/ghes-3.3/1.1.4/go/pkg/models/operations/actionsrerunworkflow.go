@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type ActionsReRunWorkflowPathParams struct {
+type ActionsReRunWorkflowRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsReRunWorkflowRequest struct {
-	PathParams ActionsReRunWorkflowPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type ActionsReRunWorkflowResponse struct {

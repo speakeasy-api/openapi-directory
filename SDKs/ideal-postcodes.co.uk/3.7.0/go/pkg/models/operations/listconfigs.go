@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConfigsPathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type ListConfigsQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type ListConfigsRequest struct {
-	PathParams  ListConfigsPathParams
-	QueryParams ListConfigsQueryParams
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
+	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type ListConfigsResponse struct {

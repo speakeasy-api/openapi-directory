@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreditPayrollIncomePrecheckRequest struct {
-	Request shared.CreditPayrollIncomePrecheckRequest `request:"mediaType=application/json"`
-}
 
 type CreditPayrollIncomePrecheckResponse struct {
 	ContentType string

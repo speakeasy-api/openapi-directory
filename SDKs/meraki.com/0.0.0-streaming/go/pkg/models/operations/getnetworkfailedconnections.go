@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkFailedConnectionsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkFailedConnectionsBandEnum - Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 type GetNetworkFailedConnectionsBandEnum string
 
@@ -36,13 +32,14 @@ func (e *GetNetworkFailedConnectionsBandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNetworkFailedConnectionsQueryParams struct {
+type GetNetworkFailedConnectionsRequest struct {
 	// Filter results by AP Tag
 	ApTag *string `queryParam:"style=form,explode=true,name=apTag"`
 	// Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 	Band *GetNetworkFailedConnectionsBandEnum `queryParam:"style=form,explode=true,name=band"`
 	// Filter by client MAC
-	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
+	ClientID  *string `queryParam:"style=form,explode=true,name=clientId"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Filter by AP
 	Serial *string `queryParam:"style=form,explode=true,name=serial"`
 	// Filter results by SSID
@@ -55,11 +52,6 @@ type GetNetworkFailedConnectionsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Filter results by VLAN
 	Vlan *int64 `queryParam:"style=form,explode=true,name=vlan"`
-}
-
-type GetNetworkFailedConnectionsRequest struct {
-	PathParams  GetNetworkFailedConnectionsPathParams
-	QueryParams GetNetworkFailedConnectionsQueryParams
 }
 
 type GetNetworkFailedConnectionsResponse struct {

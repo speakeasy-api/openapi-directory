@@ -32,20 +32,20 @@ func newPlacementGroups(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DfareportingPlacementGroupsGet - Gets one placement group by ID.
-func (s *placementGroups) DfareportingPlacementGroupsGet(ctx context.Context, request operations.DfareportingPlacementGroupsGetRequest) (*operations.DfareportingPlacementGroupsGetResponse, error) {
+func (s *placementGroups) DfareportingPlacementGroupsGet(ctx context.Context, request operations.DfareportingPlacementGroupsGetRequest, security operations.DfareportingPlacementGroupsGetSecurity) (*operations.DfareportingPlacementGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *placementGroups) DfareportingPlacementGroupsGet(ctx context.Context, re
 }
 
 // DfareportingPlacementGroupsInsert - Inserts a new placement group.
-func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context, request operations.DfareportingPlacementGroupsInsertRequest) (*operations.DfareportingPlacementGroupsInsertResponse, error) {
+func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context, request operations.DfareportingPlacementGroupsInsertRequest, security operations.DfareportingPlacementGroupsInsertSecurity) (*operations.DfareportingPlacementGroupsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context,
 }
 
 // DfareportingPlacementGroupsList - Retrieves a list of placement groups, possibly filtered. This method supports paging.
-func (s *placementGroups) DfareportingPlacementGroupsList(ctx context.Context, request operations.DfareportingPlacementGroupsListRequest) (*operations.DfareportingPlacementGroupsListResponse, error) {
+func (s *placementGroups) DfareportingPlacementGroupsList(ctx context.Context, request operations.DfareportingPlacementGroupsListRequest, security operations.DfareportingPlacementGroupsListSecurity) (*operations.DfareportingPlacementGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *placementGroups) DfareportingPlacementGroupsList(ctx context.Context, r
 }
 
 // DfareportingPlacementGroupsPatch - Updates an existing placement group. This method supports patch semantics.
-func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, request operations.DfareportingPlacementGroupsPatchRequest) (*operations.DfareportingPlacementGroupsPatchResponse, error) {
+func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, request operations.DfareportingPlacementGroupsPatchRequest, security operations.DfareportingPlacementGroupsPatchSecurity) (*operations.DfareportingPlacementGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, 
 }
 
 // DfareportingPlacementGroupsUpdate - Updates an existing placement group.
-func (s *placementGroups) DfareportingPlacementGroupsUpdate(ctx context.Context, request operations.DfareportingPlacementGroupsUpdateRequest) (*operations.DfareportingPlacementGroupsUpdateResponse, error) {
+func (s *placementGroups) DfareportingPlacementGroupsUpdate(ctx context.Context, request operations.DfareportingPlacementGroupsUpdateRequest, security operations.DfareportingPlacementGroupsUpdateSecurity) (*operations.DfareportingPlacementGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *placementGroups) DfareportingPlacementGroupsUpdate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

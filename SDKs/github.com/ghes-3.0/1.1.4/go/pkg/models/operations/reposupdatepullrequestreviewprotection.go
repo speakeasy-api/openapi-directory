@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdatePullRequestReviewProtectionPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdatePullRequestReviewProtectionRequestBodyDismissalRestrictions - Specify which users and teams can dismiss pull request reviews. Pass an empty `dismissal_restrictions` object to disable. User and team `dismissal_restrictions` are only available for organization-owned repositories. Omit this parameter for personal repositories.
 type ReposUpdatePullRequestReviewProtectionRequestBodyDismissalRestrictions struct {
 	// The list of team `slug`s with dismissal access
@@ -34,8 +27,11 @@ type ReposUpdatePullRequestReviewProtectionRequestBody struct {
 }
 
 type ReposUpdatePullRequestReviewProtectionRequest struct {
-	PathParams ReposUpdatePullRequestReviewProtectionPathParams
-	Request    *ReposUpdatePullRequestReviewProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdatePullRequestReviewProtectionRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdatePullRequestReviewProtectionResponse struct {

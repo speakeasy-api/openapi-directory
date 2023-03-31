@@ -10,13 +10,8 @@ import (
 )
 
 type CloudchannelAccountsCustomersListPurchasableSkusSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type CloudchannelAccountsCustomersListPurchasableSkusPathParams struct {
-	// Required. The resource name of the customer to list SKUs for. Format: accounts/{account_id}/customers/{customer_id}.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum - Required. Change Type for the entitlement.
@@ -46,7 +41,7 @@ func (e *CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChan
 	}
 }
 
-type CloudchannelAccountsCustomersListPurchasableSkusQueryParams struct {
+type CloudchannelAccountsCustomersListPurchasableSkusRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -61,6 +56,8 @@ type CloudchannelAccountsCustomersListPurchasableSkusQueryParams struct {
 	ChangeOfferPurchaseEntitlement *string `queryParam:"style=form,explode=true,name=changeOfferPurchase.entitlement"`
 	// Required. List SKUs belonging to this Product. Format: products/{product_id}. Supports products/- to retrieve SKUs for all products.
 	CreateEntitlementPurchaseProduct *string `queryParam:"style=form,explode=true,name=createEntitlementPurchase.product"`
+	// Required. The resource name of the customer to list SKUs for. Format: accounts/{account_id}/customers/{customer_id}.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -81,12 +78,6 @@ type CloudchannelAccountsCustomersListPurchasableSkusQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsCustomersListPurchasableSkusRequest struct {
-	PathParams  CloudchannelAccountsCustomersListPurchasableSkusPathParams
-	QueryParams CloudchannelAccountsCustomersListPurchasableSkusQueryParams
-	Security    CloudchannelAccountsCustomersListPurchasableSkusSecurity
 }
 
 type CloudchannelAccountsCustomersListPurchasableSkusResponse struct {

@@ -8,15 +8,10 @@ import (
 )
 
 type RetrieveCatalogObjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveCatalogObjectPathParams struct {
-	// The object ID of any type of catalog objects to be retrieved.
-	ObjectID string `pathParam:"style=simple,explode=false,name=object_id"`
-}
-
-type RetrieveCatalogObjectQueryParams struct {
+type RetrieveCatalogObjectRequest struct {
 	// Requests objects as of a specific version of the catalog. This allows you to retrieve historical
 	// versions of objects. The value to retrieve a specific version of an object can be found
 	// in the version field of [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject)s.
@@ -32,12 +27,8 @@ type RetrieveCatalogObjectQueryParams struct {
 	//
 	// Default value: `false`
 	IncludeRelatedObjects *bool `queryParam:"style=form,explode=true,name=include_related_objects"`
-}
-
-type RetrieveCatalogObjectRequest struct {
-	PathParams  RetrieveCatalogObjectPathParams
-	QueryParams RetrieveCatalogObjectQueryParams
-	Security    RetrieveCatalogObjectSecurity
+	// The object ID of any type of catalog objects to be retrieved.
+	ObjectID string `pathParam:"style=simple,explode=false,name=object_id"`
 }
 
 type RetrieveCatalogObjectResponse struct {

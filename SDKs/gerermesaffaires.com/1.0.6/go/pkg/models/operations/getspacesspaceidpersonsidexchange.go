@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDPersonsIDExchangePathParams struct {
+type GetSpacesSpaceIDPersonsIDExchangeRequest struct {
 	// Id of the person or memberId
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDPersonsIDExchangeRequest struct {
-	PathParams GetSpacesSpaceIDPersonsIDExchangePathParams
 }
 
 type GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum string

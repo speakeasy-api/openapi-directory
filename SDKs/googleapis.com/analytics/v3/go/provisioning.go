@@ -33,11 +33,11 @@ func newProvisioning(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AnalyticsProvisioningCreateAccountTicket - Creates an account ticket.
-func (s *provisioning) AnalyticsProvisioningCreateAccountTicket(ctx context.Context, request operations.AnalyticsProvisioningCreateAccountTicketRequest) (*operations.AnalyticsProvisioningCreateAccountTicketResponse, error) {
+func (s *provisioning) AnalyticsProvisioningCreateAccountTicket(ctx context.Context, request operations.AnalyticsProvisioningCreateAccountTicketRequest, security operations.AnalyticsProvisioningCreateAccountTicketSecurity) (*operations.AnalyticsProvisioningCreateAccountTicketResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/provisioning/createAccountTicket"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTicketInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *provisioning) AnalyticsProvisioningCreateAccountTicket(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *provisioning) AnalyticsProvisioningCreateAccountTicket(ctx context.Cont
 }
 
 // AnalyticsProvisioningCreateAccountTree - Provision account.
-func (s *provisioning) AnalyticsProvisioningCreateAccountTree(ctx context.Context, request operations.AnalyticsProvisioningCreateAccountTreeRequest) (*operations.AnalyticsProvisioningCreateAccountTreeResponse, error) {
+func (s *provisioning) AnalyticsProvisioningCreateAccountTree(ctx context.Context, request operations.AnalyticsProvisioningCreateAccountTreeRequest, security operations.AnalyticsProvisioningCreateAccountTreeSecurity) (*operations.AnalyticsProvisioningCreateAccountTreeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/provisioning/createAccountTree"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTreeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *provisioning) AnalyticsProvisioningCreateAccountTree(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

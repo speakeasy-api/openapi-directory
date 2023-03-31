@@ -45,7 +45,7 @@ func newOAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //
 // __OAuth tokens should only live on secure servers. Application clients
 // should never interact directly with OAuth tokens__.
-func (s *oAuth) ObtainToken(ctx context.Context, request operations.ObtainTokenRequest) (*operations.ObtainTokenResponse, error) {
+func (s *oAuth) ObtainToken(ctx context.Context, request shared.ObtainTokenRequest) (*operations.ObtainTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/token"
 
@@ -118,11 +118,11 @@ func (s *oAuth) ObtainToken(ctx context.Context, request operations.ObtainTokenR
 //
 // Replace `APPLICATION_SECRET` with the application secret on the Credentials
 // page in the [developer dashboard](https://developer.squareup.com/apps).
-func (s *oAuth) RenewToken(ctx context.Context, request operations.RenewTokenRequest) (*operations.RenewTokenResponse, error) {
+func (s *oAuth) RenewToken(ctx context.Context, request operations.RenewTokenRequest, security operations.RenewTokenSecurity) (*operations.RenewTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth2/clients/{client_id}/access-token/renew", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth2/clients/{client_id}/access-token/renew", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenewTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +137,7 @@ func (s *oAuth) RenewToken(ctx context.Context, request operations.RenewTokenReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *oAuth) RenewToken(ctx context.Context, request operations.RenewTokenReq
 //
 // Replace `APPLICATION_SECRET` with the application secret on the OAuth
 // page in the [developer dashboard](https://developer.squareup.com/apps).
-func (s *oAuth) RevokeToken(ctx context.Context, request operations.RevokeTokenRequest) (*operations.RevokeTokenResponse, error) {
+func (s *oAuth) RevokeToken(ctx context.Context, request shared.RevokeTokenRequest, security operations.RevokeTokenSecurity) (*operations.RevokeTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/revoke"
 
@@ -207,7 +207,7 @@ func (s *oAuth) RevokeToken(ctx context.Context, request operations.RevokeTokenR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

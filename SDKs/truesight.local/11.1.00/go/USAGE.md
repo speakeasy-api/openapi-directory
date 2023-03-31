@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CollectNowRequest{
-        PathParams: operations.CollectNowPathParams{
-            DeviceID: 548814,
-        },
-        QueryParams: operations.CollectNowQueryParams{
-            MonitorClass: "provident",
-        },
+        DeviceID: 548814,
+        MonitorClass: "provident",
     }
 
     ctx := context.Background()

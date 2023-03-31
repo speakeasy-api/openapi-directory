@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateEventNotificationRequest{
-        Headers: operations.CreateEventNotificationHeaders{
-            XFapiFinancialID: "corrupti",
-            XFapiInteractionID: "provident",
-        },
-        Request: "distinctio",
+        RequestBody: "corrupti",
+        XFapiFinancialID: "provident",
+        XFapiInteractionID: "distinctio",
     }
 
     ctx := context.Background()

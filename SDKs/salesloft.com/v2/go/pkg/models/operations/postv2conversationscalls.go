@@ -23,10 +23,6 @@ type PostV2ConversationsCallsRequestBody struct {
 	UserGUID *string `form:"name=user_guid"`
 }
 
-type PostV2ConversationsCallsRequest struct {
-	Request PostV2ConversationsCallsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ConversationsCallsResponse struct {
 	Body        []byte
 	ContentType string

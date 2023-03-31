@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationSnmpPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationSnmpRequestBodyV3AuthModeEnum - The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
 type UpdateOrganizationSnmpRequestBodyV3AuthModeEnum string
 
@@ -78,8 +74,8 @@ type UpdateOrganizationSnmpRequestBody struct {
 }
 
 type UpdateOrganizationSnmpRequest struct {
-	PathParams UpdateOrganizationSnmpPathParams
-	Request    *UpdateOrganizationSnmpRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationSnmpRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                             `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationSnmpResponse struct {

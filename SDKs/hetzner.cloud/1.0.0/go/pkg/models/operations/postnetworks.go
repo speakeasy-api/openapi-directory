@@ -70,10 +70,6 @@ type PostNetworksCreateNetworkRequest struct {
 	Subnets []PostNetworksCreateNetworkRequestSubnets `json:"subnets,omitempty"`
 }
 
-type PostNetworksRequest struct {
-	Request *PostNetworksCreateNetworkRequest `request:"mediaType=application/json"`
-}
-
 // PostNetworks201ApplicationJSONNetworkProtection - Protection configuration for the Network
 type PostNetworks201ApplicationJSONNetworkProtection struct {
 	// If true, prevents the Network from being deleted

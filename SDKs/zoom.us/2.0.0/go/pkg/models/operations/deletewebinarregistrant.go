@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteWebinarRegistrantPathParams struct {
+type DeleteWebinarRegistrantRequest struct {
+	// The webinar occurence ID.
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 	// The registrant ID.
 	RegistrantID string `pathParam:"style=simple,explode=false,name=registrantId"`
 	// The webinar ID.
 	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type DeleteWebinarRegistrantQueryParams struct {
-	// The webinar occurence ID.
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
-}
-
-type DeleteWebinarRegistrantRequest struct {
-	PathParams  DeleteWebinarRegistrantPathParams
-	QueryParams DeleteWebinarRegistrantQueryParams
 }
 
 type DeleteWebinarRegistrantResponse struct {

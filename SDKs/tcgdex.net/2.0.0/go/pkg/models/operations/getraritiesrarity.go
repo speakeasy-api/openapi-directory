@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRaritiesRarityPathParams struct {
-	Rarity string `pathParam:"style=simple,explode=false,name=rarity"`
-}
-
 type GetRaritiesRarityRequest struct {
-	PathParams GetRaritiesRarityPathParams
+	Rarity string `pathParam:"style=simple,explode=false,name=rarity"`
 }
 
 type GetRaritiesRarityResponse struct {

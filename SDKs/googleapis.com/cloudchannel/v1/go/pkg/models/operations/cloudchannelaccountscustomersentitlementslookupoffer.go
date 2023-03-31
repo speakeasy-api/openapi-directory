@@ -8,16 +8,11 @@ import (
 )
 
 type CloudchannelAccountsCustomersEntitlementsLookupOfferSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudchannelAccountsCustomersEntitlementsLookupOfferPathParams struct {
-	// Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses the format: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
-	Entitlement string `pathParam:"style=simple,explode=false,name=entitlement"`
-}
-
-type CloudchannelAccountsCustomersEntitlementsLookupOfferQueryParams struct {
+type CloudchannelAccountsCustomersEntitlementsLookupOfferRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -26,6 +21,8 @@ type CloudchannelAccountsCustomersEntitlementsLookupOfferQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses the format: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+	Entitlement string `pathParam:"style=simple,explode=false,name=entitlement"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -40,12 +37,6 @@ type CloudchannelAccountsCustomersEntitlementsLookupOfferQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsCustomersEntitlementsLookupOfferRequest struct {
-	PathParams  CloudchannelAccountsCustomersEntitlementsLookupOfferPathParams
-	QueryParams CloudchannelAccountsCustomersEntitlementsLookupOfferQueryParams
-	Security    CloudchannelAccountsCustomersEntitlementsLookupOfferSecurity
 }
 
 type CloudchannelAccountsCustomersEntitlementsLookupOfferResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListPublicMembersPathParams struct {
+type OrgsListPublicMembersRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsListPublicMembersQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type OrgsListPublicMembersRequest struct {
-	PathParams  OrgsListPublicMembersPathParams
-	QueryParams OrgsListPublicMembersQueryParams
 }
 
 type OrgsListPublicMembersResponse struct {

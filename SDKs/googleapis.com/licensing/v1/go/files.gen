@@ -21,7 +21,6 @@ pkg/models/operations/licensinglicenseassignmentspatch.go
 pkg/models/operations/licensinglicenseassignmentsupdate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/licenseassignment.go
 pkg/models/shared/licenseassignmentinsert.go
 pkg/models/shared/licenseassignmentlist.go

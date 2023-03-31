@@ -9,25 +9,19 @@ import (
 )
 
 type GetAccountsAccountIDStatementsSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
-type GetAccountsAccountIDStatementsPathParams struct {
+type GetAccountsAccountIDStatementsRequest struct {
 	// AccountId
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountsAccountIDStatementsQueryParams struct {
 	// The UTC ISO 8601 Date Time to filter statements FROM NB Time component is optional - set to 00:00:00 for just Date. If the Date Time contains a timezone, the ASPSP must ignore the timezone component.
 	FromStatementDateTime *time.Time `queryParam:"style=form,explode=true,name=fromStatementDateTime"`
-	// The UTC ISO 8601 Date Time to filter statements TO NB Time component is optional - set to 00:00:00 for just Date. If the Date Time contains a timezone, the ASPSP must ignore the timezone component.
-	ToStatementDateTime *time.Time `queryParam:"style=form,explode=true,name=toStatementDateTime"`
-}
-
-type GetAccountsAccountIDStatementsHeaders struct {
 	// The unique id of the sandbox to be used
 	SandboxID string `header:"style=simple,explode=false,name=sandbox-id"`
+	// The UTC ISO 8601 Date Time to filter statements TO NB Time component is optional - set to 00:00:00 for just Date. If the Date Time contains a timezone, the ASPSP must ignore the timezone component.
+	ToStatementDateTime *time.Time `queryParam:"style=form,explode=true,name=toStatementDateTime"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -38,13 +32,6 @@ type GetAccountsAccountIDStatementsHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type GetAccountsAccountIDStatementsRequest struct {
-	PathParams  GetAccountsAccountIDStatementsPathParams
-	QueryParams GetAccountsAccountIDStatementsQueryParams
-	Headers     GetAccountsAccountIDStatementsHeaders
-	Security    GetAccountsAccountIDStatementsSecurity
 }
 
 type GetAccountsAccountIDStatementsResponse struct {

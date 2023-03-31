@@ -8,18 +8,13 @@ import (
 )
 
 type PrivateArticleConfidentialityUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleConfidentialityUpdatePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleConfidentialityUpdateRequest struct {
-	PathParams PrivateArticleConfidentialityUpdatePathParams
-	Request    shared.ConfidentialityCreator `request:"mediaType=application/json"`
-	Security   PrivateArticleConfidentialityUpdateSecurity
+	ConfidentialityCreator shared.ConfidentialityCreator `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleConfidentialityUpdateResponse struct {

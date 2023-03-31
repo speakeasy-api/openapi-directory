@@ -61,10 +61,6 @@ type PostUserAPIKeysRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostUserAPIKeysRequest struct {
-	Request *PostUserAPIKeysRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostUserAPIKeysResponse struct {
 	// The ApiKeys object.
 	APIKeyEntity *shared.APIKeyEntity

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OAuth2PermissionGrantDeletePathParams struct {
+type OAuth2PermissionGrantDeleteRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of a permission grant.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type OAuth2PermissionGrantDeleteQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type OAuth2PermissionGrantDeleteRequest struct {
-	PathParams  OAuth2PermissionGrantDeletePathParams
-	QueryParams OAuth2PermissionGrantDeleteQueryParams
 }
 
 type OAuth2PermissionGrantDeleteResponse struct {

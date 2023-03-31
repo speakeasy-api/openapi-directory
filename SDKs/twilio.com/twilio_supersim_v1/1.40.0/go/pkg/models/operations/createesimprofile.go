@@ -14,7 +14,8 @@ var CreateEsimProfileServerList = []string{
 }
 
 type CreateEsimProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateEsimProfileCreateEsimProfileRequestCallbackMethodEnum - The HTTP method we should use to call `callback_url`. Can be: `GET` or `POST` and the default is POST.
@@ -62,12 +63,6 @@ type CreateEsimProfileCreateEsimProfileRequest struct {
 	Eid *string `form:"name=Eid"`
 	// When set to `true`, a value for `Eid` does not need to be provided. Instead, when the eSIM profile is reserved, a matching ID will be generated and returned via the `matching_id` property. This identifies the specific eSIM profile that can be used by any capable device to claim and download the profile.
 	GenerateMatchingID *bool `form:"name=GenerateMatchingId"`
-}
-
-type CreateEsimProfileRequest struct {
-	Request   *CreateEsimProfileCreateEsimProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateEsimProfileSecurity
-	ServerURL *string
 }
 
 type CreateEsimProfileResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchPatientPlanSummaryPathParams struct {
-	// Plan summary identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // FetchPatientPlanSummaryIncludeEnum - List of related resources to include in the response
 type FetchPatientPlanSummaryIncludeEnum string
 
@@ -44,14 +39,11 @@ func (e *FetchPatientPlanSummaryIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FetchPatientPlanSummaryQueryParams struct {
+type FetchPatientPlanSummaryRequest struct {
+	// Plan summary identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// List of related resources to include in the response
 	Include *FetchPatientPlanSummaryIncludeEnum `queryParam:"style=form,explode=true,name=include"`
-}
-
-type FetchPatientPlanSummaryRequest struct {
-	PathParams  FetchPatientPlanSummaryPathParams
-	QueryParams FetchPatientPlanSummaryQueryParams
 }
 
 type FetchPatientPlanSummaryResponse struct {

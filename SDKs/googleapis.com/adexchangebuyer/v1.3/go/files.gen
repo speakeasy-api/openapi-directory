@@ -41,7 +41,6 @@ pkg/models/operations/adexchangebuyerpretargetingconfigpatch.go
 pkg/models/operations/adexchangebuyerpretargetingconfigupdate.go
 pkg/models/shared/account.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountslist.go
 pkg/models/shared/billinginfo.go
 pkg/models/shared/billinginfolist.go

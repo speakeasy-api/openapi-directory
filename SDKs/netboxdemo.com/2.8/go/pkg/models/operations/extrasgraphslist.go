@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasGraphsListQueryParams struct {
+type ExtrasGraphsListRequest struct {
 	ID    *string `queryParam:"style=form,explode=true,name=id"`
 	IDGt  *string `queryParam:"style=form,explode=true,name=id__gt"`
 	IDGte *string `queryParam:"style=form,explode=true,name=id__gte"`
@@ -32,10 +32,6 @@ type ExtrasGraphsListQueryParams struct {
 	TemplateLanguageN *string `queryParam:"style=form,explode=true,name=template_language__n"`
 	Type              *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN             *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type ExtrasGraphsListRequest struct {
-	QueryParams ExtrasGraphsListQueryParams
 }
 
 type ExtrasGraphsList200ApplicationJSON struct {

@@ -3,33 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
-req = operations.GetDeleteAlarmsRequest(
-    query_params=operations.GetDeleteAlarmsQueryParams(
-        action="DeleteAlarms",
-        alarm_names=[
-            "omnis",
-            "illum",
-        ],
-        version="2010-08-01",
-    ),
-    headers=operations.GetDeleteAlarmsHeaders(
-        x_amz_algorithm="dolores",
-        x_amz_content_sha256="harum",
-        x_amz_credential="neque",
-        x_amz_date="eligendi",
-        x_amz_security_token="et",
-        x_amz_signature="aut",
-        x_amz_signed_headers="fugiat",
-    ),
+
+
+req = operations.GETDeleteAlarmsRequest(
+    action="DeleteAlarms",
+    alarm_names=[
+        "provident",
+        "distinctio",
+        "quibusdam",
+    ],
+    version="2010-08-01",
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.get_delete_alarms(req)

@@ -12,18 +12,13 @@ var FetchSupportingDocumentTypeServerList = []string{
 }
 
 type FetchSupportingDocumentTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSupportingDocumentTypePathParams struct {
-	// The unique string that identifies the Supporting Document Type resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSupportingDocumentTypeRequest struct {
-	PathParams FetchSupportingDocumentTypePathParams
-	Security   FetchSupportingDocumentTypeSecurity
-	ServerURL  *string
+	// The unique string that identifies the Supporting Document Type resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSupportingDocumentTypeResponse struct {

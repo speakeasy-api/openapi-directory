@@ -44,7 +44,6 @@ pkg/models/operations/toolresultsprojectsinitializesettings.go
 pkg/models/shared/projectsettings.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/history.go
 pkg/models/shared/screenshotcluster.go
 pkg/models/shared/screen.go

@@ -17,5 +17,4 @@ pkg/models/shared/identificationtokenresponse.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/identificationtokengenerationrequest.go
-pkg/models/shared/security.go
 USAGE.md

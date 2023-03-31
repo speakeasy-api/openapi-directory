@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsGetArchiveForAuthenticatedUserPathParams struct {
+type MigrationsGetArchiveForAuthenticatedUserRequest struct {
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
-}
-
-type MigrationsGetArchiveForAuthenticatedUserRequest struct {
-	PathParams MigrationsGetArchiveForAuthenticatedUserPathParams
 }
 
 type MigrationsGetArchiveForAuthenticatedUserResponse struct {

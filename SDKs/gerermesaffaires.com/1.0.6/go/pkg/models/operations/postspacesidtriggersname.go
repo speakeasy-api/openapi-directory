@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDTriggersNameSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostSpacesIDTriggersNamePathParams struct {
+type PostSpacesIDTriggersNameRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// trigger name
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type PostSpacesIDTriggersNameRequest struct {
-	PathParams PostSpacesIDTriggersNamePathParams
-	Security   PostSpacesIDTriggersNameSecurity
 }
 
 type PostSpacesIDTriggersNameResponse struct {

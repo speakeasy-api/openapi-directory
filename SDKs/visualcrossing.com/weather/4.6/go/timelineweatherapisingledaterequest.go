@@ -32,20 +32,30 @@ func newTimelineWeatherAPISingleDateRequest(defaultClient, securityClient HTTPCl
 
 // GetVisualCrossingWebServicesRestServicesTimelineLocationStartdate - Historical and Forecast Weather API
 // Seamless access to daily and hourly historical and forecast weather data plus weather alerts, events and current conditions.
-func (s *timelineWeatherAPISingleDateRequest) GetVisualCrossingWebServicesRestServicesTimelineLocationStartdate(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest) (*operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateResponse, error) {
-	baseURL := operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *timelineWeatherAPISingleDateRequest) GetVisualCrossingWebServicesRestServicesTimelineLocationStartdate(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest, opts ...operations.Option) (*operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}/{startdate}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}/{startdate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

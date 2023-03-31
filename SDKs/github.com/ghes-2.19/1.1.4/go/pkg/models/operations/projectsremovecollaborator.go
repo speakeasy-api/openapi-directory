@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsRemoveCollaboratorPathParams struct {
+type ProjectsRemoveCollaboratorRequest struct {
 	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
 	Username  string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ProjectsRemoveCollaboratorRequest struct {
-	PathParams ProjectsRemoveCollaboratorPathParams
 }
 
 // ProjectsRemoveCollaborator415ApplicationJSON - Preview header missing

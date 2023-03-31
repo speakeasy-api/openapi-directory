@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetReservationPathParams struct {
+type GetReservationRequest struct {
 	// ID of the reservation that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetReservationQueryParams struct {
 	// Populate chargestation
 	IncludeChargestation *bool `queryParam:"style=form,explode=true,name=include_chargestation"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
-}
-
-type GetReservationRequest struct {
-	PathParams  GetReservationPathParams
-	QueryParams GetReservationQueryParams
 }
 
 type GetReservationResponse struct {

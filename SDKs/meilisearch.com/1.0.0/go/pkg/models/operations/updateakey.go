@@ -10,10 +10,6 @@ type UpdateAKeyRequestBody struct {
 	Description *string `json:"description,omitempty"`
 }
 
-type UpdateAKeyRequest struct {
-	Request *UpdateAKeyRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateAKeyResponse struct {
 	ContentType string
 	StatusCode  int

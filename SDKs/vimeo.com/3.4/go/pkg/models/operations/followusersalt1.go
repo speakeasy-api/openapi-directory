@@ -8,17 +8,12 @@ import (
 )
 
 type FollowUsersAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FollowUsersAlt1RequestBody struct {
 	// An array of user URIs for the list of users to follow.
 	Users []string `json:"users"`
-}
-
-type FollowUsersAlt1Request struct {
-	Request  FollowUsersAlt1RequestBody `request:"mediaType=application/json"`
-	Security FollowUsersAlt1Security
 }
 
 type FollowUsersAlt1Response struct {

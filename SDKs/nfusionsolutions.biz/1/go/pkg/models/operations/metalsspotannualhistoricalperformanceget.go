@@ -83,7 +83,7 @@ func (e *MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum) UnmarshalJSO
 	}
 }
 
-type MetalsSpotAnnualHistoricalPerformanceGETQueryParams struct {
+type MetalsSpotAnnualHistoricalPerformanceGETRequest struct {
 	// comma separated list of conversion currencies, defaults to USD
 	Currency *string `queryParam:"style=form,explode=true,name=currency"`
 	// to override content negotiation specify a value of json or xml
@@ -102,10 +102,6 @@ type MetalsSpotAnnualHistoricalPerformanceGETQueryParams struct {
 	Unitofmeasure *MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum `queryParam:"style=form,explode=true,name=unitofmeasure"`
 	// Number of years of history to return. Defaults to 10.
 	Years *int `queryParam:"style=form,explode=true,name=years"`
-}
-
-type MetalsSpotAnnualHistoricalPerformanceGETRequest struct {
-	QueryParams MetalsSpotAnnualHistoricalPerformanceGETQueryParams
 }
 
 type MetalsSpotAnnualHistoricalPerformanceGETResponse struct {

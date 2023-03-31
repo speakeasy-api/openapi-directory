@@ -8,18 +8,14 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesPathParams struct {
-	// Required. Full resource name of Product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`. If the caller does not have permission to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
-	Product string `pathParam:"style=simple,explode=false,name=product"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryParams struct {
+type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                       *shared.XgafvEnum                                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRetailV2betaAddLocalInventoriesRequest *shared.GoogleCloudRetailV2betaAddLocalInventoriesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,19 +30,14 @@ type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryPara
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Full resource name of Product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`. If the caller does not have permission to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+	Product string `pathParam:"style=simple,explode=false,name=product"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesPathParams
-	QueryParams RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryParams
-	Request     *shared.GoogleCloudRetailV2betaAddLocalInventoriesRequest `request:"mediaType=application/json"`
-	Security    RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity
 }
 
 type RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse struct {

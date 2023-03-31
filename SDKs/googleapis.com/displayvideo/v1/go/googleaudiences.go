@@ -33,20 +33,20 @@ func newGoogleAudiences(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DisplayvideoGoogleAudiencesGet - Gets a Google audience.
-func (s *googleAudiences) DisplayvideoGoogleAudiencesGet(ctx context.Context, request operations.DisplayvideoGoogleAudiencesGetRequest) (*operations.DisplayvideoGoogleAudiencesGetResponse, error) {
+func (s *googleAudiences) DisplayvideoGoogleAudiencesGet(ctx context.Context, request operations.DisplayvideoGoogleAudiencesGetRequest, security operations.DisplayvideoGoogleAudiencesGetSecurity) (*operations.DisplayvideoGoogleAudiencesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/googleAudiences/{googleAudienceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/googleAudiences/{googleAudienceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *googleAudiences) DisplayvideoGoogleAudiencesGet(ctx context.Context, re
 }
 
 // DisplayvideoGoogleAudiencesList - Lists Google audiences. The order is defined by the order_by parameter.
-func (s *googleAudiences) DisplayvideoGoogleAudiencesList(ctx context.Context, request operations.DisplayvideoGoogleAudiencesListRequest) (*operations.DisplayvideoGoogleAudiencesListResponse, error) {
+func (s *googleAudiences) DisplayvideoGoogleAudiencesList(ctx context.Context, request operations.DisplayvideoGoogleAudiencesListRequest, security operations.DisplayvideoGoogleAudiencesListSecurity) (*operations.DisplayvideoGoogleAudiencesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/googleAudiences"
 
@@ -90,11 +90,11 @@ func (s *googleAudiences) DisplayvideoGoogleAudiencesList(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

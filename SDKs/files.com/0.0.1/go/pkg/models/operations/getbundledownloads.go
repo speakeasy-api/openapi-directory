@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBundleDownloadsQueryParams struct {
+type GetBundleDownloadsRequest struct {
 	// Bundle ID
 	BundleID *int `queryParam:"style=form,explode=true,name=bundle_id"`
 	// BundleRegistration ID
@@ -30,10 +30,6 @@ type GetBundleDownloadsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[created_at]=desc`). Valid fields are `created_at`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetBundleDownloadsRequest struct {
-	QueryParams GetBundleDownloadsQueryParams
 }
 
 type GetBundleDownloadsResponse struct {

@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.GetActionNotificationExportResultsRequest{
-        QueryParams: operations.GetActionNotificationExportResultsQueryParams{
-            ActionNotificationExportID: 548814,
-            Cursor: "provident",
-            PerPage: 715190,
-            UserID: 844266,
-        },
+        ActionNotificationExportID: 548814,
+        Cursor: "provident",
+        PerPage: 715190,
+        UserID: 844266,
     }
 
     ctx := context.Background()

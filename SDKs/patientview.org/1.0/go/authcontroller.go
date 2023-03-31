@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -37,7 +38,7 @@ func newAuthController(defaultClient, securityClient HTTPClient, serverURL, lang
 // Once logged in and have a token, get basic user information including group role membership
 func (s *authController) GetBasicUserInformation(ctx context.Context, request operations.GetBasicUserInformationRequest) (*operations.GetBasicUserInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/auth/{token}/basicuserinformation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/auth/{token}/basicuserinformation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +86,7 @@ func (s *authController) GetBasicUserInformation(ctx context.Context, request op
 
 // LogIn - Log In
 // Authenticate using username and password, returns token, which must be added to X-Auth-Token in header of all future requests
-func (s *authController) LogIn(ctx context.Context, request operations.LogInRequest) (*operations.LogInResponse, error) {
+func (s *authController) LogIn(ctx context.Context, request shared.Credentials) (*operations.LogInResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/login"
 
@@ -146,7 +147,7 @@ func (s *authController) LogIn(ctx context.Context, request operations.LogInRequ
 // Log Out
 func (s *authController) LogOut(ctx context.Context, request operations.LogOutRequest) (*operations.LogOutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/auth/logout/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/auth/logout/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

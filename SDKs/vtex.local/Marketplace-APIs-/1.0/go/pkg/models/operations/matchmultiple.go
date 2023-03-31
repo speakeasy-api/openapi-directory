@@ -6,28 +6,16 @@ import (
 	"net/http"
 )
 
-type MatchMultiplePathParams struct {
-	// This field refers to the operation you choose to apply to received SKUs. Values include: newproduct, skuassociation, productassociation or deny.
-	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
-}
-
-type MatchMultipleQueryParams struct {
-	// Name of the VTEX account. Used as part of the URL
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type MatchMultipleHeaders struct {
+type MatchMultipleRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type MatchMultipleRequest struct {
-	PathParams  MatchMultiplePathParams
-	QueryParams MatchMultipleQueryParams
-	Headers     MatchMultipleHeaders
-	Request     [][]interface{} `request:"mediaType=application/json"`
+	ContentType string          `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody [][]interface{} `request:"mediaType=application/json"`
+	// Name of the VTEX account. Used as part of the URL
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// This field refers to the operation you choose to apply to received SKUs. Values include: newproduct, skuassociation, productassociation or deny.
+	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
 }
 
 type MatchMultipleResponse struct {

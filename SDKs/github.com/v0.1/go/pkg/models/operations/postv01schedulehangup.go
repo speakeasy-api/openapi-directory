@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ScheduleHangupSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ScheduleHangupRequest struct {
-	// POST parameters
-	Request  *shared.ScheduleHangupParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ScheduleHangupSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ScheduleHangupResponse struct {

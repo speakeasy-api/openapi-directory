@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05ConsentsHiuOnNotifyHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05ConsentsHiuOnNotifyRequest struct {
-	Headers PostV05ConsentsHiuOnNotifyHeaders
-	Request shared.HIUConsentNotificationResponse `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization                  string                                `header:"style=simple,explode=false,name=Authorization"`
+	HIUConsentNotificationResponse shared.HIUConsentNotificationResponse `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentsHiuOnNotifyResponse struct {

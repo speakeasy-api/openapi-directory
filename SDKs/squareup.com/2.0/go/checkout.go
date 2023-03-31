@@ -35,11 +35,11 @@ func newCheckout(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Links a `checkoutId` to a `checkout_page_url` that customers are
 // directed to in order to provide their payment information using a
 // payment processing workflow hosted on connect.squareup.com.
-func (s *checkout) CreateCheckout(ctx context.Context, request operations.CreateCheckoutRequest) (*operations.CreateCheckoutResponse, error) {
+func (s *checkout) CreateCheckout(ctx context.Context, request operations.CreateCheckoutRequest, security operations.CreateCheckoutSecurity) (*operations.CreateCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/checkouts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/checkouts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCheckoutRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *checkout) CreateCheckout(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

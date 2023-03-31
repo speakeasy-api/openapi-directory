@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostRealmAuthenticationExecutionsExecutionIDLowerPriorityPathParams struct {
+type PostRealmAuthenticationExecutionsExecutionIDLowerPriorityRequest struct {
 	// Execution id
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationExecutionsExecutionIDLowerPriorityRequest struct {
-	PathParams PostRealmAuthenticationExecutionsExecutionIDLowerPriorityPathParams
 }
 
 type PostRealmAuthenticationExecutionsExecutionIDLowerPriorityResponse struct {

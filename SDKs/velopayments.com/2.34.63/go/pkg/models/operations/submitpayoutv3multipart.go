@@ -19,11 +19,6 @@ type SubmitPayoutV3MultipartFormData struct {
 	PayoutToPayorID *string `multipartForm:"name=payoutToPayorId"`
 }
 
-type SubmitPayoutV3MultipartRequest struct {
-	// Post amount to transfer using stored funding account details.
-	Request SubmitPayoutV3MultipartFormData `request:"mediaType=multipart/form-data"`
-}
-
 type SubmitPayoutV3MultipartResponse struct {
 	ContentType string
 	Headers     map[string][]string

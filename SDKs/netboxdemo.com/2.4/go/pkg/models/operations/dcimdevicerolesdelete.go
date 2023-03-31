@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimDeviceRolesDeletePathParams struct {
+type DcimDeviceRolesDeleteRequest struct {
 	// A unique integer value identifying this device role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceRolesDeleteRequest struct {
-	PathParams DcimDeviceRolesDeletePathParams
 }
 
 type DcimDeviceRolesDeleteResponse struct {

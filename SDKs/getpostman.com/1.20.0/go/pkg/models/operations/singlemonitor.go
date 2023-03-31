@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleMonitorPathParams struct {
-	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
-}
-
 type SingleMonitorRequest struct {
-	PathParams SingleMonitorPathParams
+	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
 }
 
 type SingleMonitor404ApplicationJSONError struct {

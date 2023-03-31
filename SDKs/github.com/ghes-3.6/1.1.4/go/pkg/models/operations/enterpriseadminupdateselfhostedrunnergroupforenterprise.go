@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 // EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum - Visibility of a runner group. You can select all organizations or select individual organizations.
 type EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum string
 
@@ -54,8 +47,11 @@ type EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody struct {
 }
 
 type EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest struct {
-	PathParams EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams
-	Request    *EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse struct {

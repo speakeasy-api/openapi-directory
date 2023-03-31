@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolSyslogSetConfigPathParams struct {
+type ProtocolSyslogSetConfigRequest struct {
 	// Agent to set the SYSLOG configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the SYSLOG configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the SYSLOG configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolSyslogSetConfigRequest struct {
-	PathParams ProtocolSyslogSetConfigPathParams
 }
 
 type ProtocolSyslogSetConfigResponse struct {

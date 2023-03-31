@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetInterfacePathParams struct {
+type SetInterfaceRequest struct {
 	// Agent to set the primary interface
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Primary interface of the agent
 	Interface string `pathParam:"style=simple,explode=false,name=interface"`
-}
-
-type SetInterfaceRequest struct {
-	PathParams SetInterfacePathParams
 }
 
 type SetInterfaceResponse struct {

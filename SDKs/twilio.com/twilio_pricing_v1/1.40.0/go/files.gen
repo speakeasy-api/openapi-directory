@@ -19,7 +19,6 @@ pkg/models/operations/listmessagingcountry.go
 pkg/models/operations/listphonenumbercountry.go
 pkg/models/operations/listvoicecountry.go
 pkg/models/shared/pricingv1messagingmessagingcountryinstance.go
-pkg/models/shared/security.go
 pkg/models/shared/pricingv1phonenumberphonenumbercountryinstance.go
 pkg/models/shared/pricingv1voicevoicecountryinstance.go
 pkg/models/shared/pricingv1voicevoicenumber.go
@@ -27,3 +26,4 @@ pkg/models/shared/pricingv1messagingmessagingcountry.go
 pkg/models/shared/pricingv1phonenumberphonenumbercountry.go
 pkg/models/shared/pricingv1voicevoicecountry.go
 USAGE.md
+pkg/models/operations/options.go

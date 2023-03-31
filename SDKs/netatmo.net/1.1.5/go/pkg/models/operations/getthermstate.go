@@ -8,20 +8,15 @@ import (
 )
 
 type GetthermstateSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetthermstateQueryParams struct {
+type GetthermstateRequest struct {
 	// The relay id
 	DeviceID string `queryParam:"style=form,explode=true,name=device_id"`
 	// The thermostat id
 	ModuleID string `queryParam:"style=form,explode=true,name=module_id"`
-}
-
-type GetthermstateRequest struct {
-	QueryParams GetthermstateQueryParams
-	Security    GetthermstateSecurity
 }
 
 type GetthermstateResponse struct {

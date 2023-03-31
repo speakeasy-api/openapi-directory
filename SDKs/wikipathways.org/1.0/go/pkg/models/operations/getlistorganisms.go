@@ -44,12 +44,8 @@ func (e *GetListOrganismsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetListOrganismsQueryParams struct {
-	Format *GetListOrganismsFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
 type GetListOrganismsRequest struct {
-	QueryParams GetListOrganismsQueryParams
+	Format *GetListOrganismsFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type GetListOrganismsResponse struct {

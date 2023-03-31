@@ -3,36 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.BatchGetTracesRequest(
-    query_params=operations.BatchGetTracesQueryParams(
-        next_token="ut",
-    ),
-    headers=operations.BatchGetTracesHeaders(
-        x_amz_algorithm="possimus",
-        x_amz_content_sha256="iusto",
-        x_amz_credential="illum",
-        x_amz_date="ex",
-        x_amz_security_token="eos",
-        x_amz_signature="asperiores",
-        x_amz_signed_headers="dicta",
-    ),
-    request=operations.BatchGetTracesRequestBody(
-        next_token="sunt",
+    next_token="corrupti",
+    request_body=operations.BatchGetTracesRequestBody(
+        next_token="provident",
         trace_ids=[
-            "omnis",
-            "nobis",
-            "et",
+            "quibusdam",
+            "unde",
+            "nulla",
         ],
     ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
 )
     
 res = s.batch_get_traces(req)

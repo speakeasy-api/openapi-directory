@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWireDrawdownRequestsQueryParams struct {
+type ListWireDrawdownRequestsRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListWireDrawdownRequestsRequest struct {
-	QueryParams ListWireDrawdownRequestsQueryParams
 }
 
 type ListWireDrawdownRequestsDefaultApplicationJSON13StatusEnum string

@@ -67,7 +67,7 @@ func (s *tenancy) TenancyChoicesList(ctx context.Context) (*operations.TenancyCh
 }
 func (s *tenancy) TenancyChoicesRead(ctx context.Context, request operations.TenancyChoicesReadRequest) (*operations.TenancyChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *tenancy) TenancyChoicesRead(ctx context.Context, request operations.Ten
 
 	return res, nil
 }
-func (s *tenancy) TenancyTenantGroupsCreate(ctx context.Context, request operations.TenancyTenantGroupsCreateRequest) (*operations.TenancyTenantGroupsCreateResponse, error) {
+func (s *tenancy) TenancyTenantGroupsCreate(ctx context.Context, request shared.TenantGroupInput) (*operations.TenancyTenantGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenancy/tenant-groups/"
 
@@ -152,7 +152,7 @@ func (s *tenancy) TenancyTenantGroupsCreate(ctx context.Context, request operati
 }
 func (s *tenancy) TenancyTenantGroupsDelete(ctx context.Context, request operations.TenancyTenantGroupsDeleteRequest) (*operations.TenancyTenantGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *tenancy) TenancyTenantGroupsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,9 +231,9 @@ func (s *tenancy) TenancyTenantGroupsList(ctx context.Context, request operation
 }
 func (s *tenancy) TenancyTenantGroupsPartialUpdate(ctx context.Context, request operations.TenancyTenantGroupsPartialUpdateRequest) (*operations.TenancyTenantGroupsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TenantGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *tenancy) TenancyTenantGroupsPartialUpdate(ctx context.Context, request 
 }
 func (s *tenancy) TenancyTenantGroupsRead(ctx context.Context, request operations.TenancyTenantGroupsReadRequest) (*operations.TenancyTenantGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,9 +325,9 @@ func (s *tenancy) TenancyTenantGroupsRead(ctx context.Context, request operation
 }
 func (s *tenancy) TenancyTenantGroupsUpdate(ctx context.Context, request operations.TenancyTenantGroupsUpdateRequest) (*operations.TenancyTenantGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenant-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TenantGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -375,7 +375,7 @@ func (s *tenancy) TenancyTenantGroupsUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *tenancy) TenancyTenantsCreate(ctx context.Context, request operations.TenancyTenantsCreateRequest) (*operations.TenancyTenantsCreateResponse, error) {
+func (s *tenancy) TenancyTenantsCreate(ctx context.Context, request shared.WritableTenantInput) (*operations.TenancyTenantsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenancy/tenants/"
 
@@ -429,7 +429,7 @@ func (s *tenancy) TenancyTenantsCreate(ctx context.Context, request operations.T
 }
 func (s *tenancy) TenancyTenantsDelete(ctx context.Context, request operations.TenancyTenantsDeleteRequest) (*operations.TenancyTenantsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -469,7 +469,7 @@ func (s *tenancy) TenancyTenantsList(ctx context.Context, request operations.Ten
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -508,9 +508,9 @@ func (s *tenancy) TenancyTenantsList(ctx context.Context, request operations.Ten
 }
 func (s *tenancy) TenancyTenantsPartialUpdate(ctx context.Context, request operations.TenancyTenantsPartialUpdateRequest) (*operations.TenancyTenantsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableTenantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -560,7 +560,7 @@ func (s *tenancy) TenancyTenantsPartialUpdate(ctx context.Context, request opera
 }
 func (s *tenancy) TenancyTenantsRead(ctx context.Context, request operations.TenancyTenantsReadRequest) (*operations.TenancyTenantsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,9 +602,9 @@ func (s *tenancy) TenancyTenantsRead(ctx context.Context, request operations.Ten
 }
 func (s *tenancy) TenancyTenantsUpdate(ctx context.Context, request operations.TenancyTenantsUpdateRequest) (*operations.TenancyTenantsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenancy/tenants/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableTenantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetGenrePathParams struct {
-	// ID of the genre
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetGenreIncludeLicensedContentEnum - True if you want to display licensed content
 type GetGenreIncludeLicensedContentEnum string
 
@@ -37,16 +32,13 @@ func (e *GetGenreIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGenreQueryParams struct {
+type GetGenreRequest struct {
+	// ID of the genre
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// True if you want to display licensed content
 	IncludeLicensedContent *GetGenreIncludeLicensedContentEnum `queryParam:"style=form,explode=true,name=includeLicensedContent"`
 	// The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*')
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetGenreRequest struct {
-	PathParams  GetGenrePathParams
-	QueryParams GetGenreQueryParams
 }
 
 type GetGenreResponse struct {

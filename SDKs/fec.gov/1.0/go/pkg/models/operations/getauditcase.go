@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAuditCaseQueryParams struct {
+type GetAuditCaseRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -96,10 +96,6 @@ type GetAuditCaseQueryParams struct {
 	// The finding id of an audit. Finding are a category of broader issues. Each category has an unique ID.
 	//
 	SubCategoryID *string `queryParam:"style=form,explode=true,name=sub_category_id"`
-}
-
-type GetAuditCaseRequest struct {
-	QueryParams GetAuditCaseQueryParams
 }
 
 type GetAuditCaseResponse struct {

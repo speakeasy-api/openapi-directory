@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBookmarksQueryParams struct {
+type SearchBookmarksRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -50,10 +50,6 @@ type SearchBookmarksQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBookmarksRequest struct {
-	QueryParams SearchBookmarksQueryParams
 }
 
 type SearchBookmarksResponse struct {

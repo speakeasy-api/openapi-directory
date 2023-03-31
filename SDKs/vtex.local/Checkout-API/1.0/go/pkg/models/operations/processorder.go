@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type ProcessOrderPathParams struct {
-	// Order group. It is the part of the `orderId` that comes before the `-`. For example, the `orderGroup` of the order `123456789-01` is `123456789`.
-	OrderGroup string `pathParam:"style=simple,explode=false,name=orderGroup"`
-}
-
-type ProcessOrderHeaders struct {
+type ProcessOrderRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// VTEX Chekout cookie associated with a specific order. Use the `Vtex_CHKO_Auth` and the `CheckoutDataAccess` cookies returned by the [Place order](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder) or [Place order from existing cart](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform) API requests, like a browser would.
 	Cookie string `header:"style=simple,explode=false,name=Cookie"`
-}
-
-type ProcessOrderRequest struct {
-	PathParams ProcessOrderPathParams
-	Headers    ProcessOrderHeaders
+	// Order group. It is the part of the `orderId` that comes before the `-`. For example, the `orderGroup` of the order `123456789-01` is `123456789`.
+	OrderGroup string `pathParam:"style=simple,explode=false,name=orderGroup"`
 }
 
 // ProcessOrder500ApplicationJSONError - Information on the error.

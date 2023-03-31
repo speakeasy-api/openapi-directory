@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetEntitySetPhenotypeSlimmerQueryParams struct {
+type GetEntitySetPhenotypeSlimmerRequest struct {
 	// If set, excludes associations that involve IEAs (ECO:0000501)
 	ExcludeAutomaticAssertions *bool `queryParam:"style=form,explode=true,name=exclude_automatic_assertions"`
 	// number of rows
@@ -17,10 +17,6 @@ type GetEntitySetPhenotypeSlimmerQueryParams struct {
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
 	// Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
 	Subject []string `queryParam:"style=form,explode=true,name=subject"`
-}
-
-type GetEntitySetPhenotypeSlimmerRequest struct {
-	QueryParams GetEntitySetPhenotypeSlimmerQueryParams
 }
 
 type GetEntitySetPhenotypeSlimmerResponse struct {

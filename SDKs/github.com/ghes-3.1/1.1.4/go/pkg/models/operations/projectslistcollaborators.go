@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListCollaboratorsPathParams struct {
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
 // ProjectsListCollaboratorsAffiliationEnum - Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
 type ProjectsListCollaboratorsAffiliationEnum string
 
@@ -41,18 +36,15 @@ func (e *ProjectsListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ProjectsListCollaboratorsQueryParams struct {
+type ProjectsListCollaboratorsRequest struct {
 	// Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
 	Affiliation *ProjectsListCollaboratorsAffiliationEnum `queryParam:"style=form,explode=true,name=affiliation"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ProjectsListCollaboratorsRequest struct {
-	PathParams  ProjectsListCollaboratorsPathParams
-	QueryParams ProjectsListCollaboratorsQueryParams
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type ProjectsListCollaboratorsResponse struct {

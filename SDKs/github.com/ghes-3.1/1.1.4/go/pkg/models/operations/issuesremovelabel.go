@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesRemoveLabelPathParams struct {
+type IssuesRemoveLabelRequest struct {
 	// The number that identifies the issue.
 	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
 	Name        string `pathParam:"style=simple,explode=false,name=name"`
@@ -15,10 +15,6 @@ type IssuesRemoveLabelPathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesRemoveLabelRequest struct {
-	PathParams IssuesRemoveLabelPathParams
 }
 
 type IssuesRemoveLabelResponse struct {

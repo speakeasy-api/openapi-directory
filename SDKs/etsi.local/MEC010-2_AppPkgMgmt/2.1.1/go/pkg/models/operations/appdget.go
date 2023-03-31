@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppDGETPathParams struct {
-	// Identifier of an application descriptor
-	AppDID string `pathParam:"style=simple,explode=false,name=appDId"`
-}
-
-type AppDGETQueryParams struct {
+type AppDGETRequest struct {
 	// Include all complex attributes in the response.
 	AllFields *string `queryParam:"style=form,explode=true,name=all_fields"`
+	// Identifier of an application descriptor
+	AppDID string `pathParam:"style=simple,explode=false,name=appDId"`
 	// Indicates to exclude the following complex attributes of AppPkgInfo from the response.
 	ExcludeDefault *string `queryParam:"style=form,explode=true,name=exclude_default"`
 	// Complex attributes of AppPkgInfo to be excluded from the response.
@@ -23,11 +20,6 @@ type AppDGETQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Attribute-based filtering parameters according to ETSI GS MEC 009
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-}
-
-type AppDGETRequest struct {
-	PathParams  AppDGETPathParams
-	QueryParams AppDGETQueryParams
 }
 
 type AppDGETResponse struct {

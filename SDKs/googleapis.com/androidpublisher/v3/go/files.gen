@@ -125,7 +125,6 @@ pkg/models/shared/deviceid.go
 pkg/models/shared/deviceram.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listdevicetierconfigsresponse.go
 pkg/models/shared/apksaddexternallyhostedresponse.go
 pkg/models/shared/externallyhostedapk.go

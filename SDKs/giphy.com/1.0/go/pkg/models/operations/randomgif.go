@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RandomGifQueryParams struct {
+type RandomGifRequest struct {
 	// Filters results by specified rating.
 	Rating *string `queryParam:"style=form,explode=true,name=rating"`
 	// Filters results by specified tag.
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type RandomGifRequest struct {
-	QueryParams RandomGifQueryParams
 }
 
 type RandomGif200ApplicationJSON struct {

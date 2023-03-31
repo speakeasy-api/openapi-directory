@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetTopExamplePathParams struct {
-	// Word to fetch examples for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetTopExampleUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetTopExampleUseCanonicalEnum string
 
@@ -37,14 +32,11 @@ func (e *GetTopExampleUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTopExampleQueryParams struct {
+type GetTopExampleRequest struct {
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetTopExampleUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetTopExampleRequest struct {
-	PathParams  GetTopExamplePathParams
-	QueryParams GetTopExampleQueryParams
+	// Word to fetch examples for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetTopExampleResponse struct {

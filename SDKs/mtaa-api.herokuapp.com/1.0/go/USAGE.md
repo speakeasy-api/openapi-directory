@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.DistrictsInARegionRequest{
-        PathParams: operations.DistrictsInARegionPathParams{
-            Country: "Malta",
-            Region: "provident",
-        },
+        Country: "Malta",
+        Region: "provident",
     }
 
     ctx := context.Background()

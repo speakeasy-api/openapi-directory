@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetBoxMenusSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetBoxMenusRequest struct {
-	Security GetBoxMenusSecurity
-}
 
 type GetBoxMenus200ApplicationJSONMenus struct {
 	Class *string `json:"Class,omitempty"`

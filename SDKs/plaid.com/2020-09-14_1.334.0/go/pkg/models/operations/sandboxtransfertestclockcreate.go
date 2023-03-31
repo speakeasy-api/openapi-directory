@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxTransferTestClockCreateRequest struct {
-	Request shared.SandboxTransferTestClockCreateRequest `request:"mediaType=application/json"`
-}
 
 type SandboxTransferTestClockCreateResponse struct {
 	ContentType string

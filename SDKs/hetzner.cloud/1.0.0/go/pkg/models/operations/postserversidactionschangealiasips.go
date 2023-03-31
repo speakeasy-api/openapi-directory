@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsChangeAliasIpsPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsChangeAliasIpsRequestBody struct {
 	// New alias IPs to set for this Server
 	AliasIps []string `json:"alias_ips"`
@@ -21,8 +16,9 @@ type PostServersIDActionsChangeAliasIpsRequestBody struct {
 }
 
 type PostServersIDActionsChangeAliasIpsRequest struct {
-	PathParams PostServersIDActionsChangeAliasIpsPathParams
-	Request    *PostServersIDActionsChangeAliasIpsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsChangeAliasIpsRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsChangeAliasIpsActionResponseActionError - Error message for the Action if error occurred, otherwise null

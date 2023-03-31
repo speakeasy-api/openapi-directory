@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetUpdatePaymentEstimatePathParams struct {
-	// payment ID, for which you want to get the estimate
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUpdatePaymentEstimateHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type GetUpdatePaymentEstimateRequest struct {
-	PathParams GetUpdatePaymentEstimatePathParams
-	Headers    GetUpdatePaymentEstimateHeaders
+	// payment ID, for which you want to get the estimate
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetUpdatePaymentEstimate200ApplicationJSON - 200

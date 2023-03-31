@@ -34,7 +34,7 @@ func newPayorsPrivate(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreatePayorLinks - Create a Payor Link
 // This endpoint allows you to create a payor link.
-func (s *payorsPrivate) CreatePayorLinks(ctx context.Context, request operations.CreatePayorLinksRequest) (*operations.CreatePayorLinksResponse, error) {
+func (s *payorsPrivate) CreatePayorLinks(ctx context.Context, request shared.CreatePayorLinkRequest, security operations.CreatePayorLinksSecurity) (*operations.CreatePayorLinksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payorLinks"
 
@@ -53,7 +53,7 @@ func (s *payorsPrivate) CreatePayorLinks(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

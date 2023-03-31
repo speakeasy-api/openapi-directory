@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteConfigurationAddressServerList = []string{
@@ -12,18 +11,13 @@ var DeleteConfigurationAddressServerList = []string{
 }
 
 type DeleteConfigurationAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteConfigurationAddressPathParams struct {
-	// The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteConfigurationAddressRequest struct {
-	PathParams DeleteConfigurationAddressPathParams
-	Security   DeleteConfigurationAddressSecurity
-	ServerURL  *string
+	// The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteConfigurationAddressResponse struct {

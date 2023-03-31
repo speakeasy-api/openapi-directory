@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesCategoryPathParams struct {
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
 type GetCategoriesCategoryRequest struct {
-	PathParams GetCategoriesCategoryPathParams
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 }
 
 type GetCategoriesCategoryResponse struct {

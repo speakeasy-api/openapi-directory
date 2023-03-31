@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1PollsIDPathParams struct {
+type GetAPIV1PollsIDRequest struct {
 	// ID of the poll in the database.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1PollsIDRequest struct {
-	PathParams GetAPIV1PollsIDPathParams
 }
 
 type GetAPIV1PollsIDResponse struct {

@@ -32,20 +32,20 @@ func newTables(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // BigqueryTablesDelete - Deletes the table specified by tableId from the dataset. If the table contains data, all the data will be deleted.
-func (s *tables) BigqueryTablesDelete(ctx context.Context, request operations.BigqueryTablesDeleteRequest) (*operations.BigqueryTablesDeleteResponse, error) {
+func (s *tables) BigqueryTablesDelete(ctx context.Context, request operations.BigqueryTablesDeleteRequest, security operations.BigqueryTablesDeleteSecurity) (*operations.BigqueryTablesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *tables) BigqueryTablesDelete(ctx context.Context, request operations.Bi
 }
 
 // BigqueryTablesGet - Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
-func (s *tables) BigqueryTablesGet(ctx context.Context, request operations.BigqueryTablesGetRequest) (*operations.BigqueryTablesGetResponse, error) {
+func (s *tables) BigqueryTablesGet(ctx context.Context, request operations.BigqueryTablesGetRequest, security operations.BigqueryTablesGetSecurity) (*operations.BigqueryTablesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *tables) BigqueryTablesGet(ctx context.Context, request operations.Bigqu
 }
 
 // BigqueryTablesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *tables) BigqueryTablesGetIamPolicy(ctx context.Context, request operations.BigqueryTablesGetIamPolicyRequest) (*operations.BigqueryTablesGetIamPolicyResponse, error) {
+func (s *tables) BigqueryTablesGetIamPolicy(ctx context.Context, request operations.BigqueryTablesGetIamPolicyRequest, security operations.BigqueryTablesGetIamPolicySecurity) (*operations.BigqueryTablesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *tables) BigqueryTablesGetIamPolicy(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *tables) BigqueryTablesGetIamPolicy(ctx context.Context, request operati
 }
 
 // BigqueryTablesInsert - Creates a new, empty table in the dataset.
-func (s *tables) BigqueryTablesInsert(ctx context.Context, request operations.BigqueryTablesInsertRequest) (*operations.BigqueryTablesInsertResponse, error) {
+func (s *tables) BigqueryTablesInsert(ctx context.Context, request operations.BigqueryTablesInsertRequest, security operations.BigqueryTablesInsertSecurity) (*operations.BigqueryTablesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Table", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,11 +190,11 @@ func (s *tables) BigqueryTablesInsert(ctx context.Context, request operations.Bi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,20 +229,20 @@ func (s *tables) BigqueryTablesInsert(ctx context.Context, request operations.Bi
 }
 
 // BigqueryTablesList - Lists all tables in the specified dataset. Requires the READER dataset role.
-func (s *tables) BigqueryTablesList(ctx context.Context, request operations.BigqueryTablesListRequest) (*operations.BigqueryTablesListResponse, error) {
+func (s *tables) BigqueryTablesList(ctx context.Context, request operations.BigqueryTablesListRequest, security operations.BigqueryTablesListSecurity) (*operations.BigqueryTablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *tables) BigqueryTablesList(ctx context.Context, request operations.Bigq
 }
 
 // BigqueryTablesPatch - Updates information in an existing table. The update method replaces the entire table resource, whereas the patch method only replaces fields that are provided in the submitted table resource. This method supports patch semantics.
-func (s *tables) BigqueryTablesPatch(ctx context.Context, request operations.BigqueryTablesPatchRequest) (*operations.BigqueryTablesPatchResponse, error) {
+func (s *tables) BigqueryTablesPatch(ctx context.Context, request operations.BigqueryTablesPatchRequest, security operations.BigqueryTablesPatchSecurity) (*operations.BigqueryTablesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Table", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *tables) BigqueryTablesPatch(ctx context.Context, request operations.Big
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,11 +332,11 @@ func (s *tables) BigqueryTablesPatch(ctx context.Context, request operations.Big
 }
 
 // BigqueryTablesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *tables) BigqueryTablesSetIamPolicy(ctx context.Context, request operations.BigqueryTablesSetIamPolicyRequest) (*operations.BigqueryTablesSetIamPolicyResponse, error) {
+func (s *tables) BigqueryTablesSetIamPolicy(ctx context.Context, request operations.BigqueryTablesSetIamPolicyRequest, security operations.BigqueryTablesSetIamPolicySecurity) (*operations.BigqueryTablesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -348,11 +348,11 @@ func (s *tables) BigqueryTablesSetIamPolicy(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -387,11 +387,11 @@ func (s *tables) BigqueryTablesSetIamPolicy(ctx context.Context, request operati
 }
 
 // BigqueryTablesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *tables) BigqueryTablesTestIamPermissions(ctx context.Context, request operations.BigqueryTablesTestIamPermissionsRequest) (*operations.BigqueryTablesTestIamPermissionsResponse, error) {
+func (s *tables) BigqueryTablesTestIamPermissions(ctx context.Context, request operations.BigqueryTablesTestIamPermissionsRequest, security operations.BigqueryTablesTestIamPermissionsSecurity) (*operations.BigqueryTablesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -403,11 +403,11 @@ func (s *tables) BigqueryTablesTestIamPermissions(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -442,11 +442,11 @@ func (s *tables) BigqueryTablesTestIamPermissions(ctx context.Context, request o
 }
 
 // BigqueryTablesUpdate - Updates information in an existing table. The update method replaces the entire table resource, whereas the patch method only replaces fields that are provided in the submitted table resource.
-func (s *tables) BigqueryTablesUpdate(ctx context.Context, request operations.BigqueryTablesUpdateRequest) (*operations.BigqueryTablesUpdateResponse, error) {
+func (s *tables) BigqueryTablesUpdate(ctx context.Context, request operations.BigqueryTablesUpdateRequest, security operations.BigqueryTablesUpdateSecurity) (*operations.BigqueryTablesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Table", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,11 +458,11 @@ func (s *tables) BigqueryTablesUpdate(ctx context.Context, request operations.Bi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

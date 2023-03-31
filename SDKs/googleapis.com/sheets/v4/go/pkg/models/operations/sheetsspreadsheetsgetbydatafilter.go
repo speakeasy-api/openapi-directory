@@ -8,18 +8,18 @@ import (
 )
 
 type SheetsSpreadsheetsGetByDataFilterSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsGetByDataFilterSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsGetByDataFilterSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsGetByDataFilterSecurity struct {
@@ -28,14 +28,10 @@ type SheetsSpreadsheetsGetByDataFilterSecurity struct {
 	Option3 *SheetsSpreadsheetsGetByDataFilterSecurityOption3 `security:"option"`
 }
 
-type SheetsSpreadsheetsGetByDataFilterPathParams struct {
-	// The spreadsheet to request.
-	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
-}
-
-type SheetsSpreadsheetsGetByDataFilterQueryParams struct {
+type SheetsSpreadsheetsGetByDataFilterRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                       *shared.XgafvEnum                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GetSpreadsheetByDataFilterRequest *shared.GetSpreadsheetByDataFilterRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -52,17 +48,12 @@ type SheetsSpreadsheetsGetByDataFilterQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The spreadsheet to request.
+	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SheetsSpreadsheetsGetByDataFilterRequest struct {
-	PathParams  SheetsSpreadsheetsGetByDataFilterPathParams
-	QueryParams SheetsSpreadsheetsGetByDataFilterQueryParams
-	Request     *shared.GetSpreadsheetByDataFilterRequest `request:"mediaType=application/json"`
-	Security    SheetsSpreadsheetsGetByDataFilterSecurity
 }
 
 type SheetsSpreadsheetsGetByDataFilterResponse struct {

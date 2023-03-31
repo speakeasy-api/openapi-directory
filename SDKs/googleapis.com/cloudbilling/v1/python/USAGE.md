@@ -4,38 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudbillingBillingAccountsCreateRequest(
-    security=operations.CloudbillingBillingAccountsCreateSecurity(
-        option1=operations.CloudbillingBillingAccountsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
+    dollar_xgafv="2",
+    billing_account_input=shared.BillingAccountInput(
+        display_name="provident",
+        master_billing_account="distinctio",
     ),
-    query_params=operations.CloudbillingBillingAccountsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="tempore",
-        alt="proto",
-        callback="dolores",
-        fields="quia",
-        key="voluptatum",
-        oauth_token="provident",
-        pretty_print=True,
-        quota_user="ex",
-        upload_type="animi",
-        upload_protocol="asperiores",
-    ),
-    request=shared.BillingAccountInput(
-        display_name="qui",
-        master_billing_account="earum",
-    ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.billing_accounts.cloudbilling_billing_accounts_create(req)
+res = s.billing_accounts.cloudbilling_billing_accounts_create(req, operations.CloudbillingBillingAccountsCreateSecurity(
+    option1=operations.CloudbillingBillingAccountsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.billing_account is not None:
     # handle response

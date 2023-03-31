@@ -10,7 +10,7 @@ import (
 )
 
 type GetAPIV2SpotsSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetAPIV2SpotsOrderByIDEnum - The sort order of the list of spots, based on spot ID. If unspecified, the spots are returned in random order. If using paging to iterate through the results, sort order should be specified.
@@ -37,18 +37,13 @@ func (e *GetAPIV2SpotsOrderByIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV2SpotsQueryParams struct {
+type GetAPIV2SpotsRequest struct {
 	// The sort order of the list of spots, based on spot ID. If unspecified, the spots are returned in random order. If using paging to iterate through the results, sort order should be specified.
 	OrderByID *GetAPIV2SpotsOrderByIDEnum `queryParam:"style=form,explode=true,name=orderById"`
 	// The number of items to return. Must be between 0 and 500, inclusive.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The start page of the spot to return. The first item is indexed at 0.
 	PageStart *int `queryParam:"style=form,explode=true,name=pageStart"`
-}
-
-type GetAPIV2SpotsRequest struct {
-	QueryParams GetAPIV2SpotsQueryParams
-	Security    GetAPIV2SpotsSecurity
 }
 
 type GetAPIV2SpotsResponse struct {

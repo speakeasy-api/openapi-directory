@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserOwnsVideoAlt1PathParams struct {
+type CheckIfUserOwnsVideoAlt1Request struct {
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type CheckIfUserOwnsVideoAlt1Request struct {
-	PathParams CheckIfUserOwnsVideoAlt1PathParams
 }
 
 type CheckIfUserOwnsVideoAlt1Response struct {

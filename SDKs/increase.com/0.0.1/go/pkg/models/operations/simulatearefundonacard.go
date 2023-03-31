@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateARefundOnACardRequest struct {
-	Request shared.SimulateARefundOnACardParameters `request:"mediaType=application/json"`
-}
-
 type SimulateARefundOnACardDefaultApplicationJSON13StatusEnum string
 
 const (

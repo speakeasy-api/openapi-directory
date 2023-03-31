@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostImproveJSONRequest struct {
-	Request shared.ImprovementProgramJSON `request:"mediaType=application/json"`
-}
 
 type PostImproveJSONResponse struct {
 	Body        []byte

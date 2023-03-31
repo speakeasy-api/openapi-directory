@@ -1,0 +1,206 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/apideck.com/pos/9.1.2/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.ItemsAddRequest(
+    item_input=shared.ItemInput(
+        abbreviation="Ch",
+        absent_at_location_ids=[
+            "provident",
+            "distinctio",
+            "quibusdam",
+        ],
+        available=True,
+        available_for_pickup=False,
+        available_online=False,
+        categories=[
+            shared.ItemCategoriesInput(
+                image_ids=[
+                    "12345",
+                    "12345",
+                    "12345",
+                    "12345",
+                ],
+                name="corrupti",
+            ),
+            shared.ItemCategoriesInput(
+                image_ids=[
+                    "12345",
+                    "12345",
+                    "12345",
+                    "12345",
+                ],
+                name="vel",
+            ),
+            shared.ItemCategoriesInput(
+                image_ids=[
+                    "12345",
+                    "12345",
+                    "12345",
+                ],
+                name="deserunt",
+            ),
+        ],
+        code="11910345",
+        cost=2,
+        deleted=True,
+        description="Hot Chocolate",
+        hidden=True,
+        id="#cocoa",
+        idempotency_key="random_string",
+        name="Cocoa",
+        options=[
+            shared.ItemOptions(
+                attribute_id="12345",
+                id="12345",
+                name="Option 1",
+            ),
+            shared.ItemOptions(
+                attribute_id="12345",
+                id="12345",
+                name="Option 1",
+            ),
+        ],
+        present_at_all_locations=False,
+        price_amount=10,
+        price_currency="USD",
+        pricing_type="fixed",
+        product_type="regular",
+        sku="11910345",
+        tax_ids=[
+            "magnam",
+            "debitis",
+        ],
+        variations=[
+            shared.ItemVariationsInput(
+                name="Variation",
+                present_at_all_locations=False,
+                price_amount=10,
+                price_currency="USD",
+                pricing_type="fixed",
+                sequence=1,
+                sku="11910345",
+                stockable=False,
+            ),
+        ],
+    ),
+    raw=False,
+    x_apideck_app_id="delectus",
+    x_apideck_consumer_id="tempora",
+    x_apideck_service_id="suscipit",
+)
+    
+res = s.items.items_add(req, operations.ItemsAddSecurity(
+    api_key="YOUR_API_KEY_HERE",
+))
+
+if res.create_item_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### items
+
+* `items_add` - Create Item
+* `items_all` - List Items
+* `items_delete` - Delete Item
+* `items_one` - Get Item
+* `items_update` - Update Item
+
+### locations
+
+* `locations_add` - Create Location
+* `locations_all` - List Locations
+* `locations_delete` - Delete Location
+* `locations_one` - Get Location
+* `locations_update` - Update Location
+
+### merchants
+
+* `merchants_add` - Create Merchant
+* `merchants_all` - List Merchants
+* `merchants_delete` - Delete Merchant
+* `merchants_one` - Get Merchant
+* `merchants_update` - Update Merchant
+
+### modifier_groups
+
+* `modifier_groups_add` - Create Modifier Group
+* `modifier_groups_all` - List Modifier Groups
+* `modifier_groups_delete` - Delete Modifier Group
+* `modifier_groups_one` - Get Modifier Group
+* `modifier_groups_update` - Update Modifier Group
+
+### modifiers
+
+* `modifiers_add` - Create Modifier
+* `modifiers_all` - List Modifiers
+* `modifiers_delete` - Delete Modifier
+* `modifiers_one` - Get Modifier
+* `modifiers_update` - Update Modifier
+
+### order_types
+
+* `order_types_add` - Create Order Type
+* `order_types_all` - List Order Types
+* `order_types_delete` - Delete Order Type
+* `order_types_one` - Get Order Type
+* `order_types_update` - Update Order Type
+
+### orders
+
+* `orders_add` - Create Order
+* `orders_all` - List Orders
+* `orders_delete` - Delete Order
+* `orders_one` - Get Order
+* `orders_pay` - Pay Order
+* `orders_update` - Update Order
+
+### payments
+
+* `payments_add` - Create Payment
+* `payments_all` - List Payments
+* `payments_delete` - Delete Payment
+* `payments_one` - Get Payment
+* `payments_update` - Update Payment
+
+### tenders
+
+* `tenders_add` - Create Tender
+* `tenders_all` - List Tenders
+* `tenders_delete` - Delete Tender
+* `tenders_one` - Get Tender
+* `tenders_update` - Update Tender
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

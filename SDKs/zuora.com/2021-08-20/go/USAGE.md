@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.DELETEAccountingCodeRequest{
-        PathParams: operations.DELETEAccountingCodePathParams{
-            AcID: "corrupti",
-        },
-        Headers: operations.DELETEAccountingCodeHeaders{
-            ZuoraEntityIds: "provident",
-            ZuoraTrackID: "distinctio",
-        },
+        ZuoraEntityIds: "corrupti",
+        ZuoraTrackID: "provident",
+        AcID: "distinctio",
     }
 
     ctx := context.Background()

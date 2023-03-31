@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsGetPermissionForUserPathParams struct {
+type ProjectsGetPermissionForUserRequest struct {
 	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
 	Username  string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ProjectsGetPermissionForUserRequest struct {
-	PathParams ProjectsGetPermissionForUserPathParams
 }
 
 // ProjectsGetPermissionForUser415ApplicationJSON - Preview header missing

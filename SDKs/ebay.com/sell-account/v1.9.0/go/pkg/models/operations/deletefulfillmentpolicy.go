@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteFulfillmentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteFulfillmentPolicyPathParams struct {
-	// This path parameter specifies the ID of the fulfillment policy to delete.
-	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteFulfillmentPolicyRequest struct {
-	PathParams DeleteFulfillmentPolicyPathParams
-	Security   DeleteFulfillmentPolicySecurity
+	// This path parameter specifies the ID of the fulfillment policy to delete.
+	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
 }
 
 type DeleteFulfillmentPolicyResponse struct {

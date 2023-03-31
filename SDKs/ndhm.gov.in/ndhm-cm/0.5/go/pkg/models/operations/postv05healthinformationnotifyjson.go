@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05HealthInformationNotifyJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05HealthInformationNotifyJSONRequest struct {
-	Headers PostV05HealthInformationNotifyJSONHeaders
-	Request shared.HealthInformationNotification `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization                 string                               `header:"style=simple,explode=false,name=Authorization"`
+	HealthInformationNotification shared.HealthInformationNotification `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationNotifyJSONResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3AccessAddPathParams struct {
+type ProtocolSnmpv3AccessAddRequest struct {
 	// Agent to add the SNMPv3 access
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMPv3 access context match
@@ -25,10 +25,6 @@ type ProtocolSnmpv3AccessAddPathParams struct {
 	SecurityModel string `pathParam:"style=simple,explode=false,name=securityModel"`
 	// SNMPv3 access write view
 	WriteView string `pathParam:"style=simple,explode=false,name=writeView"`
-}
-
-type ProtocolSnmpv3AccessAddRequest struct {
-	PathParams ProtocolSnmpv3AccessAddPathParams
 }
 
 type ProtocolSnmpv3AccessAddResponse struct {

@@ -12,17 +12,8 @@ var UpdateInsightsAssessmentsServerList = []string{
 }
 
 type UpdateInsightsAssessmentsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateInsightsAssessmentsPathParams struct {
-	// The id of the assessment to be modified
-	AssessmentID string `pathParam:"style=simple,explode=false,name=AssessmentId"`
-}
-
-type UpdateInsightsAssessmentsHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest struct {
@@ -35,11 +26,11 @@ type UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest struct {
 }
 
 type UpdateInsightsAssessmentsRequest struct {
-	PathParams UpdateInsightsAssessmentsPathParams
-	Headers    UpdateInsightsAssessmentsHeaders
-	Request    *UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateInsightsAssessmentsSecurity
-	ServerURL  *string
+	// The id of the assessment to be modified
+	AssessmentID string                                                     `pathParam:"style=simple,explode=false,name=AssessmentId"`
+	RequestBody  *UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type UpdateInsightsAssessmentsResponse struct {

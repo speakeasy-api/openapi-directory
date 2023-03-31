@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PostStatsIncrementFieldPathParams struct {
-	// The field to be incremented
-	Field string `pathParam:"style=simple,explode=false,name=field"`
-}
-
-type PostStatsIncrementFieldQueryParams struct {
+type PostStatsIncrementFieldRequest struct {
 	// The id of the app associated with this statistic value
 	AppID string `queryParam:"style=form,explode=true,name=appId"`
 	// The date (in millis) for when this increment occurred. The default is the current date if no value is provided.
 	Date *int64 `queryParam:"style=form,explode=true,name=date"`
+	// The field to be incremented
+	Field string `pathParam:"style=simple,explode=false,name=field"`
 	// The id of the user that is performing the action
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
 	// The increment amount. Default is 1 if no value is provided.
 	Value *int64 `queryParam:"style=form,explode=true,name=value"`
-}
-
-type PostStatsIncrementFieldRequest struct {
-	PathParams  PostStatsIncrementFieldPathParams
-	QueryParams PostStatsIncrementFieldQueryParams
 }
 
 type PostStatsIncrementFieldResponse struct {

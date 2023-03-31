@@ -8,13 +8,7 @@ import (
 )
 
 type PrivateFundingSearchSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateFundingSearchRequest struct {
-	// Search Parameters
-	Request  *shared.FundingSearch `request:"mediaType=application/json"`
-	Security PrivateFundingSearchSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateFundingSearchResponse struct {

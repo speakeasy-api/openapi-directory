@@ -55,11 +55,11 @@ func newPotsHoldingsAndTransactions(defaultClient, securityClient HTTPClient, se
 
 // UpdatePot - Update existing Pot details
 // Update an existing Pot. WealthOS will update only the fields sent in the payload.
-func (s *potsHoldingsAndTransactions) UpdatePot(ctx context.Context, request operations.UpdatePotRequest) (*operations.UpdatePotResponse, error) {
+func (s *potsHoldingsAndTransactions) UpdatePot(ctx context.Context, request operations.UpdatePotRequest, security operations.UpdatePotSecurity) (*operations.UpdatePotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -74,9 +74,9 @@ func (s *potsHoldingsAndTransactions) UpdatePot(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,11 +181,11 @@ func (s *potsHoldingsAndTransactions) UpdatePot(ctx context.Context, request ope
 }
 
 // CreatePot - Create new pot
-func (s *potsHoldingsAndTransactions) CreatePot(ctx context.Context, request operations.CreatePotRequest) (*operations.CreatePotResponse, error) {
+func (s *potsHoldingsAndTransactions) CreatePot(ctx context.Context, request operations.CreatePotRequest, security operations.CreatePotSecurity) (*operations.CreatePotResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/pots/v1"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,9 +197,9 @@ func (s *potsHoldingsAndTransactions) CreatePot(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,18 +294,18 @@ func (s *potsHoldingsAndTransactions) CreatePot(ctx context.Context, request ope
 }
 
 // GetPot - Retrive existing pot from pot id
-func (s *potsHoldingsAndTransactions) GetPot(ctx context.Context, request operations.GetPotRequest) (*operations.GetPotResponse, error) {
+func (s *potsHoldingsAndTransactions) GetPot(ctx context.Context, request operations.GetPotRequest, security operations.GetPotSecurity) (*operations.GetPotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -391,18 +391,18 @@ func (s *potsHoldingsAndTransactions) GetPot(ctx context.Context, request operat
 
 // GetPotHoldings - Get current holdings of a pot
 // Get a breakdown of all the holdings of a pot (cash and investment product holdings)
-func (s *potsHoldingsAndTransactions) GetPotHoldings(ctx context.Context, request operations.GetPotHoldingsRequest) (*operations.GetPotHoldingsResponse, error) {
+func (s *potsHoldingsAndTransactions) GetPotHoldings(ctx context.Context, request operations.GetPotHoldingsRequest, security operations.GetPotHoldingsSecurity) (*operations.GetPotHoldingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getHoldings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getHoldings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -498,22 +498,22 @@ func (s *potsHoldingsAndTransactions) GetPotHoldings(ctx context.Context, reques
 
 // GetPotTransactions - Get pending & past transactions of a pot
 // Get a list of pending and archived transactions of the pot by date range. Only last 1000 records will be recieved if the result contain more that 1000 transactions. In that case, the pagination should be used.
-func (s *potsHoldingsAndTransactions) GetPotTransactions(ctx context.Context, request operations.GetPotTransactionsRequest) (*operations.GetPotTransactionsResponse, error) {
+func (s *potsHoldingsAndTransactions) GetPotTransactions(ctx context.Context, request operations.GetPotTransactionsRequest, security operations.GetPotTransactionsSecurity) (*operations.GetPotTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getTransactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getTransactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -599,18 +599,18 @@ func (s *potsHoldingsAndTransactions) GetPotTransactions(ctx context.Context, re
 
 // GetPotValue - Get current value of a pot
 // Get the current value of the pot (including cash and investment product holdings)
-func (s *potsHoldingsAndTransactions) GetPotValue(ctx context.Context, request operations.GetPotValueRequest) (*operations.GetPotValueResponse, error) {
+func (s *potsHoldingsAndTransactions) GetPotValue(ctx context.Context, request operations.GetPotValueRequest, security operations.GetPotValueSecurity) (*operations.GetPotValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getValue", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getValue", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -706,22 +706,22 @@ func (s *potsHoldingsAndTransactions) GetPotValue(ctx context.Context, request o
 
 // GetPots - Get all pots for an investor
 // Get all Investment Pots of the investor
-func (s *potsHoldingsAndTransactions) GetPots(ctx context.Context, request operations.GetPotsRequest) (*operations.GetPotsResponse, error) {
+func (s *potsHoldingsAndTransactions) GetPots(ctx context.Context, request operations.GetPotsRequest, security operations.GetPotsSecurity) (*operations.GetPotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/getInvestorPots/{investor_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/getInvestorPots/{investor_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -817,18 +817,18 @@ func (s *potsHoldingsAndTransactions) GetPots(ctx context.Context, request opera
 
 // GetTotalPotHoldings - Get total holdings of an Investor
 // Get a breakdown of all the holdings(cash and investment product holdings) of an investor organised by the pot they belong to.
-func (s *potsHoldingsAndTransactions) GetTotalPotHoldings(ctx context.Context, request operations.GetTotalPotHoldingsRequest) (*operations.GetTotalPotHoldingsResponse, error) {
+func (s *potsHoldingsAndTransactions) GetTotalPotHoldings(ctx context.Context, request operations.GetTotalPotHoldingsRequest, security operations.GetTotalPotHoldingsSecurity) (*operations.GetTotalPotHoldingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getHoldings/{investor_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getHoldings/{investor_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -914,18 +914,18 @@ func (s *potsHoldingsAndTransactions) GetTotalPotHoldings(ctx context.Context, r
 
 // GetTotalPotValue - Get total value of all pots of an investor
 // Get the current value of all the investor’s pots broken down by currency (including cash and investment product holdings)
-func (s *potsHoldingsAndTransactions) GetTotalPotValue(ctx context.Context, request operations.GetTotalPotValueRequest) (*operations.GetTotalPotValueResponse, error) {
+func (s *potsHoldingsAndTransactions) GetTotalPotValue(ctx context.Context, request operations.GetTotalPotValueRequest, security operations.GetTotalPotValueSecurity) (*operations.GetTotalPotValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getValue/{investor_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getValue/{investor_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

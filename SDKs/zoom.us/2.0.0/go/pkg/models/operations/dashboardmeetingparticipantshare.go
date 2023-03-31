@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DashboardMeetingParticipantShareSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardMeetingParticipantSharePathParams struct {
-	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardMeetingParticipantShareTypeEnum - The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
@@ -47,19 +39,17 @@ func (e *DashboardMeetingParticipantShareTypeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DashboardMeetingParticipantShareQueryParams struct {
+type DashboardMeetingParticipantShareRequest struct {
+	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
 	Type *DashboardMeetingParticipantShareTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardMeetingParticipantShareRequest struct {
-	PathParams  DashboardMeetingParticipantSharePathParams
-	QueryParams DashboardMeetingParticipantShareQueryParams
-	Security    DashboardMeetingParticipantShareSecurity
 }
 
 type DashboardMeetingParticipantShare200ApplicationXMLParticipantsDetails struct {

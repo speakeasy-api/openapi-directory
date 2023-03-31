@@ -33,7 +33,7 @@ func (e *GamesByWeekFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GamesByWeekPathParams struct {
+type GamesByWeekRequest struct {
 	// Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
 	Format GamesByWeekFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	//           Year of the season.
@@ -44,10 +44,6 @@ type GamesByWeekPathParams struct {
 	//           <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type GamesByWeekRequest struct {
-	PathParams GamesByWeekPathParams
 }
 
 type GamesByWeekResponse struct {

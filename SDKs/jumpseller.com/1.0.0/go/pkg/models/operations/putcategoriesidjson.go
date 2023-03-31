@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCategoriesIDJSONPathParams struct {
-	// Id of the Category
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutCategoriesIDJSONQueryParams struct {
+type PutCategoriesIDJSONRequest struct {
+	// Category parameters.
+	CategoryEdit shared.CategoryEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Category
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutCategoriesIDJSONRequest struct {
-	PathParams  PutCategoriesIDJSONPathParams
-	QueryParams PutCategoriesIDJSONQueryParams
-	// Category parameters.
-	Request shared.CategoryEdit `request:"mediaType=application/json"`
 }
 
 type PutCategoriesIDJSONResponse struct {

@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDReportsPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
-type GetCommitteeCommitteeIDReportsQueryParams struct {
+type GetCommitteeCommitteeIDReportsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -25,6 +19,9 @@ type GetCommitteeCommitteeIDReportsQueryParams struct {
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
 	//
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.
@@ -152,11 +149,6 @@ type GetCommitteeCommitteeIDReportsQueryParams struct {
 	//     year from the receipt date.
 	//
 	Year []int `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCommitteeCommitteeIDReportsRequest struct {
-	PathParams  GetCommitteeCommitteeIDReportsPathParams
-	QueryParams GetCommitteeCommitteeIDReportsQueryParams
 }
 
 type GetCommitteeCommitteeIDReportsResponse struct {

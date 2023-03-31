@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1TimelinesPublicQueryParams struct {
+type GetAPIV1TimelinesPublicRequest struct {
 	// Max number of results to return. Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Show only local statuses? Defaults to false.
@@ -22,10 +22,6 @@ type GetAPIV1TimelinesPublicQueryParams struct {
 	Remote *bool `queryParam:"style=form,explode=true,name=remote"`
 	// Return results newer than ID
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1TimelinesPublicRequest struct {
-	QueryParams GetAPIV1TimelinesPublicQueryParams
 }
 
 type GetAPIV1TimelinesPublicResponse struct {

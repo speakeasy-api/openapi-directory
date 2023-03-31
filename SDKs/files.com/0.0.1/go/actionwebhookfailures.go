@@ -35,7 +35,7 @@ func newActionWebhookFailures(defaultClient, securityClient HTTPClient, serverUR
 // retry Action Webhook Failure
 func (s *actionWebhookFailures) PostActionWebhookFailuresIDRetry(ctx context.Context, request operations.PostActionWebhookFailuresIDRetryRequest) (*operations.PostActionWebhookFailuresIDRetryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action_webhook_failures/{id}/retry", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/action_webhook_failures/{id}/retry", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

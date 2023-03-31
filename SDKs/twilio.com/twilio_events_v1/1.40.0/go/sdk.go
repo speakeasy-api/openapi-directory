@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateSink - Create a new Sink
-func (s *SDK) CreateSink(ctx context.Context, request operations.CreateSinkRequest) (*operations.CreateSinkResponse, error) {
+func (s *SDK) CreateSink(ctx context.Context, request operations.CreateSinkCreateSinkRequest, security operations.CreateSinkSecurity, opts ...operations.Option) (*operations.CreateSinkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSinkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Sinks"
@@ -113,7 +123,7 @@ func (s *SDK) CreateSink(ctx context.Context, request operations.CreateSinkReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +158,30 @@ func (s *SDK) CreateSink(ctx context.Context, request operations.CreateSinkReque
 }
 
 // CreateSinkTest - Create a new Sink Test Event for the given Sink.
-func (s *SDK) CreateSinkTest(ctx context.Context, request operations.CreateSinkTestRequest) (*operations.CreateSinkTestResponse, error) {
-	baseURL := operations.CreateSinkTestServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSinkTest(ctx context.Context, request operations.CreateSinkTestRequest, security operations.CreateSinkTestSecurity, opts ...operations.Option) (*operations.CreateSinkTestResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}/Test", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSinkTestServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}/Test", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -196,15 +216,25 @@ func (s *SDK) CreateSinkTest(ctx context.Context, request operations.CreateSinkT
 }
 
 // CreateSinkValidate - Validate that a test event for a Sink was received.
-func (s *SDK) CreateSinkValidate(ctx context.Context, request operations.CreateSinkValidateRequest) (*operations.CreateSinkValidateResponse, error) {
-	baseURL := operations.CreateSinkValidateServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSinkValidate(ctx context.Context, request operations.CreateSinkValidateRequest, security operations.CreateSinkValidateSecurity, opts ...operations.Option) (*operations.CreateSinkValidateResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}/Validate", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSinkValidateServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}/Validate", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -216,7 +246,7 @@ func (s *SDK) CreateSinkValidate(ctx context.Context, request operations.CreateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,15 +281,25 @@ func (s *SDK) CreateSinkValidate(ctx context.Context, request operations.CreateS
 }
 
 // CreateSubscribedEvent - Create a new Subscribed Event type for the subscription
-func (s *SDK) CreateSubscribedEvent(ctx context.Context, request operations.CreateSubscribedEventRequest) (*operations.CreateSubscribedEventResponse, error) {
-	baseURL := operations.CreateSubscribedEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSubscribedEvent(ctx context.Context, request operations.CreateSubscribedEventRequest, security operations.CreateSubscribedEventSecurity, opts ...operations.Option) (*operations.CreateSubscribedEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSubscribedEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,7 +311,7 @@ func (s *SDK) CreateSubscribedEvent(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,10 +346,20 @@ func (s *SDK) CreateSubscribedEvent(ctx context.Context, request operations.Crea
 }
 
 // CreateSubscription - Create a new Subscription.
-func (s *SDK) CreateSubscription(ctx context.Context, request operations.CreateSubscriptionRequest) (*operations.CreateSubscriptionResponse, error) {
+func (s *SDK) CreateSubscription(ctx context.Context, request operations.CreateSubscriptionCreateSubscriptionRequest, security operations.CreateSubscriptionSecurity, opts ...operations.Option) (*operations.CreateSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Subscriptions"
@@ -326,7 +376,7 @@ func (s *SDK) CreateSubscription(ctx context.Context, request operations.CreateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,20 +411,30 @@ func (s *SDK) CreateSubscription(ctx context.Context, request operations.CreateS
 }
 
 // DeleteSink - Delete a specific Sink.
-func (s *SDK) DeleteSink(ctx context.Context, request operations.DeleteSinkRequest) (*operations.DeleteSinkResponse, error) {
-	baseURL := operations.DeleteSinkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSink(ctx context.Context, request operations.DeleteSinkRequest, security operations.DeleteSinkSecurity, opts ...operations.Option) (*operations.DeleteSinkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSinkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,20 +460,30 @@ func (s *SDK) DeleteSink(ctx context.Context, request operations.DeleteSinkReque
 }
 
 // DeleteSubscribedEvent - Remove an event type from a subscription.
-func (s *SDK) DeleteSubscribedEvent(ctx context.Context, request operations.DeleteSubscribedEventRequest) (*operations.DeleteSubscribedEventResponse, error) {
-	baseURL := operations.DeleteSubscribedEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSubscribedEvent(ctx context.Context, request operations.DeleteSubscribedEventRequest, security operations.DeleteSubscribedEventSecurity, opts ...operations.Option) (*operations.DeleteSubscribedEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSubscribedEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -439,20 +509,30 @@ func (s *SDK) DeleteSubscribedEvent(ctx context.Context, request operations.Dele
 }
 
 // DeleteSubscription - Delete a specific Subscription.
-func (s *SDK) DeleteSubscription(ctx context.Context, request operations.DeleteSubscriptionRequest) (*operations.DeleteSubscriptionResponse, error) {
-	baseURL := operations.DeleteSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSubscription(ctx context.Context, request operations.DeleteSubscriptionRequest, security operations.DeleteSubscriptionSecurity, opts ...operations.Option) (*operations.DeleteSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSubscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,20 +558,30 @@ func (s *SDK) DeleteSubscription(ctx context.Context, request operations.DeleteS
 }
 
 // FetchEventType - Fetch a specific Event Type.
-func (s *SDK) FetchEventType(ctx context.Context, request operations.FetchEventTypeRequest) (*operations.FetchEventTypeResponse, error) {
-	baseURL := operations.FetchEventTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEventType(ctx context.Context, request operations.FetchEventTypeRequest, security operations.FetchEventTypeSecurity, opts ...operations.Option) (*operations.FetchEventTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Types/{Type}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEventTypeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Types/{Type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -526,20 +616,30 @@ func (s *SDK) FetchEventType(ctx context.Context, request operations.FetchEventT
 }
 
 // FetchSchema - Fetch a specific schema with its nested versions.
-func (s *SDK) FetchSchema(ctx context.Context, request operations.FetchSchemaRequest) (*operations.FetchSchemaResponse, error) {
-	baseURL := operations.FetchSchemaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSchema(ctx context.Context, request operations.FetchSchemaRequest, security operations.FetchSchemaSecurity, opts ...operations.Option) (*operations.FetchSchemaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSchemaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -574,20 +674,30 @@ func (s *SDK) FetchSchema(ctx context.Context, request operations.FetchSchemaReq
 }
 
 // FetchSchemaVersion - Fetch a specific schema and version.
-func (s *SDK) FetchSchemaVersion(ctx context.Context, request operations.FetchSchemaVersionRequest) (*operations.FetchSchemaVersionResponse, error) {
-	baseURL := operations.FetchSchemaVersionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSchemaVersion(ctx context.Context, request operations.FetchSchemaVersionRequest, security operations.FetchSchemaVersionSecurity, opts ...operations.Option) (*operations.FetchSchemaVersionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}/Versions/{SchemaVersion}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSchemaVersionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}/Versions/{SchemaVersion}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -622,20 +732,30 @@ func (s *SDK) FetchSchemaVersion(ctx context.Context, request operations.FetchSc
 }
 
 // FetchSink - Fetch a specific Sink.
-func (s *SDK) FetchSink(ctx context.Context, request operations.FetchSinkRequest) (*operations.FetchSinkResponse, error) {
-	baseURL := operations.FetchSinkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSink(ctx context.Context, request operations.FetchSinkRequest, security operations.FetchSinkSecurity, opts ...operations.Option) (*operations.FetchSinkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSinkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -670,20 +790,30 @@ func (s *SDK) FetchSink(ctx context.Context, request operations.FetchSinkRequest
 }
 
 // FetchSubscribedEvent - Read an Event for a Subscription.
-func (s *SDK) FetchSubscribedEvent(ctx context.Context, request operations.FetchSubscribedEventRequest) (*operations.FetchSubscribedEventResponse, error) {
-	baseURL := operations.FetchSubscribedEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSubscribedEvent(ctx context.Context, request operations.FetchSubscribedEventRequest, security operations.FetchSubscribedEventSecurity, opts ...operations.Option) (*operations.FetchSubscribedEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSubscribedEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -718,20 +848,30 @@ func (s *SDK) FetchSubscribedEvent(ctx context.Context, request operations.Fetch
 }
 
 // FetchSubscription - Fetch a specific Subscription.
-func (s *SDK) FetchSubscription(ctx context.Context, request operations.FetchSubscriptionRequest) (*operations.FetchSubscriptionResponse, error) {
-	baseURL := operations.FetchSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSubscription(ctx context.Context, request operations.FetchSubscriptionRequest, security operations.FetchSubscriptionSecurity, opts ...operations.Option) (*operations.FetchSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSubscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -766,10 +906,20 @@ func (s *SDK) FetchSubscription(ctx context.Context, request operations.FetchSub
 }
 
 // ListEventType - Retrieve a paginated list of all the available Event Types.
-func (s *SDK) ListEventType(ctx context.Context, request operations.ListEventTypeRequest) (*operations.ListEventTypeResponse, error) {
+func (s *SDK) ListEventType(ctx context.Context, request operations.ListEventTypeRequest, security operations.ListEventTypeSecurity, opts ...operations.Option) (*operations.ListEventTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEventTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Types"
@@ -779,11 +929,11 @@ func (s *SDK) ListEventType(ctx context.Context, request operations.ListEventTyp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -818,24 +968,34 @@ func (s *SDK) ListEventType(ctx context.Context, request operations.ListEventTyp
 }
 
 // ListSchemaVersion - Retrieve a paginated list of versions of the schema.
-func (s *SDK) ListSchemaVersion(ctx context.Context, request operations.ListSchemaVersionRequest) (*operations.ListSchemaVersionResponse, error) {
-	baseURL := operations.ListSchemaVersionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSchemaVersion(ctx context.Context, request operations.ListSchemaVersionRequest, security operations.ListSchemaVersionSecurity, opts ...operations.Option) (*operations.ListSchemaVersionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}/Versions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSchemaVersionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Schemas/{Id}/Versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,10 +1030,20 @@ func (s *SDK) ListSchemaVersion(ctx context.Context, request operations.ListSche
 }
 
 // ListSink - Retrieve a paginated list of Sinks belonging to the account used to make the request.
-func (s *SDK) ListSink(ctx context.Context, request operations.ListSinkRequest) (*operations.ListSinkResponse, error) {
+func (s *SDK) ListSink(ctx context.Context, request operations.ListSinkRequest, security operations.ListSinkSecurity, opts ...operations.Option) (*operations.ListSinkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSinkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Sinks"
@@ -883,11 +1053,11 @@ func (s *SDK) ListSink(ctx context.Context, request operations.ListSinkRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -922,24 +1092,34 @@ func (s *SDK) ListSink(ctx context.Context, request operations.ListSinkRequest) 
 }
 
 // ListSubscribedEvent - Retrieve a list of all Subscribed Event types for a Subscription.
-func (s *SDK) ListSubscribedEvent(ctx context.Context, request operations.ListSubscribedEventRequest) (*operations.ListSubscribedEventResponse, error) {
-	baseURL := operations.ListSubscribedEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSubscribedEvent(ctx context.Context, request operations.ListSubscribedEventRequest, security operations.ListSubscribedEventSecurity, opts ...operations.Option) (*operations.ListSubscribedEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSubscribedEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -974,10 +1154,20 @@ func (s *SDK) ListSubscribedEvent(ctx context.Context, request operations.ListSu
 }
 
 // ListSubscription - Retrieve a paginated list of Subscriptions belonging to the account used to make the request.
-func (s *SDK) ListSubscription(ctx context.Context, request operations.ListSubscriptionRequest) (*operations.ListSubscriptionResponse, error) {
+func (s *SDK) ListSubscription(ctx context.Context, request operations.ListSubscriptionRequest, security operations.ListSubscriptionSecurity, opts ...operations.Option) (*operations.ListSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Subscriptions"
@@ -987,11 +1177,11 @@ func (s *SDK) ListSubscription(ctx context.Context, request operations.ListSubsc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1026,15 +1216,25 @@ func (s *SDK) ListSubscription(ctx context.Context, request operations.ListSubsc
 }
 
 // UpdateSink - Update a specific Sink
-func (s *SDK) UpdateSink(ctx context.Context, request operations.UpdateSinkRequest) (*operations.UpdateSinkResponse, error) {
-	baseURL := operations.UpdateSinkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSink(ctx context.Context, request operations.UpdateSinkRequest, security operations.UpdateSinkSecurity, opts ...operations.Option) (*operations.UpdateSinkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSinkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sinks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1046,7 +1246,7 @@ func (s *SDK) UpdateSink(ctx context.Context, request operations.UpdateSinkReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1081,15 +1281,25 @@ func (s *SDK) UpdateSink(ctx context.Context, request operations.UpdateSinkReque
 }
 
 // UpdateSubscribedEvent - Update an Event for a Subscription.
-func (s *SDK) UpdateSubscribedEvent(ctx context.Context, request operations.UpdateSubscribedEventRequest) (*operations.UpdateSubscribedEventResponse, error) {
-	baseURL := operations.UpdateSubscribedEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSubscribedEvent(ctx context.Context, request operations.UpdateSubscribedEventRequest, security operations.UpdateSubscribedEventSecurity, opts ...operations.Option) (*operations.UpdateSubscribedEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSubscribedEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1101,7 +1311,7 @@ func (s *SDK) UpdateSubscribedEvent(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1136,15 +1346,25 @@ func (s *SDK) UpdateSubscribedEvent(ctx context.Context, request operations.Upda
 }
 
 // UpdateSubscription - Update a Subscription.
-func (s *SDK) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest) (*operations.UpdateSubscriptionResponse, error) {
-	baseURL := operations.UpdateSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest, security operations.UpdateSubscriptionSecurity, opts ...operations.Option) (*operations.UpdateSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSubscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Subscriptions/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1156,7 +1376,7 @@ func (s *SDK) UpdateSubscription(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkCameraWirelessProfilePathParams struct {
+type GetNetworkCameraWirelessProfileRequest struct {
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
 	WirelessProfileID string `pathParam:"style=simple,explode=false,name=wirelessProfileId"`
-}
-
-type GetNetworkCameraWirelessProfileRequest struct {
-	PathParams GetNetworkCameraWirelessProfilePathParams
 }
 
 type GetNetworkCameraWirelessProfileResponse struct {

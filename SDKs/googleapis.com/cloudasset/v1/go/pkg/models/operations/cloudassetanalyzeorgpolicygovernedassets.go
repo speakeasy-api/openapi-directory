@@ -8,16 +8,11 @@ import (
 )
 
 type CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudassetAnalyzeOrgPolicyGovernedAssetsPathParams struct {
-	// Required. The organization to scope the request. Only organization policies within the scope will be analyzed. The output assets will also be limited to the ones governed by those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
-	Scope string `pathParam:"style=simple,explode=false,name=scope"`
-}
-
-type CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams struct {
+type CloudassetAnalyzeOrgPolicyGovernedAssetsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,16 +39,12 @@ type CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The organization to scope the request. Only organization policies within the scope will be analyzed. The output assets will also be limited to the ones governed by those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudassetAnalyzeOrgPolicyGovernedAssetsRequest struct {
-	PathParams  CloudassetAnalyzeOrgPolicyGovernedAssetsPathParams
-	QueryParams CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams
-	Security    CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity
 }
 
 type CloudassetAnalyzeOrgPolicyGovernedAssetsResponse struct {

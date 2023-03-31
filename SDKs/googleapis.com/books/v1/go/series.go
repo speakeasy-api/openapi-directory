@@ -33,7 +33,7 @@ func newSeries(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // BooksSeriesGet - Returns Series metadata for the given series ids.
-func (s *series) BooksSeriesGet(ctx context.Context, request operations.BooksSeriesGetRequest) (*operations.BooksSeriesGetResponse, error) {
+func (s *series) BooksSeriesGet(ctx context.Context, request operations.BooksSeriesGetRequest, security operations.BooksSeriesGetSecurity) (*operations.BooksSeriesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/series/get"
 
@@ -42,11 +42,11 @@ func (s *series) BooksSeriesGet(ctx context.Context, request operations.BooksSer
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *series) BooksSeriesGet(ctx context.Context, request operations.BooksSer
 }
 
 // BooksSeriesMembershipGet - Returns Series membership data given the series id.
-func (s *series) BooksSeriesMembershipGet(ctx context.Context, request operations.BooksSeriesMembershipGetRequest) (*operations.BooksSeriesMembershipGetResponse, error) {
+func (s *series) BooksSeriesMembershipGet(ctx context.Context, request operations.BooksSeriesMembershipGetRequest, security operations.BooksSeriesMembershipGetSecurity) (*operations.BooksSeriesMembershipGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/series/membership/get"
 
@@ -90,11 +90,11 @@ func (s *series) BooksSeriesMembershipGet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

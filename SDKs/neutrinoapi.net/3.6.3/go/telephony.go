@@ -43,7 +43,7 @@ func (s *telephony) HLRLookup(ctx context.Context, request operations.HLRLookupR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -99,7 +99,7 @@ func (s *telephony) HLRLookup(ctx context.Context, request operations.HLRLookupR
 
 // PhonePlayback - Phone Playback
 // Make an automated call to any valid phone number and playback an audio message
-func (s *telephony) PhonePlayback(ctx context.Context, request operations.PhonePlaybackRequest) (*operations.PhonePlaybackResponse, error) {
+func (s *telephony) PhonePlayback(ctx context.Context, request operations.PhonePlaybackRequestBody) (*operations.PhonePlaybackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone-playback"
 
@@ -170,7 +170,7 @@ func (s *telephony) PhonePlayback(ctx context.Context, request operations.PhoneP
 
 // PhoneVerify - Phone Verify
 // Make an automated call to any valid phone number and playback a unique security code
-func (s *telephony) PhoneVerify(ctx context.Context, request operations.PhoneVerifyRequest) (*operations.PhoneVerifyResponse, error) {
+func (s *telephony) PhoneVerify(ctx context.Context, request operations.PhoneVerifyRequestBody) (*operations.PhoneVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone-verify"
 
@@ -241,7 +241,7 @@ func (s *telephony) PhoneVerify(ctx context.Context, request operations.PhoneVer
 
 // SMSVerify - SMS Verify
 // Send a unique security code to any mobile device via SMS
-func (s *telephony) SMSVerify(ctx context.Context, request operations.SMSVerifyRequest) (*operations.SMSVerifyResponse, error) {
+func (s *telephony) SMSVerify(ctx context.Context, request operations.SMSVerifyRequestBody) (*operations.SMSVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sms-verify"
 
@@ -321,7 +321,7 @@ func (s *telephony) VerifySecurityCode(ctx context.Context, request operations.V
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

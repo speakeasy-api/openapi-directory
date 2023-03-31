@@ -8,9 +8,13 @@ import (
 	"time"
 )
 
-type GetSessionLogsQueryParams struct {
+type GetSessionLogsRequest struct {
 	// End date of the filter data range
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// Access Token
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Used to filter session logs by ip address.
 	IPAddress *string `queryParam:"style=form,explode=true,name=ipAddress"`
 	// Limit of the records list
@@ -27,18 +31,6 @@ type GetSessionLogsQueryParams struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Username used for filtering a list
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetSessionLogsHeaders struct {
-	// Access Token
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetSessionLogsRequest struct {
-	QueryParams GetSessionLogsQueryParams
-	Headers     GetSessionLogsHeaders
 }
 
 type GetSessionLogsResponse struct {

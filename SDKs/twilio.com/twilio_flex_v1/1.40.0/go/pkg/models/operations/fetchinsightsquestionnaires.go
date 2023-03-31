@@ -12,24 +12,15 @@ var FetchInsightsQuestionnairesServerList = []string{
 }
 
 type FetchInsightsQuestionnairesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchInsightsQuestionnairesPathParams struct {
-	// The unique ID of the questionnaire
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type FetchInsightsQuestionnairesHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchInsightsQuestionnairesRequest struct {
-	PathParams FetchInsightsQuestionnairesPathParams
-	Headers    FetchInsightsQuestionnairesHeaders
-	Security   FetchInsightsQuestionnairesSecurity
-	ServerURL  *string
+	// The unique ID of the questionnaire
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type FetchInsightsQuestionnairesResponse struct {

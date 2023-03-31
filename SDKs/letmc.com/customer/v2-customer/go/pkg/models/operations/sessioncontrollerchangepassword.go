@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type SessionControllerChangePasswordPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerChangePasswordQueryParams struct {
+type SessionControllerChangePasswordRequest struct {
 	// The customer's new password.
 	NewPassword string `queryParam:"style=form,explode=true,name=newPassword"`
 	// The customer's existing password.
 	OldPassword string `queryParam:"style=form,explode=true,name=oldPassword"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type SessionControllerChangePasswordRequest struct {
-	PathParams  SessionControllerChangePasswordPathParams
-	QueryParams SessionControllerChangePasswordQueryParams
 }
 
 type SessionControllerChangePasswordResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAPIV2ListMarketsHeaders struct {
+type GetAPIV2ListMarketsRequest struct {
 	// Your key obtained from https://boggio-analytics.com/fp-api/
 	XRapidAPIKey *string `header:"style=simple,explode=false,name=X-RapidApi-Key"`
-}
-
-type GetAPIV2ListMarketsRequest struct {
-	Headers GetAPIV2ListMarketsHeaders
 }
 
 // GetAPIV2ListMarkets404ApplicationJSON - Bad request, check response for detailed errors.

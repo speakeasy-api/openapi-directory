@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UnarchiveConversationPathParams struct {
+type UnarchiveConversationRequest struct {
 	// The ID of the conversation to unarchive.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type UnarchiveConversationRequest struct {
-	PathParams UnarchiveConversationPathParams
 }
 
 type UnarchiveConversationResponse struct {

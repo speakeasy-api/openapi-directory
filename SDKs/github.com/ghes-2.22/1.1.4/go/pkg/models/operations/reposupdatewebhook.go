@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateWebhookPathParams struct {
-	HookID int64  `pathParam:"style=simple,explode=false,name=hook_id"`
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/enterprise-server@2.22/rest/reference/repos#create-hook-config-params).
 type ReposUpdateWebhookRequestBodyConfig struct {
 	Address *string `json:"address,omitempty"`
@@ -40,8 +34,10 @@ type ReposUpdateWebhookRequestBody struct {
 }
 
 type ReposUpdateWebhookRequest struct {
-	PathParams ReposUpdateWebhookPathParams
-	Request    ReposUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	HookID      int64                         `pathParam:"style=simple,explode=false,name=hook_id"`
+	Owner       string                        `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                        `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateWebhookResponse struct {

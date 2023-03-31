@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type AgentStoreLreplacePathParams struct {
+type AgentStoreLreplaceRequest struct {
+	// Value
+	RequestBody *string `request:"mediaType=application/json"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Index
 	Index int `pathParam:"style=simple,explode=false,name=index"`
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type AgentStoreLreplaceRequest struct {
-	PathParams AgentStoreLreplacePathParams
-	// Value
-	Request *string `request:"mediaType=application/json"`
 }
 
 type AgentStoreLreplaceResponse struct {

@@ -2,19 +2,6 @@
 
 package shared
 
-type SchemeOAuthVeloBackOffice struct {
-	Authorization string `security:"name=Authorization"`
-}
-
-type SchemeBasicAuth struct {
-	Password string `security:"name=password"`
-	Username string `security:"name=username"`
-}
-
-type SchemeOAuth2 struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	OAuth2 SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }

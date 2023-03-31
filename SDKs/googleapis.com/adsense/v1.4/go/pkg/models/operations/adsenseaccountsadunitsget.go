@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsAdunitsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdunitsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdunitsGetSecurity struct {
@@ -22,16 +22,13 @@ type AdsenseAccountsAdunitsGetSecurity struct {
 	Option2 *AdsenseAccountsAdunitsGetSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsAdunitsGetPathParams struct {
+type AdsenseAccountsAdunitsGetRequest struct {
 	// Account to which the ad client belongs.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client for which to get the ad unit.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
 	// Ad unit to retrieve.
 	AdUnitID string `pathParam:"style=simple,explode=false,name=adUnitId"`
-}
-
-type AdsenseAccountsAdunitsGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,12 +43,6 @@ type AdsenseAccountsAdunitsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsAdunitsGetRequest struct {
-	PathParams  AdsenseAccountsAdunitsGetPathParams
-	QueryParams AdsenseAccountsAdunitsGetQueryParams
-	Security    AdsenseAccountsAdunitsGetSecurity
 }
 
 type AdsenseAccountsAdunitsGetResponse struct {

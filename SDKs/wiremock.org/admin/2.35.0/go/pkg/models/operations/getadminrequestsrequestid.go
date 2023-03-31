@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAdminRequestsRequestIDPathParams struct {
+type GetAdminRequestsRequestIDRequest struct {
 	// The UUID of the logged request
 	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
-}
-
-type GetAdminRequestsRequestIDRequest struct {
-	PathParams GetAdminRequestsRequestIDPathParams
 }
 
 type GetAdminRequestsRequestIDResponse struct {

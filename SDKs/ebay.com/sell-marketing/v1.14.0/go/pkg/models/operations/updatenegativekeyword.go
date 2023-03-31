@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateNegativeKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateNegativeKeywordPathParams struct {
-	// The unique identifier for the negative keyword.<br /><br />This value is returned in the <b>Location</b> response header from the <a href="/api-docs/sell/marketing/resources/negative_keyword/methods/createNegativeKeyword">createNegativeKeyword</a> method.
-	NegativeKeywordID string `pathParam:"style=simple,explode=false,name=negative_keyword_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateNegativeKeywordRequest struct {
-	PathParams UpdateNegativeKeywordPathParams
 	// A type that defines the fields for the request to update a negative keyword.
-	Request  shared.UpdateNegativeKeywordRequest `request:"mediaType=application/json"`
-	Security UpdateNegativeKeywordSecurity
+	UpdateNegativeKeywordRequest shared.UpdateNegativeKeywordRequest `request:"mediaType=application/json"`
+	// The unique identifier for the negative keyword.<br /><br />This value is returned in the <b>Location</b> response header from the <a href="/api-docs/sell/marketing/resources/negative_keyword/methods/createNegativeKeyword">createNegativeKeyword</a> method.
+	NegativeKeywordID string `pathParam:"style=simple,explode=false,name=negative_keyword_id"`
 }
 
 type UpdateNegativeKeywordResponse struct {

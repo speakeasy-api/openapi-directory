@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomersEmailEmailJSONPathParams struct {
-	// Email of the Customer
-	Email string `pathParam:"style=simple,explode=false,name=email"`
-}
-
-type GetCustomersEmailEmailJSONQueryParams struct {
+type GetCustomersEmailEmailJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Email of the Customer
+	Email string `pathParam:"style=simple,explode=false,name=email"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCustomersEmailEmailJSONRequest struct {
-	PathParams  GetCustomersEmailEmailJSONPathParams
-	QueryParams GetCustomersEmailEmailJSONQueryParams
 }
 
 type GetCustomersEmailEmailJSONResponse struct {

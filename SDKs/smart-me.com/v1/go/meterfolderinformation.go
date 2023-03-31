@@ -37,7 +37,7 @@ func newMeterFolderInformation(defaultClient, securityClient HTTPClient, serverU
 // Beta: Gets the General Information for a Meter or a Folder
 func (s *meterFolderInformation) MeterFolderInformationGet(ctx context.Context, request operations.MeterFolderInformationGetRequest) (*operations.MeterFolderInformationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/MeterFolderInformation/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/MeterFolderInformation/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *meterFolderInformation) MeterFolderInformationGet(ctx context.Context, 
 
 // MeterFolderInformationPostForm - Sets the Name of a Meter or a Folder
 // Sets the Name of a Meter or a Folder
-func (s *meterFolderInformation) MeterFolderInformationPostForm(ctx context.Context, request operations.MeterFolderInformationPostFormRequest) (*operations.MeterFolderInformationPostFormResponse, error) {
+func (s *meterFolderInformation) MeterFolderInformationPostForm(ctx context.Context, request shared.MeterFolderInformationToPost) (*operations.MeterFolderInformationPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MeterFolderInformation"
 
@@ -147,7 +147,7 @@ func (s *meterFolderInformation) MeterFolderInformationPostForm(ctx context.Cont
 
 // MeterFolderInformationPostJSON - Sets the Name of a Meter or a Folder
 // Sets the Name of a Meter or a Folder
-func (s *meterFolderInformation) MeterFolderInformationPostJSON(ctx context.Context, request operations.MeterFolderInformationPostJSONRequest) (*operations.MeterFolderInformationPostJSONResponse, error) {
+func (s *meterFolderInformation) MeterFolderInformationPostJSON(ctx context.Context, request shared.MeterFolderInformationToPost) (*operations.MeterFolderInformationPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MeterFolderInformation"
 
@@ -193,7 +193,7 @@ func (s *meterFolderInformation) MeterFolderInformationPostJSON(ctx context.Cont
 
 // MeterFolderInformationPostRaw - Sets the Name of a Meter or a Folder
 // Sets the Name of a Meter or a Folder
-func (s *meterFolderInformation) MeterFolderInformationPostRaw(ctx context.Context, request operations.MeterFolderInformationPostRawRequest) (*operations.MeterFolderInformationPostRawResponse, error) {
+func (s *meterFolderInformation) MeterFolderInformationPostRaw(ctx context.Context, request []byte) (*operations.MeterFolderInformationPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/MeterFolderInformation"
 

@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionCommentsInOrgPathParams struct {
+type TeamsListDiscussionCommentsInOrgRequest struct {
+	// The direction to sort the results by.
+	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListDiscussionCommentsInOrgQueryParams struct {
-	// The direction to sort the results by.
-	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListDiscussionCommentsInOrgRequest struct {
-	PathParams  TeamsListDiscussionCommentsInOrgPathParams
-	QueryParams TeamsListDiscussionCommentsInOrgQueryParams
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListDiscussionCommentsInOrgResponse struct {

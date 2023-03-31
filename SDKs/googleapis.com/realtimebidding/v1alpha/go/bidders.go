@@ -32,11 +32,11 @@ func newBidders(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // RealtimebiddingBiddersBiddingFunctionsActivate - Activates an existing bidding function. An activated function is available for invocation for the server-side TURTLEDOVE simulations.
-func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest) (*operations.RealtimebiddingBiddersBiddingFunctionsActivateResponse, error) {
+func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest, security operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:activate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Con
 }
 
 // RealtimebiddingBiddersBiddingFunctionsArchive - Archives an existing bidding function. An archived function will not be available for function invocation for the server-side TURTLEDOVE simulations unless it is activated.
-func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest) (*operations.RealtimebiddingBiddersBiddingFunctionsArchiveResponse, error) {
+func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest, security operations.RealtimebiddingBiddersBiddingFunctionsArchiveSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:archive", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Cont
 }
 
 // RealtimebiddingBiddersBiddingFunctionsCreate - Creates a new bidding function.
-func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest) (*operations.RealtimebiddingBiddersBiddingFunctionsCreateResponse, error) {
+func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest, security operations.RealtimebiddingBiddersBiddingFunctionsCreateSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BiddingFunctionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Conte
 }
 
 // RealtimebiddingBiddersBiddingFunctionsList - Lists the bidding functions that a bidder currently has registered.
-func (s *bidders) RealtimebiddingBiddersBiddingFunctionsList(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsListRequest) (*operations.RealtimebiddingBiddersBiddingFunctionsListResponse, error) {
+func (s *bidders) RealtimebiddingBiddersBiddingFunctionsList(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsListRequest, security operations.RealtimebiddingBiddersBiddingFunctionsListSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

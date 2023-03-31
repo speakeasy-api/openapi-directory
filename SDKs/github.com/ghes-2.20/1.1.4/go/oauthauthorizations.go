@@ -46,7 +46,7 @@ func newOauthAuthorizations(defaultClient, securityClient HTTPClient, serverURL,
 //
 // Organizations that enforce SAML SSO require personal access tokens to be allowed. Read more about allowing tokens in [the GitHub Help documentation](https://help.github.com/articles/about-identity-and-access-management-with-saml-single-sign-on).
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#create-a-new-authorization - API method documentation
-func (s *oauthAuthorizations) OauthAuthorizationsCreateAuthorization(ctx context.Context, request operations.OauthAuthorizationsCreateAuthorizationRequest) (*operations.OauthAuthorizationsCreateAuthorizationResponse, error) {
+func (s *oauthAuthorizations) OauthAuthorizationsCreateAuthorization(ctx context.Context, request operations.OauthAuthorizationsCreateAuthorizationRequestBody) (*operations.OauthAuthorizationsCreateAuthorizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorizations"
 
@@ -128,7 +128,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsCreateAuthorization(ctx context
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#delete-an-authorization - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsDeleteAuthorization(ctx context.Context, request operations.OauthAuthorizationsDeleteAuthorizationRequest) (*operations.OauthAuthorizationsDeleteAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -181,7 +181,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsDeleteAuthorization(ctx context
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#delete-a-grant - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsDeleteGrant(ctx context.Context, request operations.OauthAuthorizationsDeleteGrantRequest) (*operations.OauthAuthorizationsDeleteGrantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsDeleteGrant(ctx context.Context
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#get-a-single-authorization - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsGetAuthorization(ctx context.Context, request operations.OauthAuthorizationsGetAuthorizationRequest) (*operations.OauthAuthorizationsGetAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetAuthorization(ctx context.Co
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#get-a-single-grant - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsGetGrant(ctx context.Context, request operations.OauthAuthorizationsGetGrantRequest) (*operations.OauthAuthorizationsGetGrantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,9 +358,9 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetGrant(ctx context.Context, r
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForApp(ctx context.Context, request operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest) (*operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -447,9 +447,9 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForApp(
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app-and-fingerprint - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(ctx context.Context, request operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest) (*operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}/{fingerprint}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}/{fingerprint}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -524,7 +524,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsListAuthorizations(ctx context.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -593,7 +593,7 @@ func (s *oauthAuthorizations) OauthAuthorizationsListGrants(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -657,9 +657,9 @@ func (s *oauthAuthorizations) OauthAuthorizationsListGrants(ctx context.Context,
 // https://docs.github.com/enterprise-server@2.20/rest/reference/oauth-authorizations#update-an-existing-authorization - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsUpdateAuthorization(ctx context.Context, request operations.OauthAuthorizationsUpdateAuthorizationRequest) (*operations.OauthAuthorizationsUpdateAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

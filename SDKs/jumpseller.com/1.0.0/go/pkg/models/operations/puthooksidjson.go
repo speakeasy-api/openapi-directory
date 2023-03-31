@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutHooksIDJSONPathParams struct {
-	// Id of the Hook
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutHooksIDJSONQueryParams struct {
+type PutHooksIDJSONRequest struct {
+	// Hook parameters.
+	HookEdit shared.HookEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Hook
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutHooksIDJSONRequest struct {
-	PathParams  PutHooksIDJSONPathParams
-	QueryParams PutHooksIDJSONQueryParams
-	// Hook parameters.
-	Request shared.HookEdit `request:"mediaType=application/json"`
 }
 
 type PutHooksIDJSONResponse struct {

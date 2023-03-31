@@ -12,13 +12,8 @@ var UpdateMessageServerList = []string{
 }
 
 type UpdateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMessagePathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMessageUpdateMessageRequest struct {
@@ -27,10 +22,10 @@ type UpdateMessageUpdateMessageRequest struct {
 }
 
 type UpdateMessageRequest struct {
-	PathParams UpdateMessagePathParams
-	Request    *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMessageSecurity
-	ServerURL  *string
+	ChannelSid  string                             `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateMessageUpdateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid         string                             `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMessageResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSubscriptionListHeaders struct {
+type GetSubscriptionListRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetSubscriptionListRequest struct {
-	Headers GetSubscriptionListHeaders
 }
 
 type GetSubscriptionListResponse struct {

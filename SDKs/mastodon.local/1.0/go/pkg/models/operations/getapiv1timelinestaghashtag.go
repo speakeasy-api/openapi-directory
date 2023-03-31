@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1TimelinesTagHashtagPathParams struct {
+type GetAPIV1TimelinesTagHashtagRequest struct {
 	// Content of a `#hashtag``, not including `#` symbol..
 	Hashtag string `pathParam:"style=simple,explode=false,name=hashtag"`
-}
-
-type GetAPIV1TimelinesTagHashtagQueryParams struct {
 	// Max number of results to return. Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Show only local statuses? Defaults to false.
@@ -27,11 +24,6 @@ type GetAPIV1TimelinesTagHashtagQueryParams struct {
 	Remote *bool `queryParam:"style=form,explode=true,name=remote"`
 	// Return results newer than ID
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1TimelinesTagHashtagRequest struct {
-	PathParams  GetAPIV1TimelinesTagHashtagPathParams
-	QueryParams GetAPIV1TimelinesTagHashtagQueryParams
 }
 
 type GetAPIV1TimelinesTagHashtagResponse struct {

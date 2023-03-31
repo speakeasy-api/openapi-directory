@@ -14,23 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateActivityRequest{
-        Security: operations.CreateActivitySecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateActivityPathParams{
-            WorkspaceSid: "corrupti",
-        },
-        Request: &operations.CreateActivityCreateActivityRequest{
+        RequestBody: &operations.CreateActivityCreateActivityRequest{
             Available: false,
-            FriendlyName: "provident",
+            FriendlyName: "corrupti",
         },
+        WorkspaceSid: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.CreateActivity(ctx, req)
+    res, err := s.CreateActivity(ctx, req, operations.CreateActivitySecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

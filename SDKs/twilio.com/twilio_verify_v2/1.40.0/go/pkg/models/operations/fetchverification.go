@@ -12,20 +12,15 @@ var FetchVerificationServerList = []string{
 }
 
 type FetchVerificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchVerificationPathParams struct {
+type FetchVerificationRequest struct {
 	// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to fetch the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Verification resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchVerificationRequest struct {
-	PathParams FetchVerificationPathParams
-	Security   FetchVerificationSecurity
-	ServerURL  *string
 }
 
 type FetchVerificationResponse struct {

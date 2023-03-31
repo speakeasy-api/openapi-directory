@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteAssetServerList = []string{
@@ -12,20 +11,15 @@ var DeleteAssetServerList = []string{
 }
 
 type DeleteAssetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteAssetPathParams struct {
+type DeleteAssetRequest struct {
 	// The SID of the Service to delete the Asset resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID that identifies the Asset resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteAssetRequest struct {
-	PathParams DeleteAssetPathParams
-	Security   DeleteAssetSecurity
-	ServerURL  *string
 }
 
 type DeleteAssetResponse struct {

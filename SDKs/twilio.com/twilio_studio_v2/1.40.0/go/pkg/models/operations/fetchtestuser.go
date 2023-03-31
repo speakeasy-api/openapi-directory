@@ -12,18 +12,13 @@ var FetchTestUserServerList = []string{
 }
 
 type FetchTestUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchTestUserPathParams struct {
-	// Unique identifier of the flow.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchTestUserRequest struct {
-	PathParams FetchTestUserPathParams
-	Security   FetchTestUserSecurity
-	ServerURL  *string
+	// Unique identifier of the flow.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchTestUserResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type VirtualBillingMeterDeactivatePostRawRequest struct {
-	// The Meter to activate
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type VirtualBillingMeterDeactivatePostRawResponse struct {
 	Body        []byte
 	ContentType string

@@ -8,17 +8,12 @@ import (
 )
 
 type GetCheckSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetCheckPathParams struct {
-	// Check ID
-	CheckID string `pathParam:"style=simple,explode=false,name=check_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type GetCheckRequest struct {
-	PathParams GetCheckPathParams
-	Security   GetCheckSecurity
+	// Check ID
+	CheckID string `pathParam:"style=simple,explode=false,name=check_id"`
 }
 
 type GetCheckResponse struct {

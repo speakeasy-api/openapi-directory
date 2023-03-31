@@ -6,31 +6,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListChannelMembersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListChannelMembersPathParams struct {
+type ListChannelMembersRequest struct {
 	// Channel Id.
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-	// Unique identifier of the user who is the owner of this channel.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ListChannelMembersQueryParams struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned with a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ListChannelMembersRequest struct {
-	PathParams  ListChannelMembersPathParams
-	QueryParams ListChannelMembersQueryParams
-	Security    ListChannelMembersSecurity
+	// Unique identifier of the user who is the owner of this channel.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // ListChannelMembers200ApplicationXMLMembersRoleEnum - The role of the member. The value can be one of these: `owner`, `admin`, `member`.

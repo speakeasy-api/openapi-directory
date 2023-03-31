@@ -17,10 +17,6 @@ type AppsUpdateWebhookConfigForAppRequestBody struct {
 	URL *string `json:"url,omitempty"`
 }
 
-type AppsUpdateWebhookConfigForAppRequest struct {
-	Request AppsUpdateWebhookConfigForAppRequestBody `request:"mediaType=application/json"`
-}
-
 type AppsUpdateWebhookConfigForAppResponse struct {
 	ContentType string
 	StatusCode  int

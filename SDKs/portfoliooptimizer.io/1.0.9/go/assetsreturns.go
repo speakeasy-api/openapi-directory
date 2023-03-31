@@ -36,7 +36,7 @@ func newAssetsReturns(defaultClient, securityClient HTTPClient, serverURL, langu
 //
 // References
 // * [Wikipedia, Rate of Return](https://en.wikipedia.org/wiki/Rate_of_return#Return)
-func (s *assetsReturns) PostAssetsReturns(ctx context.Context, request operations.PostAssetsReturnsRequest) (*operations.PostAssetsReturnsResponse, error) {
+func (s *assetsReturns) PostAssetsReturns(ctx context.Context, request operations.PostAssetsReturnsRequestBody) (*operations.PostAssetsReturnsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/returns"
 
@@ -94,7 +94,7 @@ func (s *assetsReturns) PostAssetsReturns(ctx context.Context, request operation
 //
 // References
 // * [Wikipedia, Arithmetic Average Rate of Return](https://en.wikipedia.org/wiki/Rate_of_return#Arithmetic_average_rate_of_return)
-func (s *assetsReturns) PostAssetsReturnsAverage(ctx context.Context, request operations.PostAssetsReturnsAverageRequest) (*operations.PostAssetsReturnsAverageResponse, error) {
+func (s *assetsReturns) PostAssetsReturnsAverage(ctx context.Context, request operations.PostAssetsReturnsAverageRequestBody) (*operations.PostAssetsReturnsAverageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/returns/average"
 

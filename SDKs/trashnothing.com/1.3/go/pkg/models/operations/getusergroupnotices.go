@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserGroupNoticesQueryParams struct {
+type GetUserGroupNoticesRequest struct {
 	// A comma separated list of group IDs to return notices for.  If unset, notices for all the users groups will be returned.
 	GroupIds *string `queryParam:"style=form,explode=true,name=group_ids"`
-}
-
-type GetUserGroupNoticesRequest struct {
-	QueryParams GetUserGroupNoticesQueryParams
 }
 
 type GetUserGroupNoticesResponse struct {

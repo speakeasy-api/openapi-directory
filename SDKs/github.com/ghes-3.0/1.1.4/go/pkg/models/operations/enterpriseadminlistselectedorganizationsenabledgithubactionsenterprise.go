@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprisePathParams struct {
+type EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseRequest struct {
-	PathParams  EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprisePathParams
-	QueryParams EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseQueryParams
 }
 
 // EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON - Response

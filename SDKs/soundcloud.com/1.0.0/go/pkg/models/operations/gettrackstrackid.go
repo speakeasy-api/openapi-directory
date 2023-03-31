@@ -8,23 +8,14 @@ import (
 )
 
 type GetTracksTrackIDSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetTracksTrackIDPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
-}
-
-type GetTracksTrackIDQueryParams struct {
-	// A secret token to fetch private playlists/tracks
-	SecretToken *string `queryParam:"style=form,explode=true,name=secret_token"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type GetTracksTrackIDRequest struct {
-	PathParams  GetTracksTrackIDPathParams
-	QueryParams GetTracksTrackIDQueryParams
-	Security    GetTracksTrackIDSecurity
+	// A secret token to fetch private playlists/tracks
+	SecretToken *string `queryParam:"style=form,explode=true,name=secret_token"`
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type GetTracksTrackIDResponse struct {

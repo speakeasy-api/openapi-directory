@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleVersionsPathParams struct {
+type ArticleVersionsRequest struct {
 	// Article Unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
-}
-
-type ArticleVersionsRequest struct {
-	PathParams ArticleVersionsPathParams
 }
 
 type ArticleVersionsResponse struct {

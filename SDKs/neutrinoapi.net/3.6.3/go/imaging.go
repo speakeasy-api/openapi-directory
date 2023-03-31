@@ -34,7 +34,7 @@ func newImaging(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // HTMLRender - HTML Render
 // Render HTML content to PDF, JPG or PNG
-func (s *imaging) HTMLRender(ctx context.Context, request operations.HTMLRenderRequest) (*operations.HTMLRenderResponse, error) {
+func (s *imaging) HTMLRender(ctx context.Context, request operations.HTMLRenderRequestBody) (*operations.HTMLRenderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/html-render"
 
@@ -105,7 +105,7 @@ func (s *imaging) HTMLRender(ctx context.Context, request operations.HTMLRenderR
 
 // ImageResize - Image Resize
 // Resize an image and output as either JPEG or PNG
-func (s *imaging) ImageResize(ctx context.Context, request operations.ImageResizeRequest) (*operations.ImageResizeResponse, error) {
+func (s *imaging) ImageResize(ctx context.Context, request operations.ImageResizeRequestBody) (*operations.ImageResizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/image-resize"
 
@@ -176,7 +176,7 @@ func (s *imaging) ImageResize(ctx context.Context, request operations.ImageResiz
 
 // ImageWatermark - Image Watermark
 // Watermark one image with another image
-func (s *imaging) ImageWatermark(ctx context.Context, request operations.ImageWatermarkRequest) (*operations.ImageWatermarkResponse, error) {
+func (s *imaging) ImageWatermark(ctx context.Context, request operations.ImageWatermarkRequestBody) (*operations.ImageWatermarkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/image-watermark"
 
@@ -247,7 +247,7 @@ func (s *imaging) ImageWatermark(ctx context.Context, request operations.ImageWa
 
 // QRCode - QR Code
 // Generate a QR code as a PNG image
-func (s *imaging) QRCode(ctx context.Context, request operations.QRCodeRequest) (*operations.QRCodeResponse, error) {
+func (s *imaging) QRCode(ctx context.Context, request operations.QRCodeRequestBody) (*operations.QRCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qr-code"
 

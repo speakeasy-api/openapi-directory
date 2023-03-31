@@ -32,20 +32,20 @@ func newAccountPermissionGroups(defaultClient, securityClient HTTPClient, server
 }
 
 // DfareportingAccountPermissionGroupsGet - Gets one account permission group by ID.
-func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsGet(ctx context.Context, request operations.DfareportingAccountPermissionGroupsGetRequest) (*operations.DfareportingAccountPermissionGroupsGetResponse, error) {
+func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsGet(ctx context.Context, request operations.DfareportingAccountPermissionGroupsGetRequest, security operations.DfareportingAccountPermissionGroupsGetSecurity) (*operations.DfareportingAccountPermissionGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsGet(ctx con
 }
 
 // DfareportingAccountPermissionGroupsList - Retrieves the list of account permission groups.
-func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsList(ctx context.Context, request operations.DfareportingAccountPermissionGroupsListRequest) (*operations.DfareportingAccountPermissionGroupsListResponse, error) {
+func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsList(ctx context.Context, request operations.DfareportingAccountPermissionGroupsListRequest, security operations.DfareportingAccountPermissionGroupsListSecurity) (*operations.DfareportingAccountPermissionGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -32,20 +32,20 @@ func newOrderreports(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // ContentOrderreportsListdisbursements - Retrieves a report for disbursements from your Merchant Center account.
-func (s *orderreports) ContentOrderreportsListdisbursements(ctx context.Context, request operations.ContentOrderreportsListdisbursementsRequest) (*operations.ContentOrderreportsListdisbursementsResponse, error) {
+func (s *orderreports) ContentOrderreportsListdisbursements(ctx context.Context, request operations.ContentOrderreportsListdisbursementsRequest, security operations.ContentOrderreportsListdisbursementsSecurity) (*operations.ContentOrderreportsListdisbursementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *orderreports) ContentOrderreportsListdisbursements(ctx context.Context,
 }
 
 // ContentOrderreportsListtransactions - Retrieves a list of transactions for a disbursement from your Merchant Center account.
-func (s *orderreports) ContentOrderreportsListtransactions(ctx context.Context, request operations.ContentOrderreportsListtransactionsRequest) (*operations.ContentOrderreportsListtransactionsResponse, error) {
+func (s *orderreports) ContentOrderreportsListtransactions(ctx context.Context, request operations.ContentOrderreportsListtransactionsRequest, security operations.ContentOrderreportsListtransactionsSecurity) (*operations.ContentOrderreportsListtransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

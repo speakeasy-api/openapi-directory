@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05UsersAuthOnNotifyRawHeaders struct {
+type PostV05UsersAuthOnNotifyRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostV05UsersAuthOnNotifyRawRequest struct {
-	Headers PostV05UsersAuthOnNotifyRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05UsersAuthOnNotifyRawResponse struct {

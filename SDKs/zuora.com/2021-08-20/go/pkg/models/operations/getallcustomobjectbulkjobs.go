@@ -8,14 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETAllCustomObjectBulkJobsQueryParams struct {
-	// The `cursor` points to the last job of the previous result set. The cursor job is not included in this query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
-	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// Page size of the result. The maximum page size is 100. The defaut page size is 25.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETAllCustomObjectBulkJobsHeaders struct {
+type GETAllCustomObjectBulkJobsRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -29,11 +22,10 @@ type GETAllCustomObjectBulkJobsHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type GETAllCustomObjectBulkJobsRequest struct {
-	QueryParams GETAllCustomObjectBulkJobsQueryParams
-	Headers     GETAllCustomObjectBulkJobsHeaders
+	// The `cursor` points to the last job of the previous result set. The cursor job is not included in this query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
+	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
+	// Page size of the result. The maximum page size is 100. The defaut page size is 25.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GETAllCustomObjectBulkJobsResponse struct {

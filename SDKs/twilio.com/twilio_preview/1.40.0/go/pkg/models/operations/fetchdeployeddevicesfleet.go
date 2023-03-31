@@ -12,18 +12,13 @@ var FetchDeployedDevicesFleetServerList = []string{
 }
 
 type FetchDeployedDevicesFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDeployedDevicesFleetPathParams struct {
-	// Provides a 34 character string that uniquely identifies the requested Fleet resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDeployedDevicesFleetRequest struct {
-	PathParams FetchDeployedDevicesFleetPathParams
-	Security   FetchDeployedDevicesFleetSecurity
-	ServerURL  *string
+	// Provides a 34 character string that uniquely identifies the requested Fleet resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchDeployedDevicesFleetResponse struct {

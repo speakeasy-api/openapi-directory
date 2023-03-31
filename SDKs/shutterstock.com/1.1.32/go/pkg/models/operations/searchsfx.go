@@ -11,8 +11,8 @@ import (
 )
 
 type SearchSFXSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchSFXSortEnum - Sort by
@@ -72,7 +72,7 @@ func (e *SearchSFXViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchSFXQueryParams struct {
+type SearchSFXRequest struct {
 	// Show sound effects added on the specified date
 	AddedDate *types.Date `queryParam:"style=form,explode=true,name=added_date"`
 	// Show sound effects added before the specified date
@@ -99,11 +99,6 @@ type SearchSFXQueryParams struct {
 	Sort *SearchSFXSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Amount of detail to render in the response
 	View *SearchSFXViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type SearchSFXRequest struct {
-	QueryParams SearchSFXQueryParams
-	Security    SearchSFXSecurity
 }
 
 type SearchSFXResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDTransactionsPathParams struct {
-	// The unique identifier of the account.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetUsersIDTransactionsTypeEnum - Limit to transactions of this type.
 type GetUsersIDTransactionsTypeEnum string
 
@@ -38,9 +33,11 @@ func (e *GetUsersIDTransactionsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersIDTransactionsQueryParams struct {
+type GetUsersIDTransactionsRequest struct {
 	// Limit to transactions on or before this date. Required if start_date is provided. If not provided, defaults to today's date.
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
+	// The unique identifier of the account.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Limit to transactions that need to be reviewed.
 	NeedsReview *int64 `queryParam:"style=form,explode=true,name=needs_review"`
 	// Choose a particular page of the results.
@@ -55,11 +52,6 @@ type GetUsersIDTransactionsQueryParams struct {
 	Uncategorised *int64 `queryParam:"style=form,explode=true,name=uncategorised"`
 	// Limit to transactions updated since an ISO 8601 timestamp.
 	UpdatedSince *string `queryParam:"style=form,explode=true,name=updated_since"`
-}
-
-type GetUsersIDTransactionsRequest struct {
-	PathParams  GetUsersIDTransactionsPathParams
-	QueryParams GetUsersIDTransactionsQueryParams
 }
 
 type GetUsersIDTransactionsResponse struct {

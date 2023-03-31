@@ -33,20 +33,20 @@ func newSearchAds360Fields(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // Searchads360SearchAds360FieldsGet - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
-func (s *searchAds360Fields) Searchads360SearchAds360FieldsGet(ctx context.Context, request operations.Searchads360SearchAds360FieldsGetRequest) (*operations.Searchads360SearchAds360FieldsGetResponse, error) {
+func (s *searchAds360Fields) Searchads360SearchAds360FieldsGet(ctx context.Context, request operations.Searchads360SearchAds360FieldsGetRequest, security operations.Searchads360SearchAds360FieldsGetSecurity) (*operations.Searchads360SearchAds360FieldsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0/{resourceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *searchAds360Fields) Searchads360SearchAds360FieldsGet(ctx context.Conte
 }
 
 // Searchads360SearchAds360FieldsSearch - Returns all fields that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-func (s *searchAds360Fields) Searchads360SearchAds360FieldsSearch(ctx context.Context, request operations.Searchads360SearchAds360FieldsSearchRequest) (*operations.Searchads360SearchAds360FieldsSearchResponse, error) {
+func (s *searchAds360Fields) Searchads360SearchAds360FieldsSearch(ctx context.Context, request operations.Searchads360SearchAds360FieldsSearchRequest, security operations.Searchads360SearchAds360FieldsSearchSecurity) (*operations.Searchads360SearchAds360FieldsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0/searchAds360Fields:search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *searchAds360Fields) Searchads360SearchAds360FieldsSearch(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

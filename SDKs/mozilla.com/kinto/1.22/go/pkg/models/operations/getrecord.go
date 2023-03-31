@@ -6,25 +6,13 @@ import (
 	"net/http"
 )
 
-type GetRecordPathParams struct {
-	BucketID     string `pathParam:"style=simple,explode=false,name=bucket_id"`
-	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-	ID           string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetRecordQueryParams struct {
-	Fields []string `queryParam:"style=form,explode=false,name=_fields"`
-}
-
-type GetRecordHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
 type GetRecordRequest struct {
-	PathParams  GetRecordPathParams
-	QueryParams GetRecordQueryParams
-	Headers     GetRecordHeaders
+	IfMatch      *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch  *string  `header:"style=simple,explode=false,name=If-None-Match"`
+	Fields       []string `queryParam:"style=form,explode=false,name=_fields"`
+	BucketID     string   `pathParam:"style=simple,explode=false,name=bucket_id"`
+	CollectionID string   `pathParam:"style=simple,explode=false,name=collection_id"`
+	ID           string   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetRecordErrorSchema - The request is invalid.

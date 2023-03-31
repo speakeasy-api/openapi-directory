@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetSelfHostedRunnerGroupForOrgPathParams struct {
+type ActionsGetSelfHostedRunnerGroupForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner group.
 	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type ActionsGetSelfHostedRunnerGroupForOrgRequest struct {
-	PathParams ActionsGetSelfHostedRunnerGroupForOrgPathParams
 }
 
 type ActionsGetSelfHostedRunnerGroupForOrgResponse struct {

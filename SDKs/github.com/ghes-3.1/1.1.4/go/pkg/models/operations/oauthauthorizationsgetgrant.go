@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsGetGrantPathParams struct {
+type OauthAuthorizationsGetGrantRequest struct {
 	// The unique identifier of the grant.
 	GrantID int64 `pathParam:"style=simple,explode=false,name=grant_id"`
-}
-
-type OauthAuthorizationsGetGrantRequest struct {
-	PathParams OauthAuthorizationsGetGrantPathParams
 }
 
 type OauthAuthorizationsGetGrantResponse struct {

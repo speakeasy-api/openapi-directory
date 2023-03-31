@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetShakespeareGenerateInsultRequest{
-        Security: operations.GetShakespeareGenerateInsultSecurity{
-            XFungeneratorsAPISecret: shared.SchemeXFungeneratorsAPISecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetShakespeareGenerateInsultQueryParams{
-            Limit: 548814,
-        },
+        Limit: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, req)
+    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, req, operations.GetShakespeareGenerateInsultSecurity{
+        XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncPathParams struct {
-	// Required. The reseller partner ID.
-	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
-}
-
-type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncQueryParams struct {
+type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	UnclaimDevicesRequest *shared.UnclaimDevicesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The reseller partner ID.
+	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -35,12 +33,6 @@ type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest struct {
-	PathParams  AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncPathParams
-	QueryParams AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncQueryParams
-	Request     *shared.UnclaimDevicesRequest `request:"mediaType=application/json"`
 }
 
 type AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse struct {

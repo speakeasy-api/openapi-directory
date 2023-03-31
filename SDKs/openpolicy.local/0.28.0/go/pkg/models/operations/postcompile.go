@@ -9,7 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCompileQueryParams struct {
+type PostCompileRequest struct {
+	// The query (in JSON format)
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// If set to *full*, response will include query explanations in addition to the result.
 	Explain *string `queryParam:"style=form,explode=true,name=explain"`
 	// If true, response will return additional performance metrics in addition to the result and the standard metrics.
@@ -20,12 +22,6 @@ type PostCompileQueryParams struct {
 	Metrics *bool `queryParam:"style=form,explode=true,name=metrics"`
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type PostCompileRequest struct {
-	QueryParams PostCompileQueryParams
-	// The query (in JSON format)
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostCompile200ApplicationJSONExplanationLocalsKey struct {

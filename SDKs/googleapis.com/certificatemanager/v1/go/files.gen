@@ -30,12 +30,11 @@ pkg/models/operations/certificatemanagerprojectslocationsoperationsget.go
 pkg/models/operations/certificatemanagerprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/certificateissuanceconfig.go
 pkg/models/shared/certificateauthorityconfig.go
 pkg/models/shared/certificateauthorityserviceconfig.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listcertificateissuanceconfigsresponse.go
 pkg/models/shared/certificatemapentry.go
 pkg/models/shared/listcertificatemapentriesresponse.go

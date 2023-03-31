@@ -96,7 +96,7 @@ func New(opts ...SDKOption) *SDK {
 // DeleteCompanyAttendancesID - This endpoint is responsible for deleting attendance data for the company employees.
 func (s *SDK) DeleteCompanyAttendancesID(ctx context.Context, request operations.DeleteCompanyAttendancesIDRequest) (*operations.DeleteCompanyAttendancesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *SDK) DeleteCompanyAttendancesID(ctx context.Context, request operations
 // DeleteCompanyTimeOffsID - This endpoint is responsible for deleting absence period data for the company employees.
 func (s *SDK) DeleteCompanyTimeOffsID(ctx context.Context, request operations.DeleteCompanyTimeOffsIDRequest) (*operations.DeleteCompanyTimeOffsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -211,7 +211,7 @@ func (s *SDK) GetCompanyAttendances(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -296,7 +296,7 @@ func (s *SDK) GetCompanyEmployees(ctx context.Context) (*operations.GetCompanyEm
 // GetCompanyEmployeesEmployeeID - Show employee by ID
 func (s *SDK) GetCompanyEmployeesEmployeeID(ctx context.Context, request operations.GetCompanyEmployeesEmployeeIDRequest) (*operations.GetCompanyEmployeesEmployeeIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +340,7 @@ func (s *SDK) GetCompanyEmployeesEmployeeID(ctx context.Context, request operati
 // GetCompanyEmployeesEmployeeIDProfilePictureWidth - Show employee profile picture
 func (s *SDK) GetCompanyEmployeesEmployeeIDProfilePictureWidth(ctx context.Context, request operations.GetCompanyEmployeesEmployeeIDProfilePictureWidthRequest) (*operations.GetCompanyEmployeesEmployeeIDProfilePictureWidthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}/profile-picture/{width}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}/profile-picture/{width}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +391,7 @@ func (s *SDK) GetCompanyTimeOffTypes(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,7 +439,7 @@ func (s *SDK) GetCompanyTimeOffs(ctx context.Context, request operations.GetComp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -480,7 +480,7 @@ func (s *SDK) GetCompanyTimeOffs(ctx context.Context, request operations.GetComp
 // GetCompanyTimeOffsID - Absence Period
 func (s *SDK) GetCompanyTimeOffsID(ctx context.Context, request operations.GetCompanyTimeOffsIDRequest) (*operations.GetCompanyTimeOffsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -524,9 +524,9 @@ func (s *SDK) GetCompanyTimeOffsID(ctx context.Context, request operations.GetCo
 // PatchCompanyAttendancesID - This endpoint is responsible for updating attendance data for the company employees. Attributes are not required and if not specified, the current value will be used. It is not possible to change the employee id.
 func (s *SDK) PatchCompanyAttendancesID(ctx context.Context, request operations.PatchCompanyAttendancesIDRequest) (*operations.PatchCompanyAttendancesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAttendancePeriodRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -586,7 +586,7 @@ func (s *SDK) PatchCompanyAttendancesID(ctx context.Context, request operations.
 }
 
 // PostCompanyAttendances - This endpoint is responsible for adding attendance data for the company employees. It is possible to add attendances for one or many employees at the same time. The payload sent on the request should be a list of attendance periods, in the form of an array containing attendance period objects.
-func (s *SDK) PostCompanyAttendances(ctx context.Context, request operations.PostCompanyAttendancesRequest) (*operations.PostCompanyAttendancesResponse, error) {
+func (s *SDK) PostCompanyAttendances(ctx context.Context, request shared.NewAttendancePeriodRequest) (*operations.PostCompanyAttendancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/company/attendances"
 
@@ -651,7 +651,7 @@ func (s *SDK) PostCompanyAttendances(ctx context.Context, request operations.Pos
 
 // PostCompanyEmployees - Create an employee
 // Creates new employee. Status of the employee will be set to `active` if `hire_date` provided is in past. Otherwise status will be set to `onboarding`. This endpoint will respond with `id` of created employee in case of success.
-func (s *SDK) PostCompanyEmployees(ctx context.Context, request operations.PostCompanyEmployeesRequest) (*operations.PostCompanyEmployeesResponse, error) {
+func (s *SDK) PostCompanyEmployees(ctx context.Context, request operations.PostCompanyEmployeesRequestBody) (*operations.PostCompanyEmployeesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/company/employees"
 
@@ -705,7 +705,7 @@ func (s *SDK) PostCompanyEmployees(ctx context.Context, request operations.PostC
 }
 
 // PostCompanyTimeOffs - This endpoint is responsible for adding absence data for the company employees.
-func (s *SDK) PostCompanyTimeOffs(ctx context.Context, request operations.PostCompanyTimeOffsRequest) (*operations.PostCompanyTimeOffsResponse, error) {
+func (s *SDK) PostCompanyTimeOffs(ctx context.Context, request shared.CreateTimeOffPeriodRequest) (*operations.PostCompanyTimeOffsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/company/time-offs"
 

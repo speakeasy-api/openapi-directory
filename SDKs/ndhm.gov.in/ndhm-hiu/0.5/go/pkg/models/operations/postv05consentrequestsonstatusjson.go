@@ -11,17 +11,12 @@ var PostV05ConsentRequestsOnStatusJSONServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type PostV05ConsentRequestsOnStatusJSONHeaders struct {
+type PostV05ConsentRequestsOnStatusJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization           string                         `header:"style=simple,explode=false,name=Authorization"`
+	HIUConsentRequestStatus shared.HIUConsentRequestStatus `request:"mediaType=application/json"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05ConsentRequestsOnStatusJSONRequest struct {
-	Headers   PostV05ConsentRequestsOnStatusJSONHeaders
-	Request   shared.HIUConsentRequestStatus `request:"mediaType=application/json"`
-	ServerURL *string
 }
 
 type PostV05ConsentRequestsOnStatusJSONResponse struct {

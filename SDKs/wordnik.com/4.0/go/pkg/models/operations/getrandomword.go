@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetRandomWordQueryParams struct {
+type GetRandomWordRequest struct {
 	// CSV part-of-speech values to exclude (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
 	ExcludePartOfSpeech *string `queryParam:"style=form,explode=true,name=excludePartOfSpeech"`
 	// Only return words with dictionary definitions
@@ -25,10 +25,6 @@ type GetRandomWordQueryParams struct {
 	MinDictionaryCount *int `queryParam:"style=form,explode=true,name=minDictionaryCount"`
 	// Minimum word length
 	MinLength *int `queryParam:"style=form,explode=true,name=minLength"`
-}
-
-type GetRandomWordRequest struct {
-	QueryParams GetRandomWordQueryParams
 }
 
 type GetRandomWordResponse struct {

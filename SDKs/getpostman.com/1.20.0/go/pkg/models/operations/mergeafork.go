@@ -12,10 +12,6 @@ type MergeAForkRequestBody struct {
 	Strategy    *string `json:"strategy,omitempty"`
 }
 
-type MergeAForkRequest struct {
-	Request *MergeAForkRequestBody `request:"mediaType=application/json"`
-}
-
 type MergeAForkResponse struct {
 	ContentType string
 	StatusCode  int

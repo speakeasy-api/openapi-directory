@@ -33,7 +33,7 @@ func newAccountReports(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // LocalservicesAccountReportsSearch - Get account reports containing aggregate account data of all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
-func (s *accountReports) LocalservicesAccountReportsSearch(ctx context.Context, request operations.LocalservicesAccountReportsSearchRequest) (*operations.LocalservicesAccountReportsSearchResponse, error) {
+func (s *accountReports) LocalservicesAccountReportsSearch(ctx context.Context, request operations.LocalservicesAccountReportsSearchRequest, security operations.LocalservicesAccountReportsSearchSecurity) (*operations.LocalservicesAccountReportsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accountReports:search"
 
@@ -42,11 +42,11 @@ func (s *accountReports) LocalservicesAccountReportsSearch(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

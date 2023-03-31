@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsIDEmailTemplatesMasterPathParams struct {
+type GetSetupV1LocationsIDEmailTemplatesMasterRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1LocationsIDEmailTemplatesMasterRequest struct {
-	PathParams GetSetupV1LocationsIDEmailTemplatesMasterPathParams
 }
 
 type GetSetupV1LocationsIDEmailTemplatesMasterResponse struct {

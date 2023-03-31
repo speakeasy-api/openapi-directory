@@ -8,18 +8,13 @@ import (
 )
 
 type SubscribeUserNotificationSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type SubscribeUserNotificationPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SubscribeUserNotificationRequest struct {
-	PathParams SubscribeUserNotificationPathParams
-	Request    *shared.NotificationSubscription `request:"mediaType=application/json"`
-	Security   SubscribeUserNotificationSecurity
+	NotificationSubscription *shared.NotificationSubscription `request:"mediaType=application/json"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SubscribeUserNotificationResponse struct {

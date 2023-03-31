@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        PathParams: operations.GetPathParams{
-            OrderID: "corrupti",
-        },
-        Headers: operations.GetHeaders{
-            XMarketID: "provident",
-            XShopperID: "distinctio",
-        },
+        XMarketID: "corrupti",
+        XShopperID: "provident",
+        OrderID: "distinctio",
     }
 
     ctx := context.Background()

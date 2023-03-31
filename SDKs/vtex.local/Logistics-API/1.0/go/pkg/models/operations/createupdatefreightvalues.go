@@ -6,17 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUpdateFreightValuesPathParams struct {
-	CarrierID string `pathParam:"style=simple,explode=false,name=carrierId"`
-}
-
-type CreateUpdateFreightValuesHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CreateUpdateFreightValuesCreateUpdateFreightValuesRequest struct {
 	// Fixed shipping cost to be charged in a decimal number.
 	AbsoluteMoneyCost string `json:"absoluteMoneyCost"`
@@ -45,9 +34,12 @@ type CreateUpdateFreightValuesCreateUpdateFreightValuesRequest struct {
 }
 
 type CreateUpdateFreightValuesRequest struct {
-	PathParams CreateUpdateFreightValuesPathParams
-	Headers    CreateUpdateFreightValuesHeaders
-	Request    []CreateUpdateFreightValuesCreateUpdateFreightValuesRequest `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                                                      `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []CreateUpdateFreightValuesCreateUpdateFreightValuesRequest `request:"mediaType=application/json"`
+	CarrierID   string                                                      `pathParam:"style=simple,explode=false,name=carrierId"`
 }
 
 type CreateUpdateFreightValuesResponse struct {

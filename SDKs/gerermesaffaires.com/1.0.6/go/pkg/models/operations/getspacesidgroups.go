@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesIDGroupsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDGroupsQueryParams struct {
+type GetSpacesIDGroupsRequest struct {
 	// Name of the groups
 	Name *string `queryParam:"style=form,explode=true,name=Name"`
-}
-
-type GetSpacesIDGroupsRequest struct {
-	PathParams  GetSpacesIDGroupsPathParams
-	QueryParams GetSpacesIDGroupsQueryParams
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDGroupsResponse struct {

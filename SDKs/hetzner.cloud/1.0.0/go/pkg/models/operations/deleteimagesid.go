@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteImagesIDPathParams struct {
+type DeleteImagesIDRequest struct {
 	// ID of the Image
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteImagesIDRequest struct {
-	PathParams DeleteImagesIDPathParams
 }
 
 type DeleteImagesIDResponse struct {

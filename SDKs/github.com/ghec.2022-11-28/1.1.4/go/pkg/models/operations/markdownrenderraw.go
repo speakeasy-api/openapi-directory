@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type MarkdownRenderRawRequest struct {
-	Request *string `request:"mediaType=text/plain"`
-}
-
 type MarkdownRenderRawResponse struct {
 	ContentType string
 	Headers     map[string][]string

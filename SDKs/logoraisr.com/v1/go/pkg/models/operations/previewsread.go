@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PreviewsReadPathParams struct {
+type PreviewsReadRequest struct {
 	// Id of the file for which the preview_img_url is generated.
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type PreviewsReadRequest struct {
-	PathParams PreviewsReadPathParams
 }
 
 type PreviewsReadResponse struct {

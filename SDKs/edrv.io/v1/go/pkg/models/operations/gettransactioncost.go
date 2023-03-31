@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTransactionCostPathParams struct {
+type GetTransactionCostRequest struct {
 	// The transaction id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTransactionCostRequest struct {
-	PathParams GetTransactionCostPathParams
 }
 
 type GetTransactionCostResponse struct {

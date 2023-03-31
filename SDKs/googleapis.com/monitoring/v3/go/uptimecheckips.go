@@ -33,7 +33,7 @@ func newUptimeCheckIps(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // MonitoringUptimeCheckIpsList - Returns the list of IP addresses that checkers run from
-func (s *uptimeCheckIps) MonitoringUptimeCheckIpsList(ctx context.Context, request operations.MonitoringUptimeCheckIpsListRequest) (*operations.MonitoringUptimeCheckIpsListResponse, error) {
+func (s *uptimeCheckIps) MonitoringUptimeCheckIpsList(ctx context.Context, request operations.MonitoringUptimeCheckIpsListRequest, security operations.MonitoringUptimeCheckIpsListSecurity) (*operations.MonitoringUptimeCheckIpsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/uptimeCheckIps"
 
@@ -42,11 +42,11 @@ func (s *uptimeCheckIps) MonitoringUptimeCheckIpsList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

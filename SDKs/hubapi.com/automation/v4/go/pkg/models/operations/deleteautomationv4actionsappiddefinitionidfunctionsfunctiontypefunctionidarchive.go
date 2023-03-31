@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 // DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveFunctionTypeEnum - The type of function. This determines when the function will be called.
@@ -40,7 +39,7 @@ func (e *DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunction
 	}
 }
 
-type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchivePathParams struct {
+type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveRequest struct {
 	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the custom workflow action
 	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
@@ -48,11 +47,6 @@ type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDAr
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 	// The type of function. This determines when the function will be called.
 	FunctionType DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveFunctionTypeEnum `pathParam:"style=simple,explode=false,name=functionType"`
-}
-
-type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveRequest struct {
-	PathParams DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchivePathParams
-	Security   DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveSecurity
 }
 
 type DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveResponse struct {

@@ -188,7 +188,7 @@ func (e *GetDiscoveryV2SuggestUnitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDiscoveryV2SuggestQueryParams struct {
+type GetDiscoveryV2SuggestRequest struct {
 	// Filter events to clientName
 	ClientVisibility *string `queryParam:"style=form,explode=true,name=clientVisibility"`
 	// Filter suggestions by country code
@@ -221,10 +221,6 @@ type GetDiscoveryV2SuggestQueryParams struct {
 	Source *GetDiscoveryV2SuggestSourceEnum `queryParam:"style=form,explode=true,name=source"`
 	// Unit of the radius
 	Unit *GetDiscoveryV2SuggestUnitEnum `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type GetDiscoveryV2SuggestRequest struct {
-	QueryParams GetDiscoveryV2SuggestQueryParams
 }
 
 type GetDiscoveryV2SuggestResponse struct {

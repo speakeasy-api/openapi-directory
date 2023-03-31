@@ -78,10 +78,6 @@ func (u PostMatrixRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostMatrixRequest struct {
-	Request *PostMatrixRequestBody `request:"mediaType=application/json"`
-}
-
 type PostMatrixResponse struct {
 	ContentType string
 	// Unexpected Error

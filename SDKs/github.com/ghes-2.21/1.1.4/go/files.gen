@@ -804,3 +804,4 @@ pkg/models/shared/privateuser.go
 pkg/models/shared/hovercard.go
 pkg/models/shared/keysimple.go
 USAGE.md
+pkg/models/operations/options.go

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionLegacyPathParams struct {
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsListForTeamDiscussionLegacyContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
 type ReactionsListForTeamDiscussionLegacyContentEnum string
 
@@ -56,18 +51,15 @@ func (e *ReactionsListForTeamDiscussionLegacyContentEnum) UnmarshalJSON(data []b
 	}
 }
 
-type ReactionsListForTeamDiscussionLegacyQueryParams struct {
+type ReactionsListForTeamDiscussionLegacyRequest struct {
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
-	Content *ReactionsListForTeamDiscussionLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
+	Content          *ReactionsListForTeamDiscussionLegacyContentEnum `queryParam:"style=form,explode=true,name=content"`
+	DiscussionNumber int64                                            `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionLegacyRequest struct {
-	PathParams  ReactionsListForTeamDiscussionLegacyPathParams
-	QueryParams ReactionsListForTeamDiscussionLegacyQueryParams
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsListForTeamDiscussionLegacyResponse struct {

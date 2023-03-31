@@ -3,23 +3,19 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AnalyticsRequest(
-    query_params=operations.AnalyticsQueryParams(
-        end="id",
-        group_by="label",
-        label="quia",
-        start="amet",
-        subaccounts="omnis",
+        api_key_auth="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.AnalyticsRequest(
+    end="corrupti",
+    group_by="subaccount",
+    label="distinctio",
+    start="quibusdam",
+    subaccounts="unde",
 )
     
 res = s.analytics.analytics(req)

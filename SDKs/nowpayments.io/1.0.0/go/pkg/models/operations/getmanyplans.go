@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetManyPlansQueryParams struct {
+type GetManyPlansRequest struct {
 	// Number
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number
-	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetManyPlansHeaders struct {
+	Offset  *string `queryParam:"style=form,explode=true,name=offset"`
 	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetManyPlansRequest struct {
-	QueryParams GetManyPlansQueryParams
-	Headers     GetManyPlansHeaders
 }
 
 type GetManyPlans200ApplicationJSONResult struct {

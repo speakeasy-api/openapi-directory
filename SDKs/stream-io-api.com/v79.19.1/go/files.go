@@ -35,14 +35,14 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Deletes previously uploaded file
 func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileRequest) (*operations.DeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,14 +106,14 @@ func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileReq
 // Deletes previously uploaded image
 func (s *files) DeleteImage(ctx context.Context, request operations.DeleteImageRequest) (*operations.DeleteImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{type}/{id}/image", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

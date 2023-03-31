@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxBankTransferFireWebhookRequest struct {
-	Request shared.SandboxBankTransferFireWebhookRequest `request:"mediaType=application/json"`
-}
 
 type SandboxBankTransferFireWebhookResponse struct {
 	ContentType string

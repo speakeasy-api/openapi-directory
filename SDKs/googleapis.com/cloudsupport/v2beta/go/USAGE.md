@@ -14,34 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudsupportCaseClassificationsSearchRequest{
-        Security: operations.CloudsupportCaseClassificationsSearchSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.CloudsupportCaseClassificationsSearchQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PageSize: 847252,
-            PageToken: "vel",
-            PrettyPrint: false,
-            Query: "error",
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PageSize: 847252,
+        PageToken: "vel",
+        PrettyPrint: false,
+        Query: "error",
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.CaseClassifications.CloudsupportCaseClassificationsSearch(ctx, req)
+    res, err := s.CaseClassifications.CloudsupportCaseClassificationsSearch(ctx, req, operations.CloudsupportCaseClassificationsSearchSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

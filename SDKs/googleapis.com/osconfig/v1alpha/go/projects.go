@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList - List OS policies compliance data for all Compute Engine VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest) (*operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest, security operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity) (*operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *projects) OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ct
 }
 
 // OsconfigProjectsLocationsInstancesInventoriesList - List inventory data for all VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesInventoriesListRequest) (*operations.OsconfigProjectsLocationsInstancesInventoriesListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesInventoriesListRequest, security operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity) (*operations.OsconfigProjectsLocationsInstancesInventoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/inventories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/inventories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context
 }
 
 // OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest) (*operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest, security operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,20 +176,20 @@ func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsL
 }
 
 // OsconfigProjectsLocationsInstancesVulnerabilityReportsList - List vulnerability reports for all VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest) (*operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest, security operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/vulnerabilityReports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/vulnerabilityReports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,11 +224,11 @@ func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ct
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsCreate - Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OSPolicyAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -240,11 +240,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx contex
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsDelete - Delete the OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. If the LRO completes and is not cancelled, all revisions associated with the OS policy assignment are deleted. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsDelete(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsDelete(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,20 +327,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsDelete(ctx contex
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsList - List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -375,20 +375,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions - List the OS policy assignment revisions for a given OS policy assignment.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:listRevisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:listRevisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,11 +423,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,11 +439,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,20 +478,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -526,11 +526,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(ctx
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsPatch - Update an existing OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsPatch(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsPatch(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OSPolicyAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -542,11 +542,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsPatch(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

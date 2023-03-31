@@ -10,10 +10,6 @@ type UpdateFacetingRequestBody struct {
 	MaxValuesPerFacet *float64 `json:"maxValuesPerFacet,omitempty"`
 }
 
-type UpdateFacetingRequest struct {
-	Request *UpdateFacetingRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateFacetingResponse struct {
 	ContentType string
 	StatusCode  int

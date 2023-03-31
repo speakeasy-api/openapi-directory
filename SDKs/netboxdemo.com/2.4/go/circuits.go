@@ -67,7 +67,7 @@ func (s *circuits) CircuitsChoicesList(ctx context.Context) (*operations.Circuit
 }
 func (s *circuits) CircuitsChoicesRead(ctx context.Context, request operations.CircuitsChoicesReadRequest) (*operations.CircuitsChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *circuits) CircuitsChoicesRead(ctx context.Context, request operations.C
 
 	return res, nil
 }
-func (s *circuits) CircuitsCircuitTerminationsCreate(ctx context.Context, request operations.CircuitsCircuitTerminationsCreateRequest) (*operations.CircuitsCircuitTerminationsCreateResponse, error) {
+func (s *circuits) CircuitsCircuitTerminationsCreate(ctx context.Context, request shared.WritableCircuitTerminationInput) (*operations.CircuitsCircuitTerminationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/circuits/circuit-terminations/"
 
@@ -152,7 +152,7 @@ func (s *circuits) CircuitsCircuitTerminationsCreate(ctx context.Context, reques
 }
 func (s *circuits) CircuitsCircuitTerminationsDelete(ctx context.Context, request operations.CircuitsCircuitTerminationsDeleteRequest) (*operations.CircuitsCircuitTerminationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *circuits) CircuitsCircuitTerminationsList(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,9 +231,9 @@ func (s *circuits) CircuitsCircuitTerminationsList(ctx context.Context, request 
 }
 func (s *circuits) CircuitsCircuitTerminationsPartialUpdate(ctx context.Context, request operations.CircuitsCircuitTerminationsPartialUpdateRequest) (*operations.CircuitsCircuitTerminationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableCircuitTerminationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *circuits) CircuitsCircuitTerminationsPartialUpdate(ctx context.Context,
 }
 func (s *circuits) CircuitsCircuitTerminationsRead(ctx context.Context, request operations.CircuitsCircuitTerminationsReadRequest) (*operations.CircuitsCircuitTerminationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,9 +325,9 @@ func (s *circuits) CircuitsCircuitTerminationsRead(ctx context.Context, request 
 }
 func (s *circuits) CircuitsCircuitTerminationsUpdate(ctx context.Context, request operations.CircuitsCircuitTerminationsUpdateRequest) (*operations.CircuitsCircuitTerminationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-terminations/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableCircuitTerminationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -375,7 +375,7 @@ func (s *circuits) CircuitsCircuitTerminationsUpdate(ctx context.Context, reques
 
 	return res, nil
 }
-func (s *circuits) CircuitsCircuitTypesCreate(ctx context.Context, request operations.CircuitsCircuitTypesCreateRequest) (*operations.CircuitsCircuitTypesCreateResponse, error) {
+func (s *circuits) CircuitsCircuitTypesCreate(ctx context.Context, request shared.CircuitTypeInput) (*operations.CircuitsCircuitTypesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/circuits/circuit-types/"
 
@@ -429,7 +429,7 @@ func (s *circuits) CircuitsCircuitTypesCreate(ctx context.Context, request opera
 }
 func (s *circuits) CircuitsCircuitTypesDelete(ctx context.Context, request operations.CircuitsCircuitTypesDeleteRequest) (*operations.CircuitsCircuitTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -469,7 +469,7 @@ func (s *circuits) CircuitsCircuitTypesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -508,9 +508,9 @@ func (s *circuits) CircuitsCircuitTypesList(ctx context.Context, request operati
 }
 func (s *circuits) CircuitsCircuitTypesPartialUpdate(ctx context.Context, request operations.CircuitsCircuitTypesPartialUpdateRequest) (*operations.CircuitsCircuitTypesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CircuitTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -560,7 +560,7 @@ func (s *circuits) CircuitsCircuitTypesPartialUpdate(ctx context.Context, reques
 }
 func (s *circuits) CircuitsCircuitTypesRead(ctx context.Context, request operations.CircuitsCircuitTypesReadRequest) (*operations.CircuitsCircuitTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,9 +602,9 @@ func (s *circuits) CircuitsCircuitTypesRead(ctx context.Context, request operati
 }
 func (s *circuits) CircuitsCircuitTypesUpdate(ctx context.Context, request operations.CircuitsCircuitTypesUpdateRequest) (*operations.CircuitsCircuitTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuit-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CircuitTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,7 +652,7 @@ func (s *circuits) CircuitsCircuitTypesUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *circuits) CircuitsCircuitsCreate(ctx context.Context, request operations.CircuitsCircuitsCreateRequest) (*operations.CircuitsCircuitsCreateResponse, error) {
+func (s *circuits) CircuitsCircuitsCreate(ctx context.Context, request shared.WritableCircuitInput) (*operations.CircuitsCircuitsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/circuits/circuits/"
 
@@ -706,7 +706,7 @@ func (s *circuits) CircuitsCircuitsCreate(ctx context.Context, request operation
 }
 func (s *circuits) CircuitsCircuitsDelete(ctx context.Context, request operations.CircuitsCircuitsDeleteRequest) (*operations.CircuitsCircuitsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -746,7 +746,7 @@ func (s *circuits) CircuitsCircuitsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -785,9 +785,9 @@ func (s *circuits) CircuitsCircuitsList(ctx context.Context, request operations.
 }
 func (s *circuits) CircuitsCircuitsPartialUpdate(ctx context.Context, request operations.CircuitsCircuitsPartialUpdateRequest) (*operations.CircuitsCircuitsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableCircuitInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -837,7 +837,7 @@ func (s *circuits) CircuitsCircuitsPartialUpdate(ctx context.Context, request op
 }
 func (s *circuits) CircuitsCircuitsRead(ctx context.Context, request operations.CircuitsCircuitsReadRequest) (*operations.CircuitsCircuitsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -879,9 +879,9 @@ func (s *circuits) CircuitsCircuitsRead(ctx context.Context, request operations.
 }
 func (s *circuits) CircuitsCircuitsUpdate(ctx context.Context, request operations.CircuitsCircuitsUpdateRequest) (*operations.CircuitsCircuitsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/circuits/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableCircuitInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -929,7 +929,7 @@ func (s *circuits) CircuitsCircuitsUpdate(ctx context.Context, request operation
 
 	return res, nil
 }
-func (s *circuits) CircuitsProvidersCreate(ctx context.Context, request operations.CircuitsProvidersCreateRequest) (*operations.CircuitsProvidersCreateResponse, error) {
+func (s *circuits) CircuitsProvidersCreate(ctx context.Context, request shared.ProviderInput) (*operations.CircuitsProvidersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/circuits/providers/"
 
@@ -983,7 +983,7 @@ func (s *circuits) CircuitsProvidersCreate(ctx context.Context, request operatio
 }
 func (s *circuits) CircuitsProvidersDelete(ctx context.Context, request operations.CircuitsProvidersDeleteRequest) (*operations.CircuitsProvidersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1018,7 +1018,7 @@ func (s *circuits) CircuitsProvidersDelete(ctx context.Context, request operatio
 // CircuitsProvidersGraphs - A convenience method for rendering graphs for a particular provider.
 func (s *circuits) CircuitsProvidersGraphs(ctx context.Context, request operations.CircuitsProvidersGraphsRequest) (*operations.CircuitsProvidersGraphsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/graphs/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/graphs/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1067,7 +1067,7 @@ func (s *circuits) CircuitsProvidersList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1106,9 +1106,9 @@ func (s *circuits) CircuitsProvidersList(ctx context.Context, request operations
 }
 func (s *circuits) CircuitsProvidersPartialUpdate(ctx context.Context, request operations.CircuitsProvidersPartialUpdateRequest) (*operations.CircuitsProvidersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProviderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1158,7 +1158,7 @@ func (s *circuits) CircuitsProvidersPartialUpdate(ctx context.Context, request o
 }
 func (s *circuits) CircuitsProvidersRead(ctx context.Context, request operations.CircuitsProvidersReadRequest) (*operations.CircuitsProvidersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1200,9 +1200,9 @@ func (s *circuits) CircuitsProvidersRead(ctx context.Context, request operations
 }
 func (s *circuits) CircuitsProvidersUpdate(ctx context.Context, request operations.CircuitsProvidersUpdateRequest) (*operations.CircuitsProvidersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/circuits/providers/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProviderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

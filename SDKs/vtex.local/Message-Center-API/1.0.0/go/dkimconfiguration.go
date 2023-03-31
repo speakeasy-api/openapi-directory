@@ -34,7 +34,7 @@ func newDKIMConfiguration(defaultClient, securityClient HTTPClient, serverURL, l
 // Create DKIM keys for sender that was setup in VTEX mail servers
 func (s *dkimConfiguration) CreateDKIM(ctx context.Context, request operations.CreateDKIMRequest) (*operations.CreateDKIMResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/mail-service/pvt/providers/{EmailProvider}/dkim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/mail-service/pvt/providers/{EmailProvider}/dkim", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

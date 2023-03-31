@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFirewallsIDPathParams struct {
+type DeleteFirewallsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFirewallsIDRequest struct {
-	PathParams DeleteFirewallsIDPathParams
 }
 
 type DeleteFirewallsIDResponse struct {

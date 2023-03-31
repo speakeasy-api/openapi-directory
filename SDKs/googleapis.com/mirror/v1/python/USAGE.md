@@ -4,46 +4,52 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MirrorAccountsInsertRequest(
-    path_params=operations.MirrorAccountsInsertPathParams(
-        account_name="quo",
-        account_type="dolorem",
-        user_token="quod",
-    ),
-    query_params=operations.MirrorAccountsInsertQueryParams(
-        alt="json",
-        fields="eius",
-        key="dolor",
-        oauth_token="maiores",
-        pretty_print=False,
-        quota_user="recusandae",
-        user_ip="in",
-    ),
-    request=shared.Account(
+    account=shared.Account(
         auth_tokens=[
             shared.AuthToken(
-                auth_token="ipsum",
-                type="mollitia",
+                auth_token="provident",
+                type="distinctio",
+            ),
+            shared.AuthToken(
+                auth_token="quibusdam",
+                type="unde",
+            ),
+            shared.AuthToken(
+                auth_token="nulla",
+                type="corrupti",
             ),
         ],
         features=[
-            "ipsum",
-            "vero",
-            "autem",
+            "vel",
+            "error",
+            "deserunt",
+            "suscipit",
         ],
-        password="laboriosam",
+        password="iure",
         user_data=[
             shared.UserData(
-                key="incidunt",
-                value="distinctio",
+                key="debitis",
+                value="ipsa",
             ),
             shared.UserData(
-                key="labore",
-                value="magnam",
+                key="delectus",
+                value="tempora",
             ),
         ],
     ),
+    account_name="suscipit",
+    account_type="molestiae",
+    alt="json",
+    fields_="minus",
+    key="placeat",
+    oauth_token="voluptatum",
+    pretty_print=False,
+    quota_user="iusto",
+    user_ip="excepturi",
+    user_token="nisi",
 )
     
 res = s.accounts.mirror_accounts_insert(req)

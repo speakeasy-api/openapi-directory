@@ -13,12 +13,8 @@ var CreateConversationServerList = []string{
 }
 
 type CreateConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateConversationHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConversationCreateConversationRequest struct {
@@ -42,10 +38,9 @@ type CreateConversationCreateConversationRequest struct {
 }
 
 type CreateConversationRequest struct {
-	Headers   CreateConversationHeaders
-	Request   *CreateConversationCreateConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateConversationSecurity
-	ServerURL *string
+	RequestBody *CreateConversationCreateConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateConversationResponse struct {

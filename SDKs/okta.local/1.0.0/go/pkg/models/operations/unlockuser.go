@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UnlockUserPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type UnlockUserRequest struct {
-	PathParams UnlockUserPathParams
-	Request    []byte `request:"mediaType=text/plain"`
+	RequestBody []byte `request:"mediaType=text/plain"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UnlockUserResponse struct {

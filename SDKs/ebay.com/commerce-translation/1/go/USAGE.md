@@ -13,26 +13,21 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.TranslateRequest{
-        Security: operations.TranslateSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+    req := shared.TranslateRequest{
+        From: "corrupti",
+        Text: []string{
+            "distinctio",
+            "quibusdam",
+            "unde",
         },
-        Request: shared.TranslateRequest{
-            From: "corrupti",
-            Text: []string{
-                "distinctio",
-                "quibusdam",
-                "unde",
-            },
-            To: "nulla",
-            TranslationContext: "corrupti",
-        },
+        To: "nulla",
+        TranslationContext: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Language.Translate(ctx, req)
+    res, err := s.Language.Translate(ctx, req, operations.TranslateSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

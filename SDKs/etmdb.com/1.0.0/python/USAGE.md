@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CinemaSearchReadRequest(
-    path_params=operations.CinemaSearchReadPathParams(
-        id="tempore",
-    ),
+    id="corrupti",
 )
     
 res = s.cinema.cinema_search_read(req)

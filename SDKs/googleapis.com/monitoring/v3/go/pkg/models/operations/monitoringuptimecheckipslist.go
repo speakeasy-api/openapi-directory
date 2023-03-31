@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringUptimeCheckIpsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringUptimeCheckIpsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringUptimeCheckIpsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringUptimeCheckIpsListSecurity struct {
@@ -28,7 +28,7 @@ type MonitoringUptimeCheckIpsListSecurity struct {
 	Option3 *MonitoringUptimeCheckIpsListSecurityOption3 `security:"option"`
 }
 
-type MonitoringUptimeCheckIpsListQueryParams struct {
+type MonitoringUptimeCheckIpsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -55,11 +55,6 @@ type MonitoringUptimeCheckIpsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringUptimeCheckIpsListRequest struct {
-	QueryParams MonitoringUptimeCheckIpsListQueryParams
-	Security    MonitoringUptimeCheckIpsListSecurity
 }
 
 type MonitoringUptimeCheckIpsListResponse struct {

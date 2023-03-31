@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitProjectReportsPathParams struct {
+type SubmitProjectReportsRequest struct {
+	ReportContent *shared.ReportContent `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SubmitProjectReportsRequest struct {
-	PathParams SubmitProjectReportsPathParams
-	Request    *shared.ReportContent `request:"mediaType=application/json"`
 }
 
 type SubmitProjectReportsResponse struct {

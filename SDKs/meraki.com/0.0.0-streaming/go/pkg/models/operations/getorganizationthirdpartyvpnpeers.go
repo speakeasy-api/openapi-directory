@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationThirdPartyVPNPeersPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationThirdPartyVPNPeersRequest struct {
-	PathParams GetOrganizationThirdPartyVPNPeersPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationThirdPartyVPNPeersResponse struct {

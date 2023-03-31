@@ -36,14 +36,14 @@ func newCertificateActions(defaultClient, securityClient HTTPClient, serverURL, 
 // Only type `managed` Certificates can have Actions. For type `uploaded` Certificates the `actions` key will always contain an empty array.
 func (s *certificateActions) GetCertificatesIDActions(ctx context.Context, request operations.GetCertificatesIDActionsRequest) (*operations.GetCertificatesIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *certificateActions) GetCertificatesIDActions(ctx context.Context, reque
 // Returns a specific Action for a Certificate. Only type `managed` Certificates have Actions.
 func (s *certificateActions) GetCertificatesIDActionsActionID(ctx context.Context, request operations.GetCertificatesIDActionsActionIDRequest) (*operations.GetCertificatesIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/{action_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/{action_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *certificateActions) GetCertificatesIDActionsActionID(ctx context.Contex
 // | `dns_zone_is_secondary_zone`                            | DNS zone is a secondary zone                                              |
 func (s *certificateActions) PostCertificatesIDActionsRetry(ctx context.Context, request operations.PostCertificatesIDActionsRetryRequest) (*operations.PostCertificatesIDActionsRetryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/retry", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/retry", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

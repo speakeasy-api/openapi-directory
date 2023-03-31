@@ -14,55 +14,48 @@ func main() {
     s := sdk.New()
 
     req := operations.DatastoreProjectsExportRequest{
-        Security: operations.DatastoreProjectsExportSecurity{
-            Option1: &operations.DatastoreProjectsExportSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.DatastoreProjectsExportPathParams{
-            ProjectID: "corrupti",
-        },
-        QueryParams: operations.DatastoreProjectsExportQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest{
+        DollarXgafv: "2",
+        GoogleDatastoreAdminV1beta1ExportEntitiesRequest: &shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest{
             EntityFilter: &shared.GoogleDatastoreAdminV1beta1EntityFilter{
                 Kinds: []string{
-                    "iure",
-                    "magnam",
+                    "distinctio",
+                    "quibusdam",
+                    "unde",
                 },
                 NamespaceIds: []string{
-                    "ipsa",
-                    "delectus",
-                    "tempora",
-                    "suscipit",
+                    "corrupti",
+                    "illum",
+                    "vel",
+                    "error",
                 },
             },
             Labels: map[string]string{
-                "minus": "placeat",
-                "voluptatum": "iusto",
+                "suscipit": "iure",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
-            OutputURLPrefix: "excepturi",
+            OutputURLPrefix: "tempora",
         },
+        AccessToken: "suscipit",
+        Alt: "media",
+        Callback: "minus",
+        Fields: "placeat",
+        Key: "voluptatum",
+        OauthToken: "iusto",
+        PrettyPrint: false,
+        ProjectID: "excepturi",
+        QuotaUser: "nisi",
+        UploadType: "recusandae",
+        UploadProtocol: "temporibus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatastoreProjectsExport(ctx, req)
+    res, err := s.Projects.DatastoreProjectsExport(ctx, req, operations.DatastoreProjectsExportSecurity{
+        Option1: &operations.DatastoreProjectsExportSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

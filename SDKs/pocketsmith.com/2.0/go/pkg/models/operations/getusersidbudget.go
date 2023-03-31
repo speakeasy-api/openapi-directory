@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDBudgetPathParams struct {
+type GetUsersIDBudgetRequest struct {
 	// The unique identifier of the account.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDBudgetQueryParams struct {
 	// Whether parent categories should have their children rolled up into them. When used, the children will still appear in the collection on their own, but their actual and forecast figures will be rolled up to the root parent.
 	RollUp *bool `queryParam:"style=form,explode=true,name=roll_up"`
-}
-
-type GetUsersIDBudgetRequest struct {
-	PathParams  GetUsersIDBudgetPathParams
-	QueryParams GetUsersIDBudgetQueryParams
 }
 
 type GetUsersIDBudgetResponse struct {

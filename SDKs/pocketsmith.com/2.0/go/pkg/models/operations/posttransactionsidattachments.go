@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTransactionsIDAttachmentsPathParams struct {
-	// The unique identifier of the transaction.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostTransactionsIDAttachmentsRequestBody struct {
 	// The unique identifier of the attachment.
 	AttachmentID *int64 `json:"attachment_id,omitempty"`
 }
 
 type PostTransactionsIDAttachmentsRequest struct {
-	PathParams PostTransactionsIDAttachmentsPathParams
-	Request    *PostTransactionsIDAttachmentsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostTransactionsIDAttachmentsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the transaction.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostTransactionsIDAttachmentsResponse struct {

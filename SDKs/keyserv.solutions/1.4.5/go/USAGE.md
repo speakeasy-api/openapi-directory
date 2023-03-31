@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.KeysAPICurrentRequest{
-        PathParams: operations.KeysAPICurrentPathParams{
-            Serial: "corrupti",
-        },
+        Serial: "corrupti",
     }
 
     ctx := context.Background()

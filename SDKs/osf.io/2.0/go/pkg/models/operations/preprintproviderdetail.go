@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PreprintProviderDetailPathParams struct {
+type PreprintProviderDetailRequest struct {
 	// The unique identifier of the preprint provider.
 	PreprintProviderID string `pathParam:"style=simple,explode=false,name=preprint_provider_id"`
-}
-
-type PreprintProviderDetailRequest struct {
-	PathParams PreprintProviderDetailPathParams
 }
 
 // PreprintProviderDetailPreprintProvidersAttributes - The properties of the preprint provider entity.

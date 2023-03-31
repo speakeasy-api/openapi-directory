@@ -8,13 +8,13 @@ import (
 )
 
 type VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity struct {
@@ -22,14 +22,10 @@ type VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity struct {
 	Option2 *VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption2 `security:"option"`
 }
 
-type VisionProjectsLocationsImagesAsyncBatchAnnotatePathParams struct {
-	// Optional. Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type VisionProjectsLocationsImagesAsyncBatchAnnotateQueryParams struct {
+type VisionProjectsLocationsImagesAsyncBatchAnnotateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                               *shared.XgafvEnum                                                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest *shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type VisionProjectsLocationsImagesAsyncBatchAnnotateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Optional. Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type VisionProjectsLocationsImagesAsyncBatchAnnotateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VisionProjectsLocationsImagesAsyncBatchAnnotateRequest struct {
-	PathParams  VisionProjectsLocationsImagesAsyncBatchAnnotatePathParams
-	QueryParams VisionProjectsLocationsImagesAsyncBatchAnnotateQueryParams
-	Request     *shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest `request:"mediaType=application/json"`
-	Security    VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity
 }
 
 type VisionProjectsLocationsImagesAsyncBatchAnnotateResponse struct {

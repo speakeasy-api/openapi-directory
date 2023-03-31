@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupPathParams struct {
+type GetGroupRequest struct {
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetGroupRequest struct {
-	PathParams GetGroupPathParams
 }
 
 type GetGroupResponse struct {

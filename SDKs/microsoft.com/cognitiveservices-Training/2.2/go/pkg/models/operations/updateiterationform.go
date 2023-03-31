@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIterationFormPathParams struct {
+type UpdateIterationFormRequest struct {
+	// The updated iteration model.
+	IterationInput shared.IterationInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TrainingKey    string                `header:"style=simple,explode=false,name=Training-Key"`
 	// Iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// Project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateIterationFormHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateIterationFormRequest struct {
-	PathParams UpdateIterationFormPathParams
-	Headers    UpdateIterationFormHeaders
-	// The updated iteration model.
-	Request shared.IterationInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateIterationFormResponse struct {

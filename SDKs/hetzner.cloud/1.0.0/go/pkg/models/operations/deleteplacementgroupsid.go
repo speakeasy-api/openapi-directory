@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePlacementGroupsIDPathParams struct {
+type DeletePlacementGroupsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePlacementGroupsIDRequest struct {
-	PathParams DeletePlacementGroupsIDPathParams
 }
 
 type DeletePlacementGroupsIDResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETMapsUsingGETPathParams struct {
+type GETMapsUsingGETRequest struct {
 	// RGD species type key. A full list of keys is available throught the lookup service.  1=human, 2=mouse, 3=rat,ect
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETMapsUsingGETRequest struct {
-	PathParams GETMapsUsingGETPathParams
 }
 
 type GETMapsUsingGETResponse struct {

@@ -32,7 +32,7 @@ func newVirtualization(defaultClient, securityClient HTTPClient, serverURL, lang
 	}
 }
 
-func (s *virtualization) VirtualizationClusterGroupsCreate(ctx context.Context, request operations.VirtualizationClusterGroupsCreateRequest) (*operations.VirtualizationClusterGroupsCreateResponse, error) {
+func (s *virtualization) VirtualizationClusterGroupsCreate(ctx context.Context, request shared.ClusterGroupInput) (*operations.VirtualizationClusterGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualization/cluster-groups/"
 
@@ -86,7 +86,7 @@ func (s *virtualization) VirtualizationClusterGroupsCreate(ctx context.Context, 
 }
 func (s *virtualization) VirtualizationClusterGroupsDelete(ctx context.Context, request operations.VirtualizationClusterGroupsDeleteRequest) (*operations.VirtualizationClusterGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *virtualization) VirtualizationClusterGroupsList(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -167,9 +167,9 @@ func (s *virtualization) VirtualizationClusterGroupsList(ctx context.Context, re
 }
 func (s *virtualization) VirtualizationClusterGroupsPartialUpdate(ctx context.Context, request operations.VirtualizationClusterGroupsPartialUpdateRequest) (*operations.VirtualizationClusterGroupsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -221,7 +221,7 @@ func (s *virtualization) VirtualizationClusterGroupsPartialUpdate(ctx context.Co
 // VirtualizationClusterGroupsRead - Call to super to allow for caching
 func (s *virtualization) VirtualizationClusterGroupsRead(ctx context.Context, request operations.VirtualizationClusterGroupsReadRequest) (*operations.VirtualizationClusterGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -263,9 +263,9 @@ func (s *virtualization) VirtualizationClusterGroupsRead(ctx context.Context, re
 }
 func (s *virtualization) VirtualizationClusterGroupsUpdate(ctx context.Context, request operations.VirtualizationClusterGroupsUpdateRequest) (*operations.VirtualizationClusterGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -313,7 +313,7 @@ func (s *virtualization) VirtualizationClusterGroupsUpdate(ctx context.Context, 
 
 	return res, nil
 }
-func (s *virtualization) VirtualizationClusterTypesCreate(ctx context.Context, request operations.VirtualizationClusterTypesCreateRequest) (*operations.VirtualizationClusterTypesCreateResponse, error) {
+func (s *virtualization) VirtualizationClusterTypesCreate(ctx context.Context, request shared.ClusterTypeInput) (*operations.VirtualizationClusterTypesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualization/cluster-types/"
 
@@ -367,7 +367,7 @@ func (s *virtualization) VirtualizationClusterTypesCreate(ctx context.Context, r
 }
 func (s *virtualization) VirtualizationClusterTypesDelete(ctx context.Context, request operations.VirtualizationClusterTypesDeleteRequest) (*operations.VirtualizationClusterTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -409,7 +409,7 @@ func (s *virtualization) VirtualizationClusterTypesList(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -448,9 +448,9 @@ func (s *virtualization) VirtualizationClusterTypesList(ctx context.Context, req
 }
 func (s *virtualization) VirtualizationClusterTypesPartialUpdate(ctx context.Context, request operations.VirtualizationClusterTypesPartialUpdateRequest) (*operations.VirtualizationClusterTypesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -502,7 +502,7 @@ func (s *virtualization) VirtualizationClusterTypesPartialUpdate(ctx context.Con
 // VirtualizationClusterTypesRead - Call to super to allow for caching
 func (s *virtualization) VirtualizationClusterTypesRead(ctx context.Context, request operations.VirtualizationClusterTypesReadRequest) (*operations.VirtualizationClusterTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -544,9 +544,9 @@ func (s *virtualization) VirtualizationClusterTypesRead(ctx context.Context, req
 }
 func (s *virtualization) VirtualizationClusterTypesUpdate(ctx context.Context, request operations.VirtualizationClusterTypesUpdateRequest) (*operations.VirtualizationClusterTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/cluster-types/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -594,7 +594,7 @@ func (s *virtualization) VirtualizationClusterTypesUpdate(ctx context.Context, r
 
 	return res, nil
 }
-func (s *virtualization) VirtualizationClustersCreate(ctx context.Context, request operations.VirtualizationClustersCreateRequest) (*operations.VirtualizationClustersCreateResponse, error) {
+func (s *virtualization) VirtualizationClustersCreate(ctx context.Context, request shared.WritableClusterInput) (*operations.VirtualizationClustersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualization/clusters/"
 
@@ -648,7 +648,7 @@ func (s *virtualization) VirtualizationClustersCreate(ctx context.Context, reque
 }
 func (s *virtualization) VirtualizationClustersDelete(ctx context.Context, request operations.VirtualizationClustersDeleteRequest) (*operations.VirtualizationClustersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -690,7 +690,7 @@ func (s *virtualization) VirtualizationClustersList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -729,9 +729,9 @@ func (s *virtualization) VirtualizationClustersList(ctx context.Context, request
 }
 func (s *virtualization) VirtualizationClustersPartialUpdate(ctx context.Context, request operations.VirtualizationClustersPartialUpdateRequest) (*operations.VirtualizationClustersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableClusterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,7 +783,7 @@ func (s *virtualization) VirtualizationClustersPartialUpdate(ctx context.Context
 // VirtualizationClustersRead - Call to super to allow for caching
 func (s *virtualization) VirtualizationClustersRead(ctx context.Context, request operations.VirtualizationClustersReadRequest) (*operations.VirtualizationClustersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -825,9 +825,9 @@ func (s *virtualization) VirtualizationClustersRead(ctx context.Context, request
 }
 func (s *virtualization) VirtualizationClustersUpdate(ctx context.Context, request operations.VirtualizationClustersUpdateRequest) (*operations.VirtualizationClustersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/clusters/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableClusterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -875,7 +875,7 @@ func (s *virtualization) VirtualizationClustersUpdate(ctx context.Context, reque
 
 	return res, nil
 }
-func (s *virtualization) VirtualizationInterfacesCreate(ctx context.Context, request operations.VirtualizationInterfacesCreateRequest) (*operations.VirtualizationInterfacesCreateResponse, error) {
+func (s *virtualization) VirtualizationInterfacesCreate(ctx context.Context, request shared.WritableVirtualMachineInterfaceInput) (*operations.VirtualizationInterfacesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualization/interfaces/"
 
@@ -929,7 +929,7 @@ func (s *virtualization) VirtualizationInterfacesCreate(ctx context.Context, req
 }
 func (s *virtualization) VirtualizationInterfacesDelete(ctx context.Context, request operations.VirtualizationInterfacesDeleteRequest) (*operations.VirtualizationInterfacesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -971,7 +971,7 @@ func (s *virtualization) VirtualizationInterfacesList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1010,9 +1010,9 @@ func (s *virtualization) VirtualizationInterfacesList(ctx context.Context, reque
 }
 func (s *virtualization) VirtualizationInterfacesPartialUpdate(ctx context.Context, request operations.VirtualizationInterfacesPartialUpdateRequest) (*operations.VirtualizationInterfacesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualMachineInterfaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1064,7 +1064,7 @@ func (s *virtualization) VirtualizationInterfacesPartialUpdate(ctx context.Conte
 // VirtualizationInterfacesRead - Call to super to allow for caching
 func (s *virtualization) VirtualizationInterfacesRead(ctx context.Context, request operations.VirtualizationInterfacesReadRequest) (*operations.VirtualizationInterfacesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1106,9 +1106,9 @@ func (s *virtualization) VirtualizationInterfacesRead(ctx context.Context, reque
 }
 func (s *virtualization) VirtualizationInterfacesUpdate(ctx context.Context, request operations.VirtualizationInterfacesUpdateRequest) (*operations.VirtualizationInterfacesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/interfaces/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualMachineInterfaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1156,7 +1156,7 @@ func (s *virtualization) VirtualizationInterfacesUpdate(ctx context.Context, req
 
 	return res, nil
 }
-func (s *virtualization) VirtualizationVirtualMachinesCreate(ctx context.Context, request operations.VirtualizationVirtualMachinesCreateRequest) (*operations.VirtualizationVirtualMachinesCreateResponse, error) {
+func (s *virtualization) VirtualizationVirtualMachinesCreate(ctx context.Context, request shared.WritableVirtualMachineWithConfigContextInput) (*operations.VirtualizationVirtualMachinesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualization/virtual-machines/"
 
@@ -1210,7 +1210,7 @@ func (s *virtualization) VirtualizationVirtualMachinesCreate(ctx context.Context
 }
 func (s *virtualization) VirtualizationVirtualMachinesDelete(ctx context.Context, request operations.VirtualizationVirtualMachinesDeleteRequest) (*operations.VirtualizationVirtualMachinesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1252,7 +1252,7 @@ func (s *virtualization) VirtualizationVirtualMachinesList(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1291,9 +1291,9 @@ func (s *virtualization) VirtualizationVirtualMachinesList(ctx context.Context, 
 }
 func (s *virtualization) VirtualizationVirtualMachinesPartialUpdate(ctx context.Context, request operations.VirtualizationVirtualMachinesPartialUpdateRequest) (*operations.VirtualizationVirtualMachinesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualMachineWithConfigContextInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1345,7 +1345,7 @@ func (s *virtualization) VirtualizationVirtualMachinesPartialUpdate(ctx context.
 // VirtualizationVirtualMachinesRead - Call to super to allow for caching
 func (s *virtualization) VirtualizationVirtualMachinesRead(ctx context.Context, request operations.VirtualizationVirtualMachinesReadRequest) (*operations.VirtualizationVirtualMachinesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1387,9 +1387,9 @@ func (s *virtualization) VirtualizationVirtualMachinesRead(ctx context.Context, 
 }
 func (s *virtualization) VirtualizationVirtualMachinesUpdate(ctx context.Context, request operations.VirtualizationVirtualMachinesUpdateRequest) (*operations.VirtualizationVirtualMachinesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualization/virtual-machines/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVirtualMachineWithConfigContextInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

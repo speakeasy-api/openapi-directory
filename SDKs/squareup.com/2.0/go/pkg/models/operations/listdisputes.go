@@ -8,10 +8,10 @@ import (
 )
 
 type ListDisputesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListDisputesQueryParams struct {
+type ListDisputesRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for the original query.
 	// For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
@@ -23,11 +23,6 @@ type ListDisputesQueryParams struct {
 	// If not specified, the endpoint returns all open disputes (the dispute status is not `INQUIRY_CLOSED`, `WON`,
 	// or `LOST`).
 	States *string `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListDisputesRequest struct {
-	QueryParams ListDisputesQueryParams
-	Security    ListDisputesSecurity
 }
 
 type ListDisputesResponse struct {

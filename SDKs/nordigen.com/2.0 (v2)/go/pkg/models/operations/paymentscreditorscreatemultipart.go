@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsCreditorsCreateMultipartRequest struct {
-	Request shared.CreditorAccountWriteRequest1 `request:"mediaType=multipart/form-data"`
-}
-
 type PaymentsCreditorsCreateMultipartResponse struct {
 	ContentType          string
 	CreditorAccountWrite *shared.CreditorAccountWrite

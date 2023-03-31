@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerSearchGuestPathParams struct {
-	BranchID  string `pathParam:"style=simple,explode=false,name=branchID"`
-	Shortname string `pathParam:"style=simple,explode=false,name=shortname"`
-}
-
-type DiaryControllerSearchGuestQueryParams struct {
+type DiaryControllerSearchGuestRequest struct {
+	BranchID     string `pathParam:"style=simple,explode=false,name=branchID"`
 	Count        int    `queryParam:"style=form,explode=true,name=count"`
 	Emailaddress string `queryParam:"style=form,explode=true,name=emailaddress"`
 	Forename     string `queryParam:"style=form,explode=true,name=forename"`
 	Offset       int    `queryParam:"style=form,explode=true,name=offset"`
+	Shortname    string `pathParam:"style=simple,explode=false,name=shortname"`
 	Surname      string `queryParam:"style=form,explode=true,name=surname"`
-}
-
-type DiaryControllerSearchGuestRequest struct {
-	PathParams  DiaryControllerSearchGuestPathParams
-	QueryParams DiaryControllerSearchGuestQueryParams
 }
 
 type DiaryControllerSearchGuestResponse struct {

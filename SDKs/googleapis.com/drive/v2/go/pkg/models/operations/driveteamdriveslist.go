@@ -8,13 +8,13 @@ import (
 )
 
 type DriveTeamdrivesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveTeamdrivesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveTeamdrivesListSecurity struct {
@@ -22,7 +22,7 @@ type DriveTeamdrivesListSecurity struct {
 	Option2 *DriveTeamdrivesListSecurityOption2 `security:"option"`
 }
 
-type DriveTeamdrivesListQueryParams struct {
+type DriveTeamdrivesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -45,11 +45,6 @@ type DriveTeamdrivesListQueryParams struct {
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveTeamdrivesListRequest struct {
-	QueryParams DriveTeamdrivesListQueryParams
-	Security    DriveTeamdrivesListSecurity
 }
 
 type DriveTeamdrivesListResponse struct {

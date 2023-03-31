@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type LogOutPathParams struct {
+type LogOutRequest struct {
 	// token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type LogOutRequest struct {
-	PathParams LogOutPathParams
 }
 
 type LogOutResponse struct {

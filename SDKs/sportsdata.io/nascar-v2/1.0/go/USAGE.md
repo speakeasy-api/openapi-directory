@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyHeader: &shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyHeader: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.DriverDetailsRequest{
-        PathParams: operations.DriverDetailsPathParams{
-            Driverid: "corrupti",
-            Format: "json",
-        },
+        Driverid: "corrupti",
+        Format: "json",
     }
 
     ctx := context.Background()

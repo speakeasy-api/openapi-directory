@@ -79,7 +79,6 @@ pkg/models/operations/classroomuserprofilesguardianslist.go
 pkg/models/shared/coursealias.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listcoursealiasesresponse.go
 pkg/models/shared/announcement.go
 pkg/models/shared/material.go

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAdaptivePolicyAclsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationAdaptivePolicyAclsRequest struct {
-	PathParams GetOrganizationAdaptivePolicyAclsPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationAdaptivePolicyAclsResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseCustomchannelsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseCustomchannelsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseCustomchannelsGetSecurity struct {
@@ -22,16 +22,13 @@ type AdsenseCustomchannelsGetSecurity struct {
 	Option2 *AdsenseCustomchannelsGetSecurityOption2 `security:"option"`
 }
 
-type AdsenseCustomchannelsGetPathParams struct {
+type AdsenseCustomchannelsGetRequest struct {
 	// Ad client which contains the custom channel.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-	// Custom channel to retrieve.
-	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
-}
-
-type AdsenseCustomchannelsGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom channel to retrieve.
+	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -44,12 +41,6 @@ type AdsenseCustomchannelsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseCustomchannelsGetRequest struct {
-	PathParams  AdsenseCustomchannelsGetPathParams
-	QueryParams AdsenseCustomchannelsGetQueryParams
-	Security    AdsenseCustomchannelsGetSecurity
 }
 
 type AdsenseCustomchannelsGetResponse struct {

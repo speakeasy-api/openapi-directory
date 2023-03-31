@@ -8,16 +8,11 @@ import (
 )
 
 type BooksMylibraryBookshelvesClearVolumesSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksMylibraryBookshelvesClearVolumesPathParams struct {
-	// ID of bookshelf from which to remove a volume.
-	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
-}
-
-type BooksMylibraryBookshelvesClearVolumesQueryParams struct {
+type BooksMylibraryBookshelvesClearVolumesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,18 +31,14 @@ type BooksMylibraryBookshelvesClearVolumesQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// ID of bookshelf from which to remove a volume.
+	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
 	// String to identify the originator of this request.
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksMylibraryBookshelvesClearVolumesRequest struct {
-	PathParams  BooksMylibraryBookshelvesClearVolumesPathParams
-	QueryParams BooksMylibraryBookshelvesClearVolumesQueryParams
-	Security    BooksMylibraryBookshelvesClearVolumesSecurity
 }
 
 type BooksMylibraryBookshelvesClearVolumesResponse struct {

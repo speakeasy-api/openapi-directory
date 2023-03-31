@@ -3,43 +3,39 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateContainerRequest(
-    headers=operations.CreateContainerHeaders(
-        x_amz_algorithm="magnam",
-        x_amz_content_sha256="veniam",
-        x_amz_credential="dolores",
-        x_amz_date="rerum",
-        x_amz_security_token="et",
-        x_amz_signature="voluptatem",
-        x_amz_signed_headers="voluptatem",
-        x_amz_target="MediaStore_20170901.CreateContainer",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateContainerInput(
-        container_name="est",
+)
+
+
+req = operations.CreateContainerRequest(
+    create_container_input=shared.CreateContainerInput(
+        container_name="corrupti",
         tags=[
             shared.Tag(
-                key="et",
-                value="ea",
+                key="distinctio",
+                value="quibusdam",
             ),
             shared.Tag(
-                key="voluptas",
-                value="velit",
+                key="unde",
+                value="nulla",
             ),
             shared.Tag(
-                key="ipsa",
-                value="in",
+                key="corrupti",
+                value="illum",
             ),
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
+    x_amz_target="MediaStore_20170901.CreateContainer",
 )
     
 res = s.create_container(req)

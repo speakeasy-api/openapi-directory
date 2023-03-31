@@ -14,38 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.TpuProjectsLocationsAcceleratorTypesListRequest{
-        Security: operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.TpuProjectsLocationsAcceleratorTypesListPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.TpuProjectsLocationsAcceleratorTypesListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Filter: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            OrderBy: "error",
-            PageSize: 645894,
-            PageToken: "suscipit",
-            PrettyPrint: false,
-            QuotaUser: "iure",
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Filter: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        OrderBy: "vel",
+        PageSize: 623564,
+        PageToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.TpuProjectsLocationsAcceleratorTypesList(ctx, req)
+    res, err := s.Projects.TpuProjectsLocationsAcceleratorTypesList(ctx, req, operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

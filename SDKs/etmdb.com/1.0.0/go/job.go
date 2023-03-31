@@ -41,7 +41,7 @@ func newJob(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // [ref]: https://etmdb.com/en/job-list/-updated_date
 func (s *job) JobSearchRead(ctx context.Context, request operations.JobSearchReadRequest) (*operations.JobSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/job/search/{job_title}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/job/search/{job_title}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *job) JobSearchRead(ctx context.Context, request operations.JobSearchRea
 // [ref]: https://etmdb.com/en/job-list/-updated_date
 func (s *job) JobSearchallRead(ctx context.Context, request operations.JobSearchallReadRequest) (*operations.JobSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/job/searchall/{company_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/job/searchall/{company_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

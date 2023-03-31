@@ -32,20 +32,30 @@ func newCrossSelling(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // ProductSearchAccessories - Get Product Search of Accessories
 // Retrieves general information about the product's accessories.
-func (s *crossSelling) ProductSearchAccessories(ctx context.Context, request operations.ProductSearchAccessoriesRequest) (*operations.ProductSearchAccessoriesResponse, error) {
-	baseURL := operations.ProductSearchAccessoriesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchAccessories(ctx context.Context, request operations.ProductSearchAccessoriesRequest, opts ...operations.Option) (*operations.ProductSearchAccessoriesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchAccessoriesServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -74,20 +84,30 @@ func (s *crossSelling) ProductSearchAccessories(ctx context.Context, request ope
 
 // ProductSearchShowTogether - Get Product Search of Show Together
 // Retrieves general information about the products that are show together with the product in question.
-func (s *crossSelling) ProductSearchShowTogether(ctx context.Context, request operations.ProductSearchShowTogetherRequest) (*operations.ProductSearchShowTogetherResponse, error) {
-	baseURL := operations.ProductSearchShowTogetherServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchShowTogether(ctx context.Context, request operations.ProductSearchShowTogetherRequest, opts ...operations.Option) (*operations.ProductSearchShowTogetherResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchShowTogetherServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -116,20 +136,30 @@ func (s *crossSelling) ProductSearchShowTogether(ctx context.Context, request op
 
 // ProductSearchSimilars - Get Product Search of Similars
 // Retrieves general information about related product searches.
-func (s *crossSelling) ProductSearchSimilars(ctx context.Context, request operations.ProductSearchSimilarsRequest) (*operations.ProductSearchSimilarsResponse, error) {
-	baseURL := operations.ProductSearchSimilarsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchSimilars(ctx context.Context, request operations.ProductSearchSimilarsRequest, opts ...operations.Option) (*operations.ProductSearchSimilarsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchSimilarsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -158,20 +188,30 @@ func (s *crossSelling) ProductSearchSimilars(ctx context.Context, request operat
 
 // ProductSearchSuggestions - Get Product Search of Suggestions
 // Retrieves general information about other product suggestions related to the product.
-func (s *crossSelling) ProductSearchSuggestions(ctx context.Context, request operations.ProductSearchSuggestionsRequest) (*operations.ProductSearchSuggestionsResponse, error) {
-	baseURL := operations.ProductSearchSuggestionsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchSuggestions(ctx context.Context, request operations.ProductSearchSuggestionsRequest, opts ...operations.Option) (*operations.ProductSearchSuggestionsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchSuggestionsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -200,20 +240,30 @@ func (s *crossSelling) ProductSearchSuggestions(ctx context.Context, request ope
 
 // ProductSearchWhoBoughtAlsoBought - Get Product Search of Who Bought Also Bought
 // Retrieves general information about other related products that the user also bought.
-func (s *crossSelling) ProductSearchWhoBoughtAlsoBought(ctx context.Context, request operations.ProductSearchWhoBoughtAlsoBoughtRequest) (*operations.ProductSearchWhoBoughtAlsoBoughtResponse, error) {
-	baseURL := operations.ProductSearchWhoBoughtAlsoBoughtServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchWhoBoughtAlsoBought(ctx context.Context, request operations.ProductSearchWhoBoughtAlsoBoughtRequest, opts ...operations.Option) (*operations.ProductSearchWhoBoughtAlsoBoughtResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchWhoBoughtAlsoBoughtServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -251,20 +301,30 @@ func (s *crossSelling) ProductSearchWhoBoughtAlsoBought(ctx context.Context, req
 
 // ProductSearchWhoSawAlsoBought - Get Product Search of Who Saw Also Bought
 // Retrieves general information about other related products that the users saw and also bought.
-func (s *crossSelling) ProductSearchWhoSawAlsoBought(ctx context.Context, request operations.ProductSearchWhoSawAlsoBoughtRequest) (*operations.ProductSearchWhoSawAlsoBoughtResponse, error) {
-	baseURL := operations.ProductSearchWhoSawAlsoBoughtServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchWhoSawAlsoBought(ctx context.Context, request operations.ProductSearchWhoSawAlsoBoughtRequest, opts ...operations.Option) (*operations.ProductSearchWhoSawAlsoBoughtResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchWhoSawAlsoBoughtServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -302,20 +362,30 @@ func (s *crossSelling) ProductSearchWhoSawAlsoBought(ctx context.Context, reques
 
 // ProductSearchWhoSawAlsoSaw - Get Product Search of Who Saw Also Saw
 // Retrieves general information about other related products that the users also saw.
-func (s *crossSelling) ProductSearchWhoSawAlsoSaw(ctx context.Context, request operations.ProductSearchWhoSawAlsoSawRequest) (*operations.ProductSearchWhoSawAlsoSawResponse, error) {
-	baseURL := operations.ProductSearchWhoSawAlsoSawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *crossSelling) ProductSearchWhoSawAlsoSaw(ctx context.Context, request operations.ProductSearchWhoSawAlsoSawRequest, opts ...operations.Option) (*operations.ProductSearchWhoSawAlsoSawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ProductSearchWhoSawAlsoSawServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

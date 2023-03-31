@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateADeviceSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateADevicePathParams struct {
-	// Unique Identifier of the Device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateADeviceApplicationJSON struct {
@@ -27,9 +21,9 @@ type UpdateADeviceApplicationJSON struct {
 }
 
 type UpdateADeviceRequest struct {
-	PathParams UpdateADevicePathParams
-	Request    *UpdateADeviceApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateADeviceSecurity
+	RequestBody *UpdateADeviceApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type UpdateADeviceResponse struct {

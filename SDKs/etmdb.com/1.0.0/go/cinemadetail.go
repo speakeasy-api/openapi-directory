@@ -41,7 +41,7 @@ func newCinemaDetail(defaultClient, securityClient HTTPClient, serverURL, langua
 // [ref]: https://etmdb.com/en/cinema-list/-updated_date
 func (s *cinemaDetail) CinemaDetailSearchRead(ctx context.Context, request operations.CinemaDetailSearchReadRequest) (*operations.CinemaDetailSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-detail/search/{cinema_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-detail/search/{cinema_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

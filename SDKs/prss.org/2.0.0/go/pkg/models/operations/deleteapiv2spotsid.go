@@ -8,16 +8,11 @@ import (
 )
 
 type DeleteAPIV2SpotsIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteAPIV2SpotsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAPIV2SpotsIDRequest struct {
-	PathParams DeleteAPIV2SpotsIDPathParams
-	Security   DeleteAPIV2SpotsIDSecurity
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV2SpotsIDResponse struct {

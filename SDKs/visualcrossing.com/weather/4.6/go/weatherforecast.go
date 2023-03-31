@@ -33,10 +33,20 @@ func newWeatherForecast(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // GetVisualCrossingWebServicesRestServicesWeatherdataForecast - Weather Forecast API
 // Provides access to weather forecast information. The forecast is available for up to 15 days at the hourly, 12 hour and daily summary level.
-func (s *weatherForecast) GetVisualCrossingWebServicesRestServicesWeatherdataForecast(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest) (*operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse, error) {
+func (s *weatherForecast) GetVisualCrossingWebServicesRestServicesWeatherdataForecast(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest, opts ...operations.Option) (*operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/VisualCrossingWebServices/rest/services/weatherdata/forecast"
@@ -46,7 +56,7 @@ func (s *weatherForecast) GetVisualCrossingWebServicesRestServicesWeatherdataFor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

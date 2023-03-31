@@ -16,10 +16,6 @@ type PostOauthRevokeRequestBody struct {
 	Token string
 }
 
-type PostOauthRevokeRequest struct {
-	Request []byte `request:"mediaType=application/form-data"`
-}
-
 type PostOauthRevokeResponse struct {
 	ContentType string
 	// If you provide a token you do not own, or no token at all, the API call will return a 403 error.

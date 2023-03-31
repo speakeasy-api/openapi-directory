@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateRepoPermissionsPathParams struct {
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-	TeamID int64  `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum - The permission to grant the team on this repository. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer this repository.
 // \* `push` - team members can pull and push, but not administer this repository.
@@ -59,8 +53,10 @@ type TeamsAddOrUpdateRepoPermissionsRequestBody struct {
 }
 
 type TeamsAddOrUpdateRepoPermissionsRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateRepoPermissionsRequestBody `request:"mediaType=application/json"`
+	Owner       string                                      `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                      `pathParam:"style=simple,explode=false,name=repo"`
+	TeamID      int64                                       `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsResponse struct {

@@ -8,11 +8,13 @@ import (
 )
 
 type PostAccountAccessConsentsSecurity struct {
-	ClientCredentialsToken shared.SchemeClientCredentialsToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
+	ClientCredentialsToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
-type PostAccountAccessConsentsHeaders struct {
+type PostAccountAccessConsentsRequest struct {
+	// Default
+	OBReadConsent1 *shared.OBReadConsent1 `request:"mediaType=application/json"`
 	// The unique id of the sandbox to be used
 	SandboxID string `header:"style=simple,explode=false,name=sandbox-id"`
 	// Indicates the user-agent that the PSU is using.
@@ -25,13 +27,6 @@ type PostAccountAccessConsentsHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type PostAccountAccessConsentsRequest struct {
-	Headers PostAccountAccessConsentsHeaders
-	// Default
-	Request  *shared.OBReadConsent1 `request:"mediaType=application/json"`
-	Security PostAccountAccessConsentsSecurity
 }
 
 type PostAccountAccessConsentsResponse struct {

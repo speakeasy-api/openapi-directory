@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEnergyCostPathParams struct {
+type UpdateEnergyCostRequest struct {
+	// The values you wish to assign.
+	GroupConfiguration *shared.GroupConfiguration `request:"mediaType=application/json"`
 	// The ID of the group.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type UpdateEnergyCostRequest struct {
-	PathParams UpdateEnergyCostPathParams
-	// The values you wish to assign.
-	Request *shared.GroupConfiguration `request:"mediaType=application/json"`
 }
 
 type UpdateEnergyCostResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaIDJSONPathParams struct {
+type GetResourcesMediaIDJSONRequest struct {
 	// The id of the record to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDJSONRequest struct {
-	PathParams GetResourcesMediaIDJSONPathParams
 }
 
 type GetResourcesMediaIDJSONResponse struct {

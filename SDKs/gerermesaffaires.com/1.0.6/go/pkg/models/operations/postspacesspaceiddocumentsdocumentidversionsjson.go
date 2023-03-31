@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDDocumentsDocumentIDVersionsApplicationJSONFile struct {
@@ -34,10 +26,12 @@ type PostSpacesSpaceIDDocumentsDocumentIDVersionsApplicationJSON struct {
 }
 
 type PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONRequest struct {
-	PathParams PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONPathParams
 	// Version to add
-	Request  PostSpacesSpaceIDDocumentsDocumentIDVersionsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONSecurity
+	RequestBody PostSpacesSpaceIDDocumentsDocumentIDVersionsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDDocumentsDocumentIDVersionsJSON201ApplicationJSON - Id of document created

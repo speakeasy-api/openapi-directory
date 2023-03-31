@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type InventoryBySkuPathParams struct {
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type InventoryBySkuHeaders struct {
+type InventoryBySkuRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type InventoryBySkuRequest struct {
-	PathParams InventoryBySkuPathParams
-	Headers    InventoryBySkuHeaders
+	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 type InventoryBySku200ApplicationJSONBalance struct {

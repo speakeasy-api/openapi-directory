@@ -4,31 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type DashboardClientFeedbackDetailSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DashboardClientFeedbackDetailPathParams struct {
+type DashboardClientFeedbackDetailRequest struct {
 	// Feedback Detail Id
-	FeedbackID string `pathParam:"style=simple,explode=false,name=feedbackId"`
-}
-
-type DashboardClientFeedbackDetailQueryParams struct {
+	FeedbackID    string      `pathParam:"style=simple,explode=false,name=feedbackId"`
 	From          *types.Date `queryParam:"style=form,explode=true,name=from"`
 	NextPageToken *string     `queryParam:"style=form,explode=true,name=next_page_token"`
 	PageSize      *int64      `queryParam:"style=form,explode=true,name=page_size"`
 	To            *types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type DashboardClientFeedbackDetailRequest struct {
-	PathParams  DashboardClientFeedbackDetailPathParams
-	QueryParams DashboardClientFeedbackDetailQueryParams
-	Security    DashboardClientFeedbackDetailSecurity
 }
 
 type DashboardClientFeedbackDetail200ApplicationXMLClientFeedbackDetails struct {

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UserToFolderAssignPostQueryParams struct {
+type UserToFolderAssignPostRequest struct {
 	// The ID of the old folder (in case of a drag and drop to a new folder)
 	OldFolder string `queryParam:"style=form,explode=true,name=oldFolder"`
 	// The ID of the user that should be assign
 	Source string `queryParam:"style=form,explode=true,name=source"`
 	// The ID of the folder that should be the parent
 	Target string `queryParam:"style=form,explode=true,name=target"`
-}
-
-type UserToFolderAssignPostRequest struct {
-	QueryParams UserToFolderAssignPostQueryParams
 }
 
 type UserToFolderAssignPostResponse struct {

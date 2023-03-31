@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type MarketIndicatorQueryParams struct {
+type MarketIndicatorRequest struct {
 	EndDate   *string `queryParam:"style=form,explode=true,name=endDate"`
 	Limit     *string `queryParam:"style=form,explode=true,name=limit"`
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type MarketIndicatorRequest struct {
-	QueryParams MarketIndicatorQueryParams
 }
 
 type MarketIndicatorResponse struct {

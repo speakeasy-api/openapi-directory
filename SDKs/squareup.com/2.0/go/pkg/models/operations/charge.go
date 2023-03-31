@@ -8,21 +8,16 @@ import (
 )
 
 type ChargeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ChargePathParams struct {
-	// The ID of the location to associate the created transaction with.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChargeRequest struct {
-	PathParams ChargePathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.ChargeRequest `request:"mediaType=application/json"`
-	Security ChargeSecurity
+	ChargeRequest shared.ChargeRequest `request:"mediaType=application/json"`
+	// The ID of the location to associate the created transaction with.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 }
 
 type ChargeResponse struct {

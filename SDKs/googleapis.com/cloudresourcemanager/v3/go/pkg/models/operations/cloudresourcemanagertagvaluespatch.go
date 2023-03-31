@@ -8,18 +8,14 @@ import (
 )
 
 type CloudresourcemanagerTagValuesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerTagValuesPatchPathParams struct {
-	// Immutable. Resource name for TagValue in the format `tagValues/456`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudresourcemanagerTagValuesPatchQueryParams struct {
+type CloudresourcemanagerTagValuesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TagValueInput *shared.TagValueInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type CloudresourcemanagerTagValuesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Immutable. Resource name for TagValue in the format `tagValues/456`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -44,13 +42,6 @@ type CloudresourcemanagerTagValuesPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. True to perform validations necessary for updating the resource, but not actually perform the action.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type CloudresourcemanagerTagValuesPatchRequest struct {
-	PathParams  CloudresourcemanagerTagValuesPatchPathParams
-	QueryParams CloudresourcemanagerTagValuesPatchQueryParams
-	Request     *shared.TagValueInput `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerTagValuesPatchSecurity
 }
 
 type CloudresourcemanagerTagValuesPatchResponse struct {

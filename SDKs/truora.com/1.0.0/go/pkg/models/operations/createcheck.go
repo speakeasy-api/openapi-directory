@@ -10,7 +10,7 @@ import (
 )
 
 type CreateCheckSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 // CreateCheckTruoraPriorityEnum - Describes the background check priority. The amount of high priority checks is limited by country. Medium priority is used by default
@@ -40,16 +40,11 @@ func (e *CreateCheckTruoraPriorityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateCheckHeaders struct {
+type CreateCheckRequest struct {
+	// Request body create a background check
+	CreateCheckInput shared.CreateCheckInput `request:"mediaType=application/x-www-form-urlencoded"`
 	// Describes the background check priority. The amount of high priority checks is limited by country. Medium priority is used by default
 	TruoraPriority *CreateCheckTruoraPriorityEnum `header:"style=simple,explode=false,name=Truora-Priority"`
-}
-
-type CreateCheckRequest struct {
-	Headers CreateCheckHeaders
-	// Request body create a background check
-	Request  shared.CreateCheckInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateCheckSecurity
 }
 
 type CreateCheckResponse struct {

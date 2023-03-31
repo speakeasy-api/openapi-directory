@@ -4,37 +4,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ResellerCustomersGetRequest(
-    security=operations.ResellerCustomersGetSecurity(
-        option1=operations.ResellerCustomersGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.ResellerCustomersGetPathParams(
-        customer_id="quidem",
-    ),
-    query_params=operations.ResellerCustomersGetQueryParams(
-        dollar_xgafv="2",
-        access_token="deleniti",
-        alt="json",
-        callback="enim",
-        fields="dolorum",
-        key="corporis",
-        oauth_token="consequuntur",
-        pretty_print=False,
-        quota_user="aliquam",
-        upload_type="reprehenderit",
-        upload_protocol="unde",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    customer_id="unde",
+    fields_="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.customers.reseller_customers_get(req)
+res = s.customers.reseller_customers_get(req, operations.ResellerCustomersGetSecurity(
+    option1=operations.ResellerCustomersGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.customer is not None:
     # handle response

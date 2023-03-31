@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateReportTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateReportTaskRequest struct {
-	// The container for the fields that define the report task.
-	Request  shared.CreateReportTask `request:"mediaType=application/json"`
-	Security CreateReportTaskSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateReportTaskResponse struct {

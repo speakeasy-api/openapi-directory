@@ -12,15 +12,13 @@ var ListUsageTriggerServerList = []string{
 }
 
 type ListUsageTriggerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUsageTriggerPathParams struct {
+type ListUsageTriggerRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListUsageTriggerQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -33,13 +31,6 @@ type ListUsageTriggerQueryParams struct {
 	TriggerBy *shared.UsageTriggerEnumTriggerFieldEnum `queryParam:"style=form,explode=true,name=TriggerBy"`
 	// The usage category of the UsageTriggers to read. Must be a supported [usage categories](https://www.twilio.com/docs/usage/api/usage-record#usage-categories).
 	UsageCategory *shared.UsageTriggerEnumUsageCategoryEnum `queryParam:"style=form,explode=true,name=UsageCategory"`
-}
-
-type ListUsageTriggerRequest struct {
-	PathParams  ListUsageTriggerPathParams
-	QueryParams ListUsageTriggerQueryParams
-	Security    ListUsageTriggerSecurity
-	ServerURL   *string
 }
 
 // ListUsageTriggerListUsageTriggerResponse - OK

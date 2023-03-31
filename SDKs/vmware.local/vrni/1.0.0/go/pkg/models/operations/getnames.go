@@ -8,13 +8,7 @@ import (
 )
 
 type GetNamesSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNamesRequest struct {
-	// Names Request
-	Request  shared.NamesRequest `request:"mediaType=application/json"`
-	Security GetNamesSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetNamesResponse struct {

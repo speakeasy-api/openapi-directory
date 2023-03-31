@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CinemaSheduleShowtimeSearchReadPathParams struct {
-	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
-}
-
 type CinemaSheduleShowtimeSearchReadRequest struct {
-	PathParams CinemaSheduleShowtimeSearchReadPathParams
+	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
 }
 
 type CinemaSheduleShowtimeSearchReadResponse struct {

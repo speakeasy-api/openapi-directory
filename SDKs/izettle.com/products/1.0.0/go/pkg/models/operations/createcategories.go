@@ -8,17 +8,12 @@ import (
 )
 
 type CreateCategoriesSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type CreateCategoriesPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCategoriesRequest struct {
-	PathParams CreateCategoriesPathParams
-	Request    shared.CreateCategoriesRequest `request:"mediaType=application/json"`
-	Security   CreateCategoriesSecurity
+	CreateCategoriesRequest shared.CreateCategoriesRequest `request:"mediaType=application/json"`
+	OrganizationUUID        string                         `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type CreateCategoriesResponse struct {

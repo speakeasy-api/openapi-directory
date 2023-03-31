@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackRolesListQueryParams struct {
+type DcimRackRolesListRequest struct {
 	Color *string `queryParam:"style=form,explode=true,name=color"`
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
@@ -15,10 +15,6 @@ type DcimRackRolesListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type DcimRackRolesListRequest struct {
-	QueryParams DcimRackRolesListQueryParams
 }
 
 type DcimRackRolesList200ApplicationJSON struct {

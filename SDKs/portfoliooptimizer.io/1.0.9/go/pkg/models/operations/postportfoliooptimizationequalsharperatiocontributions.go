@@ -17,10 +17,6 @@ type PostPortfolioOptimizationEqualSharpeRatioContributionsRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioOptimizationEqualSharpeRatioContributionsRequest struct {
-	Request PostPortfolioOptimizationEqualSharpeRatioContributionsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON - OK
 type PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

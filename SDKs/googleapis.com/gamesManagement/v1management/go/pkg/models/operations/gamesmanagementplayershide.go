@@ -8,24 +8,19 @@ import (
 )
 
 type GamesManagementPlayersHideSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GamesManagementPlayersHidePathParams struct {
-	// The application ID from the Google Play developer console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
-	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
-}
-
-type GamesManagementPlayersHideQueryParams struct {
+type GamesManagementPlayersHideRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The application ID from the Google Play developer console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,6 +29,8 @@ type GamesManagementPlayersHideQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
+	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,12 +39,6 @@ type GamesManagementPlayersHideQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesManagementPlayersHideRequest struct {
-	PathParams  GamesManagementPlayersHidePathParams
-	QueryParams GamesManagementPlayersHideQueryParams
-	Security    GamesManagementPlayersHideSecurity
 }
 
 type GamesManagementPlayersHideResponse struct {

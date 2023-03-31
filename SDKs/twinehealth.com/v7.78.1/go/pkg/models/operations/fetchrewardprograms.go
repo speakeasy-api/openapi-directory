@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardProgramsQueryParams struct {
+type FetchRewardProgramsRequest struct {
 	// Comma-separated list of group identifiers. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.
 	//
 	FilterGroups *string `queryParam:"style=form,explode=true,name=filter[groups]"`
 	// Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.
 	//
 	FilterOrganization *string `queryParam:"style=form,explode=true,name=filter[organization]"`
-}
-
-type FetchRewardProgramsRequest struct {
-	QueryParams FetchRewardProgramsQueryParams
 }
 
 type FetchRewardProgramsResponse struct {

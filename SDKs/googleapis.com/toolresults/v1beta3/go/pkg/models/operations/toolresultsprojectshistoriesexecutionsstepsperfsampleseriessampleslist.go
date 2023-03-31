@@ -8,24 +8,11 @@ import (
 )
 
 type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListPathParams struct {
-	// A tool results execution ID.
-	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
-	// A tool results history ID.
-	HistoryID string `pathParam:"style=simple,explode=false,name=historyId"`
-	// The cloud project
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// A sample series id
-	SampleSeriesID string `pathParam:"style=simple,explode=false,name=sampleSeriesId"`
-	// A tool results step ID.
-	StepID string `pathParam:"style=simple,explode=false,name=stepId"`
-}
-
-type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListQueryParams struct {
+type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,8 +21,12 @@ type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListQuery
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// A tool results execution ID.
+	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// A tool results history ID.
+	HistoryID string `pathParam:"style=simple,explode=false,name=historyId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -46,18 +37,18 @@ type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListQuery
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The cloud project
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// A sample series id
+	SampleSeriesID string `pathParam:"style=simple,explode=false,name=sampleSeriesId"`
+	// A tool results step ID.
+	StepID string `pathParam:"style=simple,explode=false,name=stepId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest struct {
-	PathParams  ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListPathParams
-	QueryParams ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListQueryParams
-	Security    ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListSecurity
 }
 
 type ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListResponse struct {

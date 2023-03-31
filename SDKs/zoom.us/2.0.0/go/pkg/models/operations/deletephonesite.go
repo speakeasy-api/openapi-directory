@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeletePhoneSiteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeletePhoneSitePathParams struct {
-	// Unique Identifier of the Site.
-	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
-}
-
-type DeletePhoneSiteQueryParams struct {
-	// The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to.
-	TransferSiteID string `queryParam:"style=form,explode=true,name=transfer_site_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeletePhoneSiteRequest struct {
-	PathParams  DeletePhoneSitePathParams
-	QueryParams DeletePhoneSiteQueryParams
-	Security    DeletePhoneSiteSecurity
+	// Unique Identifier of the Site.
+	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
+	// The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to.
+	TransferSiteID string `queryParam:"style=form,explode=true,name=transfer_site_id"`
 }
 
 type DeletePhoneSiteResponse struct {

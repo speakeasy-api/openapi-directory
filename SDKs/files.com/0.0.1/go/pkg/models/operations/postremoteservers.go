@@ -297,10 +297,6 @@ type PostRemoteServersRequestBody struct {
 	WasabiSecretKey *string `multipartForm:"name=wasabi_secret_key"`
 }
 
-type PostRemoteServersRequest struct {
-	Request *PostRemoteServersRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostRemoteServersResponse struct {
 	ContentType string
 	// The RemoteServers object.

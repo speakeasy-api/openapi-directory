@@ -33,20 +33,20 @@ func newBlogs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // BloggerBlogsGet - Gets a blog by id.
-func (s *blogs) BloggerBlogsGet(ctx context.Context, request operations.BloggerBlogsGetRequest) (*operations.BloggerBlogsGetResponse, error) {
+func (s *blogs) BloggerBlogsGet(ctx context.Context, request operations.BloggerBlogsGetRequest, security operations.BloggerBlogsGetSecurity) (*operations.BloggerBlogsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *blogs) BloggerBlogsGet(ctx context.Context, request operations.BloggerB
 }
 
 // BloggerBlogsGetByURL - Gets a blog by url.
-func (s *blogs) BloggerBlogsGetByURL(ctx context.Context, request operations.BloggerBlogsGetByURLRequest) (*operations.BloggerBlogsGetByURLResponse, error) {
+func (s *blogs) BloggerBlogsGetByURL(ctx context.Context, request operations.BloggerBlogsGetByURLRequest, security operations.BloggerBlogsGetByURLSecurity) (*operations.BloggerBlogsGetByURLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/blogs/byurl"
 
@@ -90,11 +90,11 @@ func (s *blogs) BloggerBlogsGetByURL(ctx context.Context, request operations.Blo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *blogs) BloggerBlogsGetByURL(ctx context.Context, request operations.Blo
 }
 
 // BloggerBlogsListByUser - Lists blogs by user.
-func (s *blogs) BloggerBlogsListByUser(ctx context.Context, request operations.BloggerBlogsListByUserRequest) (*operations.BloggerBlogsListByUserResponse, error) {
+func (s *blogs) BloggerBlogsListByUser(ctx context.Context, request operations.BloggerBlogsListByUserRequest, security operations.BloggerBlogsListByUserSecurity) (*operations.BloggerBlogsListByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

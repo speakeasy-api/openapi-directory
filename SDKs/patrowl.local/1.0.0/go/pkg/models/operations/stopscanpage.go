@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopScanPagePathParams struct {
+type StopScanPageRequest struct {
 	// Numeric ID of the scan to stop
 	ScanID int64 `pathParam:"style=simple,explode=false,name=scanId"`
-}
-
-type StopScanPageRequest struct {
-	PathParams StopScanPagePathParams
 }
 
 type StopScanPageResponse struct {

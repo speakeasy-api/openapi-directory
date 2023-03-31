@@ -37,7 +37,7 @@ func newAuthenticationExtrasEssentials(defaultClient, securityClient HTTPClient,
 // [authentication](/api/authentication#generate-unauthenticated-tokens) documentation or the
 // [Client Credentials Grant](https://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.4) section of the
 // [OAuth spec](https://tools.ietf.org/html/draft-ietf-oauth-v2-31.
-func (s *authenticationExtrasEssentials) ClientAuth(ctx context.Context, request operations.ClientAuthRequest) (*operations.ClientAuthResponse, error) {
+func (s *authenticationExtrasEssentials) ClientAuth(ctx context.Context, request operations.ClientAuthRequestBody) (*operations.ClientAuthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/authorize/client"
 
@@ -101,7 +101,7 @@ func (s *authenticationExtrasEssentials) ClientAuth(ctx context.Context, request
 }
 
 // ConvertAccessToken - Convert OAuth 1 access tokens to OAuth 2 access tokens
-func (s *authenticationExtrasEssentials) ConvertAccessToken(ctx context.Context, request operations.ConvertAccessTokenRequest) (*operations.ConvertAccessTokenResponse, error) {
+func (s *authenticationExtrasEssentials) ConvertAccessToken(ctx context.Context, request operations.ConvertAccessTokenRequestBody) (*operations.ConvertAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/authorize/vimeo_oauth1"
 
@@ -220,7 +220,7 @@ func (s *authenticationExtrasEssentials) DeleteToken(ctx context.Context) (*oper
 }
 
 // ExchangeAuthCode - Exchange an authorization code for an access token
-func (s *authenticationExtrasEssentials) ExchangeAuthCode(ctx context.Context, request operations.ExchangeAuthCodeRequest) (*operations.ExchangeAuthCodeResponse, error) {
+func (s *authenticationExtrasEssentials) ExchangeAuthCode(ctx context.Context, request operations.ExchangeAuthCodeRequestBody) (*operations.ExchangeAuthCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/access_token"
 

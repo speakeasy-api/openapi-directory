@@ -33,7 +33,7 @@ func newToken(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // JWTObtain - Obtain JWT pair
-func (s *token) JWTObtain(ctx context.Context, request operations.JWTObtainRequest) (*operations.JWTObtainResponse, error) {
+func (s *token) JWTObtain(ctx context.Context, request shared.JWTObtainPairRequest) (*operations.JWTObtainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/token/new/"
 
@@ -107,7 +107,7 @@ func (s *token) JWTObtain(ctx context.Context, request operations.JWTObtainReque
 }
 
 // JWTRefresh - Refresh access token
-func (s *token) JWTRefresh(ctx context.Context, request operations.JWTRefreshRequest) (*operations.JWTRefreshResponse, error) {
+func (s *token) JWTRefresh(ctx context.Context, request shared.JWTRefreshRequest) (*operations.JWTRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/token/refresh/"
 

@@ -10,13 +10,8 @@ import (
 )
 
 type OsconfigProjectsPatchJobsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type OsconfigProjectsPatchJobsGetPathParams struct {
-	// Required. Name of the patch in the form `projects/*/patchJobs/*`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // OsconfigProjectsPatchJobsGetViewEnum - Inventory view indicating what information should be included in the inventory resource. If unspecified, the default view is BASIC.
@@ -46,7 +41,7 @@ func (e *OsconfigProjectsPatchJobsGetViewEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type OsconfigProjectsPatchJobsGetQueryParams struct {
+type OsconfigProjectsPatchJobsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -59,6 +54,8 @@ type OsconfigProjectsPatchJobsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Name of the patch in the form `projects/*/patchJobs/*`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -71,12 +68,6 @@ type OsconfigProjectsPatchJobsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Inventory view indicating what information should be included in the inventory resource. If unspecified, the default view is BASIC.
 	View *OsconfigProjectsPatchJobsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type OsconfigProjectsPatchJobsGetRequest struct {
-	PathParams  OsconfigProjectsPatchJobsGetPathParams
-	QueryParams OsconfigProjectsPatchJobsGetQueryParams
-	Security    OsconfigProjectsPatchJobsGetSecurity
 }
 
 type OsconfigProjectsPatchJobsGetResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RecognizePrintedTextQueryParams struct {
+type RecognizePrintedTextRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// Whether detect the text orientation in the image. With detectOrientation=true the OCR service tries to detect the image orientation and correct it before further processing (e.g. if it's upside-down).
 	DetectOrientation bool `queryParam:"style=form,explode=true,name=detectOrientation"`
 	// The BCP-47 language code of the text to be detected in the image. The default value is 'unk'.
 	Language *shared.OcrLanguageEnum `queryParam:"style=form,explode=true,name=language"`
-}
-
-type RecognizePrintedTextRequest struct {
-	QueryParams RecognizePrintedTextQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
 }
 
 type RecognizePrintedTextResponse struct {

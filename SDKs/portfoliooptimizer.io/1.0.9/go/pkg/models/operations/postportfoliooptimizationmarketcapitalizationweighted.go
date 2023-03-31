@@ -13,10 +13,6 @@ type PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody struct {
 	AssetsMarketCapitalizations []float64 `json:"assetsMarketCapitalizations"`
 }
 
-type PostPortfolioOptimizationMarketCapitalizationWeightedRequest struct {
-	Request PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON - OK
 type PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

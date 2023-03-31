@@ -3,49 +3,165 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchMeterUsageRequest(
-    headers=operations.BatchMeterUsageHeaders(
-        x_amz_algorithm="nihil",
-        x_amz_content_sha256="dolorem",
-        x_amz_credential="impedit",
-        x_amz_date="laboriosam",
-        x_amz_security_token="iste",
-        x_amz_signature="soluta",
-        x_amz_signed_headers="ut",
-        x_amz_target="AWSMPMeteringService.BatchMeterUsage",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchMeterUsageRequest(
-        product_code="vel",
+)
+
+
+req = operations.BatchMeterUsageRequest(
+    batch_meter_usage_request=shared.BatchMeterUsageRequest(
+        product_code="corrupti",
         usage_records=[
             shared.UsageRecord(
-                customer_identifier="soluta",
-                dimension="alias",
-                quantity=3089778739814785022,
-                timestamp="1984-04-21T17:27:21Z",
+                customer_identifier="distinctio",
+                dimension="quibusdam",
+                quantity=602763,
+                timestamp="2021-05-14T08:28:11.899Z",
                 usage_allocations=[
                     shared.UsageAllocation(
-                        allocated_usage_quantity=4453435121235553912,
+                        allocated_usage_quantity=423655,
                         tags=[
                             shared.Tag(
-                                key="dolore",
-                                value="quidem",
+                                key="deserunt",
+                                value="suscipit",
                             ),
                             shared.Tag(
-                                key="doloribus",
-                                value="at",
+                                key="iure",
+                                value="magnam",
                             ),
                             shared.Tag(
-                                key="dolore",
-                                value="et",
+                                key="debitis",
+                                value="ipsa",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=963663,
+                        tags=[
+                            shared.Tag(
+                                key="suscipit",
+                                value="molestiae",
+                            ),
+                            shared.Tag(
+                                key="minus",
+                                value="placeat",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=528895,
+                        tags=[
+                            shared.Tag(
+                                key="excepturi",
+                                value="nisi",
+                            ),
+                            shared.Tag(
+                                key="recusandae",
+                                value="temporibus",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=71036,
+                        tags=[
+                            shared.Tag(
+                                key="veritatis",
+                                value="deserunt",
+                            ),
+                            shared.Tag(
+                                key="perferendis",
+                                value="ipsam",
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            shared.UsageRecord(
+                customer_identifier="repellendus",
+                dimension="sapiente",
+                quantity=778157,
+                timestamp="2022-02-17T10:41:36.857Z",
+                usage_allocations=[
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=978619,
+                        tags=[
+                            shared.Tag(
+                                key="quod",
+                                value="quod",
+                            ),
+                            shared.Tag(
+                                key="esse",
+                                value="totam",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=780529,
+                        tags=[
+                            shared.Tag(
+                                key="dicta",
+                                value="nam",
+                            ),
+                            shared.Tag(
+                                key="officia",
+                                value="occaecati",
+                            ),
+                            shared.Tag(
+                                key="fugit",
+                                value="deleniti",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=944669,
+                        tags=[
+                            shared.Tag(
+                                key="totam",
+                                value="beatae",
+                            ),
+                            shared.Tag(
+                                key="commodi",
+                                value="molestiae",
+                            ),
+                            shared.Tag(
+                                key="modi",
+                                value="qui",
+                            ),
+                            shared.Tag(
+                                key="impedit",
+                                value="cum",
+                            ),
+                        ],
+                    ),
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=456150,
+                        tags=[
+                            shared.Tag(
+                                key="excepturi",
+                                value="aspernatur",
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            shared.UsageRecord(
+                customer_identifier="perferendis",
+                dimension="ad",
+                quantity=617636,
+                timestamp="2022-05-22T14:02:28.908Z",
+                usage_allocations=[
+                    shared.UsageAllocation(
+                        allocated_usage_quantity=616934,
+                        tags=[
+                            shared.Tag(
+                                key="hic",
+                                value="saepe",
+                            ),
+                            shared.Tag(
+                                key="fuga",
+                                value="in",
                             ),
                         ],
                     ),
@@ -53,6 +169,14 @@ req = operations.BatchMeterUsageRequest(
             ),
         ],
     ),
+    x_amz_algorithm="corporis",
+    x_amz_content_sha256="iste",
+    x_amz_credential="iure",
+    x_amz_date="saepe",
+    x_amz_security_token="quidem",
+    x_amz_signature="architecto",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="AWSMPMeteringService.BatchMeterUsage",
 )
     
 res = s.batch_meter_usage(req)

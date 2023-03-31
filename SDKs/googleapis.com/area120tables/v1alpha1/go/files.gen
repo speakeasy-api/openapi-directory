@@ -33,7 +33,6 @@ pkg/models/shared/labeleditem.go
 pkg/models/shared/datedetails.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchcreaterowsresponse.go
 pkg/models/shared/row.go
 pkg/models/shared/batchcreaterowsrequest.go

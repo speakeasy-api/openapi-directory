@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfolioVideoPathParams struct {
+type GetPortfolioVideoRequest struct {
 	// The ID of the portfolio.
 	PortfolioID float64 `pathParam:"style=simple,explode=false,name=portfolio_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetPortfolioVideoRequest struct {
-	PathParams GetPortfolioVideoPathParams
 }
 
 type GetPortfolioVideoResponse struct {

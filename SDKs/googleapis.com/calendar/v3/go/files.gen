@@ -57,7 +57,6 @@ pkg/models/operations/calendarsettingsget.go
 pkg/models/operations/calendarsettingslist.go
 pkg/models/operations/calendarsettingswatch.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/aclrule.go
 pkg/models/shared/acl.go
 pkg/models/shared/channel.go

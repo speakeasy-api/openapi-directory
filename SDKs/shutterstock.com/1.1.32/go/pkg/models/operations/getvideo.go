@@ -10,13 +10,8 @@ import (
 )
 
 type GetVideoSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetVideoPathParams struct {
-	// Video ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetVideoViewEnum - Amount of detail to render in the response
@@ -43,19 +38,15 @@ func (e *GetVideoViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoQueryParams struct {
+type GetVideoRequest struct {
+	// Video ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language for the keywords and categories in the response
 	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// The ID of the search that is related to this request
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// Amount of detail to render in the response
 	View *GetVideoViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetVideoRequest struct {
-	PathParams  GetVideoPathParams
-	QueryParams GetVideoQueryParams
-	Security    GetVideoSecurity
 }
 
 type GetVideoResponse struct {

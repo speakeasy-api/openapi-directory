@@ -43,7 +43,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *accounts) Account(ctx context.Context, request operations.AccountRequest) (*operations.AccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *accounts) Account(ctx context.Context, request operations.AccountReques
 //
 // **Scope**: `account:write:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *accounts) AccountCreate(ctx context.Context, request operations.AccountCreateRequest) (*operations.AccountCreateResponse, error) {
+func (s *accounts) AccountCreate(ctx context.Context, request operations.AccountCreateApplicationJSON) (*operations.AccountCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -177,7 +177,7 @@ func (s *accounts) AccountCreate(ctx context.Context, request operations.Account
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *accounts) AccountDisassociate(ctx context.Context, request operations.AccountDisassociateRequest) (*operations.AccountDisassociateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -221,16 +221,16 @@ func (s *accounts) AccountDisassociate(ctx context.Context, request operations.A
 //
 // **Scope:** `account:read:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *accounts) AccountManagedDomain(ctx context.Context, request operations.AccountManagedDomainRequest) (*operations.AccountManagedDomainResponse, error) {
+func (s *accounts) AccountManagedDomain(ctx context.Context, request operations.AccountManagedDomainRequest, security operations.AccountManagedDomainSecurity) (*operations.AccountManagedDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/managed_domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/managed_domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -281,11 +281,11 @@ func (s *accounts) AccountManagedDomain(ctx context.Context, request operations.
 //
 // **Scope**: `account:write:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *accounts) AccountOptionsUpdate(ctx context.Context, request operations.AccountOptionsUpdateRequest) (*operations.AccountOptionsUpdateResponse, error) {
+func (s *accounts) AccountOptionsUpdate(ctx context.Context, request operations.AccountOptionsUpdateRequest, security operations.AccountOptionsUpdateSecurity) (*operations.AccountOptionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/options", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -300,7 +300,7 @@ func (s *accounts) AccountOptionsUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,14 +343,14 @@ func (s *accounts) AccountOptionsUpdate(ctx context.Context, request operations.
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *accounts) AccountSettings(ctx context.Context, request operations.AccountSettingsRequest) (*operations.AccountSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -406,9 +406,9 @@ func (s *accounts) AccountSettings(ctx context.Context, request operations.Accou
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *accounts) AccountSettingsUpdate(ctx context.Context, request operations.AccountSettingsUpdateRequest) (*operations.AccountSettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -423,7 +423,7 @@ func (s *accounts) AccountSettingsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -468,7 +468,7 @@ func (s *accounts) AccountSettingsUpdate(ctx context.Context, request operations
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *accounts) AccountTrustedDomain(ctx context.Context, request operations.AccountTrustedDomainRequest) (*operations.AccountTrustedDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/trusted_domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/trusted_domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -534,7 +534,7 @@ func (s *accounts) Accounts(ctx context.Context, request operations.AccountsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -588,14 +588,14 @@ func (s *accounts) Accounts(ctx context.Context, request operations.AccountsRequ
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *accounts) DelVB(ctx context.Context, request operations.DelVBRequest) (*operations.DelVBResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -642,14 +642,14 @@ func (s *accounts) DelVB(ctx context.Context, request operations.DelVBRequest) (
 // **Scope:** account:read:admin
 func (s *accounts) GetAccountLockSettings(ctx context.Context, request operations.GetAccountLockSettingsRequest) (*operations.GetAccountLockSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/lock_settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/lock_settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -704,11 +704,11 @@ func (s *accounts) GetAccountLockSettings(ctx context.Context, request operation
 //
 // **Scope:** `account:write:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *accounts) UpdateAccountLockSettings(ctx context.Context, request operations.UpdateAccountLockSettingsRequest) (*operations.UpdateAccountLockSettingsResponse, error) {
+func (s *accounts) UpdateAccountLockSettings(ctx context.Context, request operations.UpdateAccountLockSettingsRequest, security operations.UpdateAccountLockSettingsSecurity) (*operations.UpdateAccountLockSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/lock_settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/lock_settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -720,7 +720,7 @@ func (s *accounts) UpdateAccountLockSettings(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -789,11 +789,11 @@ func (s *accounts) UpdateAccountLockSettings(ctx context.Context, request operat
 // **Scopes:**  `account:write:admin` or `account:master`<br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 //
 // <br>
-func (s *accounts) UpdateAccountOwner(ctx context.Context, request operations.UpdateAccountOwnerRequest) (*operations.UpdateAccountOwnerResponse, error) {
+func (s *accounts) UpdateAccountOwner(ctx context.Context, request operations.UpdateAccountOwnerRequest, security operations.UpdateAccountOwnerSecurity) (*operations.UpdateAccountOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/owner", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/owner", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -805,7 +805,7 @@ func (s *accounts) UpdateAccountOwner(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -858,9 +858,9 @@ func (s *accounts) UpdateAccountOwner(ctx context.Context, request operations.Up
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *accounts) UploadVB(ctx context.Context, request operations.UploadVBRequest) (*operations.UploadVBResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

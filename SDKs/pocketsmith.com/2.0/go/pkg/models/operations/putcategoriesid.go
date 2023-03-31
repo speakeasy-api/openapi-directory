@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCategoriesIDPathParams struct {
-	// The unique identifier of the category.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutCategoriesIDRequestBodyRefundBehaviourEnum - Set the refund behaviour of the category.
 type PutCategoriesIDRequestBodyRefundBehaviourEnum string
 
@@ -59,8 +54,9 @@ type PutCategoriesIDRequestBody struct {
 }
 
 type PutCategoriesIDRequest struct {
-	PathParams PutCategoriesIDPathParams
-	Request    *PutCategoriesIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutCategoriesIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the category.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutCategoriesIDResponse struct {

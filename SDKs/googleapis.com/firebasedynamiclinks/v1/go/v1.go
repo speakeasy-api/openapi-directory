@@ -33,20 +33,20 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // FirebasedynamiclinksGetLinkStats - Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
-func (s *v1) FirebasedynamiclinksGetLinkStats(ctx context.Context, request operations.FirebasedynamiclinksGetLinkStatsRequest) (*operations.FirebasedynamiclinksGetLinkStatsResponse, error) {
+func (s *v1) FirebasedynamiclinksGetLinkStats(ctx context.Context, request operations.FirebasedynamiclinksGetLinkStatsRequest, security operations.FirebasedynamiclinksGetLinkStatsSecurity) (*operations.FirebasedynamiclinksGetLinkStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{dynamicLink}/linkStats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{dynamicLink}/linkStats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *v1) FirebasedynamiclinksGetLinkStats(ctx context.Context, request opera
 }
 
 // FirebasedynamiclinksInstallAttribution - Get iOS strong/weak-match info for post-install attribution.
-func (s *v1) FirebasedynamiclinksInstallAttribution(ctx context.Context, request operations.FirebasedynamiclinksInstallAttributionRequest) (*operations.FirebasedynamiclinksInstallAttributionResponse, error) {
+func (s *v1) FirebasedynamiclinksInstallAttribution(ctx context.Context, request operations.FirebasedynamiclinksInstallAttributionRequest, security operations.FirebasedynamiclinksInstallAttributionSecurity) (*operations.FirebasedynamiclinksInstallAttributionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/installAttribution"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIosPostInstallAttributionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *v1) FirebasedynamiclinksInstallAttribution(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *v1) FirebasedynamiclinksInstallAttribution(ctx context.Context, request
 }
 
 // FirebasedynamiclinksReopenAttribution - Get iOS reopen attribution for app universal link open deeplinking.
-func (s *v1) FirebasedynamiclinksReopenAttribution(ctx context.Context, request operations.FirebasedynamiclinksReopenAttributionRequest) (*operations.FirebasedynamiclinksReopenAttributionResponse, error) {
+func (s *v1) FirebasedynamiclinksReopenAttribution(ctx context.Context, request operations.FirebasedynamiclinksReopenAttributionRequest, security operations.FirebasedynamiclinksReopenAttributionSecurity) (*operations.FirebasedynamiclinksReopenAttributionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/reopenAttribution"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIosReopenAttributionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *v1) FirebasedynamiclinksReopenAttribution(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

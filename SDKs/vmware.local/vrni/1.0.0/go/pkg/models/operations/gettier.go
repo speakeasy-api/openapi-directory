@@ -8,22 +8,13 @@ import (
 )
 
 type GetTierSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTierPathParams struct {
-	TierID string `pathParam:"style=simple,explode=false,name=tier-id"`
-}
-
-type GetTierHeaders struct {
-	// Authorization Header
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetTierRequest struct {
-	PathParams GetTierPathParams
-	Headers    GetTierHeaders
-	Security   GetTierSecurity
+	// Authorization Header
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	TierID        string `pathParam:"style=simple,explode=false,name=tier-id"`
 }
 
 type GetTierResponse struct {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostZebrafishMmeRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PostZebrafishMmeResponse struct {
 	ContentType string
 	StatusCode  int

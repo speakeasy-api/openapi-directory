@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ConferenceMuteSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ConferenceMuteRequest struct {
-	// POST parameters
-	Request  *shared.ConferenceMuteParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ConferenceMuteSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ConferenceMuteResponse struct {

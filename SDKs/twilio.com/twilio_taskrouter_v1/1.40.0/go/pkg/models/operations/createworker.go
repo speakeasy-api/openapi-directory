@@ -12,12 +12,8 @@ var CreateWorkerServerList = []string{
 }
 
 type CreateWorkerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateWorkerPathParams struct {
-	// The SID of the Workspace that the new Worker belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWorkerCreateWorkerRequest struct {
@@ -30,10 +26,9 @@ type CreateWorkerCreateWorkerRequest struct {
 }
 
 type CreateWorkerRequest struct {
-	PathParams CreateWorkerPathParams
-	Request    *CreateWorkerCreateWorkerRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateWorkerSecurity
-	ServerURL  *string
+	RequestBody *CreateWorkerCreateWorkerRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new Worker belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateWorkerResponse struct {

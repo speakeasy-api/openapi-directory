@@ -33,7 +33,7 @@ func (e *PagespeedonlinePagespeedapiRunpagespeedStrategyEnum) UnmarshalJSON(data
 	}
 }
 
-type PagespeedonlinePagespeedapiRunpagespeedQueryParams struct {
+type PagespeedonlinePagespeedapiRunpagespeedRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -60,10 +60,6 @@ type PagespeedonlinePagespeedapiRunpagespeedQueryParams struct {
 	URL string `queryParam:"style=form,explode=true,name=url"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type PagespeedonlinePagespeedapiRunpagespeedRequest struct {
-	QueryParams PagespeedonlinePagespeedapiRunpagespeedQueryParams
 }
 
 type PagespeedonlinePagespeedapiRunpagespeedResponse struct {

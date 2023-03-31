@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStopPointSearchQueryParams struct {
+type GetStopPointSearchRequest struct {
 	// True to only return stations in that have Fares data available for single fares to another station.
 	FaresOnly *bool `queryParam:"style=form,explode=true,name=faresOnly"`
 	// If true, returns results including HUBs.
@@ -23,10 +23,6 @@ type GetStopPointSearchQueryParams struct {
 	Query string `queryParam:"style=form,explode=true,name=query"`
 	// If the national-rail mode is included, this flag will filter the national rail stations so that only those operated by TfL are returned
 	TflOperatedNationalRailStationsOnly *bool `queryParam:"style=form,explode=true,name=tflOperatedNationalRailStationsOnly"`
-}
-
-type GetStopPointSearchRequest struct {
-	QueryParams GetStopPointSearchQueryParams
 }
 
 type GetStopPointSearchResponse struct {

@@ -32,16 +32,16 @@ func newEmbedPresetsVideos(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // AddVideoEmbedPreset - Add an embed preset to a video
-func (s *embedPresetsVideos) AddVideoEmbedPreset(ctx context.Context, request operations.AddVideoEmbedPresetRequest) (*operations.AddVideoEmbedPresetResponse, error) {
+func (s *embedPresetsVideos) AddVideoEmbedPreset(ctx context.Context, request operations.AddVideoEmbedPresetRequest, security operations.AddVideoEmbedPresetSecurity) (*operations.AddVideoEmbedPresetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -67,16 +67,16 @@ func (s *embedPresetsVideos) AddVideoEmbedPreset(ctx context.Context, request op
 }
 
 // CreateVideoCustomLogo - Add a new custom logo to a video
-func (s *embedPresetsVideos) CreateVideoCustomLogo(ctx context.Context, request operations.CreateVideoCustomLogoRequest) (*operations.CreateVideoCustomLogoResponse, error) {
+func (s *embedPresetsVideos) CreateVideoCustomLogo(ctx context.Context, request operations.CreateVideoCustomLogoRequest, security operations.CreateVideoCustomLogoSecurity) (*operations.CreateVideoCustomLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/timelinethumbnails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/timelinethumbnails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,16 +123,16 @@ func (s *embedPresetsVideos) CreateVideoCustomLogo(ctx context.Context, request 
 }
 
 // DeleteVideoEmbedPreset - Remove an embed preset from a video
-func (s *embedPresetsVideos) DeleteVideoEmbedPreset(ctx context.Context, request operations.DeleteVideoEmbedPresetRequest) (*operations.DeleteVideoEmbedPresetResponse, error) {
+func (s *embedPresetsVideos) DeleteVideoEmbedPreset(ctx context.Context, request operations.DeleteVideoEmbedPresetRequest, security operations.DeleteVideoEmbedPresetSecurity) (*operations.DeleteVideoEmbedPresetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *embedPresetsVideos) DeleteVideoEmbedPreset(ctx context.Context, request
 // GetEmbedPresetVideos - Get all the videos that have been added to an embed preset
 func (s *embedPresetsVideos) GetEmbedPresetVideos(ctx context.Context, request operations.GetEmbedPresetVideosRequest) (*operations.GetEmbedPresetVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -218,14 +218,14 @@ func (s *embedPresetsVideos) GetEmbedPresetVideos(ctx context.Context, request o
 // GetEmbedPresetVideosAlt1 - Get all the videos that have been added to an embed preset
 func (s *embedPresetsVideos) GetEmbedPresetVideosAlt1(ctx context.Context, request operations.GetEmbedPresetVideosAlt1Request) (*operations.GetEmbedPresetVideosAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -266,7 +266,7 @@ func (s *embedPresetsVideos) GetEmbedPresetVideosAlt1(ctx context.Context, reque
 // GetVideoCustomLogo - Get a custom video logo
 func (s *embedPresetsVideos) GetVideoCustomLogo(ctx context.Context, request operations.GetVideoCustomLogoRequest) (*operations.GetVideoCustomLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/timelinethumbnails/{thumbnail_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/timelinethumbnails/{thumbnail_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +320,7 @@ func (s *embedPresetsVideos) GetVideoCustomLogo(ctx context.Context, request ope
 // GetVideoEmbedPreset - Check if an embed preset has been added to a video
 func (s *embedPresetsVideos) GetVideoEmbedPreset(ctx context.Context, request operations.GetVideoEmbedPresetRequest) (*operations.GetVideoEmbedPresetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/presets/{preset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

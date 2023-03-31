@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetActionRelatedListQueryParams struct {
+type GetActionRelatedListRequest struct {
 	// Dataset dictionary of the dataset (optional)
 	Dataset *string `queryParam:"style=form,explode=true,name=dataset"`
 	// whether or not to restrict the results to only featured items
@@ -17,10 +17,6 @@ type GetActionRelatedListQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type of related item to show (optional)
 	TypeFilter *string `queryParam:"style=form,explode=true,name=type_filter"`
-}
-
-type GetActionRelatedListRequest struct {
-	QueryParams GetActionRelatedListQueryParams
 }
 
 type GetActionRelatedListResponse struct {

@@ -4,33 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IndexingURLNotificationsGetMetadataRequest(
-    security=operations.IndexingURLNotificationsGetMetadataSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.IndexingURLNotificationsGetMetadataQueryParams(
-        dollar_xgafv="1",
-        access_token="voluptate",
-        alt="json",
-        callback="corporis",
-        fields="quod",
-        key="et",
-        oauth_token="nisi",
-        pretty_print=True,
-        quota_user="incidunt",
-        upload_type="error",
-        upload_protocol="incidunt",
-        url="odit",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    pretty_print=False,
+    quota_user="illum",
+    upload_type="vel",
+    upload_protocol="error",
+    url="deserunt",
 )
     
-res = s.url_notifications.indexing_url_notifications_get_metadata(req)
+res = s.url_notifications.indexing_url_notifications_get_metadata(req, operations.IndexingURLNotificationsGetMetadataSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.url_notification_metadata is not None:
     # handle response

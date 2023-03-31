@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteTrustProductChannelEndpointAssignmentServerList = []string{
@@ -12,20 +11,15 @@ var DeleteTrustProductChannelEndpointAssignmentServerList = []string{
 }
 
 type DeleteTrustProductChannelEndpointAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteTrustProductChannelEndpointAssignmentPathParams struct {
+type DeleteTrustProductChannelEndpointAssignmentRequest struct {
 	// The unique string that we created to identify the resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The unique string that we created to identify the CustomerProfile resource.
 	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
-}
-
-type DeleteTrustProductChannelEndpointAssignmentRequest struct {
-	PathParams DeleteTrustProductChannelEndpointAssignmentPathParams
-	Security   DeleteTrustProductChannelEndpointAssignmentSecurity
-	ServerURL  *string
 }
 
 type DeleteTrustProductChannelEndpointAssignmentResponse struct {

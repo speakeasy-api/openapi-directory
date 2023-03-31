@@ -4,78 +4,70 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
-    security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="nesciunt",
-    ),
-    query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="media",
-        callback="quo",
-        fields="et",
-        key="aut",
-        oauth_token="laboriosam",
-        pretty_print=True,
-        quota_user="voluptatem",
-        upload_type="quia",
-        upload_protocol="eos",
-    ),
-    request=shared.ScanConfig(
+    dollar_xgafv="2",
+    scan_config=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
-                login_url="dolorem",
-                password="quibusdam",
-                username="qui",
+                login_url="provident",
+                password="distinctio",
+                username="Rosalinda_Mitchell84",
             ),
             google_account=shared.GoogleAccount(
-                password="enim",
-                username="dolores",
+                password="vel",
+                username="Linda.Oberbrunner",
             ),
         ),
         blacklist_patterns=[
-            "earum",
+            "debitis",
+            "ipsa",
         ],
-        display_name="qui",
+        display_name="delectus",
         latest_run=shared.ScanRun(
-            end_time="ab",
+            end_time="tempora",
             execution_state="QUEUED",
             has_vulnerabilities=False,
-            name="voluptas",
-            progress_percent=8073592271542201319,
-            result_state="RESULT_STATE_UNSPECIFIED",
-            start_time="voluptatem",
-            urls_crawled_count="optio",
-            urls_tested_count="reiciendis",
+            name="molestiae",
+            progress_percent=791725,
+            result_state="KILLED",
+            start_time="voluptatum",
+            urls_crawled_count="iusto",
+            urls_tested_count="excepturi",
         ),
-        max_qps=1508960573531668363,
-        name="inventore",
+        max_qps=392785,
+        name="recusandae",
         schedule=shared.Schedule(
-            interval_duration_days=1097738351481424118,
-            schedule_time="veritatis",
+            interval_duration_days=836079,
+            schedule_time="ab",
         ),
         starting_urls=[
-            "quis",
+            "veritatis",
+            "deserunt",
         ],
         target_platforms=[
-            "COMPUTE",
-            "TARGET_PLATFORM_UNSPECIFIED",
             "APP_ENGINE",
         ],
         user_agent="SAFARI_IPHONE",
     ),
+    access_token="sapiente",
+    alt="proto",
+    callback="odit",
+    fields_="at",
+    key="at",
+    oauth_token="maiores",
+    parent="molestiae",
+    pretty_print=False,
+    quota_user="quod",
+    upload_type="quod",
+    upload_protocol="esse",
 )
     
-res = s.projects.websecurityscanner_projects_scan_configs_create(req)
+res = s.projects.websecurityscanner_projects_scan_configs_create(req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.scan_config is not None:
     # handle response

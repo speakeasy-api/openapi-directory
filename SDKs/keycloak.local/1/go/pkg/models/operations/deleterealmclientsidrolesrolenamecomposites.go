@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRealmClientsIDRolesRoleNameCompositesPathParams struct {
+type DeleteRealmClientsIDRolesRoleNameCompositesRequest struct {
+	// roles to remove
+	RequestBody []shared.RoleRepresentation `request:"mediaType=application/json"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// role’s name (not id!)
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type DeleteRealmClientsIDRolesRoleNameCompositesRequest struct {
-	PathParams DeleteRealmClientsIDRolesRoleNameCompositesPathParams
-	// roles to remove
-	Request []shared.RoleRepresentation `request:"mediaType=application/json"`
 }
 
 type DeleteRealmClientsIDRolesRoleNameCompositesResponse struct {

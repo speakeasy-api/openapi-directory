@@ -34,14 +34,14 @@ func newRoute(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Represents the geometry, distance, and time of the shortest or fastest path between a start point and a series of end points which are reordered to minimize distance or time
 func (s *route) GetOptimalRouteOutputFormat(ctx context.Context, request operations.GetOptimalRouteOutputFormatRequest) (*operations.GetOptimalRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/optimalRoute.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/optimalRoute.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -74,14 +74,14 @@ func (s *route) GetOptimalRouteOutputFormat(ctx context.Context, request operati
 // Represents the geometry, distance, and time of the shortest or fastest path between given start and end points.
 func (s *route) GetRouteOutputFormat(ctx context.Context, request operations.GetRouteOutputFormatRequest) (*operations.GetRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/route.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/route.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -114,14 +114,14 @@ func (s *route) GetRouteOutputFormat(ctx context.Context, request operations.Get
 // Represents the geometry, distance, and time of the shortest or fastest path between a start point and a series of end points which are reordered to minimize distance or time for a commercial vehicle.
 func (s *route) GetTruckOptimalRouteOutputFormat(ctx context.Context, request operations.GetTruckOptimalRouteOutputFormatRequest) (*operations.GetTruckOptimalRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/optimalRoute.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/truck/optimalRoute.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *route) GetTruckOptimalRouteOutputFormat(ctx context.Context, request op
 // Represents the geometry, distance, and time of the shortest or fastest path between given start and end points for a commercial vehicle.
 func (s *route) GetTruckRouteOutputFormat(ctx context.Context, request operations.GetTruckRouteOutputFormatRequest) (*operations.GetTruckRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/route.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/truck/route.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,14 +194,14 @@ func (s *route) GetTruckRouteOutputFormat(ctx context.Context, request operation
 // Represents the geometry, distance, and time of the shortest or fastest path between a start point and a series of end points which are reordered to minimize total distance or time.
 func (s *route) PostOptimalRouteOutputFormat(ctx context.Context, request operations.PostOptimalRouteOutputFormatRequest) (*operations.PostOptimalRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/optimalRoute.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/optimalRoute.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -234,14 +234,14 @@ func (s *route) PostOptimalRouteOutputFormat(ctx context.Context, request operat
 // Represents the geometry, distance, and time of the shortest or fastest path between given start and end points.
 func (s *route) PostRouteOutputFormat(ctx context.Context, request operations.PostRouteOutputFormatRequest) (*operations.PostRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/route.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/route.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -274,14 +274,14 @@ func (s *route) PostRouteOutputFormat(ctx context.Context, request operations.Po
 // Represents the geometry, distance, and time of the shortest or fastest path between a start point and a series of end points which are reordered to minimize total distance or time.
 func (s *route) PostTruckOptimalRouteOutputFormat(ctx context.Context, request operations.PostTruckOptimalRouteOutputFormatRequest) (*operations.PostTruckOptimalRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/optimalRoute.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/truck/optimalRoute.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -314,14 +314,14 @@ func (s *route) PostTruckOptimalRouteOutputFormat(ctx context.Context, request o
 // Represents the geometry, distance, and time of the shortest or fastest path between given start and end points.
 func (s *route) PostTruckRouteOutputFormat(ctx context.Context, request operations.PostTruckRouteOutputFormatRequest) (*operations.PostTruckRouteOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/route.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/truck/route.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

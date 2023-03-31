@@ -14,49 +14,40 @@ func main() {
     s := sdk.New()
 
     req := operations.NotebooksProjectsLocationsEnvironmentsCreateRequest{
-        Security: operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            EnvironmentID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.EnvironmentInput{
+        DollarXgafv: "2",
+        EnvironmentInput: &shared.EnvironmentInput{
             ContainerImage: &shared.ContainerImage{
-                Repository: "iure",
-                Tag: "magnam",
+                Repository: "provident",
+                Tag: "distinctio",
             },
-            Description: "debitis",
-            DisplayName: "ipsa",
-            PostStartupScript: "delectus",
+            Description: "quibusdam",
+            DisplayName: "unde",
+            PostStartupScript: "nulla",
             VMImage: &shared.VMImage{
-                ImageFamily: "tempora",
-                ImageName: "suscipit",
-                Project: "molestiae",
+                ImageFamily: "corrupti",
+                ImageName: "illum",
+                Project: "vel",
             },
         },
+        AccessToken: "error",
+        Alt: "media",
+        Callback: "suscipit",
+        EnvironmentID: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        OauthToken: "ipsa",
+        Parent: "delectus",
+        PrettyPrint: false,
+        QuotaUser: "tempora",
+        UploadType: "suscipit",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NotebooksProjectsLocationsEnvironmentsCreate(ctx, req)
+    res, err := s.Projects.NotebooksProjectsLocationsEnvironmentsCreate(ctx, req, operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

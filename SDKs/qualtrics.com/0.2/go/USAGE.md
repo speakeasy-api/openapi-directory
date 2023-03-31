@@ -14,16 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateContactInMailinglistRequest{
-        PathParams: operations.CreateContactInMailinglistPathParams{
-            DirectoryID: "corrupti",
-            MailingListID: "provident",
-        },
-        Request: shared.CreateContactInMailingList{
-            Email: "Rosalinda_Mitchell84@hotmail.com",
-            FirstName: "Henry",
-            LastName: "Mueller",
+        CreateContactInMailingList: shared.CreateContactInMailingList{
+            Email: "Larue_Rau85@yahoo.com",
+            FirstName: "Karley",
+            LastName: "Stamm",
             Unsubscribed: false,
         },
+        DirectoryID: "vel",
+        MailingListID: "error",
     }
 
     ctx := context.Background()

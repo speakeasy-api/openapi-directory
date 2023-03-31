@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamAggregatesDeletePathParams struct {
+type IpamAggregatesDeleteRequest struct {
 	// A unique integer value identifying this aggregate.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamAggregatesDeleteRequest struct {
-	PathParams IpamAggregatesDeletePathParams
 }
 
 type IpamAggregatesDeleteResponse struct {

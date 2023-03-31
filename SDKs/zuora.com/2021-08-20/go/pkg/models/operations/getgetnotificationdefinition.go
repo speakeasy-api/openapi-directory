@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETGETNotificationDefinitionPathParams struct {
-	// The ID of the notification definition.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETGETNotificationDefinitionHeaders struct {
+type GETGETNotificationDefinitionRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -26,11 +21,8 @@ type GETGETNotificationDefinitionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETGETNotificationDefinitionRequest struct {
-	PathParams GETGETNotificationDefinitionPathParams
-	Headers    GETGETNotificationDefinitionHeaders
+	// The ID of the notification definition.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GETGETNotificationDefinitionResponse struct {

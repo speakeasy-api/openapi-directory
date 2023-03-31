@@ -8,25 +8,16 @@ import (
 )
 
 type GetSuperfundProductsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSuperfundProductsQueryParams struct {
+type GetSuperfundProductsRequest struct {
 	// The ABN of the Regulated SuperFund
 	Abn *string `queryParam:"style=form,explode=true,name=ABN"`
 	// The USI of the Regulated SuperFund
 	Usi *string `queryParam:"style=form,explode=true,name=USI"`
-}
-
-type GetSuperfundProductsHeaders struct {
 	// Xero identifier for Tenant
 	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
-}
-
-type GetSuperfundProductsRequest struct {
-	QueryParams GetSuperfundProductsQueryParams
-	Headers     GetSuperfundProductsHeaders
-	Security    GetSuperfundProductsSecurity
 }
 
 type GetSuperfundProductsResponse struct {

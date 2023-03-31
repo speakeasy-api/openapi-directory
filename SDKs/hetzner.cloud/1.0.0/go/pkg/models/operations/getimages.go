@@ -107,7 +107,7 @@ func (e *GetImagesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImagesQueryParams struct {
+type GetImagesRequest struct {
 	// Can be used multiple times. Server ID linked to the Image. Only available for Images of type `backup`
 	BoundTo *string `queryParam:"style=form,explode=true,name=bound_to"`
 	// Can be used multiple times.
@@ -122,10 +122,6 @@ type GetImagesQueryParams struct {
 	Status *GetImagesStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// Can be used multiple times.
 	Type *GetImagesTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetImagesRequest struct {
-	QueryParams GetImagesQueryParams
 }
 
 // GetImages200ApplicationJSONImagesCreatedFrom - Information about the Server the Image was created from

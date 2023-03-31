@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSmBypassActivationLockAttemptPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkSmBypassActivationLockAttemptRequestBody struct {
 	// The ids of the devices to attempt activation lock bypass.
 	Ids []string `json:"ids"`
 }
 
 type CreateNetworkSmBypassActivationLockAttemptRequest struct {
-	PathParams CreateNetworkSmBypassActivationLockAttemptPathParams
-	Request    CreateNetworkSmBypassActivationLockAttemptRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSmBypassActivationLockAttemptRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkSmBypassActivationLockAttemptResponse struct {

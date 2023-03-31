@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerAddFeedbackJSONPathParams struct {
+type DiaryControllerAddFeedbackJSONRequest struct {
+	// Feedback submission model
+	FeedbackSubmissionModel shared.FeedbackSubmissionModel `request:"mediaType=application/json"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerAddFeedbackJSONRequest struct {
-	PathParams DiaryControllerAddFeedbackJSONPathParams
-	// Feedback submission model
-	Request shared.FeedbackSubmissionModel `request:"mediaType=application/json"`
 }
 
 type DiaryControllerAddFeedbackJSONResponse struct {

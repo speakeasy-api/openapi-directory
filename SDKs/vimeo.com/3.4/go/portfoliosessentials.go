@@ -35,7 +35,7 @@ func newPortfoliosEssentials(defaultClient, securityClient HTTPClient, serverURL
 // GetPortfolio - Get a specific portfolio
 func (s *portfoliosEssentials) GetPortfolio(ctx context.Context, request operations.GetPortfolioRequest) (*operations.GetPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *portfoliosEssentials) GetPortfolio(ctx context.Context, request operati
 // GetPortfolioAlt1 - Get a specific portfolio
 func (s *portfoliosEssentials) GetPortfolioAlt1(ctx context.Context, request operations.GetPortfolioAlt1Request) (*operations.GetPortfolioAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,14 +123,14 @@ func (s *portfoliosEssentials) GetPortfolioAlt1(ctx context.Context, request ope
 // GetPortfolios - Get all the portfolios that belong to a user
 func (s *portfoliosEssentials) GetPortfolios(ctx context.Context, request operations.GetPortfoliosRequest) (*operations.GetPortfoliosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -178,7 +178,7 @@ func (s *portfoliosEssentials) GetPortfoliosAlt1(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

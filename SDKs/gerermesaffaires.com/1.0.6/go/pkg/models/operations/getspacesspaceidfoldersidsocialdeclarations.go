@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDSocialDeclarationsPathParams struct {
-	// Id of the folder socialregime
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDSocialDeclarationsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDSocialDeclarationsRequest struct {
 	// range date of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesSpaceIDFoldersIDSocialDeclarationsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDSocialDeclarationsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDSocialDeclarationsQueryParams
+	// Id of the folder socialregime
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDSocialDeclarationsResponse struct {

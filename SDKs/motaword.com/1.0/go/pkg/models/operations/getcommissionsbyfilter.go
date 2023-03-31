@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommissionsByFilterRequest struct {
-	Request *shared.ReportFilter `request:"mediaType=application/json"`
-}
-
 type GetCommissionsByFilterResponse struct {
 	// Commissions for client.
 	CommissionList *shared.CommissionList

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostVolumesIDActionsAttachPathParams struct {
-	// ID of the Volume
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostVolumesIDActionsAttachAttachVolumeRequest struct {
 	// Auto-mount the Volume after attaching it
 	Automount *bool `json:"automount,omitempty"`
@@ -21,8 +16,9 @@ type PostVolumesIDActionsAttachAttachVolumeRequest struct {
 }
 
 type PostVolumesIDActionsAttachRequest struct {
-	PathParams PostVolumesIDActionsAttachPathParams
-	Request    *PostVolumesIDActionsAttachAttachVolumeRequest `request:"mediaType=application/json"`
+	RequestBody *PostVolumesIDActionsAttachAttachVolumeRequest `request:"mediaType=application/json"`
+	// ID of the Volume
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostVolumesIDActionsAttachActionResponseActionError - Error message for the Action if error occurred, otherwise null

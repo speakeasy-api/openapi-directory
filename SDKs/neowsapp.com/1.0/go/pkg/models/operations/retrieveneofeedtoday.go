@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveNEOFeedTodayQueryParams struct {
+type RetrieveNEOFeedTodayRequest struct {
 	// detailed
 	Detailed *bool `queryParam:"style=form,explode=true,name=detailed"`
-}
-
-type RetrieveNEOFeedTodayRequest struct {
-	QueryParams RetrieveNEOFeedTodayQueryParams
 }
 
 type RetrieveNEOFeedTodayResponse struct {

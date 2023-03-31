@@ -8,13 +8,7 @@ import (
 )
 
 type CountryBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CountryBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameIn `request:"mediaType=application/json"`
-	Security CountryBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type CountryBatchResponse struct {

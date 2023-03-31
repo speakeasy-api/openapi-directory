@@ -8,16 +8,11 @@ import (
 )
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AssuredworkloadsOrganizationsLocationsWorkloadsListPathParams struct {
-	// Required. Parent Resource to list workloads from. Must be of the form `organizations/{org_id}/locations/{location}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsListQueryParams struct {
+type AssuredworkloadsOrganizationsLocationsWorkloadsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token returned from previous request. Page token contains context from previous request. Page token needs to be passed in the second and following requests.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent Resource to list workloads from. Must be of the form `organizations/{org_id}/locations/{location}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsListRequest struct {
-	PathParams  AssuredworkloadsOrganizationsLocationsWorkloadsListPathParams
-	QueryParams AssuredworkloadsOrganizationsLocationsWorkloadsListQueryParams
-	Security    AssuredworkloadsOrganizationsLocationsWorkloadsListSecurity
 }
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsListResponse struct {

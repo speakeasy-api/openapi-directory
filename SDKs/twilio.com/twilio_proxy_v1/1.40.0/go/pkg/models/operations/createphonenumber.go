@@ -12,12 +12,8 @@ var CreatePhoneNumberServerList = []string{
 }
 
 type CreatePhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreatePhoneNumberPathParams struct {
-	// The SID parent [Service](https://www.twilio.com/docs/proxy/api/service) resource of the new PhoneNumber resource.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreatePhoneNumberCreatePhoneNumberRequest struct {
@@ -30,10 +26,9 @@ type CreatePhoneNumberCreatePhoneNumberRequest struct {
 }
 
 type CreatePhoneNumberRequest struct {
-	PathParams CreatePhoneNumberPathParams
-	Request    *CreatePhoneNumberCreatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreatePhoneNumberSecurity
-	ServerURL  *string
+	RequestBody *CreatePhoneNumberCreatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID parent [Service](https://www.twilio.com/docs/proxy/api/service) resource of the new PhoneNumber resource.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreatePhoneNumberResponse struct {

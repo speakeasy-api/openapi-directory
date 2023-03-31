@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelPathParams struct {
-	// Unique identifier of the Subscription to cancel
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type CancelHeaders struct {
+type CancelRequest struct {
 	// Shopper ID to cancel subscriptions for when not using JWT
 	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
-}
-
-type CancelRequest struct {
-	PathParams CancelPathParams
-	Headers    CancelHeaders
+	// Unique identifier of the Subscription to cancel
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type CancelResponse struct {

@@ -4,34 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AddOrUpdateAdditionalRatesRequest(
-    security=operations.AddOrUpdateAdditionalRatesSecurity(
-        paylocity_auth=shared.SchemePaylocityAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
+    additional_rate=shared.AdditionalRate(
+        change_reason="corrupti",
+        cost_center1="provident",
+        cost_center2="distinctio",
+        cost_center3="quibusdam",
+        effective_date="unde",
+        end_check_date="nulla",
+        job="corrupti",
+        rate=8472.52,
+        rate_code="vel",
+        rate_notes="error",
+        rate_per="deserunt",
+        shift="suscipit",
     ),
-    path_params=operations.AddOrUpdateAdditionalRatesPathParams(
-        company_id="deleniti",
-        employee_id="ab",
-    ),
-    request=shared.AdditionalRate(
-        change_reason="alias",
-        cost_center1="voluptatem",
-        cost_center2="et",
-        cost_center3="hic",
-        effective_date="inventore",
-        end_check_date="illum",
-        job="mollitia",
-        rate=60.099998,
-        rate_code="aliquid",
-        rate_notes="nobis",
-        rate_per="quibusdam",
-        shift="et",
-    ),
+    company_id="iure",
+    employee_id="magnam",
 )
     
-res = s.additional_rates.add_or_update_additional_rates(req)
+res = s.additional_rates.add_or_update_additional_rates(req, operations.AddOrUpdateAdditionalRatesSecurity(
+    paylocity_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

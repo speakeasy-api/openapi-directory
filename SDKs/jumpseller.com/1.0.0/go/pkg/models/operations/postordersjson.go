@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOrdersJSONQueryParams struct {
+type PostOrdersJSONRequest struct {
+	// Order parameters.
+	OrderCreate shared.OrderCreate `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostOrdersJSONRequest struct {
-	QueryParams PostOrdersJSONQueryParams
-	// Order parameters.
-	Request shared.OrderCreate `request:"mediaType=application/json"`
 }
 
 type PostOrdersJSONResponse struct {

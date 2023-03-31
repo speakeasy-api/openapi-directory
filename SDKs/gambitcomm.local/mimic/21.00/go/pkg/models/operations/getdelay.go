@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDelayPathParams struct {
+type GetDelayRequest struct {
 	// Agent to return the delay time
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetDelayRequest struct {
-	PathParams GetDelayPathParams
 }
 
 type GetDelayResponse struct {

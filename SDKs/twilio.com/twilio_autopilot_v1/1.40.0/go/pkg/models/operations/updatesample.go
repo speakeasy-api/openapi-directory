@@ -12,16 +12,8 @@ var UpdateSampleServerList = []string{
 }
 
 type UpdateSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSamplePathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The Twilio-provided string that uniquely identifies the Sample resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to update.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSampleUpdateSampleRequest struct {
@@ -34,10 +26,13 @@ type UpdateSampleUpdateSampleRequest struct {
 }
 
 type UpdateSampleRequest struct {
-	PathParams UpdateSamplePathParams
-	Request    *UpdateSampleUpdateSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSampleSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to update.
+	AssistantSid string                           `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateSampleUpdateSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Sample resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to update.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type UpdateSampleResponse struct {

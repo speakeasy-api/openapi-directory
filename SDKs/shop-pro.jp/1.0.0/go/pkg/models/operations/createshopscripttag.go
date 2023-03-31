@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateShopScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum - スクリプトを出力するページ
@@ -57,12 +56,6 @@ type CreateShopScriptTagRequestBodyScriptTag struct {
 // CreateShopScriptTagRequestBody - 作成するスクリプトタグの情報
 type CreateShopScriptTagRequestBody struct {
 	ScriptTag *CreateShopScriptTagRequestBodyScriptTag `json:"script_tag,omitempty"`
-}
-
-type CreateShopScriptTagRequest struct {
-	// 作成するスクリプトタグの情報
-	Request  *CreateShopScriptTagRequestBody `request:"mediaType=application/json"`
-	Security CreateShopScriptTagSecurity
 }
 
 // CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum - スクリプトを出力するページ

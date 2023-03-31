@@ -33,7 +33,7 @@ func newMembershipsLevels(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // YoutubeMembershipsLevelsList - Retrieves a list of all pricing levels offered by a creator to the fans.
-func (s *membershipsLevels) YoutubeMembershipsLevelsList(ctx context.Context, request operations.YoutubeMembershipsLevelsListRequest) (*operations.YoutubeMembershipsLevelsListResponse, error) {
+func (s *membershipsLevels) YoutubeMembershipsLevelsList(ctx context.Context, request operations.YoutubeMembershipsLevelsListRequest, security operations.YoutubeMembershipsLevelsListSecurity) (*operations.YoutubeMembershipsLevelsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/membershipsLevels"
 
@@ -42,11 +42,11 @@ func (s *membershipsLevels) YoutubeMembershipsLevelsList(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

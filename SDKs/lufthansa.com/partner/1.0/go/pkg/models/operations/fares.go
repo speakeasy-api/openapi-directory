@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type FaresSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FaresQueryParams struct {
+type FaresRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Include fares for these carriers e.g. ('4U;LH')
 	Carriers string `queryParam:"style=form,explode=true,name=carriers"`
 	// Search fares from these carriers' catalogues - currently active for Germanwings only  (4U)
@@ -22,17 +23,6 @@ type FaresQueryParams struct {
 	Segments string `queryParam:"style=form,explode=true,name=segments"`
 	// Type and number of travelers e.g. (adult=1;child=1;infant=1)
 	Travelers *string `queryParam:"style=form,explode=true,name=travelers"`
-}
-
-type FaresHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type FaresRequest struct {
-	QueryParams FaresQueryParams
-	Headers     FaresHeaders
-	Security    FaresSecurity
 }
 
 type FaresResponse struct {

@@ -34,16 +34,16 @@ func newInvoiceSplits(defaultClient, securityClient HTTPClient, serverURL, langu
 // ObjectGETInvoiceSplit - CRUD: Retrieve an invoice split
 func (s *invoiceSplits) ObjectGETInvoiceSplit(ctx context.Context, request operations.ObjectGETInvoiceSplitRequest) (*operations.ObjectGETInvoiceSplitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-split/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-split/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

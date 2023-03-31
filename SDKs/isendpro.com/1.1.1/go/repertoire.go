@@ -34,7 +34,7 @@ func newRepertoire(defaultClient, securityClient HTTPClient, serverURL, language
 
 // Repertoire - Gestion repertoire (modification)
 // Ajoute ou supprime une liste de numéros à un répertoire existant.
-func (s *repertoire) Repertoire(ctx context.Context, request operations.RepertoireRequest) (*operations.RepertoireResponse, error) {
+func (s *repertoire) Repertoire(ctx context.Context, request shared.REPERTOIREmodifrequest) (*operations.RepertoireResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/repertoire"
 
@@ -99,7 +99,7 @@ func (s *repertoire) Repertoire(ctx context.Context, request operations.Repertoi
 
 // RepertoireCrea - Gestion repertoire (creation)
 // Cree un nouveau répertoire et retourne son identifiant. Cet identifiant pourra être utilisé pour ajouter ou supprimer des numéros via l'API.
-func (s *repertoire) RepertoireCrea(ctx context.Context, request operations.RepertoireCreaRequest) (*operations.RepertoireCreaResponse, error) {
+func (s *repertoire) RepertoireCrea(ctx context.Context, request shared.REPERTOIREcreaterequest) (*operations.RepertoireCreaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/repertoire"
 

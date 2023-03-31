@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteFilePathParams struct {
+type DeleteFileRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Automatically added
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type DeleteFileQueryParams struct {
-	URL *string `queryParam:"serialization=json,name=url"`
-}
-
-type DeleteFileRequest struct {
-	PathParams  DeleteFilePathParams
-	QueryParams DeleteFileQueryParams
+	Type string  `pathParam:"style=simple,explode=false,name=type"`
+	URL  *string `queryParam:"serialization=json,name=url"`
 }
 
 type DeleteFileResponse struct {

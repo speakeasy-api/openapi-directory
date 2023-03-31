@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PaymentInitiationConsentRevokeRequest struct {
-	Request shared.PaymentInitiationConsentRevokeRequest `request:"mediaType=application/json"`
-}
 
 type PaymentInitiationConsentRevokeResponse struct {
 	ContentType string

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionGetParameterPathParams struct {
+type ProtocolTftpSessionGetParameterRequest struct {
 	// Agent to show TFTP parameter
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to show
 	Parameter string `pathParam:"style=simple,explode=false,name=parameter"`
 	// SessionID
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionID"`
-}
-
-type ProtocolTftpSessionGetParameterRequest struct {
-	PathParams ProtocolTftpSessionGetParameterPathParams
 }
 
 type ProtocolTftpSessionGetParameterResponse struct {

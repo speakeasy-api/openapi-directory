@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveCustomerSegmentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveCustomerSegmentPathParams struct {
-	// The Square-issued ID of the customer segment.
-	SegmentID string `pathParam:"style=simple,explode=false,name=segment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveCustomerSegmentRequest struct {
-	PathParams RetrieveCustomerSegmentPathParams
-	Security   RetrieveCustomerSegmentSecurity
+	// The Square-issued ID of the customer segment.
+	SegmentID string `pathParam:"style=simple,explode=false,name=segment_id"`
 }
 
 type RetrieveCustomerSegmentResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchGroupsQueryParams struct {
+type FetchGroupsRequest struct {
 	// Group name
 	FilterName *string `queryParam:"style=form,explode=true,name=filter[name]"`
 	// Organization identifier
 	FilterOrganization string `queryParam:"style=form,explode=true,name=filter[organization]"`
-}
-
-type FetchGroupsRequest struct {
-	QueryParams FetchGroupsQueryParams
 }
 
 type FetchGroupsResponse struct {

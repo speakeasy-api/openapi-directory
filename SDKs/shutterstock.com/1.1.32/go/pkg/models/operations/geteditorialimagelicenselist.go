@@ -11,7 +11,7 @@ import (
 )
 
 type GetEditorialImageLicenseListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetEditorialImageLicenseListDownloadAvailabilityEnum - Filter licenses by download availability
@@ -65,7 +65,7 @@ func (e *GetEditorialImageLicenseListSortEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetEditorialImageLicenseListQueryParams struct {
+type GetEditorialImageLicenseListRequest struct {
 	// Filter licenses by download availability
 	DownloadAvailability *GetEditorialImageLicenseListDownloadAvailabilityEnum `queryParam:"style=form,explode=true,name=download_availability"`
 	// Show licenses created before the specified date
@@ -86,11 +86,6 @@ type GetEditorialImageLicenseListQueryParams struct {
 	TeamHistory *bool `queryParam:"style=form,explode=true,name=team_history"`
 	// Filter licenses by username of licensee
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetEditorialImageLicenseListRequest struct {
-	QueryParams GetEditorialImageLicenseListQueryParams
-	Security    GetEditorialImageLicenseListSecurity
 }
 
 type GetEditorialImageLicenseListResponse struct {

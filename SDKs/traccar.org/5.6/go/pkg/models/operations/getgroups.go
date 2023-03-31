@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsQueryParams struct {
+type GetGroupsRequest struct {
 	// Can only be used by admins or managers to fetch all entities
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Standard users can use this only with their own _userId_
 	UserID *int64 `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetGroupsRequest struct {
-	QueryParams GetGroupsQueryParams
 }
 
 type GetGroupsResponse struct {

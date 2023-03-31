@@ -13,15 +13,13 @@ var ListCallServerList = []string{
 }
 
 type ListCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCallPathParams struct {
+type ListCallRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListCallQueryParams struct {
 	// Only include calls that ended on this date. Specify a date as `YYYY-MM-DD` in GMT, for example: `2009-07-06`, to read only calls that ended on this date. You can also specify an inequality, such as `EndTime<=YYYY-MM-DD`, to read calls that ended on or before midnight of this date, and `EndTime>=YYYY-MM-DD` to read calls that ended on or after midnight of this date.
 	EndTime *time.Time `queryParam:"style=form,explode=true,name=EndTime"`
 	// Only include calls that ended on this date. Specify a date as `YYYY-MM-DD` in GMT, for example: `2009-07-06`, to read only calls that ended on this date. You can also specify an inequality, such as `EndTime<=YYYY-MM-DD`, to read calls that ended on or before midnight of this date, and `EndTime>=YYYY-MM-DD` to read calls that ended on or after midnight of this date.
@@ -48,13 +46,6 @@ type ListCallQueryParams struct {
 	Status *shared.CallEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// Only show calls made to this phone number, SIP address, Client identifier or SIM SID.
 	To *string `queryParam:"style=form,explode=true,name=To"`
-}
-
-type ListCallRequest struct {
-	PathParams  ListCallPathParams
-	QueryParams ListCallQueryParams
-	Security    ListCallSecurity
-	ServerURL   *string
 }
 
 // ListCallListCallResponse - OK

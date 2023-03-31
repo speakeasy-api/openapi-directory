@@ -3,31 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
-req = operations.GetAcceptReservedNodeExchangeRequest(
-    query_params=operations.GetAcceptReservedNodeExchangeQueryParams(
-        action="AcceptReservedNodeExchange",
-        reserved_node_id="maxime",
-        target_reserved_node_offering_id="ipsa",
-        version="2012-12-01",
-    ),
-    headers=operations.GetAcceptReservedNodeExchangeHeaders(
-        x_amz_algorithm="autem",
-        x_amz_content_sha256="magni",
-        x_amz_credential="recusandae",
-        x_amz_date="et",
-        x_amz_security_token="dolorem",
-        x_amz_signature="saepe",
-        x_amz_signed_headers="minus",
-    ),
+
+
+req = operations.GETAcceptReservedNodeExchangeRequest(
+    action="AcceptReservedNodeExchange",
+    reserved_node_id="corrupti",
+    target_reserved_node_offering_id="provident",
+    version="2012-12-01",
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
 )
     
 res = s.get_accept_reserved_node_exchange(req)

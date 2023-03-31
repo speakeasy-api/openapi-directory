@@ -13,15 +13,13 @@ var ListUsageRecordDailyServerList = []string{
 }
 
 type ListUsageRecordDailySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUsageRecordDailyPathParams struct {
+type ListUsageRecordDailyRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListUsageRecordDailyQueryParams struct {
 	// The [usage category](https://www.twilio.com/docs/usage/api/usage-record#usage-categories) of the UsageRecord resources to read. Only UsageRecord resources in the specified category are retrieved.
 	Category *shared.UsageRecordDailyEnumCategoryEnum `queryParam:"style=form,explode=true,name=Category"`
 	// Only include usage that occurred on or before this date. Specify the date in GMT and format as `YYYY-MM-DD`.  You can also specify offsets from the current date, such as: `+30days`, which will set the end date to 30 days from the current date.
@@ -36,13 +34,6 @@ type ListUsageRecordDailyQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Only include usage that has occurred on or after this date. Specify the date in GMT and format as `YYYY-MM-DD`. You can also specify offsets from the current date, such as: `-30days`, which will set the start date to be 30 days before the current date.
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListUsageRecordDailyRequest struct {
-	PathParams  ListUsageRecordDailyPathParams
-	QueryParams ListUsageRecordDailyQueryParams
-	Security    ListUsageRecordDailySecurity
-	ServerURL   *string
 }
 
 // ListUsageRecordDailyListUsageRecordDailyResponse - OK

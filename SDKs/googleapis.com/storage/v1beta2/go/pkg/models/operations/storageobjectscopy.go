@@ -10,29 +10,18 @@ import (
 )
 
 type StorageObjectsCopySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsCopySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsCopySecurity struct {
 	Option1 *StorageObjectsCopySecurityOption1 `security:"option"`
 	Option2 *StorageObjectsCopySecurityOption2 `security:"option"`
-}
-
-type StorageObjectsCopyPathParams struct {
-	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
-	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
-	// Name of the new object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any.
-	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
-	// Name of the bucket in which to find the source object.
-	SourceBucket string `pathParam:"style=simple,explode=false,name=sourceBucket"`
-	// Name of the source object.
-	SourceObject string `pathParam:"style=simple,explode=false,name=sourceObject"`
 }
 
 // StorageObjectsCopyProjectionEnum - Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
@@ -59,9 +48,14 @@ func (e *StorageObjectsCopyProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsCopyQueryParams struct {
+type StorageObjectsCopyRequest struct {
+	Object *shared.Object `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
+	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
+	// Name of the new object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any.
+	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the operation conditional on whether the destination object's current generation matches the given value.
@@ -90,17 +84,14 @@ type StorageObjectsCopyQueryParams struct {
 	Projection *StorageObjectsCopyProjectionEnum `queryParam:"style=form,explode=true,name=projection"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Name of the bucket in which to find the source object.
+	SourceBucket string `pathParam:"style=simple,explode=false,name=sourceBucket"`
 	// If present, selects a specific revision of the source object (as opposed to the latest version, the default).
 	SourceGeneration *string `queryParam:"style=form,explode=true,name=sourceGeneration"`
+	// Name of the source object.
+	SourceObject string `pathParam:"style=simple,explode=false,name=sourceObject"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectsCopyRequest struct {
-	PathParams  StorageObjectsCopyPathParams
-	QueryParams StorageObjectsCopyQueryParams
-	Request     *shared.Object `request:"mediaType=application/json"`
-	Security    StorageObjectsCopySecurity
 }
 
 type StorageObjectsCopyResponse struct {

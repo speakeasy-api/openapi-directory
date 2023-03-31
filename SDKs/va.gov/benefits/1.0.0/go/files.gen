@@ -18,7 +18,6 @@ pkg/models/operations/getbenefitsdocumentuploadstatusreport.go
 pkg/models/operations/postbenefitsdocumentupload.go
 pkg/models/operations/postbenefitsdocumentuploadvalidatedocument.go
 pkg/models/operations/putbenefitsdocumentupload.go
-pkg/models/shared/security.go
 pkg/models/shared/documentuploadstatus.go
 pkg/models/shared/documentuploadstatusattributes.go
 pkg/models/shared/pdfuploadattributes.go

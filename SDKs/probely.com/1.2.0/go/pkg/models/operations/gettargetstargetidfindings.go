@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDFindingsPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDFindingsQueryParams struct {
+type GetTargetsTargetIDFindingsRequest struct {
 	// Filter by assignee ids
 	Assignee []string `queryParam:"style=form,explode=true,name=assignee"`
 	// Filter by finding labels
@@ -32,11 +27,8 @@ type GetTargetsTargetIDFindingsQueryParams struct {
 	Severity *shared.FindingSeverityEnum `queryParam:"style=form,explode=true,name=severity"`
 	// Filter by finding states
 	State *shared.FindingStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetTargetsTargetIDFindingsRequest struct {
-	PathParams  GetTargetsTargetIDFindingsPathParams
-	QueryParams GetTargetsTargetIDFindingsQueryParams
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // GetTargetsTargetIDFindings404ApplicationJSON - Not found

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetbySkuIDPathParams struct {
-	// SKU's unique identifier in the marketplace.
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type GetbySkuIDHeaders struct {
+type GetbySkuIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetbySkuIDRequest struct {
-	PathParams GetbySkuIDPathParams
-	Headers    GetbySkuIDHeaders
+	// SKU's unique identifier in the marketplace.
+	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 // GetbySkuID200ApplicationJSON - Object with information about an SKU Binding.

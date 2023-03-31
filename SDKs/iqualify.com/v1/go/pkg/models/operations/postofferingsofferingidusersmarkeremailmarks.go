@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOfferingsOfferingIDUsersMarkerEmailMarksPathParams struct {
+type PostOfferingsOfferingIDUsersMarkerEmailMarksRequest struct {
+	// array of learners e-mails
+	RequestBody []string `request:"mediaType=application/json"`
 	// marker's email
 	MarkerEmail string `pathParam:"style=simple,explode=false,name=markerEmail"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type PostOfferingsOfferingIDUsersMarkerEmailMarksRequest struct {
-	PathParams PostOfferingsOfferingIDUsersMarkerEmailMarksPathParams
-	// array of learners e-mails
-	Request []string `request:"mediaType=application/json"`
 }
 
 type PostOfferingsOfferingIDUsersMarkerEmailMarksResponse struct {

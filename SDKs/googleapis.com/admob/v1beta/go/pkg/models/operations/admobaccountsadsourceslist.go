@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AdmobAccountsAdSourcesListPathParams struct {
-	// Required. The parent which owns this collection of ad sources. Format: accounts/{publisher_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdmobAccountsAdSourcesListQueryParams struct {
+type AdmobAccountsAdSourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type AdmobAccountsAdSourcesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListAdSources` call. Provide this to retrieve the subsequent page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent which owns this collection of ad sources. Format: accounts/{publisher_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type AdmobAccountsAdSourcesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdmobAccountsAdSourcesListRequest struct {
-	PathParams  AdmobAccountsAdSourcesListPathParams
-	QueryParams AdmobAccountsAdSourcesListQueryParams
 }
 
 type AdmobAccountsAdSourcesListResponse struct {

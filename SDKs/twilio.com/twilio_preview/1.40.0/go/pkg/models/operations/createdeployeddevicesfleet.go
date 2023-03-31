@@ -12,18 +12,13 @@ var CreateDeployedDevicesFleetServerList = []string{
 }
 
 type CreateDeployedDevicesFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDeployedDevicesFleetCreateDeployedDevicesFleetRequest struct {
 	// Provides a human readable descriptive text for this Fleet, up to 256 characters long.
 	FriendlyName *string `form:"name=FriendlyName"`
-}
-
-type CreateDeployedDevicesFleetRequest struct {
-	Request   *CreateDeployedDevicesFleetCreateDeployedDevicesFleetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateDeployedDevicesFleetSecurity
-	ServerURL *string
 }
 
 type CreateDeployedDevicesFleetResponse struct {

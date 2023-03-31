@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateSinglePaymentIntentSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateSinglePaymentIntentHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type CreateSinglePaymentIntentRequestBodyInvestmentInstructions struct {
@@ -122,9 +116,9 @@ type CreateSinglePaymentIntentRequestBody struct {
 }
 
 type CreateSinglePaymentIntentRequest struct {
-	Headers  CreateSinglePaymentIntentHeaders
-	Request  CreateSinglePaymentIntentRequestBody `request:"mediaType=application/json"`
-	Security CreateSinglePaymentIntentSecurity
+	RequestBody CreateSinglePaymentIntentRequestBody `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateSinglePaymentIntent500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

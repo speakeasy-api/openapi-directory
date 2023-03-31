@@ -4,289 +4,384 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BatchProjectsLocationsJobsCreateRequest(
-    security=operations.BatchProjectsLocationsJobsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.BatchProjectsLocationsJobsCreatePathParams(
-        parent="nostrum",
-    ),
-    query_params=operations.BatchProjectsLocationsJobsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="tempora",
-        alt="media",
-        callback="deserunt",
-        fields="nihil",
-        job_id="provident",
-        key="magni",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="accusamus",
-        request_id="asperiores",
-        upload_type="ea",
-        upload_protocol="veritatis",
-    ),
-    request=shared.JobInput(
+    dollar_xgafv="2",
+    job_input=shared.JobInput(
         allocation_policy=shared.AllocationPolicy(
             instances=[
                 shared.InstancePolicyOrTemplate(
-                    install_gpu_drivers=True,
-                    instance_template="molestiae",
+                    install_gpu_drivers=False,
+                    instance_template="distinctio",
                     policy=shared.InstancePolicy(
                         accelerators=[
+                            shared.Accelerator(
+                                count="unde",
+                                install_gpu_drivers=False,
+                                type="nulla",
+                            ),
+                            shared.Accelerator(
+                                count="corrupti",
+                                install_gpu_drivers=False,
+                                type="illum",
+                            ),
                             shared.Accelerator(
                                 count="vel",
-                                install_gpu_drivers=True,
-                                type="qui",
+                                install_gpu_drivers=False,
+                                type="error",
+                            ),
+                            shared.Accelerator(
+                                count="deserunt",
+                                install_gpu_drivers=False,
+                                type="suscipit",
                             ),
                         ],
+                        boot_disk=shared.Disk(
+                            disk_interface="iure",
+                            image="magnam",
+                            size_gb="debitis",
+                            snapshot="ipsa",
+                            type="delectus",
+                        ),
                         disks=[
                             shared.AttachedDisk(
-                                device_name="nulla",
-                                existing_disk="modi",
-                                new_disk=shared.Disk(
-                                    disk_interface="dignissimos",
-                                    image="beatae",
-                                    size_gb="esse",
-                                    snapshot="et",
-                                    type="eum",
-                                ),
-                            ),
-                            shared.AttachedDisk(
-                                device_name="aspernatur",
+                                device_name="suscipit",
                                 existing_disk="molestiae",
                                 new_disk=shared.Disk(
-                                    disk_interface="minima",
-                                    image="modi",
-                                    size_gb="quo",
-                                    snapshot="molestiae",
-                                    type="porro",
+                                    disk_interface="minus",
+                                    image="placeat",
+                                    size_gb="voluptatum",
+                                    snapshot="iusto",
+                                    type="excepturi",
                                 ),
                             ),
                             shared.AttachedDisk(
-                                device_name="provident",
-                                existing_disk="sequi",
+                                device_name="nisi",
+                                existing_disk="recusandae",
                                 new_disk=shared.Disk(
-                                    disk_interface="molestiae",
-                                    image="dolor",
-                                    size_gb="pariatur",
-                                    snapshot="hic",
-                                    type="sed",
+                                    disk_interface="temporibus",
+                                    image="ab",
+                                    size_gb="quis",
+                                    snapshot="veritatis",
+                                    type="deserunt",
                                 ),
                             ),
                         ],
-                        machine_type="dolores",
-                        min_cpu_platform="quae",
-                        provisioning_model="STANDARD",
-                    ),
-                ),
-                shared.InstancePolicyOrTemplate(
-                    install_gpu_drivers=True,
-                    instance_template="reprehenderit",
-                    policy=shared.InstancePolicy(
-                        accelerators=[
-                            shared.Accelerator(
-                                count="nesciunt",
-                                install_gpu_drivers=True,
-                                type="dolores",
-                            ),
-                            shared.Accelerator(
-                                count="dicta",
-                                install_gpu_drivers=True,
-                                type="et",
-                            ),
-                            shared.Accelerator(
-                                count="nisi",
-                                install_gpu_drivers=True,
-                                type="totam",
-                            ),
-                        ],
-                        disks=[
-                            shared.AttachedDisk(
-                                device_name="ea",
-                                existing_disk="ipsa",
-                                new_disk=shared.Disk(
-                                    disk_interface="sed",
-                                    image="voluptatem",
-                                    size_gb="repellendus",
-                                    snapshot="beatae",
-                                    type="cumque",
-                                ),
-                            ),
-                            shared.AttachedDisk(
-                                device_name="pariatur",
-                                existing_disk="possimus",
-                                new_disk=shared.Disk(
-                                    disk_interface="aperiam",
-                                    image="accusantium",
-                                    size_gb="et",
-                                    snapshot="mollitia",
-                                    type="voluptatum",
-                                ),
-                            ),
-                        ],
-                        machine_type="nisi",
-                        min_cpu_platform="pariatur",
-                        provisioning_model="STANDARD",
+                        machine_type="perferendis",
+                        min_cpu_platform="ipsam",
+                        provisioning_model="PREEMPTIBLE",
                     ),
                 ),
                 shared.InstancePolicyOrTemplate(
                     install_gpu_drivers=False,
-                    instance_template="earum",
+                    instance_template="sapiente",
                     policy=shared.InstancePolicy(
                         accelerators=[
                             shared.Accelerator(
-                                count="ab",
-                                install_gpu_drivers=True,
-                                type="earum",
+                                count="odit",
+                                install_gpu_drivers=False,
+                                type="at",
+                            ),
+                            shared.Accelerator(
+                                count="at",
+                                install_gpu_drivers=False,
+                                type="maiores",
+                            ),
+                            shared.Accelerator(
+                                count="molestiae",
+                                install_gpu_drivers=False,
+                                type="quod",
+                            ),
+                            shared.Accelerator(
+                                count="quod",
+                                install_gpu_drivers=False,
+                                type="esse",
                             ),
                         ],
+                        boot_disk=shared.Disk(
+                            disk_interface="totam",
+                            image="porro",
+                            size_gb="dolorum",
+                            snapshot="dicta",
+                            type="nam",
+                        ),
                         disks=[
                             shared.AttachedDisk(
-                                device_name="neque",
-                                existing_disk="ullam",
+                                device_name="occaecati",
+                                existing_disk="fugit",
                                 new_disk=shared.Disk(
-                                    disk_interface="adipisci",
-                                    image="quia",
-                                    size_gb="soluta",
-                                    snapshot="nulla",
-                                    type="aut",
+                                    disk_interface="deleniti",
+                                    image="hic",
+                                    size_gb="optio",
+                                    snapshot="totam",
+                                    type="beatae",
                                 ),
                             ),
                             shared.AttachedDisk(
-                                device_name="voluptatibus",
-                                existing_disk="omnis",
+                                device_name="commodi",
+                                existing_disk="molestiae",
                                 new_disk=shared.Disk(
-                                    disk_interface="deleniti",
-                                    image="libero",
-                                    size_gb="dolorum",
-                                    snapshot="voluptatem",
-                                    type="impedit",
+                                    disk_interface="modi",
+                                    image="qui",
+                                    size_gb="impedit",
+                                    snapshot="cum",
+                                    type="esse",
+                                ),
+                            ),
+                            shared.AttachedDisk(
+                                device_name="ipsum",
+                                existing_disk="excepturi",
+                                new_disk=shared.Disk(
+                                    disk_interface="aspernatur",
+                                    image="perferendis",
+                                    size_gb="ad",
+                                    snapshot="natus",
+                                    type="sed",
                                 ),
                             ),
                         ],
-                        machine_type="ipsa",
-                        min_cpu_platform="qui",
-                        provisioning_model="PREEMPTIBLE",
+                        machine_type="iste",
+                        min_cpu_platform="dolor",
+                        provisioning_model="SPOT",
+                    ),
+                ),
+                shared.InstancePolicyOrTemplate(
+                    install_gpu_drivers=False,
+                    instance_template="laboriosam",
+                    policy=shared.InstancePolicy(
+                        accelerators=[
+                            shared.Accelerator(
+                                count="saepe",
+                                install_gpu_drivers=False,
+                                type="fuga",
+                            ),
+                            shared.Accelerator(
+                                count="in",
+                                install_gpu_drivers=False,
+                                type="corporis",
+                            ),
+                            shared.Accelerator(
+                                count="iste",
+                                install_gpu_drivers=False,
+                                type="iure",
+                            ),
+                            shared.Accelerator(
+                                count="saepe",
+                                install_gpu_drivers=False,
+                                type="quidem",
+                            ),
+                        ],
+                        boot_disk=shared.Disk(
+                            disk_interface="architecto",
+                            image="ipsa",
+                            size_gb="reiciendis",
+                            snapshot="est",
+                            type="mollitia",
+                        ),
+                        disks=[
+                            shared.AttachedDisk(
+                                device_name="dolores",
+                                existing_disk="dolorem",
+                                new_disk=shared.Disk(
+                                    disk_interface="corporis",
+                                    image="explicabo",
+                                    size_gb="nobis",
+                                    snapshot="enim",
+                                    type="omnis",
+                                ),
+                            ),
+                            shared.AttachedDisk(
+                                device_name="nemo",
+                                existing_disk="minima",
+                                new_disk=shared.Disk(
+                                    disk_interface="excepturi",
+                                    image="accusantium",
+                                    size_gb="iure",
+                                    snapshot="culpa",
+                                    type="doloribus",
+                                ),
+                            ),
+                            shared.AttachedDisk(
+                                device_name="sapiente",
+                                existing_disk="architecto",
+                                new_disk=shared.Disk(
+                                    disk_interface="mollitia",
+                                    image="dolorem",
+                                    size_gb="culpa",
+                                    snapshot="consequuntur",
+                                    type="repellat",
+                                ),
+                            ),
+                        ],
+                        machine_type="mollitia",
+                        min_cpu_platform="occaecati",
+                        provisioning_model="STANDARD",
                     ),
                 ),
             ],
             labels={
-                "iste": "fugiat",
-                "minus": "laborum",
-                "eos": "illo",
+                "quam": "molestiae",
+                "velit": "error",
             },
             location=shared.LocationPolicy(
                 allowed_locations=[
-                    "debitis",
+                    "quis",
                 ],
             ),
             network=shared.NetworkPolicy(
                 network_interfaces=[
                     shared.NetworkInterface(
-                        network="dolorem",
+                        network="laborum",
                         no_external_ip_address=False,
-                        subnetwork="et",
-                    ),
-                    shared.NetworkInterface(
-                        network="ad",
-                        no_external_ip_address=True,
-                        subnetwork="et",
+                        subnetwork="animi",
                     ),
                 ],
             ),
             service_account=shared.ServiceAccount(
-                email="beatae",
+                email="Britney94@gmail.com",
+                scopes=[
+                    "id",
+                    "possimus",
+                ],
             ),
         ),
         labels={
-            "ea": "libero",
+            "quasi": "error",
         },
         logs_policy=shared.LogsPolicy(
-            destination="DESTINATION_UNSPECIFIED",
-            logs_path="eos",
+            destination="PATH",
+            logs_path="laborum",
         ),
         notifications=[
             shared.JobNotification(
                 message=shared.Message(
                     new_job_state="DELETION_IN_PROGRESS",
-                    new_task_state="RUNNING",
-                    type="JOB_STATE_CHANGED",
+                    new_task_state="SUCCEEDED",
+                    type="TASK_STATE_CHANGED",
                 ),
-                pubsub_topic="voluptas",
+                pubsub_topic="nihil",
             ),
         ],
-        priority="sapiente",
+        priority="praesentium",
         status=shared.JobStatus(
-            run_duration="iure",
+            run_duration="voluptatibus",
             state="STATE_UNSPECIFIED",
             status_events=[
                 shared.StatusEvent(
-                    description="quod",
-                    event_time="soluta",
+                    description="voluptate",
+                    event_time="cum",
                     task_execution=shared.TaskExecution(
-                        exit_code=4831452067150929985,
+                        exit_code=19987,
                     ),
-                    type="qui",
+                    task_state="STATE_UNSPECIFIED",
+                    type="reprehenderit",
                 ),
                 shared.StatusEvent(
-                    description="doloremque",
-                    event_time="nisi",
+                    description="ut",
+                    event_time="maiores",
                     task_execution=shared.TaskExecution(
-                        exit_code=2332523520286397549,
+                        exit_code=120196,
                     ),
-                    type="omnis",
+                    task_state="ASSIGNED",
+                    type="dolore",
                 ),
                 shared.StatusEvent(
-                    description="debitis",
-                    event_time="voluptatem",
+                    description="iusto",
+                    event_time="dicta",
                     task_execution=shared.TaskExecution(
-                        exit_code=1264816207080619033,
+                        exit_code=688661,
                     ),
-                    type="voluptatem",
+                    task_state="PENDING",
+                    type="accusamus",
                 ),
             ],
             task_groups={
-                "laboriosam": shared.TaskGroupStatus(
+                "repudiandae": shared.TaskGroupStatus(
                     counts={
-                        "aut": "aut",
-                        "libero": "dolorem",
+                        "ipsum": "quidem",
                     },
                     instances=[
                         shared.InstanceStatus(
-                            machine_type="sunt",
+                            boot_disk=shared.Disk(
+                                disk_interface="excepturi",
+                                image="pariatur",
+                                size_gb="modi",
+                                snapshot="praesentium",
+                                type="rem",
+                            ),
+                            machine_type="voluptates",
+                            provisioning_model="PROVISIONING_MODEL_UNSPECIFIED",
+                            task_pack="repudiandae",
+                        ),
+                        shared.InstanceStatus(
+                            boot_disk=shared.Disk(
+                                disk_interface="sint",
+                                image="veritatis",
+                                size_gb="itaque",
+                                snapshot="incidunt",
+                                type="enim",
+                            ),
+                            machine_type="consequatur",
                             provisioning_model="SPOT",
-                            task_pack="autem",
+                            task_pack="quibusdam",
+                        ),
+                        shared.InstanceStatus(
+                            boot_disk=shared.Disk(
+                                disk_interface="explicabo",
+                                image="deserunt",
+                                size_gb="distinctio",
+                                snapshot="quibusdam",
+                                type="labore",
+                            ),
+                            machine_type="modi",
+                            provisioning_model="PROVISIONING_MODEL_UNSPECIFIED",
+                            task_pack="aliquid",
                         ),
                     ],
                 ),
-                "commodi": shared.TaskGroupStatus(
+                "cupiditate": shared.TaskGroupStatus(
                     counts={
-                        "incidunt": "dolorum",
+                        "perferendis": "magni",
+                        "assumenda": "ipsam",
+                        "alias": "fugit",
                     },
                     instances=[
                         shared.InstanceStatus(
-                            machine_type="molestiae",
-                            provisioning_model="PREEMPTIBLE",
-                            task_pack="tempora",
-                        ),
-                    ],
-                ),
-                "distinctio": shared.TaskGroupStatus(
-                    counts={
-                        "rem": "est",
-                    },
-                    instances=[
-                        shared.InstanceStatus(
-                            machine_type="qui",
+                            boot_disk=shared.Disk(
+                                disk_interface="excepturi",
+                                image="tempora",
+                                size_gb="facilis",
+                                snapshot="tempore",
+                                type="labore",
+                            ),
+                            machine_type="delectus",
                             provisioning_model="STANDARD",
-                            task_pack="et",
+                            task_pack="non",
+                        ),
+                        shared.InstanceStatus(
+                            boot_disk=shared.Disk(
+                                disk_interface="eligendi",
+                                image="sint",
+                                size_gb="aliquid",
+                                snapshot="provident",
+                                type="necessitatibus",
+                            ),
+                            machine_type="sint",
+                            provisioning_model="SPOT",
+                            task_pack="dolor",
+                        ),
+                        shared.InstanceStatus(
+                            boot_disk=shared.Disk(
+                                disk_interface="debitis",
+                                image="a",
+                                size_gb="dolorum",
+                                snapshot="in",
+                                type="in",
+                            ),
+                            machine_type="illum",
+                            provisioning_model="PREEMPTIBLE",
+                            task_pack="rerum",
                         ),
                     ],
                 ),
@@ -294,206 +389,76 @@ req = operations.BatchProjectsLocationsJobsCreateRequest(
         ),
         task_groups=[
             shared.TaskGroupInput(
-                parallelism="et",
-                permissive_ssh=True,
-                require_hosts_file=True,
-                task_count="ex",
-                task_count_per_node="sint",
-                task_environments=[
-                    shared.Environment(
-                        variables={
-                            "voluptatem": "sapiente",
-                        },
-                    ),
-                    shared.Environment(
-                        variables={
-                            "est": "sit",
-                            "repellat": "earum",
-                            "in": "ut",
-                        },
-                    ),
-                    shared.Environment(
-                        variables={
-                            "laboriosam": "numquam",
-                            "aperiam": "veniam",
-                            "in": "voluptatem",
-                        },
-                    ),
-                ],
-                task_spec=shared.TaskSpec(
-                    compute_resource=shared.ComputeResource(
-                        boot_disk_mib="ut",
-                        cpu_milli="debitis",
-                        memory_mib="id",
-                    ),
-                    environment=shared.Environment(
-                        variables={
-                            "ut": "fuga",
-                            "velit": "ullam",
-                        },
-                    ),
-                    environments={
-                        "suscipit": "molestiae",
-                    },
-                    lifecycle_policies=[
-                        shared.LifecyclePolicy(
-                            action="RETRY_TASK",
-                            action_condition=shared.ActionCondition(
-                                exit_codes=[
-                                    3820347514480084000,
-                                    3344327154756972185,
-                                ],
-                            ),
-                        ),
-                        shared.LifecyclePolicy(
-                            action="FAIL_TASK",
-                            action_condition=shared.ActionCondition(
-                                exit_codes=[
-                                    6937037417593652038,
-                                ],
-                            ),
-                        ),
-                        shared.LifecyclePolicy(
-                            action="RETRY_TASK",
-                            action_condition=shared.ActionCondition(
-                                exit_codes=[
-                                    5933233700664786384,
-                                    5035964688981552535,
-                                ],
-                            ),
-                        ),
-                    ],
-                    max_retry_count=8505737205951363350,
-                    max_run_duration="voluptates",
-                    runnables=[
-                        shared.Runnable(
-                            always_run=True,
-                            background=True,
-                            barrier=shared.Barrier(
-                                name="et",
-                            ),
-                            container=shared.Container(
-                                block_external_network=False,
-                                commands=[
-                                    "corporis",
-                                    "ea",
-                                ],
-                                entrypoint="adipisci",
-                                image_uri="sit",
-                                options="sunt",
-                                password="numquam",
-                                username="et",
-                                volumes=[
-                                    "consequatur",
-                                ],
-                            ),
-                            environment=shared.Environment(
-                                variables={
-                                    "delectus": "vel",
-                                },
-                            ),
-                            ignore_exit_status=True,
-                            script=shared.Script(
-                                path="impedit",
-                                text="animi",
-                            ),
-                            timeout="sint",
-                        ),
-                    ],
-                    volumes=[
-                        shared.Volume(
-                            device_name="dolores",
-                            gcs=shared.Gcs(
-                                remote_path="sed",
-                            ),
-                            mount_options=[
-                                "quidem",
-                            ],
-                            mount_path="reiciendis",
-                            nfs=shared.Nfs(
-                                remote_path="velit",
-                                server="ut",
-                            ),
-                        ),
-                        shared.Volume(
-                            device_name="cumque",
-                            gcs=shared.Gcs(
-                                remote_path="dolor",
-                            ),
-                            mount_options=[
-                                "dolor",
-                                "et",
-                                "officiis",
-                            ],
-                            mount_path="quo",
-                            nfs=shared.Nfs(
-                                remote_path="aut",
-                                server="et",
-                            ),
-                        ),
-                        shared.Volume(
-                            device_name="dolorem",
-                            gcs=shared.Gcs(
-                                remote_path="aut",
-                            ),
-                            mount_options=[
-                                "iste",
-                                "autem",
-                                "odio",
-                            ],
-                            mount_path="soluta",
-                            nfs=shared.Nfs(
-                                remote_path="porro",
-                                server="omnis",
-                            ),
-                        ),
-                    ],
-                ),
-            ),
-            shared.TaskGroupInput(
-                parallelism="et",
+                parallelism="magnam",
                 permissive_ssh=False,
                 require_hosts_file=False,
-                task_count="reiciendis",
-                task_count_per_node="et",
+                task_count="cumque",
+                task_count_per_node="facere",
                 task_environments=[
                     shared.Environment(
+                        encrypted_variables=shared.KMSEnvMap(
+                            cipher_text="aliquid",
+                            key_name="laborum",
+                        ),
+                        secret_variables={
+                            "non": "occaecati",
+                            "enim": "accusamus",
+                            "delectus": "quidem",
+                            "provident": "nam",
+                        },
                         variables={
-                            "sit": "assumenda",
+                            "blanditiis": "deleniti",
+                            "sapiente": "amet",
+                            "deserunt": "nisi",
+                        },
+                    ),
+                    shared.Environment(
+                        encrypted_variables=shared.KMSEnvMap(
+                            cipher_text="vel",
+                            key_name="natus",
+                        ),
+                        secret_variables={
+                            "molestiae": "perferendis",
+                            "nihil": "magnam",
+                            "distinctio": "id",
+                        },
+                        variables={
+                            "labore": "suscipit",
+                            "natus": "nobis",
                         },
                     ),
                 ],
                 task_spec=shared.TaskSpec(
                     compute_resource=shared.ComputeResource(
-                        boot_disk_mib="minus",
-                        cpu_milli="voluptatibus",
-                        memory_mib="aut",
+                        boot_disk_mib="eum",
+                        cpu_milli="vero",
+                        memory_mib="aspernatur",
                     ),
                     environment=shared.Environment(
+                        encrypted_variables=shared.KMSEnvMap(
+                            cipher_text="architecto",
+                            key_name="magnam",
+                        ),
+                        secret_variables={
+                            "excepturi": "ullam",
+                        },
                         variables={
-                            "doloribus": "est",
-                            "praesentium": "distinctio",
+                            "quos": "sint",
+                            "accusantium": "mollitia",
+                            "reiciendis": "mollitia",
                         },
                     ),
                     environments={
-                        "mollitia": "iure",
-                        "nulla": "officiis",
+                        "eum": "dolor",
+                        "necessitatibus": "odit",
                     },
                     lifecycle_policies=[
                         shared.LifecyclePolicy(
-                            action="RETRY_TASK",
+                            action="ACTION_UNSPECIFIED",
                             action_condition=shared.ActionCondition(
                                 exit_codes=[
-                                    8490979167950514602,
-                                ],
-                            ),
-                        ),
-                        shared.LifecyclePolicy(
-                            action="FAIL_TASK",
-                            action_condition=shared.ActionCondition(
-                                exit_codes=[
-                                    5974282707100491270,
-                                    2339931246899802995,
+                                    984043,
+                                    891924,
                                 ],
                             ),
                         ),
@@ -501,66 +466,171 @@ req = operations.BatchProjectsLocationsJobsCreateRequest(
                             action="ACTION_UNSPECIFIED",
                             action_condition=shared.ActionCondition(
                                 exit_codes=[
-                                    4894825553613291534,
-                                    8207957692048737165,
-                                    9158996368869269916,
+                                    537023,
+                                    703889,
+                                    447926,
+                                    100226,
                                 ],
                             ),
                         ),
                     ],
-                    max_retry_count=4686911943399463022,
-                    max_run_duration="vero",
+                    max_retry_count=99569,
+                    max_run_duration="repudiandae",
                     runnables=[
                         shared.Runnable(
-                            always_run=True,
+                            always_run=False,
                             background=False,
                             barrier=shared.Barrier(
-                                name="odio",
+                                name="expedita",
                             ),
                             container=shared.Container(
                                 block_external_network=False,
                                 commands=[
-                                    "enim",
+                                    "repellat",
+                                    "quibusdam",
                                 ],
-                                entrypoint="dolores",
-                                image_uri="et",
-                                options="natus",
-                                password="sunt",
-                                username="ut",
+                                entrypoint="sed",
+                                image_uri="saepe",
+                                options="pariatur",
+                                password="accusantium",
+                                username="Carroll.Lang",
                                 volumes=[
-                                    "iure",
-                                    "neque",
-                                    "quia",
+                                    "quo",
                                 ],
                             ),
                             environment=shared.Environment(
+                                encrypted_variables=shared.KMSEnvMap(
+                                    cipher_text="illum",
+                                    key_name="pariatur",
+                                ),
+                                secret_variables={
+                                    "ea": "excepturi",
+                                    "odit": "ea",
+                                    "accusantium": "ab",
+                                    "maiores": "quidem",
+                                },
                                 variables={
-                                    "officiis": "suscipit",
+                                    "voluptate": "autem",
+                                    "nam": "eaque",
                                 },
                             ),
-                            ignore_exit_status=True,
+                            ignore_exit_status=False,
                             script=shared.Script(
-                                path="aut",
-                                text="qui",
+                                path="pariatur",
+                                text="nemo",
                             ),
-                            timeout="nostrum",
+                            timeout="voluptatibus",
+                        ),
+                        shared.Runnable(
+                            always_run=False,
+                            background=False,
+                            barrier=shared.Barrier(
+                                name="perferendis",
+                            ),
+                            container=shared.Container(
+                                block_external_network=False,
+                                commands=[
+                                    "amet",
+                                    "aut",
+                                    "cumque",
+                                    "corporis",
+                                ],
+                                entrypoint="hic",
+                                image_uri="libero",
+                                options="nobis",
+                                password="dolores",
+                                username="Eulalia.Lebsack",
+                                volumes=[
+                                    "nesciunt",
+                                    "eos",
+                                ],
+                            ),
+                            environment=shared.Environment(
+                                encrypted_variables=shared.KMSEnvMap(
+                                    cipher_text="perferendis",
+                                    key_name="dolores",
+                                ),
+                                secret_variables={
+                                    "quam": "dolor",
+                                    "vero": "nostrum",
+                                    "hic": "recusandae",
+                                    "omnis": "facilis",
+                                },
+                                variables={
+                                    "voluptatem": "porro",
+                                    "consequuntur": "blanditiis",
+                                    "error": "eaque",
+                                },
+                            ),
+                            ignore_exit_status=False,
+                            script=shared.Script(
+                                path="occaecati",
+                                text="rerum",
+                            ),
+                            timeout="adipisci",
                         ),
                     ],
                     volumes=[
                         shared.Volume(
-                            device_name="dolorem",
+                            device_name="earum",
                             gcs=shared.Gcs(
-                                remote_path="recusandae",
+                                remote_path="modi",
                             ),
                             mount_options=[
-                                "ad",
-                                "ipsum",
-                                "labore",
+                                "dolorum",
+                                "deleniti",
+                                "pariatur",
                             ],
-                            mount_path="omnis",
+                            mount_path="provident",
                             nfs=shared.Nfs(
-                                remote_path="sequi",
-                                server="velit",
+                                remote_path="nobis",
+                                server="libero",
+                            ),
+                        ),
+                        shared.Volume(
+                            device_name="delectus",
+                            gcs=shared.Gcs(
+                                remote_path="quaerat",
+                            ),
+                            mount_options=[
+                                "aliquid",
+                                "dolorem",
+                                "dolorem",
+                            ],
+                            mount_path="dolor",
+                            nfs=shared.Nfs(
+                                remote_path="qui",
+                                server="ipsum",
+                            ),
+                        ),
+                        shared.Volume(
+                            device_name="hic",
+                            gcs=shared.Gcs(
+                                remote_path="excepturi",
+                            ),
+                            mount_options=[
+                                "voluptate",
+                                "dignissimos",
+                                "reiciendis",
+                            ],
+                            mount_path="amet",
+                            nfs=shared.Nfs(
+                                remote_path="dolorum",
+                                server="numquam",
+                            ),
+                        ),
+                        shared.Volume(
+                            device_name="veritatis",
+                            gcs=shared.Gcs(
+                                remote_path="ipsa",
+                            ),
+                            mount_options=[
+                                "iure",
+                            ],
+                            mount_path="odio",
+                            nfs=shared.Nfs(
+                                remote_path="quaerat",
+                                server="accusamus",
                             ),
                         ),
                     ],
@@ -568,9 +638,25 @@ req = operations.BatchProjectsLocationsJobsCreateRequest(
             ),
         ],
     ),
+    access_token="quidem",
+    alt="proto",
+    callback="voluptas",
+    fields_="natus",
+    job_id="eos",
+    key="atque",
+    oauth_token="sit",
+    parent="fugiat",
+    pretty_print=False,
+    quota_user="ab",
+    request_id="soluta",
+    upload_type="dolorum",
+    upload_protocol="iusto",
 )
     
-res = s.projects.batch_projects_locations_jobs_create(req)
+res = s.projects.batch_projects_locations_jobs_create(req, operations.BatchProjectsLocationsJobsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.job is not None:
     # handle response

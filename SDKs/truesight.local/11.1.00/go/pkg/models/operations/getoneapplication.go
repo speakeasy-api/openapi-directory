@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOneApplicationPathParams struct {
+type GetOneApplicationRequest struct {
 	// The ID of the application.
 	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type GetOneApplicationRequest struct {
-	PathParams GetOneApplicationPathParams
 }
 
 type GetOneApplicationResponse struct {

@@ -10,10 +10,6 @@ type DeletechargingscheduleRequestBody struct {
 	ID *string `json:"id,omitempty"`
 }
 
-type DeletechargingscheduleRequest struct {
-	Request DeletechargingscheduleRequestBody `request:"mediaType=application/json"`
-}
-
 // Deletechargingschedule201ApplicationJSON - A successful response
 type Deletechargingschedule201ApplicationJSON struct {
 	Command map[string]interface{} `json:"command,omitempty"`

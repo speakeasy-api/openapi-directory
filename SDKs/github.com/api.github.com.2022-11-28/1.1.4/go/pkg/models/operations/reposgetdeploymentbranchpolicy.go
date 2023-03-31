@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetDeploymentBranchPolicyPathParams struct {
+type ReposGetDeploymentBranchPolicyRequest struct {
 	// The unique identifier of the branch policy.
 	BranchPolicyID int64 `pathParam:"style=simple,explode=false,name=branch_policy_id"`
 	// The name of the environment.
@@ -16,10 +16,6 @@ type ReposGetDeploymentBranchPolicyPathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetDeploymentBranchPolicyRequest struct {
-	PathParams ReposGetDeploymentBranchPolicyPathParams
 }
 
 type ReposGetDeploymentBranchPolicyResponse struct {

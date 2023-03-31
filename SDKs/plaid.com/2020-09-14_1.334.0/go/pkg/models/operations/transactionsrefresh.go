@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransactionsRefreshRequest struct {
-	Request shared.TransactionsRefreshRequest `request:"mediaType=application/json"`
-}
 
 type TransactionsRefreshResponse struct {
 	ContentType string

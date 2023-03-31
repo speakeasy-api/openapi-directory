@@ -8,13 +8,7 @@ import (
 )
 
 type CreateTrackCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type CreateTrackCollectionRequest struct {
-	// Collection metadata
-	Request  shared.CollectionCreateRequest `request:"mediaType=application/json"`
-	Security CreateTrackCollectionSecurity
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateTrackCollectionResponse struct {

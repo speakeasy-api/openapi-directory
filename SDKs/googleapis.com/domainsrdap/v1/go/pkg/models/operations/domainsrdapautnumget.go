@@ -7,17 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsrdapAutnumGetPathParams struct {
-	AutnumID string `pathParam:"style=simple,explode=false,name=autnumId"`
-}
-
-type DomainsrdapAutnumGetQueryParams struct {
+type DomainsrdapAutnumGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt      *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	AutnumID string          `pathParam:"style=simple,explode=false,name=autnumId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,11 +31,6 @@ type DomainsrdapAutnumGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DomainsrdapAutnumGetRequest struct {
-	PathParams  DomainsrdapAutnumGetPathParams
-	QueryParams DomainsrdapAutnumGetQueryParams
 }
 
 type DomainsrdapAutnumGetResponse struct {

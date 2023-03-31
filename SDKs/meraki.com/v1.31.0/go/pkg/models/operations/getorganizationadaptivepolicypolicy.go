@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAdaptivePolicyPolicyPathParams struct {
+type GetOrganizationAdaptivePolicyPolicyRequest struct {
 	ID             string `pathParam:"style=simple,explode=false,name=id"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationAdaptivePolicyPolicyRequest struct {
-	PathParams GetOrganizationAdaptivePolicyPolicyPathParams
 }
 
 type GetOrganizationAdaptivePolicyPolicyResponse struct {

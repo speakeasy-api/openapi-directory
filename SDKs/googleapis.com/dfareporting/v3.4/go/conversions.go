@@ -32,11 +32,11 @@ func newConversions(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DfareportingConversionsBatchinsert - Inserts conversions.
-func (s *conversions) DfareportingConversionsBatchinsert(ctx context.Context, request operations.DfareportingConversionsBatchinsertRequest) (*operations.DfareportingConversionsBatchinsertResponse, error) {
+func (s *conversions) DfareportingConversionsBatchinsert(ctx context.Context, request operations.DfareportingConversionsBatchinsertRequest, security operations.DfareportingConversionsBatchinsertSecurity) (*operations.DfareportingConversionsBatchinsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/conversions/batchinsert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/conversions/batchinsert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionsBatchInsertRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *conversions) DfareportingConversionsBatchinsert(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *conversions) DfareportingConversionsBatchinsert(ctx context.Context, re
 }
 
 // DfareportingConversionsBatchupdate - Updates existing conversions.
-func (s *conversions) DfareportingConversionsBatchupdate(ctx context.Context, request operations.DfareportingConversionsBatchupdateRequest) (*operations.DfareportingConversionsBatchupdateResponse, error) {
+func (s *conversions) DfareportingConversionsBatchupdate(ctx context.Context, request operations.DfareportingConversionsBatchupdateRequest, security operations.DfareportingConversionsBatchupdateSecurity) (*operations.DfareportingConversionsBatchupdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/conversions/batchupdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/conversions/batchupdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionsBatchUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *conversions) DfareportingConversionsBatchupdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -12,12 +12,8 @@ var UpdateChannelServerList = []string{
 }
 
 type UpdateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChannelPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChannelUpdateChannelRequest struct {
@@ -27,10 +23,9 @@ type UpdateChannelUpdateChannelRequest struct {
 }
 
 type UpdateChannelRequest struct {
-	PathParams UpdateChannelPathParams
-	Request    *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateChannelSecurity
-	ServerURL  *string
+	RequestBody *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid         string                             `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateChannelResponse struct {

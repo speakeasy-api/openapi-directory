@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionStartPathParams struct {
+type ProtocolTftpSessionStartRequest struct {
 	// Agent to start TFTP transaction
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SessionID
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionID"`
-}
-
-type ProtocolTftpSessionStartRequest struct {
-	PathParams ProtocolTftpSessionStartPathParams
 }
 
 type ProtocolTftpSessionStartResponse struct {

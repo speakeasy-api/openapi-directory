@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomerCertificatesByCustomerIDPathParams struct {
+type GetCustomerCertificatesByCustomerIDRequest struct {
 	// An identifier for a customer
 	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type GetCustomerCertificatesByCustomerIDQueryParams struct {
 	// Maximum number of items to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Number of results to skip for pagination
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetCustomerCertificatesByCustomerIDRequest struct {
-	PathParams  GetCustomerCertificatesByCustomerIDPathParams
-	QueryParams GetCustomerCertificatesByCustomerIDQueryParams
 }
 
 type GetCustomerCertificatesByCustomerIDResponse struct {

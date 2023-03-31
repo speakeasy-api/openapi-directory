@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisconnectCarrierPathParams struct {
+type DisconnectCarrierRequest struct {
 	// Carrier ID
 	CarrierID string `pathParam:"style=simple,explode=false,name=carrier_id"`
 	// The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
 	CarrierName shared.CarrierNameEnum `pathParam:"style=simple,explode=false,name=carrier_name"`
-}
-
-type DisconnectCarrierRequest struct {
-	PathParams DisconnectCarrierPathParams
 }
 
 type DisconnectCarrierResponse struct {

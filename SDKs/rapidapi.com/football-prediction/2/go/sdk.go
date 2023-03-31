@@ -101,7 +101,7 @@ func (s *SDK) GetAPIV2ListFederations(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -157,7 +157,7 @@ func (s *SDK) GetAPIV2ListMarkets(ctx context.Context, request operations.GetAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -213,7 +213,7 @@ func (s *SDK) GetAPIV2PerformanceStats(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -269,7 +269,7 @@ func (s *SDK) GetAPIV2Predictions(ctx context.Context, request operations.GetAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -309,7 +309,7 @@ func (s *SDK) GetAPIV2Predictions(ctx context.Context, request operations.GetAPI
 // GetAPIV2PredictionsID - Returns all predictions available for a match id.
 func (s *SDK) GetAPIV2PredictionsID(ctx context.Context, request operations.GetAPIV2PredictionsIDRequest) (*operations.GetAPIV2PredictionsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/predictions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/predictions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

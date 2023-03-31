@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpecificSentencePathParams struct {
+type GetSpecificSentenceRequest struct {
 	// Sentence ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpecificSentenceRequest struct {
-	PathParams GetSpecificSentencePathParams
 }
 
 type GetSpecificSentence200ApplicationJSON struct {

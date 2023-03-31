@@ -39,7 +39,7 @@ func newAssetsVolatility(defaultClient, securityClient HTTPClient, serverURL, la
 //
 // References
 // * [Wikipedia, Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation)
-func (s *assetsVolatility) PostAssetsVolatility(ctx context.Context, request operations.PostAssetsVolatilityRequest) (*operations.PostAssetsVolatilityResponse, error) {
+func (s *assetsVolatility) PostAssetsVolatility(ctx context.Context, request operations.PostAssetsVolatilityRequestBody) (*operations.PostAssetsVolatilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/volatility"
 

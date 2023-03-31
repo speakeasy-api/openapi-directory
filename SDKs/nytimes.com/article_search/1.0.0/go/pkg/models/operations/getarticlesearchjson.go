@@ -33,7 +33,7 @@ func (e *GetArticlesearchJSONSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetArticlesearchJSONQueryParams struct {
+type GetArticlesearchJSONRequest struct {
 	// "Format: YYYYMMDD
 	//
 	// Restricts responses to results with publication dates of the date specified or later."
@@ -124,10 +124,6 @@ type GetArticlesearchJSONQueryParams struct {
 	// "By default, search results are sorted by their relevance to the query term (q). Use the sort parameter to sort by pub_date."
 	//
 	Sort *GetArticlesearchJSONSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetArticlesearchJSONRequest struct {
-	QueryParams GetArticlesearchJSONQueryParams
 }
 
 type GetArticlesearchJSON200ApplicationJSONResponseMeta struct {

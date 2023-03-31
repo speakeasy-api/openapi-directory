@@ -8,18 +8,13 @@ import (
 )
 
 type CreateEmployeeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateEmployeeHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateEmployeeRequest struct {
-	Headers  CreateEmployeeHeaders
-	Request  []shared.EmployeeInput `request:"mediaType=application/json"`
-	Security CreateEmployeeSecurity
+	RequestBody []shared.EmployeeInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreateEmployeeResponse struct {

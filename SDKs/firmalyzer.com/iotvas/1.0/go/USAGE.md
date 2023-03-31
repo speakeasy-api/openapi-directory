@@ -13,27 +13,22 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.DetectDeviceRequest{
-        Security: operations.DetectDeviceSecurity{
-            APIKeyHeader: shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: shared.DeviceFeatures{
-            FtpBanner: "corrupti",
-            Hostname: "opulent-rabbit.org",
-            HTTPResponse: "unde",
-            HTTPSResponse: "nulla",
-            NicMac: "corrupti",
-            SnmpSysdescr: "illum",
-            SnmpSysoid: "vel",
-            TelnetBanner: "error",
-            UpnpResponse: "deserunt",
-        },
+    req := shared.DeviceFeatures{
+        FtpBanner: "corrupti",
+        Hostname: "opulent-rabbit.org",
+        HTTPResponse: "unde",
+        HTTPSResponse: "nulla",
+        NicMac: "corrupti",
+        SnmpSysdescr: "illum",
+        SnmpSysoid: "vel",
+        TelnetBanner: "error",
+        UpnpResponse: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Device.DetectDevice(ctx, req)
+    res, err := s.Device.DetectDevice(ctx, req, operations.DetectDeviceSecurity{
+        APIKeyHeader: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

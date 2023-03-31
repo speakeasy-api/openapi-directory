@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type DeleteWebhooksIDPathParams struct {
+type DeleteWebhooksIDRequest struct {
 	// The unique identifier for the webhook.
 	//
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWebhooksIDRequest struct {
-	PathParams DeleteWebhooksIDPathParams
 }
 
 type DeleteWebhooksIDResponse struct {

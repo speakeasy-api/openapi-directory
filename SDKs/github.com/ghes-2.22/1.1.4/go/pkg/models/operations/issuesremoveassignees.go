@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesRemoveAssigneesPathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesRemoveAssigneesRequestBody struct {
 	// Usernames of assignees to remove from an issue. _NOTE: Only users with push access can remove assignees from an issue. Assignees are silently ignored otherwise._
 	Assignees []string `json:"assignees,omitempty"`
 }
 
 type IssuesRemoveAssigneesRequest struct {
-	PathParams IssuesRemoveAssigneesPathParams
-	Request    *IssuesRemoveAssigneesRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesRemoveAssigneesRequestBody `request:"mediaType=application/json"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesRemoveAssigneesResponse struct {

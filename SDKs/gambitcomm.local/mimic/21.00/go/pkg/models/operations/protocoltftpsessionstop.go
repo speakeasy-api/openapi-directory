@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionStopPathParams struct {
+type ProtocolTftpSessionStopRequest struct {
 	// Agent to stop TFTP transaction
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SessionID
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionID"`
-}
-
-type ProtocolTftpSessionStopRequest struct {
-	PathParams ProtocolTftpSessionStopPathParams
 }
 
 type ProtocolTftpSessionStopResponse struct {

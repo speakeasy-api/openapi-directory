@@ -32,11 +32,11 @@ func newDeployments(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DeploymentmanagerDeploymentsCancelPreview - Cancels and removes the preview currently associated with the deployment.
-func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Context, request operations.DeploymentmanagerDeploymentsCancelPreviewRequest) (*operations.DeploymentmanagerDeploymentsCancelPreviewResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Context, request operations.DeploymentmanagerDeploymentsCancelPreviewRequest, security operations.DeploymentmanagerDeploymentsCancelPreviewSecurity) (*operations.DeploymentmanagerDeploymentsCancelPreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/cancelPreview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/cancelPreview", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeploymentsCancelPreviewRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Cont
 }
 
 // DeploymentmanagerDeploymentsDelete - Deletes a deployment and all of the resources in the deployment.
-func (s *deployments) DeploymentmanagerDeploymentsDelete(ctx context.Context, request operations.DeploymentmanagerDeploymentsDeleteRequest) (*operations.DeploymentmanagerDeploymentsDeleteResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsDelete(ctx context.Context, request operations.DeploymentmanagerDeploymentsDeleteRequest, security operations.DeploymentmanagerDeploymentsDeleteSecurity) (*operations.DeploymentmanagerDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *deployments) DeploymentmanagerDeploymentsDelete(ctx context.Context, re
 }
 
 // DeploymentmanagerDeploymentsGet - Gets information about a specific deployment.
-func (s *deployments) DeploymentmanagerDeploymentsGet(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetRequest) (*operations.DeploymentmanagerDeploymentsGetResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsGet(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetRequest, security operations.DeploymentmanagerDeploymentsGetSecurity) (*operations.DeploymentmanagerDeploymentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *deployments) DeploymentmanagerDeploymentsGet(ctx context.Context, reque
 }
 
 // DeploymentmanagerDeploymentsGetIamPolicy - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
-func (s *deployments) DeploymentmanagerDeploymentsGetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetIamPolicyRequest) (*operations.DeploymentmanagerDeploymentsGetIamPolicyResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsGetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetIamPolicyRequest, security operations.DeploymentmanagerDeploymentsGetIamPolicySecurity) (*operations.DeploymentmanagerDeploymentsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *deployments) DeploymentmanagerDeploymentsGetIamPolicy(ctx context.Conte
 }
 
 // DeploymentmanagerDeploymentsInsert - Creates a deployment and all of the resources described by the deployment manifest.
-func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, request operations.DeploymentmanagerDeploymentsInsertRequest) (*operations.DeploymentmanagerDeploymentsInsertResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, request operations.DeploymentmanagerDeploymentsInsertRequest, security operations.DeploymentmanagerDeploymentsInsertSecurity) (*operations.DeploymentmanagerDeploymentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, re
 }
 
 // DeploymentmanagerDeploymentsList - Lists all deployments for a given project.
-func (s *deployments) DeploymentmanagerDeploymentsList(ctx context.Context, request operations.DeploymentmanagerDeploymentsListRequest) (*operations.DeploymentmanagerDeploymentsListResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsList(ctx context.Context, request operations.DeploymentmanagerDeploymentsListRequest, security operations.DeploymentmanagerDeploymentsListSecurity) (*operations.DeploymentmanagerDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *deployments) DeploymentmanagerDeploymentsList(ctx context.Context, requ
 }
 
 // DeploymentmanagerDeploymentsPatch - Patches a deployment and all of the resources described by the deployment manifest.
-func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, request operations.DeploymentmanagerDeploymentsPatchRequest) (*operations.DeploymentmanagerDeploymentsPatchResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, request operations.DeploymentmanagerDeploymentsPatchRequest, security operations.DeploymentmanagerDeploymentsPatchSecurity) (*operations.DeploymentmanagerDeploymentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, req
 }
 
 // DeploymentmanagerDeploymentsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.
-func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsSetIamPolicyRequest) (*operations.DeploymentmanagerDeploymentsSetIamPolicyResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsSetIamPolicyRequest, security operations.DeploymentmanagerDeploymentsSetIamPolicySecurity) (*operations.DeploymentmanagerDeploymentsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlobalSetPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Conte
 }
 
 // DeploymentmanagerDeploymentsStop - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
-func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, request operations.DeploymentmanagerDeploymentsStopRequest) (*operations.DeploymentmanagerDeploymentsStopResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, request operations.DeploymentmanagerDeploymentsStopRequest, security operations.DeploymentmanagerDeploymentsStopSecurity) (*operations.DeploymentmanagerDeploymentsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeploymentsStopRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, requ
 }
 
 // DeploymentmanagerDeploymentsTestIamPermissions - Returns permissions that a caller has on the specified resource.
-func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context.Context, request operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest) (*operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context.Context, request operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest, security operations.DeploymentmanagerDeploymentsTestIamPermissionsSecurity) (*operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{resource}/testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context
 }
 
 // DeploymentmanagerDeploymentsUpdate - Updates a deployment and all of the resources described by the deployment manifest.
-func (s *deployments) DeploymentmanagerDeploymentsUpdate(ctx context.Context, request operations.DeploymentmanagerDeploymentsUpdateRequest) (*operations.DeploymentmanagerDeploymentsUpdateResponse, error) {
+func (s *deployments) DeploymentmanagerDeploymentsUpdate(ctx context.Context, request operations.DeploymentmanagerDeploymentsUpdateRequest, security operations.DeploymentmanagerDeploymentsUpdateSecurity) (*operations.DeploymentmanagerDeploymentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *deployments) DeploymentmanagerDeploymentsUpdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

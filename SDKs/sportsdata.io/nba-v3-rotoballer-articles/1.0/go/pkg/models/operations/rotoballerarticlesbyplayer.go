@@ -33,16 +33,12 @@ func (e *RotoballerArticlesByPlayerFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type RotoballerArticlesByPlayerPathParams struct {
+type RotoballerArticlesByPlayerRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format RotoballerArticlesByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
 	// Example:<code>10000507</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type RotoballerArticlesByPlayerRequest struct {
-	PathParams RotoballerArticlesByPlayerPathParams
 }
 
 type RotoballerArticlesByPlayerResponse struct {

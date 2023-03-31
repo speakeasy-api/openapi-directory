@@ -14,30 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.AdexchangebuyerAccountsGetRequest{
-        Security: operations.AdexchangebuyerAccountsGetSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AdexchangebuyerAccountsGetPathParams{
-            ID: 548814,
-        },
-        QueryParams: operations.AdexchangebuyerAccountsGetQueryParams{
-            Alt: "json",
-            Fields: "provident",
-            Key: "distinctio",
-            OauthToken: "quibusdam",
-            PrettyPrint: false,
-            QuotaUser: "unde",
-            UserIP: "nulla",
-        },
+        Alt: "json",
+        Fields: "corrupti",
+        ID: 592845,
+        Key: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        UserIP: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.AdexchangebuyerAccountsGet(ctx, req)
+    res, err := s.Accounts.AdexchangebuyerAccountsGet(ctx, req, operations.AdexchangebuyerAccountsGetSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

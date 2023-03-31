@@ -12,20 +12,15 @@ var FetchPhoneNumberServerList = []string{
 }
 
 type FetchPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchPhoneNumberPathParams struct {
+type FetchPhoneNumberRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the PhoneNumber resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchPhoneNumberRequest struct {
-	PathParams FetchPhoneNumberPathParams
-	Security   FetchPhoneNumberSecurity
-	ServerURL  *string
 }
 
 type FetchPhoneNumberResponse struct {

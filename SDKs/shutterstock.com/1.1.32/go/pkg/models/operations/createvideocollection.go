@@ -8,13 +8,7 @@ import (
 )
 
 type CreateVideoCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type CreateVideoCollectionRequest struct {
-	// Collection metadata
-	Request  shared.CollectionCreateRequest `request:"mediaType=application/json"`
-	Security CreateVideoCollectionSecurity
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateVideoCollectionResponse struct {

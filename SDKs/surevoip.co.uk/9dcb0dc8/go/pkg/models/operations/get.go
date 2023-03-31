@@ -62,15 +62,11 @@ func (e *GetHypermediaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// Content Type
 	ContentType *GetContentTypeEnum `queryParam:"style=form,explode=true,name=content-type"`
 	// Disable Hypermedia
 	Hypermedia *GetHypermediaEnum `queryParam:"style=form,explode=true,name=hypermedia"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type Get200ApplicationJSONStatusEnum string

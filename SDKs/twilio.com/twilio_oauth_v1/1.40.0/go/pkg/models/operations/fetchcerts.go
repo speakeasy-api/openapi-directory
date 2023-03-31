@@ -11,15 +11,6 @@ var FetchCertsServerList = []string{
 	"https://oauth.twilio.com",
 }
 
-type FetchCertsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCertsRequest struct {
-	Security  FetchCertsSecurity
-	ServerURL *string
-}
-
 type FetchCertsResponse struct {
 	ContentType string
 	StatusCode  int

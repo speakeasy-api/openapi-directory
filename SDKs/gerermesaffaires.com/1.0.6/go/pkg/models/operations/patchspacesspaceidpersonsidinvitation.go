@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchSpacesSpaceIDPersonsIDInvitationSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PatchSpacesSpaceIDPersonsIDInvitationPathParams struct {
-	// Id of the person
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum string
@@ -118,10 +110,12 @@ type PatchSpacesSpaceIDPersonsIDInvitationRequestBody struct {
 }
 
 type PatchSpacesSpaceIDPersonsIDInvitationRequest struct {
-	PathParams PatchSpacesSpaceIDPersonsIDInvitationPathParams
 	// Invitation to create
-	Request  PatchSpacesSpaceIDPersonsIDInvitationRequestBody `request:"mediaType=application/json"`
-	Security PatchSpacesSpaceIDPersonsIDInvitationSecurity
+	RequestBody PatchSpacesSpaceIDPersonsIDInvitationRequestBody `request:"mediaType=application/json"`
+	// Id of the person
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDPersonsIDInvitationResponse struct {

@@ -53,7 +53,6 @@ pkg/models/operations/postworkspaceslugwebhooks.go
 pkg/models/operations/putworkspaceslugwebhooksid.go
 pkg/models/operations/getworkspaces.go
 pkg/models/operations/getworkspacesworkspaceslug.go
-pkg/models/shared/security.go
 pkg/models/shared/activityandidentity.go
 pkg/models/shared/identity.go
 pkg/models/shared/activitywithmember.go

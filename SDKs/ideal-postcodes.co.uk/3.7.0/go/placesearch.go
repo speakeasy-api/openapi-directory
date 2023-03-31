@@ -73,7 +73,7 @@ func (s *placeSearch) FindPlace(ctx context.Context, request operations.FindPlac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,14 +125,14 @@ func (s *placeSearch) FindPlace(ctx context.Context, request operations.FindPlac
 // Resolves a place autocompletion by its place ID.
 func (s *placeSearch) ResolvePlace(ctx context.Context, request operations.ResolvePlaceRequest) (*operations.ResolvePlaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/places/${place}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/places/${place}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

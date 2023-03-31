@@ -8,16 +8,11 @@ import (
 )
 
 type CloudschedulerProjectsLocationsJobsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudschedulerProjectsLocationsJobsDeletePathParams struct {
-	// Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudschedulerProjectsLocationsJobsDeleteQueryParams struct {
+type CloudschedulerProjectsLocationsJobsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type CloudschedulerProjectsLocationsJobsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If the field is set to true, the job in the __cron queue with the corresponding name will be deleted instead.
 	LegacyAppEngineCron *bool `queryParam:"style=form,explode=true,name=legacyAppEngineCron"`
+	// Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type CloudschedulerProjectsLocationsJobsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudschedulerProjectsLocationsJobsDeleteRequest struct {
-	PathParams  CloudschedulerProjectsLocationsJobsDeletePathParams
-	QueryParams CloudschedulerProjectsLocationsJobsDeleteQueryParams
-	Security    CloudschedulerProjectsLocationsJobsDeleteSecurity
 }
 
 type CloudschedulerProjectsLocationsJobsDeleteResponse struct {

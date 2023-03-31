@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateReleasePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreateReleaseRequestBodyMakeLatestEnum - Specifies whether this release should be set as the latest release for the repository. Drafts and prereleases cannot be set as latest. Defaults to `true` for newly published releases. `legacy` specifies that the latest release should be determined based on the release creation date and higher semantic version.
 type ReposCreateReleaseRequestBodyMakeLatestEnum string
 
@@ -63,8 +56,11 @@ type ReposCreateReleaseRequestBody struct {
 }
 
 type ReposCreateReleaseRequest struct {
-	PathParams ReposCreateReleasePathParams
-	Request    ReposCreateReleaseRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateReleaseRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateReleaseResponse struct {

@@ -3,40 +3,44 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateDatasetRequest(
-    headers=operations.CreateDatasetHeaders(
-        x_amz_algorithm="voluptas",
-        x_amz_content_sha256="est",
-        x_amz_credential="voluptates",
-        x_amz_date="repellat",
-        x_amz_security_token="eligendi",
-        x_amz_signature="adipisci",
-        x_amz_signed_headers="sit",
-        x_amz_target="AWSLookoutEquipmentFrontendService.CreateDataset",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateDatasetRequest(
-        client_token="atque",
-        dataset_name="odio",
+)
+
+
+req = operations.CreateDatasetRequest(
+    create_dataset_request=shared.CreateDatasetRequest(
+        client_token="corrupti",
+        dataset_name="provident",
         dataset_schema=shared.DatasetSchema(
-            inline_data_schema="quam",
+            inline_data_schema="distinctio",
         ),
-        server_side_kms_key_id="ut",
+        server_side_kms_key_id="quibusdam",
         tags=[
             shared.Tag(
-                key="voluptas",
-                value="in",
+                key="nulla",
+                value="corrupti",
+            ),
+            shared.Tag(
+                key="illum",
+                value="vel",
+            ),
+            shared.Tag(
+                key="error",
+                value="deserunt",
             ),
         ],
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="iure",
+    x_amz_credential="magnam",
+    x_amz_date="debitis",
+    x_amz_security_token="ipsa",
+    x_amz_signature="delectus",
+    x_amz_signed_headers="tempora",
+    x_amz_target="AWSLookoutEquipmentFrontendService.CreateDataset",
 )
     
 res = s.create_dataset(req)

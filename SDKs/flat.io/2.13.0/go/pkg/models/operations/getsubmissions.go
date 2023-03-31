@@ -8,19 +8,14 @@ import (
 )
 
 type GetSubmissionsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSubmissionsPathParams struct {
+type GetSubmissionsRequest struct {
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
-}
-
-type GetSubmissionsRequest struct {
-	PathParams GetSubmissionsPathParams
-	Security   GetSubmissionsSecurity
 }
 
 type GetSubmissionsResponse struct {

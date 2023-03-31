@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutTargetsTargetIDFindingsIDPathParams struct {
+type PutTargetsTargetIDFindingsIDRequest struct {
+	FindingUpdateInput shared.FindingUpdateInput `request:"mediaType=application/json"`
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PutTargetsTargetIDFindingsIDRequest struct {
-	PathParams PutTargetsTargetIDFindingsIDPathParams
-	Request    shared.FindingUpdateInput `request:"mediaType=application/json"`
 }
 
 // PutTargetsTargetIDFindingsID404ApplicationJSON - Not found

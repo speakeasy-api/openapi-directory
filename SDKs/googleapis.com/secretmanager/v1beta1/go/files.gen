@@ -31,7 +31,6 @@ pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/secretversion.go
 pkg/models/shared/addsecretversionrequest.go
 pkg/models/shared/secretpayload.go

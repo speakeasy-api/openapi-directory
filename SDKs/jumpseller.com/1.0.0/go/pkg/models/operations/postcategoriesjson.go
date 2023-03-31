@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCategoriesJSONQueryParams struct {
+type PostCategoriesJSONRequest struct {
+	// Category parameters.
+	CategoryEdit shared.CategoryEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostCategoriesJSONRequest struct {
-	QueryParams PostCategoriesJSONQueryParams
-	// Category parameters.
-	Request shared.CategoryEdit `request:"mediaType=application/json"`
 }
 
 type PostCategoriesJSONResponse struct {

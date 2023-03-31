@@ -38,7 +38,7 @@ func (s *query) GetQueryResponse(ctx context.Context, request operations.GetQuer
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Query", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *query) GetQueryResponse(ctx context.Context, request operations.GetQuer
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

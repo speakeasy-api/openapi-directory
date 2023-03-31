@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceWirelessRadioSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettingsChannelEnum - Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
 type UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettingsChannelEnum string
 
@@ -235,8 +231,8 @@ type UpdateDeviceWirelessRadioSettingsRequestBody struct {
 }
 
 type UpdateDeviceWirelessRadioSettingsRequest struct {
-	PathParams UpdateDeviceWirelessRadioSettingsPathParams
-	Request    *UpdateDeviceWirelessRadioSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceWirelessRadioSettingsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                        `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceWirelessRadioSettingsResponse struct {

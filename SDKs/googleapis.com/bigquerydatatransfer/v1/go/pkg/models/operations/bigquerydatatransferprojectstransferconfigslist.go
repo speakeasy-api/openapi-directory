@@ -8,18 +8,18 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsListSecurity struct {
@@ -28,12 +28,7 @@ type BigquerydatatransferProjectsTransferConfigsListSecurity struct {
 	Option3 *BigquerydatatransferProjectsTransferConfigsListSecurityOption3 `security:"option"`
 }
 
-type BigquerydatatransferProjectsTransferConfigsListPathParams struct {
-	// Required. The BigQuery project id for which transfer configs should be returned: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsListQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,6 +49,8 @@ type BigquerydatatransferProjectsTransferConfigsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Pagination token, which can be used to request a specific page of `ListTransfersRequest` list results. For multiple-page results, `ListTransfersResponse` outputs a `next_page` token, which can be used as the `page_token` value to request the next page of list results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The BigQuery project id for which transfer configs should be returned: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -62,12 +59,6 @@ type BigquerydatatransferProjectsTransferConfigsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsListRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsListPathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsListQueryParams
-	Security    BigquerydatatransferProjectsTransferConfigsListSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsListResponse struct {

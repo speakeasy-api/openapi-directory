@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateEmailHistoryPathParams struct {
+type CertificateEmailHistoryRequest struct {
 	// Certificate id to retrieve email history
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateEmailHistoryRequest struct {
-	PathParams CertificateEmailHistoryPathParams
 }
 
 type CertificateEmailHistoryResponse struct {

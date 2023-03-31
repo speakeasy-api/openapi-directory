@@ -11,10 +11,6 @@ type PostAuthRefreshRequestBody struct {
 	Token *string `json:"token,omitempty"`
 }
 
-type PostAuthRefreshRequest struct {
-	Request PostAuthRefreshRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthRefresh500ApplicationJSON - Internal server error
 type PostAuthRefresh500ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

@@ -19,7 +19,7 @@ pkg/models/shared/flightwithemissions.go
 pkg/models/shared/flight.go
 pkg/models/shared/date.go
 pkg/models/shared/emissionsgramsperpax.go
-pkg/models/shared/computeflightemissionsrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/computeflightemissionsrequest.go
 pkg/models/shared/xgafvenum.go
 USAGE.md

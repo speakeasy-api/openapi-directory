@@ -10,7 +10,7 @@ import (
 )
 
 type ListOrganizationInvitationsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListOrganizationInvitationsRoleEnum - Filter users by role
@@ -40,7 +40,7 @@ func (e *ListOrganizationInvitationsRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListOrganizationInvitationsQueryParams struct {
+type ListOrganizationInvitationsRequest struct {
 	// This is the maximum number of objects that may be returned
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// An opaque string cursor to fetch the next page of data.
@@ -53,11 +53,6 @@ type ListOrganizationInvitationsQueryParams struct {
 	Previous *string `queryParam:"style=form,explode=true,name=previous"`
 	// Filter users by role
 	Role *ListOrganizationInvitationsRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type ListOrganizationInvitationsRequest struct {
-	QueryParams ListOrganizationInvitationsQueryParams
-	Security    ListOrganizationInvitationsSecurity
 }
 
 type ListOrganizationInvitationsResponse struct {

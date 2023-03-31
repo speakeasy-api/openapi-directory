@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetSpacesIDSettingsNf203LogsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSpacesIDSettingsNf203LogsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSpacesIDSettingsNf203LogsRequest struct {
-	PathParams GetSpacesIDSettingsNf203LogsPathParams
-	Security   GetSpacesIDSettingsNf203LogsSecurity
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetSpacesIDSettingsNf203Logs200ApplicationJSON - State of activation of the logs

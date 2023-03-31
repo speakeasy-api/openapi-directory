@@ -8,23 +8,14 @@ import (
 )
 
 type GetEventsByYearSimpleSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEventsByYearSimplePathParams struct {
-	// Competition Year (or Season). Must be 4 digits.
-	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetEventsByYearSimpleHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetEventsByYearSimpleRequest struct {
-	PathParams GetEventsByYearSimplePathParams
-	Headers    GetEventsByYearSimpleHeaders
-	Security   GetEventsByYearSimpleSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// Competition Year (or Season). Must be 4 digits.
+	Year int64 `pathParam:"style=simple,explode=false,name=year"`
 }
 
 type GetEventsByYearSimpleResponse struct {

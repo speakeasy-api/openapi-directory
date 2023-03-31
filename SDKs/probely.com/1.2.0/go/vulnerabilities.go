@@ -45,7 +45,7 @@ func (s *vulnerabilities) GetVulnerabilityDefinitions(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,7 +96,7 @@ func (s *vulnerabilities) GetVulnerabilityDefinitions(ctx context.Context, reque
 // GetVulnerabilityDefinitionsID - Retrieve vulnerability definition
 func (s *vulnerabilities) GetVulnerabilityDefinitionsID(ctx context.Context, request operations.GetVulnerabilityDefinitionsIDRequest) (*operations.GetVulnerabilityDefinitionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vulnerability_definitions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vulnerability_definitions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

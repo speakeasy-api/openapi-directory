@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSnmpSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSnmpSettingsRequest struct {
-	PathParams GetNetworkSnmpSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSnmpSettingsResponse struct {

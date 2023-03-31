@@ -44,7 +44,7 @@ func (s *user) GetUserAPIKeys(ctx context.Context, request operations.GetUserAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -112,7 +112,7 @@ func (s *user) GetUserGroups(ctx context.Context, request operations.GetUserGrou
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *user) GetUserPublicKeys(ctx context.Context, request operations.GetUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -239,7 +239,7 @@ func (s *user) GetUserPublicKeys(ctx context.Context, request operations.GetUser
 
 // PatchUser - Update User
 // Update User
-func (s *user) PatchUser(ctx context.Context, request operations.PatchUserRequest) (*operations.PatchUserResponse, error) {
+func (s *user) PatchUser(ctx context.Context, request operations.PatchUserRequestBody) (*operations.PatchUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 
@@ -310,7 +310,7 @@ func (s *user) PatchUser(ctx context.Context, request operations.PatchUserReques
 
 // PostUserAPIKeys - Create Api Key
 // Create Api Key
-func (s *user) PostUserAPIKeys(ctx context.Context, request operations.PostUserAPIKeysRequest) (*operations.PostUserAPIKeysResponse, error) {
+func (s *user) PostUserAPIKeys(ctx context.Context, request operations.PostUserAPIKeysRequestBody) (*operations.PostUserAPIKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/api_keys"
 
@@ -381,7 +381,7 @@ func (s *user) PostUserAPIKeys(ctx context.Context, request operations.PostUserA
 
 // PostUserPublicKeys - Create Public Key
 // Create Public Key
-func (s *user) PostUserPublicKeys(ctx context.Context, request operations.PostUserPublicKeysRequest) (*operations.PostUserPublicKeysResponse, error) {
+func (s *user) PostUserPublicKeys(ctx context.Context, request operations.PostUserPublicKeysRequestBody) (*operations.PostUserPublicKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/public_keys"
 

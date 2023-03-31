@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05LinksLinkInitRawHeaders struct {
+type PostV05LinksLinkInitRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
-}
-
-type PostV05LinksLinkInitRawRequest struct {
-	Headers PostV05LinksLinkInitRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05LinksLinkInitRawResponse struct {

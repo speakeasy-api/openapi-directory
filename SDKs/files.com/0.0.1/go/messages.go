@@ -37,7 +37,7 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Message
 func (s *messages) DeleteMessagesID(ctx context.Context, request operations.DeleteMessagesIDRequest) (*operations.DeleteMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *messages) GetMessages(ctx context.Context, request operations.GetMessag
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *messages) GetMessages(ctx context.Context, request operations.GetMessag
 // Show Message
 func (s *messages) GetMessagesID(ctx context.Context, request operations.GetMessagesIDRequest) (*operations.GetMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *messages) GetMessagesID(ctx context.Context, request operations.GetMess
 // Update Message
 func (s *messages) PatchMessagesID(ctx context.Context, request operations.PatchMessagesIDRequest) (*operations.PatchMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *messages) PatchMessagesID(ctx context.Context, request operations.Patch
 
 // PostMessages - Create Message
 // Create Message
-func (s *messages) PostMessages(ctx context.Context, request operations.PostMessagesRequest) (*operations.PostMessagesResponse, error) {
+func (s *messages) PostMessages(ctx context.Context, request operations.PostMessagesRequestBody) (*operations.PostMessagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messages"
 

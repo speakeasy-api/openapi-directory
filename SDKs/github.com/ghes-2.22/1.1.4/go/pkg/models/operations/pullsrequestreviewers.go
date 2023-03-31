@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsRequestReviewersPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsRequestReviewersRequestBody2 struct {
 	// An array of user `login`s that will be requested.
 	Reviewers []string `json:"reviewers,omitempty"`
@@ -28,8 +22,10 @@ type PullsRequestReviewersRequestBody1 struct {
 }
 
 type PullsRequestReviewersRequest struct {
-	PathParams PullsRequestReviewersPathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	Owner       string      `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64       `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string      `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsRequestReviewersResponse struct {

@@ -34,7 +34,7 @@ func newPublic(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // Getmeasure - The method getmeasure returns the measurements of a device or a module.
-func (s *public) Getmeasure(ctx context.Context, request operations.GetmeasureRequest) (*operations.GetmeasureResponse, error) {
+func (s *public) Getmeasure(ctx context.Context, request operations.GetmeasureRequest, security operations.GetmeasureSecurity) (*operations.GetmeasureResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getmeasure"
 
@@ -43,11 +43,11 @@ func (s *public) Getmeasure(ctx context.Context, request operations.GetmeasureRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *public) Getmeasure(ctx context.Context, request operations.GetmeasureRe
 }
 
 // Getpublicdata - Retrieves publicly shared weather data from Outdoor Modules within a predefined area.
-func (s *public) Getpublicdata(ctx context.Context, request operations.GetpublicdataRequest) (*operations.GetpublicdataResponse, error) {
+func (s *public) Getpublicdata(ctx context.Context, request operations.GetpublicdataRequest, security operations.GetpublicdataSecurity) (*operations.GetpublicdataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getpublicdata"
 
@@ -91,11 +91,11 @@ func (s *public) Getpublicdata(ctx context.Context, request operations.Getpublic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

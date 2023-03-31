@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationSamlPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationSamlRequestBody struct {
 	// Boolean for updating SAML SSO enabled settings.
 	Enabled *bool `json:"enabled,omitempty"`
 }
 
 type UpdateOrganizationSamlRequest struct {
-	PathParams UpdateOrganizationSamlPathParams
-	Request    *UpdateOrganizationSamlRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationSamlRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                             `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganizationSaml200ApplicationJSON - Successful operation

@@ -4,14 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CancelRequest(
-    path_params=operations.CancelPathParams(
-        subscription_id="tenetur",
-    ),
-    headers=operations.CancelHeaders(
-        x_shopper_id="corrupti",
-    ),
+    x_shopper_id="corrupti",
+    subscription_id="provident",
 )
     
 res = s.v1.cancel(req)

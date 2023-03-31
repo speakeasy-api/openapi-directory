@@ -12,7 +12,8 @@ var CreateAccountConfigServerList = []string{
 }
 
 type CreateAccountConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAccountConfigCreateAccountConfigRequest struct {
@@ -20,12 +21,6 @@ type CreateAccountConfigCreateAccountConfigRequest struct {
 	Key string `form:"name=Key"`
 	// The config value; up to 4096 characters.
 	Value string `form:"name=Value"`
-}
-
-type CreateAccountConfigRequest struct {
-	Request   *CreateAccountConfigCreateAccountConfigRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateAccountConfigSecurity
-	ServerURL *string
 }
 
 type CreateAccountConfigResponse struct {

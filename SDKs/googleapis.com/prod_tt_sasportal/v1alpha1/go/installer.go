@@ -33,11 +33,11 @@ func newInstaller(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ProdTtSasportalInstallerGenerateSecret - Generates a secret to be used with the ValidateInstaller.
-func (s *installer) ProdTtSasportalInstallerGenerateSecret(ctx context.Context, request operations.ProdTtSasportalInstallerGenerateSecretRequest) (*operations.ProdTtSasportalInstallerGenerateSecretResponse, error) {
+func (s *installer) ProdTtSasportalInstallerGenerateSecret(ctx context.Context, request operations.ProdTtSasportalInstallerGenerateSecretRequest, security operations.ProdTtSasportalInstallerGenerateSecretSecurity) (*operations.ProdTtSasportalInstallerGenerateSecretResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/installer:generateSecret"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *installer) ProdTtSasportalInstallerGenerateSecret(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *installer) ProdTtSasportalInstallerGenerateSecret(ctx context.Context, 
 }
 
 // ProdTtSasportalInstallerValidate - Validates the identity of a Certified Professional Installer (CPI).
-func (s *installer) ProdTtSasportalInstallerValidate(ctx context.Context, request operations.ProdTtSasportalInstallerValidateRequest) (*operations.ProdTtSasportalInstallerValidateResponse, error) {
+func (s *installer) ProdTtSasportalInstallerValidate(ctx context.Context, request operations.ProdTtSasportalInstallerValidateRequest, security operations.ProdTtSasportalInstallerValidateSecurity) (*operations.ProdTtSasportalInstallerValidateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/installer:validate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalValidateInstallerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *installer) ProdTtSasportalInstallerValidate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

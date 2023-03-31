@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsListForAuthenticatedUserQueryParams struct {
+type MigrationsListForAuthenticatedUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type MigrationsListForAuthenticatedUserRequest struct {
-	QueryParams MigrationsListForAuthenticatedUserQueryParams
 }
 
 type MigrationsListForAuthenticatedUserResponse struct {

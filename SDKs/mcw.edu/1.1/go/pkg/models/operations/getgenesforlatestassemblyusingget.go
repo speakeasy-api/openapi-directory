@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGenesForLatestAssemblyUsingGETPathParams struct {
+type GETGenesForLatestAssemblyUsingGETRequest struct {
 	// The taxon ID for species
 	TaxonID string `pathParam:"style=simple,explode=false,name=taxonId"`
-}
-
-type GETGenesForLatestAssemblyUsingGETRequest struct {
-	PathParams GETGenesForLatestAssemblyUsingGETPathParams
 }
 
 type GETGenesForLatestAssemblyUsingGETResponse struct {

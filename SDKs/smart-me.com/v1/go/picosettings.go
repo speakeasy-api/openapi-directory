@@ -37,7 +37,7 @@ func newPicoSettings(defaultClient, securityClient HTTPClient, serverURL, langua
 //	Returns the settings of a pico charging station.
 func (s *picoSettings) PicoSettingsGet(ctx context.Context, request operations.PicoSettingsGetRequest) (*operations.PicoSettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/settings/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pico/settings/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

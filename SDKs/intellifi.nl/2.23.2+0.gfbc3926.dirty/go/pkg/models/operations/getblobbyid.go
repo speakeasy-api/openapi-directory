@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetBlobByIDPathParams struct {
+type GetBlobByIDRequest struct {
 	// Filename of the blob.
 	Filename string `pathParam:"style=simple,explode=false,name=filename"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBlobByIDRequest struct {
-	PathParams GetBlobByIDPathParams
 }
 
 type GetBlobByIDResponse struct {

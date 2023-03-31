@@ -36,10 +36,6 @@ type ConvertRequestBody struct {
 	Validate *ConvertRequestBodyValidateEnum `multipartForm:"name=validate"`
 }
 
-type ConvertRequest struct {
-	Request *ConvertRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type ConvertResponse struct {
 	Body        []byte
 	ContentType string

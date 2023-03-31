@@ -12,30 +12,21 @@ var ListSyncListPermissionServerList = []string{
 }
 
 type ListSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSyncListPermissionPathParams struct {
+type ListSyncListPermissionRequest struct {
 	// The SID of the Sync List with the Sync List Permission resources to read. Can be the Sync List resource's `sid` or its `unique_name`.
 	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resources to read.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListSyncListPermissionQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSyncListPermissionRequest struct {
-	PathParams  ListSyncListPermissionPathParams
-	QueryParams ListSyncListPermissionQueryParams
-	Security    ListSyncListPermissionSecurity
-	ServerURL   *string
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resources to read.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListSyncListPermissionListSyncListPermissionResponseMeta struct {

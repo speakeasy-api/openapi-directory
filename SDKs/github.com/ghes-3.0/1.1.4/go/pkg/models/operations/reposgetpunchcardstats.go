@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ReposGetPunchCardStatsPathParams struct {
+type ReposGetPunchCardStatsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetPunchCardStatsRequest struct {
-	PathParams ReposGetPunchCardStatsPathParams
 }
 
 type ReposGetPunchCardStatsResponse struct {

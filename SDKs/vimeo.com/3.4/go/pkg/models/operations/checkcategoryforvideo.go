@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckCategoryForVideoPathParams struct {
+type CheckCategoryForVideoRequest struct {
 	// The name of the category.
 	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type CheckCategoryForVideoRequest struct {
-	PathParams CheckCategoryForVideoPathParams
 }
 
 type CheckCategoryForVideoResponse struct {

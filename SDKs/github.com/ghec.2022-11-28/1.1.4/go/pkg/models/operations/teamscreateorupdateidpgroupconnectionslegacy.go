@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups struct {
 	Description *string `json:"description,omitempty"`
 	// Description of the IdP group.
@@ -31,8 +26,9 @@ type TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody struct {
 }
 
 type TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest struct {
-	PathParams TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams
-	Request    TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse struct {

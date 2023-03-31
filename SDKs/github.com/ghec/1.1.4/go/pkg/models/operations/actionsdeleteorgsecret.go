@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteOrgSecretPathParams struct {
+type ActionsDeleteOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsDeleteOrgSecretRequest struct {
-	PathParams ActionsDeleteOrgSecretPathParams
 }
 
 type ActionsDeleteOrgSecretResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SendClientsMessageUsingGETQueryParams struct {
+type SendClientsMessageUsingGETRequest struct {
 	Msg   *string `queryParam:"style=form,explode=true,name=msg"`
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
-type SendClientsMessageUsingGETRequest struct {
-	QueryParams SendClientsMessageUsingGETQueryParams
 }
 
 // SendClientsMessageUsingGET500ApplicationJSON - internal api error (code 2)

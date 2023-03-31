@@ -34,16 +34,16 @@ func newRefunds(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetPaymentRefund - GetPaymentRefund
 // Retrieves a specific refund using the `refund_id`.
-func (s *refunds) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest) (*operations.GetPaymentRefundResponse, error) {
+func (s *refunds) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, security operations.GetPaymentRefundSecurity) (*operations.GetPaymentRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/refunds/{refund_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/refunds/{refund_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *refunds) GetPaymentRefund(ctx context.Context, request operations.GetPa
 // seconds to appear.
 //
 // The maximum results per page is 100.
-func (s *refunds) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest) (*operations.ListPaymentRefundsResponse, error) {
+func (s *refunds) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest, security operations.ListPaymentRefundsSecurity) (*operations.ListPaymentRefundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/refunds"
 
@@ -93,11 +93,11 @@ func (s *refunds) ListPaymentRefunds(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *refunds) ListPaymentRefunds(ctx context.Context, request operations.Lis
 // portion of it. You can use this endpoint to refund a card payment or record a
 // refund of a cash or external payment. For more information, see
 // [Refund Payment](https://developer.squareup.com/docs/payments-api/refund-payments).
-func (s *refunds) RefundPayment(ctx context.Context, request operations.RefundPaymentRequest) (*operations.RefundPaymentResponse, error) {
+func (s *refunds) RefundPayment(ctx context.Context, request shared.RefundPaymentRequest, security operations.RefundPaymentSecurity) (*operations.RefundPaymentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/refunds"
 
@@ -155,7 +155,7 @@ func (s *refunds) RefundPayment(ctx context.Context, request operations.RefundPa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

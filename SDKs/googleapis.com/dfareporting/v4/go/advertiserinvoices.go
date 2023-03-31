@@ -32,20 +32,20 @@ func newAdvertiserInvoices(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // DfareportingAdvertiserInvoicesList - Retrieves a list of invoices for a particular issue month. The api only works if the billing profile invoice level is set to either advertiser or campaign non-consolidated invoice level.
-func (s *advertiserInvoices) DfareportingAdvertiserInvoicesList(ctx context.Context, request operations.DfareportingAdvertiserInvoicesListRequest) (*operations.DfareportingAdvertiserInvoicesListResponse, error) {
+func (s *advertiserInvoices) DfareportingAdvertiserInvoicesList(ctx context.Context, request operations.DfareportingAdvertiserInvoicesListRequest, security operations.DfareportingAdvertiserInvoicesListSecurity) (*operations.DfareportingAdvertiserInvoicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertisers/{advertiserId}/invoices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertisers/{advertiserId}/invoices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

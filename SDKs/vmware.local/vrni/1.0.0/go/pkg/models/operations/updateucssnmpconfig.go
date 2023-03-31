@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateUcsSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateUcsSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateUcsSnmpConfigRequest struct {
-	PathParams UpdateUcsSnmpConfigPathParams
-	Request    *shared.SNMPConfig `request:"mediaType=application/json"`
-	Security   UpdateUcsSnmpConfigSecurity
+	SNMPConfig *shared.SNMPConfig `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateUcsSnmpConfigResponse struct {

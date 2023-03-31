@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSafelistServerList = []string{
@@ -12,18 +11,13 @@ var DeleteSafelistServerList = []string{
 }
 
 type DeleteSafelistSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSafelistPathParams struct {
-	// The phone number to be removed from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteSafelistRequest struct {
-	PathParams DeleteSafelistPathParams
-	Security   DeleteSafelistSecurity
-	ServerURL  *string
+	// The phone number to be removed from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
+	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
 }
 
 type DeleteSafelistResponse struct {

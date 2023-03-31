@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostEstimateJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostEstimateJSONRequest struct {
-	PathParams PostEstimateJSONPathParams
-	Request    *shared.EstimatePO `request:"mediaType=application/json"`
+	EstimatePO  *shared.EstimatePO `request:"mediaType=application/json"`
+	ProjectID   string             `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID string             `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostEstimateJSONResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationMemberElectionsPathParams struct {
+type GetApplicationMemberElectionsRequest struct {
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type GetApplicationMemberElectionsQueryParams struct {
 	// The integer offset at which to start the page. Possible values are 0 to total_records - 1
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The max size of each page of results
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetApplicationMemberElectionsRequest struct {
-	PathParams  GetApplicationMemberElectionsPathParams
-	QueryParams GetApplicationMemberElectionsQueryParams
 }
 
 type GetApplicationMemberElectionsResponse struct {

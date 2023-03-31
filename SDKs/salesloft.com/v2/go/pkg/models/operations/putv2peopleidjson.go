@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2PeopleIDJSONPathParams struct {
-	// Person id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2PeopleIDJSONRequestBody struct {
 	// ID of the Account to link this person to
 	AccountID *int64 `form:"name=account_id"`
@@ -91,8 +86,9 @@ type PutV2PeopleIDJSONRequestBody struct {
 }
 
 type PutV2PeopleIDJSONRequest struct {
-	PathParams PutV2PeopleIDJSONPathParams
-	Request    *PutV2PeopleIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2PeopleIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Person id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2PeopleIDJSONResponse struct {

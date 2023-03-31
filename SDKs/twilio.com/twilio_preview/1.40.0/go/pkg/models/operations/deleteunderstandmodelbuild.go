@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUnderstandModelBuildServerList = []string{
@@ -12,18 +11,13 @@ var DeleteUnderstandModelBuildServerList = []string{
 }
 
 type DeleteUnderstandModelBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteUnderstandModelBuildPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteUnderstandModelBuildRequest struct {
-	PathParams DeleteUnderstandModelBuildPathParams
-	Security   DeleteUnderstandModelBuildSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteUnderstandModelBuildResponse struct {

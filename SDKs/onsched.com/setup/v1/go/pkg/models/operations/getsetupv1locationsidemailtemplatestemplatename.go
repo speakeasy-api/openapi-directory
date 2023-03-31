@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsIDEmailTemplatesTemplateNamePathParams struct {
+type GetSetupV1LocationsIDEmailTemplatesTemplateNameRequest struct {
 	// id of business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// name of the email template
 	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type GetSetupV1LocationsIDEmailTemplatesTemplateNameRequest struct {
-	PathParams GetSetupV1LocationsIDEmailTemplatesTemplateNamePathParams
 }
 
 type GetSetupV1LocationsIDEmailTemplatesTemplateNameResponse struct {

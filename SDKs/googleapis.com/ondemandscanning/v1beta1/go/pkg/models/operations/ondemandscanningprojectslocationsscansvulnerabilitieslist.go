@@ -8,16 +8,11 @@ import (
 )
 
 type OndemandscanningProjectsLocationsScansVulnerabilitiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OndemandscanningProjectsLocationsScansVulnerabilitiesListPathParams struct {
-	// Required. The parent of the collection of Vulnerabilities being requested. Format: projects/[project_name]/locations/[location]/scans/[scan_id]
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams struct {
+type OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The page token, resulting from a previous call to ListVulnerabilities.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent of the collection of Vulnerabilities being requested. Format: projects/[project_name]/locations/[location]/scans/[scan_id]
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest struct {
-	PathParams  OndemandscanningProjectsLocationsScansVulnerabilitiesListPathParams
-	QueryParams OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams
-	Security    OndemandscanningProjectsLocationsScansVulnerabilitiesListSecurity
 }
 
 type OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAPIInvoiceUpdatecategoryJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type PostAPIInvoiceUpdatecategoryJSONRequest struct {
-	Headers PostAPIInvoiceUpdatecategoryJSONHeaders
-	Request shared.InvoiceCategoryUpdateAPIModel `request:"mediaType=application/json"`
+	InvoiceCategoryUpdateAPIModel shared.InvoiceCategoryUpdateAPIModel `request:"mediaType=application/json"`
+	XAuthKey                      string                               `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret                   string                               `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type PostAPIInvoiceUpdatecategoryJSONResponse struct {

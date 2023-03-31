@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsCreateContentAttachmentPathParams struct {
-	// The `id` of the `content_reference` event.
-	ContentReferenceID int64 `pathParam:"style=simple,explode=false,name=content_reference_id"`
-	// The owner of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type AppsCreateContentAttachmentRequestBody struct {
 	// The body of the attachment
 	Body string `json:"body"`
@@ -24,8 +15,13 @@ type AppsCreateContentAttachmentRequestBody struct {
 }
 
 type AppsCreateContentAttachmentRequest struct {
-	PathParams AppsCreateContentAttachmentPathParams
-	Request    AppsCreateContentAttachmentRequestBody `request:"mediaType=application/json"`
+	RequestBody AppsCreateContentAttachmentRequestBody `request:"mediaType=application/json"`
+	// The `id` of the `content_reference` event.
+	ContentReferenceID int64 `pathParam:"style=simple,explode=false,name=content_reference_id"`
+	// The owner of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // AppsCreateContentAttachment415ApplicationJSON - Preview header missing

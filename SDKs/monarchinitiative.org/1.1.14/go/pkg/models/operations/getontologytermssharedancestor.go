@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetOntologyTermsSharedAncestorPathParams struct {
+type GetOntologyTermsSharedAncestorRequest struct {
 	// CURIE identifier of a GO term, e.g. GO:0046483
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// CURIE identifier of a GO term, e.g. GO:0006259
 	Subject string `pathParam:"style=simple,explode=false,name=subject"`
-}
-
-type GetOntologyTermsSharedAncestorRequest struct {
-	PathParams GetOntologyTermsSharedAncestorPathParams
 }
 
 type GetOntologyTermsSharedAncestorResponse struct {

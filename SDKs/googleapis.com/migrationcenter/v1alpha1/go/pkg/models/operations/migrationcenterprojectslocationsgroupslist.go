@@ -8,16 +8,11 @@ import (
 )
 
 type MigrationcenterProjectsLocationsGroupsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MigrationcenterProjectsLocationsGroupsListPathParams struct {
-	// Required. Parent value for `ListGroupsRequest`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MigrationcenterProjectsLocationsGroupsListQueryParams struct {
+type MigrationcenterProjectsLocationsGroupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type MigrationcenterProjectsLocationsGroupsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent value for `ListGroupsRequest`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type MigrationcenterProjectsLocationsGroupsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MigrationcenterProjectsLocationsGroupsListRequest struct {
-	PathParams  MigrationcenterProjectsLocationsGroupsListPathParams
-	QueryParams MigrationcenterProjectsLocationsGroupsListQueryParams
-	Security    MigrationcenterProjectsLocationsGroupsListSecurity
 }
 
 type MigrationcenterProjectsLocationsGroupsListResponse struct {

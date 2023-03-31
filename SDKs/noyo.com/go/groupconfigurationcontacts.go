@@ -35,9 +35,9 @@ func newGroupConfigurationContacts(defaultClient, securityClient HTTPClient, ser
 // Create a new contact for a group
 func (s *groupConfigurationContacts) CreateContact(ctx context.Context, request operations.CreateContactRequest) (*operations.CreateContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *groupConfigurationContacts) CreateContact(ctx context.Context, request 
 // Edit and existing contact for a group
 func (s *groupConfigurationContacts) EditContact(ctx context.Context, request operations.EditContactRequest) (*operations.EditContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts/{contact_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts/{contact_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *groupConfigurationContacts) EditContact(ctx context.Context, request op
 // Returns the latest version of a single contact based on the ID provided.
 func (s *groupConfigurationContacts) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts/{contact_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts/{contact_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,14 +190,14 @@ func (s *groupConfigurationContacts) GetContact(ctx context.Context, request ope
 // Returns a list of all contacts for a given group
 func (s *groupConfigurationContacts) GetContactList(ctx context.Context, request operations.GetContactListRequest) (*operations.GetContactListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

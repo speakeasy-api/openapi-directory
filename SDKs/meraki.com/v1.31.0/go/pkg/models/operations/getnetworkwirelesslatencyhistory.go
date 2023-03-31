@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetNetworkWirelessLatencyHistoryPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkWirelessLatencyHistoryAccessCategoryEnum - Filter by access category.
 type GetNetworkWirelessLatencyHistoryAccessCategoryEnum string
 
@@ -70,7 +66,7 @@ func (e *GetNetworkWirelessLatencyHistoryBandEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetNetworkWirelessLatencyHistoryQueryParams struct {
+type GetNetworkWirelessLatencyHistoryRequest struct {
 	// Filter by access category.
 	AccessCategory *GetNetworkWirelessLatencyHistoryAccessCategoryEnum `queryParam:"style=form,explode=true,name=accessCategory"`
 	// Filter results by AP tag.
@@ -83,6 +79,7 @@ type GetNetworkWirelessLatencyHistoryQueryParams struct {
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// Filter results by device.
 	DeviceSerial *string `queryParam:"style=form,explode=true,name=deviceSerial"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
 	// Filter results by SSID number.
@@ -93,11 +90,6 @@ type GetNetworkWirelessLatencyHistoryQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkWirelessLatencyHistoryRequest struct {
-	PathParams  GetNetworkWirelessLatencyHistoryPathParams
-	QueryParams GetNetworkWirelessLatencyHistoryQueryParams
 }
 
 type GetNetworkWirelessLatencyHistory200ApplicationJSON struct {

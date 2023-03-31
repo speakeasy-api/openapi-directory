@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListInboundAchTransferReturnsQueryParams struct {
+type ListInboundAchTransferReturnsRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListInboundAchTransferReturnsRequest struct {
-	QueryParams ListInboundAchTransferReturnsQueryParams
 }
 
 type ListInboundAchTransferReturnsDefaultApplicationJSON13StatusEnum string

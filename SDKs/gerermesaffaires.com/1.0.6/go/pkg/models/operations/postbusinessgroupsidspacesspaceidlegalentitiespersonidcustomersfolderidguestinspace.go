@@ -6,22 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpacePathParams struct {
-	// Id of the folder customer
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the group
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the person customer
-	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-	// Id of the company space which contains the customer folder
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum string
@@ -80,10 +68,16 @@ type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGues
 }
 
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequest struct {
-	PathParams PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpacePathParams
 	// role and groups to apply to the managed private space
-	Request  PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBody `request:"mediaType=application/json"`
-	Security PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceSecurity
+	RequestBody PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBody `request:"mediaType=application/json"`
+	// Id of the folder customer
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the group
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the person customer
+	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
+	// Id of the company space which contains the customer folder
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpace201ApplicationJSON - Id of space created

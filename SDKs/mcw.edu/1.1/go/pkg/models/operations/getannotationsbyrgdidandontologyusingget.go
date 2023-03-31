@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETAnnotationsByRgdIDAndOntologyUsingGETPathParams struct {
+type GETAnnotationsByRgdIDAndOntologyUsingGETRequest struct {
 	// Ontology Prefix.  The prefix can be found left of the semicolon in an ontology term accession ID.  As an example, term accession PW:0000034 has the ontology prefix PW
 	OntologyPrefix string `pathParam:"style=simple,explode=false,name=ontologyPrefix"`
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETAnnotationsByRgdIDAndOntologyUsingGETRequest struct {
-	PathParams GETAnnotationsByRgdIDAndOntologyUsingGETPathParams
 }
 
 type GETAnnotationsByRgdIDAndOntologyUsingGETResponse struct {

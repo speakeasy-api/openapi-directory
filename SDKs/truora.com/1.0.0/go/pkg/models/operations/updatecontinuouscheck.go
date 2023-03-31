@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateContinuousCheckSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateContinuousCheckPathParams struct {
-	// ID resulting from calling CreateContinuousCheck
-	ContinuousCheckID float64 `pathParam:"style=simple,explode=false,name=continuous_check_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type UpdateContinuousCheckRequest struct {
-	PathParams UpdateContinuousCheckPathParams
-	Request    shared.UpdateContinuousCheckInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateContinuousCheckSecurity
+	UpdateContinuousCheckInput shared.UpdateContinuousCheckInput `request:"mediaType=application/x-www-form-urlencoded"`
+	// ID resulting from calling CreateContinuousCheck
+	ContinuousCheckID float64 `pathParam:"style=simple,explode=false,name=continuous_check_id"`
 }
 
 type UpdateContinuousCheckResponse struct {

@@ -12,7 +12,8 @@ var CreateWirelessRatePlanServerList = []string{
 }
 
 type CreateWirelessRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWirelessRatePlanCreateWirelessRatePlanRequest struct {
@@ -26,12 +27,6 @@ type CreateWirelessRatePlanCreateWirelessRatePlanRequest struct {
 	NationalRoamingEnabled *bool    `form:"name=NationalRoamingEnabled"`
 	UniqueName             *string  `form:"name=UniqueName"`
 	VoiceEnabled           *bool    `form:"name=VoiceEnabled"`
-}
-
-type CreateWirelessRatePlanRequest struct {
-	Request   *CreateWirelessRatePlanCreateWirelessRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateWirelessRatePlanSecurity
-	ServerURL *string
 }
 
 type CreateWirelessRatePlanResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LeaveGroupPathParams struct {
+type LeaveGroupRequest struct {
 	// The ID of the group to leave.
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type LeaveGroupRequest struct {
-	PathParams LeaveGroupPathParams
 }
 
 type LeaveGroupResponse struct {

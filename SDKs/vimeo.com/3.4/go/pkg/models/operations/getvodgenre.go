@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodGenrePathParams struct {
+type GetVodGenreRequest struct {
 	// The ID of the genre.
 	GenreID string `pathParam:"style=simple,explode=false,name=genre_id"`
-}
-
-type GetVodGenreRequest struct {
-	PathParams GetVodGenrePathParams
 }
 
 type GetVodGenreResponse struct {

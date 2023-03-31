@@ -8,23 +8,14 @@ import (
 )
 
 type CloudprivatecatalogproducerCatalogsProductsVersionsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudprivatecatalogproducerCatalogsProductsVersionsPatchPathParams struct {
-	// Required. The resource name of the version, in the format
-	// `catalogs/{catalog_id}/products/{product_id}/versions/a-z*[a-z0-9]'.
-	//
-	// A unique identifier for the version under a product, which can't
-	// be changed after the version is created. The final segment of the name must
-	// between 1 and 63 characters in length.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudprivatecatalogproducerCatalogsProductsVersionsPatchQueryParams struct {
+type CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                     *shared.XgafvEnum                                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudPrivatecatalogproducerV1beta1Version *shared.GoogleCloudPrivatecatalogproducerV1beta1Version `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -35,6 +26,13 @@ type CloudprivatecatalogproducerCatalogsProductsVersionsPatchQueryParams struct 
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the version, in the format
+	// `catalogs/{catalog_id}/products/{product_id}/versions/a-z*[a-z0-9]'.
+	//
+	// A unique identifier for the version under a product, which can't
+	// be changed after the version is created. The final segment of the name must
+	// between 1 and 63 characters in length.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -47,13 +45,6 @@ type CloudprivatecatalogproducerCatalogsProductsVersionsPatchQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest struct {
-	PathParams  CloudprivatecatalogproducerCatalogsProductsVersionsPatchPathParams
-	QueryParams CloudprivatecatalogproducerCatalogsProductsVersionsPatchQueryParams
-	Request     *shared.GoogleCloudPrivatecatalogproducerV1beta1Version `request:"mediaType=application/json"`
-	Security    CloudprivatecatalogproducerCatalogsProductsVersionsPatchSecurity
 }
 
 type CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse struct {

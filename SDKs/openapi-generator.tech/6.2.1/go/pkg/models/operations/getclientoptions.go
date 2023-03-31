@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClientOptionsPathParams struct {
+type GetClientOptionsRequest struct {
 	// The target language for the client library
 	Language string `pathParam:"style=simple,explode=false,name=language"`
-}
-
-type GetClientOptionsRequest struct {
-	PathParams GetClientOptionsPathParams
 }
 
 type GetClientOptionsResponse struct {

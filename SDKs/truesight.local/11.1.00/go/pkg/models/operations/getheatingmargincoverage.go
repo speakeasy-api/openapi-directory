@@ -32,7 +32,7 @@ func (e *GetHeatingMarginCoverageDirectionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetHeatingMarginCoverageQueryParams struct {
+type GetHeatingMarginCoverageRequest struct {
 	// The ID of the application.
 	ApplicationID *string `queryParam:"style=form,explode=true,name=applicationId"`
 	// If set to <em>true</em>, only gets devices whose heating margin information is available.<br>Otherwise, gets any other devices.
@@ -49,10 +49,6 @@ type GetHeatingMarginCoverageQueryParams struct {
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
 	// The column to sort by (case insensitive).
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetHeatingMarginCoverageRequest struct {
-	QueryParams GetHeatingMarginCoverageQueryParams
 }
 
 type GetHeatingMarginCoverageResponse struct {

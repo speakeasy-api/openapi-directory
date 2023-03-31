@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type ReleaseFromOrganizationInventoryPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type ReleaseFromOrganizationInventoryRequestBody struct {
 	// Serials of the devices that should be released
 	Serials []string `json:"serials,omitempty"`
 }
 
 type ReleaseFromOrganizationInventoryRequest struct {
-	PathParams ReleaseFromOrganizationInventoryPathParams
-	Request    *ReleaseFromOrganizationInventoryRequestBody `request:"mediaType=application/json"`
+	RequestBody    *ReleaseFromOrganizationInventoryRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                       `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type ReleaseFromOrganizationInventoryResponse struct {

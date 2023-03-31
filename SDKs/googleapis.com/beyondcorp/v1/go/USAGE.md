@@ -14,59 +14,51 @@ func main() {
     s := sdk.New()
 
     req := operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest{
-        Security: operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            AppConnectionID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-            ValidateOnly: false,
-        },
-        Request: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput{
+        DollarXgafv: "2",
+        GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput{
             ApplicationEndpoint: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint{
-                Host: "magnam",
-                Port: 891773,
+                Host: "provident",
+                Port: 715190,
             },
             Connectors: []string{
-                "delectus",
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             },
-            DisplayName: "tempora",
+            DisplayName: "vel",
             Gateway: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput{
-                AppGateway: "suscipit",
-                Type: "TYPE_UNSPECIFIED",
+                AppGateway: "error",
+                Type: "GCP_REGIONAL_MIG",
             },
             Labels: map[string]string{
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
-                "nisi": "recusandae",
-                "temporibus": "ab",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            Name: "quis",
+            Name: "delectus",
             Type: "TYPE_UNSPECIFIED",
         },
+        AccessToken: "suscipit",
+        Alt: "media",
+        AppConnectionID: "minus",
+        Callback: "placeat",
+        Fields: "voluptatum",
+        Key: "iusto",
+        OauthToken: "excepturi",
+        Parent: "nisi",
+        PrettyPrint: false,
+        QuotaUser: "recusandae",
+        RequestID: "temporibus",
+        UploadType: "ab",
+        UploadProtocol: "quis",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, req)
+    res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, req, operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

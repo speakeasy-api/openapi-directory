@@ -8,10 +8,10 @@ import (
 )
 
 type GetEarningByEarningCodeAndStartDateSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetEarningByEarningCodeAndStartDatePathParams struct {
+type GetEarningByEarningCodeAndStartDateRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Earning Code
@@ -20,11 +20,6 @@ type GetEarningByEarningCodeAndStartDatePathParams struct {
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
 	// Start Date
 	StartDate string `pathParam:"style=simple,explode=false,name=startDate"`
-}
-
-type GetEarningByEarningCodeAndStartDateRequest struct {
-	PathParams GetEarningByEarningCodeAndStartDatePathParams
-	Security   GetEarningByEarningCodeAndStartDateSecurity
 }
 
 type GetEarningByEarningCodeAndStartDateResponse struct {

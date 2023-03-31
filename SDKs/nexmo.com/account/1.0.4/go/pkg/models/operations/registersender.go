@@ -11,17 +11,12 @@ var RegisterSenderServerList = []string{
 	"https://rest.nexmo.com",
 }
 
-type RegisterSenderQueryParams struct {
+type RegisterSenderRequest struct {
 	// Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
-	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
-}
-
-type RegisterSenderRequest struct {
-	QueryParams RegisterSenderQueryParams
-	Request     shared.RegisterEmailRequest `request:"mediaType=application/json"`
-	ServerURL   *string
+	APISecret            string                      `queryParam:"style=form,explode=true,name=api_secret"`
+	RegisterEmailRequest shared.RegisterEmailRequest `request:"mediaType=application/json"`
 }
 
 type RegisterSenderResponse struct {

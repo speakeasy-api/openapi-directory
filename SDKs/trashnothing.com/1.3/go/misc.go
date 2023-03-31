@@ -34,7 +34,7 @@ func newMisc(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // SendFeedback - Send feedback
 // Allows users to send feedback about the trashnothing.com site or apps.
-func (s *misc) SendFeedback(ctx context.Context, request operations.SendFeedbackRequest) (*operations.SendFeedbackResponse, error) {
+func (s *misc) SendFeedback(ctx context.Context, request operations.SendFeedbackRequestBody) (*operations.SendFeedbackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/feedback"
 

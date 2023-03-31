@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFields6PathParams struct {
+type GetCustomFields6Request struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type GetCustomFields6Request struct {
-	PathParams GetCustomFields6PathParams
 }
 
 type GetCustomFields6Response struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveSiteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveSitePathParams struct {
-	// UUID or name of the site to remove
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveSiteRequest struct {
-	PathParams RemoveSitePathParams
-	Security   RemoveSiteSecurity
+	// UUID or name of the site to remove
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type RemoveSiteResponse struct {

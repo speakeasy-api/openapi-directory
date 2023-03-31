@@ -9,41 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetReviewsResourceTypeJSONResourceTypeEnum - Specify all to retrieve all reviews, including NYT Critics' Picks.
-//
-// Specify picks to get NYT Critics' Picks currently in theaters.
-type GetReviewsResourceTypeJSONResourceTypeEnum string
-
-const (
-	GetReviewsResourceTypeJSONResourceTypeEnumAll   GetReviewsResourceTypeJSONResourceTypeEnum = "all"
-	GetReviewsResourceTypeJSONResourceTypeEnumPicks GetReviewsResourceTypeJSONResourceTypeEnum = "picks"
-)
-
-func (e *GetReviewsResourceTypeJSONResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "all":
-		fallthrough
-	case "picks":
-		*e = GetReviewsResourceTypeJSONResourceTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONResourceTypeEnum: %s", s)
-	}
-}
-
-type GetReviewsResourceTypeJSONPathParams struct {
-	// Specify all to retrieve all reviews, including NYT Critics' Picks.
-	//
-	// Specify picks to get NYT Critics' Picks currently in theaters.
-	//
-	//
-	ResourceType GetReviewsResourceTypeJSONResourceTypeEnum `pathParam:"style=simple,explode=false,name=resource-type"`
-}
-
 // GetReviewsResourceTypeJSONOrderEnum - Sets the sort order of the results.
 //
 // Results ordered by-title are in ascending alphabetical order. Results ordered by one of the date parameters are in reverse chronological order.
@@ -75,7 +40,33 @@ func (e *GetReviewsResourceTypeJSONOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetReviewsResourceTypeJSONQueryParams struct {
+// GetReviewsResourceTypeJSONResourceTypeEnum - Specify all to retrieve all reviews, including NYT Critics' Picks.
+//
+// Specify picks to get NYT Critics' Picks currently in theaters.
+type GetReviewsResourceTypeJSONResourceTypeEnum string
+
+const (
+	GetReviewsResourceTypeJSONResourceTypeEnumAll   GetReviewsResourceTypeJSONResourceTypeEnum = "all"
+	GetReviewsResourceTypeJSONResourceTypeEnumPicks GetReviewsResourceTypeJSONResourceTypeEnum = "picks"
+)
+
+func (e *GetReviewsResourceTypeJSONResourceTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "all":
+		fallthrough
+	case "picks":
+		*e = GetReviewsResourceTypeJSONResourceTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONResourceTypeEnum: %s", s)
+	}
+}
+
+type GetReviewsResourceTypeJSONRequest struct {
 	// Positive integer, multiple of 20
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Sets the sort order of the results.
@@ -85,11 +76,12 @@ type GetReviewsResourceTypeJSONQueryParams struct {
 	// If you do not specify a sort order, the results will be ordered by publication-date.
 	//
 	Order *GetReviewsResourceTypeJSONOrderEnum `queryParam:"style=form,explode=true,name=order"`
-}
-
-type GetReviewsResourceTypeJSONRequest struct {
-	PathParams  GetReviewsResourceTypeJSONPathParams
-	QueryParams GetReviewsResourceTypeJSONQueryParams
+	// Specify all to retrieve all reviews, including NYT Critics' Picks.
+	//
+	// Specify picks to get NYT Critics' Picks currently in theaters.
+	//
+	//
+	ResourceType GetReviewsResourceTypeJSONResourceTypeEnum `pathParam:"style=simple,explode=false,name=resource-type"`
 }
 
 // GetReviewsResourceTypeJSON200ApplicationJSON - An array of Movies

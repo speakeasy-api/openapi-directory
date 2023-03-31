@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteImageBackgroundListSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetQuoteImageBackgroundListQueryParams struct {
-	// Response is paged. This parameter determines where the response should start.
-	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type GetQuoteImageBackgroundListRequest struct {
-	QueryParams GetQuoteImageBackgroundListQueryParams
-	Security    GetQuoteImageBackgroundListSecurity
+	// Response is paged. This parameter determines where the response should start.
+	Start *int64 `queryParam:"style=form,explode=true,name=start"`
 }
 
 type GetQuoteImageBackgroundListResponse struct {

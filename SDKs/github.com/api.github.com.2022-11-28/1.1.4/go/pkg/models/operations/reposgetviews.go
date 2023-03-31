@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetViewsPathParams struct {
+type ReposGetViewsRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetViewsQueryParams struct {
 	// The time frame to display results for.
 	Per *shared.PerEnum `queryParam:"style=form,explode=true,name=per"`
-}
-
-type ReposGetViewsRequest struct {
-	PathParams  ReposGetViewsPathParams
-	QueryParams ReposGetViewsQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGetViewsResponse struct {

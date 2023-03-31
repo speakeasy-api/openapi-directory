@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetOrgSecretPathParams struct {
+type ActionsGetOrgSecretRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// secret_name parameter
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsGetOrgSecretRequest struct {
-	PathParams ActionsGetOrgSecretPathParams
 }
 
 type ActionsGetOrgSecretResponse struct {

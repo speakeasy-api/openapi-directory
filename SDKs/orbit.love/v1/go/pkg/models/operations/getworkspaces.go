@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetWorkspacesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspacesRequest struct {
-	Security GetWorkspacesSecurity
-}
 
 type GetWorkspacesResponse struct {
 	ContentType string

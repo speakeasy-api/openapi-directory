@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolDhcpGetTracePathParams struct {
+type ProtocolDhcpGetTraceRequest struct {
 	// Agent to show whether DHCP tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolDhcpGetTraceRequest struct {
-	PathParams ProtocolDhcpGetTracePathParams
 }
 
 type ProtocolDhcpGetTraceResponse struct {

@@ -12,12 +12,8 @@ var CreateSyncListServerList = []string{
 }
 
 type CreateSyncListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncListPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Sync List in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncListCreateSyncListRequest struct {
@@ -30,10 +26,9 @@ type CreateSyncListCreateSyncListRequest struct {
 }
 
 type CreateSyncListRequest struct {
-	PathParams CreateSyncListPathParams
-	Request    *CreateSyncListCreateSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncListSecurity
-	ServerURL  *string
+	RequestBody *CreateSyncListCreateSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Sync List in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncListResponse struct {

@@ -32,11 +32,6 @@ func (e *TransportationIncentivesLawsCategoriesOutputFormatEnum) UnmarshalJSON(d
 	}
 }
 
-type TransportationIncentivesLawsCategoriesPathParams struct {
-	// Response format
-	OutputFormat TransportationIncentivesLawsCategoriesOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
-}
-
 // TransportationIncentivesLawsCategoriesTypeEnum - Search by the category type.
 type TransportationIncentivesLawsCategoriesTypeEnum string
 
@@ -67,16 +62,13 @@ func (e *TransportationIncentivesLawsCategoriesTypeEnum) UnmarshalJSON(data []by
 	}
 }
 
-type TransportationIncentivesLawsCategoriesQueryParams struct {
+type TransportationIncentivesLawsCategoriesRequest struct {
 	// API Key
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// Response format
+	OutputFormat TransportationIncentivesLawsCategoriesOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
 	// Search by the category type.
 	Type *TransportationIncentivesLawsCategoriesTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type TransportationIncentivesLawsCategoriesRequest struct {
-	PathParams  TransportationIncentivesLawsCategoriesPathParams
-	QueryParams TransportationIncentivesLawsCategoriesQueryParams
 }
 
 type TransportationIncentivesLawsCategoriesResponse struct {

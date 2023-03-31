@@ -4,15 +4,10 @@ package callbacks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebhooksUnsubscribeEventResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type WebhooksUnsubscribeEventRequest struct {
-	Request shared.Event `request:"mediaType=application/json"`
 }

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetindexbynamePathParams struct {
+type GetindexbynameRequest struct {
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
 	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
 	// Name of the index.
 	IndexName string `pathParam:"style=simple,explode=false,name=index_name"`
-}
-
-type GetindexbynameHeaders struct {
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetindexbynameRequest struct {
-	PathParams GetindexbynamePathParams
-	Headers    GetindexbynameHeaders
 }
 
 type GetindexbynameResponse struct {

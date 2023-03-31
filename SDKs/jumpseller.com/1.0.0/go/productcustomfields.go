@@ -34,14 +34,14 @@ func newProductCustomFields(defaultClient, securityClient HTTPClient, serverURL,
 // DeleteProductsProductIDFieldsFieldIDJSON - Delete value of Product Custom Field
 func (s *productCustomFields) DeleteProductsProductIDFieldsFieldIDJSON(ctx context.Context, request operations.DeleteProductsProductIDFieldsFieldIDJSONRequest) (*operations.DeleteProductsProductIDFieldsFieldIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{product_id}/fields/{field_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{product_id}/fields/{field_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,14 +92,14 @@ func (s *productCustomFields) DeleteProductsProductIDFieldsFieldIDJSON(ctx conte
 // GetProductsIDFieldsJSON - Retrieve all Product Custom Fields
 func (s *productCustomFields) GetProductsIDFieldsJSON(ctx context.Context, request operations.GetProductsIDFieldsJSONRequest) (*operations.GetProductsIDFieldsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,14 +150,14 @@ func (s *productCustomFields) GetProductsIDFieldsJSON(ctx context.Context, reque
 // GetProductsIDFieldsCountJSON - Count all Product Custom Fields.
 func (s *productCustomFields) GetProductsIDFieldsCountJSON(ctx context.Context, request operations.GetProductsIDFieldsCountJSONRequest) (*operations.GetProductsIDFieldsCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields/count.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields/count.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -208,9 +208,9 @@ func (s *productCustomFields) GetProductsIDFieldsCountJSON(ctx context.Context, 
 // PostProductsIDFieldsJSON - Add an existing Custom Field to a Product.
 func (s *productCustomFields) PostProductsIDFieldsJSON(ctx context.Context, request operations.PostProductsIDFieldsJSONRequest) (*operations.PostProductsIDFieldsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/fields.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddProductCustomField", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -225,7 +225,7 @@ func (s *productCustomFields) PostProductsIDFieldsJSON(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,14 +276,14 @@ func (s *productCustomFields) PostProductsIDFieldsJSON(ctx context.Context, requ
 // PutProductsProductIDFieldsFieldIDJSON - Update value of Product Custom Field
 func (s *productCustomFields) PutProductsProductIDFieldsFieldIDJSON(ctx context.Context, request operations.PutProductsProductIDFieldsFieldIDJSONRequest) (*operations.PutProductsProductIDFieldsFieldIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{product_id}/fields/{field_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{product_id}/fields/{field_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

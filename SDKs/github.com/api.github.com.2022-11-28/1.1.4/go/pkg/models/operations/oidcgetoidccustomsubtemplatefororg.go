@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OidcGetOidcCustomSubTemplateForOrgPathParams struct {
+type OidcGetOidcCustomSubTemplateForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OidcGetOidcCustomSubTemplateForOrgRequest struct {
-	PathParams OidcGetOidcCustomSubTemplateForOrgPathParams
 }
 
 type OidcGetOidcCustomSubTemplateForOrgResponse struct {

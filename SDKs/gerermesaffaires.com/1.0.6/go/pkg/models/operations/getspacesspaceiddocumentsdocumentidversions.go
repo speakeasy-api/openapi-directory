@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDDocumentsDocumentIDVersionsPathParams struct {
+type GetSpacesSpaceIDDocumentsDocumentIDVersionsRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsDocumentIDVersionsRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsDocumentIDVersionsPathParams
 }
 
 type GetSpacesSpaceIDDocumentsDocumentIDVersionsResponse struct {

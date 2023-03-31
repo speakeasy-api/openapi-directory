@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // RecommenderProjectsLocationsInsightTypesInsightsList - Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified insight type.
-func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsList(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest) (*operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse, error) {
+func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsList(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest, security operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity) (*operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/insights", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/insights", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsList(ctx cont
 }
 
 // RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted - Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender API that they have applied some action based on the insight. This stops the insight content from being updated. MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the recommender.*.update IAM permission for the specified insight.
-func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest) (*operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse, error) {
+func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest, security operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedSecurity) (*operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markAccepted", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markAccepted", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1MarkInsightAcceptedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsGet - Gets the requested recommendation. Requires the recommender.*.get IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsGet(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsGet(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsGetSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsGet(ct
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsList - Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsList(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsList(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsListSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/recommendations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/recommendations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsList(c
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimed - Marks the Recommendation State as Claimed. Users can use this method to indicate to the Recommender API that they are starting to apply the recommendation themselves. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED or ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markClaimed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markClaimed", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1MarkRecommendationClaimedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkCl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkCl
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed - Mark the Recommendation State as Dismissed. Users can use this method to indicate to the Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED. MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markDismissed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markDismissed", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1MarkRecommendationDismissedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDi
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed - Marks the Recommendation State as Failed. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation failed. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markFailed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markFailed", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFa
 }
 
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded - Marks the Recommendation State as Succeeded. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation was successful. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
-func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markSucceeded", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:markSucceeded", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1MarkRecommendationSucceededRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSu
 }
 
 // RecommenderProjectsLocationsRecommendersUpdateConfig - Updates a Recommender Config. This will create a new revision of the config.
-func (s *projects) RecommenderProjectsLocationsRecommendersUpdateConfig(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest) (*operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse, error) {
+func (s *projects) RecommenderProjectsLocationsRecommendersUpdateConfig(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest, security operations.RecommenderProjectsLocationsRecommendersUpdateConfigSecurity) (*operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1beta1RecommenderConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *projects) RecommenderProjectsLocationsRecommendersUpdateConfig(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

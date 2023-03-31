@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEDataQueryJobPathParams struct {
-	// Internal identifier of the query job.
-	//
-	JobID string `pathParam:"style=simple,explode=false,name=job-id"`
-}
-
-type DELETEDataQueryJobHeaders struct {
+type DELETEDataQueryJobRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -25,11 +19,9 @@ type DELETEDataQueryJobHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEDataQueryJobRequest struct {
-	PathParams DELETEDataQueryJobPathParams
-	Headers    DELETEDataQueryJobHeaders
+	// Internal identifier of the query job.
+	//
+	JobID string `pathParam:"style=simple,explode=false,name=job-id"`
 }
 
 type DELETEDataQueryJobResponse struct {

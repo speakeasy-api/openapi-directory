@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteChannelCategorySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteChannelCategoryPathParams struct {
+type DeleteChannelCategoryRequest struct {
 	// The name of the category.
 	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type DeleteChannelCategoryRequest struct {
-	PathParams DeleteChannelCategoryPathParams
-	Security   DeleteChannelCategorySecurity
 }
 
 type DeleteChannelCategoryResponse struct {

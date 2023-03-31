@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2MeetingsSettingsIDJSONPathParams struct {
-	// MeetingSetting ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2MeetingsSettingsIDJSONRequestBody struct {
 	// Allow other team members to schedule on you behalf.
 	AllowBookingOnBehalf *bool `form:"name=allow_booking_on_behalf"`
@@ -57,8 +52,9 @@ type PutV2MeetingsSettingsIDJSONRequestBody struct {
 }
 
 type PutV2MeetingsSettingsIDJSONRequest struct {
-	PathParams PutV2MeetingsSettingsIDJSONPathParams
-	Request    *PutV2MeetingsSettingsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2MeetingsSettingsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// MeetingSetting ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2MeetingsSettingsIDJSONResponse struct {

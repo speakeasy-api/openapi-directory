@@ -4,47 +4,46 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest(
-    path_params=operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams(
-        location="ex",
-    ),
-    query_params=operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams(
-        dollar_xgafv="2",
-        access_token="quis",
-        alt="json",
-        callback="qui",
-        fields="voluptates",
-        key="odio",
-        oauth_token="pariatur",
-        pretty_print=False,
-        quota_user="rerum",
-        upload_type="omnis",
-        upload_protocol="veritatis",
-    ),
-    request=shared.FetchVerificationOptionsRequest(
+    dollar_xgafv="2",
+    fetch_verification_options_request=shared.FetchVerificationOptionsRequest(
         context=shared.ServiceBusinessContext(
             address=shared.PostalAddress(
                 address_lines=[
-                    "vero",
+                    "distinctio",
+                    "quibusdam",
+                    "unde",
                 ],
-                administrative_area="autem",
-                language_code="vel",
-                locality="quos",
-                organization="dolore",
-                postal_code="sequi",
+                administrative_area="nulla",
+                language_code="corrupti",
+                locality="illum",
+                organization="vel",
+                postal_code="63428-0923",
                 recipients=[
                     "minus",
-                    "harum",
+                    "placeat",
                 ],
-                region_code="dolores",
-                revision=5694222714762395261,
-                sorting_code="iure",
-                sublocality="beatae",
+                region_code="voluptatum",
+                revision=479977,
+                sorting_code="excepturi",
+                sublocality="nisi",
             ),
         ),
-        language_code="ut",
+        language_code="recusandae",
     ),
+    access_token="temporibus",
+    alt="json",
+    callback="quis",
+    fields_="veritatis",
+    key="deserunt",
+    location="perferendis",
+    oauth_token="ipsam",
+    pretty_print=False,
+    quota_user="repellendus",
+    upload_type="sapiente",
+    upload_protocol="quo",
 )
     
 res = s.locations.mybusinessverifications_locations_fetch_verification_options(req)

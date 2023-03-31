@@ -34,14 +34,14 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // GetOrganization - Get one organization's data by id
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -80,7 +80,7 @@ func (s *organizations) GetOrganizations(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -112,9 +112,9 @@ func (s *organizations) GetOrganizations(ctx context.Context, request operations
 // PatchOrganization - Update an organization's data
 func (s *organizations) PatchOrganization(ctx context.Context, request operations.PatchOrganizationRequest) (*operations.PatchOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

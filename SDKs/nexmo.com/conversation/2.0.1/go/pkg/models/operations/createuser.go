@@ -16,10 +16,6 @@ type CreateUserRequestBody struct {
 	Name *string `json:"name,omitempty"`
 }
 
-type CreateUserRequest struct {
-	Request *CreateUserRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateUser200ApplicationJSON - Create a user response
 type CreateUser200ApplicationJSON struct {
 	// A link towards a user included in Conversation API

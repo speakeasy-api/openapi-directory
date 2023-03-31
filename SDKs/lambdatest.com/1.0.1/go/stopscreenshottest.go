@@ -33,16 +33,16 @@ func newStopScreenshotTest(defaultClient, securityClient HTTPClient, serverURL, 
 
 // StopScreenshotsTest - Stop specified screenshot test
 // Stop specified screenshot test
-func (s *stopScreenshotTest) StopScreenshotsTest(ctx context.Context, request operations.StopScreenshotsTestRequest) (*operations.StopScreenshotsTestResponse, error) {
+func (s *stopScreenshotTest) StopScreenshotsTest(ctx context.Context, request operations.StopScreenshotsTestRequest, security operations.StopScreenshotsTestSecurity) (*operations.StopScreenshotsTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stop/{test_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stop/{test_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type GetNotePathParams struct {
-	// Note's ID.
-	NoteID string `pathParam:"style=simple,explode=false,name=noteId"`
-}
-
-type GetNoteQueryParams struct {
-	// This parameter is relevant only for PII-compliant accounts. When sending requests to this endpoint, PII-compliant accounts can use this parameter to declare the reason for requesting unmasked data. Otherwise, this endpoint will return masked PII data.
-	Reason *string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type GetNoteHeaders struct {
+type GetNoteRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetNoteRequest struct {
-	PathParams  GetNotePathParams
-	QueryParams GetNoteQueryParams
-	Headers     GetNoteHeaders
+	// Note's ID.
+	NoteID string `pathParam:"style=simple,explode=false,name=noteId"`
+	// This parameter is relevant only for PII-compliant accounts. When sending requests to this endpoint, PII-compliant accounts can use this parameter to declare the reason for requesting unmasked data. Otherwise, this endpoint will return masked PII data.
+	Reason *string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 type GetNoteResponse struct {

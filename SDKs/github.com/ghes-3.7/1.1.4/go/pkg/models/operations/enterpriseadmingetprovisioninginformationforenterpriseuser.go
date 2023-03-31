@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams struct {
+type EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest struct {
 	// The unique identifier of the SCIM user.
 	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
-type EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest struct {
-	PathParams EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams
 }
 
 type EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse struct {

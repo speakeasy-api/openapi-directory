@@ -8,17 +8,12 @@ import (
 )
 
 type FollowUserAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type FollowUserAlt1PathParams struct {
-	// The ID of the following user.
-	FollowUserID float64 `pathParam:"style=simple,explode=false,name=follow_user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FollowUserAlt1Request struct {
-	PathParams FollowUserAlt1PathParams
-	Security   FollowUserAlt1Security
+	// The ID of the following user.
+	FollowUserID float64 `pathParam:"style=simple,explode=false,name=follow_user_id"`
 }
 
 type FollowUserAlt1Response struct {

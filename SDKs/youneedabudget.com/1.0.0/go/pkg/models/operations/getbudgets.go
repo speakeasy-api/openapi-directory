@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBudgetsQueryParams struct {
+type GetBudgetsRequest struct {
 	// Whether to include the list of budget accounts
 	IncludeAccounts *bool `queryParam:"style=form,explode=true,name=include_accounts"`
-}
-
-type GetBudgetsRequest struct {
-	QueryParams GetBudgetsQueryParams
 }
 
 type GetBudgetsResponse struct {

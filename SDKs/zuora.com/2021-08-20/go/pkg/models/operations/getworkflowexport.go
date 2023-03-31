@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETWorkflowExportPathParams struct {
-	// The ID of the workflow to export.
-	WorkflowID int64 `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
-type GETWorkflowExportHeaders struct {
+type GETWorkflowExportRequest struct {
 	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
 	//
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETWorkflowExportRequest struct {
-	PathParams GETWorkflowExportPathParams
-	Headers    GETWorkflowExportHeaders
+	// The ID of the workflow to export.
+	WorkflowID int64 `pathParam:"style=simple,explode=false,name=workflow_id"`
 }
 
 // GETWorkflowExport200ApplicationJSON - OK

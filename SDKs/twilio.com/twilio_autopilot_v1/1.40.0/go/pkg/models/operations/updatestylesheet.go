@@ -12,12 +12,8 @@ var UpdateStyleSheetServerList = []string{
 }
 
 type UpdateStyleSheetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateStyleSheetPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateStyleSheetUpdateStyleSheetRequest struct {
@@ -26,10 +22,9 @@ type UpdateStyleSheetUpdateStyleSheetRequest struct {
 }
 
 type UpdateStyleSheetRequest struct {
-	PathParams UpdateStyleSheetPathParams
-	Request    *UpdateStyleSheetUpdateStyleSheetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateStyleSheetSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+	AssistantSid string                                   `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateStyleSheetUpdateStyleSheetRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateStyleSheetResponse struct {

@@ -8,28 +8,20 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchPathParams struct {
-	// Required. Immutable. The ID of the base plan to which this offer is an extension.
-	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
-	// Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
-	OfferID string `pathParam:"style=simple,explode=false,name=offerId"`
-	// Required. Immutable. The package name of the app the parent subscription belongs to.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. Immutable. The ID of the parent subscription this offer belongs to.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SubscriptionOfferInput *shared.SubscriptionOfferInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Immutable. The ID of the base plan to which this offer is an extension.
+	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -38,8 +30,14 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams st
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
+	OfferID string `pathParam:"style=simple,explode=false,name=offerId"`
+	// Required. Immutable. The package name of the app the parent subscription belongs to.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Immutable. The ID of the parent subscription this offer belongs to.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Required. A string representing version of the available regions being used for the specified resource. The current version is 2022/02.
@@ -50,13 +48,6 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchPathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams
-	Request     *shared.SubscriptionOfferInput `request:"mediaType=application/json"`
-	Security    AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type UnarchiveAssignmentSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UnarchiveAssignmentPathParams struct {
+type UnarchiveAssignmentRequest struct {
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
-}
-
-type UnarchiveAssignmentRequest struct {
-	PathParams UnarchiveAssignmentPathParams
-	Security   UnarchiveAssignmentSecurity
 }
 
 type UnarchiveAssignmentResponse struct {

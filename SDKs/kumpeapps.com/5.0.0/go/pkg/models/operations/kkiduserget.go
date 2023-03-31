@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidUserGetQueryParams struct {
+type KkidUserGetRequest struct {
 	// Use bool values instead of Int 0/1
 	EnableBool *bool `queryParam:"style=form,explode=true,name=enableBool"`
-}
-
-type KkidUserGetRequest struct {
-	QueryParams KkidUserGetQueryParams
 }
 
 type KkidUserGetResponse struct {

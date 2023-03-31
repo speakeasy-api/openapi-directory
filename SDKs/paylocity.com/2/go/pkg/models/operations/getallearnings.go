@@ -8,19 +8,14 @@ import (
 )
 
 type GetAllEarningsSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllEarningsPathParams struct {
+type GetAllEarningsRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type GetAllEarningsRequest struct {
-	PathParams GetAllEarningsPathParams
-	Security   GetAllEarningsSecurity
 }
 
 type GetAllEarningsResponse struct {

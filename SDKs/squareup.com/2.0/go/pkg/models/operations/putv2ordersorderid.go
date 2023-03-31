@@ -8,21 +8,16 @@ import (
 )
 
 type PutV2OrdersOrderIDSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PutV2OrdersOrderIDPathParams struct {
-	// The ID of the order to update.
-	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutV2OrdersOrderIDRequest struct {
-	PathParams PutV2OrdersOrderIDPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateOrderRequest `request:"mediaType=application/json"`
-	Security PutV2OrdersOrderIDSecurity
+	UpdateOrderRequest shared.UpdateOrderRequest `request:"mediaType=application/json"`
+	// The ID of the order to update.
+	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
 }
 
 type PutV2OrdersOrderIDResponse struct {

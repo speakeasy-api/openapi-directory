@@ -8,13 +8,13 @@ import (
 )
 
 type WebmastersSitesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSitesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSitesListSecurity struct {
@@ -22,7 +22,7 @@ type WebmastersSitesListSecurity struct {
 	Option2 *WebmastersSitesListSecurityOption2 `security:"option"`
 }
 
-type WebmastersSitesListQueryParams struct {
+type WebmastersSitesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -37,11 +37,6 @@ type WebmastersSitesListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type WebmastersSitesListRequest struct {
-	QueryParams WebmastersSitesListQueryParams
-	Security    WebmastersSitesListSecurity
 }
 
 type WebmastersSitesListResponse struct {

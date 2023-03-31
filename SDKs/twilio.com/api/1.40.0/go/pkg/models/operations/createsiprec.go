@@ -14,14 +14,8 @@ var CreateSiprecServerList = []string{
 }
 
 type CreateSiprecSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSiprecPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateSiprecCreateSiprecRequestStatusCallbackMethodEnum - The http method for the status_callback (one of GET, POST).
@@ -469,10 +463,11 @@ type CreateSiprecCreateSiprecRequest struct {
 }
 
 type CreateSiprecRequest struct {
-	PathParams CreateSiprecPathParams
-	Request    *CreateSiprecCreateSiprecRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSiprecSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
+	CallSid     string                           `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreateSiprecCreateSiprecRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSiprecResponse struct {

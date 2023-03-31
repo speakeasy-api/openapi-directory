@@ -19,5 +19,4 @@ pkg/models/shared/ratelimitsresponse.go
 pkg/models/shared/ratelimit.go
 pkg/models/shared/resource.go
 pkg/models/shared/rate.go
-pkg/models/shared/security.go
 USAGE.md

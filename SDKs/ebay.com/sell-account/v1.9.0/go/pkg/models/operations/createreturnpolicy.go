@@ -8,13 +8,7 @@ import (
 )
 
 type CreateReturnPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateReturnPolicyRequest struct {
-	// Return policy request
-	Request  shared.ReturnPolicyRequest `request:"mediaType=application/json"`
-	Security CreateReturnPolicySecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateReturnPolicyResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsProvidersListQueryParams struct {
+type CircuitsProvidersListRequest struct {
 	Account *string  `queryParam:"style=form,explode=true,name=account"`
 	Asn     *float64 `queryParam:"style=form,explode=true,name=asn"`
 	// Multiple values may be separated by commas.
@@ -22,10 +22,6 @@ type CircuitsProvidersListQueryParams struct {
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type CircuitsProvidersListRequest struct {
-	QueryParams CircuitsProvidersListQueryParams
 }
 
 type CircuitsProvidersList200ApplicationJSON struct {

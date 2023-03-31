@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromFilesFormPathParams struct {
+type CreateImagesFromFilesFormRequest struct {
+	// The batch of image files to add. Limited to 64 images and 20 tags per batch.
+	ImageFileCreateBatch shared.ImageFileCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromFilesFormRequest struct {
-	PathParams CreateImagesFromFilesFormPathParams
-	// The batch of image files to add. Limited to 64 images and 20 tags per batch.
-	Request shared.ImageFileCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateImagesFromFilesFormResponse struct {

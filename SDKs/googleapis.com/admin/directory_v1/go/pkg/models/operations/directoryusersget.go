@@ -10,23 +10,18 @@ import (
 )
 
 type DirectoryUsersGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersGetSecurity struct {
 	Option1 *DirectoryUsersGetSecurityOption1 `security:"option"`
 	Option2 *DirectoryUsersGetSecurityOption2 `security:"option"`
-}
-
-type DirectoryUsersGetPathParams struct {
-	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 // DirectoryUsersGetProjectionEnum - What subset of fields to fetch for this user.
@@ -80,7 +75,7 @@ func (e *DirectoryUsersGetViewTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DirectoryUsersGetQueryParams struct {
+type DirectoryUsersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -107,14 +102,10 @@ type DirectoryUsersGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
+	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 	// Whether to fetch the administrator-only or domain-wide public view of the user. For more information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
 	ViewType *DirectoryUsersGetViewTypeEnum `queryParam:"style=form,explode=true,name=viewType"`
-}
-
-type DirectoryUsersGetRequest struct {
-	PathParams  DirectoryUsersGetPathParams
-	QueryParams DirectoryUsersGetQueryParams
-	Security    DirectoryUsersGetSecurity
 }
 
 type DirectoryUsersGetResponse struct {

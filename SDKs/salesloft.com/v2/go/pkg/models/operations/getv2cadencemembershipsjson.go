@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CadenceMembershipsJSONQueryParams struct {
+type GetV2CadenceMembershipsJSONRequest struct {
 	// ID of the cadence to find cadence memberships for
 	CadenceID *int64 `queryParam:"style=form,explode=true,name=cadence_id"`
 	// If true, return only cadence memberships for people currently on cadences.  If false, return cadence memberships for people who have been removed from or have completed a cadence.
@@ -33,10 +33,6 @@ type GetV2CadenceMembershipsJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2CadenceMembershipsJSONRequest struct {
-	QueryParams GetV2CadenceMembershipsJSONQueryParams
 }
 
 type GetV2CadenceMembershipsJSONResponse struct {

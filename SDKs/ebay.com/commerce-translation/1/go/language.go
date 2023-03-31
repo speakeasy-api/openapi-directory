@@ -33,7 +33,7 @@ func newLanguage(defaultClient, securityClient HTTPClient, serverURL, lang, sdkV
 }
 
 // Translate - Translates input text inot a given language.
-func (s *language) Translate(ctx context.Context, request operations.TranslateRequest) (*operations.TranslateResponse, error) {
+func (s *language) Translate(ctx context.Context, request shared.TranslateRequest, security operations.TranslateSecurity) (*operations.TranslateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/translate"
 
@@ -52,7 +52,7 @@ func (s *language) Translate(ctx context.Context, request operations.TranslateRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

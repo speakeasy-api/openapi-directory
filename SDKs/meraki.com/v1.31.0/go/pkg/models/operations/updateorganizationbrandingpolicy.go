@@ -9,11 +9,6 @@ import (
 	"time"
 )
 
-type UpdateOrganizationBrandingPolicyPathParams struct {
-	BrandingPolicyID string `pathParam:"style=simple,explode=false,name=brandingPolicyId"`
-	OrganizationID   string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum - Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
 type UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum string
 
@@ -538,8 +533,9 @@ type UpdateOrganizationBrandingPolicyRequestBody struct {
 }
 
 type UpdateOrganizationBrandingPolicyRequest struct {
-	PathParams UpdateOrganizationBrandingPolicyPathParams
-	Request    *UpdateOrganizationBrandingPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody      *UpdateOrganizationBrandingPolicyRequestBody `request:"mediaType=application/json"`
+	BrandingPolicyID string                                       `pathParam:"style=simple,explode=false,name=brandingPolicyId"`
+	OrganizationID   string                                       `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganizationBrandingPolicy200ApplicationJSONAdminSettingsAppliesToEnum - Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.

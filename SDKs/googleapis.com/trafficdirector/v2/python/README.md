@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/trafficdirector/v2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,44 +15,134 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TrafficdirectorDiscoveryClientStatusRequest(
-    security=operations.TrafficdirectorDiscoveryClientStatusSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.TrafficdirectorDiscoveryClientStatusQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="json",
-        callback="fuga",
-        fields="deleniti",
-        key="et",
-        oauth_token="esse",
-        pretty_print=True,
-        quota_user="eum",
-        upload_type="impedit",
-        upload_protocol="non",
-    ),
-    request=shared.ClientStatusRequest(
+    dollar_xgafv="2",
+    client_status_request=shared.ClientStatusRequest(
         node_matchers=[
             shared.NodeMatcher(
                 node_id=shared.StringMatcher(
-                    exact="possimus",
+                    exact="distinctio",
                     ignore_case=False,
-                    prefix="eum",
-                    regex="omnis",
+                    prefix="quibusdam",
+                    regex="unde",
                     safe_regex=shared.RegexMatcher(
                         google_re2=shared.GoogleRe2(
-                            max_program_size=801344521399143500,
+                            max_program_size=857946,
                         ),
-                        regex="officiis",
+                        regex="corrupti",
                     ),
-                    suffix="aut",
+                    suffix="illum",
+                ),
+                node_metadatas=[
+                    shared.StructMatcher(
+                        path=[
+                            shared.PathSegment(
+                                key="deserunt",
+                            ),
+                            shared.PathSegment(
+                                key="suscipit",
+                            ),
+                            shared.PathSegment(
+                                key="iure",
+                            ),
+                        ],
+                        value=shared.ValueMatcher(
+                            bool_match=False,
+                            double_match=shared.DoubleMatcher(
+                                exact=2975.34,
+                                range=shared.DoubleRange(
+                                    end=8917.73,
+                                    start=567.13,
+                                ),
+                            ),
+                            list_match=shared.ListMatcher(
+                                one_of=shared.ValueMatcher(),
+                            ),
+                            null_match={
+                                "tempora": "suscipit",
+                                "molestiae": "minus",
+                                "placeat": "voluptatum",
+                                "iusto": "excepturi",
+                            },
+                            present_match=False,
+                            string_match=shared.StringMatcher(
+                                exact="nisi",
+                                ignore_case=False,
+                                prefix="recusandae",
+                                regex="temporibus",
+                                safe_regex=shared.RegexMatcher(
+                                    google_re2=shared.GoogleRe2(
+                                        max_program_size=71036,
+                                    ),
+                                    regex="quis",
+                                ),
+                                suffix="veritatis",
+                            ),
+                        ),
+                    ),
+                    shared.StructMatcher(
+                        path=[
+                            shared.PathSegment(
+                                key="perferendis",
+                            ),
+                            shared.PathSegment(
+                                key="ipsam",
+                            ),
+                            shared.PathSegment(
+                                key="repellendus",
+                            ),
+                        ],
+                        value=shared.ValueMatcher(
+                            bool_match=False,
+                            double_match=shared.DoubleMatcher(
+                                exact=9571.56,
+                                range=shared.DoubleRange(
+                                    end=7781.57,
+                                    start=1403.5,
+                                ),
+                            ),
+                            list_match=shared.ListMatcher(
+                                one_of=shared.ValueMatcher(),
+                            ),
+                            null_match={
+                                "at": "maiores",
+                                "molestiae": "quod",
+                                "quod": "esse",
+                                "totam": "porro",
+                            },
+                            present_match=False,
+                            string_match=shared.StringMatcher(
+                                exact="dolorum",
+                                ignore_case=False,
+                                prefix="dicta",
+                                regex="nam",
+                                safe_regex=shared.RegexMatcher(
+                                    google_re2=shared.GoogleRe2(
+                                        max_program_size=639921,
+                                    ),
+                                    regex="occaecati",
+                                ),
+                                suffix="fugit",
+                            ),
+                        ),
+                    ),
+                ],
+            ),
+            shared.NodeMatcher(
+                node_id=shared.StringMatcher(
+                    exact="deleniti",
+                    ignore_case=False,
+                    prefix="hic",
+                    regex="optio",
+                    safe_regex=shared.RegexMatcher(
+                        google_re2=shared.GoogleRe2(
+                            max_program_size=521848,
+                        ),
+                        regex="beatae",
+                    ),
+                    suffix="commodi",
                 ),
                 node_metadatas=[
                     shared.StructMatcher(
@@ -60,127 +150,80 @@ req = operations.TrafficdirectorDiscoveryClientStatusRequest(
                             shared.PathSegment(
                                 key="qui",
                             ),
+                            shared.PathSegment(
+                                key="impedit",
+                            ),
                         ],
                         value=shared.ValueMatcher(
-                            bool_match=True,
+                            bool_match=False,
                             double_match=shared.DoubleMatcher(
-                                exact=15.100000,
+                                exact=7369.18,
                                 range=shared.DoubleRange(
-                                    end=85.099998,
-                                    start=65.199997,
+                                    end=4561.5,
+                                    start=2165.5,
                                 ),
                             ),
                             list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
+                                one_of=shared.ValueMatcher(),
                             ),
                             null_match={
-                                "laudantium": "rerum",
-                                "et": "officiis",
-                                "ipsa": "voluptatem",
+                                "aspernatur": "perferendis",
+                                "ad": "natus",
+                                "sed": "iste",
+                            },
+                            present_match=False,
+                            string_match=shared.StringMatcher(
+                                exact="dolor",
+                                ignore_case=False,
+                                prefix="natus",
+                                regex="laboriosam",
+                                safe_regex=shared.RegexMatcher(
+                                    google_re2=shared.GoogleRe2(
+                                        max_program_size=943749,
+                                    ),
+                                    regex="saepe",
+                                ),
+                                suffix="fuga",
+                            ),
+                        ),
+                    ),
+                    shared.StructMatcher(
+                        path=[
+                            shared.PathSegment(
+                                key="corporis",
+                            ),
+                            shared.PathSegment(
+                                key="iste",
+                            ),
+                        ],
+                        value=shared.ValueMatcher(
+                            bool_match=False,
+                            double_match=shared.DoubleMatcher(
+                                exact=4370.32,
+                                range=shared.DoubleRange(
+                                    end=9023.49,
+                                    start=6976.31,
+                                ),
+                            ),
+                            list_match=shared.ListMatcher(
+                                one_of=shared.ValueMatcher(),
+                            ),
+                            null_match={
+                                "ipsa": "reiciendis",
                             },
                             present_match=False,
                             string_match=shared.StringMatcher(
                                 exact="est",
-                                ignore_case=True,
-                                prefix="illum",
-                                regex="quibusdam",
-                                safe_regex=shared.RegexMatcher(
-                                    google_re2=shared.GoogleRe2(
-                                        max_program_size=2297128530979691075,
-                                    ),
-                                    regex="enim",
-                                ),
-                                suffix="qui",
-                            ),
-                        ),
-                    ),
-                    shared.StructMatcher(
-                        path=[
-                            shared.PathSegment(
-                                key="ut",
-                            ),
-                            shared.PathSegment(
-                                key="corporis",
-                            ),
-                        ],
-                        value=shared.ValueMatcher(
-                            bool_match=True,
-                            double_match=shared.DoubleMatcher(
-                                exact=37.200001,
-                                range=shared.DoubleRange(
-                                    end=38.099998,
-                                    start=44.099998,
-                                ),
-                            ),
-                            list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
-                            ),
-                            null_match={
-                                "velit": "quas",
-                            },
-                            present_match=True,
-                            string_match=shared.StringMatcher(
-                                exact="minima",
                                 ignore_case=False,
-                                prefix="quod",
-                                regex="saepe",
+                                prefix="mollitia",
+                                regex="laborum",
                                 safe_regex=shared.RegexMatcher(
                                     google_re2=shared.GoogleRe2(
-                                        max_program_size=5738798814881421699,
+                                        max_program_size=170909,
                                     ),
-                                    regex="qui",
+                                    regex="dolorem",
                                 ),
-                                suffix="ea",
-                            ),
-                        ),
-                    ),
-                    shared.StructMatcher(
-                        path=[
-                            shared.PathSegment(
-                                key="corrupti",
-                            ),
-                            shared.PathSegment(
-                                key="sit",
-                            ),
-                            shared.PathSegment(
-                                key="cumque",
-                            ),
-                        ],
-                        value=shared.ValueMatcher(
-                            bool_match=True,
-                            double_match=shared.DoubleMatcher(
-                                exact=1.200000,
-                                range=shared.DoubleRange(
-                                    end=55.099998,
-                                    start=77.099998,
-                                ),
-                            ),
-                            list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
-                            ),
-                            null_match={
-                                "sapiente": "odit",
-                                "est": "non",
-                            },
-                            present_match=False,
-                            string_match=shared.StringMatcher(
-                                exact="eum",
-                                ignore_case=False,
-                                prefix="sit",
-                                regex="accusantium",
-                                safe_regex=shared.RegexMatcher(
-                                    google_re2=shared.GoogleRe2(
-                                        max_program_size=8481447222394835110,
-                                    ),
-                                    regex="illum",
-                                ),
-                                suffix="et",
+                                suffix="corporis",
                             ),
                         ),
                     ),
@@ -188,160 +231,143 @@ req = operations.TrafficdirectorDiscoveryClientStatusRequest(
             ),
             shared.NodeMatcher(
                 node_id=shared.StringMatcher(
-                    exact="qui",
+                    exact="explicabo",
                     ignore_case=False,
-                    prefix="et",
-                    regex="sed",
+                    prefix="nobis",
+                    regex="enim",
                     safe_regex=shared.RegexMatcher(
                         google_re2=shared.GoogleRe2(
-                            max_program_size=2385077128595817332,
+                            max_program_size=607831,
                         ),
-                        regex="nesciunt",
+                        regex="nemo",
                     ),
-                    suffix="facilis",
+                    suffix="minima",
                 ),
                 node_metadatas=[
                     shared.StructMatcher(
                         path=[
                             shared.PathSegment(
-                                key="nostrum",
+                                key="iure",
                             ),
                         ],
                         value=shared.ValueMatcher(
                             bool_match=False,
                             double_match=shared.DoubleMatcher(
-                                exact=13.200000,
+                                exact=6342.74,
                                 range=shared.DoubleRange(
-                                    end=78.099998,
-                                    start=22.200001,
+                                    end=9883.74,
+                                    start=9589.5,
                                 ),
                             ),
                             list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
+                                one_of=shared.ValueMatcher(),
                             ),
                             null_match={
-                                "et": "maxime",
-                                "eos": "vero",
+                                "mollitia": "dolorem",
                             },
                             present_match=False,
                             string_match=shared.StringMatcher(
-                                exact="magni",
+                                exact="culpa",
                                 ignore_case=False,
-                                prefix="quis",
-                                regex="suscipit",
+                                prefix="consequuntur",
+                                regex="repellat",
                                 safe_regex=shared.RegexMatcher(
                                     google_re2=shared.GoogleRe2(
-                                        max_program_size=2975408353815645467,
+                                        max_program_size=653108,
                                     ),
-                                    regex="omnis",
+                                    regex="occaecati",
                                 ),
-                                suffix="perferendis",
+                                suffix="numquam",
                             ),
                         ),
                     ),
                     shared.StructMatcher(
                         path=[
                             shared.PathSegment(
-                                key="molestias",
+                                key="quam",
                             ),
                             shared.PathSegment(
-                                key="soluta",
+                                key="molestiae",
                             ),
                         ],
                         value=shared.ValueMatcher(
                             bool_match=False,
                             double_match=shared.DoubleMatcher(
-                                exact=82.099998,
+                                exact=2444.25,
                                 range=shared.DoubleRange(
-                                    end=16.200001,
-                                    start=83.099998,
+                                    end=6235.1,
+                                    start=1589.69,
                                 ),
                             ),
                             list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
+                                one_of=shared.ValueMatcher(),
                             ),
                             null_match={
-                                "earum": "atque",
-                                "est": "at",
+                                "vitae": "laborum",
+                                "animi": "enim",
                             },
                             present_match=False,
                             string_match=shared.StringMatcher(
-                                exact="quisquam",
+                                exact="odit",
                                 ignore_case=False,
-                                prefix="voluptatem",
-                                regex="quibusdam",
+                                prefix="quo",
+                                regex="sequi",
                                 safe_regex=shared.RegexMatcher(
                                     google_re2=shared.GoogleRe2(
-                                        max_program_size=2614919038132016322,
+                                        max_program_size=949572,
                                     ),
-                                    regex="est",
+                                    regex="ipsam",
                                 ),
-                                suffix="placeat",
+                                suffix="id",
                             ),
                         ),
                     ),
-                ],
-            ),
-            shared.NodeMatcher(
-                node_id=shared.StringMatcher(
-                    exact="cupiditate",
-                    ignore_case=False,
-                    prefix="neque",
-                    regex="occaecati",
-                    safe_regex=shared.RegexMatcher(
-                        google_re2=shared.GoogleRe2(
-                            max_program_size=4601631252330064062,
-                        ),
-                        regex="enim",
-                    ),
-                    suffix="perspiciatis",
-                ),
-                node_metadatas=[
                     shared.StructMatcher(
                         path=[
                             shared.PathSegment(
-                                key="distinctio",
+                                key="aut",
                             ),
                             shared.PathSegment(
-                                key="dolor",
+                                key="quasi",
+                            ),
+                            shared.PathSegment(
+                                key="error",
+                            ),
+                            shared.PathSegment(
+                                key="temporibus",
                             ),
                         ],
                         value=shared.ValueMatcher(
-                            bool_match=True,
+                            bool_match=False,
                             double_match=shared.DoubleMatcher(
-                                exact=72.199997,
+                                exact=6736.6,
                                 range=shared.DoubleRange(
-                                    end=90.099998,
-                                    start=75.099998,
+                                    end=960.98,
+                                    start=9719.45,
                                 ),
                             ),
                             list_match=shared.ListMatcher(
-                                one_of=shared.ValueMatcher(
-                                
-                                ),
+                                one_of=shared.ValueMatcher(),
                             ),
                             null_match={
-                                "voluptates": "et",
-                                "sed": "mollitia",
-                                "eum": "dolore",
+                                "vero": "nihil",
+                                "praesentium": "voluptatibus",
+                                "ipsa": "omnis",
+                                "voluptate": "cum",
                             },
-                            present_match=True,
+                            present_match=False,
                             string_match=shared.StringMatcher(
-                                exact="perspiciatis",
+                                exact="perferendis",
                                 ignore_case=False,
-                                prefix="omnis",
-                                regex="eligendi",
+                                prefix="doloremque",
+                                regex="reprehenderit",
                                 safe_regex=shared.RegexMatcher(
                                     google_re2=shared.GoogleRe2(
-                                        max_program_size=3967219848098404836,
+                                        max_program_size=282807,
                                     ),
-                                    regex="officiis",
+                                    regex="maiores",
                                 ),
-                                suffix="minima",
+                                suffix="dicta",
                             ),
                         ),
                     ),
@@ -349,9 +375,22 @@ req = operations.TrafficdirectorDiscoveryClientStatusRequest(
             ),
         ],
     ),
+    access_token="corporis",
+    alt="json",
+    callback="iusto",
+    fields_="dicta",
+    key="harum",
+    oauth_token="enim",
+    pretty_print=False,
+    quota_user="accusamus",
+    upload_type="commodi",
+    upload_protocol="repudiandae",
 )
     
-res = s.discovery.trafficdirector_discovery_client_status(req)
+res = s.discovery.trafficdirector_discovery_client_status(req, operations.TrafficdirectorDiscoveryClientStatusSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.client_status_response is not None:
     # handle response
@@ -359,12 +398,23 @@ if res.client_status_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### discovery
 
 * `trafficdirector_discovery_client_status`
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBlockListRequest struct {
-	// Block list
-	Request shared.CreateBlockListRequest `request:"mediaType=application/json"`
-}
-
 type CreateBlockListResponse struct {
 	// Bad request
 	APIError    *shared.APIError

@@ -44,9 +44,9 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // > The `Cancel order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) CancelOrder2(ctx context.Context, request operations.CancelOrder2Request) (*operations.CancelOrder2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *orders) CancelOrder2(ctx context.Context, request operations.CancelOrde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -433,16 +433,16 @@ func (s *orders) CancelOrder2(ctx context.Context, request operations.CancelOrde
 // | `value` | integer | Order Value |
 func (s *orders) GetOrder2(ctx context.Context, request operations.GetOrder2Request) (*operations.GetOrder2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -906,7 +906,7 @@ func (s *orders) ListOrders2(ctx context.Context, request operations.ListOrders2
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/orders/extendsearch/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -918,9 +918,9 @@ func (s *orders) ListOrders2(ctx context.Context, request operations.ListOrders2
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -968,14 +968,14 @@ func (s *orders) ListOrders2(ctx context.Context, request operations.ListOrders2
 // > The `Change order workflow status` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) StartHandling2(ctx context.Context, request operations.StartHandling2Request) (*operations.StartHandling2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/actions/start-handling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/actions/start-handling", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

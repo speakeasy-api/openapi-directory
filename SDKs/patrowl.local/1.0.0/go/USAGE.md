@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CleanScanPageRequest{
-        PathParams: operations.CleanScanPagePathParams{
-            ScanID: 548814,
-        },
+        ScanID: 548814,
     }
 
     ctx := context.Background()

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceCameraAnalyticsRecentPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // GetDeviceCameraAnalyticsRecentObjectTypeEnum - [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 type GetDeviceCameraAnalyticsRecentObjectTypeEnum string
 
@@ -36,14 +32,10 @@ func (e *GetDeviceCameraAnalyticsRecentObjectTypeEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetDeviceCameraAnalyticsRecentQueryParams struct {
+type GetDeviceCameraAnalyticsRecentRequest struct {
 	// [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 	ObjectType *GetDeviceCameraAnalyticsRecentObjectTypeEnum `queryParam:"style=form,explode=true,name=objectType"`
-}
-
-type GetDeviceCameraAnalyticsRecentRequest struct {
-	PathParams  GetDeviceCameraAnalyticsRecentPathParams
-	QueryParams GetDeviceCameraAnalyticsRecentQueryParams
+	Serial     string                                        `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceCameraAnalyticsRecentResponse struct {

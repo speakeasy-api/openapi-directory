@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetRoutingControlStateRequest(
-    headers=operations.GetRoutingControlStateHeaders(
-        x_amz_algorithm="sed",
-        x_amz_content_sha256="expedita",
-        x_amz_credential="maxime",
-        x_amz_date="eos",
-        x_amz_security_token="aut",
-        x_amz_signature="autem",
-        x_amz_signed_headers="deleniti",
-        x_amz_target="ToggleCustomerAPI.GetRoutingControlState",
+    get_routing_control_state_request=shared.GetRoutingControlStateRequest(
+        routing_control_arn="corrupti",
     ),
-    request=shared.GetRoutingControlStateRequest(
-        routing_control_arn="asperiores",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="ToggleCustomerAPI.GetRoutingControlState",
 )
     
 res = s.get_routing_control_state(req)

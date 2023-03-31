@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitDeleteRefPathParams struct {
+type GitDeleteRefRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// ref parameter
 	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitDeleteRefRequest struct {
-	PathParams GitDeleteRefPathParams
 }
 
 type GitDeleteRefResponse struct {

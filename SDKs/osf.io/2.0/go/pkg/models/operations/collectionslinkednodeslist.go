@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CollectionsLinkedNodesListPathParams struct {
+type CollectionsLinkedNodesListRequest struct {
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsLinkedNodesListRequest struct {
-	PathParams CollectionsLinkedNodesListPathParams
 }
 
 type CollectionsLinkedNodesListResponse struct {

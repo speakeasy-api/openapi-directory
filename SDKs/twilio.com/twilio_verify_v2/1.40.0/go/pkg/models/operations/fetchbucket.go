@@ -12,22 +12,17 @@ var FetchBucketServerList = []string{
 }
 
 type FetchBucketSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchBucketPathParams struct {
+type FetchBucketRequest struct {
 	// The Twilio-provided string that uniquely identifies the Rate Limit resource.
 	RateLimitSid string `pathParam:"style=simple,explode=false,name=RateLimitSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// A 34 character string that uniquely identifies this Bucket.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchBucketRequest struct {
-	PathParams FetchBucketPathParams
-	Security   FetchBucketSecurity
-	ServerURL  *string
 }
 
 type FetchBucketResponse struct {

@@ -8,18 +8,11 @@ import (
 )
 
 type ContentProductstatusesRepricingreportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentProductstatusesRepricingreportsListPathParams struct {
-	// Required. Id of the merchant who owns the Repricing rule.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-	// Required. Id of the Repricing product. Also known as the [REST_ID](https://developers.google.com/shopping-content/reference/rest/v2.1/products#Product.FIELDS.id)
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ContentProductstatusesRepricingreportsListQueryParams struct {
+type ContentProductstatusesRepricingreportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +27,8 @@ type ContentProductstatusesRepricingreportsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Id of the merchant who owns the Repricing rule.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Maximum number of days of reports to return. There can be more than one rule report returned per day. For example, if 3 rule types got applied to the same product within a 24-hour period, then a page_size of 1 will return 3 rule reports. The page size defaults to 50 and values above 1000 are coerced to 1000. This service may return fewer days of reports than this value, for example, if the time between your start and end date is less than the page size.
@@ -42,6 +37,8 @@ type ContentProductstatusesRepricingreportsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Id of the Repricing product. Also known as the [REST_ID](https://developers.google.com/shopping-content/reference/rest/v2.1/products#Product.FIELDS.id)
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Id of the Repricing rule. If specified, only gets this rule's reports.
@@ -52,12 +49,6 @@ type ContentProductstatusesRepricingreportsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentProductstatusesRepricingreportsListRequest struct {
-	PathParams  ContentProductstatusesRepricingreportsListPathParams
-	QueryParams ContentProductstatusesRepricingreportsListQueryParams
-	Security    ContentProductstatusesRepricingreportsListSecurity
 }
 
 type ContentProductstatusesRepricingreportsListResponse struct {

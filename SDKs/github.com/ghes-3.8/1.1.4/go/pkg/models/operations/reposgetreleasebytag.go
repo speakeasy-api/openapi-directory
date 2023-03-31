@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReleaseByTagPathParams struct {
+type ReposGetReleaseByTagRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// tag parameter
 	Tag string `pathParam:"style=simple,explode=false,name=tag"`
-}
-
-type ReposGetReleaseByTagRequest struct {
-	PathParams ReposGetReleaseByTagPathParams
 }
 
 type ReposGetReleaseByTagResponse struct {

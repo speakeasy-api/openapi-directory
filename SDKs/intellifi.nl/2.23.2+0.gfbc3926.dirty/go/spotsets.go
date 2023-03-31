@@ -84,7 +84,7 @@ func (s *spotsets) GetSpotsets(ctx context.Context) (*operations.GetSpotsetsResp
 // GetSpotsetsID - Get spotset
 func (s *spotsets) GetSpotsetsID(ctx context.Context, request operations.GetSpotsetsIDRequest) (*operations.GetSpotsetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spotsets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spotsets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *spotsets) GetSpotsetsID(ctx context.Context, request operations.GetSpot
 }
 
 // PostSpotsets - Create spotset
-func (s *spotsets) PostSpotsets(ctx context.Context, request operations.PostSpotsetsRequest) (*operations.PostSpotsetsResponse, error) {
+func (s *spotsets) PostSpotsets(ctx context.Context, request shared.SpotSetCreate) (*operations.PostSpotsetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/spotsets"
 
@@ -182,9 +182,9 @@ func (s *spotsets) PostSpotsets(ctx context.Context, request operations.PostSpot
 // PutSpotsetsID - Update existing spotset
 func (s *spotsets) PutSpotsetsID(ctx context.Context, request operations.PutSpotsetsIDRequest) (*operations.PutSpotsetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spotsets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/spotsets/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpotSetUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

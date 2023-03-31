@@ -11,14 +11,9 @@ var CancelBookingQuoteServerList = []string{
 	"https://api.sandbox.viator.com/partner",
 }
 
-type CancelBookingQuotePathParams struct {
+type CancelBookingQuoteRequest struct {
 	// Unique numeric identifier of the booking for which to retrieve a cancellation quote
 	BookingReference string `pathParam:"style=simple,explode=false,name=booking-reference"`
-}
-
-type CancelBookingQuoteRequest struct {
-	PathParams CancelBookingQuotePathParams
-	ServerURL  *string
 }
 
 type CancelBookingQuoteResponse struct {

@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type PastMeetingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PastMeetingsPathParams struct {
+type PastMeetingsRequest struct {
 	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
 	//
 	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
 	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type PastMeetingsRequest struct {
-	PathParams PastMeetingsPathParams
-	Security   PastMeetingsSecurity
 }
 
 type PastMeetingsMeetingInstancesMeetings struct {

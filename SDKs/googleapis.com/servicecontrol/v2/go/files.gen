@@ -16,6 +16,7 @@ pkg/models/operations/servicecontrolservicescheck.go
 pkg/models/operations/servicecontrolservicesreport.go
 pkg/models/shared/checkresponse.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/checkrequest.go
 pkg/models/shared/resourceinfo.go
 pkg/models/shared/attributecontext.go
@@ -25,8 +26,6 @@ pkg/models/shared/resource.go
 pkg/models/shared/request.go
 pkg/models/shared/auth.go
 pkg/models/shared/api.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/reportrequest.go
 USAGE.md

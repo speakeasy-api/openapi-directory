@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type TaxRatesByCountryCodeQueryParams struct {
+type TaxRatesByCountryCodeRequest struct {
 	// Country code alpha 2
 	CountryCode *string `queryParam:"style=form,explode=true,name=country_code"`
 	Date        *string `queryParam:"style=form,explode=true,name=date"`
@@ -20,10 +20,6 @@ type TaxRatesByCountryCodeQueryParams struct {
 	Province *string `queryParam:"style=form,explode=true,name=province "`
 	// You must provide a zip code if one of your selected countries is United States and you've had selected a state on your Taxrates.io member's dashboard.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type TaxRatesByCountryCodeRequest struct {
-	QueryParams TaxRatesByCountryCodeQueryParams
 }
 
 // TaxRatesByCountryCode500ApplicationJSON - Unexpected error

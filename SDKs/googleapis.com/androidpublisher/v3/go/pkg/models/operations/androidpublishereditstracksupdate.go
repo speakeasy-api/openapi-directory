@@ -8,49 +8,40 @@ import (
 )
 
 type AndroidpublisherEditsTracksUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherEditsTracksUpdatePathParams struct {
-	// Identifier of the edit.
-	EditID string `pathParam:"style=simple,explode=false,name=editId"`
-	// Package name of the app.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
-	Track string `pathParam:"style=simple,explode=false,name=track"`
-}
-
-type AndroidpublisherEditsTracksUpdateQueryParams struct {
+type AndroidpublisherEditsTracksUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Track1      *shared.Track     `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the edit.
+	EditID string `pathParam:"style=simple,explode=false,name=editId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Package name of the app.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
+	TrackPathParameter string `pathParam:"style=simple,explode=false,name=track"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherEditsTracksUpdateRequest struct {
-	PathParams  AndroidpublisherEditsTracksUpdatePathParams
-	QueryParams AndroidpublisherEditsTracksUpdateQueryParams
-	Request     *shared.Track `request:"mediaType=application/json"`
-	Security    AndroidpublisherEditsTracksUpdateSecurity
 }
 
 type AndroidpublisherEditsTracksUpdateResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type AddOrUpdateAnEmployeeEarningSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type AddOrUpdateAnEmployeeEarningPathParams struct {
-	// Company Id
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-	// Employee Id
-	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddOrUpdateAnEmployeeEarningRequest struct {
-	PathParams AddOrUpdateAnEmployeeEarningPathParams
+	// Company Id
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Earning Model
-	Request  shared.Earning `request:"mediaType=application/json"`
-	Security AddOrUpdateAnEmployeeEarningSecurity
+	Earning shared.Earning `request:"mediaType=application/json"`
+	// Employee Id
+	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
 }
 
 type AddOrUpdateAnEmployeeEarningResponse struct {

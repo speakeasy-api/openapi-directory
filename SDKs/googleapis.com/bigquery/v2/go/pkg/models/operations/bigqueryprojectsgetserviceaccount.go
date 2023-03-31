@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryProjectsGetServiceAccountSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryProjectsGetServiceAccountSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryProjectsGetServiceAccountSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryProjectsGetServiceAccountSecurity struct {
@@ -28,12 +28,7 @@ type BigqueryProjectsGetServiceAccountSecurity struct {
 	Option3 *BigqueryProjectsGetServiceAccountSecurityOption3 `security:"option"`
 }
 
-type BigqueryProjectsGetServiceAccountPathParams struct {
-	// Project ID for which the service account is requested.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryProjectsGetServiceAccountQueryParams struct {
+type BigqueryProjectsGetServiceAccountRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,16 +39,12 @@ type BigqueryProjectsGetServiceAccountQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID for which the service account is requested.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryProjectsGetServiceAccountRequest struct {
-	PathParams  BigqueryProjectsGetServiceAccountPathParams
-	QueryParams BigqueryProjectsGetServiceAccountQueryParams
-	Security    BigqueryProjectsGetServiceAccountSecurity
 }
 
 type BigqueryProjectsGetServiceAccountResponse struct {

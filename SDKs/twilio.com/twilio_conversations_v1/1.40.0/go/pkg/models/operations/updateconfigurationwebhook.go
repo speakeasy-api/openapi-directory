@@ -12,7 +12,8 @@ var UpdateConfigurationWebhookServerList = []string{
 }
 
 type UpdateConfigurationWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConfigurationWebhookUpdateConfigurationWebhookRequest struct {
@@ -25,12 +26,6 @@ type UpdateConfigurationWebhookUpdateConfigurationWebhookRequest struct {
 	// The absolute url the pre-event webhook request should be sent to.
 	PreWebhookURL *string                                    `form:"name=PreWebhookUrl"`
 	Target        *shared.ConfigurationWebhookEnumTargetEnum `form:"name=Target"`
-}
-
-type UpdateConfigurationWebhookRequest struct {
-	Request   *UpdateConfigurationWebhookUpdateConfigurationWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateConfigurationWebhookSecurity
-	ServerURL *string
 }
 
 type UpdateConfigurationWebhookResponse struct {

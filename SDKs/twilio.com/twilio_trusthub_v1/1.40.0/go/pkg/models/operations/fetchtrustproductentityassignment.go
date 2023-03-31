@@ -12,20 +12,15 @@ var FetchTrustProductEntityAssignmentServerList = []string{
 }
 
 type FetchTrustProductEntityAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTrustProductEntityAssignmentPathParams struct {
+type FetchTrustProductEntityAssignmentRequest struct {
 	// The unique string that we created to identify the Identity resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The unique string that we created to identify the TrustProduct resource.
 	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
-}
-
-type FetchTrustProductEntityAssignmentRequest struct {
-	PathParams FetchTrustProductEntityAssignmentPathParams
-	Security   FetchTrustProductEntityAssignmentSecurity
-	ServerURL  *string
 }
 
 type FetchTrustProductEntityAssignmentResponse struct {

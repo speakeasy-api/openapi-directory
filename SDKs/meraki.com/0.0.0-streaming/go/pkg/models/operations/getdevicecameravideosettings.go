@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceCameraVideoSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceCameraVideoSettingsRequest struct {
-	PathParams GetDeviceCameraVideoSettingsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceCameraVideoSettingsResponse struct {

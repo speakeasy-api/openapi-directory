@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Oauth2TokeninfoQueryParams struct {
+type Oauth2TokeninfoRequest struct {
 	// The oauth2 access token
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for the response.
@@ -26,10 +26,6 @@ type Oauth2TokeninfoQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type Oauth2TokeninfoRequest struct {
-	QueryParams Oauth2TokeninfoQueryParams
 }
 
 type Oauth2TokeninfoResponse struct {

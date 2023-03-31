@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFundingRequestV2PathParams struct {
+type CreateFundingRequestV2Request struct {
+	// Body to included amount to be funded
+	FundingRequestV2 shared.FundingRequestV2 `request:"mediaType=application/json"`
 	// Source account id
 	SourceAccountID string `pathParam:"style=simple,explode=false,name=sourceAccountId"`
-}
-
-type CreateFundingRequestV2Request struct {
-	PathParams CreateFundingRequestV2PathParams
-	// Body to included amount to be funded
-	Request shared.FundingRequestV2 `request:"mediaType=application/json"`
 }
 
 type CreateFundingRequestV2Response struct {

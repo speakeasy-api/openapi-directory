@@ -135,10 +135,6 @@ type EditUserAlt1RequestBody struct {
 	Videos   *EditUserAlt1RequestBodyVideos `json:"videos,omitempty"`
 }
 
-type EditUserAlt1Request struct {
-	Request *EditUserAlt1RequestBody `request:"mediaType=application/vnd.vimeo.user+json"`
-}
-
 type EditUserAlt1Response struct {
 	ContentType string
 	StatusCode  int

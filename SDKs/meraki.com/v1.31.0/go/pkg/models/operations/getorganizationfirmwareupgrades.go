@@ -7,20 +7,12 @@ import (
 	"time"
 )
 
-type GetOrganizationFirmwareUpgradesPathParams struct {
+type GetOrganizationFirmwareUpgradesRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationFirmwareUpgradesQueryParams struct {
 	// The product type in a given upgrade ID
 	ProductType []string `queryParam:"style=form,explode=false,name=productType"`
 	// The status of an upgrade
 	Status []string `queryParam:"style=form,explode=false,name=status"`
-}
-
-type GetOrganizationFirmwareUpgradesRequest struct {
-	PathParams  GetOrganizationFirmwareUpgradesPathParams
-	QueryParams GetOrganizationFirmwareUpgradesQueryParams
 }
 
 // GetOrganizationFirmwareUpgrades200ApplicationJSONFromVersion - ID of the upgrade's starting version

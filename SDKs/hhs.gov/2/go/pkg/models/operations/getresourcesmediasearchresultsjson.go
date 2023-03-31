@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaSearchResultsJSONQueryParams struct {
+type GetResourcesMediaSearchResultsJSONRequest struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// The offset of the records set to return for pagination.
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
 	// The search query supplied by the user
 	Q string `queryParam:"style=form,explode=false,name=q"`
-}
-
-type GetResourcesMediaSearchResultsJSONRequest struct {
-	QueryParams GetResourcesMediaSearchResultsJSONQueryParams
 }
 
 type GetResourcesMediaSearchResultsJSONResponse struct {

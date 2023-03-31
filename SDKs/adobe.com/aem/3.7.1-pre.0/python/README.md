@@ -1,0 +1,114 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/adobe.com/aem/3.7.1-pre.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
+)
+
+    
+res = s.console.get_aem_product_info()
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### console
+
+* `get_aem_product_info`
+* `get_bundle_info`
+* `get_config_mgr`
+* `post_bundle`
+* `post_jmx_repository`
+* `post_saml_configuration`
+
+### cq
+
+* `get_login_page`
+* `post_cq_actions`
+
+### crx
+
+* `get_crxde_status`
+* `get_install_status`
+* `get_package_manager_servlet`
+* `post_package_service`
+* `post_package_service_json`
+* `post_package_update`
+* `post_set_password`
+
+### custom
+
+* `get_aem_health_check`
+* `post_config_aem_health_check_servlet`
+* `post_config_aem_password_reset`
+
+### granite
+
+* `ssl_setup`
+
+### sling
+
+* `delete_agent`
+* `delete_node`
+* `get_agent`
+* `get_agents`
+* `get_authorizable_keystore`
+* `get_keystore`
+* `get_node`
+* `get_package`
+* `get_package_filter`
+* `get_query`
+* `get_truststore`
+* `get_truststore_info`
+* `post_agent`
+* `post_authorizable_keystore`
+* `post_authorizables`
+* `post_config_adobe_granite_saml_authentication_handler`
+* `post_config_apache_felix_jetty_based_http_service`
+* `post_config_apache_http_components_proxy_configuration`
+* `post_config_apache_sling_dav_ex_servlet`
+* `post_config_apache_sling_get_servlet`
+* `post_config_apache_sling_referrer_filter`
+* `post_config_property`
+* `post_node`
+* `post_node_rw`
+* `post_path`
+* `post_query`
+* `post_tree_activation`
+* `post_truststore`
+* `post_truststore_pkcs12`
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadLanguagePathParams struct {
+type DownloadLanguageRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Language code. You can download the translation of only a specific language.
 	Language string `pathParam:"style=simple,explode=false,name=language"`
-}
-
-type DownloadLanguageRequest struct {
-	PathParams DownloadLanguagePathParams
 }
 
 type DownloadLanguageResponse struct {

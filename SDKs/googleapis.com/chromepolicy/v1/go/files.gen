@@ -27,12 +27,11 @@ pkg/models/operations/chromepolicycustomerspoliciesresolve.go
 pkg/models/operations/chromepolicycustomerspolicyschemasget.go
 pkg/models/operations/chromepolicycustomerspolicyschemaslist.go
 pkg/models/operations/chromepolicymediaupload.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlechromepolicyversionsv1batchdeletegrouppoliciesrequest.go
 pkg/models/shared/googlechromepolicyversionsv1deletegrouppolicyrequest.go
 pkg/models/shared/googlechromepolicyversionsv1policytargetkey.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlechromepolicyversionsv1batchmodifygrouppoliciesrequest.go
 pkg/models/shared/googlechromepolicyversionsv1modifygrouppolicyrequest.go
 pkg/models/shared/googlechromepolicyversionsv1policyvalue.go

@@ -25,66 +25,42 @@ func main() {
     s := sdk.New()
 
     req := operations.GkehubProjectsLocationsFeaturesCreateRequest{
-        Security: operations.GkehubProjectsLocationsFeaturesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GkehubProjectsLocationsFeaturesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.GkehubProjectsLocationsFeaturesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            FeatureID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.FeatureInput{
+        DollarXgafv: "2",
+        FeatureInput: &shared.FeatureInput{
             FleetDefaultMemberConfig: map[string]interface{}{
-                "debitis": "ipsa",
-                "delectus": "tempora",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
             Labels: map[string]string{
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
             MembershipSpecs: map[string]shared.MembershipFeatureSpecInput{
-                "excepturi": shared.MembershipFeatureSpecInput{
+                "debitis": shared.MembershipFeatureSpecInput{
                     Configmanagement: &shared.ConfigManagementMembershipSpec{
                         ConfigSync: &shared.ConfigManagementConfigSync{
                             AllowVerticalScale: false,
                             Enabled: false,
                             Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "nisi",
-                                HTTPSProxy: "recusandae",
-                                PolicyDir: "temporibus",
-                                SecretType: "ab",
-                                SyncBranch: "quis",
-                                SyncRepo: "veritatis",
-                                SyncRev: "deserunt",
-                                SyncWaitSecs: "perferendis",
+                                GcpServiceAccountEmail: "ipsa",
+                                HTTPSProxy: "delectus",
+                                PolicyDir: "tempora",
+                                SecretType: "suscipit",
+                                SyncBranch: "molestiae",
+                                SyncRepo: "minus",
+                                SyncRev: "placeat",
+                                SyncWaitSecs: "voluptatum",
                             },
                             Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "ipsam",
-                                PolicyDir: "repellendus",
-                                SecretType: "sapiente",
-                                SyncRepo: "quo",
-                                SyncWaitSecs: "odit",
+                                GcpServiceAccountEmail: "iusto",
+                                PolicyDir: "excepturi",
+                                SecretType: "nisi",
+                                SyncRepo: "recusandae",
+                                SyncWaitSecs: "temporibus",
                             },
                             PreventDrift: false,
-                            SourceFormat: "at",
+                            SourceFormat: "ab",
                         },
                         HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
                             EnableHierarchicalResourceQuota: false,
@@ -92,95 +68,119 @@ func main() {
                             Enabled: false,
                         },
                         PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "at",
+                            AuditIntervalSeconds: "quis",
                             Enabled: false,
                             ExemptableNamespaces: []string{
-                                "molestiae",
-                                "quod",
-                                "quod",
-                                "esse",
+                                "deserunt",
                             },
                             LogDeniesEnabled: false,
                             Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
                                 Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
-                                    "CLOUD_MONITORING",
-                                    "CLOUD_MONITORING",
-                                    "MONITORING_BACKEND_UNSPECIFIED",
+                                    "PROMETHEUS",
                                 },
                             },
                             MutationEnabled: false,
                             ReferentialRulesEnabled: false,
                             TemplateLibraryInstalled: false,
                         },
-                        Version: "nam",
+                        Version: "repellendus",
                     },
                     FleetInherited: false,
                     Fleetobservability: map[string]interface{}{
-                        "occaecati": "fugit",
-                        "deleniti": "hic",
-                        "optio": "totam",
+                        "quo": "odit",
+                        "at": "at",
+                        "maiores": "molestiae",
+                        "quod": "quod",
                     },
                     Identityservice: &shared.IdentityServiceMembershipSpecInput{
                         AuthMethods: []shared.IdentityServiceAuthMethodInput{
                             shared.IdentityServiceAuthMethodInput{
                                 AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
-                                    ClientID: "commodi",
-                                    ClientSecret: "molestiae",
-                                    KubectlRedirectURI: "modi",
-                                    Tenant: "qui",
+                                    ClientID: "totam",
+                                    ClientSecret: "porro",
+                                    KubectlRedirectURI: "dolorum",
+                                    Tenant: "dicta",
                                 },
                                 GoogleConfig: &shared.IdentityServiceGoogleConfig{
                                     Disable: false,
                                 },
-                                Name: "impedit",
+                                Name: "nam",
                                 OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "cum",
-                                    ClientID: "esse",
-                                    ClientSecret: "ipsum",
+                                    CertificateAuthorityData: "officia",
+                                    ClientID: "occaecati",
+                                    ClientSecret: "fugit",
                                     DeployCloudConsoleProxy: false,
                                     EnableAccessToken: false,
-                                    ExtraParams: "excepturi",
-                                    GroupPrefix: "aspernatur",
-                                    GroupsClaim: "perferendis",
-                                    IssuerURI: "ad",
-                                    KubectlRedirectURI: "natus",
-                                    Scopes: "sed",
-                                    UserClaim: "iste",
-                                    UserPrefix: "dolor",
+                                    ExtraParams: "deleniti",
+                                    GroupPrefix: "hic",
+                                    GroupsClaim: "optio",
+                                    IssuerURI: "totam",
+                                    KubectlRedirectURI: "beatae",
+                                    Scopes: "commodi",
+                                    UserClaim: "molestiae",
+                                    UserPrefix: "modi",
                                 },
-                                Proxy: "natus",
+                                Proxy: "qui",
+                            },
+                            shared.IdentityServiceAuthMethodInput{
+                                AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
+                                    ClientID: "impedit",
+                                    ClientSecret: "cum",
+                                    KubectlRedirectURI: "esse",
+                                    Tenant: "ipsum",
+                                },
+                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
+                                    Disable: false,
+                                },
+                                Name: "excepturi",
+                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
+                                    CertificateAuthorityData: "aspernatur",
+                                    ClientID: "perferendis",
+                                    ClientSecret: "ad",
+                                    DeployCloudConsoleProxy: false,
+                                    EnableAccessToken: false,
+                                    ExtraParams: "natus",
+                                    GroupPrefix: "sed",
+                                    GroupsClaim: "iste",
+                                    IssuerURI: "dolor",
+                                    KubectlRedirectURI: "natus",
+                                    Scopes: "laboriosam",
+                                    UserClaim: "hic",
+                                    UserPrefix: "saepe",
+                                },
+                                Proxy: "fuga",
                             },
                         },
                     },
                     Mesh: &shared.ServiceMeshMembershipSpec{
                         ControlPlane: "AUTOMATIC",
-                        Management: "MANAGEMENT_MANUAL",
+                        Management: "MANAGEMENT_AUTOMATIC",
                     },
                 },
-                "saepe": shared.MembershipFeatureSpecInput{
+                "iste": shared.MembershipFeatureSpecInput{
                     Configmanagement: &shared.ConfigManagementMembershipSpec{
                         ConfigSync: &shared.ConfigManagementConfigSync{
                             AllowVerticalScale: false,
                             Enabled: false,
                             Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "fuga",
-                                HTTPSProxy: "in",
-                                PolicyDir: "corporis",
-                                SecretType: "iste",
-                                SyncBranch: "iure",
-                                SyncRepo: "saepe",
-                                SyncRev: "quidem",
-                                SyncWaitSecs: "architecto",
+                                GcpServiceAccountEmail: "iure",
+                                HTTPSProxy: "saepe",
+                                PolicyDir: "quidem",
+                                SecretType: "architecto",
+                                SyncBranch: "ipsa",
+                                SyncRepo: "reiciendis",
+                                SyncRev: "est",
+                                SyncWaitSecs: "mollitia",
                             },
                             Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "ipsa",
-                                PolicyDir: "reiciendis",
-                                SecretType: "est",
-                                SyncRepo: "mollitia",
-                                SyncWaitSecs: "laborum",
+                                GcpServiceAccountEmail: "laborum",
+                                PolicyDir: "dolores",
+                                SecretType: "dolorem",
+                                SyncRepo: "corporis",
+                                SyncWaitSecs: "explicabo",
                             },
                             PreventDrift: false,
-                            SourceFormat: "dolores",
+                            SourceFormat: "nobis",
                         },
                         HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
                             EnableHierarchicalResourceQuota: false,
@@ -188,16 +188,16 @@ func main() {
                             Enabled: false,
                         },
                         PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "dolorem",
+                            AuditIntervalSeconds: "enim",
                             Enabled: false,
                             ExemptableNamespaces: []string{
-                                "explicabo",
-                                "nobis",
+                                "nemo",
+                                "minima",
+                                "excepturi",
                             },
                             LogDeniesEnabled: false,
                             Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
                                 Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
-                                    "PROMETHEUS",
                                     "PROMETHEUS",
                                 },
                             },
@@ -205,156 +205,180 @@ func main() {
                             ReferentialRulesEnabled: false,
                             TemplateLibraryInstalled: false,
                         },
-                        Version: "minima",
+                        Version: "culpa",
                     },
                     FleetInherited: false,
                     Fleetobservability: map[string]interface{}{
-                        "accusantium": "iure",
-                        "culpa": "doloribus",
                         "sapiente": "architecto",
+                        "mollitia": "dolorem",
+                        "culpa": "consequuntur",
+                        "repellat": "mollitia",
                     },
                     Identityservice: &shared.IdentityServiceMembershipSpecInput{
                         AuthMethods: []shared.IdentityServiceAuthMethodInput{
                             shared.IdentityServiceAuthMethodInput{
                                 AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
-                                    ClientID: "dolorem",
-                                    ClientSecret: "culpa",
-                                    KubectlRedirectURI: "consequuntur",
-                                    Tenant: "repellat",
-                                },
-                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
-                                    Disable: false,
-                                },
-                                Name: "mollitia",
-                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "occaecati",
                                     ClientID: "numquam",
                                     ClientSecret: "commodi",
-                                    DeployCloudConsoleProxy: false,
-                                    EnableAccessToken: false,
-                                    ExtraParams: "quam",
-                                    GroupPrefix: "molestiae",
-                                    GroupsClaim: "velit",
-                                    IssuerURI: "error",
-                                    KubectlRedirectURI: "quia",
-                                    Scopes: "quis",
-                                    UserClaim: "vitae",
-                                    UserPrefix: "laborum",
-                                },
-                                Proxy: "animi",
-                            },
-                            shared.IdentityServiceAuthMethodInput{
-                                AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
-                                    ClientID: "enim",
-                                    ClientSecret: "odit",
-                                    KubectlRedirectURI: "quo",
-                                    Tenant: "sequi",
+                                    KubectlRedirectURI: "quam",
+                                    Tenant: "molestiae",
                                 },
                                 GoogleConfig: &shared.IdentityServiceGoogleConfig{
                                     Disable: false,
                                 },
-                                Name: "tenetur",
+                                Name: "velit",
                                 OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "ipsam",
+                                    CertificateAuthorityData: "error",
+                                    ClientID: "quia",
+                                    ClientSecret: "quis",
+                                    DeployCloudConsoleProxy: false,
+                                    EnableAccessToken: false,
+                                    ExtraParams: "vitae",
+                                    GroupPrefix: "laborum",
+                                    GroupsClaim: "animi",
+                                    IssuerURI: "enim",
+                                    KubectlRedirectURI: "odit",
+                                    Scopes: "quo",
+                                    UserClaim: "sequi",
+                                    UserPrefix: "tenetur",
+                                },
+                                Proxy: "ipsam",
+                            },
+                            shared.IdentityServiceAuthMethodInput{
+                                AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
                                     ClientID: "id",
                                     ClientSecret: "possimus",
-                                    DeployCloudConsoleProxy: false,
-                                    EnableAccessToken: false,
-                                    ExtraParams: "aut",
-                                    GroupPrefix: "quasi",
-                                    GroupsClaim: "error",
-                                    IssuerURI: "temporibus",
-                                    KubectlRedirectURI: "laborum",
-                                    Scopes: "quasi",
-                                    UserClaim: "reiciendis",
-                                    UserPrefix: "voluptatibus",
-                                },
-                                Proxy: "vero",
-                            },
-                            shared.IdentityServiceAuthMethodInput{
-                                AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
-                                    ClientID: "nihil",
-                                    ClientSecret: "praesentium",
-                                    KubectlRedirectURI: "voluptatibus",
-                                    Tenant: "ipsa",
+                                    KubectlRedirectURI: "aut",
+                                    Tenant: "quasi",
                                 },
                                 GoogleConfig: &shared.IdentityServiceGoogleConfig{
                                     Disable: false,
                                 },
-                                Name: "omnis",
+                                Name: "error",
                                 OidcConfig: &shared.IdentityServiceOidcConfigInput{
-                                    CertificateAuthorityData: "voluptate",
-                                    ClientID: "cum",
-                                    ClientSecret: "perferendis",
+                                    CertificateAuthorityData: "temporibus",
+                                    ClientID: "laborum",
+                                    ClientSecret: "quasi",
                                     DeployCloudConsoleProxy: false,
                                     EnableAccessToken: false,
-                                    ExtraParams: "doloremque",
-                                    GroupPrefix: "reprehenderit",
-                                    GroupsClaim: "ut",
-                                    IssuerURI: "maiores",
-                                    KubectlRedirectURI: "dicta",
-                                    Scopes: "corporis",
-                                    UserClaim: "dolore",
-                                    UserPrefix: "iusto",
+                                    ExtraParams: "reiciendis",
+                                    GroupPrefix: "voluptatibus",
+                                    GroupsClaim: "vero",
+                                    IssuerURI: "nihil",
+                                    KubectlRedirectURI: "praesentium",
+                                    Scopes: "voluptatibus",
+                                    UserClaim: "ipsa",
+                                    UserPrefix: "omnis",
                                 },
-                                Proxy: "dicta",
+                                Proxy: "voluptate",
+                            },
+                            shared.IdentityServiceAuthMethodInput{
+                                AzureadConfig: &shared.IdentityServiceAzureADConfigInput{
+                                    ClientID: "cum",
+                                    ClientSecret: "perferendis",
+                                    KubectlRedirectURI: "doloremque",
+                                    Tenant: "reprehenderit",
+                                },
+                                GoogleConfig: &shared.IdentityServiceGoogleConfig{
+                                    Disable: false,
+                                },
+                                Name: "ut",
+                                OidcConfig: &shared.IdentityServiceOidcConfigInput{
+                                    CertificateAuthorityData: "maiores",
+                                    ClientID: "dicta",
+                                    ClientSecret: "corporis",
+                                    DeployCloudConsoleProxy: false,
+                                    EnableAccessToken: false,
+                                    ExtraParams: "dolore",
+                                    GroupPrefix: "iusto",
+                                    GroupsClaim: "dicta",
+                                    IssuerURI: "harum",
+                                    KubectlRedirectURI: "enim",
+                                    Scopes: "accusamus",
+                                    UserClaim: "commodi",
+                                    UserPrefix: "repudiandae",
+                                },
+                                Proxy: "quae",
                             },
                         },
                     },
                     Mesh: &shared.ServiceMeshMembershipSpec{
-                        ControlPlane: "MANUAL",
-                        Management: "MANAGEMENT_UNSPECIFIED",
+                        ControlPlane: "CONTROL_PLANE_MANAGEMENT_UNSPECIFIED",
+                        Management: "MANAGEMENT_MANUAL",
                     },
                 },
             },
             ResourceState: &shared.FeatureResourceState{
-                State: "SERVICE_UPDATING",
+                State: "DISABLING",
             },
             ScopeSpecs: map[string]map[string]interface{}{
-                "repudiandae": map[string]interface{}{
-                    "ipsum": "quidem",
-                },
-                "molestias": map[string]interface{}{
-                    "pariatur": "modi",
+                "pariatur": map[string]interface{}{
                     "praesentium": "rem",
                     "voluptates": "quasi",
+                },
+                "repudiandae": map[string]interface{}{
+                    "veritatis": "itaque",
+                    "incidunt": "enim",
+                    "consequatur": "est",
+                },
+                "quibusdam": map[string]interface{}{
+                    "deserunt": "distinctio",
                 },
             },
             Spec: &shared.CommonFeatureSpec{
                 Appdevexperience: map[string]interface{}{
-                    "sint": "veritatis",
-                    "itaque": "incidunt",
-                    "enim": "consequatur",
-                    "est": "quibusdam",
+                    "labore": "modi",
+                    "qui": "aliquid",
+                    "cupiditate": "quos",
+                    "perferendis": "magni",
                 },
                 Fleetobservability: map[string]interface{}{
-                    "deserunt": "distinctio",
+                    "ipsam": "alias",
+                    "fugit": "dolorum",
+                    "excepturi": "tempora",
+                    "facilis": "tempore",
                 },
                 Multiclusteringress: &shared.MultiClusterIngressFeatureSpec{
-                    ConfigMembership: "quibusdam",
+                    ConfigMembership: "labore",
                 },
             },
             State: &shared.CommonFeatureState{
                 Appdevexperience: &shared.AppDevExperienceFeatureState{
                     NetworkingInstallSucceeded: &shared.Status{
-                        Code: "OK",
-                        Description: "modi",
+                        Code: "UNKNOWN",
+                        Description: "eum",
                     },
                 },
                 Fleetobservability: map[string]interface{}{
-                    "aliquid": "cupiditate",
+                    "eligendi": "sint",
                 },
                 State: &shared.FeatureState{
-                    Code: "WARNING",
-                    Description: "perferendis",
-                    UpdateTime: "magni",
+                    Code: "OK",
+                    Description: "provident",
+                    UpdateTime: "necessitatibus",
                 },
             },
         },
+        AccessToken: "sint",
+        Alt: "media",
+        Callback: "dolor",
+        FeatureID: "debitis",
+        Fields: "a",
+        Key: "dolorum",
+        OauthToken: "in",
+        Parent: "in",
+        PrettyPrint: false,
+        QuotaUser: "illum",
+        RequestID: "maiores",
+        UploadType: "rerum",
+        UploadProtocol: "dicta",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.GkehubProjectsLocationsFeaturesCreate(ctx, req)
+    res, err := s.Projects.GkehubProjectsLocationsFeaturesCreate(ctx, req, operations.GkehubProjectsLocationsFeaturesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -367,7 +391,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -392,4 +416,15 @@ func main() {
 * `GkehubProjectsLocationsScopesList` - Lists Scopes.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

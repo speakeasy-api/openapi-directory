@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferRecurringGetRequest struct {
-	Request shared.TransferRecurringGetRequest `request:"mediaType=application/json"`
-}
 
 type TransferRecurringGetResponse struct {
 	ContentType string

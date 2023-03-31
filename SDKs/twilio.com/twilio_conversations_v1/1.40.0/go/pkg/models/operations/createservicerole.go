@@ -12,12 +12,8 @@ var CreateServiceRoleServerList = []string{
 }
 
 type CreateServiceRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateServiceRolePathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to create the Role resource under.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceRoleCreateServiceRoleRequest struct {
@@ -29,10 +25,9 @@ type CreateServiceRoleCreateServiceRoleRequest struct {
 }
 
 type CreateServiceRoleRequest struct {
-	PathParams CreateServiceRolePathParams
-	Request    *CreateServiceRoleCreateServiceRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateServiceRoleSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to create the Role resource under.
+	ChatServiceSid string                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *CreateServiceRoleCreateServiceRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateServiceRoleResponse struct {

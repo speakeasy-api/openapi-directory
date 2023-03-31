@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetuserConversationsPathParams struct {
+type GetuserConversationsRequest struct {
 	// User ID
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetuserConversationsRequest struct {
-	PathParams GetuserConversationsPathParams
 }
 
 type GetuserConversations200ApplicationJSONTimestamp struct {

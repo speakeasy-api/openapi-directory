@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteIncomingPhoneNumberServerList = []string{
@@ -12,20 +11,15 @@ var DeleteIncomingPhoneNumberServerList = []string{
 }
 
 type DeleteIncomingPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteIncomingPhoneNumberPathParams struct {
+type DeleteIncomingPhoneNumberRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the IncomingPhoneNumber resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteIncomingPhoneNumberRequest struct {
-	PathParams DeleteIncomingPhoneNumberPathParams
-	Security   DeleteIncomingPhoneNumberSecurity
-	ServerURL  *string
 }
 
 type DeleteIncomingPhoneNumberResponse struct {

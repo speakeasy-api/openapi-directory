@@ -44,10 +44,6 @@ type PostNotificationsRequestBody struct {
 	Username *string `multipartForm:"name=username"`
 }
 
-type PostNotificationsRequest struct {
-	Request *PostNotificationsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostNotificationsResponse struct {
 	ContentType string
 	// The Notifications object.

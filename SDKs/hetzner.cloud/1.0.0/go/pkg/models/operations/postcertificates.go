@@ -47,10 +47,6 @@ type PostCertificatesCreateCertificateRequest struct {
 	Type *PostCertificatesCreateCertificateRequestTypeEnum `json:"type,omitempty"`
 }
 
-type PostCertificatesRequest struct {
-	Request *PostCertificatesCreateCertificateRequest `request:"mediaType=application/json"`
-}
-
 // PostCertificatesCreateCertificateResponseNullableActionError - Error message for the Action if error occurred, otherwise null
 type PostCertificatesCreateCertificateResponseNullableActionError struct {
 	// Fixed machine readable code

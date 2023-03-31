@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type GetDraftRegistrationsDraftIDPathParams struct {
+type GetDraftRegistrationsDraftIDRequest struct {
 	// The unique identifier of the draft registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type GetDraftRegistrationsDraftIDRequest struct {
-	PathParams GetDraftRegistrationsDraftIDPathParams
 }
 
 type GetDraftRegistrationsDraftIDDraftRegistrationAttributesNodeLicense struct {

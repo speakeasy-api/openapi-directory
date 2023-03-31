@@ -13,9 +13,7 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostSuggestRequest{
-        Request: "es",
-    }
+    req := "es"
 
     ctx := context.Background()
     res, err := s.Feedback.PostSuggest(ctx, req)

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackReservationsListQueryParams struct {
+type DcimRackReservationsListRequest struct {
 	Created    *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGt  *string `queryParam:"style=form,explode=true,name=created__gt"`
 	CreatedGte *string `queryParam:"style=form,explode=true,name=created__gte"`
@@ -47,10 +47,6 @@ type DcimRackReservationsListQueryParams struct {
 	UserN          *string `queryParam:"style=form,explode=true,name=user__n"`
 	UserID         *string `queryParam:"style=form,explode=true,name=user_id"`
 	UserIDN        *string `queryParam:"style=form,explode=true,name=user_id__n"`
-}
-
-type DcimRackReservationsListRequest struct {
-	QueryParams DcimRackReservationsListQueryParams
 }
 
 type DcimRackReservationsList200ApplicationJSON struct {

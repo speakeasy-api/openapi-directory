@@ -34,14 +34,14 @@ func newInvoiceItemAdjustments(defaultClient, securityClient HTTPClient, serverU
 // ObjectDELETEInvoiceItemAdjustment - CRUD: Delete an invoice item adjustment
 func (s *invoiceItemAdjustments) ObjectDELETEInvoiceItemAdjustment(ctx context.Context, request operations.ObjectDELETEInvoiceItemAdjustmentRequest) (*operations.ObjectDELETEInvoiceItemAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-item-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-item-adjustment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -94,16 +94,16 @@ func (s *invoiceItemAdjustments) ObjectDELETEInvoiceItemAdjustment(ctx context.C
 // ObjectGETInvoiceItemAdjustment - CRUD: Retrieve an invoice item adjustment
 func (s *invoiceItemAdjustments) ObjectGETInvoiceItemAdjustment(ctx context.Context, request operations.ObjectGETInvoiceItemAdjustmentRequest) (*operations.ObjectGETInvoiceItemAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-item-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice-item-adjustment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

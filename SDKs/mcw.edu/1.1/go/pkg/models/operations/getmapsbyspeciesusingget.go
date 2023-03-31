@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETMapsBySpeciesUsingGETPathParams struct {
+type GETMapsBySpeciesUsingGETRequest struct {
 	// species Key
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETMapsBySpeciesUsingGETRequest struct {
-	PathParams GETMapsBySpeciesUsingGETPathParams
 }
 
 type GETMapsBySpeciesUsingGETResponse struct {

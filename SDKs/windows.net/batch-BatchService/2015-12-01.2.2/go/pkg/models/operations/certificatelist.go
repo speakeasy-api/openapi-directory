@@ -7,31 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateListQueryParams struct {
+type CertificateListRequest struct {
 	// Sets an OData $filter clause.
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// Sets an OData $select clause.
 	DollarSelect *string `queryParam:"style=form,explode=true,name=$select"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum number of items to return in the response.
-	Maxresults *int `queryParam:"style=form,explode=true,name=maxresults"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type CertificateListHeaders struct {
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// Sets the maximum number of items to return in the response.
+	Maxresults *int `queryParam:"style=form,explode=true,name=maxresults"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type CertificateListRequest struct {
-	QueryParams CertificateListQueryParams
-	Headers     CertificateListHeaders
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type CertificateListResponse struct {

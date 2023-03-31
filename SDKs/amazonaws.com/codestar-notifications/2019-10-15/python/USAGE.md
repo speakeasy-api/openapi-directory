@@ -3,54 +3,56 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateNotificationRuleRequest(
-    headers=operations.CreateNotificationRuleHeaders(
-        x_amz_algorithm="labore",
-        x_amz_content_sha256="est",
-        x_amz_credential="quod",
-        x_amz_date="et",
-        x_amz_security_token="sit",
-        x_amz_signature="quo",
-        x_amz_signed_headers="omnis",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateNotificationRuleRequestBody(
-        client_request_token="reprehenderit",
-        detail_type="BASIC",
+)
+
+
+req = operations.CreateNotificationRuleRequest(
+    request_body=operations.CreateNotificationRuleRequestBody(
+        client_request_token="corrupti",
+        detail_type="FULL",
         event_type_ids=[
-            "veniam",
+            "quibusdam",
+            "unde",
+            "nulla",
         ],
-        name="impedit",
-        resource="ex",
-        status="DISABLED",
+        name="corrupti",
+        resource="illum",
+        status="ENABLED",
         tags={
-            "sunt": "incidunt",
-            "sed": "repellendus",
-            "error": "nostrum",
+            "deserunt": "suscipit",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
         targets=[
             shared.Target(
-                target_address="nihil",
-                target_type="ipsa",
+                target_address="tempora",
+                target_type="suscipit",
             ),
             shared.Target(
-                target_address="nihil",
-                target_type="sed",
+                target_address="molestiae",
+                target_type="minus",
             ),
             shared.Target(
-                target_address="autem",
-                target_type="consequatur",
+                target_address="placeat",
+                target_type="voluptatum",
+            ),
+            shared.Target(
+                target_address="iusto",
+                target_type="excepturi",
             ),
         ],
     ),
+    x_amz_algorithm="nisi",
+    x_amz_content_sha256="recusandae",
+    x_amz_credential="temporibus",
+    x_amz_date="ab",
+    x_amz_security_token="quis",
+    x_amz_signature="veritatis",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.create_notification_rule(req)

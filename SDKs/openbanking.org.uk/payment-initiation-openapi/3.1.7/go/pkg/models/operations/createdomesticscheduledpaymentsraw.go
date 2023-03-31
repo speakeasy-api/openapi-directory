@@ -8,12 +8,14 @@ import (
 )
 
 type CreateDomesticScheduledPaymentsRawSecurity struct {
-	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateDomesticScheduledPaymentsRawHeaders struct {
+type CreateDomesticScheduledPaymentsRawRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// Default
+	RequestBody []byte `request:"mediaType=application/jose+jwe"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -30,13 +32,6 @@ type CreateDomesticScheduledPaymentsRawHeaders struct {
 	XIdempotencyKey string `header:"style=simple,explode=false,name=x-idempotency-key"`
 	// A detached JWS signature of the body of the payload.
 	XJwsSignature string `header:"style=simple,explode=false,name=x-jws-signature"`
-}
-
-type CreateDomesticScheduledPaymentsRawRequest struct {
-	Headers CreateDomesticScheduledPaymentsRawHeaders
-	// Default
-	Request  []byte `request:"mediaType=application/jose+jwe"`
-	Security CreateDomesticScheduledPaymentsRawSecurity
 }
 
 type CreateDomesticScheduledPaymentsRawResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetConfigurationPathParams struct {
+type GetConfigurationRequest struct {
 	// ID of Configuration that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConfigurationRequest struct {
-	PathParams GetConfigurationPathParams
 }
 
 type GetConfigurationResponse struct {

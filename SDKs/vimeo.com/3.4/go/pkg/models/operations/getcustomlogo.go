@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomLogoPathParams struct {
+type GetCustomLogoRequest struct {
 	// The ID of the custom logo.
 	LogoID float64 `pathParam:"style=simple,explode=false,name=logo_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetCustomLogoRequest struct {
-	PathParams GetCustomLogoPathParams
 }
 
 type GetCustomLogoResponse struct {

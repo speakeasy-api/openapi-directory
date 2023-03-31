@@ -33,7 +33,7 @@ func newSubscription(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GetSubscription - This method retrieves a list of subscriptions associated with the seller account.
-func (s *subscription) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest) (*operations.GetSubscriptionResponse, error) {
+func (s *subscription) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest, security operations.GetSubscriptionSecurity) (*operations.GetSubscriptionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscription"
 
@@ -42,11 +42,11 @@ func (s *subscription) GetSubscription(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

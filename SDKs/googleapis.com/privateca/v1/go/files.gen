@@ -39,12 +39,11 @@ pkg/models/operations/privatecaprojectslocationsoperationsget.go
 pkg/models/operations/privatecaprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/activatecertificateauthorityrequest.go
 pkg/models/shared/subordinateconfig.go
 pkg/models/shared/subordinateconfigchain.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listcertificaterevocationlistsresponse.go
 pkg/models/shared/certificaterevocationlist.go
 pkg/models/shared/revokedcertificate.go

@@ -12,23 +12,14 @@ var FetchWirelessUsageServerList = []string{
 }
 
 type FetchWirelessUsageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchWirelessUsagePathParams struct {
-	SimSid string `pathParam:"style=simple,explode=false,name=SimSid"`
-}
-
-type FetchWirelessUsageQueryParams struct {
-	End   *string `queryParam:"style=form,explode=true,name=End"`
-	Start *string `queryParam:"style=form,explode=true,name=Start"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchWirelessUsageRequest struct {
-	PathParams  FetchWirelessUsagePathParams
-	QueryParams FetchWirelessUsageQueryParams
-	Security    FetchWirelessUsageSecurity
-	ServerURL   *string
+	End    *string `queryParam:"style=form,explode=true,name=End"`
+	SimSid string  `pathParam:"style=simple,explode=false,name=SimSid"`
+	Start  *string `queryParam:"style=form,explode=true,name=Start"`
 }
 
 type FetchWirelessUsageResponse struct {

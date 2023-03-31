@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PhotoControllerGetPhotoDownloadPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type PhotoControllerGetPhotoDownloadQueryParams struct {
+type PhotoControllerGetPhotoDownloadRequest struct {
 	// An optional parameter specifying the image height
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// The unique ID of the photo on the property
 	PhotoID string `queryParam:"style=form,explode=true,name=photoID"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
 	// An optional parameter specifying the image width
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type PhotoControllerGetPhotoDownloadRequest struct {
-	PathParams  PhotoControllerGetPhotoDownloadPathParams
-	QueryParams PhotoControllerGetPhotoDownloadQueryParams
 }
 
 type PhotoControllerGetPhotoDownloadResponse struct {

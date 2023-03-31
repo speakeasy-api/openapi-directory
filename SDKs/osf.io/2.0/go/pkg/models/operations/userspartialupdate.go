@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UsersPartialUpdatePathParams struct {
-	// The unique identifier of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // UsersPartialUpdateUserAttributesInput - The properties of the user entity.
 type UsersPartialUpdateUserAttributesInput struct {
 	// The family name of the user, used for bibliographic citations.
@@ -35,8 +30,9 @@ type UsersPartialUpdateUserInput struct {
 }
 
 type UsersPartialUpdateRequest struct {
-	PathParams UsersPartialUpdatePathParams
-	Request    UsersPartialUpdateUserInput `request:"mediaType=application/json"`
+	RequestBody UsersPartialUpdateUserInput `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type UsersPartialUpdateResponse struct {

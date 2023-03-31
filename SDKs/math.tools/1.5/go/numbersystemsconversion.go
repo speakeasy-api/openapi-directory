@@ -33,7 +33,7 @@ func newNumberSystemsConversion(defaultClient, securityClient HTTPClient, server
 }
 
 // GetNumbersNumeralChinese - Convert base 10 representation of a given number to chinese numeral.
-func (s *numberSystemsConversion) GetNumbersNumeralChinese(ctx context.Context, request operations.GetNumbersNumeralChineseRequest) (*operations.GetNumbersNumeralChineseResponse, error) {
+func (s *numberSystemsConversion) GetNumbersNumeralChinese(ctx context.Context, request operations.GetNumbersNumeralChineseRequest, security operations.GetNumbersNumeralChineseSecurity) (*operations.GetNumbersNumeralChineseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/numeral/chinese"
 
@@ -42,11 +42,11 @@ func (s *numberSystemsConversion) GetNumbersNumeralChinese(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,7 +74,7 @@ func (s *numberSystemsConversion) GetNumbersNumeralChinese(ctx context.Context, 
 }
 
 // GetNumbersNumeralEgyptian - Convert base 10 representation of a given number to egyptian numeral.
-func (s *numberSystemsConversion) GetNumbersNumeralEgyptian(ctx context.Context, request operations.GetNumbersNumeralEgyptianRequest) (*operations.GetNumbersNumeralEgyptianResponse, error) {
+func (s *numberSystemsConversion) GetNumbersNumeralEgyptian(ctx context.Context, request operations.GetNumbersNumeralEgyptianRequest, security operations.GetNumbersNumeralEgyptianSecurity) (*operations.GetNumbersNumeralEgyptianResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/numeral/egyptian"
 
@@ -83,11 +83,11 @@ func (s *numberSystemsConversion) GetNumbersNumeralEgyptian(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *numberSystemsConversion) GetNumbersNumeralEgyptian(ctx context.Context,
 }
 
 // GetNumbersNumeralRoman - Convert base 10 representation of a given number to roman numeral.
-func (s *numberSystemsConversion) GetNumbersNumeralRoman(ctx context.Context, request operations.GetNumbersNumeralRomanRequest) (*operations.GetNumbersNumeralRomanResponse, error) {
+func (s *numberSystemsConversion) GetNumbersNumeralRoman(ctx context.Context, request operations.GetNumbersNumeralRomanRequest, security operations.GetNumbersNumeralRomanSecurity) (*operations.GetNumbersNumeralRomanResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/numeral/roman"
 
@@ -124,11 +124,11 @@ func (s *numberSystemsConversion) GetNumbersNumeralRoman(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

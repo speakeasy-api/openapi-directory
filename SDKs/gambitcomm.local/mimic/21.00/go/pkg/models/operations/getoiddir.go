@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOiddirPathParams struct {
+type GetOiddirRequest struct {
 	// Agent to return the directory path
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetOiddirRequest struct {
-	PathParams GetOiddirPathParams
 }
 
 type GetOiddirResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsDataRealtimeGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsDataRealtimeGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsDataRealtimeGetSecurity struct {
@@ -22,7 +22,7 @@ type AnalyticsDataRealtimeGetSecurity struct {
 	Option2 *AnalyticsDataRealtimeGetSecurityOption2 `security:"option"`
 }
 
-type AnalyticsDataRealtimeGetQueryParams struct {
+type AnalyticsDataRealtimeGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// A comma-separated list of real time dimensions. E.g., 'rt:medium,rt:city'.
@@ -49,11 +49,6 @@ type AnalyticsDataRealtimeGetQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsDataRealtimeGetRequest struct {
-	QueryParams AnalyticsDataRealtimeGetQueryParams
-	Security    AnalyticsDataRealtimeGetSecurity
 }
 
 type AnalyticsDataRealtimeGetResponse struct {

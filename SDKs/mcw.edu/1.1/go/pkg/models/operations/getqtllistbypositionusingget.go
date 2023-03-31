@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GETQtlListByPositionUsingGETPathParams struct {
+type GETQtlListByPositionUsingGETRequest struct {
 	// Chromosome
 	Chr string `pathParam:"style=simple,explode=false,name=chr"`
 	// A list of assembly map keys can be found using the lookup service
@@ -15,10 +15,6 @@ type GETQtlListByPositionUsingGETPathParams struct {
 	Start int64 `pathParam:"style=simple,explode=false,name=start"`
 	// Stop Position
 	Stop int64 `pathParam:"style=simple,explode=false,name=stop"`
-}
-
-type GETQtlListByPositionUsingGETRequest struct {
-	PathParams GETQtlListByPositionUsingGETPathParams
 }
 
 type GETQtlListByPositionUsingGETResponse struct {

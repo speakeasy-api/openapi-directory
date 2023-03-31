@@ -3,35 +3,33 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AddEventSourceRequest(
-    headers=operations.AddEventSourceHeaders(
-        x_amz_algorithm="ipsum",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="error",
-        x_amz_date="reprehenderit",
-        x_amz_security_token="explicabo",
-        x_amz_signature="aut",
-        x_amz_signed_headers="eum",
-    ),
-    request=operations.AddEventSourceRequestBody(
-        batch_size=6380244943489637684,
-        event_source="ratione",
-        function_name="labore",
+    request_body=operations.AddEventSourceRequestBody(
+        batch_size=548814,
+        event_source="provident",
+        function_name="distinctio",
         parameters={
-            "saepe": "libero",
-            "nobis": "ut",
+            "unde": "nulla",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
         },
-        role="accusamus",
+        role="iure",
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
 )
     
 res = s.add_event_source(req)

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ItemCreatePublicTokenRequest struct {
-	Request shared.ItemPublicTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type ItemCreatePublicTokenResponse struct {
 	ContentType string

@@ -11,15 +11,6 @@ var FetchUserInfoServerList = []string{
 	"https://oauth.twilio.com",
 }
 
-type FetchUserInfoSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUserInfoRequest struct {
-	Security  FetchUserInfoSecurity
-	ServerURL *string
-}
-
 type FetchUserInfoResponse struct {
 	ContentType string
 	StatusCode  int

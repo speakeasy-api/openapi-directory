@@ -33,7 +33,7 @@ func newColors(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CalendarColorsGet - Returns the color definitions for calendars and events.
-func (s *colors) CalendarColorsGet(ctx context.Context, request operations.CalendarColorsGetRequest) (*operations.CalendarColorsGetResponse, error) {
+func (s *colors) CalendarColorsGet(ctx context.Context, request operations.CalendarColorsGetRequest, security operations.CalendarColorsGetSecurity) (*operations.CalendarColorsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/colors"
 
@@ -42,11 +42,11 @@ func (s *colors) CalendarColorsGet(ctx context.Context, request operations.Calen
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

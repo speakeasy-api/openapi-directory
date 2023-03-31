@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreateReviewCommentPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsCreateReviewCommentRequestBodySideEnum - In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/enterprise-server@3.8/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
 type PullsCreateReviewCommentRequestBodySideEnum string
 
@@ -91,8 +82,13 @@ type PullsCreateReviewCommentRequestBody struct {
 }
 
 type PullsCreateReviewCommentRequest struct {
-	PathParams PullsCreateReviewCommentPathParams
-	Request    PullsCreateReviewCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsCreateReviewCommentRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsCreateReviewCommentResponse struct {

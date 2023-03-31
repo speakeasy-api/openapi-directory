@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListPlatformsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListPlatformsQueryParams struct {
-	// Flag to display Legacy and Provider Ids.
-	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type ListPlatformsRequest struct {
-	QueryParams ListPlatformsQueryParams
-	Security    ListPlatformsSecurity
+	// Flag to display Legacy and Provider Ids.
+	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
 }
 
 type ListPlatformsResponse struct {

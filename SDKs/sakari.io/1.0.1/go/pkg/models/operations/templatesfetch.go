@@ -8,19 +8,14 @@ import (
 )
 
 type TemplatesFetchSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TemplatesFetchPathParams struct {
+type TemplatesFetchRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of template to return
 	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type TemplatesFetchRequest struct {
-	PathParams TemplatesFetchPathParams
-	Security   TemplatesFetchSecurity
 }
 
 type TemplatesFetchResponse struct {

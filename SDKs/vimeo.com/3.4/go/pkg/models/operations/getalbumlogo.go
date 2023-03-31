@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumLogoPathParams struct {
+type GetAlbumLogoRequest struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The ID of the custom logo.
 	LogoID float64 `pathParam:"style=simple,explode=false,name=logo_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetAlbumLogoRequest struct {
-	PathParams GetAlbumLogoPathParams
 }
 
 type GetAlbumLogoResponse struct {

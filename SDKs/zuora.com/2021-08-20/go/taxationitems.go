@@ -36,14 +36,14 @@ func newTaxationItems(defaultClient, securityClient HTTPClient, serverURL, langu
 // Deletes a specific taxation item by ID.
 func (s *taxationItems) DELETETaxationItem(ctx context.Context, request operations.DELETETaxationItemRequest) (*operations.DELETETaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -86,14 +86,14 @@ func (s *taxationItems) DELETETaxationItem(ctx context.Context, request operatio
 // Retrieves the information about a specific taxation item by ID.
 func (s *taxationItems) GETTaxationItem(ctx context.Context, request operations.GETTaxationItemRequest) (*operations.GETTaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -134,14 +134,14 @@ func (s *taxationItems) GETTaxationItem(ctx context.Context, request operations.
 // ObjectDELETETaxationItem - CRUD: Delete a taxation item
 func (s *taxationItems) ObjectDELETETaxationItem(ctx context.Context, request operations.ObjectDELETETaxationItemRequest) (*operations.ObjectDELETETaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -194,16 +194,16 @@ func (s *taxationItems) ObjectDELETETaxationItem(ctx context.Context, request op
 // ObjectGETTaxationItem - CRUD: Retrieve a taxation item
 func (s *taxationItems) ObjectGETTaxationItem(ctx context.Context, request operations.ObjectGETTaxationItemRequest) (*operations.ObjectGETTaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -272,7 +272,7 @@ func (s *taxationItems) ObjectPOSTTaxationItem(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/taxation-item"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateTaxationItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -287,9 +287,9 @@ func (s *taxationItems) ObjectPOSTTaxationItem(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -356,9 +356,9 @@ func (s *taxationItems) ObjectPOSTTaxationItem(ctx context.Context, request oper
 // ObjectPUTTaxationItem - CRUD: Update a taxation item
 func (s *taxationItems) ObjectPUTTaxationItem(ctx context.Context, request operations.ObjectPUTTaxationItemRequest) (*operations.ObjectPUTTaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/taxation-item/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyTaxationItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,9 +373,9 @@ func (s *taxationItems) ObjectPUTTaxationItem(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -431,9 +431,9 @@ func (s *taxationItems) ObjectPUTTaxationItem(ctx context.Context, request opera
 // Updates a specific taxation item by ID.
 func (s *taxationItems) PUTTaxationItem(ctx context.Context, request operations.PUTTaxationItemRequest) (*operations.PUTTaxationItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxationitems/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTTaxationItemType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -448,7 +448,7 @@ func (s *taxationItems) PUTTaxationItem(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

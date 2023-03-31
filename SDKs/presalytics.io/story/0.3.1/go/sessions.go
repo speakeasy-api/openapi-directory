@@ -35,7 +35,7 @@ func newSessions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Remove a session and dependant data.
 func (s *sessions) SessionIDDelete(ctx context.Context, request operations.SessionIDDeleteRequest) (*operations.SessionIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,14 +85,14 @@ func (s *sessions) SessionIDDelete(ctx context.Context, request operations.Sessi
 // Get session metadata
 func (s *sessions) SessionIDGet(ctx context.Context, request operations.SessionIDGetRequest) (*operations.SessionIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -148,9 +148,9 @@ func (s *sessions) SessionIDGet(ctx context.Context, request operations.SessionI
 // Create a new session
 func (s *sessions) StoryIDSessionPost(ctx context.Context, request operations.StoryIDSessionPostRequest) (*operations.StoryIDSessionPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSessionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,14 +217,14 @@ func (s *sessions) StoryIDSessionPost(ctx context.Context, request operations.St
 // Get a list of sessions asscoaited with this story
 func (s *sessions) StoryIDSessionsGet(ctx context.Context, request operations.StoryIDSessionsGetRequest) (*operations.StoryIDSessionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

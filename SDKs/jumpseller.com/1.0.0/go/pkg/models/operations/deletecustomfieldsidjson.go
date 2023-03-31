@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomFieldsIDJSONPathParams struct {
-	// Id of the CustomField
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCustomFieldsIDJSONQueryParams struct {
+type DeleteCustomFieldsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the CustomField
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteCustomFieldsIDJSONRequest struct {
-	PathParams  DeleteCustomFieldsIDJSONPathParams
-	QueryParams DeleteCustomFieldsIDJSONQueryParams
 }
 
 type DeleteCustomFieldsIDJSONResponse struct {

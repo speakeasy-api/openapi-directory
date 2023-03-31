@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEntitySetHomologsQueryParams struct {
+type GetEntitySetHomologsRequest struct {
 	// Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
 	Subject []string `queryParam:"style=form,explode=true,name=subject"`
-}
-
-type GetEntitySetHomologsRequest struct {
-	QueryParams GetEntitySetHomologsQueryParams
 }
 
 type GetEntitySetHomologsResponse struct {

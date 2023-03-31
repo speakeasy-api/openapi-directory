@@ -8,13 +8,13 @@ import (
 )
 
 type ScriptProjectsGetContentSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ScriptProjectsGetContentSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ScriptProjectsGetContentSecurity struct {
@@ -22,12 +22,7 @@ type ScriptProjectsGetContentSecurity struct {
 	Option2 *ScriptProjectsGetContentSecurityOption2 `security:"option"`
 }
 
-type ScriptProjectsGetContentPathParams struct {
-	// The script project's Drive ID.
-	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
-}
-
-type ScriptProjectsGetContentQueryParams struct {
+type ScriptProjectsGetContentRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,18 +41,14 @@ type ScriptProjectsGetContentQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The script project's Drive ID.
+	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The version number of the project to retrieve. If not provided, the project's HEAD version is returned.
 	VersionNumber *int64 `queryParam:"style=form,explode=true,name=versionNumber"`
-}
-
-type ScriptProjectsGetContentRequest struct {
-	PathParams  ScriptProjectsGetContentPathParams
-	QueryParams ScriptProjectsGetContentQueryParams
-	Security    ScriptProjectsGetContentSecurity
 }
 
 type ScriptProjectsGetContentResponse struct {

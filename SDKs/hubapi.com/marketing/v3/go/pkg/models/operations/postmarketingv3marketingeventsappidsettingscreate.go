@@ -8,18 +8,13 @@ import (
 )
 
 type PostMarketingV3MarketingEventsAppIDSettingsCreateSecurity struct {
-	DeveloperHapikey *shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-	Hapikey          *shared.SchemeHapikey          `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostMarketingV3MarketingEventsAppIDSettingsCreatePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Hapikey          *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PostMarketingV3MarketingEventsAppIDSettingsCreateRequest struct {
-	PathParams PostMarketingV3MarketingEventsAppIDSettingsCreatePathParams
-	Request    shared.EventDetailSettingsURL `request:"mediaType=application/json"`
-	Security   PostMarketingV3MarketingEventsAppIDSettingsCreateSecurity
+	EventDetailSettingsURL shared.EventDetailSettingsURL `request:"mediaType=application/json"`
+	AppID                  int                           `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PostMarketingV3MarketingEventsAppIDSettingsCreateResponse struct {

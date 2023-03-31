@@ -34,7 +34,7 @@ func newArticles(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AccountArticleReport - Account Article Report
 // Return status on all reports generated for the account from the oauth credentials
-func (s *articles) AccountArticleReport(ctx context.Context, request operations.AccountArticleReportRequest) (*operations.AccountArticleReportResponse, error) {
+func (s *articles) AccountArticleReport(ctx context.Context, request operations.AccountArticleReportRequest, security operations.AccountArticleReportSecurity) (*operations.AccountArticleReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles/export"
 
@@ -43,11 +43,11 @@ func (s *articles) AccountArticleReport(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *articles) AccountArticleReport(ctx context.Context, request operations.
 
 // AccountArticleReportGenerate - Initiate a new Report
 // Initiate a new Article Report for this Account. There is a limit of 1 report per day.
-func (s *articles) AccountArticleReportGenerate(ctx context.Context, request operations.AccountArticleReportGenerateRequest) (*operations.AccountArticleReportGenerateResponse, error) {
+func (s *articles) AccountArticleReportGenerate(ctx context.Context) (*operations.AccountArticleReportGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles/export"
 
@@ -95,7 +95,7 @@ func (s *articles) AccountArticleReportGenerate(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *articles) AccountArticleReportGenerate(ctx context.Context, request ope
 // View an article
 func (s *articles) ArticleDetails(ctx context.Context, request operations.ArticleDetailsRequest) (*operations.ArticleDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +186,7 @@ func (s *articles) ArticleDetails(ctx context.Context, request operations.Articl
 // File by id
 func (s *articles) ArticleFileDetails(ctx context.Context, request operations.ArticleFileDetailsRequest) (*operations.ArticleFileDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *articles) ArticleFileDetails(ctx context.Context, request operations.Ar
 // Files list for article
 func (s *articles) ArticleFiles(ctx context.Context, request operations.ArticleFilesRequest) (*operations.ArticleFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +286,7 @@ func (s *articles) ArticleFiles(ctx context.Context, request operations.ArticleF
 // Confidentiality for article version. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
 func (s *articles) ArticleVersionConfidentiality(ctx context.Context, request operations.ArticleVersionConfidentialityRequest) (*operations.ArticleVersionConfidentialityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}/confidentiality", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}/confidentiality", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +336,7 @@ func (s *articles) ArticleVersionConfidentiality(ctx context.Context, request op
 // Article with specified version
 func (s *articles) ArticleVersionDetails(ctx context.Context, request operations.ArticleVersionDetailsRequest) (*operations.ArticleVersionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -386,7 +386,7 @@ func (s *articles) ArticleVersionDetails(ctx context.Context, request operations
 // Embargo for article version
 func (s *articles) ArticleVersionEmbargo(ctx context.Context, request operations.ArticleVersionEmbargoRequest) (*operations.ArticleVersionEmbargoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}/embargo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions/{v_number}/embargo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -434,11 +434,11 @@ func (s *articles) ArticleVersionEmbargo(ctx context.Context, request operations
 
 // ArticleVersionUpdate - Update article version
 // Updating an article version by passing body parameters; request can also be made with the PATCH method.
-func (s *articles) ArticleVersionUpdate(ctx context.Context, request operations.ArticleVersionUpdateRequest) (*operations.ArticleVersionUpdateResponse, error) {
+func (s *articles) ArticleVersionUpdate(ctx context.Context, request operations.ArticleVersionUpdateRequest, security operations.ArticleVersionUpdateSecurity) (*operations.ArticleVersionUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticleUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -453,7 +453,7 @@ func (s *articles) ArticleVersionUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -504,11 +504,11 @@ func (s *articles) ArticleVersionUpdate(ctx context.Context, request operations.
 
 // ArticleVersionUpdateThumb - Update article version thumbnail
 // For a given public article version update the article thumbnail by choosing one of the associated files
-func (s *articles) ArticleVersionUpdateThumb(ctx context.Context, request operations.ArticleVersionUpdateThumbRequest) (*operations.ArticleVersionUpdateThumbResponse, error) {
+func (s *articles) ArticleVersionUpdateThumb(ctx context.Context, request operations.ArticleVersionUpdateThumbRequest, security operations.ArticleVersionUpdateThumbSecurity) (*operations.ArticleVersionUpdateThumbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/update_thumb", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/update_thumb", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileID", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,7 +523,7 @@ func (s *articles) ArticleVersionUpdateThumb(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,7 +567,7 @@ func (s *articles) ArticleVersionUpdateThumb(ctx context.Context, request operat
 // List public article versions
 func (s *articles) ArticleVersions(ctx context.Context, request operations.ArticleVersionsRequest) (*operations.ArticleVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/articles/{article_id}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -624,9 +624,9 @@ func (s *articles) ArticlesList(ctx context.Context, request operations.Articles
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -677,7 +677,7 @@ func (s *articles) ArticlesSearch(ctx context.Context, request operations.Articl
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/articles/search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticleSearch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -689,7 +689,7 @@ func (s *articles) ArticlesSearch(ctx context.Context, request operations.Articl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -734,16 +734,16 @@ func (s *articles) ArticlesSearch(ctx context.Context, request operations.Articl
 
 // PrivateArticleAuthorDelete - Delete article author
 // De-associate author from article
-func (s *articles) PrivateArticleAuthorDelete(ctx context.Context, request operations.PrivateArticleAuthorDeleteRequest) (*operations.PrivateArticleAuthorDeleteResponse, error) {
+func (s *articles) PrivateArticleAuthorDelete(ctx context.Context, request operations.PrivateArticleAuthorDeleteRequest, security operations.PrivateArticleAuthorDeleteSecurity) (*operations.PrivateArticleAuthorDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors/{author_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors/{author_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -784,11 +784,11 @@ func (s *articles) PrivateArticleAuthorDelete(ctx context.Context, request opera
 
 // PrivateArticleAuthorsAdd - Add article authors
 // Associate new authors with the article. This will add new authors to the list of already associated authors
-func (s *articles) PrivateArticleAuthorsAdd(ctx context.Context, request operations.PrivateArticleAuthorsAddRequest) (*operations.PrivateArticleAuthorsAddResponse, error) {
+func (s *articles) PrivateArticleAuthorsAdd(ctx context.Context, request operations.PrivateArticleAuthorsAddRequest, security operations.PrivateArticleAuthorsAddSecurity) (*operations.PrivateArticleAuthorsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorsCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -803,7 +803,7 @@ func (s *articles) PrivateArticleAuthorsAdd(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -847,16 +847,16 @@ func (s *articles) PrivateArticleAuthorsAdd(ctx context.Context, request operati
 
 // PrivateArticleAuthorsList - List article authors
 // List article authors
-func (s *articles) PrivateArticleAuthorsList(ctx context.Context, request operations.PrivateArticleAuthorsListRequest) (*operations.PrivateArticleAuthorsListResponse, error) {
+func (s *articles) PrivateArticleAuthorsList(ctx context.Context, request operations.PrivateArticleAuthorsListRequest, security operations.PrivateArticleAuthorsListSecurity) (*operations.PrivateArticleAuthorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -907,11 +907,11 @@ func (s *articles) PrivateArticleAuthorsList(ctx context.Context, request operat
 
 // PrivateArticleAuthorsReplace - Replace article authors
 // Associate new authors with the article. This will remove all already associated authors and add these new ones
-func (s *articles) PrivateArticleAuthorsReplace(ctx context.Context, request operations.PrivateArticleAuthorsReplaceRequest) (*operations.PrivateArticleAuthorsReplaceResponse, error) {
+func (s *articles) PrivateArticleAuthorsReplace(ctx context.Context, request operations.PrivateArticleAuthorsReplaceRequest, security operations.PrivateArticleAuthorsReplaceSecurity) (*operations.PrivateArticleAuthorsReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/authors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorsCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -926,7 +926,7 @@ func (s *articles) PrivateArticleAuthorsReplace(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -970,11 +970,11 @@ func (s *articles) PrivateArticleAuthorsReplace(ctx context.Context, request ope
 
 // PrivateArticleCategoriesAdd - Add article categories
 // Associate new categories with the article. This will add new categories to the list of already associated categories
-func (s *articles) PrivateArticleCategoriesAdd(ctx context.Context, request operations.PrivateArticleCategoriesAddRequest) (*operations.PrivateArticleCategoriesAddResponse, error) {
+func (s *articles) PrivateArticleCategoriesAdd(ctx context.Context, request operations.PrivateArticleCategoriesAddRequest, security operations.PrivateArticleCategoriesAddSecurity) (*operations.PrivateArticleCategoriesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CategoriesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -989,7 +989,7 @@ func (s *articles) PrivateArticleCategoriesAdd(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1032,16 +1032,16 @@ func (s *articles) PrivateArticleCategoriesAdd(ctx context.Context, request oper
 
 // PrivateArticleCategoriesList - List article categories
 // List article categories
-func (s *articles) PrivateArticleCategoriesList(ctx context.Context, request operations.PrivateArticleCategoriesListRequest) (*operations.PrivateArticleCategoriesListResponse, error) {
+func (s *articles) PrivateArticleCategoriesList(ctx context.Context, request operations.PrivateArticleCategoriesListRequest, security operations.PrivateArticleCategoriesListSecurity) (*operations.PrivateArticleCategoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1092,11 +1092,11 @@ func (s *articles) PrivateArticleCategoriesList(ctx context.Context, request ope
 
 // PrivateArticleCategoriesReplace - Replace article categories
 // Associate new categories with the article. This will remove all already associated categories and add these new ones
-func (s *articles) PrivateArticleCategoriesReplace(ctx context.Context, request operations.PrivateArticleCategoriesReplaceRequest) (*operations.PrivateArticleCategoriesReplaceResponse, error) {
+func (s *articles) PrivateArticleCategoriesReplace(ctx context.Context, request operations.PrivateArticleCategoriesReplaceRequest, security operations.PrivateArticleCategoriesReplaceSecurity) (*operations.PrivateArticleCategoriesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CategoriesCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1111,7 +1111,7 @@ func (s *articles) PrivateArticleCategoriesReplace(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1154,16 +1154,16 @@ func (s *articles) PrivateArticleCategoriesReplace(ctx context.Context, request 
 
 // PrivateArticleCategoryDelete - Delete article category
 // De-associate category from article
-func (s *articles) PrivateArticleCategoryDelete(ctx context.Context, request operations.PrivateArticleCategoryDeleteRequest) (*operations.PrivateArticleCategoryDeleteResponse, error) {
+func (s *articles) PrivateArticleCategoryDelete(ctx context.Context, request operations.PrivateArticleCategoryDeleteRequest, security operations.PrivateArticleCategoryDeleteSecurity) (*operations.PrivateArticleCategoryDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories/{category_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/categories/{category_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1204,16 +1204,16 @@ func (s *articles) PrivateArticleCategoryDelete(ctx context.Context, request ope
 
 // PrivateArticleConfidentialityDelete - Delete article confidentiality
 // Delete confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-func (s *articles) PrivateArticleConfidentialityDelete(ctx context.Context, request operations.PrivateArticleConfidentialityDeleteRequest) (*operations.PrivateArticleConfidentialityDeleteResponse, error) {
+func (s *articles) PrivateArticleConfidentialityDelete(ctx context.Context, request operations.PrivateArticleConfidentialityDeleteRequest, security operations.PrivateArticleConfidentialityDeleteSecurity) (*operations.PrivateArticleConfidentialityDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1256,16 +1256,16 @@ func (s *articles) PrivateArticleConfidentialityDelete(ctx context.Context, requ
 
 // PrivateArticleConfidentialityDetails - Article confidentiality details
 // View confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-func (s *articles) PrivateArticleConfidentialityDetails(ctx context.Context, request operations.PrivateArticleConfidentialityDetailsRequest) (*operations.PrivateArticleConfidentialityDetailsResponse, error) {
+func (s *articles) PrivateArticleConfidentialityDetails(ctx context.Context, request operations.PrivateArticleConfidentialityDetailsRequest, security operations.PrivateArticleConfidentialityDetailsSecurity) (*operations.PrivateArticleConfidentialityDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1316,11 +1316,11 @@ func (s *articles) PrivateArticleConfidentialityDetails(ctx context.Context, req
 
 // PrivateArticleConfidentialityUpdate - Update article confidentiality
 // Update confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
-func (s *articles) PrivateArticleConfidentialityUpdate(ctx context.Context, request operations.PrivateArticleConfidentialityUpdateRequest) (*operations.PrivateArticleConfidentialityUpdateResponse, error) {
+func (s *articles) PrivateArticleConfidentialityUpdate(ctx context.Context, request operations.PrivateArticleConfidentialityUpdateRequest, security operations.PrivateArticleConfidentialityUpdateSecurity) (*operations.PrivateArticleConfidentialityUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/confidentiality", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfidentialityCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1335,7 +1335,7 @@ func (s *articles) PrivateArticleConfidentialityUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1378,7 +1378,7 @@ func (s *articles) PrivateArticleConfidentialityUpdate(ctx context.Context, requ
 
 // PrivateArticleCreate - Create new Article
 // Create a new Article by sending article information
-func (s *articles) PrivateArticleCreate(ctx context.Context, request operations.PrivateArticleCreateRequest) (*operations.PrivateArticleCreateResponse, error) {
+func (s *articles) PrivateArticleCreate(ctx context.Context, request shared.ArticleCreate, security operations.PrivateArticleCreateSecurity) (*operations.PrivateArticleCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles"
 
@@ -1397,7 +1397,7 @@ func (s *articles) PrivateArticleCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1446,16 +1446,16 @@ func (s *articles) PrivateArticleCreate(ctx context.Context, request operations.
 
 // PrivateArticleDelete - Delete article
 // Delete an article
-func (s *articles) PrivateArticleDelete(ctx context.Context, request operations.PrivateArticleDeleteRequest) (*operations.PrivateArticleDeleteResponse, error) {
+func (s *articles) PrivateArticleDelete(ctx context.Context, request operations.PrivateArticleDeleteRequest, security operations.PrivateArticleDeleteSecurity) (*operations.PrivateArticleDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1496,16 +1496,16 @@ func (s *articles) PrivateArticleDelete(ctx context.Context, request operations.
 
 // PrivateArticleDetails - Article details
 // View a private article
-func (s *articles) PrivateArticleDetails(ctx context.Context, request operations.PrivateArticleDetailsRequest) (*operations.PrivateArticleDetailsResponse, error) {
+func (s *articles) PrivateArticleDetails(ctx context.Context, request operations.PrivateArticleDetailsRequest, security operations.PrivateArticleDetailsSecurity) (*operations.PrivateArticleDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1556,16 +1556,16 @@ func (s *articles) PrivateArticleDetails(ctx context.Context, request operations
 
 // PrivateArticleEmbargoDelete - Delete Article Embargo
 // Will lift the embargo for the specified article
-func (s *articles) PrivateArticleEmbargoDelete(ctx context.Context, request operations.PrivateArticleEmbargoDeleteRequest) (*operations.PrivateArticleEmbargoDeleteResponse, error) {
+func (s *articles) PrivateArticleEmbargoDelete(ctx context.Context, request operations.PrivateArticleEmbargoDeleteRequest, security operations.PrivateArticleEmbargoDeleteSecurity) (*operations.PrivateArticleEmbargoDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1606,16 +1606,16 @@ func (s *articles) PrivateArticleEmbargoDelete(ctx context.Context, request oper
 
 // PrivateArticleEmbargoDetails - Article Embargo Details
 // View a private article embargo details
-func (s *articles) PrivateArticleEmbargoDetails(ctx context.Context, request operations.PrivateArticleEmbargoDetailsRequest) (*operations.PrivateArticleEmbargoDetailsResponse, error) {
+func (s *articles) PrivateArticleEmbargoDetails(ctx context.Context, request operations.PrivateArticleEmbargoDetailsRequest, security operations.PrivateArticleEmbargoDetailsSecurity) (*operations.PrivateArticleEmbargoDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1666,11 +1666,11 @@ func (s *articles) PrivateArticleEmbargoDetails(ctx context.Context, request ope
 
 // PrivateArticleEmbargoUpdate - Update Article Embargo
 // Note: setting an article under whole embargo does not imply that the article will be published when the embargo will expire. You must explicitly call the publish endpoint to enable this functionality.
-func (s *articles) PrivateArticleEmbargoUpdate(ctx context.Context, request operations.PrivateArticleEmbargoUpdateRequest) (*operations.PrivateArticleEmbargoUpdateResponse, error) {
+func (s *articles) PrivateArticleEmbargoUpdate(ctx context.Context, request operations.PrivateArticleEmbargoUpdateRequest, security operations.PrivateArticleEmbargoUpdateSecurity) (*operations.PrivateArticleEmbargoUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/embargo", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticleEmbargoUpdater", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1685,7 +1685,7 @@ func (s *articles) PrivateArticleEmbargoUpdate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1729,16 +1729,16 @@ func (s *articles) PrivateArticleEmbargoUpdate(ctx context.Context, request oper
 
 // PrivateArticleFile - Single File
 // View details of file for specified article
-func (s *articles) PrivateArticleFile(ctx context.Context, request operations.PrivateArticleFileRequest) (*operations.PrivateArticleFileResponse, error) {
+func (s *articles) PrivateArticleFile(ctx context.Context, request operations.PrivateArticleFileRequest, security operations.PrivateArticleFileSecurity) (*operations.PrivateArticleFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1789,16 +1789,16 @@ func (s *articles) PrivateArticleFile(ctx context.Context, request operations.Pr
 
 // PrivateArticleFileDelete - File Delete
 // Complete file upload
-func (s *articles) PrivateArticleFileDelete(ctx context.Context, request operations.PrivateArticleFileDeleteRequest) (*operations.PrivateArticleFileDeleteResponse, error) {
+func (s *articles) PrivateArticleFileDelete(ctx context.Context, request operations.PrivateArticleFileDeleteRequest, security operations.PrivateArticleFileDeleteSecurity) (*operations.PrivateArticleFileDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1841,16 +1841,16 @@ func (s *articles) PrivateArticleFileDelete(ctx context.Context, request operati
 
 // PrivateArticleFilesList - List article files
 // List private files
-func (s *articles) PrivateArticleFilesList(ctx context.Context, request operations.PrivateArticleFilesListRequest) (*operations.PrivateArticleFilesListResponse, error) {
+func (s *articles) PrivateArticleFilesList(ctx context.Context, request operations.PrivateArticleFilesListRequest, security operations.PrivateArticleFilesListSecurity) (*operations.PrivateArticleFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1901,16 +1901,16 @@ func (s *articles) PrivateArticleFilesList(ctx context.Context, request operatio
 
 // PrivateArticlePrivateLink - List private links
 // List private links
-func (s *articles) PrivateArticlePrivateLink(ctx context.Context, request operations.PrivateArticlePrivateLinkRequest) (*operations.PrivateArticlePrivateLinkResponse, error) {
+func (s *articles) PrivateArticlePrivateLink(ctx context.Context, request operations.PrivateArticlePrivateLinkRequest, security operations.PrivateArticlePrivateLinkSecurity) (*operations.PrivateArticlePrivateLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1961,11 +1961,11 @@ func (s *articles) PrivateArticlePrivateLink(ctx context.Context, request operat
 
 // PrivateArticlePrivateLinkCreate - Create private link
 // Create new private link for this article
-func (s *articles) PrivateArticlePrivateLinkCreate(ctx context.Context, request operations.PrivateArticlePrivateLinkCreateRequest) (*operations.PrivateArticlePrivateLinkCreateResponse, error) {
+func (s *articles) PrivateArticlePrivateLinkCreate(ctx context.Context, request operations.PrivateArticlePrivateLinkCreateRequest, security operations.PrivateArticlePrivateLinkCreateSecurity) (*operations.PrivateArticlePrivateLinkCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrivateLinkCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1977,7 +1977,7 @@ func (s *articles) PrivateArticlePrivateLinkCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2032,16 +2032,16 @@ func (s *articles) PrivateArticlePrivateLinkCreate(ctx context.Context, request 
 
 // PrivateArticlePrivateLinkDelete - Disable private link
 // Disable/delete private link for this article
-func (s *articles) PrivateArticlePrivateLinkDelete(ctx context.Context, request operations.PrivateArticlePrivateLinkDeleteRequest) (*operations.PrivateArticlePrivateLinkDeleteResponse, error) {
+func (s *articles) PrivateArticlePrivateLinkDelete(ctx context.Context, request operations.PrivateArticlePrivateLinkDeleteRequest, security operations.PrivateArticlePrivateLinkDeleteSecurity) (*operations.PrivateArticlePrivateLinkDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links/{link_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links/{link_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2084,11 +2084,11 @@ func (s *articles) PrivateArticlePrivateLinkDelete(ctx context.Context, request 
 
 // PrivateArticlePrivateLinkUpdate - Update private link
 // Update existing private link for this article
-func (s *articles) PrivateArticlePrivateLinkUpdate(ctx context.Context, request operations.PrivateArticlePrivateLinkUpdateRequest) (*operations.PrivateArticlePrivateLinkUpdateResponse, error) {
+func (s *articles) PrivateArticlePrivateLinkUpdate(ctx context.Context, request operations.PrivateArticlePrivateLinkUpdateRequest, security operations.PrivateArticlePrivateLinkUpdateSecurity) (*operations.PrivateArticlePrivateLinkUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links/{link_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/private_links/{link_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrivateLinkCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2100,7 +2100,7 @@ func (s *articles) PrivateArticlePrivateLinkUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2147,16 +2147,16 @@ func (s *articles) PrivateArticlePrivateLinkUpdate(ctx context.Context, request 
 // PrivateArticlePublish - Private Article Publish
 // - If the whole article is under embargo, it will not be published immediately, but when the embargo expires or is lifted.
 // - When an article is published, a new public version will be generated. Any further updates to the article will affect the private article data. In order to make these changes publicly visible, an explicit publish operation is needed.
-func (s *articles) PrivateArticlePublish(ctx context.Context, request operations.PrivateArticlePublishRequest) (*operations.PrivateArticlePublishResponse, error) {
+func (s *articles) PrivateArticlePublish(ctx context.Context, request operations.PrivateArticlePublishRequest, security operations.PrivateArticlePublishSecurity) (*operations.PrivateArticlePublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2209,16 +2209,16 @@ func (s *articles) PrivateArticlePublish(ctx context.Context, request operations
 
 // PrivateArticleReserveDoi - Private Article Reserve DOI
 // Reserve DOI for article
-func (s *articles) PrivateArticleReserveDoi(ctx context.Context, request operations.PrivateArticleReserveDoiRequest) (*operations.PrivateArticleReserveDoiResponse, error) {
+func (s *articles) PrivateArticleReserveDoi(ctx context.Context, request operations.PrivateArticleReserveDoiRequest, security operations.PrivateArticleReserveDoiSecurity) (*operations.PrivateArticleReserveDoiResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/reserve_doi", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/reserve_doi", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2269,16 +2269,16 @@ func (s *articles) PrivateArticleReserveDoi(ctx context.Context, request operati
 
 // PrivateArticleReserveHandle - Private Article Reserve Handle
 // Reserve Handle for article
-func (s *articles) PrivateArticleReserveHandle(ctx context.Context, request operations.PrivateArticleReserveHandleRequest) (*operations.PrivateArticleReserveHandleResponse, error) {
+func (s *articles) PrivateArticleReserveHandle(ctx context.Context, request operations.PrivateArticleReserveHandleRequest, security operations.PrivateArticleReserveHandleSecurity) (*operations.PrivateArticleReserveHandleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/reserve_handle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/reserve_handle", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2329,11 +2329,11 @@ func (s *articles) PrivateArticleReserveHandle(ctx context.Context, request oper
 
 // PrivateArticleResource - Private Article Resource
 // Edit article resource data.
-func (s *articles) PrivateArticleResource(ctx context.Context, request operations.PrivateArticleResourceRequest) (*operations.PrivateArticleResourceResponse, error) {
+func (s *articles) PrivateArticleResource(ctx context.Context, request operations.PrivateArticleResourceRequest, security operations.PrivateArticleResourceSecurity) (*operations.PrivateArticleResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/resource", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/resource", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Resource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2348,7 +2348,7 @@ func (s *articles) PrivateArticleResource(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2401,11 +2401,11 @@ func (s *articles) PrivateArticleResource(ctx context.Context, request operation
 
 // PrivateArticleUpdate - Update article
 // Updating an article by passing body parameters; request can also be made with the PATCH method.
-func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.PrivateArticleUpdateRequest) (*operations.PrivateArticleUpdateResponse, error) {
+func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.PrivateArticleUpdateRequest, security operations.PrivateArticleUpdateSecurity) (*operations.PrivateArticleUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticleUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2420,7 +2420,7 @@ func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2471,16 +2471,16 @@ func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.
 
 // PrivateArticleUploadComplete - Complete Upload
 // Complete file upload
-func (s *articles) PrivateArticleUploadComplete(ctx context.Context, request operations.PrivateArticleUploadCompleteRequest) (*operations.PrivateArticleUploadCompleteResponse, error) {
+func (s *articles) PrivateArticleUploadComplete(ctx context.Context, request operations.PrivateArticleUploadCompleteRequest, security operations.PrivateArticleUploadCompleteSecurity) (*operations.PrivateArticleUploadCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2523,11 +2523,11 @@ func (s *articles) PrivateArticleUploadComplete(ctx context.Context, request ope
 
 // PrivateArticleUploadInitiate - Initiate Upload
 // Initiate a new file upload within the article. Either use the link property to point to an existing file that resides elsewhere and will not be uploaded to Figshare or use the other 3 parameters (md5, name, size).
-func (s *articles) PrivateArticleUploadInitiate(ctx context.Context, request operations.PrivateArticleUploadInitiateRequest) (*operations.PrivateArticleUploadInitiateResponse, error) {
+func (s *articles) PrivateArticleUploadInitiate(ctx context.Context, request operations.PrivateArticleUploadInitiateRequest, security operations.PrivateArticleUploadInitiateSecurity) (*operations.PrivateArticleUploadInitiateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/files", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileCreator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2542,7 +2542,7 @@ func (s *articles) PrivateArticleUploadInitiate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2597,7 +2597,7 @@ func (s *articles) PrivateArticleUploadInitiate(ctx context.Context, request ope
 
 // PrivateArticlesList - Private Articles
 // Get Own Articles
-func (s *articles) PrivateArticlesList(ctx context.Context, request operations.PrivateArticlesListRequest) (*operations.PrivateArticlesListResponse, error) {
+func (s *articles) PrivateArticlesList(ctx context.Context, request operations.PrivateArticlesListRequest, security operations.PrivateArticlesListSecurity) (*operations.PrivateArticlesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles"
 
@@ -2606,11 +2606,11 @@ func (s *articles) PrivateArticlesList(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2659,7 +2659,7 @@ func (s *articles) PrivateArticlesList(ctx context.Context, request operations.P
 
 // PrivateArticlesSearch - Private Articles search
 // Returns a list of private articles filtered by the search parameters
-func (s *articles) PrivateArticlesSearch(ctx context.Context, request operations.PrivateArticlesSearchRequest) (*operations.PrivateArticlesSearchResponse, error) {
+func (s *articles) PrivateArticlesSearch(ctx context.Context, request shared.PrivateArticleSearch, security operations.PrivateArticlesSearchSecurity) (*operations.PrivateArticlesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles/search"
 
@@ -2678,7 +2678,7 @@ func (s *articles) PrivateArticlesSearch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -24,9 +24,9 @@ pkg/models/shared/verificationoption.go
 pkg/models/shared/emailverificationdata.go
 pkg/models/shared/addressverificationdata.go
 pkg/models/shared/postaladdress.go
+pkg/models/shared/altenum.go
 pkg/models/shared/fetchverificationoptionsrequest.go
 pkg/models/shared/servicebusinesscontext.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/voiceofmerchantstate.go
 pkg/models/shared/verify.go

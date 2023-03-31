@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFileCommentsIDPathParams struct {
+type DeleteFileCommentsIDRequest struct {
 	// File Comment ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFileCommentsIDRequest struct {
-	PathParams DeleteFileCommentsIDPathParams
 }
 
 type DeleteFileCommentsIDResponse struct {

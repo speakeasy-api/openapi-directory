@@ -20,11 +20,6 @@ type EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody struct {
 	Maintenance string `form:"name=maintenance"`
 }
 
-type EnterpriseAdminEnableOrDisableMaintenanceModeRequest struct {
-	Request   EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type EnterpriseAdminEnableOrDisableMaintenanceModeResponse struct {
 	ContentType string
 	StatusCode  int

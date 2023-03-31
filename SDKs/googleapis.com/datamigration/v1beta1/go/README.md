@@ -25,137 +25,117 @@ func main() {
     s := sdk.New()
 
     req := operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
-        Security: operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ConnectionProfileID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.ConnectionProfileInput{
+        DollarXgafv: "2",
+        ConnectionProfileInput: &shared.ConnectionProfileInput{
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
+                    ActivationPolicy: "ALWAYS",
                     AutoStorageIncrease: false,
-                    DataDiskSizeGb: "debitis",
-                    DataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
+                    DataDiskSizeGb: "distinctio",
+                    DataDiskType: "PD_HDD",
                     DatabaseFlags: map[string]string{
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
-                        "iusto": "excepturi",
+                        "nulla": "corrupti",
+                        "illum": "vel",
+                        "error": "deserunt",
                     },
                     DatabaseVersion: "MYSQL_5_6",
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "temporibus",
-                                Label: "ab",
-                                TTL: "quis",
-                                Value: "veritatis",
+                                ExpireTime: "magnam",
+                                Label: "debitis",
+                                TTL: "ipsa",
+                                Value: "delectus",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "deserunt",
-                                Label: "perferendis",
-                                TTL: "ipsam",
-                                Value: "repellendus",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "sapiente",
-                                Label: "quo",
-                                TTL: "odit",
-                                Value: "at",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "at",
-                                Label: "maiores",
+                                ExpireTime: "tempora",
+                                Label: "suscipit",
                                 TTL: "molestiae",
-                                Value: "quod",
+                                Value: "minus",
                             },
                         },
                         EnableIpv4: false,
-                        PrivateNetwork: "quod",
+                        PrivateNetwork: "placeat",
                         RequireSsl: false,
                     },
-                    RootPassword: "esse",
-                    SourceID: "totam",
-                    StorageAutoResizeLimit: "porro",
-                    Tier: "dolorum",
+                    RootPassword: "voluptatum",
+                    SourceID: "iusto",
+                    StorageAutoResizeLimit: "excepturi",
+                    Tier: "nisi",
                     UserLabels: map[string]string{
-                        "nam": "officia",
+                        "temporibus": "ab",
+                        "quis": "veritatis",
+                        "deserunt": "perferendis",
+                        "ipsam": "repellendus",
                     },
-                    Zone: "occaecati",
+                    Zone: "sapiente",
                 },
             },
-            DisplayName: "fugit",
+            DisplayName: "quo",
             Error: &shared.Status{
-                Code: 537373,
+                Code: 140350,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
+                        "maiores": "molestiae",
+                        "quod": "quod",
+                        "esse": "totam",
+                        "porro": "dolorum",
+                    },
+                    map[string]interface{}{
+                        "nam": "officia",
+                    },
+                    map[string]interface{}{
+                        "fugit": "deleniti",
+                        "hic": "optio",
                         "totam": "beatae",
-                        "commodi": "molestiae",
-                        "modi": "qui",
-                        "impedit": "cum",
                     },
                     map[string]interface{}{
-                        "ipsum": "excepturi",
-                        "aspernatur": "perferendis",
-                    },
-                    map[string]interface{}{
-                        "natus": "sed",
-                        "iste": "dolor",
-                    },
-                    map[string]interface{}{
-                        "laboriosam": "hic",
-                        "saepe": "fuga",
-                        "in": "corporis",
+                        "molestiae": "modi",
+                        "qui": "impedit",
                     },
                 },
-                Message: "iste",
+                Message: "cum",
             },
             Labels: map[string]string{
-                "saepe": "quidem",
-                "architecto": "ipsa",
+                "ipsum": "excepturi",
+                "aspernatur": "perferendis",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "reiciendis",
-                Host: "est",
-                Password: "mollitia",
-                Port: 670638,
+                CloudSQLID: "ad",
+                Host: "natus",
+                Password: "sed",
+                Port: 612096,
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "dolores",
-                    ClientCertificate: "dolorem",
-                    ClientKey: "corporis",
+                    CaCertificate: "dolor",
+                    ClientCertificate: "natus",
+                    ClientKey: "laboriosam",
                 },
-                Username: "Braulio60",
+                Username: "Tyra.Turcotte35",
             },
-            Name: "nemo",
-            Provider: "DATABASE_PROVIDER_UNSPECIFIED",
-            State: "UPDATING",
+            Name: "iste",
+            Provider: "CLOUDSQL",
+            State: "FAILED",
         },
+        AccessToken: "quidem",
+        Alt: "json",
+        Callback: "ipsa",
+        ConnectionProfileID: "reiciendis",
+        Fields: "est",
+        Key: "mollitia",
+        OauthToken: "laborum",
+        Parent: "dolores",
+        PrettyPrint: false,
+        QuotaUser: "dolorem",
+        RequestID: "corporis",
+        UploadType: "explicabo",
+        UploadProtocol: "nobis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req)
+    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -168,7 +148,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -195,4 +175,15 @@ func main() {
 * `DatamigrationProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

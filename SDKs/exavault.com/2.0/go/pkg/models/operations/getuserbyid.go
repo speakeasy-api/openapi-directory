@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserByIDPathParams struct {
-	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUserByIDQueryParams struct {
-	// Comma-separated list of relationships to include in response. Possible values include **homeResource** and **ownerAccount**.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetUserByIDHeaders struct {
+type GetUserByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetUserByIDRequest struct {
-	PathParams  GetUserByIDPathParams
-	QueryParams GetUserByIDQueryParams
-	Headers     GetUserByIDHeaders
+	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
+	// Comma-separated list of relationships to include in response. Possible values include **homeResource** and **ownerAccount**.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetUserByIDResponse struct {

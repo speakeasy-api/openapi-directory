@@ -14,10 +14,6 @@ type HTMLCleanRequestBody struct {
 	OutputType string `form:"name=output-type"`
 }
 
-type HTMLCleanRequest struct {
-	Request HTMLCleanRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type HTMLCleanResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError                                *shared.APIError

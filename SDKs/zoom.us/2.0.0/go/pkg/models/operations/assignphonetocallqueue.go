@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignPhoneToCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignPhoneToCallQueuePathParams struct {
-	// Unique Identifier of the Call Queue.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AssignPhoneToCallQueueApplicationJSONPhoneNumbers struct {
@@ -29,9 +23,9 @@ type AssignPhoneToCallQueueApplicationJSON struct {
 }
 
 type AssignPhoneToCallQueueRequest struct {
-	PathParams AssignPhoneToCallQueuePathParams
-	Request    *AssignPhoneToCallQueueApplicationJSON `request:"mediaType=application/json"`
-	Security   AssignPhoneToCallQueueSecurity
+	RequestBody *AssignPhoneToCallQueueApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Call Queue.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type AssignPhoneToCallQueueResponse struct {

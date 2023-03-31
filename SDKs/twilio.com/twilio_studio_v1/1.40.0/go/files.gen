@@ -33,7 +33,6 @@ pkg/models/operations/liststep.go
 pkg/models/operations/updateexecution.go
 pkg/models/shared/studiov1flowengagement.go
 pkg/models/shared/engagementenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/studiov1flowexecution.go
 pkg/models/shared/executionenumstatusenum.go
 pkg/models/shared/studiov1flowengagementengagementcontext.go
@@ -45,3 +44,4 @@ pkg/models/shared/flowenumstatusenum.go
 pkg/models/shared/studiov1flowengagementstep.go
 pkg/models/shared/studiov1flowengagementstepstepcontext.go
 USAGE.md
+pkg/models/operations/options.go

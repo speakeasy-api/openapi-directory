@@ -123,7 +123,7 @@ func newMatrixAPI(defaultClient, securityClient HTTPClient, serverURL, language,
 // {"message":"Cannot find from_points: 1"}
 // ```
 // And the optional `hints` array.
-func (s *matrixAPI) CalculateMatrix(ctx context.Context, request operations.CalculateMatrixRequest) (*operations.CalculateMatrixResponse, error) {
+func (s *matrixAPI) CalculateMatrix(ctx context.Context, request operations.CalculateMatrixRequestBody) (*operations.CalculateMatrixResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/matrix/calculate"
 
@@ -199,7 +199,7 @@ func (s *matrixAPI) GetMatrix(ctx context.Context, request operations.GetMatrixR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,7 +253,7 @@ func (s *matrixAPI) GetMatrix(ctx context.Context, request operations.GetMatrixR
 // This endpoint returns the solution of a JSON submitted to the Batch Matrix endpoint. You can fetch it with the job_id, you have been sent.
 func (s *matrixAPI) GetMatrixSolution(ctx context.Context, request operations.GetMatrixSolutionRequest) (*operations.GetMatrixSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/matrix/solution/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/matrix/solution/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +325,7 @@ func (s *matrixAPI) GetMatrixSolution(ctx context.Context, request operations.Ge
 // ```bash
 // curl -X POST -H "Content-Type: application/json" "https://graphhopper.com/api/1/matrix?key=[YOUR_KEY]" -d '{"elevation":false,"out_arrays":["weights", "times"],"from_points":[[-0.087891,51.534377],[-0.090637,51.467697],[-0.171833,51.521241],[-0.211487,51.473685]],"to_points":[[-0.087891,51.534377],[-0.090637,51.467697],[-0.171833,51.521241],[-0.211487,51.473685]],"vehicle":"car"}'
 // ```
-func (s *matrixAPI) PostMatrix(ctx context.Context, request operations.PostMatrixRequest) (*operations.PostMatrixResponse, error) {
+func (s *matrixAPI) PostMatrix(ctx context.Context, request operations.PostMatrixRequestBody) (*operations.PostMatrixResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/matrix"
 

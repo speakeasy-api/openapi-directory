@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressPathParams struct {
+type GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressRequest struct {
 	// id of resource object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Email address of Outlook Calendar
-	OutlookEmailAddress string `pathParam:"style=simple,explode=false,name=outlookEmailAddress"`
-}
-
-type GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressQueryParams struct {
 	// Outlook calendar authorization return url
 	OutlookAuthReturnURL *string `queryParam:"style=form,explode=true,name=outlookAuthReturnUrl"`
-}
-
-type GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressRequest struct {
-	PathParams  GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressPathParams
-	QueryParams GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressQueryParams
+	// Email address of Outlook Calendar
+	OutlookEmailAddress string `pathParam:"style=simple,explode=false,name=outlookEmailAddress"`
 }
 
 type GetSetupV1ResourcesIDCalendarAuthOutlookOutlookEmailAddressResponse struct {

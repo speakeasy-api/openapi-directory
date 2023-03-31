@@ -33,20 +33,20 @@ func newVideosUpload(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CompleteStreamingUpload - Complete a user's streaming upload
-func (s *videosUpload) CompleteStreamingUpload(ctx context.Context, request operations.CompleteStreamingUploadRequest) (*operations.CompleteStreamingUploadResponse, error) {
+func (s *videosUpload) CompleteStreamingUpload(ctx context.Context, request operations.CompleteStreamingUploadRequest, security operations.CompleteStreamingUploadSecurity) (*operations.CompleteStreamingUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/uploads/{upload}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/uploads/{upload}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *videosUpload) CompleteStreamingUpload(ctx context.Context, request oper
 }
 
 // GetUploadAttempt - Get a user's upload attempt
-func (s *videosUpload) GetUploadAttempt(ctx context.Context, request operations.GetUploadAttemptRequest) (*operations.GetUploadAttemptResponse, error) {
+func (s *videosUpload) GetUploadAttempt(ctx context.Context, request operations.GetUploadAttemptRequest, security operations.GetUploadAttemptSecurity) (*operations.GetUploadAttemptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/uploads/{upload}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/uploads/{upload}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -133,9 +133,9 @@ func (s *videosUpload) GetUploadAttempt(ctx context.Context, request operations.
 // Begin the video upload process. For more information, see our [upload documentation](https://developer.vimeo.com/api/upload/videos).
 func (s *videosUpload) UploadVideo(ctx context.Context, request operations.UploadVideoRequest) (*operations.UploadVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,7 +202,7 @@ func (s *videosUpload) UploadVideo(ctx context.Context, request operations.Uploa
 
 // UploadVideoAlt1 - Upload a video
 // Begin the video upload process. For more information, see our [upload documentation](https://developer.vimeo.com/api/upload/videos).
-func (s *videosUpload) UploadVideoAlt1(ctx context.Context, request operations.UploadVideoAlt1Request) (*operations.UploadVideoAlt1Response, error) {
+func (s *videosUpload) UploadVideoAlt1(ctx context.Context, request operations.UploadVideoAlt1RequestBody) (*operations.UploadVideoAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/videos"
 

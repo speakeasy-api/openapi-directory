@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOntologyTermSubsetsPathParams struct {
+type GetOntologyTermSubsetsRequest struct {
 	// CURIE identifier of a GO term, e.g. GO:0006259
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetOntologyTermSubsetsRequest struct {
-	PathParams GetOntologyTermSubsetsPathParams
 }
 
 type GetOntologyTermSubsetsResponse struct {

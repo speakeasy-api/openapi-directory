@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDEPPathParams struct {
+type GetDEPRequest struct {
 	// The `_uuid` of the `Registrierkasse` to retrieve the DEP file.
 	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type GetDEPRequest struct {
-	PathParams GetDEPPathParams
 }
 
 type GetDEPResponse struct {

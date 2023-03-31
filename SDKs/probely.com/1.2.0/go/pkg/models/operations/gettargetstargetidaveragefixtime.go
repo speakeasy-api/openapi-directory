@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTargetsTargetIDAverageFixTimePathParams struct {
+type GetTargetsTargetIDAverageFixTimeRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDAverageFixTimeRequest struct {
-	PathParams GetTargetsTargetIDAverageFixTimePathParams
 }
 
 type GetTargetsTargetIDAverageFixTime200ApplicationJSONResults struct {

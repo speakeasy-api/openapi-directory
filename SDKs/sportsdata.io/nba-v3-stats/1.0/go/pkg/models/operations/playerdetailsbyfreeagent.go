@@ -33,13 +33,9 @@ func (e *PlayerDetailsByFreeAgentFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerDetailsByFreeAgentPathParams struct {
+type PlayerDetailsByFreeAgentRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerDetailsByFreeAgentFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type PlayerDetailsByFreeAgentRequest struct {
-	PathParams PlayerDetailsByFreeAgentPathParams
 }
 
 type PlayerDetailsByFreeAgentResponse struct {

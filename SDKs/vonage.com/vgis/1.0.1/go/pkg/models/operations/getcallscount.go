@@ -66,7 +66,7 @@ func (e *GetCallsCountStatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCallsCountQueryParams struct {
+type GetCallsCountRequest struct {
 	// Filter by call direction. For multiple criteria, seperate values by a comma.
 	Direction *GetCallsCountDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Return calls that occurred after this point in time
@@ -75,10 +75,6 @@ type GetCallsCountQueryParams struct {
 	States *GetCallsCountStatesEnum `queryParam:"style=form,explode=true,name=states"`
 	// Return calls that occurred before this point in time
 	ToDate *int64 `queryParam:"style=form,explode=true,name=toDate"`
-}
-
-type GetCallsCountRequest struct {
-	QueryParams GetCallsCountQueryParams
 }
 
 type GetCallsCountResponse struct {

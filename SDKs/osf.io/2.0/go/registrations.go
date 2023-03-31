@@ -54,7 +54,7 @@ func newRegistrations(defaultClient, securityClient HTTPClient, serverURL, langu
 // Most fields are string fields and will be filtered using simple substring matching. Public is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
 func (s *registrations) RegistrationsChildrenList(ctx context.Context, request operations.RegistrationsChildrenListRequest) (*operations.RegistrationsChildrenListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/children/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/children/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *registrations) RegistrationsChildrenList(ctx context.Context, request o
 // Returns a JSON object with a `data` key that contains the representation of the details necessary for the citation style.
 func (s *registrations) RegistrationsCitationRead(ctx context.Context, request operations.RegistrationsCitationReadRequest) (*operations.RegistrationsCitationReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/citations/{citation_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/citations/{citation_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *registrations) RegistrationsCitationRead(ctx context.Context, request o
 // Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
 func (s *registrations) RegistrationsCitationsList(ctx context.Context, request operations.RegistrationsCitationsListRequest) (*operations.RegistrationsCitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/citations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/citations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *registrations) RegistrationsCitationsList(ctx context.Context, request 
 // Most fields are string fields and will be filtered using simple substring matching. Deleted is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
 func (s *registrations) RegistrationsCommentsList(ctx context.Context, request operations.RegistrationsCommentsListRequest) (*operations.RegistrationsCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/comments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/comments/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -289,7 +289,7 @@ func (s *registrations) RegistrationsCommentsList(ctx context.Context, request o
 // Contributors may be filtered by their `bibliographic` and `permission` attributes.
 func (s *registrations) RegistrationsContributorsList(ctx context.Context, request operations.RegistrationsContributorsListRequest) (*operations.RegistrationsContributorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/contributors/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -339,7 +339,7 @@ func (s *registrations) RegistrationsContributorsList(ctx context.Context, reque
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrations) RegistrationsContributorsRead(ctx context.Context, request operations.RegistrationsContributorsReadRequest) (*operations.RegistrationsContributorsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/contributors/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/contributors/{user_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *registrations) RegistrationsContributorsRead(ctx context.Context, reque
 // Files may be filtered by `id`, `name`, `node`, `kind`, `path`, `provider`, `size`, and `last_touched`.
 func (s *registrations) RegistrationsFilesList(ctx context.Context, request operations.RegistrationsFilesListRequest) (*operations.RegistrationsFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/{provider}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -447,7 +447,7 @@ func (s *registrations) RegistrationsFilesList(ctx context.Context, request oper
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrations) RegistrationsFilesRead(ctx context.Context, request operations.RegistrationsFilesReadRequest) (*operations.RegistrationsFilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/{provider}/{path}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/{provider}/{path}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -505,7 +505,7 @@ func (s *registrations) RegistrationsFilesRead(ctx context.Context, request oper
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrations) RegistrationsForksCreate(ctx context.Context, request operations.RegistrationsForksCreateRequest) (*operations.RegistrationsForksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/forks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/forks/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -552,7 +552,7 @@ func (s *registrations) RegistrationsForksCreate(ctx context.Context, request op
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *registrations) RegistrationsForksList(ctx context.Context, request operations.RegistrationsForksListRequest) (*operations.RegistrationsForksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/forks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/forks/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -608,7 +608,7 @@ func (s *registrations) RegistrationsForksList(ctx context.Context, request oper
 // Identifiers may be filtered by their `category` e.g `ark` or `doi`.
 func (s *registrations) RegistrationsIdentifiersList(ctx context.Context, request operations.RegistrationsIdentifiersListRequest) (*operations.RegistrationsIdentifiersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/identifiers/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/identifiers/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +659,7 @@ func (s *registrations) RegistrationsIdentifiersList(ctx context.Context, reques
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *registrations) RegistrationsInstitutionsList(ctx context.Context, request operations.RegistrationsInstitutionsListRequest) (*operations.RegistrationsInstitutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/institutions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/institutions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -714,7 +714,7 @@ func (s *registrations) RegistrationsInstitutionsList(ctx context.Context, reque
 // Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
 func (s *registrations) RegistrationsLinkedNodesList(ctx context.Context, request operations.RegistrationsLinkedNodesListRequest) (*operations.RegistrationsLinkedNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/linked_nodes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/linked_nodes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -841,7 +841,7 @@ func (s *registrations) RegistrationsList(ctx context.Context) (*operations.Regi
 // Logs may be filtered by their `action`, and `date`.
 func (s *registrations) RegistrationsLogsList(ctx context.Context, request operations.RegistrationsLogsListRequest) (*operations.RegistrationsLogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/logs/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/logs/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -896,7 +896,7 @@ func (s *registrations) RegistrationsLogsList(ctx context.Context, request opera
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrations) RegistrationsPartialUpdate(ctx context.Context, request operations.RegistrationsPartialUpdateRequest) (*operations.RegistrationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -943,7 +943,7 @@ func (s *registrations) RegistrationsPartialUpdate(ctx context.Context, request 
 // Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
 func (s *registrations) RegistrationsProvidersList(ctx context.Context, request operations.RegistrationsProvidersListRequest) (*operations.RegistrationsProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/files/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1003,7 +1003,7 @@ func (s *registrations) RegistrationsProvidersList(ctx context.Context, request 
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrations) RegistrationsRead(ctx context.Context, request operations.RegistrationsReadRequest) (*operations.RegistrationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1064,7 +1064,7 @@ func (s *registrations) RegistrationsRead(ctx context.Context, request operation
 // View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
 func (s *registrations) RegistrationsViewOnlyLinksList(ctx context.Context, request operations.RegistrationsViewOnlyLinksListRequest) (*operations.RegistrationsViewOnlyLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/view_only_links/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/view_only_links/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1116,7 +1116,7 @@ func (s *registrations) RegistrationsViewOnlyLinksList(ctx context.Context, requ
 // View only links on a registration, public or private, are readable and writeable only by users that are administrators on the registration.
 func (s *registrations) RegistrationsViewOnlyLinksRead(ctx context.Context, request operations.RegistrationsViewOnlyLinksReadRequest) (*operations.RegistrationsViewOnlyLinksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/view_only_links/{link_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/view_only_links/{link_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1171,7 +1171,7 @@ func (s *registrations) RegistrationsViewOnlyLinksRead(ctx context.Context, requ
 // Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
 func (s *registrations) RegistrationsWikisList(ctx context.Context, request operations.RegistrationsWikisListRequest) (*operations.RegistrationsWikisListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/wikis/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrations/{registration_id}/wikis/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

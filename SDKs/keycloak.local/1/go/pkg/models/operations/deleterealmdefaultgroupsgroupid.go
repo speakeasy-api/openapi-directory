@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type DeleteRealmDefaultGroupsGroupIDPathParams struct {
+type DeleteRealmDefaultGroupsGroupIDRequest struct {
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmDefaultGroupsGroupIDRequest struct {
-	PathParams DeleteRealmDefaultGroupsGroupIDPathParams
 }
 
 type DeleteRealmDefaultGroupsGroupIDResponse struct {

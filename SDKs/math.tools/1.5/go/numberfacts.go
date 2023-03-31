@@ -33,7 +33,7 @@ func newNumberFacts(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // GetNumbersFact - Get a random fact about a number
-func (s *numberFacts) GetNumbersFact(ctx context.Context, request operations.GetNumbersFactRequest) (*operations.GetNumbersFactResponse, error) {
+func (s *numberFacts) GetNumbersFact(ctx context.Context, request operations.GetNumbersFactRequest, security operations.GetNumbersFactSecurity) (*operations.GetNumbersFactResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/fact"
 
@@ -42,11 +42,11 @@ func (s *numberFacts) GetNumbersFact(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

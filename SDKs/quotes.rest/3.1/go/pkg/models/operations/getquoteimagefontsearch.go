@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteImageFontSearchSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetQuoteImageFontSearchQueryParams struct {
-	// Tag string
-	Query *string `queryParam:"style=form,explode=true,name=query"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type GetQuoteImageFontSearchRequest struct {
-	QueryParams GetQuoteImageFontSearchQueryParams
-	Security    GetQuoteImageFontSearchSecurity
+	// Tag string
+	Query *string `queryParam:"style=form,explode=true,name=query"`
 }
 
 type GetQuoteImageFontSearchResponse struct {

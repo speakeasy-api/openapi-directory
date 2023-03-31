@@ -53,7 +53,7 @@ func (e *GetTicketsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTicketsQueryParams struct {
+type GetTicketsRequest struct {
 	// Is this abuse ticket closed?
 	Closed *bool `queryParam:"style=form,explode=true,name=closed"`
 	// The latest abuse ticket creation date to pull abuse tickets for
@@ -70,10 +70,6 @@ type GetTicketsQueryParams struct {
 	Target *string `queryParam:"style=form,explode=true,name=target"`
 	// The type of abuse.
 	Type *GetTicketsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetTicketsRequest struct {
-	QueryParams GetTicketsQueryParams
 }
 
 type GetTicketsResponse struct {

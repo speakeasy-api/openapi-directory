@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetSpinsQueryParams struct {
+type GetSpinsRequest struct {
 	// Amount of items to return
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// The ending datetime.
@@ -27,10 +27,6 @@ type GetSpinsQueryParams struct {
 	// The datetime starting from items must be returned.
 	//
 	Start *time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetSpinsRequest struct {
-	QueryParams GetSpinsQueryParams
 }
 
 type GetSpins200ApplicationXMLLinks struct {

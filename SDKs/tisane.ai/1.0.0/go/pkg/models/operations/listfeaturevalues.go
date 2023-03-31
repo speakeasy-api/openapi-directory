@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type ListFeatureValuesQueryParams struct {
+type ListFeatureValuesRequest struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
 	// (Required) Feature list name (localized)
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// (Required) Language code
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// (Required) Feature type
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListFeatureValuesHeaders struct {
-	// {{apiKeyDescription}}
-	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
-}
-
-type ListFeatureValuesRequest struct {
-	QueryParams ListFeatureValuesQueryParams
-	Headers     ListFeatureValuesHeaders
 }
 
 type ListFeatureValuesResponse struct {

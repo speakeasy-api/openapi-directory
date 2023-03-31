@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2AccountsIDJSONPathParams struct {
-	// Account ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2AccountsIDJSONRequestBody struct {
 	// ID of the Account Tier for this Account
 	AccountTierID *int64 `form:"name=account_tier_id"`
@@ -79,8 +74,9 @@ type PutV2AccountsIDJSONRequestBody struct {
 }
 
 type PutV2AccountsIDJSONRequest struct {
-	PathParams PutV2AccountsIDJSONPathParams
-	Request    PutV2AccountsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody PutV2AccountsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Account ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2AccountsIDJSONResponse struct {

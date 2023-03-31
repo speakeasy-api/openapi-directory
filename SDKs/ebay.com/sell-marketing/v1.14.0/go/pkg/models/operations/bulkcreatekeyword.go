@@ -8,19 +8,14 @@ import (
 )
 
 type BulkCreateKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkCreateKeywordPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkCreateKeywordRequest struct {
-	PathParams BulkCreateKeywordPathParams
 	// A type that defines the fields for the bulk request to create keywords.
-	Request  shared.BulkCreateKeywordRequest `request:"mediaType=application/json"`
-	Security BulkCreateKeywordSecurity
+	BulkCreateKeywordRequest shared.BulkCreateKeywordRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type BulkCreateKeywordResponse struct {

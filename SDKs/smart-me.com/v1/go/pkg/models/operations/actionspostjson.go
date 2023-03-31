@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ActionsPostJSONRequest struct {
-	// The Action Data
-	Request shared.ActionToPost `request:"mediaType=application/json"`
-}
 
 type ActionsPostJSONResponse struct {
 	ContentType string

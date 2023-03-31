@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BillingGetSharedStorageBillingOrgPathParams struct {
+type BillingGetSharedStorageBillingOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type BillingGetSharedStorageBillingOrgRequest struct {
-	PathParams BillingGetSharedStorageBillingOrgPathParams
 }
 
 type BillingGetSharedStorageBillingOrgResponse struct {

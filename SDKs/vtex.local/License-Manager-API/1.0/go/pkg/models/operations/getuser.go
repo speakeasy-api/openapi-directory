@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetUserPathParams struct {
-	// ID from queried user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetUserHeaders struct {
+type GetUserRequest struct {
 	// The media type of the body of the request. Default value for license manager protocol is application/json
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetUserRequest struct {
-	PathParams GetUserPathParams
-	Headers    GetUserHeaders
+	// ID from queried user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // GetUser400ApplicationJSON - Bad Request

@@ -8,17 +8,12 @@ import (
 )
 
 type DetailAdvisorySecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DetailAdvisoryPathParams struct {
-	// Advisory ID
-	AdvisoryID string `pathParam:"style=simple,explode=false,name=advisory_id"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 type DetailAdvisoryRequest struct {
-	PathParams DetailAdvisoryPathParams
-	Security   DetailAdvisorySecurity
+	// Advisory ID
+	AdvisoryID string `pathParam:"style=simple,explode=false,name=advisory_id"`
 }
 
 type DetailAdvisoryResponse struct {

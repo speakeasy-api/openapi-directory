@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVendorProjectsQueryParams struct {
+type GetVendorProjectsRequest struct {
 	// Return only projects that have been completed. When `true`, this makes `joined` true as well.
 	Completed *bool `queryParam:"style=form,explode=true,name=completed"`
 	// Return only projects that this user has already joined
 	Joined  *bool  `queryParam:"style=form,explode=true,name=joined"`
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVendorProjectsRequest struct {
-	QueryParams GetVendorProjectsQueryParams
 }
 
 type GetVendorProjectsResponse struct {

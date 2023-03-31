@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListSelfHostedRunnerGroupsForOrgPathParams struct {
+type ActionsListSelfHostedRunnerGroupsForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsListSelfHostedRunnerGroupsForOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListSelfHostedRunnerGroupsForOrgRequest struct {
-	PathParams  ActionsListSelfHostedRunnerGroupsForOrgPathParams
-	QueryParams ActionsListSelfHostedRunnerGroupsForOrgQueryParams
 }
 
 // ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON - Response

@@ -4,37 +4,50 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateAssetRequest(
-    security=operations.CreateAssetSecurity(
-        o_auth2=shared.SchemeOAuth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    headers=operations.CreateAssetHeaders(
-        xero_tenant_id="dolorem",
-    ),
-    request=shared.Asset(
-        accounting_book_value=73.099998,
-        asset_id="tempora",
-        asset_name="est",
-        asset_number="debitis",
+    asset=shared.Asset(
+        accounting_book_value=5488.14,
+        asset_id="3b5b3a38-5649-495f-87a1-14a4e5918634",
+        asset_name="Awesome Truck 3",
+        asset_number="FA-0013",
         asset_status="Draft",
-        asset_type_id="soluta",
-        book_depreciation_detail="fugit",
-        book_depreciation_setting="magni",
-        can_rollback=False,
-        disposal_date="1998-01-20",
-        disposal_price=38.200001,
-        is_delete_enabled_for_date=False,
-        purchase_date="1972-02-09",
-        purchase_price=66.199997,
-        serial_number="ipsam",
-        warranty_expiry_date="veniam",
+        asset_type_id="3b5b3a38-5649-495f-87a1-14a4e5918634",
+        book_depreciation_detail=shared.BookDepreciationDetail(
+            cost_limit=9000,
+            current_accum_depreciation_amount=5,
+            current_capital_gain=5.25,
+            current_gain_loss=10.5,
+            depreciation_start_date="2015-07-01T00:00:00",
+            prior_accum_depreciation_amount=0.45,
+            residual_value=10000,
+        ),
+        book_depreciation_setting=shared.BookDepreciationSetting(
+            averaging_method="ActualDays",
+            book_effective_date_of_change_id="68f17094-af97-4f1b-b36b-013b45b6ad3c",
+            depreciable_object_id="68f17094-af97-4f1b-b36b-013b45b6ad3c",
+            depreciable_object_type="Asset",
+            depreciation_calculation_method="None",
+            depreciation_method="StraightLine",
+            depreciation_rate=0.05,
+            effective_life_years=5,
+        ),
+        can_rollback=True,
+        disposal_date="2020-07-01T00:00:00",
+        disposal_price=1.0000,
+        is_delete_enabled_for_date=True,
+        purchase_date="2015-07-01T00:00:00",
+        purchase_price=1000.0000,
+        serial_number="ca4c6b39-4f4f-43e8-98da-5e1f350a6694",
+        warranty_expiry_date="ca4c6b39-4f4f-43e8-98da-5e1f350a6694",
     ),
+    xero_tenant_id="provident",
 )
     
-res = s.asset.create_asset(req)
+res = s.asset.create_asset(req, operations.CreateAssetSecurity(
+    o_auth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.asset is not None:
     # handle response

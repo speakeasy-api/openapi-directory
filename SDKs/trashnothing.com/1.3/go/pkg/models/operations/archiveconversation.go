@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ArchiveConversationPathParams struct {
+type ArchiveConversationRequest struct {
 	// The ID of the conversation to archive.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type ArchiveConversationRequest struct {
-	PathParams ArchiveConversationPathParams
 }
 
 type ArchiveConversationResponse struct {

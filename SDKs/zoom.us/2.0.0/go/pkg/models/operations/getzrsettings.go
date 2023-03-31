@@ -8,28 +8,18 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetZRSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetZRSettingsPathParams struct {
-	// Unique identifier of the Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
-}
-
-type GetZRSettingsQueryParams struct {
-	// The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br>
-	// `meeting`: Meeting settings of the Zoom Rooms Account.
-	SettingType string `queryParam:"style=form,explode=true,name=setting_type"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetZRSettingsRequest struct {
-	PathParams  GetZRSettingsPathParams
-	QueryParams GetZRSettingsQueryParams
-	Security    GetZRSettingsSecurity
+	// Unique identifier of the Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	// The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br>
+	// `meeting`: Meeting settings of the Zoom Rooms Account.
+	SettingType string `queryParam:"style=form,explode=true,name=setting_type"`
 }
 
 // GetZRSettings200ApplicationXML2ClientAlert - The Client Alert Settings section includes alerts that display on the TV screen of the Zoom Room. Disable these settings if you have deliberately disconnected one or more peripheral devices or have never enabled them.

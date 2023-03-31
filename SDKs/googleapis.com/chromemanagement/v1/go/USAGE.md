@@ -14,38 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest{
-        Security: operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ChromemanagementCustomersAppsCountChromeAppRequestsPathParams{
-            Customer: "corrupti",
-        },
-        QueryParams: operations.ChromemanagementCustomersAppsCountChromeAppRequestsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            OrderBy: "vel",
-            OrgUnitID: "error",
-            PageSize: 645894,
-            PageToken: "suscipit",
-            PrettyPrint: false,
-            QuotaUser: "iure",
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Customer: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        OrderBy: "vel",
+        OrgUnitID: "error",
+        PageSize: 645894,
+        PageToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, req)
+    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, req, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -28,15 +28,14 @@ pkg/models/operations/translateprojectslocationstranslatedocument.go
 pkg/models/operations/translateprojectslocationstranslatetext.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchtranslatedocumentrequest.go
 pkg/models/shared/batchdocumentoutputconfig.go
 pkg/models/shared/gcsdestination.go
 pkg/models/shared/batchdocumentinputconfig.go
 pkg/models/shared/gcssource.go
 pkg/models/shared/translatetextglossaryconfig.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchtranslatetextrequest.go
 pkg/models/shared/outputconfig.go
 pkg/models/shared/inputconfig.go

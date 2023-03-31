@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesCampaignsIDMediaJSONPathParams struct {
+type GetResourcesCampaignsIDMediaJSONRequest struct {
 	// The id of the campaign to find media items for
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesCampaignsIDMediaJSONQueryParams struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// The offset of the records set to return for pagination
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
 	// The name of the property to which sorting will be applied
 	Sort *string `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetResourcesCampaignsIDMediaJSONRequest struct {
-	PathParams  GetResourcesCampaignsIDMediaJSONPathParams
-	QueryParams GetResourcesCampaignsIDMediaJSONQueryParams
 }
 
 type GetResourcesCampaignsIDMediaJSONResponse struct {

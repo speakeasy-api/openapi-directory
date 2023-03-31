@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StorePersistsPathParams struct {
+type StorePersistsRequest struct {
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type StorePersistsRequest struct {
-	PathParams StorePersistsPathParams
 }
 
 type StorePersistsResponse struct {

@@ -78,7 +78,7 @@ func (s *recordings) GetAdminRecordingsStatus(ctx context.Context) (*operations.
 }
 
 // PostAdminRecordingsSnapshot - Take a snapshot recording
-func (s *recordings) PostAdminRecordingsSnapshot(ctx context.Context, request operations.PostAdminRecordingsSnapshotRequest) (*operations.PostAdminRecordingsSnapshotResponse, error) {
+func (s *recordings) PostAdminRecordingsSnapshot(ctx context.Context, request operations.PostAdminRecordingsSnapshotRequestBody) (*operations.PostAdminRecordingsSnapshotResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/recordings/snapshot"
 
@@ -133,7 +133,7 @@ func (s *recordings) PostAdminRecordingsSnapshot(ctx context.Context, request op
 
 // PostAdminRecordingsStart - Start recording
 // Begin recording stub mappings
-func (s *recordings) PostAdminRecordingsStart(ctx context.Context, request operations.PostAdminRecordingsStartRequest) (*operations.PostAdminRecordingsStartResponse, error) {
+func (s *recordings) PostAdminRecordingsStart(ctx context.Context, request operations.PostAdminRecordingsStartRequestBody) (*operations.PostAdminRecordingsStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/recordings/start"
 

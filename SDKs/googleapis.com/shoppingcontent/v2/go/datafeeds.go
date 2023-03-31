@@ -33,11 +33,11 @@ func newDatafeeds(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ContentDatafeedsCustombatch - Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
-func (s *datafeeds) ContentDatafeedsCustombatch(ctx context.Context, request operations.ContentDatafeedsCustombatchRequest) (*operations.ContentDatafeedsCustombatchResponse, error) {
+func (s *datafeeds) ContentDatafeedsCustombatch(ctx context.Context, request operations.ContentDatafeedsCustombatchRequest, security operations.ContentDatafeedsCustombatchSecurity) (*operations.ContentDatafeedsCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datafeeds/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatafeedsCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *datafeeds) ContentDatafeedsCustombatch(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *datafeeds) ContentDatafeedsCustombatch(ctx context.Context, request ope
 }
 
 // ContentDatafeedsDelete - Deletes a datafeed configuration from your Merchant Center account.
-func (s *datafeeds) ContentDatafeedsDelete(ctx context.Context, request operations.ContentDatafeedsDeleteRequest) (*operations.ContentDatafeedsDeleteResponse, error) {
+func (s *datafeeds) ContentDatafeedsDelete(ctx context.Context, request operations.ContentDatafeedsDeleteRequest, security operations.ContentDatafeedsDeleteSecurity) (*operations.ContentDatafeedsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *datafeeds) ContentDatafeedsDelete(ctx context.Context, request operatio
 }
 
 // ContentDatafeedsFetchnow - Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method more than once per day, we recommend you use the Products service to update your product data.
-func (s *datafeeds) ContentDatafeedsFetchnow(ctx context.Context, request operations.ContentDatafeedsFetchnowRequest) (*operations.ContentDatafeedsFetchnowResponse, error) {
+func (s *datafeeds) ContentDatafeedsFetchnow(ctx context.Context, request operations.ContentDatafeedsFetchnowRequest, security operations.ContentDatafeedsFetchnowSecurity) (*operations.ContentDatafeedsFetchnowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}/fetchNow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}/fetchNow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,20 +175,20 @@ func (s *datafeeds) ContentDatafeedsFetchnow(ctx context.Context, request operat
 }
 
 // ContentDatafeedsGet - Retrieves a datafeed configuration from your Merchant Center account.
-func (s *datafeeds) ContentDatafeedsGet(ctx context.Context, request operations.ContentDatafeedsGetRequest) (*operations.ContentDatafeedsGetResponse, error) {
+func (s *datafeeds) ContentDatafeedsGet(ctx context.Context, request operations.ContentDatafeedsGetRequest, security operations.ContentDatafeedsGetSecurity) (*operations.ContentDatafeedsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *datafeeds) ContentDatafeedsGet(ctx context.Context, request operations.
 }
 
 // ContentDatafeedsInsert - Registers a datafeed configuration with your Merchant Center account.
-func (s *datafeeds) ContentDatafeedsInsert(ctx context.Context, request operations.ContentDatafeedsInsertRequest) (*operations.ContentDatafeedsInsertResponse, error) {
+func (s *datafeeds) ContentDatafeedsInsert(ctx context.Context, request operations.ContentDatafeedsInsertRequest, security operations.ContentDatafeedsInsertSecurity) (*operations.ContentDatafeedsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Datafeed", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *datafeeds) ContentDatafeedsInsert(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,20 +278,20 @@ func (s *datafeeds) ContentDatafeedsInsert(ctx context.Context, request operatio
 }
 
 // ContentDatafeedsList - Lists the configurations for datafeeds in your Merchant Center account.
-func (s *datafeeds) ContentDatafeedsList(ctx context.Context, request operations.ContentDatafeedsListRequest) (*operations.ContentDatafeedsListResponse, error) {
+func (s *datafeeds) ContentDatafeedsList(ctx context.Context, request operations.ContentDatafeedsListRequest, security operations.ContentDatafeedsListSecurity) (*operations.ContentDatafeedsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -326,11 +326,11 @@ func (s *datafeeds) ContentDatafeedsList(ctx context.Context, request operations
 }
 
 // ContentDatafeedsUpdate - Updates a datafeed configuration of your Merchant Center account. Any fields that are not provided are deleted from the resource.
-func (s *datafeeds) ContentDatafeedsUpdate(ctx context.Context, request operations.ContentDatafeedsUpdateRequest) (*operations.ContentDatafeedsUpdateResponse, error) {
+func (s *datafeeds) ContentDatafeedsUpdate(ctx context.Context, request operations.ContentDatafeedsUpdateRequest, security operations.ContentDatafeedsUpdateSecurity) (*operations.ContentDatafeedsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeeds/{datafeedId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Datafeed", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -342,11 +342,11 @@ func (s *datafeeds) ContentDatafeedsUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

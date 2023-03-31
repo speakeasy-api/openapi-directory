@@ -8,19 +8,14 @@ import (
 )
 
 type CreateStatementsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateStatementsHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateStatementsRequest struct {
-	Headers CreateStatementsHeaders
 	// Statements array of objects in the body
-	Request  *shared.Statements `request:"mediaType=application/json"`
-	Security CreateStatementsSecurity
+	Statements *shared.Statements `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreateStatementsResponse struct {

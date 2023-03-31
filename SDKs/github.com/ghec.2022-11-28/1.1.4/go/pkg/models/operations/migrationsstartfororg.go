@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsStartForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type MigrationsStartForOrgRequestBodyExcludeEnum string
 
 const (
@@ -56,8 +51,9 @@ type MigrationsStartForOrgRequestBody struct {
 }
 
 type MigrationsStartForOrgRequest struct {
-	PathParams MigrationsStartForOrgPathParams
-	Request    MigrationsStartForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody MigrationsStartForOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type MigrationsStartForOrgResponse struct {

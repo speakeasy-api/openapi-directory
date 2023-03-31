@@ -33,7 +33,7 @@ func newBaseConversion(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // GetNumbersBase - Convert a given number from one base to another base
-func (s *baseConversion) GetNumbersBase(ctx context.Context, request operations.GetNumbersBaseRequest) (*operations.GetNumbersBaseResponse, error) {
+func (s *baseConversion) GetNumbersBase(ctx context.Context, request operations.GetNumbersBaseRequest, security operations.GetNumbersBaseSecurity) (*operations.GetNumbersBaseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/base"
 
@@ -42,11 +42,11 @@ func (s *baseConversion) GetNumbersBase(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,7 +74,7 @@ func (s *baseConversion) GetNumbersBase(ctx context.Context, request operations.
 }
 
 // GetNumbersBaseBinary - Convert a given number to binary
-func (s *baseConversion) GetNumbersBaseBinary(ctx context.Context, request operations.GetNumbersBaseBinaryRequest) (*operations.GetNumbersBaseBinaryResponse, error) {
+func (s *baseConversion) GetNumbersBaseBinary(ctx context.Context, request operations.GetNumbersBaseBinaryRequest, security operations.GetNumbersBaseBinarySecurity) (*operations.GetNumbersBaseBinaryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/base/binary"
 
@@ -83,11 +83,11 @@ func (s *baseConversion) GetNumbersBaseBinary(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *baseConversion) GetNumbersBaseBinary(ctx context.Context, request opera
 }
 
 // GetNumbersBaseHex - Convert a given number to hexadecimal
-func (s *baseConversion) GetNumbersBaseHex(ctx context.Context, request operations.GetNumbersBaseHexRequest) (*operations.GetNumbersBaseHexResponse, error) {
+func (s *baseConversion) GetNumbersBaseHex(ctx context.Context, request operations.GetNumbersBaseHexRequest, security operations.GetNumbersBaseHexSecurity) (*operations.GetNumbersBaseHexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/base/hex"
 
@@ -124,11 +124,11 @@ func (s *baseConversion) GetNumbersBaseHex(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *baseConversion) GetNumbersBaseHex(ctx context.Context, request operatio
 }
 
 // GetNumbersBaseOctal - Convert a given number to octal
-func (s *baseConversion) GetNumbersBaseOctal(ctx context.Context, request operations.GetNumbersBaseOctalRequest) (*operations.GetNumbersBaseOctalResponse, error) {
+func (s *baseConversion) GetNumbersBaseOctal(ctx context.Context, request operations.GetNumbersBaseOctalRequest, security operations.GetNumbersBaseOctalSecurity) (*operations.GetNumbersBaseOctalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/base/octal"
 
@@ -165,11 +165,11 @@ func (s *baseConversion) GetNumbersBaseOctal(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

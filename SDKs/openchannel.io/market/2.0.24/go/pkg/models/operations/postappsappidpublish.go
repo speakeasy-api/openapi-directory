@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type PostAppsAppIDPublishPathParams struct {
+type PostAppsAppIDPublishRequest struct {
 	// The id of the app to be published
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type PostAppsAppIDPublishQueryParams struct {
 	// If true, this AppVersion is automatically approved and becomes immediately available to end users
 	AutoApprove *bool `queryParam:"style=form,explode=true,name=autoApprove"`
 	// The unique id of the developer that is modifying this app
 	DeveloperID string `queryParam:"style=form,explode=true,name=developerId"`
 	// The version of the app to be published
 	Version int64 `queryParam:"style=form,explode=true,name=version"`
-}
-
-type PostAppsAppIDPublishRequest struct {
-	PathParams  PostAppsAppIDPublishPathParams
-	QueryParams PostAppsAppIDPublishQueryParams
 }
 
 type PostAppsAppIDPublishResponse struct {

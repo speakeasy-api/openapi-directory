@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type CollectNowPathParams struct {
+type CollectNowRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type CollectNowQueryParams struct {
 	// The Monitor Class of the device.
 	MonitorClass string `queryParam:"style=form,explode=true,name=monitorClass"`
-}
-
-type CollectNowRequest struct {
-	PathParams  CollectNowPathParams
-	QueryParams CollectNowQueryParams
 }
 
 type CollectNowResponse struct {

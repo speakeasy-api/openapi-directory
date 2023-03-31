@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // RecaptchaenterpriseProjectsAssessmentsAnnotate - Annotates a previously created Assessment to provide additional information on whether the event turned out to be authentic or fraudulent.
-func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest) (*operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest, security operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity) (*operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:annotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:annotate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Co
 }
 
 // RecaptchaenterpriseProjectsAssessmentsCreate - Creates an Assessment of the likelihood an event is legitimate.
-func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest) (*operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest, security operations.RecaptchaenterpriseProjectsAssessmentsCreateSecurity) (*operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assessments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assessments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1AssessmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Cont
 }
 
 // RecaptchaenterpriseProjectsFirewallpoliciesCreate - Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
-func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest, security operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateSecurity) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1FirewallPolicy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context
 }
 
 // RecaptchaenterpriseProjectsFirewallpoliciesList - Returns the list of all firewall policies that belong to a project.
-func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest, security operations.RecaptchaenterpriseProjectsFirewallpoliciesListSecurity) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.C
 }
 
 // RecaptchaenterpriseProjectsKeysCreate - Creates a new reCAPTCHA Enterprise key.
-func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysCreateRequest) (*operations.RecaptchaenterpriseProjectsKeysCreateResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysCreateRequest, security operations.RecaptchaenterpriseProjectsKeysCreateSecurity) (*operations.RecaptchaenterpriseProjectsKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1KeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,20 +300,20 @@ func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, re
 }
 
 // RecaptchaenterpriseProjectsKeysDelete - Deletes the specified key.
-func (s *projects) RecaptchaenterpriseProjectsKeysDelete(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysDeleteRequest) (*operations.RecaptchaenterpriseProjectsKeysDeleteResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysDelete(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysDeleteRequest, security operations.RecaptchaenterpriseProjectsKeysDeleteSecurity) (*operations.RecaptchaenterpriseProjectsKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) RecaptchaenterpriseProjectsKeysDelete(ctx context.Context, re
 }
 
 // RecaptchaenterpriseProjectsKeysGetMetrics - Get some aggregated metrics for a Key. This data can be used to build dashboards.
-func (s *projects) RecaptchaenterpriseProjectsKeysGetMetrics(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest) (*operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysGetMetrics(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest, security operations.RecaptchaenterpriseProjectsKeysGetMetricsSecurity) (*operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) RecaptchaenterpriseProjectsKeysGetMetrics(ctx context.Context
 }
 
 // RecaptchaenterpriseProjectsKeysList - Returns the list of all keys that belong to a project.
-func (s *projects) RecaptchaenterpriseProjectsKeysList(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysListRequest) (*operations.RecaptchaenterpriseProjectsKeysListResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysList(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysListRequest, security operations.RecaptchaenterpriseProjectsKeysListSecurity) (*operations.RecaptchaenterpriseProjectsKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysList(ctx context.Context, requ
 }
 
 // RecaptchaenterpriseProjectsKeysMigrate - Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise. Once a key is migrated, it can be used from either product. SiteVerify requests are billed as CreateAssessment calls. You must be authenticated as one of the current owners of the reCAPTCHA Site Key, and your user must have the reCAPTCHA Enterprise Admin IAM role in the destination project.
-func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysMigrateRequest) (*operations.RecaptchaenterpriseProjectsKeysMigrateResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysMigrateRequest, security operations.RecaptchaenterpriseProjectsKeysMigrateSecurity) (*operations.RecaptchaenterpriseProjectsKeysMigrateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:migrate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:migrate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, r
 }
 
 // RecaptchaenterpriseProjectsKeysPatch - Updates the specified key.
-func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysPatchRequest) (*operations.RecaptchaenterpriseProjectsKeysPatchResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysPatchRequest, security operations.RecaptchaenterpriseProjectsKeysPatchSecurity) (*operations.RecaptchaenterpriseProjectsKeysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1KeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, req
 }
 
 // RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey - Returns the secret key related to the specified public key. You must use the legacy secret key only in a 3rd party integration with legacy reCAPTCHA.
-func (s *projects) RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest) (*operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest, security operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity) (*operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{key}:retrieveLegacySecretKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{key}:retrieveLegacySecretKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(ctx co
 }
 
 // RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch - Search group memberships related to a given account.
-func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/relatedaccountgroupmemberships:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/relatedaccountgroupmemberships:search", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSear
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +657,20 @@ func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSear
 }
 
 // RecaptchaenterpriseProjectsRelatedaccountgroupsList - List groups of related accounts.
-func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/relatedaccountgroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/relatedaccountgroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsList(ctx conte
 }
 
 // RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList - Get memberships in a group of related accounts.
-func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse, error) {
+func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

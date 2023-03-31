@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type SetStatePathParams struct {
+type SetStateRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// State
 	State int `pathParam:"style=simple,explode=false,name=state"`
-}
-
-type SetStateRequest struct {
-	PathParams SetStatePathParams
 }
 
 type SetStateResponse struct {

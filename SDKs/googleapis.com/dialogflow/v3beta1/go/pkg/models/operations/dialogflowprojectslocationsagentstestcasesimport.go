@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsTestCasesImportSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesImportSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesImportSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentsTestCasesImportSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentsTestCasesImportSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentsTestCasesImportPathParams struct {
-	// Required. The agent to import test cases to. Format: `projects//locations//agents/`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesImportQueryParams struct {
+type DialogflowProjectsLocationsAgentsTestCasesImportRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                          *shared.XgafvEnum                                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest *shared.GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type DialogflowProjectsLocationsAgentsTestCasesImportQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The agent to import test cases to. Format: `projects//locations//agents/`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type DialogflowProjectsLocationsAgentsTestCasesImportQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesImportRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsTestCasesImportPathParams
-	QueryParams DialogflowProjectsLocationsAgentsTestCasesImportQueryParams
-	Request     *shared.GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentsTestCasesImportSecurity
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesImportResponse struct {

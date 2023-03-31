@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TopONDSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TopONDQueryParams struct {
+type TopONDRequest struct {
+	// Mandatory http header:  application/xml or application/json
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Carrier for which the OND will be retrieved (e.g. 'LH')
 	Catalogues *string `queryParam:"style=form,explode=true,name=catalogues"`
 	// Enter the origin country code (e.g. 'DE'). Leave empty to search Top OND across all countries
 	Origin *string `queryParam:"style=form,explode=true,name=origin"`
-}
-
-type TopONDHeaders struct {
-	// Mandatory http header:  application/xml or application/json
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type TopONDRequest struct {
-	QueryParams TopONDQueryParams
-	Headers     TopONDHeaders
-	Security    TopONDSecurity
 }
 
 type TopONDResponse struct {

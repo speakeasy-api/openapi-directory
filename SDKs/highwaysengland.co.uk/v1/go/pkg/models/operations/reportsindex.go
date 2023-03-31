@@ -6,13 +6,7 @@ import (
 	"net/http"
 )
 
-type ReportsIndexPathParams struct {
-	// Report Type Id (i.e Daily, Monthly, Annual)
-	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
-	Version    string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type ReportsIndexQueryParams struct {
+type ReportsIndexRequest struct {
 	// The end date of the report in the format ddmmyyyy (i.e 31012016)
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
 	// The page offset to return.
@@ -20,15 +14,13 @@ type ReportsIndexQueryParams struct {
 	// The number of rows to return.
 	PageSize        int  `queryParam:"style=form,explode=true,name=page_size"`
 	ReportSubTypeID *int `queryParam:"style=form,explode=true,name=reportSubTypeId"`
+	// Report Type Id (i.e Daily, Monthly, Annual)
+	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
 	// Comma separated list of site Ids.
 	Sites string `queryParam:"style=form,explode=true,name=sites"`
 	// The start date of the report in the format ddmmyyyy (i.e 31012016)
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type ReportsIndexRequest struct {
-	PathParams  ReportsIndexPathParams
-	QueryParams ReportsIndexQueryParams
+	Version   string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type ReportsIndexResponse struct {

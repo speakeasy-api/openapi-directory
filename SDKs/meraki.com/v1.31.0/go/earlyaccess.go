@@ -34,9 +34,9 @@ func newEarlyAccess(defaultClient, securityClient HTTPClient, serverURL, languag
 // Create a new early access feature opt-in for an organization
 func (s *earlyAccess) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.CreateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.CreateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *earlyAccess) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Con
 // Delete an early access feature opt-in
 func (s *earlyAccess) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest) (*operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *earlyAccess) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Con
 // List the available early access features for organization
 func (s *earlyAccess) GetOrganizationEarlyAccessFeatures(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesRequest) (*operations.GetOrganizationEarlyAccessFeaturesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *earlyAccess) GetOrganizationEarlyAccessFeatures(ctx context.Context, re
 // Show an early access feature opt-in for an organization
 func (s *earlyAccess) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *earlyAccess) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Contex
 // List the early access feature opt-ins for an organization
 func (s *earlyAccess) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInsRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,9 +260,9 @@ func (s *earlyAccess) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Conte
 // Update an early access feature opt-in for an organization
 func (s *earlyAccess) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

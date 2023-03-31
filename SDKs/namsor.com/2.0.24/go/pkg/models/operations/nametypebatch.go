@@ -8,13 +8,7 @@ import (
 )
 
 type NameTypeBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type NameTypeBatchRequest struct {
-	// A list of proper names
-	Request  *shared.BatchNameIn `request:"mediaType=application/json"`
-	Security NameTypeBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type NameTypeBatchResponse struct {

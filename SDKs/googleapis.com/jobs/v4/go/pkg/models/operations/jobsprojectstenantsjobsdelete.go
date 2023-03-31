@@ -8,13 +8,13 @@ import (
 )
 
 type JobsProjectsTenantsJobsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsJobsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsJobsDeleteSecurity struct {
@@ -22,12 +22,7 @@ type JobsProjectsTenantsJobsDeleteSecurity struct {
 	Option2 *JobsProjectsTenantsJobsDeleteSecurityOption2 `security:"option"`
 }
 
-type JobsProjectsTenantsJobsDeletePathParams struct {
-	// Required. The resource name of the job to be deleted. The format is "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For example, "projects/foo/tenants/bar/jobs/baz".
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type JobsProjectsTenantsJobsDeleteQueryParams struct {
+type JobsProjectsTenantsJobsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type JobsProjectsTenantsJobsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the job to be deleted. The format is "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For example, "projects/foo/tenants/bar/jobs/baz".
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type JobsProjectsTenantsJobsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsTenantsJobsDeleteRequest struct {
-	PathParams  JobsProjectsTenantsJobsDeletePathParams
-	QueryParams JobsProjectsTenantsJobsDeleteQueryParams
-	Security    JobsProjectsTenantsJobsDeleteSecurity
 }
 
 type JobsProjectsTenantsJobsDeleteResponse struct {

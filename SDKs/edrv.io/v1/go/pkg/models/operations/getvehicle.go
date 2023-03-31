@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetVehiclePathParams struct {
+type GetVehicleRequest struct {
 	// The vehicule id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVehicleQueryParams struct {
 	// Populate driver
 	IncludeDriver *bool `queryParam:"style=form,explode=true,name=include_driver"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
 	// Populate token
 	IncludeToken *bool `queryParam:"style=form,explode=true,name=include_token"`
-}
-
-type GetVehicleRequest struct {
-	PathParams  GetVehiclePathParams
-	QueryParams GetVehicleQueryParams
 }
 
 type GetVehicleResponse struct {

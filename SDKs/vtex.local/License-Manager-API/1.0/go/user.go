@@ -34,7 +34,7 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CreateUser - Create User
 // Allows you to create a user by providing an email (mandatory) and name (optional). The email must be in a valid format. The success response will contain the generated `userId` for that user.
-func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequest) (*operations.CreateUserResponse, error) {
+func (s *user) CreateUser(ctx context.Context, request shared.CreateUserRequest) (*operations.CreateUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/license-manager/users"
 
@@ -108,9 +108,9 @@ func (s *user) GetListUsers(ctx context.Context, request operations.GetListUsers
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -152,14 +152,14 @@ func (s *user) GetListUsers(ctx context.Context, request operations.GetListUsers
 // Allows you to get a user from the database, using the `userId` as the identifier.
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

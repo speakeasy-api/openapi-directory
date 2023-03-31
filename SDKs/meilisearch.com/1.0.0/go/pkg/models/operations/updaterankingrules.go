@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateRankingRulesRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type UpdateRankingRulesResponse struct {
 	ContentType string
 	StatusCode  int

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type LockNetworkSmDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type LockNetworkSmDevicesRequestBody struct {
 	// The ids of the devices to be locked.
 	Ids []string `json:"ids,omitempty"`
@@ -24,8 +20,8 @@ type LockNetworkSmDevicesRequestBody struct {
 }
 
 type LockNetworkSmDevicesRequest struct {
-	PathParams LockNetworkSmDevicesPathParams
-	Request    *LockNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody *LockNetworkSmDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                           `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // LockNetworkSmDevices200ApplicationJSON - Successful operation

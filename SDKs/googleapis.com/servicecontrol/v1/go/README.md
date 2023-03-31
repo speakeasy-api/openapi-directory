@@ -25,191 +25,168 @@ func main() {
     s := sdk.New()
 
     req := operations.ServicecontrolServicesAllocateQuotaRequest{
-        Security: operations.ServicecontrolServicesAllocateQuotaSecurity{
-            Option1: &operations.ServicecontrolServicesAllocateQuotaSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ServicecontrolServicesAllocateQuotaPathParams{
-            ServiceName: "corrupti",
-        },
-        QueryParams: operations.ServicecontrolServicesAllocateQuotaQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AllocateQuotaRequest{
+        DollarXgafv: "2",
+        AllocateQuotaRequest: &shared.AllocateQuotaRequest{
             AllocateOperation: &shared.QuotaOperation{
-                ConsumerID: "suscipit",
+                ConsumerID: "provident",
                 Labels: map[string]string{
-                    "magnam": "debitis",
-                    "ipsa": "delectus",
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
+                    "illum": "vel",
                 },
-                MethodName: "tempora",
-                OperationID: "suscipit",
+                MethodName: "error",
+                OperationID: "deserunt",
                 QuotaMetrics: []shared.MetricValueSet{
                     shared.MetricValueSet{
-                        MetricName: "minus",
+                        MetricName: "iure",
                         MetricValues: []shared.MetricValue{
                             shared.MetricValue{
                                 BoolValue: false,
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
-                                        "iusto",
-                                        "excepturi",
-                                        "nisi",
+                                        "ipsa",
+                                        "delectus",
+                                        "tempora",
+                                        "suscipit",
                                     },
-                                    Count: "recusandae",
+                                    Count: "molestiae",
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
+                                                    "iusto": "excepturi",
+                                                    "nisi": "recusandae",
+                                                    "temporibus": "ab",
+                                                },
+                                                map[string]interface{}{
                                                     "veritatis": "deserunt",
                                                     "perferendis": "ipsam",
                                                 },
-                                            },
-                                            Timestamp: "repellendus",
-                                            Value: 9571.56,
-                                        },
-                                        shared.Exemplar{
-                                            Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
-                                                    "at": "at",
-                                                },
-                                                map[string]interface{}{
+                                                    "sapiente": "quo",
+                                                    "odit": "at",
+                                                    "at": "maiores",
                                                     "molestiae": "quod",
-                                                    "quod": "esse",
-                                                    "totam": "porro",
-                                                    "dolorum": "dicta",
                                                 },
                                                 map[string]interface{}{
+                                                    "esse": "totam",
+                                                    "porro": "dolorum",
+                                                    "dicta": "nam",
                                                     "officia": "occaecati",
-                                                    "fugit": "deleniti",
-                                                    "hic": "optio",
-                                                },
-                                                map[string]interface{}{
-                                                    "beatae": "commodi",
-                                                    "molestiae": "modi",
-                                                    "qui": "impedit",
                                                 },
                                             },
-                                            Timestamp: "cum",
-                                            Value: 4561.5,
+                                            Timestamp: "fugit",
+                                            Value: 5373.73,
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
+                                                    "totam": "beatae",
+                                                    "commodi": "molestiae",
+                                                    "modi": "qui",
+                                                    "impedit": "cum",
+                                                },
+                                                map[string]interface{}{
+                                                    "ipsum": "excepturi",
                                                     "aspernatur": "perferendis",
-                                                    "ad": "natus",
-                                                    "sed": "iste",
                                                 },
-                                            },
-                                            Timestamp: "dolor",
-                                            Value: 6169.34,
-                                        },
-                                        shared.Exemplar{
-                                            Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
+                                                    "natus": "sed",
+                                                    "iste": "dolor",
+                                                },
+                                                map[string]interface{}{
+                                                    "laboriosam": "hic",
                                                     "saepe": "fuga",
                                                     "in": "corporis",
-                                                    "iste": "iure",
-                                                    "saepe": "quidem",
-                                                },
-                                                map[string]interface{}{
-                                                    "ipsa": "reiciendis",
                                                 },
                                             },
-                                            Timestamp: "est",
-                                            Value: 6531.4,
+                                            Timestamp: "iste",
+                                            Value: 4370.32,
+                                        },
+                                        shared.Exemplar{
+                                            Attachments: []map[string]interface{}{
+                                                map[string]interface{}{
+                                                    "architecto": "ipsa",
+                                                    "reiciendis": "est",
+                                                    "mollitia": "laborum",
+                                                },
+                                                map[string]interface{}{
+                                                    "dolorem": "corporis",
+                                                },
+                                                map[string]interface{}{
+                                                    "nobis": "enim",
+                                                },
+                                                map[string]interface{}{
+                                                    "nemo": "minima",
+                                                    "excepturi": "accusantium",
+                                                    "iure": "culpa",
+                                                },
+                                            },
+                                            Timestamp: "doloribus",
+                                            Value: 9589.5,
+                                        },
+                                        shared.Exemplar{
+                                            Attachments: []map[string]interface{}{
+                                                map[string]interface{}{
+                                                    "dolorem": "culpa",
+                                                    "consequuntur": "repellat",
+                                                    "mollitia": "occaecati",
+                                                },
+                                            },
+                                            Timestamp: "numquam",
+                                            Value: 4143.69,
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
                                         Bounds: []float64{
-                                            1709.09,
-                                            2103.82,
-                                            3581.52,
+                                            4746.97,
+                                            2444.25,
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 1289.26,
-                                        NumFiniteBuckets: 750686,
-                                        Scale: 3154.28,
+                                        GrowthFactor: 6235.1,
+                                        NumFiniteBuckets: 158969,
+                                        Scale: 3380.07,
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 607831,
-                                        Offset: 3637.11,
-                                        Width: 3250.47,
+                                        NumFiniteBuckets: 110375,
+                                        Offset: 6747.52,
+                                        Width: 6563.3,
                                     },
-                                    Maximum: 5701.97,
-                                    Mean: 384.25,
-                                    Minimum: 4386.01,
-                                    SumOfSquaredDeviation: 6342.74,
+                                    Maximum: 3172.02,
+                                    Mean: 1381.83,
+                                    Minimum: 7783.46,
+                                    SumOfSquaredDeviation: 1965.82,
                                 },
-                                DoubleValue: 9883.74,
-                                EndTime: "sapiente",
-                                Int64Value: "architecto",
+                                DoubleValue: 9495.72,
+                                EndTime: "ipsam",
+                                Int64Value: "id",
                                 Labels: map[string]string{
-                                    "dolorem": "culpa",
-                                    "consequuntur": "repellat",
-                                    "mollitia": "occaecati",
+                                    "aut": "quasi",
+                                    "error": "temporibus",
+                                    "laborum": "quasi",
+                                    "reiciendis": "voluptatibus",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "numquam",
-                                    Nanos: 414369,
-                                    Units: "quam",
+                                    CurrencyCode: "vero",
+                                    Nanos: 468651,
+                                    Units: "praesentium",
                                 },
-                                StartTime: "molestiae",
-                                StringValue: "velit",
+                                StartTime: "voluptatibus",
+                                StringValue: "ipsa",
                             },
                             shared.MetricValue{
                                 BoolValue: false,
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
-                                        "quia",
-                                        "quis",
-                                        "vitae",
+                                        "voluptate",
+                                        "cum",
+                                        "perferendis",
                                     },
-                                    Count: "laborum",
+                                    Count: "doloremque",
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
-                                                map[string]interface{}{
-                                                    "quo": "sequi",
-                                                },
-                                                map[string]interface{}{
-                                                    "ipsam": "id",
-                                                    "possimus": "aut",
-                                                    "quasi": "error",
-                                                    "temporibus": "laborum",
-                                                },
-                                            },
-                                            Timestamp: "quasi",
-                                            Value: 9719.45,
-                                        },
-                                        shared.Exemplar{
-                                            Attachments: []map[string]interface{}{
-                                                map[string]interface{}{
-                                                    "nihil": "praesentium",
-                                                    "voluptatibus": "ipsa",
-                                                    "omnis": "voluptate",
-                                                    "cum": "perferendis",
-                                                },
-                                                map[string]interface{}{
-                                                    "reprehenderit": "ut",
-                                                },
                                                 map[string]interface{}{
                                                     "dicta": "corporis",
                                                     "dolore": "iusto",
@@ -287,12 +264,15 @@ func main() {
                                 StartTime: "dicta",
                                 StringValue: "magnam",
                             },
+                        },
+                    },
+                    shared.MetricValueSet{
+                        MetricName: "cumque",
+                        MetricValues: []shared.MetricValue{
                             shared.MetricValue{
                                 BoolValue: false,
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
-                                        "facere",
-                                        "ea",
                                         "aliquid",
                                         "laborum",
                                     },
@@ -466,88 +446,92 @@ func main() {
                                 StartTime: "nobis",
                                 StringValue: "libero",
                             },
-                        },
-                    },
-                    shared.MetricValueSet{
-                        MetricName: "delectus",
-                        MetricValues: []shared.MetricValue{
                             shared.MetricValue{
                                 BoolValue: false,
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
+                                        "quaerat",
+                                        "quos",
                                         "aliquid",
                                         "dolorem",
-                                        "dolorem",
                                     },
-                                    Count: "dolor",
+                                    Count: "dolorem",
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
-                                                    "excepturi": "cum",
-                                                    "voluptate": "dignissimos",
-                                                    "reiciendis": "amet",
-                                                    "dolorum": "numquam",
+                                                    "hic": "excepturi",
                                                 },
                                             },
-                                            Timestamp: "veritatis",
-                                            Value: 580.29,
+                                            Timestamp: "cum",
+                                            Value: 4521.09,
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
                                         Bounds: []float64{
-                                            4344.17,
+                                            9702.37,
+                                            2274.14,
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 4878.38,
-                                        NumFiniteBuckets: 311796,
-                                        Scale: 8810.05,
+                                        GrowthFactor: 6805.45,
+                                        NumFiniteBuckets: 254356,
+                                        Scale: 852.95,
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 696344,
-                                        Offset: 9764.05,
-                                        Width: 3777.52,
+                                        NumFiniteBuckets: 58029,
+                                        Offset: 564.18,
+                                        Width: 4344.17,
                                     },
-                                    Maximum: 6176.58,
-                                    Mean: 1796.03,
-                                    Minimum: 5424.99,
-                                    SumOfSquaredDeviation: 246.78,
+                                    Maximum: 4878.38,
+                                    Mean: 3117.96,
+                                    Minimum: 8810.05,
+                                    SumOfSquaredDeviation: 6963.44,
                                 },
-                                DoubleValue: 8546.14,
-                                EndTime: "ab",
-                                Int64Value: "soluta",
+                                DoubleValue: 9764.05,
+                                EndTime: "voluptas",
+                                Int64Value: "natus",
                                 Labels: map[string]string{
-                                    "iusto": "voluptate",
-                                    "dolorum": "deleniti",
-                                    "omnis": "necessitatibus",
+                                    "atque": "sit",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "distinctio",
-                                    Nanos: 990339,
-                                    Units: "nihil",
+                                    CurrencyCode: "fugiat",
+                                    Nanos: 67249,
+                                    Units: "soluta",
                                 },
-                                StartTime: "ipsum",
-                                StringValue: "voluptate",
+                                StartTime: "dolorum",
+                                StringValue: "iusto",
                             },
                             shared.MetricValue{
                                 BoolValue: false,
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
-                                        "saepe",
-                                        "eius",
-                                        "aspernatur",
+                                        "dolorum",
+                                        "deleniti",
                                     },
-                                    Count: "perferendis",
+                                    Count: "omnis",
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
-                                                    "ad": "saepe",
-                                                    "suscipit": "deserunt",
-                                                    "provident": "minima",
-                                                    "repellendus": "totam",
+                                                    "nihil": "ipsum",
+                                                    "voluptate": "id",
+                                                    "saepe": "eius",
+                                                    "aspernatur": "perferendis",
                                                 },
+                                                map[string]interface{}{
+                                                    "optio": "accusamus",
+                                                },
+                                                map[string]interface{}{
+                                                    "saepe": "suscipit",
+                                                    "deserunt": "provident",
+                                                },
+                                            },
+                                            Timestamp: "minima",
+                                            Value: 8310.49,
+                                        },
+                                        shared.Exemplar{
+                                            Attachments: []map[string]interface{}{
                                                 map[string]interface{}{
                                                     "alias": "at",
                                                     "quaerat": "tempora",
@@ -569,56 +553,100 @@ func main() {
                                             Timestamp: "nihil",
                                             Value: 256.62,
                                         },
+                                        shared.Exemplar{
+                                            Attachments: []map[string]interface{}{
+                                                map[string]interface{}{
+                                                    "sed": "vel",
+                                                },
+                                                map[string]interface{}{
+                                                    "voluptas": "deserunt",
+                                                    "quam": "ipsum",
+                                                    "incidunt": "qui",
+                                                },
+                                                map[string]interface{}{
+                                                    "maxime": "pariatur",
+                                                    "soluta": "dicta",
+                                                    "laborum": "totam",
+                                                },
+                                            },
+                                            Timestamp: "incidunt",
+                                            Value: 1320.68,
+                                        },
+                                        shared.Exemplar{
+                                            Attachments: []map[string]interface{}{
+                                                map[string]interface{}{
+                                                    "facilis": "aliquid",
+                                                    "quam": "molestias",
+                                                    "temporibus": "qui",
+                                                },
+                                            },
+                                            Timestamp: "neque",
+                                            Value: 1448.47,
+                                        },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
                                         Bounds: []float64{
-                                            2074.7,
-                                            1536.94,
-                                            4246.85,
+                                            4880.56,
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 7304.42,
-                                        NumFiniteBuckets: 374170,
-                                        Scale: 6462.65,
+                                        GrowthFactor: 1248.33,
+                                        NumFiniteBuckets: 355613,
+                                        Scale: 7220.81,
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 463575,
-                                        Offset: 2148.8,
-                                        Width: 2776.28,
+                                        NumFiniteBuckets: 940432,
+                                        Offset: 304.52,
+                                        Width: 7653.26,
                                     },
-                                    Maximum: 1864.58,
-                                    Mean: 5867.84,
-                                    Minimum: 8075.81,
-                                    SumOfSquaredDeviation: 8638.56,
+                                    Maximum: 7469.94,
+                                    Mean: 7486.64,
+                                    Minimum: 925.96,
+                                    SumOfSquaredDeviation: 9037.2,
                                 },
-                                DoubleValue: 7470.8,
-                                EndTime: "dicta",
-                                Int64Value: "laborum",
+                                DoubleValue: 2174.5,
+                                EndTime: "veritatis",
+                                Int64Value: "nobis",
                                 Labels: map[string]string{
-                                    "incidunt": "aspernatur",
-                                    "dolores": "distinctio",
-                                    "facilis": "aliquid",
+                                    "tempore": "cupiditate",
+                                    "aperiam": "delectus",
+                                    "dolorem": "dolore",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "quam",
-                                    Nanos: 565421,
-                                    Units: "temporibus",
+                                    CurrencyCode: "labore",
+                                    Nanos: 240829,
+                                    Units: "dolorum",
                                 },
-                                StartTime: "qui",
-                                StringValue: "neque",
+                                StartTime: "architecto",
+                                StringValue: "quae",
                             },
                         },
                     },
                 },
                 QuotaMode: "UNSPECIFIED",
             },
-            ServiceConfigID: "magni",
+            ServiceConfigID: "quas",
         },
+        AccessToken: "itaque",
+        Alt: "json",
+        Callback: "est",
+        Fields: "repellendus",
+        Key: "porro",
+        OauthToken: "doloribus",
+        PrettyPrint: false,
+        QuotaUser: "ut",
+        ServiceName: "facilis",
+        UploadType: "cupiditate",
+        UploadProtocol: "qui",
     }
 
     ctx := context.Background()
-    res, err := s.Services.ServicecontrolServicesAllocateQuota(ctx, req)
+    res, err := s.Services.ServicecontrolServicesAllocateQuota(ctx, req, operations.ServicecontrolServicesAllocateQuotaSecurity{
+        Option1: &operations.ServicecontrolServicesAllocateQuotaSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -631,7 +659,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Services
@@ -641,4 +669,15 @@ func main() {
 * `ServicecontrolServicesReport` - Reports operation results to Google Service Control, such as logs and metrics. It should be called after an operation is completed. If feasible, the client should aggregate reporting data for up to 5 seconds to reduce API traffic. Limiting aggregation to 5 seconds is to reduce data loss during client crashes. Clients should carefully choose the aggregation time window to avoid data loss risk more than 0.01% for business and compliance reasons. NOTE: the ReportRequest has the size limit (wire-format byte size) of 1MB. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Google Cloud IAM](https://cloud.google.com/iam).
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

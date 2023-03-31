@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type ActionsCreateOrUpdateRepoSecretPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	// secret_name parameter
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type ActionsCreateOrUpdateRepoSecretRequestBody struct {
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-repository-public-key) endpoint.
 	EncryptedValue *string `json:"encrypted_value,omitempty"`
@@ -21,8 +14,11 @@ type ActionsCreateOrUpdateRepoSecretRequestBody struct {
 }
 
 type ActionsCreateOrUpdateRepoSecretRequest struct {
-	PathParams ActionsCreateOrUpdateRepoSecretPathParams
-	Request    ActionsCreateOrUpdateRepoSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateOrUpdateRepoSecretRequestBody `request:"mediaType=application/json"`
+	Owner       string                                     `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                     `pathParam:"style=simple,explode=false,name=repo"`
+	// secret_name parameter
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type ActionsCreateOrUpdateRepoSecretResponse struct {

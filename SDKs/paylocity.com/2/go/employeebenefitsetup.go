@@ -33,11 +33,11 @@ func newEmployeeBenefitSetup(defaultClient, securityClient HTTPClient, serverURL
 
 // UpdateOrAddEmployeeBenefitSetup - Add/update employee's benefit setup
 // Sends new or updated employee benefit setup information directly to Web Pay.
-func (s *employeeBenefitSetup) UpdateOrAddEmployeeBenefitSetup(ctx context.Context, request operations.UpdateOrAddEmployeeBenefitSetupRequest) (*operations.UpdateOrAddEmployeeBenefitSetupResponse, error) {
+func (s *employeeBenefitSetup) UpdateOrAddEmployeeBenefitSetup(ctx context.Context, request operations.UpdateOrAddEmployeeBenefitSetupRequest, security operations.UpdateOrAddEmployeeBenefitSetupSecurity) (*operations.UpdateOrAddEmployeeBenefitSetupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/benefitSetup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/benefitSetup", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BenefitSetup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *employeeBenefitSetup) UpdateOrAddEmployeeBenefitSetup(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

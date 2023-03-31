@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaskOfProjectPathParams struct {
+type GetTaskOfProjectRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	TaskID      string `pathParam:"style=simple,explode=false,name=task_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetTaskOfProjectRequest struct {
-	PathParams GetTaskOfProjectPathParams
 }
 
 type GetTaskOfProjectResponse struct {

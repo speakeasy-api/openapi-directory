@@ -12,11 +12,8 @@ var CreateUnderstandFieldTypeServerList = []string{
 }
 
 type CreateUnderstandFieldTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandFieldTypePathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest struct {
@@ -27,10 +24,8 @@ type CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest struct {
 }
 
 type CreateUnderstandFieldTypeRequest struct {
-	PathParams CreateUnderstandFieldTypePathParams
-	Request    *CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandFieldTypeSecurity
-	ServerURL  *string
+	AssistantSid string                                                     `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUnderstandFieldTypeResponse struct {

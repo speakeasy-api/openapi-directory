@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostReviewsQueryParams struct {
+type PostReviewsRequest struct {
 	// The id of the App that will own this review
 	AppID string `queryParam:"style=form,explode=true,name=appId"`
 	// True if the review should be automatically approved. The default is False.
@@ -27,10 +27,6 @@ type PostReviewsQueryParams struct {
 	UserAccountID *string `queryParam:"style=form,explode=true,name=userAccountId"`
 	// The id of the User that is posting this review
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PostReviewsRequest struct {
-	QueryParams PostReviewsQueryParams
 }
 
 type PostReviewsResponse struct {

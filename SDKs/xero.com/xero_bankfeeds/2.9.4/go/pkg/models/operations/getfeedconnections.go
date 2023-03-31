@@ -8,25 +8,16 @@ import (
 )
 
 type GetFeedConnectionsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetFeedConnectionsQueryParams struct {
+type GetFeedConnectionsRequest struct {
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 	// Page number which specifies the set of records to retrieve. By default the number of the records per set is 10. Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?page=1 to get the second set of the records. When page value is not a number or a negative number, by default, the first set of records is returned.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?pageSize=100 to specify page size of 100.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetFeedConnectionsHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
-}
-
-type GetFeedConnectionsRequest struct {
-	QueryParams GetFeedConnectionsQueryParams
-	Headers     GetFeedConnectionsHeaders
-	Security    GetFeedConnectionsSecurity
 }
 
 type GetFeedConnectionsResponse struct {

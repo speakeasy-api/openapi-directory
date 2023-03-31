@@ -33,22 +33,22 @@ func newReferenceData(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // SeatDetails - Seat Details
 // A description of all available seat details by aircraft type. You can retrieve the full set or details for a particular aircraft type.
-func (s *referenceData) SeatDetails(ctx context.Context, request operations.SeatDetailsRequest) (*operations.SeatDetailsResponse, error) {
+func (s *referenceData) SeatDetails(ctx context.Context, request operations.SeatDetailsRequest, security operations.SeatDetailsSecurity) (*operations.SeatDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/seatdetails/{aircraftCode}/{cabinCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/references/seatdetails/{aircraftCode}/{cabinCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

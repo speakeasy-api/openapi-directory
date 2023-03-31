@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAuthQueryParams struct {
+type PostAuthRequest struct {
 	// Client id of the downloaded credentials file
 	ClientID string `queryParam:"style=form,explode=true,name=client_id"`
 	// Client secret of the downloaded credentials file
 	ClientSecret string `queryParam:"style=form,explode=true,name=client_secret"`
-}
-
-type PostAuthRequest struct {
-	QueryParams PostAuthQueryParams
 }
 
 type PostAuthResponse struct {

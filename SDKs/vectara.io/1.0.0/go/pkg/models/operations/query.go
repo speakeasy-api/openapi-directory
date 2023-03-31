@@ -8,19 +8,14 @@ import (
 )
 
 type QuerySecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	OAuth      *shared.SchemeOAuth      `security:"scheme,type=oauth2"`
-}
-
-type QueryHeaders struct {
-	// The Customer ID to use for the request.
-	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
+	APIKeyAuth *string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
+	OAuth      *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type QueryRequest struct {
-	Headers  QueryHeaders
-	Request  shared.ServingBatchQueryRequest `request:"mediaType=application/json"`
-	Security QuerySecurity
+	// The Customer ID to use for the request.
+	CustomerID               int64                           `header:"style=simple,explode=false,name=customer-id"`
+	ServingBatchQueryRequest shared.ServingBatchQueryRequest `request:"mediaType=application/json"`
 }
 
 type QueryResponse struct {

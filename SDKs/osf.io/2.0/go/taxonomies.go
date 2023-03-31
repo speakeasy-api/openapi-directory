@@ -100,7 +100,7 @@ func (s *taxonomies) TaxonomiesList(ctx context.Context) (*operations.Taxonomies
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *taxonomies) TaxonomiesRead(ctx context.Context, request operations.TaxonomiesReadRequest) (*operations.TaxonomiesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/taxonomies/{taxonomy_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/taxonomies/{taxonomy_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

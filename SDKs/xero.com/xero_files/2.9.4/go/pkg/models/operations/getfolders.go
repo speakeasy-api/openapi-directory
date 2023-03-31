@@ -10,7 +10,7 @@ import (
 )
 
 type GetFoldersSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFoldersSortEnum - values to sort by
@@ -40,20 +40,11 @@ func (e *GetFoldersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFoldersQueryParams struct {
+type GetFoldersRequest struct {
 	// values to sort by
 	Sort *GetFoldersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFoldersHeaders struct {
 	// Xero identifier for Tenant
 	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
-}
-
-type GetFoldersRequest struct {
-	QueryParams GetFoldersQueryParams
-	Headers     GetFoldersHeaders
-	Security    GetFoldersSecurity
 }
 
 type GetFoldersResponse struct {

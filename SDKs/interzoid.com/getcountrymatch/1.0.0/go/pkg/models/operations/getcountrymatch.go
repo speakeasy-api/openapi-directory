@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcountrymatchQueryParams struct {
+type GetcountrymatchRequest struct {
 	// Country name from which to generate similarity key
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetcountrymatchRequest struct {
-	QueryParams GetcountrymatchQueryParams
 }
 
 // Getcountrymatch200ApplicationJSON - Generated similarity key for country name data

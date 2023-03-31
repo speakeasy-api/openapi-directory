@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainPathParams struct {
+type GetDomainRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the domain to get information about.
 	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-}
-
-type GetDomainHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetDomainRequest struct {
-	PathParams GetDomainPathParams
-	Headers    GetDomainHeaders
 }
 
 type GetDomainResponse struct {

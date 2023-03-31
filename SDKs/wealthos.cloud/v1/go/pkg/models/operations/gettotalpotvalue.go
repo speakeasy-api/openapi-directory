@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetTotalPotValueSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTotalPotValuePathParams struct {
-	// Id of the investor
-	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
-}
-
-type GetTotalPotValueHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetTotalPotValueRequest struct {
-	PathParams GetTotalPotValuePathParams
-	Headers    GetTotalPotValueHeaders
-	Security   GetTotalPotValueSecurity
+	// Id of the investor
+	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetTotalPotValue500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

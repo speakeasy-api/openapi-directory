@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetContainersMessagesRequest(
-    headers=operations.GetContainersMessagesHeaders(
-        x_auth_project_id="amet",
-        x_auth_token="eos",
-    ),
+    x_auth_project_id="corrupti",
+    x_auth_token="provident",
 )
     
 res = s.api_info.get_containers_messages(req)

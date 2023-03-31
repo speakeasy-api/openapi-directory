@@ -1,0 +1,194 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/androidmanagement/v1/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.AndroidmanagementEnterprisesCreateRequest(
+    dollar_xgafv="2",
+    enterprise=shared.Enterprise(
+        app_auto_approval_enabled=False,
+        contact_info=shared.ContactInfo(
+            contact_email="provident",
+            data_protection_officer_email="distinctio",
+            data_protection_officer_name="quibusdam",
+            data_protection_officer_phone="unde",
+            eu_representative_email="nulla",
+            eu_representative_name="corrupti",
+            eu_representative_phone="illum",
+        ),
+        enabled_notification_types=[
+            "STATUS_REPORT",
+            "STATUS_REPORT",
+        ],
+        enterprise_display_name="suscipit",
+        logo=shared.ExternalData(
+            sha256_hash="iure",
+            url="magnam",
+        ),
+        name="debitis",
+        primary_color=56713,
+        pubsub_topic="delectus",
+        signin_details=[
+            shared.SigninDetail(
+                allow_personal_usage="PERSONAL_USAGE_ALLOWED",
+                qr_code="molestiae",
+                signin_enrollment_token="minus",
+                signin_url="placeat",
+            ),
+            shared.SigninDetail(
+                allow_personal_usage="PERSONAL_USAGE_ALLOWED",
+                qr_code="iusto",
+                signin_enrollment_token="excepturi",
+                signin_url="nisi",
+            ),
+        ],
+        terms_and_conditions=[
+            shared.TermsAndConditions(
+                content=shared.UserFacingMessage(
+                    default_message="temporibus",
+                    localized_messages={
+                        "quis": "veritatis",
+                    },
+                ),
+                header=shared.UserFacingMessage(
+                    default_message="deserunt",
+                    localized_messages={
+                        "ipsam": "repellendus",
+                    },
+                ),
+            ),
+            shared.TermsAndConditions(
+                content=shared.UserFacingMessage(
+                    default_message="sapiente",
+                    localized_messages={
+                        "odit": "at",
+                        "at": "maiores",
+                        "molestiae": "quod",
+                        "quod": "esse",
+                    },
+                ),
+                header=shared.UserFacingMessage(
+                    default_message="totam",
+                    localized_messages={
+                        "dolorum": "dicta",
+                        "nam": "officia",
+                        "occaecati": "fugit",
+                        "deleniti": "hic",
+                    },
+                ),
+            ),
+            shared.TermsAndConditions(
+                content=shared.UserFacingMessage(
+                    default_message="optio",
+                    localized_messages={
+                        "beatae": "commodi",
+                        "molestiae": "modi",
+                        "qui": "impedit",
+                    },
+                ),
+                header=shared.UserFacingMessage(
+                    default_message="cum",
+                    localized_messages={
+                        "ipsum": "excepturi",
+                        "aspernatur": "perferendis",
+                    },
+                ),
+            ),
+            shared.TermsAndConditions(
+                content=shared.UserFacingMessage(
+                    default_message="ad",
+                    localized_messages={
+                        "sed": "iste",
+                        "dolor": "natus",
+                        "laboriosam": "hic",
+                    },
+                ),
+                header=shared.UserFacingMessage(
+                    default_message="saepe",
+                    localized_messages={
+                        "in": "corporis",
+                        "iste": "iure",
+                        "saepe": "quidem",
+                    },
+                ),
+            ),
+        ],
+    ),
+    access_token="architecto",
+    agreement_accepted=False,
+    alt="json",
+    callback="reiciendis",
+    enterprise_token="est",
+    fields_="mollitia",
+    key="laborum",
+    oauth_token="dolores",
+    pretty_print=False,
+    project_id="dolorem",
+    quota_user="corporis",
+    signup_url_name="explicabo",
+    upload_type="nobis",
+    upload_protocol="enim",
+)
+    
+res = s.enterprises.androidmanagement_enterprises_create(req, operations.AndroidmanagementEnterprisesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
+
+if res.enterprise is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### enterprises
+
+* `androidmanagement_enterprises_create` - Creates an enterprise. This is the last step in the enterprise signup flow. See also: SigninDetail
+* `androidmanagement_enterprises_devices_issue_command` - Issues a command to a device. The Operation resource returned contains a Command in its metadata field. Use the get operation method to get the status of the command.
+* `androidmanagement_enterprises_devices_list` - Lists devices for a given enterprise. Deleted devices are not returned in the response.
+* `androidmanagement_enterprises_devices_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
+* `androidmanagement_enterprises_enrollment_tokens_create` - Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to manage the lifecycle of newly created tokens and deleting them when they're not intended to be used anymore. Once an enrollment token has been created, it's not possible to retrieve the token's content anymore using AM API. It is recommended for EMMs to securely store the token if it's intended to be reused.
+* `androidmanagement_enterprises_enrollment_tokens_list` - Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to be used anymore.
+* `androidmanagement_enterprises_list` - Lists EMM-managed enterprises. Only BASIC fields are returned.
+* `androidmanagement_enterprises_policies_list` - Lists policies for a given enterprise.
+* `androidmanagement_enterprises_web_apps_create` - Creates a web app.
+* `androidmanagement_enterprises_web_apps_delete` - Deletes a web app.
+* `androidmanagement_enterprises_web_apps_get` - Gets a web app.
+* `androidmanagement_enterprises_web_apps_list` - Lists web apps for a given enterprise.
+* `androidmanagement_enterprises_web_apps_patch` - Updates a web app.
+* `androidmanagement_enterprises_web_tokens_create` - Creates a web token to access an embeddable managed Google Play web UI for a given enterprise.
+
+### signup_urls
+
+* `androidmanagement_signup_urls_create` - Creates an enterprise signup URL.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

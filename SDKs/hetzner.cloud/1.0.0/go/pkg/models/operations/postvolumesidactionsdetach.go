@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostVolumesIDActionsDetachPathParams struct {
+type PostVolumesIDActionsDetachRequest struct {
 	// ID of the Volume
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostVolumesIDActionsDetachRequest struct {
-	PathParams PostVolumesIDActionsDetachPathParams
 }
 
 // PostVolumesIDActionsDetachActionResponseActionError - Error message for the Action if error occurred, otherwise null

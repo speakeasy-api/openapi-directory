@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsPathParams struct {
-	// Id of the expense report
-	ExpenseReportID string `pathParam:"style=simple,explode=false,name=expenseReportId"`
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsStatusEnum - Status of the expense proof
 type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsStatusEnum string
 
@@ -45,18 +36,19 @@ func (e *GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsStat
 	}
 }
 
-type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsRequest struct {
 	// Date of the documents (YYYY or YYYYMM or YYYYMMDD)
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// Date of upload of the document (YYYY or YYYYMM or YYYYMMDD)
 	FolderDate *string `queryParam:"style=form,explode=true,name=FolderDate"`
 	// Status of the expense proof
 	Status *GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsQueryParams
+	// Id of the expense report
+	ExpenseReportID string `pathParam:"style=simple,explode=false,name=expenseReportId"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsResponse struct {

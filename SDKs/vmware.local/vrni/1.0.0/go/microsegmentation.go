@@ -37,7 +37,7 @@ func newMicrosegmentation(defaultClient, securityClient HTTPClient, serverURL, l
 // ExportNsxRecommendedRules - Export recommended rules for NSX-V
 // Export recommended firewall rules based on the flow data gathered by vRealize Network Insight in NSX-V compatible
 // format
-func (s *microsegmentation) ExportNsxRecommendedRules(ctx context.Context, request operations.ExportNsxRecommendedRulesRequest) (*operations.ExportNsxRecommendedRulesResponse, error) {
+func (s *microsegmentation) ExportNsxRecommendedRules(ctx context.Context, request shared.RecommendedRulesRequest, security operations.ExportNsxRecommendedRulesSecurity) (*operations.ExportNsxRecommendedRulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/micro-seg/recommended-rules/nsx"
 
@@ -53,7 +53,7 @@ func (s *microsegmentation) ExportNsxRecommendedRules(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *microsegmentation) ExportNsxRecommendedRules(ctx context.Context, reque
 // two groups OR for a single group based on all the inbound and outboud traffic for that group.
 // In case two groups are provided, both the groups should be of same type.
 // Currently supported groups are Application, Tier, NSXSecurityGroup, EC2SecurityGroup.
-func (s *microsegmentation) ListRecommendedRules(ctx context.Context, request operations.ListRecommendedRulesRequest) (*operations.ListRecommendedRulesResponse, error) {
+func (s *microsegmentation) ListRecommendedRules(ctx context.Context, request shared.RecommendedRulesRequest, security operations.ListRecommendedRulesSecurity) (*operations.ListRecommendedRulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/micro-seg/recommended-rules"
 
@@ -122,7 +122,7 @@ func (s *microsegmentation) ListRecommendedRules(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

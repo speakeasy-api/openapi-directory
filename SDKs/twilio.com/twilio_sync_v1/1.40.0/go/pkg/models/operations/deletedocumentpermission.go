@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDocumentPermissionServerList = []string{
@@ -12,22 +11,17 @@ var DeleteDocumentPermissionServerList = []string{
 }
 
 type DeleteDocumentPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteDocumentPermissionPathParams struct {
+type DeleteDocumentPermissionRequest struct {
 	// The SID of the Sync Document with the Document Permission resource to delete. Can be the Document resource's `sid` or its `unique_name`.
 	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
 	// The application-defined string that uniquely identifies the User's Document Permission resource to delete.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteDocumentPermissionRequest struct {
-	PathParams DeleteDocumentPermissionPathParams
-	Security   DeleteDocumentPermissionSecurity
-	ServerURL  *string
 }
 
 type DeleteDocumentPermissionResponse struct {

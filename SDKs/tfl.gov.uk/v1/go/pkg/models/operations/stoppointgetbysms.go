@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type StopPointGetBySmsPathParams struct {
+type StopPointGetBySmsRequest struct {
 	// A 5-digit Countdown Bus Stop Code e.g. 73241, 50435, 56334.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StopPointGetBySmsQueryParams struct {
 	// If set to "web", a 302 redirect to relevant website bus stop page is returned. Valid values are : web. All other values are ignored.
 	Output *string `queryParam:"style=form,explode=true,name=output"`
-}
-
-type StopPointGetBySmsRequest struct {
-	PathParams  StopPointGetBySmsPathParams
-	QueryParams StopPointGetBySmsQueryParams
 }
 
 type StopPointGetBySmsResponse struct {

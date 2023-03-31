@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteTierSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteTierPathParams struct {
-	// entity id
-	ID     string `pathParam:"style=simple,explode=false,name=id"`
-	TierID string `pathParam:"style=simple,explode=false,name=tier-id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type DeleteTierRequest struct {
-	PathParams DeleteTierPathParams
-	Security   DeleteTierSecurity
+	// entity id
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
+	TierID string `pathParam:"style=simple,explode=false,name=tier-id"`
 }
 
 type DeleteTierResponse struct {

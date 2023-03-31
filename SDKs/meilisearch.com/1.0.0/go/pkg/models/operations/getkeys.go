@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetKeysQueryParams struct {
+type GetKeysRequest struct {
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetKeysRequest struct {
-	QueryParams GetKeysQueryParams
 }
 
 type GetKeysResponse struct {

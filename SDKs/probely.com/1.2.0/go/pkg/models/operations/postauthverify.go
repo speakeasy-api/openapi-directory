@@ -11,10 +11,6 @@ type PostAuthVerifyRequestBody struct {
 	Token *string `json:"token,omitempty"`
 }
 
-type PostAuthVerifyRequest struct {
-	Request PostAuthVerifyRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthVerify500ApplicationJSON - Internal server error
 type PostAuthVerify500ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

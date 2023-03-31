@@ -26,10 +26,6 @@ type UsersUpdateAuthenticatedRequestBody struct {
 	TwitterUsername *string `json:"twitter_username,omitempty"`
 }
 
-type UsersUpdateAuthenticatedRequest struct {
-	Request *UsersUpdateAuthenticatedRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersUpdateAuthenticatedResponse struct {
 	ContentType string
 	StatusCode  int

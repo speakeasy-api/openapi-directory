@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostNetworksIDActionsAddSubnetPathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum - Type of Subnetwork
 type PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum string
 
@@ -52,8 +47,9 @@ type PostNetworksIDActionsAddSubnetAddSubnetRequest struct {
 }
 
 type PostNetworksIDActionsAddSubnetRequest struct {
-	PathParams PostNetworksIDActionsAddSubnetPathParams
-	Request    *PostNetworksIDActionsAddSubnetAddSubnetRequest `request:"mediaType=application/json"`
+	RequestBody *PostNetworksIDActionsAddSubnetAddSubnetRequest `request:"mediaType=application/json"`
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostNetworksIDActionsAddSubnetActionResponseActionError - Error message for the Action if error occurred, otherwise null

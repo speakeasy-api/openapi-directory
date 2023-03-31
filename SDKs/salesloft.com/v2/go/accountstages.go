@@ -45,7 +45,7 @@ func (s *accountStages) GetV2AccountStagesJSON(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *accountStages) GetV2AccountStagesJSON(ctx context.Context, request oper
 // Fetches an account stage, by ID only.
 func (s *accountStages) GetV2AccountStagesIDJSON(ctx context.Context, request operations.GetV2AccountStagesIDJSONRequest) (*operations.GetV2AccountStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/account_stages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/account_stages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurity struct {
@@ -22,12 +22,7 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurity
 	Option2 *ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListPathParams struct {
-	// Required. Parent resource identifying the connection which owns this collection of peered DNS domains in the format: `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name of the service consumer's VPC network.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListQueryParams struct {
+type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListQueryPar
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Parent resource identifying the connection which owns this collection of peered DNS domains in the format: `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name of the service consumer's VPC network.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListQueryPar
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListRequest struct {
-	PathParams  ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListPathParams
-	QueryParams ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListQueryParams
-	Security    ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurity
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListResponse struct {

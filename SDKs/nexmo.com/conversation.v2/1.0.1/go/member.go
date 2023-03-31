@@ -34,14 +34,14 @@ func newMember(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetMembers - List Members
 func (s *member) GetMembers(ctx context.Context, request operations.GetMembersRequest) (*operations.GetMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

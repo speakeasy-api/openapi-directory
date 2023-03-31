@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WorkTypeAPIDeleteFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type WorkTypeAPIDeleteFormRequest struct {
-	Headers WorkTypeAPIDeleteFormHeaders
-	Request shared.WorkTypeDeleteAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	WorkTypeDeleteAPIModel shared.WorkTypeDeleteAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey               string                        `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret            string                        `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type WorkTypeAPIDeleteFormResponse struct {

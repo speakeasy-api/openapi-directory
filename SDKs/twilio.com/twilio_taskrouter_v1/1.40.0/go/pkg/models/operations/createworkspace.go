@@ -12,7 +12,8 @@ var CreateWorkspaceServerList = []string{
 }
 
 type CreateWorkspaceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWorkspaceCreateWorkspaceRequest struct {
@@ -27,12 +28,6 @@ type CreateWorkspaceCreateWorkspaceRequest struct {
 	PrioritizeQueueOrder *shared.WorkspaceEnumQueueOrderEnum `form:"name=PrioritizeQueueOrder"`
 	// An available template name. Can be: `NONE` or `FIFO` and the default is `NONE`. Pre-configures the Workspace with the Workflow and Activities specified in the template. `NONE` will create a Workspace with only a set of default activities. `FIFO` will configure TaskRouter with a set of default activities and a single TaskQueue for first-in, first-out distribution, which can be useful when you are getting started with TaskRouter.
 	Template *string `form:"name=Template"`
-}
-
-type CreateWorkspaceRequest struct {
-	Request   *CreateWorkspaceCreateWorkspaceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateWorkspaceSecurity
-	ServerURL *string
 }
 
 type CreateWorkspaceResponse struct {

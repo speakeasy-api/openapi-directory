@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LongPollQueryParams struct {
+type LongPollRequest struct {
 	ConnectionID *string                `queryParam:"serialization=json,name=connection_id"`
 	JSON         *shared.ConnectRequest `queryParam:"serialization=json,name=json"`
-}
-
-type LongPollRequest struct {
-	QueryParams LongPollQueryParams
 }
 
 type LongPollResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetASharedLineGroupPathParams struct {
+type GetASharedLineGroupRequest struct {
 	// Unique Identifier of the Shared Line Group.
 	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
-type GetASharedLineGroupRequest struct {
-	PathParams GetASharedLineGroupPathParams
 }
 
 type GetASharedLineGroup200ApplicationXMLMembersCommonAreaPhones struct {

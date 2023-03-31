@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type RollbacksNetworkFirmwareUpgradesStagedEventsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // RollbacksNetworkFirmwareUpgradesStagedEventsRequestBodyReasonsCategoryEnum - Reason for the rollback
 type RollbacksNetworkFirmwareUpgradesStagedEventsRequestBodyReasonsCategoryEnum string
 
@@ -83,8 +79,8 @@ type RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody struct {
 }
 
 type RollbacksNetworkFirmwareUpgradesStagedEventsRequest struct {
-	PathParams RollbacksNetworkFirmwareUpgradesStagedEventsPathParams
-	Request    RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody `request:"mediaType=application/json"`
+	RequestBody RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                  `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // RollbacksNetworkFirmwareUpgradesStagedEvents200ApplicationJSONProductsSwitchNextUpgradeToVersion - Details of the version the device will upgrade to

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetIndexesQueryParams struct {
+type GetIndexesRequest struct {
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetIndexesRequest struct {
-	QueryParams GetIndexesQueryParams
 }
 
 type GetIndexesResponse struct {

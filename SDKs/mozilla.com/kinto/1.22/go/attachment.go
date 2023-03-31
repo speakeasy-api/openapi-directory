@@ -32,7 +32,7 @@ func newAttachment(defaultClient, securityClient HTTPClient, serverURL, language
 
 func (s *attachment) CreateAttachment(ctx context.Context, request operations.CreateAttachmentRequest) (*operations.CreateAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -65,7 +65,7 @@ func (s *attachment) CreateAttachment(ctx context.Context, request operations.Cr
 }
 func (s *attachment) DeleteAttachment(ctx context.Context, request operations.DeleteAttachmentRequest) (*operations.DeleteAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

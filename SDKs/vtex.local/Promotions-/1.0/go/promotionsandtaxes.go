@@ -36,14 +36,14 @@ func newPromotionsAndTaxes(defaultClient, securityClient HTTPClient, serverURL, 
 // Archives a Promotion or Tax by its ID.
 func (s *promotionsAndTaxes) ArchivePromotion(ctx context.Context, request operations.ArchivePromotionRequest) (*operations.ArchivePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/calculatorConfiguration/{idCalculatorConfiguration}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -76,7 +76,7 @@ func (s *promotionsAndTaxes) CreateOrUpdateCalculatorConfiguration(ctx context.C
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/rnb/pvt/calculatorconfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -91,7 +91,7 @@ func (s *promotionsAndTaxes) CreateOrUpdateCalculatorConfiguration(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -142,7 +142,7 @@ func (s *promotionsAndTaxes) GetAllBenefits(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -189,7 +189,7 @@ func (s *promotionsAndTaxes) GetAllTaxes(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -236,7 +236,7 @@ func (s *promotionsAndTaxes) GetArchivedPromotions(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -283,7 +283,7 @@ func (s *promotionsAndTaxes) GetArchivedTaxes(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -323,14 +323,14 @@ func (s *promotionsAndTaxes) GetArchivedTaxes(ctx context.Context, request opera
 // Retrieves a specific promotion by its Promotion ID or a specific tax by its Tax ID.
 func (s *promotionsAndTaxes) GetCalculatorConfigurationByID(ctx context.Context, request operations.GetCalculatorConfigurationByIDRequest) (*operations.GetCalculatorConfigurationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/calculatorconfiguration/{idCalculatorConfiguration}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/calculatorconfiguration/{idCalculatorConfiguration}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -377,14 +377,14 @@ func (s *promotionsAndTaxes) GetCalculatorConfigurationByID(ctx context.Context,
 // Unarchives a Promotion or Tax by its ID.
 func (s *promotionsAndTaxes) UnarchivePromotion(ctx context.Context, request operations.UnarchivePromotionRequest) (*operations.UnarchivePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/calculatorConfiguration/{idCalculatorConfiguration}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -420,7 +420,7 @@ func (s *promotionsAndTaxes) PostAPIRnbPvtImportCalculatorConfiguration(ctx cont
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/rnb/pvt/import/calculatorConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -432,7 +432,7 @@ func (s *promotionsAndTaxes) PostAPIRnbPvtImportCalculatorConfiguration(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -466,9 +466,9 @@ func (s *promotionsAndTaxes) PostAPIRnbPvtImportCalculatorConfiguration(ctx cont
 // > The limit of SKUs on a Multiple Effects promotion is 400.
 func (s *promotionsAndTaxes) PutAPIRnbPvtImportCalculatorConfigurationPromotionID(ctx context.Context, request operations.PutAPIRnbPvtImportCalculatorConfigurationPromotionIDRequest) (*operations.PutAPIRnbPvtImportCalculatorConfigurationPromotionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/import/calculatorConfiguration/{promotionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/import/calculatorConfiguration/{promotionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -480,7 +480,7 @@ func (s *promotionsAndTaxes) PutAPIRnbPvtImportCalculatorConfigurationPromotionI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

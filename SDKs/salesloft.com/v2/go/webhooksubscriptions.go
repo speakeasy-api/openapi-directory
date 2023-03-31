@@ -37,7 +37,7 @@ func newWebhookSubscriptions(defaultClient, securityClient HTTPClient, serverURL
 // Deletes a webhook subscription. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
 func (s *webhookSubscriptions) DeleteV2WebhookSubscriptionsID(ctx context.Context, request operations.DeleteV2WebhookSubscriptionsIDRequest) (*operations.DeleteV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *webhookSubscriptions) GetV2WebhookSubscriptions(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -122,7 +122,7 @@ func (s *webhookSubscriptions) GetV2WebhookSubscriptions(ctx context.Context, re
 // Fetches a webhook subscription, by ID only.
 func (s *webhookSubscriptions) GetV2WebhookSubscriptionsID(ctx context.Context, request operations.GetV2WebhookSubscriptionsIDRequest) (*operations.GetV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *webhookSubscriptions) GetV2WebhookSubscriptionsID(ctx context.Context, 
 // PostV2WebhookSubscriptions - Create a webhook subscription
 // Creates a webhook subscription. Visit the <a href="/webhooks.html" target="_blank" rel="noopener noreferrer">webhooks page</a> for additional details and a list of available webhooks.
 // Request must be made with a valid Oauth token or API key.
-func (s *webhookSubscriptions) PostV2WebhookSubscriptions(ctx context.Context, request operations.PostV2WebhookSubscriptionsRequest) (*operations.PostV2WebhookSubscriptionsResponse, error) {
+func (s *webhookSubscriptions) PostV2WebhookSubscriptions(ctx context.Context, request operations.PostV2WebhookSubscriptionsRequestBody) (*operations.PostV2WebhookSubscriptionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/webhook_subscriptions"
 
@@ -224,9 +224,9 @@ func (s *webhookSubscriptions) PostV2WebhookSubscriptions(ctx context.Context, r
 // Request must be made with a valid Oauth token or API key.
 func (s *webhookSubscriptions) PutV2WebhookSubscriptionsID(ctx context.Context, request operations.PutV2WebhookSubscriptionsIDRequest) (*operations.PutV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

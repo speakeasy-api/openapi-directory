@@ -33,7 +33,7 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CloudresourcemanagerOrganizationsSearch - Searches organization resources that are visible to the user and satisfy the specified filter. This method returns organizations in an unspecified order. New organizations do not necessarily appear at the end of the results, and may take a small amount of time to appear. Search will only return organizations on which the user has the permission `resourcemanager.organizations.get`
-func (s *organizations) CloudresourcemanagerOrganizationsSearch(ctx context.Context, request operations.CloudresourcemanagerOrganizationsSearchRequest) (*operations.CloudresourcemanagerOrganizationsSearchResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsSearch(ctx context.Context, request operations.CloudresourcemanagerOrganizationsSearchRequest, security operations.CloudresourcemanagerOrganizationsSearchSecurity) (*operations.CloudresourcemanagerOrganizationsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/organizations:search"
 
@@ -42,11 +42,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsSearch(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TravelpartnerAccountsAccountLinksDeletePathParams struct {
-	// Required. The resource name of the account link being deleted. The format is `accounts/{account_id}/accountLinks/{account_link_id}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type TravelpartnerAccountsAccountLinksDeleteQueryParams struct {
+type TravelpartnerAccountsAccountLinksDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type TravelpartnerAccountsAccountLinksDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the account link being deleted. The format is `accounts/{account_id}/accountLinks/{account_link_id}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -35,11 +32,6 @@ type TravelpartnerAccountsAccountLinksDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TravelpartnerAccountsAccountLinksDeleteRequest struct {
-	PathParams  TravelpartnerAccountsAccountLinksDeletePathParams
-	QueryParams TravelpartnerAccountsAccountLinksDeleteQueryParams
 }
 
 type TravelpartnerAccountsAccountLinksDeleteResponse struct {

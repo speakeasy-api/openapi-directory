@@ -34,14 +34,14 @@ func newApplicationKeyCredentials(defaultClient, securityClient HTTPClient, serv
 // ApplicationsListKeyCredentials - Get the keyCredentials associated with an application.
 func (s *applicationKeyCredentials) ApplicationsListKeyCredentials(ctx context.Context, request operations.ApplicationsListKeyCredentialsRequest) (*operations.ApplicationsListKeyCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,9 +106,9 @@ func (s *applicationKeyCredentials) ApplicationsListKeyCredentials(ctx context.C
 // ApplicationsUpdateKeyCredentials - Update the keyCredentials associated with an application.
 func (s *applicationKeyCredentials) ApplicationsUpdateKeyCredentials(ctx context.Context, request operations.ApplicationsUpdateKeyCredentialsRequest) (*operations.ApplicationsUpdateKeyCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeyCredentialsUpdateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *applicationKeyCredentials) ApplicationsUpdateKeyCredentials(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,20 +8,14 @@ import (
 )
 
 type ClassroomUserProfilesGuardianInvitationsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClassroomUserProfilesGuardianInvitationsPatchPathParams struct {
-	// The `id` field of the `GuardianInvitation` to be modified.
-	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
-	// The ID of the student whose guardian invitation is to be modified.
-	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
-}
-
-type ClassroomUserProfilesGuardianInvitationsPatchQueryParams struct {
+type ClassroomUserProfilesGuardianInvitationsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv        *shared.XgafvEnum          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GuardianInvitation *shared.GuardianInvitation `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +24,8 @@ type ClassroomUserProfilesGuardianInvitationsPatchQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The `id` field of the `GuardianInvitation` to be modified.
+	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -38,19 +34,14 @@ type ClassroomUserProfilesGuardianInvitationsPatchQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the student whose guardian invitation is to be modified.
+	StudentID string `pathParam:"style=simple,explode=false,name=studentId"`
 	// Mask that identifies which fields on the course to update. This field is required to do an update. The update fails if invalid fields are specified. The following fields are valid: * `state` When set in a query parameter, this field should be specified as `updateMask=,,...`
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomUserProfilesGuardianInvitationsPatchRequest struct {
-	PathParams  ClassroomUserProfilesGuardianInvitationsPatchPathParams
-	QueryParams ClassroomUserProfilesGuardianInvitationsPatchQueryParams
-	Request     *shared.GuardianInvitation `request:"mediaType=application/json"`
-	Security    ClassroomUserProfilesGuardianInvitationsPatchSecurity
 }
 
 type ClassroomUserProfilesGuardianInvitationsPatchResponse struct {

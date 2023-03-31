@@ -8,17 +8,12 @@ import (
 )
 
 type GetReportSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetReportPathParams struct {
-	// The ID of the Report
-	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type GetReportRequest struct {
-	PathParams GetReportPathParams
-	Security   GetReportSecurity
+	// The ID of the Report
+	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
 }
 
 type GetReportResponse struct {

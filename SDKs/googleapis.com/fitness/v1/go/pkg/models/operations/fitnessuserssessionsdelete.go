@@ -8,13 +8,13 @@ import (
 )
 
 type FitnessUsersSessionsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersSessionsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersSessionsDeleteSecurity struct {
@@ -22,14 +22,7 @@ type FitnessUsersSessionsDeleteSecurity struct {
 	Option2 *FitnessUsersSessionsDeleteSecurityOption2 `security:"option"`
 }
 
-type FitnessUsersSessionsDeletePathParams struct {
-	// The ID of the session to be deleted.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-	// Delete a session for the person identified. Use me to indicate the authenticated user. Only me is supported at this time.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type FitnessUsersSessionsDeleteQueryParams struct {
+type FitnessUsersSessionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,16 +41,14 @@ type FitnessUsersSessionsDeleteQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the session to be deleted.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FitnessUsersSessionsDeleteRequest struct {
-	PathParams  FitnessUsersSessionsDeletePathParams
-	QueryParams FitnessUsersSessionsDeleteQueryParams
-	Security    FitnessUsersSessionsDeleteSecurity
+	// Delete a session for the person identified. Use me to indicate the authenticated user. Only me is supported at this time.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type FitnessUsersSessionsDeleteResponse struct {

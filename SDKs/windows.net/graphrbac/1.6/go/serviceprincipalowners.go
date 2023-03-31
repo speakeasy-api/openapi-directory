@@ -34,9 +34,9 @@ func newServicePrincipalOwners(defaultClient, securityClient HTTPClient, serverU
 // ServicePrincipalsAddOwner - Add an owner to a service principal.
 func (s *servicePrincipalOwners) ServicePrincipalsAddOwner(ctx context.Context, request operations.ServicePrincipalsAddOwnerRequest) (*operations.ServicePrincipalsAddOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/$links/owners", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/$links/owners", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *servicePrincipalOwners) ServicePrincipalsAddOwner(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -101,14 +101,14 @@ func (s *servicePrincipalOwners) ServicePrincipalsAddOwner(ctx context.Context, 
 // The owners are a set of non-admin users who are allowed to modify this object.
 func (s *servicePrincipalOwners) ServicePrincipalsListOwners(ctx context.Context, request operations.ServicePrincipalsListOwnersRequest) (*operations.ServicePrincipalsListOwnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/owners", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/owners", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,14 +173,14 @@ func (s *servicePrincipalOwners) ServicePrincipalsListOwners(ctx context.Context
 // ServicePrincipalsRemoveOwner - Remove a member from owners.
 func (s *servicePrincipalOwners) ServicePrincipalsRemoveOwner(ctx context.Context, request operations.ServicePrincipalsRemoveOwnerRequest) (*operations.ServicePrincipalsRemoveOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/$links/owners/{ownerObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/$links/owners/{ownerObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcountrymatchRequest(
-    query_params=operations.GetcountrymatchQueryParams(
-        country="magni",
-        license="officiis",
-    ),
+    country="Malta",
+    license="provident",
 )
     
 res = s.country_match_similarity_key.getcountrymatch(req)

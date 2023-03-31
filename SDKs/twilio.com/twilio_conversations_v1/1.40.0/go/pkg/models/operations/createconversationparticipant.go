@@ -13,17 +13,8 @@ var CreateConversationParticipantServerList = []string{
 }
 
 type CreateConversationParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateConversationParticipantPathParams struct {
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-}
-
-type CreateConversationParticipantHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConversationParticipantCreateConversationParticipantRequest struct {
@@ -46,11 +37,11 @@ type CreateConversationParticipantCreateConversationParticipantRequest struct {
 }
 
 type CreateConversationParticipantRequest struct {
-	PathParams CreateConversationParticipantPathParams
-	Headers    CreateConversationParticipantHeaders
-	Request    *CreateConversationParticipantCreateConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateConversationParticipantSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+	ConversationSid string                                                             `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *CreateConversationParticipantCreateConversationParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ConversationParticipantEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateConversationParticipantResponse struct {

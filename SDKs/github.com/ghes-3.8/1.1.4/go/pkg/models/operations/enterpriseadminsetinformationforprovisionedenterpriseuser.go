@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminSetInformationForProvisionedEnterpriseUserPathParams struct {
-	// The unique identifier of the SCIM user.
-	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
 type EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest struct {
-	PathParams EnterpriseAdminSetInformationForProvisionedEnterpriseUserPathParams
-	Request    shared.User `request:"mediaType=application/json"`
+	// The unique identifier of the SCIM user.
+	ScimUserID string      `pathParam:"style=simple,explode=false,name=scim_user_id"`
+	User       shared.User `request:"mediaType=application/json"`
 }
 
 type EnterpriseAdminSetInformationForProvisionedEnterpriseUserResponse struct {

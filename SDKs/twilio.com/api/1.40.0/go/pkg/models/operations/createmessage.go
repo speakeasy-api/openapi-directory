@@ -13,12 +13,8 @@ var CreateMessageServerList = []string{
 }
 
 type CreateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessagePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessageCreateMessageRequest struct {
@@ -66,10 +62,9 @@ type CreateMessageCreateMessageRequest struct {
 }
 
 type CreateMessageRequest struct {
-	PathParams CreateMessagePathParams
-	Request    *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessageSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                             `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateMessageResponse struct {

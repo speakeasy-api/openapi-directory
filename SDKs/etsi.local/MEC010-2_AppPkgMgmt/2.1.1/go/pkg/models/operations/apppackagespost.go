@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPackagesPOSTRequest struct {
-	// Resource to be created
-	Request shared.CreateAppPkg `request:"mediaType=application/json"`
-}
-
 type AppPackagesPOSTResponse struct {
 	// Successful response for resource creation
 	AppPkgInfos []shared.AppPkgInfo

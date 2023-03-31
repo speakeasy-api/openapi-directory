@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncSyncMapPermissionServerList = []string{
@@ -12,21 +11,16 @@ var DeleteSyncSyncMapPermissionServerList = []string{
 }
 
 type DeleteSyncSyncMapPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncSyncMapPermissionPathParams struct {
+type DeleteSyncSyncMapPermissionRequest struct {
 	// Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// Identifier of the Sync Map. Either a SID or a unique name.
 	MapSid     string `pathParam:"style=simple,explode=false,name=MapSid"`
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncSyncMapPermissionRequest struct {
-	PathParams DeleteSyncSyncMapPermissionPathParams
-	Security   DeleteSyncSyncMapPermissionSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncSyncMapPermissionResponse struct {

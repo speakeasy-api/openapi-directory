@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamIPAddressesPartialUpdatePathParams struct {
+type IpamIPAddressesPartialUpdateRequest struct {
+	WritableIPAddressInput shared.WritableIPAddressInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this IP address.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamIPAddressesPartialUpdateRequest struct {
-	PathParams IpamIPAddressesPartialUpdatePathParams
-	Request    shared.WritableIPAddressInput `request:"mediaType=application/json"`
 }
 
 type IpamIPAddressesPartialUpdateResponse struct {

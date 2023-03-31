@@ -7,31 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListDeploymentsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListDeploymentsQueryParams struct {
+type ReposListDeploymentsRequest struct {
 	// The name of the environment that was deployed to (e.g., `staging` or `production`).
 	Environment *string `queryParam:"style=form,explode=true,name=environment"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The name of the ref. This can be a branch, tag, or SHA.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The SHA recorded at creation time.
 	Sha *string `queryParam:"style=form,explode=true,name=sha"`
 	// The name of the task for the deployment (e.g., `deploy` or `deploy:migrations`).
 	Task *string `queryParam:"style=form,explode=true,name=task"`
-}
-
-type ReposListDeploymentsRequest struct {
-	PathParams  ReposListDeploymentsPathParams
-	QueryParams ReposListDeploymentsQueryParams
 }
 
 type ReposListDeploymentsResponse struct {

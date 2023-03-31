@@ -36,7 +36,7 @@ func newUsersInIQualify(defaultClient, securityClient HTTPClient, serverURL, lan
 // Responds with a user matching the specified email.
 func (s *usersInIQualify) GetUsersUserEmail(ctx context.Context, request operations.GetUsersUserEmailRequest) (*operations.GetUsersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +97,7 @@ func (s *usersInIQualify) GetUsersUserEmail(ctx context.Context, request operati
 // Responds with all offerings that the user in.
 func (s *usersInIQualify) GetUsersUserEmailOfferings(ctx context.Context, request operations.GetUsersUserEmailOfferingsRequest) (*operations.GetUsersUserEmailOfferingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,9 +158,9 @@ func (s *usersInIQualify) GetUsersUserEmailOfferings(ctx context.Context, reques
 // Updates the specified user by email.
 func (s *usersInIQualify) PatchUsersUserEmail(ctx context.Context, request operations.PatchUsersUserEmailRequest) (*operations.PatchUsersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -224,7 +224,7 @@ func (s *usersInIQualify) PatchUsersUserEmail(ctx context.Context, request opera
 
 // PostUsers - Add new user
 // Creates a new user.
-func (s *usersInIQualify) PostUsers(ctx context.Context, request operations.PostUsersRequest) (*operations.PostUsersResponse, error) {
+func (s *usersInIQualify) PostUsers(ctx context.Context, request shared.User) (*operations.PostUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -297,7 +297,7 @@ func (s *usersInIQualify) PostUsers(ctx context.Context, request operations.Post
 // Re-sends an invitation e-mail to the specified user.
 func (s *usersInIQualify) PostUsersUserEmailInviteEmail(ctx context.Context, request operations.PostUsersUserEmailInviteEmailRequest) (*operations.PostUsersUserEmailInviteEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/invite-email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/invite-email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -347,9 +347,9 @@ func (s *usersInIQualify) PostUsersUserEmailInviteEmail(ctx context.Context, req
 // Adds a user to an array of offerings by offeringId.
 func (s *usersInIQualify) PostUsersUserEmailOfferings(ctx context.Context, request operations.PostUsersUserEmailOfferingsRequest) (*operations.PostUsersUserEmailOfferingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -418,7 +418,7 @@ func (s *usersInIQualify) PostUsersUserEmailOfferings(ctx context.Context, reque
 // Adds additional permissions to the specified user.
 func (s *usersInIQualify) PostUsersUserEmailPermissionsPermissionName(ctx context.Context, request operations.PostUsersUserEmailPermissionsPermissionNameRequest) (*operations.PostUsersUserEmailPermissionsPermissionNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/permissions/{permissionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/permissions/{permissionName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -479,9 +479,9 @@ func (s *usersInIQualify) PostUsersUserEmailPermissionsPermissionName(ctx contex
 // Suspends the specified user's account.
 func (s *usersInIQualify) PutUsersUserEmailSuspend(ctx context.Context, request operations.PutUsersUserEmailSuspendRequest) (*operations.PutUsersUserEmailSuspendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/suspend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuspendedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

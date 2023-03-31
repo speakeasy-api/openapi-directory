@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishExtensionHeaders struct {
+type PublishExtensionRequest struct {
+	// Extension information to add to the entity
+	ExtensionData shared.ExtensionData `request:"mediaType=application/json"`
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishExtensionRequest struct {
-	Headers PublishExtensionHeaders
-	// Extension information to add to the entity
-	Request shared.ExtensionData `request:"mediaType=application/json"`
 }
 
 type PublishExtensionResponse struct {

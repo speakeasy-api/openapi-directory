@@ -20,10 +20,6 @@ type DeleteUserRequestBody struct {
 	Identification DeleteUserRequestBodyIdentification `json:"identification"`
 }
 
-type DeleteUserRequest struct {
-	Request DeleteUserRequestBody `request:"mediaType=application/json"`
-}
-
 type DeleteUser500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

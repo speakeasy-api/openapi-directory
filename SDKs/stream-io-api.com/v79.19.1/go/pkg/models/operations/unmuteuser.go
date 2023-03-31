@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnmuteUserRequest struct {
-	Request shared.UnmuteUserRequest `request:"mediaType=application/json"`
-}
-
 type UnmuteUserResponse struct {
 	// Bad request
 	APIError    *shared.APIError

@@ -34,14 +34,14 @@ func newServicePrincipalAppRoleAssignments(defaultClient, securityClient HTTPCli
 // ServicePrincipalsListAppRoleAssignments - Applications that the service principal is assigned to.
 func (s *servicePrincipalAppRoleAssignments) ServicePrincipalsListAppRoleAssignments(ctx context.Context, request operations.ServicePrincipalsListAppRoleAssignmentsRequest) (*operations.ServicePrincipalsListAppRoleAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

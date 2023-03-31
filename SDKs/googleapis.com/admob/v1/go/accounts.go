@@ -33,20 +33,20 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdmobAccountsAdUnitsList - List the ad units under the specified AdMob account.
-func (s *accounts) AdmobAccountsAdUnitsList(ctx context.Context, request operations.AdmobAccountsAdUnitsListRequest) (*operations.AdmobAccountsAdUnitsListResponse, error) {
+func (s *accounts) AdmobAccountsAdUnitsList(ctx context.Context, request operations.AdmobAccountsAdUnitsListRequest, security operations.AdmobAccountsAdUnitsListSecurity) (*operations.AdmobAccountsAdUnitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/adUnits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/adUnits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *accounts) AdmobAccountsAdUnitsList(ctx context.Context, request operati
 }
 
 // AdmobAccountsAppsList - List the apps under the specified AdMob account.
-func (s *accounts) AdmobAccountsAppsList(ctx context.Context, request operations.AdmobAccountsAppsListRequest) (*operations.AdmobAccountsAppsListResponse, error) {
+func (s *accounts) AdmobAccountsAppsList(ctx context.Context, request operations.AdmobAccountsAppsListRequest, security operations.AdmobAccountsAppsListSecurity) (*operations.AdmobAccountsAppsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *accounts) AdmobAccountsAppsList(ctx context.Context, request operations
 }
 
 // AdmobAccountsGet - Gets information about the specified AdMob publisher account.
-func (s *accounts) AdmobAccountsGet(ctx context.Context, request operations.AdmobAccountsGetRequest) (*operations.AdmobAccountsGetResponse, error) {
+func (s *accounts) AdmobAccountsGet(ctx context.Context, request operations.AdmobAccountsGetRequest, security operations.AdmobAccountsGetSecurity) (*operations.AdmobAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *accounts) AdmobAccountsGet(ctx context.Context, request operations.Admo
 }
 
 // AdmobAccountsList - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
-func (s *accounts) AdmobAccountsList(ctx context.Context, request operations.AdmobAccountsListRequest) (*operations.AdmobAccountsListResponse, error) {
+func (s *accounts) AdmobAccountsList(ctx context.Context, request operations.AdmobAccountsListRequest, security operations.AdmobAccountsListSecurity) (*operations.AdmobAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accounts"
 
@@ -186,11 +186,11 @@ func (s *accounts) AdmobAccountsList(ctx context.Context, request operations.Adm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,11 +225,11 @@ func (s *accounts) AdmobAccountsList(ctx context.Context, request operations.Adm
 }
 
 // AdmobAccountsMediationReportGenerate - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
-func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, request operations.AdmobAccountsMediationReportGenerateRequest) (*operations.AdmobAccountsMediationReportGenerateResponse, error) {
+func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, request operations.AdmobAccountsMediationReportGenerateRequest, security operations.AdmobAccountsMediationReportGenerateSecurity) (*operations.AdmobAccountsMediationReportGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mediationReport:generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mediationReport:generate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateMediationReportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,11 +241,11 @@ func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,11 +280,11 @@ func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, req
 }
 
 // AdmobAccountsNetworkReportGenerate - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
-func (s *accounts) AdmobAccountsNetworkReportGenerate(ctx context.Context, request operations.AdmobAccountsNetworkReportGenerateRequest) (*operations.AdmobAccountsNetworkReportGenerateResponse, error) {
+func (s *accounts) AdmobAccountsNetworkReportGenerate(ctx context.Context, request operations.AdmobAccountsNetworkReportGenerateRequest, security operations.AdmobAccountsNetworkReportGenerateSecurity) (*operations.AdmobAccountsNetworkReportGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/networkReport:generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/networkReport:generate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateNetworkReportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -296,11 +296,11 @@ func (s *accounts) AdmobAccountsNetworkReportGenerate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

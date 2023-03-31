@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClusterTypesUpdatePathParams struct {
+type VirtualizationClusterTypesUpdateRequest struct {
+	ClusterTypeInput shared.ClusterTypeInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this cluster type.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationClusterTypesUpdateRequest struct {
-	PathParams VirtualizationClusterTypesUpdatePathParams
-	Request    shared.ClusterTypeInput `request:"mediaType=application/json"`
 }
 
 type VirtualizationClusterTypesUpdateResponse struct {

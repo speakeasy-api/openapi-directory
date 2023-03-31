@@ -36,7 +36,7 @@ func newTimeCard(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a specific my time cards
 func (s *timeCard) GetMyTimeCard(ctx context.Context, request operations.GetMyTimeCardRequest) (*operations.GetMyTimeCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/myTimeCards/{timeCard_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/myTimeCards/{timeCard_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *timeCard) GetMyTimeCard(ctx context.Context, request operations.GetMyTi
 // List my time cards
 func (s *timeCard) GetMyTimeCardList(ctx context.Context, request operations.GetMyTimeCardListRequest) (*operations.GetMyTimeCardListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/myTimeCards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/myTimeCards", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *timeCard) GetMyTimeCardList(ctx context.Context, request operations.Get
 // List a specific received time cards
 func (s *timeCard) GetReceivedTimeCard(ctx context.Context, request operations.GetReceivedTimeCardRequest) (*operations.GetReceivedTimeCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/receivedTimeCards/{timeCard_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/receivedTimeCards/{timeCard_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +501,7 @@ func (s *timeCard) GetReceivedTimeCard(ctx context.Context, request operations.G
 // List received time cards
 func (s *timeCard) GetReceivedTimeCardList(ctx context.Context, request operations.GetReceivedTimeCardListRequest) (*operations.GetReceivedTimeCardListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/receivedTimeCards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/receivedTimeCards", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

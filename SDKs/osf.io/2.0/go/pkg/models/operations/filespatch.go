@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type FilesPatchPathParams struct {
+type FilesPatchRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the file you wish to update.
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type FilesPatchRequest struct {
-	PathParams FilesPatchPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type FilesPatchResponse struct {

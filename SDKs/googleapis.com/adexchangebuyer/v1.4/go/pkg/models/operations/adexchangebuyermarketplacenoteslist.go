@@ -8,16 +8,11 @@ import (
 )
 
 type AdexchangebuyerMarketplacenotesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerMarketplacenotesListPathParams struct {
-	// The proposalId to get notes for. To search across all proposals specify order_id = '-' as part of the URL.
-	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
-}
-
-type AdexchangebuyerMarketplacenotesListQueryParams struct {
+type AdexchangebuyerMarketplacenotesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -30,16 +25,12 @@ type AdexchangebuyerMarketplacenotesListQueryParams struct {
 	PqlQuery *string `queryParam:"style=form,explode=true,name=pqlQuery"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The proposalId to get notes for. To search across all proposals specify order_id = '-' as part of the URL.
+	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerMarketplacenotesListRequest struct {
-	PathParams  AdexchangebuyerMarketplacenotesListPathParams
-	QueryParams AdexchangebuyerMarketplacenotesListQueryParams
-	Security    AdexchangebuyerMarketplacenotesListSecurity
 }
 
 type AdexchangebuyerMarketplacenotesListResponse struct {

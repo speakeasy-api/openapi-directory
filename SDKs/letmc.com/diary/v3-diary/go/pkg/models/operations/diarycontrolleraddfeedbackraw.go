@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DiaryControllerAddFeedbackRawPathParams struct {
+type DiaryControllerAddFeedbackRawRequest struct {
+	// Feedback submission model
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerAddFeedbackRawRequest struct {
-	PathParams DiaryControllerAddFeedbackRawPathParams
-	// Feedback submission model
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type DiaryControllerAddFeedbackRawResponse struct {

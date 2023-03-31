@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetRiddleSearchSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetRiddleSearchQueryParams struct {
+type GetRiddleSearchRequest struct {
 	// Category to get the riddle from
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Text to search for in the riddle
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetRiddleSearchRequest struct {
-	QueryParams GetRiddleSearchQueryParams
-	Security    GetRiddleSearchSecurity
 }
 
 type GetRiddleSearchResponse struct {

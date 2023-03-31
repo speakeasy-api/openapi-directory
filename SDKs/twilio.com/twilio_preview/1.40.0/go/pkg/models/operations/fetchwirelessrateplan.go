@@ -12,17 +12,12 @@ var FetchWirelessRatePlanServerList = []string{
 }
 
 type FetchWirelessRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchWirelessRatePlanPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchWirelessRatePlanRequest struct {
-	PathParams FetchWirelessRatePlanPathParams
-	Security   FetchWirelessRatePlanSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchWirelessRatePlanResponse struct {

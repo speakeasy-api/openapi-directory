@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlayablelocationsLogPlayerReportsQueryParams struct {
+type PlayablelocationsLogPlayerReportsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                          *shared.XgafvEnum                                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleMapsPlayablelocationsV3LogPlayerReportsRequest *shared.GoogleMapsPlayablelocationsV3LogPlayerReportsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type PlayablelocationsLogPlayerReportsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PlayablelocationsLogPlayerReportsRequest struct {
-	QueryParams PlayablelocationsLogPlayerReportsQueryParams
-	Request     *shared.GoogleMapsPlayablelocationsV3LogPlayerReportsRequest `request:"mediaType=application/json"`
 }
 
 type PlayablelocationsLogPlayerReportsResponse struct {

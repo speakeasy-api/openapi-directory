@@ -14,44 +14,35 @@ func main() {
     s := sdk.New()
 
     req := operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest{
-        Security: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributePathParams{
-            AttributesConfig: "corrupti",
-        },
-        QueryParams: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudRetailV2AddCatalogAttributeRequestInput{
+        DollarXgafv: "2",
+        GoogleCloudRetailV2AddCatalogAttributeRequestInput: &shared.GoogleCloudRetailV2AddCatalogAttributeRequestInput{
             CatalogAttribute: &shared.GoogleCloudRetailV2CatalogAttributeInput{
                 DynamicFacetableOption: "DYNAMIC_FACETABLE_ENABLED",
-                ExactSearchableOption: "EXACT_SEARCHABLE_ENABLED",
-                IndexableOption: "INDEXABLE_OPTION_UNSPECIFIED",
-                Key: "debitis",
-                RetrievableOption: "RETRIEVABLE_OPTION_UNSPECIFIED",
-                SearchableOption: "SEARCHABLE_DISABLED",
+                ExactSearchableOption: "EXACT_SEARCHABLE_DISABLED",
+                IndexableOption: "INDEXABLE_DISABLED",
+                Key: "unde",
+                RetrievableOption: "RETRIEVABLE_DISABLED",
+                SearchableOption: "SEARCHABLE_ENABLED",
             },
         },
+        AccessToken: "illum",
+        Alt: "media",
+        AttributesConfig: "error",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(ctx, req)
+    res, err := s.Projects.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(ctx, req, operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

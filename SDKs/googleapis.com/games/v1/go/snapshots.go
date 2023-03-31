@@ -32,20 +32,20 @@ func newSnapshots(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GamesSnapshotsGet - Retrieves the metadata for a given snapshot ID.
-func (s *snapshots) GamesSnapshotsGet(ctx context.Context, request operations.GamesSnapshotsGetRequest) (*operations.GamesSnapshotsGetResponse, error) {
+func (s *snapshots) GamesSnapshotsGet(ctx context.Context, request operations.GamesSnapshotsGetRequest, security operations.GamesSnapshotsGetSecurity) (*operations.GamesSnapshotsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/snapshots/{snapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/snapshots/{snapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *snapshots) GamesSnapshotsGet(ctx context.Context, request operations.Ga
 }
 
 // GamesSnapshotsList - Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
-func (s *snapshots) GamesSnapshotsList(ctx context.Context, request operations.GamesSnapshotsListRequest) (*operations.GamesSnapshotsListResponse, error) {
+func (s *snapshots) GamesSnapshotsList(ctx context.Context, request operations.GamesSnapshotsListRequest, security operations.GamesSnapshotsListSecurity) (*operations.GamesSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/snapshots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

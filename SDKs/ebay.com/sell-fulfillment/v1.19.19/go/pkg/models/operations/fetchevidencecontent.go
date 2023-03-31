@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var FetchEvidenceContentServerList = []string{
@@ -12,26 +11,16 @@ var FetchEvidenceContentServerList = []string{
 }
 
 type FetchEvidenceContentSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FetchEvidenceContentPathParams struct {
-	// The identifier of the payment dispute. The identifier of each payment dispute is returned in the <strong>getPaymentDisputeSummaries</strong> response. This identifier is passed in as a path parameter at the end of the call URI.
-	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
-}
-
-type FetchEvidenceContentQueryParams struct {
+type FetchEvidenceContentRequest struct {
 	// The identifier of the evidential file set. The identifier of an evidential file set for a payment dispute is returned under the <strong>evidence</strong> array in the <strong>getPaymentDispute</strong> response.<br><br>Below is an example of the syntax to use for this query parameter:<br><br><code>evidence_id=12345678</code>
 	EvidenceID string `queryParam:"style=form,explode=true,name=evidence_id"`
 	// The identifier of an evidential file. This file must belong to the evidential file set identified through the <strong>evidence_id</strong> query parameter. The identifier of each evidential file is returned under the <strong>evidence.files</strong> array in the <strong>getPaymentDispute</strong> response. <br><br>Below is an example of the syntax to use for this query parameter:<br><br><code>file_id=12345678</code>
 	FileID string `queryParam:"style=form,explode=true,name=file_id"`
-}
-
-type FetchEvidenceContentRequest struct {
-	PathParams  FetchEvidenceContentPathParams
-	QueryParams FetchEvidenceContentQueryParams
-	Security    FetchEvidenceContentSecurity
-	ServerURL   *string
+	// The identifier of the payment dispute. The identifier of each payment dispute is returned in the <strong>getPaymentDisputeSummaries</strong> response. This identifier is passed in as a path parameter at the end of the call URI.
+	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
 }
 
 type FetchEvidenceContentResponse struct {

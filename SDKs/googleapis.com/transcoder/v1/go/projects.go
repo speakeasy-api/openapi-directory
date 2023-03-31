@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // TranscoderProjectsLocationsJobTemplatesCreate - Creates a job template in the specified region.
-func (s *projects) TranscoderProjectsLocationsJobTemplatesCreate(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesCreateRequest) (*operations.TranscoderProjectsLocationsJobTemplatesCreateResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobTemplatesCreate(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesCreateRequest, security operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity) (*operations.TranscoderProjectsLocationsJobTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobTemplate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) TranscoderProjectsLocationsJobTemplatesCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) TranscoderProjectsLocationsJobTemplatesCreate(ctx context.Con
 }
 
 // TranscoderProjectsLocationsJobTemplatesDelete - Deletes a job template.
-func (s *projects) TranscoderProjectsLocationsJobTemplatesDelete(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest) (*operations.TranscoderProjectsLocationsJobTemplatesDeleteResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobTemplatesDelete(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest, security operations.TranscoderProjectsLocationsJobTemplatesDeleteSecurity) (*operations.TranscoderProjectsLocationsJobTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) TranscoderProjectsLocationsJobTemplatesDelete(ctx context.Con
 }
 
 // TranscoderProjectsLocationsJobTemplatesGet - Returns the job template data.
-func (s *projects) TranscoderProjectsLocationsJobTemplatesGet(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesGetRequest) (*operations.TranscoderProjectsLocationsJobTemplatesGetResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobTemplatesGet(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesGetRequest, security operations.TranscoderProjectsLocationsJobTemplatesGetSecurity) (*operations.TranscoderProjectsLocationsJobTemplatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) TranscoderProjectsLocationsJobTemplatesGet(ctx context.Contex
 }
 
 // TranscoderProjectsLocationsJobTemplatesList - Lists job templates in the specified region.
-func (s *projects) TranscoderProjectsLocationsJobTemplatesList(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesListRequest) (*operations.TranscoderProjectsLocationsJobTemplatesListResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobTemplatesList(ctx context.Context, request operations.TranscoderProjectsLocationsJobTemplatesListRequest, security operations.TranscoderProjectsLocationsJobTemplatesListSecurity) (*operations.TranscoderProjectsLocationsJobTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) TranscoderProjectsLocationsJobTemplatesList(ctx context.Conte
 }
 
 // TranscoderProjectsLocationsJobsCreate - Creates a job in the specified region.
-func (s *projects) TranscoderProjectsLocationsJobsCreate(ctx context.Context, request operations.TranscoderProjectsLocationsJobsCreateRequest) (*operations.TranscoderProjectsLocationsJobsCreateResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobsCreate(ctx context.Context, request operations.TranscoderProjectsLocationsJobsCreateRequest, security operations.TranscoderProjectsLocationsJobsCreateSecurity) (*operations.TranscoderProjectsLocationsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) TranscoderProjectsLocationsJobsCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) TranscoderProjectsLocationsJobsCreate(ctx context.Context, re
 }
 
 // TranscoderProjectsLocationsJobsList - Lists jobs in the specified region.
-func (s *projects) TranscoderProjectsLocationsJobsList(ctx context.Context, request operations.TranscoderProjectsLocationsJobsListRequest) (*operations.TranscoderProjectsLocationsJobsListResponse, error) {
+func (s *projects) TranscoderProjectsLocationsJobsList(ctx context.Context, request operations.TranscoderProjectsLocationsJobsListRequest, security operations.TranscoderProjectsLocationsJobsListSecurity) (*operations.TranscoderProjectsLocationsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetTaskSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTaskPathParams struct {
-	// UUID of the task to retrieve
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTaskRequest struct {
-	PathParams GetTaskPathParams
-	Security   GetTaskSecurity
+	// UUID of the task to retrieve
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetTaskResponse struct {

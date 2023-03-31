@@ -8,13 +8,13 @@ import (
 )
 
 type JobsProjectsTenantsClientEventsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsClientEventsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsClientEventsCreateSecurity struct {
@@ -22,14 +22,10 @@ type JobsProjectsTenantsClientEventsCreateSecurity struct {
 	Option2 *JobsProjectsTenantsClientEventsCreateSecurityOption2 `security:"option"`
 }
 
-type JobsProjectsTenantsClientEventsCreatePathParams struct {
-	// Required. Resource name of the tenant under which the event is created. The format is "projects/{project_id}/tenants/{tenant_id}", for example, "projects/foo/tenants/bar".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type JobsProjectsTenantsClientEventsCreateQueryParams struct {
+type JobsProjectsTenantsClientEventsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ClientEvent *shared.ClientEvent `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type JobsProjectsTenantsClientEventsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Resource name of the tenant under which the event is created. The format is "projects/{project_id}/tenants/{tenant_id}", for example, "projects/foo/tenants/bar".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type JobsProjectsTenantsClientEventsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsTenantsClientEventsCreateRequest struct {
-	PathParams  JobsProjectsTenantsClientEventsCreatePathParams
-	QueryParams JobsProjectsTenantsClientEventsCreateQueryParams
-	Request     *shared.ClientEvent `request:"mediaType=application/json"`
-	Security    JobsProjectsTenantsClientEventsCreateSecurity
 }
 
 type JobsProjectsTenantsClientEventsCreateResponse struct {

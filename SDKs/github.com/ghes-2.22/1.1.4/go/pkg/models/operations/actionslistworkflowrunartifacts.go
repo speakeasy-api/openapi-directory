@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListWorkflowRunArtifactsPathParams struct {
+type ActionsListWorkflowRunArtifactsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	// The id of the workflow run.
-	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsListWorkflowRunArtifactsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListWorkflowRunArtifactsRequest struct {
-	PathParams  ActionsListWorkflowRunArtifactsPathParams
-	QueryParams ActionsListWorkflowRunArtifactsQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
+	// The id of the workflow run.
+	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
 }
 
 // ActionsListWorkflowRunArtifacts200ApplicationJSON - Response

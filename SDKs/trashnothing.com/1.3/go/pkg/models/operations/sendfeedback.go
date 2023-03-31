@@ -16,10 +16,6 @@ type SendFeedbackRequestBody struct {
 	Subject string `multipartForm:"name=subject"`
 }
 
-type SendFeedbackRequest struct {
-	Request SendFeedbackRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type SendFeedbackResponse struct {
 	ContentType string
 	StatusCode  int

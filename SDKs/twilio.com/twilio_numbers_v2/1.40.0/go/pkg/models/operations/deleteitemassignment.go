@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteItemAssignmentServerList = []string{
@@ -12,20 +11,15 @@ var DeleteItemAssignmentServerList = []string{
 }
 
 type DeleteItemAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteItemAssignmentPathParams struct {
+type DeleteItemAssignmentRequest struct {
 	// The unique string that we created to identify the Bundle resource.
 	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
 	// The unique string that we created to identify the Identity resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteItemAssignmentRequest struct {
-	PathParams DeleteItemAssignmentPathParams
-	Security   DeleteItemAssignmentSecurity
-	ServerURL  *string
 }
 
 type DeleteItemAssignmentResponse struct {

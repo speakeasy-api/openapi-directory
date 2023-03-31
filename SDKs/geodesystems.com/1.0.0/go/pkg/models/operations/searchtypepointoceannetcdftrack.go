@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointOceanNetcdfTrackQueryParams struct {
+type SearchTypePointOceanNetcdfTrackRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -44,10 +44,6 @@ type SearchTypePointOceanNetcdfTrackQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointOceanNetcdfTrackRequest struct {
-	QueryParams SearchTypePointOceanNetcdfTrackQueryParams
 }
 
 type SearchTypePointOceanNetcdfTrackResponse struct {

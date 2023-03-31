@@ -10,8 +10,8 @@ import (
 )
 
 type BooksVolumesRecommendedListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksVolumesRecommendedListMaxAllowedMaturityRatingEnum - The maximum allowed maturity rating of returned recommendations. Books with a higher maturity rating are filtered out.
@@ -41,7 +41,7 @@ func (e *BooksVolumesRecommendedListMaxAllowedMaturityRatingEnum) UnmarshalJSON(
 	}
 }
 
-type BooksVolumesRecommendedListQueryParams struct {
+type BooksVolumesRecommendedListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -70,11 +70,6 @@ type BooksVolumesRecommendedListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksVolumesRecommendedListRequest struct {
-	QueryParams BooksVolumesRecommendedListQueryParams
-	Security    BooksVolumesRecommendedListSecurity
 }
 
 type BooksVolumesRecommendedListResponse struct {

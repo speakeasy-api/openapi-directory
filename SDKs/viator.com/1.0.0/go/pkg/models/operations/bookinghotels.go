@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type BookingHotelsQueryParams struct {
+type BookingHotelsRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **unique numeric identifier** of the destination
 	DestID *int64 `queryParam:"style=form,explode=true,name=destId"`
 	// **unique alphanumeric identifier** of the product
 	ProductCode *string `queryParam:"style=form,explode=true,name=productCode"`
-}
-
-type BookingHotelsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type BookingHotelsRequest struct {
-	QueryParams BookingHotelsQueryParams
-	Headers     BookingHotelsHeaders
 }
 
 type BookingHotels200ApplicationJSONData struct {

@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsCreateSelfHostedRunnerGroupForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum - Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories. Can be one of: `all`, `selected`, or `private`.
 type ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum string
 
@@ -52,8 +48,8 @@ type ActionsCreateSelfHostedRunnerGroupForOrgRequestBody struct {
 }
 
 type ActionsCreateSelfHostedRunnerGroupForOrgRequest struct {
-	PathParams ActionsCreateSelfHostedRunnerGroupForOrgPathParams
-	Request    ActionsCreateSelfHostedRunnerGroupForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateSelfHostedRunnerGroupForOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                              `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsCreateSelfHostedRunnerGroupForOrgResponse struct {

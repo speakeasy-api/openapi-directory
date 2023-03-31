@@ -4,41 +4,53 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.MetastoreOperationsCancelRequest(
-    security=operations.MetastoreOperationsCancelSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
+
+
+req = operations.MetastoreProjectsLocationsFederationsCreateRequest(
+    dollar_xgafv="2",
+    federation_input=shared.FederationInput(
+        backend_metastores={
+            "distinctio": shared.BackendMetastore(
+                metastore_type="DATAPROC_METASTORE",
+                name="unde",
+            ),
+            "nulla": shared.BackendMetastore(
+                metastore_type="DATAPROC_METASTORE",
+                name="illum",
+            ),
+            "vel": shared.BackendMetastore(
+                metastore_type="DATAPROC_METASTORE",
+                name="deserunt",
+            ),
+        },
+        labels={
+            "iure": "magnam",
+            "debitis": "ipsa",
+        },
+        name="delectus",
+        version="tempora",
     ),
-    path_params=operations.MetastoreOperationsCancelPathParams(
-        name="quia",
-    ),
-    query_params=operations.MetastoreOperationsCancelQueryParams(
-        dollar_xgafv="2",
-        access_token="cum",
-        alt="proto",
-        callback="veniam",
-        fields="ipsum",
-        key="harum",
-        oauth_token="aut",
-        pretty_print=True,
-        quota_user="ipsum",
-        upload_type="est",
-        upload_protocol="dolorem",
-    ),
-    request={
-        "molestiae": "nam",
-        "eius": "earum",
-    },
+    access_token="suscipit",
+    alt="media",
+    callback="minus",
+    federation_id="placeat",
+    fields_="voluptatum",
+    key="iusto",
+    oauth_token="excepturi",
+    parent="nisi",
+    pretty_print=False,
+    quota_user="recusandae",
+    request_id="temporibus",
+    upload_type="ab",
+    upload_protocol="quis",
 )
     
-res = s.operations.metastore_operations_cancel(req)
+res = s.projects.metastore_projects_locations_federations_create(req, operations.MetastoreProjectsLocationsFederationsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
-if res.empty is not None:
+if res.operation is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

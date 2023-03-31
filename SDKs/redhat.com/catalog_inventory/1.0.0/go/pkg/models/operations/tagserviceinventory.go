@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagServiceInventoryPathParams struct {
+type TagServiceInventoryRequest struct {
+	// Tag attributes to add
+	RequestBody []shared.Tag `request:"mediaType=application/json"`
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TagServiceInventoryRequest struct {
-	PathParams TagServiceInventoryPathParams
-	// Tag attributes to add
-	Request []shared.Tag `request:"mediaType=application/json"`
 }
 
 type TagServiceInventoryResponse struct {

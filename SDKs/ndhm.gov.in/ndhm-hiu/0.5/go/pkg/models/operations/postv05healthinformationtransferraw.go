@@ -11,15 +11,10 @@ var PostV05HealthInformationTransferRawServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type PostV05HealthInformationTransferRawHeaders struct {
+type PostV05HealthInformationTransferRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostV05HealthInformationTransferRawRequest struct {
-	Headers   PostV05HealthInformationTransferRawHeaders
-	Request   []byte `request:"mediaType=application/xml"`
-	ServerURL *string
+	RequestBody   []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05HealthInformationTransferRawResponse struct {

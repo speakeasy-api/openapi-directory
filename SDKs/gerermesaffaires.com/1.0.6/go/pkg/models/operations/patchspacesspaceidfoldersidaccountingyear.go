@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDAccountingYearPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersIDAccountingYearRequestBodyLevelEnum string
 
 const (
@@ -58,9 +51,12 @@ type PatchSpacesSpaceIDFoldersIDAccountingYearRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDAccountingYearRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDAccountingYearPathParams
 	// Accounting year to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDAccountingYearRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDAccountingYearRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDAccountingYearResponse struct {

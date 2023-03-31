@@ -3,38 +3,38 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchPutMessageRequest(
-    headers=operations.BatchPutMessageHeaders(
-        x_amz_algorithm="vel",
-        x_amz_content_sha256="cumque",
-        x_amz_credential="ea",
-        x_amz_date="earum",
-        x_amz_security_token="quisquam",
-        x_amz_signature="explicabo",
-        x_amz_signed_headers="id",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.BatchPutMessageRequestBody(
-        channel_name="aperiam",
+)
+
+
+req = operations.BatchPutMessageRequest(
+    request_body=operations.BatchPutMessageRequestBody(
+        channel_name="corrupti",
         messages=[
             shared.Message(
-                message_id="dolores",
-                payload="cum",
+                message_id="distinctio",
+                payload="quibusdam",
             ),
             shared.Message(
-                message_id="consequuntur",
-                payload="vero",
+                message_id="unde",
+                payload="nulla",
+            ),
+            shared.Message(
+                message_id="corrupti",
+                payload="illum",
             ),
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
 )
     
 res = s.batch_put_message(req)

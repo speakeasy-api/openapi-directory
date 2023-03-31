@@ -3,36 +3,32 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetClipRequest(
-    headers=operations.GetClipHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="optio",
-        x_amz_credential="ut",
-        x_amz_date="velit",
-        x_amz_security_token="velit",
-        x_amz_signature="totam",
-        x_amz_signed_headers="doloribus",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.GetClipRequestBody(
+)
+
+
+req = operations.GetClipRequest(
+    request_body=operations.GetClipRequestBody(
         clip_fragment_selector=operations.GetClipRequestBodyClipFragmentSelector(
-            fragment_selector_type="PRODUCER_TIMESTAMP",
+            fragment_selector_type="SERVER_TIMESTAMP",
             timestamp_range=shared.ClipTimestampRange(
-                end_timestamp="1995-01-21T20:44:43Z",
-                start_timestamp="1979-10-28T05:11:44Z",
+                end_timestamp="2021-07-27T21:52:56.087Z",
+                start_timestamp="2021-03-11T23:22:42.658Z",
             ),
         ),
-        stream_arn="quae",
-        stream_name="soluta",
+        stream_arn="nulla",
+        stream_name="corrupti",
     ),
+    x_amz_algorithm="illum",
+    x_amz_content_sha256="vel",
+    x_amz_credential="error",
+    x_amz_date="deserunt",
+    x_amz_security_token="suscipit",
+    x_amz_signature="iure",
+    x_amz_signed_headers="magnam",
 )
     
 res = s.get_clip(req)

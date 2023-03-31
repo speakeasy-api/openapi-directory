@@ -33,7 +33,7 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // YoutubeActivitiesList - Retrieves a list of resources, possibly filtered.
-func (s *activities) YoutubeActivitiesList(ctx context.Context, request operations.YoutubeActivitiesListRequest) (*operations.YoutubeActivitiesListResponse, error) {
+func (s *activities) YoutubeActivitiesList(ctx context.Context, request operations.YoutubeActivitiesListRequest, security operations.YoutubeActivitiesListSecurity) (*operations.YoutubeActivitiesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/activities"
 
@@ -42,11 +42,11 @@ func (s *activities) YoutubeActivitiesList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

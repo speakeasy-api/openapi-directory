@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CustomersIDPrivacyPathParams struct {
+type GetSetupV1CustomersIDPrivacyRequest struct {
 	// id of customer object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1CustomersIDPrivacyRequest struct {
-	PathParams GetSetupV1CustomersIDPrivacyPathParams
 }
 
 type GetSetupV1CustomersIDPrivacyResponse struct {

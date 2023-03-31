@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/websecurityscanner/v1beta/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,109 +15,99 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
-    security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="aut",
-    ),
-    query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="quidem",
-        alt="media",
-        callback="provident",
-        fields="amet",
-        key="repellendus",
-        oauth_token="dolorem",
-        pretty_print=False,
-        quota_user="amet",
-        upload_type="tempore",
-        upload_protocol="et",
-    ),
-    request=shared.ScanConfig(
+    dollar_xgafv="2",
+    scan_config=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
-                login_url="consectetur",
-                password="dolores",
-                username="ut",
+                login_url="provident",
+                password="distinctio",
+                username="Rosalinda_Mitchell84",
             ),
             google_account=shared.GoogleAccount(
-                password="nobis",
-                username="eum",
+                password="vel",
+                username="Linda.Oberbrunner",
             ),
             iap_credential=shared.IapCredential(
                 iap_test_service_account_info=shared.IapTestServiceAccountInfo(
-                    target_audience_client_id="voluptatem",
+                    target_audience_client_id="magnam",
                 ),
             ),
         ),
         blacklist_patterns=[
-            "et",
-            "quidem",
-            "incidunt",
+            "ipsa",
+            "delectus",
+            "tempora",
+            "suscipit",
         ],
-        display_name="vel",
-        export_to_security_command_center="ENABLED",
-        ignore_http_status_errors=True,
+        display_name="molestiae",
+        export_to_security_command_center="DISABLED",
+        ignore_http_status_errors=False,
         latest_run=shared.ScanRun(
-            end_time="voluptatem",
+            end_time="placeat",
             error_trace=shared.ScanRunErrorTrace(
-                code="SCAN_CONFIG_ISSUE",
-                most_common_http_error_code=8831363343638379985,
+                code="TIMED_OUT_WHILE_SCANNING",
+                most_common_http_error_code=479977,
                 scan_config_error=shared.ScanConfigError(
-                    code="CUSTOM_LOGIN_URL_MALFORMED",
-                    field_name="quisquam",
+                    code="MALFORMED_RESOURCE_NAME",
+                    field_name="nisi",
                 ),
             ),
-            execution_state="QUEUED",
+            execution_state="FINISHED",
             has_vulnerabilities=False,
-            name="inventore",
-            progress_percent=3405258711522167072,
-            result_state="RESULT_STATE_UNSPECIFIED",
-            start_time="eos",
-            urls_crawled_count="ut",
-            urls_tested_count="voluptates",
+            name="temporibus",
+            progress_percent=71036,
+            result_state="SUCCESS",
+            start_time="veritatis",
+            urls_crawled_count="deserunt",
+            urls_tested_count="perferendis",
             warning_traces=[
                 shared.ScanRunWarningTrace(
-                    code="TOO_MANY_FUZZ_TASKS",
+                    code="BLOCKED_BY_IAP",
                 ),
                 shared.ScanRunWarningTrace(
-                    code="INSUFFICIENT_CRAWL_RESULTS",
-                ),
-                shared.ScanRunWarningTrace(
-                    code="TOO_MANY_FUZZ_TASKS",
+                    code="NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN",
                 ),
             ],
         ),
-        managed_scan=True,
-        max_qps=1770746881013234414,
-        name="dolorem",
-        risk_level="NORMAL",
+        managed_scan=False,
+        max_qps=778157,
+        name="odit",
+        risk_level="LOW",
         schedule=shared.Schedule(
-            interval_duration_days=5951960727538493913,
-            schedule_time="mollitia",
+            interval_duration_days=870088,
+            schedule_time="maiores",
         ),
         starting_urls=[
-            "voluptas",
-            "est",
-            "quibusdam",
+            "quod",
+            "quod",
         ],
         static_ip_scan=False,
         target_platforms=[
-            "APP_ENGINE",
+            "COMPUTE",
+            "CLOUD_RUN",
         ],
-        user_agent="CHROME_LINUX",
+        user_agent="CHROME_ANDROID",
     ),
+    access_token="dicta",
+    alt="proto",
+    callback="officia",
+    fields_="occaecati",
+    key="fugit",
+    oauth_token="deleniti",
+    parent="hic",
+    pretty_print=False,
+    quota_user="optio",
+    upload_type="totam",
+    upload_protocol="beatae",
 )
     
-res = s.projects.websecurityscanner_projects_scan_configs_create(req)
+res = s.projects.websecurityscanner_projects_scan_configs_create(req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.scan_config is not None:
     # handle response
@@ -125,7 +115,8 @@ if res.scan_config is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -140,7 +131,17 @@ if res.scan_config is not None:
 * `websecurityscanner_projects_scan_configs_scan_runs_list` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
 * `websecurityscanner_projects_scan_configs_scan_runs_stop` - Stops a ScanRun. The stopped ScanRun is returned.
 * `websecurityscanner_projects_scan_configs_start` - Start a ScanRun according to the given ScanConfig.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

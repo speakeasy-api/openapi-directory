@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VenByRouteUsV1VenuesRouteQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type VenByRouteUsV1VenuesRouteQueryPostRequest struct {
-	Headers VenByRouteUsV1VenuesRouteQueryPostHeaders
-	Request shared.VenuesByRoute `request:"mediaType=application/json"`
+	VenuesByRoute shared.VenuesByRoute `request:"mediaType=application/json"`
+	XAPIKey       *string              `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type VenByRouteUsV1VenuesRouteQueryPostResponse struct {

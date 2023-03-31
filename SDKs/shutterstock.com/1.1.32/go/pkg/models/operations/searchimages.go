@@ -11,8 +11,8 @@ import (
 )
 
 type SearchImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchImagesAiIndustryEnum - For AI-powered search, specify the industry to target; requires that the `ai_search` parameter is set to true
@@ -387,7 +387,7 @@ func (e *SearchImagesViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchImagesQueryParams struct {
+type SearchImagesRequest struct {
 	// Show images added on the specified date
 	AddedDate *types.Date `queryParam:"style=form,explode=true,name=added_date"`
 	// Show images added before the specified date
@@ -468,11 +468,6 @@ type SearchImagesQueryParams struct {
 	WidthFrom *int64 `queryParam:"style=form,explode=true,name=width_from"`
 	// Show images with the specified width or smaller, in pixels
 	WidthTo *int64 `queryParam:"style=form,explode=true,name=width_to"`
-}
-
-type SearchImagesRequest struct {
-	QueryParams SearchImagesQueryParams
-	Security    SearchImagesSecurity
 }
 
 type SearchImagesResponse struct {

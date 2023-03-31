@@ -8,19 +8,14 @@ import (
 )
 
 type GetQuoteRandomSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteRandomQueryParams struct {
+type GetQuoteRandomRequest struct {
 	// Language of the Quote. The language must be supported in our system.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// No of quotes to return. The max limit depends on the subscription level.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetQuoteRandomRequest struct {
-	QueryParams GetQuoteRandomQueryParams
-	Security    GetQuoteRandomSecurity
 }
 
 type GetQuoteRandomResponse struct {

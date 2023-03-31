@@ -10,31 +10,24 @@ import (
 )
 
 type AppengineAppsAuthorizedCertificatesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesGetSecurity struct {
 	Option1 *AppengineAppsAuthorizedCertificatesGetSecurityOption1 `security:"option"`
 	Option2 *AppengineAppsAuthorizedCertificatesGetSecurityOption2 `security:"option"`
 	Option3 *AppengineAppsAuthorizedCertificatesGetSecurityOption3 `security:"option"`
-}
-
-type AppengineAppsAuthorizedCertificatesGetPathParams struct {
-	// Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	AuthorizedCertificatesID string `pathParam:"style=simple,explode=false,name=authorizedCertificatesId"`
 }
 
 // AppengineAppsAuthorizedCertificatesGetViewEnum - Controls the set of fields returned in the GET response.
@@ -61,13 +54,17 @@ func (e *AppengineAppsAuthorizedCertificatesGetViewEnum) UnmarshalJSON(data []by
 	}
 }
 
-type AppengineAppsAuthorizedCertificatesGetQueryParams struct {
+type AppengineAppsAuthorizedCertificatesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
+	// Part of `name`. See documentation of `appsId`.
+	AuthorizedCertificatesID string `pathParam:"style=simple,explode=false,name=authorizedCertificatesId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -86,12 +83,6 @@ type AppengineAppsAuthorizedCertificatesGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Controls the set of fields returned in the GET response.
 	View *AppengineAppsAuthorizedCertificatesGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type AppengineAppsAuthorizedCertificatesGetRequest struct {
-	PathParams  AppengineAppsAuthorizedCertificatesGetPathParams
-	QueryParams AppengineAppsAuthorizedCertificatesGetQueryParams
-	Security    AppengineAppsAuthorizedCertificatesGetSecurity
 }
 
 type AppengineAppsAuthorizedCertificatesGetResponse struct {

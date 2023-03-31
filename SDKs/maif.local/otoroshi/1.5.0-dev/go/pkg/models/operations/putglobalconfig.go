@@ -8,12 +8,8 @@ import (
 )
 
 type PutGlobalConfigSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PutGlobalConfigRequest struct {
-	Request  *shared.GlobalConfig `request:"mediaType=application/json"`
-	Security PutGlobalConfigSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PutGlobalConfigResponse struct {

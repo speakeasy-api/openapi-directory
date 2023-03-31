@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateGroupEmbargoOptionsDetailsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateGroupEmbargoOptionsDetailsPathParams struct {
-	// Group identifier
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateGroupEmbargoOptionsDetailsRequest struct {
-	PathParams PrivateGroupEmbargoOptionsDetailsPathParams
-	Security   PrivateGroupEmbargoOptionsDetailsSecurity
+	// Group identifier
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type PrivateGroupEmbargoOptionsDetailsResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PromisePostPathParams struct {
+type PromisePostRequest struct {
 	// The ID of the post to promise.
 	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
-type PromisePostRequest struct {
-	PathParams PromisePostPathParams
 }
 
 type PromisePostResponse struct {

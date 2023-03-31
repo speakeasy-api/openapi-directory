@@ -33,11 +33,11 @@ func newGuaranteedOrders(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // DisplayvideoGuaranteedOrdersCreate - Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
-func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersCreate(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersCreateRequest) (*operations.DisplayvideoGuaranteedOrdersCreateResponse, error) {
+func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersCreate(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersCreateRequest, security operations.DisplayvideoGuaranteedOrdersCreateSecurity) (*operations.DisplayvideoGuaranteedOrdersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/guaranteedOrders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GuaranteedOrderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersCreate(ctx context.Contex
 }
 
 // DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors - Edits read advertisers of a guaranteed order.
-func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest) (*operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse, error) {
+func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest, security operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsSecurity) (*operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditGuaranteedOrderReadAccessorsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAc
 }
 
 // DisplayvideoGuaranteedOrdersGet - Gets a guaranteed order.
-func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersGet(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersGetRequest) (*operations.DisplayvideoGuaranteedOrdersGetResponse, error) {
+func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersGet(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersGetRequest, security operations.DisplayvideoGuaranteedOrdersGetSecurity) (*operations.DisplayvideoGuaranteedOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersGet(ctx context.Context, 
 }
 
 // DisplayvideoGuaranteedOrdersList - Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersList(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersListRequest) (*operations.DisplayvideoGuaranteedOrdersListResponse, error) {
+func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersList(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersListRequest, security operations.DisplayvideoGuaranteedOrdersListSecurity) (*operations.DisplayvideoGuaranteedOrdersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/guaranteedOrders"
 
@@ -200,11 +200,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersList(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersList(ctx context.Context,
 }
 
 // DisplayvideoGuaranteedOrdersPatch - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
-func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersPatch(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersPatchRequest) (*operations.DisplayvideoGuaranteedOrdersPatchResponse, error) {
+func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersPatch(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersPatchRequest, security operations.DisplayvideoGuaranteedOrdersPatchSecurity) (*operations.DisplayvideoGuaranteedOrdersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GuaranteedOrderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

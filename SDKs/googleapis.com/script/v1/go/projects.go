@@ -33,11 +33,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ScriptProjectsCreate - Creates a new, empty script project with no script files and a base manifest file.
-func (s *projects) ScriptProjectsCreate(ctx context.Context, request operations.ScriptProjectsCreateRequest) (*operations.ScriptProjectsCreateResponse, error) {
+func (s *projects) ScriptProjectsCreate(ctx context.Context, request operations.ScriptProjectsCreateRequest, security operations.ScriptProjectsCreateSecurity) (*operations.ScriptProjectsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateProjectRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *projects) ScriptProjectsCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *projects) ScriptProjectsCreate(ctx context.Context, request operations.
 }
 
 // ScriptProjectsDeploymentsCreate - Creates a deployment of an Apps Script project.
-func (s *projects) ScriptProjectsDeploymentsCreate(ctx context.Context, request operations.ScriptProjectsDeploymentsCreateRequest) (*operations.ScriptProjectsDeploymentsCreateResponse, error) {
+func (s *projects) ScriptProjectsDeploymentsCreate(ctx context.Context, request operations.ScriptProjectsDeploymentsCreateRequest, security operations.ScriptProjectsDeploymentsCreateSecurity) (*operations.ScriptProjectsDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeploymentConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *projects) ScriptProjectsDeploymentsCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *projects) ScriptProjectsDeploymentsCreate(ctx context.Context, request 
 }
 
 // ScriptProjectsDeploymentsDelete - Deletes a deployment of an Apps Script project.
-func (s *projects) ScriptProjectsDeploymentsDelete(ctx context.Context, request operations.ScriptProjectsDeploymentsDeleteRequest) (*operations.ScriptProjectsDeploymentsDeleteResponse, error) {
+func (s *projects) ScriptProjectsDeploymentsDelete(ctx context.Context, request operations.ScriptProjectsDeploymentsDeleteRequest, security operations.ScriptProjectsDeploymentsDeleteSecurity) (*operations.ScriptProjectsDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *projects) ScriptProjectsDeploymentsDelete(ctx context.Context, request 
 }
 
 // ScriptProjectsDeploymentsGet - Gets a deployment of an Apps Script project.
-func (s *projects) ScriptProjectsDeploymentsGet(ctx context.Context, request operations.ScriptProjectsDeploymentsGetRequest) (*operations.ScriptProjectsDeploymentsGetResponse, error) {
+func (s *projects) ScriptProjectsDeploymentsGet(ctx context.Context, request operations.ScriptProjectsDeploymentsGetRequest, security operations.ScriptProjectsDeploymentsGetSecurity) (*operations.ScriptProjectsDeploymentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *projects) ScriptProjectsDeploymentsGet(ctx context.Context, request ope
 }
 
 // ScriptProjectsDeploymentsList - Lists the deployments of an Apps Script project.
-func (s *projects) ScriptProjectsDeploymentsList(ctx context.Context, request operations.ScriptProjectsDeploymentsListRequest) (*operations.ScriptProjectsDeploymentsListResponse, error) {
+func (s *projects) ScriptProjectsDeploymentsList(ctx context.Context, request operations.ScriptProjectsDeploymentsListRequest, security operations.ScriptProjectsDeploymentsListSecurity) (*operations.ScriptProjectsDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *projects) ScriptProjectsDeploymentsList(ctx context.Context, request op
 }
 
 // ScriptProjectsDeploymentsUpdate - Updates a deployment of an Apps Script project.
-func (s *projects) ScriptProjectsDeploymentsUpdate(ctx context.Context, request operations.ScriptProjectsDeploymentsUpdateRequest) (*operations.ScriptProjectsDeploymentsUpdateResponse, error) {
+func (s *projects) ScriptProjectsDeploymentsUpdate(ctx context.Context, request operations.ScriptProjectsDeploymentsUpdateRequest, security operations.ScriptProjectsDeploymentsUpdateSecurity) (*operations.ScriptProjectsDeploymentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDeploymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *projects) ScriptProjectsDeploymentsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *projects) ScriptProjectsDeploymentsUpdate(ctx context.Context, request 
 }
 
 // ScriptProjectsGet - Gets a script project's metadata.
-func (s *projects) ScriptProjectsGet(ctx context.Context, request operations.ScriptProjectsGetRequest) (*operations.ScriptProjectsGetResponse, error) {
+func (s *projects) ScriptProjectsGet(ctx context.Context, request operations.ScriptProjectsGetRequest, security operations.ScriptProjectsGetSecurity) (*operations.ScriptProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,20 +390,20 @@ func (s *projects) ScriptProjectsGet(ctx context.Context, request operations.Scr
 }
 
 // ScriptProjectsGetContent - Gets the content of the script project, including the code source and metadata for each script file.
-func (s *projects) ScriptProjectsGetContent(ctx context.Context, request operations.ScriptProjectsGetContentRequest) (*operations.ScriptProjectsGetContentResponse, error) {
+func (s *projects) ScriptProjectsGetContent(ctx context.Context, request operations.ScriptProjectsGetContentRequest, security operations.ScriptProjectsGetContentSecurity) (*operations.ScriptProjectsGetContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,20 +438,20 @@ func (s *projects) ScriptProjectsGetContent(ctx context.Context, request operati
 }
 
 // ScriptProjectsGetMetrics - Get metrics data for scripts, such as number of executions and active users.
-func (s *projects) ScriptProjectsGetMetrics(ctx context.Context, request operations.ScriptProjectsGetMetricsRequest) (*operations.ScriptProjectsGetMetricsResponse, error) {
+func (s *projects) ScriptProjectsGetMetrics(ctx context.Context, request operations.ScriptProjectsGetMetricsRequest, security operations.ScriptProjectsGetMetricsSecurity) (*operations.ScriptProjectsGetMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -486,11 +486,11 @@ func (s *projects) ScriptProjectsGetMetrics(ctx context.Context, request operati
 }
 
 // ScriptProjectsUpdateContent - Updates the content of the specified script project. This content is stored as the HEAD version, and is used when the script is executed as a trigger, in the script editor, in add-on preview mode, or as a web app or Apps Script API in development mode. This clears all the existing files in the project.
-func (s *projects) ScriptProjectsUpdateContent(ctx context.Context, request operations.ScriptProjectsUpdateContentRequest) (*operations.ScriptProjectsUpdateContentResponse, error) {
+func (s *projects) ScriptProjectsUpdateContent(ctx context.Context, request operations.ScriptProjectsUpdateContentRequest, security operations.ScriptProjectsUpdateContentSecurity) (*operations.ScriptProjectsUpdateContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/content", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Content", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -502,11 +502,11 @@ func (s *projects) ScriptProjectsUpdateContent(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -541,11 +541,11 @@ func (s *projects) ScriptProjectsUpdateContent(ctx context.Context, request oper
 }
 
 // ScriptProjectsVersionsCreate - Creates a new immutable version using the current code, with a unique version number.
-func (s *projects) ScriptProjectsVersionsCreate(ctx context.Context, request operations.ScriptProjectsVersionsCreateRequest) (*operations.ScriptProjectsVersionsCreateResponse, error) {
+func (s *projects) ScriptProjectsVersionsCreate(ctx context.Context, request operations.ScriptProjectsVersionsCreateRequest, security operations.ScriptProjectsVersionsCreateSecurity) (*operations.ScriptProjectsVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -557,11 +557,11 @@ func (s *projects) ScriptProjectsVersionsCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -596,20 +596,20 @@ func (s *projects) ScriptProjectsVersionsCreate(ctx context.Context, request ope
 }
 
 // ScriptProjectsVersionsGet - Gets a version of a script project.
-func (s *projects) ScriptProjectsVersionsGet(ctx context.Context, request operations.ScriptProjectsVersionsGetRequest) (*operations.ScriptProjectsVersionsGetResponse, error) {
+func (s *projects) ScriptProjectsVersionsGet(ctx context.Context, request operations.ScriptProjectsVersionsGetRequest, security operations.ScriptProjectsVersionsGetSecurity) (*operations.ScriptProjectsVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions/{versionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions/{versionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -644,20 +644,20 @@ func (s *projects) ScriptProjectsVersionsGet(ctx context.Context, request operat
 }
 
 // ScriptProjectsVersionsList - List the versions of a script project.
-func (s *projects) ScriptProjectsVersionsList(ctx context.Context, request operations.ScriptProjectsVersionsListRequest) (*operations.ScriptProjectsVersionsListResponse, error) {
+func (s *projects) ScriptProjectsVersionsList(ctx context.Context, request operations.ScriptProjectsVersionsListRequest, security operations.ScriptProjectsVersionsListSecurity) (*operations.ScriptProjectsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{scriptId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

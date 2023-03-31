@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteACallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteACallQueuePathParams struct {
-	// Unique Identifier of the call queue.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteACallQueueRequest struct {
-	PathParams DeleteACallQueuePathParams
-	Security   DeleteACallQueueSecurity
+	// Unique Identifier of the call queue.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type DeleteACallQueueResponse struct {

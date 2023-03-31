@@ -32,11 +32,11 @@ func newWorkers(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GenomicsWorkersCheckIn - The worker uses this method to retrieve the assigned operation and provide periodic status updates.
-func (s *workers) GenomicsWorkersCheckIn(ctx context.Context, request operations.GenomicsWorkersCheckInRequest) (*operations.GenomicsWorkersCheckInResponse, error) {
+func (s *workers) GenomicsWorkersCheckIn(ctx context.Context, request operations.GenomicsWorkersCheckInRequest, security operations.GenomicsWorkersCheckInSecurity) (*operations.GenomicsWorkersCheckInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/workers/{id}:checkIn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/workers/{id}:checkIn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckInRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *workers) GenomicsWorkersCheckIn(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

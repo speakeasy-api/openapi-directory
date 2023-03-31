@@ -8,13 +8,7 @@ import (
 )
 
 type PrivateArticleCreateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleCreateRequest struct {
-	// Article description
-	Request  shared.ArticleCreate `request:"mediaType=application/json"`
-	Security PrivateArticleCreateSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleCreateResponse struct {

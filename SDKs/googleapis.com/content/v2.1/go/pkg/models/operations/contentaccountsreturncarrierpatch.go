@@ -8,26 +8,24 @@ import (
 )
 
 type ContentAccountsReturncarrierPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentAccountsReturncarrierPatchPathParams struct {
-	// Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Required. The Google-provided unique carrier ID, used to update the resource.
-	CarrierAccountID string `pathParam:"style=simple,explode=false,name=carrierAccountId"`
-}
-
-type ContentAccountsReturncarrierPatchQueryParams struct {
+type ContentAccountsReturncarrierPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv               *shared.XgafvEnum                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AccountReturnCarrierInput *shared.AccountReturnCarrierInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The Google-provided unique carrier ID, used to update the resource.
+	CarrierAccountID string `pathParam:"style=simple,explode=false,name=carrierAccountId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,13 +40,6 @@ type ContentAccountsReturncarrierPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentAccountsReturncarrierPatchRequest struct {
-	PathParams  ContentAccountsReturncarrierPatchPathParams
-	QueryParams ContentAccountsReturncarrierPatchQueryParams
-	Request     *shared.AccountReturnCarrierInput `request:"mediaType=application/json"`
-	Security    ContentAccountsReturncarrierPatchSecurity
 }
 
 type ContentAccountsReturncarrierPatchResponse struct {

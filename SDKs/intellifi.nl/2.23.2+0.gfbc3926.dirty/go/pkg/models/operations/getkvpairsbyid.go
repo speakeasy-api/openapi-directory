@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetKvPairsByIDPathParams struct {
+type GetKvPairsByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetKvPairsByIDRequest struct {
-	PathParams GetKvPairsByIDPathParams
 }
 
 type GetKvPairsByIDResponse struct {

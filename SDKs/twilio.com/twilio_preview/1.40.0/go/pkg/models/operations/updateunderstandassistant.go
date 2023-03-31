@@ -12,12 +12,8 @@ var UpdateUnderstandAssistantServerList = []string{
 }
 
 type UpdateUnderstandAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandAssistantPathParams struct {
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandAssistantUpdateUnderstandAssistantRequest struct {
@@ -40,10 +36,9 @@ type UpdateUnderstandAssistantUpdateUnderstandAssistantRequest struct {
 }
 
 type UpdateUnderstandAssistantRequest struct {
-	PathParams UpdateUnderstandAssistantPathParams
-	Request    *UpdateUnderstandAssistantUpdateUnderstandAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandAssistantSecurity
-	ServerURL  *string
+	RequestBody *UpdateUnderstandAssistantUpdateUnderstandAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateUnderstandAssistantResponse struct {

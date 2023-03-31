@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/mybusinessbusinessinformation/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,193 +15,149 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessbusinessinformationAccountsLocationsCreateRequest(
-    path_params=operations.MybusinessbusinessinformationAccountsLocationsCreatePathParams(
-        parent="temporibus",
-    ),
-    query_params=operations.MybusinessbusinessinformationAccountsLocationsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="harum",
-        alt="media",
-        callback="fugit",
-        fields="a",
-        key="amet",
-        oauth_token="quibusdam",
-        pretty_print=False,
-        quota_user="quos",
-        request_id="omnis",
-        upload_type="est",
-        upload_protocol="id",
-        validate_only=True,
-    ),
-    request=shared.LocationInput(
+    dollar_xgafv="2",
+    location_input=shared.LocationInput(
         ad_words_location_extensions=shared.AdWordsLocationExtensions(
-            ad_phone="illum",
+            ad_phone="provident",
         ),
         categories=shared.CategoriesInput(
             additional_categories=[
                 shared.CategoryInput(
-                    name="optio",
+                    name="quibusdam",
+                ),
+                shared.CategoryInput(
+                    name="unde",
+                ),
+                shared.CategoryInput(
+                    name="nulla",
                 ),
             ],
             primary_category=shared.CategoryInput(
-                name="quisquam",
+                name="corrupti",
             ),
         ),
         labels=[
-            "et",
-            "hic",
+            "vel",
+            "error",
+            "deserunt",
+            "suscipit",
         ],
-        language_code="assumenda",
+        language_code="iure",
         latlng=shared.LatLng(
-            latitude=54.099998,
-            longitude=34.200001,
+            latitude=2975.34,
+            longitude=8917.73,
         ),
         more_hours=[
             shared.MoreHours(
-                hours_type_id="recusandae",
+                hours_type_id="delectus",
                 periods=[
+                    shared.TimePeriod(
+                        close_day="WEDNESDAY",
+                        close_time=shared.TimeOfDay(
+                            hours=477665,
+                            minutes=791725,
+                            nanos=812169,
+                            seconds=528895,
+                        ),
+                        open_day="WEDNESDAY",
+                        open_time=shared.TimeOfDay(
+                            hours=568045,
+                            minutes=392785,
+                            nanos=925597,
+                            seconds=836079,
+                        ),
+                    ),
                     shared.TimePeriod(
                         close_day="DAY_OF_WEEK_UNSPECIFIED",
                         close_time=shared.TimeOfDay(
-                            hours=2537770117610432193,
-                            minutes=1912920672296459305,
-                            nanos=6770456412245770345,
-                            seconds=6655009388421852526,
-                        ),
-                        open_day="THURSDAY",
-                        open_time=shared.TimeOfDay(
-                            hours=2906124279796139485,
-                            minutes=1460108050017592436,
-                            nanos=4496514852982219161,
-                            seconds=7830275496070812867,
-                        ),
-                    ),
-                ],
-            ),
-            shared.MoreHours(
-                hours_type_id="laborum",
-                periods=[
-                    shared.TimePeriod(
-                        close_day="MONDAY",
-                        close_time=shared.TimeOfDay(
-                            hours=140129618390307362,
-                            minutes=6481932307260638572,
-                            nanos=8624434911982963503,
-                            seconds=5301084492258222799,
+                            hours=337396,
+                            minutes=87129,
+                            nanos=648172,
+                            seconds=20218,
                         ),
                         open_day="TUESDAY",
                         open_time=shared.TimeOfDay(
-                            hours=3643434216752886557,
-                            minutes=1526691750871500017,
-                            nanos=615599060894877633,
-                            seconds=5742336221095795413,
-                        ),
-                    ),
-                    shared.TimePeriod(
-                        close_day="SUNDAY",
-                        close_time=shared.TimeOfDay(
-                            hours=6635443539021804830,
-                            minutes=8774311263671957765,
-                            nanos=1940018004485532256,
-                            seconds=350120187217077839,
-                        ),
-                        open_day="DAY_OF_WEEK_UNSPECIFIED",
-                        open_time=shared.TimeOfDay(
-                            hours=4167141316852830752,
-                            minutes=4909115012644506722,
-                            nanos=6927570835766857202,
-                            seconds=5422274956964018399,
-                        ),
-                    ),
-                    shared.TimePeriod(
-                        close_day="TUESDAY",
-                        close_time=shared.TimeOfDay(
-                            hours=2269806733975515318,
-                            minutes=770437130682450053,
-                            nanos=7979467384428972949,
-                            seconds=5700002135054739387,
-                        ),
-                        open_day="MONDAY",
-                        open_time=shared.TimeOfDay(
-                            hours=1001415491032606581,
-                            minutes=7064411216880932946,
-                            nanos=3383795025353746966,
-                            seconds=1164991827637001981,
+                            hours=832620,
+                            minutes=957156,
+                            nanos=778157,
+                            seconds=140350,
                         ),
                     ),
                 ],
             ),
         ],
-        name="maiores",
+        name="at",
         open_info=shared.OpenInfoInput(
             opening_date=shared.Date(
-                day=749565612414263141,
-                month=3009604560745221670,
-                year=6733321884604198461,
+                day=870088,
+                month=978619,
+                year=473608,
             ),
-            status="OPEN",
+            status="CLOSED_TEMPORARILY",
         ),
         phone_numbers=shared.PhoneNumbers(
             additional_phones=[
-                "nesciunt",
-                "libero",
-                "sint",
+                "esse",
+                "totam",
+                "porro",
+                "dolorum",
             ],
-            primary_phone="architecto",
+            primary_phone="dicta",
         ),
         profile=shared.Profile(
-            description="facere",
+            description="nam",
         ),
         regular_hours=shared.BusinessHours(
             periods=[
                 shared.TimePeriod(
-                    close_day="FRIDAY",
+                    close_day="THURSDAY",
                     close_time=shared.TimeOfDay(
-                        hours=801919713860541343,
-                        minutes=8091713230454783072,
-                        nanos=9104200779147671369,
-                        seconds=1363238256696863377,
-                    ),
-                    open_day="DAY_OF_WEEK_UNSPECIFIED",
-                    open_time=shared.TimeOfDay(
-                        hours=3259495980163297170,
-                        minutes=2296654132039688578,
-                        nanos=5771819234161692898,
-                        seconds=9092355897977314672,
-                    ),
-                ),
-                shared.TimePeriod(
-                    close_day="DAY_OF_WEEK_UNSPECIFIED",
-                    close_time=shared.TimeOfDay(
-                        hours=9171820464672257984,
-                        minutes=994269214858439577,
-                        nanos=8849097352879285740,
-                        seconds=5291340909935044473,
+                        hours=143353,
+                        minutes=537373,
+                        nanos=944669,
+                        seconds=758616,
                     ),
                     open_day="THURSDAY",
                     open_time=shared.TimeOfDay(
-                        hours=5619863262170207724,
-                        minutes=6639726309396845330,
-                        nanos=1219392515936132656,
-                        seconds=3350873722599631527,
+                        hours=105907,
+                        minutes=414662,
+                        nanos=473600,
+                        seconds=264555,
                     ),
                 ),
                 shared.TimePeriod(
-                    close_day="FRIDAY",
+                    close_day="MONDAY",
                     close_time=shared.TimeOfDay(
-                        hours=1138555545343431620,
-                        minutes=3648632884966860357,
-                        nanos=8585313129564246062,
-                        seconds=7364810765125760782,
+                        hours=774234,
+                        minutes=736918,
+                        nanos=456150,
+                        seconds=216550,
                     ),
-                    open_day="WEDNESDAY",
+                    open_day="THURSDAY",
                     open_time=shared.TimeOfDay(
-                        hours=3095140000035118340,
-                        minutes=5216580997470616401,
-                        nanos=7767047723797557038,
-                        seconds=3363709501079387354,
+                        hours=135218,
+                        minutes=18789,
+                        nanos=324141,
+                        seconds=617636,
+                    ),
+                ),
+                shared.TimePeriod(
+                    close_day="MONDAY",
+                    close_time=shared.TimeOfDay(
+                        hours=612096,
+                        minutes=222321,
+                        nanos=616934,
+                        seconds=386489,
+                    ),
+                    open_day="SUNDAY",
+                    open_time=shared.TimeOfDay(
+                        hours=902599,
+                        minutes=681820,
+                        nanos=449950,
+                        seconds=359508,
                     ),
                 ),
             ],
@@ -209,58 +165,73 @@ req = operations.MybusinessbusinessinformationAccountsLocationsCreateRequest(
         relationship_data=shared.RelationshipData(
             children_locations=[
                 shared.RelevantLocation(
-                    place_id="voluptatem",
+                    place_id="iure",
+                    relation_type="INDEPENDENT_ESTABLISHMENT_IN",
+                ),
+                shared.RelevantLocation(
+                    place_id="quidem",
                     relation_type="RELATION_TYPE_UNSPECIFIED",
                 ),
                 shared.RelevantLocation(
-                    place_id="itaque",
-                    relation_type="RELATION_TYPE_UNSPECIFIED",
+                    place_id="ipsa",
+                    relation_type="INDEPENDENT_ESTABLISHMENT_IN",
                 ),
             ],
-            parent_chain="quo",
+            parent_chain="est",
             parent_location=shared.RelevantLocation(
-                place_id="doloribus",
+                place_id="mollitia",
                 relation_type="INDEPENDENT_ESTABLISHMENT_IN",
             ),
         ),
         service_area=shared.ServiceAreaBusiness(
-            business_type="CUSTOMER_LOCATION_ONLY",
+            business_type="BUSINESS_TYPE_UNSPECIFIED",
             places=shared.Places(
                 place_infos=[
                     shared.PlaceInfo(
-                        place_id="dolor",
-                        place_name="quidem",
-                    ),
-                    shared.PlaceInfo(
-                        place_id="aut",
-                        place_name="possimus",
-                    ),
-                    shared.PlaceInfo(
-                        place_id="quam",
-                        place_name="harum",
+                        place_id="corporis",
+                        place_name="explicabo",
                     ),
                 ],
             ),
-            region_code="nam",
+            region_code="nobis",
         ),
         service_items=[
             shared.ServiceItem(
                 free_form_service_item=shared.FreeFormServiceItem(
-                    category="deserunt",
+                    category="omnis",
                     label=shared.Label(
-                        description="repellendus",
-                        display_name="voluptatem",
-                        language_code="reiciendis",
+                        description="nemo",
+                        display_name="minima",
+                        language_code="excepturi",
                     ),
                 ),
                 price=shared.Money(
-                    currency_code="maxime",
-                    nanos=2769094337139705554,
-                    units="iusto",
+                    currency_code="accusantium",
+                    nanos=438601,
+                    units="culpa",
                 ),
                 structured_service_item=shared.StructuredServiceItem(
-                    description="numquam",
-                    service_type_id="tempore",
+                    description="doloribus",
+                    service_type_id="sapiente",
+                ),
+            ),
+            shared.ServiceItem(
+                free_form_service_item=shared.FreeFormServiceItem(
+                    category="architecto",
+                    label=shared.Label(
+                        description="mollitia",
+                        display_name="dolorem",
+                        language_code="culpa",
+                    ),
+                ),
+                price=shared.Money(
+                    currency_code="consequuntur",
+                    nanos=995300,
+                    units="mollitia",
+                ),
+                structured_service_item=shared.StructuredServiceItem(
+                    description="occaecati",
+                    service_type_id="numquam",
                 ),
             ),
         ],
@@ -268,55 +239,91 @@ req = operations.MybusinessbusinessinformationAccountsLocationsCreateRequest(
             special_hour_periods=[
                 shared.SpecialHourPeriod(
                     close_time=shared.TimeOfDay(
-                        hours=7497738140442995187,
-                        minutes=185060451020074194,
-                        nanos=5428158002401732905,
-                        seconds=8984962643975718305,
+                        hours=466311,
+                        minutes=474697,
+                        nanos=244425,
+                        seconds=623510,
                     ),
-                    closed=True,
+                    closed=False,
                     end_date=shared.Date(
-                        day=6801276904129870564,
-                        month=3310938803414307472,
-                        year=1257723659178083677,
+                        day=158969,
+                        month=338007,
+                        year=110375,
                     ),
                     open_time=shared.TimeOfDay(
-                        hours=6424616684946641422,
-                        minutes=3416011805705925653,
-                        nanos=516569779453296898,
-                        seconds=2656648535299900283,
+                        hours=674752,
+                        minutes=656330,
+                        nanos=317202,
+                        seconds=138183,
                     ),
                     start_date=shared.Date(
-                        day=7507090394446079719,
-                        month=677422378990051746,
-                        year=6447346903261011331,
+                        day=778346,
+                        month=196582,
+                        year=949572,
+                    ),
+                ),
+                shared.SpecialHourPeriod(
+                    close_time=shared.TimeOfDay(
+                        hours=368725,
+                        minutes=662527,
+                        nanos=820994,
+                        seconds=13571,
+                    ),
+                    closed=False,
+                    end_date=shared.Date(
+                        day=97101,
+                        month=622846,
+                        year=837945,
+                    ),
+                    open_time=shared.TimeOfDay(
+                        hours=673660,
+                        minutes=96098,
+                        nanos=971945,
+                        seconds=976460,
+                    ),
+                    start_date=shared.Date(
+                        day=878194,
+                        month=468651,
+                        year=509624,
                     ),
                 ),
             ],
         ),
-        store_code="vel",
+        store_code="voluptatibus",
         storefront_address=shared.PostalAddress(
             address_lines=[
-                "molestiae",
-                "est",
-                "non",
+                "omnis",
             ],
-            administrative_area="deleniti",
-            language_code="expedita",
-            locality="aspernatur",
-            organization="dolor",
-            postal_code="quis",
+            administrative_area="voluptate",
+            language_code="cum",
+            locality="perferendis",
+            organization="doloremque",
+            postal_code="29132",
             recipients=[
-                "corrupti",
-                "ut",
+                "dicta",
+                "harum",
             ],
-            region_code="ullam",
-            revision=8461969961211307587,
-            sorting_code="voluptatibus",
-            sublocality="minima",
+            region_code="enim",
+            revision=880476,
+            sorting_code="commodi",
+            sublocality="repudiandae",
         ),
-        title="eum",
-        website_uri="praesentium",
+        title="Mr.",
+        website_uri="ipsum",
     ),
+    access_token="quidem",
+    alt="media",
+    callback="excepturi",
+    fields_="pariatur",
+    key="modi",
+    oauth_token="praesentium",
+    parent="rem",
+    pretty_print=False,
+    quota_user="voluptates",
+    request_id="quasi",
+    upload_type="repudiandae",
+    upload_protocol="sint",
+    validate_only=False,
 )
     
 res = s.accounts.mybusinessbusinessinformation_accounts_locations_create(req)
@@ -327,7 +334,8 @@ if res.location is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### accounts
 
@@ -347,7 +355,7 @@ if res.location is not None:
 
 * `mybusinessbusinessinformation_chains_search` - Searches the chain based on chain name.
 
-### googleLocations
+### google_locations
 
 * `mybusinessbusinessinformation_google_locations_search` - Search all of the possible locations that are a match to the specified request.
 
@@ -359,7 +367,17 @@ if res.location is not None:
 * `mybusinessbusinessinformation_locations_delete` - Deletes a location. If this location cannot be deleted using the API and it is marked so in the `google.mybusiness.businessinformation.v1.LocationState`, use the [Google Business Profile](https://business.google.com/manage/) website.
 * `mybusinessbusinessinformation_locations_get_attributes` - Looks up all the attributes set for a given location.
 * `mybusinessbusinessinformation_locations_update_attributes` - Update attributes for a given location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

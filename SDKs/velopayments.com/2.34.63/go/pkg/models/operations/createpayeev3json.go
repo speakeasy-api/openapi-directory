@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePayeeV3JSONRequest struct {
-	// Post payees to create.
-	Request *shared.CreatePayeesRequestV3Input `request:"mediaType=application/json"`
-}
-
 type CreatePayeeV3JSONResponse struct {
 	ContentType string
 	// HTTP Created. Body created only on CSV requests

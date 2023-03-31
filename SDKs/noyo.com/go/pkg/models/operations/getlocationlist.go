@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLocationListPathParams struct {
+type GetLocationListRequest struct {
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetLocationListQueryParams struct {
 	// The integer offset at which to start the page. Possible values are 0 to total_records - 1
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The max size of each page of results
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetLocationListRequest struct {
-	PathParams  GetLocationListPathParams
-	QueryParams GetLocationListQueryParams
 }
 
 type GetLocationListResponse struct {

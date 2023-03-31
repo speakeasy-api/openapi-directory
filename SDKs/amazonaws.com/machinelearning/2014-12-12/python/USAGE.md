@@ -3,36 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddTagsRequest(
-    headers=operations.AddTagsHeaders(
-        x_amz_algorithm="dolorem",
-        x_amz_content_sha256="facere",
-        x_amz_credential="magnam",
-        x_amz_date="aut",
-        x_amz_security_token="eum",
-        x_amz_signature="facilis",
-        x_amz_signed_headers="perferendis",
-        x_amz_target="AmazonML_20141212.AddTags",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddTagsInput(
-        resource_id="ut",
-        resource_type="MLModel",
+)
+
+
+req = operations.AddTagsRequest(
+    add_tags_input=shared.AddTagsInput(
+        resource_id="corrupti",
+        resource_type="Evaluation",
         tags=[
             shared.Tag(
-                key="ut",
-                value="ut",
+                key="quibusdam",
+                value="unde",
+            ),
+            shared.Tag(
+                key="nulla",
+                value="corrupti",
+            ),
+            shared.Tag(
+                key="illum",
+                value="vel",
             ),
         ],
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="AmazonML_20141212.AddTags",
 )
     
 res = s.add_tags(req)

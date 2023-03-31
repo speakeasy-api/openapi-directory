@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type InvoiceAPISendToAccountantRawHeaders struct {
+type InvoiceAPISendToAccountantRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type InvoiceAPISendToAccountantRawRequest struct {
-	Headers InvoiceAPISendToAccountantRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type InvoiceAPISendToAccountantRawResponse struct {

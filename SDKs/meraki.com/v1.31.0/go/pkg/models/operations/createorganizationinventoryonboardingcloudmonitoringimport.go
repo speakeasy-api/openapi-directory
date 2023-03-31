@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationInventoryOnboardingCloudMonitoringImportPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBodyDevices struct {
 	// Import ID from the Import operation
 	DeviceID string `json:"deviceId"`
@@ -25,8 +21,8 @@ type CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody struc
 }
 
 type CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest struct {
-	PathParams CreateOrganizationInventoryOnboardingCloudMonitoringImportPathParams
-	Request    CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                                `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationInventoryOnboardingCloudMonitoringImport201ApplicationJSON struct {

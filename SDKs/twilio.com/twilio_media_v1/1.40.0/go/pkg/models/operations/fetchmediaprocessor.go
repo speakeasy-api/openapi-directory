@@ -12,18 +12,13 @@ var FetchMediaProcessorServerList = []string{
 }
 
 type FetchMediaProcessorSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchMediaProcessorPathParams struct {
-	// The SID of the MediaProcessor resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchMediaProcessorRequest struct {
-	PathParams FetchMediaProcessorPathParams
-	Security   FetchMediaProcessorSecurity
-	ServerURL  *string
+	// The SID of the MediaProcessor resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchMediaProcessorResponse struct {

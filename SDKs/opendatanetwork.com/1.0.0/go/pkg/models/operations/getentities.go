@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type GetEntitiesQueryParams struct {
+type GetEntitiesRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -16,16 +18,6 @@ type GetEntitiesQueryParams struct {
 	EntityName *string `queryParam:"style=form,explode=true,name=entity_name"`
 	// Type of the entity.
 	EntityType *string `queryParam:"style=form,explode=true,name=entity_type"`
-}
-
-type GetEntitiesHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type GetEntitiesRequest struct {
-	QueryParams GetEntitiesQueryParams
-	Headers     GetEntitiesHeaders
 }
 
 type GetEntitiesResponse struct {

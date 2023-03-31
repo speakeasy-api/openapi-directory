@@ -10,7 +10,7 @@ import (
 )
 
 type CreateChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateChannelRequestBodyPrivacyEnum - The privacy level of the channel.
@@ -49,11 +49,6 @@ type CreateChannelRequestBody struct {
 	Name string `json:"name"`
 	// The privacy level of the channel.
 	Privacy CreateChannelRequestBodyPrivacyEnum `json:"privacy"`
-}
-
-type CreateChannelRequest struct {
-	Request  CreateChannelRequestBody `request:"mediaType=application/vnd.vimeo.channel+json"`
-	Security CreateChannelSecurity
 }
 
 type CreateChannelResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateEventPathParams struct {
-	// Conversation ID
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 // CreateEventRequestBody - Create New Event Request Payload Object
 type CreateEventRequestBody struct {
 	// Event Body
@@ -24,8 +19,9 @@ type CreateEventRequestBody struct {
 }
 
 type CreateEventRequest struct {
-	PathParams CreateEventPathParams
-	Request    *CreateEventRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateEventRequestBody `request:"mediaType=application/json"`
+	// Conversation ID
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 // CreateEvent201ApplicationJSON - Create New Event Response Payload Object

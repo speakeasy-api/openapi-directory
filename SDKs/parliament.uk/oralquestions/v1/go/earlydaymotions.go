@@ -37,7 +37,7 @@ func newEarlyDayMotions(defaultClient, securityClient HTTPClient, serverURL, lan
 // Get a single Early Day Motion which has the ID specified.
 func (s *earlyDayMotions) PublishedEarlyDayMotionGet(ctx context.Context, request operations.PublishedEarlyDayMotionGetRequest) (*operations.PublishedEarlyDayMotionGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/EarlyDayMotion/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/EarlyDayMotion/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *earlyDayMotions) GetEarlyDayMotionsList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

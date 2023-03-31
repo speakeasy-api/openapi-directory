@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DrillersFilesListPathParams struct {
-	PersonGUID string `pathParam:"style=simple,explode=false,name=person_guid"`
-}
-
 type DrillersFilesListRequest struct {
-	PathParams DrillersFilesListPathParams
+	PersonGUID string `pathParam:"style=simple,explode=false,name=person_guid"`
 }
 
 type DrillersFilesList200ApplicationJSONPrivate struct {

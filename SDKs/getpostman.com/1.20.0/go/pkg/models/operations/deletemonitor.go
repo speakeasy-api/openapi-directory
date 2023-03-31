@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteMonitorPathParams struct {
-	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
-}
-
 type DeleteMonitorRequest struct {
-	PathParams DeleteMonitorPathParams
+	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
 }
 
 type DeleteMonitor404ApplicationJSONError struct {

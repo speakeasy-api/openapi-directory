@@ -32,20 +32,20 @@ func newRevisions(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DriveRevisionsDelete - Permanently deletes a file version. You can only delete revisions for files with binary content in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
-func (s *revisions) DriveRevisionsDelete(ctx context.Context, request operations.DriveRevisionsDeleteRequest) (*operations.DriveRevisionsDeleteResponse, error) {
+func (s *revisions) DriveRevisionsDelete(ctx context.Context, request operations.DriveRevisionsDeleteRequest, security operations.DriveRevisionsDeleteSecurity) (*operations.DriveRevisionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *revisions) DriveRevisionsDelete(ctx context.Context, request operations
 }
 
 // DriveRevisionsGet - Gets a revision's metadata or content by ID.
-func (s *revisions) DriveRevisionsGet(ctx context.Context, request operations.DriveRevisionsGetRequest) (*operations.DriveRevisionsGetResponse, error) {
+func (s *revisions) DriveRevisionsGet(ctx context.Context, request operations.DriveRevisionsGetRequest, security operations.DriveRevisionsGetSecurity) (*operations.DriveRevisionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *revisions) DriveRevisionsGet(ctx context.Context, request operations.Dr
 }
 
 // DriveRevisionsList - Lists a file's revisions.
-func (s *revisions) DriveRevisionsList(ctx context.Context, request operations.DriveRevisionsListRequest) (*operations.DriveRevisionsListResponse, error) {
+func (s *revisions) DriveRevisionsList(ctx context.Context, request operations.DriveRevisionsListRequest, security operations.DriveRevisionsListSecurity) (*operations.DriveRevisionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *revisions) DriveRevisionsList(ctx context.Context, request operations.D
 }
 
 // DriveRevisionsUpdate - Updates a revision with patch semantics.
-func (s *revisions) DriveRevisionsUpdate(ctx context.Context, request operations.DriveRevisionsUpdateRequest) (*operations.DriveRevisionsUpdateResponse, error) {
+func (s *revisions) DriveRevisionsUpdate(ctx context.Context, request operations.DriveRevisionsUpdateRequest, security operations.DriveRevisionsUpdateSecurity) (*operations.DriveRevisionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Revision", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *revisions) DriveRevisionsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

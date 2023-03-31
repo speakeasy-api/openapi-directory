@@ -3,30 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchGetChannelRequest(
-    headers=operations.BatchGetChannelHeaders(
-        x_amz_algorithm="debitis",
-        x_amz_content_sha256="est",
-        x_amz_credential="animi",
-        x_amz_date="distinctio",
-        x_amz_security_token="hic",
-        x_amz_signature="mollitia",
-        x_amz_signed_headers="qui",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.BatchGetChannelRequestBody(
+)
+
+
+req = operations.BatchGetChannelRequest(
+    request_body=operations.BatchGetChannelRequestBody(
         arns=[
-            "labore",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
 )
     
 res = s.batch_get_channel(req)

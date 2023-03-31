@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationPathParams struct {
-	// Required. The customer managing the device. An API resource name in the format `customers/[CUSTOMER_ID]`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationQueryParams struct {
+type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                       *shared.XgafvEnum                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CustomerApplyConfigurationRequest *shared.CustomerApplyConfigurationRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationQueryParams stru
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The customer managing the device. An API resource name in the format `customers/[CUSTOMER_ID]`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -35,12 +33,6 @@ type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationQueryParams stru
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest struct {
-	PathParams  AndroiddeviceprovisioningCustomersDevicesApplyConfigurationPathParams
-	QueryParams AndroiddeviceprovisioningCustomersDevicesApplyConfigurationQueryParams
-	Request     *shared.CustomerApplyConfigurationRequest `request:"mediaType=application/json"`
 }
 
 type AndroiddeviceprovisioningCustomersDevicesApplyConfigurationResponse struct {

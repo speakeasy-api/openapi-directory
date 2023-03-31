@@ -7,22 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETProductRatePlansPathParams struct {
-	// The unique ID of a product. For example, 2c92c0f96487e16a016487f663c71a61.
-	//
-	ProductID string `pathParam:"style=simple,explode=false,name=product_id"`
-}
-
-type GETProductRatePlansQueryParams struct {
-	// Page number.
-	//
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// Number of rows returned per page.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETProductRatePlansHeaders struct {
+type GETProductRatePlansRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -31,12 +16,15 @@ type GETProductRatePlansHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETProductRatePlansRequest struct {
-	PathParams  GETProductRatePlansPathParams
-	QueryParams GETProductRatePlansQueryParams
-	Headers     GETProductRatePlansHeaders
+	// Page number.
+	//
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Number of rows returned per page.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// The unique ID of a product. For example, 2c92c0f96487e16a016487f663c71a61.
+	//
+	ProductID string `pathParam:"style=simple,explode=false,name=product_id"`
 }
 
 type GETProductRatePlansResponse struct {

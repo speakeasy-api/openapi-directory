@@ -31,20 +31,20 @@ func newTwoStepVerification(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // DirectoryTwoStepVerificationTurnOff - Turns off 2-Step Verification for user.
-func (s *twoStepVerification) DirectoryTwoStepVerificationTurnOff(ctx context.Context, request operations.DirectoryTwoStepVerificationTurnOffRequest) (*operations.DirectoryTwoStepVerificationTurnOffResponse, error) {
+func (s *twoStepVerification) DirectoryTwoStepVerificationTurnOff(ctx context.Context, request operations.DirectoryTwoStepVerificationTurnOffRequest, security operations.DirectoryTwoStepVerificationTurnOffSecurity) (*operations.DirectoryTwoStepVerificationTurnOffResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/twoStepVerification/turnOff", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/twoStepVerification/turnOff", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

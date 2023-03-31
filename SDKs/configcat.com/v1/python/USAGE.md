@@ -3,31 +3,21 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        basic=shared.SchemeBasic(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
 )
-    
+
+
 req = operations.GetAuditlogsRequest(
-    path_params=operations.GetAuditlogsPathParams(
-        product_id="ea",
-    ),
-    query_params=operations.GetAuditlogsQueryParams(
-        audit_log_type={
-            "dolor": "voluptatem",
-            "illo": "est",
-            "reprehenderit": "facilis",
-        },
-        config_id="aliquid",
-        environment_id="iure",
-        from_utc_date_time="2004-03-31T03:18:23Z",
-        to_utc_date_time="1997-12-15T16:24:08Z",
-    ),
+    audit_log_type="integrationLinkAdded",
+    config_id="9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+    environment_id="05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+    from_utc_date_time="2022-02-02T00:14:45.467Z",
+    product_id="39205929-396f-4ea7-996e-b10faaa2352c",
+    to_utc_date_time="2022-05-24T03:24:11.703Z",
 )
     
 res = s.audit_logs.get_auditlogs(req)

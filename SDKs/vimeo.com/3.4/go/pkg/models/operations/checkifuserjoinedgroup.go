@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserJoinedGroupPathParams struct {
+type CheckIfUserJoinedGroupRequest struct {
 	// The ID of the group.
 	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type CheckIfUserJoinedGroupRequest struct {
-	PathParams CheckIfUserJoinedGroupPathParams
 }
 
 type CheckIfUserJoinedGroupResponse struct {

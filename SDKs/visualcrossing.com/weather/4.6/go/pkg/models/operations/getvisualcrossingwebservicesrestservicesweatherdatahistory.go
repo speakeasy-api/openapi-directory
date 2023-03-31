@@ -10,7 +10,7 @@ var GetVisualCrossingWebServicesRestServicesWeatherdataHistoryServerList = []str
 	"https://weather.visualcrossing.com",
 }
 
-type GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams struct {
+type GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest struct {
 	AggregateHours              *string `queryParam:"style=form,explode=true,name=aggregateHours"`
 	AllowAsynch                 *bool   `queryParam:"style=form,explode=true,name=allowAsynch"`
 	CollectStationContributions *bool   `queryParam:"style=form,explode=true,name=collectStationContributions"`
@@ -24,11 +24,6 @@ type GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams struc
 	ShortColumnNames            *bool   `queryParam:"style=form,explode=true,name=shortColumnNames"`
 	StartDateTime               *string `queryParam:"style=form,explode=true,name=startDateTime"`
 	UnitGroup                   *string `queryParam:"style=form,explode=true,name=unitGroup"`
-}
-
-type GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest struct {
-	QueryParams GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams
-	ServerURL   *string
 }
 
 type GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse struct {

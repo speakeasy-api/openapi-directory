@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest{
-        PathParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionPathParams{
-            FileFormatExtension: "shpz",
-            GeomarkID: "provident",
-        },
-        QueryParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionQueryParams{
-            Srid: "26909",
-        },
+        FileFormatExtension: "shpz",
+        GeomarkID: "provident",
+        Srid: "26909",
     }
 
     ctx := context.Background()

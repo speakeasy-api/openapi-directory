@@ -380,16 +380,16 @@ func newFacets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ```
 func (s *facets) Facetscategory(ctx context.Context, request operations.FacetscategoryRequest) (*operations.FacetscategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/search/{term}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/search/{term}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -451,16 +451,16 @@ func (s *facets) Facetscategory(ctx context.Context, request operations.Facetsca
 // ```
 func (s *facets) GetAPICatalogSystemPubFacetsCategoryCategoryID(ctx context.Context, request operations.GetAPICatalogSystemPubFacetsCategoryCategoryIDRequest) (*operations.GetAPICatalogSystemPubFacetsCategoryCategoryIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/category/{categoryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/category/{categoryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

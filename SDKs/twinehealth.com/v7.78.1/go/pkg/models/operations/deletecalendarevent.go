@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCalendarEventPathParams struct {
+type DeleteCalendarEventRequest struct {
 	// Calendar event identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCalendarEventRequest struct {
-	PathParams DeleteCalendarEventPathParams
 }
 
 type DeleteCalendarEventResponse struct {

@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PutQuoteImageSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type PutQuoteImageQueryParams struct {
+type PutQuoteImageRequest struct {
 	// Background Color(if background image id is not supplied)
 	BgColor *string `queryParam:"style=form,explode=true,name=bg_color"`
 	// Background Image id ( Will override bgcolor if supplied)
@@ -36,11 +35,6 @@ type PutQuoteImageQueryParams struct {
 	Valign *string `queryParam:"style=form,explode=true,name=valign"`
 	// Image Width(By default this takes the width of the background image)
 	Width *int64 `queryParam:"style=form,explode=true,name=width"`
-}
-
-type PutQuoteImageRequest struct {
-	QueryParams PutQuoteImageQueryParams
-	Security    PutQuoteImageSecurity
 }
 
 type PutQuoteImageResponse struct {

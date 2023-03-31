@@ -12,14 +12,8 @@ var CreateSipCredentialServerList = []string{
 }
 
 type CreateSipCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipCredentialPathParams struct {
-	// The unique id of the Account that is responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The unique id that identifies the credential list to include the created credential.
-	CredentialListSid string `pathParam:"style=simple,explode=false,name=CredentialListSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipCredentialCreateSipCredentialRequest struct {
@@ -30,10 +24,11 @@ type CreateSipCredentialCreateSipCredentialRequest struct {
 }
 
 type CreateSipCredentialRequest struct {
-	PathParams CreateSipCredentialPathParams
-	Request    *CreateSipCredentialCreateSipCredentialRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipCredentialSecurity
-	ServerURL  *string
+	// The unique id of the Account that is responsible for this resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The unique id that identifies the credential list to include the created credential.
+	CredentialListSid string                                         `pathParam:"style=simple,explode=false,name=CredentialListSid"`
+	RequestBody       *CreateSipCredentialCreateSipCredentialRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipCredentialResponse struct {

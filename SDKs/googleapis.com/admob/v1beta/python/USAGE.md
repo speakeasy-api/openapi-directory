@@ -4,26 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AdmobAccountsAdSourcesListRequest(
-    path_params=operations.AdmobAccountsAdSourcesListPathParams(
-        parent="temporibus",
-    ),
-    query_params=operations.AdmobAccountsAdSourcesListQueryParams(
-        dollar_xgafv="2",
-        access_token="tenetur",
-        alt="proto",
-        callback="officiis",
-        fields="optio",
-        key="tenetur",
-        oauth_token="molestiae",
-        page_size=4341844419008172106,
-        page_token="sint",
-        pretty_print=False,
-        quota_user="exercitationem",
-        upload_type="quia",
-        upload_protocol="est",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    parent="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
 res = s.accounts.admob_accounts_ad_sources_list(req)

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ObjectGETSubscriptionPathParams struct {
-	// Object id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ObjectGETSubscriptionQueryParams struct {
-	// Object fields to return
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-}
-
-type ObjectGETSubscriptionHeaders struct {
+type ObjectGETSubscriptionRequest struct {
 	// Zuora WSDL version number.
 	//
 	XZuoraWSDLVersion *string `header:"style=simple,explode=false,name=X-Zuora-WSDL-Version"`
@@ -29,12 +19,10 @@ type ObjectGETSubscriptionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type ObjectGETSubscriptionRequest struct {
-	PathParams  ObjectGETSubscriptionPathParams
-	QueryParams ObjectGETSubscriptionQueryParams
-	Headers     ObjectGETSubscriptionHeaders
+	// Object fields to return
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Object id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ObjectGETSubscriptionResponse struct {

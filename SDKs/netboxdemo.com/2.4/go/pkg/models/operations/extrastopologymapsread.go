@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTopologyMapsReadPathParams struct {
+type ExtrasTopologyMapsReadRequest struct {
 	// A unique integer value identifying this topology map.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTopologyMapsReadRequest struct {
-	PathParams ExtrasTopologyMapsReadPathParams
 }
 
 type ExtrasTopologyMapsReadResponse struct {

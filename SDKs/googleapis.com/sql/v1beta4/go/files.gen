@@ -82,7 +82,6 @@ pkg/models/shared/operationerror.go
 pkg/models/shared/backupcontext.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/backuprun.go
 pkg/models/shared/diskencryptionstatus.go
 pkg/models/shared/diskencryptionconfiguration.go

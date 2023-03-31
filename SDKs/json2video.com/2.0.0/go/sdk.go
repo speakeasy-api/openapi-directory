@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 	"time"
@@ -130,7 +131,7 @@ func (s *SDK) GetMovies(ctx context.Context) (*operations.GetMoviesResponse, err
 
 // NewMovie - Create a new movie
 // Submit a new movie rendering job.
-func (s *SDK) NewMovie(ctx context.Context, request operations.NewMovieRequest) (*operations.NewMovieResponse, error) {
+func (s *SDK) NewMovie(ctx context.Context, request shared.Movie) (*operations.NewMovieResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/movies"
 

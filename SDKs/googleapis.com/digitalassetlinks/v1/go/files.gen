@@ -18,13 +18,13 @@ pkg/models/operations/digitalassetlinksassetlinkscheck.go
 pkg/models/operations/digitalassetlinksstatementslist.go
 pkg/models/shared/bulkcheckresponse.go
 pkg/models/shared/checkresponse.go
+pkg/models/shared/altenum.go
 pkg/models/shared/bulkcheckrequest.go
 pkg/models/shared/statementtemplate.go
 pkg/models/shared/asset.go
 pkg/models/shared/webasset.go
 pkg/models/shared/androidappasset.go
 pkg/models/shared/certificateinfo.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/listresponse.go
 pkg/models/shared/statement.go

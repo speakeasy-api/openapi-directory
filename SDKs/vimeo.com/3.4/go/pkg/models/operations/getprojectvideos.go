@@ -10,14 +10,7 @@ import (
 )
 
 type GetProjectVideosSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetProjectVideosPathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetProjectVideosDirectionEnum - The sort direction of the results.
@@ -77,21 +70,19 @@ func (e *GetProjectVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectVideosQueryParams struct {
+type GetProjectVideosRequest struct {
 	// The sort direction of the results.
 	Direction *GetProjectVideosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The way to sort the results.
 	Sort *GetProjectVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetProjectVideosRequest struct {
-	PathParams  GetProjectVideosPathParams
-	QueryParams GetProjectVideosQueryParams
-	Security    GetProjectVideosSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetProjectVideosResponse struct {

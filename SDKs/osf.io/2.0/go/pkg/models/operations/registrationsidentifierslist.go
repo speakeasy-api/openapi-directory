@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type RegistrationsIdentifiersListPathParams struct {
+type RegistrationsIdentifiersListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsIdentifiersListRequest struct {
-	PathParams RegistrationsIdentifiersListPathParams
 }
 
 // RegistrationsIdentifiersListIdentifierAttributesCategoryEnum - The category of the identifier

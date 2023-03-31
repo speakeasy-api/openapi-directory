@@ -42,7 +42,7 @@ func (s *search) SearchInIndex(ctx context.Context, request operations.SearchInI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -73,7 +73,7 @@ func (s *search) SearchInIndex(ctx context.Context, request operations.SearchInI
 
 // SearchInIndex1 - Search in index
 // Search in index
-func (s *search) SearchInIndex1(ctx context.Context, request operations.SearchInIndex1Request) (*operations.SearchInIndex1Response, error) {
+func (s *search) SearchInIndex1(ctx context.Context, request operations.SearchInIndex1RequestBody) (*operations.SearchInIndex1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/search"
 

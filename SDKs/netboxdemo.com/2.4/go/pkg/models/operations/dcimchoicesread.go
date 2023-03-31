@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DcimChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DcimChoicesReadRequest struct {
-	PathParams DcimChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DcimChoicesReadResponse struct {

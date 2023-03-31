@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurity struct {
@@ -22,12 +22,7 @@ type BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurity struct {
 	Option2 *BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurityOption2 `security:"option"`
 }
 
-type BigqueryreservationProjectsLocationsSearchAllAssignmentsPathParams struct {
-	// Required. The resource name with location (project name could be the wildcard '-'), e.g.: `projects/-/locations/US`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigqueryreservationProjectsLocationsSearchAllAssignmentsQueryParams struct {
+type BigqueryreservationProjectsLocationsSearchAllAssignmentsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type BigqueryreservationProjectsLocationsSearchAllAssignmentsQueryParams struct 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous List request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name with location (project name could be the wildcard '-'), e.g.: `projects/-/locations/US`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Please specify resource name as assignee in the query. Examples: * `assignee=projects/myproject` * `assignee=folders/123` * `assignee=organizations/456`
@@ -56,12 +53,6 @@ type BigqueryreservationProjectsLocationsSearchAllAssignmentsQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigqueryreservationProjectsLocationsSearchAllAssignmentsRequest struct {
-	PathParams  BigqueryreservationProjectsLocationsSearchAllAssignmentsPathParams
-	QueryParams BigqueryreservationProjectsLocationsSearchAllAssignmentsQueryParams
-	Security    BigqueryreservationProjectsLocationsSearchAllAssignmentsSecurity
 }
 
 type BigqueryreservationProjectsLocationsSearchAllAssignmentsResponse struct {

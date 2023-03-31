@@ -12,24 +12,15 @@ var ListFaxMediaServerList = []string{
 }
 
 type ListFaxMediaSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type ListFaxMediaPathParams struct {
-	// The SID of the fax with the FaxMedia resources to read.
-	FaxSid string `pathParam:"style=simple,explode=false,name=FaxSid"`
-}
-
-type ListFaxMediaQueryParams struct {
-	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ListFaxMediaRequest struct {
-	PathParams  ListFaxMediaPathParams
-	QueryParams ListFaxMediaQueryParams
-	Security    ListFaxMediaSecurity
-	ServerURL   *string
+	// The SID of the fax with the FaxMedia resources to read.
+	FaxSid string `pathParam:"style=simple,explode=false,name=FaxSid"`
+	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 }
 
 type ListFaxMediaListFaxMediaResponseMeta struct {

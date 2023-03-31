@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMonatsbelegePathParams struct {
+type GetMonatsbelegeRequest struct {
+	Month *int64 `queryParam:"style=form,explode=true,name=month"`
 	// The `_uuid` of the `Registrierkasse`.
 	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type GetMonatsbelegeQueryParams struct {
-	Month *int64 `queryParam:"style=form,explode=true,name=month"`
-	Year  *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetMonatsbelegeRequest struct {
-	PathParams  GetMonatsbelegePathParams
-	QueryParams GetMonatsbelegeQueryParams
+	Year                *int64 `queryParam:"style=form,explode=true,name=year"`
 }
 
 type GetMonatsbelegeResponse struct {

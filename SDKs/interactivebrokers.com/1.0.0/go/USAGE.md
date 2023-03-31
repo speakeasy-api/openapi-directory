@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            CookieAuth: shared.SchemeCookieAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            CookieAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetAccountsRequest{
-        QueryParams: operations.GetAccountsQueryParams{
-            Account: "corrupti",
-        },
+        Account: "corrupti",
     }
 
     ctx := context.Background()

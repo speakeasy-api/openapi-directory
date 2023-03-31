@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmIdentityProviderInstancesAliasMappersIDPathParams struct {
+type GetRealmIdentityProviderInstancesAliasMappersIDRequest struct {
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// Mapper id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmIdentityProviderInstancesAliasMappersIDRequest struct {
-	PathParams GetRealmIdentityProviderInstancesAliasMappersIDPathParams
 }
 
 type GetRealmIdentityProviderInstancesAliasMappersIDResponse struct {

@@ -37,14 +37,14 @@ func newBehaviors(defaultClient, securityClient HTTPClient, serverURL, language,
 // List Behaviors by path
 func (s *behaviors) BehaviorListForPath(ctx context.Context, request operations.BehaviorListForPathRequest) (*operations.BehaviorListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/folders/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/behaviors/folders/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *behaviors) BehaviorListForPath(ctx context.Context, request operations.
 // Delete Behavior
 func (s *behaviors) DeleteBehaviorsID(ctx context.Context, request operations.DeleteBehaviorsIDRequest) (*operations.DeleteBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *behaviors) GetBehaviors(ctx context.Context, request operations.GetBeha
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,7 +229,7 @@ func (s *behaviors) GetBehaviors(ctx context.Context, request operations.GetBeha
 // Show Behavior
 func (s *behaviors) GetBehaviorsID(ctx context.Context, request operations.GetBehaviorsIDRequest) (*operations.GetBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -293,9 +293,9 @@ func (s *behaviors) GetBehaviorsID(ctx context.Context, request operations.GetBe
 // Update Behavior
 func (s *behaviors) PatchBehaviorsID(ctx context.Context, request operations.PatchBehaviorsIDRequest) (*operations.PatchBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -362,7 +362,7 @@ func (s *behaviors) PatchBehaviorsID(ctx context.Context, request operations.Pat
 
 // PostBehaviors - Create Behavior
 // Create Behavior
-func (s *behaviors) PostBehaviors(ctx context.Context, request operations.PostBehaviorsRequest) (*operations.PostBehaviorsResponse, error) {
+func (s *behaviors) PostBehaviors(ctx context.Context, request operations.PostBehaviorsRequestBody) (*operations.PostBehaviorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/behaviors"
 
@@ -433,7 +433,7 @@ func (s *behaviors) PostBehaviors(ctx context.Context, request operations.PostBe
 
 // PostBehaviorsWebhookTest - Test webhook.
 // Test webhook.
-func (s *behaviors) PostBehaviorsWebhookTest(ctx context.Context, request operations.PostBehaviorsWebhookTestRequest) (*operations.PostBehaviorsWebhookTestResponse, error) {
+func (s *behaviors) PostBehaviorsWebhookTest(ctx context.Context, request operations.PostBehaviorsWebhookTestRequestBody) (*operations.PostBehaviorsWebhookTestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/behaviors/webhook/test"
 

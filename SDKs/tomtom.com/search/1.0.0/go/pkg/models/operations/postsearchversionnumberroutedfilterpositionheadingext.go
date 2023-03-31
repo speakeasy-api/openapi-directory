@@ -7,22 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
-	Heading float32 `pathParam:"style=simple,explode=false,name=heading"`
-	// This is specified as a comma separated string composed of lat., lon.
-	Position string `pathParam:"style=simple,explode=false,name=position"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams struct {
-	// Only return results that arrive from routing engine within this time limit.
-	RoutingTimeout *int64 `queryParam:"style=form,explode=true,name=routingTimeout"`
-}
-
 type PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress struct {
 	FreeformAddress *string `json:"freeformAddress,omitempty"`
 }
@@ -47,9 +31,17 @@ type PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody struct {
 }
 
 type PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest struct {
-	PathParams  PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams
-	QueryParams PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams
-	Request     *PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody `request:"mediaType=application/json"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
+	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+	Heading float32 `pathParam:"style=simple,explode=false,name=heading"`
+	// This is specified as a comma separated string composed of lat., lon.
+	Position string `pathParam:"style=simple,explode=false,name=position"`
+	// Only return results that arrive from routing engine within this time limit.
+	RoutingTimeout *int64 `queryParam:"style=form,explode=true,name=routingTimeout"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse struct {

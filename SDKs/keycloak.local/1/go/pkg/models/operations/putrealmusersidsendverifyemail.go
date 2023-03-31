@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type PutRealmUsersIDSendVerifyEmailPathParams struct {
+type PutRealmUsersIDSendVerifyEmailRequest struct {
+	// Client id
+	ClientID *string `queryParam:"style=form,explode=true,name=client_id"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDSendVerifyEmailQueryParams struct {
-	// Client id
-	ClientID *string `queryParam:"style=form,explode=true,name=client_id"`
 	// Redirect uri
 	RedirectURI *string `queryParam:"style=form,explode=true,name=redirect_uri"`
-}
-
-type PutRealmUsersIDSendVerifyEmailRequest struct {
-	PathParams  PutRealmUsersIDSendVerifyEmailPathParams
-	QueryParams PutRealmUsersIDSendVerifyEmailQueryParams
 }
 
 type PutRealmUsersIDSendVerifyEmailResponse struct {

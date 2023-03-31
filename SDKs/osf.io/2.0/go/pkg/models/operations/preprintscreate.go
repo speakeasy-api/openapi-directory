@@ -39,10 +39,6 @@ type PreprintsCreatePreprintInput struct {
 	Type string `json:"type"`
 }
 
-type PreprintsCreateRequest struct {
-	Request PreprintsCreatePreprintInput `request:"mediaType=application/json"`
-}
-
 type PreprintsCreateResponse struct {
 	ContentType string
 	StatusCode  int

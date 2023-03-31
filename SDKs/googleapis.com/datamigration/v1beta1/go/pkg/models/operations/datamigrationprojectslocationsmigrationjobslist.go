@@ -8,16 +8,11 @@ import (
 )
 
 type DatamigrationProjectsLocationsMigrationJobsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatamigrationProjectsLocationsMigrationJobsListPathParams struct {
-	// Required. The parent, which owns this collection of migrationJobs.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatamigrationProjectsLocationsMigrationJobsListQueryParams struct {
+type DatamigrationProjectsLocationsMigrationJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type DatamigrationProjectsLocationsMigrationJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The nextPageToken value received in the previous call to migrationJobs.list, used in the subsequent request to retrieve the next page of results. On first call this should be left blank. When paginating, all other parameters provided to migrationJobs.list must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent, which owns this collection of migrationJobs.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type DatamigrationProjectsLocationsMigrationJobsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatamigrationProjectsLocationsMigrationJobsListRequest struct {
-	PathParams  DatamigrationProjectsLocationsMigrationJobsListPathParams
-	QueryParams DatamigrationProjectsLocationsMigrationJobsListQueryParams
-	Security    DatamigrationProjectsLocationsMigrationJobsListSecurity
 }
 
 type DatamigrationProjectsLocationsMigrationJobsListResponse struct {

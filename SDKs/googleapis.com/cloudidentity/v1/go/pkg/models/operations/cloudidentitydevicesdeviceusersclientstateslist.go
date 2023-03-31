@@ -8,13 +8,13 @@ import (
 )
 
 type CloudidentityDevicesDeviceUsersClientStatesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesDeviceUsersClientStatesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesDeviceUsersClientStatesListSecurity struct {
@@ -22,12 +22,7 @@ type CloudidentityDevicesDeviceUsersClientStatesListSecurity struct {
 	Option2 *CloudidentityDevicesDeviceUsersClientStatesListSecurityOption2 `security:"option"`
 }
 
-type CloudidentityDevicesDeviceUsersClientStatesListPathParams struct {
-	// Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all ClientStates owned by a DeviceUser, set this to the resource name of the DeviceUser. Format: devices/{device}/deviceUsers/{deviceUser}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityDevicesDeviceUsersClientStatesListQueryParams struct {
+type CloudidentityDevicesDeviceUsersClientStatesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,6 +45,8 @@ type CloudidentityDevicesDeviceUsersClientStatesListQueryParams struct {
 	OrderBy *string `queryParam:"style=form,explode=true,name=orderBy"`
 	// Optional. A page token, received from a previous `ListClientStates` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListClientStates` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all ClientStates owned by a DeviceUser, set this to the resource name of the DeviceUser. Format: devices/{device}/deviceUsers/{deviceUser}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -58,12 +55,6 @@ type CloudidentityDevicesDeviceUsersClientStatesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityDevicesDeviceUsersClientStatesListRequest struct {
-	PathParams  CloudidentityDevicesDeviceUsersClientStatesListPathParams
-	QueryParams CloudidentityDevicesDeviceUsersClientStatesListQueryParams
-	Security    CloudidentityDevicesDeviceUsersClientStatesListSecurity
 }
 
 type CloudidentityDevicesDeviceUsersClientStatesListResponse struct {

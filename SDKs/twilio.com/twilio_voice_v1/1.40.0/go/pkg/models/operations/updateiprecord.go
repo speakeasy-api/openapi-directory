@@ -12,12 +12,8 @@ var UpdateIPRecordServerList = []string{
 }
 
 type UpdateIPRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateIPRecordPathParams struct {
-	// The Twilio-provided string that uniquely identifies the IP Record resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateIPRecordUpdateIPRecordRequest struct {
@@ -26,10 +22,9 @@ type UpdateIPRecordUpdateIPRecordRequest struct {
 }
 
 type UpdateIPRecordRequest struct {
-	PathParams UpdateIPRecordPathParams
-	Request    *UpdateIPRecordUpdateIPRecordRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateIPRecordSecurity
-	ServerURL  *string
+	RequestBody *UpdateIPRecordUpdateIPRecordRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the IP Record resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateIPRecordResponse struct {

@@ -32,20 +32,20 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AndroidenterprisePermissionsGet - Retrieves details of an Android app permission for display to an enterprise admin.
-func (s *permissions) AndroidenterprisePermissionsGet(ctx context.Context, request operations.AndroidenterprisePermissionsGetRequest) (*operations.AndroidenterprisePermissionsGetResponse, error) {
+func (s *permissions) AndroidenterprisePermissionsGet(ctx context.Context, request operations.AndroidenterprisePermissionsGetRequest, security operations.AndroidenterprisePermissionsGetSecurity) (*operations.AndroidenterprisePermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/permissions/{permissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

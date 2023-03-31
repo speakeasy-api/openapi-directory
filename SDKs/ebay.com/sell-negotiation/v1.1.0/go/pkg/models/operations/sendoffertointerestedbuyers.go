@@ -8,19 +8,14 @@ import (
 )
 
 type SendOfferToInterestedBuyersSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type SendOfferToInterestedBuyersHeaders struct {
-	// The eBay marketplace on which your listings with &quot;eligible&quot; buyers appear. For a complete list of supported marketplaces, see Negotiation API requirements and restrictions.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SendOfferToInterestedBuyersRequest struct {
-	Headers SendOfferToInterestedBuyersHeaders
 	// Send offer to eligible items request.
-	Request  *shared.CreateOffersRequest `request:"mediaType=application/json"`
-	Security SendOfferToInterestedBuyersSecurity
+	CreateOffersRequest *shared.CreateOffersRequest `request:"mediaType=application/json"`
+	// The eBay marketplace on which your listings with &quot;eligible&quot; buyers appear. For a complete list of supported marketplaces, see Negotiation API requirements and restrictions.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type SendOfferToInterestedBuyersResponse struct {

@@ -33,7 +33,7 @@ func (e *PagespeedonlinePagespeedapiRunpagespeedStrategyEnum) UnmarshalJSON(data
 	}
 }
 
-type PagespeedonlinePagespeedapiRunpagespeedQueryParams struct {
+type PagespeedonlinePagespeedapiRunpagespeedRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -66,10 +66,6 @@ type PagespeedonlinePagespeedapiRunpagespeedQueryParams struct {
 	UtmCampaign *string `queryParam:"style=form,explode=true,name=utm_campaign"`
 	// Campaign source for analytics.
 	UtmSource *string `queryParam:"style=form,explode=true,name=utm_source"`
-}
-
-type PagespeedonlinePagespeedapiRunpagespeedRequest struct {
-	QueryParams PagespeedonlinePagespeedapiRunpagespeedQueryParams
 }
 
 type PagespeedonlinePagespeedapiRunpagespeedResponse struct {

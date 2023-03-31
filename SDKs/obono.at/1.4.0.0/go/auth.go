@@ -34,7 +34,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetAuth - Request a JWT access token using your obono username and password.
-func (s *auth) GetAuth(ctx context.Context, request operations.GetAuthRequest) (*operations.GetAuthResponse, error) {
+func (s *auth) GetAuth(ctx context.Context) (*operations.GetAuthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth"
 
@@ -43,7 +43,7 @@ func (s *auth) GetAuth(ctx context.Context, request operations.GetAuthRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

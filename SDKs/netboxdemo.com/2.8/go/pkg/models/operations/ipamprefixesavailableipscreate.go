@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamPrefixesAvailableIpsCreatePathParams struct {
+type IpamPrefixesAvailableIpsCreateRequest struct {
 	// A unique integer value identifying this prefix.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamPrefixesAvailableIpsCreateRequest struct {
-	PathParams IpamPrefixesAvailableIpsCreatePathParams
 }
 
 type IpamPrefixesAvailableIpsCreateResponse struct {

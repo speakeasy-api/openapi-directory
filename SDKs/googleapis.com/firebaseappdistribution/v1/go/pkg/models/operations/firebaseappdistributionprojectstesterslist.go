@@ -8,16 +8,11 @@ import (
 )
 
 type FirebaseappdistributionProjectsTestersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FirebaseappdistributionProjectsTestersListPathParams struct {
-	// Required. The name of the project resource, which is the parent of the tester resources. Format: `projects/{project_number}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappdistributionProjectsTestersListQueryParams struct {
+type FirebaseappdistributionProjectsTestersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type FirebaseappdistributionProjectsTestersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListTesters` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListTesters` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the project resource, which is the parent of the tester resources. Format: `projects/{project_number}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type FirebaseappdistributionProjectsTestersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappdistributionProjectsTestersListRequest struct {
-	PathParams  FirebaseappdistributionProjectsTestersListPathParams
-	QueryParams FirebaseappdistributionProjectsTestersListQueryParams
-	Security    FirebaseappdistributionProjectsTestersListSecurity
 }
 
 type FirebaseappdistributionProjectsTestersListResponse struct {

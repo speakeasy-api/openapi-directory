@@ -33,13 +33,9 @@ func (e *LegacyBoxScoresActiveFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LegacyBoxScoresActivePathParams struct {
+type LegacyBoxScoresActiveRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LegacyBoxScoresActiveFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type LegacyBoxScoresActiveRequest struct {
-	PathParams LegacyBoxScoresActivePathParams
 }
 
 type LegacyBoxScoresActiveResponse struct {

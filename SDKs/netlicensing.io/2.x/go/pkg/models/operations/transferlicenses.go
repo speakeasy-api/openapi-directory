@@ -8,12 +8,8 @@ import (
 )
 
 type TransferLicensesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type TransferLicensesPathParams struct {
-	// Licensee number with a maximum length of 1000 characters
-	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type TransferLicensesRequestBody struct {
@@ -22,9 +18,9 @@ type TransferLicensesRequestBody struct {
 }
 
 type TransferLicensesRequest struct {
-	PathParams TransferLicensesPathParams
-	Request    TransferLicensesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   TransferLicensesSecurity
+	RequestBody TransferLicensesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Licensee number with a maximum length of 1000 characters
+	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
 }
 
 type TransferLicensesResponse struct {

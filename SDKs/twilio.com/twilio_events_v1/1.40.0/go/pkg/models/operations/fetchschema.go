@@ -12,18 +12,13 @@ var FetchSchemaServerList = []string{
 }
 
 type FetchSchemaSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSchemaPathParams struct {
-	// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSchemaRequest struct {
-	PathParams FetchSchemaPathParams
-	Security   FetchSchemaSecurity
-	ServerURL  *string
+	// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
 }
 
 type FetchSchemaResponse struct {

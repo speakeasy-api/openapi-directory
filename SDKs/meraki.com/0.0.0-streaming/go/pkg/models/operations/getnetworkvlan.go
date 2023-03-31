@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkVlanPathParams struct {
+type GetNetworkVlanRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	VlanID    string `pathParam:"style=simple,explode=false,name=vlanId"`
-}
-
-type GetNetworkVlanRequest struct {
-	PathParams GetNetworkVlanPathParams
 }
 
 type GetNetworkVlanResponse struct {

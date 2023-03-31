@@ -14,68 +14,58 @@ func main() {
     s := sdk.New()
 
     req := operations.DatafusionProjectsLocationsInstancesCreateRequest{
-        Security: operations.DatafusionProjectsLocationsInstancesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DatafusionProjectsLocationsInstancesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DatafusionProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            InstanceID: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.InstanceInput{
+        DollarXgafv: "2",
+        InstanceInput: &shared.InstanceInput{
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "iure",
+                KeyReference: "provident",
             },
-            DataprocServiceAccount: "magnam",
-            Description: "debitis",
-            DisplayName: "ipsa",
+            DataprocServiceAccount: "distinctio",
+            Description: "quibusdam",
+            DisplayName: "unde",
             EnableRbac: false,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
             EnableZoneSeparation: false,
             EventPublishConfig: &shared.EventPublishConfig{
                 Enabled: false,
-                Topic: "delectus",
+                Topic: "nulla",
             },
             Labels: map[string]string{
-                "suscipit": "molestiae",
-                "minus": "placeat",
+                "illum": "vel",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "voluptatum",
-                Network: "iusto",
+                IPAllocation: "magnam",
+                Network: "debitis",
             },
             Options: map[string]string{
-                "nisi": "recusandae",
-                "temporibus": "ab",
-                "quis": "veritatis",
+                "delectus": "tempora",
             },
             PrivateInstance: false,
-            Type: "ENTERPRISE",
-            Version: "perferendis",
-            Zone: "ipsam",
+            Type: "BASIC",
+            Version: "molestiae",
+            Zone: "minus",
         },
+        AccessToken: "placeat",
+        Alt: "media",
+        Callback: "iusto",
+        Fields: "excepturi",
+        InstanceID: "nisi",
+        Key: "recusandae",
+        OauthToken: "temporibus",
+        Parent: "ab",
+        PrettyPrint: false,
+        QuotaUser: "quis",
+        UploadType: "veritatis",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatafusionProjectsLocationsInstancesCreate(ctx, req)
+    res, err := s.Projects.DatafusionProjectsLocationsInstancesCreate(ctx, req, operations.DatafusionProjectsLocationsInstancesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

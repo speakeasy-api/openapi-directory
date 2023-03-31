@@ -35,9 +35,9 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // Claim a list of devices, licenses, and/or orders into an organization. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory.
 func (s *organizations) ClaimIntoOrganization(ctx context.Context, request operations.ClaimIntoOrganizationRequest) (*operations.ClaimIntoOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -87,9 +87,9 @@ func (s *organizations) ClaimIntoOrganization(ctx context.Context, request opera
 // Create a new organization by cloning the addressed organization
 func (s *organizations) CloneOrganization(ctx context.Context, request operations.CloneOrganizationRequest) (*operations.CloneOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -142,7 +142,7 @@ func (s *organizations) CloneOrganization(ctx context.Context, request operation
 // Return an organization
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +187,7 @@ func (s *organizations) GetOrganization(ctx context.Context, request operations.
 // List the status of every Meraki device in the organization
 func (s *organizations) GetOrganizationDeviceStatuses(ctx context.Context, request operations.GetOrganizationDeviceStatusesRequest) (*operations.GetOrganizationDeviceStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/deviceStatuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/deviceStatuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,14 +232,14 @@ func (s *organizations) GetOrganizationDeviceStatuses(ctx context.Context, reque
 // Return the inventory for an organization
 func (s *organizations) GetOrganizationInventory(ctx context.Context, request operations.GetOrganizationInventoryRequest) (*operations.GetOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -281,7 +281,7 @@ func (s *organizations) GetOrganizationInventory(ctx context.Context, request op
 // Return the third party VPN peers for an organization
 func (s *organizations) GetOrganizationThirdPartyVPNPeers(ctx context.Context, request operations.GetOrganizationThirdPartyVPNPeersRequest) (*operations.GetOrganizationThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/thirdPartyVPNPeers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,14 +326,14 @@ func (s *organizations) GetOrganizationThirdPartyVPNPeers(ctx context.Context, r
 // Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 func (s *organizations) GetOrganizationUplinksLossAndLatency(ctx context.Context, request operations.GetOrganizationUplinksLossAndLatencyRequest) (*operations.GetOrganizationUplinksLossAndLatencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinksLossAndLatency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinksLossAndLatency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -420,9 +420,9 @@ func (s *organizations) GetOrganizations(ctx context.Context) (*operations.GetOr
 // Update the third party VPN peers for an organization
 func (s *organizations) UpdateOrganizationThirdPartyVPNPeers(ctx context.Context, request operations.UpdateOrganizationThirdPartyVPNPeersRequest) (*operations.UpdateOrganizationThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/thirdPartyVPNPeers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

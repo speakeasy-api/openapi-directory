@@ -14,41 +14,34 @@ func main() {
     s := sdk.New()
 
     req := operations.PubsubSubscriptionsAcknowledgeRequest{
-        Security: operations.PubsubSubscriptionsAcknowledgeSecurity{
-            Option1: &operations.PubsubSubscriptionsAcknowledgeSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.PubsubSubscriptionsAcknowledgeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.AcknowledgeRequest{
+        DollarXgafv: "2",
+        AcknowledgeRequest: &shared.AcknowledgeRequest{
             AckID: []string{
-                "suscipit",
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            Subscription: "debitis",
+            Subscription: "nulla",
         },
+        AccessToken: "corrupti",
+        Alt: "proto",
+        Callback: "vel",
+        Fields: "error",
+        Key: "deserunt",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Subscriptions.PubsubSubscriptionsAcknowledge(ctx, req)
+    res, err := s.Subscriptions.PubsubSubscriptionsAcknowledge(ctx, req, operations.PubsubSubscriptionsAcknowledgeSecurity{
+        Option1: &operations.PubsubSubscriptionsAcknowledgeSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type SmartMeDeviceConfigurationPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type SmartMeDeviceConfigurationPostRawResponse struct {
 	ContentType string
 	StatusCode  int

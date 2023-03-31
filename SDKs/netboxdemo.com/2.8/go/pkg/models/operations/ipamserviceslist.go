@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamServicesListQueryParams struct {
+type IpamServicesListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -53,10 +53,6 @@ type IpamServicesListQueryParams struct {
 	VirtualMachineN   *string `queryParam:"style=form,explode=true,name=virtual_machine__n"`
 	VirtualMachineID  *string `queryParam:"style=form,explode=true,name=virtual_machine_id"`
 	VirtualMachineIDN *string `queryParam:"style=form,explode=true,name=virtual_machine_id__n"`
-}
-
-type IpamServicesListRequest struct {
-	QueryParams IpamServicesListQueryParams
 }
 
 type IpamServicesList200ApplicationJSON struct {

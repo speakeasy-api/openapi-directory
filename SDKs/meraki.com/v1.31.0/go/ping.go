@@ -34,9 +34,9 @@ func newPing(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Enqueue a job to ping a target host from the device
 func (s *ping) CreateDeviceLiveToolsPing(ctx context.Context, request operations.CreateDeviceLiveToolsPingRequest) (*operations.CreateDeviceLiveToolsPingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/liveTools/ping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/liveTools/ping", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *ping) CreateDeviceLiveToolsPing(ctx context.Context, request operations
 // Return a ping job. Latency unit in response is in milliseconds. Size is in bytes.
 func (s *ping) GetDeviceLiveToolsPing(ctx context.Context, request operations.GetDeviceLiveToolsPingRequest) (*operations.GetDeviceLiveToolsPingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/liveTools/ping/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/liveTools/ping/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

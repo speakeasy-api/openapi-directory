@@ -12,30 +12,21 @@ var ListParticipantServerList = []string{
 }
 
 type ListParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListParticipantPathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resources to read.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resources to read.
-	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
-}
-
-type ListParticipantQueryParams struct {
+type ListParticipantRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListParticipantRequest struct {
-	PathParams  ListParticipantPathParams
-	QueryParams ListParticipantQueryParams
-	Security    ListParticipantSecurity
-	ServerURL   *string
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resources to read.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resources to read.
+	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
 }
 
 type ListParticipantListParticipantResponseMeta struct {

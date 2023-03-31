@@ -42,7 +42,7 @@ func (s *paymentMethods) GetPaymentMethodsJSON(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *paymentMethods) GetPaymentMethodsJSON(ctx context.Context, request oper
 // GetPaymentMethodsIDJSON - Retrieve a single Payment Method.
 func (s *paymentMethods) GetPaymentMethodsIDJSON(ctx context.Context, request operations.GetPaymentMethodsIDJSONRequest) (*operations.GetPaymentMethodsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_methods/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payment_methods/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

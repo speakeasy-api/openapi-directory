@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.TripsTripDetailsRequest{
-        QueryParams: operations.TripsTripDetailsQueryParams{
-            TrackToken: "corrupti",
-        },
+        TrackToken: "corrupti",
     }
 
     ctx := context.Background()

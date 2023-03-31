@@ -40,14 +40,14 @@ func newDebitMemos(defaultClient, securityClient HTTPClient, serverURL, language
 // You can delete a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *debitMemos) DELETEDebitMemo(ctx context.Context, request operations.DELETEDebitMemoRequest) (*operations.DELETEDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *debitMemos) DELETEDebitMemo(ctx context.Context, request operations.DEL
 // Retrieves the information about a specific debit memo.
 func (s *debitMemos) GETDebitMemo(ctx context.Context, request operations.GETDebitMemoRequest) (*operations.GETDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -142,14 +142,14 @@ func (s *debitMemos) GETDebitMemo(ctx context.Context, request operations.GETDeb
 // Retrieves information about the payments or credit memos that are applied to a specified debit memo.
 func (s *debitMemos) GETDebitMemoApplicationParts(ctx context.Context, request operations.GETDebitMemoApplicationPartsRequest) (*operations.GETDebitMemoApplicationPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/application-parts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/application-parts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -193,14 +193,14 @@ func (s *debitMemos) GETDebitMemoApplicationParts(ctx context.Context, request o
 // Retrieves information about a specific item of a debit memo. A debit memo item is a single line item in a debit memo.
 func (s *debitMemos) GETDebitMemoItem(ctx context.Context, request operations.GETDebitMemoItemRequest) (*operations.GETDebitMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items/{dmitemid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items/{dmitemid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -256,16 +256,16 @@ func (s *debitMemos) GETDebitMemoItem(ctx context.Context, request operations.GE
 // - /v1/debitmemos/402890245c7ca371015c7cb40b28001f/items?amount=100&sort=createdDate
 func (s *debitMemos) GETDebitMemoItems(ctx context.Context, request operations.GETDebitMemoItemsRequest) (*operations.GETDebitMemoItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -332,9 +332,9 @@ func (s *debitMemos) GETDebitMemos(ctx context.Context, request operations.GETDe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -380,16 +380,16 @@ func (s *debitMemos) GETDebitMemos(ctx context.Context, request operations.GETDe
 // Retrieves information about the taxation items of a specific debit memo item.
 func (s *debitMemos) GETTaxationItemsOfDebitMemoItem(ctx context.Context, request operations.GETTaxationItemsOfDebitMemoItemRequest) (*operations.GETTaxationItemsOfDebitMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items/{dmitemid}/taxation-items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/items/{dmitemid}/taxation-items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -435,9 +435,9 @@ func (s *debitMemos) GETTaxationItemsOfDebitMemoItem(ctx context.Context, reques
 // Creates taxation items for a debit memo.
 func (s *debitMemos) POSTDMTaxationItems(ctx context.Context, request operations.POSTDMTaxationItemsRequest) (*operations.POSTDMTaxationItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/taxationitems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/taxationitems", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTTaxationItemListForDMType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -452,7 +452,7 @@ func (s *debitMemos) POSTDMTaxationItems(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -508,9 +508,9 @@ func (s *debitMemos) POSTDMTaxationItems(ctx context.Context, request operations
 //  4. If `UnappliedPayment` is specified in `applicationOrder`, when there are more than 25 payments will be used to apply to the debit memo, the request will be rejected.
 func (s *debitMemos) POSTDebitMemoCollect(ctx context.Context, request operations.POSTDebitMemoCollectRequest) (*operations.POSTDebitMemoCollectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/collect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/collect", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DebitMemoCollectRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -525,7 +525,7 @@ func (s *debitMemos) POSTDebitMemoCollect(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,7 +575,7 @@ func (s *debitMemos) POSTDebitMemoFromPrpc(ctx context.Context, request operatio
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/debitmemos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DebitMemoFromChargeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -590,7 +590,7 @@ func (s *debitMemos) POSTDebitMemoFromPrpc(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -636,14 +636,14 @@ func (s *debitMemos) POSTDebitMemoFromPrpc(ctx context.Context, request operatio
 // This REST API operation can be used only if you have the billing document file generation feature and the Billing user permission "Regenerate PDF" enabled.
 func (s *debitMemos) POSTDebitMemoPDF(ctx context.Context, request operations.POSTDebitMemoPDFRequest) (*operations.POSTDebitMemoPDFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/pdfs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/pdfs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -699,9 +699,9 @@ func (s *debitMemos) POSTDebitMemoPDF(ctx context.Context, request operations.PO
 //   - The email addresses are not specified in the `emailAddresses` field.
 func (s *debitMemos) POSTEmailDebitMemo(ctx context.Context, request operations.POSTEmailDebitMemoRequest) (*operations.POSTEmailDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/emails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/emails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostDebitMemoEmailType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -716,7 +716,7 @@ func (s *debitMemos) POSTEmailDebitMemo(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -767,9 +767,9 @@ func (s *debitMemos) POSTEmailDebitMemo(ctx context.Context, request operations.
 // - A maximum of 50 PDF files can be uploaded for one debit memo.
 func (s *debitMemos) POSTUploadFileForDebitMemo(ctx context.Context, request operations.POSTUploadFileForDebitMemoRequest) (*operations.POSTUploadFileForDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/files", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -781,7 +781,7 @@ func (s *debitMemos) POSTUploadFileForDebitMemo(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -827,7 +827,7 @@ func (s *debitMemos) PUTBatchUpdateDebitMemos(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/debitmemos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTBatchDebitMemosRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -842,7 +842,7 @@ func (s *debitMemos) PUTBatchUpdateDebitMemos(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -888,14 +888,14 @@ func (s *debitMemos) PUTBatchUpdateDebitMemos(ctx context.Context, request opera
 // You can cancel a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *debitMemos) PUTCancelDebitMemo(ctx context.Context, request operations.PUTCancelDebitMemoRequest) (*operations.PUTCancelDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -945,9 +945,9 @@ func (s *debitMemos) PUTCancelDebitMemo(ctx context.Context, request operations.
 // You can update a debit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *debitMemos) PUTDebitMemo(ctx context.Context, request operations.PUTDebitMemoRequest) (*operations.PUTDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTDebitMemoType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -962,7 +962,7 @@ func (s *debitMemos) PUTDebitMemo(ctx context.Context, request operations.PUTDeb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1006,14 +1006,14 @@ func (s *debitMemos) PUTDebitMemo(ctx context.Context, request operations.PUTDeb
 // Posts a debit memo to activate it. You can post debit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
 func (s *debitMemos) PUTPostDebitMemo(ctx context.Context, request operations.PUTPostDebitMemoRequest) (*operations.PUTPostDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/post", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/post", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1059,14 +1059,14 @@ func (s *debitMemos) PUTPostDebitMemo(ctx context.Context, request operations.PU
 // You can unpost debit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
 func (s *debitMemos) PUTUnpostDebitMemo(ctx context.Context, request operations.PUTUnpostDebitMemoRequest) (*operations.PUTUnpostDebitMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/unpost", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debitmemos/{debitMemoId}/unpost", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETListAllSettingsHeaders struct {
+type GETListAllSettingsRequest struct {
 	// Specifies response media type. If you omit the `Accept` header parameter, the response body is by default in JSON format. If you include `Accept` header parameter and set it to `application/csv`, the response body is in csv format.
 	//
 	Accept *string `header:"style=simple,explode=false,name=Accept"`
@@ -22,10 +22,6 @@ type GETListAllSettingsHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETListAllSettingsRequest struct {
-	Headers GETListAllSettingsHeaders
 }
 
 type GETListAllSettingsResponse struct {

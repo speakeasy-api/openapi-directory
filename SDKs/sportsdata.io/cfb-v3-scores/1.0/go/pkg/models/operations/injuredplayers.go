@@ -33,13 +33,9 @@ func (e *InjuredPlayersFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InjuredPlayersPathParams struct {
+type InjuredPlayersRequest struct {
 	// Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
 	Format InjuredPlayersFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type InjuredPlayersRequest struct {
-	PathParams InjuredPlayersPathParams
 }
 
 type InjuredPlayersResponse struct {

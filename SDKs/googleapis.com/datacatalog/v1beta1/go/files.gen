@@ -39,11 +39,10 @@ pkg/models/operations/datacatalogprojectslocationstaxonomiespolicytagssetiampoli
 pkg/models/operations/datacatalogprojectslocationstaxonomiespolicytagstestiampermissions.go
 pkg/models/shared/googleclouddatacatalogv1beta1searchcatalogresponse.go
 pkg/models/shared/googleclouddatacatalogv1beta1searchcatalogresult.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googleclouddatacatalogv1beta1searchcatalogrequest.go
 pkg/models/shared/googleclouddatacatalogv1beta1searchcatalogrequestscope.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleclouddatacatalogv1beta1entry.go
 pkg/models/shared/googleclouddatacatalogv1beta1usagesignal.go
 pkg/models/shared/googleclouddatacatalogv1beta1usagestats.go

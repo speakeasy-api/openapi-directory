@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/bigqueryreservation/v1beta1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,54 +15,57 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest(
-    security=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity(
-        option1=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams(
-        parent="accusamus",
-    ),
-    query_params=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="deleniti",
-        alt="json",
-        callback="quasi",
-        capacity_commitment_id="praesentium",
-        enforce_single_admin_project_per_org=True,
-        fields="eos",
-        key="ipsam",
-        oauth_token="ipsum",
-        pretty_print=False,
-        quota_user="ut",
-        upload_type="veniam",
-        upload_protocol="qui",
-    ),
-    request=shared.CapacityCommitmentInput(
+    dollar_xgafv="2",
+    capacity_commitment_input=shared.CapacityCommitmentInput(
         failure_status=shared.Status(
-            code=7196243287888629260,
+            code=592845,
             details=[
                 {
-                    "distinctio": "eos",
+                    "unde": "nulla",
+                    "corrupti": "illum",
+                    "vel": "error",
+                    "deserunt": "suscipit",
+                },
+                {
+                    "magnam": "debitis",
+                    "ipsa": "delectus",
+                },
+                {
+                    "suscipit": "molestiae",
+                    "minus": "placeat",
                 },
             ],
-            message="officia",
+            message="voluptatum",
         ),
-        multi_region_auxiliary=True,
-        plan="ANNUAL",
-        renewal_plan="COMMITMENT_PLAN_UNSPECIFIED",
-        slot_count="corporis",
+        multi_region_auxiliary=False,
+        plan="TRIAL",
+        renewal_plan="TRIAL",
+        slot_count="nisi",
     ),
+    access_token="recusandae",
+    alt="proto",
+    callback="ab",
+    capacity_commitment_id="quis",
+    enforce_single_admin_project_per_org=False,
+    fields_="veritatis",
+    key="deserunt",
+    oauth_token="perferendis",
+    parent="ipsam",
+    pretty_print=False,
+    quota_user="repellendus",
+    upload_type="sapiente",
+    upload_protocol="quo",
 )
     
-res = s.projects.bigqueryreservation_projects_locations_capacity_commitments_create(req)
+res = s.projects.bigqueryreservation_projects_locations_capacity_commitments_create(req, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity(
+    option1=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.capacity_commitment is not None:
     # handle response
@@ -70,7 +73,8 @@ if res.capacity_commitment is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -87,7 +91,17 @@ if res.capacity_commitment is not None:
 * `bigqueryreservation_projects_locations_reservations_get` - Returns information about the reservation.
 * `bigqueryreservation_projects_locations_reservations_list` - Lists all the reservations for the project in the specified location.
 * `bigqueryreservation_projects_locations_search_assignments` - Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project->folder->organization) happens in this API. 3. Parent here is `projects/*/locations/*`, instead of `projects/*/locations/*reservations/*`. **Note** "-" cannot be used for projects nor locations.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

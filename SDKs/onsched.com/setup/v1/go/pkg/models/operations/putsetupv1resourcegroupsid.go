@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1ResourcegroupsIDPathParams struct {
+type PutSetupV1ResourcegroupsIDRequest struct {
+	// Resource Group Update Model
+	ResourceGroupUpdateModel *shared.ResourceGroupUpdateModel `request:"mediaType=application/json"`
 	// id of resourcGroup object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1ResourcegroupsIDRequest struct {
-	PathParams PutSetupV1ResourcegroupsIDPathParams
-	// Resource Group Update Model
-	Request *shared.ResourceGroupUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1ResourcegroupsIDResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchStylesPathPathParams struct {
-	// Style path.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type PatchStylesPathRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -23,8 +18,9 @@ type PatchStylesPathRequestBody struct {
 }
 
 type PatchStylesPathRequest struct {
-	PathParams PatchStylesPathPathParams
-	Request    PatchStylesPathRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchStylesPathRequestBody `request:"mediaType=multipart/form-data"`
+	// Style path.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PatchStylesPathResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRouteRequest struct {
-	Request *shared.RouteRequest `request:"mediaType=application/json"`
-}
-
 type PostRouteResponse struct {
 	ContentType string
 	// Your request is not valid. For example, you specified too few or too many points.

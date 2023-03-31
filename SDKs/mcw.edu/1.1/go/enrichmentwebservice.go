@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newEnrichmentWebService(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // GetEnrichmentDataUsingPOST - Return a list of genes annotated to the term.Genes are rgdids separated by comma.Species type is an integer value.term is the ontology
-func (s *enrichmentWebService) GetEnrichmentDataUsingPOST(ctx context.Context, request operations.GetEnrichmentDataUsingPOSTRequest) (*operations.GetEnrichmentDataUsingPOSTResponse, error) {
+func (s *enrichmentWebService) GetEnrichmentDataUsingPOST(ctx context.Context, request shared.EnrichmentGeneRequest) (*operations.GetEnrichmentDataUsingPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enrichment/annotatedGenes"
 
@@ -95,7 +96,7 @@ func (s *enrichmentWebService) GetEnrichmentDataUsingPOST(ctx context.Context, r
 }
 
 // GetEnrichmentDataUsingPOST1 - Return a chart of ontology terms annotated to the genes.Genes are rgdids separated by comma.Species type is an integer value.Aspect is the Ontology group
-func (s *enrichmentWebService) GetEnrichmentDataUsingPOST1(ctx context.Context, request operations.GetEnrichmentDataUsingPOST1Request) (*operations.GetEnrichmentDataUsingPOST1Response, error) {
+func (s *enrichmentWebService) GetEnrichmentDataUsingPOST1(ctx context.Context, request shared.EnrichmentRequest) (*operations.GetEnrichmentDataUsingPOST1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enrichment/data"
 

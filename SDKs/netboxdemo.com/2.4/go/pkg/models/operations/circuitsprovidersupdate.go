@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsProvidersUpdatePathParams struct {
+type CircuitsProvidersUpdateRequest struct {
+	ProviderInput shared.ProviderInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this provider.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsProvidersUpdateRequest struct {
-	PathParams CircuitsProvidersUpdatePathParams
-	Request    shared.ProviderInput `request:"mediaType=application/json"`
 }
 
 type CircuitsProvidersUpdateResponse struct {

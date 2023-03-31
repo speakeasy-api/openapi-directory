@@ -8,27 +8,19 @@ import (
 	"time"
 )
 
-type LineStatusPathParams struct {
-	// Automatically added
-	EndDate string `pathParam:"style=simple,explode=false,name=EndDate"`
-	// Automatically added
-	StartDate string `pathParam:"style=simple,explode=false,name=StartDate"`
-	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type LineStatusQueryParams struct {
-	DateRangeEndDate   *time.Time `queryParam:"style=form,explode=true,name=dateRange.endDate"`
-	DateRangeStartDate *time.Time `queryParam:"style=form,explode=true,name=dateRange.startDate"`
-	// Include details of the disruptions that are causing the line status including the affected stops and routes
-	Detail    *bool  `queryParam:"style=form,explode=true,name=detail"`
-	EndDate   string `queryParam:"style=form,explode=true,name=endDate"`
-	StartDate string `queryParam:"style=form,explode=true,name=startDate"`
-}
-
 type LineStatusRequest struct {
-	PathParams  LineStatusPathParams
-	QueryParams LineStatusQueryParams
+	// Automatically added
+	EndDatePathParameter string `pathParam:"style=simple,explode=false,name=EndDate"`
+	// Automatically added
+	StartDatePathParameter string     `pathParam:"style=simple,explode=false,name=StartDate"`
+	DateRangeEndDate       *time.Time `queryParam:"style=form,explode=true,name=dateRange.endDate"`
+	DateRangeStartDate     *time.Time `queryParam:"style=form,explode=true,name=dateRange.startDate"`
+	// Include details of the disruptions that are causing the line status including the affected stops and routes
+	Detail                *bool  `queryParam:"style=form,explode=true,name=detail"`
+	EndDateQueryParameter string `queryParam:"style=form,explode=true,name=endDate"`
+	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+	Ids                     []string `pathParam:"style=simple,explode=false,name=ids"`
+	StartDateQueryParameter string   `queryParam:"style=form,explode=true,name=startDate"`
 }
 
 type LineStatusResponse struct {

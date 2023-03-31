@@ -196,10 +196,6 @@ type PatchUserRequestBody struct {
 	Username *string `multipartForm:"name=username"`
 }
 
-type PatchUserRequest struct {
-	Request *PatchUserRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PatchUserResponse struct {
 	ContentType string
 	StatusCode  int

@@ -4,47 +4,52 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudtasksAPIQueueUpdateRequest(
-    security=operations.CloudtasksAPIQueueUpdateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.CloudtasksAPIQueueUpdateQueryParams(
-        dollar_xgafv="2",
-        access_token="enim",
-        alt="json",
-        app_id="quisquam",
-        callback="sit",
-        fields="qui",
-        key="voluptates",
-        oauth_token="voluptate",
-        pretty_print=False,
-        quota_user="error",
-        upload_type="consequuntur",
-        upload_protocol="illo",
-    ),
-    request=shared.HTTPBody(
-        content_type="quia",
-        data="sunt",
+    dollar_xgafv="2",
+    http_body=shared.HTTPBody(
+        content_type="provident",
+        data="distinctio",
         extensions=[
             {
-                "repellat": "explicabo",
+                "nulla": "corrupti",
+                "illum": "vel",
+                "error": "deserunt",
             },
             {
-                "animi": "omnis",
-                "eum": "recusandae",
-                "doloribus": "officia",
+                "iure": "magnam",
+                "debitis": "ipsa",
+            },
+            {
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
+                "iusto": "excepturi",
+            },
+            {
+                "recusandae": "temporibus",
+                "ab": "quis",
             },
         ],
     ),
+    access_token="veritatis",
+    alt="media",
+    app_id="perferendis",
+    callback="ipsam",
+    fields_="repellendus",
+    key="sapiente",
+    oauth_token="quo",
+    pretty_print=False,
+    quota_user="odit",
+    upload_type="at",
+    upload_protocol="at",
 )
     
-res = s.api.cloudtasks_api_queue_update(req)
+res = s.api.cloudtasks_api_queue_update(req, operations.CloudtasksAPIQueueUpdateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.empty is not None:
     # handle response

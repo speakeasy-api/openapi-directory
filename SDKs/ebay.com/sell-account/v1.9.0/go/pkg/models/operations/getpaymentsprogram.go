@@ -8,19 +8,14 @@ import (
 )
 
 type GetPaymentsProgramSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPaymentsProgramPathParams struct {
+type GetPaymentsProgramRequest struct {
 	// This path parameter specifies the eBay marketplace of the payments program for which you want to retrieve the seller's status.
 	MarketplaceID string `pathParam:"style=simple,explode=false,name=marketplace_id"`
 	// This path parameter specifies the payments program whose status is returned by the call.
 	PaymentsProgramType string `pathParam:"style=simple,explode=false,name=payments_program_type"`
-}
-
-type GetPaymentsProgramRequest struct {
-	PathParams GetPaymentsProgramPathParams
-	Security   GetPaymentsProgramSecurity
 }
 
 type GetPaymentsProgramResponse struct {

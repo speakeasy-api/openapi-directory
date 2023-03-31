@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolCoapGetArgsPathParams struct {
+type ProtocolCoapGetArgsRequest struct {
 	// Agent to show the COAP argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolCoapGetArgsRequest struct {
-	PathParams ProtocolCoapGetArgsPathParams
 }
 
 type ProtocolCoapGetArgsResponse struct {

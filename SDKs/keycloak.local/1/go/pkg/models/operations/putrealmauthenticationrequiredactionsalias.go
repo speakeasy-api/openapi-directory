@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmAuthenticationRequiredActionsAliasPathParams struct {
+type PutRealmAuthenticationRequiredActionsAliasRequest struct {
+	// JSON describing new state of required action
+	RequiredActionProviderRepresentation shared.RequiredActionProviderRepresentation `request:"mediaType=application/json"`
 	// Alias of required action
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmAuthenticationRequiredActionsAliasRequest struct {
-	PathParams PutRealmAuthenticationRequiredActionsAliasPathParams
-	// JSON describing new state of required action
-	Request shared.RequiredActionProviderRepresentation `request:"mediaType=application/json"`
 }
 
 type PutRealmAuthenticationRequiredActionsAliasResponse struct {

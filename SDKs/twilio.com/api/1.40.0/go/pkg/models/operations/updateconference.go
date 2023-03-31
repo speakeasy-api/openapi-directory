@@ -14,14 +14,8 @@ var UpdateConferenceServerList = []string{
 }
 
 type UpdateConferenceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConferencePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the Conference resource to update
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateConferenceUpdateConferenceRequestAnnounceMethodEnum - The HTTP method used to call `announce_url`. Can be: `GET` or `POST` and the default is `POST`
@@ -69,10 +63,11 @@ type UpdateConferenceUpdateConferenceRequest struct {
 }
 
 type UpdateConferenceRequest struct {
-	PathParams UpdateConferencePathParams
-	Request    *UpdateConferenceUpdateConferenceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConferenceSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to update.
+	AccountSid  string                                   `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateConferenceUpdateConferenceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Conference resource to update
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConferenceResponse struct {

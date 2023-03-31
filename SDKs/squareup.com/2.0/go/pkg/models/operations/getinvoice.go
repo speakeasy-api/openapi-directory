@@ -8,17 +8,12 @@ import (
 )
 
 type GetInvoiceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetInvoicePathParams struct {
-	// The ID of the invoice to retrieve.
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetInvoiceRequest struct {
-	PathParams GetInvoicePathParams
-	Security   GetInvoiceSecurity
+	// The ID of the invoice to retrieve.
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
 }
 
 type GetInvoiceResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeServicePathParams struct {
+type DescribeServiceRequest struct {
 	// Service ID of the service to describe.
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type DescribeServiceRequest struct {
-	PathParams DescribeServicePathParams
 }
 
 type DescribeServiceResponse struct {

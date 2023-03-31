@@ -30,7 +30,7 @@ func (e *GetCampagneRapportCampagneEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCampagneQueryParams struct {
+type GetCampagneRequest struct {
 	// date de debut au format YYYY-MM-DD hh:mm
 	DateDeb string `queryParam:"style=form,explode=true,name=date_deb"`
 	// date de fin au format YYYY-MM-DD hh:mm
@@ -39,10 +39,6 @@ type GetCampagneQueryParams struct {
 	Keyid string `queryParam:"style=form,explode=true,name=keyid"`
 	// Doit valoir "1"
 	RapportCampagne GetCampagneRapportCampagneEnum `queryParam:"style=form,explode=true,name=rapportCampagne"`
-}
-
-type GetCampagneRequest struct {
-	QueryParams GetCampagneQueryParams
 }
 
 type GetCampagneResponse struct {

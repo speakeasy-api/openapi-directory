@@ -34,11 +34,11 @@ func newChargers(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // ControlChargerCharging - Control Charging
 // Instruct the charger to start or stop charging
-func (s *chargers) ControlChargerCharging(ctx context.Context, request operations.ControlChargerChargingRequest) (*operations.ControlChargerChargingResponse, error) {
+func (s *chargers) ControlChargerCharging(ctx context.Context, request operations.ControlChargerChargingRequest, security operations.ControlChargerChargingSecurity) (*operations.ControlChargerChargingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}/charging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}/charging", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *chargers) ControlChargerCharging(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -76,20 +76,20 @@ func (s *chargers) ControlChargerCharging(ctx context.Context, request operation
 }
 
 // GetCharger - Get Charger
-func (s *chargers) GetCharger(ctx context.Context, request operations.GetChargerRequest) (*operations.GetChargerResponse, error) {
+func (s *chargers) GetCharger(ctx context.Context, request operations.GetChargerRequest, security operations.GetChargerSecurity) (*operations.GetChargerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *chargers) GetCharger(ctx context.Context, request operations.GetCharger
 }
 
 // GetChargers - List Chargers
-func (s *chargers) GetChargers(ctx context.Context, request operations.GetChargersRequest) (*operations.GetChargersResponse, error) {
+func (s *chargers) GetChargers(ctx context.Context, request operations.GetChargersRequest, security operations.GetChargersSecurity) (*operations.GetChargersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/chargers"
 
@@ -133,11 +133,11 @@ func (s *chargers) GetChargers(ctx context.Context, request operations.GetCharge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

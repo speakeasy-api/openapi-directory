@@ -8,20 +8,18 @@ import (
 )
 
 type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsPathParams struct {
-	// Required. A name of the AddressGroup to remove items from. Must be in the format `projects|organization/*/locations/{location}/addressGroups/*`.
-	AddressGroup string `pathParam:"style=simple,explode=false,name=addressGroup"`
-}
-
-type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsQueryParams struct {
+type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RemoveAddressGroupItemsRequest *shared.RemoveAddressGroupItemsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. A name of the AddressGroup to remove items from. Must be in the format `projects|organization/*/locations/{location}/addressGroups/*`.
+	AddressGroup string `pathParam:"style=simple,explode=false,name=addressGroup"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsRequest struct {
-	PathParams  NetworksecurityProjectsLocationsAddressGroupsRemoveItemsPathParams
-	QueryParams NetworksecurityProjectsLocationsAddressGroupsRemoveItemsQueryParams
-	Request     *shared.RemoveAddressGroupItemsRequest `request:"mediaType=application/json"`
-	Security    NetworksecurityProjectsLocationsAddressGroupsRemoveItemsSecurity
 }
 
 type NetworksecurityProjectsLocationsAddressGroupsRemoveItemsResponse struct {

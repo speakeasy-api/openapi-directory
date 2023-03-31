@@ -4,40 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest(
-    security=operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RealtimebiddingBiddersBiddingFunctionsActivatePathParams(
-        name="magni",
-    ),
-    query_params=operations.RealtimebiddingBiddersBiddingFunctionsActivateQueryParams(
-        dollar_xgafv="1",
-        access_token="maiores",
-        alt="proto",
-        callback="quasi",
-        fields="voluptas",
-        key="et",
-        oauth_token="magni",
-        pretty_print=True,
-        quota_user="occaecati",
-        upload_type="inventore",
-        upload_protocol="accusamus",
-    ),
-    request={
-        "rerum": "animi",
-        "ut": "ea",
-        "nihil": "suscipit",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.bidders.realtimebidding_bidders_bidding_functions_activate(req)
+res = s.bidders.realtimebidding_bidders_bidding_functions_activate(req, operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.bidding_function is not None:
     # handle response

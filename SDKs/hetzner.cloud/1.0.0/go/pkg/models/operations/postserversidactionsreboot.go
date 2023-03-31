@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsRebootPathParams struct {
+type PostServersIDActionsRebootRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsRebootRequest struct {
-	PathParams PostServersIDActionsRebootPathParams
 }
 
 // PostServersIDActionsRebootActionResponseActionError - Error message for the Action if error occurred, otherwise null

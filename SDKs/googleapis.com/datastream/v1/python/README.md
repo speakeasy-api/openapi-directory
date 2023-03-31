@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/datastream/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,95 +15,93 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest(
-    security=operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="similique",
-    ),
-    query_params=operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="cumque",
-        alt="json",
-        callback="omnis",
-        connection_profile_id="ut",
-        fields="dicta",
-        force=False,
-        key="possimus",
-        oauth_token="eos",
-        pretty_print=False,
-        quota_user="natus",
-        request_id="consequatur",
-        upload_type="aspernatur",
-        upload_protocol="dolores",
-        validate_only=True,
-    ),
-    request=shared.ConnectionProfileInput(
+    dollar_xgafv="2",
+    connection_profile_input=shared.ConnectionProfileInput(
         bigquery_profile={
-            "omnis": "et",
-            "est": "necessitatibus",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        display_name="velit",
+        display_name="vel",
         forward_ssh_connectivity=shared.ForwardSSHTunnelConnectivity(
-            hostname="repudiandae",
-            password="delectus",
-            port=5778884639584587050,
-            private_key="et",
-            username="tenetur",
+            hostname="physical-pegboard.info",
+            password="iure",
+            port=297534,
+            private_key="debitis",
+            username="Anahi38",
         ),
         gcs_profile=shared.GcsProfile(
-            bucket="labore",
-            root_path="est",
+            bucket="molestiae",
+            root_path="minus",
         ),
         labels={
-            "provident": "perspiciatis",
-            "mollitia": "vitae",
+            "voluptatum": "iusto",
+            "excepturi": "nisi",
+            "recusandae": "temporibus",
+            "ab": "quis",
         },
         mysql_profile=shared.MysqlProfileInput(
-            hostname="ad",
-            password="magni",
-            port=3484971647339665490,
+            hostname="bountiful-pension.com",
+            password="ipsam",
+            port=832620,
             ssl_config=shared.MysqlSslConfigInput(
-                ca_certificate="autem",
-                client_certificate="et",
-                client_key="aut",
+                ca_certificate="sapiente",
+                client_certificate="quo",
+                client_key="odit",
             ),
-            username="explicabo",
+            username="Sarah.Strosin79",
         ),
         oracle_profile=shared.OracleProfile(
             connection_attributes={
-                "quia": "veniam",
+                "esse": "totam",
+                "porro": "dolorum",
+                "dicta": "nam",
+                "officia": "occaecati",
             },
-            database_service="repellendus",
-            hostname="ducimus",
-            password="soluta",
-            port=1616641109373168718,
-            username="cumque",
+            database_service="fugit",
+            hostname="miserly-usage.net",
+            password="totam",
+            port=105907,
+            username="Haskell18",
         ),
         postgresql_profile=shared.PostgresqlProfile(
-            database="aut",
-            hostname="explicabo",
-            password="maxime",
-            port=4805550021675459519,
-            username="ut",
+            database="impedit",
+            hostname="several-increase.biz",
+            password="excepturi",
+            port=135218,
+            username="Aiden.Hane",
         ),
         private_connectivity=shared.PrivateConnectivity(
-            private_connection="voluptas",
+            private_connection="iste",
         ),
         static_service_ip_connectivity={
-            "modi": "et",
+            "natus": "laboriosam",
         },
     ),
+    access_token="hic",
+    alt="proto",
+    callback="fuga",
+    connection_profile_id="in",
+    fields_="corporis",
+    force=False,
+    key="iste",
+    oauth_token="iure",
+    parent="saepe",
+    pretty_print=False,
+    quota_user="quidem",
+    request_id="architecto",
+    upload_type="ipsa",
+    upload_protocol="reiciendis",
+    validate_only=False,
 )
     
-res = s.projects.datastream_projects_locations_connection_profiles_create(req)
+res = s.projects.datastream_projects_locations_connection_profiles_create(req, operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -111,7 +109,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -121,7 +120,7 @@ if res.operation is not None:
 * `datastream_projects_locations_fetch_static_ips` - The FetchStaticIps API call exposes the static IP addresses used by Datastream.
 * `datastream_projects_locations_list` - Lists information about the supported locations for this service.
 * `datastream_projects_locations_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `datastream_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `datastream_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `datastream_projects_locations_private_connections_create` - Use this method to create a private connectivity configuration.
 * `datastream_projects_locations_private_connections_list` - Use this method to list private connectivity configurations in a project and location.
 * `datastream_projects_locations_private_connections_routes_create` - Use this method to create a route for a private connectivity configuration in a project and location.
@@ -135,7 +134,17 @@ if res.operation is not None:
 * `datastream_projects_locations_streams_objects_start_backfill_job` - Use this method to start a backfill job for the specified stream object.
 * `datastream_projects_locations_streams_objects_stop_backfill_job` - Use this method to stop a backfill job for the specified stream object.
 * `datastream_projects_locations_streams_patch` - Use this method to update the configuration of a stream.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

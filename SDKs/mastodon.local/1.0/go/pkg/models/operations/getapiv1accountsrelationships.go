@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1AccountsRelationshipsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1AccountsRelationshipsQueryParams struct {
-	// Array of account IDs to check
-	ID []string `queryParam:"style=form,explode=true,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1AccountsRelationshipsRequest struct {
-	QueryParams GetAPIV1AccountsRelationshipsQueryParams
-	Security    GetAPIV1AccountsRelationshipsSecurity
+	// Array of account IDs to check
+	ID []string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetAPIV1AccountsRelationshipsResponse struct {

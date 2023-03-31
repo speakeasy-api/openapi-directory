@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete1PathParams struct {
+type Delete1Request struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type Delete1Request struct {
-	PathParams Delete1PathParams
 }
 
 type Delete1Response struct {

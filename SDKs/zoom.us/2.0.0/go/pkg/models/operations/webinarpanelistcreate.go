@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarPanelistCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarPanelistCreatePathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarPanelistCreateApplicationJSONPanelists - Panelist base object.
@@ -32,9 +26,9 @@ type WebinarPanelistCreateApplicationJSON struct {
 }
 
 type WebinarPanelistCreateRequest struct {
-	PathParams WebinarPanelistCreatePathParams
-	Request    WebinarPanelistCreateApplicationJSON `request:"mediaType=application/json"`
-	Security   WebinarPanelistCreateSecurity
+	RequestBody WebinarPanelistCreateApplicationJSON `request:"mediaType=application/json"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // WebinarPanelistCreate201ApplicationXML - **HTTP Status Code:** `201`<br>

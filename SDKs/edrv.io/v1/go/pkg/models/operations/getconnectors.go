@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetConnectorsQueryParams struct {
+type GetConnectorsRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -33,10 +33,6 @@ type GetConnectorsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetConnectorsRequest struct {
-	QueryParams GetConnectorsQueryParams
 }
 
 type GetConnectorsResponse struct {

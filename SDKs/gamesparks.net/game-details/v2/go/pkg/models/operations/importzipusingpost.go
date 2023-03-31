@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportZipUsingPOSTPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
 type ImportZipUsingPOSTRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -23,8 +18,9 @@ type ImportZipUsingPOSTRequestBody struct {
 }
 
 type ImportZipUsingPOSTRequest struct {
-	PathParams ImportZipUsingPOSTPathParams
-	Request    ImportZipUsingPOSTRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ImportZipUsingPOSTRequestBody `request:"mediaType=multipart/form-data"`
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 }
 
 type ImportZipUsingPOSTResponse struct {

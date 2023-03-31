@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PreprintsPartialUpdatePathParams struct {
+type PreprintsPartialUpdateRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the preprint.
 	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
-}
-
-type PreprintsPartialUpdateRequest struct {
-	PathParams PreprintsPartialUpdatePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PreprintsPartialUpdateResponse struct {

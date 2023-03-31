@@ -34,14 +34,14 @@ func newCustomFieldSelectOptions(defaultClient, securityClient HTTPClient, serve
 // GetCustomFieldsIDSelectOptionsJSON - Retrieve all Store's Custom Fields.
 func (s *customFieldSelectOptions) GetCustomFieldsIDSelectOptionsJSON(ctx context.Context, request operations.GetCustomFieldsIDSelectOptionsJSONRequest) (*operations.GetCustomFieldsIDSelectOptionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *customFieldSelectOptions) GetCustomFieldsIDSelectOptionsJSON(ctx contex
 // GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON - Retrieve a single SelectOption from a CustomField.
 func (s *customFieldSelectOptions) GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON(ctx context.Context, request operations.GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest) (*operations.GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -140,9 +140,9 @@ func (s *customFieldSelectOptions) GetCustomFieldsIDSelectOptionsCustomFieldSele
 // PostCustomFieldsIDSelectOptionsJSON - Create a new Custom Field Select Option.
 func (s *customFieldSelectOptions) PostCustomFieldsIDSelectOptionsJSON(ctx context.Context, request operations.PostCustomFieldsIDSelectOptionsJSONRequest) (*operations.PostCustomFieldsIDSelectOptionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldSelectOptionEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -157,7 +157,7 @@ func (s *customFieldSelectOptions) PostCustomFieldsIDSelectOptionsJSON(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -198,9 +198,9 @@ func (s *customFieldSelectOptions) PostCustomFieldsIDSelectOptionsJSON(ctx conte
 // PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON - Update a SelectOption from a CustomField.
 func (s *customFieldSelectOptions) PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON(ctx context.Context, request operations.PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest) (*operations.PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldSelectOptionEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -215,7 +215,7 @@ func (s *customFieldSelectOptions) PutCustomFieldsIDSelectOptionsCustomFieldSele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

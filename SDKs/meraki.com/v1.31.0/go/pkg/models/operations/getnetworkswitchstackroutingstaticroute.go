@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchStackRoutingStaticRoutePathParams struct {
+type GetNetworkSwitchStackRoutingStaticRouteRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
 	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
-type GetNetworkSwitchStackRoutingStaticRouteRequest struct {
-	PathParams GetNetworkSwitchStackRoutingStaticRoutePathParams
 }
 
 type GetNetworkSwitchStackRoutingStaticRouteResponse struct {

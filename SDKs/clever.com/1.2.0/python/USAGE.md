@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth=shared.SchemeOauth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetContactRequest(
-    path_params=operations.GetContactPathParams(
-        id="similique",
+        oauth="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetContactRequest(
+    id="corrupti",
 )
     
 res = s.contacts.get_contact(req)

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutImagesIDPathParams struct {
-	// ID of the Image
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutImagesIDUpdateImageRequestTypeEnum - Destination Image type to convert to
 type PutImagesIDUpdateImageRequestTypeEnum string
 
@@ -44,8 +39,9 @@ type PutImagesIDUpdateImageRequest struct {
 }
 
 type PutImagesIDRequest struct {
-	PathParams PutImagesIDPathParams
-	Request    *PutImagesIDUpdateImageRequest `request:"mediaType=application/json"`
+	RequestBody *PutImagesIDUpdateImageRequest `request:"mediaType=application/json"`
+	// ID of the Image
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutImagesID200ApplicationJSONImageCreatedFrom - Information about the Server the Image was created from

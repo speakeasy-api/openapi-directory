@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LogLocationRequest struct {
-	Request *shared.LocationUpdateContent `request:"mediaType=application/json"`
-}
-
 type LogLocationResponse struct {
 	ContentType string
 	// UserNotFound

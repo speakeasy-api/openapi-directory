@@ -8,17 +8,13 @@ import (
 )
 
 type ScreenshotsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ScreenshotsPathParams struct {
-	// Test ID that details you want to fetch
-	TestID string `pathParam:"style=simple,explode=false,name=test_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ScreenshotsRequest struct {
-	PathParams ScreenshotsPathParams
-	Security   ScreenshotsSecurity
+	// Test ID that details you want to fetch
+	TestID string `pathParam:"style=simple,explode=false,name=test_id"`
 }
 
 type ScreenshotsResponse struct {

@@ -10,12 +10,7 @@ import (
 )
 
 type ListAdvisorySystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListAdvisorySystemsPathParams struct {
-	// Advisory ID
-	AdvisoryID string `pathParam:"style=simple,explode=false,name=advisory_id"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 // ListAdvisorySystemsSortEnum - Sort field
@@ -63,7 +58,9 @@ func (e *ListAdvisorySystemsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAdvisorySystemsQueryParams struct {
+type ListAdvisorySystemsRequest struct {
+	// Advisory ID
+	AdvisoryID string `pathParam:"style=simple,explode=false,name=advisory_id"`
 	// Filter
 	FilterCreated *string `queryParam:"style=form,explode=true,name=filter[created]"`
 	// Filter
@@ -106,12 +103,6 @@ type ListAdvisorySystemsQueryParams struct {
 	Sort *ListAdvisorySystemsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ListAdvisorySystemsRequest struct {
-	PathParams  ListAdvisorySystemsPathParams
-	QueryParams ListAdvisorySystemsQueryParams
-	Security    ListAdvisorySystemsSecurity
 }
 
 type ListAdvisorySystemsResponse struct {

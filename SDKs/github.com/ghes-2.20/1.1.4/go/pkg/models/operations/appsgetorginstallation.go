@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetOrgInstallationPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type AppsGetOrgInstallationHeaders struct {
+type AppsGetOrgInstallationRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type AppsGetOrgInstallationRequest struct {
-	PathParams AppsGetOrgInstallationPathParams
-	Headers    AppsGetOrgInstallationHeaders
+	Org    string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type AppsGetOrgInstallationResponse struct {

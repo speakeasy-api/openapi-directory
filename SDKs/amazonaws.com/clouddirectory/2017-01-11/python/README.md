@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/clouddirectory/2017-01-11/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,65 +14,75 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddFacetToObjectRequest(
-    headers=operations.AddFacetToObjectHeaders(
-        x_amz_algorithm="facilis",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="mollitia",
-        x_amz_date="velit",
-        x_amz_security_token="illum",
-        x_amz_signature="eum",
-        x_amz_signed_headers="quo",
-        x_amz_data_partition="et",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.AddFacetToObjectRequestBody(
+)
+
+
+req = operations.AddFacetToObjectRequest(
+    request_body=operations.AddFacetToObjectRequestBody(
         object_attribute_list=[
             shared.AttributeKeyAndValue(
                 key=shared.AttributeKey(
-                    facet_name="omnis",
-                    name="tempora",
-                    schema_arn="aliquid",
+                    facet_name="provident",
+                    name="distinctio",
+                    schema_arn="quibusdam",
                 ),
                 value=shared.TypedAttributeValue(
-                    binary_value="molestiae",
+                    binary_value="unde",
                     boolean_value=False,
-                    datetime_value="2009-08-18T16:12:12Z",
-                    number_value="cum",
-                    string_value="a",
+                    datetime_value="2021-05-14T08:28:11.899Z",
+                    number_value="illum",
+                    string_value="vel",
                 ),
             ),
             shared.AttributeKeyAndValue(
                 key=shared.AttributeKey(
-                    facet_name="quo",
-                    name="delectus",
-                    schema_arn="et",
+                    facet_name="error",
+                    name="deserunt",
+                    schema_arn="suscipit",
                 ),
                 value=shared.TypedAttributeValue(
-                    binary_value="ipsum",
+                    binary_value="iure",
                     boolean_value=False,
-                    datetime_value="1971-08-07T18:15:28Z",
-                    number_value="et",
-                    string_value="cupiditate",
+                    datetime_value="2022-02-09T12:04:06.508Z",
+                    number_value="ipsa",
+                    string_value="delectus",
+                ),
+            ),
+            shared.AttributeKeyAndValue(
+                key=shared.AttributeKey(
+                    facet_name="tempora",
+                    name="suscipit",
+                    schema_arn="molestiae",
+                ),
+                value=shared.TypedAttributeValue(
+                    binary_value="minus",
+                    boolean_value=False,
+                    datetime_value="2021-05-31T20:38:28.793Z",
+                    number_value="iusto",
+                    string_value="excepturi",
                 ),
             ),
         ],
         object_reference=operations.AddFacetToObjectRequestBodyObjectReference(
-            selector="sed",
+            selector="nisi",
         ),
         schema_facet=operations.AddFacetToObjectRequestBodySchemaFacet(
-            facet_name="praesentium",
-            schema_arn="excepturi",
+            facet_name="recusandae",
+            schema_arn="temporibus",
         ),
     ),
+    x_amz_algorithm="ab",
+    x_amz_content_sha256="quis",
+    x_amz_credential="veritatis",
+    x_amz_date="deserunt",
+    x_amz_security_token="perferendis",
+    x_amz_signature="ipsam",
+    x_amz_signed_headers="repellendus",
+    x_amz_data_partition="sapiente",
 )
     
 res = s.add_facet_to_object(req)
@@ -83,7 +93,7 @@ if res.add_facet_to_object_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -153,7 +163,17 @@ if res.add_facet_to_object_response is not None:
 * `update_typed_link_facet` - Updates a <a>TypedLinkFacet</a>. For more information, see <a href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed Links</a>.
 * `upgrade_applied_schema` - Upgrades a single directory in-place using the <code>PublishedSchemaArn</code> with schema updates found in <code>MinorVersion</code>. Backwards-compatible minor version upgrades are instantaneously available for readers on all objects in the directory. Note: This is a synchronous API call and upgrades only one schema on a given directory per call. To upgrade multiple directories from one schema, you would need to call this API on each directory.
 * `upgrade_published_schema` - Upgrades a published schema under a new minor version revision using the current contents of <code>DevelopmentSchemaArn</code>.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

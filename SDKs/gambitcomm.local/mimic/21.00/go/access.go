@@ -37,7 +37,7 @@ func newAccess(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Adds/Overwrites the user entry in the access control database.
 func (s *access) AccessAdd(ctx context.Context, request operations.AccessAddRequest) (*operations.AccessAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/add/{user}/{agents}/{mask}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/add/{user}/{agents}/{mask}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *access) AccessAdd(ctx context.Context, request operations.AccessAddRequ
 // Using '*' for user clears all the users.
 func (s *access) AccessDel(ctx context.Context, request operations.AccessDelRequest) (*operations.AccessDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/del/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/del/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -365,7 +365,7 @@ func (s *access) AccessList(ctx context.Context) (*operations.AccessListResponse
 // If filename is not specified then the currently set 'acldb' parameter is used.
 func (s *access) AccessLoad(ctx context.Context, request operations.AccessLoadRequest) (*operations.AccessLoadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/load/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/load/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -411,7 +411,7 @@ func (s *access) AccessLoad(ctx context.Context, request operations.AccessLoadRe
 // If filename is not specified then the currently set 'acldb' parameter is used.
 func (s *access) AccessSave(ctx context.Context, request operations.AccessSaveRequest) (*operations.AccessSaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/save/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/save/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -457,7 +457,7 @@ func (s *access) AccessSave(ctx context.Context, request operations.AccessSaveRe
 // This will be used for subsequent load and save operations.
 func (s *access) AccessSetAcldb(ctx context.Context, request operations.AccessSetAcldbRequest) (*operations.AccessSetAcldbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/set/acldb/{databaseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/set/acldb/{databaseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -504,7 +504,7 @@ func (s *access) AccessSetAcldb(ctx context.Context, request operations.AccessSe
 // 0 indicates disabled, 1 indicates enabled.
 func (s *access) AccessSetEnabled(ctx context.Context, request operations.AccessSetEnabledRequest) (*operations.AccessSetEnabledResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/set/enabled/{enabledOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/access/set/enabled/{enabledOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

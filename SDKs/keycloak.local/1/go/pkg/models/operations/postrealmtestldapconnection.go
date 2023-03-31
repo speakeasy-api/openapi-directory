@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmTestLDAPConnectionPathParams struct {
+type PostRealmTestLDAPConnectionRequest struct {
+	TestLdapConnectionRepresentation shared.TestLdapConnectionRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmTestLDAPConnectionRequest struct {
-	PathParams PostRealmTestLDAPConnectionPathParams
-	Request    shared.TestLdapConnectionRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmTestLDAPConnectionResponse struct {

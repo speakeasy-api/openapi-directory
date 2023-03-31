@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBookingRequest struct {
-	// Specifies the room you want to book for your guest.
-	Request *shared.BookingRequest `request:"mediaType=application/json"`
-}
-
 type CreateBookingResponse struct {
 	ContentType string
 	StatusCode  int

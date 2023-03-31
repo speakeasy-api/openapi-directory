@@ -44,14 +44,10 @@ func (e *GetGetPathwaysByParentOntologyTermFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetGetPathwaysByParentOntologyTermQueryParams struct {
+type GetGetPathwaysByParentOntologyTermRequest struct {
 	Format *GetGetPathwaysByParentOntologyTermFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The Ontology term
 	Term string `queryParam:"style=form,explode=true,name=term"`
-}
-
-type GetGetPathwaysByParentOntologyTermRequest struct {
-	QueryParams GetGetPathwaysByParentOntologyTermQueryParams
 }
 
 type GetGetPathwaysByParentOntologyTermResponse struct {

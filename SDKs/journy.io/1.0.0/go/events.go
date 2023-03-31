@@ -143,7 +143,7 @@ func (s *events) GetEvents(ctx context.Context) (*operations.GetEventsResponse, 
 // Endpoint used to track an event for a user or an account.
 //
 // This endpoint is moved to [Track](#operation/trackEvent).
-func (s *events) TrackJourneyEvent(ctx context.Context, request operations.TrackJourneyEventRequest) (*operations.TrackJourneyEventResponse, error) {
+func (s *events) TrackJourneyEvent(ctx context.Context, request operations.TrackJourneyEventRequestBody) (*operations.TrackJourneyEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"
 

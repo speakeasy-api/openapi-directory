@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3GroupAddPathParams struct {
+type ProtocolSnmpv3GroupAddRequest struct {
 	// Agent to add the SNMPv3 group
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMPv3 group name
@@ -15,10 +15,6 @@ type ProtocolSnmpv3GroupAddPathParams struct {
 	SecurityModel string `pathParam:"style=simple,explode=false,name=securityModel"`
 	// SNMPv3 group security name
 	SecurityName string `pathParam:"style=simple,explode=false,name=securityName"`
-}
-
-type ProtocolSnmpv3GroupAddRequest struct {
-	PathParams ProtocolSnmpv3GroupAddPathParams
 }
 
 type ProtocolSnmpv3GroupAddResponse struct {

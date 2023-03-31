@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAnEventSubscriptionPathParams struct {
-	EventSubscriptionID string `pathParam:"style=simple,explode=false,name=event_subscription_id"`
-}
-
 type UpdateAnEventSubscriptionRequest struct {
-	PathParams UpdateAnEventSubscriptionPathParams
-	Request    shared.UpdateAnEventSubscriptionParameters `request:"mediaType=application/json"`
+	EventSubscriptionID                 string                                     `pathParam:"style=simple,explode=false,name=event_subscription_id"`
+	UpdateAnEventSubscriptionParameters shared.UpdateAnEventSubscriptionParameters `request:"mediaType=application/json"`
 }
 
 type UpdateAnEventSubscriptionDefaultApplicationJSON13StatusEnum string

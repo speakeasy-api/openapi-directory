@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type SchemaResponsePatchPathParams struct {
-	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
-	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
 // SchemaResponsePatchSchemaResponsesAttributesReviewsStateEnum - A string that represents Schema Response state. `initial` is the state of a Schema Response on a newly registered Registration, to edit a Schema Response you must create a Schema Response Action that triggers a new submission.
 type SchemaResponsePatchSchemaResponsesAttributesReviewsStateEnum string
 
@@ -93,8 +88,9 @@ type SchemaResponsePatchSchemaResponsesInput struct {
 }
 
 type SchemaResponsePatchRequest struct {
-	PathParams SchemaResponsePatchPathParams
-	Request    SchemaResponsePatchSchemaResponsesInput `request:"mediaType=application/json"`
+	RequestBody SchemaResponsePatchSchemaResponsesInput `request:"mediaType=application/json"`
+	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
+	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
 }
 
 // SchemaResponsePatchSchemaResponsesAttributes - The properties of the Schema Response.

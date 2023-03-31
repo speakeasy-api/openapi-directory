@@ -12,14 +12,8 @@ var CreateSyncListItemServerList = []string{
 }
 
 type CreateSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncListItemPathParams struct {
-	// The SID of the Sync List to add the new List Item to. Can be the Sync List resource's `sid` or its `unique_name`.
-	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new List Item in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncListItemCreateSyncListItemRequest struct {
@@ -34,10 +28,11 @@ type CreateSyncListItemCreateSyncListItemRequest struct {
 }
 
 type CreateSyncListItemRequest struct {
-	PathParams CreateSyncListItemPathParams
-	Request    *CreateSyncListItemCreateSyncListItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncListItemSecurity
-	ServerURL  *string
+	// The SID of the Sync List to add the new List Item to. Can be the Sync List resource's `sid` or its `unique_name`.
+	ListSid     string                                       `pathParam:"style=simple,explode=false,name=ListSid"`
+	RequestBody *CreateSyncListItemCreateSyncListItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new List Item in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncListItemResponse struct {

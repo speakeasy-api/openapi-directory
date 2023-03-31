@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RoleUpdatePathParams struct {
+type RoleUpdateRequest struct {
+	// The Role to change to
+	RoleUpdateRequest shared.RoleUpdateRequest `request:"mediaType=application/json"`
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type RoleUpdateRequest struct {
-	PathParams RoleUpdatePathParams
-	// The Role to change to
-	Request shared.RoleUpdateRequest `request:"mediaType=application/json"`
 }
 
 type RoleUpdateResponse struct {

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryPathParams struct {
+type ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest struct {
+	ActionsSetDefaultWorkflowPermissions shared.ActionsSetDefaultWorkflowPermissions `request:"mediaType=application/json"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest struct {
-	PathParams ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryPathParams
-	Request    shared.ActionsSetDefaultWorkflowPermissions `request:"mediaType=application/json"`
 }
 
 type ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryResponse struct {

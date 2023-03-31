@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetAdminBranchProtectionPathParams struct {
+type ReposGetAdminBranchProtectionRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetAdminBranchProtectionRequest struct {
-	PathParams ReposGetAdminBranchProtectionPathParams
 }
 
 type ReposGetAdminBranchProtectionResponse struct {

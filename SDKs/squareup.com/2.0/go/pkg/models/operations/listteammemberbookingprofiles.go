@@ -8,10 +8,10 @@ import (
 )
 
 type ListTeamMemberBookingProfilesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListTeamMemberBookingProfilesQueryParams struct {
+type ListTeamMemberBookingProfilesRequest struct {
 	// Indicates whether to include only bookable team members in the returned result (`true`) or not (`false`).
 	BookableOnly *bool `queryParam:"style=form,explode=true,name=bookable_only"`
 	// The cursor for paginating through the results.
@@ -20,11 +20,6 @@ type ListTeamMemberBookingProfilesQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Indicates whether to include only team members enabled at the given location in the returned result.
 	LocationID *string `queryParam:"style=form,explode=true,name=location_id"`
-}
-
-type ListTeamMemberBookingProfilesRequest struct {
-	QueryParams ListTeamMemberBookingProfilesQueryParams
-	Security    ListTeamMemberBookingProfilesSecurity
 }
 
 type ListTeamMemberBookingProfilesResponse struct {

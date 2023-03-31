@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type IsDescendantOfUsingGETPathParams struct {
+type IsDescendantOfUsingGETRequest struct {
 	// Child Term Accession ID
 	AccId1 string `pathParam:"style=simple,explode=false,name=accId1"`
 	// Parent Term Accession ID
 	AccId2 string `pathParam:"style=simple,explode=false,name=accId2"`
-}
-
-type IsDescendantOfUsingGETRequest struct {
-	PathParams IsDescendantOfUsingGETPathParams
 }
 
 type IsDescendantOfUsingGETResponse struct {

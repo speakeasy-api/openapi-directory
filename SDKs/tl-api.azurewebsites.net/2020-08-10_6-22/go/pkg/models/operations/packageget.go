@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageGetQueryParams struct {
+type PackageGetRequest struct {
 	// primary key of package entity
 	PackageID *int `queryParam:"style=form,explode=true,name=packageId"`
-}
-
-type PackageGetRequest struct {
-	QueryParams PackageGetQueryParams
 }
 
 type PackageGetResponse struct {

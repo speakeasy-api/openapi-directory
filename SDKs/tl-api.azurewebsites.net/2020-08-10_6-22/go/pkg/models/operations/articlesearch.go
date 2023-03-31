@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleSearchQueryParams struct {
+type ArticleSearchRequest struct {
 	// Active Status 1 : Active, 2: Inactive, 3: All, Default : 1
 	ActiveStatus *int `queryParam:"style=form,explode=true,name=activeStatus"`
 	// -1 for all gyms
@@ -22,10 +22,6 @@ type ArticleSearchQueryParams struct {
 	SearchText *string `queryParam:"style=form,explode=true,name=searchText"`
 	// filter article type. default is 'all'
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ArticleSearchRequest struct {
-	QueryParams ArticleSearchQueryParams
 }
 
 type ArticleSearchResponse struct {

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type LinkDeliveryGetRequest struct {
-	Request shared.LinkDeliveryGetRequest `request:"mediaType=application/json"`
-}
 
 type LinkDeliveryGetResponse struct {
 	ContentType string

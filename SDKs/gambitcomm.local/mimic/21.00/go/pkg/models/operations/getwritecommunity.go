@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetWriteCommunityPathParams struct {
+type GetWriteCommunityRequest struct {
 	// Agent to return the SNMP write community string
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetWriteCommunityRequest struct {
-	PathParams GetWriteCommunityPathParams
 }
 
 type GetWriteCommunityResponse struct {

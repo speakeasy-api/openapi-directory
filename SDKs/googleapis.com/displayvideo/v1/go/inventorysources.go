@@ -33,11 +33,11 @@ func newInventorySources(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // DisplayvideoInventorySourcesCreate - Creates a new inventory source. Returns the newly created inventory source if successful.
-func (s *inventorySources) DisplayvideoInventorySourcesCreate(ctx context.Context, request operations.DisplayvideoInventorySourcesCreateRequest) (*operations.DisplayvideoInventorySourcesCreateResponse, error) {
+func (s *inventorySources) DisplayvideoInventorySourcesCreate(ctx context.Context, request operations.DisplayvideoInventorySourcesCreateRequest, security operations.DisplayvideoInventorySourcesCreateSecurity) (*operations.DisplayvideoInventorySourcesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inventorySources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InventorySourceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesCreate(ctx context.Contex
 }
 
 // DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
-func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors(ctx context.Context, request operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest) (*operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse, error) {
+func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors(ctx context.Context, request operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest, security operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsSecurity) (*operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditInventorySourceReadWriteAccessorsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWr
 }
 
 // DisplayvideoInventorySourcesGet - Gets an inventory source.
-func (s *inventorySources) DisplayvideoInventorySourcesGet(ctx context.Context, request operations.DisplayvideoInventorySourcesGetRequest) (*operations.DisplayvideoInventorySourcesGetResponse, error) {
+func (s *inventorySources) DisplayvideoInventorySourcesGet(ctx context.Context, request operations.DisplayvideoInventorySourcesGetRequest, security operations.DisplayvideoInventorySourcesGetSecurity) (*operations.DisplayvideoInventorySourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *inventorySources) DisplayvideoInventorySourcesGet(ctx context.Context, 
 }
 
 // DisplayvideoInventorySourcesList - Lists inventory sources that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *inventorySources) DisplayvideoInventorySourcesList(ctx context.Context, request operations.DisplayvideoInventorySourcesListRequest) (*operations.DisplayvideoInventorySourcesListResponse, error) {
+func (s *inventorySources) DisplayvideoInventorySourcesList(ctx context.Context, request operations.DisplayvideoInventorySourcesListRequest, security operations.DisplayvideoInventorySourcesListSecurity) (*operations.DisplayvideoInventorySourcesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inventorySources"
 
@@ -200,11 +200,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesList(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesList(ctx context.Context,
 }
 
 // DisplayvideoInventorySourcesPatch - Updates an existing inventory source. Returns the updated inventory source if successful.
-func (s *inventorySources) DisplayvideoInventorySourcesPatch(ctx context.Context, request operations.DisplayvideoInventorySourcesPatchRequest) (*operations.DisplayvideoInventorySourcesPatchResponse, error) {
+func (s *inventorySources) DisplayvideoInventorySourcesPatch(ctx context.Context, request operations.DisplayvideoInventorySourcesPatchRequest, security operations.DisplayvideoInventorySourcesPatchSecurity) (*operations.DisplayvideoInventorySourcesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySources/{inventorySourceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InventorySourceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *inventorySources) DisplayvideoInventorySourcesPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

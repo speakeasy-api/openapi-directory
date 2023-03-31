@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetAccountBillingInvoicePathParams struct {
+type GetAccountBillingInvoiceRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// The invoice ID.
 	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type GetAccountBillingInvoiceRequest struct {
-	PathParams GetAccountBillingInvoicePathParams
 }
 
 type GetAccountBillingInvoice200ApplicationXMLInvoiceItems struct {

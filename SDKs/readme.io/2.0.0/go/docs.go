@@ -33,11 +33,11 @@ func newDocs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CreateDoc - Create doc
 // Create a new doc inside of this project
-func (s *docs) CreateDoc(ctx context.Context, request operations.CreateDocRequest) (*operations.CreateDocResponse, error) {
+func (s *docs) CreateDoc(ctx context.Context, request operations.CreateDocRequest, security operations.CreateDocSecurity) (*operations.CreateDocResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/docs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Doc", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *docs) CreateDoc(ctx context.Context, request operations.CreateDocReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,18 +83,18 @@ func (s *docs) CreateDoc(ctx context.Context, request operations.CreateDocReques
 
 // DeleteDoc - Delete doc
 // Delete the doc with this slug
-func (s *docs) DeleteDoc(ctx context.Context, request operations.DeleteDocRequest) (*operations.DeleteDocResponse, error) {
+func (s *docs) DeleteDoc(ctx context.Context, request operations.DeleteDocRequest, security operations.DeleteDocSecurity) (*operations.DeleteDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,18 +123,18 @@ func (s *docs) DeleteDoc(ctx context.Context, request operations.DeleteDocReques
 
 // GetDoc - Get doc
 // Returns the doc with this slug
-func (s *docs) GetDoc(ctx context.Context, request operations.GetDocRequest) (*operations.GetDocResponse, error) {
+func (s *docs) GetDoc(ctx context.Context, request operations.GetDocRequest, security operations.GetDocSecurity) (*operations.GetDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *docs) GetDoc(ctx context.Context, request operations.GetDocRequest) (*o
 
 // SearchDocs - Search docs
 // Returns all docs that match the search
-func (s *docs) SearchDocs(ctx context.Context, request operations.SearchDocsRequest) (*operations.SearchDocsResponse, error) {
+func (s *docs) SearchDocs(ctx context.Context, request operations.SearchDocsRequest, security operations.SearchDocsSecurity) (*operations.SearchDocsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/docs/search"
 
@@ -172,13 +172,13 @@ func (s *docs) SearchDocs(ctx context.Context, request operations.SearchDocsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,11 +207,11 @@ func (s *docs) SearchDocs(ctx context.Context, request operations.SearchDocsRequ
 
 // UpdateDoc - Update doc
 // Update a doc with this slug
-func (s *docs) UpdateDoc(ctx context.Context, request operations.UpdateDocRequest) (*operations.UpdateDocResponse, error) {
+func (s *docs) UpdateDoc(ctx context.Context, request operations.UpdateDocRequest, security operations.UpdateDocSecurity) (*operations.UpdateDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Doc", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -226,9 +226,9 @@ func (s *docs) UpdateDoc(ctx context.Context, request operations.UpdateDocReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

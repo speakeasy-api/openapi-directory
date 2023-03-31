@@ -10,13 +10,8 @@ import (
 )
 
 type ListSimilarImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type ListSimilarImagesPathParams struct {
-	// Image ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListSimilarImagesViewEnum - Amount of detail to render in the response
@@ -43,7 +38,9 @@ func (e *ListSimilarImagesViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSimilarImagesQueryParams struct {
+type ListSimilarImagesRequest struct {
+	// Image ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language for the keywords and categories in the response
 	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Page number
@@ -52,12 +49,6 @@ type ListSimilarImagesQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Amount of detail to render in the response
 	View *ListSimilarImagesViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ListSimilarImagesRequest struct {
-	PathParams  ListSimilarImagesPathParams
-	QueryParams ListSimilarImagesQueryParams
-	Security    ListSimilarImagesSecurity
 }
 
 type ListSimilarImagesResponse struct {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PrepareTransactionRequest struct {
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PrepareTransactionResponse struct {
 	Body        []byte
 	ContentType string

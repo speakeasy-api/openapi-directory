@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // IdentitytoolkitProjectsIdentityPlatformInitializeAuth - Initialize Identity Platform for a Cloud project. Identity Platform is an end-to-end authentication system for third-party users to access your apps and services. These could include mobile/web apps, games, APIs and beyond. This is the publicly available variant of EnableIdentityPlatform that is only available to billing-enabled projects.
-func (s *projects) IdentitytoolkitProjectsIdentityPlatformInitializeAuth(ctx context.Context, request operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest) (*operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse, error) {
+func (s *projects) IdentitytoolkitProjectsIdentityPlatformInitializeAuth(ctx context.Context, request operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest, security operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthSecurity) (*operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{project}/identityPlatform:initializeAuth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{project}/identityPlatform:initializeAuth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) IdentitytoolkitProjectsIdentityPlatformInitializeAuth(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) IdentitytoolkitProjectsIdentityPlatformInitializeAuth(ctx con
 }
 
 // IdentitytoolkitProjectsTenantsCreate - Create a tenant. Requires write permission on the Agent project.
-func (s *projects) IdentitytoolkitProjectsTenantsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsCreateRequest) (*operations.IdentitytoolkitProjectsTenantsCreateResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsCreateRequest, security operations.IdentitytoolkitProjectsTenantsCreateSecurity) (*operations.IdentitytoolkitProjectsTenantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tenants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tenants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitAdminV2TenantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsCreate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsCreate(ctx context.Context, req
 }
 
 // IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreate - Create a default supported Idp configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest) (*operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest, security operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateSecurity) (*operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/defaultSupportedIdpConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/defaultSupportedIdpConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreat
 }
 
 // IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList - List all default supported Idp configurations for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest) (*operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest, security operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurity) (*operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/defaultSupportedIdpConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/defaultSupportedIdpConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList(
 }
 
 // IdentitytoolkitProjectsTenantsGetIamPolicy - Gets the access control policy for a resource. An error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Caller must have the right Google IAM permission on the resource.
-func (s *projects) IdentitytoolkitProjectsTenantsGetIamPolicy(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest) (*operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsGetIamPolicy(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest, security operations.IdentitytoolkitProjectsTenantsGetIamPolicySecurity) (*operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsGetIamPolicy(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsGetIamPolicy(ctx context.Contex
 }
 
 // IdentitytoolkitProjectsTenantsInboundSamlConfigsCreate - Create an inbound SAML configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest) (*operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest, security operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateSecurity) (*operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inboundSamlConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inboundSamlConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitAdminV2InboundSamlConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,20 +355,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsCreate(ctx co
 }
 
 // IdentitytoolkitProjectsTenantsInboundSamlConfigsList - List all inbound SAML configurations for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest) (*operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest, security operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurity) (*operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inboundSamlConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inboundSamlConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,20 +403,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsInboundSamlConfigsList(ctx cont
 }
 
 // IdentitytoolkitProjectsTenantsList - List tenants under the given agent project. Requires read permission on the Agent project.
-func (s *projects) IdentitytoolkitProjectsTenantsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsListRequest) (*operations.IdentitytoolkitProjectsTenantsListResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsListRequest, security operations.IdentitytoolkitProjectsTenantsListSecurity) (*operations.IdentitytoolkitProjectsTenantsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tenants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/tenants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsList(ctx context.Context, reque
 }
 
 // IdentitytoolkitProjectsTenantsOauthIdpConfigsCreate - Create an Oidc Idp configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsCreate(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest, security operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurity) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/oauthIdpConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/oauthIdpConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsCreate(ctx conte
 }
 
 // IdentitytoolkitProjectsTenantsOauthIdpConfigsDelete - Delete an Oidc Idp configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsDelete(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsDelete(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest, security operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurity) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsDelete(ctx conte
 }
 
 // IdentitytoolkitProjectsTenantsOauthIdpConfigsGet - Retrieve an Oidc Idp configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsGet(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsGet(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest, security operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetSecurity) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsGet(ctx context.
 }
 
 // IdentitytoolkitProjectsTenantsOauthIdpConfigsList - List all Oidc Idp configurations for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsList(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest, security operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListSecurity) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/oauthIdpConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/oauthIdpConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsList(ctx context
 }
 
 // IdentitytoolkitProjectsTenantsOauthIdpConfigsPatch - Update an Oidc Idp configuration for an Identity Toolkit project.
-func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsPatch(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsPatch(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest, security operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity) (*operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsPatch(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,11 +705,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsOauthIdpConfigsPatch(ctx contex
 }
 
 // IdentitytoolkitProjectsTenantsSetIamPolicy - Sets the access control policy for a resource. If the policy exists, it is replaced. Caller must have the right Google IAM permission on the resource.
-func (s *projects) IdentitytoolkitProjectsTenantsSetIamPolicy(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest) (*operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsSetIamPolicy(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest, security operations.IdentitytoolkitProjectsTenantsSetIamPolicySecurity) (*operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,11 +721,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsSetIamPolicy(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,11 +760,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsSetIamPolicy(ctx context.Contex
 }
 
 // IdentitytoolkitProjectsTenantsTestIamPermissions - Returns the caller's permissions on a resource. An error is returned if the resource does not exist. A caller is not required to have Google IAM permission to make this request.
-func (s *projects) IdentitytoolkitProjectsTenantsTestIamPermissions(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest) (*operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse, error) {
+func (s *projects) IdentitytoolkitProjectsTenantsTestIamPermissions(ctx context.Context, request operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest, security operations.IdentitytoolkitProjectsTenantsTestIamPermissionsSecurity) (*operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -776,11 +776,11 @@ func (s *projects) IdentitytoolkitProjectsTenantsTestIamPermissions(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

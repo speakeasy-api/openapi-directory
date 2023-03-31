@@ -12,18 +12,13 @@ var UpdateBrandRegistrationsServerList = []string{
 }
 
 type UpdateBrandRegistrationsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateBrandRegistrationsPathParams struct {
-	// The SID of the Brand Registration resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateBrandRegistrationsRequest struct {
-	PathParams UpdateBrandRegistrationsPathParams
-	Security   UpdateBrandRegistrationsSecurity
-	ServerURL  *string
+	// The SID of the Brand Registration resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateBrandRegistrationsResponse struct {

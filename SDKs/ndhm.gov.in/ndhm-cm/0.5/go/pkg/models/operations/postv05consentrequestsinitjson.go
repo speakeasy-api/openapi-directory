@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05ConsentRequestsInitJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05ConsentRequestsInitJSONRequest struct {
-	Headers PostV05ConsentRequestsInitJSONHeaders
-	Request shared.ConsentRequest `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization  string                `header:"style=simple,explode=false,name=Authorization"`
+	ConsentRequest shared.ConsentRequest `request:"mediaType=application/json"`
 }
 
 type PostV05ConsentRequestsInitJSONResponse struct {

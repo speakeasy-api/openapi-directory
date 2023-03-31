@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetPathParams struct {
+type ArticleGetRequest struct {
 	// indentity number (primary key) for article object
 	ArticleID int `pathParam:"style=simple,explode=false,name=articleID"`
-}
-
-type ArticleGetRequest struct {
-	PathParams ArticleGetPathParams
 }
 
 type ArticleGetResponse struct {

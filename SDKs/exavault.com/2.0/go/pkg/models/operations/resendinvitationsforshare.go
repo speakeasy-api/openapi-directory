@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResendInvitationsForSharePathParams struct {
-	// ID of the share to resend invites for.
-	ShareID int64 `pathParam:"style=simple,explode=false,name=shareId"`
-}
-
-type ResendInvitationsForShareHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type ResendInvitationsForShareResendInvitationsRequestBody struct {
 	// ID number of recipient to send a new invitation to.
 	RecipientID *int `json:"recipientId,omitempty"`
 }
 
 type ResendInvitationsForShareRequest struct {
-	PathParams ResendInvitationsForSharePathParams
-	Headers    ResendInvitationsForShareHeaders
-	Request    *ResendInvitationsForShareResendInvitationsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ResendInvitationsForShareResendInvitationsRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// ID of the share to resend invites for.
+	ShareID int64 `pathParam:"style=simple,explode=false,name=shareId"`
 }
 
 type ResendInvitationsForShareResponse struct {

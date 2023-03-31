@@ -8,19 +8,14 @@ import (
 )
 
 type CreateAssetTypeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateAssetTypeHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateAssetTypeRequest struct {
-	Headers CreateAssetTypeHeaders
 	// Asset type to add
-	Request  *shared.AssetType `request:"mediaType=application/json"`
-	Security CreateAssetTypeSecurity
+	AssetType *shared.AssetType `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type CreateAssetTypeResponse struct {

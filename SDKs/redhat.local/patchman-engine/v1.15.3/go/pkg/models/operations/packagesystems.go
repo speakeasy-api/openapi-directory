@@ -8,15 +8,10 @@ import (
 )
 
 type PackageSystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type PackageSystemsPathParams struct {
-	// Package name
-	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
-}
-
-type PackageSystemsQueryParams struct {
+type PackageSystemsRequest struct {
 	// Filter systems by their SAP SIDs
 	FilterSystemProfileSapSidsIn []string `queryParam:"style=form,explode=true,name=filter[system_profile][sap_sids][in]"`
 	// Filter only SAP systems
@@ -25,14 +20,10 @@ type PackageSystemsQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset for paging
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
+	// Package name
+	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type PackageSystemsRequest struct {
-	PathParams  PackageSystemsPathParams
-	QueryParams PackageSystemsQueryParams
-	Security    PackageSystemsSecurity
 }
 
 type PackageSystemsResponse struct {

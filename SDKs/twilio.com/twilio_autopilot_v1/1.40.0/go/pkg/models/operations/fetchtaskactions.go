@@ -12,20 +12,15 @@ var FetchTaskActionsServerList = []string{
 }
 
 type FetchTaskActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskActionsPathParams struct {
+type FetchTaskActionsRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to fetch were defined.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) for which the task actions to fetch were defined.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type FetchTaskActionsRequest struct {
-	PathParams FetchTaskActionsPathParams
-	Security   FetchTaskActionsSecurity
-	ServerURL  *string
 }
 
 type FetchTaskActionsResponse struct {

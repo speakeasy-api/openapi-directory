@@ -14,12 +14,8 @@ var UpdateFleetServerList = []string{
 }
 
 type UpdateFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateFleetPathParams struct {
-	// The SID of the Fleet resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateFleetUpdateFleetRequestIPCommandsMethodEnum - A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.
@@ -112,10 +108,9 @@ type UpdateFleetUpdateFleetRequest struct {
 }
 
 type UpdateFleetRequest struct {
-	PathParams UpdateFleetPathParams
-	Request    *UpdateFleetUpdateFleetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateFleetSecurity
-	ServerURL  *string
+	RequestBody *UpdateFleetUpdateFleetRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Fleet resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateFleetResponse struct {

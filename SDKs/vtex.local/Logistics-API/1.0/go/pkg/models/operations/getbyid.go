@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetByIDPathParams struct {
-	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
-}
-
-type GetByIDHeaders struct {
+type GetByIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetByIDRequest struct {
-	PathParams GetByIDPathParams
-	Headers    GetByIDHeaders
+	ContentType   string `header:"style=simple,explode=false,name=Content-Type"`
+	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
 }
 
 type GetByIDGetByIDAddress4Country struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesCheckUserCanBeAssignedToIssuePathParams struct {
+type IssuesCheckUserCanBeAssignedToIssueRequest struct {
 	Assignee string `pathParam:"style=simple,explode=false,name=assignee"`
 	// The number that identifies the issue.
 	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
@@ -15,10 +15,6 @@ type IssuesCheckUserCanBeAssignedToIssuePathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesCheckUserCanBeAssignedToIssueRequest struct {
-	PathParams IssuesCheckUserCanBeAssignedToIssuePathParams
 }
 
 type IssuesCheckUserCanBeAssignedToIssueResponse struct {

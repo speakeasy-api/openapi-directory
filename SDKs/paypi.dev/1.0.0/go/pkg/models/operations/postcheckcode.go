@@ -11,10 +11,6 @@ type PostCheckCodeRequestBody struct {
 	Email *string `json:"email,omitempty"`
 }
 
-type PostCheckCodeRequest struct {
-	Request PostCheckCodeRequestBody `request:"mediaType=application/json"`
-}
-
 // PostCheckCode403ApplicationJSON - #### Tries for this email exceeded.
 // To prevent abuse and brute forcing, we limit the number of checkCode requests for each email address to 20. \
 // This means if more than 20 requests are made you will have to send another code to your user, this will reset the limit.

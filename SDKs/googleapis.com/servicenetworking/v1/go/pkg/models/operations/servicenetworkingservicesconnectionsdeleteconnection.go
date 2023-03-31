@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesConnectionsDeleteConnectionSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesConnectionsDeleteConnectionSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesConnectionsDeleteConnectionSecurity struct {
@@ -22,14 +22,10 @@ type ServicenetworkingServicesConnectionsDeleteConnectionSecurity struct {
 	Option2 *ServicenetworkingServicesConnectionsDeleteConnectionSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesConnectionsDeleteConnectionPathParams struct {
-	// Required. The private service connection that connects to a service producer organization. The name includes both the private service name and the VPC network peering name in the format of `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that support this functionality, this is `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicenetworkingServicesConnectionsDeleteConnectionQueryParams struct {
+type ServicenetworkingServicesConnectionsDeleteConnectionRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DeleteConnectionRequest *shared.DeleteConnectionRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type ServicenetworkingServicesConnectionsDeleteConnectionQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The private service connection that connects to a service producer organization. The name includes both the private service name and the VPC network peering name in the format of `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that support this functionality, this is `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type ServicenetworkingServicesConnectionsDeleteConnectionQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesConnectionsDeleteConnectionRequest struct {
-	PathParams  ServicenetworkingServicesConnectionsDeleteConnectionPathParams
-	QueryParams ServicenetworkingServicesConnectionsDeleteConnectionQueryParams
-	Request     *shared.DeleteConnectionRequest `request:"mediaType=application/json"`
-	Security    ServicenetworkingServicesConnectionsDeleteConnectionSecurity
 }
 
 type ServicenetworkingServicesConnectionsDeleteConnectionResponse struct {

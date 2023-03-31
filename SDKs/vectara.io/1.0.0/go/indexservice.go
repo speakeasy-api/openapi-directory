@@ -34,11 +34,11 @@ func newIndexService(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // Delete - Delete
-func (s *indexService) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
+func (s *indexService) Delete(ctx context.Context, request operations.DeleteRequest, security operations.DeleteSecurity) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/delete-doc"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VectaraDeleteDocumentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *indexService) Delete(ctx context.Context, request operations.DeleteRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,11 +100,11 @@ func (s *indexService) Delete(ctx context.Context, request operations.DeleteRequ
 }
 
 // FileUpload - File Upload
-func (s *indexService) FileUpload(ctx context.Context, request operations.FileUploadRequest) (*operations.FileUploadResponse, error) {
+func (s *indexService) FileUpload(ctx context.Context, request operations.FileUploadRequest, security operations.FileUploadSecurity) (*operations.FileUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/upload"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -116,11 +116,11 @@ func (s *indexService) FileUpload(ctx context.Context, request operations.FileUp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,11 +172,11 @@ func (s *indexService) FileUpload(ctx context.Context, request operations.FileUp
 }
 
 // Index - Index
-func (s *indexService) Index(ctx context.Context, request operations.IndexRequest) (*operations.IndexResponse, error) {
+func (s *indexService) Index(ctx context.Context, request operations.IndexRequest, security operations.IndexSecurity) (*operations.IndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/index"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VectaraIndexDocumentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,9 +191,9 @@ func (s *indexService) Index(ctx context.Context, request operations.IndexReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

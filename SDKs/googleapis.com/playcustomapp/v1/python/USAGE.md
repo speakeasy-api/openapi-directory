@@ -4,36 +4,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PlaycustomappAccountsCustomAppsCreateRequest(
-    security=operations.PlaycustomappAccountsCustomAppsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.PlaycustomappAccountsCustomAppsCreatePathParams(
-        account="delectus",
-    ),
-    query_params=operations.PlaycustomappAccountsCustomAppsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="totam",
-        alt="proto",
-        callback="quia",
-        fields="id",
-        key="sint",
-        oauth_token="amet",
-        pretty_print=False,
-        quota_user="qui",
-        upload_type="vel",
-        upload_protocol="porro",
-    ),
-    request="tenetur".encode(),
+    dollar_xgafv="2",
+    request_body="provident".encode(),
+    access_token="distinctio",
+    account="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.accounts.playcustomapp_accounts_custom_apps_create(req)
+res = s.accounts.playcustomapp_accounts_custom_apps_create(req, operations.PlaycustomappAccountsCustomAppsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.custom_app is not None:
     # handle response

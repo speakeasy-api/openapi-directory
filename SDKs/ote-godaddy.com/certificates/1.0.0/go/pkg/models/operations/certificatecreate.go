@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCreateHeaders struct {
+type CertificateCreateRequest struct {
+	// The certificate order information
+	CertificateCreate shared.CertificateCreate `request:"mediaType=application/json"`
 	// Setting locale for communications such as emails and error messages
 	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
-}
-
-type CertificateCreateRequest struct {
-	Headers CertificateCreateHeaders
-	// The certificate order information
-	Request shared.CertificateCreate `request:"mediaType=application/json"`
 }
 
 type CertificateCreateResponse struct {

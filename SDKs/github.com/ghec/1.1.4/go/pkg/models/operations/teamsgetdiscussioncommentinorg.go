@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetDiscussionCommentInOrgPathParams struct {
+type TeamsGetDiscussionCommentInOrgRequest struct {
 	// The number that identifies the comment.
 	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// The number that identifies the discussion.
@@ -16,10 +16,6 @@ type TeamsGetDiscussionCommentInOrgPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsGetDiscussionCommentInOrgRequest struct {
-	PathParams TeamsGetDiscussionCommentInOrgPathParams
 }
 
 type TeamsGetDiscussionCommentInOrgResponse struct {

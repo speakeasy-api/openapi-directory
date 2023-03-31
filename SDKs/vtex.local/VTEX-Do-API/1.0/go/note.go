@@ -35,16 +35,16 @@ func newNote(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Retrieves a given note in VTEX DO, filtering by `noteId`.
 func (s *note) GetNote(ctx context.Context, request operations.GetNoteRequest) (*operations.GetNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notes/{noteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notes/{noteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,9 +93,9 @@ func (s *note) GetNotesbyorderID(ctx context.Context, request operations.GetNote
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,7 +143,7 @@ func (s *note) NewNote(ctx context.Context, request operations.NewNoteRequest) (
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -155,7 +155,7 @@ func (s *note) NewNote(ctx context.Context, request operations.NewNoteRequest) (
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

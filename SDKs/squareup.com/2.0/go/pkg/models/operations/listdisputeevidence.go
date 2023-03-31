@@ -8,25 +8,16 @@ import (
 )
 
 type ListDisputeEvidenceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListDisputeEvidencePathParams struct {
-	// The ID of the dispute.
-	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
-}
-
-type ListDisputeEvidenceQueryParams struct {
+type ListDisputeEvidenceRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for the original query.
 	// For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-}
-
-type ListDisputeEvidenceRequest struct {
-	PathParams  ListDisputeEvidencePathParams
-	QueryParams ListDisputeEvidenceQueryParams
-	Security    ListDisputeEvidenceSecurity
+	// The ID of the dispute.
+	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 }
 
 type ListDisputeEvidenceResponse struct {

@@ -44,7 +44,7 @@ func (s *authentication) AppkeyPatch(ctx context.Context, request operations.App
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,7 +93,7 @@ func (s *authentication) AppkeyPost(ctx context.Context, request operations.Appk
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -133,7 +133,7 @@ func (s *authentication) AppkeyPost(ctx context.Context, request operations.Appk
 
 // AppkeyPut - Deactivate app key
 // Pass your app key to deactivate the key
-func (s *authentication) AppkeyPut(ctx context.Context, request operations.AppkeyPutRequest) (*operations.AppkeyPutResponse, error) {
+func (s *authentication) AppkeyPut(ctx context.Context, request operations.AppkeyPutRequest, security operations.AppkeyPutSecurity) (*operations.AppkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appkey"
 
@@ -142,11 +142,11 @@ func (s *authentication) AppkeyPut(ctx context.Context, request operations.Appke
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *authentication) AuthAppkeyPatch(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,7 +240,7 @@ func (s *authentication) AuthAppkeyPost(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -280,7 +280,7 @@ func (s *authentication) AuthAppkeyPost(ctx context.Context, request operations.
 
 // AuthAppkeyPut - Deactivate app key
 // Pass your app key to deactivate the key
-func (s *authentication) AuthAppkeyPut(ctx context.Context, request operations.AuthAppkeyPutRequest) (*operations.AuthAppkeyPutResponse, error) {
+func (s *authentication) AuthAppkeyPut(ctx context.Context, request operations.AuthAppkeyPutRequest, security operations.AuthAppkeyPutSecurity) (*operations.AuthAppkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authentication/appkey"
 
@@ -289,11 +289,11 @@ func (s *authentication) AuthAppkeyPut(ctx context.Context, request operations.A
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *authentication) AuthAppkeyPut(ctx context.Context, request operations.A
 
 // AuthAuthkeyGet - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
-func (s *authentication) AuthAuthkeyGet(ctx context.Context, request operations.AuthAuthkeyGetRequest) (*operations.AuthAuthkeyGetResponse, error) {
+func (s *authentication) AuthAuthkeyGet(ctx context.Context, request operations.AuthAuthkeyGetRequest, security operations.AuthAuthkeyGetSecurity) (*operations.AuthAuthkeyGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authentication/authkey"
 
@@ -338,11 +338,11 @@ func (s *authentication) AuthAuthkeyGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -408,7 +408,7 @@ func (s *authentication) AuthAuthkeyPatch(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -449,7 +449,7 @@ func (s *authentication) AuthAuthkeyPatch(ctx context.Context, request operation
 
 // AuthAuthkeyPost - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
-func (s *authentication) AuthAuthkeyPost(ctx context.Context, request operations.AuthAuthkeyPostRequest) (*operations.AuthAuthkeyPostResponse, error) {
+func (s *authentication) AuthAuthkeyPost(ctx context.Context, request operations.AuthAuthkeyPostRequest, security operations.AuthAuthkeyPostSecurity) (*operations.AuthAuthkeyPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authentication/authkey"
 
@@ -458,11 +458,11 @@ func (s *authentication) AuthAuthkeyPost(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -519,7 +519,7 @@ func (s *authentication) AuthAuthkeyPost(ctx context.Context, request operations
 
 // AuthAuthkeyPut - Deactivate auth key (logout)
 // Deactivate auth key for user logging them out of your application
-func (s *authentication) AuthAuthkeyPut(ctx context.Context, request operations.AuthAuthkeyPutRequest) (*operations.AuthAuthkeyPutResponse, error) {
+func (s *authentication) AuthAuthkeyPut(ctx context.Context, request operations.AuthAuthkeyPutRequest, security operations.AuthAuthkeyPutSecurity) (*operations.AuthAuthkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authentication/authkey"
 
@@ -528,11 +528,11 @@ func (s *authentication) AuthAuthkeyPut(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -569,7 +569,7 @@ func (s *authentication) AuthAuthkeyPut(ctx context.Context, request operations.
 
 // AuthVerifyotpGet - Verifies YubiKey OTP for authenticated user
 // Verifies YubiKey OTP for authenticated user
-func (s *authentication) AuthVerifyotpGet(ctx context.Context, request operations.AuthVerifyotpGetRequest) (*operations.AuthVerifyotpGetResponse, error) {
+func (s *authentication) AuthVerifyotpGet(ctx context.Context, request operations.AuthVerifyotpGetRequest, security operations.AuthVerifyotpGetSecurity) (*operations.AuthVerifyotpGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authentication/verifyotp"
 
@@ -578,11 +578,11 @@ func (s *authentication) AuthVerifyotpGet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -621,7 +621,7 @@ func (s *authentication) AuthVerifyotpGet(ctx context.Context, request operation
 
 // AuthkeyGet - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
-func (s *authentication) AuthkeyGet(ctx context.Context, request operations.AuthkeyGetRequest) (*operations.AuthkeyGetResponse, error) {
+func (s *authentication) AuthkeyGet(ctx context.Context, request operations.AuthkeyGetRequest, security operations.AuthkeyGetSecurity) (*operations.AuthkeyGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
 
@@ -630,11 +630,11 @@ func (s *authentication) AuthkeyGet(ctx context.Context, request operations.Auth
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -700,7 +700,7 @@ func (s *authentication) AuthkeyPatch(ctx context.Context, request operations.Au
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -741,7 +741,7 @@ func (s *authentication) AuthkeyPatch(ctx context.Context, request operations.Au
 
 // AuthkeyPost - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
-func (s *authentication) AuthkeyPost(ctx context.Context, request operations.AuthkeyPostRequest) (*operations.AuthkeyPostResponse, error) {
+func (s *authentication) AuthkeyPost(ctx context.Context, request operations.AuthkeyPostRequest, security operations.AuthkeyPostSecurity) (*operations.AuthkeyPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
 
@@ -750,11 +750,11 @@ func (s *authentication) AuthkeyPost(ctx context.Context, request operations.Aut
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -811,7 +811,7 @@ func (s *authentication) AuthkeyPost(ctx context.Context, request operations.Aut
 
 // AuthkeyPut - Deactivate auth key (logout)
 // Deactivate auth key for user logging them out of your application
-func (s *authentication) AuthkeyPut(ctx context.Context, request operations.AuthkeyPutRequest) (*operations.AuthkeyPutResponse, error) {
+func (s *authentication) AuthkeyPut(ctx context.Context, request operations.AuthkeyPutRequest, security operations.AuthkeyPutSecurity) (*operations.AuthkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
 
@@ -820,11 +820,11 @@ func (s *authentication) AuthkeyPut(ctx context.Context, request operations.Auth
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

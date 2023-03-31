@@ -10,7 +10,7 @@ import (
 )
 
 type GetAPIV2SearchSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetAPIV2SearchTypeEnum - Enum(accounts, hashtags, statuses)
@@ -40,7 +40,7 @@ func (e *GetAPIV2SearchTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV2SearchQueryParams struct {
+type GetAPIV2SearchRequest struct {
 	// If provided, statuses returned will be authored only by this account
 	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	// Filter out unreviewed tags? Defaults to false. Use true when trying to find trending tags.
@@ -61,11 +61,6 @@ type GetAPIV2SearchQueryParams struct {
 	Resolve *string `queryParam:"style=form,explode=true,name=resolve"`
 	// Enum(accounts, hashtags, statuses)
 	Type *GetAPIV2SearchTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetAPIV2SearchRequest struct {
-	QueryParams GetAPIV2SearchQueryParams
-	Security    GetAPIV2SearchSecurity
 }
 
 // GetAPIV2Search200ApplicationJSON - Result

@@ -32,11 +32,11 @@ func newFeeds(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudassetFeedsCreate - Creates a feed in a parent project/folder/organization to listen to its asset updates.
-func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.CloudassetFeedsCreateRequest) (*operations.CloudassetFeedsCreateResponse, error) {
+func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.CloudassetFeedsCreateRequest, security operations.CloudassetFeedsCreateSecurity) (*operations.CloudassetFeedsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateFeedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.Cl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.Cl
 }
 
 // CloudassetFeedsList - Lists all asset feeds in a parent project/folder/organization.
-func (s *feeds) CloudassetFeedsList(ctx context.Context, request operations.CloudassetFeedsListRequest) (*operations.CloudassetFeedsListResponse, error) {
+func (s *feeds) CloudassetFeedsList(ctx context.Context, request operations.CloudassetFeedsListRequest, security operations.CloudassetFeedsListSecurity) (*operations.CloudassetFeedsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

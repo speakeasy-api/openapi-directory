@@ -10,7 +10,7 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 // GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDFunctionTypeEnum - The type of function. This determines when the function will be called.
@@ -40,7 +40,7 @@ func (e *GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDG
 	}
 }
 
-type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDPathParams struct {
+type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDRequest struct {
 	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the custom workflow action.
 	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
@@ -48,11 +48,6 @@ type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetBy
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 	// The type of function. This determines when the function will be called.
 	FunctionType GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDFunctionTypeEnum `pathParam:"style=simple,explode=false,name=functionType"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDRequest struct {
-	PathParams GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDPathParams
-	Security   GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDSecurity
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDResponse struct {

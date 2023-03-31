@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetZRAccountProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetZRAccountProfileRequest struct {
-	Security GetZRAccountProfileSecurity
-}
 
 type GetZRAccountProfile200ApplicationXMLBasic struct {
 	// Require code to exit out of the Zoom Rooms application to switch between other apps.

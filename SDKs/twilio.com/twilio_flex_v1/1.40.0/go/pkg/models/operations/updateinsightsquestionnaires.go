@@ -12,17 +12,8 @@ var UpdateInsightsQuestionnairesServerList = []string{
 }
 
 type UpdateInsightsQuestionnairesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateInsightsQuestionnairesPathParams struct {
-	// The unique ID of the questionnaire
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateInsightsQuestionnairesHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest struct {
@@ -37,11 +28,11 @@ type UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest struct {
 }
 
 type UpdateInsightsQuestionnairesRequest struct {
-	PathParams UpdateInsightsQuestionnairesPathParams
-	Headers    UpdateInsightsQuestionnairesHeaders
-	Request    *UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateInsightsQuestionnairesSecurity
-	ServerURL  *string
+	// The unique ID of the questionnaire
+	ID          string                                                           `pathParam:"style=simple,explode=false,name=Id"`
+	RequestBody *UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type UpdateInsightsQuestionnairesResponse struct {

@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveACheckDepositPathParams struct {
-	CheckDepositID string `pathParam:"style=simple,explode=false,name=check_deposit_id"`
-}
-
 type RetrieveACheckDepositRequest struct {
-	PathParams RetrieveACheckDepositPathParams
+	CheckDepositID string `pathParam:"style=simple,explode=false,name=check_deposit_id"`
 }
 
 type RetrieveACheckDepositDefaultApplicationJSON13StatusEnum string

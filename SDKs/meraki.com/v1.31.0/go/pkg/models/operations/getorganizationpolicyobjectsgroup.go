@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationPolicyObjectsGroupPathParams struct {
+type GetOrganizationPolicyObjectsGroupRequest struct {
 	OrganizationID      string `pathParam:"style=simple,explode=false,name=organizationId"`
 	PolicyObjectGroupID string `pathParam:"style=simple,explode=false,name=policyObjectGroupId"`
-}
-
-type GetOrganizationPolicyObjectsGroupRequest struct {
-	PathParams GetOrganizationPolicyObjectsGroupPathParams
 }
 
 type GetOrganizationPolicyObjectsGroupResponse struct {

@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type UploadVBuserPathParams struct {
-	// Unique identifier of the user. Retrieve the value for this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type UploadVBuserRequestBody struct {
 	// Provide the file's path here.
 	File *string `multipartForm:"name=file"`
 }
 
 type UploadVBuserRequest struct {
-	PathParams UploadVBuserPathParams
-	Request    *UploadVBuserRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadVBuserRequestBody `request:"mediaType=multipart/form-data"`
+	// Unique identifier of the user. Retrieve the value for this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // UploadVBuser201ApplicationXML - **HTTP Status Code:** `201` **Created** <br>

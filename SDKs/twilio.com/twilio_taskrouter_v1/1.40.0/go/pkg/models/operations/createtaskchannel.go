@@ -12,12 +12,8 @@ var CreateTaskChannelServerList = []string{
 }
 
 type CreateTaskChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTaskChannelPathParams struct {
-	// The SID of the Workspace that the new Task Channel belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTaskChannelCreateTaskChannelRequest struct {
@@ -30,10 +26,9 @@ type CreateTaskChannelCreateTaskChannelRequest struct {
 }
 
 type CreateTaskChannelRequest struct {
-	PathParams CreateTaskChannelPathParams
-	Request    *CreateTaskChannelCreateTaskChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTaskChannelSecurity
-	ServerURL  *string
+	RequestBody *CreateTaskChannelCreateTaskChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new Task Channel belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateTaskChannelResponse struct {

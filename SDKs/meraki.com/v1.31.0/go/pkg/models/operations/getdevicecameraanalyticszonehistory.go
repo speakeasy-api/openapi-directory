@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceCameraAnalyticsZoneHistoryPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-	ZoneID string `pathParam:"style=simple,explode=false,name=zoneId"`
-}
-
 // GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum - [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 type GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum string
 
@@ -37,22 +32,19 @@ func (e *GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetDeviceCameraAnalyticsZoneHistoryQueryParams struct {
+type GetDeviceCameraAnalyticsZoneHistoryRequest struct {
 	// [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 	ObjectType *GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum `queryParam:"style=form,explode=true,name=objectType"`
 	// The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
+	Serial     string `pathParam:"style=simple,explode=false,name=serial"`
 	// The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 14 hours after t0.
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetDeviceCameraAnalyticsZoneHistoryRequest struct {
-	PathParams  GetDeviceCameraAnalyticsZoneHistoryPathParams
-	QueryParams GetDeviceCameraAnalyticsZoneHistoryQueryParams
+	ZoneID   string   `pathParam:"style=simple,explode=false,name=zoneId"`
 }
 
 type GetDeviceCameraAnalyticsZoneHistoryResponse struct {

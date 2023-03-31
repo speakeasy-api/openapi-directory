@@ -12,8 +12,8 @@ import (
 )
 
 type GetUpdatedEditorialImageSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetUpdatedEditorialImageSortEnum - Sort by
@@ -64,7 +64,7 @@ func (e *GetUpdatedEditorialImageTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUpdatedEditorialImageQueryParams struct {
+type GetUpdatedEditorialImageRequest struct {
 	// Show only editorial content that is available for distribution in a certain country
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// The cursor of the page with which to start fetching results; this cursor is returned from previous requests
@@ -85,11 +85,6 @@ type GetUpdatedEditorialImageQueryParams struct {
 	SupplierCode []string `queryParam:"style=form,explode=true,name=supplier_code"`
 	// Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted
 	Type GetUpdatedEditorialImageTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetUpdatedEditorialImageRequest struct {
-	QueryParams GetUpdatedEditorialImageQueryParams
-	Security    GetUpdatedEditorialImageSecurity
 }
 
 type GetUpdatedEditorialImageResponse struct {

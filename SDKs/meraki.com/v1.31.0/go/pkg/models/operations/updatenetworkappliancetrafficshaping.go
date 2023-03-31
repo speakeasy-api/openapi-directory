@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceTrafficShapingPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits - Global per-client bandwidth limit
 type UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits struct {
 	// The download bandwidth limit in Kbps. (0 represents no limit.)
@@ -24,8 +20,8 @@ type UpdateNetworkApplianceTrafficShapingRequestBody struct {
 }
 
 type UpdateNetworkApplianceTrafficShapingRequest struct {
-	PathParams UpdateNetworkApplianceTrafficShapingPathParams
-	Request    *UpdateNetworkApplianceTrafficShapingRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceTrafficShapingRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                           `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceTrafficShapingResponse struct {

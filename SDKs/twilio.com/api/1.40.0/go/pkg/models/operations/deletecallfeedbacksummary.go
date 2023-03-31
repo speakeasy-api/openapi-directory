@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCallFeedbackSummaryServerList = []string{
@@ -12,20 +11,15 @@ var DeleteCallFeedbackSummaryServerList = []string{
 }
 
 type DeleteCallFeedbackSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteCallFeedbackSummaryPathParams struct {
+type DeleteCallFeedbackSummaryRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteCallFeedbackSummaryRequest struct {
-	PathParams DeleteCallFeedbackSummaryPathParams
-	Security   DeleteCallFeedbackSummarySecurity
-	ServerURL  *string
 }
 
 type DeleteCallFeedbackSummaryResponse struct {

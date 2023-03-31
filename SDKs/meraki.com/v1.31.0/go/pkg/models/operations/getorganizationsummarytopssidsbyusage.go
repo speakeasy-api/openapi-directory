@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSummaryTopSsidsByUsagePathParams struct {
+type GetOrganizationSummaryTopSsidsByUsageRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationSummaryTopSsidsByUsageQueryParams struct {
 	// The beginning of the timespan for the data.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetOrganizationSummaryTopSsidsByUsageRequest struct {
-	PathParams  GetOrganizationSummaryTopSsidsByUsagePathParams
-	QueryParams GetOrganizationSummaryTopSsidsByUsageQueryParams
 }
 
 // GetOrganizationSummaryTopSsidsByUsage200ApplicationJSONClientsCounts - Counts of the clients

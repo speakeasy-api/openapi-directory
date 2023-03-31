@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptInvitationRequest(
-    headers=operations.AcceptInvitationHeaders(
-        x_amz_algorithm="veritatis",
-        x_amz_content_sha256="qui",
-        x_amz_credential="facere",
-        x_amz_date="aut",
-        x_amz_security_token="nesciunt",
-        x_amz_signature="adipisci",
-        x_amz_signed_headers="consequatur",
+    request_body=operations.AcceptInvitationRequestBody(
+        administrator_account_id="corrupti",
+        invitation_id="provident",
+        master_account="distinctio",
     ),
-    request=operations.AcceptInvitationRequestBody(
-        administrator_account_id="praesentium",
-        invitation_id="temporibus",
-        master_account="alias",
-    ),
+    x_amz_algorithm="quibusdam",
+    x_amz_content_sha256="unde",
+    x_amz_credential="nulla",
+    x_amz_date="corrupti",
+    x_amz_security_token="illum",
+    x_amz_signature="vel",
+    x_amz_signed_headers="error",
 )
     
 res = s.accept_invitation(req)

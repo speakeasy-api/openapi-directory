@@ -8,20 +8,17 @@ import (
 )
 
 type AdsensehostCustomchannelsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostCustomchannelsDeletePathParams struct {
+type AdsensehostCustomchannelsDeleteRequest struct {
 	// Ad client from which to delete the custom channel.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-	// Custom channel to delete.
-	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
-}
-
-type AdsensehostCustomchannelsDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom channel to delete.
+	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -34,12 +31,6 @@ type AdsensehostCustomchannelsDeleteQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostCustomchannelsDeleteRequest struct {
-	PathParams  AdsensehostCustomchannelsDeletePathParams
-	QueryParams AdsensehostCustomchannelsDeleteQueryParams
-	Security    AdsensehostCustomchannelsDeleteSecurity
 }
 
 type AdsensehostCustomchannelsDeleteResponse struct {

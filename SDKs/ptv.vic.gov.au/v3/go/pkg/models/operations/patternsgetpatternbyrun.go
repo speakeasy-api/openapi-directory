@@ -10,46 +10,6 @@ import (
 	"time"
 )
 
-// PatternsGetPatternByRunRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type PatternsGetPatternByRunRouteTypeEnum string
-
-const (
-	PatternsGetPatternByRunRouteTypeEnumZero  PatternsGetPatternByRunRouteTypeEnum = "0"
-	PatternsGetPatternByRunRouteTypeEnumOne   PatternsGetPatternByRunRouteTypeEnum = "1"
-	PatternsGetPatternByRunRouteTypeEnumTwo   PatternsGetPatternByRunRouteTypeEnum = "2"
-	PatternsGetPatternByRunRouteTypeEnumThree PatternsGetPatternByRunRouteTypeEnum = "3"
-	PatternsGetPatternByRunRouteTypeEnumFour  PatternsGetPatternByRunRouteTypeEnum = "4"
-)
-
-func (e *PatternsGetPatternByRunRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "0":
-		fallthrough
-	case "1":
-		fallthrough
-	case "2":
-		fallthrough
-	case "3":
-		fallthrough
-	case "4":
-		*e = PatternsGetPatternByRunRouteTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PatternsGetPatternByRunRouteTypeEnum: %s", s)
-	}
-}
-
-type PatternsGetPatternByRunPathParams struct {
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType PatternsGetPatternByRunRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
-	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
-}
-
 type PatternsGetPatternByRunExpandEnum string
 
 const (
@@ -94,7 +54,40 @@ func (e *PatternsGetPatternByRunExpandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PatternsGetPatternByRunQueryParams struct {
+// PatternsGetPatternByRunRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
+type PatternsGetPatternByRunRouteTypeEnum string
+
+const (
+	PatternsGetPatternByRunRouteTypeEnumZero  PatternsGetPatternByRunRouteTypeEnum = "0"
+	PatternsGetPatternByRunRouteTypeEnumOne   PatternsGetPatternByRunRouteTypeEnum = "1"
+	PatternsGetPatternByRunRouteTypeEnumTwo   PatternsGetPatternByRunRouteTypeEnum = "2"
+	PatternsGetPatternByRunRouteTypeEnumThree PatternsGetPatternByRunRouteTypeEnum = "3"
+	PatternsGetPatternByRunRouteTypeEnumFour  PatternsGetPatternByRunRouteTypeEnum = "4"
+)
+
+func (e *PatternsGetPatternByRunRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "0":
+		fallthrough
+	case "1":
+		fallthrough
+	case "2":
+		fallthrough
+	case "3":
+		fallthrough
+	case "4":
+		*e = PatternsGetPatternByRunRouteTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatternsGetPatternByRunRouteTypeEnum: %s", s)
+	}
+}
+
+type PatternsGetPatternByRunRequest struct {
 	// Filter by the date and time of the request (ISO 8601 UTC format)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
@@ -105,17 +98,16 @@ type PatternsGetPatternByRunQueryParams struct {
 	IncludeGeopath *bool `queryParam:"style=form,explode=true,name=include_geopath"`
 	// Include any skipped stops in a stopping pattern. Defaults to false.
 	IncludeSkippedStops *bool `queryParam:"style=form,explode=true,name=include_skipped_stops"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType PatternsGetPatternByRunRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
+	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Filter by stop_id; values returned by Stops API
 	StopID *int `queryParam:"style=form,explode=true,name=stop_id"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type PatternsGetPatternByRunRequest struct {
-	PathParams  PatternsGetPatternByRunPathParams
-	QueryParams PatternsGetPatternByRunQueryParams
 }
 
 type PatternsGetPatternByRunResponse struct {

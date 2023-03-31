@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateWorkflow - Create a workflow
-func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkflowRequest) (*operations.CreateWorkflowResponse, error) {
+func (s *SDK) CreateWorkflow(ctx context.Context, request shared.CreateWorkflow, security operations.CreateWorkflowSecurity) (*operations.CreateWorkflowResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -112,7 +112,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

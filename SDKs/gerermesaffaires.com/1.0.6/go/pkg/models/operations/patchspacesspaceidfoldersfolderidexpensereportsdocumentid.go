@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequestBody - An expense report to modify
 type PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequestBody struct {
 	BeforeVAT      *float64 `json:"BeforeVAT,omitempty"`
@@ -25,9 +16,14 @@ type PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequestBody struct
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDPathParams
 	// An expense report to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDResponse struct {

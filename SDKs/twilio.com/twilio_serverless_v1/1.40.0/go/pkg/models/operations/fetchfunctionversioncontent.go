@@ -12,22 +12,17 @@ var FetchFunctionVersionContentServerList = []string{
 }
 
 type FetchFunctionVersionContentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFunctionVersionContentPathParams struct {
+type FetchFunctionVersionContentRequest struct {
 	// The SID of the Function that is the parent of the Function Version content to fetch.
 	FunctionSid string `pathParam:"style=simple,explode=false,name=FunctionSid"`
 	// The SID of the Service to fetch the Function Version content from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Function Version content to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFunctionVersionContentRequest struct {
-	PathParams FetchFunctionVersionContentPathParams
-	Security   FetchFunctionVersionContentSecurity
-	ServerURL  *string
 }
 
 type FetchFunctionVersionContentResponse struct {

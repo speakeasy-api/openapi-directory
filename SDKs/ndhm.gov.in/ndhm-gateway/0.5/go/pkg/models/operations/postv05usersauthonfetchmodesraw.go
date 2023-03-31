@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05UsersAuthOnFetchModesRawHeaders struct {
+type PostV05UsersAuthOnFetchModesRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05UsersAuthOnFetchModesRawRequest struct {
-	Headers PostV05UsersAuthOnFetchModesRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05UsersAuthOnFetchModesRawResponse struct {

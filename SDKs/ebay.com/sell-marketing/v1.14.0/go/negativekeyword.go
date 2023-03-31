@@ -33,7 +33,7 @@ func newNegativeKeyword(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // BulkCreateNegativeKeyword - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method adds negative keywords, in bulk, to an existing ad group in a PLA campaign that uses the Cost Per Click (CPC) funding model.<br /><br />Specify the <b>campaignId</b> and <b>adGroupId</b> in the request body, along with the <b>negativeKeywordText</b> and <b>negativeKeywordMatchType</b>.<br /><br />Call the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method to retrieve a list of current campaign IDs for a specified seller.
-func (s *negativeKeyword) BulkCreateNegativeKeyword(ctx context.Context, request operations.BulkCreateNegativeKeywordRequest) (*operations.BulkCreateNegativeKeywordResponse, error) {
+func (s *negativeKeyword) BulkCreateNegativeKeyword(ctx context.Context, request shared.BulkCreateNegativeKeywordRequest, security operations.BulkCreateNegativeKeywordSecurity) (*operations.BulkCreateNegativeKeywordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bulk_create_negative_keyword"
 
@@ -52,7 +52,7 @@ func (s *negativeKeyword) BulkCreateNegativeKeyword(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *negativeKeyword) BulkCreateNegativeKeyword(ctx context.Context, request
 }
 
 // BulkUpdateNegativeKeyword - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method updates the statuses of existing negative keywords, in bulk.<br /><br />Specify the <b>negativeKeywordId</b> and <b>negativeKeywordStatus</b> in the request body.
-func (s *negativeKeyword) BulkUpdateNegativeKeyword(ctx context.Context, request operations.BulkUpdateNegativeKeywordRequest) (*operations.BulkUpdateNegativeKeywordResponse, error) {
+func (s *negativeKeyword) BulkUpdateNegativeKeyword(ctx context.Context, request shared.BulkUpdateNegativeKeywordRequest, security operations.BulkUpdateNegativeKeywordSecurity) (*operations.BulkUpdateNegativeKeywordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bulk_update_negative_keyword"
 
@@ -115,7 +115,7 @@ func (s *negativeKeyword) BulkUpdateNegativeKeyword(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,7 +159,7 @@ func (s *negativeKeyword) BulkUpdateNegativeKeyword(ctx context.Context, request
 }
 
 // CreateNegativeKeyword - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method adds a negative keyword to an existing ad group in a PLA campaign that uses the Cost Per Click (CPC) funding model.<br /><br />Specify the <b>campaignId</b> and <b>adGroupId</b> in the request body, along with the <b>negativeKeywordText</b> and <b>negativeKeywordMatchType</b>.<br /><br />Call the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method to retrieve a list of current campaign IDs for a specified seller.
-func (s *negativeKeyword) CreateNegativeKeyword(ctx context.Context, request operations.CreateNegativeKeywordRequest) (*operations.CreateNegativeKeywordResponse, error) {
+func (s *negativeKeyword) CreateNegativeKeyword(ctx context.Context, request shared.CreateNegativeKeywordRequest, security operations.CreateNegativeKeywordSecurity) (*operations.CreateNegativeKeywordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/negative_keyword"
 
@@ -178,7 +178,7 @@ func (s *negativeKeyword) CreateNegativeKeyword(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,16 +222,16 @@ func (s *negativeKeyword) CreateNegativeKeyword(ctx context.Context, request ope
 }
 
 // GetNegativeKeyword - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method retrieves details on a specific negative keyword.<br /><br />In the request, specify the <b>negative_keyword_id</b> as a path parameter.
-func (s *negativeKeyword) GetNegativeKeyword(ctx context.Context, request operations.GetNegativeKeywordRequest) (*operations.GetNegativeKeywordResponse, error) {
+func (s *negativeKeyword) GetNegativeKeyword(ctx context.Context, request operations.GetNegativeKeywordRequest, security operations.GetNegativeKeywordSecurity) (*operations.GetNegativeKeywordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/negative_keyword/{negative_keyword_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/negative_keyword/{negative_keyword_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -275,7 +275,7 @@ func (s *negativeKeyword) GetNegativeKeyword(ctx context.Context, request operat
 }
 
 // GetNegativeKeywords - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method can be used to retrieve all of the negative keywords for ad groups in PLA campaigns that use the Cost Per Click (CPC) funding model.<br /><br />The results can be filtered using the <b>campaign_ids</b>, <b>ad_group_ids</b>, and <b>negative_keyword_status</b> query parameters.<br /><br />Call the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method to retrieve a list of current campaign IDs for a seller.
-func (s *negativeKeyword) GetNegativeKeywords(ctx context.Context, request operations.GetNegativeKeywordsRequest) (*operations.GetNegativeKeywordsResponse, error) {
+func (s *negativeKeyword) GetNegativeKeywords(ctx context.Context, request operations.GetNegativeKeywordsRequest, security operations.GetNegativeKeywordsSecurity) (*operations.GetNegativeKeywordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/negative_keyword"
 
@@ -284,11 +284,11 @@ func (s *negativeKeyword) GetNegativeKeywords(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,11 +332,11 @@ func (s *negativeKeyword) GetNegativeKeywords(ctx context.Context, request opera
 }
 
 // UpdateNegativeKeyword - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method updates the status of an existing negative keyword.<br /><br />Specify the <b>negative_keyword_id</b> as a path parameter, and specify the <b>negativeKeywordStatus</b> in the request body.
-func (s *negativeKeyword) UpdateNegativeKeyword(ctx context.Context, request operations.UpdateNegativeKeywordRequest) (*operations.UpdateNegativeKeywordResponse, error) {
+func (s *negativeKeyword) UpdateNegativeKeyword(ctx context.Context, request operations.UpdateNegativeKeywordRequest, security operations.UpdateNegativeKeywordSecurity) (*operations.UpdateNegativeKeywordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/negative_keyword/{negative_keyword_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/negative_keyword/{negative_keyword_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateNegativeKeywordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -351,7 +351,7 @@ func (s *negativeKeyword) UpdateNegativeKeyword(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

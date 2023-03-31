@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type StreetsInAWardPathParams struct {
+type StreetsInAWardRequest struct {
 	// Country name in lowercase eg( tanzania)
 	Country string `pathParam:"style=simple,explode=false,name=country"`
 	// Name of the District eg (Rungwe)
@@ -15,10 +15,6 @@ type StreetsInAWardPathParams struct {
 	Region string `pathParam:"style=simple,explode=false,name=region"`
 	// Name of the Ward eg (Kiwira)
 	Ward string `pathParam:"style=simple,explode=false,name=ward"`
-}
-
-type StreetsInAWardRequest struct {
-	PathParams StreetsInAWardPathParams
 }
 
 type StreetsInAWardResponse struct {

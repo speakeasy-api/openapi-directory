@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretsSecretsListQueryParams struct {
+type SecretsSecretsListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -45,10 +45,6 @@ type SecretsSecretsListQueryParams struct {
 	RoleIDN *string `queryParam:"style=form,explode=true,name=role_id__n"`
 	Tag     *string `queryParam:"style=form,explode=true,name=tag"`
 	TagN    *string `queryParam:"style=form,explode=true,name=tag__n"`
-}
-
-type SecretsSecretsListRequest struct {
-	QueryParams SecretsSecretsListQueryParams
 }
 
 type SecretsSecretsList200ApplicationJSON struct {

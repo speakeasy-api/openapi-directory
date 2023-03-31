@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationBrandingPoliciesPrioritiesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationBrandingPoliciesPrioritiesRequestBody struct {
 	//       An ordered list of branding policy IDs that determines the priority order of how to apply the policies
 	//
@@ -17,8 +13,8 @@ type UpdateOrganizationBrandingPoliciesPrioritiesRequestBody struct {
 }
 
 type UpdateOrganizationBrandingPoliciesPrioritiesRequest struct {
-	PathParams UpdateOrganizationBrandingPoliciesPrioritiesPathParams
-	Request    *UpdateOrganizationBrandingPoliciesPrioritiesRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationBrandingPoliciesPrioritiesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                   `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganizationBrandingPoliciesPriorities200ApplicationJSON - Successful operation

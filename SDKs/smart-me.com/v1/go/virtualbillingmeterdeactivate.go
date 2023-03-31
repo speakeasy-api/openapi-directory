@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newVirtualBillingMeterDeactivate(defaultClient, securityClient HTTPClient, 
 
 // VirtualBillingMeterDeactivatePostForm - Beta: Virtual Meter API: Deactivates a Virtual Meter.
 // Beta: Virtual Meter API: Deactivates a Virtual Meter.
-func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostForm(ctx context.Context, request operations.VirtualBillingMeterDeactivatePostFormRequest) (*operations.VirtualBillingMeterDeactivatePostFormResponse, error) {
+func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostForm(ctx context.Context, request shared.VMeterToDeactivate) (*operations.VirtualBillingMeterDeactivatePostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterDeactivate"
 
@@ -115,7 +116,7 @@ func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostForm(ct
 
 // VirtualBillingMeterDeactivatePostJSON - Beta: Virtual Meter API: Deactivates a Virtual Meter.
 // Beta: Virtual Meter API: Deactivates a Virtual Meter.
-func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostJSON(ctx context.Context, request operations.VirtualBillingMeterDeactivatePostJSONRequest) (*operations.VirtualBillingMeterDeactivatePostJSONResponse, error) {
+func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostJSON(ctx context.Context, request shared.VMeterToDeactivate) (*operations.VirtualBillingMeterDeactivatePostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterDeactivate"
 
@@ -196,7 +197,7 @@ func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostJSON(ct
 
 // VirtualBillingMeterDeactivatePostRaw - Beta: Virtual Meter API: Deactivates a Virtual Meter.
 // Beta: Virtual Meter API: Deactivates a Virtual Meter.
-func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostRaw(ctx context.Context, request operations.VirtualBillingMeterDeactivatePostRawRequest) (*operations.VirtualBillingMeterDeactivatePostRawResponse, error) {
+func (s *virtualBillingMeterDeactivate) VirtualBillingMeterDeactivatePostRaw(ctx context.Context, request []byte) (*operations.VirtualBillingMeterDeactivatePostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterDeactivate"
 

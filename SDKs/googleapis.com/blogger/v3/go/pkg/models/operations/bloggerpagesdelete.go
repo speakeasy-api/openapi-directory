@@ -8,22 +8,18 @@ import (
 )
 
 type BloggerPagesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BloggerPagesDeletePathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
-	PageID string `pathParam:"style=simple,explode=false,name=pageId"`
-}
-
-type BloggerPagesDeleteQueryParams struct {
+type BloggerPagesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -32,6 +28,7 @@ type BloggerPagesDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	PageID     string  `pathParam:"style=simple,explode=false,name=pageId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,12 +39,6 @@ type BloggerPagesDeleteQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Move to Trash if possible
 	UseTrash *bool `queryParam:"style=form,explode=true,name=useTrash"`
-}
-
-type BloggerPagesDeleteRequest struct {
-	PathParams  BloggerPagesDeletePathParams
-	QueryParams BloggerPagesDeleteQueryParams
-	Security    BloggerPagesDeleteSecurity
 }
 
 type BloggerPagesDeleteResponse struct {

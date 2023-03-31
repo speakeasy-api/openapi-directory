@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SpeechOperationsGetRequest(
-    security=operations.SpeechOperationsGetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.SpeechOperationsGetPathParams(
-        name="accusantium",
-    ),
-    query_params=operations.SpeechOperationsGetQueryParams(
-        dollar_xgafv="1",
-        access_token="aut",
-        alt="json",
-        callback="consequatur",
-        fields="quaerat",
-        key="est",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="velit",
-        upload_type="tempore",
-        upload_protocol="consequatur",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.operations.speech_operations_get(req)
+res = s.operations.speech_operations_get(req, operations.SpeechOperationsGetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

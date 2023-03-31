@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlatformsReadPathParams struct {
+type PlatformsReadRequest struct {
 	// A unique integer value identifying this Platform.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PlatformsReadRequest struct {
-	PathParams PlatformsReadPathParams
 }
 
 type PlatformsReadResponse struct {

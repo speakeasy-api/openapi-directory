@@ -4,25 +4,22 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinesslodgingLocationsGetLodgingRequest(
-    path_params=operations.MybusinesslodgingLocationsGetLodgingPathParams(
-        name="non",
-    ),
-    query_params=operations.MybusinesslodgingLocationsGetLodgingQueryParams(
-        dollar_xgafv="1",
-        access_token="corrupti",
-        alt="proto",
-        callback="et",
-        fields="atque",
-        key="sed",
-        oauth_token="maiores",
-        pretty_print=True,
-        quota_user="eos",
-        read_mask="animi",
-        upload_type="iste",
-        upload_protocol="reprehenderit",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    read_mask="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
 res = s.locations.mybusinesslodging_locations_get_lodging(req)

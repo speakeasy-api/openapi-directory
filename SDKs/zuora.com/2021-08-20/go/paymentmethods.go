@@ -42,14 +42,14 @@ func newPaymentMethods(defaultClient, securityClient HTTPClient, serverURL, lang
 // For a use case of this operation, see [Configure Payment Methods](https://www.zuora.com/developer/api-guides/#Configure-payment-methods).
 func (s *paymentMethods) DELETEPaymentMethods(ctx context.Context, request operations.DELETEPaymentMethodsRequest) (*operations.DELETEPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *paymentMethods) DELETEPaymentMethods(ctx context.Context, request opera
 // This operation allows you to get the detailed information about a payment method.
 func (s *paymentMethods) GETPaymentMethod(ctx context.Context, request operations.GETPaymentMethodRequest) (*operations.GETPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -146,16 +146,16 @@ func (s *paymentMethods) GETPaymentMethod(ctx context.Context, request operation
 // Though you can also send requests for bank transfer, ACH, or other supported payment methods, the response will not include effective details of these payment methods.
 func (s *paymentMethods) GETPaymentMethodsCreditCard(ctx context.Context, request operations.GETPaymentMethodsCreditCardRequest) (*operations.GETPaymentMethodsCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/credit-cards/accounts/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/credit-cards/accounts/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -201,16 +201,16 @@ func (s *paymentMethods) GETPaymentMethodsCreditCard(ctx context.Context, reques
 // **Note:** This feature is in the **Early Adopters** phase. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.
 func (s *paymentMethods) GETStoredCredentialProfiles(ctx context.Context, request operations.GETStoredCredentialProfilesRequest) (*operations.GETStoredCredentialProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,14 +253,14 @@ func (s *paymentMethods) GETStoredCredentialProfiles(ctx context.Context, reques
 // ObjectDELETEPaymentMethod - CRUD: Delete a payment method
 func (s *paymentMethods) ObjectDELETEPaymentMethod(ctx context.Context, request operations.ObjectDELETEPaymentMethodRequest) (*operations.ObjectDELETEPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -313,16 +313,16 @@ func (s *paymentMethods) ObjectDELETEPaymentMethod(ctx context.Context, request 
 // ObjectGETPaymentMethod - CRUD: Retrieve a payment method
 func (s *paymentMethods) ObjectGETPaymentMethod(ctx context.Context, request operations.ObjectGETPaymentMethodRequest) (*operations.ObjectGETPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -391,7 +391,7 @@ func (s *paymentMethods) ObjectPOSTPaymentMethod(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/payment-method"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreatePaymentMethod", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -406,9 +406,9 @@ func (s *paymentMethods) ObjectPOSTPaymentMethod(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -476,9 +476,9 @@ func (s *paymentMethods) ObjectPOSTPaymentMethod(ctx context.Context, request op
 // For a use case of this operation, see [Configure Payment Methods](https://www.zuora.com/developer/api-guides/#Configure-payment-methods).
 func (s *paymentMethods) ObjectPUTPaymentMethod(ctx context.Context, request operations.ObjectPUTPaymentMethodRequest) (*operations.ObjectPUTPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyPaymentMethod", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -493,9 +493,9 @@ func (s *paymentMethods) ObjectPUTPaymentMethod(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -553,9 +553,9 @@ func (s *paymentMethods) ObjectPUTPaymentMethod(ctx context.Context, request ope
 // Allows you to cancel an authorization. The payment gateways that support this operation include Verifi, CyberSource 1.28, CyberSource 1.97, Chase Paymentech Orbital, and Ingenico ePayments.
 func (s *paymentMethods) POSTCancelAuthorization(ctx context.Context, request operations.POSTCancelAuthorizationRequest) (*operations.POSTCancelAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/voidAuthorize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/voidAuthorize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTVoidAuthorize", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,7 +570,7 @@ func (s *paymentMethods) POSTCancelAuthorization(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -616,14 +616,14 @@ func (s *paymentMethods) POSTCancelAuthorization(ctx context.Context, request op
 // **Note:** This feature is in the **Early Adopters** phase. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.
 func (s *paymentMethods) POSTCancelStoredCredentialProfile(ctx context.Context, request operations.POSTCancelStoredCredentialProfileRequest) (*operations.POSTCancelStoredCredentialProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles/{profile-number}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles/{profile-number}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -681,9 +681,9 @@ func (s *paymentMethods) POSTCancelStoredCredentialProfile(ctx context.Context, 
 // If you have the Invoice Settlement feature enabled, use the [Create payment](https://www.zuora.com/developer/api-reference/#operation/POST_CreatePayment) operation to capture the funds instead of the [CRUD: Create payment](https://www.zuora.com/developer/api-reference/#operation/Object_POSTPayment) operation.
 func (s *paymentMethods) POSTCreateAuthorization(ctx context.Context, request operations.POSTCreateAuthorizationRequest) (*operations.POSTCreateAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/authorize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/authorize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTDelayAuthorizeCapture", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -698,7 +698,7 @@ func (s *paymentMethods) POSTCreateAuthorization(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -744,9 +744,9 @@ func (s *paymentMethods) POSTCreateAuthorization(ctx context.Context, request op
 // **Note:** This feature is in the **Early Adopters** phase. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.
 func (s *paymentMethods) POSTCreateStoredCredentialProfile(ctx context.Context, request operations.POSTCreateStoredCredentialProfileRequest) (*operations.POSTCreateStoredCredentialProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateStoredCredentialProfileRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -761,7 +761,7 @@ func (s *paymentMethods) POSTCreateStoredCredentialProfile(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -807,14 +807,14 @@ func (s *paymentMethods) POSTCreateStoredCredentialProfile(ctx context.Context, 
 // **Note:** This feature is in the **Early Adopters** phase. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.
 func (s *paymentMethods) POSTExpireStoredCredentialProfile(ctx context.Context, request operations.POSTExpireStoredCredentialProfileRequest) (*operations.POSTExpireStoredCredentialProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles/{profile-number}/expire", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/profiles/{profile-number}/expire", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -958,7 +958,7 @@ func (s *paymentMethods) POSTPaymentMethods(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payment-methods"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPaymentMethodRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -973,7 +973,7 @@ func (s *paymentMethods) POSTPaymentMethods(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1021,7 +1021,7 @@ func (s *paymentMethods) POSTPaymentMethodsCreditCard(ctx context.Context, reque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payment-methods/credit-cards"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPaymentMethodType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1036,7 +1036,7 @@ func (s *paymentMethods) POSTPaymentMethodsCreditCard(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1083,7 +1083,7 @@ func (s *paymentMethods) POSTPaymentMethodsDecryption(ctx context.Context, reque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payment-methods/decryption"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPaymentMethodDecryption", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1098,7 +1098,7 @@ func (s *paymentMethods) POSTPaymentMethodsDecryption(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1151,9 +1151,9 @@ func (s *paymentMethods) POSTPaymentMethodsDecryption(ctx context.Context, reque
 // * `securityCode`
 func (s *paymentMethods) PUTPaymentMethod(ctx context.Context, request operations.PUTPaymentMethodRequest) (*operations.PUTPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTPaymentMethodRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1168,7 +1168,7 @@ func (s *paymentMethods) PUTPaymentMethod(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1210,9 +1210,9 @@ func (s *paymentMethods) PUTPaymentMethod(ctx context.Context, request operation
 // Updates an existing credit card payment method.
 func (s *paymentMethods) PUTPaymentMethodsCreditCard(ctx context.Context, request operations.PUTPaymentMethodsCreditCardRequest) (*operations.PUTPaymentMethodsCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/credit-cards/{payment-method-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/credit-cards/{payment-method-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTPaymentMethodType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1227,7 +1227,7 @@ func (s *paymentMethods) PUTPaymentMethodsCreditCard(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1276,14 +1276,14 @@ func (s *paymentMethods) PUTPaymentMethodsCreditCard(ctx context.Context, reques
 // **Note:** In order to use this operation, you must ensure that the **Scrub Sensitive Data of Specific Payment Method payments** permission is enabled in your user role. Contact your tenant administrator if you want to enable this permission. See [Scrub Payment Methods](https://knowledgecenter.zuora.com/CB_Billing/L_Payment_Methods/Scrub_Payment_Methods) for more information.
 func (s *paymentMethods) PUTScrubPaymentMethods(ctx context.Context, request operations.PUTScrubPaymentMethodsRequest) (*operations.PUTScrubPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/scrub", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/scrub", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1329,9 +1329,9 @@ func (s *paymentMethods) PUTScrubPaymentMethods(ctx context.Context, request ope
 // If a payment method is created by Hosted Payment Pages and is not assigned to any billing account, the payment method cannot be verified through this operation.
 func (s *paymentMethods) PUTVerifyPaymentMethods(ctx context.Context, request operations.PUTVerifyPaymentMethodsRequest) (*operations.PUTVerifyPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/verify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-methods/{payment-method-id}/verify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTVerifyPaymentMethodType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1346,7 +1346,7 @@ func (s *paymentMethods) PUTVerifyPaymentMethods(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

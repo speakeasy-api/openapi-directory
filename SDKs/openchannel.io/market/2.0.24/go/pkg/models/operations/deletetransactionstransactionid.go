@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteTransactionsTransactionIDPathParams struct {
+type DeleteTransactionsTransactionIDRequest struct {
 	// The id of the transaction to be deleted
 	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type DeleteTransactionsTransactionIDRequest struct {
-	PathParams DeleteTransactionsTransactionIDPathParams
 }
 
 type DeleteTransactionsTransactionIDResponse struct {

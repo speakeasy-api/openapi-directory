@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2CustomFieldsIDJSONPathParams struct {
-	// Custom Field ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2CustomFieldsIDJSONRequestBody struct {
 	// The field type of the custom field. Value must be one of: person, company, opportunity
 	FieldType *string `form:"name=field_type"`
@@ -19,8 +14,9 @@ type PutV2CustomFieldsIDJSONRequestBody struct {
 }
 
 type PutV2CustomFieldsIDJSONRequest struct {
-	PathParams PutV2CustomFieldsIDJSONPathParams
-	Request    *PutV2CustomFieldsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2CustomFieldsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Custom Field ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2CustomFieldsIDJSONResponse struct {

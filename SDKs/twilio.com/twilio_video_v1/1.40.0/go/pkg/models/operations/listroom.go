@@ -13,10 +13,11 @@ var ListRoomServerList = []string{
 }
 
 type ListRoomSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRoomQueryParams struct {
+type ListRoomRequest struct {
 	// Read only rooms that started on or after this date, given as `YYYY-MM-DD`.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only rooms that started before this date, given as `YYYY-MM-DD`.
@@ -31,12 +32,6 @@ type ListRoomQueryParams struct {
 	Status *shared.RoomEnumRoomStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// Read only rooms with the this `unique_name`.
 	UniqueName *string `queryParam:"style=form,explode=true,name=UniqueName"`
-}
-
-type ListRoomRequest struct {
-	QueryParams ListRoomQueryParams
-	Security    ListRoomSecurity
-	ServerURL   *string
 }
 
 type ListRoomListRoomResponseMeta struct {

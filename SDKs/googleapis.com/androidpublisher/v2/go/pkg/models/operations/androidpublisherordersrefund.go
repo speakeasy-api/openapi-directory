@@ -8,18 +8,11 @@ import (
 )
 
 type AndroidpublisherOrdersRefundSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherOrdersRefundPathParams struct {
-	// The order ID provided to the user when the subscription or in-app order was purchased.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-	// The package name of the application for which this subscription or in-app item was purchased (for example, 'com.some.thing').
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherOrdersRefundQueryParams struct {
+type AndroidpublisherOrdersRefundRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -28,6 +21,10 @@ type AndroidpublisherOrdersRefundQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The order ID provided to the user when the subscription or in-app order was purchased.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	// The package name of the application for which this subscription or in-app item was purchased (for example, 'com.some.thing').
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -36,12 +33,6 @@ type AndroidpublisherOrdersRefundQueryParams struct {
 	Revoke *bool `queryParam:"style=form,explode=true,name=revoke"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherOrdersRefundRequest struct {
-	PathParams  AndroidpublisherOrdersRefundPathParams
-	QueryParams AndroidpublisherOrdersRefundQueryParams
-	Security    AndroidpublisherOrdersRefundSecurity
 }
 
 type AndroidpublisherOrdersRefundResponse struct {

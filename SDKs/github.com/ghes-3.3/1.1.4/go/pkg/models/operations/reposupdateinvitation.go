@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateInvitationPathParams struct {
-	// The unique identifier of the invitation.
-	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateInvitationRequestBodyPermissionsEnum - The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
 type ReposUpdateInvitationRequestBodyPermissionsEnum string
 
@@ -57,8 +48,13 @@ type ReposUpdateInvitationRequestBody struct {
 }
 
 type ReposUpdateInvitationRequest struct {
-	PathParams ReposUpdateInvitationPathParams
-	Request    *ReposUpdateInvitationRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateInvitationRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the invitation.
+	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateInvitationResponse struct {

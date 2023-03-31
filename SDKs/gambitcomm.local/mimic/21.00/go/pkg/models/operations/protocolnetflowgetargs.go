@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowGetArgsPathParams struct {
+type ProtocolNetflowGetArgsRequest struct {
 	// Agent to show the NETFLOW argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolNetflowGetArgsRequest struct {
-	PathParams ProtocolNetflowGetArgsPathParams
 }
 
 type ProtocolNetflowGetArgsResponse struct {

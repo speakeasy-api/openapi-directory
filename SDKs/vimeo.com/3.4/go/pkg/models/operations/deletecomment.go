@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteCommentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteCommentPathParams struct {
+type DeleteCommentRequest struct {
 	// The ID of the comment.
 	CommentID float64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteCommentRequest struct {
-	PathParams DeleteCommentPathParams
-	Security   DeleteCommentSecurity
 }
 
 type DeleteCommentResponse struct {

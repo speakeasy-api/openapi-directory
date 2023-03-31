@@ -35,15 +35,25 @@ func newLink(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // PostV05LinksLinkConfirmJSON - Token submission by Consent Manager for link confirmation
 // API to submit the token that was sent by HIP during the link request.
-func (s *link) PostV05LinksLinkConfirmJSON(ctx context.Context, request operations.PostV05LinksLinkConfirmJSONRequest) (*operations.PostV05LinksLinkConfirmJSONResponse, error) {
+func (s *link) PostV05LinksLinkConfirmJSON(ctx context.Context, request operations.PostV05LinksLinkConfirmJSONRequest, opts ...operations.Option) (*operations.PostV05LinksLinkConfirmJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkConfirmJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/confirm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LinkConfirmationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +68,7 @@ func (s *link) PostV05LinksLinkConfirmJSON(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -108,15 +118,25 @@ func (s *link) PostV05LinksLinkConfirmJSON(ctx context.Context, request operatio
 
 // PostV05LinksLinkConfirmRaw - Token submission by Consent Manager for link confirmation
 // API to submit the token that was sent by HIP during the link request.
-func (s *link) PostV05LinksLinkConfirmRaw(ctx context.Context, request operations.PostV05LinksLinkConfirmRawRequest) (*operations.PostV05LinksLinkConfirmRawResponse, error) {
+func (s *link) PostV05LinksLinkConfirmRaw(ctx context.Context, request operations.PostV05LinksLinkConfirmRawRequest, opts ...operations.Option) (*operations.PostV05LinksLinkConfirmRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkConfirmRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/confirm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +151,7 @@ func (s *link) PostV05LinksLinkConfirmRaw(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -186,15 +206,25 @@ func (s *link) PostV05LinksLinkConfirmRaw(ctx context.Context, request operation
 //     and were these care contexts discovered or not for a given patient**
 //  3. **Before eventual link confirmation, HIP needs to authenticate the request with the patient(eg: OTP verification)**
 //  4. **HIP should communicate the mode of authentication of a successful request to Consent Manager**
-func (s *link) PostV05LinksLinkInitJSON(ctx context.Context, request operations.PostV05LinksLinkInitJSONRequest) (*operations.PostV05LinksLinkInitJSONResponse, error) {
+func (s *link) PostV05LinksLinkInitJSON(ctx context.Context, request operations.PostV05LinksLinkInitJSONRequest, opts ...operations.Option) (*operations.PostV05LinksLinkInitJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkInitJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientLinkReferenceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -209,7 +239,7 @@ func (s *link) PostV05LinksLinkInitJSON(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -264,15 +294,25 @@ func (s *link) PostV05LinksLinkInitJSON(ctx context.Context, request operations.
 //     and were these care contexts discovered or not for a given patient**
 //  3. **Before eventual link confirmation, HIP needs to authenticate the request with the patient(eg: OTP verification)**
 //  4. **HIP should communicate the mode of authentication of a successful request to Consent Manager**
-func (s *link) PostV05LinksLinkInitRaw(ctx context.Context, request operations.PostV05LinksLinkInitRawRequest) (*operations.PostV05LinksLinkInitRawResponse, error) {
+func (s *link) PostV05LinksLinkInitRaw(ctx context.Context, request operations.PostV05LinksLinkInitRawRequest, opts ...operations.Option) (*operations.PostV05LinksLinkInitRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkInitRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -287,7 +327,7 @@ func (s *link) PostV05LinksLinkInitRaw(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -338,15 +378,25 @@ func (s *link) PostV05LinksLinkInitRaw(ctx context.Context, request operations.P
 // PostV05LinksLinkOnAddContextsJSON - callback API for HIP initiated patient linking /link/add-context
 // If the accessToken is valid for purpose of linking, and specified details provided, CM will send "acknoweldgement.status" as SUCCESS. If any error occcurred, for example invalid token, or other required patient or care-context information not provided, then "error" attribute conveys so.
 //  1. **accessToken must be valid and must be for the purpose of linking**
-func (s *link) PostV05LinksLinkOnAddContextsJSON(ctx context.Context, request operations.PostV05LinksLinkOnAddContextsJSONRequest) (*operations.PostV05LinksLinkOnAddContextsJSONResponse, error) {
+func (s *link) PostV05LinksLinkOnAddContextsJSON(ctx context.Context, request operations.PostV05LinksLinkOnAddContextsJSONRequest, opts ...operations.Option) (*operations.PostV05LinksLinkOnAddContextsJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkOnAddContextsJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/on-add-contexts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientCareContextLinkResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -361,7 +411,7 @@ func (s *link) PostV05LinksLinkOnAddContextsJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -412,15 +462,25 @@ func (s *link) PostV05LinksLinkOnAddContextsJSON(ctx context.Context, request op
 // PostV05LinksLinkOnAddContextsRaw - callback API for HIP initiated patient linking /link/add-context
 // If the accessToken is valid for purpose of linking, and specified details provided, CM will send "acknoweldgement.status" as SUCCESS. If any error occcurred, for example invalid token, or other required patient or care-context information not provided, then "error" attribute conveys so.
 //  1. **accessToken must be valid and must be for the purpose of linking**
-func (s *link) PostV05LinksLinkOnAddContextsRaw(ctx context.Context, request operations.PostV05LinksLinkOnAddContextsRawRequest) (*operations.PostV05LinksLinkOnAddContextsRawResponse, error) {
+func (s *link) PostV05LinksLinkOnAddContextsRaw(ctx context.Context, request operations.PostV05LinksLinkOnAddContextsRawRequest, opts ...operations.Option) (*operations.PostV05LinksLinkOnAddContextsRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05LinksLinkOnAddContextsRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/links/link/on-add-contexts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -435,7 +495,7 @@ func (s *link) PostV05LinksLinkOnAddContextsRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

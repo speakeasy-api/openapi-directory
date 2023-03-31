@@ -32,13 +32,9 @@ func (e *AreGamesInProgressFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AreGamesInProgressPathParams struct {
+type AreGamesInProgressRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format AreGamesInProgressFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type AreGamesInProgressRequest struct {
-	PathParams AreGamesInProgressPathParams
 }
 
 type AreGamesInProgressResponse struct {

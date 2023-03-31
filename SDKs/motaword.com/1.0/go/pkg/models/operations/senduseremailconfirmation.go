@@ -10,17 +10,12 @@ import (
 )
 
 type SendUserEmailConfirmationSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type SendUserEmailConfirmationPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SendUserEmailConfirmationRequest struct {
-	PathParams SendUserEmailConfirmationPathParams
-	Security   SendUserEmailConfirmationSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SendUserEmailConfirmation202ApplicationJSONStatusEnum string

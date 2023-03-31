@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SuggestTagsAndRegionsPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type SuggestTagsAndRegionsQueryParams struct {
+type SuggestTagsAndRegionsRequest struct {
 	// Array of image ids tag suggestion are needed for. Use GetUntaggedImages API to get imageIds.
 	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
 	// IterationId to use for tag and region suggestion.
 	IterationID string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type SuggestTagsAndRegionsRequest struct {
-	PathParams  SuggestTagsAndRegionsPathParams
-	QueryParams SuggestTagsAndRegionsQueryParams
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type SuggestTagsAndRegionsResponse struct {

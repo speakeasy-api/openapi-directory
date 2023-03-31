@@ -10,13 +10,13 @@ import (
 )
 
 type PlusActivitiesSearchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusActivitiesSearchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusActivitiesSearchSecurity struct {
@@ -48,7 +48,7 @@ func (e *PlusActivitiesSearchOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlusActivitiesSearchQueryParams struct {
+type PlusActivitiesSearchRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -73,11 +73,6 @@ type PlusActivitiesSearchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type PlusActivitiesSearchRequest struct {
-	QueryParams PlusActivitiesSearchQueryParams
-	Security    PlusActivitiesSearchSecurity
 }
 
 type PlusActivitiesSearchResponse struct {

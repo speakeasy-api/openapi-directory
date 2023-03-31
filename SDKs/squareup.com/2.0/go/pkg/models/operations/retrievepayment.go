@@ -8,19 +8,14 @@ import (
 )
 
 type RetrievePaymentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrievePaymentPathParams struct {
+type RetrievePaymentRequest struct {
 	// The ID of the payment's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The Square-issued payment ID. payment_id comes from Payment objects returned by the List Payments endpoint, Settlement objects returned by the List Settlements endpoint, or Refund objects returned by the List Refunds endpoint.
 	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
-}
-
-type RetrievePaymentRequest struct {
-	PathParams RetrievePaymentPathParams
-	Security   RetrievePaymentSecurity
 }
 
 type RetrievePaymentResponse struct {

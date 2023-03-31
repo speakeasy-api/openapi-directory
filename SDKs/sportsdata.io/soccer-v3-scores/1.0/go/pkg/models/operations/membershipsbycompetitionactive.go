@@ -33,15 +33,11 @@ func (e *MembershipsByCompetitionActiveFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type MembershipsByCompetitionActivePathParams struct {
+type MembershipsByCompetitionActiveRequest struct {
 	// An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: <code>EPL</code>, <code>1</code>, <code>MLS</code>, <code>8</code>, etc.
 	Competition string `pathParam:"style=simple,explode=false,name=competition"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format MembershipsByCompetitionActiveFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type MembershipsByCompetitionActiveRequest struct {
-	PathParams MembershipsByCompetitionActivePathParams
 }
 
 type MembershipsByCompetitionActiveResponse struct {

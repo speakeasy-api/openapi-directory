@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type NodesNodeAddonUpdatePathParams struct {
+type NodesNodeAddonUpdateRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the addon.
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type NodesNodeAddonUpdateRequest struct {
-	PathParams NodesNodeAddonUpdatePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type NodesNodeAddonUpdateResponse struct {

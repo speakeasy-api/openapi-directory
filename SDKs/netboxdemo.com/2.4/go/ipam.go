@@ -67,7 +67,7 @@ func (s *ipam) IpamChoicesList(ctx context.Context) (*operations.IpamChoicesList
 }
 func (s *ipam) IpamChoicesRead(ctx context.Context, request operations.IpamChoicesReadRequest) (*operations.IpamChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *ipam) IpamChoicesRead(ctx context.Context, request operations.IpamChoic
 
 	return res, nil
 }
-func (s *ipam) IpamAggregatesCreate(ctx context.Context, request operations.IpamAggregatesCreateRequest) (*operations.IpamAggregatesCreateResponse, error) {
+func (s *ipam) IpamAggregatesCreate(ctx context.Context, request shared.WritableAggregateInput) (*operations.IpamAggregatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/aggregates/"
 
@@ -152,7 +152,7 @@ func (s *ipam) IpamAggregatesCreate(ctx context.Context, request operations.Ipam
 }
 func (s *ipam) IpamAggregatesDelete(ctx context.Context, request operations.IpamAggregatesDeleteRequest) (*operations.IpamAggregatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *ipam) IpamAggregatesList(ctx context.Context, request operations.IpamAg
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,9 +231,9 @@ func (s *ipam) IpamAggregatesList(ctx context.Context, request operations.IpamAg
 }
 func (s *ipam) IpamAggregatesPartialUpdate(ctx context.Context, request operations.IpamAggregatesPartialUpdateRequest) (*operations.IpamAggregatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableAggregateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *ipam) IpamAggregatesPartialUpdate(ctx context.Context, request operatio
 }
 func (s *ipam) IpamAggregatesRead(ctx context.Context, request operations.IpamAggregatesReadRequest) (*operations.IpamAggregatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,9 +325,9 @@ func (s *ipam) IpamAggregatesRead(ctx context.Context, request operations.IpamAg
 }
 func (s *ipam) IpamAggregatesUpdate(ctx context.Context, request operations.IpamAggregatesUpdateRequest) (*operations.IpamAggregatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/aggregates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableAggregateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -375,7 +375,7 @@ func (s *ipam) IpamAggregatesUpdate(ctx context.Context, request operations.Ipam
 
 	return res, nil
 }
-func (s *ipam) IpamIPAddressesCreate(ctx context.Context, request operations.IpamIPAddressesCreateRequest) (*operations.IpamIPAddressesCreateResponse, error) {
+func (s *ipam) IpamIPAddressesCreate(ctx context.Context, request shared.WritableIPAddressInput) (*operations.IpamIPAddressesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/ip-addresses/"
 
@@ -429,7 +429,7 @@ func (s *ipam) IpamIPAddressesCreate(ctx context.Context, request operations.Ipa
 }
 func (s *ipam) IpamIPAddressesDelete(ctx context.Context, request operations.IpamIPAddressesDeleteRequest) (*operations.IpamIPAddressesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -469,7 +469,7 @@ func (s *ipam) IpamIPAddressesList(ctx context.Context, request operations.IpamI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -508,9 +508,9 @@ func (s *ipam) IpamIPAddressesList(ctx context.Context, request operations.IpamI
 }
 func (s *ipam) IpamIPAddressesPartialUpdate(ctx context.Context, request operations.IpamIPAddressesPartialUpdateRequest) (*operations.IpamIPAddressesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableIPAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -560,7 +560,7 @@ func (s *ipam) IpamIPAddressesPartialUpdate(ctx context.Context, request operati
 }
 func (s *ipam) IpamIPAddressesRead(ctx context.Context, request operations.IpamIPAddressesReadRequest) (*operations.IpamIPAddressesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,9 +602,9 @@ func (s *ipam) IpamIPAddressesRead(ctx context.Context, request operations.IpamI
 }
 func (s *ipam) IpamIPAddressesUpdate(ctx context.Context, request operations.IpamIPAddressesUpdateRequest) (*operations.IpamIPAddressesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/ip-addresses/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableIPAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -658,9 +658,9 @@ func (s *ipam) IpamIPAddressesUpdate(ctx context.Context, request operations.Ipa
 // however results will not be paginated.
 func (s *ipam) IpamPrefixesAvailableIpsCreate(ctx context.Context, request operations.IpamPrefixesAvailableIpsCreateRequest) (*operations.IpamPrefixesAvailableIpsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-ips/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-ips/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePrefixInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -714,7 +714,7 @@ func (s *ipam) IpamPrefixesAvailableIpsCreate(ctx context.Context, request opera
 // however results will not be paginated.
 func (s *ipam) IpamPrefixesAvailableIpsRead(ctx context.Context, request operations.IpamPrefixesAvailableIpsReadRequest) (*operations.IpamPrefixesAvailableIpsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-ips/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-ips/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -758,9 +758,9 @@ func (s *ipam) IpamPrefixesAvailableIpsRead(ctx context.Context, request operati
 // IpamPrefixesAvailablePrefixesCreate - A convenience method for returning available child prefixes within a parent.
 func (s *ipam) IpamPrefixesAvailablePrefixesCreate(ctx context.Context, request operations.IpamPrefixesAvailablePrefixesCreateRequest) (*operations.IpamPrefixesAvailablePrefixesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-prefixes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-prefixes/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePrefixInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -812,7 +812,7 @@ func (s *ipam) IpamPrefixesAvailablePrefixesCreate(ctx context.Context, request 
 // IpamPrefixesAvailablePrefixesRead - A convenience method for returning available child prefixes within a parent.
 func (s *ipam) IpamPrefixesAvailablePrefixesRead(ctx context.Context, request operations.IpamPrefixesAvailablePrefixesReadRequest) (*operations.IpamPrefixesAvailablePrefixesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-prefixes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/available-prefixes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -852,7 +852,7 @@ func (s *ipam) IpamPrefixesAvailablePrefixesRead(ctx context.Context, request op
 
 	return res, nil
 }
-func (s *ipam) IpamPrefixesCreate(ctx context.Context, request operations.IpamPrefixesCreateRequest) (*operations.IpamPrefixesCreateResponse, error) {
+func (s *ipam) IpamPrefixesCreate(ctx context.Context, request shared.WritablePrefixInput) (*operations.IpamPrefixesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/prefixes/"
 
@@ -906,7 +906,7 @@ func (s *ipam) IpamPrefixesCreate(ctx context.Context, request operations.IpamPr
 }
 func (s *ipam) IpamPrefixesDelete(ctx context.Context, request operations.IpamPrefixesDeleteRequest) (*operations.IpamPrefixesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -946,7 +946,7 @@ func (s *ipam) IpamPrefixesList(ctx context.Context, request operations.IpamPref
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -985,9 +985,9 @@ func (s *ipam) IpamPrefixesList(ctx context.Context, request operations.IpamPref
 }
 func (s *ipam) IpamPrefixesPartialUpdate(ctx context.Context, request operations.IpamPrefixesPartialUpdateRequest) (*operations.IpamPrefixesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePrefixInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1037,7 +1037,7 @@ func (s *ipam) IpamPrefixesPartialUpdate(ctx context.Context, request operations
 }
 func (s *ipam) IpamPrefixesRead(ctx context.Context, request operations.IpamPrefixesReadRequest) (*operations.IpamPrefixesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1079,9 +1079,9 @@ func (s *ipam) IpamPrefixesRead(ctx context.Context, request operations.IpamPref
 }
 func (s *ipam) IpamPrefixesUpdate(ctx context.Context, request operations.IpamPrefixesUpdateRequest) (*operations.IpamPrefixesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/prefixes/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritablePrefixInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1129,7 +1129,7 @@ func (s *ipam) IpamPrefixesUpdate(ctx context.Context, request operations.IpamPr
 
 	return res, nil
 }
-func (s *ipam) IpamRirsCreate(ctx context.Context, request operations.IpamRirsCreateRequest) (*operations.IpamRirsCreateResponse, error) {
+func (s *ipam) IpamRirsCreate(ctx context.Context, request shared.RIRInput) (*operations.IpamRirsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/rirs/"
 
@@ -1183,7 +1183,7 @@ func (s *ipam) IpamRirsCreate(ctx context.Context, request operations.IpamRirsCr
 }
 func (s *ipam) IpamRirsDelete(ctx context.Context, request operations.IpamRirsDeleteRequest) (*operations.IpamRirsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1223,7 +1223,7 @@ func (s *ipam) IpamRirsList(ctx context.Context, request operations.IpamRirsList
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1262,9 +1262,9 @@ func (s *ipam) IpamRirsList(ctx context.Context, request operations.IpamRirsList
 }
 func (s *ipam) IpamRirsPartialUpdate(ctx context.Context, request operations.IpamRirsPartialUpdateRequest) (*operations.IpamRirsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RIRInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1314,7 +1314,7 @@ func (s *ipam) IpamRirsPartialUpdate(ctx context.Context, request operations.Ipa
 }
 func (s *ipam) IpamRirsRead(ctx context.Context, request operations.IpamRirsReadRequest) (*operations.IpamRirsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1356,9 +1356,9 @@ func (s *ipam) IpamRirsRead(ctx context.Context, request operations.IpamRirsRead
 }
 func (s *ipam) IpamRirsUpdate(ctx context.Context, request operations.IpamRirsUpdateRequest) (*operations.IpamRirsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/rirs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RIRInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1406,7 +1406,7 @@ func (s *ipam) IpamRirsUpdate(ctx context.Context, request operations.IpamRirsUp
 
 	return res, nil
 }
-func (s *ipam) IpamRolesCreate(ctx context.Context, request operations.IpamRolesCreateRequest) (*operations.IpamRolesCreateResponse, error) {
+func (s *ipam) IpamRolesCreate(ctx context.Context, request shared.RoleInput) (*operations.IpamRolesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/roles/"
 
@@ -1460,7 +1460,7 @@ func (s *ipam) IpamRolesCreate(ctx context.Context, request operations.IpamRoles
 }
 func (s *ipam) IpamRolesDelete(ctx context.Context, request operations.IpamRolesDeleteRequest) (*operations.IpamRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1500,7 +1500,7 @@ func (s *ipam) IpamRolesList(ctx context.Context, request operations.IpamRolesLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1539,9 +1539,9 @@ func (s *ipam) IpamRolesList(ctx context.Context, request operations.IpamRolesLi
 }
 func (s *ipam) IpamRolesPartialUpdate(ctx context.Context, request operations.IpamRolesPartialUpdateRequest) (*operations.IpamRolesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1591,7 +1591,7 @@ func (s *ipam) IpamRolesPartialUpdate(ctx context.Context, request operations.Ip
 }
 func (s *ipam) IpamRolesRead(ctx context.Context, request operations.IpamRolesReadRequest) (*operations.IpamRolesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1633,9 +1633,9 @@ func (s *ipam) IpamRolesRead(ctx context.Context, request operations.IpamRolesRe
 }
 func (s *ipam) IpamRolesUpdate(ctx context.Context, request operations.IpamRolesUpdateRequest) (*operations.IpamRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/roles/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1683,7 +1683,7 @@ func (s *ipam) IpamRolesUpdate(ctx context.Context, request operations.IpamRoles
 
 	return res, nil
 }
-func (s *ipam) IpamServicesCreate(ctx context.Context, request operations.IpamServicesCreateRequest) (*operations.IpamServicesCreateResponse, error) {
+func (s *ipam) IpamServicesCreate(ctx context.Context, request shared.WritableServiceInput) (*operations.IpamServicesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/services/"
 
@@ -1737,7 +1737,7 @@ func (s *ipam) IpamServicesCreate(ctx context.Context, request operations.IpamSe
 }
 func (s *ipam) IpamServicesDelete(ctx context.Context, request operations.IpamServicesDeleteRequest) (*operations.IpamServicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1777,7 +1777,7 @@ func (s *ipam) IpamServicesList(ctx context.Context, request operations.IpamServ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1816,9 +1816,9 @@ func (s *ipam) IpamServicesList(ctx context.Context, request operations.IpamServ
 }
 func (s *ipam) IpamServicesPartialUpdate(ctx context.Context, request operations.IpamServicesPartialUpdateRequest) (*operations.IpamServicesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1868,7 +1868,7 @@ func (s *ipam) IpamServicesPartialUpdate(ctx context.Context, request operations
 }
 func (s *ipam) IpamServicesRead(ctx context.Context, request operations.IpamServicesReadRequest) (*operations.IpamServicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1910,9 +1910,9 @@ func (s *ipam) IpamServicesRead(ctx context.Context, request operations.IpamServ
 }
 func (s *ipam) IpamServicesUpdate(ctx context.Context, request operations.IpamServicesUpdateRequest) (*operations.IpamServicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/services/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1960,7 +1960,7 @@ func (s *ipam) IpamServicesUpdate(ctx context.Context, request operations.IpamSe
 
 	return res, nil
 }
-func (s *ipam) IpamVlanGroupsCreate(ctx context.Context, request operations.IpamVlanGroupsCreateRequest) (*operations.IpamVlanGroupsCreateResponse, error) {
+func (s *ipam) IpamVlanGroupsCreate(ctx context.Context, request shared.WritableVLANGroupInput) (*operations.IpamVlanGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/vlan-groups/"
 
@@ -2014,7 +2014,7 @@ func (s *ipam) IpamVlanGroupsCreate(ctx context.Context, request operations.Ipam
 }
 func (s *ipam) IpamVlanGroupsDelete(ctx context.Context, request operations.IpamVlanGroupsDeleteRequest) (*operations.IpamVlanGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2054,7 +2054,7 @@ func (s *ipam) IpamVlanGroupsList(ctx context.Context, request operations.IpamVl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2093,9 +2093,9 @@ func (s *ipam) IpamVlanGroupsList(ctx context.Context, request operations.IpamVl
 }
 func (s *ipam) IpamVlanGroupsPartialUpdate(ctx context.Context, request operations.IpamVlanGroupsPartialUpdateRequest) (*operations.IpamVlanGroupsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVLANGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2145,7 +2145,7 @@ func (s *ipam) IpamVlanGroupsPartialUpdate(ctx context.Context, request operatio
 }
 func (s *ipam) IpamVlanGroupsRead(ctx context.Context, request operations.IpamVlanGroupsReadRequest) (*operations.IpamVlanGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2187,9 +2187,9 @@ func (s *ipam) IpamVlanGroupsRead(ctx context.Context, request operations.IpamVl
 }
 func (s *ipam) IpamVlanGroupsUpdate(ctx context.Context, request operations.IpamVlanGroupsUpdateRequest) (*operations.IpamVlanGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlan-groups/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVLANGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2237,7 +2237,7 @@ func (s *ipam) IpamVlanGroupsUpdate(ctx context.Context, request operations.Ipam
 
 	return res, nil
 }
-func (s *ipam) IpamVlansCreate(ctx context.Context, request operations.IpamVlansCreateRequest) (*operations.IpamVlansCreateResponse, error) {
+func (s *ipam) IpamVlansCreate(ctx context.Context, request shared.WritableVLANInput) (*operations.IpamVlansCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/vlans/"
 
@@ -2291,7 +2291,7 @@ func (s *ipam) IpamVlansCreate(ctx context.Context, request operations.IpamVlans
 }
 func (s *ipam) IpamVlansDelete(ctx context.Context, request operations.IpamVlansDeleteRequest) (*operations.IpamVlansDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2331,7 +2331,7 @@ func (s *ipam) IpamVlansList(ctx context.Context, request operations.IpamVlansLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2370,9 +2370,9 @@ func (s *ipam) IpamVlansList(ctx context.Context, request operations.IpamVlansLi
 }
 func (s *ipam) IpamVlansPartialUpdate(ctx context.Context, request operations.IpamVlansPartialUpdateRequest) (*operations.IpamVlansPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVLANInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2422,7 +2422,7 @@ func (s *ipam) IpamVlansPartialUpdate(ctx context.Context, request operations.Ip
 }
 func (s *ipam) IpamVlansRead(ctx context.Context, request operations.IpamVlansReadRequest) (*operations.IpamVlansReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2464,9 +2464,9 @@ func (s *ipam) IpamVlansRead(ctx context.Context, request operations.IpamVlansRe
 }
 func (s *ipam) IpamVlansUpdate(ctx context.Context, request operations.IpamVlansUpdateRequest) (*operations.IpamVlansUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vlans/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVLANInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2514,7 +2514,7 @@ func (s *ipam) IpamVlansUpdate(ctx context.Context, request operations.IpamVlans
 
 	return res, nil
 }
-func (s *ipam) IpamVrfsCreate(ctx context.Context, request operations.IpamVrfsCreateRequest) (*operations.IpamVrfsCreateResponse, error) {
+func (s *ipam) IpamVrfsCreate(ctx context.Context, request shared.WritableVRFInput) (*operations.IpamVrfsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ipam/vrfs/"
 
@@ -2568,7 +2568,7 @@ func (s *ipam) IpamVrfsCreate(ctx context.Context, request operations.IpamVrfsCr
 }
 func (s *ipam) IpamVrfsDelete(ctx context.Context, request operations.IpamVrfsDeleteRequest) (*operations.IpamVrfsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2608,7 +2608,7 @@ func (s *ipam) IpamVrfsList(ctx context.Context, request operations.IpamVrfsList
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2647,9 +2647,9 @@ func (s *ipam) IpamVrfsList(ctx context.Context, request operations.IpamVrfsList
 }
 func (s *ipam) IpamVrfsPartialUpdate(ctx context.Context, request operations.IpamVrfsPartialUpdateRequest) (*operations.IpamVrfsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVRFInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2699,7 +2699,7 @@ func (s *ipam) IpamVrfsPartialUpdate(ctx context.Context, request operations.Ipa
 }
 func (s *ipam) IpamVrfsRead(ctx context.Context, request operations.IpamVrfsReadRequest) (*operations.IpamVrfsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2741,9 +2741,9 @@ func (s *ipam) IpamVrfsRead(ctx context.Context, request operations.IpamVrfsRead
 }
 func (s *ipam) IpamVrfsUpdate(ctx context.Context, request operations.IpamVrfsUpdateRequest) (*operations.IpamVrfsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ipam/vrfs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableVRFInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

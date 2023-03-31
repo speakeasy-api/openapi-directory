@@ -8,16 +8,14 @@ import (
 )
 
 type AdsensehostCustomchannelsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostCustomchannelsPatchPathParams struct {
+type AdsensehostCustomchannelsPatchRequest struct {
+	CustomChannel *shared.CustomChannel `request:"mediaType=application/json"`
 	// Ad client in which the custom channel will be updated.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-}
-
-type AdsensehostCustomchannelsPatchQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Custom channel to get.
@@ -34,13 +32,6 @@ type AdsensehostCustomchannelsPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostCustomchannelsPatchRequest struct {
-	PathParams  AdsensehostCustomchannelsPatchPathParams
-	QueryParams AdsensehostCustomchannelsPatchQueryParams
-	Request     *shared.CustomChannel `request:"mediaType=application/json"`
-	Security    AdsensehostCustomchannelsPatchSecurity
 }
 
 type AdsensehostCustomchannelsPatchResponse struct {

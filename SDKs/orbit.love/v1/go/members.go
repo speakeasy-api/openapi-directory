@@ -31,16 +31,16 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DeleteWorkspaceSlugMembersMemberSlug - Delete a member
-func (s *members) DeleteWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugRequest) (*operations.DeleteWorkspaceSlugMembersMemberSlugResponse, error) {
+func (s *members) DeleteWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugRequest, security operations.DeleteWorkspaceSlugMembersMemberSlugSecurity) (*operations.DeleteWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -68,11 +68,11 @@ func (s *members) DeleteWorkspaceSlugMembersMemberSlug(ctx context.Context, requ
 }
 
 // DeleteWorkspaceSlugMembersMemberSlugIdentities - Remove identity from a member
-func (s *members) DeleteWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest) (*operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
+func (s *members) DeleteWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest, security operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity) (*operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Identity", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -84,7 +84,7 @@ func (s *members) DeleteWorkspaceSlugMembersMemberSlugIdentities(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -114,20 +114,20 @@ func (s *members) DeleteWorkspaceSlugMembersMemberSlugIdentities(ctx context.Con
 }
 
 // GetWorkspaceSlugMembers - List members in a workspace
-func (s *members) GetWorkspaceSlugMembers(ctx context.Context, request operations.GetWorkspaceSlugMembersRequest) (*operations.GetWorkspaceSlugMembersResponse, error) {
+func (s *members) GetWorkspaceSlugMembers(ctx context.Context, request operations.GetWorkspaceSlugMembersRequest, security operations.GetWorkspaceSlugMembersSecurity) (*operations.GetWorkspaceSlugMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,20 +154,20 @@ func (s *members) GetWorkspaceSlugMembers(ctx context.Context, request operation
 
 // GetWorkspaceSlugMembersFind - Find a member by an identity
 // Provide a source and one of username/uid/email params to return a member with that identity, if one exists. Common values for source include github, twitter, and email.
-func (s *members) GetWorkspaceSlugMembersFind(ctx context.Context, request operations.GetWorkspaceSlugMembersFindRequest) (*operations.GetWorkspaceSlugMembersFindResponse, error) {
+func (s *members) GetWorkspaceSlugMembersFind(ctx context.Context, request operations.GetWorkspaceSlugMembersFindRequest, security operations.GetWorkspaceSlugMembersFindSecurity) (*operations.GetWorkspaceSlugMembersFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/find", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/find", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -195,16 +195,16 @@ func (s *members) GetWorkspaceSlugMembersFind(ctx context.Context, request opera
 }
 
 // GetWorkspaceSlugMembersMemberSlug - Get a member
-func (s *members) GetWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugRequest) (*operations.GetWorkspaceSlugMembersMemberSlugResponse, error) {
+func (s *members) GetWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugRequest, security operations.GetWorkspaceSlugMembersMemberSlugSecurity) (*operations.GetWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,20 +230,20 @@ func (s *members) GetWorkspaceSlugMembersMemberSlug(ctx context.Context, request
 }
 
 // GetWorkspaceSlugOrganizationsOrganizationIDMembers - List members in an organization
-func (s *members) GetWorkspaceSlugOrganizationsOrganizationIDMembers(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersRequest) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersResponse, error) {
+func (s *members) GetWorkspaceSlugOrganizationsOrganizationIDMembers(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersRequest, security operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersSecurity) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,11 +270,11 @@ func (s *members) GetWorkspaceSlugOrganizationsOrganizationIDMembers(ctx context
 
 // PostWorkspaceSlugMembers - Create or update a member
 // This method is useful when you know a member's identity in another system and want to create or update the corresponding Orbit member. Identities can be specified in the identity object or member attributes like member.github. If no member exists, a new member will be created and linked to any provided identities.
-func (s *members) PostWorkspaceSlugMembers(ctx context.Context, request operations.PostWorkspaceSlugMembersRequest) (*operations.PostWorkspaceSlugMembersResponse, error) {
+func (s *members) PostWorkspaceSlugMembers(ctx context.Context, request operations.PostWorkspaceSlugMembersRequest, security operations.PostWorkspaceSlugMembersSecurity) (*operations.PostWorkspaceSlugMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MemberAndIdentity", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,7 +286,7 @@ func (s *members) PostWorkspaceSlugMembers(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,11 +318,11 @@ func (s *members) PostWorkspaceSlugMembers(ctx context.Context, request operatio
 }
 
 // PostWorkspaceSlugMembersMemberSlugIdentities - Add identity to a member
-func (s *members) PostWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugIdentitiesRequest) (*operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
+func (s *members) PostWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugIdentitiesRequest, security operations.PostWorkspaceSlugMembersMemberSlugIdentitiesSecurity) (*operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Identity", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -334,7 +334,7 @@ func (s *members) PostWorkspaceSlugMembersMemberSlugIdentities(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -364,11 +364,11 @@ func (s *members) PostWorkspaceSlugMembersMemberSlugIdentities(ctx context.Conte
 }
 
 // PutWorkspaceSlugMembersMemberSlug - Update a member
-func (s *members) PutWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugRequest) (*operations.PutWorkspaceSlugMembersMemberSlugResponse, error) {
+func (s *members) PutWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugRequest, security operations.PutWorkspaceSlugMembersMemberSlugSecurity) (*operations.PutWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Member", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,7 +380,7 @@ func (s *members) PutWorkspaceSlugMembersMemberSlug(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

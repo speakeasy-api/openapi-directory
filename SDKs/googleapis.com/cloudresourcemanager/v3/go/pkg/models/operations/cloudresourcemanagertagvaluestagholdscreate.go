@@ -8,18 +8,14 @@ import (
 )
 
 type CloudresourcemanagerTagValuesTagHoldsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerTagValuesTagHoldsCreatePathParams struct {
-	// Required. The resource name of the TagHold's parent TagValue. Must be of the form: `tagValues/{tag-value-id}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudresourcemanagerTagValuesTagHoldsCreateQueryParams struct {
+type CloudresourcemanagerTagValuesTagHoldsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TagHoldInput *shared.TagHoldInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type CloudresourcemanagerTagValuesTagHoldsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource name of the TagHold's parent TagValue. Must be of the form: `tagValues/{tag-value-id}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type CloudresourcemanagerTagValuesTagHoldsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Set to true to perform the validations necessary for creating the resource, but not actually perform the action.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type CloudresourcemanagerTagValuesTagHoldsCreateRequest struct {
-	PathParams  CloudresourcemanagerTagValuesTagHoldsCreatePathParams
-	QueryParams CloudresourcemanagerTagValuesTagHoldsCreateQueryParams
-	Request     *shared.TagHoldInput `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerTagValuesTagHoldsCreateSecurity
 }
 
 type CloudresourcemanagerTagValuesTagHoldsCreateResponse struct {

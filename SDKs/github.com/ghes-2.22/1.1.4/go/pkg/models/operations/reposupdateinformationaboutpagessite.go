@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateInformationAboutPagesSitePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum - The repository directory that includes the source files for the Pages site. Allowed paths are `/` or `/docs`.
 type ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum string
 
@@ -291,8 +286,9 @@ type ReposUpdateInformationAboutPagesSiteRequestBody1 struct {
 }
 
 type ReposUpdateInformationAboutPagesSiteRequest struct {
-	PathParams ReposUpdateInformationAboutPagesSitePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	Owner       string      `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string      `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateInformationAboutPagesSiteResponse struct {

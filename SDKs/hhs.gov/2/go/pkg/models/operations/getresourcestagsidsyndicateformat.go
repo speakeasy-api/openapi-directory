@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetResourcesTagsIDSyndicateFormatPathParams struct {
+type GetResourcesTagsIDSyndicateFormatRequest struct {
+	// Method used to render an html request. Accepts one: [mv, list, feed]
+	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// The id of the record to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesTagsIDSyndicateFormatQueryParams struct {
-	// Method used to render an html request. Accepts one: [mv, list, feed]
-	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
-}
-
-type GetResourcesTagsIDSyndicateFormatRequest struct {
-	PathParams  GetResourcesTagsIDSyndicateFormatPathParams
-	QueryParams GetResourcesTagsIDSyndicateFormatQueryParams
 }
 
 type GetResourcesTagsIDSyndicateFormatResponse struct {

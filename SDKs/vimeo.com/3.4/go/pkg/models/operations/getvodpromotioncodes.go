@@ -8,27 +8,18 @@ import (
 )
 
 type GetVodPromotionCodesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetVodPromotionCodesPathParams struct {
+type GetVodPromotionCodesRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-	// The ID of the promotion.
-	PromotionID float64 `pathParam:"style=simple,explode=false,name=promotion_id"`
-}
-
-type GetVodPromotionCodesQueryParams struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVodPromotionCodesRequest struct {
-	PathParams  GetVodPromotionCodesPathParams
-	QueryParams GetVodPromotionCodesQueryParams
-	Security    GetVodPromotionCodesSecurity
+	// The ID of the promotion.
+	PromotionID float64 `pathParam:"style=simple,explode=false,name=promotion_id"`
 }
 
 type GetVodPromotionCodesResponse struct {

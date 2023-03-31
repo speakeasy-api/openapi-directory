@@ -12,14 +12,12 @@ var ListMetricServerList = []string{
 }
 
 type ListMetricSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMetricPathParams struct {
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type ListMetricQueryParams struct {
+type ListMetricRequest struct {
+	CallSid   string                                `pathParam:"style=simple,explode=false,name=CallSid"`
 	Direction *shared.MetricEnumStreamDirectionEnum `queryParam:"style=form,explode=true,name=Direction"`
 	Edge      *shared.MetricEnumTwilioEdgeEnum      `queryParam:"style=form,explode=true,name=Edge"`
 	// The page index. This value is simply for client state.
@@ -28,13 +26,6 @@ type ListMetricQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListMetricRequest struct {
-	PathParams  ListMetricPathParams
-	QueryParams ListMetricQueryParams
-	Security    ListMetricSecurity
-	ServerURL   *string
 }
 
 type ListMetricListMetricResponseMeta struct {

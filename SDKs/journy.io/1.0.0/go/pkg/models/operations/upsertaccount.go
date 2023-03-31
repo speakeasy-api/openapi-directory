@@ -22,10 +22,6 @@ type UpsertAccountRequestBody struct {
 	Properties map[string]interface{} `json:"properties,omitempty"`
 }
 
-type UpsertAccountRequest struct {
-	Request UpsertAccountRequestBody `request:"mediaType=application/json"`
-}
-
 type UpsertAccount500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

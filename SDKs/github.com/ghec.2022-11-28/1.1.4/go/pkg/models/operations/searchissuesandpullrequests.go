@@ -60,7 +60,7 @@ func (e *SearchIssuesAndPullRequestsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchIssuesAndPullRequestsQueryParams struct {
+type SearchIssuesAndPullRequestsRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -71,10 +71,6 @@ type SearchIssuesAndPullRequestsQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Sorts the results of your query by the number of `comments`, `reactions`, `reactions-+1`, `reactions--1`, `reactions-smile`, `reactions-thinking_face`, `reactions-heart`, `reactions-tada`, or `interactions`. You can also sort results by how recently the items were `created` or `updated`, Default: [best match](https://docs.github.com/enterprise-cloud@latest//rest/reference/search#ranking-search-results)
 	Sort *SearchIssuesAndPullRequestsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchIssuesAndPullRequestsRequest struct {
-	QueryParams SearchIssuesAndPullRequestsQueryParams
 }
 
 // SearchIssuesAndPullRequests503ApplicationJSON - Service unavailable

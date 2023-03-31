@@ -34,10 +34,6 @@ type PostPortfolioOptimizationMaximumSharpeRatioRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioOptimizationMaximumSharpeRatioRequest struct {
-	Request PostPortfolioOptimizationMaximumSharpeRatioRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON - OK
 type PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

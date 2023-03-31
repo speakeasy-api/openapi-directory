@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostOntolIdentifierResourceQueryParams struct {
+type PostOntolIdentifierResourceRequest struct {
 	// List of labels
 	Label []string `queryParam:"style=form,explode=true,name=label"`
-}
-
-type PostOntolIdentifierResourceRequest struct {
-	QueryParams PostOntolIdentifierResourceQueryParams
 }
 
 type PostOntolIdentifierResourceResponse struct {

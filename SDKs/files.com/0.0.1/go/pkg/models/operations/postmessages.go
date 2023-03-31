@@ -18,10 +18,6 @@ type PostMessagesRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostMessagesRequest struct {
-	Request *PostMessagesRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostMessagesResponse struct {
 	ContentType string
 	// The Messages object.

@@ -8,10 +8,10 @@ import (
 )
 
 type DeleteSubmissionCommentSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSubmissionCommentPathParams struct {
+type DeleteSubmissionCommentRequest struct {
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
@@ -20,11 +20,6 @@ type DeleteSubmissionCommentPathParams struct {
 	Comment string `pathParam:"style=simple,explode=false,name=comment"`
 	// Unique identifier of the submission
 	Submission string `pathParam:"style=simple,explode=false,name=submission"`
-}
-
-type DeleteSubmissionCommentRequest struct {
-	PathParams DeleteSubmissionCommentPathParams
-	Security   DeleteSubmissionCommentSecurity
 }
 
 type DeleteSubmissionCommentResponse struct {

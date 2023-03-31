@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SaveRevisionUsingPOSTQueryParams struct {
+type SaveRevisionUsingPOSTRequest struct {
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 	Rev   *string `queryParam:"style=form,explode=true,name=rev"`
-}
-
-type SaveRevisionUsingPOSTRequest struct {
-	QueryParams SaveRevisionUsingPOSTQueryParams
 }
 
 // SaveRevisionUsingPOST500ApplicationJSON - internal api error (code 2)

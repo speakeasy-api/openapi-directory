@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmGroupsIDPathParams struct {
+type GetRealmGroupsIDRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmGroupsIDRequest struct {
-	PathParams GetRealmGroupsIDPathParams
 }
 
 type GetRealmGroupsIDResponse struct {

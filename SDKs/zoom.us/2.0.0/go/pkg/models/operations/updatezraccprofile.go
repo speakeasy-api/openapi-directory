@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateZRAccProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateZRAccProfileApplicationJSONBasic struct {
@@ -25,11 +24,6 @@ type UpdateZRAccProfileApplicationJSONBasic struct {
 
 type UpdateZRAccProfileApplicationJSON struct {
 	Basic *UpdateZRAccProfileApplicationJSONBasic `json:"basic,omitempty"`
-}
-
-type UpdateZRAccProfileRequest struct {
-	Request  *UpdateZRAccProfileApplicationJSON `request:"mediaType=application/json"`
-	Security UpdateZRAccProfileSecurity
 }
 
 type UpdateZRAccProfileResponse struct {

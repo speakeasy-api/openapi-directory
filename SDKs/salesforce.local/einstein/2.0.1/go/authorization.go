@@ -36,7 +36,7 @@ func newAuthorization(defaultClient, securityClient HTTPClient, serverURL, langu
 // GenerateTokenV2 - Generate an OAuth Token
 // Returns an OAuth access token or a refresh token. You must pass a valid access token in the header of each API call.
 // https://metamind.readme.io/docs/generate-an-oauth-access-token - authentication guid
-func (s *authorization) GenerateTokenV2(ctx context.Context, request operations.GenerateTokenV2Request) (*operations.GenerateTokenV2Response, error) {
+func (s *authorization) GenerateTokenV2(ctx context.Context, request operations.GenerateTokenV2RequestBody) (*operations.GenerateTokenV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/oauth2/token"
 
@@ -87,16 +87,16 @@ func (s *authorization) GenerateTokenV2(ctx context.Context, request operations.
 }
 
 // RevokeRefreshTokenV2 - Delete a Refresh Token
-func (s *authorization) RevokeRefreshTokenV2(ctx context.Context, request operations.RevokeRefreshTokenV2Request) (*operations.RevokeRefreshTokenV2Response, error) {
+func (s *authorization) RevokeRefreshTokenV2(ctx context.Context, request operations.RevokeRefreshTokenV2Request, security operations.RevokeRefreshTokenV2Security) (*operations.RevokeRefreshTokenV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/oauth2/tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/oauth2/tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

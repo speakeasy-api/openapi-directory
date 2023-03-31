@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageRegionsRawPathParams struct {
+type CreateImageRegionsRawRequest struct {
+	// Batch of image regions which include a tag and bounding box. Limited to 64.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImageRegionsRawRequest struct {
-	PathParams CreateImageRegionsRawPathParams
-	// Batch of image regions which include a tag and bounding box. Limited to 64.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type CreateImageRegionsRawResponse struct {

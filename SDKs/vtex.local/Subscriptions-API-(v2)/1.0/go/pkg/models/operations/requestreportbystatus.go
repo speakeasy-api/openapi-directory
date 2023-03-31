@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type RequestreportbyStatusQueryParams struct {
-	// Email that the report will be sent to
-	RequesterEmail string `queryParam:"style=form,explode=true,name=requesterEmail"`
-	// Binary OR of the following status: 1 - ACTIVE; 2 - PAUSED; 4 - CANCELED; 8 - EXPIRED
-	Status int `queryParam:"style=form,explode=true,name=status"`
-}
-
-type RequestreportbyStatusHeaders struct {
+type RequestreportbyStatusRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RequestreportbyStatusRequest struct {
-	QueryParams RequestreportbyStatusQueryParams
-	Headers     RequestreportbyStatusHeaders
+	// Email that the report will be sent to
+	RequesterEmail string `queryParam:"style=form,explode=true,name=requesterEmail"`
+	// Binary OR of the following status: 1 - ACTIVE; 2 - PAUSED; 4 - CANCELED; 8 - EXPIRED
+	Status int `queryParam:"style=form,explode=true,name=status"`
 }
 
 type RequestreportbyStatusResponse struct {

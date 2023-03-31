@@ -4,79 +4,74 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.YoutubeAbuseReportsInsertRequest(
-    security=operations.YoutubeAbuseReportsInsertSecurity(
-        option1=operations.YoutubeAbuseReportsInsertSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.YoutubeAbuseReportsInsertQueryParams(
-        dollar_xgafv="2",
-        access_token="dolores",
-        alt="json",
-        callback="nihil",
-        fields="dolorem",
-        key="a",
-        oauth_token="dicta",
-        part=[
-            "consequatur",
-        ],
-        pretty_print=True,
-        quota_user="omnis",
-        upload_type="doloremque",
-        upload_protocol="magnam",
-    ),
-    request=shared.AbuseReport(
+    dollar_xgafv="2",
+    abuse_report=shared.AbuseReport(
         abuse_types=[
             shared.AbuseType(
-                id="ea",
+                id="distinctio",
             ),
             shared.AbuseType(
-                id="in",
+                id="quibusdam",
             ),
             shared.AbuseType(
-                id="et",
+                id="unde",
             ),
         ],
-        description="aut",
+        description="nulla",
         related_entities=[
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="qui",
-                    type_id="blanditiis",
-                    url="inventore",
+                    id="illum",
+                    type_id="vel",
+                    url="error",
                 ),
             ),
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="minima",
-                    type_id="eum",
-                    url="dolorum",
+                    id="deserunt",
+                    type_id="suscipit",
+                    url="iure",
                 ),
             ),
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="quibusdam",
-                    type_id="est",
-                    url="sint",
+                    id="magnam",
+                    type_id="debitis",
+                    url="ipsa",
                 ),
             ),
         ],
         subject=shared.Entity(
-            id="et",
-            type_id="aut",
-            url="repellendus",
+            id="delectus",
+            type_id="tempora",
+            url="suscipit",
         ),
     ),
+    access_token="molestiae",
+    alt="proto",
+    callback="placeat",
+    fields_="voluptatum",
+    key="iusto",
+    oauth_token="excepturi",
+    part=[
+        "recusandae",
+        "temporibus",
+    ],
+    pretty_print=False,
+    quota_user="ab",
+    upload_type="quis",
+    upload_protocol="veritatis",
 )
     
-res = s.abuse_reports.youtube_abuse_reports_insert(req)
+res = s.abuse_reports.youtube_abuse_reports_insert(req, operations.YoutubeAbuseReportsInsertSecurity(
+    option1=operations.YoutubeAbuseReportsInsertSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.abuse_report is not None:
     # handle response

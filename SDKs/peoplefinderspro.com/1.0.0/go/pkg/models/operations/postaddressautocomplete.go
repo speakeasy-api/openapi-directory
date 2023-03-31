@@ -6,22 +6,18 @@ import (
 	"net/http"
 )
 
-type PostAddressAutocompleteHeaders struct {
+type PostAddressAutocompleteRequestBody struct {
+	Input *string `json:"Input,omitempty"`
+}
+
+type PostAddressAutocompleteRequest struct {
+	RequestBody *PostAddressAutocompleteRequestBody `request:"mediaType=application/json"`
 	// e.g. Key
 	GalaxyApName *string `header:"style=simple,explode=false,name=galaxy-ap-name"`
 	// e.g. Secret
 	GalaxyApPassword *string `header:"style=simple,explode=false,name=galaxy-ap-password"`
 	// e.g. DevAPIAddressAutoComplete
 	GalaxySearchType *string `header:"style=simple,explode=false,name=galaxy-search-type"`
-}
-
-type PostAddressAutocompleteRequestBody struct {
-	Input *string `json:"Input,omitempty"`
-}
-
-type PostAddressAutocompleteRequest struct {
-	Headers PostAddressAutocompleteHeaders
-	Request *PostAddressAutocompleteRequestBody `request:"mediaType=application/json"`
 }
 
 type PostAddressAutocompleteResponse struct {

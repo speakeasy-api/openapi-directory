@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETNCBIGeneMappingUsingGETPathParams struct {
+type GETNCBIGeneMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETNCBIGeneMappingUsingGETRequest struct {
-	PathParams GETNCBIGeneMappingUsingGETPathParams
 }
 
 type GETNCBIGeneMappingUsingGETResponse struct {

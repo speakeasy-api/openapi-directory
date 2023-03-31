@@ -8,22 +8,13 @@ import (
 )
 
 type GetAllProductsV2Security struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetAllProductsV2PathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-}
-
-type GetAllProductsV2QueryParams struct {
-	// If true, sorts response by created date
-	Sort *bool `queryParam:"style=form,explode=true,name=sort"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAllProductsV2Request struct {
-	PathParams  GetAllProductsV2PathParams
-	QueryParams GetAllProductsV2QueryParams
-	Security    GetAllProductsV2Security
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	// If true, sorts response by created date
+	Sort *bool `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type GetAllProductsV2Response struct {

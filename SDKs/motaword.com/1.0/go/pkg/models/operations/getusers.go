@@ -33,16 +33,12 @@ func (e *GetUsersUserTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	Email    *string               `queryParam:"style=form,explode=true,name=email"`
 	Page     *int64                `queryParam:"style=form,explode=true,name=page"`
 	PerPage  *int64                `queryParam:"style=form,explode=true,name=per_page"`
 	Search   *string               `queryParam:"style=form,explode=true,name=search"`
 	UserType *GetUsersUserTypeEnum `queryParam:"style=form,explode=true,name=user_type"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 type GetUsersResponse struct {

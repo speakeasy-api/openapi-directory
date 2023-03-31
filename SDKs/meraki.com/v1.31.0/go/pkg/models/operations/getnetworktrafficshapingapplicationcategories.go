@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkTrafficShapingApplicationCategoriesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkTrafficShapingApplicationCategoriesRequest struct {
-	PathParams GetNetworkTrafficShapingApplicationCategoriesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkTrafficShapingApplicationCategoriesResponse struct {

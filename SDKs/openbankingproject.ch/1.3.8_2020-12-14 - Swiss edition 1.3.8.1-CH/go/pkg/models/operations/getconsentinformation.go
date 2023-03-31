@@ -8,16 +8,10 @@ import (
 )
 
 type GetConsentInformationSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetConsentInformationPathParams struct {
-	// ID of the corresponding consent object as returned by an account information consent request.
-	//
-	ConsentID string `pathParam:"style=simple,explode=false,name=consentId"`
-}
-
-type GetConsentInformationHeaders struct {
+type GetConsentInformationRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -69,12 +63,9 @@ type GetConsentInformationHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetConsentInformationRequest struct {
-	PathParams GetConsentInformationPathParams
-	Headers    GetConsentInformationHeaders
-	Security   GetConsentInformationSecurity
+	// ID of the corresponding consent object as returned by an account information consent request.
+	//
+	ConsentID string `pathParam:"style=simple,explode=false,name=consentId"`
 }
 
 type GetConsentInformationResponse struct {

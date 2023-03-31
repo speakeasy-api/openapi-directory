@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointDisruptionPathParams struct {
-	// A comma-seperated list of stop point ids. Max. approx. 20 ids.
-	//             You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type StopPointDisruptionQueryParams struct {
+type StopPointDisruptionRequest struct {
 	// Specify true to associate all disruptions with parent stop point. (Only applicable when getFamily is true).
 	FlattenResponse *bool `queryParam:"style=form,explode=true,name=flattenResponse"`
 	// Specify true to return disruptions for entire family, or false to return disruptions for just this stop point. Defaults to false.
-	GetFamily                *bool `queryParam:"style=form,explode=true,name=getFamily"`
-	IncludeRouteBlockedStops *bool `queryParam:"style=form,explode=true,name=includeRouteBlockedStops"`
-}
-
-type StopPointDisruptionRequest struct {
-	PathParams  StopPointDisruptionPathParams
-	QueryParams StopPointDisruptionQueryParams
+	GetFamily *bool `queryParam:"style=form,explode=true,name=getFamily"`
+	// A comma-seperated list of stop point ids. Max. approx. 20 ids.
+	//             You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.
+	Ids                      []string `pathParam:"style=simple,explode=false,name=ids"`
+	IncludeRouteBlockedStops *bool    `queryParam:"style=form,explode=true,name=includeRouteBlockedStops"`
 }
 
 type StopPointDisruptionResponse struct {

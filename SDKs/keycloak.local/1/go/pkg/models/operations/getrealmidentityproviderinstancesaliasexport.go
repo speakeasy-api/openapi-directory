@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetRealmIdentityProviderInstancesAliasExportPathParams struct {
+type GetRealmIdentityProviderInstancesAliasExportRequest struct {
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmIdentityProviderInstancesAliasExportQueryParams struct {
 	// Format to use
 	Format *string `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetRealmIdentityProviderInstancesAliasExportRequest struct {
-	PathParams  GetRealmIdentityProviderInstancesAliasExportPathParams
-	QueryParams GetRealmIdentityProviderInstancesAliasExportQueryParams
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 }
 
 type GetRealmIdentityProviderInstancesAliasExportResponse struct {

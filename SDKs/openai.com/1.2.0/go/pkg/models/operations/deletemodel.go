@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteModelPathParams struct {
+type DeleteModelRequest struct {
 	// The model to delete
 	Model string `pathParam:"style=simple,explode=false,name=model"`
-}
-
-type DeleteModelRequest struct {
-	PathParams DeleteModelPathParams
 }
 
 type DeleteModelResponse struct {

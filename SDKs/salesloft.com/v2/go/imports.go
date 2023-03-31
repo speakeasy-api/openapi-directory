@@ -39,14 +39,14 @@ func newImports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) DeleteV2ImportsIDJSON(ctx context.Context, request operations.DeleteV2ImportsIDJSONRequest) (*operations.DeleteV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,7 +86,7 @@ func (s *imports) GetV2ImportsJSON(ctx context.Context, request operations.GetV2
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,7 +130,7 @@ func (s *imports) GetV2ImportsJSON(ctx context.Context, request operations.GetV2
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) GetV2ImportsIDJSON(ctx context.Context, request operations.GetV2ImportsIDJSONRequest) (*operations.GetV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *imports) GetV2ImportsIDJSON(ctx context.Context, request operations.Get
 
 // PostV2ImportsJSON - Create an import
 // Creates an import.
-func (s *imports) PostV2ImportsJSON(ctx context.Context, request operations.PostV2ImportsJSONRequest) (*operations.PostV2ImportsJSONResponse, error) {
+func (s *imports) PostV2ImportsJSON(ctx context.Context, request operations.PostV2ImportsJSONRequestBody) (*operations.PostV2ImportsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/imports.json"
 
@@ -229,9 +229,9 @@ func (s *imports) PostV2ImportsJSON(ctx context.Context, request operations.Post
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) PutV2ImportsIDJSON(ctx context.Context, request operations.PutV2ImportsIDJSONRequest) (*operations.PutV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

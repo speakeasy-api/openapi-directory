@@ -37,14 +37,14 @@ func newHealthProfile(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get a health profile by id
 func (s *healthProfile) FetchHealthProfile(ctx context.Context, request operations.FetchHealthProfileRequest) (*operations.FetchHealthProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/health_profile/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/health_profile/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *healthProfile) FetchHealthProfiles(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

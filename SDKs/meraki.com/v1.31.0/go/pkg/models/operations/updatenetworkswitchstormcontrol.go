@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchStormControlPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchStormControlRequestBody struct {
 	// Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration.
 	BroadcastThreshold *int64 `json:"broadcastThreshold,omitempty"`
@@ -20,8 +16,8 @@ type UpdateNetworkSwitchStormControlRequestBody struct {
 }
 
 type UpdateNetworkSwitchStormControlRequest struct {
-	PathParams UpdateNetworkSwitchStormControlPathParams
-	Request    *UpdateNetworkSwitchStormControlRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchStormControlRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchStormControlResponse struct {

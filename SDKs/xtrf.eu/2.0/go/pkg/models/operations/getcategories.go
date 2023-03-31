@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCategoriesPathParams struct {
+type GetCategoriesRequest struct {
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type GetCategoriesRequest struct {
-	PathParams GetCategoriesPathParams
 }
 
 type GetCategoriesResponse struct {

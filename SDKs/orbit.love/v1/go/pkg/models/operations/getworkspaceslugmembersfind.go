@@ -4,31 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugMembersFindSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugMembersFindPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
-}
-
-type GetWorkspaceSlugMembersFindQueryParams struct {
-	Email *string `queryParam:"style=form,explode=true,name=email"`
-	// Deprecated, please use source=github and username=<username> instead
-	Github     *string `queryParam:"style=form,explode=true,name=github"`
-	Source     *string `queryParam:"style=form,explode=true,name=source"`
-	SourceHost *string `queryParam:"style=form,explode=true,name=source_host"`
-	UID        *string `queryParam:"style=form,explode=true,name=uid"`
-	Username   *string `queryParam:"style=form,explode=true,name=username"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWorkspaceSlugMembersFindRequest struct {
-	PathParams  GetWorkspaceSlugMembersFindPathParams
-	QueryParams GetWorkspaceSlugMembersFindQueryParams
-	Security    GetWorkspaceSlugMembersFindSecurity
+	Email *string `queryParam:"style=form,explode=true,name=email"`
+	// Deprecated, please use source=github and username=<username> instead
+	Github        *string `queryParam:"style=form,explode=true,name=github"`
+	Source        *string `queryParam:"style=form,explode=true,name=source"`
+	SourceHost    *string `queryParam:"style=form,explode=true,name=source_host"`
+	UID           *string `queryParam:"style=form,explode=true,name=uid"`
+	Username      *string `queryParam:"style=form,explode=true,name=username"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugMembersFindResponse struct {

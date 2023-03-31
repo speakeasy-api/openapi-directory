@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchCommunityResourceQueryParams struct {
+type SearchCommunityResourceRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -52,10 +52,6 @@ type SearchCommunityResourceQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchCommunityResourceRequest struct {
-	QueryParams SearchCommunityResourceQueryParams
 }
 
 type SearchCommunityResourceResponse struct {

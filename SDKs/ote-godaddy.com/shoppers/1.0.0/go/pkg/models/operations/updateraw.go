@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRawPathParams struct {
+type UpdateRawRequest struct {
+	// The Shopper details to update
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The ID of the Shopper to update
 	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
-type UpdateRawRequest struct {
-	PathParams UpdateRawPathParams
-	// The Shopper details to update
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type UpdateRawResponse struct {

@@ -33,7 +33,7 @@ func (e *TeamHittingVsStartingPitcherFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type TeamHittingVsStartingPitcherPathParams struct {
+type TeamHittingVsStartingPitcherRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format TeamHittingVsStartingPitcherFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The GameID of an MLB game.  GameIDs can be found in the Games API.  Valid entries are <code>14620</code> or <code>16905</code>
@@ -41,10 +41,6 @@ type TeamHittingVsStartingPitcherPathParams struct {
 	// The abbreviation of the requested team.
 	// <br>Examples: <code>SF</code>, <code>NYY</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
-}
-
-type TeamHittingVsStartingPitcherRequest struct {
-	PathParams TeamHittingVsStartingPitcherPathParams
 }
 
 type TeamHittingVsStartingPitcherResponse struct {

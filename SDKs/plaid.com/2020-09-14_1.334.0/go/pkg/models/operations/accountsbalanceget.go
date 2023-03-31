@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AccountsBalanceGetRequest struct {
-	Request shared.AccountsBalanceGetRequest `request:"mediaType=application/json"`
-}
 
 type AccountsBalanceGetResponse struct {
 	// OK

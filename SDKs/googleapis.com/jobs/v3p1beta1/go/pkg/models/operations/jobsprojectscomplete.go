@@ -10,23 +10,18 @@ import (
 )
 
 type JobsProjectsCompleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsCompleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsCompleteSecurity struct {
 	Option1 *JobsProjectsCompleteSecurityOption1 `security:"option"`
 	Option2 *JobsProjectsCompleteSecurityOption2 `security:"option"`
-}
-
-type JobsProjectsCompletePathParams struct {
-	// Required. Resource name of project the completion is performed within. The format is "projects/{project_id}", for example, "projects/api-test-project".
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // JobsProjectsCompleteScopeEnum - Optional. The scope of the completion. The defaults is CompletionScope.PUBLIC.
@@ -86,7 +81,7 @@ func (e *JobsProjectsCompleteTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type JobsProjectsCompleteQueryParams struct {
+type JobsProjectsCompleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -105,6 +100,8 @@ type JobsProjectsCompleteQueryParams struct {
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
 	// Optional. The list of languages of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open jobs with the same language_codes are returned. For CompletionType.COMPANY_NAME type, only companies having open jobs with the same language_codes are returned. For CompletionType.COMBINED type, only open jobs with the same language_codes or companies having open jobs with the same language_codes are returned. The maximum number of allowed characters is 255.
 	LanguageCodes []string `queryParam:"style=form,explode=true,name=languageCodes"`
+	// Required. Resource name of project the completion is performed within. The format is "projects/{project_id}", for example, "projects/api-test-project".
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Required. Completion result count. The maximum allowed page size is 10.
@@ -123,12 +120,6 @@ type JobsProjectsCompleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsCompleteRequest struct {
-	PathParams  JobsProjectsCompletePathParams
-	QueryParams JobsProjectsCompleteQueryParams
-	Security    JobsProjectsCompleteSecurity
 }
 
 type JobsProjectsCompleteResponse struct {

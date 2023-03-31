@@ -8,13 +8,13 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurity struct {
@@ -22,14 +22,10 @@ type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurity struct {
 	Option2 *CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurityOption2 `security:"option"`
 }
 
-type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayPathParams struct {
-	// Required. The name of the registry. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayQueryParams struct {
+type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	UnbindDeviceFromGatewayRequest *shared.UnbindDeviceFromGatewayRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayQueryParams struc
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the registry. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayQueryParams struc
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayPathParams
-	QueryParams CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayQueryParams
-	Request     *shared.UnbindDeviceFromGatewayRequest `request:"mediaType=application/json"`
-	Security    CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurity
 }
 
 type CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse struct {

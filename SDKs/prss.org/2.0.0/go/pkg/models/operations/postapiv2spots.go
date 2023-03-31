@@ -8,7 +8,7 @@ import (
 )
 
 type PostAPIV2SpotsSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAPIV2SpotsRequestBody struct {
@@ -18,11 +18,6 @@ type PostAPIV2SpotsRequestBody struct {
 	Name string `form:"name=name"`
 	// Notes pertaining to the spot.
 	Notes string `form:"name=notes"`
-}
-
-type PostAPIV2SpotsRequest struct {
-	Request  *PostAPIV2SpotsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostAPIV2SpotsSecurity
 }
 
 type PostAPIV2SpotsResponse struct {

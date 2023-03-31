@@ -38,7 +38,7 @@ func newTags(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Create a new Tag for customizing how you track your shipments
 func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagRequest) (*operations.CreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -97,7 +97,7 @@ func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagReques
 // Delete a tag that is no longer needed
 func (s *tags) DeleteTag(ctx context.Context, request operations.DeleteTagRequest) (*operations.DeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *tags) ListTags(ctx context.Context) (*operations.ListTagsResponse, erro
 // Change a tag name while still keeping the relevant shipments attached to it
 func (s *tags) RenameTag(ctx context.Context, request operations.RenameTagRequest) (*operations.RenameTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}/{new_tag_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tag_name}/{new_tag_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

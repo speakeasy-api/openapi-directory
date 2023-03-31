@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAttachmentsIDPathParams struct {
+type GetAttachmentsIDRequest struct {
 	// The unique identifier of the attachment.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAttachmentsIDRequest struct {
-	PathParams GetAttachmentsIDPathParams
 }
 
 type GetAttachmentsIDResponse struct {

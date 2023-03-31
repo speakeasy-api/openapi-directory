@@ -8,27 +8,19 @@ import (
 	"time"
 )
 
-type RoutesRouteFromIDPathParams struct {
-	// Identifier of route; values returned by Departures, Directions and Disruptions APIs
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-}
-
-type RoutesRouteFromIDQueryParams struct {
+type RoutesRouteFromIDRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter geopaths by date (ISO 8601 UTC format) (default = current date)
 	GeopathUtc *time.Time `queryParam:"style=form,explode=true,name=geopath_utc"`
 	// Indicates kif geopath data will be returned (default = false)
 	IncludeGeopath *bool `queryParam:"style=form,explode=true,name=include_geopath"`
+	// Identifier of route; values returned by Departures, Directions and Disruptions APIs
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RoutesRouteFromIDRequest struct {
-	PathParams  RoutesRouteFromIDPathParams
-	QueryParams RoutesRouteFromIDQueryParams
 }
 
 type RoutesRouteFromIDResponse struct {

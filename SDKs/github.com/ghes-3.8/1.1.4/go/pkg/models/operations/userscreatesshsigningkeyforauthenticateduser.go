@@ -14,10 +14,6 @@ type UsersCreateSSHSigningKeyForAuthenticatedUserRequestBody struct {
 	Title *string `json:"title,omitempty"`
 }
 
-type UsersCreateSSHSigningKeyForAuthenticatedUserRequest struct {
-	Request UsersCreateSSHSigningKeyForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersCreateSSHSigningKeyForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveAChannelMemberSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveAChannelMemberPathParams struct {
+type RemoveAChannelMemberRequest struct {
 	// Unique Identifier of the Channel from where you would like to remove a member. This can be retrieved from the [List Channels API](https://marketplace.zoom.us/docs/api-reference/zoom-api/chat-channels/getchannels).
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// Email address of the member whom you would like to be remove from the channel.
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 	// Unique identifier of the channel owner.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type RemoveAChannelMemberRequest struct {
-	PathParams RemoveAChannelMemberPathParams
-	Security   RemoveAChannelMemberSecurity
 }
 
 type RemoveAChannelMemberResponse struct {

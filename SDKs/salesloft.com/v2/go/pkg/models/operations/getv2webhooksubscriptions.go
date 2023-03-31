@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2WebhookSubscriptionsQueryParams struct {
+type GetV2WebhookSubscriptionsRequest struct {
 	// Filters webhook subscriptions by whether is enabled or not.
 	Enabled *bool `queryParam:"style=form,explode=true,name=enabled"`
-}
-
-type GetV2WebhookSubscriptionsRequest struct {
-	QueryParams GetV2WebhookSubscriptionsQueryParams
 }
 
 type GetV2WebhookSubscriptionsResponse struct {

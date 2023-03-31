@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetOrganizationInventoryOnboardingCloudMonitoringImportsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationInventoryOnboardingCloudMonitoringImportsQueryParams struct {
-	// import ids from an imports
-	ImportIds []string `queryParam:"style=form,explode=false,name=importIds"`
-}
-
 type GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest struct {
-	PathParams  GetOrganizationInventoryOnboardingCloudMonitoringImportsPathParams
-	QueryParams GetOrganizationInventoryOnboardingCloudMonitoringImportsQueryParams
+	// import ids from an imports
+	ImportIds      []string `queryParam:"style=form,explode=false,name=importIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationInventoryOnboardingCloudMonitoringImports200ApplicationJSONDevice - Represents the details of an imported device.

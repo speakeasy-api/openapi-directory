@@ -32,16 +32,16 @@ func newSwagger(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DeleteSwagger - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe
-func (s *swagger) DeleteSwagger(ctx context.Context, request operations.DeleteSwaggerRequest) (*operations.DeleteSwaggerResponse, error) {
+func (s *swagger) DeleteSwagger(ctx context.Context, request operations.DeleteSwaggerRequest, security operations.DeleteSwaggerSecurity) (*operations.DeleteSwaggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -69,11 +69,11 @@ func (s *swagger) DeleteSwagger(ctx context.Context, request operations.DeleteSw
 }
 
 // UpdateSwagger - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file.
-func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSwaggerRequest) (*operations.UpdateSwaggerResponse, error) {
+func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSwaggerRequest, security operations.UpdateSwaggerSecurity) (*operations.UpdateSwaggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,7 +88,7 @@ func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSw
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -118,7 +118,7 @@ func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSw
 }
 
 // UploadSwagger - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe
-func (s *swagger) UploadSwagger(ctx context.Context, request operations.UploadSwaggerRequest) (*operations.UploadSwaggerResponse, error) {
+func (s *swagger) UploadSwagger(ctx context.Context, request operations.UploadSwaggerRequestBody, security operations.UploadSwaggerSecurity) (*operations.UploadSwaggerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/swagger"
 
@@ -137,7 +137,7 @@ func (s *swagger) UploadSwagger(ctx context.Context, request operations.UploadSw
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

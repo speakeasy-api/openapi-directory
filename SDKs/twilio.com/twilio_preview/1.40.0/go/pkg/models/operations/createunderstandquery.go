@@ -12,12 +12,8 @@ var CreateUnderstandQueryServerList = []string{
 }
 
 type CreateUnderstandQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUnderstandQueryPathParams struct {
-	// The unique ID of the parent Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUnderstandQueryCreateUnderstandQueryRequest struct {
@@ -34,10 +30,9 @@ type CreateUnderstandQueryCreateUnderstandQueryRequest struct {
 }
 
 type CreateUnderstandQueryRequest struct {
-	PathParams CreateUnderstandQueryPathParams
-	Request    *CreateUnderstandQueryCreateUnderstandQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUnderstandQuerySecurity
-	ServerURL  *string
+	// The unique ID of the parent Assistant.
+	AssistantSid string                                             `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateUnderstandQueryCreateUnderstandQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUnderstandQueryResponse struct {

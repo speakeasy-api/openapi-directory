@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchPatientHealthResultsQueryParams struct {
+type FetchPatientHealthResultsRequest struct {
 	// A comma-separated list of action identifiers
 	FilterActions *string `queryParam:"style=form,explode=true,name=filter[actions]"`
 	// The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
@@ -32,10 +32,6 @@ type FetchPatientHealthResultsQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page[number]"`
 	// Page size
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type FetchPatientHealthResultsRequest struct {
-	QueryParams FetchPatientHealthResultsQueryParams
 }
 
 type FetchPatientHealthResultsResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetServersIDPathParams struct {
+type GetServersIDRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetServersIDRequest struct {
-	PathParams GetServersIDPathParams
 }
 
 type GetServersID200ApplicationJSONServerDatacenterLocation struct {

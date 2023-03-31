@@ -25,7 +25,6 @@ pkg/models/shared/enduserroute.go
 pkg/models/shared/basicuser.go
 pkg/models/shared/line.go
 pkg/models/shared/did.go
-pkg/models/shared/security.go
 pkg/models/shared/validationerrorsresponse.go
 pkg/models/shared/detailedinvalidparam.go
 USAGE.md

@@ -61,7 +61,6 @@ pkg/models/operations/updatesupportingdocument.go
 pkg/models/operations/updatetrustproduct.go
 pkg/models/shared/trusthubv1customerprofile.go
 pkg/models/shared/customerprofileenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/trusthubv1customerprofilecustomerprofilechannelendpointassignment.go
 pkg/models/shared/trusthubv1customerprofilecustomerprofileentityassignment.go
 pkg/models/shared/trusthubv1customerprofilecustomerprofileevaluation.go
@@ -79,3 +78,4 @@ pkg/models/shared/trusthubv1endusertype.go
 pkg/models/shared/trusthubv1policies.go
 pkg/models/shared/trusthubv1supportingdocumenttype.go
 USAGE.md
+pkg/models/operations/options.go

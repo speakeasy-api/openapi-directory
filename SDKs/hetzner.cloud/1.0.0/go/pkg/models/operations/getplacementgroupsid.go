@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetPlacementGroupsIDPathParams struct {
+type GetPlacementGroupsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPlacementGroupsIDRequest struct {
-	PathParams GetPlacementGroupsIDPathParams
 }
 
 // GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum - Type of the Placement Group

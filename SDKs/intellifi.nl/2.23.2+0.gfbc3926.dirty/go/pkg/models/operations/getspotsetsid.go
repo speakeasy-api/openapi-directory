@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpotsetsIDPathParams struct {
+type GetSpotsetsIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpotsetsIDRequest struct {
-	PathParams GetSpotsetsIDPathParams
 }
 
 type GetSpotsetsIDResponse struct {

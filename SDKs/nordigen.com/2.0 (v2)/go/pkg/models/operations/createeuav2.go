@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEUAV2Request struct {
-	Request shared.EndUserAgreementRequest `request:"mediaType=application/json"`
-}
-
 type CreateEUAV2Response struct {
 	ContentType string
 	// Create enduser agreement

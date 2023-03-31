@@ -8,17 +8,12 @@ import (
 )
 
 type RotateAccountOrganizationExportTokenSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RotateAccountOrganizationExportTokenPathParams struct {
-	// UUID of the organization to retrieve
-	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RotateAccountOrganizationExportTokenRequest struct {
-	PathParams RotateAccountOrganizationExportTokenPathParams
-	Security   RotateAccountOrganizationExportTokenSecurity
+	// UUID of the organization to retrieve
+	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
 }
 
 type RotateAccountOrganizationExportTokenResponse struct {

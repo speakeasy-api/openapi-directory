@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetFindInteractionsRequest{
-        QueryParams: operations.GetFindInteractionsQueryParams{
-            Format: "dump",
-            Query: "provident",
-        },
+        Format: "dump",
+        Query: "provident",
     }
 
     ctx := context.Background()

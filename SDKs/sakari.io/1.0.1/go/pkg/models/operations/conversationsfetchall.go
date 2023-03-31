@@ -8,25 +8,16 @@ import (
 )
 
 type ConversationsFetchAllSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConversationsFetchAllPathParams struct {
+type ConversationsFetchAllRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type ConversationsFetchAllQueryParams struct {
 	// Maximum number of results to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Results to skip when paginating through a result set
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ConversationsFetchAllRequest struct {
-	PathParams  ConversationsFetchAllPathParams
-	QueryParams ConversationsFetchAllQueryParams
-	Security    ConversationsFetchAllSecurity
 }
 
 type ConversationsFetchAllResponse struct {

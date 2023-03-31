@@ -4,27 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.DetectDeviceDetectPostRequest(
-    security=operations.DetectDeviceDetectPostSecurity(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    request=shared.DeviceFeatures(
-        ftp_banner="ad",
-        hostname="autem",
-        http_response="adipisci",
-        https_response="cumque",
-        nic_mac="sunt",
-        snmp_sysdescr="deleniti",
-        snmp_sysoid="qui",
-        telnet_banner="et",
-        upnp_response="quia",
-    ),
+
+
+req = shared.DeviceFeatures(
+    ftp_banner="corrupti",
+    hostname="opulent-rabbit.org",
+    http_response="unde",
+    https_response="nulla",
+    nic_mac="corrupti",
+    snmp_sysdescr="illum",
+    snmp_sysoid="vel",
+    telnet_banner="error",
+    upnp_response="deserunt",
 )
     
-res = s.device.detect_device_detect_post(req)
+res = s.device.detect_device(req, operations.DetectDeviceSecurity(
+    api_key_header="YOUR_API_KEY_HERE",
+))
 
 if res.device_info is not None:
     # handle response

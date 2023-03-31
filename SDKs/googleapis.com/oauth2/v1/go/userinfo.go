@@ -33,7 +33,7 @@ func newUserinfo(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // Oauth2UserinfoGet - Get user info
-func (s *userinfo) Oauth2UserinfoGet(ctx context.Context, request operations.Oauth2UserinfoGetRequest) (*operations.Oauth2UserinfoGetResponse, error) {
+func (s *userinfo) Oauth2UserinfoGet(ctx context.Context, request operations.Oauth2UserinfoGetRequest, security operations.Oauth2UserinfoGetSecurity) (*operations.Oauth2UserinfoGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/v1/userinfo"
 
@@ -42,11 +42,11 @@ func (s *userinfo) Oauth2UserinfoGet(ctx context.Context, request operations.Oau
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *userinfo) Oauth2UserinfoGet(ctx context.Context, request operations.Oau
 }
 
 // Oauth2UserinfoV2MeGet - Get user info
-func (s *userinfo) Oauth2UserinfoV2MeGet(ctx context.Context, request operations.Oauth2UserinfoV2MeGetRequest) (*operations.Oauth2UserinfoV2MeGetResponse, error) {
+func (s *userinfo) Oauth2UserinfoV2MeGet(ctx context.Context, request operations.Oauth2UserinfoV2MeGetRequest, security operations.Oauth2UserinfoV2MeGetSecurity) (*operations.Oauth2UserinfoV2MeGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userinfo/v2/me"
 
@@ -90,11 +90,11 @@ func (s *userinfo) Oauth2UserinfoV2MeGet(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

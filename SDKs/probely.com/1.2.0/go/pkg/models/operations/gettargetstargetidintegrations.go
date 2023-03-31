@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDIntegrationsPathParams struct {
+type GetTargetsTargetIDIntegrationsRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDIntegrationsRequest struct {
-	PathParams GetTargetsTargetIDIntegrationsPathParams
 }
 
 // GetTargetsTargetIDIntegrations403ApplicationJSON - Not allowed to perform operation

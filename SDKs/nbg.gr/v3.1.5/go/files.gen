@@ -45,7 +45,6 @@ pkg/models/operations/getaccountsaccountidtransactions.go
 pkg/models/shared/oberrorresponse1.go
 pkg/models/shared/oberror1.go
 pkg/models/shared/errorcodeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/obreadconsentresponse1.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LanguageDetectionRequest struct {
-	Request []shared.LanguageDetection `request:"mediaType=application/json"`
-}
-
 type LanguageDetectionResponse struct {
 	ContentType string
 	// Successful Response

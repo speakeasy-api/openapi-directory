@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostImagesIDActionsChangeProtectionPathParams struct {
-	// ID of the Image
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostImagesIDActionsChangeProtectionRequestBody struct {
 	// If true, prevents the snapshot from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostImagesIDActionsChangeProtectionRequest struct {
-	PathParams PostImagesIDActionsChangeProtectionPathParams
-	Request    *PostImagesIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostImagesIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	// ID of the Image
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostImagesIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

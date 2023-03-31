@@ -33,18 +33,18 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // GetAccountsAccountIDStatementsStatementIDTransactions - Get Transactions
 // Get Transactions by Account ID and Statement ID
-func (s *transactions) GetAccountsAccountIDStatementsStatementIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDTransactionsRequest) (*operations.GetAccountsAccountIDStatementsStatementIDTransactionsResponse, error) {
+func (s *transactions) GetAccountsAccountIDStatementsStatementIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDTransactionsRequest, security operations.GetAccountsAccountIDStatementsStatementIDTransactionsSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,22 +115,22 @@ func (s *transactions) GetAccountsAccountIDStatementsStatementIDTransactions(ctx
 
 // GetAccountsAccountIDTransactions - Get Transactions
 // Get Transactions by Account ID
-func (s *transactions) GetAccountsAccountIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDTransactionsRequest) (*operations.GetAccountsAccountIDTransactionsResponse, error) {
+func (s *transactions) GetAccountsAccountIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDTransactionsRequest, security operations.GetAccountsAccountIDTransactionsSecurity) (*operations.GetAccountsAccountIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -35,14 +35,14 @@ func newPredictionsAPI(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeletePrediction - Delete a set of predicted images and their associated prediction results.
 func (s *predictionsAPI) DeletePrediction(ctx context.Context, request operations.DeletePredictionRequest) (*operations.DeletePredictionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,9 +84,9 @@ func (s *predictionsAPI) DeletePrediction(ctx context.Context, request operation
 // QueryPredictionsForm - Get images that were sent to your prediction endpoint.
 func (s *predictionsAPI) QueryPredictionsForm(ctx context.Context, request operations.QueryPredictionsFormRequest) (*operations.QueryPredictionsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PredictionQueryToken", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,9 +176,9 @@ func (s *predictionsAPI) QueryPredictionsForm(ctx context.Context, request opera
 // QueryPredictionsJSON - Get images that were sent to your prediction endpoint.
 func (s *predictionsAPI) QueryPredictionsJSON(ctx context.Context, request operations.QueryPredictionsJSONRequest) (*operations.QueryPredictionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PredictionQueryToken", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,9 +268,9 @@ func (s *predictionsAPI) QueryPredictionsJSON(ctx context.Context, request opera
 // QueryPredictionsRaw - Get images that were sent to your prediction endpoint.
 func (s *predictionsAPI) QueryPredictionsRaw(ctx context.Context, request operations.QueryPredictionsRawRequest) (*operations.QueryPredictionsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,9 +360,9 @@ func (s *predictionsAPI) QueryPredictionsRaw(ctx context.Context, request operat
 // QuickTestImage - Quick test an image.
 func (s *predictionsAPI) QuickTestImage(ctx context.Context, request operations.QuickTestImageRequest) (*operations.QuickTestImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/image", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -377,7 +377,7 @@ func (s *predictionsAPI) QuickTestImage(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -456,9 +456,9 @@ func (s *predictionsAPI) QuickTestImage(ctx context.Context, request operations.
 // QuickTestImageURLForm - Quick test an image url.
 func (s *predictionsAPI) QuickTestImageURLForm(ctx context.Context, request operations.QuickTestImageURLFormRequest) (*operations.QuickTestImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -473,7 +473,7 @@ func (s *predictionsAPI) QuickTestImageURLForm(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -552,9 +552,9 @@ func (s *predictionsAPI) QuickTestImageURLForm(ctx context.Context, request oper
 // QuickTestImageURLJSON - Quick test an image url.
 func (s *predictionsAPI) QuickTestImageURLJSON(ctx context.Context, request operations.QuickTestImageURLJSONRequest) (*operations.QuickTestImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -569,7 +569,7 @@ func (s *predictionsAPI) QuickTestImageURLJSON(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -648,9 +648,9 @@ func (s *predictionsAPI) QuickTestImageURLJSON(ctx context.Context, request oper
 // QuickTestImageURLRaw - Quick test an image url.
 func (s *predictionsAPI) QuickTestImageURLRaw(ctx context.Context, request operations.QuickTestImageURLRawRequest) (*operations.QuickTestImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -665,7 +665,7 @@ func (s *predictionsAPI) QuickTestImageURLRaw(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

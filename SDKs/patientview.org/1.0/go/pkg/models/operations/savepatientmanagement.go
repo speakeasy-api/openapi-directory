@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SavePatientManagementPathParams struct {
+type SavePatientManagementRequest struct {
+	// patientManagement
+	PatientManagement *shared.PatientManagement `request:"mediaType=application/json"`
 	// groupId
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// identifierId
 	IdentifierID int64 `pathParam:"style=simple,explode=false,name=identifierId"`
 	// userId
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type SavePatientManagementRequest struct {
-	PathParams SavePatientManagementPathParams
-	// patientManagement
-	Request *shared.PatientManagement `request:"mediaType=application/json"`
 }
 
 type SavePatientManagementResponse struct {

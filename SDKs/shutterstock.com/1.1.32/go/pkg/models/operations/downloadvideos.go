@@ -8,19 +8,14 @@ import (
 )
 
 type DownloadVideosSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DownloadVideosPathParams struct {
-	// The license ID of the item to (re)download. The download links in the response are valid for 8 hours.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DownloadVideosRequest struct {
-	PathParams DownloadVideosPathParams
 	// Information about the videos to redownload
-	Request  shared.RedownloadVideo `request:"mediaType=application/json"`
-	Security DownloadVideosSecurity
+	RedownloadVideo shared.RedownloadVideo `request:"mediaType=application/json"`
+	// The license ID of the item to (re)download. The download links in the response are valid for 8 hours.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DownloadVideosResponse struct {

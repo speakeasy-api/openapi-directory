@@ -14,16 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateDeployedDevicesCertificateRequest{
-        Security: operations.CreateDeployedDevicesCertificateSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateDeployedDevicesCertificatePathParams{
-            FleetSid: "corrupti",
-        },
-        Request: &operations.CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest{
+        FleetSid: "corrupti",
+        RequestBody: &operations.CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest{
             CertificateData: "provident",
             DeviceSid: "distinctio",
             FriendlyName: "quibusdam",
@@ -31,7 +23,10 @@ func main() {
     }
 
     ctx := context.Background()
-    res, err := s.CreateDeployedDevicesCertificate(ctx, req)
+    res, err := s.CreateDeployedDevicesCertificate(ctx, req, operations.CreateDeployedDevicesCertificateSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

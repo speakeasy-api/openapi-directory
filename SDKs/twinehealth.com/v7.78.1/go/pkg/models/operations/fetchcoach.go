@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchCoachPathParams struct {
+type FetchCoachRequest struct {
 	// Coach identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchCoachRequest struct {
-	PathParams FetchCoachPathParams
 }
 
 type FetchCoachResponse struct {

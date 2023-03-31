@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetResourcesJSONQueryParams struct {
+type GetResourcesJSONRequest struct {
 	// The search query supplied by the user
 	Q string `queryParam:"style=form,explode=false,name=q"`
-}
-
-type GetResourcesJSONRequest struct {
-	QueryParams GetResourcesJSONQueryParams
 }
 
 type GetResourcesJSONResponse struct {

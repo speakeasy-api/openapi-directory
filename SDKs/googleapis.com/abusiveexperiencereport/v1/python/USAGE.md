@@ -4,24 +4,21 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AbusiveexperiencereportSitesGetRequest(
-    path_params=operations.AbusiveexperiencereportSitesGetPathParams(
-        name="rerum",
-    ),
-    query_params=operations.AbusiveexperiencereportSitesGetQueryParams(
-        dollar_xgafv="2",
-        access_token="quia",
-        alt="media",
-        callback="qui",
-        fields="hic",
-        key="eum",
-        oauth_token="debitis",
-        pretty_print=True,
-        quota_user="cupiditate",
-        upload_type="reiciendis",
-        upload_protocol="minus",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
 res = s.sites.abusiveexperiencereport_sites_get(req)

@@ -13,11 +13,9 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AddShortlinkRequest{
-        Request: shared.ShortlinkRequest{
-            Keyid: "corrupti",
-            Shortlink: "provident",
-        },
+    req := shared.ShortlinkRequest{
+        Keyid: "corrupti",
+        Shortlink: "provident",
     }
 
     ctx := context.Background()

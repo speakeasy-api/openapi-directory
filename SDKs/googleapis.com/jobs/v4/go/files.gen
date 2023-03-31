@@ -32,7 +32,6 @@ pkg/models/shared/clientevent.go
 pkg/models/shared/jobevent.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/company.go
 pkg/models/shared/companyderivedinfo.go
 pkg/models/shared/location.go

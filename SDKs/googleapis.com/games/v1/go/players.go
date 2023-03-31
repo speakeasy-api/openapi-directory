@@ -33,20 +33,20 @@ func newPlayers(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GamesPlayersGet - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
-func (s *players) GamesPlayersGet(ctx context.Context, request operations.GamesPlayersGetRequest) (*operations.GamesPlayersGetResponse, error) {
+func (s *players) GamesPlayersGet(ctx context.Context, request operations.GamesPlayersGetRequest, security operations.GamesPlayersGetSecurity) (*operations.GamesPlayersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *players) GamesPlayersGet(ctx context.Context, request operations.GamesP
 }
 
 // GamesPlayersGetMultipleApplicationPlayerIds - Get the application player ids for the currently authenticated player across all requested games by the same developer as the calling application. This will only return ids for players that actually have an id (scoped or otherwise) with that game.
-func (s *players) GamesPlayersGetMultipleApplicationPlayerIds(ctx context.Context, request operations.GamesPlayersGetMultipleApplicationPlayerIdsRequest) (*operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse, error) {
+func (s *players) GamesPlayersGetMultipleApplicationPlayerIds(ctx context.Context, request operations.GamesPlayersGetMultipleApplicationPlayerIdsRequest, security operations.GamesPlayersGetMultipleApplicationPlayerIdsSecurity) (*operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/players/me/multipleApplicationPlayerIds"
 
@@ -90,11 +90,11 @@ func (s *players) GamesPlayersGetMultipleApplicationPlayerIds(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *players) GamesPlayersGetMultipleApplicationPlayerIds(ctx context.Contex
 }
 
 // GamesPlayersGetScopedPlayerIds - Retrieves scoped player identifiers for currently authenticated user.
-func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request operations.GamesPlayersGetScopedPlayerIdsRequest) (*operations.GamesPlayersGetScopedPlayerIdsResponse, error) {
+func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request operations.GamesPlayersGetScopedPlayerIdsRequest, security operations.GamesPlayersGetScopedPlayerIdsSecurity) (*operations.GamesPlayersGetScopedPlayerIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/players/me/scopedIds"
 
@@ -138,11 +138,11 @@ func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,20 +177,20 @@ func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request op
 }
 
 // GamesPlayersList - Get the collection of players for the currently authenticated user.
-func (s *players) GamesPlayersList(ctx context.Context, request operations.GamesPlayersListRequest) (*operations.GamesPlayersListResponse, error) {
+func (s *players) GamesPlayersList(ctx context.Context, request operations.GamesPlayersListRequest, security operations.GamesPlayersListSecurity) (*operations.GamesPlayersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/me/players/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/me/players/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

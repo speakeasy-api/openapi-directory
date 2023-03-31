@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRawTxPathParams struct {
+type GetRawTxRequest struct {
 	// Transaction ID
 	Txid string `pathParam:"style=simple,explode=false,name=txid"`
-}
-
-type GetRawTxRequest struct {
-	PathParams GetRawTxPathParams
 }
 
 type GetRawTxResponse struct {

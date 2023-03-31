@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccessDelPathParams struct {
+type AccessDelRequest struct {
 	// username of the simulator hosting system
 	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type AccessDelRequest struct {
-	PathParams AccessDelPathParams
 }
 
 type AccessDelResponse struct {

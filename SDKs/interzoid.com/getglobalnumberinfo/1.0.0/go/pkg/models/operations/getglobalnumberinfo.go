@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetglobalnumberinfoQueryParams struct {
+type GetglobalnumberinfoRequest struct {
 	// International number (with country code) to retrieve information for
 	Intlnumber string `queryParam:"style=form,explode=true,name=intlnumber"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetglobalnumberinfoRequest struct {
-	QueryParams GetglobalnumberinfoQueryParams
 }
 
 // Getglobalnumberinfo200ApplicationJSON - Global telephone demographic information

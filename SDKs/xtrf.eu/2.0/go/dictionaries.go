@@ -82,14 +82,14 @@ func (s *dictionaries) GetActive(ctx context.Context) (*operations.GetActiveResp
 // Returns active values from a given dictionary.
 func (s *dictionaries) GetActiveByType(ctx context.Context, request operations.GetActiveByTypeRequest) (*operations.GetActiveByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/active", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/active", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,7 +138,7 @@ func (s *dictionaries) GetAllActive(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,14 +180,14 @@ func (s *dictionaries) GetAllActive(ctx context.Context, request operations.GetA
 // Returns all values (both active and not active) from a given dictionary.
 func (s *dictionaries) GetAllByType(ctx context.Context, request operations.GetAllByTypeRequest) (*operations.GetAllByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/all", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/all", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -311,7 +311,7 @@ func (s *dictionaries) GetAll3(ctx context.Context, request operations.GetAll3Re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -353,7 +353,7 @@ func (s *dictionaries) GetAll3(ctx context.Context, request operations.GetAll3Re
 // Returns specific value from a given dictionary.
 func (s *dictionaries) GetByTypeAndID(ctx context.Context, request operations.GetByTypeAndIDRequest) (*operations.GetByTypeAndIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

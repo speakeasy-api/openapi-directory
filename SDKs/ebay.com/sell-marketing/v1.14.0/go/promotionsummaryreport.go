@@ -33,7 +33,7 @@ func newPromotionSummaryReport(defaultClient, securityClient HTTPClient, serverU
 }
 
 // GetPromotionSummaryReport - This method generates a report that summarizes the seller's promotions for the specified eBay marketplace. The report returns information on <code>RUNNING</code>, <code>PAUSED</code>, and <code>ENDED</code> promotions (deleted reports are not returned) and summarizes the seller's campaign performance for all promotions on a given site.  <br><br>For information about summary reports, see <a href="/api-docs/sell/static/marketing/pm-summary-report.html">Reading the item promotion Summary report</a>.
-func (s *promotionSummaryReport) GetPromotionSummaryReport(ctx context.Context, request operations.GetPromotionSummaryReportRequest) (*operations.GetPromotionSummaryReportResponse, error) {
+func (s *promotionSummaryReport) GetPromotionSummaryReport(ctx context.Context, request operations.GetPromotionSummaryReportRequest, security operations.GetPromotionSummaryReportSecurity) (*operations.GetPromotionSummaryReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/promotion_summary_report"
 
@@ -42,11 +42,11 @@ func (s *promotionSummaryReport) GetPromotionSummaryReport(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

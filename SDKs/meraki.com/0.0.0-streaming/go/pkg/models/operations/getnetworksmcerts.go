@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmCertsPathParams struct {
+type GetNetworkSmCertsRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmCertsRequest struct {
-	PathParams GetNetworkSmCertsPathParams
 }
 
 type GetNetworkSmCertsResponse struct {

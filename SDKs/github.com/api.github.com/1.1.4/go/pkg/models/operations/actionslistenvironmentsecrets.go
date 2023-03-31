@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListEnvironmentSecretsPathParams struct {
+type ActionsListEnvironmentSecretsRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
-	// The unique identifier of the repository.
-	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type ActionsListEnvironmentSecretsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListEnvironmentSecretsRequest struct {
-	PathParams  ActionsListEnvironmentSecretsPathParams
-	QueryParams ActionsListEnvironmentSecretsQueryParams
+	// The unique identifier of the repository.
+	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
 }
 
 // ActionsListEnvironmentSecrets200ApplicationJSON - Response

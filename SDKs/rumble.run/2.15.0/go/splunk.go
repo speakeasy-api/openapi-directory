@@ -33,7 +33,7 @@ func newSplunk(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // SplunkAssetSyncCreatedJSON - Exports the asset inventory in a sync-friendly manner using created_at as a checkpoint. Requires the Splunk entitlement.
-func (s *splunk) SplunkAssetSyncCreatedJSON(ctx context.Context, request operations.SplunkAssetSyncCreatedJSONRequest) (*operations.SplunkAssetSyncCreatedJSONResponse, error) {
+func (s *splunk) SplunkAssetSyncCreatedJSON(ctx context.Context, request operations.SplunkAssetSyncCreatedJSONRequest, security operations.SplunkAssetSyncCreatedJSONSecurity) (*operations.SplunkAssetSyncCreatedJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets/sync/created/assets.json"
 
@@ -42,11 +42,11 @@ func (s *splunk) SplunkAssetSyncCreatedJSON(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *splunk) SplunkAssetSyncCreatedJSON(ctx context.Context, request operati
 }
 
 // SplunkAssetSyncUpdatedJSON - Exports the asset inventory in a sync-friendly manner using updated_at as a checkpoint. Requires the Splunk entitlement.
-func (s *splunk) SplunkAssetSyncUpdatedJSON(ctx context.Context, request operations.SplunkAssetSyncUpdatedJSONRequest) (*operations.SplunkAssetSyncUpdatedJSONResponse, error) {
+func (s *splunk) SplunkAssetSyncUpdatedJSON(ctx context.Context, request operations.SplunkAssetSyncUpdatedJSONRequest, security operations.SplunkAssetSyncUpdatedJSONSecurity) (*operations.SplunkAssetSyncUpdatedJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets/sync/updated/assets.json"
 
@@ -91,11 +91,11 @@ func (s *splunk) SplunkAssetSyncUpdatedJSON(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

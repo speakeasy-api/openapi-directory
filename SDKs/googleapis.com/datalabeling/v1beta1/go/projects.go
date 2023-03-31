@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DatalabelingProjectsAnnotationSpecSetsCreate - Creates an annotation spec set by providing a set of labels.
-func (s *projects) DatalabelingProjectsAnnotationSpecSetsCreate(ctx context.Context, request operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest) (*operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse, error) {
+func (s *projects) DatalabelingProjectsAnnotationSpecSetsCreate(ctx context.Context, request operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest, security operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity) (*operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotationSpecSets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotationSpecSets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DatalabelingProjectsAnnotationSpecSetsCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) DatalabelingProjectsAnnotationSpecSetsCreate(ctx context.Cont
 }
 
 // DatalabelingProjectsAnnotationSpecSetsList - Lists annotation spec sets for a project. Pagination is supported.
-func (s *projects) DatalabelingProjectsAnnotationSpecSetsList(ctx context.Context, request operations.DatalabelingProjectsAnnotationSpecSetsListRequest) (*operations.DatalabelingProjectsAnnotationSpecSetsListResponse, error) {
+func (s *projects) DatalabelingProjectsAnnotationSpecSetsList(ctx context.Context, request operations.DatalabelingProjectsAnnotationSpecSetsListRequest, security operations.DatalabelingProjectsAnnotationSpecSetsListSecurity) (*operations.DatalabelingProjectsAnnotationSpecSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotationSpecSets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotationSpecSets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) DatalabelingProjectsAnnotationSpecSetsList(ctx context.Contex
 }
 
 // DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesList - Lists examples in an annotated dataset. Pagination is supported.
-func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest, security operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListSecurity) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/examples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/examples", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesList(ctx
 }
 
 // DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreate - Create a FeedbackMessage object.
-func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreate(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreate(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest, security operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateSecurity) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackMessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackMessages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1FeedbackMessage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsF
 }
 
 // DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesList - List FeedbackMessages with pagination.
-func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest, security operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListSecurity) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackMessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackMessages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsF
 }
 
 // DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsList - List FeedbackThreads with pagination.
-func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest, security operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListSecurity) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackThreads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/feedbackThreads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,20 +334,20 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsL
 }
 
 // DatalabelingProjectsDatasetsAnnotatedDatasetsList - Lists annotated datasets for a dataset. Pagination is supported.
-func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest, security operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListSecurity) (*operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotatedDatasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/annotatedDatasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,11 +382,11 @@ func (s *projects) DatalabelingProjectsDatasetsAnnotatedDatasetsList(ctx context
 }
 
 // DatalabelingProjectsDatasetsCreate - Creates dataset. If success return a Dataset resource.
-func (s *projects) DatalabelingProjectsDatasetsCreate(ctx context.Context, request operations.DatalabelingProjectsDatasetsCreateRequest) (*operations.DatalabelingProjectsDatasetsCreateResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsCreate(ctx context.Context, request operations.DatalabelingProjectsDatasetsCreateRequest, security operations.DatalabelingProjectsDatasetsCreateSecurity) (*operations.DatalabelingProjectsDatasetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1CreateDatasetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -398,11 +398,11 @@ func (s *projects) DatalabelingProjectsDatasetsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -437,20 +437,20 @@ func (s *projects) DatalabelingProjectsDatasetsCreate(ctx context.Context, reque
 }
 
 // DatalabelingProjectsDatasetsDataItemsList - Lists data items in a dataset. This API can be called after data are imported into dataset. Pagination is supported.
-func (s *projects) DatalabelingProjectsDatasetsDataItemsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsDataItemsListRequest) (*operations.DatalabelingProjectsDatasetsDataItemsListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsDataItemsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsDataItemsListRequest, security operations.DatalabelingProjectsDatasetsDataItemsListSecurity) (*operations.DatalabelingProjectsDatasetsDataItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dataItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dataItems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,11 +485,11 @@ func (s *projects) DatalabelingProjectsDatasetsDataItemsList(ctx context.Context
 }
 
 // DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearch - Searches example comparisons from an evaluation. The return format is a list of example comparisons that show ground truth and prediction(s) for a single input. Search by providing an evaluation ID.
-func (s *projects) DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearch(ctx context.Context, request operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest) (*operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearch(ctx context.Context, request operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest, security operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchSecurity) (*operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/exampleComparisons:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/exampleComparisons:search", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,11 +501,11 @@ func (s *projects) DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSear
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,11 +540,11 @@ func (s *projects) DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSear
 }
 
 // DatalabelingProjectsDatasetsExportData - Exports data and annotations from dataset.
-func (s *projects) DatalabelingProjectsDatasetsExportData(ctx context.Context, request operations.DatalabelingProjectsDatasetsExportDataRequest) (*operations.DatalabelingProjectsDatasetsExportDataResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsExportData(ctx context.Context, request operations.DatalabelingProjectsDatasetsExportDataRequest, security operations.DatalabelingProjectsDatasetsExportDataSecurity) (*operations.DatalabelingProjectsDatasetsExportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1ExportDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,11 +556,11 @@ func (s *projects) DatalabelingProjectsDatasetsExportData(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) DatalabelingProjectsDatasetsExportData(ctx context.Context, r
 }
 
 // DatalabelingProjectsDatasetsImageLabel - Starts a labeling task for image. The type of image labeling task is configured by feature in the request.
-func (s *projects) DatalabelingProjectsDatasetsImageLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsImageLabelRequest) (*operations.DatalabelingProjectsDatasetsImageLabelResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsImageLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsImageLabelRequest, security operations.DatalabelingProjectsDatasetsImageLabelSecurity) (*operations.DatalabelingProjectsDatasetsImageLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/image:label", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/image:label", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1LabelImageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) DatalabelingProjectsDatasetsImageLabel(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) DatalabelingProjectsDatasetsImageLabel(ctx context.Context, r
 }
 
 // DatalabelingProjectsDatasetsImportData - Imports data into dataset based on source locations defined in request. It can be called multiple times for the same dataset. Each dataset can only have one long running operation running on it. For example, no labeling task (also long running operation) can be started while importing is still ongoing. Vice versa.
-func (s *projects) DatalabelingProjectsDatasetsImportData(ctx context.Context, request operations.DatalabelingProjectsDatasetsImportDataRequest) (*operations.DatalabelingProjectsDatasetsImportDataResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsImportData(ctx context.Context, request operations.DatalabelingProjectsDatasetsImportDataRequest, security operations.DatalabelingProjectsDatasetsImportDataSecurity) (*operations.DatalabelingProjectsDatasetsImportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1ImportDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) DatalabelingProjectsDatasetsImportData(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) DatalabelingProjectsDatasetsImportData(ctx context.Context, r
 }
 
 // DatalabelingProjectsDatasetsList - Lists datasets under a project. Pagination is supported.
-func (s *projects) DatalabelingProjectsDatasetsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsListRequest) (*operations.DatalabelingProjectsDatasetsListResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsList(ctx context.Context, request operations.DatalabelingProjectsDatasetsListRequest, security operations.DatalabelingProjectsDatasetsListSecurity) (*operations.DatalabelingProjectsDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,11 +753,11 @@ func (s *projects) DatalabelingProjectsDatasetsList(ctx context.Context, request
 }
 
 // DatalabelingProjectsDatasetsTextLabel - Starts a labeling task for text. The type of text labeling task is configured by feature in the request.
-func (s *projects) DatalabelingProjectsDatasetsTextLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsTextLabelRequest) (*operations.DatalabelingProjectsDatasetsTextLabelResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsTextLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsTextLabelRequest, security operations.DatalabelingProjectsDatasetsTextLabelSecurity) (*operations.DatalabelingProjectsDatasetsTextLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/text:label", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/text:label", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1LabelTextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,11 +769,11 @@ func (s *projects) DatalabelingProjectsDatasetsTextLabel(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,11 +808,11 @@ func (s *projects) DatalabelingProjectsDatasetsTextLabel(ctx context.Context, re
 }
 
 // DatalabelingProjectsDatasetsVideoLabel - Starts a labeling task for video. The type of video labeling task is configured by feature in the request.
-func (s *projects) DatalabelingProjectsDatasetsVideoLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsVideoLabelRequest) (*operations.DatalabelingProjectsDatasetsVideoLabelResponse, error) {
+func (s *projects) DatalabelingProjectsDatasetsVideoLabel(ctx context.Context, request operations.DatalabelingProjectsDatasetsVideoLabelRequest, security operations.DatalabelingProjectsDatasetsVideoLabelSecurity) (*operations.DatalabelingProjectsDatasetsVideoLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/video:label", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/video:label", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1LabelVideoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -824,11 +824,11 @@ func (s *projects) DatalabelingProjectsDatasetsVideoLabel(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,11 +863,11 @@ func (s *projects) DatalabelingProjectsDatasetsVideoLabel(ctx context.Context, r
 }
 
 // DatalabelingProjectsEvaluationJobsCreate - Creates an evaluation job.
-func (s *projects) DatalabelingProjectsEvaluationJobsCreate(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsCreateRequest) (*operations.DatalabelingProjectsEvaluationJobsCreateResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationJobsCreate(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsCreateRequest, security operations.DatalabelingProjectsEvaluationJobsCreateSecurity) (*operations.DatalabelingProjectsEvaluationJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluationJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluationJobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,11 +879,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsCreate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,20 +918,20 @@ func (s *projects) DatalabelingProjectsEvaluationJobsCreate(ctx context.Context,
 }
 
 // DatalabelingProjectsEvaluationJobsList - Lists all evaluation jobs within a project with possible filters. Pagination is supported.
-func (s *projects) DatalabelingProjectsEvaluationJobsList(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsListRequest) (*operations.DatalabelingProjectsEvaluationJobsListResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationJobsList(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsListRequest, security operations.DatalabelingProjectsEvaluationJobsListSecurity) (*operations.DatalabelingProjectsEvaluationJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluationJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluationJobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -966,11 +966,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsList(ctx context.Context, r
 }
 
 // DatalabelingProjectsEvaluationJobsPatch - Updates an evaluation job. You can only update certain fields of the job's EvaluationJobConfig: `humanAnnotationConfig.instruction`, `exampleCount`, and `exampleSamplePercentage`. If you want to change any other aspect of the evaluation job, you must delete the job and create a new one.
-func (s *projects) DatalabelingProjectsEvaluationJobsPatch(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsPatchRequest) (*operations.DatalabelingProjectsEvaluationJobsPatchResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationJobsPatch(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsPatchRequest, security operations.DatalabelingProjectsEvaluationJobsPatchSecurity) (*operations.DatalabelingProjectsEvaluationJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1EvaluationJob", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -982,11 +982,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsPatch(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1021,11 +1021,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsPatch(ctx context.Context, 
 }
 
 // DatalabelingProjectsEvaluationJobsPause - Pauses an evaluation job. Pausing an evaluation job that is already in a `PAUSED` state is a no-op.
-func (s *projects) DatalabelingProjectsEvaluationJobsPause(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsPauseRequest) (*operations.DatalabelingProjectsEvaluationJobsPauseResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationJobsPause(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsPauseRequest, security operations.DatalabelingProjectsEvaluationJobsPauseSecurity) (*operations.DatalabelingProjectsEvaluationJobsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:pause", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1037,11 +1037,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsPause(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1076,11 +1076,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsPause(ctx context.Context, 
 }
 
 // DatalabelingProjectsEvaluationJobsResume - Resumes a paused evaluation job. A deleted evaluation job can't be resumed. Resuming a running or scheduled evaluation job is a no-op.
-func (s *projects) DatalabelingProjectsEvaluationJobsResume(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsResumeRequest) (*operations.DatalabelingProjectsEvaluationJobsResumeResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationJobsResume(ctx context.Context, request operations.DatalabelingProjectsEvaluationJobsResumeRequest, security operations.DatalabelingProjectsEvaluationJobsResumeSecurity) (*operations.DatalabelingProjectsEvaluationJobsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1092,11 +1092,11 @@ func (s *projects) DatalabelingProjectsEvaluationJobsResume(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1131,20 +1131,20 @@ func (s *projects) DatalabelingProjectsEvaluationJobsResume(ctx context.Context,
 }
 
 // DatalabelingProjectsEvaluationsSearch - Searches evaluations within a project.
-func (s *projects) DatalabelingProjectsEvaluationsSearch(ctx context.Context, request operations.DatalabelingProjectsEvaluationsSearchRequest) (*operations.DatalabelingProjectsEvaluationsSearchResponse, error) {
+func (s *projects) DatalabelingProjectsEvaluationsSearch(ctx context.Context, request operations.DatalabelingProjectsEvaluationsSearchRequest, security operations.DatalabelingProjectsEvaluationsSearchSecurity) (*operations.DatalabelingProjectsEvaluationsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluations:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/evaluations:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1179,11 +1179,11 @@ func (s *projects) DatalabelingProjectsEvaluationsSearch(ctx context.Context, re
 }
 
 // DatalabelingProjectsInstructionsCreate - Creates an instruction for how data should be labeled.
-func (s *projects) DatalabelingProjectsInstructionsCreate(ctx context.Context, request operations.DatalabelingProjectsInstructionsCreateRequest) (*operations.DatalabelingProjectsInstructionsCreateResponse, error) {
+func (s *projects) DatalabelingProjectsInstructionsCreate(ctx context.Context, request operations.DatalabelingProjectsInstructionsCreateRequest, security operations.DatalabelingProjectsInstructionsCreateSecurity) (*operations.DatalabelingProjectsInstructionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatalabelingV1beta1CreateInstructionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1195,11 +1195,11 @@ func (s *projects) DatalabelingProjectsInstructionsCreate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1234,20 +1234,20 @@ func (s *projects) DatalabelingProjectsInstructionsCreate(ctx context.Context, r
 }
 
 // DatalabelingProjectsInstructionsList - Lists instructions for a project. Pagination is supported.
-func (s *projects) DatalabelingProjectsInstructionsList(ctx context.Context, request operations.DatalabelingProjectsInstructionsListRequest) (*operations.DatalabelingProjectsInstructionsListResponse, error) {
+func (s *projects) DatalabelingProjectsInstructionsList(ctx context.Context, request operations.DatalabelingProjectsInstructionsListRequest, security operations.DatalabelingProjectsInstructionsListSecurity) (*operations.DatalabelingProjectsInstructionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1282,20 +1282,20 @@ func (s *projects) DatalabelingProjectsInstructionsList(ctx context.Context, req
 }
 
 // DatalabelingProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DatalabelingProjectsOperationsCancel(ctx context.Context, request operations.DatalabelingProjectsOperationsCancelRequest) (*operations.DatalabelingProjectsOperationsCancelResponse, error) {
+func (s *projects) DatalabelingProjectsOperationsCancel(ctx context.Context, request operations.DatalabelingProjectsOperationsCancelRequest, security operations.DatalabelingProjectsOperationsCancelSecurity) (*operations.DatalabelingProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1330,20 +1330,20 @@ func (s *projects) DatalabelingProjectsOperationsCancel(ctx context.Context, req
 }
 
 // DatalabelingProjectsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) DatalabelingProjectsOperationsDelete(ctx context.Context, request operations.DatalabelingProjectsOperationsDeleteRequest) (*operations.DatalabelingProjectsOperationsDeleteResponse, error) {
+func (s *projects) DatalabelingProjectsOperationsDelete(ctx context.Context, request operations.DatalabelingProjectsOperationsDeleteRequest, security operations.DatalabelingProjectsOperationsDeleteSecurity) (*operations.DatalabelingProjectsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1378,20 +1378,20 @@ func (s *projects) DatalabelingProjectsOperationsDelete(ctx context.Context, req
 }
 
 // DatalabelingProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) DatalabelingProjectsOperationsGet(ctx context.Context, request operations.DatalabelingProjectsOperationsGetRequest) (*operations.DatalabelingProjectsOperationsGetResponse, error) {
+func (s *projects) DatalabelingProjectsOperationsGet(ctx context.Context, request operations.DatalabelingProjectsOperationsGetRequest, security operations.DatalabelingProjectsOperationsGetSecurity) (*operations.DatalabelingProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1426,20 +1426,20 @@ func (s *projects) DatalabelingProjectsOperationsGet(ctx context.Context, reques
 }
 
 // DatalabelingProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-func (s *projects) DatalabelingProjectsOperationsList(ctx context.Context, request operations.DatalabelingProjectsOperationsListRequest) (*operations.DatalabelingProjectsOperationsListResponse, error) {
+func (s *projects) DatalabelingProjectsOperationsList(ctx context.Context, request operations.DatalabelingProjectsOperationsListRequest, security operations.DatalabelingProjectsOperationsListSecurity) (*operations.DatalabelingProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

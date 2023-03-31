@@ -8,22 +8,13 @@ import (
 )
 
 type CreateProductSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type CreateProductPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-}
-
-type CreateProductQueryParams struct {
-	ReturnEntity *bool `queryParam:"style=form,explode=true,name=returnEntity"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateProductRequest struct {
-	PathParams  CreateProductPathParams
-	QueryParams CreateProductQueryParams
-	Request     shared.ProductCreateRequest `request:"mediaType=application/json"`
-	Security    CreateProductSecurity
+	ProductCreateRequest shared.ProductCreateRequest `request:"mediaType=application/json"`
+	OrganizationUUID     string                      `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ReturnEntity         *bool                       `queryParam:"style=form,explode=true,name=returnEntity"`
 }
 
 type CreateProductResponse struct {

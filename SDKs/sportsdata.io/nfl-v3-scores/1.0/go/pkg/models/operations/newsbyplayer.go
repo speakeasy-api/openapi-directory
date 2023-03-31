@@ -35,16 +35,12 @@ func (e *NewsByPlayerFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type NewsByPlayerPathParams struct {
+type NewsByPlayerRequest struct {
 	//           Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	//
 	Format NewsByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:<code>14257</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type NewsByPlayerRequest struct {
-	PathParams NewsByPlayerPathParams
 }
 
 type NewsByPlayerResponse struct {

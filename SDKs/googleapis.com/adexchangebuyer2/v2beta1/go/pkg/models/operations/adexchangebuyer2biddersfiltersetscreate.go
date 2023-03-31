@@ -8,18 +8,14 @@ import (
 )
 
 type Adexchangebuyer2BiddersFilterSetsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2BiddersFilterSetsCreatePathParams struct {
-	// Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
-	OwnerName string `pathParam:"style=simple,explode=false,name=ownerName"`
-}
-
-type Adexchangebuyer2BiddersFilterSetsCreateQueryParams struct {
+type Adexchangebuyer2BiddersFilterSetsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	FilterSet   *shared.FilterSet `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,6 +30,8 @@ type Adexchangebuyer2BiddersFilterSetsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
+	OwnerName string `pathParam:"style=simple,explode=false,name=ownerName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type Adexchangebuyer2BiddersFilterSetsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2BiddersFilterSetsCreateRequest struct {
-	PathParams  Adexchangebuyer2BiddersFilterSetsCreatePathParams
-	QueryParams Adexchangebuyer2BiddersFilterSetsCreateQueryParams
-	Request     *shared.FilterSet `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2BiddersFilterSetsCreateSecurity
 }
 
 type Adexchangebuyer2BiddersFilterSetsCreateResponse struct {

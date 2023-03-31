@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDLoansAllPathParams struct {
+type GetSpacesSpaceIDLoansAllRequest struct {
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDLoansAllRequest struct {
-	PathParams GetSpacesSpaceIDLoansAllPathParams
 }
 
 type GetSpacesSpaceIDLoansAllResponse struct {

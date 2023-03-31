@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsListPasswordCredentialsPathParams struct {
+type ApplicationsListPasswordCredentialsRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Application object ID.
 	ApplicationObjectID string `pathParam:"style=simple,explode=false,name=applicationObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsListPasswordCredentialsQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsListPasswordCredentialsRequest struct {
-	PathParams  ApplicationsListPasswordCredentialsPathParams
-	QueryParams ApplicationsListPasswordCredentialsQueryParams
 }
 
 type ApplicationsListPasswordCredentialsResponse struct {

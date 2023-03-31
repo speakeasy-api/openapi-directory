@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminUpdateOrgNamePathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type EnterpriseAdminUpdateOrgNameRequestBody struct {
 	// The organization's new name.
 	Login string `json:"login"`
 }
 
 type EnterpriseAdminUpdateOrgNameRequest struct {
-	PathParams EnterpriseAdminUpdateOrgNamePathParams
-	Request    EnterpriseAdminUpdateOrgNameRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminUpdateOrgNameRequestBody `request:"mediaType=application/json"`
+	Org         string                                  `pathParam:"style=simple,explode=false,name=org"`
 }
 
 // EnterpriseAdminUpdateOrgName202ApplicationJSON - Response

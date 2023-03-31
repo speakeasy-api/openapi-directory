@@ -36,7 +36,7 @@ func newDefinition(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetCommunicationPreferencesV3DefinitionsGetPage - Get subscription definitions
 // Get a list of all subscription definitions for the portal
-func (s *definition) GetCommunicationPreferencesV3DefinitionsGetPage(ctx context.Context, request operations.GetCommunicationPreferencesV3DefinitionsGetPageRequest) (*operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse, error) {
+func (s *definition) GetCommunicationPreferencesV3DefinitionsGetPage(ctx context.Context) (*operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/communication-preferences/v3/definitions"
 
@@ -45,7 +45,7 @@ func (s *definition) GetCommunicationPreferencesV3DefinitionsGetPage(ctx context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

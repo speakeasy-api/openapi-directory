@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListSessionsOfGroupUsingPOSTQueryParams struct {
-	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
-}
-
 type ListSessionsOfGroupUsingPOSTRequest struct {
-	QueryParams ListSessionsOfGroupUsingPOSTQueryParams
+	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 }
 
 // ListSessionsOfGroupUsingPOST500ApplicationJSON - internal api error (code 2)

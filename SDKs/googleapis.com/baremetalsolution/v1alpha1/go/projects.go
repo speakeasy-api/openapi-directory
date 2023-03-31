@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BaremetalsolutionProjectsLocationsSubmitProvisioningConfig - Submit a provisiong configuration for a given project.
-func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest) (*operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse, error) {
+func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest, security operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity) (*operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{project}/{location}:submitProvisioningConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{project}/{location}:submitProvisioningConfig", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitProvisioningConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ct
 }
 
 // BaremetalsolutionProjectsProvisioningQuotasList - List the budget details to provision resources on a given project.
-func (s *projects) BaremetalsolutionProjectsProvisioningQuotasList(ctx context.Context, request operations.BaremetalsolutionProjectsProvisioningQuotasListRequest) (*operations.BaremetalsolutionProjectsProvisioningQuotasListResponse, error) {
+func (s *projects) BaremetalsolutionProjectsProvisioningQuotasList(ctx context.Context, request operations.BaremetalsolutionProjectsProvisioningQuotasListRequest, security operations.BaremetalsolutionProjectsProvisioningQuotasListSecurity) (*operations.BaremetalsolutionProjectsProvisioningQuotasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/provisioningQuotas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/provisioningQuotas", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -12,18 +12,13 @@ var FetchByocTrunkServerList = []string{
 }
 
 type FetchByocTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchByocTrunkPathParams struct {
-	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchByocTrunkRequest struct {
-	PathParams FetchByocTrunkPathParams
-	Security   FetchByocTrunkSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchByocTrunkResponse struct {

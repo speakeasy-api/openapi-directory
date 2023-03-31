@@ -8,17 +8,12 @@ import (
 )
 
 type CancelTerminalCheckoutSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelTerminalCheckoutPathParams struct {
-	// The unique ID for the desired `TerminalCheckout`.
-	CheckoutID string `pathParam:"style=simple,explode=false,name=checkout_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelTerminalCheckoutRequest struct {
-	PathParams CancelTerminalCheckoutPathParams
-	Security   CancelTerminalCheckoutSecurity
+	// The unique ID for the desired `TerminalCheckout`.
+	CheckoutID string `pathParam:"style=simple,explode=false,name=checkout_id"`
 }
 
 type CancelTerminalCheckoutResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListOrgVariablesPathParams struct {
+type ActionsListOrgVariablesRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsListOrgVariablesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 30).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListOrgVariablesRequest struct {
-	PathParams  ActionsListOrgVariablesPathParams
-	QueryParams ActionsListOrgVariablesQueryParams
 }
 
 // ActionsListOrgVariables200ApplicationJSON - Response

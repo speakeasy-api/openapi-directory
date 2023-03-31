@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeviceDeletePathParams struct {
+type DeviceDeleteRequest struct {
 	// The device ID.
 	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type DeviceDeleteRequest struct {
-	PathParams DeviceDeletePathParams
 }
 
 type DeviceDeleteResponse struct {

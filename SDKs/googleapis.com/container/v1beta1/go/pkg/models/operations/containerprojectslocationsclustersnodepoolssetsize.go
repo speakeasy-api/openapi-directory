@@ -8,18 +8,14 @@ import (
 )
 
 type ContainerProjectsLocationsClustersNodePoolsSetSizeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsLocationsClustersNodePoolsSetSizePathParams struct {
-	// The name (project, location, cluster, node pool id) of the node pool to set size. Specified in the format `projects/*/locations/*/clusters/*/nodePools/*`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ContainerProjectsLocationsClustersNodePoolsSetSizeQueryParams struct {
+type ContainerProjectsLocationsClustersNodePoolsSetSizeRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SetNodePoolSizeRequest *shared.SetNodePoolSizeRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type ContainerProjectsLocationsClustersNodePoolsSetSizeQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name (project, location, cluster, node pool id) of the node pool to set size. Specified in the format `projects/*/locations/*/clusters/*/nodePools/*`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type ContainerProjectsLocationsClustersNodePoolsSetSizeQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContainerProjectsLocationsClustersNodePoolsSetSizeRequest struct {
-	PathParams  ContainerProjectsLocationsClustersNodePoolsSetSizePathParams
-	QueryParams ContainerProjectsLocationsClustersNodePoolsSetSizeQueryParams
-	Request     *shared.SetNodePoolSizeRequest `request:"mediaType=application/json"`
-	Security    ContainerProjectsLocationsClustersNodePoolsSetSizeSecurity
 }
 
 type ContainerProjectsLocationsClustersNodePoolsSetSizeResponse struct {

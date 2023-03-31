@@ -36,7 +36,7 @@ func newGeofences(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteGeofencesID - Delete a Geofence
 func (s *geofences) DeleteGeofencesID(ctx context.Context, request operations.DeleteGeofencesIDRequest) (*operations.DeleteGeofencesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/geofences/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/geofences/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *geofences) GetGeofences(ctx context.Context, request operations.GetGeof
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,7 +118,7 @@ func (s *geofences) GetGeofences(ctx context.Context, request operations.GetGeof
 }
 
 // PostGeofences - Create a Geofence
-func (s *geofences) PostGeofences(ctx context.Context, request operations.PostGeofencesRequest) (*operations.PostGeofencesResponse, error) {
+func (s *geofences) PostGeofences(ctx context.Context, request shared.Geofence) (*operations.PostGeofencesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/geofences"
 
@@ -174,9 +174,9 @@ func (s *geofences) PostGeofences(ctx context.Context, request operations.PostGe
 // PutGeofencesID - Update a Geofence
 func (s *geofences) PutGeofencesID(ctx context.Context, request operations.PutGeofencesIDRequest) (*operations.PutGeofencesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/geofences/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/geofences/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Geofence", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

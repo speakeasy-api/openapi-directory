@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1AppointmentsCustomfieldsQueryParams struct {
+type GetConsumerV1AppointmentsCustomfieldsRequest struct {
 	// id of business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
-}
-
-type GetConsumerV1AppointmentsCustomfieldsRequest struct {
-	QueryParams GetConsumerV1AppointmentsCustomfieldsQueryParams
 }
 
 type GetConsumerV1AppointmentsCustomfieldsResponse struct {

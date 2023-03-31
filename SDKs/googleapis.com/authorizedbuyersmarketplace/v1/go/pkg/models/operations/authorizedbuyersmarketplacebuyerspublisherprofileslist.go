@@ -8,16 +8,11 @@ import (
 )
 
 type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListPathParams struct {
-	// Required. Parent that owns the collection of publisher profiles Format: `buyers/{buyerId}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams struct {
+type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The page token as returned from a previous ListPublisherProfilesResponse.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent that owns the collection of publisher profiles Format: `buyers/{buyerId}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest struct {
-	PathParams  AuthorizedbuyersmarketplaceBuyersPublisherProfilesListPathParams
-	QueryParams AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams
-	Security    AuthorizedbuyersmarketplaceBuyersPublisherProfilesListSecurity
 }
 
 type AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse struct {

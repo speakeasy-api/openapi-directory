@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTDeactivateAccountingCodePathParams struct {
-	// ID of the accounting code you want to deactivate.
-	AcID string `pathParam:"style=simple,explode=false,name=ac-id"`
-}
-
-type PUTDeactivateAccountingCodeHeaders struct {
+type PUTDeactivateAccountingCodeRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -21,11 +16,8 @@ type PUTDeactivateAccountingCodeHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type PUTDeactivateAccountingCodeRequest struct {
-	PathParams PUTDeactivateAccountingCodePathParams
-	Headers    PUTDeactivateAccountingCodeHeaders
+	// ID of the accounting code you want to deactivate.
+	AcID string `pathParam:"style=simple,explode=false,name=ac-id"`
 }
 
 type PUTDeactivateAccountingCodeResponse struct {

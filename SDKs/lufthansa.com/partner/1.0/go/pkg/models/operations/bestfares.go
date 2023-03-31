@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BestFaresSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BestFaresQueryParams struct {
+type BestFaresRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
 	CabinClass *string `queryParam:"style=form,explode=true,name=cabin-class"`
 	// Search fares from these carriers' catalogues (e.g. '4U;OS;LH')
@@ -32,17 +33,6 @@ type BestFaresQueryParams struct {
 	TravelDate string `queryParam:"style=form,explode=true,name=travel-date"`
 	// Trip duration in days (e.g. '7')
 	TripDuration string `queryParam:"style=form,explode=true,name=trip-duration"`
-}
-
-type BestFaresHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type BestFaresRequest struct {
-	QueryParams BestFaresQueryParams
-	Headers     BestFaresHeaders
-	Security    BestFaresSecurity
 }
 
 type BestFaresResponse struct {

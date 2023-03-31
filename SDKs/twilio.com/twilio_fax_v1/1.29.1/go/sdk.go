@@ -93,20 +93,30 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // DeleteFax - Delete a specific fax and its associated media.
-func (s *SDK) DeleteFax(ctx context.Context, request operations.DeleteFaxRequest) (*operations.DeleteFaxResponse, error) {
-	baseURL := operations.DeleteFaxServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteFax(ctx context.Context, request operations.DeleteFaxRequest, security operations.DeleteFaxSecurity, opts ...operations.Option) (*operations.DeleteFaxResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteFaxServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,20 +142,30 @@ func (s *SDK) DeleteFax(ctx context.Context, request operations.DeleteFaxRequest
 }
 
 // DeleteFaxMedia - Delete a specific fax media instance.
-func (s *SDK) DeleteFaxMedia(ctx context.Context, request operations.DeleteFaxMediaRequest) (*operations.DeleteFaxMediaResponse, error) {
-	baseURL := operations.DeleteFaxMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteFaxMedia(ctx context.Context, request operations.DeleteFaxMediaRequest, security operations.DeleteFaxMediaSecurity, opts ...operations.Option) (*operations.DeleteFaxMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteFaxMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,20 +191,30 @@ func (s *SDK) DeleteFaxMedia(ctx context.Context, request operations.DeleteFaxMe
 }
 
 // FetchFax - Fetch a specific fax.
-func (s *SDK) FetchFax(ctx context.Context, request operations.FetchFaxRequest) (*operations.FetchFaxResponse, error) {
-	baseURL := operations.FetchFaxServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchFax(ctx context.Context, request operations.FetchFaxRequest, security operations.FetchFaxSecurity, opts ...operations.Option) (*operations.FetchFaxResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchFaxServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -219,20 +249,30 @@ func (s *SDK) FetchFax(ctx context.Context, request operations.FetchFaxRequest) 
 }
 
 // FetchFaxMedia - Fetch a specific fax media instance.
-func (s *SDK) FetchFaxMedia(ctx context.Context, request operations.FetchFaxMediaRequest) (*operations.FetchFaxMediaResponse, error) {
-	baseURL := operations.FetchFaxMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchFaxMedia(ctx context.Context, request operations.FetchFaxMediaRequest, security operations.FetchFaxMediaSecurity, opts ...operations.Option) (*operations.FetchFaxMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchFaxMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,10 +307,20 @@ func (s *SDK) FetchFaxMedia(ctx context.Context, request operations.FetchFaxMedi
 }
 
 // ListFax - Retrieve a list of all faxes.
-func (s *SDK) ListFax(ctx context.Context, request operations.ListFaxRequest) (*operations.ListFaxResponse, error) {
+func (s *SDK) ListFax(ctx context.Context, request operations.ListFaxRequest, security operations.ListFaxSecurity, opts ...operations.Option) (*operations.ListFaxResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListFaxServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Faxes"
@@ -280,11 +330,11 @@ func (s *SDK) ListFax(ctx context.Context, request operations.ListFaxRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,24 +369,34 @@ func (s *SDK) ListFax(ctx context.Context, request operations.ListFaxRequest) (*
 }
 
 // ListFaxMedia - Retrieve a list of all fax media instances for the specified fax.
-func (s *SDK) ListFaxMedia(ctx context.Context, request operations.ListFaxMediaRequest) (*operations.ListFaxMediaResponse, error) {
-	baseURL := operations.ListFaxMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListFaxMedia(ctx context.Context, request operations.ListFaxMediaRequest, security operations.ListFaxMediaSecurity, opts ...operations.Option) (*operations.ListFaxMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListFaxMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

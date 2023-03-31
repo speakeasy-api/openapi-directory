@@ -36,14 +36,14 @@ func newPaymentRuns(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes a payment run. Only payment runs with the Canceled or Error status can be deleted.
 func (s *paymentRuns) DELETEPaymentRun(ctx context.Context, request operations.DELETEPaymentRunRequest) (*operations.DELETEPaymentRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -85,14 +85,14 @@ func (s *paymentRuns) DELETEPaymentRun(ctx context.Context, request operations.D
 // Retrives the information about a specific payment run.
 func (s *paymentRuns) GETPaymentRun(ctx context.Context, request operations.GETPaymentRunRequest) (*operations.GETPaymentRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -134,14 +134,14 @@ func (s *paymentRuns) GETPaymentRun(ctx context.Context, request operations.GETP
 // Retrieves payment run data and the processing result with details, if the `data` field was specified in the Create payment run operation.
 func (s *paymentRuns) GETPaymentRunData(ctx context.Context, request operations.GETPaymentRunDataRequest) (*operations.GETPaymentRunDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}/data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}/data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -183,14 +183,14 @@ func (s *paymentRuns) GETPaymentRunData(ctx context.Context, request operations.
 // Retrives the summary of a payment run.
 func (s *paymentRuns) GETPaymentRunSummary(ctx context.Context, request operations.GETPaymentRunSummaryRequest) (*operations.GETPaymentRunSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}/summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}/summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -253,9 +253,9 @@ func (s *paymentRuns) GETPaymentRuns(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,7 +308,7 @@ func (s *paymentRuns) POSTPaymentRun(ctx context.Context, request operations.POS
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payment-runs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPaymentRunRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *paymentRuns) POSTPaymentRun(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -367,9 +367,9 @@ func (s *paymentRuns) POSTPaymentRun(ctx context.Context, request operations.POS
 // If none of the **accountId**, **batch**, **billCycleDay**, **currency**, **paymentGatewayId**, and **billingRunId** fields is specified in the request body, the corresponding payment run collects payments for all accounts.
 func (s *paymentRuns) PUTPaymentRun(ctx context.Context, request operations.PUTPaymentRunRequest) (*operations.PUTPaymentRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payment-runs/{paymentRunId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTPaymentRunRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *paymentRuns) PUTPaymentRun(ctx context.Context, request operations.PUTP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

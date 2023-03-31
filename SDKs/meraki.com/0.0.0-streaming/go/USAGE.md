@@ -13,29 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            MerakiAPIKey: shared.SchemeMerakiAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            MerakiAPIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetOrganizationAPIRequestsRequest{
-        PathParams: operations.GetOrganizationAPIRequestsPathParams{
-            OrganizationID: "corrupti",
-        },
-        QueryParams: operations.GetOrganizationAPIRequestsQueryParams{
-            AdminID: "provident",
-            EndingBefore: "distinctio",
-            Method: "quibusdam",
-            Path: "unde",
-            PerPage: 857946,
-            ResponseCode: 544883,
-            SourceIP: "illum",
-            StartingAfter: "vel",
-            T0: "error",
-            T1: "deserunt",
-            Timespan: 3843.82,
-        },
+        AdminID: "corrupti",
+        EndingBefore: "provident",
+        Method: "distinctio",
+        OrganizationID: "quibusdam",
+        Path: "unde",
+        PerPage: 857946,
+        ResponseCode: 544883,
+        SourceIP: "illum",
+        StartingAfter: "vel",
+        T0: "error",
+        T1: "deserunt",
+        Timespan: 3843.82,
     }
 
     ctx := context.Background()

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTimezoneAreaPathParams struct {
-	Area string `pathParam:"style=simple,explode=false,name=area"`
-}
-
 type GetTimezoneAreaRequest struct {
-	PathParams GetTimezoneAreaPathParams
+	Area string `pathParam:"style=simple,explode=false,name=area"`
 }
 
 type GetTimezoneAreaResponse struct {

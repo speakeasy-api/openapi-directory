@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type GetPeersListQueryParams struct {
+type GetPeersListRequest struct {
 	// Set to true to show peers not open to be connected
 	ClosedAPI *bool `queryParam:"style=form,explode=true,name=closedApi"`
 	Limit     *int  `queryParam:"style=form,explode=true,name=limit"`
 	// Set to true to show unreachable peers in the list
 	Unreachable *bool `queryParam:"style=form,explode=true,name=unreachable"`
-}
-
-type GetPeersListRequest struct {
-	QueryParams GetPeersListQueryParams
 }
 
 type GetPeersListResponse struct {

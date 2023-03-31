@@ -33,11 +33,11 @@ func newFundsConfirmations(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // CreateFundsConfirmationConsents - Create Funds Confirmation Consent
-func (s *fundsConfirmations) CreateFundsConfirmationConsents(ctx context.Context, request operations.CreateFundsConfirmationConsentsRequest) (*operations.CreateFundsConfirmationConsentsResponse, error) {
+func (s *fundsConfirmations) CreateFundsConfirmationConsents(ctx context.Context, request operations.CreateFundsConfirmationConsentsRequest, security operations.CreateFundsConfirmationConsentsSecurity) (*operations.CreateFundsConfirmationConsentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/funds-confirmation-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBFundsConfirmationConsent1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *fundsConfirmations) CreateFundsConfirmationConsents(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -112,11 +112,11 @@ func (s *fundsConfirmations) CreateFundsConfirmationConsents(ctx context.Context
 }
 
 // CreateFundsConfirmations - Create Funds Confirmation
-func (s *fundsConfirmations) CreateFundsConfirmations(ctx context.Context, request operations.CreateFundsConfirmationsRequest) (*operations.CreateFundsConfirmationsResponse, error) {
+func (s *fundsConfirmations) CreateFundsConfirmations(ctx context.Context, request operations.CreateFundsConfirmationsRequest, security operations.CreateFundsConfirmationsSecurity) (*operations.CreateFundsConfirmationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/funds-confirmations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBFundsConfirmation1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,9 +131,9 @@ func (s *fundsConfirmations) CreateFundsConfirmations(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,18 +191,18 @@ func (s *fundsConfirmations) CreateFundsConfirmations(ctx context.Context, reque
 }
 
 // DeleteFundsConfirmationConsentsConsentID - Delete Funds Confirmation Consent
-func (s *fundsConfirmations) DeleteFundsConfirmationConsentsConsentID(ctx context.Context, request operations.DeleteFundsConfirmationConsentsConsentIDRequest) (*operations.DeleteFundsConfirmationConsentsConsentIDResponse, error) {
+func (s *fundsConfirmations) DeleteFundsConfirmationConsentsConsentID(ctx context.Context, request operations.DeleteFundsConfirmationConsentsConsentIDRequest, security operations.DeleteFundsConfirmationConsentsConsentIDSecurity) (*operations.DeleteFundsConfirmationConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,18 +250,18 @@ func (s *fundsConfirmations) DeleteFundsConfirmationConsentsConsentID(ctx contex
 }
 
 // GetFundsConfirmationConsentsConsentID - Get Funds Confirmation Consent
-func (s *fundsConfirmations) GetFundsConfirmationConsentsConsentID(ctx context.Context, request operations.GetFundsConfirmationConsentsConsentIDRequest) (*operations.GetFundsConfirmationConsentsConsentIDResponse, error) {
+func (s *fundsConfirmations) GetFundsConfirmationConsentsConsentID(ctx context.Context, request operations.GetFundsConfirmationConsentsConsentIDRequest, security operations.GetFundsConfirmationConsentsConsentIDSecurity) (*operations.GetFundsConfirmationConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

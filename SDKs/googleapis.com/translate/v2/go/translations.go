@@ -33,7 +33,7 @@ func newTranslations(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // LanguageTranslationsList - Translates input text, returning translated text.
-func (s *translations) LanguageTranslationsList(ctx context.Context, request operations.LanguageTranslationsListRequest) (*operations.LanguageTranslationsListResponse, error) {
+func (s *translations) LanguageTranslationsList(ctx context.Context, request operations.LanguageTranslationsListRequest, security operations.LanguageTranslationsListSecurity) (*operations.LanguageTranslationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2"
 
@@ -42,11 +42,11 @@ func (s *translations) LanguageTranslationsList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *translations) LanguageTranslationsList(ctx context.Context, request ope
 }
 
 // LanguageTranslationsTranslate - Translates input text, returning translated text.
-func (s *translations) LanguageTranslationsTranslate(ctx context.Context, request operations.LanguageTranslationsTranslateRequest) (*operations.LanguageTranslationsTranslateResponse, error) {
+func (s *translations) LanguageTranslationsTranslate(ctx context.Context, request operations.LanguageTranslationsTranslateRequest, security operations.LanguageTranslationsTranslateSecurity) (*operations.LanguageTranslationsTranslateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TranslateTextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *translations) LanguageTranslationsTranslate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

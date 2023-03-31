@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetMibPathParams struct {
+type GetMibRequest struct {
 	// Agent to show the MIB
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object
 	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GetMibRequest struct {
-	PathParams GetMibPathParams
 }
 
 type GetMibResponse struct {

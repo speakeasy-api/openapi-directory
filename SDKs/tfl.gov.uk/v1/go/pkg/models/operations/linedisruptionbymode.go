@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineDisruptionByModePathParams struct {
+type LineDisruptionByModeRequest struct {
 	// A comma-separated list of modes e.g. tube,dlr
 	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
-type LineDisruptionByModeRequest struct {
-	PathParams LineDisruptionByModePathParams
 }
 
 type LineDisruptionByModeResponse struct {

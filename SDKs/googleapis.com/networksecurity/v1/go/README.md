@@ -25,44 +25,38 @@ func main() {
     s := sdk.New()
 
     req := operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest{
-        Security: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            AuthorizationPolicyID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.AuthorizationPolicyInput{
+        DollarXgafv: "2",
+        AuthorizationPolicyInput: &shared.AuthorizationPolicyInput{
             Action: "ALLOW",
-            Description: "magnam",
+            Description: "distinctio",
             Labels: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
-            Name: "iusto",
+            Name: "iure",
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
+                        shared.Destination{
+                            Hosts: []string{
+                                "delectus",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "tempora",
+                                RegexMatch: "suscipit",
+                            },
+                            Methods: []string{
+                                "minus",
+                                "placeat",
+                            },
+                            Ports: []int64{
+                                479977,
+                                568045,
+                                392785,
+                            },
+                        },
                         shared.Destination{
                             Hosts: []string{
                                 "temporibus",
@@ -106,49 +100,48 @@ func main() {
                                 944669,
                             },
                         },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
+                        shared.Destination{
+                            Hosts: []string{
+                                "totam",
                                 "beatae",
                                 "commodi",
                                 "molestiae",
                             },
-                            Principals: []string{
-                                "qui",
-                                "impedit",
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "modi",
+                                RegexMatch: "qui",
                             },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
+                            Methods: []string{
+                                "cum",
                                 "esse",
                                 "ipsum",
                                 "excepturi",
                             },
-                            Principals: []string{
-                                "perferendis",
+                            Ports: []int64{
+                                18789,
                             },
                         },
+                    },
+                    Sources: []shared.Source{
                         shared.Source{
                             IPBlocks: []string{
-                                "natus",
                                 "sed",
+                                "iste",
+                                "dolor",
                             },
                             Principals: []string{
-                                "dolor",
-                                "natus",
                                 "laboriosam",
+                                "hic",
+                                "saepe",
                             },
                         },
                         shared.Source{
                             IPBlocks: []string{
-                                "saepe",
-                                "fuga",
                                 "in",
                                 "corporis",
+                                "iste",
                             },
                             Principals: []string{
-                                "iure",
                                 "saepe",
                                 "quidem",
                             },
@@ -200,113 +193,27 @@ func main() {
                         },
                     },
                 },
-                shared.Rule{
-                    Destinations: []shared.Destination{
-                        shared.Destination{
-                            Hosts: []string{
-                                "occaecati",
-                                "numquam",
-                                "commodi",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "quam",
-                                RegexMatch: "molestiae",
-                            },
-                            Methods: []string{
-                                "error",
-                            },
-                            Ports: []int64{
-                                338007,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "laborum",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "animi",
-                                RegexMatch: "enim",
-                            },
-                            Methods: []string{
-                                "quo",
-                            },
-                            Ports: []int64{
-                                949572,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "id",
-                                "possimus",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "aut",
-                                RegexMatch: "quasi",
-                            },
-                            Methods: []string{
-                                "temporibus",
-                                "laborum",
-                                "quasi",
-                            },
-                            Ports: []int64{
-                                976460,
-                                878194,
-                                468651,
-                                509624,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "ipsa",
-                                "omnis",
-                                "voluptate",
-                                "cum",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "perferendis",
-                                RegexMatch: "doloremque",
-                            },
-                            Methods: []string{
-                                "ut",
-                                "maiores",
-                            },
-                            Ports: []int64{
-                                359444,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "dicta",
-                                "harum",
-                            },
-                            Principals: []string{
-                                "accusamus",
-                                "commodi",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "quae",
-                                "ipsum",
-                                "quidem",
-                                "molestias",
-                            },
-                            Principals: []string{
-                                "pariatur",
-                                "modi",
-                                "praesentium",
-                            },
-                        },
-                    },
-                },
             },
         },
+        AccessToken: "repellat",
+        Alt: "media",
+        AuthorizationPolicyID: "occaecati",
+        Callback: "numquam",
+        Fields: "commodi",
+        Key: "quam",
+        OauthToken: "molestiae",
+        Parent: "velit",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "quia",
+        UploadProtocol: "quis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx, req)
+    res, err := s.Projects.NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx, req, operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -319,7 +226,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -341,4 +248,15 @@ func main() {
 * `NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

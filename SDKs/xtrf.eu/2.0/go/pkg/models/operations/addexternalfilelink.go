@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddExternalFileLinkPathParams struct {
+type AddExternalFileLinkRequest struct {
+	// Added file links to the project as added by PM.
+	ExternalFileDto shared.ExternalFileDto `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type AddExternalFileLinkRequest struct {
-	PathParams AddExternalFileLinkPathParams
-	// Added file links to the project as added by PM.
-	Request shared.ExternalFileDto `request:"mediaType=application/json"`
 }
 
 type AddExternalFileLinkResponse struct {

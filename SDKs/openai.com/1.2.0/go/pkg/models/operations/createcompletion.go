@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCompletionRequest struct {
-	Request shared.CreateCompletionRequest `request:"mediaType=application/json"`
-}
-
 type CreateCompletionResponse struct {
 	ContentType string
 	// OK

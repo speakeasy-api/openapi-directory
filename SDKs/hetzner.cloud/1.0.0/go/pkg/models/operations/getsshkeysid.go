@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSSHKeysIDPathParams struct {
+type GetSSHKeysIDRequest struct {
 	// ID of the SSH key
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSSHKeysIDRequest struct {
-	PathParams GetSSHKeysIDPathParams
 }
 
 type GetSSHKeysID200ApplicationJSONSSHKey struct {

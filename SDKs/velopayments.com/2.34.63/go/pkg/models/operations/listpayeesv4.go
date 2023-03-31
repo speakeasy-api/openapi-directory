@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPayeesV4QueryParams struct {
+type ListPayeesV4Request struct {
 	// Payee disabled
 	Disabled *bool `queryParam:"style=form,explode=true,name=disabled"`
 	// The display name of the payees.
@@ -35,10 +35,6 @@ type ListPayeesV4QueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The watchlistStatus of the payees.
 	WatchlistStatus *string `queryParam:"style=form,explode=true,name=watchlistStatus"`
-}
-
-type ListPayeesV4Request struct {
-	QueryParams ListPayeesV4QueryParams
 }
 
 type ListPayeesV4Response struct {

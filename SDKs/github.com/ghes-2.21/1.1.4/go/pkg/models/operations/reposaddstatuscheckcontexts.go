@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposAddStatusCheckContextsPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposAddStatusCheckContextsRequestBody1 struct {
 	// contexts parameter
 	Contexts []string `json:"contexts"`
@@ -91,8 +84,11 @@ func (u ReposAddStatusCheckContextsRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type ReposAddStatusCheckContextsRequest struct {
-	PathParams ReposAddStatusCheckContextsPathParams
-	Request    *ReposAddStatusCheckContextsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposAddStatusCheckContextsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposAddStatusCheckContextsResponse struct {

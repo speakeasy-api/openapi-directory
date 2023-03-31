@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaxesIDJSONPathParams struct {
-	// Id of the Tax
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTaxesIDJSONQueryParams struct {
+type GetTaxesIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Tax
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetTaxesIDJSONRequest struct {
-	PathParams  GetTaxesIDJSONPathParams
-	QueryParams GetTaxesIDJSONQueryParams
 }
 
 type GetTaxesIDJSONResponse struct {

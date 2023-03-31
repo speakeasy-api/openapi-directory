@@ -9,17 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDHistoryCyclePathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-	// A two year election cycle that the committee was active- (after original registration
-	// date but before expiration date in Form 1s) The cycle begins with
-	// an odd year and is named for its ending, even year.
-	//
-	Cycle int `pathParam:"style=simple,explode=false,name=cycle"`
-}
-
 type GetCommitteeCommitteeIDHistoryCycleDesignationEnum string
 
 const (
@@ -58,10 +47,18 @@ func (e *GetCommitteeCommitteeIDHistoryCycleDesignationEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetCommitteeCommitteeIDHistoryCycleQueryParams struct {
+type GetCommitteeCommitteeIDHistoryCycleRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
+	// A two year election cycle that the committee was active- (after original registration
+	// date but before expiration date in Form 1s) The cycle begins with
+	// an odd year and is named for its ending, even year.
+	//
+	Cycle int `pathParam:"style=simple,explode=false,name=cycle"`
 	// The one-letter designation code of the organization:
 	//          - A authorized by a candidate
 	//          - J joint fundraising committee
@@ -87,11 +84,6 @@ type GetCommitteeCommitteeIDHistoryCycleQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCommitteeCommitteeIDHistoryCycleRequest struct {
-	PathParams  GetCommitteeCommitteeIDHistoryCyclePathParams
-	QueryParams GetCommitteeCommitteeIDHistoryCycleQueryParams
 }
 
 type GetCommitteeCommitteeIDHistoryCycleResponse struct {

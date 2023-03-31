@@ -10,7 +10,7 @@ import (
 )
 
 type CreateAlbumAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateAlbumAlt1RequestBodyLayoutEnum - The type of layout for presenting the album.
@@ -154,11 +154,6 @@ type CreateAlbumAlt1RequestBody struct {
 	Sort *CreateAlbumAlt1RequestBodySortEnum `json:"sort,omitempty"`
 	// The color theme of the album.
 	Theme *CreateAlbumAlt1RequestBodyThemeEnum `json:"theme,omitempty"`
-}
-
-type CreateAlbumAlt1Request struct {
-	Request  CreateAlbumAlt1RequestBody `request:"mediaType=application/vnd.vimeo.album+json"`
-	Security CreateAlbumAlt1Security
 }
 
 type CreateAlbumAlt1Response struct {

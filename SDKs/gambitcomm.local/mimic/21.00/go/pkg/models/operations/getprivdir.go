@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPrivdirPathParams struct {
+type GetPrivdirRequest struct {
 	// Agent to return the directory path
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetPrivdirRequest struct {
-	PathParams GetPrivdirPathParams
 }
 
 type GetPrivdirResponse struct {

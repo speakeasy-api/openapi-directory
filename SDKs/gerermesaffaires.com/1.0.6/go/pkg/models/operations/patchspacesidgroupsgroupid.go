@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDGroupsGroupIDPathParams struct {
-	// Id of the group to modify
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchSpacesIDGroupsGroupIDRequestBody - Group to modify
 type PatchSpacesIDGroupsGroupIDRequestBody struct {
 	EndDate *string `json:"EndDate,omitempty"`
@@ -20,9 +13,12 @@ type PatchSpacesIDGroupsGroupIDRequestBody struct {
 }
 
 type PatchSpacesIDGroupsGroupIDRequest struct {
-	PathParams PatchSpacesIDGroupsGroupIDPathParams
 	// Group to modify
-	Request PatchSpacesIDGroupsGroupIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDGroupsGroupIDRequestBody `request:"mediaType=application/json"`
+	// Id of the group to modify
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchSpacesIDGroupsGroupIDResponse struct {

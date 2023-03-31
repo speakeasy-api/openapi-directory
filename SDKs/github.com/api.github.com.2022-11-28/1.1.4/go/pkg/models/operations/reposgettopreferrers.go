@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetTopReferrersPathParams struct {
+type ReposGetTopReferrersRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetTopReferrersRequest struct {
-	PathParams ReposGetTopReferrersPathParams
 }
 
 type ReposGetTopReferrersResponse struct {

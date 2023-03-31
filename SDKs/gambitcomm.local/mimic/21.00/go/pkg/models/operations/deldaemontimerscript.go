@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DelDaemonTimerScriptPathParams struct {
+type DelDaemonTimerScriptRequest struct {
 	// Arguments to the script
 	Arg string `pathParam:"style=simple,explode=false,name=arg"`
 	// Interval in msec
 	Interval int `pathParam:"style=simple,explode=false,name=interval"`
 	// Script name
 	Script string `pathParam:"style=simple,explode=false,name=script"`
-}
-
-type DelDaemonTimerScriptRequest struct {
-	PathParams DelDaemonTimerScriptPathParams
 }
 
 type DelDaemonTimerScriptResponse struct {

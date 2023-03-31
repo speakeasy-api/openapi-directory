@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostMakePdfRequest(
-    request=operations.PostMakePdfRequestBody(
-        html="dolorem",
-        key="assumenda",
-        url="laudantium",
-    ),
+
+
+req = operations.PostMakePdfRequestBody(
+    html="corrupti",
+    key="provident",
+    url="distinctio",
 )
     
 res = s.post_make_pdf(req)

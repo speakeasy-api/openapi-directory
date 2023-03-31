@@ -8,18 +8,13 @@ import (
 )
 
 type GetCharginglocationsCharginglocationidSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type GetCharginglocationsCharginglocationidPathParams struct {
-	// ID of the Charging Location
-	ChargingLocationID string `pathParam:"style=simple,explode=false,name=chargingLocationId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCharginglocationsCharginglocationidRequest struct {
-	PathParams GetCharginglocationsCharginglocationidPathParams
-	Security   GetCharginglocationsCharginglocationidSecurity
+	// ID of the Charging Location
+	ChargingLocationID string `pathParam:"style=simple,explode=false,name=chargingLocationId"`
 }
 
 type GetCharginglocationsCharginglocationidResponse struct {

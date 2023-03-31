@@ -7,21 +7,17 @@ import (
 	"time"
 )
 
-type ActivityMarkRepoNotificationsAsReadPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ActivityMarkRepoNotificationsAsReadRequestBody struct {
 	// Describes the last point that notifications were checked. Anything updated since this time will not be marked as read. If you omit this parameter, all notifications are marked as read. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Default: The current timestamp.
 	LastReadAt *time.Time `json:"last_read_at,omitempty"`
 }
 
 type ActivityMarkRepoNotificationsAsReadRequest struct {
-	PathParams ActivityMarkRepoNotificationsAsReadPathParams
-	Request    *ActivityMarkRepoNotificationsAsReadRequestBody `request:"mediaType=application/json"`
+	RequestBody *ActivityMarkRepoNotificationsAsReadRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ActivityMarkRepoNotificationsAsRead202ApplicationJSON - Response

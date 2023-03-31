@@ -3,56 +3,56 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateConfigurationSetRequest(
-    headers=operations.CreateConfigurationSetHeaders(
-        x_amz_algorithm="dolor",
-        x_amz_content_sha256="sit",
-        x_amz_credential="non",
-        x_amz_date="sed",
-        x_amz_security_token="cumque",
-        x_amz_signature="architecto",
-        x_amz_signed_headers="accusantium",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateConfigurationSetRequestBody(
-        configuration_set_name="non",
+)
+
+
+req = operations.CreateConfigurationSetRequest(
+    request_body=operations.CreateConfigurationSetRequestBody(
+        configuration_set_name="corrupti",
         delivery_options=operations.CreateConfigurationSetRequestBodyDeliveryOptions(
-            sending_pool_name="et",
-            tls_policy="REQUIRE",
+            sending_pool_name="provident",
+            tls_policy="OPTIONAL",
         ),
         reputation_options=operations.CreateConfigurationSetRequestBodyReputationOptions(
-            last_fresh_start="2018-09-28T20:49:02Z",
-            reputation_metrics_enabled=True,
+            last_fresh_start="2021-03-11T23:22:42.658Z",
+            reputation_metrics_enabled=False,
         ),
         sending_options=operations.CreateConfigurationSetRequestBodySendingOptions(
-            sending_enabled=True,
+            sending_enabled=False,
         ),
         tags=[
             shared.Tag(
-                key="reiciendis",
-                value="et",
+                key="corrupti",
+                value="illum",
             ),
             shared.Tag(
-                key="dolorem",
-                value="minus",
+                key="vel",
+                value="error",
             ),
             shared.Tag(
-                key="ea",
-                value="quaerat",
+                key="deserunt",
+                value="suscipit",
+            ),
+            shared.Tag(
+                key="iure",
+                value="magnam",
             ),
         ],
         tracking_options=operations.CreateConfigurationSetRequestBodyTrackingOptions(
-            custom_redirect_domain="dolorem",
+            custom_redirect_domain="debitis",
         ),
     ),
+    x_amz_algorithm="ipsa",
+    x_amz_content_sha256="delectus",
+    x_amz_credential="tempora",
+    x_amz_date="suscipit",
+    x_amz_security_token="molestiae",
+    x_amz_signature="minus",
+    x_amz_signed_headers="placeat",
 )
     
 res = s.create_configuration_set(req)

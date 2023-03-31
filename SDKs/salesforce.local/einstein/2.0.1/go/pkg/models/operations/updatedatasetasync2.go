@@ -8,12 +8,7 @@ import (
 )
 
 type UpdateDatasetAsync2Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateDatasetAsync2PathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateDatasetAsync2RequestBody struct {
@@ -24,9 +19,9 @@ type UpdateDatasetAsync2RequestBody struct {
 }
 
 type UpdateDatasetAsync2Request struct {
-	PathParams UpdateDatasetAsync2PathParams
-	Request    *UpdateDatasetAsync2RequestBody `request:"mediaType=multipart/form-data"`
-	Security   UpdateDatasetAsync2Security
+	RequestBody *UpdateDatasetAsync2RequestBody `request:"mediaType=multipart/form-data"`
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 }
 
 type UpdateDatasetAsync2Response struct {

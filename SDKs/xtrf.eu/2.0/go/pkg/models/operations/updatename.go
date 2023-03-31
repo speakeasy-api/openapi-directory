@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNamePathParams struct {
+type UpdateNameRequest struct {
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateNameRequest struct {
-	PathParams UpdateNamePathParams
-	Request    shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateNameResponse struct {

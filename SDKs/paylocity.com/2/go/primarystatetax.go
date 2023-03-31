@@ -33,11 +33,11 @@ func newPrimaryStateTax(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // AddOrUpdatePrimaryStateTax - Add/update primary state tax
 // Sends new or updated employee primary state tax information directly to Web Pay.
-func (s *primaryStateTax) AddOrUpdatePrimaryStateTax(ctx context.Context, request operations.AddOrUpdatePrimaryStateTaxRequest) (*operations.AddOrUpdatePrimaryStateTaxResponse, error) {
+func (s *primaryStateTax) AddOrUpdatePrimaryStateTax(ctx context.Context, request operations.AddOrUpdatePrimaryStateTaxRequest, security operations.AddOrUpdatePrimaryStateTaxSecurity) (*operations.AddOrUpdatePrimaryStateTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/primaryStateTax", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/primaryStateTax", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StateTax", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *primaryStateTax) AddOrUpdatePrimaryStateTax(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

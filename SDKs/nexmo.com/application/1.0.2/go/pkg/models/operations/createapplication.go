@@ -60,10 +60,6 @@ type CreateApplicationRequestBody struct {
 	Type CreateApplicationRequestBodyTypeEnum `json:"type"`
 }
 
-type CreateApplicationRequest struct {
-	Request *CreateApplicationRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateApplicationResponse struct {
 	ContentType string
 	StatusCode  int

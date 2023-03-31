@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsListPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsListDirectionEnum - The direction of the sort. Can be either `asc` or `desc`. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
 type PullsListDirectionEnum string
 
@@ -95,26 +90,23 @@ func (e *PullsListStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PullsListQueryParams struct {
+type PullsListRequest struct {
 	// Filter pulls by base branch name. Example: `gh-pages`.
 	Base *string `queryParam:"style=form,explode=true,name=base"`
 	// The direction of the sort. Can be either `asc` or `desc`. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
 	Direction *PullsListDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`.
-	Head *string `queryParam:"style=form,explode=true,name=head"`
+	Head  *string `queryParam:"style=form,explode=true,name=head"`
+	Owner string  `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// What to sort results by. Can be either `created`, `updated`, `popularity` (comment count) or `long-running` (age, filtering by pulls updated in the last month).
 	Sort *PullsListSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Either `open`, `closed`, or `all` to filter by state.
 	State *PullsListStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type PullsListRequest struct {
-	PathParams  PullsListPathParams
-	QueryParams PullsListQueryParams
 }
 
 type PullsListResponse struct {

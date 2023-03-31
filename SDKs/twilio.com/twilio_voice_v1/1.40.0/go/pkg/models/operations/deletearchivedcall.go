@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
@@ -13,20 +12,15 @@ var DeleteArchivedCallServerList = []string{
 }
 
 type DeleteArchivedCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteArchivedCallPathParams struct {
+type DeleteArchivedCallRequest struct {
 	// The date of the Call in UTC.
 	Date types.Date `pathParam:"style=simple,explode=false,name=Date"`
 	// The Twilio-provided Call SID that uniquely identifies the Call resource to delete
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteArchivedCallRequest struct {
-	PathParams DeleteArchivedCallPathParams
-	Security   DeleteArchivedCallSecurity
-	ServerURL  *string
 }
 
 type DeleteArchivedCallResponse struct {

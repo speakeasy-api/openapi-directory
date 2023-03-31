@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsDisablePublicInterfacePathParams struct {
+type PostLoadBalancersIDActionsDisablePublicInterfaceRequest struct {
 	// ID of the Load Balancer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostLoadBalancersIDActionsDisablePublicInterfaceRequest struct {
-	PathParams PostLoadBalancersIDActionsDisablePublicInterfacePathParams
 }
 
 // PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionError - Error message for the Action if error occurred, otherwise null

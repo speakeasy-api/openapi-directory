@@ -20,11 +20,10 @@ pkg/models/shared/analyzeentitiesresponse.go
 pkg/models/shared/entity.go
 pkg/models/shared/entitymention.go
 pkg/models/shared/textspan.go
+pkg/models/shared/altenum.go
 pkg/models/shared/analyzeentitiesrequest.go
 pkg/models/shared/document.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/analyzesentimentresponse.go
 pkg/models/shared/sentence.go
 pkg/models/shared/sentiment.go

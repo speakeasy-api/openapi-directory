@@ -69,7 +69,7 @@ func (e *FacetsSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FacetsQueryParams struct {
+type FacetsRequest struct {
 	// The number of search results per page desired by the client; OpenSearch 1.1
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// The end date in yyyy-mm-dd format
@@ -88,10 +88,6 @@ type FacetsQueryParams struct {
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=startDate"`
 	// First search result desired by the search client; OpenSearch 1.1
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type FacetsRequest struct {
-	QueryParams FacetsQueryParams
 }
 
 type FacetsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimPowerFeedsDeletePathParams struct {
+type DcimPowerFeedsDeleteRequest struct {
 	// A unique integer value identifying this power feed.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerFeedsDeleteRequest struct {
-	PathParams DcimPowerFeedsDeletePathParams
 }
 
 type DcimPowerFeedsDeleteResponse struct {

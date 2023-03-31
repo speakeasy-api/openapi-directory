@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PatchDraftRegistrationsDraftIDPathParams struct {
+type PatchDraftRegistrationsDraftIDRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the draft registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type PatchDraftRegistrationsDraftIDRequest struct {
-	PathParams PatchDraftRegistrationsDraftIDPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PatchDraftRegistrationsDraftIDResponse struct {

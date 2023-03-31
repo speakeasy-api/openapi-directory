@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceTypesCreateRequest struct {
-	Request shared.WritableDeviceTypeInput `request:"mediaType=application/json"`
-}
-
 type DcimDeviceTypesCreateResponse struct {
 	ContentType string
 	DeviceType  *shared.DeviceType

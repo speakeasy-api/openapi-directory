@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitCreateBlobPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type GitCreateBlobRequestBody struct {
 	// The new blob's content.
 	Content string `json:"content"`
@@ -20,8 +15,9 @@ type GitCreateBlobRequestBody struct {
 }
 
 type GitCreateBlobRequest struct {
-	PathParams GitCreateBlobPathParams
-	Request    GitCreateBlobRequestBody `request:"mediaType=application/json"`
+	RequestBody GitCreateBlobRequestBody `request:"mediaType=application/json"`
+	Owner       string                   `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                   `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitCreateBlobResponse struct {

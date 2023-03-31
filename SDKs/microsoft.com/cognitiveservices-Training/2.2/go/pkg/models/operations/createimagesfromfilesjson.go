@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromFilesJSONPathParams struct {
+type CreateImagesFromFilesJSONRequest struct {
+	// The batch of image files to add. Limited to 64 images and 20 tags per batch.
+	ImageFileCreateBatch shared.ImageFileCreateBatch `request:"mediaType=application/json"`
+	TrainingKey          string                      `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromFilesJSONHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateImagesFromFilesJSONRequest struct {
-	PathParams CreateImagesFromFilesJSONPathParams
-	Headers    CreateImagesFromFilesJSONHeaders
-	// The batch of image files to add. Limited to 64 images and 20 tags per batch.
-	Request shared.ImageFileCreateBatch `request:"mediaType=application/json"`
 }
 
 type CreateImagesFromFilesJSONResponse struct {

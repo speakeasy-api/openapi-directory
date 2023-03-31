@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPagesbyContentTypePathParams struct {
+type GetPagesbyContentTypeRequest struct {
 	// Builder ID specified in the settings of the CMS app.
 	BuilderID string `pathParam:"style=simple,explode=false,name=builderId"`
 	// Content Type identifier defined in the FastStore project.
 	ContentType string `pathParam:"style=simple,explode=false,name=content-type"`
-}
-
-type GetPagesbyContentTypeQueryParams struct {
 	// Filter results by a property of the page (e.g., `filters[status]`) or by a nested custom field of the `parameters` object (e.g., `filters[parameters.collection.sort]`).
 	// *Replace {field} with the desired property.*
 	FiltersField *string `queryParam:"style=form,explode=true,name=filters[{field}]"`
@@ -21,11 +18,6 @@ type GetPagesbyContentTypeQueryParams struct {
 	ReleaseID *string `queryParam:"style=form,explode=true,name=releaseId"`
 	// Version ID presented in the URL path of a CMS preview.
 	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
-}
-
-type GetPagesbyContentTypeRequest struct {
-	PathParams  GetPagesbyContentTypePathParams
-	QueryParams GetPagesbyContentTypeQueryParams
 }
 
 // GetPagesbyContentType200ApplicationJSONDataSections - Object with data about a specific section.

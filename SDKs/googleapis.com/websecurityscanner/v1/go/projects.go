@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // WebsecurityscannerProjectsScanConfigsCreate - Creates a new ScanConfig.
-func (s *projects) WebsecurityscannerProjectsScanConfigsCreate(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsCreateRequest) (*operations.WebsecurityscannerProjectsScanConfigsCreateResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsCreate(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsCreateRequest, security operations.WebsecurityscannerProjectsScanConfigsCreateSecurity) (*operations.WebsecurityscannerProjectsScanConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScanConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsCreate(ctx context.Conte
 }
 
 // WebsecurityscannerProjectsScanConfigsDelete - Deletes an existing ScanConfig and its child resources.
-func (s *projects) WebsecurityscannerProjectsScanConfigsDelete(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsDeleteRequest) (*operations.WebsecurityscannerProjectsScanConfigsDeleteResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsDelete(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsDeleteRequest, security operations.WebsecurityscannerProjectsScanConfigsDeleteSecurity) (*operations.WebsecurityscannerProjectsScanConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsDelete(ctx context.Conte
 }
 
 // WebsecurityscannerProjectsScanConfigsList - Lists ScanConfigs under a given project.
-func (s *projects) WebsecurityscannerProjectsScanConfigsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsListRequest) (*operations.WebsecurityscannerProjectsScanConfigsListResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsListRequest, security operations.WebsecurityscannerProjectsScanConfigsListSecurity) (*operations.WebsecurityscannerProjectsScanConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsList(ctx context.Context
 }
 
 // WebsecurityscannerProjectsScanConfigsPatch - Updates a ScanConfig. This method support partial update of a ScanConfig.
-func (s *projects) WebsecurityscannerProjectsScanConfigsPatch(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsPatchRequest) (*operations.WebsecurityscannerProjectsScanConfigsPatchResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsPatch(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsPatchRequest, security operations.WebsecurityscannerProjectsScanConfigsPatchSecurity) (*operations.WebsecurityscannerProjectsScanConfigsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScanConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsPatch(ctx context.Contex
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList - List CrawledUrls under a given ScanRun.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/crawledUrls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/crawledUrls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList - List all FindingTypeStats under a given ScanRun.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findingTypeStats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findingTypeStats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,20 +334,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStats
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet - Gets a Finding.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,20 +382,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet(ctx 
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsFindingsList - List Findings under a given ScanRun.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,20 +430,20 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsFindingsList(ctx
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsList - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsList(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsListSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scanRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,11 +478,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsList(ctx context
 }
 
 // WebsecurityscannerProjectsScanConfigsScanRunsStop - Stops a ScanRun. The stopped ScanRun is returned.
-func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsStop(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsStop(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest, security operations.WebsecurityscannerProjectsScanConfigsScanRunsStopSecurity) (*operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -494,11 +494,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsStop(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -533,11 +533,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsScanRunsStop(ctx context
 }
 
 // WebsecurityscannerProjectsScanConfigsStart - Start a ScanRun according to the given ScanConfig.
-func (s *projects) WebsecurityscannerProjectsScanConfigsStart(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsStartRequest) (*operations.WebsecurityscannerProjectsScanConfigsStartResponse, error) {
+func (s *projects) WebsecurityscannerProjectsScanConfigsStart(ctx context.Context, request operations.WebsecurityscannerProjectsScanConfigsStartRequest, security operations.WebsecurityscannerProjectsScanConfigsStartSecurity) (*operations.WebsecurityscannerProjectsScanConfigsStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -549,11 +549,11 @@ func (s *projects) WebsecurityscannerProjectsScanConfigsStart(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
